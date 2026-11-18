@@ -132,7 +132,7 @@ public class PromptAgentSessionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The <code>Error</code> field in the frame. This is an in-stream error, which is an object.</p>
+         * <p>The Error field in the frame. This is an in-stream error, which is an object.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;code&quot;:-32603,&quot;errorCode&quot;:&quot;CLI_STREAM_FAILED&quot;,&quot;message&quot;:&quot;The response stream was interrupted.&quot;}</p>
@@ -143,7 +143,7 @@ public class PromptAgentSessionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The <code>Id</code> field in the frame, used to associate the request. Notification frames may not contain this field.</p>
+         * <p>The Id field in the frame, used to associate the request. Notification frames may not contain this field.</p>
          * 
          * <strong>example:</strong>
          * <p>request-001</p>
@@ -154,7 +154,7 @@ public class PromptAgentSessionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The <code>Jsonrpc</code> field in the frame. The value is <code>2.0</code>.</p>
+         * <p>The Jsonrpc field in the frame. The value is 2.0.</p>
          * 
          * <strong>example:</strong>
          * <p>2.0</p>
@@ -165,7 +165,7 @@ public class PromptAgentSessionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The <code>Method</code> field in the frame, used to distinguish notification categories.</p>
+         * <p>The Method field in the frame, used to distinguish notification categories.</p>
          * 
          * <strong>example:</strong>
          * <p>session/update</p>
@@ -176,10 +176,10 @@ public class PromptAgentSessionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The <code>Params</code> field in the frame. This is the notification payload, which is an object.</p>
+         * <p>The Params field in the frame. This is the notification payload, which is an object.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;sessionId&quot;:&quot;0123456789abcdef0123456789abcdef&quot;,&quot;update&quot;:{&quot;sessionUpdate&quot;:&quot;agent_message_chunk&quot;,&quot;content&quot;:{&quot;type&quot;:&quot;text&quot;,&quot;text&quot;:&quot;Check whether the list is empty first.&quot;}},&quot;_meta&quot;:{&quot;offset&quot;:12,&quot;eventEpoch&quot;:&quot;epoch-example&quot;,&quot;promptId&quot;:&quot;prompt-example&quot;}}</p>
+         * <p>{&quot;sessionId&quot;:&quot;0123456789abcdef0123456789abcdef&quot;,&quot;update&quot;:{&quot;sessionUpdate&quot;:&quot;agent_message_chunk&quot;,&quot;content&quot;:{&quot;type&quot;:&quot;text&quot;,&quot;text&quot;:&quot;You should first check whether the list is empty.&quot;}},&quot;_meta&quot;:{&quot;offset&quot;:12,&quot;eventEpoch&quot;:&quot;epoch-example&quot;,&quot;promptId&quot;:&quot;prompt-example&quot;}}</p>
          */
         public Builder params(Object params) {
             this.params = params;
@@ -198,7 +198,7 @@ public class PromptAgentSessionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The <code>Result</code> field in the frame. This is the normal result, which is an object.</p>
+         * <p>The Result field in the frame. This is the normal result, which is an object.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;stopReason&quot;:&quot;end_turn&quot;}</p>

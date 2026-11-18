@@ -151,7 +151,7 @@ public class ListModelsRequest extends Request {
         }
 
         /**
-         * <p>Set this parameter to <code>text</code> for text sessions. If you omit this parameter, all visible models are queried.</p>
+         * <p>Set to <code>text</code> for text sessions. If omitted, all visible models are queried.</p>
          * 
          * <strong>example:</strong>
          * <p>text</p>

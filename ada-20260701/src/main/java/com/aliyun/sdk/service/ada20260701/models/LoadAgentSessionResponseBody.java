@@ -143,7 +143,7 @@ public class LoadAgentSessionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The <code>Id</code> field in the frame. It is used to associate the request. Notification frames may not contain this field.</p>
+         * <p>The <code>Id</code> field in the frame, used to associate the request. Notification frames may not contain this field.</p>
          * 
          * <strong>example:</strong>
          * <p>request-001</p>
@@ -165,7 +165,7 @@ public class LoadAgentSessionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The <code>Method</code> field in the frame. It is used to distinguish notification categories.</p>
+         * <p>The <code>Method</code> field in the frame, used to distinguish notification categories.</p>
          * 
          * <strong>example:</strong>
          * <p>session/update</p>

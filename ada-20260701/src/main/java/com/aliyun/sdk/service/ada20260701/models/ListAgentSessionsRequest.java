@@ -111,7 +111,7 @@ public class ListAgentSessionsRequest extends Request {
         }
 
         /**
-         * <p>The correlation identifier for this call. It is echoed in the response and does not provide idempotency guarantees.</p>
+         * <p>The correlation identifier for this call. This identifier is echoed in the response and does not provide idempotency guarantees.</p>
          * 
          * <strong>example:</strong>
          * <p>request-001</p>
@@ -123,7 +123,7 @@ public class ListAgentSessionsRequest extends Request {
         }
 
         /**
-         * <p>The JSON-RPC protocol version. Set this parameter to <code>2.0</code>.</p>
+         * <p>The JSON-RPC protocol version. Set this parameter to 2.0.</p>
          * 
          * <strong>example:</strong>
          * <p>2.0</p>

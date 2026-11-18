@@ -132,7 +132,7 @@ public class ListAgentsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of agent summaries. For the fields of each element, see the supplementary description of response parameters.</p>
+         * <p>The list of agent summaries. For field details of each element, see the supplementary description of response parameters.</p>
          */
         public Builder agents(java.util.List<?> agents) {
             this.agents = agents;
@@ -151,7 +151,7 @@ public class ListAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The next token. An empty string is returned if no next page exists.</p>
+         * <p>The next token. An empty string is returned if there are no more pages.</p>
          * 
          * <strong>example:</strong>
          * <p>eyJwYWdlIjoyfQ.example</p>
@@ -184,7 +184,7 @@ public class ListAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID, used for Tracing Analysis and troubleshooting.</p>
+         * <p>The request ID, which is used for Tracing Analysis and troubleshooting.</p>
          * 
          * <strong>example:</strong>
          * <p>0A1B2C3D-4E5F-6789-ABCD-EF0123456789</p>
@@ -195,7 +195,7 @@ public class ListAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of agents that meet the filter conditions.</p>
+         * <p>The total number of agents that match the filter conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

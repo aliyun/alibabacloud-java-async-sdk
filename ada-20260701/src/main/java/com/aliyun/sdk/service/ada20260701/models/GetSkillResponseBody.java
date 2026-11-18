@@ -269,10 +269,10 @@ public class GetSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The description in the current main record of the skill.</p>
+         * <p>The description in the current primary record of the skill.</p>
          * 
          * <strong>example:</strong>
-         * <p>A skill for code review and risk alerting</p>
+         * <p>A skill for performing code review and risk alerts</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -280,7 +280,7 @@ public class GetSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The download URL of the bundle. This field is returned when the network is specified, an accessible artifact exists, and the pre-signing is successful.</p>
+         * <p>The download URL of the bundle. This field is returned when the network is specified, an accessible artifact exists, and presigning is successful.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/artifacts/code-review-v2.zip?signature=example">https://example.com/artifacts/code-review-v2.zip?signature=example</a></p>
@@ -368,7 +368,7 @@ public class GetSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The current status of the skill. Common values include DRAFT and PUBLISHED.</p>
+         * <p>The current status of the skill. Common values are DRAFT and PUBLISHED.</p>
          * 
          * <strong>example:</strong>
          * <p>PUBLISHED</p>
@@ -390,7 +390,7 @@ public class GetSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The visibility of the current skill. Common values include user and tenant.</p>
+         * <p>The visibility of the current skill. Common values are user and tenant.</p>
          * 
          * <strong>example:</strong>
          * <p>user</p>

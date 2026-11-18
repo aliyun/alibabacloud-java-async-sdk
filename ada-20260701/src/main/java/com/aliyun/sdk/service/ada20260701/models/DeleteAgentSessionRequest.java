@@ -111,7 +111,7 @@ public class DeleteAgentSessionRequest extends Request {
         }
 
         /**
-         * <p>The correlation identifier for this call, which is echoed in the response. It does not provide idempotency guarantees.</p>
+         * <p>The correlation identifier for this call, which is echoed in the response. This parameter does not provide idempotence guarantees.</p>
          * 
          * <strong>example:</strong>
          * <p>request-001</p>
@@ -123,7 +123,7 @@ public class DeleteAgentSessionRequest extends Request {
         }
 
         /**
-         * <p>The JSON-RPC protocol version. Set the value to <code>2.0</code>.</p>
+         * <p>The JSON-RPC protocol version. Set this parameter to <code>2.0</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>2.0</p>

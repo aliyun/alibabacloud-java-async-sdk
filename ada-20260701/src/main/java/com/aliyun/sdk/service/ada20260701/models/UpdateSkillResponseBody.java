@@ -139,7 +139,7 @@ public class UpdateSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the operation is successful. Returns <code>true</code> if the skill update and optional package replacement have been fully submitted and confirmed by read-back.</p>
+         * <p>Indicates whether the operation is successful. A value of <code>true</code> is returned when the skill update and optional bundle replacement are fully submitted and confirmed by read-back.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

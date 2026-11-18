@@ -142,7 +142,7 @@ public class UpdateSkillRequest extends Request {
          * <p>The updated description of the skill.</p>
          * 
          * <strong>example:</strong>
-         * <p>A skill used for code review, security checks, and risk alerts</p>
+         * <p>A skill used to perform code review, security checks, and risk alerts</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -175,7 +175,7 @@ public class UpdateSkillRequest extends Request {
         }
 
         /**
-         * <p>The name of the skill to be updated. This parameter is only used to locate the skill and cannot be used to modify the name.</p>
+         * <p>The name of the skill to be updated. This parameter is used only to locate the skill and cannot be used to modify the name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

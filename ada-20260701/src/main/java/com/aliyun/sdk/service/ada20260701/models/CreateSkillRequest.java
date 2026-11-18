@@ -140,11 +140,11 @@ public class CreateSkillRequest extends Request {
         }
 
         /**
-         * <p>The metadata of the skill, in JSON object format. You must and can only provide one content source. For specific fields, refer to the supplementary description of request parameters.</p>
+         * <p>The metadata of the skill, in JSON object format. One and only one content source must be provided. For specific fields, refer to the supplementary description of request parameters.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;skillMd&quot;:&quot;# Code Review\nChecks code quality, security risks, and coding standards.&quot;}</p>
+         * <p>{&quot;skillMd&quot;:&quot;# Code Review\nCheck code quality, security risks, and coding standards.&quot;}</p>
          */
         public Builder metadata(Object metadata) {
             this.putBodyParameter("Metadata", metadata);
@@ -153,7 +153,7 @@ public class CreateSkillRequest extends Request {
         }
 
         /**
-         * <p>The unique identifier of the skill. Only English letters, digits, underscores, and hyphens are supported. The length cannot exceed 64 characters.</p>
+         * <p>The unique identifier of the skill. Only letters, digits, underscores, and hyphens are supported. The length cannot exceed 64 characters.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,7 +166,7 @@ public class CreateSkillRequest extends Request {
         }
 
         /**
-         * <p>The visibility of the skill. Valid values: user and tenant. Default value: user.</p>
+         * <p>The visibility of the skill. Valid values: <code>user</code> and <code>tenant</code>. Default value: <code>user</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>user</p>

@@ -184,7 +184,7 @@ public class CreateAgentRequest extends Request {
          * <p>The description of the agent.</p>
          * 
          * <strong>example:</strong>
-         * <p>Analyzes code changes and generates code review comments</p>
+         * <p>Analyze code changes and generate code review comments</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -196,7 +196,7 @@ public class CreateAgentRequest extends Request {
          * <p>The display name of the agent.</p>
          * 
          * <strong>example:</strong>
-         * <p>Code Review Agent</p>
+         * <p>Code review agent</p>
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("DisplayName", displayName);
@@ -254,7 +254,7 @@ public class CreateAgentRequest extends Request {
         }
 
         /**
-         * <p>The list of MCP server and connector name references. The same array supports both types of entries. Specify only one type of reference for each entry. For MCP, omitting items indicates all public tools, and historically specified items retain their original values.</p>
+         * <p>The list of references to MCP server and connector names. The same array supports both types of entries. Specify only one type of reference for each entry. For MCP, omitting items indicates all public tools, and historically specified items retain their original values.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;mcpServerName&quot;:&quot;code-repository-mcp&quot;},{&quot;connectorName&quot;:&quot;code-review-data&quot;}]</p>
@@ -266,7 +266,7 @@ public class CreateAgentRequest extends Request {
         }
 
         /**
-         * <p>The visibility scope of the agent. Valid values: <code>user</code> and <code>tenant</code>. Default value: <code>user</code>.</p>
+         * <p>The visibility scope of the agent. Valid values: user and tenant. Default value: user.</p>
          * 
          * <strong>example:</strong>
          * <p>user</p>

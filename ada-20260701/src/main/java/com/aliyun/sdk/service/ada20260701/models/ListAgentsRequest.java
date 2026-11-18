@@ -280,7 +280,7 @@ public class ListAgentsRequest extends Request {
         }
 
         /**
-         * <p>The query scope. Valid values: <code>SYSTEM</code> and <code>CUSTOM</code>.</p>
+         * <p>The query scope. Valid values: SYSTEM and CUSTOM.</p>
          * 
          * <strong>example:</strong>
          * <p>CUSTOM</p>
@@ -292,7 +292,7 @@ public class ListAgentsRequest extends Request {
         }
 
         /**
-         * <p>Filters agents by visibility scope. Valid values: <code>user</code> and <code>tenant</code>.</p>
+         * <p>Filters agents by visibility scope. Valid values: user and tenant.</p>
          * 
          * <strong>example:</strong>
          * <p>user</p>

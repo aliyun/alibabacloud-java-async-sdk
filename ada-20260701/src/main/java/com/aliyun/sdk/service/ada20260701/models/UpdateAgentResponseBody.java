@@ -139,7 +139,7 @@ public class UpdateAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the agent is updated. A success response always returns <code>true</code>. An error response is returned upon failure.</p>
+         * <p>Indicates whether the agent was successfully updated. A success response always returns <code>true</code>. An error response is returned upon failure.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -150,7 +150,7 @@ public class UpdateAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The most recent update time. The value is a UNIX timestamp in milliseconds.</p>
+         * <p>The time of the most recent update. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1788332700000</p>

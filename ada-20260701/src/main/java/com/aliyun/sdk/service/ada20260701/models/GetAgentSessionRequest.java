@@ -123,7 +123,7 @@ public class GetAgentSessionRequest extends Request {
         }
 
         /**
-         * <p>The JSON-RPC protocol version. Set the value to <code>2.0</code>.</p>
+         * <p>The JSON-RPC protocol version. Set this parameter to <code>2.0</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>2.0</p>

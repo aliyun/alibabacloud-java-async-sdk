@@ -111,7 +111,7 @@ public class LoadAgentSessionRequest extends Request {
         }
 
         /**
-         * <p>The client call identifier. It is used to associate the current response and does not provide idempotence guarantees.</p>
+         * <p>The client call identifier used to associate the current response. It does not provide idempotency guarantees.</p>
          * 
          * <strong>example:</strong>
          * <p>request-001</p>
@@ -135,7 +135,7 @@ public class LoadAgentSessionRequest extends Request {
         }
 
         /**
-         * <p>The business parameter structure. For core nested fields, refer to the supplementary description.</p>
+         * <p>The business parameter structure. For core nested fields, see the supplementary description.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

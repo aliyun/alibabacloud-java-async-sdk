@@ -91,7 +91,7 @@ public class CreateAgentSessionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The server-side request ID, which is used to troubleshoot this call.</p>
+         * <p>The server-side request ID. It is used to troubleshoot this call.</p>
          * 
          * <strong>example:</strong>
          * <p>0A1B2C3D-4E5F-6789-ABCD-EF0123456789</p>

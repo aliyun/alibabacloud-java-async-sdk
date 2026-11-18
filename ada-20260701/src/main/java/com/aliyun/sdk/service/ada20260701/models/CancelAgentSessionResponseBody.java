@@ -80,7 +80,7 @@ public class CancelAgentSessionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response object. The business result is located in result.</p>
+         * <p>The response object. The business result is located in <code>result</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;request-001&quot;,&quot;result&quot;:{&quot;sessionId&quot;:&quot;0123456789abcdef0123456789abcdef&quot;,&quot;removed&quot;:true}}</p>
@@ -102,7 +102,7 @@ public class CancelAgentSessionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the operation is successful. Determine the final execution state based on the description of this API operation.</p>
+         * <p>Indicates whether the operation is successful. Determine the desired state of the execution based on the description of this operation.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

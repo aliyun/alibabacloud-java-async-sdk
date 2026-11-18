@@ -139,7 +139,7 @@ public class CreateSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the operation is successful. A value of true is returned when the skill and its body or bundle are fully created and readable. Business failures are indicated by error responses.</p>
+         * <p>Indicates whether the operation is successful. true is returned when the skill and its body or bundle are fully created and readable. Business failures are returned in error responses.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

@@ -78,7 +78,7 @@ public class DeleteSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the operation is successful. Returns <code>true</code> if the skill is logically deleted and optional artifacts are logically archived.</p>
+         * <p>Indicates whether the operation is successful. Returns <code>true</code> when the logical deletion of the skill and the optional logical archiving of artifacts are complete.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

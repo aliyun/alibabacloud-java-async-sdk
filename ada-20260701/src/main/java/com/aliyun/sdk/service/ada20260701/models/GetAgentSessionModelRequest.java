@@ -111,7 +111,7 @@ public class GetAgentSessionModelRequest extends Request {
         }
 
         /**
-         * <p>The client request identifier, which is echoed in the response. It is used to correlate this call and does not have idempotent semantics.</p>
+         * <p>The client request identifier, which is echoed in the response. It is used to associate this call and does not have idempotent semantics.</p>
          * 
          * <strong>example:</strong>
          * <p>request-001</p>

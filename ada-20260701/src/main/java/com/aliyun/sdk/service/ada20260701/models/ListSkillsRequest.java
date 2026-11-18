@@ -181,7 +181,7 @@ public class ListSkillsRequest extends Request {
         }
 
         /**
-         * <p>Filters the skills by creator ID.</p>
+         * <p>Filters skills by the creator ID.</p>
          * 
          * <strong>example:</strong>
          * <p>example-user</p>
@@ -193,7 +193,7 @@ public class ListSkillsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page for cursor-based pagination. Valid values: 1 to 100. Default value: 20. If you explicitly specify this parameter, cursor-based pagination takes precedence.</p>
+         * <p>The number of entries per page for cursor-based pagination. Valid values: 1 to 100. Default value: <code>20</code>. If this parameter is explicitly specified, cursor-based pagination takes precedence.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -205,7 +205,7 @@ public class ListSkillsRequest extends Request {
         }
 
         /**
-         * <p>The next token returned by the server. Do not pass this parameter for the first query. For subsequent queries, use the value from the previous response.</p>
+         * <p>The next token returned by the server. Do not specify this parameter for the first query. For subsequent queries, use the value from the previous response.</p>
          * 
          * <strong>example:</strong>
          * <p>eyJzIjoiZDc3ZGRhYmE3MDMwYWM1NCIsInAiOjJ9.vkKVySx9G26993sTNLZqwGSmgciRsrRm2SgsjOMJoCQ</p>
@@ -217,7 +217,7 @@ public class ListSkillsRequest extends Request {
         }
 
         /**
-         * <p>The compatible page number parameter for page number-based pagination. Pages start from 1. Default value: 1.</p>
+         * <p>The compatible page number parameter for page number-based pagination. Pages start from 1. Default value: <code>1</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -229,7 +229,7 @@ public class ListSkillsRequest extends Request {
         }
 
         /**
-         * <p>The compatible number of entries per page for page number-based pagination. Valid values: 1 to 100. Default value: 20.</p>
+         * <p>The compatible number of entries per page for page number-based pagination. Valid values: 1 to 100. Default value: <code>20</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

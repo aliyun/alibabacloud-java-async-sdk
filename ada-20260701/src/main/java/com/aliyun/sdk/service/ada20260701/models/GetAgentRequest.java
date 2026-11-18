@@ -83,7 +83,7 @@ public class GetAgentRequest extends Request {
         }
 
         /**
-         * <p>The agent name.</p>
+         * <p>The name of the agent.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

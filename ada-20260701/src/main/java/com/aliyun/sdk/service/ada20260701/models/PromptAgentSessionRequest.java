@@ -123,7 +123,7 @@ public class PromptAgentSessionRequest extends Request {
         }
 
         /**
-         * <p>The JSON-RPC version. Set this parameter to <code>2.0</code>.</p>
+         * <p>The JSON-RPC version. Set this parameter to 2.0.</p>
          * 
          * <strong>example:</strong>
          * <p>2.0</p>
@@ -135,7 +135,7 @@ public class PromptAgentSessionRequest extends Request {
         }
 
         /**
-         * <p>The business parameter structure. For core nested fields, refer to the supplementary description.</p>
+         * <p>The structure of the business parameters. For core nested fields, refer to the supplementary instructions.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -106,7 +106,7 @@ public class CreateTransitUploadPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The object storage key, which is also the <code>key</code> in the PostObject form.</p>
+         * <p>The object storage key, which is also the key in the PostObject form.</p>
          * 
          * <strong>example:</strong>
          * <p>skill-bundle/tenant-demo/user-demo/20260904120000_0123456789abcdef0123456789abcdef.zip</p>
@@ -117,7 +117,7 @@ public class CreateTransitUploadPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The upload policy object. For complete sub-fields, see the following table.</p>
+         * <p>The upload policy object. For more information about the complete sub-fields, see the following table.</p>
          */
         public Builder policyInfo(PolicyInfo policyInfo) {
             this.policyInfo = policyInfo;
@@ -125,7 +125,7 @@ public class CreateTransitUploadPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID, used for Tracing Analysis and troubleshooting.</p>
+         * <p>The request ID, which is used for Tracing Analysis and troubleshooting.</p>
          * 
          * <strong>example:</strong>
          * <p>0A1B2C3D-4E5F-6789-ABCD-EF0123456789</p>
@@ -136,7 +136,7 @@ public class CreateTransitUploadPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the upload policy is successfully generated. A successful response always returns <code>true</code>. An error response is returned upon failure.</p>
+         * <p>Indicates whether the upload policy is successfully generated. A success response always returns true. An error response is returned upon failure.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -147,7 +147,7 @@ public class CreateTransitUploadPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the newly created Transit record, which is used for subsequent queries and storage.</p>
+         * <p>The ID of the newly created transit record, which can be used for subsequent queries and storage.</p>
          * 
          * <strong>example:</strong>
          * <p>transit_0123456789abcdef0123456789abcdef</p>
@@ -268,7 +268,7 @@ public class CreateTransitUploadPolicyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The <code>OSSAccessKeyId</code> in the PostObject form. Keep it secure along with the entire <code>PolicyInfo</code>.</p>
+             * <p>The OSSAccessKeyId in the PostObject form. This field must be properly protected along with the entire PolicyInfo.</p>
              * 
              * <strong>example:</strong>
              * <REDACTED>
@@ -279,7 +279,7 @@ public class CreateTransitUploadPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The object storage key. The value is the same as the top-level <code>FilePath</code>.</p>
+             * <p>The object storage key. The value is the same as the top-level FilePath.</p>
              * 
              * <strong>example:</strong>
              * <p>skill-bundle/tenant-demo/user-demo/20260904120000_0123456789abcdef0123456789abcdef.zip</p>
@@ -301,7 +301,7 @@ public class CreateTransitUploadPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Base64-encoded PostObject upload policy. Keep it secure along with the entire <code>PolicyInfo</code>.</p>
+             * <p>The Base64-encoded PostObject upload policy. This field must be properly protected along with the entire PolicyInfo.</p>
              * 
              * <strong>example:</strong>
              * <REDACTED>
@@ -312,7 +312,7 @@ public class CreateTransitUploadPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>When STS credentials are used, this is the <code>x-oss-security-token</code> in the PostObject form. It may be empty if STS is not used. This field contains sensitive authorization information.</p>
+             * <p>The x-oss-security-token in the PostObject form when Security Token Service (STS) credentials are used. This field may be empty if STS is not used. This field contains sensitive authorization information.</p>
              * 
              * <strong>example:</strong>
              * <REDACTED>

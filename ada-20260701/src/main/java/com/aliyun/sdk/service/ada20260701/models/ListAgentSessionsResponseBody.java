@@ -70,7 +70,7 @@ public class ListAgentSessionsResponseBody extends TeaModel {
          * <p>The JSON-RPC response object. The business result is located in Result.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;Jsonrpc&quot;:&quot;2.0&quot;,&quot;Id&quot;:&quot;request-001&quot;,&quot;Result&quot;:{&quot;MaxResults&quot;:20,&quot;NextToken&quot;:&quot;next-token-example&quot;,&quot;SessionList&quot;:[{&quot;sessionId&quot;:&quot;0123456789abcdef0123456789abcdef&quot;,&quot;title&quot;:&quot;代码评审&quot;,&quot;agentName&quot;:&quot;review-agent-demo&quot;,&quot;createdAt&quot;:1793232000000,&quot;updatedAt&quot;:1793232060000}]}}</p>
+         * <p>{&quot;Jsonrpc&quot;:&quot;2.0&quot;,&quot;Id&quot;:&quot;request-001&quot;,&quot;Result&quot;:{&quot;MaxResults&quot;:20,&quot;NextToken&quot;:&quot;next-token-example&quot;,&quot;SessionList&quot;:[{&quot;sessionId&quot;:&quot;0123456789abcdef0123456789abcdef&quot;,&quot;title&quot;:&quot;Code review&quot;,&quot;agentName&quot;:&quot;review-agent-demo&quot;,&quot;createdAt&quot;:1793232000000,&quot;updatedAt&quot;:1793232060000}]}}</p>
          */
         public Builder jsonRpcResponse(JsonRpcResponse jsonRpcResponse) {
             this.jsonRpcResponse = jsonRpcResponse;
@@ -171,7 +171,7 @@ public class ListAgentSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The credential to continue querying the next page. Pass it as is to Params.NextToken. Pagination ends when the token is not returned or is empty.</p>
+             * <p>The credential for querying the next page. Pass this value as is to Params.NextToken. Pagination ends when this value is not returned or is empty.</p>
              * 
              * <strong>example:</strong>
              * <p>next-token-example</p>
@@ -276,7 +276,7 @@ public class ListAgentSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The fixed value <code>2.0</code>.</p>
+             * <p>The fixed value 2.0.</p>
              * 
              * <strong>example:</strong>
              * <p>2.0</p>

@@ -106,7 +106,7 @@ public class ListModelsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The maximum number of results used for the current pagination. If pagination is not used, this value is the total number of results. This value is not the actual number of entries returned on the current page.</p>
+         * <p>The maximum number of results used for this pagination. If not paginated, it is the total number of results. It is not the actual number of entries returned on this page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -120,7 +120,7 @@ public class ListModelsResponseBody extends TeaModel {
          * <p>The array of model structures. For nested fields, refer to the supplementary description of response parameters.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;Id&quot;:&quot;text-model-example&quot;,&quot;Object&quot;:&quot;model&quot;,&quot;Created&quot;:1793491200,&quot;OwnedBy&quot;:&quot;provider-example&quot;,&quot;DisplayName&quot;:&quot;示例文本模型&quot;,&quot;Capabilities&quot;:{&quot;InputModalities&quot;:[&quot;text&quot;]},&quot;CreditsCoefficient&quot;:&quot;2.5&quot;,&quot;ThinkingLevels&quot;:[&quot;off&quot;,&quot;low&quot;,&quot;medium&quot;,&quot;high&quot;],&quot;ThinkingLevel&quot;:&quot;off&quot;}]</p>
+         * <p>[{&quot;Id&quot;:&quot;text-model-example&quot;,&quot;Object&quot;:&quot;model&quot;,&quot;Created&quot;:1793491200,&quot;OwnedBy&quot;:&quot;provider-example&quot;,&quot;DisplayName&quot;:&quot;Sample text model&quot;,&quot;Capabilities&quot;:{&quot;InputModalities&quot;:[&quot;text&quot;]},&quot;CreditsCoefficient&quot;:&quot;2.5&quot;,&quot;ThinkingLevels&quot;:[&quot;off&quot;,&quot;low&quot;,&quot;medium&quot;,&quot;high&quot;],&quot;ThinkingLevel&quot;:&quot;off&quot;}]</p>
          */
         public Builder models(java.util.List<Models> models) {
             this.models = models;
@@ -128,7 +128,7 @@ public class ListModelsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token for the next page. An empty value indicates that no more pages exist.</p>
+         * <p>The token for the next page. An empty value indicates that there is no next page.</p>
          * 
          * <strong>example:</strong>
          * <p>next-token-example</p>
@@ -139,7 +139,7 @@ public class ListModelsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request. You can use the ID to troubleshoot issues.</p>
+         * <p>The ID of the request. It is used for troubleshooting.</p>
          * 
          * <strong>example:</strong>
          * <p>0A1B2C3D-4E5F-6789-ABCD-EF0123456789</p>
@@ -434,7 +434,7 @@ public class ListModelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The deprecated compatibility field. This field is not returned. Do not rely on this field for integration.</p>
+             * <p><strong>[Deprecated]</strong> The legacy compatibility field. It is no longer returned. Do not use it as a dependency for integration.</p>
              * 
              * <strong>example:</strong>
              * <p>32768</p>
@@ -445,7 +445,7 @@ public class ListModelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the model was created. The value is a UNIX timestamp in seconds.</p>
+             * <p>The time when the model was created. It is a UNIX timestamp in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1793491200</p>
@@ -456,7 +456,7 @@ public class ListModelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The credits coefficient of the model. The value is returned as a decimal string. This parameter is not returned if it is not configured.</p>
+             * <p>The credit coefficient of the model, returned as a decimal string. Not returned if not configured.</p>
              * 
              * <strong>example:</strong>
              * <p>2.5</p>
@@ -467,7 +467,7 @@ public class ListModelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the model. Do not pass this value as the model identifier.</p>
+             * <p>The display name of the model. Do not pass it as the model identifier.</p>
              * 
              * <strong>example:</strong>
              * <p>Sample text model</p>
@@ -489,7 +489,7 @@ public class ListModelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The deprecated compatibility field. This field is not returned. Do not rely on this field for integration.</p>
+             * <p><strong>[Deprecated]</strong> The legacy compatibility field. It is no longer returned. Do not use it as a dependency for integration.</p>
              * 
              * <strong>example:</strong>
              * <p>131072</p>
@@ -500,7 +500,7 @@ public class ListModelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The object type. The value is fixed to model.</p>
+             * <p>The object type. Fixed to model.</p>
              * 
              * <strong>example:</strong>
              * <p>model</p>
@@ -522,7 +522,7 @@ public class ListModelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The deprecated compatibility field. This field is not returned. Use ThinkingLevels instead.</p>
+             * <p><strong>[Deprecated]</strong> The legacy compatibility field. It is no longer returned. Use ThinkingLevels instead.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -533,7 +533,7 @@ public class ListModelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The default thinking level in the model catalog. This value does not represent the current value of the session. Query the current value by using GetAgentSessionModel.</p>
+             * <p>The default thinking level in the model catalog. It does not represent the current value of the session. Query the current value by using GetAgentSessionModel.</p>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -544,7 +544,7 @@ public class ListModelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The thinking levels supported by the model. An empty array does not indicate that all levels are supported. The target session still requires validation.</p>
+             * <p>The thinking levels supported by the model. An empty array does not mean all levels are supported. The target session still needs to be verified.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;off&quot;,&quot;low&quot;,&quot;medium&quot;,&quot;high&quot;]</p>
@@ -555,7 +555,7 @@ public class ListModelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The deprecated compatibility field. This field is not returned. Use ThinkingLevel instead.</p>
+             * <p><strong>[Deprecated]</strong> The legacy compatibility field. It is no longer returned. Use ThinkingLevel instead.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>

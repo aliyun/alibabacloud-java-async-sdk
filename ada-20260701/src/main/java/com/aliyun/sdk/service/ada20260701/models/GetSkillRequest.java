@@ -136,7 +136,7 @@ public class GetSkillRequest extends Request {
         }
 
         /**
-         * <p>Specifies the published history version number to query. If omitted, the current main record of the skill is returned.</p>
+         * <p>Specifies the published historical version number to query. If omitted, the current primary record of the skill is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>

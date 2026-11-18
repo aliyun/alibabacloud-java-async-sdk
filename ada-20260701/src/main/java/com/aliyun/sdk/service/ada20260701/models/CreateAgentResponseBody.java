@@ -139,7 +139,7 @@ public class CreateAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the agent was created. A success response always returns <code>true</code>. An error response is returned upon failure.</p>
+         * <p>Indicates whether the agent was created successfully. A success response always returns true. An error response is returned upon failure.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

@@ -111,7 +111,7 @@ public class CreateAgentSessionRequest extends Request {
         }
 
         /**
-         * <p>The correlation identifier for this call. It is echoed in the response and does not provide idempotence guarantees.</p>
+         * <p>The correlation identifier for this call. It is echoed in the response and does not provide idempotency guarantees.</p>
          * 
          * <strong>example:</strong>
          * <p>request-001</p>

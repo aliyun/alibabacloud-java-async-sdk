@@ -310,7 +310,7 @@ public class GetAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the current identity can delete the agent.</p>
+         * <p>Specifies whether the current identity can delete the agent.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -321,7 +321,7 @@ public class GetAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the current identity can modify the agent.</p>
+         * <p>Specifies whether the current identity can modify the agent.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -343,10 +343,10 @@ public class GetAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The agent description. This field may not be returned if it is not configured.</p>
+         * <p>The description of the agent. This field may not be returned if it is not configured.</p>
          * 
          * <strong>example:</strong>
-         * <p>Analyze code changes and generate code review comments</p>
+         * <p>Analyzes code changes and generates CR review comments</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -357,7 +357,7 @@ public class GetAgentResponseBody extends TeaModel {
          * <p>The display name of the agent. This field may not be returned if it is not configured.</p>
          * 
          * <strong>example:</strong>
-         * <p>Code review agent</p>
+         * <p>CR code review agent</p>
          */
         public Builder displayName(String displayName) {
             this.displayName = displayName;
@@ -365,7 +365,7 @@ public class GetAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The knowledge base reference list. The list contains at most one element.</p>
+         * <p>The list of knowledge base references. The list contains at most one element.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;name&quot;:&quot;code-review-guidelines&quot;}]</p>
@@ -376,7 +376,7 @@ public class GetAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The display metadata of the agent. For specific fields, refer to the supplementary description of response parameters.</p>
+         * <p>The display metadata of the agent. For specific fields, see the supplementary description of response parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;iconUrl&quot;:&quot;<a href="https://example.com/icons/code-review-agent.png%22%7D">https://example.com/icons/code-review-agent.png&quot;}</a></p>
@@ -387,7 +387,7 @@ public class GetAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The saved model configuration. This information is returned only for official agents. Object arrays are supported, and historical single objects and strings are compatible. An empty array is returned as [ \]. Object arrays retain the original order, duplicate names, and object fields.</p>
+         * <p>The saved model configuration. This information is returned only for official agents. Object arrays are supported, and historical single objects and strings are compatible. An empty array returns [ \]. Object arrays retain the original order, duplicate names, and object fields.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;name&quot;:&quot;base&quot;,&quot;default&quot;:true},{&quot;name&quot;:&quot;base&quot;},{&quot;name&quot;:&quot;base&quot;,&quot;settings&quot;:{&quot;thinking&quot;:false,&quot;topK&quot;:5}}]</p>
@@ -398,7 +398,7 @@ public class GetAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The agent name.</p>
+         * <p>The name of the agent.</p>
          * 
          * <strong>example:</strong>
          * <p>code-review-agent</p>
@@ -409,7 +409,7 @@ public class GetAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the agent is an official agent provided by the platform.</p>
+         * <p>Specifies whether the agent is an official agent provided by the platform.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -431,7 +431,7 @@ public class GetAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The skill reference list. For specific fields, refer to the supplementary description of response parameters.</p>
+         * <p>The list of skill references. For specific fields, see the supplementary description of response parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;name&quot;:&quot;code-review&quot;}]</p>
@@ -442,7 +442,7 @@ public class GetAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The agent status. The default status of a newly created agent is <code>draft</code>.</p>
+         * <p>The status of the agent. The default status of a newly created agent is <code>draft</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>draft</p>
@@ -456,7 +456,7 @@ public class GetAgentResponseBody extends TeaModel {
          * <p>The system prompt. This field may not be returned if it is not configured.</p>
          * 
          * <strong>example:</strong>
-         * <p>Check the correctness, security, and maintainability of code changes in the code review, and provide review comments based on severity</p>
+         * <p>Please check the correctness, security, and maintainability of the code changes in the CR, and provide review comments based on severity</p>
          */
         public Builder systemPrompt(String systemPrompt) {
             this.systemPrompt = systemPrompt;
@@ -464,7 +464,7 @@ public class GetAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The reference list of MCP server and connector names. For element fields, refer to the following sections.</p>
+         * <p>The list of MCP server and connector name references. For element fields, see the following sections.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;mcpServerName&quot;:&quot;code-repository-mcp&quot;},{&quot;connectorName&quot;:&quot;code-review-data&quot;}]</p>

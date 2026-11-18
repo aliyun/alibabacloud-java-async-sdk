@@ -80,7 +80,7 @@ public class SetAgentSessionModelResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The defined JSON-RPC response structure. For core nested fields, see the supplementary description.</p>
+         * <p>The defined JSON-RPC response structure. For more information about the core nested fields, see the supplementary description.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;request-001&quot;,&quot;result&quot;:{&quot;modelId&quot;:&quot;text-model-example&quot;,&quot;thinkingLevel&quot;:&quot;off&quot;,&quot;thinkingLevels&quot;:[&quot;off&quot;,&quot;low&quot;,&quot;medium&quot;,&quot;high&quot;]}}</p>
@@ -102,7 +102,7 @@ public class SetAgentSessionModelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the setting is successful. The value is <code>true</code> if the setting is successful. Read the actual model and thinking level from the business result.</p>
+         * <p>Indicates whether the setting is successful. The value is true if the setting is successful. Read the actual model and thinking level from the business result.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
