@@ -74,12 +74,41 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>This API operation generates temporary OSS upload credentials so that clients can directly upload files to a specified OSS bucket.</li>
+     * <li>The <code>FileExt</code> parameter is required and specifies the file name extension of the file to be uploaded, such as mp4 or wav. Do not include the dot.</li>
+     * <li>The <code>FileType</code> parameter is optional and defaults to <code>Media</code>. It affects the path segment in the returned <code>ObjectKey</code>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateOssUpload  CreateOssUploadRequest
+     * @return CreateOssUploadResponse
+     */
+    CompletableFuture<CreateOssUploadResponse> createOssUpload(CreateOssUploadRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>Creates a project in a specified workspace and returns the project ID. If WorkspaceId is not specified, the default workspace of the current account is used. After the project is created, you can call GetProject to query the details or call ListProjects to list projects.</p>
      * 
      * @param request the request parameters of CreateProject  CreateProjectRequest
      * @return CreateProjectResponse
      */
     CompletableFuture<CreateProjectResponse> createProject(CreateProjectRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>This operation supports two modes: creating a new media asset and overwriting an existing media asset.</li>
+     * <li>When creating a new media asset, the <code>FileInfo</code> and <code>MediaMetaData</code> parameters are required.</li>
+     * <li>When overwriting an existing media asset, you must set <code>Overwrite</code> to true and provide <code>MediaId</code>.</li>
+     * <li>You can specify the credential type by using <code>CredentialType</code>. The default value is STS_TOKEN.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateUploadMedia  CreateUploadMediaRequest
+     * @return CreateUploadMediaResponse
+     */
+    CompletableFuture<CreateUploadMediaResponse> createUploadMedia(CreateUploadMediaRequest request);
 
     /**
      * <b>description</b> :
@@ -291,6 +320,19 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListInfiniteCanvasesResponse
      */
     CompletableFuture<ListInfiniteCanvasesResponse> listInfiniteCanvases(ListInfiniteCanvasesRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>This operation retrieves a list of all media folders in a specified project (<code>ProductionId</code>). Pagination is supported by using the <code>PageNo</code> and <code>PageSize</code> parameters.</li>
+     * <li>If <code>ProductionId</code> is not provided, the default project of the current account is used.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ListMediaFolders  ListMediaFoldersRequest
+     * @return ListMediaFoldersResponse
+     */
+    CompletableFuture<ListMediaFoldersResponse> listMediaFolders(ListMediaFoldersRequest request);
 
     /**
      * <b>description</b> :
