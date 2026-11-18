@@ -21,6 +21,10 @@ public class PushMeteringDataRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("GmtCreate")
     private String gmtCreate;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Metering")
+    private String metering;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("MeteringData")
     private java.util.List<MeteringData> meteringData;
@@ -28,6 +32,7 @@ public class PushMeteringDataRequest extends Request {
     private PushMeteringDataRequest(Builder builder) {
         super(builder);
         this.gmtCreate = builder.gmtCreate;
+        this.metering = builder.metering;
         this.meteringData = builder.meteringData;
     }
 
@@ -52,6 +57,13 @@ public class PushMeteringDataRequest extends Request {
     }
 
     /**
+     * @return metering
+     */
+    public String getMetering() {
+        return this.metering;
+    }
+
+    /**
      * @return meteringData
      */
     public java.util.List<MeteringData> getMeteringData() {
@@ -60,6 +72,7 @@ public class PushMeteringDataRequest extends Request {
 
     public static final class Builder extends Request.Builder<PushMeteringDataRequest, Builder> {
         private String gmtCreate; 
+        private String metering; 
         private java.util.List<MeteringData> meteringData; 
 
         private Builder() {
@@ -69,6 +82,7 @@ public class PushMeteringDataRequest extends Request {
         private Builder(PushMeteringDataRequest request) {
             super(request);
             this.gmtCreate = request.gmtCreate;
+            this.metering = request.metering;
             this.meteringData = request.meteringData;
         } 
 
@@ -78,6 +92,15 @@ public class PushMeteringDataRequest extends Request {
         public Builder gmtCreate(String gmtCreate) {
             this.putBodyParameter("GmtCreate", gmtCreate);
             this.gmtCreate = gmtCreate;
+            return this;
+        }
+
+        /**
+         * Metering.
+         */
+        public Builder metering(String metering) {
+            this.putQueryParameter("Metering", metering);
+            this.metering = metering;
             return this;
         }
 

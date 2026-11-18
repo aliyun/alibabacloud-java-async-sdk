@@ -61,9 +61,6 @@ public class DescribePushMeteringDataRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>pushData123456</p>
          */
         public Builder pushOrderBizId(String pushOrderBizId) {
             this.putQueryParameter("PushOrderBizId", pushOrderBizId);

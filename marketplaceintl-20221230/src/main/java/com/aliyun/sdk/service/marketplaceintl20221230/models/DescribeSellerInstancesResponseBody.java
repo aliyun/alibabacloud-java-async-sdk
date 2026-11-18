@@ -187,10 +187,7 @@ public class DescribeSellerInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>fatal</p>
-         * 
-         * <strong>example:</strong>
-         * <p>False</p>
+         * Fatal.
          */
         public Builder fatal(Boolean fatal) {
             this.fatal = fatal;
