@@ -108,7 +108,7 @@ public class ResumeTaskInstancesRequest extends Request {
         }
 
         /**
-         * <p>The list of task instance IDs.</p>
+         * <p>The list of node instance IDs.</p>
          */
         public Builder ids(java.util.List<Long> ids) {
             String idsShrink = shrink(ids, "Ids", "json");

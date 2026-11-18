@@ -136,7 +136,7 @@ public class RemoveTaskInstanceDependenciesRequest extends Request {
         }
 
         /**
-         * <p>The list of upstream node instance IDs.</p>
+         * <p>The upstream node instance IDs.</p>
          */
         public Builder upstreamTaskInstanceIds(java.util.List<Long> upstreamTaskInstanceIds) {
             String upstreamTaskInstanceIdsShrink = shrink(upstreamTaskInstanceIds, "UpstreamTaskInstanceIds", "json");

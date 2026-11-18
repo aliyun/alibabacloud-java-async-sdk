@@ -3622,7 +3622,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or a later edition to use this operation.</p>
+     * <p>You must purchase DataWorks Basic Edition or later to use this operation.</p>
      * 
      * @param request the request parameters of RemoveTaskInstanceDependencies  RemoveTaskInstanceDependenciesRequest
      * @return RemoveTaskInstanceDependenciesResponse
@@ -3679,7 +3679,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
+     * <p>DataWorks Basic Edition or later is required.</p>
      * 
      * @param request the request parameters of ResumeTaskInstances  ResumeTaskInstancesRequest
      * @return ResumeTaskInstancesResponse
@@ -4450,7 +4450,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or higher to use this feature.</p>
+     * <p>You must purchase DataWorks Basic Edition or later to use this operation.</p>
      * 
      * @param request the request parameters of UpdateTaskInstances  UpdateTaskInstancesRequest
      * @return UpdateTaskInstancesResponse

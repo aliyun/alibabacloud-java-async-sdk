@@ -67,7 +67,7 @@ public class UpdateTaskInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</p>
+         * <p>The ID of the request, which is used to locate logs and troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>22C97E95-F023-56B5-8852-B1A77A17XXXX</p>
@@ -78,7 +78,7 @@ public class UpdateTaskInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result information of the batch operation. The data structure is a map, where the key is the node instance ID and the value is the result information.</p>
+         * <p>The result information of the batch operation. The structure is a map where the key is the task instance ID and the value is the result information.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;10001&quot;: {&quot;Success&quot;: false, &quot;Message&quot;: &quot;The instance does not exist.&quot;}}</p>

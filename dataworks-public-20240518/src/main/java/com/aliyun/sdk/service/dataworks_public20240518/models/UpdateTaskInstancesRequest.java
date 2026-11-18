@@ -96,7 +96,7 @@ public class UpdateTaskInstancesRequest extends Request {
         }
 
         /**
-         * <p>The remarks.</p>
+         * <p>The comment.</p>
          * 
          * <strong>example:</strong>
          * <p>this is a comment</p>
@@ -108,7 +108,7 @@ public class UpdateTaskInstancesRequest extends Request {
         }
 
         /**
-         * <p>The list of node instances.</p>
+         * <p>The list of task instances.</p>
          */
         public Builder taskInstances(java.util.List<TaskInstances> taskInstances) {
             String taskInstancesShrink = shrink(taskInstances, "TaskInstances", "json");
@@ -261,7 +261,7 @@ public class UpdateTaskInstancesRequest extends Request {
             } 
 
             /**
-             * <p>The information about the associated data source.</p>
+             * <p>The associated data source information.</p>
              */
             public Builder dataSource(DataSource dataSource) {
                 this.dataSource = dataSource;
