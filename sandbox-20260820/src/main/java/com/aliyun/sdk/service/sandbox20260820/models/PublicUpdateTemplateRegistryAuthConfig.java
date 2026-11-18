@@ -70,7 +70,7 @@ public class PublicUpdateTemplateRegistryAuthConfig extends TeaModel {
          * <p>The repository password.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>Demo****Pass</p>
          */
         public Builder password(String password) {
             this.password = password;

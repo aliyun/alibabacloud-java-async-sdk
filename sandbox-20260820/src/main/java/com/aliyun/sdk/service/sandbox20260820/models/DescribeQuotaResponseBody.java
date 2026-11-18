@@ -117,7 +117,7 @@ public class DescribeQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message. The value is success for a successful request.</p>
+         * <p>The response message. A value of success indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -147,7 +147,7 @@ public class DescribeQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Team 当前配额用量。用量不可用时省略；成功查询且无占用时返回三项零值。</p>
+         * <p>The current quota usage of the team.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;cpuCores&quot;:1,&quot;memoryGB&quot;:1.5,&quot;instanceCount&quot;:1}</p>

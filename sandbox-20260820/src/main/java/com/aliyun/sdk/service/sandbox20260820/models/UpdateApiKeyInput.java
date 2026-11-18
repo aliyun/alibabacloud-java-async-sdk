@@ -32,12 +32,16 @@ public class UpdateApiKeyInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
+    @com.aliyun.core.annotation.NameInMap("vpcBindings")
+    private java.util.List<String> vpcBindings;
+
     private UpdateApiKeyInput(Builder builder) {
         this.apiKeyName = builder.apiKeyName;
         this.expireTime = builder.expireTime;
         this.ipBlacklist = builder.ipBlacklist;
         this.ipWhitelist = builder.ipWhitelist;
         this.status = builder.status;
+        this.vpcBindings = builder.vpcBindings;
     }
 
     public static Builder builder() {
@@ -87,12 +91,20 @@ public class UpdateApiKeyInput extends TeaModel {
         return this.status;
     }
 
+    /**
+     * @return vpcBindings
+     */
+    public java.util.List<String> getVpcBindings() {
+        return this.vpcBindings;
+    }
+
     public static final class Builder {
         private String apiKeyName; 
         private String expireTime; 
         private java.util.List<IPConfig> ipBlacklist; 
         private java.util.List<IPConfig> ipWhitelist; 
         private String status; 
+        private java.util.List<String> vpcBindings; 
 
         private Builder() {
         } 
@@ -103,10 +115,11 @@ public class UpdateApiKeyInput extends TeaModel {
             this.ipBlacklist = model.ipBlacklist;
             this.ipWhitelist = model.ipWhitelist;
             this.status = model.status;
+            this.vpcBindings = model.vpcBindings;
         } 
 
         /**
-         * <p>The new name of the API key. The name can be up to 128 characters in length and can contain letters, digits, spaces, hyphens (-), underscores (_), and periods (.).</p>
+         * <p>The new name of the API key. The name can be up to 128 characters in length and can contain only letters, digits, spaces, hyphens (-), underscores (_), and periods (.).</p>
          * 
          * <strong>example:</strong>
          * <p>ci-pipeline-key-v2</p>
@@ -117,7 +130,7 @@ public class UpdateApiKeyInput extends TeaModel {
         }
 
         /**
-         * <p>The expiration time of the API key, in UTC, in RFC 3339 format. Leave this parameter empty to indicate that the API key never expires.</p>
+         * <p>The expiration time of the API key in UTC. The time must be in RFC 3339 format. An empty value indicates that the API key never expires.</p>
          * 
          * <strong>example:</strong>
          * <p>2099-12-31T23:59:59Z</p>
@@ -128,7 +141,10 @@ public class UpdateApiKeyInput extends TeaModel {
         }
 
         /**
-         * <p>The IP blacklist. If specified, the existing blacklist is entirely overwritten. This parameter is mutually exclusive with ipWhitelist.</p>
+         * <p>The IP address blacklist. If you specify this parameter, the existing blacklist is completely overwritten. This parameter is mutually exclusive with ipWhitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;ipAddress&quot;:&quot;192.0.2.1&quot;,&quot;description&quot;:&quot;example client&quot;}]</p>
          */
         public Builder ipBlacklist(java.util.List<IPConfig> ipBlacklist) {
             this.ipBlacklist = ipBlacklist;
@@ -136,7 +152,10 @@ public class UpdateApiKeyInput extends TeaModel {
         }
 
         /**
-         * <p>The IP whitelist. If specified, the existing whitelist is entirely overwritten. This parameter is mutually exclusive with ipBlacklist.</p>
+         * <p>The IP address whitelist. If you specify this parameter, the existing whitelist is completely overwritten. This parameter is mutually exclusive with ipBlacklist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;ipAddress&quot;:&quot;192.0.2.1&quot;,&quot;description&quot;:&quot;example client&quot;}]</p>
          */
         public Builder ipWhitelist(java.util.List<IPConfig> ipWhitelist) {
             this.ipWhitelist = ipWhitelist;
@@ -155,6 +174,17 @@ public class UpdateApiKeyInput extends TeaModel {
          */
         public Builder status(String status) {
             this.status = status;
+            return this;
+        }
+
+        /**
+         * <p>The set of allowed source VPC IDs. This set is updated independently of the IP blacklists and whitelists. If you omit this parameter or set it to null, the original set is retained. A non-empty array completely replaces the original set. An explicit empty array [] purges the VPC restrictions. Updating only this parameter does not affect the IP address lists, and updating the IP address lists does not affect the VPC restrictions. An empty request body {} purges all IP address and VPC source restrictions. You can update this parameter along with other parameters such as the name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;vpc-examplea&quot;,&quot;vpc-exampleb&quot;]</p>
+         */
+        public Builder vpcBindings(java.util.List<String> vpcBindings) {
+            this.vpcBindings = vpcBindings;
             return this;
         }
 

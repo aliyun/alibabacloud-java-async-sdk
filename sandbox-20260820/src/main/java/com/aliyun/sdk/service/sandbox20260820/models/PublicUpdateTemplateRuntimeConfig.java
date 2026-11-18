@@ -35,6 +35,9 @@ public class PublicUpdateTemplateRuntimeConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("sandboxConfig")
     private PublicUpdateTemplateSandboxConfig sandboxConfig;
 
+    @com.aliyun.core.annotation.NameInMap("vpcBindings")
+    private java.util.List<String> vpcBindings;
+
     @com.aliyun.core.annotation.NameInMap("vpcConfig")
     private PublicUpdateTemplateVPCConfig vpcConfig;
 
@@ -45,6 +48,7 @@ public class PublicUpdateTemplateRuntimeConfig extends TeaModel {
         this.logConfig = builder.logConfig;
         this.memorySize = builder.memorySize;
         this.sandboxConfig = builder.sandboxConfig;
+        this.vpcBindings = builder.vpcBindings;
         this.vpcConfig = builder.vpcConfig;
     }
 
@@ -103,6 +107,13 @@ public class PublicUpdateTemplateRuntimeConfig extends TeaModel {
     }
 
     /**
+     * @return vpcBindings
+     */
+    public java.util.List<String> getVpcBindings() {
+        return this.vpcBindings;
+    }
+
+    /**
      * @return vpcConfig
      */
     public PublicUpdateTemplateVPCConfig getVpcConfig() {
@@ -116,6 +127,7 @@ public class PublicUpdateTemplateRuntimeConfig extends TeaModel {
         private PublicUpdateTemplateLogConfig logConfig; 
         private Integer memorySize; 
         private PublicUpdateTemplateSandboxConfig sandboxConfig; 
+        private java.util.List<String> vpcBindings; 
         private PublicUpdateTemplateVPCConfig vpcConfig; 
 
         private Builder() {
@@ -128,11 +140,12 @@ public class PublicUpdateTemplateRuntimeConfig extends TeaModel {
             this.logConfig = model.logConfig;
             this.memorySize = model.memorySize;
             this.sandboxConfig = model.sandboxConfig;
+            this.vpcBindings = model.vpcBindings;
             this.vpcConfig = model.vpcConfig;
         } 
 
         /**
-         * <p>The number of vCPUs.</p>
+         * <p>The number of vCPU cores.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -143,7 +156,7 @@ public class PublicUpdateTemplateRuntimeConfig extends TeaModel {
         }
 
         /**
-         * <p>The system cloud disk size, in MB.</p>
+         * <p>The system cloud disk size in MB.</p>
          * 
          * <strong>example:</strong>
          * <p>512</p>
@@ -170,7 +183,7 @@ public class PublicUpdateTemplateRuntimeConfig extends TeaModel {
         }
 
         /**
-         * <p>The memory size, in MB.</p>
+         * <p>The memory size in MB.</p>
          * 
          * <strong>example:</strong>
          * <p>2048</p>
@@ -185,6 +198,17 @@ public class PublicUpdateTemplateRuntimeConfig extends TeaModel {
          */
         public Builder sandboxConfig(PublicUpdateTemplateSandboxConfig sandboxConfig) {
             this.sandboxConfig = sandboxConfig;
+            return this;
+        }
+
+        /**
+         * <p>If omitted or set to null, the original list is retained. A non-empty array replaces the entire allowed set. An explicit empty array [] clears the inbound VPC restrictions for the new version. This field is independent of vpcConfig. An empty request body {}, an empty runtimeConfig, or a runtimeConfig that contains only vpcBindings: null returns a 400 error and does not clear the bindings. The actual JSON received by the server prevails. An empty array omitted by the SDK cannot clear the list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;vpc-examplea&quot;,&quot;vpc-exampleb&quot;]</p>
+         */
+        public Builder vpcBindings(java.util.List<String> vpcBindings) {
+            this.vpcBindings = vpcBindings;
             return this;
         }
 

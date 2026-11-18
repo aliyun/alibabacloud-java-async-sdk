@@ -85,7 +85,7 @@ public class UpdateApiKeyRequest extends Request {
         }
 
         /**
-         * <p>The request parameters for updating the API key.</p>
+         * <p>The request parameters for updating an API key.</p>
          */
         public Builder body(UpdateApiKeyInput body) {
             this.putBodyParameter("body", body);

@@ -53,6 +53,9 @@ public class GetTemplateResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("templateID")
     private String templateID;
 
+    @com.aliyun.core.annotation.NameInMap("templateType")
+    private String templateType;
+
     private GetTemplateResponseBody(Builder builder) {
         this.code = builder.code;
         this.createdTime = builder.createdTime;
@@ -66,6 +69,7 @@ public class GetTemplateResponseBody extends TeaModel {
         this.teamID = builder.teamID;
         this.teamName = builder.teamName;
         this.templateID = builder.templateID;
+        this.templateType = builder.templateType;
     }
 
     public static Builder builder() {
@@ -164,6 +168,13 @@ public class GetTemplateResponseBody extends TeaModel {
         return this.templateID;
     }
 
+    /**
+     * @return templateType
+     */
+    public String getTemplateType() {
+        return this.templateType;
+    }
+
     public static final class Builder {
         private String code; 
         private String createdTime; 
@@ -177,6 +188,7 @@ public class GetTemplateResponseBody extends TeaModel {
         private String teamID; 
         private String teamName; 
         private String templateID; 
+        private String templateType; 
 
         private Builder() {
         } 
@@ -194,6 +206,7 @@ public class GetTemplateResponseBody extends TeaModel {
             this.teamID = model.teamID;
             this.teamName = model.teamName;
             this.templateID = model.templateID;
+            this.templateType = model.templateType;
         } 
 
         /**
@@ -230,7 +243,7 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the template.</p>
+         * <p>The template name.</p>
          * 
          * <strong>example:</strong>
          * <p>my-template</p>
@@ -279,7 +292,7 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the template.</p>
+         * <p>The template status.</p>
          */
         public Builder status(PublicTemplateStatus status) {
             this.status = status;
@@ -298,7 +311,7 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the team.</p>
+         * <p>The team name.</p>
          * 
          * <strong>example:</strong>
          * <p>my-team</p>
@@ -316,6 +329,17 @@ public class GetTemplateResponseBody extends TeaModel {
          */
         public Builder templateID(String templateID) {
             this.templateID = templateID;
+            return this;
+        }
+
+        /**
+         * <p>The templatetype. The default value is runtime template if it is not returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>layer</p>
+         */
+        public Builder templateType(String templateType) {
+            this.templateType = templateType;
             return this;
         }
 
@@ -378,7 +402,7 @@ public class GetTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The key of the tag.</p>
+             * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
              * <p>project</p>
@@ -389,7 +413,7 @@ public class GetTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the tag.</p>
+             * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
              * <p>demo</p>

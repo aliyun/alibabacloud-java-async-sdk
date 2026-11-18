@@ -139,7 +139,7 @@ public class ListTeamsRequest extends Request {
         }
 
         /**
-         * <p>Filters teams by plan specification. Valid values: eco (Economy), std (Standard), pro (Professional), and ent (Enterprise).</p>
+         * <p>Filters teams by plan specifications. Valid values: eco (Economy), std (Standard), pro (Professional), and ent (Enterprise).</p>
          * 
          * <strong>example:</strong>
          * <p>pro</p>

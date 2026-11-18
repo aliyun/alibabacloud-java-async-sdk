@@ -80,7 +80,7 @@ public class DeleteVolumeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code. 200 indicates success.</p>
+         * <p>The response code. The value is 200 if the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -91,7 +91,7 @@ public class DeleteVolumeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message. success indicates a successful request.</p>
+         * <p>The response message. The value is success if the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>

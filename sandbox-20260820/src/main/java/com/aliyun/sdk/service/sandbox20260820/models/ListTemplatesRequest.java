@@ -26,6 +26,10 @@ public class ListTemplatesRequest extends Request {
     private String nextToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("resourceTags")
+    private java.util.List<ResourceTags> resourceTags;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("teamID")
     private String teamID;
 
@@ -33,6 +37,7 @@ public class ListTemplatesRequest extends Request {
         super(builder);
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
+        this.resourceTags = builder.resourceTags;
         this.teamID = builder.teamID;
     }
 
@@ -64,6 +69,13 @@ public class ListTemplatesRequest extends Request {
     }
 
     /**
+     * @return resourceTags
+     */
+    public java.util.List<ResourceTags> getResourceTags() {
+        return this.resourceTags;
+    }
+
+    /**
      * @return teamID
      */
     public String getTeamID() {
@@ -73,6 +85,7 @@ public class ListTemplatesRequest extends Request {
     public static final class Builder extends Request.Builder<ListTemplatesRequest, Builder> {
         private Integer maxResults; 
         private String nextToken; 
+        private java.util.List<ResourceTags> resourceTags; 
         private String teamID; 
 
         private Builder() {
@@ -83,6 +96,7 @@ public class ListTemplatesRequest extends Request {
             super(request);
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
+            this.resourceTags = request.resourceTags;
             this.teamID = request.teamID;
         } 
 
@@ -99,7 +113,7 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The pagination token. Set this parameter to the nextToken value returned in the response of the previous request.</p>
+         * <p>The pagination token. Use the nextToken value returned in the previous response.</p>
          * 
          * <strong>example:</strong>
          * <p>cae5f900-8b1d-4c0e-9c2a-1a2b3c4d5e6f</p>
@@ -107,6 +121,16 @@ public class ListTemplatesRequest extends Request {
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
             this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * <p>The resource tags.</p>
+         */
+        public Builder resourceTags(java.util.List<ResourceTags> resourceTags) {
+            String resourceTagsShrink = shrink(resourceTags, "resourceTags", "json");
+            this.putQueryParameter("resourceTags", resourceTagsShrink);
+            this.resourceTags = resourceTags;
             return this;
         }
 
@@ -129,4 +153,85 @@ public class ListTemplatesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListTemplatesRequest} extends {@link TeaModel}
+     *
+     * <p>ListTemplatesRequest</p>
+     */
+    public static class ResourceTags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("value")
+        private String value;
+
+        private ResourceTags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResourceTags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceTags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>project</p>
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public ResourceTags build() {
+                return new ResourceTags(this);
+            } 
+
+        } 
+
+    }
 }

@@ -167,7 +167,7 @@ public class ListApiKeysRequest extends Request {
         }
 
         /**
-         * <p>The number of API keys to return on each page. Default value: 10. Valid values: 1 to 100.</p>
+         * <p>The number of API keys to return per page. Default value: 10. Valid values: 1 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -191,7 +191,11 @@ public class ListApiKeysRequest extends Request {
         }
 
         /**
-         * <p>Filters API keys by status. Valid values: active (enabled), inactive (disabled).</p>
+         * <p>Filters API keys by status. Valid values:</p>
+         * <ul>
+         * <li>active: Enabled.</li>
+         * <li>inactive: Disabled.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Success</p>

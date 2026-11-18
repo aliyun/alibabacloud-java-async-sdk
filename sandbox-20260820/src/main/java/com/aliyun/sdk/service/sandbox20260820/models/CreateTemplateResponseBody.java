@@ -126,7 +126,7 @@ public class CreateTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique identifier of the created template.</p>
+         * <p>The unique ID of the created template.</p>
          * 
          * <strong>example:</strong>
          * <p>us7dxqaezw5uu7aa2cm5</p>

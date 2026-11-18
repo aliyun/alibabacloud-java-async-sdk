@@ -44,6 +44,9 @@ public class PublicTemplate extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("templateID")
     private String templateID;
 
+    @com.aliyun.core.annotation.NameInMap("templateType")
+    private String templateType;
+
     private PublicTemplate(Builder builder) {
         this.createdTime = builder.createdTime;
         this.name = builder.name;
@@ -54,6 +57,7 @@ public class PublicTemplate extends TeaModel {
         this.teamID = builder.teamID;
         this.teamName = builder.teamName;
         this.templateID = builder.templateID;
+        this.templateType = builder.templateType;
     }
 
     public static Builder builder() {
@@ -131,6 +135,13 @@ public class PublicTemplate extends TeaModel {
         return this.templateID;
     }
 
+    /**
+     * @return templateType
+     */
+    public String getTemplateType() {
+        return this.templateType;
+    }
+
     public static final class Builder {
         private String createdTime; 
         private String name; 
@@ -141,6 +152,7 @@ public class PublicTemplate extends TeaModel {
         private String teamID; 
         private String teamName; 
         private String templateID; 
+        private String templateType; 
 
         private Builder() {
         } 
@@ -155,6 +167,7 @@ public class PublicTemplate extends TeaModel {
             this.teamID = model.teamID;
             this.teamName = model.teamName;
             this.templateID = model.templateID;
+            this.templateType = model.templateType;
         } 
 
         /**
@@ -169,7 +182,7 @@ public class PublicTemplate extends TeaModel {
         }
 
         /**
-         * <p>The name of the template, which is unique within a team.</p>
+         * <p>The template name, which is unique within a team.</p>
          * 
          * <strong>example:</strong>
          * <p>python-data-analysis</p>
@@ -199,7 +212,7 @@ public class PublicTemplate extends TeaModel {
         }
 
         /**
-         * <p>The runtime configuration of the template, which determines the specifications and environment of the sandbox instances created from the template.</p>
+         * <p>The runtime configuration of the template, which determines the specifications and environment of sandbox instances created from this template.</p>
          */
         public Builder runtimeConfig(PublicTemplateRuntimeConfig runtimeConfig) {
             this.runtimeConfig = runtimeConfig;
@@ -226,7 +239,7 @@ public class PublicTemplate extends TeaModel {
         }
 
         /**
-         * <p>The name of the team.</p>
+         * <p>The team name.</p>
          * 
          * <strong>example:</strong>
          * <p>sandbox-dev</p>
@@ -237,13 +250,24 @@ public class PublicTemplate extends TeaModel {
         }
 
         /**
-         * <p>The ID of the sandbox template.</p>
+         * <p>The sandbox template ID.</p>
          * 
          * <strong>example:</strong>
          * <p>tm-8f3a2c7b5e14d806</p>
          */
         public Builder templateID(String templateID) {
             this.templateID = templateID;
+            return this;
+        }
+
+        /**
+         * <p>The templatetype. An empty value indicates a runtime template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>layer</p>
+         */
+        public Builder templateType(String templateType) {
+            this.templateType = templateType;
             return this;
         }
 

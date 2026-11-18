@@ -1,0 +1,190 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.sandbox20260820.models;
+
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link ListWarmPoolsResponseBody} extends {@link TeaModel}
+ *
+ * <p>ListWarmPoolsResponseBody</p>
+ */
+public class ListWarmPoolsResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("code")
+    private String code;
+
+    @com.aliyun.core.annotation.NameInMap("maxResults")
+    private Integer maxResults;
+
+    @com.aliyun.core.annotation.NameInMap("message")
+    private String message;
+
+    @com.aliyun.core.annotation.NameInMap("nextToken")
+    private String nextToken;
+
+    @com.aliyun.core.annotation.NameInMap("requestId")
+    private String requestId;
+
+    @com.aliyun.core.annotation.NameInMap("warmPools")
+    private java.util.List<PublicWarmPoolConfig> warmPools;
+
+    private ListWarmPoolsResponseBody(Builder builder) {
+        this.code = builder.code;
+        this.maxResults = builder.maxResults;
+        this.message = builder.message;
+        this.nextToken = builder.nextToken;
+        this.requestId = builder.requestId;
+        this.warmPools = builder.warmPools;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static ListWarmPoolsResponseBody create() {
+        return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return code
+     */
+    public String getCode() {
+        return this.code;
+    }
+
+    /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
+     * @return warmPools
+     */
+    public java.util.List<PublicWarmPoolConfig> getWarmPools() {
+        return this.warmPools;
+    }
+
+    public static final class Builder {
+        private String code; 
+        private Integer maxResults; 
+        private String message; 
+        private String nextToken; 
+        private String requestId; 
+        private java.util.List<PublicWarmPoolConfig> warmPools; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListWarmPoolsResponseBody model) {
+            this.code = model.code;
+            this.maxResults = model.maxResults;
+            this.message = model.message;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.warmPools = model.warmPools;
+        } 
+
+        /**
+         * <p>The business code in the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
+        public Builder code(String code) {
+            this.code = code;
+            return this;
+        }
+
+        /**
+         * <p>The actual maximum number of results returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
+         */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
+
+        /**
+         * <p>The pagination token. An empty value indicates that no more results are available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-token</p>
+         */
+        public Builder nextToken(String nextToken) {
+            this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>01234567-89AB-CDEF-0123-456789ABCDEF</p>
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * <p>The list of warm pools.</p>
+         */
+        public Builder warmPools(java.util.List<PublicWarmPoolConfig> warmPools) {
+            this.warmPools = warmPools;
+            return this;
+        }
+
+        public ListWarmPoolsResponseBody build() {
+            return new ListWarmPoolsResponseBody(this);
+        } 
+
+    } 
+
+}

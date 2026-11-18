@@ -141,7 +141,7 @@ public class ListVolumesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message. A value of success indicates that the request was successful.</p>
+         * <p>The response message. The value is success if the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>

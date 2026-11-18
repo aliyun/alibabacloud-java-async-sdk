@@ -68,6 +68,9 @@ public class ApiKey extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("username")
     private String username;
 
+    @com.aliyun.core.annotation.NameInMap("vpcBindings")
+    private java.util.List<String> vpcBindings;
+
     private ApiKey(Builder builder) {
         this.apiKeyID = builder.apiKeyID;
         this.apiKeyMask = builder.apiKeyMask;
@@ -86,6 +89,7 @@ public class ApiKey extends TeaModel {
         this.teamPlan = builder.teamPlan;
         this.userID = builder.userID;
         this.username = builder.username;
+        this.vpcBindings = builder.vpcBindings;
     }
 
     public static Builder builder() {
@@ -219,6 +223,13 @@ public class ApiKey extends TeaModel {
         return this.username;
     }
 
+    /**
+     * @return vpcBindings
+     */
+    public java.util.List<String> getVpcBindings() {
+        return this.vpcBindings;
+    }
+
     public static final class Builder {
         private String apiKeyID; 
         private String apiKeyMask; 
@@ -237,6 +248,7 @@ public class ApiKey extends TeaModel {
         private String teamPlan; 
         private String userID; 
         private String username; 
+        private java.util.List<String> vpcBindings; 
 
         private Builder() {
         } 
@@ -259,6 +271,7 @@ public class ApiKey extends TeaModel {
             this.teamPlan = model.teamPlan;
             this.userID = model.userID;
             this.username = model.username;
+            this.vpcBindings = model.vpcBindings;
         } 
 
         /**
@@ -273,7 +286,7 @@ public class ApiKey extends TeaModel {
         }
 
         /**
-         * <p>The masked value of the API key. The prefix and the first and last four characters are retained, and the middle portion is replaced with four asterisks. This value is used for secure display in the user interface.</p>
+         * <p>The masked value of the API key. It retains the prefix and the first and last four characters, and replaces the middle characters with four asterisks for secure display in the user interface.</p>
          * 
          * <strong>example:</strong>
          * <p>e2b_3f9a****b915</p>
@@ -284,7 +297,7 @@ public class ApiKey extends TeaModel {
         }
 
         /**
-         * <p>The name of the API key. The name can be up to 128 characters in length and can contain letters, digits, spaces, hyphens (-), underscores (_), and periods (.).</p>
+         * <p>The name of the API key. The name can be up to 128 characters in length and can contain only letters, digits, spaces, hyphens (-), underscores (_), and half-width periods (.).</p>
          * 
          * <strong>example:</strong>
          * <p>ci-pipeline-key</p>
@@ -295,7 +308,7 @@ public class ApiKey extends TeaModel {
         }
 
         /**
-         * <p>The plaintext value of the API key, prefixed with e2b_. This value is returned only in responses from the create, import, and reset operations. Other operations do not return this value.</p>
+         * <p>The plaintext value of the API key, which starts with e2b_. This value is returned only in the responses of the create, import, and reset operations, and is not returned by other operations.</p>
          * 
          * <strong>example:</strong>
          * <p>e2b_****</p>
@@ -306,7 +319,7 @@ public class ApiKey extends TeaModel {
         }
 
         /**
-         * <p>The time when the API key was created, in UTC and RFC 3339 format.</p>
+         * <p>The creation time of the API key, in UTC and RFC 3339 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-20T08:30:00Z</p>
@@ -317,7 +330,7 @@ public class ApiKey extends TeaModel {
         }
 
         /**
-         * <p>The time when the API key expires, in UTC and RFC 3339 format. An empty value indicates that the API key never expires.</p>
+         * <p>The expiration time of the API key, in UTC and RFC 3339 format. An empty value indicates that the API key never expires.</p>
          * 
          * <strong>example:</strong>
          * <p>2099-12-31T23:59:59Z</p>
@@ -328,7 +341,7 @@ public class ApiKey extends TeaModel {
         }
 
         /**
-         * <p>The IP blacklist. After configuration, IP addresses in the list cannot use this API key. This parameter is mutually exclusive with ipWhitelist.</p>
+         * <p>The IP address blacklist. After configuration, the IP addresses in the list cannot use the API key. This parameter is mutually exclusive with ipWhitelist.</p>
          */
         public Builder ipBlacklist(java.util.List<IPConfig> ipBlacklist) {
             this.ipBlacklist = ipBlacklist;
@@ -336,7 +349,7 @@ public class ApiKey extends TeaModel {
         }
 
         /**
-         * <p>The IP address whitelist. After configuration, only IP addresses in the list can use this API key. This parameter is mutually exclusive with ipBlacklist.</p>
+         * <p>The IP address whitelist. After configuration, only the IP addresses in the list can use the API key. This parameter is mutually exclusive with ipBlacklist.</p>
          */
         public Builder ipWhitelist(java.util.List<IPConfig> ipWhitelist) {
             this.ipWhitelist = ipWhitelist;
@@ -344,7 +357,7 @@ public class ApiKey extends TeaModel {
         }
 
         /**
-         * <p>The time when the API key was last used, in UTC and RFC 3339 format. An empty value indicates that the API key has never been used.</p>
+         * <p>The time when the API key was last used, in UTC and RFC 3339 format. This value is empty if the API key has never been used.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-09-10T14:22:07Z</p>
@@ -355,7 +368,7 @@ public class ApiKey extends TeaModel {
         }
 
         /**
-         * <p>The Alibaba Cloud resource group ID to which the team belongs.</p>
+         * <p>The ID of the Alibaba Cloud resource group to which the team belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-****</p>
@@ -366,11 +379,7 @@ public class ApiKey extends TeaModel {
         }
 
         /**
-         * <p>The source of the API key. Valid values:</p>
-         * <ul>
-         * <li>generated: The API key is generated by the service.</li>
-         * <li>custom: The API key is imported by the user.</li>
-         * </ul>
+         * <p>The source of the API key. Valid values: generated (generated by the service) and custom (imported by the user).</p>
          * 
          * <strong>example:</strong>
          * <p>generated</p>
@@ -381,11 +390,7 @@ public class ApiKey extends TeaModel {
         }
 
         /**
-         * <p>The status of the API key. Valid values:</p>
-         * <ul>
-         * <li>active: The API key is enabled.</li>
-         * <li>inactive: The API key is disabled. A disabled API key cannot be used to access sandbox services.</li>
-         * </ul>
+         * <p>The status of the API key. Valid values: active (enabled) and inactive (disabled). A disabled API key can no longer be used to access the sandbox service.</p>
          * 
          * <strong>example:</strong>
          * <p>active</p>
@@ -407,7 +412,7 @@ public class ApiKey extends TeaModel {
         }
 
         /**
-         * <p>The team name.</p>
+         * <p>The name of the team.</p>
          * 
          * <strong>example:</strong>
          * <p>sandbox-dev</p>
@@ -418,13 +423,7 @@ public class ApiKey extends TeaModel {
         }
 
         /**
-         * <p>The team plan. Valid values:</p>
-         * <ul>
-         * <li>eco: economy</li>
-         * <li>std: standard</li>
-         * <li>pro: professional</li>
-         * <li>ent: enterprise</li>
-         * </ul>
+         * <p>The team plan edition. Valid values: eco (Economy), std (Standard), pro (Professional), and ent (Enterprise).</p>
          * 
          * <strong>example:</strong>
          * <p>std</p>
@@ -453,6 +452,17 @@ public class ApiKey extends TeaModel {
          */
         public Builder username(String username) {
             this.username = username;
+            return this;
+        }
+
+        /**
+         * <p>The set of source VPC IDs allowed for this API key. An omitted or empty array indicates that no VPC source restrictions are configured. If the array is not empty, requests must meet both this VPC restriction and the configured IP source policies. This list is retained when credentials are rotated by calling ResetApiKey.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;vpc-examplea&quot;,&quot;vpc-exampleb&quot;]</p>
+         */
+        public Builder vpcBindings(java.util.List<String> vpcBindings) {
+            this.vpcBindings = vpcBindings;
             return this;
         }
 

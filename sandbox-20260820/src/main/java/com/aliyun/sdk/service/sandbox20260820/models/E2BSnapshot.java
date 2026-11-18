@@ -35,6 +35,9 @@ public class E2BSnapshot extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("resourceGroupID")
     private String resourceGroupID;
 
+    @com.aliyun.core.annotation.NameInMap("resourceTags")
+    private java.util.List<ResourceTags> resourceTags;
+
     @com.aliyun.core.annotation.NameInMap("snapshotID")
     private String snapshotID;
 
@@ -63,6 +66,7 @@ public class E2BSnapshot extends TeaModel {
         this.memoryMB = builder.memoryMB;
         this.name = builder.name;
         this.resourceGroupID = builder.resourceGroupID;
+        this.resourceTags = builder.resourceTags;
         this.snapshotID = builder.snapshotID;
         this.sourceSandboxID = builder.sourceSandboxID;
         this.status = builder.status;
@@ -127,6 +131,13 @@ public class E2BSnapshot extends TeaModel {
     }
 
     /**
+     * @return resourceTags
+     */
+    public java.util.List<ResourceTags> getResourceTags() {
+        return this.resourceTags;
+    }
+
+    /**
      * @return snapshotID
      */
     public String getSnapshotID() {
@@ -182,6 +193,7 @@ public class E2BSnapshot extends TeaModel {
         private Integer memoryMB; 
         private String name; 
         private String resourceGroupID; 
+        private java.util.List<ResourceTags> resourceTags; 
         private String snapshotID; 
         private String sourceSandboxID; 
         private String status; 
@@ -200,6 +212,7 @@ public class E2BSnapshot extends TeaModel {
             this.memoryMB = model.memoryMB;
             this.name = model.name;
             this.resourceGroupID = model.resourceGroupID;
+            this.resourceTags = model.resourceTags;
             this.snapshotID = model.snapshotID;
             this.sourceSandboxID = model.sourceSandboxID;
             this.status = model.status;
@@ -272,6 +285,14 @@ public class E2BSnapshot extends TeaModel {
          */
         public Builder resourceGroupID(String resourceGroupID) {
             this.resourceGroupID = resourceGroupID;
+            return this;
+        }
+
+        /**
+         * <p>The resource tags.</p>
+         */
+        public Builder resourceTags(java.util.List<ResourceTags> resourceTags) {
+            this.resourceTags = resourceTags;
             return this;
         }
 
@@ -358,4 +379,85 @@ public class E2BSnapshot extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link E2BSnapshot} extends {@link TeaModel}
+     *
+     * <p>E2BSnapshot</p>
+     */
+    public static class ResourceTags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("tagKey")
+        private String tagKey;
+
+        @com.aliyun.core.annotation.NameInMap("tagValue")
+        private String tagValue;
+
+        private ResourceTags(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResourceTags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceTags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
+            /**
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>project</p>
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo</p>
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public ResourceTags build() {
+                return new ResourceTags(this);
+            } 
+
+        } 
+
+    }
 }

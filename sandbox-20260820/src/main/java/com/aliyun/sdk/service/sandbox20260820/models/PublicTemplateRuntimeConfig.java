@@ -35,6 +35,9 @@ public class PublicTemplateRuntimeConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("sandboxConfig")
     private PublicTemplateSandboxConfig sandboxConfig;
 
+    @com.aliyun.core.annotation.NameInMap("vpcBindings")
+    private java.util.List<String> vpcBindings;
+
     @com.aliyun.core.annotation.NameInMap("vpcConfig")
     private PublicTemplateVPCConfig vpcConfig;
 
@@ -45,6 +48,7 @@ public class PublicTemplateRuntimeConfig extends TeaModel {
         this.logConfig = builder.logConfig;
         this.memorySize = builder.memorySize;
         this.sandboxConfig = builder.sandboxConfig;
+        this.vpcBindings = builder.vpcBindings;
         this.vpcConfig = builder.vpcConfig;
     }
 
@@ -103,6 +107,13 @@ public class PublicTemplateRuntimeConfig extends TeaModel {
     }
 
     /**
+     * @return vpcBindings
+     */
+    public java.util.List<String> getVpcBindings() {
+        return this.vpcBindings;
+    }
+
+    /**
      * @return vpcConfig
      */
     public PublicTemplateVPCConfig getVpcConfig() {
@@ -116,6 +127,7 @@ public class PublicTemplateRuntimeConfig extends TeaModel {
         private PublicTemplateLogConfig logConfig; 
         private Integer memorySize; 
         private PublicTemplateSandboxConfig sandboxConfig; 
+        private java.util.List<String> vpcBindings; 
         private PublicTemplateVPCConfig vpcConfig; 
 
         private Builder() {
@@ -128,11 +140,12 @@ public class PublicTemplateRuntimeConfig extends TeaModel {
             this.logConfig = model.logConfig;
             this.memorySize = model.memorySize;
             this.sandboxConfig = model.sandboxConfig;
+            this.vpcBindings = model.vpcBindings;
             this.vpcConfig = model.vpcConfig;
         } 
 
         /**
-         * <p>The CPU specification of the sandbox instance, in cores.</p>
+         * <p>The CPU specifications of the sandbox instance, in cores.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -143,7 +156,7 @@ public class PublicTemplateRuntimeConfig extends TeaModel {
         }
 
         /**
-         * <p>The disk specification of the sandbox instance, in MB.</p>
+         * <p>The disk specifications of the sandbox instance, in MB.</p>
          * 
          * <strong>example:</strong>
          * <p>10240</p>
@@ -170,7 +183,7 @@ public class PublicTemplateRuntimeConfig extends TeaModel {
         }
 
         /**
-         * <p>The memory specification of the sandbox instance, in MB.</p>
+         * <p>The memory specifications of the sandbox instance, in MB.</p>
          * 
          * <strong>example:</strong>
          * <p>2048</p>
@@ -185,6 +198,17 @@ public class PublicTemplateRuntimeConfig extends TeaModel {
          */
         public Builder sandboxConfig(PublicTemplateSandboxConfig sandboxConfig) {
             this.sandboxConfig = sandboxConfig;
+            return this;
+        }
+
+        /**
+         * <p>The collection of inbound source VPCs allowed by the current template configuration. Omitting this field or providing an empty array indicates that no inbound VPC bindings are configured. This configuration is independent of the egress network vpcConfig. Subsequent template updates do not change the inbound VPC bindings of existing sandbox instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;vpc-examplea&quot;,&quot;vpc-exampleb&quot;]</p>
+         */
+        public Builder vpcBindings(java.util.List<String> vpcBindings) {
+            this.vpcBindings = vpcBindings;
             return this;
         }
 

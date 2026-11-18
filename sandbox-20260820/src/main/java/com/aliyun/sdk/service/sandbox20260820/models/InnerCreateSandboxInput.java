@@ -35,6 +35,9 @@ public class InnerCreateSandboxInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("network")
     private E2BNetwork network;
 
+    @com.aliyun.core.annotation.NameInMap("resourceTags")
+    private java.util.List<ResourceTags> resourceTags;
+
     @com.aliyun.core.annotation.NameInMap("runtime")
     private InnerSandboxRuntimeConfig runtime;
 
@@ -66,6 +69,7 @@ public class InnerCreateSandboxInput extends TeaModel {
         this.envVars = builder.envVars;
         this.metadata = builder.metadata;
         this.network = builder.network;
+        this.resourceTags = builder.resourceTags;
         this.runtime = builder.runtime;
         this.secure = builder.secure;
         this.snapshotID = builder.snapshotID;
@@ -131,6 +135,13 @@ public class InnerCreateSandboxInput extends TeaModel {
     }
 
     /**
+     * @return resourceTags
+     */
+    public java.util.List<ResourceTags> getResourceTags() {
+        return this.resourceTags;
+    }
+
+    /**
      * @return runtime
      */
     public InnerSandboxRuntimeConfig getRuntime() {
@@ -193,6 +204,7 @@ public class InnerCreateSandboxInput extends TeaModel {
         private java.util.Map<String, String> envVars; 
         private java.util.Map<String, String> metadata; 
         private E2BNetwork network; 
+        private java.util.List<ResourceTags> resourceTags; 
         private InnerSandboxRuntimeConfig runtime; 
         private Boolean secure; 
         private String snapshotID; 
@@ -212,6 +224,7 @@ public class InnerCreateSandboxInput extends TeaModel {
             this.envVars = model.envVars;
             this.metadata = model.metadata;
             this.network = model.network;
+            this.resourceTags = model.resourceTags;
             this.runtime = model.runtime;
             this.secure = model.secure;
             this.snapshotID = model.snapshotID;
@@ -257,6 +270,9 @@ public class InnerCreateSandboxInput extends TeaModel {
 
         /**
          * <p>The environment variable configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;APP_MODE&quot;:&quot;demo&quot;}</p>
          */
         public Builder envVars(java.util.Map<String, String> envVars) {
             this.envVars = envVars;
@@ -276,6 +292,14 @@ public class InnerCreateSandboxInput extends TeaModel {
          */
         public Builder network(E2BNetwork network) {
             this.network = network;
+            return this;
+        }
+
+        /**
+         * <p>The resource tags.</p>
+         */
+        public Builder resourceTags(java.util.List<ResourceTags> resourceTags) {
+            this.resourceTags = resourceTags;
             return this;
         }
 
@@ -343,7 +367,7 @@ public class InnerCreateSandboxInput extends TeaModel {
         }
 
         /**
-         * <p>The timeout period, in seconds.</p>
+         * <p>The timeout period in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>180</p>
@@ -367,4 +391,85 @@ public class InnerCreateSandboxInput extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link InnerCreateSandboxInput} extends {@link TeaModel}
+     *
+     * <p>InnerCreateSandboxInput</p>
+     */
+    public static class ResourceTags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("value")
+        private String value;
+
+        private ResourceTags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResourceTags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceTags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>project</p>
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public ResourceTags build() {
+                return new ResourceTags(this);
+            } 
+
+        } 
+
+    }
 }
