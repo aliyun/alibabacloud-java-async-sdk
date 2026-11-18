@@ -231,7 +231,10 @@ public class CreateExecutorGroupRequest extends Request {
         } 
 
         /**
-         * ApiKey.
+         * <p>The client secret.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HfGUG/Qf8qRCCWlv5RT6WA==</p>
          */
         public Builder apiKey(String apiKey) {
             this.putBodyParameter("ApiKey", apiKey);
@@ -240,7 +243,10 @@ public class CreateExecutorGroupRequest extends Request {
         }
 
         /**
-         * AuthType.
+         * <p>The authentication type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api_key</p>
          */
         public Builder authType(String authType) {
             this.putBodyParameter("AuthType", authType);
@@ -249,7 +255,7 @@ public class CreateExecutorGroupRequest extends Request {
         }
 
         /**
-         * AutoScale.
+         * <p>The auto scaling configuration.</p>
          */
         public Builder autoScale(Boolean autoScale) {
             this.putBodyParameter("AutoScale", autoScale);
@@ -258,6 +264,7 @@ public class CreateExecutorGroupRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -270,7 +277,7 @@ public class CreateExecutorGroupRequest extends Request {
         }
 
         /**
-         * CmsWorkspaceId.
+         * <p>The CloudMonitor Service (CMS) workspace ID.</p>
          */
         public Builder cmsWorkspaceId(String cmsWorkspaceId) {
             this.putBodyParameter("CmsWorkspaceId", cmsWorkspaceId);
@@ -279,7 +286,10 @@ public class CreateExecutorGroupRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the worker group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>group1</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -288,7 +298,10 @@ public class CreateExecutorGroupRequest extends Request {
         }
 
         /**
-         * IntegrationType.
+         * <p>The integration method of the executor. Valid values: manual (indicates manual entry) and acs (indicates ACS integration).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>manual</p>
          */
         public Builder integrationType(String integrationType) {
             this.putBodyParameter("IntegrationType", integrationType);
@@ -297,6 +310,7 @@ public class CreateExecutorGroupRequest extends Request {
         }
 
         /**
+         * <p>The name of the worker group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -309,7 +323,10 @@ public class CreateExecutorGroupRequest extends Request {
         }
 
         /**
-         * Network.
+         * <p>The network type. Valid values: public and private.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>public</p>
          */
         public Builder network(String network) {
             this.putBodyParameter("Network", network);
@@ -318,7 +335,21 @@ public class CreateExecutorGroupRequest extends Request {
         }
 
         /**
-         * Protocol.
+         * <p>The backend protocol. Valid values:</p>
+         * <ul>
+         * <li><p><strong>HTTP</strong> (default): Supports association with HTTPS, HTTP, and QUIC listeners.</p>
+         * </li>
+         * <li><p><strong>HTTPS</strong>: Supports association with HTTPS listeners.</p>
+         * </li>
+         * <li><p><strong>gRPC</strong>: Supports association with HTTPS and QUIC listeners.</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>If <strong>ServerGroupType</strong> is set to <strong>Fc</strong>, you do not need to configure the backend protocol.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTPS</p>
          */
         public Builder protocol(String protocol) {
             this.putBodyParameter("Protocol", protocol);
@@ -327,6 +358,7 @@ public class CreateExecutorGroupRequest extends Request {
         }
 
         /**
+         * <p>The worker type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -339,6 +371,7 @@ public class CreateExecutorGroupRequest extends Request {
         }
 
         /**
+         * <p>The list of workers in JSON format.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -351,7 +384,10 @@ public class CreateExecutorGroupRequest extends Request {
         }
 
         /**
-         * XAttrs.
+         * <p>The extended configuration of the executor group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Not publicly available</p>
          */
         public Builder xAttrs(String xAttrs) {
             this.putBodyParameter("XAttrs", xAttrs);

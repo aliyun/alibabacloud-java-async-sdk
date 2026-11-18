@@ -139,7 +139,7 @@ public class OperateUnholdWorkflowExecutionRequest extends Request {
         }
 
         /**
-         * <p>The workflow execution ID.</p>
+         * <p>The workflow instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

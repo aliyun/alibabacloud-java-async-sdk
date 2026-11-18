@@ -119,7 +119,7 @@ public class ListRegionZoneResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Response code.</p>
+         * <p>The response code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -130,9 +130,7 @@ public class ListRegionZoneResponseBody extends TeaModel {
         }
 
         /**
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>The response data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -140,7 +138,7 @@ public class ListRegionZoneResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error code.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>IllegalRequest</p>
@@ -151,7 +149,7 @@ public class ListRegionZoneResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error message.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>Parameter check error</p>
@@ -162,7 +160,7 @@ public class ListRegionZoneResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request UUID.</p>
+         * <p>The unique ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>438737AC-760A-57D9-B646-B7EF79426243</p>
@@ -173,10 +171,10 @@ public class ListRegionZoneResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the invocation succeeded.</p>
+         * <p>Indicates whether the call is successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The invocation succeeded.</li>
-         * <li><strong>false</strong>: Failed to invoke.</li>
+         * <li><strong>true</strong>: The call is successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -246,7 +244,7 @@ public class ListRegionZoneResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Local name.</p>
+             * <p>The local name.</p>
              * 
              * <strong>example:</strong>
              * <p>E</p>
@@ -257,7 +255,7 @@ public class ListRegionZoneResponseBody extends TeaModel {
             }
 
             /**
-             * <p>zone id</p>
+             * <p>The zone ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-beijing-j</p>

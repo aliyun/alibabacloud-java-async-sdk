@@ -140,6 +140,9 @@ public class ListAppsRequest extends Request {
 
         /**
          * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-app</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -150,6 +153,9 @@ public class ListAppsRequest extends Request {
         /**
          * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxljob-b6ec1xxxx</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -173,7 +179,7 @@ public class ListAppsRequest extends Request {
          * <p>The page size.</p>
          * 
          * <strong>example:</strong>
-         * <p>20</p>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -183,6 +189,9 @@ public class ListAppsRequest extends Request {
 
         /**
          * <p>The title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test application</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);

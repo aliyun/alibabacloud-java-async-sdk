@@ -154,7 +154,7 @@ public class ListWorkflowVersionsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,7 +167,7 @@ public class ListWorkflowVersionsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of results to return. The default value is 10.</p>
+         * <p>The maximum number of results to return for this request. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -179,7 +179,7 @@ public class ListWorkflowVersionsRequest extends Request {
         }
 
         /**
-         * <p>The token to retrieve the next page of results. Omit this parameter for the first request.</p>
+         * <p>The pagination token that indicates the position from which the current call returns results. An empty value indicates that all data has been retrieved. You do not need to specify this parameter for the first request.</p>
          * 
          * <strong>example:</strong>
          * <p>eCKqVlS5FKF5EWGGOo8EgQ==</p>

@@ -110,7 +110,10 @@ public class ListContactsRequest extends Request {
         }
 
         /**
-         * ContactName.
+         * <p>The name of the alert contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Tom</p>
          */
         public Builder contactName(String contactName) {
             this.putQueryParameter("ContactName", contactName);
@@ -119,7 +122,7 @@ public class ListContactsRequest extends Request {
         }
 
         /**
-         * <p>页码，从 1 开始，默认 1</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -131,7 +134,7 @@ public class ListContactsRequest extends Request {
         }
 
         /**
-         * <p>每页条数，默认 20，最大 100</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

@@ -106,7 +106,10 @@ public class GetPageLogResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class GetPageLogResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The paginated log results.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class GetPageLogResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CalendarName is already existed</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class GetPageLogResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5EF879D0-3B43-5AD1-9BF7-52418F9C5E73</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,14 @@ public class GetPageLogResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -269,7 +285,10 @@ public class GetPageLogResponseBody extends TeaModel {
             } 
 
             /**
-             * AppName.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-app</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -277,7 +296,10 @@ public class GetPageLogResponseBody extends TeaModel {
             }
 
             /**
-             * JobExecutionId.
+             * <p>The job execution ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>101</p>
              */
             public Builder jobExecutionId(String jobExecutionId) {
                 this.jobExecutionId = jobExecutionId;
@@ -285,7 +307,10 @@ public class GetPageLogResponseBody extends TeaModel {
             }
 
             /**
-             * JobName.
+             * <p>The job name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder jobName(String jobName) {
                 this.jobName = jobName;
@@ -293,7 +318,10 @@ public class GetPageLogResponseBody extends TeaModel {
             }
 
             /**
-             * Log.
+             * <p>The content output by the current command in the current output stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[2026-02-10 10:23:36]tStart writing to Recall Enginen</p>
              */
             public Builder log(String log) {
                 this.log = log;
@@ -301,7 +329,10 @@ public class GetPageLogResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * <p>The print time in the yyyy-MM-dd HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-31 16:43:51</p>
              */
             public Builder time(String time) {
                 this.time = time;
@@ -309,7 +340,10 @@ public class GetPageLogResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zhangsan</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -317,7 +351,10 @@ public class GetPageLogResponseBody extends TeaModel {
             }
 
             /**
-             * WorkerAddr.
+             * <p>The worker address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:030225016025_9357_60125@127.0.0.1">030225016025_9357_60125@127.0.0.1</a>:51363</p>
              */
             public Builder workerAddr(String workerAddr) {
                 this.workerAddr = workerAddr;
@@ -410,7 +447,10 @@ public class GetPageLogResponseBody extends TeaModel {
             } 
 
             /**
-             * PageNum.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -418,7 +458,10 @@ public class GetPageLogResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -426,7 +469,7 @@ public class GetPageLogResponseBody extends TeaModel {
             }
 
             /**
-             * Records.
+             * <p>The list of log records on the current page.</p>
              */
             public Builder records(java.util.List<Records> records) {
                 this.records = records;
@@ -434,7 +477,10 @@ public class GetPageLogResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>65</p>
              */
             public Builder total(Integer total) {
                 this.total = total;

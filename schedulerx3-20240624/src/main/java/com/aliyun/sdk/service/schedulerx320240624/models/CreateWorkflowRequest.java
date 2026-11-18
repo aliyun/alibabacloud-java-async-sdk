@@ -238,7 +238,7 @@ public class CreateWorkflowRequest extends Request {
         }
 
         /**
-         * <p>The custom calendar. This parameter applies only when <code>TimeType</code> is <code>cron</code>.</p>
+         * <p>The custom calendar. This parameter is optional when the time type is cron.</p>
          * 
          * <strong>example:</strong>
          * <p>workday</p>
@@ -250,7 +250,7 @@ public class CreateWorkflowRequest extends Request {
         }
 
         /**
-         * <p>A unique client token to ensure request idempotence. The token must contain only ASCII characters. If you omit this parameter, the system uses the RequestId as the ClientToken. The RequestId is unique to each request.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can generate the value from your client and ensure that the value is unique across different requests. The client token can contain only ASCII characters. Note: If you do not specify this parameter, the system automatically uses the RequestId of the API request as the client token. The RequestId may be different for each API request.</p>
          * 
          * <strong>example:</strong>
          * <p>123456789</p>
@@ -287,7 +287,7 @@ public class CreateWorkflowRequest extends Request {
         }
 
         /**
-         * <p>The maximum concurrency for the workflow.</p>
+         * <p>The maximum concurrency of the workflow.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -312,12 +312,10 @@ public class CreateWorkflowRequest extends Request {
         }
 
         /**
-         * <p>The status of the workflow. By default, the workflow is disabled. Valid values:</p>
+         * <p>The workflow status. Default value: 0. Valid values:</p>
          * <ul>
-         * <li><p>0: Disabled</p>
-         * </li>
-         * <li><p>1: Enabled</p>
-         * </li>
+         * <li>0: Disabled.</li>
+         * <li>1: Enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -330,14 +328,11 @@ public class CreateWorkflowRequest extends Request {
         }
 
         /**
-         * <p>The time expression, which depends on the <code>TimeType</code> parameter.</p>
+         * <p>The time expression. Set the time expression based on the selected time type.</p>
          * <ul>
-         * <li><p><strong>none</strong>: This parameter is not required.</p>
-         * </li>
-         * <li><p><strong>cron</strong>: Enter a standard cron expression. Online validation is supported.</p>
-         * </li>
-         * <li><p><strong>api</strong>: This parameter is not required.</p>
-         * </li>
+         * <li><strong>none</strong>: Not required.</li>
+         * <li><strong>cron</strong>: Enter a standard cron expression. Online validation is supported.</li>
+         * <li><strong>api</strong>: Not required.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -350,14 +345,11 @@ public class CreateWorkflowRequest extends Request {
         }
 
         /**
-         * <p>The schedule type. Valid values:</p>
+         * <p>The time type. Valid values:</p>
          * <ul>
-         * <li><p>-1: none<br></p>
-         * </li>
-         * <li><p>1: cron<br></p>
-         * </li>
-         * <li><p>100: api</p>
-         * </li>
+         * <li>-1: none<br/></li>
+         * <li>1: cron<br/></li>
+         * <li>100: api</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -370,7 +362,7 @@ public class CreateWorkflowRequest extends Request {
         }
 
         /**
-         * <p>The time zone for the schedule.</p>
+         * <p>The time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>GMT+8</p>

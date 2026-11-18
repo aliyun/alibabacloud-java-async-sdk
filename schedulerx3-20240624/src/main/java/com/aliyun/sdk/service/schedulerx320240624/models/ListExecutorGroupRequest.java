@@ -43,6 +43,10 @@ public class ListExecutorGroupRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TimeType")
+    private java.util.List<Integer> timeType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WorkerType")
     private String workerType;
 
@@ -54,6 +58,7 @@ public class ListExecutorGroupRequest extends Request {
         this.nextToken = builder.nextToken;
         this.pageNum = builder.pageNum;
         this.pageSize = builder.pageSize;
+        this.timeType = builder.timeType;
         this.workerType = builder.workerType;
     }
 
@@ -113,6 +118,13 @@ public class ListExecutorGroupRequest extends Request {
     }
 
     /**
+     * @return timeType
+     */
+    public java.util.List<Integer> getTimeType() {
+        return this.timeType;
+    }
+
+    /**
      * @return workerType
      */
     public String getWorkerType() {
@@ -126,6 +138,7 @@ public class ListExecutorGroupRequest extends Request {
         private String nextToken; 
         private Integer pageNum; 
         private Integer pageSize; 
+        private java.util.List<Integer> timeType; 
         private String workerType; 
 
         private Builder() {
@@ -140,10 +153,12 @@ public class ListExecutorGroupRequest extends Request {
             this.nextToken = request.nextToken;
             this.pageNum = request.pageNum;
             this.pageSize = request.pageSize;
+            this.timeType = request.timeType;
             this.workerType = request.workerType;
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,7 +171,10 @@ public class ListExecutorGroupRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return for this request. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -165,7 +183,10 @@ public class ListExecutorGroupRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the executor group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>group1</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -174,7 +195,10 @@ public class ListExecutorGroupRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token that specifies the position from which the current call returns data. An empty value indicates that all data has been read. You do not need to specify this parameter for the first query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eCKqVlS5FKF5EWGGOo8EgQ==</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -183,7 +207,10 @@ public class ListExecutorGroupRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -192,7 +219,10 @@ public class ListExecutorGroupRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -201,7 +231,22 @@ public class ListExecutorGroupRequest extends Request {
         }
 
         /**
-         * WorkerType.
+         * <p>The list of time types.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        public Builder timeType(java.util.List<Integer> timeType) {
+            this.putQueryParameter("TimeType", timeType);
+            this.timeType = timeType;
+            return this;
+        }
+
+        /**
+         * <p>The executor type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>openclaw</p>
          */
         public Builder workerType(String workerType) {
             this.putQueryParameter("WorkerType", workerType);

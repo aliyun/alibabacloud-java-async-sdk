@@ -125,7 +125,7 @@ public class ImportJobsRequest extends Request {
         }
 
         /**
-         * <p>Determines whether to automatically create the Application if it does not exist.</p>
+         * <p>Specifies whether to enable automatic creation of applications.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -150,7 +150,7 @@ public class ImportJobsRequest extends Request {
         }
 
         /**
-         * <p>The jobs to import, formatted as a JSON string.</p>
+         * <p>The content to import.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -216,12 +216,10 @@ public class ImportJobsRequest extends Request {
         }
 
         /**
-         * <p>Determines whether to overwrite jobs if they already exist. The default is <strong>true</strong>.</p>
+         * <p>Specifies whether to overwrite the task if it already exists. Default value: true.</p>
          * <ul>
-         * <li><p><strong>true</strong>: Overwrites existing jobs.</p>
-         * </li>
-         * <li><p><strong>false</strong>: Does not overwrite existing jobs.</p>
-         * </li>
+         * <li>true: Overwrite.</li>
+         * <li>false: Do not overwrite.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -111,7 +111,7 @@ public class ExportWorkflowsRequest extends Request {
         }
 
         /**
-         * <p>The name of the application.</p>
+         * <p>The application name.</p>
          * 
          * <strong>example:</strong>
          * <p>test-app</p>
@@ -123,7 +123,7 @@ public class ExportWorkflowsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the cluster where the Workflow is located.</p>
+         * <p>A short description of struct</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,7 +136,7 @@ public class ExportWorkflowsRequest extends Request {
         }
 
         /**
-         * <p>An array of Workflow IDs to export.</p>
+         * <p>The workflow ID.</p>
          */
         public Builder workflowId(java.util.List<Long> workflowId) {
             String workflowIdShrink = shrink(workflowId, "WorkflowId", "json");

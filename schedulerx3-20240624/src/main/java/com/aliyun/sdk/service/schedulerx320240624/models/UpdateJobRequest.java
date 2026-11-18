@@ -491,7 +491,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The retry interval upon node failure.</p>
+         * <p>The retry interval for a failed job.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -515,7 +515,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The child node IDs, separated by commas.</p>
+         * <p>The IDs of child jobs. Separate multiple IDs with commas.</p>
          * 
          * <strong>example:</strong>
          * <p>1,2</p>
@@ -552,7 +552,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The node description.</p>
+         * <p>The job description.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -566,7 +566,7 @@ public class UpdateJobRequest extends Request {
         /**
          * <p>The client blocking strategy. Valid values:</p>
          * <ul>
-         * <li>1: serial execution on a single machine</li>
+         * <li>1: single-machine serial execution</li>
          * <li>2: ignore subsequent scheduling</li>
          * <li>3: override previous scheduling</li>
          * </ul>
@@ -581,7 +581,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The jobhandler name.</p>
+         * <p>The name of the job handler.</p>
          * 
          * <strong>example:</strong>
          * <p>testJobVoidHandler</p>
@@ -593,7 +593,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The node ID.</p>
+         * <p>The job ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -606,7 +606,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The node label information.</p>
+         * <p>The tag information of the job.</p>
          * 
          * <strong>example:</strong>
          * <p>{key:value}</p>
@@ -618,7 +618,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of retry attempts upon node failure.</p>
+         * <p>The maximum number of retries for a failed job.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -630,9 +630,9 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The maximum concurrency of the node.</p>
+         * <p>The maximum number of concurrent instances for a job.</p>
          * <blockquote>
-         * <p>The maximum number of instances that can run simultaneously for the same node. A value of 1 indicates that repeated execution is not allowed. If the concurrency limit is exceeded, the current scheduling is skipped.</p>
+         * <p>The maximum number of instances that can run concurrently for the same job. A value of 1 indicates that repeated execution is not allowed. If the concurrency limit is exceeded, the current scheduling is skipped.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -645,7 +645,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The node name.</p>
+         * <p>The job name.</p>
          * 
          * <strong>example:</strong>
          * <p>test-job</p>
@@ -677,7 +677,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The node parameters.</p>
+         * <p>The job parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -689,7 +689,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The execution priority of the node. Valid values:</p>
+         * <p>The execution priority of the job. Valid values:</p>
          * <ul>
          * <li>1: low</li>
          * <li>5: medium</li>
@@ -716,7 +716,7 @@ public class UpdateJobRequest extends Request {
          * <li>5: least frequently used</li>
          * <li>6: least recently used</li>
          * <li>7: consistent hashing</li>
-         * <li>8: shard broadcast</li>
+         * <li>8: sharding broadcast</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -729,7 +729,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The script configured for non-BEAN nodes.</p>
+         * <p>The script configuration for non-BEAN jobs.</p>
          * 
          * <strong>example:</strong>
          * <p>echo &quot;hello world&quot;</p>
@@ -741,7 +741,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The scheduling start time.</p>
+         * <p>The start time of the scheduling.</p>
          * 
          * <strong>example:</strong>
          * <p>1716902187</p>
@@ -765,13 +765,13 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The time expression. Set the time expression based on the selected time type.</p>
+         * <p>The time expression. Configure the time expression based on the selected time type.</p>
          * <ul>
-         * <li>none: No value is required.</li>
+         * <li>none: not required</li>
          * <li>cron: Enter a standard cron expression. Online verification is supported.</li>
-         * <li>api: No value is required.</li>
-         * <li>fixed_rate: Enter a fixed frequency value in seconds. For example, 30 indicates that the node is triggered every 30 seconds.</li>
-         * <li>one_time: Enter a scheduling time in the format of yyyy-MM-dd HH:mm:ss or a timestamp in milliseconds. For example, &quot;2022-10-10 10:10:00&quot;.</li>
+         * <li>api: not required</li>
+         * <li>fixed_rate: Enter a fixed frequency value in seconds. For example, 30 indicates that the job is triggered every 30 seconds.</li>
+         * <li>one_time: Enter the scheduling time in the yyyy-MM-dd HH:mm:ss format or a timestamp in milliseconds, such as &quot;2022-10-10 10:10:00&quot;.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -805,7 +805,7 @@ public class UpdateJobRequest extends Request {
         /**
          * <p>The time zone.</p>
          * <blockquote>
-         * <p>Default value: the time zone of the SchedulerX server.</p>
+         * <p>By default, the time zone of the SchedulerX server is used.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -818,7 +818,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The node weight.</p>
+         * <p>The weight of the job.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -830,7 +830,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The extended properties of the node.</p>
+         * <p>The extended properties of the job.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;reponseMode&quot;:&quot;streaming&quot;}</p>
@@ -1005,7 +1005,7 @@ public class UpdateJobRequest extends Request {
             } 
 
             /**
-             * <p>The early completion threshold, in seconds.</p>
+             * <p>The threshold for early completion, in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -1024,10 +1024,10 @@ public class UpdateJobRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable the failure alert. Valid values:</p>
+             * <p>Specifies whether to enable failure alerts. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: Enables the failure alert.</li>
-             * <li><strong>false</strong>: Disables the failure alert.</li>
+             * <li><strong>true</strong>: enabled</li>
+             * <li><strong>false</strong>: disabled</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1041,7 +1041,7 @@ public class UpdateJobRequest extends Request {
             /**
              * <p>The number of consecutive failures.</p>
              * <blockquote>
-             * <p>An alert is sent only when the number of consecutive failures exceeds the configured value.</p>
+             * <p>An alert is triggered only when the number of consecutive failures exceeds the configured threshold.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1053,10 +1053,10 @@ public class UpdateJobRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable the no-available-machine alert. Valid values:</p>
+             * <p>Specifies whether to enable alerts for unavailable workers. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: Enables the no-available-machine alert.</li>
-             * <li><strong>false</strong>: Disables the no-available-machine alert.</li>
+             * <li><strong>true</strong>: enabled</li>
+             * <li><strong>false</strong>: disabled</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1088,10 +1088,10 @@ public class UpdateJobRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable the success notification. Valid values:</p>
+             * <p>Specifies whether to enable success notifications. Valid values:</p>
              * <ul>
-             * <li>true: Enabled.</li>
-             * <li>false: Disabled.</li>
+             * <li>true: enabled</li>
+             * <li>false: disabled</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1103,7 +1103,7 @@ public class UpdateJobRequest extends Request {
             }
 
             /**
-             * <p>The node execution timeout period, in seconds.</p>
+             * <p>The timeout period for job execution, in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>90</p>
@@ -1116,9 +1116,9 @@ public class UpdateJobRequest extends Request {
             /**
              * <p>Specifies whether to enable the timeout alert. Valid values:</p>
              * <ul>
-             * <li><p>true: Enabled.</p>
+             * <li><p>true: enabled</p>
              * </li>
-             * <li><p>false: Disabled.</p>
+             * <li><p>false: disabled</p>
              * </li>
              * </ul>
              * 
@@ -1131,10 +1131,10 @@ public class UpdateJobRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable the timeout termination for the current trigger. Valid values:</p>
+             * <p>Specifies whether to terminate the current trigger upon timeout. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: Enables the timeout termination.</li>
-             * <li><strong>false</strong>: Disables the timeout termination.</li>
+             * <li><strong>true</strong>: enabled</li>
+             * <li><strong>false</strong>: disabled</li>
              * </ul>
              * 
              * <strong>example:</strong>

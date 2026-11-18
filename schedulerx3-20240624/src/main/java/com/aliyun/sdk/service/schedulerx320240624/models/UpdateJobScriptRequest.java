@@ -168,7 +168,7 @@ public class UpdateJobScriptRequest extends Request {
         }
 
         /**
-         * <p>The job ID.</p>
+         * <p>The task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,10 +186,10 @@ public class UpdateJobScriptRequest extends Request {
          * <strong>example:</strong>
          * <p>#!/bin/bash
          * echo &quot;xxl-job: hello shell&quot;</p>
-         * <p>echo &quot;脚本位置: $0&quot;
-         * echo &quot;任务参数: $1&quot;
-         * echo &quot;分片序号 = $2&quot;
-         * echo &quot;分片总数 = $3&quot;</p>
+         * <p>echo &quot;Script path: $0&quot;
+         * echo &quot;Task parameter: $1&quot;
+         * echo &quot;Shard index = $2&quot;
+         * echo &quot;Total shards = $3&quot;</p>
          * <p>echo &quot;Good bye!&quot;
          * exit 0</p>
          */
@@ -200,7 +200,7 @@ public class UpdateJobScriptRequest extends Request {
         }
 
         /**
-         * <p>The description of the script version.</p>
+         * <p>The script version description.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

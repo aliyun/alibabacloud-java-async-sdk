@@ -60,7 +60,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Creates a custom calendar for SchedulerX.</p>
+     * <p>Creates a custom calendar.</p>
      * 
      * @param request the request parameters of CreateCalendar  CreateCalendarRequest
      * @return CreateCalendarResponse
@@ -99,7 +99,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>创建自定义联系人</p>
+     * <p>Creates a custom contact.</p>
      * 
      * @param request the request parameters of CreateContact  CreateContactRequest
      * @return CreateContactResponse
@@ -138,7 +138,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>手动导入执行器</p>
+     * <p>Manually imports executors.</p>
      * 
      * @param request the request parameters of CreateExecutorGroup  CreateExecutorGroupRequest
      * @return CreateExecutorGroupResponse
@@ -159,7 +159,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Imports one or more executors.</p>
+     * <p>Manually imports executors.</p>
      * 
      * @param request the request parameters of CreateExecutors  CreateExecutorsRequest
      * @return CreateExecutorsResponse
@@ -270,7 +270,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>删除自定义联系人</p>
+     * <p>Deletes a custom contact.</p>
      * 
      * @param request the request parameters of DeleteContact  DeleteContactRequest
      * @return DeleteContactResponse
@@ -490,9 +490,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <h1>Add the enhancement plugin</h1>
-     * <p>Add the Enhancement Plugin to your <code>pom.xml</code> file to extend the Executor\&quot;s capabilities.
-     * <strong>Note</strong>: Place this plugin <strong>before</strong> the <code>xxl-job-core</code> dependency in the <code>pom.xml</code> file.
-     * <strong>For more information, see</strong>: <a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">Plugin Version Documentation</a></p>
+     * <p>Add the enhancement plugin to the <code>pom.xml</code> file to enhance the capabilities of the executor.
+     * <strong>Note</strong>: Make sure that the plugin is placed <strong>above</strong> the <code>xxl-job-core</code> dependency in the pom file.
+     * <strong>For more information</strong>, refer to <a href="https://www.alibabacloud.com/help/en/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">Plugin version description</a>.</p>
      * 
      * @param request the request parameters of GetExecutorConfig  GetExecutorConfigRequest
      * @return GetExecutorConfigResponse
@@ -531,10 +531,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h1>Import the enhanced plugin</h1>
-     * <p>Add the enhanced plugin to the <code>pom.xml</code> file to improve the capabilities of the Executor.
-     * <strong>Note</strong>: Make sure this plugin is placed <strong>above</strong> the <code>xxl-job-core</code> dependency in the pom file.
-     * <strong>For more information, refer to</strong>: <a href="https://www.alibabacloud.com/help/en/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">Plugin version description</a></p>
+     * <h1>Import the enhancement plugin</h1>
+     * <p>Add the enhancement plugin to the <code>pom.xml</code> file to improve the capabilities of the Executor.
+     * <strong>Note</strong>: Make sure that the plugin is placed <strong>above</strong> the <code>xxl-job-core</code> dependency in the pom file.
+     * <strong>For more information, see</strong>: <a href="https://www.alibabacloud.com/help/en/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">Plugin version description</a></p>
      * 
      * @param request the request parameters of GetJobExecutionProgress  GetJobExecutionProgressRequest
      * @return GetJobExecutionProgressResponse
@@ -555,10 +555,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h1>Add the enhancement plugin</h1>
-     * <p>Add the Enhancement Plugin to your <code>pom.xml</code> file to extend the executor\&quot;s capabilities.
-     * <strong>Note</strong>: Place this plugin <strong>above</strong> the <code>xxl-job-core</code> dependency.
-     * <strong>For more information, see</strong>: <a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">Plugin versioning documentation</a></p>
+     * <h1>Import the enhancement plug-in</h1>
+     * <p>Add the enhancement plug-in to the <code>pom.xml</code> file to enhance the capabilities of the executor.
+     * <strong>Note</strong>: Make sure that the plug-in is placed <strong>above</strong> the <code>xxl-job-core</code> dependency in the POM file.
+     * <strong>For more information, see</strong>: <a href="https://www.alibabacloud.com/help/en/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">Plug-in version description</a></p>
      * 
      * @param request the request parameters of GetJobExecutionThreadDump  GetJobExecutionThreadDumpRequest
      * @return GetJobExecutionThreadDumpResponse
@@ -615,10 +615,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h1>引入增强插件</h1>
-     * <p>在<code>pom.xml</code>文件中添加增强插件以提升Executor的能力。
-     * <strong>注意</strong>：请确保该插件在pom中放置在<code>xxl-job-core</code> 依赖的<strong>上方</strong>。
-     * <strong>详细信息请参考</strong>：<a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">插件版本说明文档</a></p>
+     * <h1>Add the enhancement plugin</h1>
+     * <p>Add the enhancement plugin to the pom.xml file to enhance the capabilities of the executor.
+     * <strong>Note</strong>: Make sure that this plugin is placed <strong>above</strong> the xxl-job-core dependency in the pom file.
+     * <strong>For more information, see</strong>: <a href="https://www.alibabacloud.com/help/en/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">Plugin version description</a></p>
      * 
      * @param request the request parameters of GetPageLog  GetPageLogRequest
      * @return GetPageLogResponse
@@ -711,7 +711,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>导入agent中的定时任务到scheduler平台（SSE），该接口禁止使用xxljob的clusterid调用，不支持XXLJOB相关集群，这个接口仅限AI任务调度集群使用。</p>
+     * <p>Imports scheduled tasks from an agent to the scheduler platform (SSE). You cannot call this API operation by using the cluster ID of an XXL-JOB cluster, and XXL-JOB clusters are not supported. This API operation is exclusively available for AI task scheduling clusters.</p>
      * 
      * @param request the request parameters of ImportAgentJobs  ImportAgentJobsRequest
      * @return ImportAgentJobsResponse
@@ -904,7 +904,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>查看联系人</p>
+     * <p>Views the contacts.</p>
      * 
      * @param request the request parameters of ListContacts  ListContactsRequest
      * @return ListContactsResponse
@@ -943,10 +943,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h1>引入增强插件</h1>
-     * <p>在<code>pom.xml</code>文件中添加增强插件以提升Executor的能力。
-     * <strong>注意</strong>：请确保该插件在pom中放置在<code>xxl-job-core</code> 依赖的<strong>上方</strong>。
-     * <strong>详细信息请参考</strong>：<a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">插件版本说明文档</a></p>
+     * <h1>Import the enhancement plugin</h1>
+     * <p>Add the enhancement plugin to the <code>pom.xml</code> file to enhance the capabilities of the executor.
+     * <strong>Note</strong>: Make sure that this plugin is placed <strong>above</strong> the <code>xxl-job-core</code> dependency in the pom file.
+     * <strong>For more information, see</strong>: <a href="https://www.alibabacloud.com/help/en/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">Plugin version description</a></p>
      * 
      * @param request the request parameters of ListExecutorGroup  ListExecutorGroupRequest
      * @return ListExecutorGroupResponse
@@ -1039,10 +1039,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h1>Add the enhancement plugin</h1>
-     * <p>Add the enhancement plugin to your <code>pom.xml</code> file to extend the Executor\&quot;s capabilities.
-     * <strong>Note</strong>: Place this plugin <strong>above</strong> the <code>xxl-job-core</code> dependency in your pom.xml file.
-     * <strong>For more information:</strong> <a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">Plugin version release notes</a></p>
+     * <h1>Add the enhancement plug-in</h1>
+     * <p>Add the enhancement plug-in to the <code>pom.xml</code> file to enhance the capabilities of the executor.
+     * <strong>Note</strong>: Make sure that this plug-in is placed <strong>above</strong> the <code>xxl-job-core</code> dependency in the POM file.
+     * <strong>For more information, see</strong>: <a href="https://www.alibabacloud.com/help/en/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">Plug-in version descriptions</a></p>
      * 
      * @param request the request parameters of ListK8sResource  ListK8sResourceRequest
      * @return ListK8sResourceResponse
@@ -1279,7 +1279,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Disables one or more specified workflows.</p>
+     * <p>Manually imports an executor.</p>
      * 
      * @param request the request parameters of OperateDisableWorkflows  OperateDisableWorkflowsRequest
      * @return OperateDisableWorkflowsResponse
@@ -1354,7 +1354,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation starts a new workflow instance.</p>
+     * <p>Manually imports an executor.</p>
      * 
      * @param request the request parameters of OperateExecuteWorkflow  OperateExecuteWorkflowRequest
      * @return OperateExecuteWorkflowResponse
@@ -1681,7 +1681,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>更新通知联系人</p>
+     * <p>Updates a notification contact.</p>
      * 
      * @param request the request parameters of UpdateContact  UpdateContactRequest
      * @return UpdateContactResponse
@@ -1720,10 +1720,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h1>引入增强插件</h1>
-     * <p>在<code>pom.xml</code>文件中添加增强插件以提升Executor的能力。
-     * <strong>注意</strong>：请确保该插件在pom中放置在<code>xxl-job-core</code> 依赖的<strong>上方</strong>。
-     * <strong>详细信息请参考</strong>：<a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">插件版本说明文档</a></p>
+     * <h1>Import the enhancement plugin</h1>
+     * <p>Add the enhancement plugin to the <code>pom.xml</code> file to improve the capabilities of the executor.
+     * <strong>Note</strong>: Make sure that the plugin is placed <strong>above</strong> the <code>xxl-job-core</code> dependency in the POM file.
+     * <strong>For more information, see</strong>: <a href="https://www.alibabacloud.com/help/en/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">Plugin version description</a></p>
      * 
      * @param request the request parameters of UpdateExecutorGroup  UpdateExecutorGroupRequest
      * @return UpdateExecutorGroupResponse
@@ -1744,10 +1744,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h1>Add the enhancement plugin</h1>
-     * <p>Add the enhancement plugin to the <code>pom.xml</code> file to extend the capabilities of the Executor.
-     * <strong>Note</strong>: Place this plugin <strong>above</strong> the <code>xxl-job-core</code> dependency in the pom.xml file.
-     * <strong>For more information, see the</strong> <a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">Plugin Version Description Document</a>.</p>
+     * <h1>Import the enhancement plug-in</h1>
+     * <p>Add the enhancement plug-in to the <code>pom.xml</code> file to enhance the capabilities of the executor.
+     * <strong>Note</strong>: Make sure that the plug-in is placed <strong>above</strong> the <code>xxl-job-core</code> dependency in the POM file.
+     * <strong>For more information</strong>, see <a href="https://www.alibabacloud.com/help/en/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">Plug-in version description</a>.</p>
      * 
      * @param request the request parameters of UpdateExecutors  UpdateExecutorsRequest
      * @return UpdateExecutorsResponse

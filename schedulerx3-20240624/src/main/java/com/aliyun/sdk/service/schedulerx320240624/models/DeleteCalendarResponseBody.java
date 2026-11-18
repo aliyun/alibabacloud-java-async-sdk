@@ -104,7 +104,7 @@ public class DeleteCalendarResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>Parameter error: content is null.</p>
@@ -115,7 +115,7 @@ public class DeleteCalendarResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique identifier for the request.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>CF99C381-C8F6-5A8D-8C24-57F46B706D2D</p>
@@ -126,12 +126,10 @@ public class DeleteCalendarResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the operation was successful.</p>
+         * <p>Indicates whether the call is successful.</p>
          * <ul>
-         * <li><p><strong>true</strong>: The request was successful.</p>
-         * </li>
-         * <li><p><strong>false</strong>: The request failed.</p>
-         * </li>
+         * <li><strong>true</strong>: The call is successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

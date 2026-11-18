@@ -139,7 +139,7 @@ public class OperateDisableWorkflowsRequest extends Request {
         }
 
         /**
-         * <p>A list of workflow IDs.</p>
+         * <p>The list of workflow IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder workflowIds(java.util.List<Long> workflowIds) {

@@ -117,7 +117,7 @@ public class ListScheduleEventResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The paginated results of scheduling events.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class ListScheduleEventResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned error message.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>Parameter check error</p>
@@ -136,7 +136,7 @@ public class ListScheduleEventResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique identifier for the request, which is used to troubleshoot issues.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>B880122A-B0E4-52E8-8F54-87DB7779EB74</p>
@@ -147,12 +147,10 @@ public class ListScheduleEventResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful.</p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: The call succeeded.</p>
-         * </li>
-         * <li><p><strong>false</strong>: The call failed.</p>
-         * </li>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -337,7 +335,7 @@ public class ListScheduleEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The event content.</p>
+             * <p>The content.</p>
              * 
              * <strong>example:</strong>
              * <p>hello word</p>
@@ -348,7 +346,7 @@ public class ListScheduleEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The event status.</p>
+             * <p>The event ID.</p>
              * 
              * <strong>example:</strong>
              * <p>Failed</p>
@@ -392,7 +390,7 @@ public class ListScheduleEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp of the event. The time is in the <code>yyyy-MM-dd HH:mm:ss</code> format.</p>
+             * <p>The log printing time, in the <code>yyyy-MM-dd HH:mm:ss</code> format.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-10-31 16:43:51</p>
@@ -414,7 +412,7 @@ public class ListScheduleEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The workflow execution ID.</p>
+             * <p>The workflow execution record ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1450568762586578000</p>
@@ -428,7 +426,7 @@ public class ListScheduleEventResponseBody extends TeaModel {
              * <p>The workflow name.</p>
              * 
              * <strong>example:</strong>
-             * <p>工作流0001</p>
+             * <p>Workflow0001</p>
              */
             public Builder workflowName(String workflowName) {
                 this.workflowName = workflowName;
@@ -543,7 +541,7 @@ public class ListScheduleEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The array of event records.</p>
+             * <p>The result set.</p>
              */
             public Builder records(java.util.List<Records> records) {
                 this.records = records;
@@ -551,7 +549,7 @@ public class ListScheduleEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries.</p>
+             * <p>The total number of records.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

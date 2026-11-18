@@ -169,7 +169,10 @@ public class OperateExecuteJobRequest extends Request {
         }
 
         /**
-         * AppGroupId.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1625</p>
          */
         public Builder appGroupId(Long appGroupId) {
             this.putBodyParameter("AppGroupId", appGroupId);
@@ -216,7 +219,7 @@ public class OperateExecuteJobRequest extends Request {
         }
 
         /**
-         * <p>The node ID.</p>
+         * <p>The job ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -241,7 +244,7 @@ public class OperateExecuteJobRequest extends Request {
         }
 
         /**
-         * <p>The workerAddr of the specified machine.</p>
+         * <p>The worker address of the specified machine.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://192.168.***.5:9999/">http://192.168.***.5:9999/</a></p>

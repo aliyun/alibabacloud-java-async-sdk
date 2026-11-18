@@ -143,7 +143,7 @@ public class SyncJobsRequest extends Request {
         }
 
         /**
-         * <p>A list of job IDs.</p>
+         * <p>The list of node IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder jobIds(java.util.List<Long> jobIds) {
@@ -154,7 +154,7 @@ public class SyncJobsRequest extends Request {
         }
 
         /**
-         * <p>The name of the source application that contains the jobs.</p>
+         * <p>The name of the original application where the nodes are located.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,7 +167,7 @@ public class SyncJobsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the source cluster that contains the jobs.</p>
+         * <p>The ID of the original cluster where the nodes are located.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -180,7 +180,7 @@ public class SyncJobsRequest extends Request {
         }
 
         /**
-         * <p>The name of the destination application.</p>
+         * <p>The name of the target application to which the nodes are synchronized.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -193,7 +193,7 @@ public class SyncJobsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the destination cluster.</p>
+         * <p>The ID of the target cluster to which the nodes are synchronized.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

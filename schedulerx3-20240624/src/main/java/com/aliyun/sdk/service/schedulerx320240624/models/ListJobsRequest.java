@@ -63,6 +63,10 @@ public class ListJobsRequest extends Request {
     private String status;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TimeType")
+    private java.util.List<Integer> timeType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WorkflowId")
     private Long workflowId;
 
@@ -79,6 +83,7 @@ public class ListJobsRequest extends Request {
         this.pageNum = builder.pageNum;
         this.pageSize = builder.pageSize;
         this.status = builder.status;
+        this.timeType = builder.timeType;
         this.workflowId = builder.workflowId;
     }
 
@@ -173,6 +178,13 @@ public class ListJobsRequest extends Request {
     }
 
     /**
+     * @return timeType
+     */
+    public java.util.List<Integer> getTimeType() {
+        return this.timeType;
+    }
+
+    /**
      * @return workflowId
      */
     public Long getWorkflowId() {
@@ -191,6 +203,7 @@ public class ListJobsRequest extends Request {
         private Integer pageNum; 
         private Integer pageSize; 
         private String status; 
+        private java.util.List<Integer> timeType; 
         private Long workflowId; 
 
         private Builder() {
@@ -210,6 +223,7 @@ public class ListJobsRequest extends Request {
             this.pageNum = request.pageNum;
             this.pageSize = request.pageSize;
             this.status = request.status;
+            this.timeType = request.timeType;
             this.workflowId = request.workflowId;
         } 
 
@@ -235,7 +249,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -251,7 +265,7 @@ public class ListJobsRequest extends Request {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>job01 standalone task</p>
+         * <p>job01 standalone job</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -260,7 +274,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The <code>jobhandler</code> name.</p>
+         * <p>The jobhandler name.</p>
          * 
          * <strong>example:</strong>
          * <p>jobDemoHandler</p>
@@ -272,7 +286,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The task ID.</p>
+         * <p>The job ID.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -284,7 +298,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The task name.</p>
+         * <p>The job name.</p>
          * 
          * <strong>example:</strong>
          * <p>job01</p>
@@ -296,7 +310,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The task label filter condition.</p>
+         * <p>The job label condition.</p>
          * 
          * <strong>example:</strong>
          * <p>{key:value}</p>
@@ -340,6 +354,18 @@ public class ListJobsRequest extends Request {
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
             this.status = status;
+            return this;
+        }
+
+        /**
+         * <p>The list of time types.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        public Builder timeType(java.util.List<Integer> timeType) {
+            this.putQueryParameter("TimeType", timeType);
+            this.timeType = timeType;
             return this;
         }
 

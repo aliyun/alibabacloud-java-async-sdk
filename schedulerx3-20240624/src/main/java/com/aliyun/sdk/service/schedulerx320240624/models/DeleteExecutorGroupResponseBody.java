@@ -93,7 +93,10 @@ public class DeleteExecutorGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class DeleteExecutorGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Parameter check error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,10 @@ public class DeleteExecutorGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3835AA29-2298-5434-BC53-9CC377CDFD2C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,14 @@ public class DeleteExecutorGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call is successful.</p>
+         * <ul>
+         * <li>true: The call is successful.</li>
+         * <li>false: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

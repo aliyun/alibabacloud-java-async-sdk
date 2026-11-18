@@ -127,7 +127,10 @@ public class GetJobExecutionProgressRequest extends Request {
         }
 
         /**
-         * AppGroupId.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1625</p>
          */
         public Builder appGroupId(Long appGroupId) {
             this.putQueryParameter("AppGroupId", appGroupId);
@@ -162,7 +165,7 @@ public class GetJobExecutionProgressRequest extends Request {
         }
 
         /**
-         * <p>The task execution ID.</p>
+         * <p>The job execution ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

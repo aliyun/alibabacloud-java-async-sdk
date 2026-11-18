@@ -153,7 +153,7 @@ public class DeleteWorkflowsRequest extends Request {
         }
 
         /**
-         * <p>If set to <code>true</code>, all jobs within the specified workflows are also deleted.</p>
+         * <p>Specifies whether to delete all jobs in the workflow.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -165,7 +165,7 @@ public class DeleteWorkflowsRequest extends Request {
         }
 
         /**
-         * <p>A list of workflow IDs to delete.</p>
+         * <p>The list of workflow IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder workflowIds(java.util.List<Long> workflowIds) {

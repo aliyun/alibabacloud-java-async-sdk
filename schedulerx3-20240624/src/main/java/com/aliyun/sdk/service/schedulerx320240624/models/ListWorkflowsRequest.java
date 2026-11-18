@@ -209,7 +209,7 @@ public class ListWorkflowsRequest extends Request {
         }
 
         /**
-         * <p>The name of the application.</p>
+         * <p>The application name.</p>
          * 
          * <strong>example:</strong>
          * <p>test-app</p>
@@ -221,7 +221,7 @@ public class ListWorkflowsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -234,7 +234,7 @@ public class ListWorkflowsRequest extends Request {
         }
 
         /**
-         * <p>The description of the workflow.</p>
+         * <p>The workflow description.</p>
          * 
          * <strong>example:</strong>
          * <p>my first workflow</p>
@@ -246,7 +246,7 @@ public class ListWorkflowsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return. The default value is 10.</p>
+         * <p>The maximum number of entries to return for this request. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -258,7 +258,7 @@ public class ListWorkflowsRequest extends Request {
         }
 
         /**
-         * <p>The name of the workflow.</p>
+         * <p>The workflow name.</p>
          * 
          * <strong>example:</strong>
          * <p>myWorkflow</p>
@@ -270,7 +270,7 @@ public class ListWorkflowsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. If the return value is empty, no more data is returned.</p>
+         * <p>The token that specifies the position where the current call returns the read data. An empty value indicates that all data has been read. You do not need to specify this parameter for the first query.</p>
          * 
          * <strong>example:</strong>
          * <p>eCKqVlS5FKF5EWGGOo8EgQ==</p>
@@ -294,7 +294,7 @@ public class ListWorkflowsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -306,12 +306,10 @@ public class ListWorkflowsRequest extends Request {
         }
 
         /**
-         * <p>The status of the workflow. If this parameter is not specified, workflows in the <code>disabled</code> state are returned by default. Valid values:</p>
+         * <p>The workflow status. Default value: 0. Valid values:</p>
          * <ul>
-         * <li><p><code>0</code>: disabled</p>
-         * </li>
-         * <li><p><code>1</code>: enabled</p>
-         * </li>
+         * <li>0: Disabled.</li>
+         * <li>1: Enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -324,7 +322,7 @@ public class ListWorkflowsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the workflow.</p>
+         * <p>The workflow ID.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

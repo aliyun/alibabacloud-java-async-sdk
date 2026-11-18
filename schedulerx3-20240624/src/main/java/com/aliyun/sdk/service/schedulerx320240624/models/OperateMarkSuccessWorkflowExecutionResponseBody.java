@@ -93,7 +93,7 @@ public class OperateMarkSuccessWorkflowExecutionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code. A value of <code>200</code> indicates a successful request.</p>
+         * <p>The response code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class OperateMarkSuccessWorkflowExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Additional details about the result.</p>
+         * <p>The detailed information.</p>
          * 
          * <strong>example:</strong>
          * <p>Parameter error: content is null.</p>
@@ -115,7 +115,7 @@ public class OperateMarkSuccessWorkflowExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique ID of the request, used for troubleshooting.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>1DF6732E-15D8-5E1F-95E3-C10077F556B5</p>
@@ -126,12 +126,10 @@ public class OperateMarkSuccessWorkflowExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates if the operation succeeded.</p>
+         * <p>Indicates whether the call is successful. Valid values:</p>
          * <ul>
-         * <li><p><code>true</code>: The operation succeeded.</p>
-         * </li>
-         * <li><p><code>false</code>: The operation failed.</p>
-         * </li>
+         * <li>true: The call succeeded.</li>
+         * <li>false: The call failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

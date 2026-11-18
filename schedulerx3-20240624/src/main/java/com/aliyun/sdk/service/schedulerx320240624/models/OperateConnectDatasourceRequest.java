@@ -128,7 +128,7 @@ public class OperateConnectDatasourceRequest extends Request {
         }
 
         /**
-         * <p>Cluster ID</p>
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,7 +141,7 @@ public class OperateConnectDatasourceRequest extends Request {
         }
 
         /**
-         * <p>Connection parameters of the data source</p>
+         * <p>The connection parameters of the data source.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,11 +154,11 @@ public class OperateConnectDatasourceRequest extends Request {
         }
 
         /**
-         * <p>Password of the database user.</p>
+         * <p>The password of the database user.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>Demo****1234</p>
          */
         public Builder password(String password) {
             this.putBodyParameter("Password", password);
@@ -167,7 +167,7 @@ public class OperateConnectDatasourceRequest extends Request {
         }
 
         /**
-         * <p>Type of the data source.</p>
+         * <p>The type of the data source.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

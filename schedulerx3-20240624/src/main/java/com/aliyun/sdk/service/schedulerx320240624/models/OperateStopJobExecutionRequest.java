@@ -141,7 +141,7 @@ public class OperateStopJobExecutionRequest extends Request {
         }
 
         /**
-         * AppGroupId.
+         * <p>The application ID.</p>
          */
         public Builder appGroupId(Long appGroupId) {
             this.putQueryParameter("AppGroupId", appGroupId);
@@ -189,7 +189,7 @@ public class OperateStopJobExecutionRequest extends Request {
         }
 
         /**
-         * <p>The subtask IDs.</p>
+         * <p>The subtask ID.</p>
          */
         public Builder taskList(java.util.List<String> taskList) {
             String taskListShrink = shrink(taskList, "TaskList", "json");

@@ -116,7 +116,7 @@ public class UpdateClusterRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxljob-c20f7ec9a78</p>
+         * <p>xxljob-b6ec1xxxx</p>
          */
         public Builder clusterId(String clusterId) {
             this.putBodyParameter("ClusterId", clusterId);
@@ -128,7 +128,7 @@ public class UpdateClusterRequest extends Request {
          * <p>The cluster name.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx-test-1107</p>
+         * <p>qianxi-test-0812</p>
          */
         public Builder clusterName(String clusterName) {
             this.putBodyParameter("ClusterName", clusterName);
@@ -137,7 +137,10 @@ public class UpdateClusterRequest extends Request {
         }
 
         /**
-         * IpWhitelist.
+         * <p>The instance-level IP whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.1.0/24</p>
          */
         public Builder ipWhitelist(String ipWhitelist) {
             this.putBodyParameter("IpWhitelist", ipWhitelist);

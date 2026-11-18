@@ -176,7 +176,10 @@ public class ListClustersRequest extends Request {
         }
 
         /**
-         * ClusterType.
+         * <p>The cluster type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder clusterType(Integer clusterType) {
             this.putQueryParameter("ClusterType", clusterType);
@@ -197,7 +200,7 @@ public class ListClustersRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page in a paged query.</p>
+         * <p>The number of entries per page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -209,7 +212,7 @@ public class ListClustersRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The list of tags used to filter clusters.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -277,7 +280,10 @@ public class ListClustersRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>environment</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -285,7 +291,10 @@ public class ListClustersRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;

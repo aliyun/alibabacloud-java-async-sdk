@@ -223,7 +223,10 @@ public class GetPageLogRequest extends Request {
         }
 
         /**
-         * AppName.
+         * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-app</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -232,6 +235,7 @@ public class GetPageLogRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -244,7 +248,10 @@ public class GetPageLogRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1777292662000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -253,7 +260,10 @@ public class GetPageLogRequest extends Request {
         }
 
         /**
-         * JobExecutionId.
+         * <p>The job execution ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1310630367761285120</p>
          */
         public Builder jobExecutionId(String jobExecutionId) {
             this.putQueryParameter("JobExecutionId", jobExecutionId);
@@ -262,7 +272,10 @@ public class GetPageLogRequest extends Request {
         }
 
         /**
-         * JobName.
+         * <p>The job name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job01</p>
          */
         public Builder jobName(String jobName) {
             this.putQueryParameter("JobName", jobName);
@@ -271,7 +284,10 @@ public class GetPageLogRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * <p>The search keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hello word</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -280,7 +296,10 @@ public class GetPageLogRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -289,7 +308,10 @@ public class GetPageLogRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -298,7 +320,14 @@ public class GetPageLogRequest extends Request {
         }
 
         /**
-         * Reverse.
+         * <p>Specifies whether to sort the results in descending order. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Sorts the results in descending order.</li>
+         * <li><strong>false</strong>: Sorts the results in ascending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder reverse(Boolean reverse) {
             this.putQueryParameter("Reverse", reverse);
@@ -307,7 +336,10 @@ public class GetPageLogRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1777292662000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -316,7 +348,10 @@ public class GetPageLogRequest extends Request {
         }
 
         /**
-         * WorkerAddr.
+         * <p>The executor address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.1.100</p>
          */
         public Builder workerAddr(String workerAddr) {
             this.putQueryParameter("WorkerAddr", workerAddr);

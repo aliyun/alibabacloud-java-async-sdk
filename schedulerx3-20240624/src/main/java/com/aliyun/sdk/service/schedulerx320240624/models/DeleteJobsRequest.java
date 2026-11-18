@@ -126,7 +126,10 @@ public class DeleteJobsRequest extends Request {
         }
 
         /**
-         * AppGroupId.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1625</p>
          */
         public Builder appGroupId(Long appGroupId) {
             this.putBodyParameter("AppGroupId", appGroupId);
@@ -161,7 +164,7 @@ public class DeleteJobsRequest extends Request {
         }
 
         /**
-         * JobIds.
+         * <p>The list of task IDs.</p>
          */
         public Builder jobIds(java.util.List<Long> jobIds) {
             String jobIdsShrink = shrink(jobIds, "JobIds", "json");

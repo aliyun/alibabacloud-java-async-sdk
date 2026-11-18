@@ -224,7 +224,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The billing type.</p>
+         * <p>The billing method.</p>
          * 
          * <strong>example:</strong>
          * <p>POSTPAY</p>
@@ -238,6 +238,9 @@ public class CreateClusterRequest extends Request {
         /**
          * <p>The name of the cluster.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qianxi-test-0812</p>
          */
         public Builder clusterName(String clusterName) {
             this.putBodyParameter("ClusterName", clusterName);
@@ -252,8 +255,11 @@ public class CreateClusterRequest extends Request {
          * <li>scx.small.x1</li>
          * <li>scx.small.x2</li>
          * <li>scx.medium.x1</li>
-         * <li>scx.medium.x2.</li>
+         * <li>scx.medium.x2</li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>scx.dev.x1</p>
          */
         public Builder clusterSpec(String clusterSpec) {
             this.putBodyParameter("ClusterSpec", clusterSpec);
@@ -287,6 +293,9 @@ public class CreateClusterRequest extends Request {
 
         /**
          * <p>The engine type. Valid values: xxljob.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxljob</p>
          */
         public Builder engineType(String engineType) {
             this.putBodyParameter("EngineType", engineType);
@@ -319,7 +328,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The list of tags. A maximum of 20 tags are supported.</p>
+         * <p>The list of tags. You can add up to 20 tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -328,7 +337,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The information about the vSwitches.</p>
+         * <p>The vSwitch information.</p>
          */
         public Builder vSwitches(java.util.List<VSwitches> vSwitches) {
             String vSwitchesShrink = shrink(vSwitches, "VSwitches", "json");
@@ -338,7 +347,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The ID of the VPC.</p>
+         * <p>The VPC ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-aa1a18236n90rqhuhhnhh</p>
          */
         public Builder vpcId(String vpcId) {
             this.putBodyParameter("VpcId", vpcId);
@@ -407,6 +419,9 @@ public class CreateClusterRequest extends Request {
 
             /**
              * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>environment</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -415,6 +430,9 @@ public class CreateClusterRequest extends Request {
 
             /**
              * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -481,7 +499,10 @@ public class CreateClusterRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the vSwitch.</p>
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-2ze745n3r2sfqtahhubpl</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -490,6 +511,9 @@ public class CreateClusterRequest extends Request {
 
             /**
              * <p>The zone ID of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-j</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

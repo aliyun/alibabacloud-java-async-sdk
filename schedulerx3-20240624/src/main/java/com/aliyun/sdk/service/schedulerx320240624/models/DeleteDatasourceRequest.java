@@ -98,7 +98,7 @@ public class DeleteDatasourceRequest extends Request {
         }
 
         /**
-         * <p>Cluster ID.</p>
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,7 +111,7 @@ public class DeleteDatasourceRequest extends Request {
         }
 
         /**
-         * <p>DataSource ID, which can be obtained by invoking the ListDatasources API.</p>
+         * <p>The data source ID. You can obtain the ID by calling the ListDatasources operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

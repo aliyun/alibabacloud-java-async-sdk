@@ -133,7 +133,10 @@ public class ListExecutorGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The total count of data under the current request conditions. This parameter is optional and is not returned by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -141,7 +144,7 @@ public class ListExecutorGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The query results.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -149,7 +152,10 @@ public class ListExecutorGroupResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return for this request. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -157,6 +163,7 @@ public class ListExecutorGroupResponseBody extends TeaModel {
         }
 
         /**
+         * <p>The position from which the current call returns data. An empty value indicates that all data has been read.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -168,7 +175,10 @@ public class ListExecutorGroupResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token that specifies the position from which the current call returns data. An empty value indicates that all data has been read. You do not need to specify this parameter for the first query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eCKqVlS5FKF5EWGGOo8EgQ==</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -176,7 +186,10 @@ public class ListExecutorGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5EF879D0-3B43-5AD1-9BF7-52418F9C5E73</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -184,7 +197,10 @@ public class ListExecutorGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -250,7 +266,10 @@ public class ListExecutorGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * AppName.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Tornado</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -258,7 +277,10 @@ public class ListExecutorGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>group1</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -533,7 +555,10 @@ public class ListExecutorGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * ApiKey.
+             * <p>The client key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f/HElmWgOgmb0mlbRRkNuQ==</p>
              */
             public Builder apiKey(String apiKey) {
                 this.apiKey = apiKey;
@@ -541,7 +566,10 @@ public class ListExecutorGroupResponseBody extends TeaModel {
             }
 
             /**
-             * AuthType.
+             * <p>The authentication type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>api_key</p>
              */
             public Builder authType(String authType) {
                 this.authType = authType;
@@ -549,7 +577,14 @@ public class ListExecutorGroupResponseBody extends TeaModel {
             }
 
             /**
-             * AutoScale.
+             * <p>Specifies whether to enable <strong>automatic start and stop</strong>. Valid values:</p>
+             * <ul>
+             * <li>true: Enabled. If no tasks are scheduled for a period of time, the agent automatically hibernates. If tasks are scheduled for a period of time, the agent wakes up in advance.</li>
+             * <li>false: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder autoScale(Boolean autoScale) {
                 this.autoScale = autoScale;
@@ -557,7 +592,7 @@ public class ListExecutorGroupResponseBody extends TeaModel {
             }
 
             /**
-             * CiteList.
+             * <p>The list of referenced applications.</p>
              */
             public Builder citeList(java.util.List<CiteList> citeList) {
                 this.citeList = citeList;
@@ -565,7 +600,10 @@ public class ListExecutorGroupResponseBody extends TeaModel {
             }
 
             /**
-             * CmsWorkspaceId.
+             * <p>The CloudMonitor workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>scx-workspace-acd09a5d-4133-43cc-889d-c33a122afb6e</p>
              */
             public Builder cmsWorkspaceId(String cmsWorkspaceId) {
                 this.cmsWorkspaceId = cmsWorkspaceId;
@@ -573,7 +611,10 @@ public class ListExecutorGroupResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentJobs.
+             * <p>The current number of tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder currentJobs(Integer currentJobs) {
                 this.currentJobs = currentJobs;
@@ -581,7 +622,10 @@ public class ListExecutorGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the executor group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my first workflow</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -597,7 +641,15 @@ public class ListExecutorGroupResponseBody extends TeaModel {
             }
 
             /**
-             * IntegrationType.
+             * <p>The integration method. Valid values:</p>
+             * <ul>
+             * <li>manual</li>
+             * <li>acs_sandbox</li>
+             * <li>k8s_service</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>acs_sandbox</p>
              */
             public Builder integrationType(String integrationType) {
                 this.integrationType = integrationType;
@@ -605,7 +657,10 @@ public class ListExecutorGroupResponseBody extends TeaModel {
             }
 
             /**
-             * MaxJobs.
+             * <p>The maximum number of tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder maxJobs(Integer maxJobs) {
                 this.maxJobs = maxJobs;
@@ -613,7 +668,10 @@ public class ListExecutorGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the executor group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job01</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -621,7 +679,10 @@ public class ListExecutorGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Network.
+             * <p>The network configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>public</p>
              */
             public Builder network(String network) {
                 this.network = network;
@@ -629,7 +690,10 @@ public class ListExecutorGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * <p>The protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>openai</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -637,7 +701,10 @@ public class ListExecutorGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ResolvedWorkers.
+             * <p>The list of resolved workers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;address&quot;:&quot;<a href="http://192.168.2.34:8084%22%7D%5D">http://192.168.2.34:8084&quot;}]</a></p>
              */
             public Builder resolvedWorkers(String resolvedWorkers) {
                 this.resolvedWorkers = resolvedWorkers;
@@ -645,7 +712,10 @@ public class ListExecutorGroupResponseBody extends TeaModel {
             }
 
             /**
-             * WorkerId.
+             * <p>The ID of the executor group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder workerId(Long workerId) {
                 this.workerId = workerId;
@@ -653,7 +723,10 @@ public class ListExecutorGroupResponseBody extends TeaModel {
             }
 
             /**
-             * WorkerType.
+             * <p>The executor type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k8s_service</p>
              */
             public Builder workerType(String workerType) {
                 this.workerType = workerType;
@@ -661,7 +734,10 @@ public class ListExecutorGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Workers.
+             * <p>The list of specified machines in JSON format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;address&quot;:&quot;<a href="http://47.111.188.191:18789%22%7D%5D">http://47.111.188.191:18789&quot;}]</a></p>
              */
             public Builder workers(String workers) {
                 this.workers = workers;
@@ -669,7 +745,10 @@ public class ListExecutorGroupResponseBody extends TeaModel {
             }
 
             /**
-             * XAttrs.
+             * <p>The extended parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder xAttrs(String xAttrs) {
                 this.xAttrs = xAttrs;
@@ -762,7 +841,10 @@ public class ListExecutorGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * PageNumber.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -770,7 +852,10 @@ public class ListExecutorGroupResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -778,7 +863,9 @@ public class ListExecutorGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Records.
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder records(java.util.List<Records> records) {
                 this.records = records;
@@ -786,7 +873,10 @@ public class ListExecutorGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder total(Integer total) {
                 this.total = total;

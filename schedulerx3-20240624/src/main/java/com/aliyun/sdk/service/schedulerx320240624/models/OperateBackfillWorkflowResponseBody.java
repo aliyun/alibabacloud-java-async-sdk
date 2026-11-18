@@ -93,7 +93,7 @@ public class OperateBackfillWorkflowResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code. A value of <code>200</code> indicates that the request was successful.</p>
+         * <p>The response code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class OperateBackfillWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned if the request fails.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>Parameter error: content is null.</p>
@@ -115,7 +115,7 @@ public class OperateBackfillWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique ID generated for the request.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>5EF879D0-3B43-5AD1-9BF7-52418F9C5E73</p>
@@ -126,12 +126,10 @@ public class OperateBackfillWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the call is successful. Valid values:</p>
          * <ul>
-         * <li><p><code>true</code>: The request was successful.</p>
-         * </li>
-         * <li><p><code>false</code>: The request failed.</p>
-         * </li>
+         * <li>true: The call is successful.</li>
+         * <li>false: The call fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>

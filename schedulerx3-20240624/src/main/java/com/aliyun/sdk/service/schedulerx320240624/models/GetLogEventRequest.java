@@ -265,7 +265,7 @@ public class GetLogEventRequest extends Request {
         }
 
         /**
-         * <p>The name of the application.</p>
+         * <p>The application name.</p>
          * 
          * <strong>example:</strong>
          * <p>xxl-job-executor-perf-test-241</p>
@@ -277,7 +277,7 @@ public class GetLogEventRequest extends Request {
         }
 
         /**
-         * <p>The unique identifier for the cluster.</p>
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -290,7 +290,7 @@ public class GetLogEventRequest extends Request {
         }
 
         /**
-         * <p>The end of the query\&quot;s time range, specified as a Unix timestamp in milliseconds.</p>
+         * <p>The end time.</p>
          * 
          * <strong>example:</strong>
          * <p>1721636220</p>
@@ -302,7 +302,7 @@ public class GetLogEventRequest extends Request {
         }
 
         /**
-         * <p>The severity level for filtering events.</p>
+         * <p>The event.</p>
          * 
          * <strong>example:</strong>
          * <p>INFO</p>
@@ -314,7 +314,7 @@ public class GetLogEventRequest extends Request {
         }
 
         /**
-         * <p>The type of event to retrieve.</p>
+         * <p>The event type.</p>
          * 
          * <strong>example:</strong>
          * <p>JOB</p>
@@ -326,7 +326,7 @@ public class GetLogEventRequest extends Request {
         }
 
         /**
-         * <p>The unique identifier for the job execution.</p>
+         * <p>The job execution ID.</p>
          * 
          * <strong>example:</strong>
          * <p>101</p>
@@ -338,7 +338,7 @@ public class GetLogEventRequest extends Request {
         }
 
         /**
-         * <p>The name of the job.</p>
+         * <p>The job name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -350,7 +350,7 @@ public class GetLogEventRequest extends Request {
         }
 
         /**
-         * <p>A keyword to search for in log events.</p>
+         * <p>The keyword.</p>
          * 
          * <strong>example:</strong>
          * <p>test_partition_tbl</p>
@@ -362,7 +362,7 @@ public class GetLogEventRequest extends Request {
         }
 
         /**
-         * <p>The page number to retrieve.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -374,7 +374,7 @@ public class GetLogEventRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of results to return per page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -386,12 +386,10 @@ public class GetLogEventRequest extends Request {
         }
 
         /**
-         * <p>Specifies the sort order of events.</p>
+         * <p>Specifies whether to sort the results in descending order. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: Sorts events in descending order.</p>
-         * </li>
-         * <li><p><strong>false</strong>: Sorts events in ascending order.</p>
-         * </li>
+         * <li><strong>true</strong>: Sorts the results in descending order.</li>
+         * <li><strong>false</strong>: Sorts the results in ascending order.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -404,7 +402,7 @@ public class GetLogEventRequest extends Request {
         }
 
         /**
-         * <p>The start of the query\&quot;s time range, specified as a Unix timestamp in milliseconds.</p>
+         * <p>The start time. Specify a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1721268302000</p>
@@ -416,7 +414,7 @@ public class GetLogEventRequest extends Request {
         }
 
         /**
-         * <p>The unique identifier for the workflow execution.</p>
+         * <p>The workflow execution ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1450568762586578000</p>
@@ -428,10 +426,10 @@ public class GetLogEventRequest extends Request {
         }
 
         /**
-         * <p>The name of the workflow.</p>
+         * <p>The workflow name.</p>
          * 
          * <strong>example:</strong>
-         * <p>流程001</p>
+         * <p>Workflow001</p>
          */
         public Builder workflowName(String workflowName) {
             this.putQueryParameter("WorkflowName", workflowName);

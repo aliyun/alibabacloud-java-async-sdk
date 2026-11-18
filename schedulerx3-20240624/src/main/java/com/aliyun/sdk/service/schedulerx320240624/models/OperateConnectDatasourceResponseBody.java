@@ -93,7 +93,7 @@ public class OperateConnectDatasourceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Response code</p>
+         * <p>The response code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class OperateConnectDatasourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error message.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>Parameter error: content is null.</p>
@@ -115,7 +115,7 @@ public class OperateConnectDatasourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID of the request</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>BAC1ADB5-EEB5-5834-93D8-522E067AF8D9</p>
@@ -126,10 +126,10 @@ public class OperateConnectDatasourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the invocation succeeded.  </p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
          * <ul>
-         * <li>true: The invocation succeeded.  </li>
-         * <li>false: The invocation failed.</li>
+         * <li>true: The call was successful.</li>
+         * <li>false: The call failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

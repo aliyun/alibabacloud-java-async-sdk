@@ -140,7 +140,10 @@ public class ListExecutorsRequest extends Request {
         }
 
         /**
-         * AppGroupId.
+         * <p>The application group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1625</p>
          */
         public Builder appGroupId(Long appGroupId) {
             this.putQueryParameter("AppGroupId", appGroupId);

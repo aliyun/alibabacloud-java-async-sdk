@@ -104,7 +104,7 @@ public class OperateUnholdWorkflowExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message.</p>
+         * <p>The detailed information.</p>
          * 
          * <strong>example:</strong>
          * <p>Parameter error: content is null.</p>
@@ -115,7 +115,7 @@ public class OperateUnholdWorkflowExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>3835AA29-2298-5434-BC53-9CC377CDFD2C</p>
@@ -126,12 +126,10 @@ public class OperateUnholdWorkflowExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the call was successful.</p>
          * <ul>
-         * <li><p><code>true</code>: The request was successful.</p>
-         * </li>
-         * <li><p><code>false</code>: The request failed.</p>
-         * </li>
+         * <li>true: The call was successful.</li>
+         * <li>false: The call failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -167,7 +167,7 @@ public class ListDatasourcesRequest extends Request {
         }
 
         /**
-         * <p>Cluster ID.</p>
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -180,7 +180,7 @@ public class ListDatasourcesRequest extends Request {
         }
 
         /**
-         * <p>Maximum data volume to read in this request. Default value is 10.</p>
+         * <p>The maximum number of entries to return for this request. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -192,10 +192,10 @@ public class ListDatasourcesRequest extends Request {
         }
 
         /**
-         * <p>Job Name.</p>
+         * <p>The task name.</p>
          * 
          * <strong>example:</strong>
-         * <p>修正券统计数据</p>
+         * <p>Corrected voucher statistics</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -204,7 +204,7 @@ public class ListDatasourcesRequest extends Request {
         }
 
         /**
-         * <p>Indicates the current read position returned by the call. An empty value means all data has been read. This parameter is not required for the first query.</p>
+         * <p>The token that indicates the position from which the current call returns data. An empty value indicates that all data has been read. You do not need to specify this parameter for the first query.</p>
          * 
          * <strong>example:</strong>
          * <p>eCKqVlS5FKF5EWGGOo8EgQ==</p>
@@ -216,7 +216,7 @@ public class ListDatasourcesRequest extends Request {
         }
 
         /**
-         * <p>Page number.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -228,7 +228,7 @@ public class ListDatasourcesRequest extends Request {
         }
 
         /**
-         * <p>Page size.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -240,10 +240,14 @@ public class ListDatasourcesRequest extends Request {
         }
 
         /**
-         * <p>Grafana dashboard type, including: dash-db: Dashboard; dash-folder: Folder (which can contain dashboards).</p>
+         * <p>The Grafana dashboard type. Valid values:</p>
+         * <ul>
+         * <li>dash-db: Dashboard.</li>
+         * <li>dash-folder: Folder, which can contain dashboards.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
-         * <p>REDIS</p>
+         * <p>0</p>
          */
         public Builder type(Integer type) {
             this.putQueryParameter("Type", type);

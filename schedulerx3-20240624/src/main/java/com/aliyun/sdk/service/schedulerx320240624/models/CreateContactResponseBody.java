@@ -106,7 +106,10 @@ public class CreateContactResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class CreateContactResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class CreateContactResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Parameter error: content is null.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class CreateContactResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2C3E52FF-CBE9-5C0E-8252-37ACFF1F5EFF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,14 @@ public class CreateContactResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call is successful.</li>
+         * <li>false: The call fails.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -191,7 +207,7 @@ public class CreateContactResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>新建联系人的 id，后续 Update/Delete 时使用</p>
+             * <p>The contact ID.</p>
              * 
              * <strong>example:</strong>
              * <p>5000</p>

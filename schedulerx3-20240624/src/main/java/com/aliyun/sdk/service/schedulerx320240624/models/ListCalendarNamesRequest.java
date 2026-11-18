@@ -83,7 +83,7 @@ public class ListCalendarNamesRequest extends Request {
         }
 
         /**
-         * <p>The Cluster ID.</p>
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

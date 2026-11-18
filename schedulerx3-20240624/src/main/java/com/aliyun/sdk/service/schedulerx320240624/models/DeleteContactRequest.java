@@ -83,10 +83,11 @@ public class DeleteContactRequest extends Request {
         }
 
         /**
+         * <p>The name of the alert contact.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>黄永丰</p>
+         * <p>Huang Yongfeng</p>
          */
         public Builder contactName(String contactName) {
             this.putBodyParameter("ContactName", contactName);

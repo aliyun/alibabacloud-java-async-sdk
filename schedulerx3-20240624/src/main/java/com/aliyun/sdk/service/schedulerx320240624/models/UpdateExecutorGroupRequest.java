@@ -230,7 +230,10 @@ public class UpdateExecutorGroupRequest extends Request {
         } 
 
         /**
-         * ApiKey.
+         * <p>The client secret.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>K4KWGINZVY9JwcZT0/vpSg==</p>
          */
         public Builder apiKey(String apiKey) {
             this.putBodyParameter("ApiKey", apiKey);
@@ -239,7 +242,10 @@ public class UpdateExecutorGroupRequest extends Request {
         }
 
         /**
-         * AuthType.
+         * <p>The authentication type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>APP</p>
          */
         public Builder authType(String authType) {
             this.putBodyParameter("AuthType", authType);
@@ -248,7 +254,7 @@ public class UpdateExecutorGroupRequest extends Request {
         }
 
         /**
-         * AutoScale.
+         * <p>Specifies whether to enable auto scaling.</p>
          */
         public Builder autoScale(Boolean autoScale) {
             this.putBodyParameter("AutoScale", autoScale);
@@ -257,6 +263,7 @@ public class UpdateExecutorGroupRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -269,7 +276,7 @@ public class UpdateExecutorGroupRequest extends Request {
         }
 
         /**
-         * CmsWorkspaceId.
+         * <p>The CMS workspace ID.</p>
          */
         public Builder cmsWorkspaceId(String cmsWorkspaceId) {
             this.putBodyParameter("CmsWorkspaceId", cmsWorkspaceId);
@@ -278,7 +285,10 @@ public class UpdateExecutorGroupRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the executor group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>group1</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -287,6 +297,7 @@ public class UpdateExecutorGroupRequest extends Request {
         }
 
         /**
+         * <p>The ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -299,7 +310,10 @@ public class UpdateExecutorGroupRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the executor group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>group1</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -308,7 +322,10 @@ public class UpdateExecutorGroupRequest extends Request {
         }
 
         /**
-         * Network.
+         * <p>The network configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>public</p>
          */
         public Builder network(String network) {
             this.putBodyParameter("Network", network);
@@ -317,7 +334,10 @@ public class UpdateExecutorGroupRequest extends Request {
         }
 
         /**
-         * Protocol.
+         * <p>The protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>openai</p>
          */
         public Builder protocol(String protocol) {
             this.putBodyParameter("Protocol", protocol);
@@ -326,7 +346,10 @@ public class UpdateExecutorGroupRequest extends Request {
         }
 
         /**
-         * WorkerType.
+         * <p>The executor type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>openclaw</p>
          */
         public Builder workerType(String workerType) {
             this.putBodyParameter("WorkerType", workerType);
@@ -335,7 +358,10 @@ public class UpdateExecutorGroupRequest extends Request {
         }
 
         /**
-         * Workers.
+         * <p>The list of specified machines in JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;address&quot;:&quot;<a href="http://47.111.188.191:18789%22%7D%5D">http://47.111.188.191:18789&quot;}]</a></p>
          */
         public Builder workers(String workers) {
             this.putBodyParameter("Workers", workers);
@@ -344,7 +370,10 @@ public class UpdateExecutorGroupRequest extends Request {
         }
 
         /**
-         * XAttrs.
+         * <p>The extended configuration of the executor group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Not publicly available</p>
          */
         public Builder xAttrs(String xAttrs) {
             this.putBodyParameter("XAttrs", xAttrs);

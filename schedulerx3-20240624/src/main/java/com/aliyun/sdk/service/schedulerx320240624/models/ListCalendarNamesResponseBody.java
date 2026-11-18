@@ -117,9 +117,7 @@ public class ListCalendarNamesResponseBody extends TeaModel {
         }
 
         /**
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>The list of calendar names.</p>
          */
         public Builder data(java.util.List<String> data) {
             this.data = data;
@@ -149,12 +147,10 @@ public class ListCalendarNamesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the call was successful.</p>
          * <ul>
-         * <li><p><strong>true</strong>: The request succeeded.</p>
-         * </li>
-         * <li><p><strong>false</strong>: The request failed.</p>
-         * </li>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

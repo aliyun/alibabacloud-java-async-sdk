@@ -184,7 +184,7 @@ public class CreateAppRequest extends Request {
         }
 
         /**
-         * <p>The access token.</p>
+         * <p>The access token of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>ltk1ZXHv6LvibZypFkPHzRA</p>
@@ -196,7 +196,7 @@ public class CreateAppRequest extends Request {
         }
 
         /**
-         * <p>The app name.</p>
+         * <p>The application name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -209,7 +209,7 @@ public class CreateAppRequest extends Request {
         }
 
         /**
-         * <p>The app type.</p>
+         * <p>The application type.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -234,7 +234,7 @@ public class CreateAppRequest extends Request {
         }
 
         /**
-         * <p>Indicates whether to enable logging.</p>
+         * <p>Specifies whether to enable logging.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -247,6 +247,9 @@ public class CreateAppRequest extends Request {
 
         /**
          * <p>The label routing strategy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder labelRouteStrategy(Integer labelRouteStrategy) {
             this.putBodyParameter("LabelRouteStrategy", labelRouteStrategy);
@@ -255,9 +258,9 @@ public class CreateAppRequest extends Request {
         }
 
         /**
-         * <p>The maximum concurrency.</p>
+         * <p>The size of the task execution queue.</p>
          * <blockquote>
-         * <p>This parameter specifies the maximum number of task instances that can run concurrently for the app. Task instances that exceed this limit are not discarded. They are queued for execution.</p>
+         * <p>The maximum number of task instances that can run concurrently for an application. Task instances that exceed the concurrency limit are not discarded but are placed in a queue for execution.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -270,7 +273,7 @@ public class CreateAppRequest extends Request {
         }
 
         /**
-         * <p>The title of the app.</p>
+         * <p>The title.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

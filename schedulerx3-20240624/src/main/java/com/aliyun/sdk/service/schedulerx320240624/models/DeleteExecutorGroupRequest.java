@@ -103,6 +103,7 @@ public class DeleteExecutorGroupRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +116,7 @@ public class DeleteExecutorGroupRequest extends Request {
         }
 
         /**
-         * DeleteJobs.
+         * <p>Specifies whether to synchronously delete tasks.</p>
          */
         public Builder deleteJobs(Boolean deleteJobs) {
             this.putBodyParameter("DeleteJobs", deleteJobs);
@@ -124,6 +125,7 @@ public class DeleteExecutorGroupRequest extends Request {
         }
 
         /**
+         * <p>The ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,7 +138,10 @@ public class DeleteExecutorGroupRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the executor group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>group1</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);

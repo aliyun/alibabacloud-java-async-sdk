@@ -127,7 +127,7 @@ public class DeleteWorkflowRequest extends Request {
         }
 
         /**
-         * <p>The Application name.</p>
+         * <p>The application name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,7 +140,7 @@ public class DeleteWorkflowRequest extends Request {
         }
 
         /**
-         * <p>The Cluster ID.</p>
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -153,7 +153,7 @@ public class DeleteWorkflowRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to delete all Jobs in the Workflow.</p>
+         * <p>Specifies whether to delete all jobs in the workflow.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -165,7 +165,7 @@ public class DeleteWorkflowRequest extends Request {
         }
 
         /**
-         * <p>The Workflow ID.</p>
+         * <p>The workflow ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

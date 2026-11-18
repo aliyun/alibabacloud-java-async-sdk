@@ -93,7 +93,7 @@ public class OperateUnholdJobExecutionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The Response Code.</p>
+         * <p>The response code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class OperateUnholdJobExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The Error Message.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>Parameter error: content is null.</p>
@@ -115,7 +115,7 @@ public class OperateUnholdJobExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The Request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>D0DE9C33-992A-580B-89C4-B609A292748D</p>
@@ -126,12 +126,10 @@ public class OperateUnholdJobExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request succeeded:</p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
          * <ul>
-         * <li><p>true: The request succeeded.</p>
-         * </li>
-         * <li><p>false: The request failed.</p>
-         * </li>
+         * <li>true: The call was successful.</li>
+         * <li>false: The call failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

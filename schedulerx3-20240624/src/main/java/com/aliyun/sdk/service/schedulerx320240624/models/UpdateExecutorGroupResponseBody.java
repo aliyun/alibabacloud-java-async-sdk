@@ -106,7 +106,10 @@ public class UpdateExecutorGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class UpdateExecutorGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The updated executor group information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class UpdateExecutorGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Parameter check error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class UpdateExecutorGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C78E2AD2-5985-515B-BAD2-31A248AFC263</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,14 @@ public class UpdateExecutorGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call was successful.</li>
+         * <li>false: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -295,7 +311,17 @@ public class UpdateExecutorGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthType.
+             * <p>The authentication type. Valid values:</p>
+             * <ul>
+             * <li><strong>Anonymous</strong>: No authentication is required.</li>
+             * <li><strong>Application</strong>: Authentication is required.<blockquote>
+             * <p>The default value is <strong>Anonymous</strong>.</p>
+             * </blockquote>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>EDIT</p>
              */
             public Builder authType(String authType) {
                 this.authType = authType;
@@ -303,7 +329,10 @@ public class UpdateExecutorGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The workflow description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my first workflow</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -311,7 +340,10 @@ public class UpdateExecutorGroupResponseBody extends TeaModel {
             }
 
             /**
-             * FailedService.
+             * <p>The Kubernetes services that failed to be imported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;cluster&quot;:&quot;xxxxx&quot;,&quot;namespace&quot;:&quot;xxxxx&quot;,&quot;service&quot;:&quot;xxxxx&quot;}]</p>
              */
             public Builder failedService(String failedService) {
                 this.failedService = failedService;
@@ -319,7 +351,10 @@ public class UpdateExecutorGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The workflow name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>myWorkflow</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -327,7 +362,10 @@ public class UpdateExecutorGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Network.
+             * <p>The network data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;OfficeSiteId\&quot;:\&quot;cn-hangzhou+dir-8801187585\&quot;,\&quot;VSwitchIds\&quot;:[null]}</p>
              */
             public Builder network(String network) {
                 this.network = network;
@@ -335,7 +373,10 @@ public class UpdateExecutorGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * <p>The protocol types supported by the domain name. HTTP: Only the HTTP protocol is supported. HTTPS: Only the HTTPS protocol is supported. HTTP,HTTPS: Both HTTP and HTTPS protocols are supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TCP</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -343,7 +384,10 @@ public class UpdateExecutorGroupResponseBody extends TeaModel {
             }
 
             /**
-             * WorkerId.
+             * <p>The worker ID of the deployment task. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2712224.html">ListWorkerResource</a> operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder workerId(Long workerId) {
                 this.workerId = workerId;
@@ -351,7 +395,10 @@ public class UpdateExecutorGroupResponseBody extends TeaModel {
             }
 
             /**
-             * WorkerType.
+             * <p>The executor type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k8s_service</p>
              */
             public Builder workerType(String workerType) {
                 this.workerType = workerType;
@@ -359,7 +406,10 @@ public class UpdateExecutorGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Workers.
+             * <p>The list of specified machines in JSON format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;cluster&quot;:&quot;xxxxx&quot;,&quot;namespace&quot;:&quot;xxxxx&quot;,&quot;service&quot;:&quot;xxxxx&quot;}]</p>
              */
             public Builder workers(String workers) {
                 this.workers = workers;

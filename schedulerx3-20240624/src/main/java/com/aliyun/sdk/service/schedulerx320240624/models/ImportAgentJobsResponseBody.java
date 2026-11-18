@@ -93,7 +93,10 @@ public class ImportAgentJobsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class ImportAgentJobsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The detailed information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Parameter error: content is null.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,10 @@ public class ImportAgentJobsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2C3E52FF-CBE9-5C0E-8252-37ACFF1F5EFF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,14 @@ public class ImportAgentJobsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call was successful.</li>
+         * <li>false: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

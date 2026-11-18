@@ -115,7 +115,7 @@ public class OperateHoldJobExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>2ECA6FC9-7557-5576-AF5F-FC3E7BCC9C21</p>
@@ -126,12 +126,10 @@ public class OperateHoldJobExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the call is successful. Valid values:</p>
          * <ul>
-         * <li><p><code>true</code>: The request was successful.</p>
-         * </li>
-         * <li><p><code>false</code>: The request failed.</p>
-         * </li>
+         * <li>true: The call is successful.</li>
+         * <li>false: The call failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

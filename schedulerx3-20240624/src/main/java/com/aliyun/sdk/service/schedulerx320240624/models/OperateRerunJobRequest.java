@@ -172,7 +172,10 @@ public class OperateRerunJobRequest extends Request {
         }
 
         /**
-         * AppId.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1625</p>
          */
         public Builder appId(Long appId) {
             this.putQueryParameter("AppId", appId);
@@ -207,7 +210,7 @@ public class OperateRerunJobRequest extends Request {
         }
 
         /**
-         * <p>The data timestamp.</p>
+         * <p>The data timestamp, in the HH:mm:ss format.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -220,7 +223,7 @@ public class OperateRerunJobRequest extends Request {
         }
 
         /**
-         * <p>The end time.</p>
+         * <p>The end time, specified as a UNIX timestamp in milliseconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -233,7 +236,7 @@ public class OperateRerunJobRequest extends Request {
         }
 
         /**
-         * <p>The node ID.</p>
+         * <p>The job ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -246,7 +249,7 @@ public class OperateRerunJobRequest extends Request {
         }
 
         /**
-         * <p>The start time.</p>
+         * <p>The start time, specified as a UNIX timestamp in milliseconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

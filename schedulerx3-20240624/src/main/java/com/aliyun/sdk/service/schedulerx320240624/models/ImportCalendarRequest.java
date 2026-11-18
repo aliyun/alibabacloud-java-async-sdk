@@ -141,7 +141,7 @@ public class ImportCalendarRequest extends Request {
         }
 
         /**
-         * <p>The days of each month, in JSON format.</p>
+         * <p>The month.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

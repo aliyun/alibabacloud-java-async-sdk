@@ -106,7 +106,10 @@ public class CreateExecutorGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class CreateExecutorGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class CreateExecutorGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Parameter format error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class CreateExecutorGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5EF879D0-3B43-5AD1-9BF7-52418F9C5E73</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,14 @@ public class CreateExecutorGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call was successful.</li>
+         * <li>false: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -295,7 +311,15 @@ public class CreateExecutorGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthType.
+             * <p>The authentication method used by devices under the product to connect to the IoT platform. Valid values:</p>
+             * <ul>
+             * <li><strong>secret</strong>: Uses the device secret for device identity authentication.</li>
+             * <li><strong>id2</strong>: Uses IoT Internet Device ID (ID²).</li>
+             * <li><strong>x509</strong>: Uses the device X.509 certificate for device identity authentication.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>md5_spell</p>
              */
             public Builder authType(String authType) {
                 this.authType = authType;
@@ -303,7 +327,10 @@ public class CreateExecutorGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The workflow description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my first workflow</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -311,7 +338,10 @@ public class CreateExecutorGroupResponseBody extends TeaModel {
             }
 
             /**
-             * FailedService.
+             * <p>The Kubernetes services that failed to be imported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;cluster&quot;:&quot;xxxxx&quot;,&quot;namespace&quot;:&quot;xxxxx&quot;,&quot;service&quot;:&quot;xxxxx&quot;}]</p>
              */
             public Builder failedService(String failedService) {
                 this.failedService = failedService;
@@ -319,7 +349,10 @@ public class CreateExecutorGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The workflow name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>myWorkflow</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -327,7 +360,10 @@ public class CreateExecutorGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Network.
+             * <p>The domain name rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder network(String network) {
                 this.network = network;
@@ -335,7 +371,10 @@ public class CreateExecutorGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * <p>The protocol types supported by the domain name. Valid values: HTTP (supports only the HTTP protocol), HTTPS (supports only the HTTPS protocol), and HTTP,HTTPS (supports both HTTP and HTTPS protocols).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>All</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -343,7 +382,10 @@ public class CreateExecutorGroupResponseBody extends TeaModel {
             }
 
             /**
-             * WorkerId.
+             * <p>The worker ID of the deployment task. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2712224.html">ListWorkerResource</a> operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder workerId(Long workerId) {
                 this.workerId = workerId;
@@ -351,7 +393,10 @@ public class CreateExecutorGroupResponseBody extends TeaModel {
             }
 
             /**
-             * WorkerType.
+             * <p>The executor type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k8s_service</p>
              */
             public Builder workerType(String workerType) {
                 this.workerType = workerType;
@@ -359,7 +404,10 @@ public class CreateExecutorGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Workers.
+             * <p>The list of specified machines in JSON format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;cluster&quot;:&quot;xxxxx&quot;,&quot;namespace&quot;:&quot;xxxxx&quot;,&quot;service&quot;:&quot;xxxxx&quot;}]</p>
              */
             public Builder workers(String workers) {
                 this.workers = workers;

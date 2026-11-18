@@ -127,7 +127,7 @@ public class OperateRetryWorkflowExecutionRequest extends Request {
         }
 
         /**
-         * <p>The name of the application.</p>
+         * <p>The application name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -153,7 +153,7 @@ public class OperateRetryWorkflowExecutionRequest extends Request {
         }
 
         /**
-         * <p>Set to <code>true</code> to rerun only failed nodes.</p>
+         * <p>Specifies whether to rerun only the failed nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -165,7 +165,7 @@ public class OperateRetryWorkflowExecutionRequest extends Request {
         }
 
         /**
-         * <p>The workflow execution ID.</p>
+         * <p>The workflow instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
