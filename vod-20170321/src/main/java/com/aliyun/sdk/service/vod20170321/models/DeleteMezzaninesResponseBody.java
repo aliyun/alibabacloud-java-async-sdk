@@ -93,7 +93,7 @@ public class DeleteMezzaninesResponseBody extends TeaModel {
         } 
 
         /**
-         * NonExistReferenceIds.
+         * <p>The list of custom IDs that do not exist.</p>
          */
         public Builder nonExistReferenceIds(java.util.List<String> nonExistReferenceIds) {
             this.nonExistReferenceIds = nonExistReferenceIds;
@@ -101,7 +101,7 @@ public class DeleteMezzaninesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The IDs of the audio or video files that do not exist.</p>
+         * <p>The list of audio or video IDs that do not exist.</p>
          */
         public Builder nonExistVideoIds(java.util.List<String> nonExistVideoIds) {
             this.nonExistVideoIds = nonExistVideoIds;
@@ -109,7 +109,7 @@ public class DeleteMezzaninesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>25818875-5F78-4AF6-D7393642CA58****</p>
@@ -120,9 +120,9 @@ public class DeleteMezzaninesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The IDs of the audio or video files whose source files cannot be deleted.</p>
+         * <p>The list of audio or video IDs that cannot be deleted.</p>
          * <blockquote>
-         * <p> In most cases, source files cannot be deleted if they are used for original-quality playback or you do not have required permissions to delete them. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Overview</a>.</p>
+         * <p>This is typically because the source file is used as the original stream (if the video transcoding pattern is no transcoding or asynchronous transcoding, the source file is used as the original stream for playback and cannot be deleted by default) or because of insufficient <a href="https://help.aliyun.com/document_detail/113600.html">permissions</a>.</p>
          * </blockquote>
          */
         public Builder unRemoveableVideoIds(java.util.List<String> unRemoveableVideoIds) {

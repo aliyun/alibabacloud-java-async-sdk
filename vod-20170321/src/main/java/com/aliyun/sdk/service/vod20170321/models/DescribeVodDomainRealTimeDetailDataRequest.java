@@ -175,7 +175,11 @@ public class DescribeVodDomainRealTimeDetailDataRequest extends Request {
         } 
 
         /**
-         * <p>The accelerated domain name. You can specify a maximum of 20 accelerated domain names in each call. Separate domain names with commas (,).</p>
+         * <p>The accelerated domain name to query.</p>
+         * <ul>
+         * <li>Batch queries are supported. Separate multiple domain names with commas (,). You can specify up to 20 domain names at a time.</li>
+         * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>, and in the left-side navigation pane, choose <strong>Configuration Management &gt; CDN Configuration &gt; Domain Names</strong> to view the accelerated domain names that you have added to ApsaraVideo VOD. Alternatively, call the <a href="~~DescribeVodUserDomains~~">DescribeVodUserDomains</a> operation to query the list of accelerated domain names.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -188,8 +192,10 @@ public class DescribeVodDomainRealTimeDetailDataRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query.</p>
-         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Example: 2019-11-30T05:40:00Z.</p>
+         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p>The end time must be later than the start time, and the difference between the end time and the start time cannot exceed 10 minutes.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -202,12 +208,16 @@ public class DescribeVodDomainRealTimeDetailDataRequest extends Request {
         }
 
         /**
-         * <p>The type of data that you want to query. You can specify multiple data types and separate them with commas (,). Valid values:</p>
-         * <p>qps: the number of queries per second bps: bandwidth data http_code: HTTP status codes</p>
+         * <p>The type of access data to query. You can specify multiple types. Separate multiple types with commas (,). Valid values:</p>
+         * <ul>
+         * <li><strong>qps</strong>: queries per second (QPS).</li>
+         * <li><strong>bps</strong>: bandwidth data.</li>
+         * <li><strong>http_code</strong>: HTTP status codes.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>bps</p>
+         * <p>qps</p>
          */
         public Builder field(String field) {
             this.putQueryParameter("Field", field);
@@ -216,7 +226,7 @@ public class DescribeVodDomainRealTimeDetailDataRequest extends Request {
         }
 
         /**
-         * <p>The name of the Internet service provider (ISP).</p>
+         * <p>The Internet service provider (ISP) name in English. If you do not specify this parameter, data for all ISPs is queried by default.</p>
          * 
          * <strong>example:</strong>
          * <p>unicom</p>
@@ -228,7 +238,7 @@ public class DescribeVodDomainRealTimeDetailDataRequest extends Request {
         }
 
         /**
-         * <p>The name of the region. If you do not specify a region, data in all regions is queried.</p>
+         * <p>The region name in English. If you do not specify this parameter, data for all regions is queried by default.</p>
          * 
          * <strong>example:</strong>
          * <p>shanghai</p>
@@ -240,8 +250,11 @@ public class DescribeVodDomainRealTimeDetailDataRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return a summary value. Valid values:</p>
-         * <p>true false (default)</p>
+         * <p>Specifies whether to return aggregated data by domain name. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Returns aggregated data across all domain names.</li>
+         * <li><strong>false</strong> (default): Returns data grouped by domain name.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -253,12 +266,11 @@ public class DescribeVodDomainRealTimeDetailDataRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return a summary value. Valid values:</p>
+         * <p>Specifies whether to return aggregated data by region and ISP. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: groups the results by domain name and merges the results by region and ISP.</li>
-         * <li><strong>false</strong>: groups the results by domain name.</li>
+         * <li><strong>true</strong>: Returns data grouped only by domain name, with region and ISP values aggregated.</li>
+         * <li><strong>false</strong> (default): Returns data grouped by domain name, region, and ISP.</li>
          * </ul>
-         * <p>Default value: <strong>false</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -279,8 +291,7 @@ public class DescribeVodDomainRealTimeDetailDataRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query.</p>
-         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Example: 2019-11-30T05:33:00Z.</p>
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

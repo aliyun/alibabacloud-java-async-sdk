@@ -93,7 +93,7 @@ public class UpdateMediaStorageClassResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The IDs of the media assets that failed to be processed.</p>
+         * ForbiddenList.
          */
         public Builder forbiddenList(ForbiddenList forbiddenList) {
             this.forbiddenList = forbiddenList;
@@ -101,7 +101,7 @@ public class UpdateMediaStorageClassResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The IDs of the media assets that failed to be obtained.</p>
+         * IgnoredList.
          */
         public Builder ignoredList(IgnoredList ignoredList) {
             this.ignoredList = ignoredList;
@@ -109,7 +109,7 @@ public class UpdateMediaStorageClassResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>30FA0B7C-3A81-5449-93CD-ACA149E6****</p>
@@ -120,10 +120,10 @@ public class UpdateMediaStorageClassResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The state of the task. Valid values:</p>
+         * <p>The task status. Valid values:</p>
          * <ul>
-         * <li><strong>Processing</strong></li>
-         * <li><strong>Failed</strong></li>
+         * <li><strong>Processing</strong>: The task is being processed.</li>
+         * <li><strong>Failed</strong>: The task failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -193,10 +193,7 @@ public class UpdateMediaStorageClassResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the media asset.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>19e231ee6e3e417fbf2e92ec2680****</p>
+             * MediaId.
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
@@ -204,10 +201,7 @@ public class UpdateMediaStorageClassResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reason for the failure.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TargetStorageClassInconsistent</p>
+             * Reason.
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -315,10 +309,7 @@ public class UpdateMediaStorageClassResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the media asset.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>19e231ee6e3e417fbf2e92ec2680****</p>
+             * MediaId.
              */
             public Builder mediaId(java.util.List<String> mediaId) {
                 this.mediaId = mediaId;

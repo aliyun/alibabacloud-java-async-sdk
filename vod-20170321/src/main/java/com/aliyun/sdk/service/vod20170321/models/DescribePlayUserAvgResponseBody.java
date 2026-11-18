@@ -67,7 +67,7 @@ public class DescribePlayUserAvgResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>6C7F90B2-BDA4-4FAC-****-A38A121DFE19</p>
@@ -78,7 +78,7 @@ public class DescribePlayUserAvgResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The statistics on average playback each day.</p>
+         * UserPlayStatisAvgs.
          */
         public Builder userPlayStatisAvgs(UserPlayStatisAvgs userPlayStatisAvgs) {
             this.userPlayStatisAvgs = userPlayStatisAvgs;
@@ -157,10 +157,7 @@ public class DescribePlayUserAvgResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The average number of video views.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>170</p>
+             * AvgPlayCount.
              */
             public Builder avgPlayCount(String avgPlayCount) {
                 this.avgPlayCount = avgPlayCount;
@@ -168,10 +165,7 @@ public class DescribePlayUserAvgResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The average playback duration. Unit: milliseconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1035902.8</p>
+             * AvgPlayDuration.
              */
             public Builder avgPlayDuration(String avgPlayDuration) {
                 this.avgPlayDuration = avgPlayDuration;
@@ -179,10 +173,7 @@ public class DescribePlayUserAvgResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The date when the statistics were generated. The date follows the <em>yyyy-MM-dd</em> format.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>20170120</p>
+             * Date.
              */
             public Builder date(String date) {
                 this.date = date;

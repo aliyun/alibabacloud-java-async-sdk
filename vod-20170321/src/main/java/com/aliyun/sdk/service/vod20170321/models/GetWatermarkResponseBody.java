@@ -67,7 +67,7 @@ public class GetWatermarkResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>25818875-5F78-4A*****F6-D7393642CA58</p>
@@ -78,7 +78,7 @@ public class GetWatermarkResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the watermark template.</p>
+         * <p>The image or text watermark template information.</p>
          */
         public Builder watermarkInfo(WatermarkInfo watermarkInfo) {
             this.watermarkInfo = watermarkInfo;
@@ -222,7 +222,7 @@ public class GetWatermarkResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the application.</p>
+             * <p>The application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>app-****</p>
@@ -233,7 +233,7 @@ public class GetWatermarkResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the watermark template was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * <p>The creation time of the watermark template. The time follows the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format and is in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2018-11-06T08:03:17Z</p>
@@ -244,9 +244,9 @@ public class GetWatermarkResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the watermark file. The URL is an Object Storage Service (OSS) URL or an Alibaba Cloud CDN URL.</p>
+             * <p>The URL of the watermark file, which is an OSS URL or a CDN URL.</p>
              * <blockquote>
-             * <p> This parameter is returned only for image watermark templates.</p>
+             * <p>This parameter is returned only for image watermark templates.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -258,10 +258,10 @@ public class GetWatermarkResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the watermark template is the default one. Valid values:</p>
+             * <p>Specifies whether the watermark template is the default image or text watermark template. Valid values:</p>
              * <ul>
-             * <li><strong>Default</strong></li>
-             * <li><strong>NotDefault</strong></li>
+             * <li><strong>Default</strong>: default image or text watermark template.</li>
+             * <li><strong>NotDefault</strong>: non-default image or text watermark template.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -276,7 +276,7 @@ public class GetWatermarkResponseBody extends TeaModel {
              * <p>The name of the watermark template.</p>
              * 
              * <strong>example:</strong>
-             * <p>image watermark test</p>
+             * <p>Image watermark test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -286,12 +286,12 @@ public class GetWatermarkResponseBody extends TeaModel {
             /**
              * <p>The type of the watermark template. Valid values:</p>
              * <ul>
-             * <li><strong>Image</strong>: image watermark template</li>
-             * <li><strong>Text</strong>: text watermark template</li>
+             * <li><strong>Image</strong>: image watermark template.</li>
+             * <li><strong>Text</strong>: text watermark template.</li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>Text</p>
+             * <p>Image</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -299,7 +299,7 @@ public class GetWatermarkResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configuration information of the watermark such as the display position and special effects. The value is a JSON string. The configuration parameters for image and text watermarks are different. For more information about the parameter structure, see <a href="~~98618#section-h01-44s-2lr~~">WatermarkConfig</a>.</p>
+             * <p>The configuration information of the image or text watermark in JSON string format, including the display position and effect of the watermark. The configuration parameters for image watermarks and text watermarks are different. For more information about the parameter structure, see <a href="~~98618#section-h01-44s-2lr~~">WatermarkConfig</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;ReferPos&quot;: &quot;BottomRight&quot;,&quot;Height&quot;: &quot;55&quot;,&quot;Width&quot;: &quot;55&quot;,&quot;Dx&quot;: &quot;8&quot;,&quot;Dy&quot;: &quot;8&quot; }</p>

@@ -67,7 +67,7 @@ public class GetVideoInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>25818875-5F78-4AF6-D7393642CA58****</p>
@@ -78,7 +78,7 @@ public class GetVideoInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the audio or video file.</p>
+         * <p>The audio or video information.</p>
          */
         public Builder video(Video video) {
             this.video = video;
@@ -497,7 +497,7 @@ public class GetVideoInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the application.</p>
+             * <p>The application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>app-****</p>
@@ -510,8 +510,8 @@ public class GetVideoInfoResponseBody extends TeaModel {
             /**
              * <p>The final review result of the audio or video file. Valid values:</p>
              * <ul>
-             * <li><strong>Normal</strong>: pass</li>
-             * <li><strong>Blocked</strong>: blocked</li>
+             * <li><strong>Normal</strong>: Approved.</li>
+             * <li><strong>Blocked</strong>: Blocked.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -523,7 +523,7 @@ public class GetVideoInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The category ID of the media file.</p>
+             * <p>The category ID.</p>
              * 
              * <strong>example:</strong>
              * <p>781111****</p>
@@ -534,10 +534,10 @@ public class GetVideoInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the category.</p>
+             * <p>The category name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Category name</p>
+             * <p>cate1</p>
              */
             public Builder cateName(String cateName) {
                 this.cateName = cateName;
@@ -545,7 +545,7 @@ public class GetVideoInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The thumbnail URL of the media file.</p>
+             * <p>The thumbnail URL of the audio or video file.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example.aliyundoc.com/****.jpg">https://example.aliyundoc.com/****.jpg</a></p>
@@ -556,7 +556,7 @@ public class GetVideoInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the media file was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * <p>The time when the audio or video file was created. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2017-11-14T09:15:50Z</p>
@@ -567,7 +567,10 @@ public class GetVideoInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The custom information about the media file.\n\n&gt; This parameter has been deprecated. This parameter is no longer returned after you call the operation.</p>
+             * <p>The custom media asset information.</p>
+             * <blockquote>
+             * <p>This parameter is deprecated. The API no longer returns this parameter.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>{&quot;aaa&quot;:&quot;test&quot;}</p>
@@ -578,10 +581,10 @@ public class GetVideoInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the media file.</p>
+             * <p>The description of the audio or video file.</p>
              * 
              * <strong>example:</strong>
-             * <p>Video description in ApsaraVideo VOD</p>
+             * <p>Alibaba Cloud VOD video description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -589,10 +592,10 @@ public class GetVideoInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the offline download feature is enabled. If you enable the offline download feature, users can download and play videos by using the ApsaraVideo Player on a local PC. For more information, see <a href="https://help.aliyun.com/document_detail/86107.html">Configure download settings</a>. Valid values:</p>
+             * <p>The status of the offline download switch. After the offline download feature is enabled, mobile users can cache videos to their local devices for offline viewing by using ApsaraVideo Player. For more information, see <a href="https://help.aliyun.com/document_detail/86107.html">Offline download</a>. Valid values:</p>
              * <ul>
-             * <li><strong>on</strong>: the offline download feature is enabled.</li>
-             * <li><strong>off</strong>: the offline download feature is not enabled.</li>
+             * <li><strong>on</strong>: enabled. Offline download is allowed.</li>
+             * <li><strong>off</strong>: disabled. Offline download is not allowed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -604,7 +607,7 @@ public class GetVideoInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The duration of the media file. Unit: seconds.</p>
+             * <p>The duration of the audio or video file. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>135.6</p>
@@ -615,7 +618,7 @@ public class GetVideoInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the audio or video file was last updated. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * <p>The time when the audio or video file was last updated. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2017-11-14T10:15:50Z</p>
@@ -626,7 +629,10 @@ public class GetVideoInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ReferenceId.
+             * <p>The custom ID. Only lowercase letters, uppercase letters, digits, hyphens, and underscores are supported. The length is 6 to 64 characters. The ID is unique at the user level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123-123</p>
              */
             public Builder referenceId(String referenceId) {
                 this.referenceId = referenceId;
@@ -634,7 +640,7 @@ public class GetVideoInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region where the media file is stored.</p>
+             * <p>The region where the audio or video file is stored.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-shanghai</p>
@@ -645,7 +651,7 @@ public class GetVideoInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The period of time in which the object remains in the restored state.</p>
+             * <p>The expiration time of the media asset restoration.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-03-30T10:14:14Z</p>
@@ -656,11 +662,11 @@ public class GetVideoInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The restoration status of the audio or video file. Valid values:</p>
+             * <p>The restoration status of the media asset. Valid values:</p>
              * <ul>
-             * <li><strong>Processing</strong></li>
-             * <li><strong>Success</strong></li>
-             * <li><strong>Failed</strong></li>
+             * <li><strong>Processing</strong>: The media asset is being restored.</li>
+             * <li><strong>Success</strong>: The media asset is restored.</li>
+             * <li><strong>Failed</strong>: The media asset failed to be restored.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -672,7 +678,7 @@ public class GetVideoInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the source file. Unit: bytes.</p>
+             * <p>The size of the audio or video source file. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>10897890</p>
@@ -683,7 +689,7 @@ public class GetVideoInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The video snapshot URLs.</p>
+             * Snapshots.
              */
             public Builder snapshots(Snapshots snapshots) {
                 this.snapshots = snapshots;
@@ -691,15 +697,15 @@ public class GetVideoInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the media file. For more information about the operations that you can perform on files in different statuses and usage limits, see <a href="~~52839#title-vqg-8cz-7p8~~">Status: the status of a video</a>. Valid values:</p>
+             * <p>The status of the audio or video file. For more information about the operations that can be performed on audio and video files in each status and the limits, see <a href="~~52839#title-vqg-8cz-7p8~~">Status: audio and video status</a>. Valid values:</p>
              * <ul>
-             * <li><strong>Uploading</strong></li>
-             * <li><strong>UploadFail</strong></li>
-             * <li><strong>UploadSucc</strong></li>
-             * <li><strong>Transcoding</strong></li>
-             * <li><strong>TranscodeFail</strong></li>
-             * <li><strong>Blocked</strong></li>
-             * <li><strong>Normal</strong></li>
+             * <li><strong>Uploading</strong>: The file is being uploaded.</li>
+             * <li><strong>UploadFail</strong>: The file failed to be uploaded.</li>
+             * <li><strong>UploadSucc</strong>: The file is uploaded.</li>
+             * <li><strong>Transcoding</strong>: The file is being transcoded.</li>
+             * <li><strong>TranscodeFail</strong>: The file failed to be transcoded.</li>
+             * <li><strong>Blocked</strong>: The file is blocked.</li>
+             * <li><strong>Normal</strong>: The file is in a normal state.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -711,16 +717,16 @@ public class GetVideoInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage class of the audio or video file. Valid values:</p>
+             * <p>The storage class of the media asset. Valid values:</p>
              * <ul>
-             * <li><strong>Standard</strong>: All media resources are stored as Standard objects.</li>
-             * <li><strong>IA</strong>: All media resources are stored as IA objects.</li>
-             * <li><strong>Archive</strong>: All media resources are stored as Archive objects.</li>
-             * <li><strong>ColdArchive</strong>: All media resources are stored as Cold Archive objects.</li>
-             * <li><strong>SourceIA</strong>: Only the source files are IA objects.</li>
-             * <li><strong>SourceArchive</strong>: Only the source files are Archive objects.</li>
-             * <li><strong>SourceColdArchive</strong>: Only the source files are Cold Archive objects.</li>
-             * <li><strong>Changing</strong>: The storage class of the audio or video file is being changed.</li>
+             * <li><strong>Standard</strong>: standard.</li>
+             * <li><strong>IA</strong>: Infrequent Access (media asset).</li>
+             * <li><strong>Archive</strong>: Archive (media asset).</li>
+             * <li><strong>ColdArchive</strong>: Cold Archive (media asset).</li>
+             * <li><strong>SourceIA</strong>: Infrequent Access (source file).</li>
+             * <li><strong>SourceArchive</strong>: Archive (source file).</li>
+             * <li><strong>SourceColdArchive</strong>: Cold Archive (source file).</li>
+             * <li><strong>Changing</strong>: The storage class of the media asset is being changed.</li>
              * <li><strong>SourceChanging</strong>: The storage class of the source file is being changed.</li>
              * </ul>
              * 
@@ -733,7 +739,7 @@ public class GetVideoInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage address of the media file.</p>
+             * <p>The storage address of the audio or video file.</p>
              * 
              * <strong>example:</strong>
              * <p>out-201703232251****.oss-cn-shanghai.aliyuncs.com</p>
@@ -747,7 +753,7 @@ public class GetVideoInfoResponseBody extends TeaModel {
              * <p>The tags of the audio or video file. Multiple tags are separated by commas (,).</p>
              * 
              * <strong>example:</strong>
-             * <p>Tag 1,Tag 2</p>
+             * <p>tag1, tag2</p>
              */
             public Builder tags(String tags) {
                 this.tags = tags;
@@ -755,7 +761,7 @@ public class GetVideoInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the transcoding template group.</p>
+             * <p>The transcoding template group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>9ae2af636ca64835b0c10412f448****</p>
@@ -766,10 +772,10 @@ public class GetVideoInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The title of the media file.</p>
+             * <p>The title of the audio or video file.</p>
              * 
              * <strong>example:</strong>
-             * <p>Video title in ApsaraVideo VOD</p>
+             * <p>Alibaba Cloud VOD Video Title</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -777,7 +783,7 @@ public class GetVideoInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Custom settings. This is a JSON string that supports settings such as message callbacks and upload acceleration. For more information, please refer to <a href="https://help.aliyun.com/document_detail/86952.html">UserData</a>.</p>
+             * <p>The custom settings. The value is a JSON string that supports settings such as message callbacks and upload acceleration. For more information, see <a href="https://help.aliyun.com/document_detail/86952.html">UserData</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;MessageCallback&quot;:{&quot;CallbackURL&quot;:&quot;<a href="http://example.aliyundoc.com%22%7D,%22Extend%22:%7B%22localId%22:%22*****%22,%22test%22:%22www%22%7D%7D">http://example.aliyundoc.com&quot;},&quot;Extend&quot;:{&quot;localId&quot;:&quot;*****&quot;,&quot;test&quot;:&quot;www&quot;}}</a></p>
@@ -788,7 +794,7 @@ public class GetVideoInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the media file.</p>
+             * <p>The audio or video ID.</p>
              * 
              * <strong>example:</strong>
              * <p>9b73864d75f1d231e9001cd5f8****</p>

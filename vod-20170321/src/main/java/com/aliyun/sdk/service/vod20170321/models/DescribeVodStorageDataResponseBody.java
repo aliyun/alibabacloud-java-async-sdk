@@ -80,10 +80,10 @@ public class DescribeVodStorageDataResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The time granularity at which the data was queried. Valid values:</p>
+         * <p>The time granularity of the returned data. Valid values:</p>
          * <ul>
-         * <li><strong>hour</strong></li>
-         * <li><strong>day</strong></li>
+         * <li><strong>hour</strong>: hourly data.</li>
+         * <li><strong>day</strong>: daily data.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -95,7 +95,7 @@ public class DescribeVodStorageDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>C370DAF1-C838-4288-****-9A87633D248E</p>
@@ -106,7 +106,7 @@ public class DescribeVodStorageDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The storage usage data returned.</p>
+         * StorageData.
          */
         public Builder storageData(StorageData storageData) {
             this.storageData = storageData;
@@ -185,10 +185,7 @@ public class DescribeVodStorageDataResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The outbound traffic. Unit: bytes. The outbound traffic is generated when videos are directly downloaded or played from OSS buckets without Alibaba Cloud CDN acceleration.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>111111</p>
+             * NetworkOut.
              */
             public Builder networkOut(String networkOut) {
                 this.networkOut = networkOut;
@@ -196,10 +193,7 @@ public class DescribeVodStorageDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The detailed usage data of storage-related resources. Unit: bytes.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>111111</p>
+             * StorageUtilization.
              */
             public Builder storageUtilization(String storageUtilization) {
                 this.storageUtilization = storageUtilization;
@@ -207,10 +201,7 @@ public class DescribeVodStorageDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp of the returned data. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2019-02-01T15:00:00Z</p>
+             * TimeStamp.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;

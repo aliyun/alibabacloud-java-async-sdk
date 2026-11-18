@@ -119,7 +119,7 @@ public class DescribeVodDomainSrcBpsDataResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The time interval at which data is returned, which is the time granularity. Unit: seconds.</p>
+         * <p>The time interval of each record, which is the time granularity of the data. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -130,7 +130,7 @@ public class DescribeVodDomainSrcBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The accelerated domain name whose ICP filing status you want to update.</p>
+         * <p>The accelerated domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>sample.com</p>
@@ -141,7 +141,7 @@ public class DescribeVodDomainSrcBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The end of the time range.</p>
+         * <p>The end time of the data. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format and in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-08-23T02:02:57Z</p>
@@ -152,7 +152,7 @@ public class DescribeVodDomainSrcBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>25818875-5F78-4A13-BEF6-****</p>
@@ -163,7 +163,7 @@ public class DescribeVodDomainSrcBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The origin bandwidth data at each time interval.</p>
+         * SrcBpsDataPerInterval.
          */
         public Builder srcBpsDataPerInterval(SrcBpsDataPerInterval srcBpsDataPerInterval) {
             this.srcBpsDataPerInterval = srcBpsDataPerInterval;
@@ -171,7 +171,7 @@ public class DescribeVodDomainSrcBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The beginning of the time range.</p>
+         * <p>The start time of the data. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format and in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-07-12T16:00:00Z</p>
@@ -253,10 +253,7 @@ public class DescribeVodDomainSrcBpsDataResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The bandwidth consumed for fetching resources from the origin over HTTPS.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * HttpsValue.
              */
             public Builder httpsValue(String httpsValue) {
                 this.httpsValue = httpsValue;
@@ -264,10 +261,7 @@ public class DescribeVodDomainSrcBpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp of the data returned. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2022-08-23T02:02:57Z</p>
+             * TimeStamp.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -275,10 +269,7 @@ public class DescribeVodDomainSrcBpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total origin bandwidth data. Unit: bit/s.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

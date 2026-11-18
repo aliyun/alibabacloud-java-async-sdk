@@ -60,7 +60,7 @@ public class DeleteAppInfoRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the application. Default value: <strong>app-1000000</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Overview</a>.</p>
+         * <p>The application ID. You can obtain the value from the AppId response parameter returned by the <a href="https://help.aliyun.com/document_detail/113266.html">Create an application</a> or <a href="https://help.aliyun.com/document_detail/114000.html">List applications</a> API operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

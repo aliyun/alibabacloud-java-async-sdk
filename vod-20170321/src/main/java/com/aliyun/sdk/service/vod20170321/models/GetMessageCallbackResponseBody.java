@@ -67,7 +67,7 @@ public class GetMessageCallbackResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The configuration of the event notification.</p>
+         * <p>The event notification configuration.</p>
          */
         public Builder messageCallback(MessageCallback messageCallback) {
             this.messageCallback = messageCallback;
@@ -75,7 +75,7 @@ public class GetMessageCallbackResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>272A222A-F7F7-4A3E-****-F531574F1234</p>
@@ -222,7 +222,7 @@ public class GetMessageCallbackResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the application.</p>
+             * <p>The application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>app-1000000</p>
@@ -233,7 +233,7 @@ public class GetMessageCallbackResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cryptographic key. This parameter is returned only for HTTP callbacks.</p>
+             * <p>The authentication key when the callback method is set to HTTP.</p>
              * 
              * <strong>example:</strong>
              * <p>12345678abc</p>
@@ -244,10 +244,10 @@ public class GetMessageCallbackResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether callback authentication is enabled. This parameter is returned only for HTTP callbacks. Valid values:</p>
+             * <p>The callback authentication switch when the callback method is set to HTTP. Valid values:</p>
              * <ul>
-             * <li><strong>on</strong></li>
-             * <li><strong>off</strong></li>
+             * <li><strong>on</strong>: enabled.</li>
+             * <li><strong>off</strong>: disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -274,7 +274,7 @@ public class GetMessageCallbackResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The callback URL. This parameter is returned only for HTTP callbacks.</p>
+             * <p>The callback URL when the callback method is set to HTTP.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://test.com/test">http://test.com/test</a></p>
@@ -285,7 +285,7 @@ public class GetMessageCallbackResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the callback event.</p>
+             * <p>The callback event types.</p>
              * 
              * <strong>example:</strong>
              * <p>FileUploadComplete,StreamTranscodeComplete,TranscodeComplete,SnapshotComplete,AIComplete,AddLiveRecordVideoComplete,CreateAuditComplete,UploadByURLComplete,ProduceMediaComplete,LiveRecordVideoComposeStart,ImageUploadComplete,VideoAnalysisComplete</p>
@@ -296,7 +296,7 @@ public class GetMessageCallbackResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public endpoint of MNS. This parameter is returned only for MNS callbacks.</p>
+             * <p>The public endpoint of the MSMQ when the callback method is set to MNS.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://1234567.mns.cn-shanghai-internal.aliyuncs.com/">http://1234567.mns.cn-shanghai-internal.aliyuncs.com/</a></p>
@@ -307,7 +307,7 @@ public class GetMessageCallbackResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the Message Service (MNS) queue. This parameter is returned only for MNS callbacks.</p>
+             * <p>The name of the MSMQ when the callback method is set to MNS.</p>
              * 
              * <strong>example:</strong>
              * <p>vodcallback</p>

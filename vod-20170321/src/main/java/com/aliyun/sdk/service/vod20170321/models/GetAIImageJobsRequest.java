@@ -116,9 +116,9 @@ public class GetAIImageJobsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the image AI processing job. You can obtain the value of JobId from the response to the <a href="~~SubmitAIImageJob~~">SubmitAIImageJob</a> operation.</p>
+         * <p>The IDs of the AI image processing tasks. The value consists of one or more job IDs. A job ID is the value of the JobId parameter returned by the <a href="https://help.aliyun.com/document_detail/186922.html">SubmitAIImageJob</a> operation.</p>
          * <ul>
-         * <li>You can specify a maximum of 10 IDs.</li>
+         * <li>You can specify up to 10 IDs.</li>
          * <li>Separate multiple IDs with commas (,).</li>
          * </ul>
          * <p>This parameter is required.</p>

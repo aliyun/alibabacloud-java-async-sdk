@@ -90,7 +90,8 @@ public class AddAITemplateRequest extends Request {
         } 
 
         /**
-         * <p>The detailed configurations of the AI template. The value must be a JSON string. For more information, see <a href="~~89863#title-vd3-499-o36~~">AITemplateConfig</a>.</p>
+         * <p>The detailed configuration of the AI template. The value is a JSON string.
+         * For more information, see <a href="~~89863#title-vd3-499-o36~~">AITemplateConfig</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -103,7 +104,7 @@ public class AddAITemplateRequest extends Request {
         }
 
         /**
-         * <p>The name of the AI template. The name can be up to 128 bytes in length.</p>
+         * <p>The name of the AI template. Maximum length: 128 bytes.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,10 +117,10 @@ public class AddAITemplateRequest extends Request {
         }
 
         /**
-         * <p>The type of the AI template. Valid values:</p>
+         * <p>The templatetype of the AI template. Valid values:</p>
          * <ul>
-         * <li><strong>AIMediaAudit</strong>: automated review</li>
-         * <li><strong>AIImage</strong>: smart thumbnail</li>
+         * <li><strong>AIMediaAudit</strong>: automated review.</li>
+         * <li><strong>AIImage</strong>: smart thumbnail.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

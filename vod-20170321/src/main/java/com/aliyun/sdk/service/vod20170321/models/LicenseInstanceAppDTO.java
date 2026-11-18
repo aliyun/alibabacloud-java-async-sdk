@@ -184,7 +184,7 @@ public class LicenseInstanceAppDTO extends TeaModel {
         } 
 
         /**
-         * AppId.
+         * <p>appId</p>
          */
         public Builder appId(String appId) {
             this.appId = appId;
@@ -192,7 +192,7 @@ public class LicenseInstanceAppDTO extends TeaModel {
         }
 
         /**
-         * BeginOn.
+         * <p>beginOn</p>
          */
         public Builder beginOn(String beginOn) {
             this.beginOn = beginOn;
@@ -200,7 +200,7 @@ public class LicenseInstanceAppDTO extends TeaModel {
         }
 
         /**
-         * ContractNo.
+         * <p>contractNo</p>
          */
         public Builder contractNo(String contractNo) {
             this.contractNo = contractNo;
@@ -208,7 +208,7 @@ public class LicenseInstanceAppDTO extends TeaModel {
         }
 
         /**
-         * CreationTime.
+         * <p>creationTime</p>
          */
         public Builder creationTime(String creationTime) {
             this.creationTime = creationTime;
@@ -216,7 +216,7 @@ public class LicenseInstanceAppDTO extends TeaModel {
         }
 
         /**
-         * ExpiredOn.
+         * <p>expiredOn</p>
          */
         public Builder expiredOn(String expiredOn) {
             this.expiredOn = expiredOn;
@@ -224,7 +224,7 @@ public class LicenseInstanceAppDTO extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * <p>instanceId</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -232,7 +232,7 @@ public class LicenseInstanceAppDTO extends TeaModel {
         }
 
         /**
-         * ItemId.
+         * <p>itemId</p>
          */
         public Builder itemId(String itemId) {
             this.itemId = itemId;
@@ -240,7 +240,7 @@ public class LicenseInstanceAppDTO extends TeaModel {
         }
 
         /**
-         * LicenseConfigs.
+         * <p>LicenseConfigDTOS</p>
          */
         public Builder licenseConfigs(java.util.List<LicenseConfigs> licenseConfigs) {
             this.licenseConfigs = licenseConfigs;
@@ -248,7 +248,7 @@ public class LicenseInstanceAppDTO extends TeaModel {
         }
 
         /**
-         * ModificationTime.
+         * <p>modificationTime</p>
          */
         public Builder modificationTime(String modificationTime) {
             this.modificationTime = modificationTime;
@@ -256,7 +256,7 @@ public class LicenseInstanceAppDTO extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>status</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -264,7 +264,7 @@ public class LicenseInstanceAppDTO extends TeaModel {
         }
 
         /**
-         * UserId.
+         * <p>userId</p>
          */
         public Builder userId(Long userId) {
             this.userId = userId;
@@ -408,7 +408,7 @@ public class LicenseInstanceAppDTO extends TeaModel {
             } 
 
             /**
-             * BusinessType.
+             * <p>businessType</p>
              */
             public Builder businessType(String businessType) {
                 this.businessType = businessType;
@@ -416,7 +416,7 @@ public class LicenseInstanceAppDTO extends TeaModel {
             }
 
             /**
-             * FeatureIds.
+             * <p>featureIds</p>
              */
             public Builder featureIds(String featureIds) {
                 this.featureIds = featureIds;
@@ -424,7 +424,7 @@ public class LicenseInstanceAppDTO extends TeaModel {
             }
 
             /**
-             * IsTrial.
+             * <p>isTrial</p>
              */
             public Builder isTrial(Boolean isTrial) {
                 this.isTrial = isTrial;
@@ -432,7 +432,7 @@ public class LicenseInstanceAppDTO extends TeaModel {
             }
 
             /**
-             * SdkId.
+             * <p>sdkId</p>
              */
             public Builder sdkId(Integer sdkId) {
                 this.sdkId = sdkId;
@@ -440,7 +440,7 @@ public class LicenseInstanceAppDTO extends TeaModel {
             }
 
             /**
-             * SdkName.
+             * <p>sdkName</p>
              */
             public Builder sdkName(String sdkName) {
                 this.sdkName = sdkName;
@@ -448,7 +448,7 @@ public class LicenseInstanceAppDTO extends TeaModel {
             }
 
             /**
-             * Subscription.
+             * <p>subscription</p>
              */
             public Builder subscription(String subscription) {
                 this.subscription = subscription;
@@ -456,7 +456,7 @@ public class LicenseInstanceAppDTO extends TeaModel {
             }
 
             /**
-             * SubscriptionImp.
+             * <p>subscriptionImp</p>
              */
             public Builder subscriptionImp(String subscriptionImp) {
                 this.subscriptionImp = subscriptionImp;
@@ -464,7 +464,7 @@ public class LicenseInstanceAppDTO extends TeaModel {
             }
 
             /**
-             * SubscriptionPkg.
+             * <p>subscriptionPkg</p>
              */
             public Builder subscriptionPkg(String subscriptionPkg) {
                 this.subscriptionPkg = subscriptionPkg;

@@ -116,7 +116,7 @@ public class DecryptKMSDataKeyRequest extends Request {
         } 
 
         /**
-         * <p>The ciphertext to be decrypted.</p>
+         * <p>The ciphertext to decrypt.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

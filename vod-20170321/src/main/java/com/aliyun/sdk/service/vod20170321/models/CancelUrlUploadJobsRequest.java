@@ -73,13 +73,13 @@ public class CancelUrlUploadJobsRequest extends Request {
         } 
 
         /**
-         * <p>The IDs of the upload jobs. You can obtain the job IDs from PlayInfo in the response to the <a href="https://help.aliyun.com/document_detail/56124.html">GetPlayInfo</a> operation.</p>
+         * <p>The list of task IDs. You can obtain the task ID (JobId) from the PlayInfo struct returned by the <a href="https://help.aliyun.com/document_detail/56124.html">GetPlayInfo</a> operation.</p>
          * <ul>
-         * <li>You can specify a maximum of 10 IDs.</li>
+         * <li>A maximum of 10 IDs are supported.</li>
          * <li>Separate multiple IDs with commas (,).</li>
          * </ul>
          * <blockquote>
-         * <p> You must specify either JobIds or UploadUrls. If you specify both the JobIds and UploadUrls parameters, only the value of the JobIds parameter takes effect.</p>
+         * <p>You must specify either JobIds or UploadUrls. If both are specified, only JobIds is processed.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -92,11 +92,11 @@ public class CancelUrlUploadJobsRequest extends Request {
         }
 
         /**
-         * <p>The upload URLs of source video files. Separate multiple URLs with commas (,). You can specify a maximum of 10 URLs.</p>
+         * <p>The list of source video URLs to upload. Separate multiple URLs with commas (,). A maximum of 10 URLs are supported.</p>
          * <blockquote>
          * <ul>
-         * <li>You must encode the URLs before you use the URLs.</li>
-         * <li>You must specify either JobIds or UploadUrls. If you specify both the JobIds and UploadUrls parameters, only the value of the JobIds parameter takes effect.</li>
+         * <li>URL-encode the URLs before use.</li>
+         * <li>You must specify either JobIds or UploadUrls. If both are specified, only JobIds is processed.</li>
          * </ul>
          * </blockquote>
          */

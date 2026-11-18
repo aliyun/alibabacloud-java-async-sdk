@@ -67,7 +67,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>8829B4DB-AFD9-4FF6-12965DBFFA14****</p>
@@ -78,7 +78,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned result.</p>
+         * <p>The result data.</p>
          */
         public Builder videoTagResult(VideoTagResult videoTagResult) {
             this.videoTagResult = videoTagResult;
@@ -131,10 +131,10 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tag string.</p>
+             * <p>The tag.</p>
              * 
              * <strong>example:</strong>
-             * <p>Retouching</p>
+             * <p>Beauty</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -201,7 +201,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tag string.</p>
+             * <p>The tag.</p>
              * 
              * <strong>example:</strong>
              * <p>Cushion</p>
@@ -212,7 +212,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The points in time when the tags are displayed. Unit: milliseconds.</p>
+             * <p>The time points. Unit: milliseconds.</p>
              */
             public Builder times(java.util.List<String> times) {
                 this.times = times;
@@ -279,7 +279,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tag string.</p>
+             * <p>The tag.</p>
              * 
              * <strong>example:</strong>
              * <p>Asia</p>
@@ -290,7 +290,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The points in time when the tags are displayed. Unit: milliseconds.</p>
+             * <p>The time points. Unit: milliseconds.</p>
              */
             public Builder times(java.util.List<String> times) {
                 this.times = times;
@@ -370,9 +370,9 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The URL of the profile photo.</p>
+             * <p>The URL of the face.</p>
              * <blockquote>
-             * <p>This parameter is returned only when a figure tag was used.</p>
+             * <p>This field is returned only for person tags.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -384,10 +384,10 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag string.</p>
+             * <p>The tag.</p>
              * 
              * <strong>example:</strong>
-             * <p>John</p>
+             * <p>Xiao Wang</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -395,7 +395,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The points in time when the tags are displayed. Unit: milliseconds.</p>
+             * <p>The time points. Unit: milliseconds.</p>
              */
             public Builder times(java.util.List<String> times) {
                 this.times = times;
@@ -462,7 +462,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tag string.</p>
+             * <p>The tag.</p>
              * 
              * <strong>example:</strong>
              * <p>Milliseconds</p>
@@ -473,7 +473,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The points in time when the tags are displayed. Unit: milliseconds.</p>
+             * <p>The time points. Unit: milliseconds.</p>
              */
             public Builder times(java.util.List<String> times) {
                 this.times = times;
@@ -603,7 +603,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The figure tags.</p>
+             * <p>The person tags.</p>
              */
             public Builder person(java.util.List<Person> person) {
                 this.person = person;

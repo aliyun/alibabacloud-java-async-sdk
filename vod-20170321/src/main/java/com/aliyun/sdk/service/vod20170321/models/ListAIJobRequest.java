@@ -116,9 +116,9 @@ public class ListAIJobRequest extends Request {
         } 
 
         /**
-         * <p>The list of job IDs. You can obtain the job ID from the PlayInfo parameter in the response to the <a href="https://help.aliyun.com/document_detail/56124.html">GetPlayInfo</a> operation.</p>
+         * <p>The list of job IDs. You can obtain the JobId from the PlayInfo struct returned by the <a href="https://help.aliyun.com/document_detail/56124.html">GetPlayInfo</a> operation.</p>
          * <blockquote>
-         * <p> You can specify a maximum of 10 job IDs in a request. Separate multiple IDs with commas (,).</p>
+         * <p>Separate multiple IDs with commas (,). You can query up to 10 job IDs at a time.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

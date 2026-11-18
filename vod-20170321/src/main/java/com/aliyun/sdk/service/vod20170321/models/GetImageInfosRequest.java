@@ -88,22 +88,20 @@ public class GetImageInfosRequest extends Request {
         } 
 
         /**
-         * <p>The time when the image URL expires. Unit: seconds.</p>
+         * <p>The expiration time of the image access URL. Unit: seconds.</p>
          * <ul>
-         * <li><p>If the OutputType parameter is set to cdn:</p>
-         * <ul>
-         * <li>This parameter takes effect only if URL authentication is enabled. Otherwise, the image URL does not expire.</li>
+         * <li>If OutputType is set to cdn:<ul>
+         * <li>Only image URLs for which URL authentication is enabled expire. Otherwise, the URLs are permanently valid.</li>
          * <li>Minimum value: 1.</li>
          * <li>Maximum value: unlimited.</li>
-         * <li>Default value: The default validity period that is specified in URL authentication is used.</li>
+         * <li>Default value: If this parameter is not specified, the default validity period configured for URL authentication is used.</li>
          * </ul>
          * </li>
-         * <li><p>If the OutputType parameter is set to oss:</p>
-         * <ul>
-         * <li>This parameter takes effect only when the ACL of the Object Storage Service (OSS) bucket is private. Otherwise, the image URL does not expire.</li>
+         * <li>If OutputType is set to oss:<ul>
+         * <li>Only playback URLs for images stored in private buckets expire. Otherwise, the URLs are permanently valid.</li>
          * <li>Minimum value: 1.</li>
-         * <li>If you store the image in the VOD bucket, the maximum value of this parameter is <strong>2592000</strong> (30 days). If you store the image in an OSS bucket, the maximum value of this parameter is <strong>129600</strong> (36 hours). The maximum value is limited to reduce security risks of the origin.</li>
-         * <li>Default value: 3600.</li>
+         * <li>Maximum value: To reduce security risks to the origin server, the maximum value is <strong>2592000</strong> (30 days) if the image is stored in an ApsaraVideo VOD bucket, and <strong>129600</strong> (36 hours) if the image is stored in a custom OSS bucket.</li>
+         * <li>Default value: If this parameter is not specified, the value is 3600.</li>
          * </ul>
          * </li>
          * </ul>
@@ -118,11 +116,11 @@ public class GetImageInfosRequest extends Request {
         }
 
         /**
-         * <p>The image IDs. Separate multiple IDs with commas (,). You can specify up to 20 image IDs. You can use one of the following methods to obtain the ID:</p>
+         * <p>The list of image IDs. Separate multiple IDs with commas (,). You can specify up to 20 IDs. You can obtain the image IDs by using one of the following methods:</p>
          * <ul>
-         * <li>Log on to the <a href="https://vod.console.aliyun.com/">ApsaraVideo VOD console</a> and choose <strong>Media Files &gt; Images</strong> in the left-side navigation pane.</li>
-         * <li>Obtain the value of ImageId from the response to the CreateUploadImage operation that you call to obtain the upload URL and credential.</li>
-         * <li>Obtain the value of ImageId from the response to the <a href="~~SearchMedia~~">SearchMedia</a> operation after you upload images.</li>
+         * <li>Log on to the <a href="https://vod.console.aliyun.com/">ApsaraVideo VOD console</a> and choose <strong>Media Files &gt; Images</strong> to view the IDs.</li>
+         * <li>Call the <a href="~~CreateUploadImage~~">CreateUploadImage</a> operation to obtain the upload URL and credential. The image ID is returned in the response.</li>
+         * <li>Call the <a href="~~SearchMedia~~">SearchMedia</a> operation to query images. The image ID is returned in the response.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -136,10 +134,10 @@ public class GetImageInfosRequest extends Request {
         }
 
         /**
-         * <p>The type of the output image URL. Valid values:</p>
+         * <p>The type of the output image access URL. Valid values:</p>
          * <ul>
-         * <li>oss: OSS URL</li>
-         * <li>cdn: CDN URL</li>
+         * <li>oss: back-to-origin URL.</li>
+         * <li>cdn (default): accelerated URL.</li>
          * </ul>
          * 
          * <strong>example:</strong>

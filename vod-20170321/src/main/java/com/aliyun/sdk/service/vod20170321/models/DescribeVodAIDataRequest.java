@@ -117,11 +117,11 @@ public class DescribeVodAIDataRequest extends Request {
         } 
 
         /**
-         * <p>The type of video AI. If you leave this parameter empty, statistics on video AI of all types are returned. Separate multiple types with commas (,). Valid values:</p>
+         * <p>The AI type. By default, all types are returned. You can specify multiple types separated by commas (,). Valid values:</p>
          * <ul>
-         * <li><strong>AIVideoCensor</strong>: automated review</li>
-         * <li><strong>AIVideoFPShot</strong>: media fingerprinting</li>
-         * <li><strong>AIVideoTag</strong>: smart tagging</li>
+         * <li><strong>AIVideoCensor</strong>: automated review.</li>
+         * <li><strong>AIVideoFPShot</strong>: media fingerprint.</li>
+         * <li><strong>AIVideoTag</strong>: smart tagging.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -134,7 +134,7 @@ public class DescribeVodAIDataRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC.</p>
+         * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format (UTC).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,12 +156,12 @@ public class DescribeVodAIDataRequest extends Request {
         }
 
         /**
-         * <p>The region in which you want to query data. If you leave this parameter empty, data in all regions is returned. Separate multiple regions with commas (,). Valid values:</p>
+         * <p>The storage region. By default, data in all regions is returned. You can specify multiple regions separated by commas (,). Valid values:</p>
          * <ul>
-         * <li><strong>cn-shanghai</strong>: China (Shanghai)</li>
-         * <li><strong>cn-beijing</strong>: China (Beijing)</li>
-         * <li><strong>eu-central-1</strong>: Germany (Frankfurt)</li>
-         * <li><strong>ap-southeast-1</strong>: Singapore</li>
+         * <li><strong>cn-shanghai</strong>: Shanghai.</li>
+         * <li><strong>cn-beijing</strong>: Beijing.</li>
+         * <li><strong>eu-central-1</strong>: Germany.</li>
+         * <li><strong>ap-southeast-1</strong>: Singapore.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -174,7 +174,7 @@ public class DescribeVodAIDataRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC.</p>
+         * <p>The start of the time range to query. Specify the time in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format (UTC).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

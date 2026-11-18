@@ -130,7 +130,7 @@ public class RegisterMediaRequest extends Request {
         } 
 
         /**
-         * EnableFirstFrameCover.
+         * <p>Specifies whether to use the first frame of the video as the thumbnail.</p>
          */
         public Builder enableFirstFrameCover(Boolean enableFirstFrameCover) {
             this.putQueryParameter("EnableFirstFrameCover", enableFirstFrameCover);
@@ -139,7 +139,7 @@ public class RegisterMediaRequest extends Request {
         }
 
         /**
-         * GenerateThumbnail.
+         * <p>Specifies whether to generate a thumbnail for the video.</p>
          */
         public Builder generateThumbnail(Boolean generateThumbnail) {
             this.putQueryParameter("GenerateThumbnail", generateThumbnail);
@@ -148,7 +148,7 @@ public class RegisterMediaRequest extends Request {
         }
 
         /**
-         * <p>The metadata of the media files. The value must be a JSON string. You can specify the metadata for up to 10 media files at a time. For more information about the metadata of media files, see the <strong>RegisterMetadata</strong> section of this topic.</p>
+         * <p>The metadata of the media assets to be registered. The value is a JSON string. You can specify the metadata for up to 10 media assets at a time. For more information about the parameter structure, see the <strong>RegisterMetadata</strong> table below.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -161,20 +161,19 @@ public class RegisterMediaRequest extends Request {
         }
 
         /**
-         * <p>The ID of the transcoding template group. You can use one of the following methods to obtain the ID:</p>
+         * <p>The ID of the transcoding template group. You can obtain the ID by using one of the following methods:</p>
          * <ul>
-         * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose <strong>Configuration Management</strong> &gt; <strong>Media Processing</strong> &gt; <strong>Transcoding Template Groups</strong>. On the Transcoding Template Groups page, you can view the ID of the transcoding template group.</li>
-         * <li>Obtain the value of the TranscodeTemplateGroupId parameter from the response to the <a href="https://help.aliyun.com/document_detail/102665.html">AddTranscodeTemplateGroup</a> operation that you called to create a transcoding template group.</li>
-         * <li>Obtain the value of the TranscodeTemplateGroupId parameter from the response to the <a href="https://help.aliyun.com/document_detail/102669.html">ListTranscodeTemplateGroup</a> operation that you called to query transcoding template groups.</li>
+         * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Configuration Management</strong> &gt; <strong>Media Processing Configuration</strong> &gt; <strong>Transcoding Template Groups</strong> to view the ID of the transcoding template group.</li>
+         * <li>When you create a transcoding template group by calling the <a href="https://help.aliyun.com/document_detail/102665.html">Create a transcoding template group</a> operation, the ID of the transcoding template group is the value of the TranscodeTemplateGroupId response parameter.</li>
+         * <li>When you query transcoding template groups by calling the <a href="https://help.aliyun.com/document_detail/102669.html">Query transcoding configurations</a> operation, the ID of the transcoding template group is the value of the TranscodeTemplateGroupId response parameter.</li>
          * </ul>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>If you do not need to transcode media files, set the TemplateGroupId parameter to VOD_NO_TRANSCODE. If you do not specify this configuration, errors occur on your files. If you need to transcode media files, specify the ID of the transcoding template group.</p>
-         * </li>
-         * <li><p>If you specify both WorkflowId and TemplateGroupId, the value of the WorkflowId parameter takes effect. For more information, see <a href="https://help.aliyun.com/document_detail/115347.html">Workflows</a>.</p>
-         * </li>
+         * <li>If transcoding is not required, set this parameter to VOD_NO_TRANSCODE, which specifies the no-transcoding template group. Otherwise, the video status is <strong>Upload Completed</strong>, and you cannot use the playback service to play the audio or video. If transcoding is required, specify the ID of the corresponding transcoding template group.</li>
+         * <li>If both WorkflowId and TemplateGroupId are specified, WorkflowId takes precedence. For more information, see <a href="https://help.aliyun.com/document_detail/115347.html">Media workflows</a>.</li>
+         * <li>The task for this parameter is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous task</a>. After the task is submitted, it is not immediately completed but queued for asynchronous execution in the background.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>ca3a8f6e49c87b65806709586****</p>
@@ -186,9 +185,9 @@ public class RegisterMediaRequest extends Request {
         }
 
         /**
-         * <p>The custom settings. The value must be a JSON string. You can configure settings such as message callbacks. For more information, see <a href="~~86952#section_6fg_qll_v3w~~">UserData</a>.</p>
+         * <p>The custom settings. The value is a JSON string. You can configure settings such as message callbacks. For more information about the parameter, see <a href="~~86952#section_6fg_qll_v3w~~">UserData</a>.</p>
          * <blockquote>
-         * <p> You cannot configure callbacks for this operation. No callback message is returned after the media files are registered even if you configure callback settings for this parameter. If you configure callback settings for the UserData parameter when you create media processing jobs such as transcoding and snapshot capture jobs for the media file, the callback URL that you specified is used. If you do not configure callback settings when you create media processing jobs, the callback URL that you specified for the UserData parameter when you register the media file is used.</p>
+         * <p>This operation does not support callbacks. Even if a message callback is configured in this parameter, no callback message is generated after the media asset registration is completed. When you subsequently initiate media processing such as transcoding and snapshot generation for the registered media assets, if you separately configure a message callback in UserData when initiating the transcoding or snapshot generation, that callback URL takes precedence. If no callback is separately configured, the callback URL configured in UserData during the media asset registration is used.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -201,9 +200,12 @@ public class RegisterMediaRequest extends Request {
         }
 
         /**
-         * <p>The ID of the workflow. To view the workflow ID, perform the following steps: Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose <strong>Configuration Management</strong> &gt; <strong>Media Processing</strong> &gt; <strong>Workflows</strong>.</p>
+         * <p>The ID of the media workflow. You can log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Configuration Management</strong> &gt; <strong>Media Processing Configuration</strong> &gt; <strong>Workflow Management</strong> to view the workflow ID.</p>
          * <blockquote>
-         * <p> If you specify both WorkflowId and TemplateGroupId, the value of WorkflowId parameter takes effect. For more information, see <a href="https://help.aliyun.com/document_detail/115347.html">Workflows</a>.</p>
+         * <ul>
+         * <li>If both WorkflowId and TemplateGroupId are specified, WorkflowId takes precedence. For more information, see <a href="https://help.aliyun.com/document_detail/115347.html">Media workflows</a>.</li>
+         * <li>The task for this parameter is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous task</a>. After the task is submitted, it is not immediately completed but queued for asynchronous execution in the background.</li>
+         * </ul>
          * </blockquote>
          * 
          * <strong>example:</strong>

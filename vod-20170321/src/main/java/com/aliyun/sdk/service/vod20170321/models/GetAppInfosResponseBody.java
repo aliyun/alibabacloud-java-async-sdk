@@ -93,7 +93,7 @@ public class GetAppInfosResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of applications.</p>
+         * <p>The list of application information.</p>
          */
         public Builder appInfoList(java.util.List<AppInfoList> appInfoList) {
             this.appInfoList = appInfoList;
@@ -101,7 +101,7 @@ public class GetAppInfosResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code that is returned.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -112,7 +112,7 @@ public class GetAppInfosResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The IDs of applications that do not exist.</p>
+         * <p>The list of application IDs that do not exist.</p>
          */
         public Builder nonExistAppIds(java.util.List<String> nonExistAppIds) {
             this.nonExistAppIds = nonExistAppIds;
@@ -120,7 +120,7 @@ public class GetAppInfosResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>25818875-5F78-4A13-4DC4-D7393642****</p>
@@ -267,7 +267,7 @@ public class GetAppInfosResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the application.</p>
+             * <p>The application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>app-****</p>
@@ -278,7 +278,7 @@ public class GetAppInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the application.</p>
+             * <p>The application name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -289,7 +289,7 @@ public class GetAppInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the application was created. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * <p>The creation time in UTC. The time follows the ISO 8601 standard in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2019-03-01T08:00:00Z</p>
@@ -300,7 +300,7 @@ public class GetAppInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the application.</p>
+             * <p>The application description.</p>
              * 
              * <strong>example:</strong>
              * <p>my first app.</p>
@@ -311,7 +311,7 @@ public class GetAppInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last time when the application was modified. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * <p>The modification time in UTC. The time follows the ISO 8601 standard in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2019-03-01T09:00:00Z</p>
@@ -333,10 +333,10 @@ public class GetAppInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the application. Valid values:</p>
+             * <p>The application status. Valid values:</p>
              * <ul>
-             * <li><strong>Normal</strong></li>
-             * <li><strong>Disable</strong></li>
+             * <li><strong>Normal</strong>: normal.</li>
+             * <li><strong>Disable</strong>: disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -348,10 +348,10 @@ public class GetAppInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the application. Valid values:</p>
+             * <p>The application type. Valid values:</p>
              * <ul>
-             * <li><strong>System</strong></li>
-             * <li><strong>Custom</strong></li>
+             * <li><strong>System</strong>: system default.</li>
+             * <li><strong>Custom</strong>: user-created.</li>
              * </ul>
              * 
              * <strong>example:</strong>

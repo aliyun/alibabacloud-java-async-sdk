@@ -115,7 +115,10 @@ public class SetAppPlayKeyRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>The application ID. Default value: <strong>app-1000000</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Multi-application</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app-1000231</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -133,7 +136,14 @@ public class SetAppPlayKeyRequest extends Request {
         }
 
         /**
-         * PlayKey.
+         * <p>The playback key.</p>
+         * <ul>
+         * <li>The value must be 8 to 20 characters in length and can contain only uppercase and lowercase letters and digits.</li>
+         * <li>The value must be encoded in UTF-8.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>yzNgTUtAl6HAuosIA</p>
          */
         public Builder playKey(String playKey) {
             this.putQueryParameter("PlayKey", playKey);

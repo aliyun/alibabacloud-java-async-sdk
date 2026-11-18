@@ -146,7 +146,8 @@ public class DeleteEditingProjectMaterialsRequest extends Request {
         } 
 
         /**
-         * <p>The material ID. Separate multiple material IDs with commas (,).</p>
+         * <p>The material IDs. These are media asset IDs, such as VideoId for videos, ImageId for images, and MediaId for auxiliary media assets. Separate multiple material IDs with commas (,).</p>
+         * <p>To obtain material IDs, see <a href="https://help.aliyun.com/document_detail/86044.html">Search for media information</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,11 +160,11 @@ public class DeleteEditingProjectMaterialsRequest extends Request {
         }
 
         /**
-         * <p>The type of the material. Valid values:</p>
+         * <p>The material type. Valid values:</p>
          * <ul>
-         * <li><strong>video</strong></li>
-         * <li><strong>audio</strong></li>
-         * <li><strong>image</strong></li>
+         * <li><strong>video</strong>: video.</li>
+         * <li><strong>audio</strong>: audio-only.</li>
+         * <li><strong>image</strong>: image.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

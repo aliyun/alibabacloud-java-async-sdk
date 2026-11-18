@@ -93,7 +93,7 @@ public class RefreshUploadVideoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>25818875-5F78-4A43-7DF6-D7393642****</p>
@@ -106,7 +106,7 @@ public class RefreshUploadVideoResponseBody extends TeaModel {
         /**
          * <p>The upload URL.</p>
          * <blockquote>
-         * <p> The returned upload URL is a Base64-encoded URL. You must decode the Base64-encoded upload URL before you use an SDK or call an API operation to upload media files. You need to parse UploadAddress only if you use the OSS SDK or call an OSS API operation to upload media files.</p>
+         * <p>The upload URL returned by this operation is a Base64-encoded value. When you use an SDK or API to upload media assets, you must decode the value in Base64 before use. You need to parse UploadAddress only if you use the China (China) native OSS SDK or OSS API for upload.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -120,7 +120,7 @@ public class RefreshUploadVideoResponseBody extends TeaModel {
         /**
          * <p>The upload credential.</p>
          * <blockquote>
-         * <p> The returned upload credential is a Base64-encoded value. You must decode the Base64-encoded upload URL before you use an SDK or call an API operation to upload media files. You need to parse UploadAuth only if you use the OSS SDK or call an OSS API operation to upload media files.</p>
+         * <p>The upload credential returned by this operation is a Base64-encoded value. When you use an SDK or API to upload media assets, you must decode the value in Base64 before use. You need to parse UploadAuth only if you use the native OSS SDK or OSS API for upload.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -132,7 +132,7 @@ public class RefreshUploadVideoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the audio or video file.</p>
+         * <p>The audio or video ID.</p>
          * 
          * <strong>example:</strong>
          * <p>c6a23a870c8c4ffcd40cbd381333****</p>

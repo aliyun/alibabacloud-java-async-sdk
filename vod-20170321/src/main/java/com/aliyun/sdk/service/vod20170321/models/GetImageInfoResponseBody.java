@@ -67,7 +67,7 @@ public class GetImageInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the image.</p>
+         * <p>The image information list.</p>
          */
         public Builder imageInfo(ImageInfo imageInfo) {
             this.imageInfo = imageInfo;
@@ -75,7 +75,7 @@ public class GetImageInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>AB99D4DF-FAFA-49DC-9C548C1E261E****</p>
@@ -183,7 +183,7 @@ public class GetImageInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The size of the image. Unit: bytes.</p>
+             * <p>The file size. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>8932</p>
@@ -205,7 +205,7 @@ public class GetImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The height of the image. Unit: pixels.</p>
+             * <p>The image height. Unit: pixels.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -216,7 +216,7 @@ public class GetImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the source file.</p>
+             * <p>The URL of the uploaded source image file.</p>
              * 
              * <strong>example:</strong>
              * <p>****.gif</p>
@@ -227,7 +227,7 @@ public class GetImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The width of the image. Unit: pixels.</p>
+             * <p>The image width. Unit: pixels.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -440,7 +440,7 @@ public class GetImageInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the application.</p>
+             * <p>The application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>app-****</p>
@@ -451,7 +451,7 @@ public class GetImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the category.</p>
+             * <p>The category ID.</p>
              * 
              * <strong>example:</strong>
              * <p>254766071</p>
@@ -462,10 +462,10 @@ public class GetImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the category.</p>
+             * <p>The category name.</p>
              * 
              * <strong>example:</strong>
-             * <p>test name</p>
+             * <p>Test</p>
              */
             public Builder cateName(String cateName) {
                 this.cateName = cateName;
@@ -473,7 +473,7 @@ public class GetImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the image was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * <p>The time when the image was created. The time follows the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2018-11-21T02:37:23Z</p>
@@ -484,10 +484,10 @@ public class GetImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the image.</p>
+             * <p>The image description.</p>
              * 
              * <strong>example:</strong>
-             * <p>test description</p>
+             * <p>Test description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -495,7 +495,7 @@ public class GetImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the image.</p>
+             * <p>The image ID.</p>
              * 
              * <strong>example:</strong>
              * <p>bbc65bba53f9*****ed90de118a7849</p>
@@ -506,17 +506,14 @@ public class GetImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the image. Valid values:</p>
+             * <p>The image type. Valid values:</p>
              * <ul>
-             * <li><strong>CoverSnapshot</strong>: thumbnail snapshot.</li>
-             * <li><strong>NormalSnapshot</strong>: normal snapshot.</li>
-             * <li><strong>SpriteSnapshot</strong>: sprite snapshot.</li>
-             * <li><strong>SpriteOriginSnapshot</strong>: sprite source snapshot.</li>
-             * <li><strong>All</strong>: images of all the preceding types. Multiple types other than All can return for this parameter. Multiple types are separated by commas (,).</li>
+             * <li><strong>default</strong>: regular image</li>
+             * <li><strong>cover</strong>: video thumbnail</li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>NormalSnapshot</p>
+             * <p>default</p>
              */
             public Builder imageType(String imageType) {
                 this.imageType = imageType;
@@ -524,7 +521,7 @@ public class GetImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source information about the image.</p>
+             * <p>The image source information.</p>
              */
             public Builder mezzanine(Mezzanine mezzanine) {
                 this.mezzanine = mezzanine;
@@ -532,11 +529,11 @@ public class GetImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the image. Valid values:</p>
+             * <p>The image status. Valid values:</p>
              * <ul>
-             * <li><strong>Uploading</strong>: The image is being uploaded. This is the initial status.</li>
+             * <li><strong>Uploading</strong>: The initial status, which indicates that the image is being uploaded.</li>
              * <li><strong>Normal</strong>: The image is uploaded.</li>
-             * <li><strong>UploadFail</strong>: The image fails to be uploaded.</li>
+             * <li><strong>UploadFail</strong>: The image failed to be uploaded.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -548,7 +545,7 @@ public class GetImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The bucket in which the image is stored.</p>
+             * <p>The storage address of the image file.</p>
              * 
              * <strong>example:</strong>
              * <p>outin-****..oss-cn-shanghai.aliyuncs.com</p>
@@ -559,7 +556,7 @@ public class GetImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags of the image. Multiple tags are separated by commas (,).</p>
+             * <p>The image tags. Multiple tags are separated by commas (,).</p>
              * 
              * <strong>example:</strong>
              * <p>tag1,tag2,tag3</p>
@@ -570,7 +567,7 @@ public class GetImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The title of the image.</p>
+             * <p>The image title.</p>
              * 
              * <strong>example:</strong>
              * <p>this is a sample</p>
@@ -581,7 +578,7 @@ public class GetImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The image URL. If a domain name for CDN is specified, a CDN URL is returned. Otherwise, an OSS URL is returned.</p>
+             * <p>The image access URL. If a CDN domain name is configured, the value is a CDN URL. Otherwise, the value is an OSS URL.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://example.aliyundoc.com/image/default/****.gif?auth_key=">http://example.aliyundoc.com/image/default/****.gif?auth_key=</a>****</p>

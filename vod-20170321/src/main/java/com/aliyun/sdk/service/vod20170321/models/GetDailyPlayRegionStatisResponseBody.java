@@ -93,7 +93,7 @@ public class GetDailyPlayRegionStatisResponseBody extends TeaModel {
         } 
 
         /**
-         * DailyPlayRegionStatisList.
+         * <p>The CSV file information returned.</p>
          */
         public Builder dailyPlayRegionStatisList(java.util.List<DailyPlayRegionStatisList> dailyPlayRegionStatisList) {
             this.dailyPlayRegionStatisList = dailyPlayRegionStatisList;
@@ -101,7 +101,7 @@ public class GetDailyPlayRegionStatisResponseBody extends TeaModel {
         }
 
         /**
-         * EmptyDates.
+         * <p>If no playback data exists on a specific day, the date is displayed in this field.</p>
          */
         public Builder emptyDates(java.util.List<String> emptyDates) {
             this.emptyDates = emptyDates;
@@ -109,7 +109,7 @@ public class GetDailyPlayRegionStatisResponseBody extends TeaModel {
         }
 
         /**
-         * FailDates.
+         * <p>If the playback data export fails on a specific day, the date is displayed in this field.</p>
          */
         public Builder failDates(java.util.List<String> failDates) {
             this.failDates = failDates;
@@ -117,7 +117,10 @@ public class GetDailyPlayRegionStatisResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>67720502-CDDB-3F1C-8A91-12258*******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -183,7 +186,10 @@ public class GetDailyPlayRegionStatisResponseBody extends TeaModel {
             } 
 
             /**
-             * Date.
+             * <p>The playback date, in days. Format: yyyy-MM-dd.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-03-20</p>
              */
             public Builder date(String date) {
                 this.date = date;
@@ -191,7 +197,10 @@ public class GetDailyPlayRegionStatisResponseBody extends TeaModel {
             }
 
             /**
-             * FileUrl.
+             * <p>The download URL of the CSV file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://outin-e70266d4ed*******0163e1403e7.oss-cn-shanghai.aliyuncs.com/dataexport/play/cn_hangzhou_20250320_video_traffic.csv">https://outin-e70266d4ed*******0163e1403e7.oss-cn-shanghai.aliyuncs.com/dataexport/play/cn_hangzhou_20250320_video_traffic.csv</a>?*******</p>
              */
             public Builder fileUrl(String fileUrl) {
                 this.fileUrl = fileUrl;

@@ -67,9 +67,9 @@ public class ListAppPoliciesForIdentityResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of each policy.</p>
+         * <p>The list of access policy names.</p>
          * <blockquote>
-         * <p>A maximum of 100 entries can be returned.</p>
+         * <p>A maximum of 100 entries are returned.</p>
          * </blockquote>
          */
         public Builder appPolicyList(java.util.List<AppPolicyList> appPolicyList) {
@@ -78,7 +78,7 @@ public class ListAppPoliciesForIdentityResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>C9F3E715-B3B8-4D*****27-3A70346F0E04</p>
@@ -212,7 +212,7 @@ public class ListAppPoliciesForIdentityResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the application.</p>
+             * <p>The application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>app-****</p>
@@ -223,7 +223,7 @@ public class ListAppPoliciesForIdentityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the application policy was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * <p>The time when the application policy was granted to the role. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2019-01-01T01:01:01Z</p>
@@ -234,7 +234,7 @@ public class ListAppPoliciesForIdentityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the policy.</p>
+             * <p>The policy description.</p>
              * 
              * <strong>example:</strong>
              * <p>App full access permission</p>
@@ -245,7 +245,7 @@ public class ListAppPoliciesForIdentityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last time when the application policy was modified. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * <p>The time when the application policy granted to the role was last modified. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2019-01-01T01:08:01Z</p>
@@ -256,7 +256,7 @@ public class ListAppPoliciesForIdentityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the policy.</p>
+             * <p>The policy name.</p>
              * 
              * <strong>example:</strong>
              * <p>VODAppFullAccess</p>
@@ -267,10 +267,10 @@ public class ListAppPoliciesForIdentityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the policy. Valid values:</p>
+             * <p>The policy type. Valid values:</p>
              * <ul>
-             * <li><strong>System</strong></li>
-             * <li><strong>Custom</strong></li>
+             * <li><strong>System</strong>: system policy.</li>
+             * <li><strong>Custom</strong>: user-defined policy.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -282,7 +282,7 @@ public class ListAppPoliciesForIdentityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The content of the policy.</p>
+             * <p>The policy value.</p>
              * 
              * <strong>example:</strong>
              * <hr>

@@ -67,7 +67,7 @@ public class ListTranscodeTemplateGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>25818875-5F78-4A*****F6-D7393642CA58</p>
@@ -78,7 +78,7 @@ public class ListTranscodeTemplateGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The transcoding template groups.</p>
+         * <p>The list of transcoding template group data.</p>
          */
         public Builder transcodeTemplateGroupList(java.util.List<TranscodeTemplateGroupList> transcodeTemplateGroupList) {
             this.transcodeTemplateGroupList = transcodeTemplateGroupList;
@@ -209,7 +209,7 @@ public class ListTranscodeTemplateGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the application.</p>
+             * <p>The application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>app-****</p>
@@ -220,7 +220,7 @@ public class ListTranscodeTemplateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the template group was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * <p>The time when the template group was created. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2018-12-05T10:20:09Z</p>
@@ -248,8 +248,8 @@ public class ListTranscodeTemplateGroupResponseBody extends TeaModel {
             /**
              * <p>The lock status of the transcoding template group. Valid values:</p>
              * <ul>
-             * <li><strong>Disabled</strong>: The template group is not locked.</li>
-             * <li><strong>Enabled</strong>: The template group is locked.</li>
+             * <li><strong>Disabled</strong>: unlocked</li>
+             * <li><strong>Enabled</strong>: locked</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -261,7 +261,7 @@ public class ListTranscodeTemplateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the template group was modified. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * <p>The time when the template group was last modified. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2018-12-05T10:22:09Z</p>
@@ -283,7 +283,7 @@ public class ListTranscodeTemplateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the transcoding template group.</p>
+             * <p>The transcoding template group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>17a9889fc66852*****d791c886700932</p>

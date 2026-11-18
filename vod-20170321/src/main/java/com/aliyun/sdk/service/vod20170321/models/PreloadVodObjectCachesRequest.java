@@ -130,11 +130,7 @@ public class PreloadVodObjectCachesRequest extends Request {
         } 
 
         /**
-         * <p>The acceleration region in which you want to prefetch content. If you do not specify a region, the value overseas is used.</p>
-         * <ul>
-         * <li><strong>domestic</strong>: Chinese mainland</li>
-         * <li><strong>overseas</strong>: outside the Chinese mainland</li>
-         * </ul>
+         * <p>The prefetch region.</p>
          * 
          * <strong>example:</strong>
          * <p>domestic</p>
@@ -146,10 +142,12 @@ public class PreloadVodObjectCachesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to prefetch content to POPs. Valid values:</p>
+         * <p>Specifies whether to prefetch content directly to L2 nodes. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: prefetches content to nodes that include L2 DCDN nodes.</li>
-         * <li><strong>false</strong>: prefetches content to L2 POPs or L3 POPs.</li>
+         * <li><p><strong>true</strong>: The prefetch node hierarchy must include L2 nodes.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Content is prefetched only to the origin-fetching layer nodes. This is the <strong>default value</strong>. The origin-fetching layer nodes can be L2 or L3 nodes.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -162,7 +160,9 @@ public class PreloadVodObjectCachesRequest extends Request {
         }
 
         /**
-         * <p>The URL of the file to be prefetched. Separate multiple URLs with line breaks (\n or \r\n).</p>
+         * <p>The URLs of the files to be prefetched. Separate multiple URLs with line breaks (
+         *  or 
+         * ).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -193,7 +193,7 @@ public class PreloadVodObjectCachesRequest extends Request {
         }
 
         /**
-         * <p>The custom header for prefetch in the JSON format.</p>
+         * <p>By default, prefetch requests carry the Accept-Encoding: gzip header. If you want prefetch requests to carry other headers or implement multi-replica prefetching, you can use this parameter to specify custom prefetch headers. Submit the headers in JSON format.</p>
          * 
          * <strong>example:</strong>
          * <p>{

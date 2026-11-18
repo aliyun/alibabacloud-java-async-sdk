@@ -131,7 +131,7 @@ public class SetEditingProjectMaterialsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the media asset. You can specify IDs of media assets such as videos, images, or auxiliary media assets. Separate multiple IDs with commas (,).</p>
+         * <p>The material IDs, which are media asset IDs such as video IDs, image IDs, and auxiliary media asset IDs. Separate multiple material IDs with commas (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

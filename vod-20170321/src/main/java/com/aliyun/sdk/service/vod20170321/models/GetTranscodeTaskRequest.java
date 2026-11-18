@@ -73,8 +73,10 @@ public class GetTranscodeTaskRequest extends Request {
         } 
 
         /**
-         * <p>Transcoding job ID. Supports up to 10 IDs, and multiple IDs should be separated by a comma (,). You can obtain this value in the following ways:</p>
-         * <p>When initiating a transcoding task through the <a href="https://help.aliyun.com/document_detail/454920.html">SubmitTranscodeJobs</a> interface, it is the value of the returned parameter JobId.</p>
+         * <p>The IDs of the transcoding jobs. You can specify up to 10 IDs. Separate multiple IDs with commas (,). You can obtain the IDs by using the following method:</p>
+         * <ul>
+         * <li>Call the <a href="https://help.aliyun.com/document_detail/68570.html">SubmitTranscodeJobs</a> operation to initiate a transcoding task. The ID is the value of the JobId response parameter.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>86c1925fba0****,7afb201e7fa****,2cc4997378****</p>
@@ -86,10 +88,10 @@ public class GetTranscodeTaskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the transcoding task. You can use one of the following methods to obtain the ID:</p>
+         * <p>The transcoding task ID. You can obtain the ID by using one of the following methods:</p>
          * <ul>
-         * <li>Obtain the value of TranscodeTaskId from the response to the <a href="https://help.aliyun.com/document_detail/68570.html">SubmitTranscodeJobs</a> operation.</li>
-         * <li>Obtain the value of TranscodeTaskId from the response to the <a href="https://help.aliyun.com/document_detail/109120.html">ListTranscodeTask</a> operation.</li>
+         * <li>Call the <a href="https://help.aliyun.com/document_detail/68570.html">SubmitTranscodeJobs</a> operation to initiate a transcoding task. The ID is the value of the TranscodeTaskId response parameter.</li>
+         * <li>Call the <a href="https://help.aliyun.com/document_detail/109120.html">ListTranscodeTask</a> operation to query transcoding tasks. The ID is the value of the TranscodeTaskId response parameter.</li>
          * </ul>
          * 
          * <strong>example:</strong>

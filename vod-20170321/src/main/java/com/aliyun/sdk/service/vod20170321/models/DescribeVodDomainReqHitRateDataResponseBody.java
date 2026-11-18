@@ -119,7 +119,7 @@ public class DescribeVodDomainReqHitRateDataResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request hit rate data at each time interval.</p>
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,7 +127,7 @@ public class DescribeVodDomainReqHitRateDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time interval at which data is returned, which is the time granularity. Unit: seconds.</p>
+         * <p>The time interval of each data entry, which is the time granularity of the data. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -149,7 +149,7 @@ public class DescribeVodDomainReqHitRateDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The end of the time range.</p>
+         * <p>The end time of the returned data. The time is displayed in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-12-22T08:00:00Z</p>
@@ -160,7 +160,7 @@ public class DescribeVodDomainReqHitRateDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>D94E471F-1A27-442E-552D-D4D2000C****</p>
@@ -171,7 +171,7 @@ public class DescribeVodDomainReqHitRateDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The beginning of the time range.</p>
+         * <p>The start time of the returned data. The time is displayed in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-12-21T08:00:00Z</p>
@@ -253,10 +253,7 @@ public class DescribeVodDomainReqHitRateDataResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The HTTPS request hit rate.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>50</p>
+             * HttpsValue.
              */
             public Builder httpsValue(String httpsValue) {
                 this.httpsValue = httpsValue;
@@ -264,10 +261,7 @@ public class DescribeVodDomainReqHitRateDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp of the data returned. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2023-12-21T08:00:00Z</p>
+             * TimeStamp.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -275,10 +269,7 @@ public class DescribeVodDomainReqHitRateDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total request hit rate.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>100</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

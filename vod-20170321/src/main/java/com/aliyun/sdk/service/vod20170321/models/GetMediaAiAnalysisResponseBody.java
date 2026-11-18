@@ -75,7 +75,10 @@ public class GetMediaAiAnalysisResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>746FFA07-8BBB-46B1-3E94E3B2915E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

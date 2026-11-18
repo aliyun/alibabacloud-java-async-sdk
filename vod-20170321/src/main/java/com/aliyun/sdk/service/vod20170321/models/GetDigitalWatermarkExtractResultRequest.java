@@ -145,9 +145,9 @@ public class GetDigitalWatermarkExtractResultRequest extends Request {
         } 
 
         /**
-         * <p>The type of the watermark. Valid values:</p>
+         * <p>The type of the watermark to extract. Valid values:</p>
          * <ul>
-         * <li><strong>TraceMark</strong>: user-tracing watermark</li>
+         * <li><strong>TraceMark</strong>: tracing watermark</li>
          * <li><strong>CopyrightMark</strong>: copyright watermark</li>
          * </ul>
          * <p>This parameter is required.</p>
@@ -164,8 +164,8 @@ public class GetDigitalWatermarkExtractResultRequest extends Request {
         /**
          * <p>The ID of the watermark extraction job.</p>
          * <ul>
-         * <li>You can obtain the ID from the response to the <a href="~~SubmitDigitalWatermarkExtractJob~~">SubmitDigitalWatermarkExtractJob</a> operation.</li>
-         * <li>If you specify this parameter, the result of the specified watermark extraction job is returned. If you leave this parameter empty, the results of all watermark extraction jobs submitted for the video are returned.</li>
+         * <li>The job ID is returned after you call the <a href="~~SubmitDigitalWatermarkExtractJob~~">SubmitDigitalWatermarkExtractJob</a> operation.</li>
+         * <li>If you specify this parameter, the result of the specified watermark extraction job is returned. If you do not specify this parameter, the results of all historical watermark extraction jobs for the video are returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -178,10 +178,10 @@ public class GetDigitalWatermarkExtractResultRequest extends Request {
         }
 
         /**
-         * <p>The ID of the video from which you want to query the watermark content. You can specify only one ID. You can use one of the following methods to obtain the ID:</p>
+         * <p>The ID of the video to query. You can specify only one video ID. You can obtain the video ID by using one of the following methods:</p>
          * <ul>
-         * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose <strong>Media Files</strong> &gt; <strong>Audio/Video</strong> to view the video ID.</li>
-         * <li>Obtain the VideoId from the response to the <a href="~~SearchMedia~~">SearchMedia</a> operation.</li>
+         * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Media Assets</strong> &gt; <strong>Audio/Video</strong> to view the video ID.</li>
+         * <li>Call the <a href="~~SearchMedia~~">SearchMedia</a> operation. The video ID is returned in the VideoId parameter.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

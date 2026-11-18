@@ -60,12 +60,12 @@ public class UpdateVideoInfosRequest extends Request {
         } 
 
         /**
-         * <p>The new information about audios or videos. You can modify the information about up to 20 audios or videos at a time. Separate multiple audios or videos with commas (,). When you modify the information exceed 20 audios or videos at a time, the update will fail with an error code <strong>CountExceededMax</strong>.</p>
-         * <p>The value is a JSON string. For more information, see the <strong>UpdateContent</strong> section of this topic.</p>
+         * <p>The update content. You can modify object information of up to 20 audio or video files at a time. Separate object information of multiple audio or video files with commas (,). If you attempt to update more than 20 files at a time, the update fails and the <code>CountExceededMax</code> error is returned.
+         * The value must be a JSON string. For more information about how to construct the parameters, see the <strong>UpdateContent</strong> table below.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;VideoId&quot;:&quot;f45cf4eba5cb90233389558c39****&quot;,&quot;Title&quot;:&quot;test title1&quot;},{&quot;VideoId&quot;:&quot;f45cf4eba5c84233389558c36****&quot;,&quot;Title&quot;:&quot;test title2&quot;}]</p>
+         * <p>[{&quot;VideoId&quot;:&quot;f45cf4eba5cb90233389558c39****&quot;,&quot;Title&quot;:&quot;Alibaba Cloud VOD Video Title1&quot;},{&quot;VideoId&quot;:&quot;f45cf4eba5c84233389558c36****&quot;,&quot;Title&quot;:&quot;Alibaba Cloud VOD Video Title2&quot;}]</p>
          */
         public Builder updateContent(String updateContent) {
             this.putQueryParameter("UpdateContent", updateContent);

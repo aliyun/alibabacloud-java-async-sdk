@@ -67,7 +67,7 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of CDN logs.</p>
+         * DomainLogDetails.
          */
         public Builder domainLogDetails(DomainLogDetails domainLogDetails) {
             this.domainLogDetails = domainLogDetails;
@@ -183,10 +183,7 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The end of the time range during which data was queried. The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2018-05-31T05:00:00Z</p>
+             * EndTime.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -194,10 +191,7 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the log file.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>example.com_2018_03_25_180000_19****.gz</p>
+             * LogName.
              */
             public Builder logName(String logName) {
                 this.logName = logName;
@@ -205,10 +199,7 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The path of the log file.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>example.com/2018_03_25/example.com_2018_03_25_180000_19****.gz?Expires=1522659931&amp;OSSAccessKeyId=<strong><strong>&amp;Signature=</strong></strong></p>
+             * LogPath.
              */
             public Builder logPath(String logPath) {
                 this.logPath = logPath;
@@ -216,10 +207,7 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the log file.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2645401</p>
+             * LogSize.
              */
             public Builder logSize(Long logSize) {
                 this.logSize = logSize;
@@ -227,10 +215,7 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The beginning of the time range during which data was queried. The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2018-05-31T04:00:00Z</p>
+             * StartTime.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -364,10 +349,7 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The page number.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * PageNumber.
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -375,10 +357,7 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries per page.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>300</p>
+             * PageSize.
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -386,10 +365,7 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * Total.
              */
             public Builder total(Long total) {
                 this.total = total;
@@ -482,10 +458,7 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The domain name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>example.com</p>
+             * DomainName.
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -493,10 +466,7 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned on the current page.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * LogCount.
              */
             public Builder logCount(Long logCount) {
                 this.logCount = logCount;
@@ -504,7 +474,7 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The queried CDN logs.</p>
+             * LogInfos.
              */
             public Builder logInfos(LogInfos logInfos) {
                 this.logInfos = logInfos;
@@ -512,7 +482,7 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The pagination information.</p>
+             * PageInfos.
              */
             public Builder pageInfos(PageInfos pageInfos) {
                 this.pageInfos = pageInfos;

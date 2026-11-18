@@ -93,7 +93,7 @@ public class UpdateVideoInfosResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The IDs of the videos that cannot be modified. Generally, videos cannot be modified if you do not have required <a href="https://help.aliyun.com/document_detail/113600.html">permissions</a>.</p>
+         * <p>The IDs of the audio or video files on which operations are forbidden. This is usually caused by a lack of <a href="https://help.aliyun.com/document_detail/113600.html">permissions</a>.</p>
          */
         public Builder forbiddenVideoIds(java.util.List<String> forbiddenVideoIds) {
             this.forbiddenVideoIds = forbiddenVideoIds;
@@ -101,7 +101,7 @@ public class UpdateVideoInfosResponseBody extends TeaModel {
         }
 
         /**
-         * NonExistReferenceIds.
+         * <p>The custom IDs that do not exist.</p>
          */
         public Builder nonExistReferenceIds(java.util.List<String> nonExistReferenceIds) {
             this.nonExistReferenceIds = nonExistReferenceIds;
@@ -109,7 +109,7 @@ public class UpdateVideoInfosResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The IDs of the videos that do not exist.</p>
+         * <p>The IDs of the audio or video files that do not exist.</p>
          */
         public Builder nonExistVideoIds(java.util.List<String> nonExistVideoIds) {
             this.nonExistVideoIds = nonExistVideoIds;
@@ -117,7 +117,7 @@ public class UpdateVideoInfosResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>25818875-5F78-4AF6-D7393642CA58****</p>

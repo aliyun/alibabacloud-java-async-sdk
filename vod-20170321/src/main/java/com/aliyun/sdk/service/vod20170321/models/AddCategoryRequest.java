@@ -88,15 +88,15 @@ public class AddCategoryRequest extends Request {
         } 
 
         /**
-         * <p>The name of the category.</p>
+         * <p>The category name.</p>
          * <ul>
-         * <li>The value can be up to 64 bytes in length.</li>
-         * <li>The value must be encoded in UTF-8.</li>
+         * <li>It can be up to 64 bytes in length.</li>
+         * <li>It is encoded in UTF-8.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>Comedy</p>
          */
         public Builder cateName(String cateName) {
             this.putQueryParameter("CateName", cateName);
@@ -106,11 +106,11 @@ public class AddCategoryRequest extends Request {
 
         /**
          * <p>The ID of the parent category.</p>
-         * <p>To obtain the category ID, perform the following steps: Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. Choose <strong>Configuration Management</strong> &gt; <strong>Media Management</strong> &gt; <strong>Categories</strong>. On the <strong>Audio and Video / Image Category</strong> or <strong>Short Video Material Category</strong> tab, view the category ID.</p>
+         * <p>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Configuration Management</strong> &gt; <strong>Media Asset Management Configuration</strong> &gt; <strong>Category Management</strong> &gt; <strong>Audio/Video/Image Categories</strong> or <strong>Short Video Material Categories</strong> to view the category ID.</p>
          * <blockquote>
          * <ul>
-         * <li>If you specify this parameter, the system creates a subcategory under the parent category. If you leave this parameter empty, the system creates a level 1 category.</li>
-         * <li>You cannot modify, add, or delete level 1 categories of short video materials. You can create only subcategories under level 1 categories for short video materials. This parameter is required when you set <code>Type</code> to <code>material</code>.</li>
+         * <li>If you specify this parameter, a subcategory is created under the specified parent category. If you do not specify this parameter, a level-1 category is created.</li>
+         * <li>All level-1 categories for short video materials are built-in and cannot be modified, added, or deleted. You can only create subcategories under level-1 categories. Therefore, this parameter is required when <code>Type</code> is set to <code>material</code>.</li>
          * </ul>
          * </blockquote>
          * 
@@ -124,10 +124,10 @@ public class AddCategoryRequest extends Request {
         }
 
         /**
-         * <p>The type of the category. Valid values:</p>
+         * <p>The category type. Valid values:</p>
          * <ul>
-         * <li><strong>default</strong> (default): audio, video, and image files</li>
-         * <li><strong>material</strong>: short video materials</li>
+         * <li><strong>default</strong>: audio, video, and image categories. This is the default value.</li>
+         * <li><strong>material</strong>: short video material categories.</li>
          * </ul>
          * 
          * <strong>example:</strong>

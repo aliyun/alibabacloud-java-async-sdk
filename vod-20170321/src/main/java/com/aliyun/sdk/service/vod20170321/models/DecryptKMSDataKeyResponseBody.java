@@ -80,7 +80,7 @@ public class DecryptKMSDataKeyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the customer master key (CMK) that was used to decrypt the ciphertext.</p>
+         * <p>The ID of the master key used to decrypt the ciphertext.</p>
          * 
          * <strong>example:</strong>
          * <p>202b9877-5a25-46e3-a763-e20791b5****</p>
@@ -91,7 +91,7 @@ public class DecryptKMSDataKeyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The plaintext that is generated after decryption.</p>
+         * <p>The decrypted plaintext.</p>
          * 
          * <strong>example:</strong>
          * <p>tRYXuCwgja12xxO1N/gZERDDCLw9doZEQiPDk/Bv****</p>

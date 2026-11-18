@@ -119,8 +119,8 @@ public class DescribeVodDomainRealTimeHttpCodeDataResponseBody extends TeaModel 
         } 
 
         /**
-         * <p>The time interval at which data is returned. Unit: seconds.</p>
-         * <p>The returned value varies based on the time range per query. Valid values: 60 (1 minute), 300 (5 minutes), and 3600 (1 hour). For more information, see the <strong>Time granularity</strong> section in the <strong>API documentation</strong>.</p>
+         * <p>The time interval between two consecutive data points. Unit: seconds.</p>
+         * <p>Based on the time range for a single query, this parameter returns a fixed value of 60 (1 minute), 300 (5 minutes), or 3600 (1 hour). For more information, see the <strong>Time granularity of returned data</strong> section in the <strong>Operation description</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -142,7 +142,7 @@ public class DescribeVodDomainRealTimeHttpCodeDataResponseBody extends TeaModel 
         }
 
         /**
-         * <p>The end of the time range.</p>
+         * <p>The end time of the data. The time is displayed in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-11-30T05:40:00Z</p>
@@ -153,7 +153,7 @@ public class DescribeVodDomainRealTimeHttpCodeDataResponseBody extends TeaModel 
         }
 
         /**
-         * <p>The proportion of each HTTP status code in each time interval.</p>
+         * RealTimeHttpCodeData.
          */
         public Builder realTimeHttpCodeData(RealTimeHttpCodeData realTimeHttpCodeData) {
             this.realTimeHttpCodeData = realTimeHttpCodeData;
@@ -161,7 +161,7 @@ public class DescribeVodDomainRealTimeHttpCodeDataResponseBody extends TeaModel 
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>BC858082-736F-4A25-867B-E5B67C85ACF7</p>
@@ -172,7 +172,7 @@ public class DescribeVodDomainRealTimeHttpCodeDataResponseBody extends TeaModel 
         }
 
         /**
-         * <p>The beginning of the time range.</p>
+         * <p>The start time of the data. The time is displayed in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-11-30T05:39:00Z</p>
@@ -254,10 +254,7 @@ public class DescribeVodDomainRealTimeHttpCodeDataResponseBody extends TeaModel 
             } 
 
             /**
-             * <p>The HTTP status code.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>500</p>
+             * Code.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -265,10 +262,7 @@ public class DescribeVodDomainRealTimeHttpCodeDataResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The number of the HTTP status codes.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>100</p>
+             * Count.
              */
             public Builder count(String count) {
                 this.count = count;
@@ -276,10 +270,7 @@ public class DescribeVodDomainRealTimeHttpCodeDataResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The proportion of the HTTP status code in percentage.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>28.4496124031008</p>
+             * Proportion.
              */
             public Builder proportion(String proportion) {
                 this.proportion = proportion;
@@ -400,10 +391,7 @@ public class DescribeVodDomainRealTimeHttpCodeDataResponseBody extends TeaModel 
             } 
 
             /**
-             * <p>The timestamp of the data returned. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2019-11-30T05:39:00Z</p>
+             * TimeStamp.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -411,7 +399,7 @@ public class DescribeVodDomainRealTimeHttpCodeDataResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The proportion of each HTTP status code is displayed in a data list.</p>
+             * Value.
              */
             public Builder value(Value value) {
                 this.value = value;

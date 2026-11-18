@@ -162,7 +162,7 @@ public class DescribeVodSSLCertificateListRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Valid values: integers from 1 to 1000.</p>
+         * <p>The page size. Valid values: any integer from 1 to 1000.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -174,7 +174,7 @@ public class DescribeVodSSLCertificateListRequest extends Request {
         }
 
         /**
-         * <p>The keyword that is used to query certificates.</p>
+         * <p>The certificate name for fuzzy match.</p>
          * 
          * <strong>example:</strong>
          * <p>certabc</p>

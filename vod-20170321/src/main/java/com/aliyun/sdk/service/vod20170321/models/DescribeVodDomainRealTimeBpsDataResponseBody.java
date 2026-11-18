@@ -67,7 +67,7 @@ public class DescribeVodDomainRealTimeBpsDataResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned data.</p>
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,7 @@ public class DescribeVodDomainRealTimeBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>B49E6DDA-F413-422B-B58E-2FA23F286726</p>
@@ -144,10 +144,7 @@ public class DescribeVodDomainRealTimeBpsDataResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The bandwidth. Unit: bit/s.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>16710625.733333332</p>
+             * Bps.
              */
             public Builder bps(Float bps) {
                 this.bps = bps;
@@ -155,10 +152,7 @@ public class DescribeVodDomainRealTimeBpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp of the data returned. The time follows the ISO 8601 standard. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2019-11-30T05:41:00Z</p>
+             * TimeStamp.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;

@@ -200,7 +200,7 @@ public class CreateUploadAttachedMediaRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the application. Default value: <strong>app-1000000</strong>. If you have activated the multi-application service, specify the ID of the application to add the watermark template in the specified application. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Overview</a>.</p>
+         * <p>The application ID. Default value: <strong>app-1000000</strong>. If the multi-application system is enabled, you can specify an application ID to upload the auxiliary media asset to the specified application. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Multi-application</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>app-****</p>
@@ -214,9 +214,9 @@ public class CreateUploadAttachedMediaRequest extends Request {
         /**
          * <p>The type of the auxiliary media asset. Valid values:</p>
          * <ul>
-         * <li><strong>watermark</strong></li>
-         * <li><strong>subtitle</strong></li>
-         * <li><strong>material</strong></li>
+         * <li><strong>watermark</strong>: watermark</li>
+         * <li><strong>subtitle</strong>: subtitle</li>
+         * <li><strong>material</strong>: material</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -230,11 +230,11 @@ public class CreateUploadAttachedMediaRequest extends Request {
         }
 
         /**
-         * <p>The ID of the category. Separate multiple IDs with commas (,). You can specify up to five IDs. You can use one of the following methods to obtain the ID:</p>
+         * <p>The category IDs. Separate multiple IDs with commas (,). A maximum of five IDs are supported. You can obtain the IDs by using the following methods:</p>
          * <ul>
-         * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose <strong>Configuration Management</strong> &gt; <strong>Media Management</strong> &gt; <strong>Categories</strong> to view the category ID of the media file.</li>
-         * <li>Obtain the category ID from the response to the <a href="~~AddCategory~~">AddCategory</a> operation that you call to create a category.</li>
-         * <li>Obtain the category ID from the response to the <a href="~~GetCategories~~">GetCategories</a> operation that you call to query categories.</li>
+         * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Configuration Management</strong> &gt; <strong>Media Asset Management Configuration</strong> &gt; <strong>Category Management</strong> to view the category IDs.</li>
+         * <li>Call the <a href="~~AddCategory~~">AddCategory</a> operation to create a category. The category ID is returned in the response.</li>
+         * <li>Call the <a href="~~GetCategories~~">GetCategories</a> operation to query categories. The category IDs are returned in the response.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -247,10 +247,10 @@ public class CreateUploadAttachedMediaRequest extends Request {
         }
 
         /**
-         * <p>The description of the auxiliary media asset. Take note of the following items:</p>
+         * <p>The media asset description. Rules:</p>
          * <ul>
-         * <li>The description can be up to 1,024 bytes in length.</li>
-         * <li>The value must be encoded in UTF-8.</li>
+         * <li>The length cannot exceed 1,024 bytes.</li>
+         * <li>The description must be encoded in UTF-8.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -263,9 +263,9 @@ public class CreateUploadAttachedMediaRequest extends Request {
         }
 
         /**
-         * <p>The source file URL of the auxiliary media asset.</p>
+         * <p>The source file URL of the auxiliary media asset to be uploaded.</p>
          * <blockquote>
-         * <p> The file name extension is optional. If the file name extension that you specified for this parameter is different from the value of MediaExt, the value of MediaExt takes effect.</p>
+         * <p>The file name extension is optional. If a file name extension is included and it is different from the file name extension specified in MediaExt, the value of MediaExt prevails.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -278,7 +278,7 @@ public class CreateUploadAttachedMediaRequest extends Request {
         }
 
         /**
-         * <p>The size of the auxiliary media asset. Unit: byte.</p>
+         * <p>The file size. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -290,11 +290,11 @@ public class CreateUploadAttachedMediaRequest extends Request {
         }
 
         /**
-         * <p>The file name extension of the auxiliary media asset.</p>
+         * <p>The file name extension of the resource file of the auxiliary media asset to be uploaded. Valid values:</p>
          * <ul>
-         * <li>Valid values for watermarks: <strong>png, gif, apng, and mov</strong></li>
-         * <li>Valid values for subtitles: <strong>srt, ass, stl, ttml, and vtt</strong></li>
-         * <li>Valid values for materials: <strong>jpg, gif, png, mp4, mat, zip, and apk</strong></li>
+         * <li>Watermark: <strong>png, gif, apng, and mov</strong></li>
+         * <li>Subtitle: <strong>srt, ass, stl, ttml, and vtt</strong></li>
+         * <li>Material: <strong>jpg, gif, png, mp4, mat, zip, and apk</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -307,10 +307,10 @@ public class CreateUploadAttachedMediaRequest extends Request {
         }
 
         /**
-         * <p>The storage address. Perform the following operations to obtain the storage address:</p>
-         * <p>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose <strong>Configuration Management</strong> &gt; <strong>Media Management</strong> &gt; <strong>Storage</strong>. On the Storage page, view the storage address.</p>
+         * <p>The storage address. You can obtain it by using the following method:</p>
+         * <p>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Configuration Management</strong> &gt; <strong>Media Asset Management Configuration</strong> &gt; <strong>Storage Management</strong> to view the storage address.</p>
          * <blockquote>
-         * <p> If you leave this parameter empty, the auxiliary media asset is uploaded to the default storage address. If you specify this parameter, the auxiliary media asset is uploaded to the specified storage address.</p>
+         * <p>If you do not specify this parameter, the auxiliary media asset is uploaded to the default storage address. If you specify this parameter, the auxiliary media asset is uploaded to the specified storage address.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -323,12 +323,12 @@ public class CreateUploadAttachedMediaRequest extends Request {
         }
 
         /**
-         * <p>The one or more tags of the auxiliary media asset. Take note of the following items:</p>
+         * <p>The tags. Rules:</p>
          * <ul>
-         * <li>You can specify a maximum of 16 tags.</li>
-         * <li>If you need to specify multiple tags, separate the tags with commas (,).</li>
-         * <li>Each tag can be up to 32 characters in length.</li>
-         * <li>The value must be encoded in UTF-8.</li>
+         * <li>A maximum of 16 tags can be set.</li>
+         * <li>Separate multiple tags with commas (,).</li>
+         * <li>A single tag cannot exceed 32 characters.</li>
+         * <li>The tags must be encoded in UTF-8.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -341,14 +341,14 @@ public class CreateUploadAttachedMediaRequest extends Request {
         }
 
         /**
-         * <p>The title of the auxiliary media asset. The following rules apply:</p>
+         * <p>The title of the auxiliary media asset. Rules:</p>
          * <ul>
-         * <li>The title cannot exceed 128 bytes.</li>
+         * <li>The length cannot exceed 128 bytes.</li>
          * <li>The title must be encoded in UTF-8.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>testTitle</p>
+         * <p>Test</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);
@@ -357,11 +357,11 @@ public class CreateUploadAttachedMediaRequest extends Request {
         }
 
         /**
-         * <p>The custom configurations. For example, you can specify callback configurations and upload acceleration configurations. The value must be a JSON string. For more information, see <a href="~~86952#section-6fg-qll-v3w~~">Request parameters</a>.</p>
+         * <p>The custom settings. The value is a JSON string that supports settings such as message callback and upload acceleration. For more information, see <a href="~~86952#section-6fg-qll-v3w~~">UserData</a>.</p>
          * <blockquote>
          * <ul>
-         * <li>The callback configurations take effect only after you specify the HTTP callback URL and select the specific callback events in the ApsaraVideo VOD console. For more information about how to configure HTTP callback settings in the ApsaraVideo VOD console, see <a href="https://help.aliyun.com/document_detail/86071.html">Configure callback settings</a>.</li>
-         * <li>If you want to enable the upload acceleration feature, submit a ticket. For more information, see <a href="https://help.aliyun.com/document_detail/55396.html">Overview</a>. For more information about how to submit a ticket, see <a href="https://help.aliyun.com/document_detail/464625.html">Contact us</a>.</li>
+         * <li>To use the message callback feature in this parameter, you must configure an HTTP callback URL in the console and select the corresponding callback event type. Otherwise, the callback settings do not take effect. For more information about how to configure HTTP callbacks in the console, see <a href="https://help.aliyun.com/document_detail/86071.html">Callback settings</a>.</li>
+         * <li>To use the upload acceleration feature, submit a ticket to apply for activation. For more information, see <a href="https://help.aliyun.com/document_detail/55396.html">Upload instructions</a>. For more information about how to submit a ticket, see <a href="https://help.aliyun.com/document_detail/464625.html">Contact us</a>.</li>
          * </ul>
          * </blockquote>
          * 

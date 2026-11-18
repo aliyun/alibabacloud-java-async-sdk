@@ -116,7 +116,7 @@ public class UpdateVodDomainRequest extends Request {
         } 
 
         /**
-         * <p>The domain name.</p>
+         * <p>The accelerated domain name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -147,7 +147,7 @@ public class UpdateVodDomainRequest extends Request {
         }
 
         /**
-         * <p>The information about the addresses of origin servers.</p>
+         * <p>The addresses of the origin server. For more information about the Sources parameter, see the <strong>Sources</strong> section.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;content&quot;:&quot;1.1.1.1&quot;,&quot;type&quot;:&quot;ipaddr&quot;,&quot;priority&quot;:&quot;20&quot;,&quot;port&quot;:80}]</p>

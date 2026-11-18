@@ -146,9 +146,9 @@ public class AddEditingProjectMaterialsRequest extends Request {
         } 
 
         /**
-         * <p>Separate multiple material IDs with commas (,). You can specify up to 10 IDs.</p>
+         * <p>The IDs of the media assets. Separate multiple IDs with commas (,). You can specify up to 10 media asset IDs.</p>
          * <blockquote>
-         * <p> If you specify multiple materials, make sure that the materials are of the same type as specified in MaterialType.</p>
+         * <p>When you associate multiple media assets, make sure that they are of the same type and the type matches the value of MaterialType.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -162,11 +162,11 @@ public class AddEditingProjectMaterialsRequest extends Request {
         }
 
         /**
-         * <p>The type of the material. Valid values:</p>
+         * <p>The type of the media asset. Valid values:</p>
          * <ul>
-         * <li><strong>video</strong></li>
-         * <li><strong>audio</strong></li>
-         * <li><strong>image</strong></li>
+         * <li><strong>video</strong>: video.</li>
+         * <li><strong>audio</strong>: audio-only.</li>
+         * <li><strong>image</strong>: image.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

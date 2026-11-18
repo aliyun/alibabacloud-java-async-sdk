@@ -89,11 +89,11 @@ public class UpdateWatermarkRequest extends Request {
         } 
 
         /**
-         * <p>The name of the watermark template to which you want to change.</p>
+         * <p>The new name of the watermark template.</p>
          * <ul>
-         * <li>Only letters and digits are supported.</li>
-         * <li>The name cannot exceed 128 bytes.</li>
-         * <li>The value must be encoded in UTF-8.</li>
+         * <li>Only Chinese characters, letters, and digits are supported.</li>
+         * <li>The name can be up to 128 bytes in length.</li>
+         * <li>UTF-8 encoding.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -106,11 +106,14 @@ public class UpdateWatermarkRequest extends Request {
         }
 
         /**
-         * <p>The configuration information of the watermark such as the display position and special effects. The value must be a JSON string. The configuration parameters for image and text watermarks are different. For more information about the parameter structure, see <a href="~~98618#section-h01-44s-2lr~~">WatermarkConfig</a>.</p>
+         * <p>The configuration information of the image and text watermark (JSON character string), including the watermark display position and watermark effect. The configuration parameters for image watermarks and text watermarks are different. For details about the parameter structure, see <a href="~~98618#section-h01-44s-2lr~~">WatermarkConfig</a>.</p>
+         * <blockquote>
+         * <p>Modifying across templatetypes is not supported. You can invoke the <a href="~~GetWatermark~~">GetWatermark</a> operation to query the type of the watermark template before modifying the configuration.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;Width&quot;:&quot;55&quot;,&quot;Height&quot;:&quot;55&quot;,&quot;Dx&quot;:&quot;9&quot;,&quot;Dy&quot;:&quot;9&quot;,&quot;ReferPos&quot;:&quot;BottonLeft&quot;,&quot;Type&quot;:&quot;Image&quot;}</p>
+         * <p>{&quot;Width&quot;:&quot;55&quot;,&quot;Height&quot;:&quot;55&quot;,&quot;Dx&quot;:&quot;9&quot;,&quot;Dy&quot;:&quot;9&quot;,&quot;ReferPos&quot;:&quot;BottomLeft&quot;}</p>
          */
         public Builder watermarkConfig(String watermarkConfig) {
             this.putQueryParameter("WatermarkConfig", watermarkConfig);
@@ -119,10 +122,10 @@ public class UpdateWatermarkRequest extends Request {
         }
 
         /**
-         * <p>The ID of the watermark template. You can specify only one watermark template ID. You can obtain the ID by using one of the following methods:</p>
+         * <p>The ID of the image and text watermark template to modify. Only a single watermark template ID is supported. You can obtain the ID by using one of the following methods:</p>
          * <ul>
-         * <li>Obtain the watermark template ID from the response to the <a href="~~AddWatermark~~">AddWatermark</a> operation that you call to create a watermark template.</li>
-         * <li>Obtain the watermark template ID from the response to the <a href="~~ListWatermark~~">ListWatermark</a> operation that you call to query all watermark templates within your account.</li>
+         * <li>The ID is returned after you call the <a href="~~AddWatermark~~">AddWatermark</a> operation to add an image and text watermark template.</li>
+         * <li>The ID is returned after you call the <a href="~~ListWatermark~~">ListWatermark</a> operation to query the list of image and text watermark templates.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

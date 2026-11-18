@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class SubmitWorkflowJobRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExtraInputs")
+    private String extraInputs;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MediaId")
     private String mediaId;
 
@@ -28,6 +32,7 @@ public class SubmitWorkflowJobRequest extends Request {
 
     private SubmitWorkflowJobRequest(Builder builder) {
         super(builder);
+        this.extraInputs = builder.extraInputs;
         this.mediaId = builder.mediaId;
         this.workflowId = builder.workflowId;
     }
@@ -46,6 +51,13 @@ public class SubmitWorkflowJobRequest extends Request {
     }
 
     /**
+     * @return extraInputs
+     */
+    public String getExtraInputs() {
+        return this.extraInputs;
+    }
+
+    /**
      * @return mediaId
      */
     public String getMediaId() {
@@ -60,6 +72,7 @@ public class SubmitWorkflowJobRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SubmitWorkflowJobRequest, Builder> {
+        private String extraInputs; 
         private String mediaId; 
         private String workflowId; 
 
@@ -69,16 +82,26 @@ public class SubmitWorkflowJobRequest extends Request {
 
         private Builder(SubmitWorkflowJobRequest request) {
             super(request);
+            this.extraInputs = request.extraInputs;
             this.mediaId = request.mediaId;
             this.workflowId = request.workflowId;
         } 
 
         /**
-         * <p>The ID of the media file. You can use one of the following methods to obtain the ID:</p>
+         * ExtraInputs.
+         */
+        public Builder extraInputs(String extraInputs) {
+            this.putQueryParameter("ExtraInputs", extraInputs);
+            this.extraInputs = extraInputs;
+            return this;
+        }
+
+        /**
+         * <p>The media asset ID, which is the video ID. You can obtain the ID by using one of the following methods:</p>
          * <ul>
-         * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD</a> console. In the left-side navigation pane, choose <strong>Media Files</strong> &gt; <strong>Audio/Video</strong>. On the Video and Audio page, view the ID of the audio or video file. This method is applicable to files that are uploaded by using the ApsaraVideo VOD console.</li>
-         * <li>Obtain the value of the VideoId parameter when you call the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation to upload media files.</li>
-         * <li>Obtain the value of the VideoId parameter when you call the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation after you upload media files.</li>
+         * <li>For videos uploaded through the console, log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Media Assets</strong> &gt; <strong>Audio/Video</strong> to view the video ID.</li>
+         * <li>When you call the <a href="https://help.aliyun.com/document_detail/55407.html">Get the upload URL and credential for a video</a> operation to obtain the upload URL and credential, the video ID is the value of the VideoId response parameter.</li>
+         * <li>After a video is uploaded, you can call the <a href="https://help.aliyun.com/document_detail/86044.html">Search for media information</a> operation to query the video ID. The video ID is the value of the VideoId response parameter.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -91,7 +114,7 @@ public class SubmitWorkflowJobRequest extends Request {
         }
 
         /**
-         * <p>The ID of the workflow. To view the ID of the workflow, log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose <strong>Configuration Management</strong> &gt; <strong>Media Processing</strong> &gt; <strong>Workflows</strong>.</p>
+         * <p>The workflow ID. You can log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Configuration Management</strong> &gt; <strong>Media Processing Configuration</strong> &gt; <strong>Workflow Management</strong> to view the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

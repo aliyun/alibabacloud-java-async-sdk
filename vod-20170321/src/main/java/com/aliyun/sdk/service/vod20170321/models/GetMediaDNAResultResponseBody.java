@@ -67,7 +67,7 @@ public class GetMediaDNAResultResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The media fingerprinting results.</p>
+         * <p>The media fingerprint result.</p>
          */
         public Builder DNAResult(DNAResult DNAResult) {
             this.DNAResult = DNAResult;
@@ -75,7 +75,7 @@ public class GetMediaDNAResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>63FC4896-E956-4B*****7D-134FF1BC597A</p>
@@ -306,7 +306,7 @@ public class GetMediaDNAResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The start time and duration of the matched video.</p>
+             * <p>The start time and duration of the video in the library.</p>
              */
             public Builder duplication(Duplication duplication) {
                 this.duplication = duplication;
@@ -394,7 +394,7 @@ public class GetMediaDNAResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The details of the matched video. Information such as the location and duration of the video is returned.</p>
+             * <p>The details of the similar video, including the position and duration.</p>
              */
             public Builder detail(java.util.List<Detail> detail) {
                 this.detail = detail;
@@ -402,7 +402,7 @@ public class GetMediaDNAResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the video that has a similar fingerprint.</p>
+             * <p>The ID of the similar video.</p>
              * 
              * <strong>example:</strong>
              * <p>6ad8987da46f4b*****490ce2873745</p>
@@ -413,7 +413,7 @@ public class GetMediaDNAResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The similarity between the fingerprints of the input video and the matched video. 1 indicates that the fingerprints of the two videos are the same.</p>
+             * <p>The similarity of the video. A similarity value of 1 indicates 100% similarity.</p>
              * 
              * <strong>example:</strong>
              * <p>0.98</p>
@@ -470,7 +470,7 @@ public class GetMediaDNAResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The video fingerprint recognition result.</p>
+             * <p>The media fingerprint recognition results.</p>
              */
             public Builder videoDNA(java.util.List<VideoDNA> videoDNA) {
                 this.videoDNA = videoDNA;

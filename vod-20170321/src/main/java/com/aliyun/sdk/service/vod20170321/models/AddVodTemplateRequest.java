@@ -104,7 +104,7 @@ public class AddVodTemplateRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the application. Default value: <strong>app-1000000</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Multi-application service</a>.</p>
+         * <p>The ID of the application. Default value: <strong>app-1000000</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Multi-application</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>app-****</p>
@@ -118,8 +118,8 @@ public class AddVodTemplateRequest extends Request {
         /**
          * <p>The name of the template.</p>
          * <ul>
-         * <li>The name cannot exceed 128 bytes.</li>
-         * <li>The value must be encoded in UTF-8.</li>
+         * <li>The name can be up to 128 bytes in length.</li>
+         * <li>The name must be encoded in UTF-8.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -133,7 +133,7 @@ public class AddVodTemplateRequest extends Request {
         }
 
         /**
-         * <p>The configurations of the snapshot template. The value must be a JSON string. For more information about the data structure, see <a href="https://help.aliyun.com/document_detail/98618.html">SnapshotTemplateConfig</a> and <a href="https://help.aliyun.com/document_detail/98618.html">DynamicImageTemplateConfig</a>.</p>
+         * <p>The configuration data of the template in JSON format. For more information about the data structure, see <a href="https://help.aliyun.com/document_detail/98618.html">Snapshot template configuration</a> or <a href="https://help.aliyun.com/document_detail/98618.html">Animated image template configuration</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,7 +146,11 @@ public class AddVodTemplateRequest extends Request {
         }
 
         /**
-         * <p>The type of the template. Set the value to <strong>Snapshot</strong>.</p>
+         * <p>The templatetype. Valid values:</p>
+         * <ul>
+         * <li><strong>Snapshot</strong>: snapshot.</li>
+         * <li><strong>DynamicImage</strong>: animated image.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

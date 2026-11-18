@@ -67,7 +67,7 @@ public class DescribeVodDomainConfigsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The configurations of the domain name.</p>
+         * DomainConfigs.
          */
         public Builder domainConfigs(DomainConfigs domainConfigs) {
             this.domainConfigs = domainConfigs;
@@ -144,10 +144,7 @@ public class DescribeVodDomainConfigsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The parameter name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>file_type</p>
+             * ArgName.
              */
             public Builder argName(String argName) {
                 this.argName = argName;
@@ -155,10 +152,7 @@ public class DescribeVodDomainConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parameter value.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>txt</p>
+             * ArgValue.
              */
             public Builder argValue(String argValue) {
                 this.argValue = argValue;
@@ -305,10 +299,7 @@ public class DescribeVodDomainConfigsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The configuration ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>5003576</p>
+             * ConfigId.
              */
             public Builder configId(String configId) {
                 this.configId = configId;
@@ -316,7 +307,7 @@ public class DescribeVodDomainConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The feature parameters.</p>
+             * FunctionArgs.
              */
             public Builder functionArgs(FunctionArgs functionArgs) {
                 this.functionArgs = functionArgs;
@@ -324,10 +315,7 @@ public class DescribeVodDomainConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The feature name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>set_req_host_header</p>
+             * FunctionName.
              */
             public Builder functionName(String functionName) {
                 this.functionName = functionName;
@@ -335,16 +323,7 @@ public class DescribeVodDomainConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configuration status. Valid values:</p>
-             * <ul>
-             * <li><strong>success</strong></li>
-             * <li><strong>testing</strong></li>
-             * <li><strong>failed</strong></li>
-             * <li><strong>configuring</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>success</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;

@@ -67,7 +67,7 @@ public class CreateAppInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the application.</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>app-****</p>
@@ -78,7 +78,7 @@ public class CreateAppInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>25818875-5F78-4A13-34D5-D7393642****</p>

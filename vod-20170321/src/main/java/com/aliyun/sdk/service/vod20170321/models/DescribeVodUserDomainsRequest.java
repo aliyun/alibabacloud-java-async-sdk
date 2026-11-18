@@ -158,7 +158,7 @@ public class DescribeVodUserDomainsRequest extends Request {
         } 
 
         /**
-         * <p>The domain name. The value of this parameter is used as a filter condition for a fuzzy match.</p>
+         * <p>The ApsaraVideo VOD accelerated domain name. Fuzzy match is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>example.aliyundoc.com</p>
@@ -170,12 +170,12 @@ public class DescribeVodUserDomainsRequest extends Request {
         }
 
         /**
-         * <p>The search method. Valid values:</p>
+         * <p>The domain name search type. Valid values:</p>
          * <ul>
          * <li><strong>fuzzy_match</strong> (default): fuzzy match.</li>
-         * <li><strong>pre_match</strong>: prefix match</li>
-         * <li><strong>suf_match</strong>: suffix match</li>
-         * <li><strong>full_match</strong>: exact match</li>
+         * <li><strong>pre_match</strong>: prefix match.</li>
+         * <li><strong>suf_match</strong>: suffix match.</li>
+         * <li><strong>full_match</strong>: exact match.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -188,14 +188,14 @@ public class DescribeVodUserDomainsRequest extends Request {
         }
 
         /**
-         * <p>The status of the domain name. Value values:</p>
+         * <p>The domain name status used for filtering. Valid values:</p>
          * <ul>
-         * <li><strong>online</strong>: indicates that the domain name is enabled.</li>
-         * <li><strong>offline</strong>: indicates that the domain name is disabled.</li>
-         * <li><strong>configuring</strong>: indicates that the domain name is being configured.</li>
-         * <li><strong>configure_failed</strong>: indicates that the domain name failed to be configured.</li>
-         * <li><strong>checking</strong>: indicates that the domain name is under review.</li>
-         * <li><strong>check_failed</strong>: indicates that the domain name failed the review.</li>
+         * <li><strong>online</strong>: The domain name is enabled.</li>
+         * <li><strong>offline</strong>: The domain name is disabled.</li>
+         * <li><strong>configuring</strong>: The domain name is being configured.</li>
+         * <li><strong>configure_failed</strong>: The domain name failed to be configured.</li>
+         * <li><strong>checking</strong>: The domain name is being reviewed.</li>
+         * <li><strong>check_failed</strong>: The domain name failed the review.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -217,7 +217,7 @@ public class DescribeVodUserDomainsRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the returned page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -229,7 +229,7 @@ public class DescribeVodUserDomainsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: <strong>20</strong>. Maximum value: <strong>50</strong>. Valid values: <strong>1</strong> to <strong>50</strong>.</p>
+         * <p>The number of entries per page. Default value: <strong>20</strong>. Maximum value: <strong>50</strong>. Valid values: any integer from <strong>1</strong> to <strong>50</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -318,7 +318,7 @@ public class DescribeVodUserDomainsRequest extends Request {
             } 
 
             /**
-             * <p>The key of tag N. Valid values of N: <strong>1</strong> to <strong>20</strong>.</p>
+             * <p>The tag key. Valid values of N: <strong>1</strong> to <strong>20</strong>.</p>
              * <p>By default, all tag keys are queried.</p>
              * 
              * <strong>example:</strong>
@@ -330,7 +330,7 @@ public class DescribeVodUserDomainsRequest extends Request {
             }
 
             /**
-             * <p>The value of tag N. Valid values of N: <strong>1</strong> to <strong>20</strong>.</p>
+             * <p>The tag value. Valid values of N: <strong>1</strong> to <strong>20</strong>.</p>
              * <p>By default, all tag values are queried.</p>
              * 
              * <strong>example:</strong>

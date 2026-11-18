@@ -80,7 +80,7 @@ public class SubmitAIMediaAuditJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the job.</p>
+         * <p>The job ID.</p>
          * 
          * <strong>example:</strong>
          * <p>bdbc266af6893943a70176d92e99****</p>
@@ -91,7 +91,7 @@ public class SubmitAIMediaAuditJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the media file.</p>
+         * <p>The audio or video ID.</p>
          * 
          * <strong>example:</strong>
          * <p>fe028d09441afffb138cd7ee****</p>
@@ -102,7 +102,7 @@ public class SubmitAIMediaAuditJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>F4631053-8D9F-42B2-4A67281DB88E****</p>

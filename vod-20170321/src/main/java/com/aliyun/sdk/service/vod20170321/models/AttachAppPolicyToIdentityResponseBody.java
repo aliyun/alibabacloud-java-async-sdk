@@ -80,7 +80,7 @@ public class AttachAppPolicyToIdentityResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The names of the policies that failed to be granted to the RAM user or RAM role.</p>
+         * <p>The Policy Name of the failed policy.</p>
          */
         public Builder failedPolicyNames(java.util.List<String> failedPolicyNames) {
             this.failedPolicyNames = failedPolicyNames;
@@ -88,7 +88,7 @@ public class AttachAppPolicyToIdentityResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The names of the policies that were not found.</p>
+         * <p>The list of non-existent policy names.</p>
          */
         public Builder nonExistPolicyNames(java.util.List<String> nonExistPolicyNames) {
             this.nonExistPolicyNames = nonExistPolicyNames;
@@ -96,7 +96,7 @@ public class AttachAppPolicyToIdentityResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>25818875-5F78-4A13-****-D7393642CA58</p>

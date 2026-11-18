@@ -78,7 +78,7 @@ public class ListAuditSecurityIpResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the review security group.</p>
+         * <p>The details of the review security IPs.</p>
          */
         public Builder securityIpList(java.util.List<SecurityIpList> securityIpList) {
             this.securityIpList = securityIpList;
@@ -170,7 +170,7 @@ public class ListAuditSecurityIpResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the review security group was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * <p>The time when the security IP group was created. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2018-05-22T06:54:23Z</p>
@@ -181,7 +181,7 @@ public class ListAuditSecurityIpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP addresses in the review security group.</p>
+             * <p>The list of security IPs.</p>
              * 
              * <strong>example:</strong>
              * <p>30.27.14.0/24,30.39.127.245</p>
@@ -192,7 +192,7 @@ public class ListAuditSecurityIpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the review security group was last modified. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * <p>The time when the security IP group was last modified. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2018-05-22T06:55:14Z</p>
@@ -203,7 +203,7 @@ public class ListAuditSecurityIpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the review security group.</p>
+             * <p>The name of the security IP group.</p>
              * 
              * <strong>example:</strong>
              * <p>Default</p>

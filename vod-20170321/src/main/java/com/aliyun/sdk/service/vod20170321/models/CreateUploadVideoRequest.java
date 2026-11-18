@@ -257,7 +257,7 @@ public class CreateUploadVideoRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the application. Default value: <strong>app-1000000</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Overview</a>.</p>
+         * <p>The application ID. Default value: <strong>app-1000000</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Multi-application</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>app-1000000</p>
@@ -269,11 +269,11 @@ public class CreateUploadVideoRequest extends Request {
         }
 
         /**
-         * <p>The ID of the category. You can use one of the following methods to obtain the ID:</p>
+         * <p>The category ID. You can obtain the category ID by using one of the following methods:</p>
          * <ul>
-         * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose <strong>Configuration Management</strong> &gt; <strong>Media Management</strong> &gt; <strong>Categories</strong> to view the category ID of the media file.</li>
-         * <li>Obtain the value of CateId from the response to the <a href="~~AddCategory~~">AddCategory</a> operation.</li>
-         * <li>Obtain the value of CateId from the response to the <a href="~~GetCategories~~">GetCategories</a> operation.</li>
+         * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose <strong>Configuration Management</strong> &gt; <strong>Media Asset Management Configuration</strong> &gt; <strong>Category Management</strong> to view the category ID.</li>
+         * <li>When you create a category by calling the <a href="~~AddCategory~~">AddCategory</a> operation, the category ID is the value of the CateId parameter in the response.</li>
+         * <li>When you query categories by calling the <a href="~~GetCategories~~">GetCategories</a> operation, the category ID is the value of the CateId parameter in the response.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -298,10 +298,10 @@ public class CreateUploadVideoRequest extends Request {
         }
 
         /**
-         * <p>The description of the audio or video file.</p>
+         * <p>The description of the audio or video file displayed in ApsaraVideo VOD after the upload is complete.</p>
          * <ul>
-         * <li>The value can be up to 1,024 characters in length.</li>
-         * <li>The value must be encoded in UTF-8.</li>
+         * <li>The description can be up to 1,024 characters in length.</li>
+         * <li>The description must be encoded in UTF-8.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -314,7 +314,7 @@ public class CreateUploadVideoRequest extends Request {
         }
 
         /**
-         * EnableFirstFrameCover.
+         * <p>Specifies whether to use the first frame of the video as the thumbnail.</p>
          */
         public Builder enableFirstFrameCover(Boolean enableFirstFrameCover) {
             this.putQueryParameter("EnableFirstFrameCover", enableFirstFrameCover);
@@ -323,10 +323,10 @@ public class CreateUploadVideoRequest extends Request {
         }
 
         /**
-         * <p>The name of the source file.</p>
+         * <p>The name of the audio or video source file to be uploaded.</p>
          * <ul>
-         * <li>The name must contain a file name extension, which is not case-sensitive.</li>
-         * <li>For more information about file name extensions supported by ApsaraVideo VOD, see <a href="https://help.aliyun.com/document_detail/55396.html">Overview</a>.</li>
+         * <li>The file name must contain an extension. The extension is not case-sensitive.</li>
+         * <li>For supported extensions, see <a href="https://help.aliyun.com/document_detail/55396.html">Upload overview</a>.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -340,7 +340,7 @@ public class CreateUploadVideoRequest extends Request {
         }
 
         /**
-         * <p>The size of the source file. Unit: bytes.</p>
+         * <p>The size of the audio or video source file to be uploaded. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -352,7 +352,7 @@ public class CreateUploadVideoRequest extends Request {
         }
 
         /**
-         * GenerateThumbnail.
+         * <p>Specifies whether to generate a thumbnail for the video.</p>
          */
         public Builder generateThumbnail(Boolean generateThumbnail) {
             this.putQueryParameter("GenerateThumbnail", generateThumbnail);
@@ -361,7 +361,10 @@ public class CreateUploadVideoRequest extends Request {
         }
 
         /**
-         * ReferenceId.
+         * <p>The custom ID. The ID can be 6 to 64 characters in length and can contain only lowercase letters, uppercase letters, digits, hyphens (-), and underscores (_). The ID must be unique within the user dimension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123-123</p>
          */
         public Builder referenceId(String referenceId) {
             this.putQueryParameter("ReferenceId", referenceId);
@@ -370,9 +373,10 @@ public class CreateUploadVideoRequest extends Request {
         }
 
         /**
-         * <p>The storage address. Perform the following operations to obtain the storage address: Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose <strong>Configuration Management</strong> &gt; <strong>Media Management</strong> &gt; <strong>Storage</strong>. On the Storage page, view the storage address.</p>
+         * <p>The storage address. You can obtain the storage address by using the following method:
+         * Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Configuration Management</strong> &gt; <strong>Media Asset Management Configuration</strong> &gt; <strong>Storage Management</strong> to view the storage address.</p>
          * <blockquote>
-         * <p> If you leave this parameter empty, audio and video files are uploaded to the default storage address. If you specify a storage address, audio and video files are uploaded to the specified address.</p>
+         * <p>If you do not specify this parameter, the audio or video file is uploaded to the default storage address. If no default storage address is configured, the file is uploaded to the first storage address in the storage list. If you specify this parameter, the audio or video file is uploaded to the specified storage address.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -387,10 +391,10 @@ public class CreateUploadVideoRequest extends Request {
         /**
          * <p>The tags of the audio or video file.</p>
          * <ul>
-         * <li>You can specify a maximum of 16 tags.</li>
-         * <li>If you want to specify multiple tags, separate the tags with commas (,).</li>
+         * <li>You can specify up to 16 tags.</li>
+         * <li>Separate multiple tags with commas (,).</li>
          * <li>Each tag can be up to 32 characters in length.</li>
-         * <li>The value must be encoded in UTF-8.</li>
+         * <li>The tags must be encoded in UTF-8.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -403,18 +407,19 @@ public class CreateUploadVideoRequest extends Request {
         }
 
         /**
-         * <p>The ID of the transcoding template group. You can use one of the following methods to obtain the ID:</p>
+         * <p>The ID of the transcoding template group. You can obtain the ID by using one of the following methods:</p>
          * <ul>
-         * <li>Log on to the ApsaraVideo VOD console. In the left-side navigation pane, choose Configuration Management &gt; Media Processing &gt; Transcoding Template Groups. On the Transcoding Template Groups page, you can view the ID of the transcoding template group.<a href="https://vod.console.aliyun.com"></a>************</li>
-         * <li>Obtain the value of the TranscodeTemplateGroupId parameter from the response to the <a href="https://help.aliyun.com/document_detail/102665.html">AddTranscodeTemplateGroup</a> operation that you called to create a transcoding template group.</li>
-         * <li>Obtain the value of the TranscodeTemplateGroupId parameter from the response to the <a href="https://help.aliyun.com/document_detail/102669.html">ListTranscodeTemplateGroup</a> operation that you called to query transcoding template groups.</li>
+         * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose <strong>Configuration Management</strong> &gt; <strong>Media Processing Configuration</strong> &gt; <strong>Transcoding Template Groups</strong> to view the ID of the transcoding template group.</li>
+         * <li>When you create a transcoding template group by calling the <a href="https://help.aliyun.com/document_detail/102665.html">Create a transcoding template group</a> operation, the ID is the value of the TranscodeTemplateGroupId parameter in the response.</li>
+         * <li>When you query transcoding template groups by calling the <a href="https://help.aliyun.com/document_detail/102669.html">Query transcoding configuration list</a> operation, the ID is the value of the TranscodeTemplateGroupId parameter in the response.</li>
          * </ul>
          * <blockquote>
          * <ul>
-         * <li>If you specify both WorkflowId and TemplateGroupId, the value of the WorkflowId parameter takes effect.</li>
-         * <li>If this parameter is not specified, transcoding is performed based on the default transcoding template group. If the transcoding template group ID is specified, transcoding is performed based on the specified template group.</li>
-         * <li>If the <strong>No Transcoding</strong> template group is used, only the <a href="https://help.aliyun.com/document_detail/55630.html">FileUploadComplete</a> event notification is returned after a video is uploaded. The <a href="https://help.aliyun.com/document_detail/55636.html">StreamTranscodeComplete</a> event notification is not returned.</li>
-         * <li>If you use the <strong>No Transcoding</strong> template group to upload videos, only videos in the format of MP4, FLV, MP3, M3U8, or WebM can be played. Videos in other formats can only be stored in ApsaraVideo VOD. You can view the file name extension to obtain the video format. If you want to use ApsaraVideo Player, make sure that the version of the player is V3.1.0 or later.</li>
+         * <li>If both WorkflowId and TemplateGroupId are specified, WorkflowId takes precedence.</li>
+         * <li>If you do not specify this parameter, the default transcoding template group is used. If you specify this parameter, the specified transcoding template group is used.</li>
+         * <li>If you set this parameter to the built-in <strong>No Transcoding</strong> template group, only the <a href="https://help.aliyun.com/document_detail/55630.html">video upload completion</a> event notification is generated after the audio or video file is uploaded. The <a href="https://help.aliyun.com/document_detail/55636.html">single definition transcoding completion</a> event notification is not generated.</li>
+         * <li>The task triggered by this parameter is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous task</a>. After the task is submitted, it is queued and executed asynchronously in the background.</li>
+         * <li>To ensure normal playback, if you set this parameter to the built-in <strong>No Transcoding</strong> template group, only the following formats support direct playback without transcoding after the audio or video file is uploaded: MP4, FLV, MP3, M3U8, and WEBM. Other formats are only supported for storage (pay attention to the extension of FileName). If you use ApsaraVideo Player for playback, the version must be 3.1.0 or later.</li>
          * </ul>
          * </blockquote>
          * 
@@ -428,10 +433,10 @@ public class CreateUploadVideoRequest extends Request {
         }
 
         /**
-         * <p>The title of the audio or video file.</p>
+         * <p>The title of the audio or video file displayed in ApsaraVideo VOD after the upload is complete.</p>
          * <ul>
          * <li>The title can be up to 128 characters in length.</li>
-         * <li>The value must be encoded in UTF-8.</li>
+         * <li>The title must be encoded in UTF-8.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -445,11 +450,11 @@ public class CreateUploadVideoRequest extends Request {
         }
 
         /**
-         * <p>The custom configurations such as callback configurations and upload acceleration configurations. The value must be a JSON string. For more information, see <a href="https://help.aliyun.com/document_detail/86952.html">Request parameters</a>.</p>
+         * <p>The custom settings. The value is a JSON string that supports settings such as message callback and upload acceleration. For more information, see <a href="https://help.aliyun.com/document_detail/86952.html">UserData</a>.</p>
          * <blockquote>
          * <ul>
-         * <li>The callback configurations take effect only after you specify the HTTP callback URL and select specific callback events in the ApsaraVideo VOD console. For more information about how to configure HTTP callback settings in the ApsaraVideo VOD console, see <a href="https://help.aliyun.com/document_detail/86071.html">Configure callback settings</a>.</li>
-         * <li>If you want to enable the upload acceleration feature, <a href="https://yida.alibaba-inc.com/o/ticketapply">submit a request on Yida</a>. For more information, see <a href="https://help.aliyun.com/document_detail/55396.html">Overview</a>.</li>
+         * <li>To use the message callback feature, you must configure an HTTP callback URL and select the corresponding callback event types in the console. Otherwise, the callback settings do not take effect. If no callback URL is specified for subsequent tasks, notifications are pushed to this URL by default. For more information about how to configure HTTP callbacks in the console, see <a href="https://help.aliyun.com/document_detail/86071.html">Callback settings</a>.</li>
+         * <li>To use the upload acceleration feature, you must <a href="https://yida.alibaba-inc.com/o/ticketapply">submit an application</a> to enable it. For more information, see <a href="https://help.aliyun.com/document_detail/55396.html">Upload instructions</a>.</li>
          * </ul>
          * </blockquote>
          * 
@@ -463,9 +468,12 @@ public class CreateUploadVideoRequest extends Request {
         }
 
         /**
-         * <p>The ID of the workflow. To view the ID of the workflow, log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose <strong>Configuration Management</strong> &gt; <strong>Media Processing</strong> &gt; <strong>Workflows</strong>.</p>
+         * <p>The workflow ID. You can log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Configuration Management</strong> &gt; <strong>Media Processing Configuration</strong> &gt; <strong>Workflows</strong> to view the workflow ID.</p>
          * <blockquote>
-         * <p>If you specify the WorkflowId and TemplateGroupId parameters, the value of the WorkflowId parameter takes effect. For more information, see <a href="https://help.aliyun.com/document_detail/115347.html">Workflows</a>.</p>
+         * <ul>
+         * <li>If both WorkflowId and TemplateGroupId are specified, WorkflowId takes precedence. For more information, see <a href="https://help.aliyun.com/document_detail/115347.html">Workflows</a>.</li>
+         * <li>The task triggered by this parameter is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous task</a>. After the task is submitted, it is queued and executed asynchronously in the background.</li>
+         * </ul>
          * </blockquote>
          * 
          * <strong>example:</strong>

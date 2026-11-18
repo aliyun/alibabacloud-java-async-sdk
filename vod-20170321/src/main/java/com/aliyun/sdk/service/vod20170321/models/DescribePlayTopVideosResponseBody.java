@@ -128,7 +128,7 @@ public class DescribePlayTopVideosResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>4B0BCF9F-2FD5-4817-****-7BEBBE3AF90B&quot;</p>
@@ -139,7 +139,7 @@ public class DescribePlayTopVideosResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The daily playback statistics on each top video.</p>
+         * TopPlayVideos.
          */
         public Builder topPlayVideos(TopPlayVideos topPlayVideos) {
             this.topPlayVideos = topPlayVideos;
@@ -147,7 +147,7 @@ public class DescribePlayTopVideosResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries that were collected in playback statistics on top videos.</p>
+         * <p>The total number of top videos.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -255,10 +255,7 @@ public class DescribePlayTopVideosResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The total playback duration. Unit: milliseconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>4640369</p>
+             * PlayDuration.
              */
             public Builder playDuration(String playDuration) {
                 this.playDuration = playDuration;
@@ -266,10 +263,7 @@ public class DescribePlayTopVideosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The title of the video.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Four streams (two streams encrypted): LD-HLS-encrypted + SD-MP4 + HD-H</p>
+             * Title.
              */
             public Builder title(String title) {
                 this.title = title;
@@ -277,10 +271,7 @@ public class DescribePlayTopVideosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of unique visitors.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * UV.
              */
             public Builder uv(String uv) {
                 this.uv = uv;
@@ -288,10 +279,7 @@ public class DescribePlayTopVideosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of video views.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>107</p>
+             * VV.
              */
             public Builder vv(String vv) {
                 this.vv = vv;
@@ -299,10 +287,7 @@ public class DescribePlayTopVideosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the video.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2a8d4cb9ecbb487681473a15****8fda</p>
+             * VideoId.
              */
             public Builder videoId(String videoId) {
                 this.videoId = videoId;

@@ -88,7 +88,7 @@ public class BatchStopVodDomainRequest extends Request {
         } 
 
         /**
-         * <p>The accelerated domain name. Separate multiple domain names with commas (,).</p>
+         * <p>The accelerated domain names for ApsaraVideo VOD. Separate multiple domain names with commas (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

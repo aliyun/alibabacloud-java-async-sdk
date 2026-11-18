@@ -101,7 +101,10 @@ public class GetAppPlayKeyRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>The application ID. Default value: <strong>app-1000000</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Multi-application</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app-1000000</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);

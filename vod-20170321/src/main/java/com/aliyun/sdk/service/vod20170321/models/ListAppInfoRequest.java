@@ -125,7 +125,7 @@ public class ListAppInfoRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID to which the instance belongs.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aekzko7fsuj****</p>
@@ -137,7 +137,7 @@ public class ListAppInfoRequest extends Request {
         }
 
         /**
-         * <p>The status of the application. You can specify the status of the applications that you want to query. After an application is created, it enters the <strong>Normal</strong> state. Valid values:</p>
+         * <p>The application status. You can query applications in a specified status. After an application is created, the status is <strong>Normal</strong> by default. Valid values:</p>
          * <ul>
          * <li><strong>Normal</strong></li>
          * <li><strong>Disable</strong></li>

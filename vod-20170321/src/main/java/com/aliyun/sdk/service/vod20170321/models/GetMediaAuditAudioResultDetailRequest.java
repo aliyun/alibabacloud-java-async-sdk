@@ -130,7 +130,7 @@ public class GetMediaAuditAudioResultDetailRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the video. You can query the video ID by using the ApsaraVideo VOD console or calling the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation.</p>
+         * <p>The audio ID. You can query the audio ID in the ApsaraVideo VOD console or obtain it from the response of the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -161,7 +161,7 @@ public class GetMediaAuditAudioResultDetailRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. This parameter is optional. If you do not specify this parameter, all results are returned without pagination.</p>
+         * <p>The page number. This parameter is optional. If you do not specify this parameter, all results are returned without pagination.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

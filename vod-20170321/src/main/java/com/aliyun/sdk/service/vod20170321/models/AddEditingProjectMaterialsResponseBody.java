@@ -67,7 +67,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The materials.</p>
+         * <p>The list of media assets.</p>
          */
         public Builder materialList(java.util.List<MaterialList> materialList) {
             this.materialList = materialList;
@@ -75,7 +75,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>85237CDA-0B54-5CED-BA10-A8A71AA13C1A</p>
@@ -339,7 +339,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the category.</p>
+             * <p>The category ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1000487543</p>
@@ -350,10 +350,10 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The category name of the material.</p>
+             * <p>The name of the media asset category.</p>
              * 
              * <strong>example:</strong>
-             * <p>cate1</p>
+             * <p>Category 1</p>
              */
             public Builder cateName(String cateName) {
                 this.cateName = cateName;
@@ -361,7 +361,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The thumbnail URL.</p>
+             * <p>The URL of the media asset thumbnail.</p>
              */
             public Builder coverURL(String coverURL) {
                 this.coverURL = coverURL;
@@ -369,7 +369,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the material was created. The time follows the ISO 8601 standard in the <em>YYYY-MM-DD**Thh:mm:ss</em> format. The time is displayed in UTC.</p>
+             * <p>The time when the media asset was created. The time follows the <i>yyyy-mm-dd</i>T<i>hh:mm:ss</i>Z format. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2019-10-02T08:26Z</p>
@@ -380,7 +380,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the user.</p>
+             * <p>The user ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1234751840694470</p>
@@ -391,10 +391,10 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the material.</p>
+             * <p>The description of the media asset.</p>
              * 
              * <strong>example:</strong>
-             * <p>test material</p>
+             * <p>Media asset description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -402,7 +402,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The duration of the material. Unit: seconds. The value is accurate to four decimal places.</p>
+             * <p>The duration of the media asset. Unit: seconds. The value is accurate to four decimal places.</p>
              * 
              * <strong>example:</strong>
              * <p>3690.2332</p>
@@ -413,7 +413,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the material.</p>
+             * <p>The ID of the media asset.</p>
              * 
              * <strong>example:</strong>
              * <p>85befc4118b84c6723e53b80b1****</p>
@@ -424,11 +424,11 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the material. Valid values:</p>
+             * <p>The type of the media asset. Valid values:</p>
              * <ul>
-             * <li><strong>video</strong></li>
-             * <li><strong>audio</strong></li>
-             * <li><strong>image</strong></li>
+             * <li><strong>video</strong>: video</li>
+             * <li><strong>audio</strong>: audio-only</li>
+             * <li><strong>image</strong>: image</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -440,7 +440,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the material was last updated. The time follows the ISO 8601 standard in the <em>YYYY-MM-DD**Thh:mm:ss</em> format. The time is displayed in UTC.</p>
+             * <p>The time when the media asset was updated. The time follows the <i>yyyy-mm-dd</i>T<i>hh:mm:ss</i>Z format. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-11-25T07:28:34Z</p>
@@ -451,7 +451,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the material.</p>
+             * <p>The file size.</p>
              * 
              * <strong>example:</strong>
              * <p>1682694</p>
@@ -462,7 +462,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URLs of snapshots.</p>
+             * <p>The array of snapshot URLs for the media asset.</p>
              */
             public Builder snapshots(java.util.List<String> snapshots) {
                 this.snapshots = snapshots;
@@ -470,7 +470,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configuration of the sprite snapshot.</p>
+             * <p>The sprite configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>xxx</p>
@@ -481,7 +481,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URLs of sprite snapshots.</p>
+             * <p>The array of sprite URLs for the media asset.</p>
              */
             public Builder sprites(java.util.List<String> sprites) {
                 this.sprites = sprites;
@@ -489,11 +489,11 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the material. Valid values:</p>
+             * <p>The status of the media asset. Valid values:</p>
              * <ul>
-             * <li><strong>Normal</strong></li>
-             * <li><strong>Uploading</strong></li>
-             * <li><strong>UploadFail</strong></li>
+             * <li><strong>Normal</strong>: Normal.</li>
+             * <li><strong>Uploading</strong>: Uploading.</li>
+             * <li><strong>UploadFail</strong>: Upload failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -505,7 +505,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag of the material. Multiple tags are separated by commas (,).</p>
+             * <p>The tags of the media asset. Separate multiple tags with commas (,).</p>
              * 
              * <strong>example:</strong>
              * <p>tag1,tag2</p>
@@ -516,7 +516,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The title of the material.</p>
+             * <p>The title of the media asset.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>

@@ -117,7 +117,7 @@ public class DeleteVodSpecificConfigRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the configuration.</p>
+         * <p>The configuration ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +130,7 @@ public class DeleteVodSpecificConfigRequest extends Request {
         }
 
         /**
-         * <p>The accelerated domain name.</p>
+         * <p>The accelerated domain name for ApsaraVideo VOD.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,10 +143,10 @@ public class DeleteVodSpecificConfigRequest extends Request {
         }
 
         /**
-         * <p>The environment from which the domain name configurations are deleted. Valid values:</p>
+         * <p>The environment from which you want to delete the configuration. Valid values:</p>
          * <ul>
          * <li>online: production environment</li>
-         * <li>gray: simulation environment</li>
+         * <li>gray: canary release environment</li>
          * </ul>
          * 
          * <strong>example:</strong>

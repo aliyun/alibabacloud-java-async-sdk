@@ -119,8 +119,8 @@ public class DescribeVodDomainRealTimeTrafficDataResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The time interval at which data is returned. Unit: seconds.</p>
-         * <p>The returned value varies based on the time range per query. Valid values: 60 (1 minute), 300 (5 minutes), and 3600 (1 hour). For more information, see the <strong>Time granularity</strong> section in the <strong>API documentation</strong>.</p>
+         * <p>The time interval of each data entry, which indicates the time granularity of the data. Unit: seconds.</p>
+         * <p>The value of this parameter is fixed to 60 (1 minute), 300 (5 minutes), or 3600 (1 hour) based on the time range of a single query. For more information, see the <strong>Time granularity of returned data</strong> section in the <strong>Operation description</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -142,7 +142,7 @@ public class DescribeVodDomainRealTimeTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The end of the time range.</p>
+         * <p>The end time of the data. The time is displayed in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-12-10T20:01:00Z</p>
@@ -153,7 +153,7 @@ public class DescribeVodDomainRealTimeTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of traffic data in each time interval.</p>
+         * RealTimeTrafficDataPerInterval.
          */
         public Builder realTimeTrafficDataPerInterval(RealTimeTrafficDataPerInterval realTimeTrafficDataPerInterval) {
             this.realTimeTrafficDataPerInterval = realTimeTrafficDataPerInterval;
@@ -161,7 +161,7 @@ public class DescribeVodDomainRealTimeTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>A666D44F-19D6-490E-97CF-1A64AB962C57</p>
@@ -172,7 +172,7 @@ public class DescribeVodDomainRealTimeTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The beginning of the time range.</p>
+         * <p>The start time of the data. The time is displayed in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-12-10T20:00:00Z</p>
@@ -241,10 +241,7 @@ public class DescribeVodDomainRealTimeTrafficDataResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The timestamp of the data returned. The time follows the ISO 8601 standard. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2019-12-10T20:01:00Z</p>
+             * TimeStamp.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -252,10 +249,7 @@ public class DescribeVodDomainRealTimeTrafficDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The traffic data. Unit: bytes.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

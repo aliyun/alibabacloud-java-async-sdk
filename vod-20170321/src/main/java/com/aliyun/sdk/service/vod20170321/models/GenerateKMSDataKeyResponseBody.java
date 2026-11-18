@@ -93,7 +93,7 @@ public class GenerateKMSDataKeyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ciphertext of the encrypted data key. This is used as CipherText when you create a transcoding job.</p>
+         * <p>The ciphertext of the encrypted data key (DK). This value is used for the CipherText parameter when you submit a transcoding job.</p>
          * 
          * <strong>example:</strong>
          * <p>ODZhOWVmZDktM2QxNi00ODk0LWJkNGYtMWZjNDNmM2YyYWJmS7FmDBBQ0BkKsQrtRnidtPwirmDcS0ZuJCU41xxAAWk4Z8qsADfbV0b+i6kQmlvj79dJdGOvtX69Uycs901qOjop4bTS****</p>
@@ -104,7 +104,7 @@ public class GenerateKMSDataKeyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the customer master key (CMK). The ID must be globally unique.</p>
+         * <p>The globally unique identifier of the master key.</p>
          * 
          * <strong>example:</strong>
          * <p>7906979c-8e06-46a2-be2d-68e3ccbc****</p>
@@ -115,7 +115,7 @@ public class GenerateKMSDataKeyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The Base64-encoded plaintext of the data key.</p>
+         * <p>The Base64-encoding plaintext of the data key (DK).</p>
          * 
          * <strong>example:</strong>
          * <p>QmFzZTY0IGVuY29kZWQgcGxhaW50****</p>
@@ -126,7 +126,7 @@ public class GenerateKMSDataKeyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>25818875-5F78-4A*****F6-D7393642CA58</p>

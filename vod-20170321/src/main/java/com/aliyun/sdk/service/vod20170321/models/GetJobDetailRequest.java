@@ -75,7 +75,7 @@ public class GetJobDetailRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the task.</p>
+         * <p>The job ID. Note: To query a transcoding task by TaskId, refer to <a href="https://www.alibabacloud.com/help/en/vod/developer-reference/api-vod-2017-03-21-gettranscodetask">GetTranscodeTask</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -90,9 +90,14 @@ public class GetJobDetailRequest extends Request {
         /**
          * <p>The task type. Valid values:</p>
          * <ul>
-         * <li>transcode</li>
-         * <li>snapshot</li>
-         * <li>ai</li>
+         * <li><p>transcode</p>
+         * </li>
+         * <li><p>snapshot</p>
+         * </li>
+         * <li><p>ai</p>
+         * </li>
+         * <li><p>workflow</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

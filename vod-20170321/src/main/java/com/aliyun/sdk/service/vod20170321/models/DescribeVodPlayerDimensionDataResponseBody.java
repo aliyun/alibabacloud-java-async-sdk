@@ -67,7 +67,7 @@ public class DescribeVodPlayerDimensionDataResponseBody extends TeaModel {
         } 
 
         /**
-         * DataList.
+         * <p>The list of returned data.</p>
          */
         public Builder dataList(java.util.List<String> dataList) {
             this.dataList = dataList;

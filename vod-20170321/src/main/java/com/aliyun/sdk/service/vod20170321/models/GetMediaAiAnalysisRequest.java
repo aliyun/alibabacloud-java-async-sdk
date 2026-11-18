@@ -101,7 +101,26 @@ public class GetMediaAiAnalysisRequest extends Request {
         } 
 
         /**
-         * AuthTimeout.
+         * <p>The expiration time of the image access URL. Unit: seconds.</p>
+         * <ul>
+         * <li>If OutputType is set to cdn:<ul>
+         * <li>Only image URLs with URL authentication enabled expire. Otherwise, the URLs are permanently valid.</li>
+         * <li>Minimum value: 1.</li>
+         * <li>Maximum value: unlimited.</li>
+         * <li>Default value: If this parameter is not specified, the default validity period specified in URL authentication settings is used.</li>
+         * </ul>
+         * </li>
+         * <li>If OutputType is set to oss:<ul>
+         * <li>Only image URLs with private storage permissions expire. Otherwise, the URLs are permanently valid.</li>
+         * <li>Minimum value: 1.</li>
+         * <li>Maximum value: To reduce security risks to the origin server, the maximum value is <strong>2592000</strong> (30 days) if images are stored in a bucket managed by ApsaraVideo VOD, and <strong>129600</strong> (36 hours) if images are stored in your own OSS bucket.</li>
+         * <li>Default value: If this parameter is not specified, the value is 3600.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder authTimeout(String authTimeout) {
             this.putQueryParameter("AuthTimeout", authTimeout);
@@ -110,7 +129,10 @@ public class GetMediaAiAnalysisRequest extends Request {
         }
 
         /**
-         * MediaId.
+         * <p>The audio ID. You can query the audio ID in the ApsaraVideo VOD console or obtain it from the response of the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>006204a11bb386bb25491f95f****</p>
          */
         public Builder mediaId(String mediaId) {
             this.putQueryParameter("MediaId", mediaId);
@@ -119,7 +141,14 @@ public class GetMediaAiAnalysisRequest extends Request {
         }
 
         /**
-         * OutputType.
+         * <p>The type of the output URL. Valid values:</p>
+         * <ul>
+         * <li><strong>oss</strong>: back-to-origin URL.</li>
+         * <li><strong>cdn</strong> (default): accelerated URL.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cdn</p>
          */
         public Builder outputType(String outputType) {
             this.putQueryParameter("OutputType", outputType);
@@ -128,7 +157,10 @@ public class GetMediaAiAnalysisRequest extends Request {
         }
 
         /**
-         * ResultTypes.
+         * <p>The type of analysis results. Separate multiple types with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Chapter</p>
          */
         public Builder resultTypes(String resultTypes) {
             this.putQueryParameter("ResultTypes", resultTypes);

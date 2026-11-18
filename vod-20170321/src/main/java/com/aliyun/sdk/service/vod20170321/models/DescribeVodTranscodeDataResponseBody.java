@@ -80,10 +80,10 @@ public class DescribeVodTranscodeDataResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The interval at which the data was queried. Valid values:</p>
+         * <p>The time granularity of the returned data. Valid values:</p>
          * <ul>
-         * <li><strong>hour</strong></li>
-         * <li><strong>day</strong></li>
+         * <li><strong>hour</strong>: hourly data.</li>
+         * <li><strong>day</strong>: daily data.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -95,7 +95,7 @@ public class DescribeVodTranscodeDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>C370DAF1-C838-4288-****-9A87633D248E</p>
@@ -106,7 +106,7 @@ public class DescribeVodTranscodeDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The transcoding statistics returned.</p>
+         * TranscodeData.
          */
         public Builder transcodeData(TranscodeData transcodeData) {
             this.transcodeData = transcodeData;
@@ -172,15 +172,7 @@ public class DescribeVodTranscodeDataResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The transcoding specification. Valid values:</p>
-             * <ul>
-             * <li><strong>Audio</strong>: audio transcoding</li>
-             * <li><strong>Segmentation</strong>: container format conversion</li>
-             * <li><strong>H264.LD, H264.SD, H264.HD, H264.2K, H264.4K, and more</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>H264.SD</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -188,10 +180,7 @@ public class DescribeVodTranscodeDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The transcoding duration. Unit: seconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>111</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -312,7 +301,7 @@ public class DescribeVodTranscodeDataResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The statistics on transcoding of different specifications.</p>
+             * Data.
              */
             public Builder data(Data data) {
                 this.data = data;
@@ -320,10 +309,7 @@ public class DescribeVodTranscodeDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp of the returned data. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2019-02-01T16:00:00Z</p>
+             * TimeStamp.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;

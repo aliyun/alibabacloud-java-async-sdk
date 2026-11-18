@@ -132,10 +132,10 @@ public class DescribeVodDomainTrafficDataResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The time interval at which data is returned, which is the time granularity. Unit: seconds.</p>
+         * <p>The time interval of each record, which indicates the time granularity of the data. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
-         * <p>3600</p>
+         * <p>300</p>
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -154,7 +154,7 @@ public class DescribeVodDomainTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The end of the time range.</p>
+         * <p>The end time of the data. The time is displayed in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-01-20T14:59:58Z</p>
@@ -165,7 +165,7 @@ public class DescribeVodDomainTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>D94E471F-1A27-442E-552D-D4D2000C****</p>
@@ -176,7 +176,7 @@ public class DescribeVodDomainTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The beginning of the time range.</p>
+         * <p>The start time of the data. The time is displayed in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-01-20T13:59:58Z</p>
@@ -187,7 +187,7 @@ public class DescribeVodDomainTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total amount of network traffic.</p>
+         * <p>The total traffic.</p>
          * 
          * <strong>example:</strong>
          * <p>5906662826</p>
@@ -198,7 +198,7 @@ public class DescribeVodDomainTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The amount of network traffic at each time interval.</p>
+         * TrafficDataPerInterval.
          */
         public Builder trafficDataPerInterval(TrafficDataPerInterval trafficDataPerInterval) {
             this.trafficDataPerInterval = trafficDataPerInterval;
@@ -329,10 +329,7 @@ public class DescribeVodDomainTrafficDataResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The amount of network traffic in the Chinese mainland. Unit: bytes.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * DomesticValue.
              */
             public Builder domesticValue(String domesticValue) {
                 this.domesticValue = domesticValue;
@@ -340,10 +337,7 @@ public class DescribeVodDomainTrafficDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The amount of HTTPS network traffic on points of presence (POPs) in the Chinese mainland. Unit: bytes.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * HttpsDomesticValue.
              */
             public Builder httpsDomesticValue(String httpsDomesticValue) {
                 this.httpsDomesticValue = httpsDomesticValue;
@@ -351,10 +345,7 @@ public class DescribeVodDomainTrafficDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The amount of HTTPS network traffic on POPs outside the Chinese mainland. Unit: bytes.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * HttpsOverseasValue.
              */
             public Builder httpsOverseasValue(String httpsOverseasValue) {
                 this.httpsOverseasValue = httpsOverseasValue;
@@ -362,10 +353,7 @@ public class DescribeVodDomainTrafficDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total amount of HTTPS network traffic on POPs. Unit: bytes.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * HttpsValue.
              */
             public Builder httpsValue(String httpsValue) {
                 this.httpsValue = httpsValue;
@@ -373,10 +361,7 @@ public class DescribeVodDomainTrafficDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The amount of network traffic outside the Chinese mainland. Unit: bytes.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * OverseasValue.
              */
             public Builder overseasValue(String overseasValue) {
                 this.overseasValue = overseasValue;
@@ -384,10 +369,7 @@ public class DescribeVodDomainTrafficDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp of the data returned. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2019-01-15T19:00:00Z</p>
+             * TimeStamp.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -395,10 +377,7 @@ public class DescribeVodDomainTrafficDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total traffic. Unit: bytes.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

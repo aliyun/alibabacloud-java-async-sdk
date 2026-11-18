@@ -67,7 +67,7 @@ public class DescribeVodDomainRealTimeByteHitRateDataResponseBody extends TeaMod
         } 
 
         /**
-         * <p>The returned data.</p>
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,7 @@ public class DescribeVodDomainRealTimeByteHitRateDataResponseBody extends TeaMod
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>70A26B11-3673-479C-AEA8-E03FC5D3496D</p>
@@ -144,10 +144,7 @@ public class DescribeVodDomainRealTimeByteHitRateDataResponseBody extends TeaMod
             } 
 
             /**
-             * <p>The byte hit ratio in percentage.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0.8956940476262277</p>
+             * ByteHitRate.
              */
             public Builder byteHitRate(Float byteHitRate) {
                 this.byteHitRate = byteHitRate;
@@ -155,10 +152,7 @@ public class DescribeVodDomainRealTimeByteHitRateDataResponseBody extends TeaMod
             }
 
             /**
-             * <p>The timestamp of the data returned. The time follows the ISO 8601 standard. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2020-05-15T09:13:00Z</p>
+             * TimeStamp.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;

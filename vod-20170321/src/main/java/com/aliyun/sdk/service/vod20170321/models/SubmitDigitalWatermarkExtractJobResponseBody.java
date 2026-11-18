@@ -67,7 +67,7 @@ public class SubmitDigitalWatermarkExtractJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the watermark extraction job.</p>
+         * <p>The ID of the watermark extraction job. You can use this ID as a request parameter when you call the <a href="https://help.aliyun.com/document_detail/2587769.html">GetDigitalWatermarkExtractResult</a> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>ad90a501b1b9472374ad005046****</p>

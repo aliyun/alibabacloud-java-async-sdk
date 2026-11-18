@@ -80,7 +80,10 @@ public class DescribeVodUserVipsByDomainResponseBody extends TeaModel {
         } 
 
         /**
-         * DomainName.
+         * <p>The ApsaraVideo VOD accelerated domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -88,7 +91,10 @@ public class DescribeVodUserVipsByDomainResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6730AC93-7B12-4B*****7F-49EE1FE8BC49</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

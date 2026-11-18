@@ -80,7 +80,7 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the media assets.</p>
+         * <p>The list of auxiliary media assets.</p>
          */
         public Builder attachedMediaList(java.util.List<AttachedMediaList> attachedMediaList) {
             this.attachedMediaList = attachedMediaList;
@@ -96,7 +96,7 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>221BCB57-B217-42BF-619BD13378F9****</p>
@@ -205,7 +205,7 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
              * <p>The name of the category.</p>
              * 
              * <strong>example:</strong>
-             * <p>category test</p>
+             * <p>Test</p>
              */
             public Builder cateName(String cateName) {
                 this.cateName = cateName;
@@ -424,7 +424,7 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the application.</p>
+             * <p>The application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>app-*****</p>
@@ -435,7 +435,7 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The categories.</p>
+             * <p>The list of categories.</p>
              */
             public Builder categories(java.util.List<Categories> categories) {
                 this.categories = categories;
@@ -443,7 +443,7 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the auxiliary media asset was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * <p>The time when the auxiliary media asset was created. The time follows the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2019-01-01T10:00:00Z</p>
@@ -454,13 +454,13 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the auxiliary media asset.</p>
+             * <p>The description.</p>
              * <blockquote>
-             * <p> This parameter is returned only when a description is specified for the auxiliary media asset.</p>
+             * <p>This parameter is returned only if the auxiliary media asset has a description.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
-             * <p>description test</p>
+             * <p>Test description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -479,7 +479,7 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the auxiliary media asset was last updated. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * <p>The time when the auxiliary media asset was last updated. The time follows the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-05-31T11:42:20Z</p>
@@ -492,9 +492,9 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
             /**
              * <p>The status of the auxiliary media asset. Valid values:</p>
              * <ul>
-             * <li><strong>Uploading</strong></li>
-             * <li><strong>Normal</strong></li>
-             * <li><strong>UploadFail</strong></li>
+             * <li><strong>Uploading</strong>: The auxiliary media asset is being uploaded.</li>
+             * <li><strong>Normal</strong>: Normal.</li>
+             * <li><strong>UploadFail</strong>: The auxiliary media asset failed to be uploaded.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -517,9 +517,9 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags of the auxiliary media asset.</p>
+             * <p>The tags.</p>
              * <blockquote>
-             * <p> This parameter is returned only when tags are specified for the auxiliary media asset.</p>
+             * <p>This parameter is returned only if the auxiliary media asset has tags.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -531,10 +531,10 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The title of the auxiliary media asset.</p>
+             * <p>The title.</p>
              * 
              * <strong>example:</strong>
-             * <p>subtitle test</p>
+             * <p>Test subtitle</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -542,11 +542,11 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the auxiliary media asset.</p>
+             * <p>The type of the auxiliary media asset. Valid values:</p>
              * <ul>
-             * <li><strong>watermark</strong></li>
-             * <li><strong>subtitle</strong></li>
-             * <li><strong>material</strong></li>
+             * <li><strong>watermark</strong>: watermark.</li>
+             * <li><strong>subtitle</strong>: subtitle.</li>
+             * <li><strong>material</strong>: material.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -558,9 +558,9 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the auxiliary media asset.</p>
+             * <p>The access URL of the auxiliary media asset.</p>
              * <blockquote>
-             * <p> If a CDN domain name is specified, a CDN URL is returned. Otherwise, an OSS URL is returned.</p>
+             * <p>If a CDN domain name is configured for ApsaraVideo VOD, the CDN URL is returned. Otherwise, the OSS URL is returned.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

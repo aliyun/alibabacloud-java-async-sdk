@@ -106,7 +106,7 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The detailed information about each domain name for CDN. The returned information is displayed in the format that is specified by the PageData parameter.</p>
+         * Domains.
          */
         public Builder domains(Domains domains) {
             this.domains = domains;
@@ -114,7 +114,7 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the returned page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -136,7 +136,7 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>E4EBD2BF-5EB0-4476-****-9D94E1B15267</p>
@@ -242,10 +242,7 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The address of the origin server.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>192.168.0.1</p>
+             * Content.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -253,10 +250,7 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The port number. Valid values: <strong>443</strong> and <strong>80</strong>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>80</p>
+             * Port.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -264,10 +258,7 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The priority of the origin server.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>5</p>
+             * Priority.
              */
             public Builder priority(String priority) {
                 this.priority = priority;
@@ -275,15 +266,7 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the origin server. Valid values:</p>
-             * <ul>
-             * <li><strong>ipaddr</strong>: an IP address.</li>
-             * <li><strong>domain</strong>: an origin domain name</li>
-             * <li><strong>oss</strong>: the OSS domain of an Object Storage Service (OSS) bucket</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>oss</p>
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -495,10 +478,7 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The CNAME that is assigned to the domain name for CDN.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>learn.developer.aliyundoc.com</p>
+             * Cname.
              */
             public Builder cname(String cname) {
                 this.cname = cname;
@@ -506,10 +486,7 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The remarks.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Zhejiang ICP Filing No. ****</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -517,10 +494,7 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The domain name for CDN.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>example.aliyundoc.com</p>
+             * DomainName.
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -528,18 +502,7 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the domain name for CDN. Valid values:</p>
-             * <ul>
-             * <li><strong>online</strong>: indicates that the domain name is enabled.</li>
-             * <li><strong>offline</strong>: indicates that the domain name is disabled.</li>
-             * <li><strong>configuring</strong>: indicates that the domain name is being configured.</li>
-             * <li><strong>configure_failed</strong>: indicates that the domain name failed to be configured.</li>
-             * <li><strong>checking</strong>: indicates that the domain name is under review.</li>
-             * <li><strong>check_failed</strong>: indicates that the domain name failed the review.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>online</p>
+             * DomainStatus.
              */
             public Builder domainStatus(String domainStatus) {
                 this.domainStatus = domainStatus;
@@ -547,10 +510,7 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the domain name for CDN was added. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2017-08-29T08:40:53Z</p>
+             * GmtCreated.
              */
             public Builder gmtCreated(String gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -558,10 +518,7 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last time when the domain name for CDN was modified. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2017-12-29T09:24:12Z</p>
+             * GmtModified.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -569,10 +526,7 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the accelerated domain name was in a sandbox.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>normal</p>
+             * Sandbox.
              */
             public Builder sandbox(String sandbox) {
                 this.sandbox = sandbox;
@@ -580,7 +534,7 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the origin server.</p>
+             * Sources.
              */
             public Builder sources(Sources sources) {
                 this.sources = sources;
@@ -588,14 +542,7 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether HTTPS is enabled.</p>
-             * <ul>
-             * <li><strong>on</strong>: HTTPS is enabled.</li>
-             * <li><strong>off</strong>: HTTPS is not eabled.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>on</p>
+             * SslProtocol.
              */
             public Builder sslProtocol(String sslProtocol) {
                 this.sslProtocol = sslProtocol;

@@ -119,7 +119,7 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
         } 
 
         /**
-         * DataList.
+         * <p>The returned data list.</p>
          */
         public Builder dataList(java.util.List<DataList> dataList) {
             this.dataList = dataList;
@@ -127,7 +127,7 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
         }
 
         /**
-         * Extend.
+         * <p>The extended information.</p>
          */
         public Builder extend(Extend extend) {
             this.extend = extend;
@@ -135,7 +135,10 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -143,7 +146,10 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5000</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -162,7 +168,10 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCnt.
+         * <p>The total number of data points.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder totalCnt(Long totalCnt) {
             this.totalCnt = totalCnt;
@@ -540,7 +549,10 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
             } 
 
             /**
-             * AvgPerCompletionVv.
+             * <p>The average number of completions per user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder avgPerCompletionVv(Double avgPerCompletionVv) {
                 this.avgPerCompletionVv = avgPerCompletionVv;
@@ -548,7 +560,10 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
             }
 
             /**
-             * AvgPerPlayDuration.
+             * <p>The average playback duration per user, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100000</p>
              */
             public Builder avgPerPlayDuration(Double avgPerPlayDuration) {
                 this.avgPerPlayDuration = avgPerPlayDuration;
@@ -556,7 +571,10 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
             }
 
             /**
-             * AvgPerVv.
+             * <p>The average number of playbacks per user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder avgPerVv(Double avgPerVv) {
                 this.avgPerVv = avgPerVv;
@@ -564,7 +582,10 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
             }
 
             /**
-             * AvgPlayBitrate.
+             * <p>The average playback bitrate, in bps.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder avgPlayBitrate(Double avgPlayBitrate) {
                 this.avgPlayBitrate = avgPlayBitrate;
@@ -572,7 +593,10 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
             }
 
             /**
-             * AvgPlayDuration.
+             * <p>The average playback duration, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100000</p>
              */
             public Builder avgPlayDuration(Double avgPlayDuration) {
                 this.avgPlayDuration = avgPlayDuration;
@@ -580,7 +604,10 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
             }
 
             /**
-             * AvgStartBitrate.
+             * <p>The average startup bitrate, in bps.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder avgStartBitrate(Double avgStartBitrate) {
                 this.avgStartBitrate = avgStartBitrate;
@@ -588,7 +615,10 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
             }
 
             /**
-             * AvgVideoDuration.
+             * <p>The average video duration, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100000</p>
              */
             public Builder avgVideoDuration(Double avgVideoDuration) {
                 this.avgVideoDuration = avgVideoDuration;
@@ -596,7 +626,10 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
             }
 
             /**
-             * CompletionRate.
+             * <p>The completion rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.8</p>
              */
             public Builder completionRate(Double completionRate) {
                 this.completionRate = completionRate;
@@ -604,7 +637,10 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
             }
 
             /**
-             * CompletionVv.
+             * <p>The completion volume.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder completionVv(Double completionVv) {
                 this.completionVv = completionVv;
@@ -612,7 +648,10 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
             }
 
             /**
-             * Dimension.
+             * <p>The dimension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>H265_MP4_WIFI</p>
              */
             public Builder dimension(String dimension) {
                 this.dimension = dimension;
@@ -620,7 +659,10 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorCount100s.
+             * <p>The number of errors per 100 seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder errorCount100s(Double errorCount100s) {
                 this.errorCount100s = errorCount100s;
@@ -628,7 +670,10 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
             }
 
             /**
-             * FirstFrame.
+             * <p>The first frame loading time, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder firstFrame(Double firstFrame) {
                 this.firstFrame = firstFrame;
@@ -636,7 +681,10 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
             }
 
             /**
-             * JumpRate5s.
+             * <p>The 5-second bounce rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.1</p>
              */
             public Builder jumpRate5s(Double jumpRate5s) {
                 this.jumpRate5s = jumpRate5s;
@@ -644,7 +692,10 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
             }
 
             /**
-             * PlayFailRate.
+             * <p>The playback failure rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.2</p>
              */
             public Builder playFailRate(Double playFailRate) {
                 this.playFailRate = playFailRate;
@@ -652,7 +703,10 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
             }
 
             /**
-             * RealVv.
+             * <p>The actual playback volume.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder realVv(Double realVv) {
                 this.realVv = realVv;
@@ -660,7 +714,10 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
             }
 
             /**
-             * SecondPlayRate.
+             * <p>The 1-second startup rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.8</p>
              */
             public Builder secondPlayRate(Double secondPlayRate) {
                 this.secondPlayRate = secondPlayRate;
@@ -668,7 +725,10 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
             }
 
             /**
-             * SeedFailRate.
+             * <p>The non-startup rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.01</p>
              */
             public Builder seedFailRate(Double seedFailRate) {
                 this.seedFailRate = seedFailRate;
@@ -676,7 +736,10 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
             }
 
             /**
-             * SeekDuration.
+             * <p>The seek duration, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder seekDuration(Double seekDuration) {
                 this.seekDuration = seekDuration;
@@ -684,7 +747,10 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
             }
 
             /**
-             * SlowPlayRate.
+             * <p>The slow startup rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.2</p>
              */
             public Builder slowPlayRate(Double slowPlayRate) {
                 this.slowPlayRate = slowPlayRate;
@@ -692,7 +758,10 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
             }
 
             /**
-             * StuckCount100s.
+             * <p>The number of stuttering events per 100 seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder stuckCount100s(String stuckCount100s) {
                 this.stuckCount100s = stuckCount100s;
@@ -700,7 +769,10 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
             }
 
             /**
-             * StuckCountRate.
+             * <p>The stuttering rate by count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.1</p>
              */
             public Builder stuckCountRate(Double stuckCountRate) {
                 this.stuckCountRate = stuckCountRate;
@@ -708,7 +780,10 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
             }
 
             /**
-             * StuckDuration100s.
+             * <p>The stuttering duration per 100 seconds, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder stuckDuration100s(Double stuckDuration100s) {
                 this.stuckDuration100s = stuckDuration100s;
@@ -716,7 +791,10 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
             }
 
             /**
-             * TimeStamp.
+             * <p>The timestamp of the returned data. Format: yyyy-mm-ddThh:mm:ssZ (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-24T00:55:06Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -724,7 +802,10 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
             }
 
             /**
-             * TotalPlayDuration.
+             * <p>The total playback duration, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100000</p>
              */
             public Builder totalPlayDuration(Double totalPlayDuration) {
                 this.totalPlayDuration = totalPlayDuration;
@@ -732,7 +813,10 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
             }
 
             /**
-             * Uv.
+             * <p>The number of playback users.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder uv(Double uv) {
                 this.uv = uv;
@@ -740,7 +824,10 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
             }
 
             /**
-             * Vv.
+             * <p>The number of playbacks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>800</p>
              */
             public Builder vv(Double vv) {
                 this.vv = vv;
@@ -820,7 +907,10 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
             } 
 
             /**
-             * ActualEndTime.
+             * <p>The latest time with data points within the specified time range. Format: yyyy-mm-ddThh:mm:ssZ (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-05T15:59:59Z</p>
              */
             public Builder actualEndTime(String actualEndTime) {
                 this.actualEndTime = actualEndTime;
@@ -828,7 +918,10 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
             }
 
             /**
-             * ActualStartTime.
+             * <p>The earliest time with data points within the specified time range. Format: yyyy-mm-ddThh:mm:ssZ (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-24T00:55:06Z</p>
              */
             public Builder actualStartTime(String actualStartTime) {
                 this.actualStartTime = actualStartTime;
@@ -836,7 +929,10 @@ public class DescribeVodPlayerMetricDataResponseBody extends TeaModel {
             }
 
             /**
-             * IntervalSeconds.
+             * <p>The time granularity of the queried data, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3600</p>
              */
             public Builder intervalSeconds(Long intervalSeconds) {
                 this.intervalSeconds = intervalSeconds;

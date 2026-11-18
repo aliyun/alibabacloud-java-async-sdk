@@ -67,7 +67,7 @@ public class AddEditingProjectResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the online editing project. For more information about the structure, see <a href="https://help.aliyun.com/document_detail/52839.html">EditingProject</a>.</p>
+         * <p>The online editing project. For more information about the structure, see <a href="https://help.aliyun.com/document_detail/52839.html">EditingProject</a>.</p>
          */
         public Builder project(Project project) {
             this.project = project;
@@ -196,7 +196,7 @@ public class AddEditingProjectResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the online editing project was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * <p>The time when the online editing project was created. The time follows the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2017-01-11T12:00:00Z</p>
@@ -218,7 +218,7 @@ public class AddEditingProjectResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the online editing project was last modified. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * <p>The time when the online editing project was last modified. The time follows the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2017-01-11T13:00:00Z</p>
@@ -242,10 +242,10 @@ public class AddEditingProjectResponseBody extends TeaModel {
             /**
              * <p>The status of the online editing project. Valid values:</p>
              * <ul>
-             * <li><strong>Normal</strong>: the online editing project is in draft.</li>
-             * <li><strong>Producing</strong>: the video is being produced.</li>
-             * <li><strong>Produced</strong>: the video is produced.</li>
-             * <li><strong>ProduceFailed</strong>: the video failed to be produced.</li>
+             * <li><strong>Normal</strong>: draft</li>
+             * <li><strong>Producing</strong>: producing</li>
+             * <li><strong>Produced</strong>: produced</li>
+             * <li><strong>ProduceFailed</strong>: production failed</li>
              * </ul>
              * 
              * <strong>example:</strong>

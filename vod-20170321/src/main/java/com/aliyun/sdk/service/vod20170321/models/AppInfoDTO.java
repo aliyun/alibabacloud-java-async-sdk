@@ -158,7 +158,7 @@ public class AppInfoDTO extends TeaModel {
         } 
 
         /**
-         * AppName.
+         * <p>The application name.</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -166,7 +166,14 @@ public class AppInfoDTO extends TeaModel {
         }
 
         /**
-         * AppType.
+         * <p>The application type. Valid values:</p>
+         * <ul>
+         * <li>1: Common application.</li>
+         * <li>2: Embedded SDK.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder appType(Integer appType) {
             this.appType = appType;
@@ -174,7 +181,7 @@ public class AppInfoDTO extends TeaModel {
         }
 
         /**
-         * CreationTime.
+         * <p>The creation time.</p>
          */
         public Builder creationTime(String creationTime) {
             this.creationTime = creationTime;
@@ -182,7 +189,7 @@ public class AppInfoDTO extends TeaModel {
         }
 
         /**
-         * GmtCreate.
+         * <p>The creation time.</p>
          */
         public Builder gmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
@@ -190,7 +197,7 @@ public class AppInfoDTO extends TeaModel {
         }
 
         /**
-         * GmtModified.
+         * <p>The update time.</p>
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
@@ -198,7 +205,7 @@ public class AppInfoDTO extends TeaModel {
         }
 
         /**
-         * ItemId.
+         * <p>The application ID.</p>
          */
         public Builder itemId(String itemId) {
             this.itemId = itemId;
@@ -206,7 +213,7 @@ public class AppInfoDTO extends TeaModel {
         }
 
         /**
-         * ModificationTime.
+         * <p>The update time.</p>
          */
         public Builder modificationTime(String modificationTime) {
             this.modificationTime = modificationTime;
@@ -214,7 +221,7 @@ public class AppInfoDTO extends TeaModel {
         }
 
         /**
-         * Platforms.
+         * <p>The list of platform information for the application.</p>
          */
         public Builder platforms(java.util.List<Platforms> platforms) {
             this.platforms = platforms;
@@ -222,7 +229,7 @@ public class AppInfoDTO extends TeaModel {
         }
 
         /**
-         * UserId.
+         * <p>The user ID.</p>
          */
         public Builder userId(Long userId) {
             this.userId = userId;
@@ -340,7 +347,7 @@ public class AppInfoDTO extends TeaModel {
             } 
 
             /**
-             * ItemId.
+             * <p>The platform ID.</p>
              */
             public Builder itemId(String itemId) {
                 this.itemId = itemId;
@@ -348,7 +355,7 @@ public class AppInfoDTO extends TeaModel {
             }
 
             /**
-             * LicenseItemIds.
+             * <p>The list of licenses.</p>
              */
             public Builder licenseItemIds(java.util.List<String> licenseItemIds) {
                 this.licenseItemIds = licenseItemIds;
@@ -356,7 +363,7 @@ public class AppInfoDTO extends TeaModel {
             }
 
             /**
-             * PkgName.
+             * <p>The package name.</p>
              */
             public Builder pkgName(String pkgName) {
                 this.pkgName = pkgName;
@@ -364,7 +371,7 @@ public class AppInfoDTO extends TeaModel {
             }
 
             /**
-             * PkgSignature.
+             * <p>The package signature.</p>
              */
             public Builder pkgSignature(String pkgSignature) {
                 this.pkgSignature = pkgSignature;
@@ -372,7 +379,7 @@ public class AppInfoDTO extends TeaModel {
             }
 
             /**
-             * PlatformType.
+             * <p>The platform type.</p>
              */
             public Builder platformType(Long platformType) {
                 this.platformType = platformType;
@@ -380,7 +387,7 @@ public class AppInfoDTO extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The platform type.</p>
              */
             public Builder type(Long type) {
                 this.type = type;

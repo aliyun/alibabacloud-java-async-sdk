@@ -67,7 +67,7 @@ public class GetMediaAuditAudioResultDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Details of review results.</p>
+         * <p>The review results.</p>
          */
         public Builder mediaAuditAudioResultDetail(MediaAuditAudioResultDetail mediaAuditAudioResultDetail) {
             this.mediaAuditAudioResultDetail = mediaAuditAudioResultDetail;
@@ -75,7 +75,7 @@ public class GetMediaAuditAudioResultDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>CB7D7232-1AB2-40FE-B8D3-****</p>
@@ -170,7 +170,7 @@ public class GetMediaAuditAudioResultDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The end time of the audio that failed the review. Unit: seconds.</p>
+             * <p>The end time of the flagged audio segment, in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -181,15 +181,18 @@ public class GetMediaAuditAudioResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The review results. Valid values:</p>
+             * <p>The category of the audio review result. Valid values:</p>
              * <ul>
-             * <li><strong>spam</strong></li>
-             * <li><strong>ad</strong></li>
-             * <li><strong>abuse</strong></li>
-             * <li><strong>flood</strong></li>
-             * <li><strong>contraband</strong></li>
-             * <li><strong>meaningless</strong></li>
-             * <li><strong>normal</strong></li>
+             * <li><strong>normal</strong>: Normal.</li>
+             * <li><strong>spam</strong>: Spam.</li>
+             * <li><strong>ad</strong>: Ad.</li>
+             * <li><strong>politics</strong>: Political content.</li>
+             * <li><strong>terrorism</strong>: Terrorism.</li>
+             * <li><strong>abuse</strong>: Abuse.</li>
+             * <li><strong>porn</strong>: Pornography.</li>
+             * <li><strong>flood</strong>: Flooding.</li>
+             * <li><strong>contraband</strong>: Contraband.</li>
+             * <li><strong>meaningless</strong>: Meaningless.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -201,7 +204,7 @@ public class GetMediaAuditAudioResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the audio that failed the review. Unit: seconds.</p>
+             * <p>The start time of the flagged audio segment, in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>8</p>
@@ -212,10 +215,10 @@ public class GetMediaAuditAudioResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The text that corresponds to the audio.</p>
+             * <p>The text content corresponding to the audio.</p>
              * 
              * <strong>example:</strong>
-             * <p>beauty</p>
+             * <p>Tian\&quot;anmen</p>
              */
             public Builder text(String text) {
                 this.text = text;
@@ -303,7 +306,7 @@ public class GetMediaAuditAudioResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number of the returned page.</p>
+             * <p>The current page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -314,7 +317,7 @@ public class GetMediaAuditAudioResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of pages returned.</p>
+             * <p>The total number of pages.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>

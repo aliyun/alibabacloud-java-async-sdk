@@ -117,13 +117,13 @@ public class UpdateMediaStorageClassRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to change the storage class of a media asset that is stored for less than the minimum storage duration. Valid values:</p>
+         * <p>Specifies whether to allow modifying the storage class of media assets whose storage duration does not meet the minimum requirement. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: allows the modification.</li>
+         * <li><strong>false</strong> (default): does not allow the modification.</li>
          * </ul>
          * <blockquote>
-         * <p> If you forcibly change the storage class of a media asset that is stored for less than the minimum storage duration, additional data retrieval fees are incurred.</p>
+         * <p>If the storage duration of a media asset does not meet the minimum requirement and you force the storage class modification, additional data retrieval fees are incurred.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -136,11 +136,11 @@ public class UpdateMediaStorageClassRequest extends Request {
         }
 
         /**
-         * <p>The media asset ID. You can specify a maximum of 20 IDs. Separate multiple IDs with commas (,). You can use one of the following methods to obtain the ID:</p>
+         * <p>The media asset IDs, which are the audio or video IDs (VideoId). Separate multiple IDs with commas (,). You can specify up to 20 IDs. You can obtain the IDs by using one of the following methods:</p>
          * <ul>
-         * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD</a> console. In the left-side navigation pane, choose <strong>Media Files</strong> &gt; <strong>Audio/Video</strong>. On the Video and Audio page, you can view the ID of the media asset. This method is applicable to files that are uploaded by using the ApsaraVideo VOD console.</li>
-         * <li>Obtain the value of the VideoId parameter from the response to the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation that you call to upload media assets.</li>
-         * <li>Obtain the value of the VideoId parameter from the response to the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation that you call to query the media ID after the media asset is uploaded.</li>
+         * <li>For audio or video files uploaded in the console, log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Media Assets</strong> &gt; <strong>Audio/Video</strong> to view the audio or video IDs.</li>
+         * <li>When you call the <a href="https://help.aliyun.com/document_detail/55407.html">Obtain the upload URL and credential for audio and video files</a> operation, the value of the VideoId response parameter is the media asset ID.</li>
+         * <li>After an audio or video file is uploaded, you can call the <a href="https://help.aliyun.com/document_detail/86044.html">Search for media asset information</a> operation to query the media asset ID. The value of the VideoId response parameter is the media asset ID.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -154,11 +154,11 @@ public class UpdateMediaStorageClassRequest extends Request {
         }
 
         /**
-         * <p>The restoration priority. This parameter is required only when you restore a Cold Archive media asset. Valid values:</p>
+         * <p>The restoration priority. This parameter is required only for Cold Archive media assets. If you do not specify this parameter, the default value <strong>Standard</strong> is used. Valid values:</p>
          * <ul>
-         * <li><strong>Expedited</strong></li>
-         * <li><strong>Standard</strong></li>
-         * <li><strong>Bulk</strong></li>
+         * <li><strong>Expedited</strong>: Expedited</li>
+         * <li><strong>Standard</strong> (default): Standard</li>
+         * <li><strong>Bulk</strong>: Bulk</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -171,10 +171,10 @@ public class UpdateMediaStorageClassRequest extends Request {
         }
 
         /**
-         * <p>The modification range. Valid values:</p>
+         * <p>The scope of the modification. If you do not specify this parameter, the default value <strong>All</strong> is used. Valid values:</p>
          * <ul>
-         * <li><strong>All</strong>: modifies the storage classes of all resources including the source files and transcoded streams.</li>
-         * <li><strong>SourceFile</strong>: modifies the storage classes of only the source files. The storage class of other resources is Standard.</li>
+         * <li><strong>All</strong> (default): applies tiered storage to all resources of the media asset, including the source file and transcoded streams.</li>
+         * <li><strong>SourceFile</strong>: applies tiered storage only to the video source file of the media asset ID. Resources other than the source file are stored in Standard storage.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -189,10 +189,10 @@ public class UpdateMediaStorageClassRequest extends Request {
         /**
          * <p>The storage class. Valid values:</p>
          * <ul>
-         * <li><strong>Standard</strong></li>
-         * <li><strong>IA</strong></li>
-         * <li><strong>Archive</strong></li>
-         * <li><strong>ColdArchive</strong></li>
+         * <li><strong>Standard</strong>: Standard</li>
+         * <li><strong>IA</strong>: Infrequent Access (IA)</li>
+         * <li><strong>Archive</strong>: Archive</li>
+         * <li><strong>ColdArchive</strong>: Cold Archive</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

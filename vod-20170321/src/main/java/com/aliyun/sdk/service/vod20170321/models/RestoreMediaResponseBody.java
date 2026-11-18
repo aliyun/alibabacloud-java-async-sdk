@@ -93,7 +93,7 @@ public class RestoreMediaResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The IDs of the media asset that failed to be processed.</p>
+         * ForbiddenList.
          */
         public Builder forbiddenList(ForbiddenList forbiddenList) {
             this.forbiddenList = forbiddenList;
@@ -101,7 +101,7 @@ public class RestoreMediaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The IDs of the media assets that failed to be obtained.</p>
+         * IgnoredList.
          */
         public Builder ignoredList(IgnoredList ignoredList) {
             this.ignoredList = ignoredList;
@@ -109,7 +109,7 @@ public class RestoreMediaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>8E70E3F8-E2EE-47BC-4677-379D6F28****</p>
@@ -120,7 +120,7 @@ public class RestoreMediaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the operation was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -189,10 +189,7 @@ public class RestoreMediaResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the media asset.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>fa10ee70898671edb99f6eb3690d****</p>
+             * MediaId.
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
@@ -200,10 +197,7 @@ public class RestoreMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reason for the failure.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Forbidden.RestoreMedia</p>
+             * Reason.
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -311,10 +305,7 @@ public class RestoreMediaResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the media asset.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>fa10ee70898671edb99f6eb3690d****</p>
+             * MediaId.
              */
             public Builder mediaId(java.util.List<String> mediaId) {
                 this.mediaId = mediaId;

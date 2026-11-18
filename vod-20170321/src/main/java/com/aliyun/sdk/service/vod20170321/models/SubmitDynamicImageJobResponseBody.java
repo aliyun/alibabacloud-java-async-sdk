@@ -67,7 +67,7 @@ public class SubmitDynamicImageJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the animated image job.</p>
+         * <p>The animated image job information.</p>
          */
         public Builder dynamicImageJob(DynamicImageJob dynamicImageJob) {
             this.dynamicImageJob = dynamicImageJob;
@@ -75,7 +75,7 @@ public class SubmitDynamicImageJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>25818875-5F78-74A6-BEF6-D7393642****</p>

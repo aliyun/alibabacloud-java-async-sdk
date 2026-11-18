@@ -88,7 +88,14 @@ public class DescribeVodUserVipsByDomainRequest extends Request {
         } 
 
         /**
-         * Available.
+         * <p>Specifies whether to query healthy VIPs. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong>: Healthy VIPs.</li>
+         * <li><strong>off</strong>: All VIPs.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder available(String available) {
             this.putQueryParameter("Available", available);
@@ -97,6 +104,7 @@ public class DescribeVodUserVipsByDomainRequest extends Request {
         }
 
         /**
+         * <p>The ApsaraVideo VOD accelerated domain name. You can specify only one domain name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

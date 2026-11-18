@@ -80,7 +80,7 @@ public class DescribeVodDomainBpsDataByLayerResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The bandwidth returned at each time interval. Unit: bit/s.</p>
+         * BpsDataInterval.
          */
         public Builder bpsDataInterval(BpsDataInterval bpsDataInterval) {
             this.bpsDataInterval = bpsDataInterval;
@@ -88,7 +88,7 @@ public class DescribeVodDomainBpsDataByLayerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time interval between the entries returned. Unit: seconds.</p>
+         * <p>The time interval between each record, which is the time granularity of the data. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -99,7 +99,7 @@ public class DescribeVodDomainBpsDataByLayerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>25818875-5F78-4A*****F6-D7393642CA58</p>
@@ -181,10 +181,7 @@ public class DescribeVodDomainBpsDataByLayerResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The timestamp of the data returned. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2024-02-08T10:09:19Z</p>
+             * TimeStamp.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -192,10 +189,7 @@ public class DescribeVodDomainBpsDataByLayerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total traffic. Unit: bytes.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1000</p>
+             * TrafficValue.
              */
             public Builder trafficValue(Long trafficValue) {
                 this.trafficValue = trafficValue;
@@ -203,10 +197,7 @@ public class DescribeVodDomainBpsDataByLayerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The peak bandwidth. Unit: bit/s.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>75.33</p>
+             * Value.
              */
             public Builder value(Double value) {
                 this.value = value;

@@ -145,7 +145,7 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The billable region where the data was collected.</p>
+         * <p>The usage region.</p>
          * 
          * <strong>example:</strong>
          * <p>CN</p>
@@ -156,7 +156,7 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time interval between the entries returned. Unit: seconds.</p>
+         * <p>The time interval between records. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -167,7 +167,7 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The accelerated domain name.</p>
+         * <p>The accelerated domain name information.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com</p>
@@ -178,7 +178,7 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The end of the time range during which data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The end time. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2015-12-10T12:20:00Z</p>
@@ -189,7 +189,7 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>B955107D-E658-4E77-****-E0AC3D31693E</p>
@@ -200,7 +200,7 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The start of the time range during which data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The start time. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2015-12-10T10:20:00Z</p>
@@ -211,14 +211,14 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The type of the data. Valid values:</p>
+         * <p>The data type. Valid values:</p>
          * <ul>
-         * <li><strong>bps</strong>: bandwidth</li>
-         * <li><strong>traf</strong>: traffic</li>
+         * <li><strong>bps</strong>: bandwidth.</li>
+         * <li><strong>traf</strong>: traffic.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>static</p>
+         * <p>bps</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -226,7 +226,7 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The traffic or bandwidth data returned at each interval.</p>
+         * UsageDataPerInterval.
          */
         public Builder usageDataPerInterval(UsageDataPerInterval usageDataPerInterval) {
             this.usageDataPerInterval = usageDataPerInterval;
@@ -292,10 +292,7 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The timestamp of the returned data. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2015-12-10T10:00:00Z</p>
+             * TimeStamp.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -303,10 +300,7 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The traffic or bandwidth data. Unit: bit/s.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2592.3920000000003</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

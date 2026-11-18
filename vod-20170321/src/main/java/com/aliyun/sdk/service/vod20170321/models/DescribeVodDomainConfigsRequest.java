@@ -103,7 +103,7 @@ public class DescribeVodDomainConfigsRequest extends Request {
         } 
 
         /**
-         * <p>The domain name for CDN.</p>
+         * <p>The accelerated domain name for ApsaraVideo VOD. Only a single domain name can be queried at a time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class DescribeVodDomainConfigsRequest extends Request {
         }
 
         /**
-         * <p>The feature name. Separate multiple names with commas (,). For more information, see <strong>Feature description</strong>.</p>
+         * <p>The feature names. You can query multiple feature configurations in a single request. Separate multiple feature names with commas (,). For the features supported by accelerated domain names for ApsaraVideo VOD and their names, see <a href="https://help.aliyun.com/document_detail/2411639.html">Feature functions for domain name configuration</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

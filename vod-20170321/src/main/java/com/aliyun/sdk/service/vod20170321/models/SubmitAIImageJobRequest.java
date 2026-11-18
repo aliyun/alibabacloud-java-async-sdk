@@ -159,9 +159,9 @@ public class SubmitAIImageJobRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the pipeline that is used for the AI processing job.</p>
+         * <p>The AI task pipeline ID.</p>
          * <blockquote>
-         * <p> This parameter is optional if you specify a default pipeline ID. If you want to use a separate pipeline to submit multiple AI processing jobs., submit a ticket or contact Alibaba Cloud after-sales engineers. For more information about how to submit a ticket, see <a href="https://help.aliyun.com/document_detail/464625.html">Contact us</a>.</p>
+         * <p>A default ID is provided and this parameter is optional. If you need to import data in batches, you must use a separate task pipeline. Submit a ticket to apply for the configuration or contact Alibaba Cloud after-sales support. For more information about how to submit a ticket, see <a href="https://help.aliyun.com/document_detail/464625.html">Contact us</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -174,10 +174,10 @@ public class SubmitAIImageJobRequest extends Request {
         }
 
         /**
-         * <p>The ID of the AI template. You can use one of the following methods to obtain the ID:</p>
+         * <p>The AI image template ID. You can obtain the template ID by using one of the following methods:</p>
          * <ul>
-         * <li>Obtain the value of TemplateId from the response to the <a href="https://help.aliyun.com/document_detail/102930.html">AddAITemplate</a> that you call to create the template.</li>
-         * <li>Obtain the value of TemplateId from the response to the <a href="https://help.aliyun.com/document_detail/102936.html">ListAITemplate</a> operation after you create the template.</li>
+         * <li>When you create an image template by calling the <a href="https://help.aliyun.com/document_detail/102930.html">AddAITemplate</a> operation, the template ID is the value of the TemplateId response parameter.</li>
+         * <li>After a template is created, you can call the <a href="https://help.aliyun.com/document_detail/102936.html">ListAITemplate</a> operation to query the AI image template ID. The template ID is the value of the TemplateId response parameter.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -227,13 +227,13 @@ public class SubmitAIImageJobRequest extends Request {
         }
 
         /**
-         * <p>The user data.</p>
+         * <p>The custom settings.</p>
          * <ul>
          * <li>The value must be a JSON string.</li>
-         * <li>You must specify the MessageCallback or Extend parameter.</li>
-         * <li>The value can contain a maximum of 512 bytes.</li>
+         * <li>The value must contain the MessageCallback or Extend parameter.</li>
+         * <li>The maximum length is 512 bytes.</li>
          * </ul>
-         * <p>For more information, see the &quot;UserData: specifies the custom configurations for media upload&quot; section of the <a href="https://help.aliyun.com/document_detail/86952.html">Request parameters</a> topic.</p>
+         * <p>For more information about how to construct the parameter, see <a href="https://help.aliyun.com/document_detail/86952.html">UserData</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;Extend&quot;:{&quot;localId&quot;:&quot;****&quot;,&quot;test&quot;:&quot;www&quot;}}</p>
@@ -245,11 +245,11 @@ public class SubmitAIImageJobRequest extends Request {
         }
 
         /**
-         * <p>The ID of the video. You can use one of the following methods to obtain the ID:</p>
+         * <p>The video ID. You can obtain the video ID by using one of the following methods:</p>
          * <ul>
-         * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD</a> console. In the left-side navigation pane, choose <strong>Media Files</strong> &gt; <strong>Audio/Video</strong>. On the Video and Audio page, view the ID of the video file. This method is applicable to files that are uploaded by using the ApsaraVideo VOD console.</li>
-         * <li>Obtain the value of VideoId from the response to the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation that you call to upload the video.</li>
-         * <li>Obtain the value of VideoId from the response to the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation after you upload the video.</li>
+         * <li>For videos uploaded through the console, log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Media Assets</strong> &gt; <strong>Audio/Video</strong> to view the video ID.</li>
+         * <li>When you upload a video by calling the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation, the video ID is the value of the VideoId response parameter.</li>
+         * <li>After a video is uploaded, you can call the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation to query the video ID. The video ID is the value of the VideoId response parameter.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

@@ -102,7 +102,7 @@ public class DescribeVodDomainRealTimeReqHitRateDataRequest extends Request {
         } 
 
         /**
-         * <p>You can specify multiple domain names and separate them with commas (,). You can specify a maximum of 100 domain names in each call. If you specify multiple domain names, merged data is returned.</p>
+         * <p>The accelerated domain names. Separate multiple domain names with commas (,). You can specify up to 100 domain names at a time. When you query data for multiple domain names, the returned data is the aggregated data for all specified domain names.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,10 +115,9 @@ public class DescribeVodDomainRealTimeReqHitRateDataRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query.</p>
-         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * <blockquote>
-         * <p> The end time must be later than the start time.</p>
+         * <p>The end time must be later than the start time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -140,8 +139,7 @@ public class DescribeVodDomainRealTimeReqHitRateDataRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query.</p>
-         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-01-02T11:23:00Z</p>

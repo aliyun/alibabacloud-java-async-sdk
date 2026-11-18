@@ -67,7 +67,7 @@ public class SubmitAIImageJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the image AI processing job.</p>
+         * <p>The ID of the AI image processing task.</p>
          * 
          * <strong>example:</strong>
          * <p>cf08a2c6e11e*****de1711b738b9067</p>
@@ -78,7 +78,7 @@ public class SubmitAIImageJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>218A6807-A21E-43*****54-C0512880B0B0</p>

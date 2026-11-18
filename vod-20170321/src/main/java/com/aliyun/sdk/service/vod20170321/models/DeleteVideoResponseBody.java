@@ -93,9 +93,9 @@ public class DeleteVideoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The IDs of the videos that cannot be deleted.</p>
+         * <p>The list of video IDs for which the operation is forbidden.</p>
          * <blockquote>
-         * <p>Generally, videos cannot be deleted if you do not have the required <a href="https://help.aliyun.com/document_detail/113600.html">permissions</a>.</p>
+         * <p>This is typically caused by insufficient <a href="https://help.aliyun.com/document_detail/113600.html">permissions</a>.</p>
          * </blockquote>
          */
         public Builder forbiddenVideoIds(java.util.List<String> forbiddenVideoIds) {
@@ -104,7 +104,7 @@ public class DeleteVideoResponseBody extends TeaModel {
         }
 
         /**
-         * NonExistReferenceIds.
+         * <p>The list of custom IDs that do not exist.</p>
          */
         public Builder nonExistReferenceIds(java.util.List<String> nonExistReferenceIds) {
             this.nonExistReferenceIds = nonExistReferenceIds;
@@ -112,10 +112,7 @@ public class DeleteVideoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The IDs of the videos that do not exist.</p>
-         * <blockquote>
-         * <p>If the list of videos to be deleted contains one or more videos that do not exist, the IDs of these non-existing videos are returned. If none of the videos in the list exists, a 404 error is returned.</p>
-         * </blockquote>
+         * <p>The list of video IDs that do not exist.</p>
          */
         public Builder nonExistVideoIds(java.util.List<String> nonExistVideoIds) {
             this.nonExistVideoIds = nonExistVideoIds;
@@ -123,7 +120,7 @@ public class DeleteVideoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>E4EBD2BF-5EB0-4476-8829-9D94E1B1****</p>

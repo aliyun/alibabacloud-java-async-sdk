@@ -158,7 +158,7 @@ public class DescribeVodRefreshQuotaResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The maximum number of Object Storage Service (OSS) buckets that can be refreshed each day.</p>
+         * <p>The maximum number of storage purge operations per day.</p>
          * 
          * <strong>example:</strong>
          * <p>500</p>
@@ -169,7 +169,7 @@ public class DescribeVodRefreshQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of directories of files that can be refreshed each day.</p>
+         * <p>The maximum number of directory purge operations per day.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -180,7 +180,7 @@ public class DescribeVodRefreshQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The remaining number of directories of files that can be refreshed on the current day.</p>
+         * <p>The remaining number of directory purge operations for the current day.</p>
          * 
          * <strong>example:</strong>
          * <p>99</p>
@@ -191,7 +191,7 @@ public class DescribeVodRefreshQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of URLs of files that can be prefetched each day.</p>
+         * <p>The maximum number of prefetch operations per day.</p>
          * 
          * <strong>example:</strong>
          * <p>500</p>
@@ -202,7 +202,7 @@ public class DescribeVodRefreshQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The remaining number of URLs of files that can be prefetched on the current day.</p>
+         * <p>The remaining number of prefetch operations for the current day.</p>
          * 
          * <strong>example:</strong>
          * <p>500</p>
@@ -213,7 +213,7 @@ public class DescribeVodRefreshQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>42E0554B-80F4-4921-****-ACFB22CAAAD0</p>
@@ -224,7 +224,7 @@ public class DescribeVodRefreshQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of URLs of files that can be refreshed each day.</p>
+         * <p>The maximum number of URL purge operations per day.</p>
          * 
          * <strong>example:</strong>
          * <p>2000</p>
@@ -235,7 +235,7 @@ public class DescribeVodRefreshQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The remaining number of URLs of files that can be refreshed on the current day.</p>
+         * <p>The remaining number of URL purge operations for the current day.</p>
          * 
          * <strong>example:</strong>
          * <p>1996</p>
@@ -246,7 +246,7 @@ public class DescribeVodRefreshQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The remaining number of OSS buckets that can be refreshed on the current day.</p>
+         * <p>The remaining number of storage purge operations for the current day.</p>
          * 
          * <strong>example:</strong>
          * <p>500</p>

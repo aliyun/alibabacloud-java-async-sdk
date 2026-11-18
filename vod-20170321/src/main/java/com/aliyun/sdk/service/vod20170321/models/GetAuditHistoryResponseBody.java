@@ -93,7 +93,7 @@ public class GetAuditHistoryResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The review records.</p>
+         * <p>The list of review history records.</p>
          */
         public Builder histories(java.util.List<Histories> histories) {
             this.histories = histories;
@@ -101,7 +101,7 @@ public class GetAuditHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>04F0F334-1335-43*****D7-6C044FE73368</p>
@@ -112,10 +112,10 @@ public class GetAuditHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The manual review result. Valid values:</p>
+         * <p>The review result. Indicates the result of the current manual review. Valid values:</p>
          * <ul>
-         * <li><strong>Normal</strong>: The video can be played.</li>
-         * <li><strong>Blocked</strong>: The video is blocked.</li>
+         * <li><strong>Normal</strong>: the content is normal.</li>
+         * <li><strong>Blocked</strong>: the content is blocked.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -127,7 +127,7 @@ public class GetAuditHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of review records.</p>
+         * <p>The total number of review history records.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -246,7 +246,7 @@ public class GetAuditHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The review comments, which are provided by the reviewer.</p>
+             * <p>The review details, which are the specific comments provided by the reviewer.</p>
              * 
              * <strong>example:</strong>
              * <p>Contains nudity</p>
@@ -257,7 +257,7 @@ public class GetAuditHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the review record was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * <p>The time when the record was created. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2017-01-11T12:00:00Z</p>
@@ -268,7 +268,7 @@ public class GetAuditHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reason why the video failed the review. If the video failed the review, specify the reason.</p>
+             * <p>The reason for rejection. If the review result is rejection, the reason must be provided.</p>
              * 
              * <strong>example:</strong>
              * <p>Pornographic video</p>
@@ -279,10 +279,10 @@ public class GetAuditHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The manual review result. Valid values:</p>
+             * <p>The review result. Valid values:</p>
              * <ul>
-             * <li><strong>Normal</strong>: The video can be played.</li>
-             * <li><strong>Blocked</strong>: The video is blocked.</li>
+             * <li><strong>Normal</strong></li>
+             * <li><strong>Blocked</strong></li>
              * </ul>
              * 
              * <strong>example:</strong>

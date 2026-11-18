@@ -80,7 +80,7 @@ public class ListAIJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of jobs.</p>
+         * AIJobList.
          */
         public Builder AIJobList(AIJobList AIJobList) {
             this.AIJobList = AIJobList;
@@ -88,7 +88,7 @@ public class ListAIJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The IDs of the jobs that do not exist.</p>
+         * NonExistAIJobIds.
          */
         public Builder nonExistAIJobIds(NonExistAIJobIds nonExistAIJobIds) {
             this.nonExistAIJobIds = nonExistAIJobIds;
@@ -96,7 +96,7 @@ public class ListAIJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>8233A0E4-E112-44*****58-2BCED1B88173</p>
@@ -256,10 +256,7 @@ public class ListAIJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The error code. This parameter is returned if the value of Status is fail.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * Code.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -267,10 +264,7 @@ public class ListAIJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the job was complete. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2020-06-28T02:04:47Z</p>
+             * CompleteTime.
              */
             public Builder completeTime(String completeTime) {
                 this.completeTime = completeTime;
@@ -278,10 +272,7 @@ public class ListAIJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the job was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2020-06-28T02:04:32Z</p>
+             * CreationTime.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -289,10 +280,7 @@ public class ListAIJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The returned data. The value is a JSON string. For more information, see <a href="https://help.aliyun.com/document_detail/89863.html">AITemplateConfig</a>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>{&quot;OrigASRData&quot;:{&quot;AsrTextList&quot;:[{&quot;EndTime&quot;:700,&quot;StartTime&quot;:0,&quot;Text&quot;:&quot;Yes.&quot;,&quot;ChannelId&quot;:0,&quot;SpeechRate&quot;:85},{&quot;EndTime&quot;:3750,&quot;StartTime&quot;:1630,&quot;Text&quot;:&quot;No.&quot;,&quot;ChannelId&quot;:0,&quot;SpeechRate&quot;:28},{&quot;EndTime&quot;:5910,&quot;StartTime&quot;:4020,&quot;Text&quot;:&quot;Of course.&quot;,&quot;ChannelId&quot;:0,&quot;SpeechRate&quot;:95},{&quot;EndTime&quot;:12750,&quot;StartTime&quot;:10090,&quot;Text&quot;:&quot;Message.&quot;,&quot;ChannelId&quot;:0,&quot;SpeechRate&quot;:45},{&quot;EndTime&quot;:25230,&quot;StartTime&quot;:13590,&quot;Text&quot;:&quot;Hello, good afternoon.&quot;,&quot;ChannelId&quot;:0,&quot;SpeechRate&quot;:20},{&quot;EndTime&quot;:30000,&quot;StartTime&quot;:28220,&quot;Text&quot;:&quot;Yes.&quot;,&quot;ChannelId&quot;:0,&quot;SpeechRate&quot;:33}],&quot;Duration&quot;:&quot;30016&quot;}}</p>
+             * Data.
              */
             public Builder data(String data) {
                 this.data = data;
@@ -300,10 +288,7 @@ public class ListAIJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The job ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>a718a3a1e8bb42ee3bc88921e94****</p>
+             * JobId.
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -311,10 +296,7 @@ public class ListAIJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the video file.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3D3D12340d9401fab46a0b847****</p>
+             * MediaId.
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
@@ -322,10 +304,7 @@ public class ListAIJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message. This parameter is returned if the value of Status is fail.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>OK</p>
+             * Message.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -333,16 +312,7 @@ public class ListAIJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the job. Valid values:</p>
-             * <ul>
-             * <li><strong>success</strong>: The job is successful.</li>
-             * <li><strong>fail</strong>: The job failed.</li>
-             * <li><strong>init</strong>: The job is being initialized.</li>
-             * <li><strong>Processing</strong>: The job is in progress.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>success</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -350,14 +320,7 @@ public class ListAIJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the job. Valid values:</p>
-             * <ul>
-             * <li><strong>AIMediaDNA</strong>: video fingerprinting</li>
-             * <li><strong>AIVideoTag</strong>: smart tagging</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>AIVideoTag</p>
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;

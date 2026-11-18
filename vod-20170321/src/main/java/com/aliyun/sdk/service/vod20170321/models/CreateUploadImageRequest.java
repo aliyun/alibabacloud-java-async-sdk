@@ -186,7 +186,7 @@ public class CreateUploadImageRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the application. Default value: <strong>app-1000000</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Overview</a>.</p>
+         * <p>The application ID. Default value: <strong>app-1000000</strong>. If you have enabled the multi-application system, you can specify an application ID to upload the image to a specified application. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Multi-application system</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>app-1000000</p>
@@ -198,11 +198,11 @@ public class CreateUploadImageRequest extends Request {
         }
 
         /**
-         * <p>The category ID of the image. You can use one of the following methods to obtain the category ID:</p>
+         * <p>The category ID. You can obtain the category ID by using one of the following methods:</p>
          * <ul>
-         * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose <strong>Configuration Management</strong> &gt; <strong>Media Management</strong> &gt; <strong>Categories</strong>. On the Categories page, you can view the category ID of the image.</li>
-         * <li>Obtain the value of CateId from the response to the <a href="https://help.aliyun.com/document_detail/56401.html">AddCategory</a> operation.</li>
-         * <li>Obtain the value of CateId from the response to the <a href="https://help.aliyun.com/document_detail/56406.html">GetCategories</a> operation.</li>
+         * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Configuration Management</strong> &gt; <strong>Media Asset Management Configuration</strong> &gt; <strong>Category Management</strong> to view the category ID.</li>
+         * <li>Call the <a href="~~AddCategory~~">AddCategory</a> operation to create a category. The category ID is the value of the CateId response parameter.</li>
+         * <li>Call the <a href="~~GetCategories~~">GetCategories</a> operation to query categories. The category ID is the value of the CateId response parameter.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -218,11 +218,11 @@ public class CreateUploadImageRequest extends Request {
          * <p>The description of the image.</p>
          * <ul>
          * <li>The description can be up to 1,024 characters in length.</li>
-         * <li>The value must be encoded in UTF-8.</li>
+         * <li>The description must be encoded in UTF-8.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>The description of the image</p>
+         * <p>Image upload test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -231,12 +231,14 @@ public class CreateUploadImageRequest extends Request {
         }
 
         /**
-         * <p>The file name extension of the image. Valid values:</p>
+         * <p>The file name extension of the source image file to be uploaded. Valid values:</p>
          * <ul>
-         * <li><strong>png</strong> (default)</li>
+         * <li><strong>png</strong>: default value.</li>
          * <li><strong>jpg</strong></li>
          * <li><strong>jpeg</strong></li>
          * <li><strong>gif</strong></li>
+         * <li><strong>heic</strong></li>
+         * <li><strong>webp</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -251,11 +253,11 @@ public class CreateUploadImageRequest extends Request {
         /**
          * <p>The type of the image. Valid values:</p>
          * <ul>
-         * <li><strong>default</strong>: the default image type.</li>
-         * <li><strong>cover</strong>: the thumbnail.</li>
+         * <li><strong>default</strong>: regular image. This is the default value.</li>
+         * <li><strong>cover</strong>: video thumbnail.</li>
          * </ul>
          * <blockquote>
-         * <p>You can manage only images of the <strong>default</strong> type in the ApsaraVideo VOD console.</p>
+         * <p>The ApsaraVideo VOD console currently supports viewing and managing only images of the <strong>default</strong> type.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -269,13 +271,13 @@ public class CreateUploadImageRequest extends Request {
         }
 
         /**
-         * <p>The name of the source file.</p>
+         * <p>The address of the source image file to be uploaded.</p>
          * <blockquote>
-         * <p>The name must contain a file name extension. The file name extension is not case-sensitive.</p>
+         * <p>The address can exclude the file name extension. If the address includes a file name extension that is different from the one specified by <code>ImageExt</code>, the value of <code>ImageExt</code> prevails.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>D:\picture_01.png</p>
+         * <p>D:\picture_01</p>
          */
         public Builder originalFileName(String originalFileName) {
             this.putQueryParameter("OriginalFileName", originalFileName);
@@ -284,9 +286,10 @@ public class CreateUploadImageRequest extends Request {
         }
 
         /**
-         * <p>The storage address. Perform the following operations to obtain the storage address: Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose <strong>Configuration Management</strong> &gt; <strong>Media Management</strong> &gt; <strong>Storage</strong>. On the Storage page, view the storage address.</p>
+         * <p>The storage address. You can obtain the storage address by using the following method:
+         * Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Configuration Management</strong> &gt; <strong>Media Asset Management Configuration</strong> &gt; <strong>Storage Management</strong> to view the storage address.</p>
          * <blockquote>
-         * <p>If you specify a storage address, media files are uploaded to the specified address.</p>
+         * <p>If you do not specify this parameter, the image is uploaded to the default storage address. If you specify this parameter, the image is uploaded to the specified storage address.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -299,16 +302,16 @@ public class CreateUploadImageRequest extends Request {
         }
 
         /**
-         * <p>The tags of the image. The following rules apply:</p>
+         * <p>The tags of the image. Rules:</p>
          * <ul>
-         * <li>Each tag can be up to 32 characters in length.</li>
-         * <li>You can specify a maximum of 16 tags for an image.</li>
+         * <li>A single tag can be up to 32 characters in length.</li>
+         * <li>You can specify up to 16 tags.</li>
          * <li>Separate multiple tags with commas (,).</li>
-         * <li>The value must be encoded in UTF-8.</li>
+         * <li>The tags must be encoded in UTF-8.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>Test</p>
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);
@@ -317,10 +320,10 @@ public class CreateUploadImageRequest extends Request {
         }
 
         /**
-         * <p>The title of the image. The following rules apply:</p>
+         * <p>The title of the image. Rules:</p>
          * <ul>
          * <li>The title can be up to 128 characters in length.</li>
-         * <li>The value must be encoded in UTF-8.</li>
+         * <li>The title must be encoded in UTF-8.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -333,11 +336,11 @@ public class CreateUploadImageRequest extends Request {
         }
 
         /**
-         * <p>The custom configurations, including callback configurations and upload acceleration configurations. The value must be a JSON string. For more information, see the &quot;UserData: specifies the custom configurations for media upload&quot; section of the <a href="https://help.aliyun.com/document_detail/86952.html">Request parameters</a> topic.</p>
+         * <p>The custom settings. The value is a JSON string that supports settings such as message callbacks and upload acceleration. For more information, see <a href="https://help.aliyun.com/document_detail/86952.html">UserData</a>.</p>
          * <blockquote>
          * <ul>
-         * <li>The callback configurations take effect only after you specify the HTTP callback URL and select specific callback events in the ApsaraVideo VOD console. For more information about how to configure HTTP callback settings in the ApsaraVideo VOD console, see <a href="https://help.aliyun.com/document_detail/86071.html">Configure callback settings</a>.</li>
-         * <li>If you want to enable the upload acceleration feature, submit a ticket. For more information, see <a href="https://help.aliyun.com/document_detail/55396.html">Overview</a>. For more information about how to submit a ticket, see <a href="https://help.aliyun.com/document_detail/464625.html">Contact us</a>.</li>
+         * <li>To use message callbacks in this parameter, you must configure an HTTP callback URL and select the corresponding callback event types in the console. Otherwise, the callback settings do not take effect. For more information about how to configure HTTP callbacks in the console, see <a href="https://help.aliyun.com/document_detail/86071.html">Callback settings</a>.</li>
+         * <li>To use the upload acceleration feature, submit a ticket to apply for activation. For more information, see <a href="https://help.aliyun.com/document_detail/55396.html">Upload instructions</a>. For more information about how to submit a ticket, see <a href="https://help.aliyun.com/document_detail/464625.html">Contact us</a>.</li>
          * </ul>
          * </blockquote>
          * 

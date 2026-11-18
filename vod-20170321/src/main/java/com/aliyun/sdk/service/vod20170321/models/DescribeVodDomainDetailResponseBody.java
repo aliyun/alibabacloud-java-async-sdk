@@ -67,7 +67,7 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The basic information about the domain name for CDN.</p>
+         * <p>The basic configuration information of the domain name.</p>
          */
         public Builder domainDetail(DomainDetail domainDetail) {
             this.domainDetail = domainDetail;
@@ -75,7 +75,7 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>09ABE829-6CD3-4FE0-556113E2****</p>
@@ -196,10 +196,7 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The address of the origin server.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>****.oss-cn-hangzhou.aliyuncs.com</p>
+             * Content.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -207,14 +204,7 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the origin server. Valid values:</p>
-             * <ul>
-             * <li><strong>online</strong>: indicates that the origin server is enabled.</li>
-             * <li><strong>offline</strong>: indicates that the origin server is disabled.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>online</p>
+             * Enabled.
              */
             public Builder enabled(String enabled) {
                 this.enabled = enabled;
@@ -222,10 +212,7 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The port number. Valid values: 443 and 80.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>80</p>
+             * Port.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -233,10 +220,7 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The priority of the origin server.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>50</p>
+             * Priority.
              */
             public Builder priority(String priority) {
                 this.priority = priority;
@@ -244,15 +228,7 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the origin server. Valid values:</p>
-             * <ul>
-             * <li><strong>ipaddr</strong>: a server that you can access by using an IP address.</li>
-             * <li><strong>domain</strong>: a server that you can access by using a domain name.</li>
-             * <li><strong>oss</strong>: the URL of an Object Storage Service (OSS) bucket.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>oss</p>
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -260,10 +236,7 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The weight of the origin server if multiple origin servers have been specified.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>10</p>
+             * Weight.
              */
             public Builder weight(String weight) {
                 this.weight = weight;
@@ -514,7 +487,7 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the certificate. The value of this parameter is returned if HTTPS is enabled.</p>
+             * <p>The name of the HTTPS certificate if HTTPS secure acceleration is enabled. This parameter is not returned if HTTPS secure acceleration is disabled.</p>
              * 
              * <strong>example:</strong>
              * <p>testCertName</p>
@@ -525,7 +498,7 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The CNAME that is assigned to the domain name for CDN. You must add a CNAME record in the system of your Domain Name System (DNS) service provider to map the domain name for CDN to the CNAME.</p>
+             * <p>The CNAME domain name generated for the accelerated domain name. You must add a CNAME record at your DNS provider to resolve the accelerated domain name to this CNAME domain name. For more information, see <a href="https://help.aliyun.com/document_detail/86075.html">Configure CNAME</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>example.com.w.alikunlun.net</p>
@@ -536,7 +509,7 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the domain name for CDN.</p>
+             * <p>The description of the ApsaraVideo VOD accelerated domain name.</p>
              * 
              * <strong>example:</strong>
              * <p>testDescription</p>
@@ -547,7 +520,7 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The domain name for CDN.</p>
+             * <p>The ApsaraVideo VOD accelerated domain name.</p>
              * 
              * <strong>example:</strong>
              * <p>example.com</p>
@@ -558,14 +531,14 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the domain name for CDN. Value values:</p>
+             * <p>The running status of the accelerated domain name. Valid values:</p>
              * <ul>
-             * <li><strong>online</strong>: indicates that the domain name is enabled.</li>
-             * <li><strong>offline</strong>: indicates that the domain name is disabled.</li>
-             * <li><strong>configuring</strong>: indicates that the domain name is being configured.</li>
-             * <li><strong>configure_failed</strong>: indicates that the domain name failed to be configured.</li>
-             * <li><strong>checking</strong>: indicates that the domain name is under review.</li>
-             * <li><strong>check_failed</strong>: indicates that the domain name failed the review.</li>
+             * <li><strong>online</strong>: Enabled.</li>
+             * <li><strong>offline</strong>: Disabled.</li>
+             * <li><strong>configuring</strong>: Configuring.</li>
+             * <li><strong>configure_failed</strong>: Configuration failed.</li>
+             * <li><strong>checking</strong>: Under review.</li>
+             * <li><strong>check_failed</strong>: Review failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -577,7 +550,7 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the domain name for CDN was added. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * <p>The creation time. The format is <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2017-11-27T06:51:26Z</p>
@@ -588,7 +561,7 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last time when the domain name for CDN was modified. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * <p>The last modification time. The format is <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2017-11-27T06:55:26Z</p>
@@ -599,10 +572,10 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the Secure Sockets Layer (SSL) certificate is enabled. Valid values:</p>
+             * <p>Specifies whether the SSL certificate is enabled. Valid values:</p>
              * <ul>
-             * <li><strong>on</strong>: indicates that the SSL certificate is enabled.</li>
-             * <li><strong>off</strong>: indicates that the SSL certificate is disabled.</li>
+             * <li><strong>on</strong>: Enabled.</li>
+             * <li><strong>off</strong>: Disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -614,7 +587,7 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public key of the certificate. The value of this parameter is returned if HTTPS is enabled.</p>
+             * <p>The public key of the HTTPS certificate if HTTPS secure acceleration is enabled. This parameter is not returned if HTTPS secure acceleration is disabled.</p>
              * 
              * <strong>example:</strong>
              * <p>yourSSLPub</p>
@@ -625,11 +598,11 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter is applicable to users of level 3 or higher in mainland China and users outside mainland China. Valid values:</p>
+             * <p>The accelerated region. Valid values:</p>
              * <ul>
-             * <li><strong>domestic</strong>: mainland China. This is the default value.</li>
-             * <li><strong>overseas</strong>: outside mainland China.</li>
-             * <li><strong>global</strong>: regions in and outside mainland China.</li>
+             * <li><strong>domestic</strong> (default): The Chinese mainland.</li>
+             * <li><strong>overseas</strong>: Global (excluding the Chinese mainland).</li>
+             * <li><strong>global</strong>: Global.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -641,7 +614,7 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the origin server.</p>
+             * Sources.
              */
             public Builder sources(Sources sources) {
                 this.sources = sources;
@@ -649,7 +622,7 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The weight of the origin server.</p>
+             * <p>The back-to-origin weight.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

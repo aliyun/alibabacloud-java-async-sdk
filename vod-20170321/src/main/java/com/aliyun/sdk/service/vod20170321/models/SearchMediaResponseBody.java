@@ -93,7 +93,7 @@ public class SearchMediaResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the media assets.</p>
+         * <p>The list of media asset information.</p>
          */
         public Builder mediaList(java.util.List<MediaList> mediaList) {
             this.mediaList = mediaList;
@@ -101,7 +101,7 @@ public class SearchMediaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3E0CEF83-FB09-4E34-BA1451814B03****</p>
@@ -112,7 +112,7 @@ public class SearchMediaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination identifier.</p>
+         * <p>The pagination token.</p>
          * 
          * <strong>example:</strong>
          * <p>24e0fba7188fae707e146esa54****</p>
@@ -123,7 +123,7 @@ public class SearchMediaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of data records that meet the specified filter criteria.</p>
+         * <p>The total number of media assets that match the search conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -205,10 +205,7 @@ public class SearchMediaResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The start time of the clip.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1.4</p>
+             * From.
              */
             public Builder from(Double from) {
                 this.from = from;
@@ -216,10 +213,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The score.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0.75287705</p>
+             * Score.
              */
             public Builder score(Double score) {
                 this.score = score;
@@ -227,10 +221,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the clip.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2.5</p>
+             * To.
              */
             public Builder to(Double to) {
                 this.to = to;
@@ -323,10 +314,7 @@ public class SearchMediaResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The category.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Transportation</p>
+             * Category.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -334,10 +322,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the tag.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>10310250338</p>
+             * LabelId.
              */
             public Builder labelId(String labelId) {
                 this.labelId = labelId;
@@ -345,10 +330,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the tag.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Vehicles</p>
+             * LabelName.
              */
             public Builder labelName(String labelName) {
                 this.labelName = labelName;
@@ -356,7 +338,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The clips.</p>
+             * Occurrences.
              */
             public Builder occurrences(java.util.List<Occurrences> occurrences) {
                 this.occurrences = occurrences;
@@ -436,10 +418,7 @@ public class SearchMediaResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The text content.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>I&quot;m Jane.</p>
+             * Content.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -447,10 +426,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the subtitle.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1.4</p>
+             * From.
              */
             public Builder from(Double from) {
                 this.from = from;
@@ -458,10 +434,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the subtitle.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2.5</p>
+             * To.
              */
             public Builder to(Double to) {
                 this.to = to;
@@ -528,7 +501,7 @@ public class SearchMediaResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The AI tags.</p>
+             * AiLabelInfo.
              */
             public Builder aiLabelInfo(java.util.List<AiLabelInfo> aiLabelInfo) {
                 this.aiLabelInfo = aiLabelInfo;
@@ -536,7 +509,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about subtitles.</p>
+             * OcrInfo.
              */
             public Builder ocrInfo(java.util.List<OcrInfo> ocrInfo) {
                 this.ocrInfo = ocrInfo;
@@ -629,10 +602,7 @@ public class SearchMediaResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The AI category.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TV series</p>
+             * AiCategory.
              */
             public Builder aiCategory(String aiCategory) {
                 this.aiCategory = aiCategory;
@@ -640,10 +610,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the AI task.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cd35b0b0025f71edbfcb472190a9xxxx</p>
+             * AiJobId.
              */
             public Builder aiJobId(String aiJobId) {
                 this.aiJobId = aiJobId;
@@ -651,10 +618,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The save type.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TEXT</p>
+             * SaveType.
              */
             public Builder saveType(String saveType) {
                 this.saveType = saveType;
@@ -662,10 +626,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data status.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>SaveSuccess</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -758,7 +719,7 @@ public class SearchMediaResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The category ID of the auxiliary media asset.</p>
+             * <p>The category ID.</p>
              * 
              * <strong>example:</strong>
              * <p>10027394</p>
@@ -769,10 +730,10 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the category.</p>
+             * <p>The category name.</p>
              * 
              * <strong>example:</strong>
-             * <p>test1</p>
+             * <p>cate1</p>
              */
             public Builder cateName(String cateName) {
                 this.cateName = cateName;
@@ -780,7 +741,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The level of the category.</p>
+             * <p>The category level.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -791,7 +752,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the parent node.</p>
+             * <p>The parent node ID.</p>
              * 
              * <strong>example:</strong>
              * <p>-1</p>
@@ -991,7 +952,7 @@ public class SearchMediaResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the application.</p>
+             * <p>The application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>app-****</p>
@@ -1002,11 +963,11 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the auxiliary media asset. Valid values:</p>
+             * <p>The business type. Valid values:</p>
              * <ul>
-             * <li><strong>watermark</strong></li>
-             * <li><strong>subtitle</strong></li>
-             * <li><strong>material</strong></li>
+             * <li><strong>watermark</strong>: watermark.</li>
+             * <li><strong>subtitle</strong>: subtitle.</li>
+             * <li><strong>material</strong>: material.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1026,7 +987,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the auxiliary media asset was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * <p>The creation time. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2018-07-19T03:45:25Z</p>
@@ -1037,10 +998,10 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the auxiliary media asset.</p>
+             * <p>The description.</p>
              * 
              * <strong>example:</strong>
-             * <p>test3</p>
+             * <p>Alibaba Cloud VOD-assisted media asset description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1048,7 +1009,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the auxiliary media asset.</p>
+             * <p>The auxiliary media asset ID.</p>
              * 
              * <strong>example:</strong>
              * <p>a82a2cd7d4e147ba0ed6c1ee372****</p>
@@ -1059,7 +1020,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the auxiliary media asset was updated. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * <p>The last modification time. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2018-07-19T03:48:25Z</p>
@@ -1070,11 +1031,11 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the auxiliary media asset. Valid values:</p>
+             * <p>The status. Valid values:</p>
              * <ul>
-             * <li><strong>Uploading</strong></li>
-             * <li><strong>Normal</strong></li>
-             * <li><strong>UploadFail</strong></li>
+             * <li><strong>Uploading</strong> (uploading): the initial state. The auxiliary media asset is being uploaded.</li>
+             * <li><strong>Normal</strong> (normal): the auxiliary media asset is uploaded.</li>
+             * <li><strong>UploadFail</strong> (failed): the auxiliary media asset failed to be uploaded.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1086,7 +1047,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region in which the auxiliary media asset is stored.</p>
+             * <p>The storage region.</p>
              * 
              * <strong>example:</strong>
              * <p>outin-bfefbb90a47c11*****7426.oss-cn-shanghai.aliyuncs.com</p>
@@ -1097,10 +1058,10 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags of the auxiliary media asset.</p>
+             * <p>The tags.</p>
              * 
              * <strong>example:</strong>
-             * <p>test2</p>
+             * <p>tag1</p>
              */
             public Builder tags(String tags) {
                 this.tags = tags;
@@ -1108,10 +1069,10 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The title of the auxiliary media asset.</p>
+             * <p>The title.</p>
              * 
              * <strong>example:</strong>
-             * <p>test</p>
+             * <p>Alibaba Cloud VOD-assisted media asset Title</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -1119,7 +1080,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the auxiliary media asset.</p>
+             * <p>The auxiliary media asset URL.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example.com/****.png">https://example.com/****.png</a></p>
@@ -1475,7 +1436,7 @@ public class SearchMediaResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the application.</p>
+             * <p>The application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>app-****</p>
@@ -1486,7 +1447,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the audio file.</p>
+             * <p>The audio ID.</p>
              * 
              * <strong>example:</strong>
              * <p>a82a2cd7d4e147bbed6c1ee372****</p>
@@ -1497,7 +1458,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the category.</p>
+             * <p>The category ID.</p>
              * 
              * <strong>example:</strong>
              * <p>10000123</p>
@@ -1508,10 +1469,10 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the category.</p>
+             * <p>The category name.</p>
              * 
              * <strong>example:</strong>
-             * <p>ceshi</p>
+             * <p>cate1</p>
              */
             public Builder cateName(String cateName) {
                 this.cateName = cateName;
@@ -1519,7 +1480,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the thumbnail.</p>
+             * <p>The thumbnail URL.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://example.com/image04.jpg">http://example.com/image04.jpg</a></p>
@@ -1530,7 +1491,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the audio stream was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * <p>The creation time. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2018-07-19T03:45:25Z</p>
@@ -1541,10 +1502,10 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the audio file.</p>
+             * <p>The description.</p>
              * 
              * <strong>example:</strong>
-             * <p>audio description</p>
+             * <p>Alibaba Cloud VOD Audio Description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1552,10 +1513,10 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The download switch. The audio file can be downloaded offline only when the download switch is turned on. Valid values:</p>
+             * <p>The download switch. Offline download is allowed only when the switch is enabled. Valid values:</p>
              * <ul>
-             * <li><strong>on</strong></li>
-             * <li><strong>off</strong></li>
+             * <li><strong>on</strong> (enabled): the initial state. Offline download is allowed.</li>
+             * <li><strong>off</strong> (disabled): offline download is disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1567,7 +1528,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The duration of the audio file.</p>
+             * <p>The duration.</p>
              * 
              * <strong>example:</strong>
              * <p>123</p>
@@ -1578,12 +1539,12 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source of the audio file. Valid values:</p>
+             * <p>The source. Valid values:</p>
              * <ul>
-             * <li><strong>general</strong>: The audio file is uploaded by using ApsaraVideo VOD.</li>
-             * <li><strong>short_video</strong>: The audio file is uploaded to ApsaraVideo VOD by using the short video SDK. For more information, see <a href="https://help.aliyun.com/document_detail/53407.html">Introduction</a>.</li>
-             * <li><strong>editing</strong>: The audio file is uploaded to ApsaraVideo VOD after online editing and production. For more information, see <a href="https://help.aliyun.com/document_detail/68536.html">ProduceEditingProjectVideo</a>.</li>
-             * <li><strong>live</strong>: The audio file is recorded and uploaded as a file to ApsaraVideo VOD.</li>
+             * <li><strong>general</strong> (ApsaraVideo VOD upload): standard upload.</li>
+             * <li><strong>short_video</strong> (the short video SDK): files uploaded to ApsaraVideo VOD by using the short video SDK. For more information, see <a href="https://help.aliyun.com/document_detail/53407.html">Short video SDK</a>.</li>
+             * <li><strong>editing</strong> (online editing): files uploaded to ApsaraVideo VOD by using online editing. For more information, see <a href="https://help.aliyun.com/document_detail/68536.html">Produce videos</a>.</li>
+             * <li><strong>live</strong> (live recording): files uploaded to ApsaraVideo VOD through live recording.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1595,7 +1556,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the audio file was updated. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * <p>The last modification time. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2018-07-19T03:48:25Z</p>
@@ -1606,12 +1567,12 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The preprocessing status. Only preprocessed videos can be used for live streaming in the production studio. Valid values:</p>
+             * <p>The preprocessing status. Only preprocessed videos can be used for live streaming. Valid values:</p>
              * <ul>
-             * <li><strong>UnPreprocess</strong></li>
-             * <li><strong>Preprocessing</strong></li>
-             * <li><strong>PreprocessSucceed</strong></li>
-             * <li><strong>PreprocessFailed</strong></li>
+             * <li><strong>UnPreprocess</strong>: not preprocessed.</li>
+             * <li><strong>Preprocessing</strong>: preprocessing.</li>
+             * <li><strong>PreprocessSucceed</strong>: preprocessing complete.</li>
+             * <li><strong>PreprocessFailed</strong>: preprocessing failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1623,7 +1584,10 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * ReferenceId.
+             * <p>The custom ID. Only lowercase letters, uppercase letters, digits, hyphens, and underscores are supported. The value must be 6 to 64 characters in length and is unique at the user level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123-123</p>
              */
             public Builder referenceId(String referenceId) {
                 this.referenceId = referenceId;
@@ -1631,7 +1595,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The period of time in which the audio file remains in the restored state.</p>
+             * <p>The expiration time of the media asset restoration.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-03-30T10:14:14Z</p>
@@ -1642,11 +1606,11 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The restoration status of the audio file. Valid values:</p>
+             * <p>The media asset restoration status. Valid values:</p>
              * <ul>
-             * <li><strong>Processing</strong></li>
-             * <li><strong>Success</strong></li>
-             * <li><strong>Failed</strong></li>
+             * <li><strong>Processing</strong>: restoring.</li>
+             * <li><strong>Success</strong>: restoration successful.</li>
+             * <li><strong>Failed</strong>: restoration failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1658,7 +1622,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the audio file.</p>
+             * <p>The size.</p>
              * 
              * <strong>example:</strong>
              * <p>123</p>
@@ -1669,7 +1633,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The automatic snapshots.</p>
+             * <p>The list of automatic snapshots.</p>
              */
             public Builder snapshots(java.util.List<String> snapshots) {
                 this.snapshots = snapshots;
@@ -1677,7 +1641,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sprite snapshots.</p>
+             * <p>The list of sprites.</p>
              */
             public Builder spriteSnapshots(java.util.List<String> spriteSnapshots) {
                 this.spriteSnapshots = spriteSnapshots;
@@ -1685,12 +1649,12 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the audio file. Valid values:</p>
+             * <p>The status. Valid values:</p>
              * <ul>
-             * <li><strong>Uploading</strong></li>
-             * <li><strong>Normal</strong></li>
-             * <li><strong>UploadFail</strong></li>
-             * <li><strong>Deleted</strong></li>
+             * <li><strong>Uploading</strong>: uploading.</li>
+             * <li><strong>Normal</strong>: normal.	</li>
+             * <li><strong>UploadFail</strong>: upload failed.</li>
+             * <li><strong>Deleted</strong>: deleted.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1702,16 +1666,16 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage class of the audio file. Valid values:</p>
+             * <p>The storage class of the media asset. Valid values:</p>
              * <ul>
-             * <li><strong>Standard</strong>: All media resources are stored as Standard objects.</li>
-             * <li><strong>IA</strong>: All media resources are stored as IA objects.</li>
-             * <li><strong>Archive</strong>: All media resources are stored as Archive objects.</li>
-             * <li><strong>ColdArchive</strong>: All media resources are stored as Cold Archive objects.</li>
-             * <li><strong>SourceIA</strong>: Only the source file is stored as an IA object.</li>
-             * <li><strong>SourceArchive</strong>: Only the source file is stored as an Archive object.</li>
-             * <li><strong>SourceColdArchive</strong>: Only the source file is stored as a Cold Archive object.</li>
-             * <li><strong>Changing</strong>: The storage class is being modified.</li>
+             * <li><strong>Standard</strong>: standard.</li>
+             * <li><strong>IA</strong>: Infrequent Access (media asset).</li>
+             * <li><strong>Archive</strong>: Archive (media asset).</li>
+             * <li><strong>ColdArchive</strong>: Cold Archive (media asset).</li>
+             * <li><strong>SourceIA</strong>: Infrequent Access (source file).</li>
+             * <li><strong>SourceArchive</strong>: Archive (source file).</li>
+             * <li><strong>SourceColdArchive</strong>: Cold Archive (source file).</li>
+             * <li><strong>Changing</strong>: the storage class is being changed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1723,7 +1687,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region in which the audio is stored.</p>
+             * <p>The storage region.</p>
              * 
              * <strong>example:</strong>
              * <p>outin-aaa*****aa.oss-cn-shanghai.aliyuncs.com</p>
@@ -1734,7 +1698,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags of the audio file.</p>
+             * <p>The tags.</p>
              * 
              * <strong>example:</strong>
              * <p>tag1,tag2</p>
@@ -1745,10 +1709,10 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The title of the audio file</p>
+             * <p>The title.</p>
              * 
              * <strong>example:</strong>
-             * <p>audio</p>
+             * <p>Alibaba Cloud VOD Audio Title</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -1758,9 +1722,9 @@ public class SearchMediaResponseBody extends TeaModel {
             /**
              * <p>The transcoding mode. Valid values:</p>
              * <ul>
-             * <li><strong>FastTranscode</strong>: The audio file is immediately transcoded after it is uploaded. You cannot play the file before it is transcoded.</li>
-             * <li><strong>NoTranscode</strong>: The audio file can be played without being transcoded. You can immediately play the file after it is uploaded.</li>
-             * <li><strong>AsyncTranscode</strong>: The audio file can be immediately played and asynchronously transcoded after it is uploaded.</li>
+             * <li><strong>FastTranscode</strong> (standard transcoding, default): transcoding starts after the upload is complete, and the audio can be played only after transcoding is complete.</li>
+             * <li><strong>NoTranscode</strong> (distribution without transcoding): the audio can be played immediately after the upload is complete without transcoding.</li>
+             * <li><strong>AsyncTranscode</strong> (distribution and transcoding upon upload): the audio can be played immediately after the upload is complete, and transcoding is performed asynchronously.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1961,7 +1925,7 @@ public class SearchMediaResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the application.</p>
+             * <p>The application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>app-****</p>
@@ -1972,7 +1936,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the category.</p>
+             * <p>The category ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1000123</p>
@@ -1983,10 +1947,10 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the category.</p>
+             * <p>The category name.</p>
              * 
              * <strong>example:</strong>
-             * <p>beauty</p>
+             * <p>cate1</p>
              */
             public Builder cateName(String cateName) {
                 this.cateName = cateName;
@@ -1994,7 +1958,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the image was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * <p>The creation time. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2018-07-19T03:45:25Z</p>
@@ -2005,10 +1969,10 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the image file.</p>
+             * <p>The description.</p>
              * 
              * <strong>example:</strong>
-             * <p>image test</p>
+             * <p>Alibaba Cloud VOD Image Description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2016,7 +1980,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the image file.</p>
+             * <p>The image ID.</p>
              * 
              * <strong>example:</strong>
              * <p>11130843741se99wqmoes****</p>
@@ -2027,7 +1991,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the image file was updated. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * <p>The last modification time. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2018-07-19T03:48:25Z</p>
@@ -2038,11 +2002,11 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the image file.</p>
+             * <p>The image status. Valid values:</p>
              * <ul>
-             * <li><strong>Uploading</strong></li>
-             * <li><strong>Normal</strong></li>
-             * <li><strong>UploadFail</strong></li>
+             * <li><strong>Uploading</strong> (uploading): the initial state. The image is being uploaded.</li>
+             * <li><strong>Normal</strong> (normal): the image is uploaded.</li>
+             * <li><strong>UploadFail</strong> (failed): the image failed to be uploaded.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2054,7 +2018,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region in which the image is stored.</p>
+             * <p>The storage region.</p>
              * 
              * <strong>example:</strong>
              * <p>outin-bfefbb90a47c******163e1c7426.oss-cn-shanghai.aliyuncs.com</p>
@@ -2065,7 +2029,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags of the image file.</p>
+             * <p>The tags.</p>
              * 
              * <strong>example:</strong>
              * <p>tag1</p>
@@ -2076,10 +2040,10 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The title of the image file.</p>
+             * <p>The title.</p>
              * 
              * <strong>example:</strong>
-             * <p>image1</p>
+             * <p>Alibaba Cloud VOD Image Title</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -2087,7 +2051,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the image file.</p>
+             * <p>The image URL.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example.com/****.png">https://example.com/****.png</a></p>
@@ -2443,7 +2407,7 @@ public class SearchMediaResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the application.</p>
+             * <p>The application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>app-****</p>
@@ -2454,7 +2418,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the category.</p>
+             * <p>The category ID.</p>
              * 
              * <strong>example:</strong>
              * <p>10000123</p>
@@ -2465,7 +2429,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the category.</p>
+             * <p>The category name.</p>
              * 
              * <strong>example:</strong>
              * <p>video1</p>
@@ -2476,7 +2440,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the thumbnail.</p>
+             * <p>The thumbnail URL.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example.aliyundoc.com/image01.png">https://example.aliyundoc.com/image01.png</a></p>
@@ -2487,7 +2451,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the video file was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * <p>The time when the video information was created. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2018-07-19T03:45:25Z</p>
@@ -2498,10 +2462,10 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the video file.</p>
+             * <p>The video description.</p>
              * 
              * <strong>example:</strong>
-             * <p>Video test</p>
+             * <p>Alibaba Cloud VOD video description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2509,10 +2473,10 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The download switch. The video file can be downloaded offline only when the download switch is turned on. Valid values:</p>
+             * <p>The download switch. Offline download is allowed only when the switch is enabled. Valid values:</p>
              * <ul>
-             * <li><strong>on</strong></li>
-             * <li><strong>off</strong></li>
+             * <li><strong>on</strong> (enabled): the initial state. Offline download is allowed.</li>
+             * <li><strong>off</strong> (disabled): offline download is disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2524,7 +2488,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The duration of the video file. Unit: seconds.</p>
+             * <p>The video duration. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>123</p>
@@ -2535,12 +2499,12 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source of the video file. Valid values:</p>
+             * <p>The source. Valid values:</p>
              * <ul>
-             * <li><strong>general</strong>: The video file is uploaded by using ApsaraVideo VOD.</li>
-             * <li><strong>short_video</strong>: The video file is uploaded by using the short video SDK.</li>
-             * <li><strong>editing</strong>: The video file is produced after online editing.</li>
-             * <li><strong>live</strong>: The video stream is recorded and uploaded as a file.</li>
+             * <li><strong>general</strong>: ApsaraVideo VOD upload.</li>
+             * <li><strong>short_video</strong>: the short video SDK.</li>
+             * <li><strong>editing</strong>: online editing.</li>
+             * <li><strong>live</strong>: live recording.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2552,7 +2516,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the video file was updated. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * <p>The time when the video information was last modified. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2018-07-19T03:48:25Z</p>
@@ -2565,10 +2529,10 @@ public class SearchMediaResponseBody extends TeaModel {
             /**
              * <p>The preprocessing status. Valid values:</p>
              * <ul>
-             * <li><strong>UnPreprocess</strong></li>
-             * <li><strong>Preprocessing</strong></li>
-             * <li><strong>PreprocessSucceed</strong></li>
-             * <li><strong>PreprocessFailed</strong></li>
+             * <li><strong>UnPreprocess</strong>: not preprocessed.</li>
+             * <li><strong>Preprocessing</strong>: preprocessing.</li>
+             * <li><strong>PreprocessSucceed</strong>: preprocessing complete.</li>
+             * <li><strong>PreprocessFailed</strong>: preprocessing failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2580,7 +2544,10 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * ReferenceId.
+             * <p>The custom ID. Only lowercase letters, uppercase letters, digits, hyphens, and underscores are supported. The value must be 6 to 64 characters in length and is unique at the user level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123-123</p>
              */
             public Builder referenceId(String referenceId) {
                 this.referenceId = referenceId;
@@ -2588,7 +2555,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The period of time in which the video file remains in the restored state.</p>
+             * <p>The expiration time of the media asset restoration.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-03-30T10:14:14Z</p>
@@ -2599,11 +2566,11 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The restoration status of the video file. Valid values:</p>
+             * <p>The media asset restoration status. Valid values:</p>
              * <ul>
-             * <li><strong>Processing</strong></li>
-             * <li><strong>Success</strong></li>
-             * <li><strong>Failed</strong></li>
+             * <li><strong>Processing</strong>: restoring.</li>
+             * <li><strong>Success</strong>: restoration successful.</li>
+             * <li><strong>Failed</strong>: restoration failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2615,7 +2582,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the video file.</p>
+             * <p>The video size.</p>
              * 
              * <strong>example:</strong>
              * <p>123</p>
@@ -2626,7 +2593,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The automatic snapshots.</p>
+             * <p>The list of automatic snapshots.</p>
              */
             public Builder snapshots(java.util.List<String> snapshots) {
                 this.snapshots = snapshots;
@@ -2634,7 +2601,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sprite snapshots.</p>
+             * <p>The list of sprites.</p>
              */
             public Builder spriteSnapshots(java.util.List<String> spriteSnapshots) {
                 this.spriteSnapshots = spriteSnapshots;
@@ -2642,15 +2609,15 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the file. Valid values:</p>
+             * <p>The status. Valid values:</p>
              * <ul>
-             * <li><strong>Uploading</strong></li>
-             * <li><strong>UploadFail</strong></li>
-             * <li><strong>UploadSucc</strong></li>
-             * <li><strong>Transcoding</strong></li>
-             * <li><strong>TranscodeFail</strong></li>
-             * <li><strong>Blocked</strong></li>
-             * <li><strong>Normal</strong></li>
+             * <li><strong>Uploading</strong>: uploading.</li>
+             * <li><strong>UploadFail</strong>: upload failed.</li>
+             * <li><strong>UploadSucc</strong>: upload complete.</li>
+             * <li><strong>Transcoding</strong>: transcoding.</li>
+             * <li><strong>TranscodeFail</strong>: transcoding failed.</li>
+             * <li><strong>Blocked</strong>: blocked.</li>
+             * <li><strong>Normal</strong>: normal.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2662,17 +2629,17 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage class of the video file. Valid values:</p>
+             * <p>The storage class of the media asset. Valid values:</p>
              * <ul>
-             * <li><strong>Standard</strong>: All media resources are stored as Standard objects.</li>
-             * <li><strong>IA</strong>: All media resources are stored as IA objects.</li>
-             * <li><strong>Archive</strong>: All media resources are stored as Archive objects.</li>
-             * <li><strong>ColdArchive</strong>: All media resources are stored as Cold Archive objects.</li>
-             * <li><strong>SourceIA</strong>: Only the source file is stored as an IA object.</li>
-             * <li><strong>SourceArchive</strong>: Only the source file is stored as an Archive object.</li>
-             * <li><strong>SourceColdArchive</strong>: Only the source file is stored as a Cold Archive object.</li>
-             * <li><strong>Changing</strong>: The storage class of the video file is being changed.</li>
-             * <li><strong>SourceChanging</strong>: The storage class of the source file is being changed.</li>
+             * <li><strong>Standard</strong>: standard.</li>
+             * <li><strong>IA</strong>: Infrequent Access (media asset).</li>
+             * <li><strong>Archive</strong>: Archive (media asset).</li>
+             * <li><strong>ColdArchive</strong>: Cold Archive (media asset).</li>
+             * <li><strong>SourceIA</strong>: Infrequent Access (source file).</li>
+             * <li><strong>SourceArchive</strong>: Archive (source file).</li>
+             * <li><strong>SourceColdArchive</strong>: Cold Archive (source file).</li>
+             * <li><strong>Changing</strong>: the storage class of the media asset is being changed.</li>
+             * <li><strong>SourceChanging</strong>: the storage class of the source file is being changed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2684,7 +2651,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region in which the video is stored.</p>
+             * <p>The storage region.</p>
              * 
              * <strong>example:</strong>
              * <p>outin-bfefbb90a47c******163e1c7426.oss-cn-shanghai.aliyuncs.com</p>
@@ -2695,7 +2662,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags of the video file.</p>
+             * <p>The video tags.</p>
              * 
              * <strong>example:</strong>
              * <p>tag1</p>
@@ -2706,10 +2673,10 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The title of the video.</p>
+             * <p>The video title.</p>
              * 
              * <strong>example:</strong>
-             * <p>ceshi</p>
+             * <p>Alibaba Cloud VOD Video Title</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -2719,9 +2686,9 @@ public class SearchMediaResponseBody extends TeaModel {
             /**
              * <p>The transcoding mode. Valid values:</p>
              * <ul>
-             * <li><strong>FastTranscode</strong>: The video file is immediately transcoded after it is uploaded. You cannot play the file before it is transcoded.</li>
-             * <li><strong>NoTranscode</strong>: The video file can be played without being transcoded. You can immediately play the file after it is uploaded.</li>
-             * <li><strong>AsyncTranscode</strong>: The video file can be immediately played and asynchronously transcoded after it is uploaded.</li>
+             * <li><strong>FastTranscode</strong> (standard transcoding): the default mode. Transcoding starts after the upload is complete, and the video can be played only after transcoding is complete.</li>
+             * <li><strong>NoTranscode</strong> (distribution without transcoding): the video can be played immediately after the upload is complete without transcoding.</li>
+             * <li><strong>AsyncTranscode</strong> (distribution and transcoding upon upload): the video can be played immediately after the upload is complete, and transcoding is performed asynchronously.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2733,7 +2700,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the video file.</p>
+             * <p>The video ID.</p>
              * 
              * <strong>example:</strong>
              * <p>a82a2asdasqadaf3faa0ed6c1ee372****</p>
@@ -2894,7 +2861,7 @@ public class SearchMediaResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Details about AI data.</p>
+             * AiData.
              */
             public Builder aiData(AiData aiData) {
                 this.aiData = aiData;
@@ -2902,7 +2869,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The basic information about AI data.</p>
+             * AiRoughData.
              */
             public Builder aiRoughData(AiRoughData aiRoughData) {
                 this.aiRoughData = aiRoughData;
@@ -2910,7 +2877,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p><a href="https://help.aliyun.com/document_detail/86991.html">The information about the auxiliary media asset</a>.</p>
+             * <p><a href="https://help.aliyun.com/document_detail/86991.html">Auxiliary media asset information</a>.</p>
              */
             public Builder attachedMedia(AttachedMedia attachedMedia) {
                 this.attachedMedia = attachedMedia;
@@ -2918,7 +2885,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p><a href="https://help.aliyun.com/document_detail/86991.html">The information about the audio</a>.</p>
+             * <p><a href="https://help.aliyun.com/document_detail/86991.html">Audio information</a>.</p>
              */
             public Builder audio(Audio audio) {
                 this.audio = audio;
@@ -2926,7 +2893,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the media asset was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * <p>The time when the media asset was created. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2018-07-19T03:45:25Z</p>
@@ -2937,7 +2904,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p><a href="https://help.aliyun.com/document_detail/86991.html">The information about the image</a>.</p>
+             * <p><a href="https://help.aliyun.com/document_detail/86991.html">Image information</a>.</p>
              */
             public Builder image(Image image) {
                 this.image = image;
@@ -2945,7 +2912,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the file.</p>
+             * <p>The media ID.</p>
              * 
              * <strong>example:</strong>
              * <p>a82a2cd7d4e147bbed6c1ee372****</p>
@@ -2956,12 +2923,12 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the media asset. Valid values:</p>
+             * <p>The media type. Valid values:</p>
              * <ul>
-             * <li><strong>video</strong></li>
-             * <li><strong>audio</strong></li>
-             * <li><strong>image</strong></li>
-             * <li><strong>attached</strong></li>
+             * <li><strong>video</strong>: video.</li>
+             * <li><strong>audio</strong>: audio.</li>
+             * <li><strong>image</strong>: image.</li>
+             * <li><strong>attached</strong>: auxiliary media asset.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2973,7 +2940,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p><a href="https://help.aliyun.com/document_detail/86991.html">The information about the video</a>.</p>
+             * <p><a href="https://help.aliyun.com/document_detail/86991.html">Video information</a>.</p>
              */
             public Builder video(Video video) {
                 this.video = video;

@@ -88,10 +88,10 @@ public class CreateAppInfoRequest extends Request {
         } 
 
         /**
-         * <p>The name of the application. The application name must be unique.</p>
+         * <p>The application name. The name must be unique.</p>
          * <ul>
-         * <li>The name can contain letters, digits, periods (.), hyphens (-), and at signs (@). The name can be up to 128 characters in length.</li>
-         * <li>The value must be encoded in UTF-8.</li>
+         * <li>The name can be up to 128 characters in length and can contain only Chinese characters, uppercase and lowercase letters, digits, periods (.), hyphens (-), and at signs (@).</li>
+         * <li>The name must be encoded in UTF-8.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -105,10 +105,10 @@ public class CreateAppInfoRequest extends Request {
         }
 
         /**
-         * <p>The description of the application.</p>
+         * <p>The application description.</p>
          * <ul>
-         * <li>The description can contain up to 512 characters in length.</li>
-         * <li>The value must be encoded in UTF-8.</li>
+         * <li>The description can be up to 512 characters in length.</li>
+         * <li>The description must be encoded in UTF-8.</li>
          * </ul>
          * 
          * <strong>example:</strong>

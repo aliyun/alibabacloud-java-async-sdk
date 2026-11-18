@@ -88,22 +88,20 @@ public class GetAttachedMediaInfoRequest extends Request {
         } 
 
         /**
-         * <p>The validity period of the URL. Unit: seconds.</p>
+         * <p>The expiration time of the auxiliary media asset URLs. Unit: seconds.</p>
          * <ul>
-         * <li><p>If you set the OutputType parameter to <strong>cdn</strong>:</p>
-         * <ul>
-         * <li>The URL of the auxiliary media asset has a validity period only if URL signing is enabled. Otherwise, the URL of the auxiliary media asset is permanently valid.</li>
+         * <li>If OutputType is set to <strong>cdn</strong>:<ul>
+         * <li>The URLs expire only if URL authentication is enabled. Otherwise, the URLs are permanently valid.</li>
          * <li>Minimum value: <strong>1</strong>.</li>
          * <li>Maximum value: unlimited.</li>
-         * <li>Default value: If you do not set this parameter, the default validity period that is specified in URL signing is used.</li>
+         * <li>Default value: If this parameter is not specified, the default validity period configured for URL authentication is used.</li>
          * </ul>
          * </li>
-         * <li><p>If you set the OutputType parameter to <strong>oss</strong>:</p>
-         * <ul>
-         * <li>The URL of the auxiliary media asset has a validity period only if the permissions on the Object Storage Service (OSS) bucket are private. Otherwise, the URL of the auxiliary media asset is permanently valid.</li>
+         * <li>If OutputType is set to <strong>oss</strong>:<ul>
+         * <li>The URLs expire only if the storage permission is set to private. Otherwise, the URLs are permanently valid.</li>
          * <li>Minimum value: <strong>1</strong>.</li>
-         * <li>The maximum value for a media asset stored in the VOD bucket is <strong>2592000</strong> (30 days) and the maximum value for a media asset stored in an OSS bucket is <strong>129600</strong> (36 hours). The maximum value is limited to reduce security risks of the origin.</li>
-         * <li>Default value: If you do not set this parameter, the default value <strong>3600</strong> is used.</li>
+         * <li>Maximum value: To reduce security risks to the origin server, the maximum value is <strong>2592000</strong> (30 days) if the auxiliary media assets are stored in an ApsaraVideo VOD bucket, and <strong>129600</strong> (36 hours) if the auxiliary media assets are stored in a user-owned OSS bucket.</li>
+         * <li>Default value: If this parameter is not specified, the value is <strong>3600</strong>.</li>
          * </ul>
          * </li>
          * </ul>
@@ -118,10 +116,10 @@ public class GetAttachedMediaInfoRequest extends Request {
         }
 
         /**
-         * <p>The ID of the auxiliary media asset.</p>
+         * <p>The IDs of the auxiliary media assets.</p>
          * <ul>
          * <li>Separate multiple IDs with commas (,). You can specify up to 20 IDs.</li>
-         * <li>You can obtain the ID from the response to the <a href="~~CreateUploadAttachedMedia~~">CreateUploadAttachedMedia</a> operation that you call to obtain the upload URL and credential.</li>
+         * <li>The IDs are returned after you call the <a href="~~CreateUploadAttachedMedia~~">CreateUploadAttachedMedia</a> operation to obtain the upload URLs and credentials for the auxiliary media assets.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -135,10 +133,10 @@ public class GetAttachedMediaInfoRequest extends Request {
         }
 
         /**
-         * <p>The type of the media asset URL. Valid values:</p>
+         * <p>The type of the output URL. Valid values:</p>
          * <ul>
-         * <li><strong>oss</strong></li>
-         * <li><strong>cdn</strong> (default)</li>
+         * <li><strong>oss</strong>: back-to-origin URL.</li>
+         * <li><strong>cdn</strong> (default): accelerated URL.</li>
          * </ul>
          * 
          * <strong>example:</strong>

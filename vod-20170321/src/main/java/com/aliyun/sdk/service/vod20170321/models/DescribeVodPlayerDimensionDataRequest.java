@@ -117,6 +117,7 @@ public class DescribeVodPlayerDimensionDataRequest extends Request {
         } 
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +130,22 @@ public class DescribeVodPlayerDimensionDataRequest extends Request {
         }
 
         /**
+         * <p>The dimension type. Valid values:</p>
+         * <ul>
+         * <li>Os: Operating system.</li>
+         * <li>AppVersion: App version.</li>
+         * <li>SdkVersion: SDK version.</li>
+         * <li>Codec: Codec.</li>
+         * <li>VideoType: Video format.</li>
+         * <li>Network: Network type.</li>
+         * <li>Isp: ISP.</li>
+         * <li>VideoDefinition: Resolution.</li>
+         * <li>Domain: Domain name.</li>
+         * <li>Country: Country.</li>
+         * <li>Province: Province.</li>
+         * <li>ErrorCode: Error code.</li>
+         * <li>IsHw: Hardware decoding.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,7 +158,10 @@ public class DescribeVodPlayerDimensionDataRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time of the query. Format: yyyy-mm-ddThh:mm:ssZ (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-06-05T15:59:59Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -150,7 +170,15 @@ public class DescribeVodPlayerDimensionDataRequest extends Request {
         }
 
         /**
-         * Region.
+         * <p>The region used to limit the query scope when querying the metadata for the Province and ISP dimensions. Valid values:</p>
+         * <ul>
+         * <li>ALL (default): All regions.</li>
+         * <li>CN: China.</li>
+         * <li>OVERSEAS: Outside China.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -159,7 +187,17 @@ public class DescribeVodPlayerDimensionDataRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time of the query. Format: <i>yyyy-mm-dd</i>T<i>hh:mm:ss</i>Z (UTC).</p>
+         * <blockquote>
+         * <ul>
+         * <li>You can query playback data history for the past year.</li>
+         * <li>The time range for a single query cannot exceed 31 days.</li>
+         * <li>The time interval is left-closed and right-open [StartTime, EndTime).</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-06-24T00:55:06Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

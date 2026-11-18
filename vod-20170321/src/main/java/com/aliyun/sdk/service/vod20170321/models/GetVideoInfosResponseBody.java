@@ -93,7 +93,7 @@ public class GetVideoInfosResponseBody extends TeaModel {
         } 
 
         /**
-         * NonExistReferenceIds.
+         * <p>The list of custom IDs that do not exist.</p>
          */
         public Builder nonExistReferenceIds(java.util.List<String> nonExistReferenceIds) {
             this.nonExistReferenceIds = nonExistReferenceIds;
@@ -101,7 +101,7 @@ public class GetVideoInfosResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The IDs of the videos that do not exist.</p>
+         * <p>The list of audio or video IDs that do not exist.</p>
          */
         public Builder nonExistVideoIds(java.util.List<String> nonExistVideoIds) {
             this.nonExistVideoIds = nonExistVideoIds;
@@ -109,7 +109,7 @@ public class GetVideoInfosResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>25818875-5F78-4AF6-D7393642CA58****</p>
@@ -120,7 +120,7 @@ public class GetVideoInfosResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the audio or video files.</p>
+         * <p>The information about the audio and video files.</p>
          */
         public Builder videoList(java.util.List<VideoList> videoList) {
             this.videoList = videoList;
@@ -446,7 +446,7 @@ public class GetVideoInfosResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the application.</p>
+             * <p>The application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>app-****</p>
@@ -457,7 +457,7 @@ public class GetVideoInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the category.</p>
+             * <p>The category ID.</p>
              * 
              * <strong>example:</strong>
              * <p>781111****</p>
@@ -468,10 +468,10 @@ public class GetVideoInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the category.</p>
+             * <p>The category name.</p>
              * 
              * <strong>example:</strong>
-             * <p>This is a category name.</p>
+             * <p>cate1</p>
              */
             public Builder cateName(String cateName) {
                 this.cateName = cateName;
@@ -490,7 +490,7 @@ public class GetVideoInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the media file was created. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * <p>The time when the audio or video file was created. The time follows the ISO 8601 standard in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2017-06-26T05:38:48Z</p>
@@ -504,7 +504,7 @@ public class GetVideoInfosResponseBody extends TeaModel {
              * <p>The description of the audio or video file.</p>
              * 
              * <strong>example:</strong>
-             * <p>This is a category description.</p>
+             * <p>Alibaba Cloud VOD video description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -512,10 +512,10 @@ public class GetVideoInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the offline download feature is enabled. If you enable the offline download feature, users can download and play videos by using the ApsaraVideo Player on a local PC. For more information, see <a href="https://help.aliyun.com/document_detail/86107.html">Configure download settings</a>. Valid values:</p>
+             * <p>The status of the offline download switch. If the offline download feature is enabled, mobile users can cache videos to their local devices for offline viewing by using ApsaraVideo Player. For more information, see <a href="https://help.aliyun.com/document_detail/86107.html">Offline download</a>. Valid values:</p>
              * <ul>
-             * <li><strong>on</strong>: the offline download feature is enabled.</li>
-             * <li><strong>off</strong>: the offline download feature is not enabled.</li>
+             * <li><strong>on</strong>: enabled. Offline download is allowed.</li>
+             * <li><strong>off</strong>: disabled. Offline download is not allowed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -538,7 +538,7 @@ public class GetVideoInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the audio or video file was last updated. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * <p>The last time when the audio or video file was updated. The time follows the ISO 8601 standard in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2017-06-26T06:38:48Z</p>
@@ -549,7 +549,10 @@ public class GetVideoInfosResponseBody extends TeaModel {
             }
 
             /**
-             * ReferenceId.
+             * <p>The custom ID. The value can contain only lowercase letters, uppercase letters, digits, hyphens (-), and underscores (_), and must be 6 to 64 characters in length. The value is unique at the user level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123-123</p>
              */
             public Builder referenceId(String referenceId) {
                 this.referenceId = referenceId;
@@ -557,7 +560,7 @@ public class GetVideoInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The period of time in which the audio file remains in the restored state.</p>
+             * <p>The expiration time of the media asset restoration.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-03-30T10:14:14Z</p>
@@ -568,11 +571,11 @@ public class GetVideoInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The restoration status of the audio file. Valid values:</p>
+             * <p>The restoration status of the media asset. Valid values:</p>
              * <ul>
-             * <li><strong>Processing</strong></li>
-             * <li><strong>Success</strong></li>
-             * <li><strong>Failed</strong></li>
+             * <li><strong>Processing</strong>: The media asset is being restored.</li>
+             * <li><strong>Success</strong>: The media asset is restored.</li>
+             * <li><strong>Failed</strong>: The media asset failed to be restored.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -584,7 +587,7 @@ public class GetVideoInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the source file. Unit: bytes.</p>
+             * <p>The size of the audio or video source file. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>453</p>
@@ -595,7 +598,7 @@ public class GetVideoInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The video snapshot URLs.</p>
+             * <p>The array of video snapshot URLs.</p>
              */
             public Builder snapshots(java.util.List<String> snapshots) {
                 this.snapshots = snapshots;
@@ -603,15 +606,15 @@ public class GetVideoInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the video. Valid values:</p>
+             * <p>The video status. Valid values:</p>
              * <ul>
-             * <li><strong>Uploading</strong></li>
-             * <li><strong>UploadFail</strong></li>
-             * <li><strong>UploadSucc</strong></li>
-             * <li><strong>Transcoding</strong></li>
-             * <li><strong>TranscodeFail</strong></li>
-             * <li><strong>Blocked</strong></li>
-             * <li><strong>Normal</strong></li>
+             * <li><strong>Uploading</strong>: The video is being uploaded.</li>
+             * <li><strong>UploadFail</strong>: The video failed to be uploaded.</li>
+             * <li><strong>UploadSucc</strong>: The video has been uploaded.</li>
+             * <li><strong>Transcoding</strong>: The video is being transcoded.</li>
+             * <li><strong>TranscodeFail</strong>: The video failed to be transcoded.</li>
+             * <li><strong>Blocked</strong>: The video is blocked.</li>
+             * <li><strong>Normal</strong>: The video is in a normal state.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -623,17 +626,17 @@ public class GetVideoInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage class of the audio file. Valid values:</p>
+             * <p>The storage class of the media asset. Valid values:</p>
              * <ul>
-             * <li><strong>Standard</strong>: All media resources are stored as Standard objects.</li>
-             * <li><strong>IA</strong>: All media resources are stored as IA objects.</li>
-             * <li><strong>Archive</strong>: All media resources are stored as Archive objects.</li>
-             * <li><strong>ColdArchive</strong>: All media resources are stored as Cold Archive objects.</li>
-             * <li><strong>SourceIA</strong>: Only the source files are IA objects.</li>
-             * <li><strong>SourceArchive</strong>: Only the source files are Archive objects.</li>
-             * <li><strong>SourceColdArchive</strong>: Only the source file is stored as a Cold Archive object.</li>
-             * <li><strong>Changing</strong>: The storage class of the video file is being changed.</li>
-             * <li><strong>SourceChanging</strong>: The storage class of the source file is being changed.</li>
+             * <li><strong>Standard</strong>: standard.</li>
+             * <li><strong>IA</strong>: media asset Infrequent Access.</li>
+             * <li><strong>Archive</strong>: media asset Archive.</li>
+             * <li><strong>ColdArchive</strong>: media asset Cold Archive.</li>
+             * <li><strong>SourceIA</strong>: source file Infrequent Access.</li>
+             * <li><strong>SourceArchive</strong>: source file Archive.</li>
+             * <li><strong>SourceColdArchive</strong>: source file Cold Archive.</li>
+             * <li><strong>Changing</strong>: the media asset storage class is being changed.</li>
+             * <li><strong>SourceChanging</strong>: the source file storage class is being changed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -667,7 +670,7 @@ public class GetVideoInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the transcoding template group.</p>
+             * <p>The transcoding template group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>b4039216985f4312a5382a4ed****</p>
@@ -681,7 +684,7 @@ public class GetVideoInfosResponseBody extends TeaModel {
              * <p>The title of the audio or video file.</p>
              * 
              * <strong>example:</strong>
-             * <p>Video tiltle</p>
+             * <p>Alibaba Cloud VOD Video Title</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -689,7 +692,7 @@ public class GetVideoInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Custom settings. This is a JSON string that supports settings such as message callbacks and upload acceleration. For more information, please refer to <a href="https://help.aliyun.com/document_detail/86952.html">UserData</a>.</p>
+             * <p>The custom settings. The value is a JSON string that supports settings such as message callbacks and upload acceleration. For more information, see <a href="https://help.aliyun.com/document_detail/86952.html">UserData</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;MessageCallback&quot;:{&quot;CallbackURL&quot;:&quot;<a href="http://example.aliyundoc.com%22%7D,%22Extend%22:%7B%22localId%22:%22*****%22,%22test%22:%22www%22%7D%7D">http://example.aliyundoc.com&quot;},&quot;Extend&quot;:{&quot;localId&quot;:&quot;*****&quot;,&quot;test&quot;:&quot;www&quot;}}</a></p>
@@ -700,7 +703,7 @@ public class GetVideoInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the audio or video file.</p>
+             * <p>The audio or video ID.</p>
              * 
              * <strong>example:</strong>
              * <p>7753d144efd74d6c45fe0570****</p>

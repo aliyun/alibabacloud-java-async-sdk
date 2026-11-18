@@ -67,7 +67,7 @@ public class DescribeVodTieringStorageRetrievalDataResponseBody extends TeaModel
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>25818875-5F78-4A13-BEF6-D73936****</p>
@@ -78,7 +78,7 @@ public class DescribeVodTieringStorageRetrievalDataResponseBody extends TeaModel
         }
 
         /**
-         * <p>The data retrieval information.</p>
+         * <p>The retrieval data.</p>
          */
         public Builder retrievalData(java.util.List<RetrievalData> retrievalData) {
             this.retrievalData = retrievalData;
@@ -209,7 +209,7 @@ public class DescribeVodTieringStorageRetrievalDataResponseBody extends TeaModel
             } 
 
             /**
-             * <p>The retrieved Cold Archive data in the bulk mode.</p>
+             * <p>The Cold Archive bulk retrieval data.</p>
              * 
              * <strong>example:</strong>
              * <p>123</p>
@@ -220,7 +220,7 @@ public class DescribeVodTieringStorageRetrievalDataResponseBody extends TeaModel
             }
 
             /**
-             * <p>The retrieved Cold Archive data in the expedited mode.</p>
+             * <p>The Cold Archive high-priority retrieval data.</p>
              * 
              * <strong>example:</strong>
              * <p>123</p>
@@ -231,7 +231,7 @@ public class DescribeVodTieringStorageRetrievalDataResponseBody extends TeaModel
             }
 
             /**
-             * <p>The retrieved Cold Archive data in the standard mode.</p>
+             * <p>The Cold Archive standard retrieval data.</p>
              * 
              * <strong>example:</strong>
              * <p>123</p>
@@ -253,7 +253,7 @@ public class DescribeVodTieringStorageRetrievalDataResponseBody extends TeaModel
             }
 
             /**
-             * <p>The data retrieval information.</p>
+             * <p>The retrieval data.</p>
              * 
              * <strong>example:</strong>
              * <p>1234</p>
@@ -264,7 +264,7 @@ public class DescribeVodTieringStorageRetrievalDataResponseBody extends TeaModel
             }
 
             /**
-             * <p>The storage type.</p>
+             * <p>The media asset storage class.</p>
              * 
              * <strong>example:</strong>
              * <p>IA</p>
@@ -275,7 +275,7 @@ public class DescribeVodTieringStorageRetrievalDataResponseBody extends TeaModel
             }
 
             /**
-             * <p>The timestamp of the returned data. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * <p>The start time of the time interval. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2023-06-02T10:20:00Z</p>

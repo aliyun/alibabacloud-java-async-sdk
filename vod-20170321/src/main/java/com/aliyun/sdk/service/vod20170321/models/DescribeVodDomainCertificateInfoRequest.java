@@ -88,7 +88,7 @@ public class DescribeVodDomainCertificateInfoRequest extends Request {
         } 
 
         /**
-         * <p>The accelerated domain name.</p>
+         * <p>The accelerated domain name for ApsaraVideo VOD.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

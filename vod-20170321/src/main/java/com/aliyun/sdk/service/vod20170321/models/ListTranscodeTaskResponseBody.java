@@ -67,7 +67,7 @@ public class ListTranscodeTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>25818875-5F78-4A*****F6-D7393642CA58</p>
@@ -78,7 +78,7 @@ public class ListTranscodeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Details about transcoding tasks.</p>
+         * <p>The list of transcoding task information.</p>
          */
         public Builder transcodeTaskList(java.util.List<TranscodeTaskList> transcodeTaskList) {
             this.transcodeTaskList = transcodeTaskList;
@@ -209,7 +209,7 @@ public class ListTranscodeTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the transcoding task was complete. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * <p>The time when the transcoding task was complete. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2019-01-23T12:40:12Z</p>
@@ -220,7 +220,7 @@ public class ListTranscodeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the transcoding task was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * <p>The time when the transcoding task was created. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2019-01-23T12:35:12Z</p>
@@ -231,13 +231,13 @@ public class ListTranscodeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the transcoding task. Valid values:</p>
+             * <p>The status of the transcoding task.</p>
              * <ul>
-             * <li><strong>Processing</strong>: In progress.</li>
-             * <li><strong>Partial</strong>: Some transcoding jobs were complete.</li>
-             * <li><strong>CompleteAllSucc</strong>: All transcoding jobs were successful.</li>
-             * <li><strong>CompleteAllFail</strong>: All transcoding jobs failed. If an exception occurs in the source file, no transcoding job is initiated and the transcoding task fails.</li>
-             * <li><strong>CompletePartialSucc</strong>: All transcoding jobs were complete but only some were successful.</li>
+             * <li><strong>Processing</strong>: in progress.</li>
+             * <li><strong>Partial</strong>: partially completed.</li>
+             * <li><strong>CompleteAllSucc</strong>: all transcoding jobs are complete and successful.</li>
+             * <li><strong>CompleteAllFail</strong>: all transcoding jobs are complete but all failed. If the source file has issues, no transcoding jobs are initiated and the entire transcoding task fails.</li>
+             * <li><strong>CompletePartialSucc</strong>: all transcoding jobs are complete but only some are successful.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -249,7 +249,7 @@ public class ListTranscodeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the transcoding task.</p>
+             * <p>The transcoding task ID.</p>
              * 
              * <strong>example:</strong>
              * <p>b1b65ab107*****ba3dbb900f6c1fe0</p>
@@ -260,7 +260,7 @@ public class ListTranscodeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the transcoding template group.</p>
+             * <p>The ID of the transcoding template group used for transcoding.</p>
              * 
              * <strong>example:</strong>
              * <p>b500c7094bd24*****f3e9900752d7c3</p>
@@ -271,10 +271,10 @@ public class ListTranscodeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mode in which the transcoding task is triggered. Valid values:</p>
+             * <p>The trigger type. Valid values:</p>
              * <ul>
-             * <li><strong>Auto</strong>: The transcoding task is automatically triggered when the video is uploaded.</li>
-             * <li><strong>Manual</strong>: The transcoding task is triggered by calling the SubmitTranscodeJobs operation.</li>
+             * <li><strong>Auto</strong>: automatically triggered after a video is uploaded.</li>
+             * <li><strong>Manual</strong>: triggered by calling the SubmitTranscodeJobs operation.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -286,7 +286,7 @@ public class ListTranscodeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the audio or video file.</p>
+             * <p>The audio or video ID.</p>
              * 
              * <strong>example:</strong>
              * <p>d4860fcc6a5*****bce9fed52e893824</p>

@@ -67,7 +67,7 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>6730AC93-7B12-4B*****7F-49EE1FE8BC49</p>
@@ -78,7 +78,7 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the transcoding template group.</p>
+         * <p>The data of the transcoding template group.</p>
          */
         public Builder transcodeTemplateGroup(TranscodeTemplateGroup transcodeTemplateGroup) {
             this.transcodeTemplateGroup = transcodeTemplateGroup;
@@ -352,7 +352,7 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The transcoding configurations of the audio stream. The value is a JSON string.</p>
+             * <p>The transcoding configuration parameters for the audio stream. The value is a JSON string.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;Codec&quot;:&quot;AAC&quot;,&quot;Remove&quot;:&quot;false&quot;,&quot;Bitrate&quot;:&quot;44&quot;,&quot;Samplerate&quot;:&quot;32000&quot;,&quot;Channels&quot;:&quot;2&quot;,&quot;Profile&quot;:&quot;aac_low&quot;}</p>
@@ -363,7 +363,7 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The clipping configurations of the video. The value is a JSON string. For example, this parameter is returned if you extract 5 seconds of content from a video to generate a new video.</p>
+             * <p>The video clipping configuration. The value is a JSON string. For example, if you need to extract 5 seconds of content from a video to generate a new video, you can set this parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;TimeSpan&quot;:{&quot;Seek&quot;:&quot;1&quot;,&quot;Duration&quot;:&quot;5&quot;}</p>
@@ -374,7 +374,7 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The format of the container used to encapsulate audio and video streams. The value is a JSON string.</p>
+             * <p>The container format that encapsulates the audio and video streams. The value is a JSON string.</p>
              * 
              * <strong>example:</strong>
              * <p>&quot;Format&quot;:&quot;m3u8&quot;</p>
@@ -385,11 +385,11 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The content of the copyright watermark.</p>
+             * <p>The copyright watermark information.</p>
              * 
              * <strong>example:</strong>
              * <p>{
-             *     &quot;Content&quot;: &quot;test&quot;
+             *     &quot;Content&quot;: &quot;Test copyright watermark text&quot;
              * }</p>
              */
             public Builder copyrightMark(String copyrightMark) {
@@ -398,32 +398,32 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Valid values for the definition of a common transcoding template:</p>
+             * <p>The definition tags for standard transcoding templates:</p>
              * <ul>
-             * <li><strong>LD</strong>: low definition.</li>
-             * <li><strong>SD</strong>: standard definition.</li>
-             * <li><strong>HD</strong>: high definition.</li>
-             * <li><strong>FHD</strong>: ultra high definition.</li>
-             * <li><strong>OD</strong>: original quality.</li>
+             * <li><strong>LD</strong> (Smooth)</li>
+             * <li><strong>SD</strong> (Standard definition)</li>
+             * <li><strong>HD</strong> (High definition)</li>
+             * <li><strong>FHD</strong> (Full high definition)</li>
+             * <li><strong>OD</strong> (Original definition, which means container format conversion)</li>
              * <li><strong>2K</strong></li>
              * <li><strong>4K</strong></li>
-             * <li><strong>SQ</strong>: standard sound quality.</li>
-             * <li><strong>HQ</strong>: high sound quality.</li>
+             * <li><strong>SQ</strong> (Standard sound quality)</li>
+             * <li><strong>HQ</strong> (High sound quality)</li>
              * </ul>
-             * <p>Valid values for the definition of a Narrowband HD™ 1.0 transcoding template:</p>
+             * <p>The definition tags for built-in Narrowband HD™ 1.0 transcoding templates:</p>
              * <ul>
-             * <li><strong>LD-NBV1</strong>: low definition.</li>
-             * <li><strong>SD-NBV1</strong>: standard definition.</li>
-             * <li><strong>HD-NBV1</strong>: high definition.</li>
-             * <li><strong>FHD-NBV1</strong>: ultra high definition.</li>
+             * <li><strong>LD-NBV1</strong> (Smooth)</li>
+             * <li><strong>SD-NBV1</strong> (Standard definition)</li>
+             * <li><strong>HD-NBV1</strong> (High definition)</li>
+             * <li><strong>FHD-NBV1</strong> (Full high definition)</li>
              * <li><strong>2K-NBV1</strong></li>
              * <li><strong>4K-NBV1</strong></li>
              * </ul>
              * <blockquote>
              * <ul>
-             * <li>You cannot change the definition of a transcoding template.</li>
-             * <li>You cannot modify the system parameters, such as the video resolution, audio resolution, and bitrate, of Narrowband HD™ 1.0 transcoding templates.</li>
-             * <li>You can create only Narrowband HD™ 1.0 transcoding templates that support the FLV, M3U8 (HLS), and MP4 output formats.</li>
+             * <li>You cannot modify the definition tags of transcoding templates.</li>
+             * <li>The audio and video resolutions, bitrates, and other parameters of Narrowband HD™ 1.0 transcoding templates are built-in and cannot be modified.</li>
+             * <li>Narrowband HD™ 1.0 transcoding templates support only the FLV, M3U8 (HLS), and MP4 formats.</li>
              * </ul>
              * </blockquote>
              * 
@@ -436,7 +436,7 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The encryption configuration for transcoding.</p>
+             * <p>The encryption configuration information for transcoding.</p>
              * 
              * <strong>example:</strong>
              * <p>&quot;EncryptType&quot;:&quot;Private&quot;</p>
@@ -447,7 +447,7 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The transcoding segment configurations. This parameter must be returned if HTTP-Live-Streaming (HLS) encryption is used. The value is a JSON string.</p>
+             * <p>The segment settings for transcoding. This parameter is required for HLS. The value is a JSON string.</p>
              * 
              * <strong>example:</strong>
              * <p>&quot;Segment&quot;: { &quot;Duration&quot;:&quot;6&quot; }</p>
@@ -458,7 +458,7 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The packaging configuration. Only HLS packaging and DASH packaging are supported. The value is a JSON string.</p>
+             * <p>The packaging configuration. Only HLS adaptive bitrate streaming packaging and DASH packaging are supported. The value is a JSON string.</p>
              * 
              * <strong>example:</strong>
              * <p>&quot;PackageType&quot;:&quot;HLSPackage&quot;,&quot;PackageConfig&quot;:{   &quot;BandWidth&quot;:&quot;900000&quot;  }</p>
@@ -469,7 +469,7 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The video rotation identifier. It is used to control the image rotation angle. For example, if you set this parameter to 180, the video image is turned upside down. Valid values: <code>[0,360]</code>.</p>
+             * <p>The video rotation parameter. This parameter controls the rotation angle of the video image. For example, if you set this parameter to 180, the video image is upside down. Valid values: <code>[0,360]</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>90</p>
@@ -480,7 +480,7 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The subtitle configurations. The value is a JSON string.</p>
+             * <p>The subtitle configuration. The value is a JSON string.</p>
              * 
              * <strong>example:</strong>
              * <p>[{&quot;SubtitleUrl&quot;:&quot;<a href="http://outin-test.oss-cn-shanghai.aliyuncs.com/subtitles/c737fece-14f1-4364-b107-d5f7f8edde0e.ass%22,%22CharEncode%22:%22utf-8%22%7D%5D">http://outin-test.oss-cn-shanghai.aliyuncs.com/subtitles/c737fece-14f1-4364-b107-d5f7f8edde0e.ass&quot;,&quot;CharEncode&quot;:&quot;utf-8&quot;}]</a></p>
@@ -502,7 +502,7 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The content of the tracing watermark.</p>
+             * <p>The tracing watermark information.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -515,7 +515,7 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The conditional transcoding configurations. This parameter can be used if you want to determine the basic logic based on the bitrate and resolution of the source file before the video is transcoded. The value is a JSON-formatted string.</p>
+             * <p>The conditional transcoding parameters. If you need to make basic logical judgments based on the bitrate and resolution of the source video before outputting the transcoded video, you can set this parameter. The value is a JSON string.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;IsCheckReso&quot;:&quot;true&quot;,&quot;IsCheckResoFail&quot;:&quot;false&quot;,&quot;IsCheckVideoBitrate&quot;:&quot;false&quot;,&quot;IsCheckVideoBitrateFail&quot;:&quot;false&quot;,&quot;IsCheckAudioBitrate&quot;:&quot;false&quot;,&quot;IsCheckAudioBitrateFail&quot;:&quot;false&quot;}</p>
@@ -526,7 +526,7 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The custom path used to store the output files.</p>
+             * <p>The custom output path for transcoding.</p>
              * 
              * <strong>example:</strong>
              * <p>{MediaId}/transcoce_1</p>
@@ -537,7 +537,7 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The transcoding template ID.</p>
+             * <p>The ID of the transcoding template.</p>
              * 
              * <strong>example:</strong>
              * <p>696d29a11erc057*****a3acc398d02f4</p>
@@ -548,11 +548,11 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the transcoding template. Valid values:</p>
+             * <p>The templatetype. Valid values:</p>
              * <ul>
-             * <li><strong>Normal</strong> (default): a common transcoding template. The PackageSetting parameter cannot be set for this type of template.</li>
-             * <li><strong>VideoPackage</strong>: a video stream package template. If this type of template is used, ApsaraVideo VOD transcodes a video into video streams in different bitrates and packages these video streams with a file. The PackageSetting parameter must be set for this type of template.</li>
-             * <li><strong>SubtitlePackage</strong>: a subtitle package template. If this type of template is used, ApsaraVideo VOD adds the subtitle information to the output file generated by packaging the multi-bitrate video streams of the corresponding video without transcoding. You must set the PackageSetting parameter for a subtitle package template and associate the subtitle package template with a video stream package template. A template group can contain only one subtitle package template.</li>
+             * <li><strong>Normal</strong> (default): A standard transcoding template. You cannot configure the Settings for the PackageSetting parameter for this type of template.</li>
+             * <li><strong>VideoPackage</strong>: A video stream packaging template. This type of template transcodes the video stream first and then builds an adaptive bitrate stream. You must configure the Settings for the PackageSetting parameter.</li>
+             * <li><strong>SubtitlePackage</strong>: A subtitle packaging template. This type of template does not transcode the video stream. It only builds the corresponding subtitle information into the adaptive bitrate output file. You must configure the Settings for the PackageSetting parameter. This type of template cannot exist independently in a template group and must be configured together with a VideoPackage template. You can configure only one SubtitlePackage template in a template group.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -564,7 +564,7 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The transcoding configurations of the video stream. The value is a JSON string.</p>
+             * <p>The transcoding configuration parameters for the video stream. The value is a JSON string.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;Codec&quot;:&quot;H.264&quot;,&quot;Bitrate&quot;:&quot;900&quot;,&quot;Width&quot;:&quot;960&quot;,&quot;Remove&quot;:&quot;false&quot;,&quot;Fps&quot;:&quot;30&quot;}</p>
@@ -575,7 +575,7 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IDs of the associated watermarks.</p>
+             * <p>The IDs of the associated image and text watermark templates.</p>
              */
             public Builder watermarkIds(java.util.List<String> watermarkIds) {
                 this.watermarkIds = watermarkIds;
@@ -731,7 +731,7 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the transcoding template group was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * <p>The time when the template group was created. The time follows the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2018-12-12T10:20:51Z</p>
@@ -742,10 +742,10 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the template group is the default one. Valid values:</p>
+             * <p>Specifies whether the template group is the default template group. Valid values:</p>
              * <ul>
-             * <li><strong>Default</strong></li>
-             * <li><strong>NotDefault</strong></li>
+             * <li><strong>Default</strong>: The default template group.</li>
+             * <li><strong>NotDefault</strong>: A non-default template group.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -757,10 +757,10 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the transcoding template group is locked. Valid values:</p>
+             * <p>Specifies whether the template group is locked. Valid values:</p>
              * <ul>
-             * <li><strong>Disabled</strong>: The template group is not locked.</li>
-             * <li><strong>Enabled</strong>: The template group is locked.</li>
+             * <li><strong>Disabled</strong>: Not locked.</li>
+             * <li><strong>Enabled</strong>: Locked.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -772,7 +772,7 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the transcoding template group was last modified. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * <p>The time when the template group was modified. The time follows the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2018-12-12T11:20:51Z</p>
@@ -783,7 +783,7 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the transcoding template group.</p>
+             * <p>The name of the template group.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -805,7 +805,7 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the transcoding templates.</p>
+             * <p>The list of transcoding template configuration information.</p>
              */
             public Builder transcodeTemplateList(java.util.List<TranscodeTemplateList> transcodeTemplateList) {
                 this.transcodeTemplateList = transcodeTemplateList;

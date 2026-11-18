@@ -117,7 +117,7 @@ public class GenerateDownloadSecretKeyRequest extends Request {
         } 
 
         /**
-         * <p>A custom string of 16 to 32 characters in length. The string must contain uppercase letters, lowercase letters, and digits.</p>
+         * <p>The custom encryption private key string. The string must be 16 to 32 characters in length, consist of letters and digits, and contain uppercase letters, lowercase letters, and digits.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,13 +130,13 @@ public class GenerateDownloadSecretKeyRequest extends Request {
         }
 
         /**
-         * <p>The unique identifier of the app.</p>
+         * <p>The unique app identifier.</p>
          * <ul>
-         * <li>Android: the SHA-1 fingerprint of the keystore. The value is a string that contains a colon (:).</li>
-         * <li>iOS: the bundle ID of the app.</li>
-         * <li>Windows: the serial number in the digital signature certificate.</li>
+         * <li>Android: the SHA-1 value of the keystore file. The obtained SHA-1 value must be a string that contains colons.</li>
+         * <li>iOS: the app bundle ID.</li>
+         * <li>Windows: the serial number of the digital signature certificate.</li>
          * </ul>
-         * <p>For more information about how to obtain the unique identifier of an app, see <a href="~~86107#section-wtj-9d7-lg2~~">Obtain the unique app identifier</a>.</p>
+         * <p>For more information about how to obtain the unique app identifier, see <a href="~~86107#section-wtj-9d7-lg2~~">Obtain the unique app identifier</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -171,7 +171,7 @@ public class SetMessageCallbackRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the application. If you leave this parameter empty, the default value <strong>app-1000000</strong> is used.</p>
+         * <p>The application ID. If you do not specify this parameter, the ID of the default application is used, which is fixed at <strong>app-1000000</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>app-1000000</p>
@@ -183,7 +183,7 @@ public class SetMessageCallbackRequest extends Request {
         }
 
         /**
-         * <p>The authentication key. The key can be up to 32 characters in length and must contain uppercase letters, lowercase letters, and digits. This parameter takes effect only when you set CallbackType to <strong>HTTP</strong>.</p>
+         * <p>The authentication key. The key can be up to 32 characters in length and must contain both uppercase and lowercase letters and digits. You can set this parameter when the callback method is set to <strong>HTTP</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>Dsf346dvet</p>
@@ -195,10 +195,10 @@ public class SetMessageCallbackRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable callback authentication. This parameter takes effect only when you set CallbackType to <strong>HTTP</strong>. Valid values:</p>
+         * <p>Specifies whether to enable authentication for HTTP callbacks. This parameter takes effect only when the callback method is set to <strong>HTTP</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>on</strong></li>
-         * <li><strong>off</strong></li>
+         * <li><strong>on</strong>: Enabled.</li>
+         * <li><strong>off</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -214,7 +214,7 @@ public class SetMessageCallbackRequest extends Request {
          * <p>The callback method. Valid values:</p>
          * <ul>
          * <li><strong>HTTP</strong></li>
-         * <li><strong>Simple Message Queue(formerly MNS)</strong></li>
+         * <li><strong>Simple MSMQ (formerly MNS)</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -227,7 +227,8 @@ public class SetMessageCallbackRequest extends Request {
         }
 
         /**
-         * <p>The callback URL. This parameter is required if you set CallbackType to <strong>HTTP</strong>. The callback URL cannot exceed 256 bytes in length. You can specify only one callback URL.</p>
+         * <p>The callback URL. This parameter is required when the callback method is set to <strong>HTTP</strong>.
+         * The callback URL cannot exceed 256 bytes in length. You cannot specify multiple callback URLs.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://developer.aliyundoc.com">http://developer.aliyundoc.com</a></p>
@@ -239,7 +240,11 @@ public class SetMessageCallbackRequest extends Request {
         }
 
         /**
-         * <p>The type of the callback event. If you do not set this parameter, notifications for all types of events are disabled. If you set this parameter to <strong>ALL</strong>, notifications for all types of events are enabled. You can specify the event types for which notifications are enabled. Separate multiple event types with commas (,). For more information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/55627.html">Overview</a>.</p>
+         * <p>The callback event types. If this parameter is left empty, all message notifications are disabled. If this parameter is set to <strong>ALL</strong>, all message notifications are enabled. You can also specify specific event types to enable. Separate multiple event types with commas (,). For more information about the valid values, see <a href="https://help.aliyun.com/document_detail/55627.html">Event types</a>.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
+         * <blockquote>
+         * <p>All AI-related events, such as AIMediaAuditComplete and AIMediaDNAComplete, use the value <strong>AIComplete</strong>.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>FileUploadComplete</p>
@@ -251,7 +256,7 @@ public class SetMessageCallbackRequest extends Request {
         }
 
         /**
-         * <p>The public endpoint of Message Service (MNS). This parameter only takes effect when the CallbackType parameter is set to <strong>Simple Message Queue(formerly MNS)</strong>. To obtain the public endpoint, log on to the <a href="https://account.aliyun.com/login/login.html">Simple Message Queue(formerly MNS) console</a> and click <strong>Get Endpoint</strong> in the upper-right corner of the Topics page. For more information, see <a href="https://help.aliyun.com/document_detail/27480.html">Endpoint</a>.</p>
+         * <p>The public endpoint of the MSMQ. Settings for this parameter are required when the callback method is set to <strong>Simple MSMQ (formerly MNS)</strong>. You can logon to the <a href="https://account.aliyun.com/login/login.html">Message Service console</a> and click the <strong>Get Endpoint</strong> button in the upper-right corner to obtain the endpoint. For more information, see <a href="https://help.aliyun.com/document_detail/27480.html">Endpoints</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>http://****.mns.cn-shanghai.aliyuncs.com/</p>
@@ -263,7 +268,7 @@ public class SetMessageCallbackRequest extends Request {
         }
 
         /**
-         * <p>The name of the Simple Message Queue(formerly MNS). You can obtain the name of the Simple Message Queue(formerly MNS) on the <strong>Queues</strong> page in the <a href="https://account.aliyun.com/login/login.html">Simple Message Queue(formerly MNS) console</a>. This parameter is required when you set CallbackType to <strong>Simple Message Queue(formerly MNS)</strong>.</p>
+         * <p>The name of the MSMQ. You can logon to the <a href="https://account.aliyun.com/login/login.html">Message Service console</a> and view the name in the <strong>Queue List</strong>. Settings for this parameter are required when the callback method is set to <strong>Simple MSMQ (formerly MNS)</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>quene_name</p>

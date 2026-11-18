@@ -67,7 +67,7 @@ public class SubmitMediaDNADeleteJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the job.</p>
+         * <p>The job ID.</p>
          * 
          * <strong>example:</strong>
          * <p>6805B2EC-CE87-****-8FF6-9C0E97719A26</p>
@@ -78,7 +78,7 @@ public class SubmitMediaDNADeleteJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>e5b1a2e7bee******b632c2710b9423f</p>

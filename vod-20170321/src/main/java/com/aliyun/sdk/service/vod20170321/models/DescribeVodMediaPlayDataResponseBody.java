@@ -106,7 +106,7 @@ public class DescribeVodMediaPlayDataResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the returned data.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -128,7 +128,7 @@ public class DescribeVodMediaPlayDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The list of returned data.</p>
          */
         public Builder qoeInfoList(java.util.List<QoeInfoList> qoeInfoList) {
             this.qoeInfoList = qoeInfoList;
@@ -136,7 +136,7 @@ public class DescribeVodMediaPlayDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>25818875-5F78-4AF6-D7393642CA58****</p>
@@ -294,7 +294,7 @@ public class DescribeVodMediaPlayDataResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of visits to the audio or video per day.</p>
+             * <p>The number of unique visitors for the audio or video file.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -305,7 +305,7 @@ public class DescribeVodMediaPlayDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the media file (VideoId).</p>
+             * <p>The media ID, which is the audio or video ID (VideoId).</p>
              * 
              * <strong>example:</strong>
              * <p>9ae2af636ca6c10412f44891fc****</p>
@@ -316,7 +316,7 @@ public class DescribeVodMediaPlayDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total playback duration of the audio or video. Unit: seconds.</p>
+             * <p>The total play duration for the audio or video file. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>2400</p>
@@ -327,7 +327,7 @@ public class DescribeVodMediaPlayDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The average playback duration of the audio or video per viewer. Unit: seconds.</p>
+             * <p>The average play duration per user for the audio or video file. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>120</p>
@@ -338,7 +338,7 @@ public class DescribeVodMediaPlayDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The average number of times that the audio or video was played per viewer.</p>
+             * <p>The average number of plays per user for the audio or video file.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -349,7 +349,7 @@ public class DescribeVodMediaPlayDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of times the audio or video has been played.</p>
+             * <p>The total number of plays for the audio or video file.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -371,10 +371,10 @@ public class DescribeVodMediaPlayDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the audio or video file.</p>
+             * <p>The title of the audio or video file.</p>
              * 
              * <strong>example:</strong>
-             * <p>title</p>
+             * <p>Alibaba Cloud VOD video title</p>
              */
             public Builder videoTitle(String videoTitle) {
                 this.videoTitle = videoTitle;

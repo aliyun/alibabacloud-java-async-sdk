@@ -199,7 +199,7 @@ public class SearchEditingProjectRequest extends Request {
         } 
 
         /**
-         * <p>The end of the time range to query. The query is performed based on the time range during which the required online editing projects were created. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * <p>The end time of the creation time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2017-01-11T13:00:00Z</p>
@@ -229,7 +229,7 @@ public class SearchEditingProjectRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * <p>The current page number. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -241,7 +241,7 @@ public class SearchEditingProjectRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Default value: <strong>10</strong>. Maximum value: <strong>100</strong>.</p>
+         * <p>The number of entries per page. Default value: <strong>10</strong>. Maximum value: <strong>100</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -271,14 +271,14 @@ public class SearchEditingProjectRequest extends Request {
         }
 
         /**
-         * <p>The sorting rule of results. Valid values:</p>
+         * <p>The sorting method of the results. Valid values:</p>
          * <ul>
-         * <li><strong>CreationTime:Desc</strong>: sorts the results based on the creation time in descending order. This is the default value.</li>
-         * <li><strong>CreationTime:Asc</strong>: sorts the results based on the creation time in ascending order.</li>
+         * <li><strong>desc</strong> (default): Sorts the results by creation time in descending order.</li>
+         * <li><strong>asc</strong>: Sorts the results by creation time in ascending order.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>CreationTime:Desc</p>
+         * <p>desc</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -287,7 +287,7 @@ public class SearchEditingProjectRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. The query is performed based on the time range during which the required online editing projects were created. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * <p>The start time of the creation time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2017-01-11T12:00:00Z</p>
@@ -299,12 +299,12 @@ public class SearchEditingProjectRequest extends Request {
         }
 
         /**
-         * <p>The status of the online editing project. Separate multiple states with commas (,). By default, all online editing projects are queried. Valid values:</p>
+         * <p>The status of the online editing project. Separate multiple values with commas (,). By default, all online editing projects are retrieved. Valid values:</p>
          * <ul>
-         * <li><strong>Normal</strong>: indicates that the online editing project is in draft.</li>
-         * <li><strong>Producing</strong>: indicates that the video is being produced.</li>
-         * <li><strong>Produced</strong>: indicates that the video was produced.</li>
-         * <li><strong>ProduceFailed</strong>: indicates that the video failed to be produced.</li>
+         * <li><strong>Normal</strong>: Draft.</li>
+         * <li><strong>Producing</strong>: Producing.</li>
+         * <li><strong>Produced</strong>: Produced.</li>
+         * <li><strong>ProduceFailed</strong>: Production failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

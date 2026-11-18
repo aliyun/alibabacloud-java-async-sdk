@@ -181,11 +181,11 @@ public class SubmitAIMediaAuditJobRequest extends Request {
         }
 
         /**
-         * <p>The configuration information about the review job.</p>
+         * <p>The configuration of the review job.</p>
          * <ul>
-         * <li>Other configuration items of the review job. Only the ResourceType field is supported. This field is used to specify the type of media files. You can adjust review standards and rules based on the type of media files.</li>
-         * <li>If you want to modify the review standard and rules based on ResourceType, submit a ticket. For more information, see <a href="https://help.aliyun.com/document_detail/464625.html">Contact us</a>.</li>
-         * <li>The value of ResourceType can contain only letters, digits, and underscores (_).</li>
+         * <li>For other configuration items of the review job, only the ResourceType field is currently supported. This field controls the media file type, and you can adjust the review standards and rules for the specified type.</li>
+         * <li>To adjust the review standards and rules for a ResourceType, submit a ticket for technical support. For information about how to submit a ticket, refer to <a href="https://help.aliyun.com/document_detail/464625.html">Contact us</a>.</li>
+         * <li>Usage notes for ResourceType: Only letters, digits, and underscores (_) are allowed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -198,7 +198,7 @@ public class SubmitAIMediaAuditJobRequest extends Request {
         }
 
         /**
-         * <p>The ID of the video file. To obtain the file ID, log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Review Management</strong> &gt; <strong>Content Moderation</strong> in the left-side navigation pane.</p>
+         * <p>The audio or video ID. Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Review Management</strong> &gt; <strong>Video Review</strong> to view the audio or video ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -211,7 +211,7 @@ public class SubmitAIMediaAuditJobRequest extends Request {
         }
 
         /**
-         * <p>The type of the media file. Only <strong>video</strong> is supported.</p>
+         * <p>The media type. Currently, only <strong>video</strong> is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>video</p>
@@ -232,13 +232,13 @@ public class SubmitAIMediaAuditJobRequest extends Request {
         }
 
         /**
-         * <p>The ID of the AI template. You can use one of the following methods to obtain the ID of the AI template:</p>
+         * <p>The AI template ID. You can obtain the ID by using one of the following methods:</p>
          * <ul>
-         * <li>Obtain the value of TemplateId from the response to the <a href="https://help.aliyun.com/document_detail/102930.html">AddAITemplate</a> operation that you call to create an AI template.</li>
-         * <li>Obtain the value of TemplateId from the response to the <a href="https://help.aliyun.com/document_detail/102936.html">ListAITemplate</a> operation that you call to create an AI template.</li>
+         * <li>When you call the <a href="https://help.aliyun.com/document_detail/102930.html">AddAITemplate</a> operation to add an AI template, the AI template ID is the value of the TemplateId response parameter.</li>
+         * <li>After the AI template is added, call the <a href="https://help.aliyun.com/document_detail/102936.html">ListAITemplate</a> operation to query the AI template ID, which is the value of the TemplateId response parameter.</li>
          * </ul>
          * <blockquote>
-         * <p> If you do not specify an ID, the ID of the default AI template is used.</p>
+         * <p>If you do not specify an AI template ID, the default AI template ID for automated review is used.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -251,9 +251,9 @@ public class SubmitAIMediaAuditJobRequest extends Request {
         }
 
         /**
-         * <p>The custom settings. The value must be a JSON string. You can configure settings such as message callbacks. For more information, see <a href="https://help.aliyun.com/document_detail/86952.html">UserData</a>.</p>
+         * <p>The custom settings. The value is a JSON string that supports settings such as message callbacks. For more information, refer to <a href="https://help.aliyun.com/document_detail/86952.html">UserData</a>.</p>
          * <blockquote>
-         * <p> To use the callback configurations specified by this parameter, you must configure an HTTP callback URL and specify the types of the callback events in the ApsaraVideo VOD console. Otherwise, the callback configurations do not take effect. For more information about how to configure HTTP callback settings in the ApsaraVideo VOD console, see <a href="https://help.aliyun.com/document_detail/86071.html">Configure callback settings</a>.</p>
+         * <p>To use message callbacks in this parameter, you must configure an HTTP callback URL and select the corresponding callback event types in the console. Otherwise, the callback settings do not take effect. For information about how to configure HTTP callbacks in the console, refer to <a href="https://help.aliyun.com/document_detail/86071.html">Callback settings</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

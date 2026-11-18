@@ -67,7 +67,7 @@ public class GenerateDownloadSecretKeyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The key file for secure download.</p>
+         * <p>The generated secure download key.</p>
          * 
          * <strong>example:</strong>
          * <hr>
@@ -78,7 +78,7 @@ public class GenerateDownloadSecretKeyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>E99B9BAD-7F9D-552B-A689-B72E92EA040E</p>

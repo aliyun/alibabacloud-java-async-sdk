@@ -129,7 +129,10 @@ public class DescribeVodEditingUsageDataRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>The application ID. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Multi-application</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app-****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -138,7 +141,10 @@ public class DescribeVodEditingUsageDataRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mmZ format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-11-07T16:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -156,7 +162,10 @@ public class DescribeVodEditingUsageDataRequest extends Request {
         }
 
         /**
-         * Region.
+         * <p>The region. By default, data from all regions is returned. You can specify multiple regions separated by commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -165,7 +174,10 @@ public class DescribeVodEditingUsageDataRequest extends Request {
         }
 
         /**
-         * Specification.
+         * <p>The output specification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>H264.SD</p>
          */
         public Builder specification(String specification) {
             this.putQueryParameter("Specification", specification);
@@ -174,7 +186,11 @@ public class DescribeVodEditingUsageDataRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mmZ format. The time must be in UTC.</p>
+         * <p>If you leave this parameter empty, data from the last 24 hours is queried by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-11-06T16:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

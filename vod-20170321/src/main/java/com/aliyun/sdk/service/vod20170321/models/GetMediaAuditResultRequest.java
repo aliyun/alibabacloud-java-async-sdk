@@ -60,7 +60,7 @@ public class GetMediaAuditResultRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the video or image.</p>
+         * <p>The ID of the video or image to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

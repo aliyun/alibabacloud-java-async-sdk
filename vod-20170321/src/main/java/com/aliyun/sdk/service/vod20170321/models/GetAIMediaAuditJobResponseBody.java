@@ -67,7 +67,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the intelligent review job.</p>
+         * <p>The automated review job information.</p>
          */
         public Builder mediaAuditJob(MediaAuditJob mediaAuditJob) {
             this.mediaAuditJob = mediaAuditJob;
@@ -75,7 +75,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>EAA3E96A-02E2-41*****85-08E1D568ED3A</p>
@@ -170,18 +170,18 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The category of the review result.</p>
+             * <p>The review result category. Valid values:</p>
              * <ul>
-             * <li><strong>normal</strong>: normal content</li>
-             * <li><strong>spam</strong>: spam</li>
-             * <li><strong>ad</strong>: ads</li>
-             * <li><strong>politics</strong>: political content</li>
-             * <li><strong>terrorism</strong>: terrorist content</li>
-             * <li><strong>abuse</strong>: abuse</li>
-             * <li><strong>porn</strong>: pornographic content.</li>
-             * <li><strong>flood</strong>: excessive junk content</li>
-             * <li><strong>contraband</strong>: prohibited content</li>
-             * <li><strong>meaningless</strong>: meaningless content</li>
+             * <li><strong>normal</strong>: Normal.</li>
+             * <li><strong>spam</strong>: Spam content.</li>
+             * <li><strong>ad</strong>: Ad.</li>
+             * <li><strong>politics</strong>: Political content.</li>
+             * <li><strong>terrorism</strong>: Terrorist content.</li>
+             * <li><strong>abuse</strong>: Abuse.</li>
+             * <li><strong>porn</strong>: Pornographic content.</li>
+             * <li><strong>flood</strong>: Flooding.</li>
+             * <li><strong>contraband</strong>: Contraband.</li>
+             * <li><strong>meaningless</strong>: Meaningless.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -193,7 +193,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The review scenario. The value is <strong>antispam</strong>.</p>
+             * <p>The review scene. Fixed value: <strong>antispam</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>antispam</p>
@@ -204,7 +204,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The score.</p>
+             * <p>The result score.</p>
              * 
              * <strong>example:</strong>
              * <p>99.91</p>
@@ -215,11 +215,11 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The recommendation for review results. Valid values:</p>
+             * <p>The review suggestion. Valid values:</p>
              * <ul>
-             * <li><strong>block</strong></li>
-             * <li><strong>review</strong></li>
-             * <li><strong>pass</strong></li>
+             * <li><strong>block</strong>: Violation.</li>
+             * <li><strong>review</strong>: Suspected violation.</li>
+             * <li><strong>pass</strong>: Passed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -316,57 +316,57 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The category of the review result.</p>
-             * <p>Valid values if scene is <strong>porn</strong>:</p>
+             * <p>The review result category.</p>
+             * <p>When the scene is <strong>porn</strong>, valid values:</p>
              * <ul>
-             * <li><strong>porn</strong></li>
-             * <li><strong>sexy</strong></li>
-             * <li><strong>normal</strong></li>
+             * <li><strong>porn</strong>: Pornographic.</li>
+             * <li><strong>sexy</strong>: Sexy.</li>
+             * <li><strong>normal</strong>: Normal.</li>
              * </ul>
-             * <p>Valid values if scene is <strong>terrorism</strong>:</p>
+             * <p>When the scene is <strong>terrorism</strong>, valid values:</p>
              * <ul>
-             * <li><strong>normal</strong></li>
-             * <li><strong>bloody</strong></li>
-             * <li><strong>explosion</strong></li>
-             * <li><strong>outfit</strong></li>
-             * <li><strong>logo</strong></li>
-             * <li><strong>weapon</strong></li>
-             * <li><strong>politics</strong></li>
-             * <li><strong>violence</strong></li>
-             * <li><strong>crowd</strong></li>
-             * <li><strong>parade</strong></li>
-             * <li><strong>carcrash</strong></li>
-             * <li><strong>flag</strong></li>
-             * <li><strong>location</strong></li>
-             * <li><strong>others</strong></li>
+             * <li><strong>normal</strong>: Normal.</li>
+             * <li><strong>bloody</strong>: Bloody.</li>
+             * <li><strong>explosion</strong>: Explosion and smoke.</li>
+             * <li><strong>outfit</strong>: Special outfit.</li>
+             * <li><strong>logo</strong>: Special logo.</li>
+             * <li><strong>weapon</strong>: Weapon.</li>
+             * <li><strong>politics</strong>: Political content.</li>
+             * <li><strong>violence</strong>: Violence.</li>
+             * <li><strong>crowd</strong>: Crowd.</li>
+             * <li><strong>parade</strong>: Parade.</li>
+             * <li><strong>carcrash</strong>: Car crash.</li>
+             * <li><strong>flag</strong>: Flag.</li>
+             * <li><strong>location</strong>: Landmark.</li>
+             * <li><strong>others</strong>: Others.</li>
              * </ul>
-             * <p>Valid values if scene is <strong>ad</strong>:</p>
+             * <p>When the scene is <strong>ad</strong>, valid values:</p>
              * <ul>
-             * <li><strong>normal</strong>: normal content</li>
-             * <li><strong>ad</strong>: ads</li>
-             * <li><strong>politics</strong>: political content</li>
-             * <li><strong>porn</strong>: pornographic content</li>
-             * <li><strong>abuse</strong>: verbal abuse</li>
-             * <li><strong>terrorism</strong>: terrorist content</li>
-             * <li><strong>contraband</strong>: prohibited content</li>
-             * <li><strong>spam</strong>: spam content</li>
-             * <li><strong>npx</strong>: illegal ad</li>
-             * <li><strong>qrcode</strong>: QR code</li>
-             * <li><strong>programCode</strong>: mini program code</li>
+             * <li><strong>normal</strong>: Normal.</li>
+             * <li><strong>ad</strong>: Other ads.</li>
+             * <li><strong>politics</strong>: Text containing political content.</li>
+             * <li><strong>porn</strong>: Text containing pornographic content.</li>
+             * <li><strong>abuse</strong>: Text containing abusive content.</li>
+             * <li><strong>terrorism</strong>: Text containing terrorist content.</li>
+             * <li><strong>contraband</strong>: Text containing contraband content.</li>
+             * <li><strong>spam</strong>: Text containing other spam content.</li>
+             * <li><strong>npx</strong>: Nuisance ad.</li>
+             * <li><strong>qrcode</strong>: QR code included.</li>
+             * <li><strong>programCode</strong>: Mini program code included.</li>
              * </ul>
-             * <p>Valid values if scene is <strong>live</strong>:</p>
+             * <p>When the scene is <strong>live</strong>, valid values:</p>
              * <ul>
-             * <li><strong>normal</strong>: normal content</li>
-             * <li><strong>meaningless</strong>: meaningless content, such as a black or white screen.</li>
-             * <li><strong>PIP</strong>: picture-in-picture</li>
-             * <li><strong>smoking</strong>: smoking</li>
-             * <li><strong>drivelive</strong>: live broadcasting in a running vehicle</li>
+             * <li><strong>normal</strong>: Normal.</li>
+             * <li><strong>meaningless</strong>: No content in the image, such as a black or white screen.</li>
+             * <li><strong>PIP</strong>: Picture-in-Picture (PiP).</li>
+             * <li><strong>smoking</strong>: Smoking.</li>
+             * <li><strong>drivelive</strong>: In-car live streaming.</li>
              * </ul>
-             * <p>Valid values if scene is <strong>logo</strong>:</p>
+             * <p>When the scene is <strong>logo</strong>, valid values:</p>
              * <ul>
-             * <li><strong>normal</strong>: normal content</li>
-             * <li><strong>TV</strong>: controlled TV station logo</li>
-             * <li><strong>trademark</strong>: trademark</li>
+             * <li><strong>normal</strong>: Normal.</li>
+             * <li><strong>TV</strong>: Regulated logo included.</li>
+             * <li><strong>trademark</strong>: Trademark included.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -378,13 +378,13 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The review scenario. Valid values:</p>
+             * <p>The review scene. Valid values:</p>
              * <ul>
-             * <li><strong>porn</strong>: pornographic content</li>
-             * <li><strong>terrorism</strong>: terrorist or politically sensitive content</li>
-             * <li><strong>ad</strong>: ad violation</li>
-             * <li><strong>live</strong>: undesirable scene</li>
-             * <li><strong>logo</strong>: logo</li>
+             * <li><strong>porn</strong>: Pornography detection.</li>
+             * <li><strong>terrorism</strong>: Terrorist and political content detection.</li>
+             * <li><strong>ad</strong>: Image and text violation detection.</li>
+             * <li><strong>live</strong>: Undesirable scene detection.</li>
+             * <li><strong>logo</strong>: Image logo detection.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -396,7 +396,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The score of the image of the category that is indicated by Label. Valid values: <code>[0, 100]</code>. The score is representative of the confidence.</p>
+             * <p>The score of the image that hits the label. Valid values: <code>[0, 100]</code>. The score indicates the probability that the image belongs to the corresponding label category. A higher score indicates higher accuracy.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -407,11 +407,11 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The recommendation for review results. Valid values:</p>
+             * <p>The review suggestion. Valid values:</p>
              * <ul>
-             * <li><strong>block</strong></li>
-             * <li><strong>review</strong></li>
-             * <li><strong>pass</strong></li>
+             * <li><strong>block</strong>: Violation.</li>
+             * <li><strong>review</strong>: Suspected violation.</li>
+             * <li><strong>pass</strong>: Passed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -521,14 +521,14 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The categories of the image review results. Multiple values are separated by commas (,). Valid values:</p>
+             * <p>The image review result category. Multiple values are separated by commas (,). Valid values:</p>
              * <ul>
-             * <li><strong>porn</strong>: pornographic content</li>
-             * <li><strong>terrorism</strong>: terrorist or politically sensitive content</li>
-             * <li><strong>ad</strong>: ad violation</li>
-             * <li><strong>live</strong>: undesirable scene</li>
-             * <li><strong>logo</strong>: logo</li>
-             * <li><strong>normal</strong>: normal content</li>
+             * <li><strong>porn</strong>: Pornographic content.</li>
+             * <li><strong>terrorism</strong>: Terrorist and political content.</li>
+             * <li><strong>ad</strong>: Image and text violation.</li>
+             * <li><strong>live</strong>: Undesirable scene.</li>
+             * <li><strong>logo</strong>: Image logo.</li>
+             * <li><strong>normal</strong>: Normal.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -540,7 +540,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Details of image review results.</p>
+             * <p>The image review result details.</p>
              */
             public Builder result(java.util.List<Result> result) {
                 this.result = result;
@@ -548,11 +548,11 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The recommendation for review results. Valid values:</p>
+             * <p>The review suggestion. Valid values:</p>
              * <ul>
-             * <li><strong>block</strong></li>
-             * <li><strong>review</strong></li>
-             * <li><strong>pass</strong></li>
+             * <li><strong>block</strong>: Violation.</li>
+             * <li><strong>review</strong>: Suspected violation.</li>
+             * <li><strong>pass</strong>: Passed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -564,7 +564,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the image. Valid value: <strong>cover</strong>.</p>
+             * <p>The image category. Valid value: <strong>cover</strong> (thumbnail).</p>
              * 
              * <strong>example:</strong>
              * <p>cover</p>
@@ -708,15 +708,15 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The category of the review result. Valid values:</p>
+             * <p>The review result category. Valid values:</p>
              * <ul>
-             * <li><strong>spam</strong>: spam content</li>
-             * <li><strong>ad</strong>: ads</li>
-             * <li><strong>abuse</strong>: abuse</li>
-             * <li><strong>flood</strong>: excessive junk content</li>
-             * <li><strong>contraband</strong>: prohibited content</li>
-             * <li><strong>meaningless</strong>: meaningless content</li>
-             * <li><strong>normal</strong>: normal content</li>
+             * <li><strong>spam</strong>: Spam content.</li>
+             * <li><strong>ad</strong>: Ad.</li>
+             * <li><strong>abuse</strong>: Abuse.</li>
+             * <li><strong>flood</strong>: Flooding.</li>
+             * <li><strong>contraband</strong>: Contraband.</li>
+             * <li><strong>meaningless</strong>: Meaningless.</li>
+             * <li><strong>normal</strong>: Normal.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -728,7 +728,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The review scenario. The value is <strong>antispam</strong>.</p>
+             * <p>The review scene. Fixed value: <strong>antispam</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>antispam</p>
@@ -739,7 +739,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The score of the image of the category that is indicated by Label. Valid values: <code>[0, 100]</code>. The score is representative of the confidence.</p>
+             * <p>The score of the image that hits the label. Valid values: <code>[0, 100]</code>. The score indicates the probability that the image belongs to the corresponding label category. A higher score indicates higher accuracy.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -750,11 +750,11 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The recommendation for review results. Valid values:</p>
+             * <p>The review suggestion. Valid values:</p>
              * <ul>
-             * <li><strong>block</strong></li>
-             * <li><strong>review</strong></li>
-             * <li><strong>pass</strong></li>
+             * <li><strong>block</strong>: Violation.</li>
+             * <li><strong>review</strong>: Suspected violation.</li>
+             * <li><strong>pass</strong>: Passed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -766,7 +766,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the text. The value is <strong>title</strong>.</p>
+             * <p>The text categorization. Valid value: <strong>title</strong> (title).</p>
              * 
              * <strong>example:</strong>
              * <p>title</p>
@@ -847,19 +847,19 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The categories of the ad review results. Valid values:</p>
+             * <p>The ad review result category. Valid values:</p>
              * <ul>
-             * <li><strong>normal</strong>: normal content</li>
-             * <li><strong>ad</strong>: other ads</li>
-             * <li><strong>politics</strong>: political content</li>
-             * <li><strong>porn</strong>: pornographic content</li>
-             * <li><strong>abuse</strong>: abuse</li>
-             * <li><strong>terrorism</strong>: terrorist content</li>
-             * <li><strong>contraband</strong>: prohibited content</li>
-             * <li><strong>spam</strong>: spam content</li>
-             * <li><strong>npx</strong>: illegal ad</li>
-             * <li><strong>qrcode</strong>: QR code</li>
-             * <li><strong>programCode</strong>: mini program code</li>
+             * <li><strong>normal</strong>: Normal.</li>
+             * <li><strong>ad</strong>: Other ads.</li>
+             * <li><strong>politics</strong>: Text containing political content.</li>
+             * <li><strong>porn</strong>: Text containing pornographic content.</li>
+             * <li><strong>abuse</strong>: Text containing abusive content.</li>
+             * <li><strong>terrorism</strong>: Text containing terrorist content.</li>
+             * <li><strong>contraband</strong>: Text containing contraband content.</li>
+             * <li><strong>spam</strong>: Text containing other spam content.</li>
+             * <li><strong>npx</strong>: Nuisance ad.</li>
+             * <li><strong>qrcode</strong>: QR code included.</li>
+             * <li><strong>programCode</strong>: Mini program code included.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -956,19 +956,19 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The categories of the ad review results. Valid values:</p>
+             * <p>The ad review result category. Valid values:</p>
              * <ul>
-             * <li><strong>normal</strong>: normal content</li>
-             * <li><strong>ad</strong>: other ads</li>
-             * <li><strong>politics</strong>: political content</li>
-             * <li><strong>porn</strong>: pornographic content</li>
-             * <li><strong>abuse</strong>: abuse</li>
-             * <li><strong>terrorism</strong>: terrorist content</li>
-             * <li><strong>contraband</strong>: prohibited content</li>
-             * <li><strong>spam</strong>: spam content</li>
-             * <li><strong>npx</strong>: illegal ad</li>
-             * <li><strong>qrcode</strong>: QR code</li>
-             * <li><strong>programCode</strong>: mini program code</li>
+             * <li><strong>normal</strong>: Normal.</li>
+             * <li><strong>ad</strong>: Other ads.</li>
+             * <li><strong>politics</strong>: Text containing political content.</li>
+             * <li><strong>porn</strong>: Text containing pornographic content.</li>
+             * <li><strong>abuse</strong>: Text containing abusive content.</li>
+             * <li><strong>terrorism</strong>: Text containing terrorist content.</li>
+             * <li><strong>contraband</strong>: Text containing contraband content.</li>
+             * <li><strong>spam</strong>: Text containing other spam content.</li>
+             * <li><strong>npx</strong>: Nuisance ad.</li>
+             * <li><strong>qrcode</strong>: QR code included.</li>
+             * <li><strong>programCode</strong>: Mini program code included.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -980,7 +980,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The score of the snapshot in the category that is indicated by Label.</p>
+             * <p>The score of the video snapshot that hits the label.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -991,7 +991,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp of the snapshot in the video. Unit: milliseconds.</p>
+             * <p>The position of the video snapshot in the video. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>500</p>
@@ -1005,7 +1005,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
              * <p>The URL of the video snapshot.</p>
              * 
              * <strong>example:</strong>
-             * <p><a href="http://temp-****bucket.oss-cn-shanghai.aliyuncs.com/aivideocensor/****.jpg">http://temp-****bucket.oss-cn-shanghai.aliyuncs.com/aivideocensor/****.jpg</a></p>
+             * <p><a href="http://temp-testbucket.oss-cn-shanghai.aliyuncs.com/aivideocensor/****.jpg">http://temp-testbucket.oss-cn-shanghai.aliyuncs.com/aivideocensor/****.jpg</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -1124,7 +1124,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The average score of the review results.</p>
+             * <p>The average score of the ad review result.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -1135,7 +1135,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of snapshots of each category in the review result.</p>
+             * <p>The categories of the review results and the number of video snapshots for each category.</p>
              */
             public Builder counterList(java.util.List<CounterList> counterList) {
                 this.counterList = counterList;
@@ -1143,19 +1143,19 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The categories of the ad review results. Valid values:</p>
+             * <p>The ad review result category. Valid values:</p>
              * <ul>
-             * <li><strong>normal</strong>: normal content</li>
-             * <li><strong>ad</strong>: other ads</li>
-             * <li><strong>politics</strong>: political content</li>
-             * <li><strong>porn</strong>: pornographic content</li>
-             * <li><strong>abuse</strong>: abuse</li>
-             * <li><strong>terrorism</strong>: terrorist content</li>
-             * <li><strong>contraband</strong>: prohibited content</li>
-             * <li><strong>spam</strong>: spam content</li>
-             * <li><strong>npx</strong>: illegal ad</li>
-             * <li><strong>qrcode</strong>: QR code</li>
-             * <li><strong>programCode</strong>: mini program code</li>
+             * <li><strong>normal</strong>: Normal.</li>
+             * <li><strong>ad</strong>: Other ads.</li>
+             * <li><strong>politics</strong>: Text containing political content.</li>
+             * <li><strong>porn</strong>: Text containing pornographic content.</li>
+             * <li><strong>abuse</strong>: Text containing abusive content.</li>
+             * <li><strong>terrorism</strong>: Text containing terrorist content.</li>
+             * <li><strong>contraband</strong>: Text containing contraband content.</li>
+             * <li><strong>spam</strong>: Text containing other spam content.</li>
+             * <li><strong>npx</strong>: Nuisance ad.</li>
+             * <li><strong>qrcode</strong>: QR code included.</li>
+             * <li><strong>programCode</strong>: Mini program code included.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1178,11 +1178,11 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The recommendation for review results. Valid values:</p>
+             * <p>The review suggestion. Valid values:</p>
              * <ul>
-             * <li><strong>block</strong>: The content violates the regulations.</li>
-             * <li><strong>review</strong>: The content may violate the regulations.</li>
-             * <li><strong>pass</strong>: The content passes the review.</li>
+             * <li><strong>block</strong>: Violation.</li>
+             * <li><strong>review</strong>: Suspected violation.</li>
+             * <li><strong>pass</strong>: Passed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1194,7 +1194,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the snapshot that has the highest score in the category.</p>
+             * <p>The information about the video snapshots with the highest scores for the hit label.</p>
              */
             public Builder topList(java.util.List<TopList> topList) {
                 this.topList = topList;
@@ -1261,10 +1261,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of video snapshots.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>10</p>
+             * <p>The number of video frames that correspond to the label.</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -1272,23 +1269,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The categories of the ad review results. Valid values:</p>
-             * <ul>
-             * <li><strong>normal</strong>: normal content</li>
-             * <li><strong>ad</strong>: other ads</li>
-             * <li><strong>politics</strong>: political content</li>
-             * <li><strong>porn</strong>: pornographic content</li>
-             * <li><strong>abuse</strong>: abuse</li>
-             * <li><strong>terrorism</strong>: terrorist content</li>
-             * <li><strong>contraband</strong>: prohibited content</li>
-             * <li><strong>spam</strong>: spam content</li>
-             * <li><strong>npx</strong>: illegal ad</li>
-             * <li><strong>qrcode</strong>: QR code</li>
-             * <li><strong>programCode</strong>: mini program code</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>ad</p>
+             * <p>The moderation result label.</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -1381,23 +1362,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The categories of the ad review results. Valid values:</p>
-             * <ul>
-             * <li><strong>normal</strong>: normal content</li>
-             * <li><strong>ad</strong>: other ads</li>
-             * <li><strong>politics</strong>: political content</li>
-             * <li><strong>porn</strong>: pornographic content</li>
-             * <li><strong>abuse</strong>: abuse</li>
-             * <li><strong>terrorism</strong>: terrorist content</li>
-             * <li><strong>contraband</strong>: prohibited content</li>
-             * <li><strong>spam</strong>: spam content</li>
-             * <li><strong>npx</strong>: illegal ad</li>
-             * <li><strong>qrcode</strong>: QR code</li>
-             * <li><strong>programCode</strong>: mini program code</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>ad</p>
+             * <p>The moderation category.</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -1405,10 +1370,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The score of the snapshot in the category that is indicated by Label.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>100</p>
+             * <p>The confidence score of the video snapshot that hits the label.</p>
              */
             public Builder score(String score) {
                 this.score = score;
@@ -1416,10 +1378,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp of the snapshot in the video. Unit: milliseconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>500</p>
+             * <p>The position of the video snapshot in the video.</p>
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;
@@ -1428,9 +1387,6 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
 
             /**
              * <p>The URL of the video snapshot.</p>
-             * 
-             * <strong>example:</strong>
-             * <p><a href="http://temp-****bucket.oss-cn-shanghai.aliyuncs.com/aivideocensor/****.jpg">http://temp-****bucket.oss-cn-shanghai.aliyuncs.com/aivideocensor/****.jpg</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -1549,10 +1505,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The average score of the review results.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>100</p>
+             * <p>The average confidence score of the hit frames. This parameter is not returned if no frames are hit.</p>
              */
             public Builder averageScore(String averageScore) {
                 this.averageScore = averageScore;
@@ -1560,7 +1513,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of snapshots of each category in the review result.</p>
+             * <p>The aggregated count of violation labels, including Label (the Green label) and Count (the number of frames that hit the label).</p>
              */
             public Builder counterList(java.util.List<GreenEnhancedResultCounterList> counterList) {
                 this.counterList = counterList;
@@ -1568,23 +1521,10 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The categories of the ad review results. Valid values:</p>
-             * <ul>
-             * <li><strong>normal</strong>: normal content</li>
-             * <li><strong>ad</strong>: other ads</li>
-             * <li><strong>politics</strong>: political content</li>
-             * <li><strong>porn</strong>: pornographic content</li>
-             * <li><strong>abuse</strong>: abuse</li>
-             * <li><strong>terrorism</strong>: terrorist content</li>
-             * <li><strong>contraband</strong>: prohibited content</li>
-             * <li><strong>spam</strong>: spam content</li>
-             * <li><strong>npx</strong>: illegal ad</li>
-             * <li><strong>qrcode</strong>: QR code</li>
-             * <li><strong>programCode</strong>: mini program code</li>
-             * </ul>
+             * <p>The union of hit Green native labels, separated by commas, such as pornographic_adultContent_tii. If no labels are hit, the value is normal.</p>
              * 
              * <strong>example:</strong>
-             * <p>ad</p>
+             * <p>normal</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -1592,10 +1532,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The highest review score.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>100</p>
+             * <p>The highest confidence score of the hit frames. This parameter is not returned if no frames are hit.</p>
              */
             public Builder maxScore(String maxScore) {
                 this.maxScore = maxScore;
@@ -1603,15 +1540,10 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The recommendation for review results. Valid values:</p>
-             * <ul>
-             * <li><strong>block</strong>: The content violates the regulations.</li>
-             * <li><strong>review</strong>: The content may violate the regulations.</li>
-             * <li><strong>pass</strong>: The content passes the review.</li>
-             * </ul>
+             * <p>The image moderation conclusion, which is mapped from frameResult.riskLevel: high to block, medium or low to review, and none to pass.</p>
              * 
              * <strong>example:</strong>
-             * <p>block</p>
+             * <p>pass</p>
              */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;
@@ -1619,7 +1551,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the snapshot that has the highest score in the category.</p>
+             * <p>The details of the hit frames, sorted in descending order of confidence score.</p>
              */
             public Builder topList(java.util.List<GreenEnhancedResultTopList> topList) {
                 this.topList = topList;
@@ -1689,7 +1621,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
              * <p>The number of video snapshots.</p>
              * 
              * <strong>example:</strong>
-             * <p>0</p>
+             * <p>4</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -1697,17 +1629,17 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The category of the review result. Valid values:</p>
+             * <p>The moderation category. Valid values:</p>
              * <ul>
-             * <li><strong>normal</strong>: normal content</li>
-             * <li><strong>meaningless</strong>: meaningless content, such as a black or white screen.</li>
-             * <li><strong>PIP</strong>: picture-in-picture</li>
+             * <li><strong>normal</strong>: normal</li>
+             * <li><strong>meaningless</strong>: the image contains no content, such as a black or white screen</li>
+             * <li><strong>PIP</strong>: Picture-in-Picture (PiP)</li>
              * <li><strong>smoking</strong>: smoking</li>
-             * <li><strong>drivelive</strong>: live broadcasting in a running vehicle</li>
+             * <li><strong>drivelive</strong>: live streaming inside a vehicle</li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>live</p>
+             * <p>smoking</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -1800,17 +1732,17 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The category of the review result. Valid values:</p>
+             * <p>The moderation category. Valid values:</p>
              * <ul>
-             * <li><strong>normal</strong>: normal content</li>
-             * <li><strong>meaningless</strong>: meaningless content, such as a black or white screen.</li>
-             * <li><strong>PIP</strong>: picture-in-picture</li>
+             * <li><strong>normal</strong>: normal</li>
+             * <li><strong>meaningless</strong>: the image contains no content, such as a black or white screen</li>
+             * <li><strong>PIP</strong>: Picture-in-Picture (PiP)</li>
              * <li><strong>smoking</strong>: smoking</li>
-             * <li><strong>drivelive</strong>: live broadcasting in a running vehicle</li>
+             * <li><strong>drivelive</strong>: live streaming inside a vehicle</li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>live</p>
+             * <p>smoking</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -1818,7 +1750,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The score of the snapshot in the category that is indicated by Label.</p>
+             * <p>The score of the video snapshot that hits the label.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -1829,7 +1761,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp of the snapshot in the video. Unit: milliseconds.</p>
+             * <p>The position of the video snapshot in the video. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>500</p>
@@ -1843,7 +1775,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
              * <p>The URL of the video snapshot.</p>
              * 
              * <strong>example:</strong>
-             * <p><a href="http://temp-****bucket.oss-cn-shanghai.aliyuncs.com/aivideocensor/****.jpg">http://temp-****bucket.oss-cn-shanghai.aliyuncs.com/aivideocensor/****.jpg</a></p>
+             * <p><a href="http://temp-testbucket.oss-cn-shanghai.aliyuncs.com/aivideocensor/****.jpg">http://temp-testbucket.oss-cn-shanghai.aliyuncs.com/aivideocensor/****.jpg</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -1962,7 +1894,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The average score of the review results.</p>
+             * <p>The average score of the moderation result.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -1973,7 +1905,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The categories of the review results and the number of video snapshots in each category.</p>
+             * <p>The moderation categories and the number of video snapshots for each category.</p>
              */
             public Builder counterList(java.util.List<LiveResultCounterList> counterList) {
                 this.counterList = counterList;
@@ -1981,17 +1913,17 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The category of the review result. Valid values:</p>
+             * <p>The moderation category. Valid values:</p>
              * <ul>
-             * <li><strong>normal</strong>: normal content</li>
-             * <li><strong>meaningless</strong>: meaningless content, such as a black or white screen.</li>
-             * <li><strong>PIP</strong>: picture-in-picture</li>
+             * <li><strong>normal</strong>: normal</li>
+             * <li><strong>meaningless</strong>: the image contains no content, such as a black or white screen</li>
+             * <li><strong>PIP</strong>: Picture-in-Picture (PiP)</li>
              * <li><strong>smoking</strong>: smoking</li>
-             * <li><strong>drivelive</strong>: live broadcasting in a running vehicle</li>
+             * <li><strong>drivelive</strong>: live streaming inside a vehicle</li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>live</p>
+             * <p>smoking</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -2010,11 +1942,11 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The recommendation for review results. Valid values:</p>
+             * <p>The moderation suggestion. Valid values:</p>
              * <ul>
-             * <li><strong>block</strong>: The content violates the regulations.</li>
-             * <li><strong>review</strong>: The content may violate the regulations.</li>
-             * <li><strong>pass</strong>: The content passes the review.</li>
+             * <li><strong>block</strong>: The content violates regulations.</li>
+             * <li><strong>review</strong>: The content is suspected of violating regulations.</li>
+             * <li><strong>pass</strong>: The content passes the moderation.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2026,7 +1958,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the snapshot that has the highest score in the category.</p>
+             * <p>The information about the video snapshots with the highest scores for the hit label.</p>
              */
             public Builder topList(java.util.List<LiveResultTopList> topList) {
                 this.topList = topList;
@@ -2104,15 +2036,15 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The category of the review result. Valid values:</p>
+             * <p>The logo moderation category. Valid values:</p>
              * <ul>
-             * <li><strong>normal</strong>: normal content</li>
-             * <li><strong>TV</strong>: controlled TV station logo</li>
-             * <li><strong>trademark</strong>: trademark</li>
+             * <li><strong>normal</strong>: normal</li>
+             * <li><strong>TV</strong>: the image contains a regulated logo</li>
+             * <li><strong>trademark</strong>: the image contains a trademark</li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>logo</p>
+             * <p>TV</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -2205,15 +2137,15 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The category of the review result. Valid values:</p>
+             * <p>The logo moderation category. Valid values:</p>
              * <ul>
-             * <li><strong>normal</strong>: normal content</li>
-             * <li><strong>TV</strong>: controlled TV station logo</li>
-             * <li><strong>trademark</strong>: trademark</li>
+             * <li><strong>normal</strong>: normal</li>
+             * <li><strong>TV</strong>: the image contains a regulated logo</li>
+             * <li><strong>trademark</strong>: the image contains a trademark</li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>logo</p>
+             * <p>TV</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -2221,7 +2153,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The score of the snapshot in the category that is indicated by Label.</p>
+             * <p>The score of the video snapshot that hits the label.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -2232,7 +2164,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp of the snapshot in the video. Unit: milliseconds.</p>
+             * <p>The position of the video snapshot in the video. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>5000</p>
@@ -2246,7 +2178,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
              * <p>The URL of the video snapshot.</p>
              * 
              * <strong>example:</strong>
-             * <p><a href="http://temp-****bucket.oss-cn-shanghai.aliyuncs.com/aivideocensor/****.jpg">http://temp-****bucket.oss-cn-shanghai.aliyuncs.com/aivideocensor/****.jpg</a></p>
+             * <p><a href="http://temp-testbucket.oss-cn-shanghai.aliyuncs.com/aivideocensor/****.jpg">http://temp-testbucket.oss-cn-shanghai.aliyuncs.com/aivideocensor/****.jpg</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -2365,7 +2297,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The average score of the snapshots in the category indicated by Label.</p>
+             * <p>The average score of the video snapshots that hit the label.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -2376,7 +2308,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The categories of the review results and the number of video snapshots in each category.</p>
+             * <p>The moderation categories and the number of video snapshots for each category.</p>
              */
             public Builder counterList(java.util.List<LogoResultCounterList> counterList) {
                 this.counterList = counterList;
@@ -2384,15 +2316,15 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The category of the review result. Valid values:</p>
+             * <p>The logo moderation category. Valid values:</p>
              * <ul>
-             * <li><strong>normal</strong>: normal content</li>
-             * <li><strong>TV</strong>: controlled TV station logo</li>
-             * <li><strong>trademark</strong>: trademark</li>
+             * <li><strong>normal</strong>: normal</li>
+             * <li><strong>TV</strong>: the image contains a regulated logo</li>
+             * <li><strong>trademark</strong>: the image contains a trademark</li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>logo</p>
+             * <p>TV</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -2400,7 +2332,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The highest score of the snapshot of the category that is indicated by Label.</p>
+             * <p>The highest score of the video snapshots that hit the label.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -2411,11 +2343,11 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The recommendation for review results. Valid values:</p>
+             * <p>The logo moderation suggestion. Valid values:</p>
              * <ul>
-             * <li><strong>block</strong>: The content violates the regulations.</li>
-             * <li><strong>review</strong>: The content may violate the regulations.</li>
-             * <li><strong>pass</strong>: The content passes the review.</li>
+             * <li><strong>block</strong>: The content violates regulations.</li>
+             * <li><strong>review</strong>: The content is suspected of violating regulations.</li>
+             * <li><strong>pass</strong>: The content passes the moderation.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2427,7 +2359,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the snapshot that has the highest score in the category.</p>
+             * <p>The information about the video snapshots with the highest scores for the hit label.</p>
              */
             public Builder topList(java.util.List<LogoResultTopList> topList) {
                 this.topList = topList;
@@ -2505,11 +2437,11 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The results of pornographic content review. Valid values:</p>
+             * <p>The pornography detection result. Valid values:</p>
              * <ul>
-             * <li><strong>porn</strong></li>
-             * <li><strong>sexy</strong></li>
-             * <li><strong>normal</strong></li>
+             * <li><strong>porn</strong>: Pornographic.</li>
+             * <li><strong>sexy</strong>: Sexy.</li>
+             * <li><strong>normal</strong>: Normal.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2606,11 +2538,11 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The results of pornographic content review. Valid values:</p>
+             * <p>The pornography detection result. Valid values:</p>
              * <ul>
-             * <li><strong>porn</strong></li>
-             * <li><strong>sexy</strong></li>
-             * <li><strong>normal</strong></li>
+             * <li><strong>porn</strong>: Pornographic.</li>
+             * <li><strong>sexy</strong>: Sexy.</li>
+             * <li><strong>normal</strong>: Normal.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2622,7 +2554,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The score of the snapshot in the category that is indicated by Label. Valid values: <code>[0, 100]</code>. The value is accurate to 10 decimal places. The score is representative of the confidence.</p>
+             * <p>The score of the video snapshot that hits the label. Valid values: <code>[0, 100]</code>. The precision is 10 decimal places. The score indicates the probability that the snapshot belongs to the corresponding label category. A higher score indicates higher accuracy.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -2633,7 +2565,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp of the snapshot in the video. Unit: milliseconds.</p>
+             * <p>The position of the video snapshot in the video. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>3005</p>
@@ -2647,7 +2579,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
              * <p>The URL of the video snapshot.</p>
              * 
              * <strong>example:</strong>
-             * <p><a href="http://temp-****bucket.oss-cn-shanghai.aliyuncs.com/aivideocensor/****.jpg">http://temp-****bucket.oss-cn-shanghai.aliyuncs.com/aivideocensor/****.jpg</a></p>
+             * <p><a href="http://temp-testbucket.oss-cn-shanghai.aliyuncs.com/aivideocensor/****.jpg">http://temp-testbucket.oss-cn-shanghai.aliyuncs.com/aivideocensor/****.jpg</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -2766,7 +2698,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The average score of the snapshots of the category that is indicated by Label. Valid values: <code>[0, 100]</code>. The value is accurate to 10 decimal places. The score is representative of the confidence.</p>
+             * <p>The average score of the video snapshots that hit the label. Valid values: <code>[0, 100]</code>. The precision is 10 decimal places. The score indicates the probability that the snapshot belongs to the corresponding label category. A higher score indicates higher accuracy.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -2777,7 +2709,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of snapshots of each category in the review result.</p>
+             * <p>The categories of the review results and the number of video snapshots for each category.</p>
              */
             public Builder counterList(java.util.List<PornResultCounterList> counterList) {
                 this.counterList = counterList;
@@ -2785,11 +2717,11 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The category of the review result. Valid values:</p>
+             * <p>The pornography detection result. Valid values:</p>
              * <ul>
-             * <li><strong>porn</strong></li>
-             * <li><strong>sexy</strong></li>
-             * <li><strong>normal</strong></li>
+             * <li><strong>porn</strong>: Pornographic.</li>
+             * <li><strong>sexy</strong>: Sexy.</li>
+             * <li><strong>normal</strong>: Normal.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2801,7 +2733,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The highest score of the snapshot of the category that is indicated by Label. Valid values: <code>[0, 100]</code>. The value is accurate to 10 decimal places. The score is representative of the confidence.</p>
+             * <p>The highest score of the video snapshots that hit the label. Valid values: <code>[0, 100]</code>. The precision is 10 decimal places. The score indicates the probability that the snapshot belongs to the corresponding label category. A higher score indicates higher accuracy.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -2812,11 +2744,11 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The recommendation for review results. Valid values:</p>
+             * <p>The pornography detection suggestion. Valid values:</p>
              * <ul>
-             * <li><strong>block</strong>: The content violates the regulations.</li>
-             * <li><strong>review</strong>: The content may violate the regulations.</li>
-             * <li><strong>pass</strong>: The content passes the review.</li>
+             * <li><strong>block</strong>: Violation.</li>
+             * <li><strong>review</strong>: Suspected violation.</li>
+             * <li><strong>pass</strong>: Passed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2828,7 +2760,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the snapshot that has the highest score in the category.</p>
+             * <p>The information about the video snapshots with the highest scores for the hit label.</p>
              */
             public Builder topList(java.util.List<PornResultTopList> topList) {
                 this.topList = topList;
@@ -2906,22 +2838,22 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The results of terrorist content review. Valid values:</p>
+             * <p>The terrorist and political content review result. Valid values:</p>
              * <ul>
-             * <li><strong>normal</strong></li>
-             * <li><strong>bloody</strong></li>
-             * <li><strong>explosion</strong></li>
-             * <li><strong>outfit</strong></li>
-             * <li><strong>logo</strong></li>
-             * <li><strong>weapon</strong></li>
-             * <li><strong>politics</strong></li>
-             * <li><strong>violence</strong></li>
-             * <li><strong>crowd</strong></li>
-             * <li><strong>parade</strong></li>
-             * <li><strong>carcrash</strong></li>
-             * <li><strong>flag</strong></li>
-             * <li><strong>location</strong></li>
-             * <li><strong>others</strong></li>
+             * <li><strong>normal</strong>: Normal.</li>
+             * <li><strong>bloody</strong>: Bloody.</li>
+             * <li><strong>explosion</strong>: Explosion and smoke.</li>
+             * <li><strong>outfit</strong>: Special outfit.</li>
+             * <li><strong>logo</strong>: Special logo.</li>
+             * <li><strong>weapon</strong>: Weapon.</li>
+             * <li><strong>politics</strong>: Political content.</li>
+             * <li><strong>violence</strong>: Violence.</li>
+             * <li><strong>crowd</strong>: Crowd.</li>
+             * <li><strong>parade</strong>: Parade.</li>
+             * <li><strong>carcrash</strong>: Car crash.</li>
+             * <li><strong>flag</strong>: Flag.</li>
+             * <li><strong>location</strong>: Landmark.</li>
+             * <li><strong>others</strong>: Others.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3018,22 +2950,22 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The results of terrorist content review. Valid values:</p>
+             * <p>The terrorist and political content review result. Valid values:</p>
              * <ul>
-             * <li><strong>normal</strong></li>
-             * <li><strong>bloody</strong></li>
-             * <li><strong>explosion</strong></li>
-             * <li><strong>outfit</strong></li>
-             * <li><strong>logo</strong></li>
-             * <li><strong>weapon</strong></li>
-             * <li><strong>politics</strong></li>
-             * <li><strong>violence</strong></li>
-             * <li><strong>crowd</strong></li>
-             * <li><strong>parade</strong></li>
-             * <li><strong>carcrash</strong></li>
-             * <li><strong>flag</strong></li>
-             * <li><strong>location</strong></li>
-             * <li><strong>others</strong></li>
+             * <li><strong>normal</strong>: Normal.</li>
+             * <li><strong>bloody</strong>: Bloody.</li>
+             * <li><strong>explosion</strong>: Explosion and smoke.</li>
+             * <li><strong>outfit</strong>: Special outfit.</li>
+             * <li><strong>logo</strong>: Special logo.</li>
+             * <li><strong>weapon</strong>: Weapon.</li>
+             * <li><strong>politics</strong>: Political content.</li>
+             * <li><strong>violence</strong>: Violence.</li>
+             * <li><strong>crowd</strong>: Crowd.</li>
+             * <li><strong>parade</strong>: Parade.</li>
+             * <li><strong>carcrash</strong>: Car crash.</li>
+             * <li><strong>flag</strong>: Flag.</li>
+             * <li><strong>location</strong>: Landmark.</li>
+             * <li><strong>others</strong>: Others.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3045,7 +2977,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The score of the snapshot in the category that is indicated by Label. Valid values: <code>[0, 100]</code>. The value is accurate to 10 decimal places. The score is representative of the confidence.</p>
+             * <p>The score of the video snapshot that hits the label. Valid values: <code>[0, 100]</code>. The precision is 10 decimal places. The score indicates the probability that the snapshot belongs to the corresponding label category. A higher score indicates higher accuracy.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -3056,7 +2988,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp of the snapshot in the video. Unit: milliseconds.</p>
+             * <p>The position of the video snapshot in the video. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -3189,7 +3121,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The average score of the snapshots of the category that is indicated by Label. Valid values: <code>[0, 100]</code>. The value is accurate to 10 decimal places. The score is representative of the confidence.</p>
+             * <p>The average score of the video snapshots that hit the label. Valid values: <code>[0, 100]</code>. The precision is 10 decimal places. The score indicates the probability that the snapshot belongs to the corresponding label category. A higher score indicates higher accuracy.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -3200,7 +3132,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The categories of terrorist content review results and the number of video snapshots in each category.</p>
+             * <p>The categories of the terrorist and political content review results and the number of video snapshots for each category.</p>
              */
             public Builder counterList(java.util.List<TerrorismResultCounterList> counterList) {
                 this.counterList = counterList;
@@ -3208,22 +3140,22 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The category of the review result. Valid values:</p>
+             * <p>The terrorist and political content review result. Valid values:</p>
              * <ul>
-             * <li><strong>normal</strong></li>
-             * <li><strong>bloody</strong></li>
-             * <li><strong>explosion</strong></li>
-             * <li><strong>outfit</strong></li>
-             * <li><strong>logo</strong></li>
-             * <li><strong>weapon</strong></li>
-             * <li><strong>politics</strong></li>
-             * <li><strong>violence</strong></li>
-             * <li><strong>crowd</strong></li>
-             * <li><strong>parade</strong></li>
-             * <li><strong>carcrash</strong></li>
-             * <li><strong>flag</strong></li>
-             * <li><strong>location</strong></li>
-             * <li><strong>others</strong></li>
+             * <li><strong>normal</strong>: Normal.</li>
+             * <li><strong>bloody</strong>: Bloody.</li>
+             * <li><strong>explosion</strong>: Explosion and smoke.</li>
+             * <li><strong>outfit</strong>: Special outfit.</li>
+             * <li><strong>logo</strong>: Special logo.</li>
+             * <li><strong>weapon</strong>: Weapon.</li>
+             * <li><strong>politics</strong>: Political content.</li>
+             * <li><strong>violence</strong>: Violence.</li>
+             * <li><strong>crowd</strong>: Crowd.</li>
+             * <li><strong>parade</strong>: Parade.</li>
+             * <li><strong>carcrash</strong>: Car crash.</li>
+             * <li><strong>flag</strong>: Flag.</li>
+             * <li><strong>location</strong>: Landmark.</li>
+             * <li><strong>others</strong>: Others.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3235,7 +3167,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The highest score of the snapshot of the category that is indicated by Label. Valid values: <code>[0, 100]</code>. The value is accurate to 10 decimal places. The score is representative of the confidence.</p>
+             * <p>The highest score of the video snapshots that hit the label. Valid values: <code>[0, 100]</code>. The precision is 10 decimal places. The score indicates the probability that the snapshot belongs to the corresponding label category. A higher score indicates higher accuracy.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -3246,11 +3178,11 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The recommendation for terrorist content review results. Valid values:</p>
+             * <p>The terrorist and political content review suggestion. Valid values:</p>
              * <ul>
-             * <li><strong>block</strong></li>
-             * <li><strong>review</strong></li>
-             * <li><strong>pass</strong></li>
+             * <li><strong>block</strong>: Violation.</li>
+             * <li><strong>review</strong>: Suspected violation.</li>
+             * <li><strong>pass</strong>: Passed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3262,7 +3194,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the snapshot that has the highest score in the category.</p>
+             * <p>The information about the video snapshots with the highest scores for the hit label.</p>
              */
             public Builder topList(java.util.List<TerrorismResultTopList> topList) {
                 this.topList = topList;
@@ -3407,7 +3339,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The results of ad review.</p>
+             * <p>The ad review result.</p>
              */
             public Builder adResult(AdResult adResult) {
                 this.adResult = adResult;
@@ -3415,7 +3347,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * GreenEnhancedResult.
+             * <p>The GreenEnhanced moderation result.</p>
              */
             public Builder greenEnhancedResult(GreenEnhancedResult greenEnhancedResult) {
                 this.greenEnhancedResult = greenEnhancedResult;
@@ -3423,14 +3355,14 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The category of the review result. Valid values:</p>
+             * <p>The review result category. Valid values:</p>
              * <ul>
-             * <li><strong>porn</strong>: pornographic content</li>
-             * <li><strong>terrorism</strong>: terrorist or politically sensitive content</li>
-             * <li><strong>ad</strong>: ad violation</li>
-             * <li><strong>live</strong>: undesirable scene</li>
-             * <li><strong>logo</strong>: logo</li>
-             * <li><strong>normal</strong></li>
+             * <li><strong>porn</strong>: Pornographic content.</li>
+             * <li><strong>terrorism</strong>: Terrorist and political content.</li>
+             * <li><strong>ad</strong>: Image and text violation.</li>
+             * <li><strong>live</strong>: Undesirable scene.</li>
+             * <li><strong>logo</strong>: Image logo.</li>
+             * <li><strong>normal</strong>: Normal.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3442,7 +3374,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The results of undesired content review.</p>
+             * <p>The harmful content moderation result.</p>
              */
             public Builder liveResult(LiveResult liveResult) {
                 this.liveResult = liveResult;
@@ -3450,7 +3382,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The results of logo review.</p>
+             * <p>The logo moderation result.</p>
              */
             public Builder logoResult(LogoResult logoResult) {
                 this.logoResult = logoResult;
@@ -3458,7 +3390,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The results of pornographic content review.</p>
+             * <p>The pornography detection result.</p>
              */
             public Builder pornResult(PornResult pornResult) {
                 this.pornResult = pornResult;
@@ -3466,11 +3398,11 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The recommendation for video review results. Valid values:</p>
+             * <p>The video review suggestion. Valid values:</p>
              * <ul>
-             * <li><strong>block</strong></li>
-             * <li><strong>review</strong></li>
-             * <li><strong>pass</strong></li>
+             * <li><strong>block</strong>: Violation.</li>
+             * <li><strong>review</strong>: Suspected violation.</li>
+             * <li><strong>pass</strong>: Passed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3482,7 +3414,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The results of terrorist content review.</p>
+             * <p>The terrorist and political content review result.</p>
              */
             public Builder terrorismResult(TerrorismResult terrorismResult) {
                 this.terrorismResult = terrorismResult;
@@ -3614,11 +3546,11 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The content that violates the regulations. Separate multiple values with commas (,). Valid values:</p>
+             * <p>The reviewed content that contains violations. Multiple values are separated by commas (,). Valid values:</p>
              * <ul>
-             * <li><strong>video</strong>: the video.</li>
-             * <li><strong>image-cover</strong>: the cover.</li>
-             * <li><strong>text-title</strong>: the title.</li>
+             * <li><strong>video</strong>: Video.</li>
+             * <li><strong>image-cover</strong>: Thumbnail.</li>
+             * <li><strong>text-title</strong>: Title.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3630,7 +3562,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The results of audio review.</p>
+             * <p>The audio review result.</p>
              */
             public Builder audioResult(java.util.List<AudioResult> audioResult) {
                 this.audioResult = audioResult;
@@ -3638,7 +3570,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The results of image review.</p>
+             * <p>The image review result.</p>
              */
             public Builder imageResult(java.util.List<ImageResult> imageResult) {
                 this.imageResult = imageResult;
@@ -3646,15 +3578,15 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The category of the review result. Multiple values are separated by commas (,). Valid values:</p>
+             * <p>The review result category. Multiple values are separated by commas (,). Valid values:</p>
              * <ul>
-             * <li><strong>porn</strong>: pornographic content</li>
-             * <li><strong>terrorism</strong>: terrorist or politically sensitive content</li>
-             * <li><strong>ad</strong>: ad violation</li>
-             * <li><strong>live</strong>: undesirable scene</li>
-             * <li><strong>logo</strong>: logo</li>
-             * <li><strong>audio</strong>: audio anti-spam</li>
-             * <li><strong>normal</strong>: normal content</li>
+             * <li><strong>porn</strong>: Pornographic content.</li>
+             * <li><strong>terrorism</strong>: Terrorist and political content.</li>
+             * <li><strong>ad</strong>: Image and text violation.</li>
+             * <li><strong>live</strong>: Undesirable scene.</li>
+             * <li><strong>logo</strong>: Image logo.</li>
+             * <li><strong>audio</strong>: Audio anti-spam.</li>
+             * <li><strong>normal</strong>: Normal.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3666,11 +3598,11 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The recommendation for review results. Valid values:</p>
+             * <p>The review suggestion. Valid values:</p>
              * <ul>
-             * <li><strong>block</strong>: The content violates the regulations.</li>
-             * <li><strong>review</strong>: The content may violate the regulations.</li>
-             * <li><strong>pass</strong>: The content passes the review.</li>
+             * <li><strong>block</strong>: Violation.</li>
+             * <li><strong>review</strong>: Suspected violation.</li>
+             * <li><strong>pass</strong>: Passed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3682,7 +3614,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The text moderation results.</p>
+             * <p>The text review result.</p>
              */
             public Builder textResult(java.util.List<TextResult> textResult) {
                 this.textResult = textResult;
@@ -3690,7 +3622,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The results of video review.</p>
+             * <p>The video review result.</p>
              */
             public Builder videoResult(VideoResult videoResult) {
                 this.videoResult = videoResult;
@@ -3848,7 +3780,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The error code. This parameter is returned if the value of Status is fail.</p>
+             * <p>The job error code. Check this field when the job status is fail.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -3859,7 +3791,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the job is complete. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * <p>The end time of the job. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2017-01-11T13:00:00Z</p>
@@ -3870,7 +3802,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the job started to run. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * <p>The start time of the job. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2017-01-11T12:00:00Z</p>
@@ -3881,7 +3813,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The job result.</p>
+             * <p>The job result data.</p>
              */
             public Builder data(Data data) {
                 this.data = data;
@@ -3889,7 +3821,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the job.</p>
+             * <p>The job ID.</p>
              * 
              * <strong>example:</strong>
              * <p>bdbc266af6894*****943a70176d92e9</p>
@@ -3900,7 +3832,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the video.</p>
+             * <p>The video ID.</p>
              * 
              * <strong>example:</strong>
              * <p>fe028d09441d*****d1afffb138cd7e</p>
@@ -3911,7 +3843,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message. This parameter is returned if the value of Status is fail.</p>
+             * <p>The job error message. Check this field when the job status is fail.</p>
              * 
              * <strong>example:</strong>
              * <p>OK</p>
@@ -3922,12 +3854,12 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the job. Valid values:</p>
+             * <p>The job status. Valid values:</p>
              * <ul>
-             * <li><strong>success</strong>: The job is successful.</li>
-             * <li><strong>fail</strong>: The job failed.</li>
-             * <li><strong>init</strong>: The job is being initialized.</li>
-             * <li><strong>Processing</strong>: The job is in progress.</li>
+             * <li><strong>success</strong>: Succeeded.</li>
+             * <li><strong>fail</strong>: Failed.</li>
+             * <li><strong>init</strong>: Initialized.</li>
+             * <li><strong>processing</strong>: Processing.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3939,7 +3871,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the job. The value is AIMediaAudit.</p>
+             * <p>The job type. Currently, only automated review is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>AIMediaAudit</p>

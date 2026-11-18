@@ -104,9 +104,9 @@ public class AttachAppPolicyToIdentityRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the application. Default value: <strong>app-1000000</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Multi-application service</a>.</p>
+         * <p>The application ID. Default value: <strong>app-1000000</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Multiple applications</a>.</p>
          * <blockquote>
-         * <p>This parameter is optional only if you set the policy name to VODAppAdministratorAccess.</p>
+         * <p>If the policy name is VODAppAdministratorAccess, this parameter is optional. For other policies, this parameter is required.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -119,10 +119,10 @@ public class AttachAppPolicyToIdentityRequest extends Request {
         }
 
         /**
-         * <p>The ID of the RAM user or the name of the RAM role.</p>
+         * <p>The identity name.</p>
          * <ul>
-         * <li>Specify the ID of the RAM user when the IdentityType parameter is set to RamUser.</li>
-         * <li>Specify the name of the RAM role when the IdentityType parameter is set to RamRole.</li>
+         * <li>If the type is RamUser, specify the Resource Access Management (RAM) user ID.</li>
+         * <li>If the type is RamRole, specify the role name.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -136,10 +136,10 @@ public class AttachAppPolicyToIdentityRequest extends Request {
         }
 
         /**
-         * <p>The type of the identity. Valid values:</p>
+         * <p>The identity type. Valid values:</p>
          * <ul>
-         * <li><strong>RamUser</strong>: a RAM user</li>
-         * <li><strong>RamRole</strong>: a RAM role</li>
+         * <li><strong>RamUser</strong>: Resource Access Management (RAM) user.</li>
+         * <li><strong>RamRole</strong>: RAM role.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -153,11 +153,11 @@ public class AttachAppPolicyToIdentityRequest extends Request {
         }
 
         /**
-         * <p>The name of the policy. Only system policies are supported. Separate multiple policy names with commas (,). Valid values:</p>
+         * <p>The policy names. Separate multiple names with commas (,). Currently, only system policies are supported. Valid values:</p>
          * <ul>
-         * <li><strong>VODAppFullAccess</strong>: permissions to manage all resources in an application.</li>
-         * <li><strong>VODAppReadOnlyAccess</strong>: permissions to read all resources in an application.</li>
-         * <li><strong>VODAppAdministratorAccess</strong>: permissions of the application administrator.</li>
+         * <li><strong>VODAppFullAccess</strong>: the permissions to manage and operate all resources under the application.</li>
+         * <li><strong>VODAppReadOnlyAccess</strong>: the read-only permissions on all resources under the application.</li>
+         * <li><strong>VODAppAdministratorAccess</strong>: the application administrator permissions.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

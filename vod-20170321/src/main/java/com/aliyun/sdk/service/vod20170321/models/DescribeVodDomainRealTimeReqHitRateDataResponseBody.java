@@ -67,7 +67,7 @@ public class DescribeVodDomainRealTimeReqHitRateDataResponseBody extends TeaMode
         } 
 
         /**
-         * <p>The returned results.</p>
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,7 @@ public class DescribeVodDomainRealTimeReqHitRateDataResponseBody extends TeaMode
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>70A26B11-3673-479C-AEA8-E03FC5D3496D</p>
@@ -144,10 +144,7 @@ public class DescribeVodDomainRealTimeReqHitRateDataResponseBody extends TeaMode
             } 
 
             /**
-             * <p>The cache hit ratio that is calculated based on requests. The cache hit ratio is measured in percentage.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0.8956940476262277</p>
+             * ReqHitRate.
              */
             public Builder reqHitRate(Float reqHitRate) {
                 this.reqHitRate = reqHitRate;
@@ -155,10 +152,7 @@ public class DescribeVodDomainRealTimeReqHitRateDataResponseBody extends TeaMode
             }
 
             /**
-             * <p>The timestamp of the data returned. The time follows the ISO 8601 standard. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2024-01-02T11:26:00Z</p>
+             * TimeStamp.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;

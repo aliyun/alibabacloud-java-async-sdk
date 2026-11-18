@@ -67,7 +67,7 @@ public class GetDigitalWatermarkExtractResultResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the watermark extraction job.</p>
+         * <p>The details of the watermark extraction jobs.</p>
          */
         public Builder aiExtractResultList(java.util.List<AiExtractResultList> aiExtractResultList) {
             this.aiExtractResultList = aiExtractResultList;
@@ -196,7 +196,7 @@ public class GetDigitalWatermarkExtractResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the watermark extraction job was created.</p>
+             * <p>The time when the watermark extraction job was created. The time is displayed in UTC and formatted in accordance with ISO 8601 in the yyyy-MM-ddTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-09-16T02:49:04Z</p>
@@ -207,10 +207,10 @@ public class GetDigitalWatermarkExtractResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message.</p>
+             * <p>The error message. This parameter is returned only when the watermark extraction job fails (the Status parameter is Failed).</p>
              * 
              * <strong>example:</strong>
-             * <p>successful</p>
+             * <p>query copyright info err</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -229,7 +229,7 @@ public class GetDigitalWatermarkExtractResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the watermark extraction job was last updated.</p>
+             * <p>The time when the watermark extraction job was last updated. The time is displayed in UTC and formatted in accordance with ISO 8601 in the yyyy-MM-ddTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-09-17T06:20:45Z</p>
@@ -242,13 +242,13 @@ public class GetDigitalWatermarkExtractResultResponseBody extends TeaModel {
             /**
              * <p>The status of the watermark extraction job. Valid values:</p>
              * <ul>
-             * <li><strong>Success</strong></li>
-             * <li><strong>Failed</strong></li>
-             * <li><strong>Processing</strong></li>
+             * <li><strong>Success</strong>: The job succeeded.	</li>
+             * <li><strong>Failed</strong>: The job failed.</li>
+             * <li><strong>Processing</strong>: The job is in progress.</li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>Success</p>
+             * <p>Failed</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -256,7 +256,7 @@ public class GetDigitalWatermarkExtractResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The extracted watermark content.</p>
+             * <p>The extracted watermark text.</p>
              * 
              * <strong>example:</strong>
              * <p>test mark</p>

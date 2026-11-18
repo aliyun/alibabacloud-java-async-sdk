@@ -115,8 +115,12 @@ public class DescribeVodDomainSrcTrafficDataRequest extends Request {
         } 
 
         /**
-         * <p>The accelerated domain name. You can specify a maximum of 500 domain names in a request. Separate multiple domain names with commas (,). If you specify multiple domain names in a request, aggregation results are returned.</p>
-         * <p>If you leave this parameter empty, the origin traffic data for all accelerated domain names is queried by default.</p>
+         * <p>The accelerated domain name to query.</p>
+         * <ul>
+         * <li>If you do not specify this parameter, the pooled data of all accelerated domain names is returned by default.</li>
+         * <li>Batch queries are supported. Separate multiple domain names with commas (,). You can query up to 500 domain names at a time.</li>
+         * <li>You can logon to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Configuration Management &gt; Distribution Acceleration Configuration &gt; Domain Names</strong> in the left-side navigation pane to view the accelerated domain names added to ApsaraVideo VOD. You can also invoke the <a href="~~DescribeVodUserDomains~~">DescribeVodUserDomains</a> API operation to query the list of accelerated domain names.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>example.com</p>
@@ -128,7 +132,10 @@ public class DescribeVodDomainSrcTrafficDataRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The end time of the data to retrieve. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p>The end time must be later than the start time.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>2022-09-24T15:59:59Z</p>
@@ -140,15 +147,12 @@ public class DescribeVodDomainSrcTrafficDataRequest extends Request {
         }
 
         /**
-         * <p>The time interval between the data entries to return. Unit: seconds. Valid values:</p>
+         * <p>The time granularity of the data to query. Unit: seconds. Valid values: <strong>300</strong>, <strong>3600</strong>, and <strong>86400</strong>. If you do not specify this parameter or specify an unsupported value, the default value is used. The supported time granularity varies based on the time span between StartTime and EndTime:</p>
          * <ul>
-         * <li><strong>300</strong>: 5 minutes</li>
-         * <li><strong>3600</strong>: 1 hour</li>
-         * <li><strong>86400</strong>: 1 day</li>
+         * <li>Less than 3 days: <strong>300</strong> (default), <strong>3600</strong>, and <strong>86400</strong>.</li>
+         * <li>3 to 31 days (excluding 31 days): <strong>3600</strong> (default) and <strong>86400</strong>.</li>
+         * <li>More than 31 days: <strong>86400</strong> (default).</li>
          * </ul>
-         * <blockquote>
-         * <p>The time granularity supported by the Interval parameter varies based on the time range per query specified by using <code>StartTime</code> and <code>EndTime</code>. For more information, see the <strong>Time granularity</strong> section of this topic.</p>
-         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -169,8 +173,7 @@ public class DescribeVodDomainSrcTrafficDataRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
-         * <p>If you leave this parameter empty, the origin traffic data that is generated in the last 24 hours is queried by default.</p>
+         * <p>The start time of the data to retrieve. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-03-22T16:00:00Z</p>

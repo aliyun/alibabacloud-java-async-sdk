@@ -54,7 +54,7 @@ public class DeleteAIImageInfosResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>FCDC80EA-363C-41*****B8-0DF14033D643</p>

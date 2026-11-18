@@ -67,7 +67,7 @@ public class DescribeVodDomainRealTimeQpsDataResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned data.</p>
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,7 @@ public class DescribeVodDomainRealTimeQpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>32DC9806-E9F9-4490-BBDC-B3A9E32FCC1D</p>
@@ -144,10 +144,7 @@ public class DescribeVodDomainRealTimeQpsDataResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of queries per second.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1851.25</p>
+             * Qps.
              */
             public Builder qps(Float qps) {
                 this.qps = qps;
@@ -155,10 +152,7 @@ public class DescribeVodDomainRealTimeQpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp of the returned data. The time follows the ISO 8601 standard. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2019-12-02T11:25:00Z</p>
+             * TimeStamp.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;

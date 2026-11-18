@@ -67,7 +67,7 @@ public class SubmitPreprocessJobsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the job.</p>
+         * PreprocessJobs.
          */
         public Builder preprocessJobs(PreprocessJobs preprocessJobs) {
             this.preprocessJobs = preprocessJobs;
@@ -75,7 +75,7 @@ public class SubmitPreprocessJobsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>E4EBD2BF-5EB0-4476-8829-9D94E1B1****</p>
@@ -131,10 +131,7 @@ public class SubmitPreprocessJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the job.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>bb396607fd11fee9effbb99c4****</p>
+             * JobId.
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;

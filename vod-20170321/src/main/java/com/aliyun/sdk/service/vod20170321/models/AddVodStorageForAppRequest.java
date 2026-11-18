@@ -88,7 +88,7 @@ public class AddVodStorageForAppRequest extends Request {
         } 
 
         /**
-         * <p>The IDs of applications. You can obtain the application ID from the <code>AppId</code> parameter in the response to the <a href="~~CreateAppInfo~~">CreateAppInfo</a> or <a href="~~ListAppInfo~~">ListAppInfo</a> operation.</p>
+         * <p>The list of application IDs. You can obtain the application ID from the AppId response parameter of the <a href="~~CreateAppInfo~~">CreateAppInfo</a> or <a href="~~ListAppInfo~~">ListAppInfo</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,10 +101,10 @@ public class AddVodStorageForAppRequest extends Request {
         }
 
         /**
-         * <p>The address of an Object Storage Service (OSS) bucket. This parameter does not take effect. You can call this operation to add only VOD buckets.</p>
+         * <p>The address of the OSS bucket. This parameter is required when StorageType is set to user_oss_bucket.</p>
          * 
          * <strong>example:</strong>
-         * <p>out-****.oss-cn-shanghai.aliyuncs.com</p>
+         * <p>example-bucket.oss-cn-shanghai.aliyuncs.com</p>
          */
         public Builder storageLocation(String storageLocation) {
             this.putQueryParameter("StorageLocation", storageLocation);
@@ -113,7 +113,7 @@ public class AddVodStorageForAppRequest extends Request {
         }
 
         /**
-         * <p>The storage class. Default value: <strong>vod_oss_bucket</strong>.</p>
+         * <p>The storage type. Valid values: vod_oss_bucket and user_oss_bucket. Default value: <strong>vod_oss_bucket</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>vod_oss_bucket</p>

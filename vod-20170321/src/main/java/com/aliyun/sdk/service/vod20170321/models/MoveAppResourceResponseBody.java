@@ -80,7 +80,7 @@ public class MoveAppResourceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The IDs of the resources that failed to be migrated.</p>
+         * <p>The IDs of resources that failed to be migrated.</p>
          */
         public Builder failedResourceIds(java.util.List<String> failedResourceIds) {
             this.failedResourceIds = failedResourceIds;
@@ -88,7 +88,7 @@ public class MoveAppResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The IDs of the resources that were not found.</p>
+         * <p>The IDs of resources that do not exist.</p>
          */
         public Builder nonExistResourceIds(java.util.List<String> nonExistResourceIds) {
             this.nonExistResourceIds = nonExistResourceIds;

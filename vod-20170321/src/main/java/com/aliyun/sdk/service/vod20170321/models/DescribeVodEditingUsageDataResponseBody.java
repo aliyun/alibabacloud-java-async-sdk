@@ -93,7 +93,7 @@ public class DescribeVodEditingUsageDataResponseBody extends TeaModel {
         } 
 
         /**
-         * EditingData.
+         * <p>The usage data.</p>
          */
         public Builder editingData(java.util.List<EditingData> editingData) {
             this.editingData = editingData;
@@ -101,7 +101,10 @@ public class DescribeVodEditingUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range to query. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-11-07T16:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -109,7 +112,10 @@ public class DescribeVodEditingUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6CB55B62-6E5F-54D1-80BF-DFA3DE9F0***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +123,10 @@ public class DescribeVodEditingUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The beginning of the time range to query. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-11-06T16:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -209,7 +218,10 @@ public class DescribeVodEditingUsageDataResponseBody extends TeaModel {
             } 
 
             /**
-             * Duration.
+             * <p>The audio or video duration. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder duration(Long duration) {
                 this.duration = duration;
@@ -217,7 +229,10 @@ public class DescribeVodEditingUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * <p>The region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -225,7 +240,10 @@ public class DescribeVodEditingUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * Specification.
+             * <p>The output specification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>H264.SD</p>
              */
             public Builder specification(String specification) {
                 this.specification = specification;
@@ -233,7 +251,10 @@ public class DescribeVodEditingUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * TimeStamp.
+             * <p>The start time of the time interval. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-11-06T16:00:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;

@@ -67,7 +67,7 @@ public class DescribeVodPlayerCollectDataResponseBody extends TeaModel {
         } 
 
         /**
-         * DataList.
+         * <p>The returned data list.</p>
          */
         public Builder dataList(java.util.List<DataList> dataList) {
             this.dataList = dataList;
@@ -170,7 +170,10 @@ public class DescribeVodPlayerCollectDataResponseBody extends TeaModel {
             } 
 
             /**
-             * Metric.
+             * <p>The returned data metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Vv</p>
              */
             public Builder metric(String metric) {
                 this.metric = metric;
@@ -178,7 +181,10 @@ public class DescribeVodPlayerCollectDataResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the returned data metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.0</p>
              */
             public Builder value(Double value) {
                 this.value = value;
@@ -186,7 +192,10 @@ public class DescribeVodPlayerCollectDataResponseBody extends TeaModel {
             }
 
             /**
-             * ValueRatio.
+             * <p>The period-over-period percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder valueRatio(Double valueRatio) {
                 this.valueRatio = valueRatio;
@@ -194,7 +203,10 @@ public class DescribeVodPlayerCollectDataResponseBody extends TeaModel {
             }
 
             /**
-             * ValueRefer.
+             * <p>The period-over-period value of the returned data metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200.0</p>
              */
             public Builder valueRefer(Double valueRefer) {
                 this.valueRefer = valueRefer;

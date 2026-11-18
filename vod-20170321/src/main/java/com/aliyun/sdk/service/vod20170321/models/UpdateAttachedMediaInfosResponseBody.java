@@ -67,7 +67,7 @@ public class UpdateAttachedMediaInfosResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The IDs of the auxiliary media assets that do not exist.</p>
+         * <p>The list of IDs of non-existent auxiliary media assets.</p>
          */
         public Builder nonExistMediaIds(java.util.List<String> nonExistMediaIds) {
             this.nonExistMediaIds = nonExistMediaIds;
@@ -75,7 +75,7 @@ public class UpdateAttachedMediaInfosResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>25818875-5F78-4DF6-D7393642CA58****</p>

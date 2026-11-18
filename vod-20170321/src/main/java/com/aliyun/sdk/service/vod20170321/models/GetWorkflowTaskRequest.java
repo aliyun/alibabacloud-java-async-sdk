@@ -59,7 +59,10 @@ public class GetWorkflowTaskRequest extends Request {
         } 
 
         /**
-         * TaskId.
+         * <p>The workflow task ID. It is returned by the SubmitWorkflowJob operation and is used to query the execution status and result of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70422****</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

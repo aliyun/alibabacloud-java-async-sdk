@@ -67,7 +67,7 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about each certificate.</p>
+         * <p>The certificate list information.</p>
          */
         public Builder certificateListModel(CertificateListModel certificateListModel) {
             this.certificateListModel = certificateListModel;
@@ -75,7 +75,7 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>FC0E34AC-0239-44A7-****-800DE522C8DA</p>
@@ -287,10 +287,7 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The algorithm.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>RSA</p>
+             * Algorithm.
              */
             public Builder algorithm(String algorithm) {
                 this.algorithm = algorithm;
@@ -298,10 +295,7 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the certificate.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>235437</p>
+             * CertId.
              */
             public Builder certId(Long certId) {
                 this.certId = certId;
@@ -309,10 +303,7 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the certificate.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>14173772-cn-hangzhou</p>
+             * CertIdentifier.
              */
             public Builder certIdentifier(String certIdentifier) {
                 this.certIdentifier = certIdentifier;
@@ -320,10 +311,7 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the certificate.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>certificate</p>
+             * CertName.
              */
             public Builder certName(String certName) {
                 this.certName = certName;
@@ -331,10 +319,7 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The common name of the certificate.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * Common.
              */
             public Builder common(String common) {
                 this.common = common;
@@ -342,10 +327,7 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the certificate was created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1725206400000</p>
+             * CreateTime.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -353,10 +335,7 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>DomainMatchCert.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * DomainMatchCert.
              */
             public Builder domainMatchCert(Boolean domainMatchCert) {
                 this.domainMatchCert = domainMatchCert;
@@ -364,10 +343,7 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the certificate expired.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1759507200000</p>
+             * EndTime.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -375,10 +351,7 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The fingerprint of the certificate.</p>
-             * 
-             * <strong>example:</strong>
-             * <hr>
+             * Fingerprint.
              */
             public Builder fingerprint(String fingerprint) {
                 this.fingerprint = fingerprint;
@@ -386,10 +359,7 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cert-cn-cd806ae0fdfbfa60</p>
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -397,10 +367,7 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The certificate authority (CA) that issued the certificate.</p>
-             * 
-             * <strong>example:</strong>
-             * <hr>
+             * Issuer.
              */
             public Builder issuer(String issuer) {
                 this.issuer = issuer;
@@ -408,10 +375,7 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the certificate was issued. Unit: seconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1512388610</p>
+             * LastTime.
              */
             public Builder lastTime(Long lastTime) {
                 this.lastTime = lastTime;
@@ -419,10 +383,7 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The signAlgorithm.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>sha256withrsa</p>
+             * SignAlgorithm.
              */
             public Builder signAlgorithm(String signAlgorithm) {
                 this.signAlgorithm = signAlgorithm;
@@ -543,7 +504,7 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of certificates.</p>
+             * CertList.
              */
             public Builder certList(CertList certList) {
                 this.certList = certList;
@@ -551,7 +512,7 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of certificates that are returned.</p>
+             * <p>The number of certificates.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>

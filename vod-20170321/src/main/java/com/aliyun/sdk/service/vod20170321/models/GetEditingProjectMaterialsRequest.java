@@ -144,11 +144,11 @@ public class GetEditingProjectMaterialsRequest extends Request {
         } 
 
         /**
-         * <p>The type of the material. Valid values:</p>
+         * <p>The material type. Valid values:</p>
          * <ul>
-         * <li><strong>video</strong></li>
-         * <li><strong>audio</strong></li>
-         * <li><strong>image</strong></li>
+         * <li><strong>video</strong>: video</li>
+         * <li><strong>audio</strong>: audio-only</li>
+         * <li><strong>image</strong>: image</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -179,10 +179,10 @@ public class GetEditingProjectMaterialsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the online editing project. You can use one of the following methods to obtain the ID of the online editing project:</p>
+         * <p>The ID of the online editing project. You can obtain the ID by using one of the following methods:</p>
          * <ul>
-         * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose <strong>Production Center</strong> &gt; <strong>Video Editing</strong> to obtain the ID of the specified online editing project.</li>
-         * <li>Call the <strong>AddEditingProject</strong> operation. The value of the response parameter ProjectId is the ID of the specified online editing project.</li>
+         * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>, choose <strong>Production center</strong> &gt; <strong>Video editing</strong>, and view the ID.</li>
+         * <li>The value of the ProjectId response parameter returned when you create a project by calling the <strong>Create an online editing project</strong> operation.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -214,10 +214,10 @@ public class GetEditingProjectMaterialsRequest extends Request {
         }
 
         /**
-         * <p>The type of the material. Valid values:</p>
+         * <p>The material type. Valid values:</p>
          * <ul>
-         * <li><strong>video</strong></li>
-         * <li><strong>audio</strong></li>
+         * <li><strong>video</strong>: video</li>
+         * <li><strong>audio</strong>: audio-only</li>
          * </ul>
          * 
          * <strong>example:</strong>
