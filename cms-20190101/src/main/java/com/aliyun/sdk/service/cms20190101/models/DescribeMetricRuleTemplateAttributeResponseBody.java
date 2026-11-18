@@ -1148,7 +1148,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
              * <p>The description of the alert template.</p>
              * 
              * <strong>example:</strong>
-             * <p>ECS template</p>
+             * <p>ECS模板</p>
              */
             public Builder description(String description) {
                 this.description = description;

@@ -147,7 +147,7 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
         /**
          * <p>The status code.</p>
          * <blockquote>
-         * <p>The value 200 indicates success.</p>
+         * <p>200 indicates success.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -192,7 +192,7 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>F02B299A-D374-4595-9F55-7534D604F132</p>

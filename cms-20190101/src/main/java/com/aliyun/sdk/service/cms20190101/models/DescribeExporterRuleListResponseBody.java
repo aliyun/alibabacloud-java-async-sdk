@@ -132,13 +132,7 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code.</p>
-         * <blockquote>
-         * <p>A status code of 200 indicates success. Other values indicate failure.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>200</p>
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -154,10 +148,7 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>The specified resource is not found.</p>
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -165,10 +156,7 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number. Default value: 1.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -176,10 +164,7 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>6BA047CA-8BC6-40BC-BC8F-FBECF35F1993</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -187,14 +172,7 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful. Valid values:  </p>
-         * <ul>
-         * <li><code>true</code>: The request is successful.</li>
-         * <li><code>false</code>: The request fails.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -202,10 +180,7 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1000</p>
+         * Total.
          */
         public Builder total(Integer total) {
             this.total = total;

@@ -62,9 +62,6 @@ public class DescribeUnhealthyHostAvailabilityRequest extends Request {
         /**
          * <p>The task ID.</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>123456</p>
          */
         public Builder id(java.util.List<Long> id) {
             this.putQueryParameter("Id", id);

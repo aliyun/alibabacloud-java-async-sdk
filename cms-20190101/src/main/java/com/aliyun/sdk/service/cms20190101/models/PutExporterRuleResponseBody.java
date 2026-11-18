@@ -93,13 +93,7 @@ public class PutExporterRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code.</p>
-         * <blockquote>
-         * <p>200 indicates success.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>200</p>
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -107,10 +101,7 @@ public class PutExporterRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>The specified resource is not found.</p>
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -118,10 +109,7 @@ public class PutExporterRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>461CF2CD-2FC3-4B26-8645-7BD27E7D0F1D</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,16 +117,7 @@ public class PutExporterRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the operation is successful. Valid values:</p>
-         * <ul>
-         * <li><p>true: Successful.</p>
-         * </li>
-         * <li><p>false: Failed.</p>
-         * </li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -75,11 +75,8 @@ public class DeleteEventRuleTargetsRequest extends Request {
         } 
 
         /**
-         * <p>The IDs of event-triggered alert rules.</p>
+         * <p>The list of event-triggered alert rule IDs.</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
          */
         public Builder ids(java.util.List<String> ids) {
             this.putQueryParameter("Ids", ids);
@@ -89,7 +86,7 @@ public class DeleteEventRuleTargetsRequest extends Request {
 
         /**
          * <p>The name of the event-triggered alert rule.</p>
-         * <p>For information about how to obtain the name of an event-triggered alert rule, see <a href="https://help.aliyun.com/document_detail/114996.html">DescribeEventRuleList</a>.</p>
+         * <p>For more information about how to obtain the name of an event-triggered alert rule, see <a href="https://help.aliyun.com/document_detail/114996.html">DescribeEventRuleList</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

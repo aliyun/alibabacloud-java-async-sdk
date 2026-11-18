@@ -106,9 +106,10 @@ public class DeleteMetricRuleTargetsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code.</p>
-         * <p>\<em>\</em></p>
-         * <p><strong>Description</strong> The status code 200 indicates that the request was successful.</p>
+         * <p>The status code.</p>
+         * <blockquote>
+         * <p>200 indicates success.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -119,7 +120,7 @@ public class DeleteMetricRuleTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The IDs of the resources that failed to be deleted.</p>
+         * <p>The list of target IDs that failed to be deleted.</p>
          */
         public Builder failIds(FailIds failIds) {
             this.failIds = failIds;
@@ -149,11 +150,11 @@ public class DeleteMetricRuleTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the operation is successful. Valid values:</p>
          * <ul>
-         * <li><p>true</p>
+         * <li><p>true: Successful.</p>
          * </li>
-         * <li><p>false</p>
+         * <li><p>false: Failed.</p>
          * </li>
          * </ul>
          * 

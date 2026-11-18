@@ -80,10 +80,8 @@ public class PutCustomEventResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The responses code.</p>
-         * <blockquote>
-         * <p>The status code 200 indicates that the request was successful.</p>
-         * </blockquote>
+         * <p>The status code.
+         * A value of 200 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>

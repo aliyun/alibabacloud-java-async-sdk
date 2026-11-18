@@ -60,11 +60,7 @@ public class DeleteExporterRuleRequest extends Request {
         } 
 
         /**
-         * <p>The name of the export rules.</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>myRuleName</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);

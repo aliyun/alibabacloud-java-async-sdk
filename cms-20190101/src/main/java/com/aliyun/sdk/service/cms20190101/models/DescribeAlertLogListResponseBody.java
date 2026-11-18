@@ -1761,7 +1761,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
              * <p>The name of the alert rule.</p>
              * 
              * <strong>example:</strong>
-             * <p>CPU utilization</p>
+             * <p>CPU使用率</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;

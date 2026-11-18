@@ -73,10 +73,7 @@ public class DescribeExporterRuleListRequest extends Request {
         } 
 
         /**
-         * <p>The page number. Default value: 1.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -85,10 +82,7 @@ public class DescribeExporterRuleListRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

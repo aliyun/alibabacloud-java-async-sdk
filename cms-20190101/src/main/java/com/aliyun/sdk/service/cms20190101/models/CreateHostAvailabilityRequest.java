@@ -203,7 +203,7 @@ public class CreateHostAvailabilityRequest extends Request {
         }
 
         /**
-         * <p>The alert targets.</p>
+         * <p>The alert trigger targets.</p>
          */
         public Builder alertConfigTargetList(java.util.List<AlertConfigTargetList> alertConfigTargetList) {
             this.putQueryParameter("AlertConfigTargetList", alertConfigTargetList);
@@ -227,7 +227,7 @@ public class CreateHostAvailabilityRequest extends Request {
         /**
          * <p>The list of ECS instances that initiate the probes. Valid values of N: 1 to 21.</p>
          * <blockquote>
-         * <p>You must set this parameter when <code>TaskScope</code> is set to <code>GROUP_SPEC_INSTANCE</code>.</p>
+         * <p>You must set this parameter when TaskScope is set to GROUP_SPEC_INSTANCE.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -255,8 +255,8 @@ public class CreateHostAvailabilityRequest extends Request {
         /**
          * <p>The probe scope of the availability monitoring task. Valid values:</p>
          * <ul>
-         * <li>GROUP: All ECS instances in the current application group are used as probes for the task.</li>
-         * <li>GROUP_SPEC_INSTANCE: Specified ECS instances in the current application group are used as probes for the task. If you set this parameter to GROUP_SPEC_INSTANCE, you must also set the InstanceList parameter, which specifies the list of ECS instances that initiate the probes.</li>
+         * <li>GROUP: All ECS instances in the current application group are used as probes for the monitoring task.</li>
+         * <li>GROUP_SPEC_INSTANCE: Specified ECS instances in the current application group are used as probes for the monitoring task. If you set this parameter to GROUP_SPEC_INSTANCE, you must also set the InstanceList parameter, which specifies the list of ECS instances that initiate the probes.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -386,8 +386,8 @@ public class CreateHostAvailabilityRequest extends Request {
             } 
 
             /**
-             * <p>The end time of the effective period for alerting.</p>
-             * <p>The value is an integer ranging from 0 to 23. Unit: hours. The value indicates the hour when the effective period ends. The actual end time is 00:00:00 of the specified hour. For example, if you set this parameter to 22, the effective period ends at 22:00:00. The time zone is UTC+8.</p>
+             * <p>The end time of the effective period for alerts.</p>
+             * <p>The value must be an integer ranging from 0 to 23. Unit: hours. The value specifies the hour when the effective period ends. The actual end time is 00:00:00 of the specified hour. For example, if you set this parameter to 22, the effective period ends at 22:00:00. The time zone is UTC+8 (Beijing time).</p>
              * <blockquote>
              * <p>Note: If the current time is not within the effective time window, the system does not send alert notifications even if the threshold is exceeded.</p>
              * </blockquote>
@@ -401,12 +401,12 @@ public class CreateHostAvailabilityRequest extends Request {
             }
 
             /**
-             * <p>The alert notification method. Valid values:</p>
-             * <p>&lt;props=&quot;china&quot;&gt;- 2: phone call, text message, email, and DingTalk chatbot.</p>
-             * <p>&lt;props=&quot;china&quot;&gt;- 1: text message, email, and DingTalk chatbot.</p>
-             * <p>&lt;props=&quot;china&quot;&gt;- 0: email and DingTalk chatbot.</p>
-             * <p>&lt;props=&quot;intl&quot;&gt;0: email and DingTalk chatbot.</p>
-             * <p>&lt;props=&quot;partner&quot;&gt;0: email and DingTalk chatbot.</p>
+             * <p>The alert notification type. Valid values:</p>
+             * <p>&lt;props=&quot;china&quot;&gt;- 2: Phone call, text message, email, and DingTalk chatbot.</p>
+             * <p>&lt;props=&quot;china&quot;&gt;- 1: Text message, email, and DingTalk chatbot.</p>
+             * <p>&lt;props=&quot;china&quot;&gt;- 0: Email and DingTalk chatbot.</p>
+             * <p>&lt;props=&quot;intl&quot;&gt;0: Email and DingTalk chatbot.</p>
+             * <p>&lt;props=&quot;partner&quot;&gt;0: Email and DingTalk chatbot.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -429,8 +429,8 @@ public class CreateHostAvailabilityRequest extends Request {
             }
 
             /**
-             * <p>The start time of the effective period for alerting.</p>
-             * <p>The value is an integer ranging from 0 to 23. Unit: hours. The value indicates the hour when the effective period starts. The actual start time is 00:00:00 of the specified hour. For example, if you set this parameter to 0, the effective period starts at 00:00:00. The time zone is UTC+8.</p>
+             * <p>The start time of the effective period for alerts.</p>
+             * <p>The value must be an integer ranging from 0 to 23. Unit: hours. The value specifies the hour when the effective period starts. The actual start time is 00:00:00 of the specified hour. For example, if you set this parameter to 0, the effective period starts at 00:00:00. The time zone is UTC+8 (Beijing time).</p>
              * <blockquote>
              * <p>Note: If the current time is not within the effective time window, the system does not send alert notifications even if the threshold is exceeded.</p>
              * </blockquote>
@@ -831,7 +831,7 @@ public class CreateHostAvailabilityRequest extends Request {
             } 
 
             /**
-             * <p>The statistical method for the alert. Valid values of N: 1 to 21. Valid values vary based on the metric:</p>
+             * <p>The aggregation method for the alert. Valid values of N: 1 to 21. Valid values vary based on the metric:</p>
              * <ul>
              * <li>HttpStatus: Value.</li>
              * <li>HttpLatency: Average.</li>
@@ -840,7 +840,7 @@ public class CreateHostAvailabilityRequest extends Request {
              * <li>PingLostRate: Average.</li>
              * </ul>
              * <blockquote>
-             * <p>The statistical method for status codes is the original value (Value), and the statistical method for response time or packet loss rate is the average value (Average).</p>
+             * <p>The aggregation method for status codes is the original value (Value). The aggregation method for response time or packet loss rate is the average value (Average).</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -997,7 +997,7 @@ public class CreateHostAvailabilityRequest extends Request {
             } 
 
             /**
-             * <p>The Alibaba Cloud Resource Name (ARN) of the resource. Format: <code>acs:{service abbreviation}:{regionId}:{userId}:/{resource type}/{resource name}/message</code>. Example: <code>acs:mns:cn-hangzhou:120886317861****:/queues/test123/message</code>. Parameter description:</p>
+             * <p>The ARN of the resource. Format: <code>acs:{service abbreviation}:{regionId}:{userId}:/{resource type}/{resource name}/message</code>. Example: <code>acs:mns:cn-hangzhou:120886317861****:/queues/test123/message</code>. Parameter descriptions:</p>
              * <ul>
              * <li><p>{service abbreviation}: The abbreviation of the cloud service. Only Simple Message Queue (formerly MNS) is supported.</p>
              * </li>
@@ -1005,7 +1005,7 @@ public class CreateHostAvailabilityRequest extends Request {
              * </li>
              * <li><p>{regionId}: The region where the Simple Message Queue (formerly MNS) queue or topic resides.</p>
              * </li>
-             * <li><p>{resource type}: The type of the resource that receives alerts. Valid values:</p>
+             * <li><p>{resource type}: The type of the resource that accepts alert notifications. Valid values:</p>
              * <ul>
              * <li><strong>queues</strong>: queue.</li>
              * <li><strong>topics</strong>: topic.</li>
@@ -1028,7 +1028,7 @@ public class CreateHostAvailabilityRequest extends Request {
             }
 
             /**
-             * <p>The ID of the alert target.</p>
+             * <p>The ID of the alert trigger target.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1052,9 +1052,9 @@ public class CreateHostAvailabilityRequest extends Request {
             /**
              * <p>The alert level. Valid values:</p>
              * <ul>
-             * <li>INFO: information.</li>
-             * <li>WARN: warning.</li>
-             * <li>CRITICAL: critical.</li>
+             * <li>INFO: Information.</li>
+             * <li>WARN: Warning.</li>
+             * <li>CRITICAL: Critical.</li>
              * </ul>
              * 
              * <strong>example:</strong>

@@ -93,13 +93,7 @@ public class DeleteExporterOutputResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code.</p>
-         * <blockquote>
-         * <p>A status code of 200 indicates success. Other values indicate failure.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>200</p>
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -107,10 +101,7 @@ public class DeleteExporterOutputResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Success</p>
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -118,10 +109,7 @@ public class DeleteExporterOutputResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2DECF751-7AFA-43BB-8C63-2B6B07E51AE1</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,14 +117,7 @@ public class DeleteExporterOutputResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:  </p>
-         * <ul>
-         * <li><code>true</code>: The request was successful.</li>
-         * <li><code>false</code>: The request failed.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;

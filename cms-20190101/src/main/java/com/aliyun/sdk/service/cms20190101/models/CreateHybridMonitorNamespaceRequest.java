@@ -119,7 +119,7 @@ public class CreateHybridMonitorNamespaceRequest extends Request {
          * <p>The description of the metric namespace.</p>
          * 
          * <strong>example:</strong>
-         * <p>Alibaba Cloud product metric repository.</p>
+         * <p>Metric namespace for Alibaba Cloud services</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -156,10 +156,10 @@ public class CreateHybridMonitorNamespaceRequest extends Request {
         /**
          * <p>The storage solution for monitoring data. Valid values:</p>
          * <ul>
-         * <li>aliyun_prometheus: Stores monitoring data in Prometheus.</li>
+         * <li>aliyun_prometheus: Monitoring data is stored in Prometheus.</li>
          * </ul>
          * <blockquote>
-         * <p>For more information about storage solutions for monitoring data, see <a href="https://help.aliyun.com/document_detail/2594921.html">Storage solutions for monitoring data in Hybrid Cloud Monitoring</a>.</p>
+         * <p>For more information about the storage solutions for monitoring data, see <a href="https://help.aliyun.com/document_detail/2594921.html">Storage solutions for monitoring data in Hybrid Cloud Monitoring</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -174,14 +174,14 @@ public class CreateHybridMonitorNamespaceRequest extends Request {
         /**
          * <p>The data storage duration. Valid values:</p>
          * <ul>
-         * <li>cms.s1.large: Stores data for 15 days.</li>
-         * <li>cms.s1.xlarge: Stores data for 32 days.</li>
-         * <li>cms.s1.2xlarge: Stores data for 63 days.</li>
-         * <li>cms.s1.3xlarge (default): Stores data for 93 days.</li>
-         * <li>cms.s1.6xlarge: Stores data for 185 days.</li>
-         * <li>cms.s1.12xlarge: Stores data for 376 days.</li>
+         * <li>cms.s1.large: 15 days</li>
+         * <li>cms.s1.xlarge: 32 days</li>
+         * <li>cms.s1.2xlarge: 63 days</li>
+         * <li>cms.s1.3xlarge (default value): 93 days</li>
+         * <li>cms.s1.6xlarge: 185 days</li>
+         * <li>cms.s1.12xlarge: 376 days</li>
          * </ul>
-         * <p>For more information about the pricing of different storage durations, see the <strong>Pricing</strong> table in <a href="https://help.aliyun.com/document_detail/223532.html">Dashboard</a>.</p>
+         * <p>For the prices of different storage duration specifications, see <strong>Pricing</strong> in <a href="https://help.aliyun.com/document_detail/223532.html">dashboard</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>cms.s1.3xlarge</p>

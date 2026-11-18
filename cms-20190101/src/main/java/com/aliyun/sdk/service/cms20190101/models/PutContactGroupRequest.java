@@ -31,6 +31,10 @@ public class PutContactGroupRequest extends Request {
     private String describe;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EnableSubscribed")
     private Boolean enableSubscribed;
 
@@ -39,6 +43,7 @@ public class PutContactGroupRequest extends Request {
         this.contactGroupName = builder.contactGroupName;
         this.contactNames = builder.contactNames;
         this.describe = builder.describe;
+        this.dryRun = builder.dryRun;
         this.enableSubscribed = builder.enableSubscribed;
     }
 
@@ -77,6 +82,13 @@ public class PutContactGroupRequest extends Request {
     }
 
     /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    /**
      * @return enableSubscribed
      */
     public Boolean getEnableSubscribed() {
@@ -87,6 +99,7 @@ public class PutContactGroupRequest extends Request {
         private String contactGroupName; 
         private java.util.List<String> contactNames; 
         private String describe; 
+        private Boolean dryRun; 
         private Boolean enableSubscribed; 
 
         private Builder() {
@@ -98,6 +111,7 @@ public class PutContactGroupRequest extends Request {
             this.contactGroupName = request.contactGroupName;
             this.contactNames = request.contactNames;
             this.describe = request.describe;
+            this.dryRun = request.dryRun;
             this.enableSubscribed = request.enableSubscribed;
         } 
 
@@ -106,7 +120,7 @@ public class PutContactGroupRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>Attendance system group</p>
+         * <p>Attendance System Group</p>
          */
         public Builder contactGroupName(String contactGroupName) {
             this.putQueryParameter("ContactGroupName", contactGroupName);
@@ -115,7 +129,7 @@ public class PutContactGroupRequest extends Request {
         }
 
         /**
-         * <p>The name of the alert contact.</p>
+         * <p>The names of the alert contacts.</p>
          */
         public Builder contactNames(java.util.List<String> contactNames) {
             this.putQueryParameter("ContactNames", contactNames);
@@ -136,11 +150,23 @@ public class PutContactGroupRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether to perform a dry run on the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
          * <p>Specifies whether to enable the subscription feature. Valid values:</p>
          * <ul>
-         * <li><p>true: Enabled.</p>
+         * <li><p>true: Yes.</p>
          * </li>
-         * <li><p>false: Disabled.</p>
+         * <li><p>false: No.</p>
          * </li>
          * </ul>
          * 

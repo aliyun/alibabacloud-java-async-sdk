@@ -115,7 +115,7 @@ public class DeleteEventRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The UUID of the request, which is used to query logs.</p>
+         * <p>The UUID of the request, which can be used to query logs.</p>
          * 
          * <strong>example:</strong>
          * <p>45231A42-5A09-5AFF-953C-A5B3D4ED8925</p>
@@ -126,11 +126,11 @@ public class DeleteEventRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the operation is successful. Valid values:</p>
+         * <p>Indicates whether the operation was successful. Valid values:</p>
          * <ul>
-         * <li><p>true: Successful.</p>
+         * <li><p>true: The operation was successful.</p>
          * </li>
-         * <li><p>false: Failed.</p>
+         * <li><p>false: The operation failed.</p>
          * </li>
          * </ul>
          * 

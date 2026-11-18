@@ -60,11 +60,8 @@ public class DisableHostAvailabilityRequest extends Request {
         } 
 
         /**
-         * <p>The IDs of the availability monitoring jobs.</p>
+         * <p>The ID of the availability monitoring task.</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>12345</p>
          */
         public Builder id(java.util.List<Long> id) {
             this.putQueryParameter("Id", id);

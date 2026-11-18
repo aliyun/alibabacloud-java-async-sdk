@@ -103,7 +103,7 @@ public class ModifyHybridMonitorSLSGroupRequest extends Request {
          * <p>The description of the Logstore group.</p>
          * 
          * <strong>example:</strong>
-         * <p>Logstore group of Alibaba Cloud products.</p>
+         * <p>阿里云产品归属的Logstore组。</p>
          */
         public Builder SLSGroupDescription(String SLSGroupDescription) {
             this.putQueryParameter("SLSGroupDescription", SLSGroupDescription);

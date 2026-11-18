@@ -134,11 +134,11 @@ public class CreateMonitorGroupByResourceGroupIdRequest extends Request {
 
         /**
          * <p>The alert contact group. Alert notifications for the application group are sent to the alert contacts in this alert contact group.</p>
-         * <p>An alert contact group is a collection of alert contacts and can contain one or more alert contacts. For more information about how to create alert contacts and alert contact groups, see <a href="https://help.aliyun.com/document_detail/114923.html">PutContact</a> and <a href="https://help.aliyun.com/document_detail/114929.html">PutContactGroup</a>. For more information about how to obtain alert contact groups, see <a href="https://help.aliyun.com/document_detail/114922.html">DescribeContactGroupList</a>.</p>
+         * <p>An alert contact group contains one or more alert contacts. For more information about how to create alert contacts and alert contact groups, see <a href="https://help.aliyun.com/document_detail/114923.html">PutContact</a> and <a href="https://help.aliyun.com/document_detail/114929.html">PutContactGroup</a>. For more information about how to obtain alert contact groups, see <a href="https://help.aliyun.com/document_detail/114922.html">DescribeContactGroupList</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ECS_Group</p>
+         * <p>[&quot;ECS_Group&quot;]</p>
          */
         public Builder contactGroupList(java.util.List<String> contactGroupList) {
             this.putQueryParameter("ContactGroupList", contactGroupList);
@@ -151,7 +151,7 @@ public class CreateMonitorGroupByResourceGroupIdRequest extends Request {
          * <ul>
          * <li><p>true: Enabled.</p>
          * </li>
-         * <li><p>false: Disabled. Default value.</p>
+         * <li><p>false: Disabled. This is the default value.</p>
          * </li>
          * </ul>
          * 
@@ -169,7 +169,7 @@ public class CreateMonitorGroupByResourceGroupIdRequest extends Request {
          * <ul>
          * <li><p>true: Enabled.</p>
          * </li>
-         * <li><p>false: Disabled. Default value.</p>
+         * <li><p>false: Disabled. This is the default value.</p>
          * </li>
          * </ul>
          * 
@@ -183,7 +183,7 @@ public class CreateMonitorGroupByResourceGroupIdRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the resource group.</p>
+         * <p>The ID of the region to which the resource group belongs.</p>
          * <p>For more information about how to obtain the region ID of a resource group, see <a href="https://help.aliyun.com/document_detail/158866.html">GetResourceGroup</a>.</p>
          * <p>This parameter is required.</p>
          * 
@@ -198,7 +198,7 @@ public class CreateMonitorGroupByResourceGroupIdRequest extends Request {
 
         /**
          * <p>The ID of the resource group.</p>
-         * <p>For more information about how to obtain the resource group ID, see <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a>.</p>
+         * <p>For more information about how to obtain the ID of a resource group, see <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -212,7 +212,7 @@ public class CreateMonitorGroupByResourceGroupIdRequest extends Request {
 
         /**
          * <p>The name of the resource group.</p>
-         * <p>For more information about how to obtain the resource group name, see <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a>.</p>
+         * <p>For more information about how to obtain the name of a resource group, see <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

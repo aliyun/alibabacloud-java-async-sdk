@@ -91,7 +91,7 @@ public class ModifyHybridMonitorNamespaceRequest extends Request {
          * <p>The description of the metric store.</p>
          * 
          * <strong>example:</strong>
-         * <p>Alibaba Cloud product metric repository.</p>
+         * <p>阿里云产品指标仓库。</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);

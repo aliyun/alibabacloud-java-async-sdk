@@ -60,11 +60,7 @@ public class DeleteExporterOutputRequest extends Request {
         } 
 
         /**
-         * <p>The destination name of the configuration.</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testName</p>
          */
         public Builder destName(String destName) {
             this.putQueryParameter("DestName", destName);

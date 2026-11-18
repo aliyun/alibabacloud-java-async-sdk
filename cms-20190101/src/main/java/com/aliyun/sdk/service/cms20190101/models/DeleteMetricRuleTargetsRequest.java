@@ -88,7 +88,7 @@ public class DeleteMetricRuleTargetsRequest extends Request {
         }
 
         /**
-         * <p>The resource IDs.</p>
+         * <p>The target IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

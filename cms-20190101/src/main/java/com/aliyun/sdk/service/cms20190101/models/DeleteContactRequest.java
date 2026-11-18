@@ -22,9 +22,14 @@ public class DeleteContactRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String contactName;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
     private DeleteContactRequest(Builder builder) {
         super(builder);
         this.contactName = builder.contactName;
+        this.dryRun = builder.dryRun;
     }
 
     public static Builder builder() {
@@ -47,8 +52,16 @@ public class DeleteContactRequest extends Request {
         return this.contactName;
     }
 
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
     public static final class Builder extends Request.Builder<DeleteContactRequest, Builder> {
         private String contactName; 
+        private Boolean dryRun; 
 
         private Builder() {
             super();
@@ -57,6 +70,7 @@ public class DeleteContactRequest extends Request {
         private Builder(DeleteContactRequest request) {
             super(request);
             this.contactName = request.contactName;
+            this.dryRun = request.dryRun;
         } 
 
         /**
@@ -69,6 +83,18 @@ public class DeleteContactRequest extends Request {
         public Builder contactName(String contactName) {
             this.putQueryParameter("ContactName", contactName);
             this.contactName = contactName;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to perform only a dry run for this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 

@@ -103,18 +103,7 @@ public class PutExporterOutputRequest extends Request {
         } 
 
         /**
-         * <p>The data export configuration. It is a JSON object string that must contain the following fields:</p>
-         * <ul>
-         * <li>endpoint: the domain name for Simple Log Service (SLS) data.</li>
-         * <li>project: the project.</li>
-         * <li>logstore: the Logstore.</li>
-         * <li>ak: the AccessKey ID.</li>
-         * <li>as: the AccessKey Secret.</li>
-         * </ul>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{ &quot;endpoint&quot;: &quot;<a href="http://cn-qingdao-share.log.aliyuncs.com">http://cn-qingdao-share.log.aliyuncs.com</a>&quot;, &quot;project&quot;: &quot;exporter&quot;, &quot;logstore&quot;: &quot;exporter&quot;,&quot;ak&quot;: &quot;LTAIp*******&quot;, &quot;userId&quot;: &quot;17754********&quot;, &quot;as&quot;: &quot;TxHwuJ8yAb3AU******&quot;}</p>
          */
         public Builder configJson(String configJson) {
             this.putQueryParameter("ConfigJson", configJson);
@@ -123,10 +112,7 @@ public class PutExporterOutputRequest extends Request {
         }
 
         /**
-         * <p>The description of the configuration.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>CPU metric export</p>
+         * Desc.
          */
         public Builder desc(String desc) {
             this.putQueryParameter("Desc", desc);
@@ -135,11 +121,7 @@ public class PutExporterOutputRequest extends Request {
         }
 
         /**
-         * <p>The name of the configuration.</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>exporterConfig</p>
          */
         public Builder destName(String destName) {
             this.putQueryParameter("DestName", destName);
@@ -148,10 +130,7 @@ public class PutExporterOutputRequest extends Request {
         }
 
         /**
-         * <p>The destination service for the export.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>sls</p>
+         * DestType.
          */
         public Builder destType(String destType) {
             this.putQueryParameter("DestType", destType);

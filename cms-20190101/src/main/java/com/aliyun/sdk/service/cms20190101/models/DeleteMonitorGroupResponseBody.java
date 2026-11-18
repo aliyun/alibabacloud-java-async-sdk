@@ -106,7 +106,10 @@ public class DeleteMonitorGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code. A value of 200 indicates that the deletion was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class DeleteMonitorGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Group.
+         * <p>The information about the deleted application group.</p>
          */
         public Builder group(Group group) {
             this.group = group;
@@ -122,7 +125,10 @@ public class DeleteMonitorGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message returned when the request fails. The example indicates that the required parameter GroupId is missing. No error message is returned when the deletion is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GroupId is mandatory for this action.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class DeleteMonitorGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>550e8400-e29b-41d4-a716-446655440000</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class DeleteMonitorGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the application group was deleted. A value of true indicates success, and a value of false indicates failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -320,7 +332,10 @@ public class DeleteMonitorGroupResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * <p>The name of the application group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>生产应用分组</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;

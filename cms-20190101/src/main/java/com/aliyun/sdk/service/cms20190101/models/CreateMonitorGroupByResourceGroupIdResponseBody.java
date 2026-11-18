@@ -106,7 +106,7 @@ public class CreateMonitorGroupByResourceGroupIdResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The status code.</p>
          * <blockquote>
          * <p>200 indicates success.</p>
          * </blockquote>
@@ -155,9 +155,9 @@ public class CreateMonitorGroupByResourceGroupIdResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the operation was successful. Valid values:</p>
          * <ul>
-         * <li><p>true: Successful.</p>
+         * <li><p>true: The operation was successful.</p>
          * </li>
-         * <li><p>false: Failed.</p>
+         * <li><p>false: The operation failed.</p>
          * </li>
          * </ul>
          * 

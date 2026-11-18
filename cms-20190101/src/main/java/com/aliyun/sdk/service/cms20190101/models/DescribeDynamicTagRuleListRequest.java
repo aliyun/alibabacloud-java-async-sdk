@@ -196,9 +196,7 @@ public class DescribeDynamicTagRuleListRequest extends Request {
          * <p>For more information about how to obtain a tag value, see <a href="https://help.aliyun.com/document_detail/145557.html">DescribeTagValueList</a>.</p>
          * 
          * <strong>example:</strong>
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>production</p>
          */
         public Builder tagValue(String tagValue) {
             this.putQueryParameter("TagValue", tagValue);

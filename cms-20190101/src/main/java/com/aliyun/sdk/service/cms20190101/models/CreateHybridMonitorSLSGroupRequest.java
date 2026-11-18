@@ -89,7 +89,7 @@ public class CreateHybridMonitorSLSGroupRequest extends Request {
         } 
 
         /**
-         * <p>The configurations of the Logstore group.</p>
+         * <p>The configuration information of the Logstore group.</p>
          * <p>Valid values of N: 1 to 25.</p>
          * <p>This parameter is required.</p>
          */
@@ -103,7 +103,7 @@ public class CreateHybridMonitorSLSGroupRequest extends Request {
          * <p>The description of the Logstore group.</p>
          * 
          * <strong>example:</strong>
-         * <p>Logstore group of Alibaba Cloud products.</p>
+         * <p>The Logstore group to which Alibaba Cloud services belong</p>
          */
         public Builder SLSGroupDescription(String SLSGroupDescription) {
             this.putQueryParameter("SLSGroupDescription", SLSGroupDescription);
@@ -113,7 +113,7 @@ public class CreateHybridMonitorSLSGroupRequest extends Request {
 
         /**
          * <p>The name of the Logstore group.</p>
-         * <p>The name must be 2 to 32 characters in length and can contain uppercase letters, lowercase letters, digits, and underscores (_). The name must start with a letter.</p>
+         * <p>The name must be 2 to 32 characters in length, and can contain uppercase letters, lowercase letters, digits, and underscores (_). It must start with a letter.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -253,11 +253,11 @@ public class CreateHybridMonitorSLSGroupRequest extends Request {
             }
 
             /**
-             * <p>The member ID.</p>
+             * <p>The ID of the member.</p>
              * <p>Valid values of N: 1 to 25.</p>
-             * <p>If you invoke this operation by using a management account, you can associate the Alibaba Cloud services of any member in the resource folder with Hybrid Cloud Monitoring through cloud native mode. You can use the resource folder to monitor the Alibaba Cloud services of multiple accounts.</p>
+             * <p>When you invoke this API operation by using a management account, you can use the cloud native mode for the Alibaba Cloud services of any member in the resource folder for Hybrid Cloud Monitoring. This allows you to monitor the Alibaba Cloud services across accounts in an enterprise by using the resource folder.</p>
              * <blockquote>
-             * <p>If a member uses CloudMonitor for the first time, make sure that the member has been granted the authorization for the CloudMonitor service-linked role (AliyunServiceRoleForCloudMonitor). For more information, see <a href="https://help.aliyun.com/document_detail/170423.html">CloudMonitor service-linked role</a>.</p>
+             * <p>If the member uses CloudMonitor for the first time, make sure that the member has completed the authorization to associate the CloudMonitor service-linked role (AliyunServiceRoleForCloudMonitor). For more information, see <a href="https://help.aliyun.com/document_detail/170423.html">CloudMonitor service-linked role</a>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

@@ -74,11 +74,11 @@ public class DeleteSiteMonitorsRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to delete alert rules when you delete the tasks. Valid values:</p>
+         * <p>Specifies whether to delete alert rules when deleting tasks. Valid values:</p>
          * <ul>
-         * <li><p>true (default): Deletes the alert rules.</p>
+         * <li><p>true (default): Deletes alert rules.</p>
          * </li>
-         * <li><p>false: Does not delete the alert rules.</p>
+         * <li><p>false: Does not delete alert rules.</p>
          * </li>
          * </ul>
          * 

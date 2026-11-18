@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class PutMetricRuleTargetsRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RuleId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String ruleId;
@@ -29,6 +33,7 @@ public class PutMetricRuleTargetsRequest extends Request {
 
     private PutMetricRuleTargetsRequest(Builder builder) {
         super(builder);
+        this.dryRun = builder.dryRun;
         this.ruleId = builder.ruleId;
         this.targets = builder.targets;
     }
@@ -47,6 +52,13 @@ public class PutMetricRuleTargetsRequest extends Request {
     }
 
     /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    /**
      * @return ruleId
      */
     public String getRuleId() {
@@ -61,6 +73,7 @@ public class PutMetricRuleTargetsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<PutMetricRuleTargetsRequest, Builder> {
+        private Boolean dryRun; 
         private String ruleId; 
         private java.util.List<Targets> targets; 
 
@@ -70,13 +83,26 @@ public class PutMetricRuleTargetsRequest extends Request {
 
         private Builder(PutMetricRuleTargetsRequest request) {
             super(request);
+            this.dryRun = request.dryRun;
             this.ruleId = request.ruleId;
             this.targets = request.targets;
         } 
 
         /**
+         * <p>Specifies whether to perform a dry run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
          * <p>The ID of the alert rule.</p>
-         * <p>For information about how to obtain the alert rule ID, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</p>
+         * <p>For more information about how to obtain the ID of an alert rule, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,33 +212,33 @@ public class PutMetricRuleTargetsRequest extends Request {
             } 
 
             /**
-             * <p>The Alibaba Cloud Resource Name (ARN) of the resource. Simple Message Queue (formerly MNS), elastic scaling (ESS), Simple Log Service (SLS), and Function Compute (FC) are supported.</p>
-             * <p>The following section describes the ARN parameter metric description for Simple Message Queue (formerly MNS):</p>
-             * <p><code>acs:mns:{regionId}:{userId}:/{Resource type}/{Resource name}/message</code></p>
+             * <p>The ARN of the resource. Simple Message Queue (formerly MNS), Auto Scaling (ESS), Simple Log Service (SLS), and Function Compute (FC) are supported.</p>
+             * <p>The ARN parameters for Simple Message Queue (formerly MNS) are as follows:</p>
+             * <p><code>acs:mns:{regionId}:{userId}:/{resource type}/{resource name}/message</code>.</p>
              * <ul>
-             * <li><p>{regionId}: the region where the MSMQ or topic of Simple Message Queue (formerly MNS) resides.</p>
+             * <li><p>{regionId}: the region where the Simple Message Queue (formerly MNS) queue or topic resides.</p>
              * </li>
-             * <li><p>{userId}: the Alibaba Cloud account that owns the resource.</p>
+             * <li><p>{userId}: the Alibaba Cloud account to which the resource belongs.</p>
              * </li>
-             * <li><p>{Resource type}: the type of the resource that accepts alert notifications. Valid values:</p>
+             * <li><p>{resource type}: the type of the resource that accepts alerts. Valid values:</p>
              * <ul>
-             * <li><strong>queues</strong>: queue.</li>
-             * <li><strong>topics</strong>: topic.</li>
+             * <li><strong>queues</strong>: queue</li>
+             * <li><strong>topics</strong>: topic</li>
              * </ul>
              * </li>
-             * <li><p>{Resource name}: the name of the resource.</p>
+             * <li><p>{resource name}: the name of the resource.</p>
              * <ul>
              * <li>If the resource type is <strong>queues</strong>, the resource name is the queue name.</li>
              * <li>If the resource type is <strong>topics</strong>, the resource name is the topic name.</li>
              * </ul>
              * </li>
              * </ul>
-             * <p>ARN for elastic scaling:</p>
-             * <p>acs:ess:{regionId}:{userId}:scalingGroupId/{Scaling group ID}:scalingRuleId/{Scaling rule ID}</p>
-             * <p>ARN for Simple Log Service:</p>
-             * <p>acs:log:{regionId}:{userId}:project/{Project name}/logstore/{Logstore name}</p>
-             * <p>ARN for Function Compute:</p>
-             * <p>acs:fc:{regionId}:{userId}:services/{Service name}/functions/{Function name}.</p>
+             * <p>The ARN for Auto Scaling:</p>
+             * <p>acs:ess:{regionId}:{userId}:scalingGroupId/{scaling group ID}:scalingRuleId/{scaling rule ID}</p>
+             * <p>The ARN for Simple Log Service:</p>
+             * <p>acs:log:{regionId}:{userId}:project/{project name}/logstore/{Logstore name}</p>
+             * <p>The ARN for Function Compute:</p>
+             * <p>acs:fc:{regionId}:{userId}:services/{service name}/functions/{function name}</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -225,7 +251,7 @@ public class PutMetricRuleTargetsRequest extends Request {
 
             /**
              * <p>The ID of the alert trigger target.</p>
-             * <p>For information about how to obtain the alert trigger target ID, see <a href="https://help.aliyun.com/document_detail/121592.html">DescribeMetricRuleTargets</a>.</p>
+             * <p>For more information about how to obtain the ID of an alert trigger target, see <a href="https://help.aliyun.com/document_detail/121592.html">DescribeMetricRuleTargets</a>.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -237,7 +263,7 @@ public class PutMetricRuleTargetsRequest extends Request {
             }
 
             /**
-             * <p>The JSON-formatted parameters of the alert callback.</p>
+             * <p>The JSON-formatted parameters for the alert callback.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;customField1&quot;:&quot;value1&quot;,&quot;customField2&quot;:&quot;$.name&quot;}</p>
@@ -250,9 +276,9 @@ public class PutMetricRuleTargetsRequest extends Request {
             /**
              * <p>The alert level. Valid values:</p>
              * <ul>
-             * <li>INFO: information.</li>
-             * <li>WARN: warning.</li>
-             * <li>CRITICAL: critical.</li>
+             * <li>INFO: information</li>
+             * <li>WARN: warning</li>
+             * <li>CRITICAL: critical</li>
              * </ul>
              * 
              * <strong>example:</strong>

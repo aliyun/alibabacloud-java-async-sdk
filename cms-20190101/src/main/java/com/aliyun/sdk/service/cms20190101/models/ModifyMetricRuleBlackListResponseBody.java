@@ -106,7 +106,7 @@ public class ModifyMetricRuleBlackListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code.</p>
+         * <p>The HTTP status code.</p>
          * <blockquote>
          * <p>200 indicates success.</p>
          * </blockquote>

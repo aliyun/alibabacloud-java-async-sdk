@@ -108,7 +108,7 @@ public class ApplyMetricRuleTemplateResponseBody extends TeaModel {
         /**
          * <p>The HTTP status code.</p>
          * <blockquote>
-         * <p>A status code of 200 indicates that the request was successful.</p>
+         * <p>200 indicates success.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -142,7 +142,7 @@ public class ApplyMetricRuleTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The resources affected by the alert rule.</p>
+         * <p>The resources affected by the alert rules.</p>
          */
         public Builder resource(Resource resource) {
             this.resource = resource;
@@ -266,7 +266,7 @@ public class ApplyMetricRuleTemplateResponseBody extends TeaModel {
             /**
              * <p>The HTTP status code.</p>
              * <blockquote>
-             * <p>A status code of 200 indicates that the request was successful.</p>
+             * <p>200 indicates success.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

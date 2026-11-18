@@ -106,9 +106,9 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The status code.</p>
          * <blockquote>
-         * <p>The value 200 indicates success.</p>
+         * <p>200 indicates success.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -120,7 +120,7 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of failures.</p>
+         * <p>The list of failed items.</p>
          */
         public Builder failData(FailData failData) {
             this.failData = failData;
@@ -152,9 +152,9 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the operation was successful. Valid values:</p>
          * <ul>
-         * <li><p>true: successful.</p>
+         * <li><p>true: successful</p>
          * </li>
-         * <li><p>false: failed.</p>
+         * <li><p>false: failed</p>
          * </li>
          * </ul>
          * 

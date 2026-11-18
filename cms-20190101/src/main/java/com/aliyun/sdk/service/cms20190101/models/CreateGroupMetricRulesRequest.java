@@ -254,7 +254,7 @@ public class CreateGroupMetricRulesRequest extends Request {
             /**
              * <p>The statistical method for critical-level alerts.</p>
              * <p>Valid values of N: 1 to 200.</p>
-             * <p>The valid values of this parameter are determined by the <code>Statistics</code> column that corresponds to the <code>MetricName</code> parameter of the specified Alibaba Cloud service. Examples: Maximum, Minimum, and Average. For more information about how to obtain the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service monitoring metrics</a>.</p>
+             * <p>The valid values of this parameter are determined by the Statistics column that corresponds to the MetricName parameter of the specified Alibaba Cloud service. Examples: Maximum, Minimum, and Average. For more information about how to obtain the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">cloud service monitoring metrics</a>.</p>
              * <blockquote>
              * <p>You must specify at least one of the following alert levels: Critical, Warn, and Info. For the specified alert level, you must specify the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
              * </blockquote>
@@ -268,7 +268,7 @@ public class CreateGroupMetricRulesRequest extends Request {
             }
 
             /**
-             * <p>The threshold for triggering critical-level alert notifications.</p>
+             * <p>The threshold that triggers the critical-level alert notification.</p>
              * <p>Valid values of N: 1 to 200.</p>
              * <blockquote>
              * <p>You must specify at least one of the following alert levels: Critical, Warn, and Info. For the specified alert level, you must specify the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
@@ -283,7 +283,7 @@ public class CreateGroupMetricRulesRequest extends Request {
             }
 
             /**
-             * <p>The number of times that the metric must reach the alert threshold to send a critical-level alert notification.</p>
+             * <p>The number of times the monitoring metrics must reach the alert threshold to send a critical-level alert notification.</p>
              * <p>Valid values of N: 1 to 200.</p>
              * <blockquote>
              * <p>You must specify at least one of the following alert levels: Critical, Warn, and Info. For the specified alert level, you must specify the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
@@ -455,7 +455,7 @@ public class CreateGroupMetricRulesRequest extends Request {
             /**
              * <p>The statistical method for info-level alerts.</p>
              * <p>Valid values of N: 1 to 200.</p>
-             * <p>The valid values of this parameter are determined by the <code>Statistics</code> column that corresponds to the <code>MetricName</code> parameter of the specified Alibaba Cloud service. Examples: Maximum, Minimum, and Average. For more information about how to obtain the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service monitoring metrics</a>.</p>
+             * <p>The valid values of this parameter are determined by the Statistics column that corresponds to the MetricName parameter of the specified Alibaba Cloud service. Examples: Maximum, Minimum, and Average. For more information about how to obtain the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">cloud service monitoring metrics</a>.</p>
              * <blockquote>
              * <p>You must specify at least one of the following alert levels: Critical, Warn, and Info. For the specified alert level, you must specify the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
              * </blockquote>
@@ -484,7 +484,7 @@ public class CreateGroupMetricRulesRequest extends Request {
             }
 
             /**
-             * <p>The number of times that the metric must reach the alert threshold to send an info-level alert notification.</p>
+             * <p>The number of times the monitoring metrics must reach the alert threshold to send an info-level alert notification.</p>
              * <p>Valid values of N: 1 to 200.</p>
              * <blockquote>
              * <p>You must specify at least one of the following alert levels: Critical, Warn, and Info. For the specified alert level, you must specify the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
@@ -656,7 +656,7 @@ public class CreateGroupMetricRulesRequest extends Request {
             /**
              * <p>The statistical method for warning-level alerts.</p>
              * <p>Valid values of N: 1 to 200.</p>
-             * <p>The valid values of this parameter are determined by the <code>Statistics</code> column that corresponds to the <code>MetricName</code> parameter of the specified Alibaba Cloud service. Examples: Maximum, Minimum, and Average. For more information about how to obtain the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service monitoring metrics</a>.</p>
+             * <p>The valid values of this parameter are determined by the Statistics column that corresponds to the MetricName parameter of the specified Alibaba Cloud service. Examples: Maximum, Minimum, and Average. For more information about how to obtain the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">cloud service monitoring metrics</a>.</p>
              * <blockquote>
              * <p>You must specify at least one of the following alert levels: Critical, Warn, and Info. For the specified alert level, you must specify the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
              * </blockquote>
@@ -685,7 +685,7 @@ public class CreateGroupMetricRulesRequest extends Request {
             }
 
             /**
-             * <p>The number of times that the metric must reach the alert threshold to send a warning-level alert notification.</p>
+             * <p>The number of times the monitoring metrics must reach the alert threshold to send a warning-level alert notification.</p>
              * <p>Valid values of N: 1 to 200.</p>
              * <blockquote>
              * <p>You must specify at least one of the following alert levels: Critical, Warn, and Info. For the specified alert level, you must specify the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
@@ -1164,7 +1164,7 @@ public class CreateGroupMetricRulesRequest extends Request {
             /**
              * <p>The abbreviation of the cloud service name.</p>
              * <p>Valid values of N: 1 to 200.</p>
-             * <p>For more information about how to obtain the abbreviation of a cloud service name, see the <code>metricCategory</code> field in the <code>Labels</code> response parameter of the <a href="https://help.aliyun.com/document_detail/114916.html">DescribeProjectMeta</a> operation.</p>
+             * <p>For more information about how to obtain the abbreviation of a cloud service name, see the metricCategory field in the Labels response parameter of the <a href="https://help.aliyun.com/document_detail/114916.html">DescribeProjectMeta</a> operation.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1178,7 +1178,7 @@ public class CreateGroupMetricRulesRequest extends Request {
             /**
              * <p>The alert contact group.</p>
              * <p>Valid values of N: 1 to 200.</p>
-             * <p>For more information about how to obtain alert contact groups, see <a href="https://help.aliyun.com/document_detail/114922.html">DescribeContactGroupList</a>.</p>
+             * <p>For more information about how to obtain an alert contact group, see <a href="https://help.aliyun.com/document_detail/114922.html">DescribeContactGroupList</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>ECS_Group</p>
@@ -1226,9 +1226,9 @@ public class CreateGroupMetricRulesRequest extends Request {
             /**
              * <p>The detection period of the alert rule.</p>
              * <p>Valid values of N: 1 to 200.</p>
-             * <p>Unit: seconds. The default value is the minimum frequency of the metric.</p>
+             * <p>Unit: seconds. The default value is the minimum reporting frequency of the metric.</p>
              * <blockquote>
-             * <p>Set the detection period of the alert rule to the same value as the data reporting period. If the detection period is shorter than the data reporting period, alerts may not be triggered due to insufficient data.</p>
+             * <p>Set the detection period of the alert rule to the same value as the reporting period of monitoring data. If the detection period is shorter than the reporting period, alerts cannot be triggered due to insufficient data.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1248,9 +1248,9 @@ public class CreateGroupMetricRulesRequest extends Request {
             }
 
             /**
-             * <p>The name of the metric.</p>
+             * <p>The name of the monitoring metric.</p>
              * <p>Valid values of N: 1 to 200.</p>
-             * <p>For more information about how to obtain the name of a metric, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service monitoring metrics</a>.</p>
+             * <p>For more information about how to obtain the name of a monitoring metric, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/163515.html">cloud service monitoring metrics</a>.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1264,7 +1264,7 @@ public class CreateGroupMetricRulesRequest extends Request {
             /**
              * <p>The data namespace of the Alibaba Cloud service.</p>
              * <p>Valid values of N: 1 to 200.</p>
-             * <p>For more information about how to obtain the data namespace of an Alibaba Cloud service, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service monitoring metrics</a>.</p>
+             * <p>For more information about how to obtain the data namespace of an Alibaba Cloud service, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/163515.html">cloud service monitoring metrics</a>.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1276,11 +1276,11 @@ public class CreateGroupMetricRulesRequest extends Request {
             }
 
             /**
-             * <p>The handling method when no monitoring data is available. Valid values:</p>
+             * <p>The processing method when no monitoring data is available. Valid values:</p>
              * <ul>
-             * <li>KEEP_LAST_STATE: No action is taken. This is the default value.</li>
-             * <li>INSUFFICIENT_DATA: The alert content indicates that no data is available.</li>
-             * <li>OK: The status is normal.</li>
+             * <li>KEEP_LAST_STATE: takes no action. This is the default value.</li>
+             * <li>INSUFFICIENT_DATA: reports an alert indicating that no data is available.</li>
+             * <li>OK: reports a normal status.</li>
              * </ul>
              * <p>Valid values of N: 1 to 200.</p>
              * 
@@ -1293,7 +1293,7 @@ public class CreateGroupMetricRulesRequest extends Request {
             }
 
             /**
-             * <p>The time range during which the alert rule is inactive. Valid values of N: 1 to 200.</p>
+             * <p>The time period during which the alert rule is ineffective. Valid values of N: 1 to 200.</p>
              * 
              * <strong>example:</strong>
              * <p>00:00-05:30</p>
@@ -1320,7 +1320,7 @@ public class CreateGroupMetricRulesRequest extends Request {
             /**
              * <p>The reporting period of monitoring data.</p>
              * <p>Valid values of N: 1 to 200. </p>
-             * <p>The value of <code>Period</code> must be 60 or an integer multiple of 60. Unit: seconds. Default value: 300.</p>
+             * <p>The value of Period must be 60 or a multiple of 60. Unit: seconds. Default value: 300.</p>
              * 
              * <strong>example:</strong>
              * <p>60</p>
