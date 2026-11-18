@@ -148,6 +148,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateDatasetVersion  CreateDatasetVersionRequest
+     * @return CreateDatasetVersionResponse
+     */
+    @Override
+    public CompletableFuture<CreateDatasetVersionResponse> createDatasetVersion(CreateDatasetVersionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateDatasetVersion").setMethod(HttpMethod.POST).setPathRegex("/agentspace/{agentSpace}/dataset/{datasetName}/version").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateDatasetVersionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateDatasetVersionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>Calls the CreateEvaluationTask operation to create an evaluation task under a specified AgentSpace. The server validates AgentSpace permissions, initializes evaluation result storage, checks task name uniqueness, and asynchronously creates and executes an EvaluationRun based on <code>taskMode</code> and <code>runStrategies</code>.
      * This operation is applicable to running built-in or custom evaluators on Trace, Dataset, or SLS Log data. It supports two execution strategies: historical backfill and continuous evaluation.</p>
@@ -207,7 +225,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Creates an experiment plan in a specified AgentSpace. You can use this operation to define the configuration for an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to initiate the execution.</p>
+     * <p>Calls CreateExperimentPlan to create an experiment plan in a specified AgentSpace. This operation is used to define the configuration for an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to initiate the execution.</p>
      * 
      * @param request the request parameters of CreateExperimentPlan  CreateExperimentPlanRequest
      * @return CreateExperimentPlanResponse
@@ -368,6 +386,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteDatasetResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteDatasetVersion  DeleteDatasetVersionRequest
+     * @return DeleteDatasetVersionResponse
+     */
+    @Override
+    public CompletableFuture<DeleteDatasetVersionResponse> deleteDatasetVersion(DeleteDatasetVersionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteDatasetVersion").setMethod(HttpMethod.DELETE).setPathRegex("/agentspace/{agentSpace}/dataset/{datasetName}/version/{version}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteDatasetVersionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteDatasetVersionResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -804,6 +840,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Invokes GetPipelineRun to retrieve the details of a single pipeline run, including the data window, execute status, retry information, run statistics, and fault message.</p>
+     * 
      * @param request the request parameters of GetPipelineRun  GetPipelineRunRequest
      * @return GetPipelineRunResponse
      */
@@ -891,6 +930,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListContextStoresResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListDatasetVersions  ListDatasetVersionsRequest
+     * @return ListDatasetVersionsResponse
+     */
+    @Override
+    public CompletableFuture<ListDatasetVersionsResponse> listDatasetVersions(ListDatasetVersionsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListDatasetVersions").setMethod(HttpMethod.GET).setPathRegex("/agentspace/{agentSpace}/dataset/{datasetName}/version").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListDatasetVersionsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListDatasetVersionsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -988,7 +1045,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Calls ListExperimentPlans to query the list of experiment plans under a specified AgentSpace for the current account. Supports fuzzy match by plan name, filtering by status, and pagination by using <code>offset</code>/<code>limit</code>.</p>
+     * <p>Calls ListExperimentPlans to query the list of experiment plans under a specified AgentSpace for the current account. This operation supports fuzzy match by plan name, filtering by status, and pagination by using <code>offset</code> and <code>limit</code>.</p>
      * 
      * @param request the request parameters of ListExperimentPlans  ListExperimentPlansRequest
      * @return ListExperimentPlansResponse
@@ -1065,6 +1122,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Calls the ListPipelineRuns operation to query the pipeline run history. You can filter the results by status, trigger type, and time range, and use cursor-based pagination.</p>
+     * 
      * @param request the request parameters of ListPipelineRuns  ListPipelineRunsRequest
      * @return ListPipelineRunsResponse
      */
@@ -1122,8 +1182,8 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li><strong>agentSpace</strong> must be an AgentSpace instance created under the current account.</li>
-     * <li><strong>source.type</strong> currently supports only the <code>logstore</code> type, and <code>logstore.project</code> and <code>logstore.logstore</code> must be authorized within the AgentSpace and reside in the same region.</li>
+     * <li><strong>agentSpace</strong> must be an existing AgentSpace instance under the current account.</li>
+     * <li><strong>source.type</strong> currently supports only the <code>logstore</code> type. The <code>logstore.project</code> and <code>logstore.logstore</code> must be authorized within the AgentSpace and reside in the same region.</li>
      * <li><strong>pipeline.nodes</strong> must contain at least one <code>Source</code> node and cannot be empty.</li>
      * <li><strong>fromTime</strong> and <strong>toTime</strong> are UNIX timestamps in seconds. <strong>fromTime</strong> must be earlier than <strong>toTime</strong>.</li>
      * <li>A maximum of 5 records are returned, and internal fields of the data source system are automatically filtered out.</li>

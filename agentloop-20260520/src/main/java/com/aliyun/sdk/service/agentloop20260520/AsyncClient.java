@@ -56,6 +56,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDatasetResponse> createDataset(CreateDatasetRequest request);
 
     /**
+     * @param request the request parameters of CreateDatasetVersion  CreateDatasetVersionRequest
+     * @return CreateDatasetVersionResponse
+     */
+    CompletableFuture<CreateDatasetVersionResponse> createDatasetVersion(CreateDatasetVersionRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Calls the CreateEvaluationTask operation to create an evaluation task under a specified AgentSpace. The server validates AgentSpace permissions, initializes evaluation result storage, checks task name uniqueness, and asynchronously creates and executes an EvaluationRun based on <code>taskMode</code> and <code>runStrategies</code>.
      * This operation is applicable to running built-in or custom evaluators on Trace, Dataset, or SLS Log data. It supports two execution strategies: historical backfill and continuous evaluation.</p>
@@ -79,7 +85,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Creates an experiment plan in a specified AgentSpace. You can use this operation to define the configuration for an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to initiate the execution.</p>
+     * <p>Calls CreateExperimentPlan to create an experiment plan in a specified AgentSpace. This operation is used to define the configuration for an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to initiate the execution.</p>
      * 
      * @param request the request parameters of CreateExperimentPlan  CreateExperimentPlanRequest
      * @return CreateExperimentPlanResponse
@@ -136,6 +142,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteDatasetResponse
      */
     CompletableFuture<DeleteDatasetResponse> deleteDataset(DeleteDatasetRequest request);
+
+    /**
+     * @param request the request parameters of DeleteDatasetVersion  DeleteDatasetVersionRequest
+     * @return DeleteDatasetVersionResponse
+     */
+    CompletableFuture<DeleteDatasetVersionResponse> deleteDatasetVersion(DeleteDatasetVersionRequest request);
 
     /**
      * @param request the request parameters of DeleteEvaluationRun  DeleteEvaluationRunRequest
@@ -292,6 +304,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetPipelineResponse> getPipeline(GetPipelineRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Invokes GetPipelineRun to retrieve the details of a single pipeline run, including the data window, execute status, retry information, run statistics, and fault message.</p>
+     * 
      * @param request the request parameters of GetPipelineRun  GetPipelineRunRequest
      * @return GetPipelineRunResponse
      */
@@ -325,6 +340,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListContextStoresResponse> listContextStores(ListContextStoresRequest request);
 
     /**
+     * @param request the request parameters of ListDatasetVersions  ListDatasetVersionsRequest
+     * @return ListDatasetVersionsResponse
+     */
+    CompletableFuture<ListDatasetVersionsResponse> listDatasetVersions(ListDatasetVersionsRequest request);
+
+    /**
      * @param request the request parameters of ListDatasets  ListDatasetsRequest
      * @return ListDatasetsResponse
      */
@@ -356,7 +377,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Calls ListExperimentPlans to query the list of experiment plans under a specified AgentSpace for the current account. Supports fuzzy match by plan name, filtering by status, and pagination by using <code>offset</code>/<code>limit</code>.</p>
+     * <p>Calls ListExperimentPlans to query the list of experiment plans under a specified AgentSpace for the current account. This operation supports fuzzy match by plan name, filtering by status, and pagination by using <code>offset</code> and <code>limit</code>.</p>
      * 
      * @param request the request parameters of ListExperimentPlans  ListExperimentPlansRequest
      * @return ListExperimentPlansResponse
@@ -385,6 +406,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListOptimizeTasksResponse> listOptimizeTasks(ListOptimizeTasksRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Calls the ListPipelineRuns operation to query the pipeline run history. You can filter the results by status, trigger type, and time range, and use cursor-based pagination.</p>
+     * 
      * @param request the request parameters of ListPipelineRuns  ListPipelineRunsRequest
      * @return ListPipelineRunsResponse
      */
@@ -406,8 +430,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li><strong>agentSpace</strong> must be an AgentSpace instance created under the current account.</li>
-     * <li><strong>source.type</strong> currently supports only the <code>logstore</code> type, and <code>logstore.project</code> and <code>logstore.logstore</code> must be authorized within the AgentSpace and reside in the same region.</li>
+     * <li><strong>agentSpace</strong> must be an existing AgentSpace instance under the current account.</li>
+     * <li><strong>source.type</strong> currently supports only the <code>logstore</code> type. The <code>logstore.project</code> and <code>logstore.logstore</code> must be authorized within the AgentSpace and reside in the same region.</li>
      * <li><strong>pipeline.nodes</strong> must contain at least one <code>Source</code> node and cannot be empty.</li>
      * <li><strong>fromTime</strong> and <strong>toTime</strong> are UNIX timestamps in seconds. <strong>fromTime</strong> must be earlier than <strong>toTime</strong>.</li>
      * <li>A maximum of 5 records are returned, and internal fields of the data source system are automatically filtered out.</li>

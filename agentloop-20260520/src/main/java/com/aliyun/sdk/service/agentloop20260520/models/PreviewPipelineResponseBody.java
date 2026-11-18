@@ -80,10 +80,10 @@ public class PreviewPipelineResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The collection of sample rows for the preview result. Each row is a key-value structure. The array contains only the first N rows, up to 5 rows by default, and does not reflect the complete write plan.</p>
+         * <p>The collection of sample rows. This array of maps includes only the first N rows (up to 5 rows by default) and does not reflect the complete write plan.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;status&quot;:&quot;200&quot;,&quot;method&quot;:&quot;POST&quot;}]</p>
+         * <p>[{\&quot;type\&quot;: \&quot;saturation\&quot;, \&quot;value\&quot;: 0}, {\&quot;type\&quot;: \&quot;load\&quot;, \&quot;value\&quot;: 0}, {\&quot;type\&quot;: \&quot;latency\&quot;, \&quot;value\&quot;: 1}, {\&quot;type\&quot;: \&quot;error\&quot;, \&quot;value\&quot;: 0}]</p>
          */
         public Builder data(java.util.List<java.util.Map<String, String>> data) {
             this.data = data;
@@ -99,7 +99,7 @@ public class PreviewPipelineResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID. You can use this ID to locate the request when you troubleshoot issues.</p>
+         * <p>The request ID used to locate the request during troubleshooting.</p>
          * 
          * <strong>example:</strong>
          * <p>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</p>
@@ -389,7 +389,7 @@ public class PreviewPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of data types for each column. This field provides a mapping from column names to data types, such as string, long, double, and json.</p>
+             * <p>The mapping from column names to data types, such as string, long, double, or json.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;long&quot;,&quot;string&quot;]</p>
@@ -444,7 +444,7 @@ public class PreviewPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether an SQL query is used.</p>
+             * <p>Indicates whether an SQL query is used.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -455,7 +455,7 @@ public class PreviewPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether nanosecond-level ordering is enabled.</p>
+             * <p>Indicates whether nanosecond-level ordering is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -477,7 +477,7 @@ public class PreviewPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of rows returned in the result.</p>
+             * <p>The maximum number of returned rows.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -488,7 +488,7 @@ public class PreviewPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The identifier of the query mode.</p>
+             * <p>The query mode identifier.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -499,7 +499,7 @@ public class PreviewPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of bytes of processed data.</p>
+             * <p>The number of processed data bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>524288</p>
@@ -521,7 +521,7 @@ public class PreviewPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Simple Log Service (SLS) query progress. A value of Complete indicates that the query is completed.</p>
+             * <p>The Simple Log Service (SLS) query progress. A value of Complete indicates that the query is finished.</p>
              * 
              * <strong>example:</strong>
              * <p>Complete</p>
@@ -532,7 +532,7 @@ public class PreviewPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of bytes of scanned raw data.</p>
+             * <p>The number of scanned raw data bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>1048576</p>
@@ -543,7 +543,7 @@ public class PreviewPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The dataset schema of the final pipeline output. The keys are field names, and the type in the values supports text, long, double, and json. The field order is determined by the keys.</p>
+             * <p>The dataset schema for the final output of the pipeline. The keys are field names, and the type in the values supports text, long, double, and json. The field order is determined by the keys field.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;status&quot;:{&quot;type&quot;:&quot;long&quot;}}</p>

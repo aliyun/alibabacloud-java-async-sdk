@@ -87,7 +87,7 @@ public class GetEvaluationRunRequest extends Request {
         } 
 
         /**
-         * <p>The AgentSpace name.</p>
+         * <p>The name of the AgentSpace.</p>
          * 
          * <strong>example:</strong>
          * <p>prod-agentspace</p>
@@ -99,7 +99,7 @@ public class GetEvaluationRunRequest extends Request {
         }
 
         /**
-         * <p>The evaluation task ID.</p>
+         * <p>The ID of the evaluation task.</p>
          * 
          * <strong>example:</strong>
          * <p>eval-task-8b36f2e2b1f94f9c91ce7a4b0f6d9c25</p>
@@ -111,7 +111,7 @@ public class GetEvaluationRunRequest extends Request {
         }
 
         /**
-         * <p>The evaluation run ID.</p>
+         * <p>The ID of the evaluation run.</p>
          * 
          * <strong>example:</strong>
          * <p>eval-run-4fd47f3d7e684e15b1d3d178c6a5b81a</p>

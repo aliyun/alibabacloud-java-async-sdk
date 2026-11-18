@@ -85,7 +85,7 @@ public class GetOptimizeTaskRequest extends Request {
         }
 
         /**
-         * <p>The optimization task name.</p>
+         * <p>The name of the optimization task.</p>
          * 
          * <strong>example:</strong>
          * <p>efficiency-analysis</p>

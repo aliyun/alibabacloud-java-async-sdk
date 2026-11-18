@@ -117,7 +117,7 @@ public class ListEvaluatorsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page used in this request.</p>
+         * <p>The number of entries per page used for this request.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -150,7 +150,7 @@ public class ListEvaluatorsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of evaluators that match the filter conditions.</p>
+         * <p>The total number of evaluators that meet the conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -323,7 +323,7 @@ public class ListEvaluatorsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of annotations.</p>
+             * <p>The list of annotation tags.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;__en&quot;]</p>
@@ -334,7 +334,7 @@ public class ListEvaluatorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time, in seconds-level UNIX timestamp.</p>
+             * <p>The creation time. The value is a UNIX timestamp in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1782816000</p>
@@ -348,7 +348,7 @@ public class ListEvaluatorsResponseBody extends TeaModel {
              * <p>The evaluator description.</p>
              * 
              * <strong>example:</strong>
-             * <p>判断 Agent 是否完成用户任务</p>
+             * <p>Determines whether the agent has completed the user task</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -359,7 +359,7 @@ public class ListEvaluatorsResponseBody extends TeaModel {
              * <p>The display name.</p>
              * 
              * <strong>example:</strong>
-             * <p>链路任务完成度</p>
+             * <p>Pipeline task completion rate</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -422,7 +422,7 @@ public class ListEvaluatorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time, in seconds-level UNIX timestamp.</p>
+             * <p>The update time. The value is a UNIX timestamp in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1782816600</p>

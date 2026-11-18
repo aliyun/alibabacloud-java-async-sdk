@@ -275,7 +275,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The name of the AgentSpace to which the pipeline belongs.</p>
+         * <p>The name of the AgentSpace.</p>
          * 
          * <strong>example:</strong>
          * <p>my-agent-space</p>
@@ -286,7 +286,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The current retry count.</p>
+         * <p>The current number of retries.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -298,6 +298,9 @@ public class GetPipelineRunResponseBody extends TeaModel {
 
         /**
          * <p>The semantic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ExpressionEvaluationError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -306,6 +309,9 @@ public class GetPipelineRunResponseBody extends TeaModel {
 
         /**
          * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Failed to evaluate filter expression in node \&quot;node-1\&quot;: column \&quot;score\&quot; does not exist.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -313,7 +319,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The finish time, in ISO 8601 UTC format.</p>
+         * <p>The finish time in ISO 8601 UTC format.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          * 
          * <strong>example:</strong>
@@ -325,7 +331,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The start of the data window, in UNIX seconds.</p>
+         * <p>The start time of the data window, in UNIX seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1735660800</p>
@@ -347,7 +353,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The next retry time, in ISO 8601 UTC format.</p>
+         * <p>The next retry time in ISO 8601 UTC format.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          * 
          * <strong>example:</strong>
@@ -370,7 +376,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID, which is used to locate and troubleshoot issues.</p>
+         * <p>The ID of the request, which is used to locate the request during troubleshooting.</p>
          * 
          * <strong>example:</strong>
          * <p>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</p>
@@ -381,7 +387,10 @@ public class GetPipelineRunResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The inline run results. This field is returned only when output.inline is set to true at trigger time.</p>
+         * <p>The inline run results, which are returned only when output.inline is set to true during triggering.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;outputRows&quot;: 100, &quot;summary&quot;: &quot;processed 100 rows, 92 matched&quot;, &quot;passed&quot;: true}</p>
          */
         public Builder results(java.util.Map<String, ?> results) {
             this.results = results;
@@ -400,7 +409,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The execution start time, in ISO 8601 UTC format.</p>
+         * <p>The execution start time in ISO 8601 UTC format.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          * 
          * <strong>example:</strong>
@@ -412,7 +421,10 @@ public class GetPipelineRunResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The run statistics, including processedRows (number of processed rows), processedBytes (number of processed bytes), outputRows (number of output rows), outputBytes (number of output bytes), elapsedMs (elapsed time in milliseconds), cpuSec (CPU seconds), cpuCores (number of CPU cores), and tokenCount (number of tokens consumed).</p>
+         * <p>The run statistics, including processedRows (number of processed rows), processedBytes (number of processed bytes), outputRows (number of output rows), outputBytes (number of output bytes), elapsedMs (elapsed time in milliseconds), cpuSec (CPU seconds), cpuCores (number of CPU cores), and tokenCount (number of consumed tokens).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;processedRows&quot;:1000,&quot;elapsedMs&quot;:2500}</p>
          */
         public Builder stats(java.util.Map<String, ?> stats) {
             this.stats = stats;
@@ -420,14 +432,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The run status. Valid values:</p>
-         * <ul>
-         * <li>Pending</li>
-         * <li>Running</li>
-         * <li>Succeeded</li>
-         * <li>Failed</li>
-         * <li>Cancelled</li>
-         * </ul>
+         * <p>The status of the run. Valid values: Pending, Running, Succeeded, Failed, and Cancelled.</p>
          * 
          * <strong>example:</strong>
          * <p>Succeeded</p>
@@ -438,7 +443,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The end of the data window, in UNIX seconds.</p>
+         * <p>The end time of the data window, in UNIX seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1735747200</p>
@@ -449,7 +454,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The trigger time, in ISO 8601 UTC format.</p>
+         * <p>The trigger time in ISO 8601 UTC format.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          * 
          * <strong>example:</strong>
@@ -461,12 +466,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The trigger type. Valid values:</p>
-         * <ul>
-         * <li>Scheduled</li>
-         * <li>Manual</li>
-         * <li>RunOnce</li>
-         * </ul>
+         * <p>The trigger type. Valid values: Scheduled, Manual, and RunOnce.</p>
          * 
          * <strong>example:</strong>
          * <p>Scheduled</p>

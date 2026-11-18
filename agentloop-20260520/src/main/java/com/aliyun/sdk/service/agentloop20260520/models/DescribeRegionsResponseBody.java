@@ -93,7 +93,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The maximum number of entries returned per request.</p>
+         * <p>The maximum number of records returned in a single request.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -104,7 +104,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token. If no more pages are available, this parameter is empty.</p>
+         * <p>The pagination token. This value is empty if no more pages are available.</p>
          * 
          * <strong>example:</strong>
          * <p>ydx438PDAW1lYRJZbBn9</p>
@@ -232,7 +232,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
              * <p>The region name.</p>
              * 
              * <strong>example:</strong>
-             * <p>华东1（杭州）</p>
+             * <p>China (Hangzhou)</p>
              */
             public Builder localName(String localName) {
                 this.localName = localName;

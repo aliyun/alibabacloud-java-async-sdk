@@ -181,7 +181,7 @@ public class ListPipelineRunsRequest extends Request {
         }
 
         /**
-         * <p>The upper bound for filtering by trigger time (triggered_at &lt;= endTime), in UNIX seconds.</p>
+         * <p>The upper bound of the trigger time filter (triggered_at &lt;= endTime). The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1735660800</p>
@@ -205,7 +205,7 @@ public class ListPipelineRunsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token. Pass the nextToken value from the previous response to retrieve the next page. Do not specify this parameter for the first request.</p>
+         * <p>The pagination token. To retrieve the next page of results, pass the nextToken value from the previous response. Do not specify this parameter for the first request.</p>
          * 
          * <strong>example:</strong>
          * <p>MTIzNDU2Nzg5MA==</p>
@@ -217,7 +217,7 @@ public class ListPipelineRunsRequest extends Request {
         }
 
         /**
-         * <p>The lower bound for filtering by trigger time (triggered_at &gt;= startTime), in UNIX seconds.</p>
+         * <p>The lower bound of the trigger time filter (triggered_at &gt;= startTime). The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1735574400</p>
@@ -229,7 +229,7 @@ public class ListPipelineRunsRequest extends Request {
         }
 
         /**
-         * <p>Filters runs by status. Valid values: Pending, Running, Succeeded, Failed, and Cancelled. If you do not specify this parameter, no filtering is applied.</p>
+         * <p>Filters the results by run status. Valid values: Pending, Running, Succeeded, Failed, and Cancelled. If you do not specify this parameter, the results are not filtered by status.</p>
          * 
          * <strong>example:</strong>
          * <p>Succeeded</p>
@@ -241,7 +241,7 @@ public class ListPipelineRunsRequest extends Request {
         }
 
         /**
-         * <p>Filters runs by trigger type. Valid values: Continuous, RunOnce, and Scheduled. If you do not specify this parameter, no filtering is applied.</p>
+         * <p>Filters the results by trigger type. Valid values: Manual, Scheduled, and RunOnce. If you do not specify this parameter, the results are not filtered by trigger type.</p>
          * 
          * <strong>example:</strong>
          * <p>Scheduled</p>

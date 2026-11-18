@@ -44,6 +44,9 @@ public class GetAgentSpaceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("slsProject")
     private String slsProject;
 
+    @com.aliyun.core.annotation.NameInMap("tags")
+    private java.util.List<Tags> tags;
+
     @com.aliyun.core.annotation.NameInMap("updateTime")
     private String updateTime;
 
@@ -57,6 +60,7 @@ public class GetAgentSpaceResponseBody extends TeaModel {
         this.regionId = builder.regionId;
         this.requestId = builder.requestId;
         this.slsProject = builder.slsProject;
+        this.tags = builder.tags;
         this.updateTime = builder.updateTime;
     }
 
@@ -136,6 +140,13 @@ public class GetAgentSpaceResponseBody extends TeaModel {
     }
 
     /**
+     * @return tags
+     */
+    public java.util.List<Tags> getTags() {
+        return this.tags;
+    }
+
+    /**
      * @return updateTime
      */
     public String getUpdateTime() {
@@ -152,6 +163,7 @@ public class GetAgentSpaceResponseBody extends TeaModel {
         private String regionId; 
         private String requestId; 
         private String slsProject; 
+        private java.util.List<Tags> tags; 
         private String updateTime; 
 
         private Builder() {
@@ -167,6 +179,7 @@ public class GetAgentSpaceResponseBody extends TeaModel {
             this.regionId = model.regionId;
             this.requestId = model.requestId;
             this.slsProject = model.slsProject;
+            this.tags = model.tags;
             this.updateTime = model.updateTime;
         } 
 
@@ -268,6 +281,17 @@ public class GetAgentSpaceResponseBody extends TeaModel {
         }
 
         /**
+         * <p>The complete standard tags of the active AgentSpace in the current region. An empty array is returned if it is confirmed that no tags exist. This field is omitted if the AgentSpace is not active or the tags cannot be determined. The omission of this field does not indicate that no tags exist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;key&quot;:&quot;env&quot;,&quot;value&quot;:&quot;test&quot;}]</p>
+         */
+        public Builder tags(java.util.List<Tags> tags) {
+            this.tags = tags;
+            return this;
+        }
+
+        /**
          * <p>The update time.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
@@ -351,7 +375,7 @@ public class GetAgentSpaceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The attach type of the MSE namespace. AutoCreated indicates automatic creation by AgentLoop. UserSelected indicates that an existing namespace is selected and attached when the AgentSpace is created.</p>
+             * <p>The attach type of the MSE namespace. AutoCreated indicates automatic creation by AgentLoop. UserSelected indicates that you select and attach an existing namespace when creating the AgentSpace.</p>
              * 
              * <strong>example:</strong>
              * <p>AutoCreated</p>
@@ -385,6 +409,87 @@ public class GetAgentSpaceResponseBody extends TeaModel {
 
             public MseNamespace build() {
                 return new MseNamespace(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetAgentSpaceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAgentSpaceResponseBody</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * <p>The tag value, which can be an empty string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
             } 
 
         } 

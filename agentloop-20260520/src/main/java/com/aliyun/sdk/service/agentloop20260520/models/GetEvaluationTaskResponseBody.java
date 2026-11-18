@@ -41,6 +41,9 @@ public class GetEvaluationTaskResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("evaluators")
     private java.util.List<Evaluator> evaluators;
 
+    @com.aliyun.core.annotation.NameInMap("qualityMetrics")
+    private java.util.Map<String, ?> qualityMetrics;
+
     @com.aliyun.core.annotation.NameInMap("regionId")
     private String regionId;
 
@@ -77,6 +80,7 @@ public class GetEvaluationTaskResponseBody extends TeaModel {
         this.dataType = builder.dataType;
         this.description = builder.description;
         this.evaluators = builder.evaluators;
+        this.qualityMetrics = builder.qualityMetrics;
         this.regionId = builder.regionId;
         this.requestId = builder.requestId;
         this.runStrategyConfig = builder.runStrategyConfig;
@@ -157,6 +161,13 @@ public class GetEvaluationTaskResponseBody extends TeaModel {
     }
 
     /**
+     * @return qualityMetrics
+     */
+    public java.util.Map<String, ?> getQualityMetrics() {
+        return this.qualityMetrics;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -228,6 +239,7 @@ public class GetEvaluationTaskResponseBody extends TeaModel {
         private String dataType; 
         private String description; 
         private java.util.List<Evaluator> evaluators; 
+        private java.util.Map<String, ?> qualityMetrics; 
         private String regionId; 
         private String requestId; 
         private RunStrategies runStrategyConfig; 
@@ -250,6 +262,7 @@ public class GetEvaluationTaskResponseBody extends TeaModel {
             this.dataType = model.dataType;
             this.description = model.description;
             this.evaluators = model.evaluators;
+            this.qualityMetrics = model.qualityMetrics;
             this.regionId = model.regionId;
             this.requestId = model.requestId;
             this.runStrategyConfig = model.runStrategyConfig;
@@ -262,7 +275,7 @@ public class GetEvaluationTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The AgentSpace name.</p>
+         * <p>The name of the AgentSpace.</p>
          * 
          * <strong>example:</strong>
          * <p>prod-agentspace</p>
@@ -284,7 +297,7 @@ public class GetEvaluationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data source and execution configuration. Tasks with <code>dataType=trace</code> typically contain backend-populated <code>project</code>, <code>storeName</code>, and <code>dataScope</code> fields.</p>
+         * <p>The data source and execution configurations. Tasks with <code>dataType=trace</code> typically include the <code>project</code>, <code>storeName</code>, and <code>dataScope</code> fields populated by the backend.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;project&quot;:&quot;agentspace-project&quot;,&quot;storeName&quot;:&quot;logstore-tracing&quot;,&quot;dataScope&quot;:&quot;trace&quot;}</p>
@@ -295,7 +308,7 @@ public class GetEvaluationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The creation time, in seconds as a UNIX timestamp.</p>
+         * <p>The creation time, represented as a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1782816000</p>
@@ -306,7 +319,7 @@ public class GetEvaluationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The evaluation data filter conditions, returned by the backend as a JSON string.</p>
+         * <p>The filter conditions for evaluation data. The backend returns this value as a JSON string.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;query&quot;:&quot;serviceName=\&quot;checkout-service\&quot;&quot;,&quot;maxRecords&quot;:10,&quot;samplingRate&quot;:100}</p>
@@ -331,7 +344,7 @@ public class GetEvaluationTaskResponseBody extends TeaModel {
          * <p>The description of the evaluation task.</p>
          * 
          * <strong>example:</strong>
-         * <p>Evaluate the task completion of the online Agent pipeline</p>
+         * <p>Evaluate the task completion rate of online agent workflows</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -350,6 +363,17 @@ public class GetEvaluationTaskResponseBody extends TeaModel {
         }
 
         /**
+         * <p>The quality score and coverage snapshot of the most recent evaluator run. This field is empty when the feature is not enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
+        public Builder qualityMetrics(java.util.Map<String, ?> qualityMetrics) {
+            this.qualityMetrics = qualityMetrics;
+            return this;
+        }
+
+        /**
          * <p>The region to which the task belongs.</p>
          * 
          * <strong>example:</strong>
@@ -361,7 +385,7 @@ public class GetEvaluationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>3FE4CD1E-FF41-56BE-B590-7A021D9C1524</p>
@@ -372,7 +396,7 @@ public class GetEvaluationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The structured run strategy configuration, including the parsed backfill strategy and continuous evaluation strategy.</p>
+         * <p>The structured configuration of the run strategy, including the parsed backfill strategy and continuous evaluation strategy.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;backfill&quot;:{&quot;enabled&quot;:true,&quot;startTime&quot;:1782816000000,&quot;endTime&quot;:1782902400000},&quot;continuous&quot;:{&quot;enabled&quot;:true,&quot;intervalUnit&quot;:&quot;HOUR&quot;,&quot;intervalValue&quot;:1,&quot;dataDelayMinutes&quot;:5}}</p>
@@ -383,7 +407,7 @@ public class GetEvaluationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The evaluation task status.</p>
+         * <p>The status of the evaluation task.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -394,7 +418,7 @@ public class GetEvaluationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The key-value pairs of task tags. Empty if not set.</p>
+         * <p>The key-value pairs of task tags. This field is empty when no tags are set.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;serviceId&quot;:&quot;checkout-service&quot;,&quot;env&quot;:&quot;prod&quot;}</p>
@@ -405,7 +429,7 @@ public class GetEvaluationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The evaluation task ID.</p>
+         * <p>The ID of the evaluation task.</p>
          * 
          * <strong>example:</strong>
          * <p>eval-task-8b36f2e2b1f94f9c91ce7a4b0f6d9c25</p>
@@ -416,7 +440,7 @@ public class GetEvaluationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The evaluation task mode.</p>
+         * <p>The mode of the evaluation task.</p>
          * 
          * <strong>example:</strong>
          * <p>batch</p>
@@ -427,7 +451,7 @@ public class GetEvaluationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The task name.</p>
+         * <p>The name of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>trace_task_completion_eval</p>
@@ -438,7 +462,7 @@ public class GetEvaluationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The last update time, in seconds as a UNIX timestamp.</p>
+         * <p>The last update time, represented as a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1782816600</p>

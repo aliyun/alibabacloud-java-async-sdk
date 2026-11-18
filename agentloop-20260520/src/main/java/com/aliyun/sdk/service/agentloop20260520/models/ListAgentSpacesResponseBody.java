@@ -106,7 +106,7 @@ public class ListAgentSpacesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the AgentSpaces.</p>
+         * <p>The AgentSpaces information.</p>
          */
         public Builder agentSpaces(java.util.List<AgentSpaces> agentSpaces) {
             this.agentSpaces = agentSpaces;
@@ -125,7 +125,7 @@ public class ListAgentSpacesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token. This parameter is empty if no next page is available.</p>
+         * <p>The pagination token. This parameter is empty if no next page exists.</p>
          * 
          * <strong>example:</strong>
          * <p>b5754ef15c784abc8696d82790d2985c</p>
@@ -147,7 +147,7 @@ public class ListAgentSpacesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total count.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>13</p>
@@ -229,7 +229,7 @@ public class ListAgentSpacesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The attach method of the MSE namespace. AutoCreated indicates automatic creation by AgentLoop. UserSelected indicates that an existing namespace is selected and attached when the AgentSpace is created.</p>
+             * <p>The attach method for the MSE namespace. AutoCreated indicates automatic creation by AgentLoop. UserSelected indicates that an existing namespace is selected and attached when the AgentSpace is created.</p>
              * 
              * <strong>example:</strong>
              * <p>AutoCreated</p>
@@ -274,6 +274,87 @@ public class ListAgentSpacesResponseBody extends TeaModel {
      *
      * <p>ListAgentSpacesResponseBody</p>
      */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * <p>The tag value, which can be an empty string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListAgentSpacesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAgentSpacesResponseBody</p>
+     */
     public static class AgentSpaces extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("agentSpace")
         private String agentSpace;
@@ -296,6 +377,9 @@ public class ListAgentSpacesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("slsProject")
         private String slsProject;
 
+        @com.aliyun.core.annotation.NameInMap("tags")
+        private java.util.List<Tags> tags;
+
         @com.aliyun.core.annotation.NameInMap("updateTime")
         private String updateTime;
 
@@ -307,6 +391,7 @@ public class ListAgentSpacesResponseBody extends TeaModel {
             this.mseNamespace = builder.mseNamespace;
             this.regionId = builder.regionId;
             this.slsProject = builder.slsProject;
+            this.tags = builder.tags;
             this.updateTime = builder.updateTime;
         }
 
@@ -368,6 +453,13 @@ public class ListAgentSpacesResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public java.util.List<Tags> getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return updateTime
          */
         public String getUpdateTime() {
@@ -382,6 +474,7 @@ public class ListAgentSpacesResponseBody extends TeaModel {
             private MseNamespace mseNamespace; 
             private String regionId; 
             private String slsProject; 
+            private java.util.List<Tags> tags; 
             private String updateTime; 
 
             private Builder() {
@@ -395,6 +488,7 @@ public class ListAgentSpacesResponseBody extends TeaModel {
                 this.mseNamespace = model.mseNamespace;
                 this.regionId = model.regionId;
                 this.slsProject = model.slsProject;
+                this.tags = model.tags;
                 this.updateTime = model.updateTime;
             } 
 
@@ -470,6 +564,17 @@ public class ListAgentSpacesResponseBody extends TeaModel {
              */
             public Builder slsProject(String slsProject) {
                 this.slsProject = slsProject;
+                return this;
+            }
+
+            /**
+             * <p>Returns only AgentSpace tags that are active in the current region and match the local instance. An empty array is returned when it is confirmed that no tags exist. This field is omitted for entries in other regions, inactive entries, or entries that do not match the local instance. Omission of this field does not indicate the absence of tags.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;key&quot;:&quot;env&quot;,&quot;value&quot;:&quot;test&quot;}]</p>
+             */
+            public Builder tags(java.util.List<Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 

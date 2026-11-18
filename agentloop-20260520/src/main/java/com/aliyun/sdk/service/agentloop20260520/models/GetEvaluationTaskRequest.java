@@ -73,7 +73,7 @@ public class GetEvaluationTaskRequest extends Request {
         } 
 
         /**
-         * <p>The AgentSpace name.</p>
+         * <p>The name of the AgentSpace.</p>
          * 
          * <strong>example:</strong>
          * <p>prod-agentspace</p>
@@ -85,7 +85,7 @@ public class GetEvaluationTaskRequest extends Request {
         }
 
         /**
-         * <p>The evaluation task ID.</p>
+         * <p>The ID of the evaluation task.</p>
          * 
          * <strong>example:</strong>
          * <p>eval-task-8b36f2e2b1f94f9c91ce7a4b0f6d9c25</p>

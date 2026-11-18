@@ -167,7 +167,7 @@ public class ListOptimizeRunsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return. Default value: 20. Maximum value: 100.</p>
+         * <p>The maximum number of results to return. Default value: 20. Maximum value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -191,7 +191,7 @@ public class ListOptimizeRunsRequest extends Request {
         }
 
         /**
-         * <p>The status used to filter results.</p>
+         * <p>The status used to filter the results.</p>
          * 
          * <strong>example:</strong>
          * <p>Succeeded</p>
@@ -203,10 +203,10 @@ public class ListOptimizeRunsRequest extends Request {
         }
 
         /**
-         * <p>The lower bound of the window start time in UNIX seconds.</p>
+         * <p>The lower bound of the window start time, in UNIX seconds.</p>
          * 
          * <strong>example:</strong>
-         * <p>1786432688000</p>
+         * <p>1786432688</p>
          */
         public Builder windowStartTimeBegin(Long windowStartTimeBegin) {
             this.putQueryParameter("windowStartTimeBegin", windowStartTimeBegin);
@@ -215,10 +215,10 @@ public class ListOptimizeRunsRequest extends Request {
         }
 
         /**
-         * <p>The upper bound of the window start time in UNIX seconds.</p>
+         * <p>The upper bound of the window start time, in UNIX seconds.</p>
          * 
          * <strong>example:</strong>
-         * <p>1786432690000</p>
+         * <p>1786432690</p>
          */
         public Builder windowStartTimeEnd(Long windowStartTimeEnd) {
             this.putQueryParameter("windowStartTimeEnd", windowStartTimeEnd);

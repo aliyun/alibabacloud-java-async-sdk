@@ -35,6 +35,9 @@ public class GetEvaluationRunResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("failedCount")
     private Integer failedCount;
 
+    @com.aliyun.core.annotation.NameInMap("qualityMetrics")
+    private java.util.Map<String, ?> qualityMetrics;
+
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
@@ -69,6 +72,7 @@ public class GetEvaluationRunResponseBody extends TeaModel {
         this.evaluatorProgress = builder.evaluatorProgress;
         this.evaluators = builder.evaluators;
         this.failedCount = builder.failedCount;
+        this.qualityMetrics = builder.qualityMetrics;
         this.requestId = builder.requestId;
         this.runId = builder.runId;
         this.runName = builder.runName;
@@ -132,6 +136,13 @@ public class GetEvaluationRunResponseBody extends TeaModel {
      */
     public Integer getFailedCount() {
         return this.failedCount;
+    }
+
+    /**
+     * @return qualityMetrics
+     */
+    public java.util.Map<String, ?> getQualityMetrics() {
+        return this.qualityMetrics;
     }
 
     /**
@@ -204,6 +215,7 @@ public class GetEvaluationRunResponseBody extends TeaModel {
         private java.util.List<EvaluatorProgress> evaluatorProgress; 
         private String evaluators; 
         private Integer failedCount; 
+        private java.util.Map<String, ?> qualityMetrics; 
         private String requestId; 
         private String runId; 
         private String runName; 
@@ -224,6 +236,7 @@ public class GetEvaluationRunResponseBody extends TeaModel {
             this.evaluatorProgress = model.evaluatorProgress;
             this.evaluators = model.evaluators;
             this.failedCount = model.failedCount;
+            this.qualityMetrics = model.qualityMetrics;
             this.requestId = model.requestId;
             this.runId = model.runId;
             this.runName = model.runName;
@@ -236,7 +249,7 @@ public class GetEvaluationRunResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The creation time, in seconds-level UNIX timestamp.</p>
+         * <p>The creation time. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1782816000</p>
@@ -247,7 +260,7 @@ public class GetEvaluationRunResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The end time of the run data window, in seconds-level UNIX timestamp.</p>
+         * <p>The end time of the run data window. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1782902400</p>
@@ -258,7 +271,7 @@ public class GetEvaluationRunResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The start time of the run data window, in seconds-level UNIX timestamp.</p>
+         * <p>The start time of the run data window. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1782816000</p>
@@ -269,7 +282,7 @@ public class GetEvaluationRunResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of progress entries by evaluator.</p>
+         * <p>The progress list by evaluator dimension.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;evaluatorName&quot;:&quot;Builtin.agent_task_completion&quot;,&quot;totalCount&quot;:100,&quot;successCount&quot;:96,&quot;failedCount&quot;:4}]</p>
@@ -280,7 +293,7 @@ public class GetEvaluationRunResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The snapshot of the evaluator configuration at the time the run was created, in JSON string format.</p>
+         * <p>The snapshot of the evaluator configuration when the run is created. The value is a JSON string.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;evaluatorRef&quot;:&quot;Builtin.agent_task_completion&quot;}]</p>
@@ -302,7 +315,18 @@ public class GetEvaluationRunResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The snapshot of the evaluator quality scores and coverage for the current run. This field is empty if the feature is not enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
+        public Builder qualityMetrics(java.util.Map<String, ?> qualityMetrics) {
+            this.qualityMetrics = qualityMetrics;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>3FE4CD1E-FF41-56BE-B590-7A021D9C1524</p>
@@ -313,7 +337,7 @@ public class GetEvaluationRunResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The run ID.</p>
+         * <p>The ID of the run.</p>
          * 
          * <strong>example:</strong>
          * <p>eval-run-4fd47f3d7e684e15b1d3d178c6a5b81a</p>
@@ -324,7 +348,7 @@ public class GetEvaluationRunResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The run name.</p>
+         * <p>The name of the run.</p>
          * 
          * <strong>example:</strong>
          * <p>trace_task_completion_eval-backfill</p>
@@ -335,7 +359,7 @@ public class GetEvaluationRunResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The run type.</p>
+         * <p>The type of the run.</p>
          * 
          * <strong>example:</strong>
          * <p>backfill</p>
@@ -346,7 +370,7 @@ public class GetEvaluationRunResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The run status.</p>
+         * <p>The status of the run.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -368,7 +392,7 @@ public class GetEvaluationRunResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The evaluation task ID.</p>
+         * <p>The ID of the evaluation task.</p>
          * 
          * <strong>example:</strong>
          * <p>eval-task-8b36f2e2b1f94f9c91ce7a4b0f6d9c25</p>
@@ -379,7 +403,7 @@ public class GetEvaluationRunResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of evaluation items.</p>
+         * <p>The total number of evaluated items.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -390,7 +414,7 @@ public class GetEvaluationRunResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The update time, in seconds-level UNIX timestamp.</p>
+         * <p>The update time. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1782816600</p>
@@ -485,7 +509,7 @@ public class GetEvaluationRunResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The evaluator name.</p>
+             * <p>The name of the evaluator.</p>
              * 
              * <strong>example:</strong>
              * <p>Builtin.agent_task_completion</p>
@@ -496,7 +520,7 @@ public class GetEvaluationRunResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of failed items for this evaluator.</p>
+             * <p>The number of failed items for the evaluator.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -507,7 +531,7 @@ public class GetEvaluationRunResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of successful items for this evaluator.</p>
+             * <p>The number of successful items for the evaluator.</p>
              * 
              * <strong>example:</strong>
              * <p>96</p>
@@ -518,7 +542,7 @@ public class GetEvaluationRunResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of items for this evaluator.</p>
+             * <p>The total number of items for the evaluator.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

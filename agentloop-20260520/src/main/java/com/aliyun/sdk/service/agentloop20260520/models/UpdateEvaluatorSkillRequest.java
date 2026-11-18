@@ -160,7 +160,7 @@ public class UpdateEvaluatorSkillRequest extends Request {
         } 
 
         /**
-         * <p>The evaluator name.</p>
+         * <p>The name of the evaluator.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -173,7 +173,7 @@ public class UpdateEvaluatorSkillRequest extends Request {
         }
 
         /**
-         * <p>The skill name.</p>
+         * <p>The name of the skill.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,7 +186,7 @@ public class UpdateEvaluatorSkillRequest extends Request {
         }
 
         /**
-         * <p>The AgentSpace name.</p>
+         * <p>The name of the AgentSpace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -202,7 +202,7 @@ public class UpdateEvaluatorSkillRequest extends Request {
          * <p>The description of the skill.</p>
          * 
          * <strong>example:</strong>
-         * <p>读取链路上下文辅助评估</p>
+         * <p>Read trace context to assist evaluation</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -214,7 +214,7 @@ public class UpdateEvaluatorSkillRequest extends Request {
          * <p>The display name of the skill.</p>
          * 
          * <strong>example:</strong>
-         * <p>Trace 上下文读取</p>
+         * <p>Read Trace Context</p>
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("displayName", displayName);
@@ -223,7 +223,7 @@ public class UpdateEvaluatorSkillRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the skill.</p>
+         * <p>Specifies whether the skill is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -235,10 +235,10 @@ public class UpdateEvaluatorSkillRequest extends Request {
         }
 
         /**
-         * <p>The list of skill files. When provided, the skill file content is updated.</p>
+         * <p>The list of skill files. If specified, the content of the skill files is updated.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;name&quot;:&quot;SKILL.md&quot;,&quot;content&quot;:&quot;# Trace Context Loader&quot;,&quot;remark&quot;:&quot;主技能说明&quot;}]</p>
+         * <p>[{&quot;name&quot;:&quot;SKILL.md&quot;,&quot;content&quot;:&quot;# Trace Context Loader&quot;,&quot;remark&quot;:&quot;Primary skill description&quot;}]</p>
          */
         public Builder files(java.util.List<Files> files) {
             this.putBodyParameter("files", files);
@@ -247,7 +247,7 @@ public class UpdateEvaluatorSkillRequest extends Request {
         }
 
         /**
-         * <p>The idempotency token. CloudSpec declares this query parameter, but the backend does not currently perform idempotency comparison.</p>
+         * <p>The idempotency token. CloudSpec declares this query parameter, but the backend does not currently perform idempotency checks.</p>
          * 
          * <strong>example:</strong>
          * <p>a1b2c3d4-1234-5678-90ab-cdef12345678</p>
@@ -333,7 +333,7 @@ public class UpdateEvaluatorSkillRequest extends Request {
             } 
 
             /**
-             * <p>The skill file content.</p>
+             * <p>The content of the skill file.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -345,7 +345,7 @@ public class UpdateEvaluatorSkillRequest extends Request {
             }
 
             /**
-             * <p>The skill file name.</p>
+             * <p>The name of the skill file.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -357,10 +357,10 @@ public class UpdateEvaluatorSkillRequest extends Request {
             }
 
             /**
-             * <p>The file remark.</p>
+             * <p>The remark for the file.</p>
              * 
              * <strong>example:</strong>
-             * <p>主技能说明</p>
+             * <p>Primary skill description</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
