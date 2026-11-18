@@ -67,7 +67,7 @@ public class GetInfiniteCanvasResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The infinite canvas details.</p>
+         * <p>The details of the infinite canvas.</p>
          */
         public Builder infiniteCanvas(InfiniteCanvas infiniteCanvas) {
             this.infiniteCanvas = infiniteCanvas;

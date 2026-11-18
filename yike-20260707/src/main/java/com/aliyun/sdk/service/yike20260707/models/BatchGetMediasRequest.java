@@ -124,7 +124,7 @@ public class BatchGetMediasRequest extends Request {
         }
 
         /**
-         * <p>The validity period of the signed file access URL. Unit: seconds.</p>
+         * <p>Specifies the validity period, in seconds, for accessing file URLs that require authentication.</p>
          * 
          * <strong>example:</strong>
          * <p>3600</p>
@@ -145,7 +145,7 @@ public class BatchGetMediasRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the media assets to query, separated by commas.</p>
+         * <p>The IDs of the media assets to be queried, separated by commas.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong><strong>b48fb04483915d4f2cd8</strong></strong></strong>,<strong><strong><strong>c48fb37407365d4f2cd8</strong></strong></strong></p>

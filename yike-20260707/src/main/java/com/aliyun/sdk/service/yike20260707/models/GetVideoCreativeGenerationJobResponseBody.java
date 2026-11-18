@@ -145,7 +145,7 @@ public class GetVideoCreativeGenerationJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The job creation time in UTC format (yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot;).</p>
+         * <p>The time when the job was created. The time is displayed in UTC in the yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot; format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-02-06T18:53:34.001+08:00</p>
@@ -156,7 +156,7 @@ public class GetVideoCreativeGenerationJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code. This parameter is returned only when the job status is Failed.</p>
+         * <p>The error code. This field is returned only when the job status is Failed.</p>
          * 
          * <strong>example:</strong>
          * <p>WorkflowTaskFailed</p>
@@ -167,7 +167,7 @@ public class GetVideoCreativeGenerationJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The job completion time in UTC format.</p>
+         * <p>The time when the job was completed. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-02-06T18:53:34.001+08:00</p>
@@ -189,7 +189,7 @@ public class GetVideoCreativeGenerationJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The task results of the node. This parameter is valid only when the job status is Succeeded. Each element represents the output for a single language.</p>
+         * <p>The task result. This field is valid only when the node status is Succeeded. Each element represents a single-language video output.</p>
          */
         public Builder jobResult(java.util.List<JobResult> jobResult) {
             this.jobResult = jobResult;
@@ -219,7 +219,7 @@ public class GetVideoCreativeGenerationJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The custom user data, which is returned as-is.</p>
+         * <p>The user-defined parameter. This value is returned as is.</p>
          * 
          * <strong>example:</strong>
          * <p>12374214127312673137132</p>
@@ -314,7 +314,7 @@ public class GetVideoCreativeGenerationJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The online editing project ID.</p>
+             * <p>The ID of the online editing project.</p>
              * 
              * <strong>example:</strong>
              * <p>01a6adbbd181437eb5030d3d93e0182d</p>
@@ -325,7 +325,7 @@ public class GetVideoCreativeGenerationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The media asset ID of the output video.</p>
+             * <p>The media asset ID of the produced video.</p>
              * 
              * <strong>example:</strong>
              * <p>9d7e982012c671f1b803e7f6d75a6302</p>
@@ -347,7 +347,7 @@ public class GetVideoCreativeGenerationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The signed download URL of the output video. The URL is time-limited.</p>
+             * <p>The download URL of the produced video. The URL is signed and time-sensitive.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://test.oss-cn-shanghai.aliyuncs.com/test.mp4">https://test.oss-cn-shanghai.aliyuncs.com/test.mp4</a></p>

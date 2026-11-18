@@ -67,7 +67,7 @@ public class UpdateMediaResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The Intelligent Cloud Editing (ICE) media asset ID.</p>
+         * <p>The ID of the ICE media asset.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
@@ -78,7 +78,7 @@ public class UpdateMediaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>

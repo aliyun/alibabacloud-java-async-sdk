@@ -66,6 +66,10 @@ public class ImportMediaRequest extends Request {
     private Boolean overwrite;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    private String projectId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegisterConfig")
     private String registerConfig;
 
@@ -95,6 +99,7 @@ public class ImportMediaRequest extends Request {
         this.mediaTags = builder.mediaTags;
         this.mediaType = builder.mediaType;
         this.overwrite = builder.overwrite;
+        this.projectId = builder.projectId;
         this.registerConfig = builder.registerConfig;
         this.title = builder.title;
         this.userData = builder.userData;
@@ -199,6 +204,13 @@ public class ImportMediaRequest extends Request {
     }
 
     /**
+     * @return projectId
+     */
+    public String getProjectId() {
+        return this.projectId;
+    }
+
+    /**
      * @return registerConfig
      */
     public String getRegisterConfig() {
@@ -239,6 +251,7 @@ public class ImportMediaRequest extends Request {
         private String mediaTags; 
         private String mediaType; 
         private Boolean overwrite; 
+        private String projectId; 
         private String registerConfig; 
         private String title; 
         private String userData; 
@@ -262,6 +275,7 @@ public class ImportMediaRequest extends Request {
             this.mediaTags = request.mediaTags;
             this.mediaType = request.mediaType;
             this.overwrite = request.overwrite;
+            this.projectId = request.projectId;
             this.registerConfig = request.registerConfig;
             this.title = request.title;
             this.userData = request.userData;
@@ -287,7 +301,10 @@ public class ImportMediaRequest extends Request {
         }
 
         /**
-         * CategoryId.
+         * <p>The category ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder categoryId(Long categoryId) {
             this.putQueryParameter("CategoryId", categoryId);
@@ -296,7 +313,7 @@ public class ImportMediaRequest extends Request {
         }
 
         /**
-         * <p>The cover image URL. This parameter is valid only for video media assets.</p>
+         * <p>The URL of the cover image. This parameter is valid only for video media assets.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://outin-55c9ab3fb1b911ee817b00163e32b0a3.oss-cn-shanghai.aliyuncs.com/60425a2758a971f181385017f0e90102/covers/ice-generated/d4aee2d6c6f84769ac89f18c667699c6-cover.png">https://outin-55c9ab3fb1b911ee817b00163e32b0a3.oss-cn-shanghai.aliyuncs.com/60425a2758a971f181385017f0e90102/covers/ice-generated/d4aee2d6c6f84769ac89f18c667699c6-cover.png</a></p>
@@ -308,7 +325,7 @@ public class ImportMediaRequest extends Request {
         }
 
         /**
-         * <p>The description of the media asset.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -368,10 +385,10 @@ public class ImportMediaRequest extends Request {
         }
 
         /**
-         * <p>The tags of the media asset. Separate multiple tags with commas (,).</p>
+         * <p>The tags. Separate multiple tags with commas.</p>
          * 
          * <strong>example:</strong>
-         * <p>AdvancedImageToVideo,AIGenerated</p>
+         * <p>Advanced image-to-video, AI-generated</p>
          */
         public Builder mediaTags(String mediaTags) {
             this.putQueryParameter("MediaTags", mediaTags);
@@ -404,6 +421,18 @@ public class ImportMediaRequest extends Request {
         }
 
         /**
+         * <p>The project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pd_123456</p>
+         */
+        public Builder projectId(String projectId) {
+            this.putQueryParameter("ProjectId", projectId);
+            this.projectId = projectId;
+            return this;
+        }
+
+        /**
          * <p>The configuration for registering the media asset.</p>
          * 
          * <strong>example:</strong>
@@ -416,7 +445,7 @@ public class ImportMediaRequest extends Request {
         }
 
         /**
-         * <p>The title of the media asset.</p>
+         * <p>The title.</p>
          * 
          * <strong>example:</strong>
          * <p>title</p>
@@ -428,7 +457,7 @@ public class ImportMediaRequest extends Request {
         }
 
         /**
-         * <p>The user data. Maximum length: 1024 bytes.</p>
+         * <p>The user data. Maximum size: 1024 bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>

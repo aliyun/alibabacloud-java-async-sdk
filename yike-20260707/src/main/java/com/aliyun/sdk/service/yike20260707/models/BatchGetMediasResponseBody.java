@@ -88,7 +88,7 @@ public class BatchGetMediasResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The collection of media assets that meet the specified criteria.</p>
+         * <p>The collection of media assets that meet the requirements.</p>
          */
         public Builder mediaInfos(java.util.List<MediaInfos> mediaInfos) {
             this.mediaInfos = mediaInfos;
@@ -384,7 +384,7 @@ public class BatchGetMediasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The channel output layout.</p>
+             * <p>The channel layout.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -408,7 +408,7 @@ public class BatchGetMediasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The long name of the codec format.</p>
+             * <p>The long name of the codec.</p>
              * 
              * <strong>example:</strong>
              * <p>xx</p>
@@ -419,7 +419,7 @@ public class BatchGetMediasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The short name of the codec format.</p>
+             * <p>The short name of the codec.</p>
              * 
              * <strong>example:</strong>
              * <p>H264</p>
@@ -430,7 +430,7 @@ public class BatchGetMediasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The codec tag.</p>
+             * <p>The tag of the codec.</p>
              * 
              * <strong>example:</strong>
              * <p>xx</p>
@@ -441,7 +441,7 @@ public class BatchGetMediasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The codec tag string.</p>
+             * <p>The tag string of the codec.</p>
              * 
              * <strong>example:</strong>
              * <p>xx</p>
@@ -452,7 +452,7 @@ public class BatchGetMediasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The codec time base.</p>
+             * <p>The time base of the codec.</p>
              * 
              * <strong>example:</strong>
              * <p>xx</p>
@@ -518,7 +518,7 @@ public class BatchGetMediasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The codec profile.</p>
+             * <p>The profile of the codec.</p>
              * 
              * <strong>example:</strong>
              * <p>{\&quot;ApiKey\&quot;:\&quot;c0358c6e51c1013b446fdeb21a3a5d1c\&quot;,\&quot;AppId\&quot;:\&quot;5b347bfb\&quot;,\&quot;ApiSecret\&quot;:\&quot;a9872e2342952e248727798f642936b6\&quot;}</p>
@@ -529,7 +529,7 @@ public class BatchGetMediasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sample format.</p>
+             * <p>The sample format of the audio stream.</p>
              * 
              * <strong>example:</strong>
              * <p>xx</p>
@@ -540,7 +540,7 @@ public class BatchGetMediasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sample rate.</p>
+             * <p>The sample rate of the audio stream.</p>
              * 
              * <strong>example:</strong>
              * <p>0.01</p>
@@ -562,7 +562,7 @@ public class BatchGetMediasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time base.</p>
+             * <p>The timebase.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -773,7 +773,7 @@ public class BatchGetMediasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The file name.</p>
+             * <p>The name of the file.</p>
              * 
              * <strong>example:</strong>
              * <p>example.mp4</p>
@@ -784,7 +784,7 @@ public class BatchGetMediasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The file size, in bytes.</p>
+             * <p>The size of the file in bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>191</p>
@@ -795,7 +795,7 @@ public class BatchGetMediasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The file status.</p>
+             * <p>The status of the file.</p>
              * 
              * <strong>example:</strong>
              * <p>Normal</p>
@@ -806,7 +806,7 @@ public class BatchGetMediasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The file type.</p>
+             * <p>The type of the file.</p>
              * 
              * <strong>example:</strong>
              * <p>source_file</p>
@@ -839,7 +839,7 @@ public class BatchGetMediasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The height of the file.</p>
+             * <p>The height of the video.</p>
              * 
              * <strong>example:</strong>
              * <p>416</p>
@@ -850,7 +850,7 @@ public class BatchGetMediasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage region of the file.</p>
+             * <p>The region where the file is stored.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-shanghai</p>
@@ -861,7 +861,7 @@ public class BatchGetMediasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The width of the file.</p>
+             * <p>The width of the video.</p>
              * 
              * <strong>example:</strong>
              * <p>640</p>
@@ -1035,7 +1035,7 @@ public class BatchGetMediasResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The long name of the codec format.</p>
+             * <p>The long name of the codec.</p>
              * 
              * <strong>example:</strong>
              * <p>xx</p>
@@ -1046,7 +1046,7 @@ public class BatchGetMediasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The short name of the codec format.</p>
+             * <p>The short name of the codec.</p>
              * 
              * <strong>example:</strong>
              * <p>H264</p>
@@ -1057,7 +1057,7 @@ public class BatchGetMediasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The codec tag.</p>
+             * <p>The tag of the codec.</p>
              * 
              * <strong>example:</strong>
              * <p>xx</p>
@@ -1068,7 +1068,7 @@ public class BatchGetMediasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The codec tag string.</p>
+             * <p>The tag string of the codec.</p>
              * 
              * <strong>example:</strong>
              * <p>xx</p>
@@ -1079,7 +1079,7 @@ public class BatchGetMediasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The codec time base.</p>
+             * <p>The time base of the codec.</p>
              * 
              * <strong>example:</strong>
              * <p>xx</p>
@@ -1134,7 +1134,7 @@ public class BatchGetMediasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time base.</p>
+             * <p>The timebase.</p>
              * 
              * <strong>example:</strong>
              * <p>xx</p>
@@ -1512,7 +1512,7 @@ public class BatchGetMediasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The long name of the codec format.</p>
+             * <p>The long name of the codec.</p>
              * 
              * <strong>example:</strong>
              * <p>xx</p>
@@ -1523,7 +1523,7 @@ public class BatchGetMediasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The short name of the codec format.</p>
+             * <p>The short name of the codec.</p>
              * 
              * <strong>example:</strong>
              * <p>H264</p>
@@ -1534,7 +1534,7 @@ public class BatchGetMediasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The codec tag.</p>
+             * <p>The tag of the codec.</p>
              * 
              * <strong>example:</strong>
              * <p>xx</p>
@@ -1545,7 +1545,7 @@ public class BatchGetMediasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The codec tag string.</p>
+             * <p>The tag string of the codec.</p>
              * 
              * <strong>example:</strong>
              * <p>xx</p>
@@ -1556,7 +1556,7 @@ public class BatchGetMediasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The codec time base.</p>
+             * <p>The time base of the codec.</p>
              * 
              * <strong>example:</strong>
              * <p>xx</p>
@@ -1567,7 +1567,7 @@ public class BatchGetMediasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display aspect ratio (DAR).</p>
+             * <p>The display aspect ratio.</p>
              * 
              * <strong>example:</strong>
              * <p>xx</p>
@@ -1611,7 +1611,7 @@ public class BatchGetMediasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The height of the file.</p>
+             * <p>The height of the video.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1688,7 +1688,7 @@ public class BatchGetMediasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The codec profile.</p>
+             * <p>The profile of the codec.</p>
              * 
              * <strong>example:</strong>
              * <p>{\&quot;ApiKey\&quot;:\&quot;c0358c6e51c1013b446fdeb21a3a5d1c\&quot;,\&quot;AppId\&quot;:\&quot;5b347bfb\&quot;,\&quot;ApiSecret\&quot;:\&quot;a9872e2342952e248727798f642936b6\&quot;}</p>
@@ -1699,7 +1699,7 @@ public class BatchGetMediasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The rotation angle.</p>
+             * <p>The rotation.</p>
              * 
              * <strong>example:</strong>
              * <p>xx</p>
@@ -1710,7 +1710,7 @@ public class BatchGetMediasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sample aspect ratio (SAR).</p>
+             * <p>The sample aspect ratio.</p>
              * 
              * <strong>example:</strong>
              * <p>xx</p>
@@ -1732,7 +1732,7 @@ public class BatchGetMediasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time base.</p>
+             * <p>The timebase.</p>
              * 
              * <strong>example:</strong>
              * <p>xx</p>
@@ -1743,7 +1743,7 @@ public class BatchGetMediasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The width of the file.</p>
+             * <p>The width of the video.</p>
              * 
              * <strong>example:</strong>
              * <p>720</p>
@@ -1855,7 +1855,7 @@ public class BatchGetMediasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The subtitle stream information. A media asset may have multiple subtitle streams.</p>
+             * <p>The subtitle stream information. A media asset may contain multiple subtitle streams.</p>
              */
             public Builder subtitleStreamInfoList(java.util.List<SubtitleStreamInfoList> subtitleStreamInfoList) {
                 this.subtitleStreamInfoList = subtitleStreamInfoList;
@@ -1863,7 +1863,7 @@ public class BatchGetMediasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The video stream information. A media asset may have multiple video streams.</p>
+             * <p>The video stream information. A media asset may contain multiple video streams.</p>
              */
             public Builder videoStreamInfoList(java.util.List<VideoStreamInfoList> videoStreamInfoList) {
                 this.videoStreamInfoList = videoStreamInfoList;
@@ -2150,7 +2150,7 @@ public class BatchGetMediasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the media asset content.</p>
+             * <p>The description of the media asset.</p>
              * 
              * <strong>example:</strong>
              * <p>sample_description</p>
@@ -2161,7 +2161,7 @@ public class BatchGetMediasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The address of the media asset to be registered in the corresponding system.</p>
+             * <p>The URL of the media asset to be registered in the corresponding system.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4">https://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4</a></p>
@@ -2328,7 +2328,7 @@ public class BatchGetMediasResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The dynamic metadata content.</p>
+             * <p>The content of the dynamic metadata.</p>
              * 
              * <strong>example:</strong>
              * <p>05D92F7EE52363AE3C95FB23EC56611929613720</p>
@@ -2418,11 +2418,15 @@ public class BatchGetMediasResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MediaId")
         private String mediaId;
 
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
+        private String projectId;
+
         private MediaInfos(Builder builder) {
             this.fileInfoList = builder.fileInfoList;
             this.mediaBasicInfo = builder.mediaBasicInfo;
             this.mediaDynamicInfo = builder.mediaDynamicInfo;
             this.mediaId = builder.mediaId;
+            this.projectId = builder.projectId;
         }
 
         public static Builder builder() {
@@ -2461,11 +2465,19 @@ public class BatchGetMediasResponseBody extends TeaModel {
             return this.mediaId;
         }
 
+        /**
+         * @return projectId
+         */
+        public String getProjectId() {
+            return this.projectId;
+        }
+
         public static final class Builder {
             private java.util.List<FileInfoList> fileInfoList; 
             private MediaBasicInfo mediaBasicInfo; 
             private MediaDynamicInfo mediaDynamicInfo; 
             private String mediaId; 
+            private String projectId; 
 
             private Builder() {
             } 
@@ -2475,6 +2487,7 @@ public class BatchGetMediasResponseBody extends TeaModel {
                 this.mediaBasicInfo = model.mediaBasicInfo;
                 this.mediaDynamicInfo = model.mediaDynamicInfo;
                 this.mediaId = model.mediaId;
+                this.projectId = model.projectId;
             } 
 
             /**
@@ -2494,7 +2507,7 @@ public class BatchGetMediasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The dynamic data of the media entity.</p>
+             * <p>The dynamic data of the entity.</p>
              */
             public Builder mediaDynamicInfo(MediaDynamicInfo mediaDynamicInfo) {
                 this.mediaDynamicInfo = mediaDynamicInfo;
@@ -2502,13 +2515,24 @@ public class BatchGetMediasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The media asset ID.</p>
+             * <p>The ID of the media asset.</p>
              * 
              * <strong>example:</strong>
              * <p><strong><strong><strong>c48fb37407365d4f2cd8</strong></strong></strong></p>
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
+                return this;
+            }
+
+            /**
+             * <p>The project ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pd_123456</p>
+             */
+            public Builder projectId(String projectId) {
+                this.projectId = projectId;
                 return this;
             }
 

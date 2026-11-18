@@ -102,7 +102,7 @@ public class CancelGenerationJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The task status. The value is Canceled.</p>
+         * <p>The task status, which is Canceled.</p>
          * 
          * <strong>example:</strong>
          * <p>Canceled</p>

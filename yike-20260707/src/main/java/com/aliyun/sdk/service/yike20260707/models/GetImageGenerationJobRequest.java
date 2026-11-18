@@ -82,7 +82,7 @@ public class GetImageGenerationJobRequest extends Request {
         }
 
         /**
-         * <p>The task ID.</p>
+         * <p>The job ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ag_68ca759b4903b255*******</p>

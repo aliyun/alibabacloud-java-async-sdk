@@ -60,7 +60,7 @@ public class GetVideoDetextJobRequest extends Request {
         } 
 
         /**
-         * <p>The video text erasure task ID returned by SubmitVideoDetextJob.</p>
+         * <p>The ID of the video text removal job returned by SubmitVideoDetextJob.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

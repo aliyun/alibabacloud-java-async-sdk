@@ -67,7 +67,7 @@ public class GetVideoRenderJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The video rendering and compositing task object.</p>
+         * <p>The video rendering and compositing node object.</p>
          */
         public Builder job(Job job) {
             this.job = job;
@@ -233,7 +233,7 @@ public class GetVideoRenderJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error code. This parameter is returned when the job is in the Failed state.</p>
+             * <p>The error code. This parameter is returned when the job status is Failed.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -244,7 +244,7 @@ public class GetVideoRenderJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message. This parameter is returned when the job is in the Failed state.</p>
+             * <p>The error message. This parameter is of the String type and is returned when the job status is Failed.</p>
              * 
              * <strong>example:</strong>
              * <p>The specified product does not exist.</p>
@@ -255,7 +255,7 @@ public class GetVideoRenderJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The job ID.</p>
+             * <p>The ID of the job returned by SubmitVideoRenderJob.</p>
              * 
              * <strong>example:</strong>
              * <p>68ca759e798b40b4903b255*******</p>
@@ -288,14 +288,7 @@ public class GetVideoRenderJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The job status. Valid values:</p>
-             * <ul>
-             * <li>Created: The job is created.</li>
-             * <li>Executing: The job is being executed.</li>
-             * <li>Finished: The job is completed.</li>
-             * <li>Failed: The job failed.</li>
-             * <li>Deleted: The job is deleted.</li>
-             * </ul>
+             * <p>The status of the job. Valid values: Created, Executing, Finished, and Failed. RecordNotFound is returned if the queried job is deleted, does not exist, or does not belong to the current account.</p>
              * 
              * <strong>example:</strong>
              * <p>Executing</p>
@@ -306,7 +299,7 @@ public class GetVideoRenderJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user-defined parameter, which is a JSON-formatted string.</p>
+             * <p>The custom user data in JSON format.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;NotifyAddress&quot;: &quot;<a href="http://xxx.callback.url%22%7D">http://xxx.callback.url&quot;}</a></p>

@@ -30,6 +30,10 @@ public class CreateInfiniteCanvasRequest extends Request {
     private String productionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    private String projectId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Title")
     @com.aliyun.core.annotation.Validation(required = true, maxLength = 200)
     private String title;
@@ -43,6 +47,7 @@ public class CreateInfiniteCanvasRequest extends Request {
         this.regionId = builder.regionId;
         this.coverUrl = builder.coverUrl;
         this.productionId = builder.productionId;
+        this.projectId = builder.projectId;
         this.title = builder.title;
         this.workspaceId = builder.workspaceId;
     }
@@ -82,6 +87,13 @@ public class CreateInfiniteCanvasRequest extends Request {
     }
 
     /**
+     * @return projectId
+     */
+    public String getProjectId() {
+        return this.projectId;
+    }
+
+    /**
      * @return title
      */
     public String getTitle() {
@@ -99,6 +111,7 @@ public class CreateInfiniteCanvasRequest extends Request {
         private String regionId; 
         private String coverUrl; 
         private String productionId; 
+        private String projectId; 
         private String title; 
         private String workspaceId; 
 
@@ -111,6 +124,7 @@ public class CreateInfiniteCanvasRequest extends Request {
             this.regionId = request.regionId;
             this.coverUrl = request.coverUrl;
             this.productionId = request.productionId;
+            this.projectId = request.projectId;
             this.title = request.title;
             this.workspaceId = request.workspaceId;
         } 
@@ -137,7 +151,7 @@ public class CreateInfiniteCanvasRequest extends Request {
         }
 
         /**
-         * <p>The project ID.</p>
+         * <p>The project ID. <strong>[Deprecated]</strong> Use ProjectId instead.</p>
          * 
          * <strong>example:</strong>
          * <p>pd_061716****</p>
@@ -145,6 +159,18 @@ public class CreateInfiniteCanvasRequest extends Request {
         public Builder productionId(String productionId) {
             this.putQueryParameter("ProductionId", productionId);
             this.productionId = productionId;
+            return this;
+        }
+
+        /**
+         * <p>The project ID. This field takes precedence.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pd_061716****</p>
+         */
+        public Builder projectId(String projectId) {
+            this.putQueryParameter("ProjectId", projectId);
+            this.projectId = projectId;
             return this;
         }
 

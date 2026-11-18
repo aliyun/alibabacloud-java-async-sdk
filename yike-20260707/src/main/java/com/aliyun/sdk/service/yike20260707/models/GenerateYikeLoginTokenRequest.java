@@ -192,7 +192,7 @@ public class GenerateYikeLoginTokenRequest extends Request {
         }
 
         /**
-         * <p>The token expiration time, in seconds. Default value: 30 days.</p>
+         * <p>The expiration time of the token, in seconds. Default value: 30 days.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -207,11 +207,11 @@ public class GenerateYikeLoginTokenRequest extends Request {
          * <p>The nickname.</p>
          * <ul>
          * <li>Format check: The maximum length is 50 characters.</li>
-         * <li>Special format validation: Chinese characters, English characters, digits, _ \ / () ] [</li>
+         * <li>Special format check: Chinese and English characters, digits, and _ \ / () ] [.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>冯凯</p>
+         * <p>Feng Kai</p>
          */
         public Builder nickName(String nickName) {
             this.putQueryParameter("NickName", nickName);

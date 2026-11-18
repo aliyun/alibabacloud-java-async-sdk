@@ -239,9 +239,9 @@ public class GetAssetCategoryResponseBody extends TeaModel {
             /**
              * <p>The category level. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: level-1 category.</li>
-             * <li><strong>1</strong>: level-2 category.</li>
-             * <li><strong>2</strong>: level-3 category.</li>
+             * <li><strong>0</strong>: Level-1 category.</li>
+             * <li><strong>1</strong>: Level-2 category.</li>
+             * <li><strong>2</strong>: Level-3 category.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -253,7 +253,7 @@ public class GetAssetCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parent category ID.</p>
+             * <p>The ID of the parent category.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -395,7 +395,7 @@ public class GetAssetCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parent category ID.</p>
+             * <p>The ID of the parent category.</p>
              * 
              * <strong>example:</strong>
              * <p>50</p>

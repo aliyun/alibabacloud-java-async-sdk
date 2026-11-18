@@ -96,7 +96,7 @@ public class GetVideoGenerationJobRequest extends Request {
         }
 
         /**
-         * <p>The idempotency token.</p>
+         * <p>The client token.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxx</p>
@@ -108,7 +108,7 @@ public class GetVideoGenerationJobRequest extends Request {
         }
 
         /**
-         * <p>The task ID.</p>
+         * <p>The job ID.</p>
          * 
          * <strong>example:</strong>
          * <p>68ca759e798b40b4903b255*******</p>

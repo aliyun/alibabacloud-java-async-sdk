@@ -240,7 +240,10 @@ public class UpdateMediaRequest extends Request {
         }
 
         /**
-         * CategoryId.
+         * <p>The category ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder categoryId(Long categoryId) {
             this.putQueryParameter("CategoryId", categoryId);
@@ -249,7 +252,7 @@ public class UpdateMediaRequest extends Request {
         }
 
         /**
-         * <p>The cover image URL. This parameter is valid only for video media assets.</p>
+         * <p>The URL of the cover image. This parameter is valid only for video media assets.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://bullet-time-20240910.oss-cn-shanghai.aliyuncs.com/ice-generated/a97255309a7c71f093d3e7f6d75a6302/snapshots/normal/2a4030b1950443048f3e3f81489d57eb-00001.jpg">https://bullet-time-20240910.oss-cn-shanghai.aliyuncs.com/ice-generated/a97255309a7c71f093d3e7f6d75a6302/snapshots/normal/2a4030b1950443048f3e3f81489d57eb-00001.jpg</a></p>
@@ -297,7 +300,7 @@ public class UpdateMediaRequest extends Request {
         }
 
         /**
-         * <p>The media asset ID.</p>
+         * <p>The ID of the media asset.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
@@ -309,10 +312,10 @@ public class UpdateMediaRequest extends Request {
         }
 
         /**
-         * <p>The tags. Separate multiple tags with commas (,).</p>
+         * <p>The tags. Separate multiple tags with commas.</p>
          * 
          * <strong>example:</strong>
-         * <p>剪映动画</p>
+         * <p>CapCut Animation</p>
          */
         public Builder mediaTags(String mediaTags) {
             this.putQueryParameter("MediaTags", mediaTags);
@@ -333,7 +336,7 @@ public class UpdateMediaRequest extends Request {
         }
 
         /**
-         * <p>The user data. Maximum length: 1024 bytes.</p>
+         * <p>The user data. Maximum size: 1,024 bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>

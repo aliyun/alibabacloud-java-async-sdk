@@ -80,7 +80,7 @@ public class GetMediaComprehensionJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The media content understanding result object.</p>
+         * <p>The media content comprehension result object.</p>
          */
         public Builder job(Job job) {
             this.job = job;
@@ -88,7 +88,7 @@ public class GetMediaComprehensionJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> The media content understanding object.</p>
+         * <p><strong>[Deprecated]</strong> The media content comprehension object.</p>
          */
         public Builder mediaComprehensionJob(MediaComprehensionJob mediaComprehensionJob) {
             this.mediaComprehensionJob = mediaComprehensionJob;
@@ -217,7 +217,7 @@ public class GetMediaComprehensionJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The error code. This parameter is returned when the job status is Failed.</p>
+             * <p>The error code. This parameter is returned when the job is in the Failed state.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -228,7 +228,7 @@ public class GetMediaComprehensionJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message. This parameter is of the String type and is returned when the job status is Failed.</p>
+             * <p>The error message, which is a string. This parameter is returned when the job is in the Failed state.</p>
              * 
              * <strong>example:</strong>
              * <p>The specified product does not exist.</p>
@@ -247,7 +247,9 @@ public class GetMediaComprehensionJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the analysis result file. The file content is in JSON format.</p>
+             * <p>The analysis result, which is a string.</p>
+             * <p>VideoBreakdown: the URL of the JSON file that contains the analysis result. The file content varies based on the JobParams.ResultType parameter specified when the job is submitted.</p>
+             * <p>ProductRecognition: the text of the product recognition result. By default, the result is output in JSON format and returned directly as a string.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://xxxx.json">http://xxxx.json</a></p>
@@ -258,14 +260,7 @@ public class GetMediaComprehensionJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The job status. Valid values:</p>
-             * <ul>
-             * <li><strong>Created</strong>: The job is created.</li>
-             * <li><strong>Executing</strong>: The job is being executed.</li>
-             * <li><strong>Finished</strong>: The job is completed.</li>
-             * <li><strong>Failed</strong>: The job failed.</li>
-             * <li><strong>Deleted</strong>: The job is deleted.</li>
-             * </ul>
+             * <p>The job status. Valid values: Created, Executing, Finished, and Failed. If the queried job is deleted, does not exist, or does not belong to the current account, RecordNotFound is returned.</p>
              * 
              * <strong>example:</strong>
              * <p>Executing</p>
@@ -276,10 +271,12 @@ public class GetMediaComprehensionJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user-defined parameter. The value is a JSON string.</p>
+             * <p>The custom user data, which is a JSON-formatted string.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;NotifyAddress&quot;: &quot;<a href="http://xxx.callback.url%22%7D">http://xxx.callback.url&quot;}</a></p>
+             * <p>{
+             *   &quot;NotifyAddress&quot;: &quot;<a href="https://example.com/callback">https://example.com/callback</a>&quot;
+             * }</p>
              */
             public Builder userData(String userData) {
                 this.userData = userData;
@@ -411,7 +408,7 @@ public class GetMediaComprehensionJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The error code. This parameter is returned when the status is <code>Failed</code>.</p>
+             * <p>The error code. This parameter is returned when the job is in the <code>Failed</code> state.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -422,7 +419,7 @@ public class GetMediaComprehensionJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message. This parameter is of the String type and is returned when the job status is Failed.</p>
+             * <p>The error message, which is a string. This parameter is returned when the job is in the Failed state.</p>
              * 
              * <strong>example:</strong>
              * <p>The specified product does not exist.</p>
@@ -455,7 +452,7 @@ public class GetMediaComprehensionJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The analysis result. The value is a JSON string.</p>
+             * <p>The analysis result, which is a JSON string.</p>
              * 
              * <strong>example:</strong>
              * <p>&quot;{\&quot;source_video_url\&quot;:\&quot;<a href="http://xxx.mp4%5C%5C%22,%5C%5C%22narrative_overview%5C%5C%22:%7B******%7D%7D">http://xxx.mp4\\&quot;,\\&quot;narrative_overview\\&quot;:{******}}</a>&quot;</p>
@@ -470,7 +467,7 @@ public class GetMediaComprehensionJobResponseBody extends TeaModel {
              * <ul>
              * <li><strong>Created</strong>: The job is created.</li>
              * <li><strong>Executing</strong>: The job is being executed.</li>
-             * <li><strong>Finished</strong>: The job is completed.</li>
+             * <li><strong>Finished</strong>: The job is finished.</li>
              * <li><strong>Failed</strong>: The job failed.</li>
              * <li><strong>Deleted</strong>: The job is deleted.</li>
              * </ul>
@@ -484,7 +481,7 @@ public class GetMediaComprehensionJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user-defined parameter. The value is a JSON string.</p>
+             * <p>The custom user data, which is a JSON-formatted string.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;NotifyAddress&quot;: &quot;<a href="http://xxx.callback.url%22%7D">http://xxx.callback.url&quot;}</a></p>

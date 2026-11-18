@@ -130,7 +130,7 @@ public class SearchMediaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The collection of media assets that meet the requirements.</p>
+         * <p>The collection of matching media assets.</p>
          */
         public Builder mediaInfoList(java.util.List<MediaInfoList> mediaInfoList) {
             this.mediaInfoList = mediaInfoList;
@@ -149,7 +149,7 @@ public class SearchMediaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The scroll token.</p>
+         * <p>The pagination token.</p>
          * 
          * <strong>example:</strong>
          * <p>F8C4F642184DBDA5D93907A70AAE****</p>
@@ -160,7 +160,7 @@ public class SearchMediaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call is successful.</p>
+         * <p>Indicates whether the call was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -171,7 +171,7 @@ public class SearchMediaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of media assets that meet the requirements.</p>
+         * <p>The total number of matching media assets.</p>
          * 
          * <strong>example:</strong>
          * <p>163</p>
@@ -429,7 +429,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The file name.</p>
+             * <p>The name of the file.</p>
              * 
              * <strong>example:</strong>
              * <p>1642650802***0527050.wav</p>
@@ -440,7 +440,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The file size in bytes.</p>
+             * <p>The size of the file in bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>48524</p>
@@ -451,7 +451,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The file status.</p>
+             * <p>The status of the file.</p>
              * 
              * <strong>example:</strong>
              * <p>Normal</p>
@@ -462,7 +462,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The file type.</p>
+             * <p>The type of the file.</p>
              * 
              * <strong>example:</strong>
              * <p>source_file</p>
@@ -596,7 +596,7 @@ public class SearchMediaResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The basic file information, including the duration and size.</p>
+             * <p>The basic information of the file, including the duration and size.</p>
              */
             public Builder fileBasicInfo(FileBasicInfo fileBasicInfo) {
                 this.fileBasicInfo = fileBasicInfo;
@@ -919,7 +919,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The category name.</p>
+             * <p>The name of the category.</p>
              * 
              * <strong>example:</strong>
              * <p>test-category-01</p>
@@ -930,7 +930,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cover URL.</p>
+             * <p>The URL of the cover image.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://test-bucket-***.oss-cn-shanghai.aliyuncs.com/cover/e694372e-4f5b-4821-ae09-efd064f2****_large_cover_url.jpg">https://test-bucket-***.oss-cn-shanghai.aliyuncs.com/cover/e694372e-4f5b-4821-ae09-efd064f2****_large_cover_url.jpg</a></p>
@@ -941,7 +941,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time of the media asset.</p>
+             * <p>The time when the media asset was created.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-05-01T19:48Z</p>
@@ -952,7 +952,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The content description.</p>
+             * <p>The description of the content.</p>
              * 
              * <strong>example:</strong>
              * <p>This is a test video.</p>
@@ -974,7 +974,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The media asset URL.</p>
+             * <p>The URL of the media asset.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://test-bucket-***.oss-cn-shanghai.aliyuncs.com/sv/23d5cdd1-18180984899/23d5cdd1-1818098****.mp4">https://test-bucket-***.oss-cn-shanghai.aliyuncs.com/sv/23d5cdd1-18180984899/23d5cdd1-1818098****.mp4</a></p>
@@ -1018,7 +1018,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The modification time of the media asset.</p>
+             * <p>The time when the media asset was modified.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-05-01T20:48Z</p>
@@ -1062,7 +1062,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource status.</p>
+             * <p>The status of the resource.</p>
              * 
              * <strong>example:</strong>
              * <p>Normal</p>
@@ -1176,7 +1176,7 @@ public class SearchMediaResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The dynamic metadata content.</p>
+             * <p>The content of the dynamic metadata.</p>
              * 
              * <strong>example:</strong>
              * <p>&quot;{\&quot;ThirdPartyAssetStatus\&quot;:\&quot;Success\&quot;}&quot;</p>
@@ -1345,7 +1345,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The basic media asset information.</p>
+             * <p>The basic information of the media asset.</p>
              */
             public Builder mediaBasicInfo(MediaBasicInfo mediaBasicInfo) {
                 this.mediaBasicInfo = mediaBasicInfo;

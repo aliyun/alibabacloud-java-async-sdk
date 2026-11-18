@@ -1,0 +1,105 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.yike20260707.models;
+
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link GetProjectRequest} extends {@link RequestModel}
+ *
+ * <p>GetProjectRequest</p>
+ */
+public class GetProjectRequest extends Request {
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String projectId;
+
+    private GetProjectRequest(Builder builder) {
+        super(builder);
+        this.regionId = builder.regionId;
+        this.projectId = builder.projectId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static GetProjectRequest create() {
+        return builder().build();
+    }
+
+@Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return projectId
+     */
+    public String getProjectId() {
+        return this.projectId;
+    }
+
+    public static final class Builder extends Request.Builder<GetProjectRequest, Builder> {
+        private String regionId; 
+        private String projectId; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(GetProjectRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.projectId = request.projectId;
+        } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pd_061716****</p>
+         */
+        public Builder projectId(String projectId) {
+            this.putQueryParameter("ProjectId", projectId);
+            this.projectId = projectId;
+            return this;
+        }
+
+        @Override
+        public GetProjectRequest build() {
+            return new GetProjectRequest(this);
+        } 
+
+    } 
+
+}
