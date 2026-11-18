@@ -170,7 +170,7 @@ public class CreateLangfuseProjectResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time of the Langfuse project. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+             * <p>The time when the Langfuse project was created. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-06-24T10:14:33Z</p>

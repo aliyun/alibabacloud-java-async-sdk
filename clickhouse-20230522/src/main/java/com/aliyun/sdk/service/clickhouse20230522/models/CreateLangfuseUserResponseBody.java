@@ -144,7 +144,7 @@ public class CreateLangfuseUserResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The Langfuse organization ID.</p>
+             * <p>The ID of the Langfuse organization.</p>
              * 
              * <strong>example:</strong>
              * <p>cmrbhzx930005jw2q****</p>
@@ -294,7 +294,7 @@ public class CreateLangfuseUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user role.</p>
+             * <p>The role of the user.</p>
              */
             public Builder membership(Membership membership) {
                 this.membership = membership;
@@ -302,7 +302,7 @@ public class CreateLangfuseUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The username.</p>
+             * <p>The name of the user.</p>
              * 
              * <strong>example:</strong>
              * <p>john</p>

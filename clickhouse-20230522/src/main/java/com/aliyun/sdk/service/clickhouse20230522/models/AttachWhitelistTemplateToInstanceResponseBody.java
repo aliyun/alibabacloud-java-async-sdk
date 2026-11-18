@@ -144,7 +144,7 @@ public class AttachWhitelistTemplateToInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The instance name.</p>
+             * <p>The name of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>my-database</p>
@@ -155,10 +155,10 @@ public class AttachWhitelistTemplateToInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reason for the disassociation failure.</p>
+             * <p>The reason for the association failure.</p>
              * 
              * <strong>example:</strong>
-             * <p>Processing exception</p>
+             * <p>Processing error</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -308,7 +308,7 @@ public class AttachWhitelistTemplateToInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The associated instances.</p>
+             * <p>The list of associated instances.</p>
              */
             public Builder dbInstances(java.util.List<DbInstances> dbInstances) {
                 this.dbInstances = dbInstances;
@@ -316,7 +316,7 @@ public class AttachWhitelistTemplateToInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP whitelists.</p>
+             * <p>The IP whitelist.</p>
              * 
              * <strong>example:</strong>
              * <p>192.168.1.1,10.0.0.1</p>
@@ -327,7 +327,7 @@ public class AttachWhitelistTemplateToInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The whitelist template ID.</p>
+             * <p>The ID of the whitelist template.</p>
              * 
              * <strong>example:</strong>
              * <p>g-asdfwem</p>
@@ -338,7 +338,7 @@ public class AttachWhitelistTemplateToInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The whitelist template name.</p>
+             * <p>The name of the whitelist template.</p>
              * 
              * <strong>example:</strong>
              * <p>demo_template</p>
@@ -408,7 +408,7 @@ public class AttachWhitelistTemplateToInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The instance name.</p>
+             * <p>The name of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>my-database</p>
@@ -419,7 +419,7 @@ public class AttachWhitelistTemplateToInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The whitelist templates.</p>
+             * <p>The list of whitelist templates.</p>
              */
             public Builder templates(java.util.List<Templates> templates) {
                 this.templates = templates;
@@ -499,7 +499,7 @@ public class AttachWhitelistTemplateToInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The instances that failed to be disassociated.</p>
+             * <p>The instances that failed to be associated.</p>
              */
             public Builder attachFailList(java.util.List<AttachFailList> attachFailList) {
                 this.attachFailList = attachFailList;
@@ -507,7 +507,7 @@ public class AttachWhitelistTemplateToInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The templates that were successfully associated.</p>
+             * <p>The successfully associated templates.</p>
              */
             public Builder attachSuccessedList(java.util.List<AttachSuccessedList> attachSuccessedList) {
                 this.attachSuccessedList = attachSuccessedList;
@@ -515,7 +515,7 @@ public class AttachWhitelistTemplateToInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operation status.</p>
+             * <p>The status of the operation.</p>
              * 
              * <strong>example:</strong>
              * <p>ok</p>

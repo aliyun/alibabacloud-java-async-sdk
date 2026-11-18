@@ -157,7 +157,7 @@ public class CreateLangfuseOrgResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time of the Langfuse organization. The time is in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ss.SSSZ format.</p>
+             * <p>The time when the Langfuse organization was created. The time is in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ss.SSSZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-06-25T09:28:30.949Z</p>
@@ -179,7 +179,7 @@ public class CreateLangfuseOrgResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Langfuse organization.</p>
+             * <p>The Langfuse organization ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cmrbhzx930005jw****</p>

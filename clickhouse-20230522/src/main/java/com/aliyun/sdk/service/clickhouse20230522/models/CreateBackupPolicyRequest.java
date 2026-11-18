@@ -119,7 +119,7 @@ public class CreateBackupPolicyRequest extends Request {
         } 
 
         /**
-         * <p>The number of days for which backups are retained.</p>
+         * <p>The backup retention period in days.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>

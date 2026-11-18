@@ -129,7 +129,7 @@ public class CreateEndpointRequest extends Request {
         }
 
         /**
-         * <p>The prefix of the destination endpoint. This is the prefix of the ConnectionString parameter.</p>
+         * <p>The prefix of the destination endpoint, which is the prefix of the ConnectionString parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>cc-bp100p4q1g9z3****-clickhouse.clickhouseserver.rds.aliyuncs.com</p>

@@ -313,7 +313,7 @@ public class DescribeLangfuseSecurityIPListResponseBody extends TeaModel {
              * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>lfs-****</p>
+             * <p>100001</p>
              */
             public Builder DBInstanceID(Integer DBInstanceID) {
                 this.DBInstanceID = DBInstanceID;

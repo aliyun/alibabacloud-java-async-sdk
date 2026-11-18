@@ -67,7 +67,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response data.</p>
+         * <p>The response result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -901,6 +901,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
             /**
              * <p>The category. Valid values:</p>
+             * <ul>
+             * <li>enterprise: Enterprise Edition.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>enterprise</p>
@@ -911,7 +914,8 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing method.</p>
+             * <p>The billing method. 
+             * Enterprise Edition clusters only support the pay-as-you-go billing method.</p>
              * 
              * <strong>example:</strong>
              * <p>POSTPAY</p>
@@ -922,7 +926,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ClickObserve service status.</p>
+             * <p>The status of the ClickObserve service.</p>
              * 
              * <strong>example:</strong>
              * <p>activation</p>
@@ -955,7 +959,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether deletion protection is enabled.</p>
+             * <p>Indicates whether release protection is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>0/1</p>
@@ -966,7 +970,12 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The zone deployment status of the cluster. Valid values: single_az and multi_az.</p>
+             * <p>The zone deployment status of the cluster. Valid values:</p>
+             * <ul>
+             * <li>single_az: Servers are deployed in the primary zone specified by ZoneId.</li>
+             * <li>multi_az: Servers are deployed in multiple zones specified by MultiZones.</li>
+             * </ul>
+             * <p>Keeper nodes are always deployed in multiple zones specified by MultiZones.</p>
              * 
              * <strong>example:</strong>
              * <p>single_az</p>
@@ -988,7 +997,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The disabled database ports. Multiple ports are separated by commas (,).</p>
+             * <p>The disabled database ports. Separate multiple ports with commas (,).</p>
              * 
              * <strong>example:</strong>
              * <p>9001,8123</p>
@@ -1010,7 +1019,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The minor version of the cluster engine.</p>
+             * <p>The minor engine version of the cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>23.8.1.41495_6</p>
@@ -1021,7 +1030,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The DPI engine version.</p>
+             * <p>The database engine version.</p>
              * 
              * <strong>example:</strong>
              * <p>23.8</p>
@@ -1033,6 +1042,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
             /**
              * <p>The expiration time of the cluster. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
+             * <blockquote>
+             * <p>Pay-as-you-go clusters do not have an expiration time. An empty value is returned.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>2024-04-17T08:14:48Z</p>
@@ -1043,7 +1055,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of Langfuse instance IDs.</p>
+             * <p>The Langfuse instance IDs.</p>
              */
             public Builder langfuseInstanceIds(java.util.List<String> langfuseInstanceIds) {
                 this.langfuseInstanceIds = langfuseInstanceIds;
@@ -1125,7 +1137,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum elastic scaling value for serverless nodes.</p>
+             * <p>The maximum scaling limit for serverless nodes.</p>
              * 
              * <strong>example:</strong>
              * <p>32</p>
@@ -1136,7 +1148,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The minimum elastic scaling value for serverless nodes.</p>
+             * <p>The minimum scaling limit for serverless nodes.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -1188,7 +1200,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum scaling value for serverless elastic scaling.</p>
+             * <p>The maximum value for serverless elastic scaling.</p>
              * 
              * <strong>example:</strong>
              * <p>32</p>
@@ -1199,7 +1211,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The minimum scaling value for serverless elastic scaling.</p>
+             * <p>The minimum value for serverless elastic scaling.</p>
              * 
              * <strong>example:</strong>
              * <p>8</p>
@@ -1221,7 +1233,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The pre-purchased storage quota, in GB.</p>
+             * <p>The purchased storage quota, in GB.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -1232,7 +1244,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage size. Unit: GB.</p>
+             * <p>The storage space size. Unit: GB.</p>
              * 
              * <strong>example:</strong>
              * <p>12</p>
@@ -1273,7 +1285,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>VPC ID。</p>
+             * <p>The VPC ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-wz9duj8xd6r1gzhsg*****</p>

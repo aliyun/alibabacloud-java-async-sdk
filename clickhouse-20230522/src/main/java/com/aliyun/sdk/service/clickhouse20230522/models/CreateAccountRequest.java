@@ -162,7 +162,7 @@ public class CreateAccountRequest extends Request {
         } 
 
         /**
-         * <p>The database account. The account name must meet the following requirements:</p>
+         * <p>The database account. The name must meet the following requirements:</p>
          * <ul>
          * <li>The name must be unique.</li>
          * <li>The name can contain lowercase letters, digits, and underscores (_).</li>
@@ -183,8 +183,8 @@ public class CreateAccountRequest extends Request {
         /**
          * <p>The type of the database account. Valid values:</p>
          * <ul>
-         * <li><strong>NormalAccount</strong>: Standard account.</li>
-         * <li><strong>SuperAccount</strong>: Privileged account.</li>
+         * <li><strong>NormalAccount</strong>: standard account.</li>
+         * <li><strong>SuperAccount</strong>: privileged account.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -380,7 +380,7 @@ public class CreateAccountRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to grant DDL permissions to the database account. Valid values:</p>
+             * <p>Specifies whether to grant Data Definition Language (DDL) permissions to the database account. Valid values:</p>
              * <ul>
              * <li><strong>true</strong>: Allows DDL operations.</li>
              * <li><strong>false</strong>: Prohibits DDL operations.</li>
@@ -395,7 +395,7 @@ public class CreateAccountRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to grant DML permissions to the database account. Valid values:</p>
+             * <p>Specifies whether to grant Data Manipulation Language (DML) permissions to the database account. Valid values:</p>
              * <ul>
              * <li><strong>0</strong>: Allows queries for reading, writing, and changing settings.</li>
              * <li><strong>1</strong>: Allows only queries for reading data.</li>

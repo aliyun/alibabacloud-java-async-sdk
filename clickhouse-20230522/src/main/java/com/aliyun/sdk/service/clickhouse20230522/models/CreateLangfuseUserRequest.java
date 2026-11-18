@@ -197,7 +197,7 @@ public class CreateLangfuseUserRequest extends Request {
         }
 
         /**
-         * <p>The username.</p>
+         * <p>The name of the user.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -222,7 +222,7 @@ public class CreateLangfuseUserRequest extends Request {
         }
 
         /**
-         * <p>The Langfuse organization ID.</p>
+         * <p>The ID of the Langfuse organization.</p>
          * 
          * <strong>example:</strong>
          * <p>cmrbhzx930005jw2q****</p>
@@ -236,11 +236,11 @@ public class CreateLangfuseUserRequest extends Request {
         /**
          * <p>The password of the user account. The password must meet the following requirements:</p>
          * <ul>
-         * <li><p>It must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
+         * <li><p>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
          * </li>
          * <li><p>Special characters include !@#$%^&amp;*()_+-=.</p>
          * </li>
-         * <li><p>It must be 8 to 32 characters in length.</p>
+         * <li><p>The password must be 8 to 32 characters in length.</p>
          * </li>
          * </ul>
          * <p>This parameter is required.</p>
