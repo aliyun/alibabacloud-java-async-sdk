@@ -106,7 +106,7 @@ public class ListExecutorEventsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of the running event.</p>
+         * <p>The list of runtime events.</p>
          */
         public Builder executorEventList(java.util.List<ExecutorEventList> executorEventList) {
             this.executorEventList = executorEventList;
@@ -114,7 +114,7 @@ public class ListExecutorEventsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class ListExecutorEventsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The paging Settings for the number of entries per page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -147,7 +147,7 @@ public class ListExecutorEventsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>40</p>
@@ -255,7 +255,7 @@ public class ListExecutorEventsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The content of the running event.</p>
+             * <p>The content of the runtime event.</p>
              * 
              * <strong>example:</strong>
              * <p>Executor created successfully</p>
@@ -266,7 +266,7 @@ public class ListExecutorEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the executor. The format is JobId-TaskName-ArrayIndex.</p>
+             * <p>The executor ID. Format: JobId-TaskName-ArrayIndex.</p>
              * 
              * <strong>example:</strong>
              * <p>job-xxxx-Task0-1</p>
@@ -288,7 +288,7 @@ public class ListExecutorEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The level of the running event. Valid values:</p>
+             * <p>The level of the runtime event. Valid values:</p>
              * <ul>
              * <li>Normal</li>
              * <li>Warning</li>
@@ -304,7 +304,7 @@ public class ListExecutorEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The event of the running event.</p>
+             * <p>The time when the runtime event occurred.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-02-20 10:04:13</p>

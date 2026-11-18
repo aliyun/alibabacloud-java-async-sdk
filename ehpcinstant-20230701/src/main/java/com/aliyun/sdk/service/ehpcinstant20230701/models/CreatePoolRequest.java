@@ -119,7 +119,7 @@ public class CreatePoolRequest extends Request {
          * <p>The name of the resource pool.</p>
          * <ul>
          * <li>The name can be up to 15 characters in length.</li>
-         * <li>It can contain digits, uppercase letters, lowercase letters, underscores (_), and dots (.).</li>
+         * <li>The name can contain digits, uppercase letters, lowercase letters, underscores (_), and periods (.).</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -135,8 +135,8 @@ public class CreatePoolRequest extends Request {
         /**
          * <p>The priority of the resource pool.</p>
          * <ul>
-         * <li>You can set a priority in the range of 1 to 99. The default value is 1, which is the lowest priority.</li>
-         * <li>Jobs submitted to a resource pool with a higher priority level value will be scheduled before pending jobs in a resource pool with a lower priority level value, and the priority level of the resource pool takes precedence over the priority of the job.</li>
+         * <li>Valid values: 1 to 99. Default value: 1, which indicates the lowest priority.</li>
+         * <li>Jobs submitted to a resource pool with a higher priority value are scheduled before pending jobs in resource pools with lower priority values. The priority of a resource pool takes precedence over the priority of a job.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -149,7 +149,7 @@ public class CreatePoolRequest extends Request {
         }
 
         /**
-         * <p>The quota of resources that users are allowed to concurrently use in a resource pool.</p>
+         * <p>The resource quota limits for concurrent usage allowed for a user within a resource pool.</p>
          */
         public Builder resourceLimits(ResourceLimits resourceLimits) {
             String resourceLimitsShrink = shrink(resourceLimits, "ResourceLimits", "json");
@@ -159,7 +159,10 @@ public class CreatePoolRequest extends Request {
         }
 
         /**
-         * SchedulingPolicyId.
+         * <p>The scheduling policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>policy-xxx</p>
          */
         public Builder schedulingPolicyId(String schedulingPolicyId) {
             this.putQueryParameter("SchedulingPolicyId", schedulingPolicyId);
@@ -168,7 +171,7 @@ public class CreatePoolRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>The tag information.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -224,7 +227,10 @@ public class CreatePoolRequest extends Request {
             } 
 
             /**
-             * MaxExecutorNum.
+             * <p>The maximum number of executor nodes that a user can concurrently run within a resource pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maxExecutorNum(Integer maxExecutorNum) {
                 this.maxExecutorNum = maxExecutorNum;
@@ -291,7 +297,10 @@ public class CreatePoolRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -299,7 +308,10 @@ public class CreatePoolRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -87,7 +87,7 @@ public class DescribeJobMetricLastRequest extends Request {
         } 
 
         /**
-         * <p>The list of array job indexes.</p>
+         * <p>The list of job array indexes.</p>
          */
         public Builder arrayIndex(java.util.List<Integer> arrayIndex) {
             String arrayIndexShrink = shrink(arrayIndex, "ArrayIndex", "json");
@@ -109,7 +109,7 @@ public class DescribeJobMetricLastRequest extends Request {
         }
 
         /**
-         * <p>The name of the task.</p>
+         * <p>The task name.</p>
          * 
          * <strong>example:</strong>
          * <p>Task0</p>

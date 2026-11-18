@@ -106,7 +106,7 @@ public class ListPoolsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The page number. Default value: 1.</p>
+         * <p>The current page number. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -117,7 +117,7 @@ public class ListPoolsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries on each page. Maximum value: 50. Default value: 10.</p>
+         * <p>The number of entries per page in a paging query. Maximum value: 50. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -128,7 +128,7 @@ public class ListPoolsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Queries the resource pool list.</p>
+         * <p>The list of resource pools.</p>
          */
         public Builder poolList(java.util.List<PoolList> poolList) {
             this.poolList = poolList;
@@ -147,7 +147,7 @@ public class ListPoolsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of list entries.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -216,7 +216,10 @@ public class ListPoolsResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -224,7 +227,10 @@ public class ListPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -382,7 +388,10 @@ public class ListPoolsResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The time when the resource pool was created. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-04-20 11:09:59</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -390,10 +399,10 @@ public class ListPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indices whether the resource pool is the default resource pool. Valid values:</p>
+             * <p>Specifies whether the resource pool is the default resource pool. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><strong>true</strong>: Yes.</li>
+             * <li><strong>false</strong>: No.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -405,7 +414,10 @@ public class ListPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * MaxExecutorNum.
+             * <p>The number of running executor nodes in a resource pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maxExecutorNum(Integer maxExecutorNum) {
                 this.maxExecutorNum = maxExecutorNum;
@@ -413,10 +425,10 @@ public class ListPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the resource pool.</p>
+             * <p>The resource pool name.</p>
              * <ul>
-             * <li>The value can be up to 15 characters in length.</li>
-             * <li>It can contain digits, uppercase letters, lowercase letters, underscores (_), and dots (.).</li>
+             * <li>The name can be up to 15 characters in length.</li>
+             * <li>The name can contain digits, uppercase letters, lowercase letters, underscores (_), and periods (.).</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -430,8 +442,8 @@ public class ListPoolsResponseBody extends TeaModel {
             /**
              * <p>The priority of the resource pool.</p>
              * <ul>
-             * <li>You can set a priority in the range of 1 to 99. The default value is 1, which is the lowest priority.</li>
-             * <li>Jobs submitted to a resource pool with a higher priority level value will be scheduled before pending jobs in a resource pool with a lower priority level value, and the priority level of the resource pool takes precedence over the priority of the job.</li>
+             * <li>Valid values: 1 to 99. Default value: 1, which indicates the lowest priority.</li>
+             * <li>Jobs submitted to a resource pool with a higher priority level are scheduled before pending jobs in a resource pool with a lower priority level. The priority level of a resource pool takes precedence over the priority of a job.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -443,7 +455,10 @@ public class ListPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * SchedulingPolicyId.
+             * <p>The ID of the scheduling policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>policy-xxx</p>
              */
             public Builder schedulingPolicyId(String schedulingPolicyId) {
                 this.schedulingPolicyId = schedulingPolicyId;
@@ -451,7 +466,7 @@ public class ListPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the resource pool. Valid values:</p>
+             * <p>The resource pool status. Valid values:</p>
              * <ul>
              * <li>Creating: The resource pool is being created.</li>
              * <li>Updating: The resource pool is being updated.</li>
@@ -469,7 +484,7 @@ public class ListPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The tag information.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -477,7 +492,10 @@ public class ListPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The time when the resource pool was updated. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-04-20 11:09:59</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

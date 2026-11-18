@@ -67,7 +67,10 @@ public class CreateJobTemplateResponseBody extends TeaModel {
         } 
 
         /**
-         * JobTemplateId.
+         * <p>The job template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>jt-xxxx</p>
          */
         public Builder jobTemplateId(String jobTemplateId) {
             this.jobTemplateId = jobTemplateId;
@@ -75,7 +78,10 @@ public class CreateJobTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>896D338C-E4F4-41EC-A154-D605E5DE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

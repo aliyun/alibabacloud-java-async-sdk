@@ -87,7 +87,7 @@ public class ListExecutorEventsRequest extends Request {
         } 
 
         /**
-         * <p>Queries the Executor filter conditions.</p>
+         * <p>The filter conditions for querying executors.</p>
          */
         public Builder filter(Filter filter) {
             String filterShrink = shrink(filter, "Filter", "json");
@@ -97,7 +97,7 @@ public class ListExecutorEventsRequest extends Request {
         }
 
         /**
-         * <p>The current page number.<br>Starting value: 1<br>Default value: 1</p>
+         * <p>The page number. Starting value: 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -109,7 +109,7 @@ public class ListExecutorEventsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries on the current page. Default value: 50. Maximum value: 100.</p>
+         * <p>The paging Settings for the number of entries per page in a paged query. Default value: 50. Maximum value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -219,7 +219,7 @@ public class ListExecutorEventsRequest extends Request {
             } 
 
             /**
-             * <p>The list of executor IDs. A maximum of 100 IDs are supported.</p>
+             * <p>The list of executor IDs. You can specify up to 100 IDs.</p>
              */
             public Builder executorIds(java.util.List<String> executorIds) {
                 this.executorIds = executorIds;
@@ -238,7 +238,7 @@ public class ListExecutorEventsRequest extends Request {
             }
 
             /**
-             * <p>The level of the running event. Valid value:</p>
+             * <p>The level of the runtime event. Valid values:</p>
              * <ul>
              * <li>Normal</li>
              * <li>Warning</li>
@@ -254,7 +254,7 @@ public class ListExecutorEventsRequest extends Request {
             }
 
             /**
-             * <p>For jobs submitted after this time, the time in the region is converted into a Unix timestamp (UI8 regionfor Aliyun sites).</p>
+             * <p>The start time of the events. Events that occur after this time are returned. The time must be a UNIX timestamp based on the time zone of the region (UTC+8 for the Chinese site).</p>
              * 
              * <strong>example:</strong>
              * <p>1703820113</p>
@@ -265,7 +265,7 @@ public class ListExecutorEventsRequest extends Request {
             }
 
             /**
-             * <p>For jobs submitted before this time, the time in the region is converted into a Unix timestamp (UI8 regionfor Aliyun sites).</p>
+             * <p>The end time of the events. Events that occur before this time are returned. The time must be a UNIX timestamp based on the time zone of the region (UTC+8 for the Chinese site).</p>
              * 
              * <strong>example:</strong>
              * <p>1703819914</p>

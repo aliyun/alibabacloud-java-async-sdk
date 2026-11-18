@@ -106,7 +106,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         } 
 
         /**
-         * JobTemplates.
+         * <p>The job templates.</p>
          */
         public Builder jobTemplates(java.util.List<JobTemplates> jobTemplates) {
             this.jobTemplates = jobTemplates;
@@ -114,7 +114,10 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>896D338C-E4F4-41EC-A154-D605E5DE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of templates.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -204,7 +216,10 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The job tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -212,7 +227,10 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The job tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -344,7 +362,10 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time. The example uses the YYYY-MM-DD HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-04-20 11:09:59</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -352,7 +373,10 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * JobTemplateDescription.
+             * <p>The template description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Demo</p>
              */
             public Builder jobTemplateDescription(String jobTemplateDescription) {
                 this.jobTemplateDescription = jobTemplateDescription;
@@ -360,7 +384,10 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * JobTemplateId.
+             * <p>The job template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>jt-xxxx</p>
              */
             public Builder jobTemplateId(String jobTemplateId) {
                 this.jobTemplateId = jobTemplateId;
@@ -368,7 +395,10 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * JobTemplateName.
+             * <p>The template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-template</p>
              */
             public Builder jobTemplateName(String jobTemplateName) {
                 this.jobTemplateName = jobTemplateName;
@@ -376,7 +406,10 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The job template status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Working</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -384,7 +417,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The job tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -392,7 +425,10 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The update time. The example uses the YYYY-MM-DD HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-04-20 11:09:59</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

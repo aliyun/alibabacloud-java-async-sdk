@@ -101,7 +101,7 @@ public class ListJobsRequest extends Request {
         } 
 
         /**
-         * <p>Queries job filter conditions.</p>
+         * <p>The filter conditions for querying jobs.</p>
          */
         public Builder filter(Filter filter) {
             String filterShrink = shrink(filter, "Filter", "json");
@@ -111,9 +111,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
-         * <p>Pages start from page 1.</p>
-         * <p>Default value: 1.</p>
+         * <p>The page number. Starting value: 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +123,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries on the current page. Default value: 50. Maximum value: 100.</p>
+         * <p>The paging Settings for the number of entries per page in a paged query. Default value: 50. Maximum value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -206,7 +204,10 @@ public class ListJobsRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The key of the job tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -214,7 +215,10 @@ public class ListJobsRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of the job tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -372,7 +376,7 @@ public class ListJobsRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the job.</p>
+             * <p>The job ID.</p>
              * 
              * <strong>example:</strong>
              * <p>job-xxxx</p>
@@ -383,7 +387,7 @@ public class ListJobsRequest extends Request {
             }
 
             /**
-             * JobIds.
+             * <p>Filters jobs by a list of job IDs. A maximum of 100 job IDs are supported.</p>
              */
             public Builder jobIds(java.util.List<String> jobIds) {
                 this.jobIds = jobIds;
@@ -391,7 +395,7 @@ public class ListJobsRequest extends Request {
             }
 
             /**
-             * <p>The job name. Fuzzy search is supported.</p>
+             * <p>The job name. Fuzzy match is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>testJob</p>
@@ -402,7 +406,10 @@ public class ListJobsRequest extends Request {
             }
 
             /**
-             * JobTemplateId.
+             * <p>The ID of the job template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>jt-xxxx</p>
              */
             public Builder jobTemplateId(String jobTemplateId) {
                 this.jobTemplateId = jobTemplateId;
@@ -410,7 +417,10 @@ public class ListJobsRequest extends Request {
             }
 
             /**
-             * PoolName.
+             * <p>The name of the resource pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MyPool</p>
              */
             public Builder poolName(String poolName) {
                 this.poolName = poolName;
@@ -420,17 +430,17 @@ public class ListJobsRequest extends Request {
             /**
              * <p>The job status. Valid values:</p>
              * <ul>
-             * <li>Pending</li>
-             * <li>initing</li>
-             * <li>Succeed</li>
-             * <li>Failed</li>
-             * <li>Running</li>
-             * <li>Exception</li>
-             * <li>Retrying</li>
-             * <li>Expired</li>
-             * <li>Suspended</li>
-             * <li>Restarting</li>
-             * <li>Deleted</li>
+             * <li>Pending: The job is queued.</li>
+             * <li>Initing: The job is being initialized.</li>
+             * <li>Succeeded: The job ran successfully.</li>
+             * <li>Failed: The job failed to run.</li>
+             * <li>Running: The job is running.</li>
+             * <li>Exception: A scheduling exception occurred.</li>
+             * <li>Retrying: The job is being retried.</li>
+             * <li>Expired: The job timed out.</li>
+             * <li>Suspended: The job is hibernated.</li>
+             * <li>Restarting: The job is being restarted.</li>
+             * <li>Deleted: The job is deleted.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -442,7 +452,7 @@ public class ListJobsRequest extends Request {
             }
 
             /**
-             * Tag.
+             * <p>The list of job tags.</p>
              */
             public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
@@ -450,7 +460,7 @@ public class ListJobsRequest extends Request {
             }
 
             /**
-             * <p>For jobs submitted after this time, the time in the region is converted into a UNIX timestamp (UI8).</p>
+             * <p>The time after which jobs were submitted. The time is converted to a UNIX timestamp based on the time zone of the region. For regions in the Chinese mainland, the time zone is UTC+8.</p>
              * 
              * <strong>example:</strong>
              * <p>1703819914</p>
@@ -461,7 +471,7 @@ public class ListJobsRequest extends Request {
             }
 
             /**
-             * <p>For jobs submitted before this time, the time in the region is converted into a Unix timestamp (for domestic sites, the UI8 region).</p>
+             * <p>The time before which jobs were submitted. The time is converted to a UNIX timestamp based on the time zone of the region. For regions in the Chinese mainland, the time zone is UTC+8.</p>
              * 
              * <strong>example:</strong>
              * <p>1703820113</p>
@@ -548,8 +558,8 @@ public class ListJobsRequest extends Request {
             /**
              * <p>The sorting order. Valid values:</p>
              * <ul>
-             * <li>ASC (default): ascending order</li>
-             * <li>DESC: descending order</li>
+             * <li>ASC: ascending order. This is the default value.</li>
+             * <li>DESC: descending order.</li>
              * </ul>
              * 
              * <strong>example:</strong>

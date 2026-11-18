@@ -80,7 +80,14 @@ public class DescribeJobResultsResponseBody extends TeaModel {
         } 
 
         /**
-         * ExitCode.
+         * <p>The exit code of the command.</p>
+         * <ul>
+         * <li>For Linux instances, this is the exit code of the shell command.</li>
+         * <li>For Windows instances, this is the exit code of the batch or PowerShell command.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder exitCode(Long exitCode) {
             this.exitCode = exitCode;
@@ -88,7 +95,10 @@ public class DescribeJobResultsResponseBody extends TeaModel {
         }
 
         /**
-         * Output.
+         * <p>The output generated after the command is executed. If ContentEncoding is set to PlainText, the original output is returned. If ContentEncoding is set to Base64, the Base64-encoded output is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MTU6MzA6MDEK</p>
          */
         public Builder output(String output) {
             this.output = output;

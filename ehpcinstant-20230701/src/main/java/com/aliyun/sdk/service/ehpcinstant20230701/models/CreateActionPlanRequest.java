@@ -211,11 +211,11 @@ public class CreateActionPlanRequest extends Request {
         }
 
         /**
-         * <p>The type of the resource.</p>
+         * <p>The resource allocation specification. Valid values:</p>
          * <ul>
-         * <li>Standard</li>
-         * <li>Dedicated: You must enable a whitelist for use.</li>
-         * <li>Economic: You must enable a whitelist for use.</li>
+         * <li>Standard: standard</li>
+         * <li>Dedicated: dedicated. To use this value, you must be added to the whitelist.</li>
+         * <li>Economic: economy. To use this value, you must be added to the whitelist.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -228,7 +228,7 @@ public class CreateActionPlanRequest extends Request {
         }
 
         /**
-         * <p>The ID of the application.</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ci-vm-rYfypJKwlN9Y</p>
@@ -240,7 +240,7 @@ public class CreateActionPlanRequest extends Request {
         }
 
         /**
-         * <p>The expected scale of resources for the execution plan. If the ResourceType parameter is set to VcpuCapacity, the execution plan is expected to have 10000 vCPUs.</p>
+         * <p>The desired resource capacity for the execution plan. If ResourceType is set to VCpuCapacity, this parameter specifies the expected number of vCPUs to maintain, such as 10000.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -252,7 +252,10 @@ public class CreateActionPlanRequest extends Request {
         }
 
         /**
-         * IntervalMinutes.
+         * <p>The scheduling interval of the execution plan. Unit: minutes. Valid values: 10 to 10080. Default value: 60.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder intervalMinutes(Integer intervalMinutes) {
             this.putQueryParameter("IntervalMinutes", intervalMinutes);
@@ -261,12 +264,12 @@ public class CreateActionPlanRequest extends Request {
         }
 
         /**
-         * <p>The computing power level. This value is valid only when the resource type is Economic. The following disk categories are supported:</p>
+         * <p>The computing power level. This parameter takes effect only when the resource type is set to Economic. Valid values:</p>
          * <ul>
-         * <li>General</li>
-         * <li>Performance</li>
+         * <li>General: general-purpose</li>
+         * <li>Performance: performance-optimized</li>
          * </ul>
-         * <p>Default value: General</p>
+         * <p>Default value: General.</p>
          * 
          * <strong>example:</strong>
          * <p>General</p>
@@ -278,7 +281,7 @@ public class CreateActionPlanRequest extends Request {
         }
 
         /**
-         * <p>The pre-processing script. Base64 encoding is required.</p>
+         * <p>The prolog script. The script must be Base64-encoded.</p>
          * 
          * <strong>example:</strong>
          * <p>bHMgLWFsCmxzIC1hbGggfCB3YyAtbA==</p>
@@ -290,7 +293,7 @@ public class CreateActionPlanRequest extends Request {
         }
 
         /**
-         * <p>The list of resource configurations in the region where the execution plan runs.</p>
+         * <p>The list of region-specific resource configurations for the runtime environment of the execution plan.</p>
          */
         public Builder regions(java.util.List<Regions> regions) {
             String regionsShrink = shrink(regions, "Regions", "json");
@@ -300,10 +303,12 @@ public class CreateActionPlanRequest extends Request {
         }
 
         /**
-         * <p>Target resource type: the capacity of vCPUs or the number of execution nodes. Valid values:</p>
+         * <p>The type of the target resource for the execution plan. Valid values:</p>
          * <ul>
-         * <li>VCpuCapacity</li>
-         * <li>ExecutorCapacity</li>
+         * <li><p>VCpuCapacity: vCPU capacity</p>
+         * </li>
+         * <li><p>ExecutorCapacity: number of execution nodes</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -316,10 +321,7 @@ public class CreateActionPlanRequest extends Request {
         }
 
         /**
-         * <p>The list of resource configurations of the execution plan runtime environment. You can configure 1 to 10 resources.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1000</p>
+         * <p>The list of resource configurations for the runtime environment of the execution plan. You can specify 1 to 10 resource configurations.</p>
          */
         public Builder resources(java.util.List<Resources> resources) {
             String resourcesShrink = shrink(resources, "Resources", "json");
@@ -329,7 +331,7 @@ public class CreateActionPlanRequest extends Request {
         }
 
         /**
-         * <p>The running-job script. Base64 encoding is required.</p>
+         * <p>The script used to run the job. The script must be Base64-encoded.</p>
          * 
          * <strong>example:</strong>
          * <p>bHMgLWFsCmxzIC1hbGggfCB3YyAtbA==</p>
@@ -437,7 +439,7 @@ public class CreateActionPlanRequest extends Request {
             }
 
             /**
-             * <p>The list of security groups available for the execution plan in the region. You can have 0 to 5 security groups.</p>
+             * <p>The list of security groups available for the execution plan in the region. You can specify 0 to 5 security groups.</p>
              */
             public Builder securityGroupId(java.util.List<String> securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -445,7 +447,7 @@ public class CreateActionPlanRequest extends Request {
             }
 
             /**
-             * SecurityGroupIds.
+             * <p>The list of security group IDs. You can call the <a href="https://api.aliyun.com/document/Ecs/2014-05-26/DescribeSecurityGroups">DescribeSecurityGroups</a> operation to query available security groups.</p>
              */
             public Builder securityGroupIds(java.util.List<String> securityGroupIds) {
                 this.securityGroupIds = securityGroupIds;
@@ -453,7 +455,7 @@ public class CreateActionPlanRequest extends Request {
             }
 
             /**
-             * <p>The list of VSwitches available for the execution plan in the region. Supports 0 to 5 VSwitches.</p>
+             * <p>The list of vSwitches available for the execution plan in the region. You can specify 0 to 5 vSwitches.</p>
              */
             public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -520,7 +522,7 @@ public class CreateActionPlanRequest extends Request {
             } 
 
             /**
-             * <p>The number of CPUs in the running environment.</p>
+             * <p>The number of CPU cores in the runtime environment.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -531,7 +533,7 @@ public class CreateActionPlanRequest extends Request {
             }
 
             /**
-             * <p>The memory size of the running environment. Unit: GiB.</p>
+             * <p>The memory size of the runtime environment. Unit: GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>

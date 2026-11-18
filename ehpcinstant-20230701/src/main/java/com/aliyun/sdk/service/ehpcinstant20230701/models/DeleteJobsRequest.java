@@ -261,7 +261,8 @@ public class DeleteJobsRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the job to be deleted.<br>You can call the ListJobs operation to query job IDs.</p>
+             * <p>The ID of the job to be deleted.\
+             * You can call the ListJobs operation to query job IDs.</p>
              * 
              * <strong>example:</strong>
              * <p>job-xxxx</p>

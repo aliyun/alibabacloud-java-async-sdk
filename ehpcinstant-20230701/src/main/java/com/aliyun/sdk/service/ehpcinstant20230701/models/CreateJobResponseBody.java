@@ -168,7 +168,7 @@ public class CreateJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of executor IDs contained in the task.</p>
+             * <p>The list of executor IDs included in the task.</p>
              */
             public Builder executorIds(java.util.List<String> executorIds) {
                 this.executorIds = executorIds;
@@ -176,7 +176,7 @@ public class CreateJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the task.</p>
+             * <p>The task name.</p>
              * 
              * <strong>example:</strong>
              * <p>task0</p>

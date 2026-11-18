@@ -145,7 +145,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
         } 
 
         /**
-         * CreateTime.
+         * <p>The creation time. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-04-20 11:09:59</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -153,7 +156,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * JobTemplateConfig.
+         * <p>The template configuration.</p>
          */
         public Builder jobTemplateConfig(JobTemplateConfig jobTemplateConfig) {
             this.jobTemplateConfig = jobTemplateConfig;
@@ -161,7 +164,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * JobTemplateDescription.
+         * <p>The template description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Demo</p>
          */
         public Builder jobTemplateDescription(String jobTemplateDescription) {
             this.jobTemplateDescription = jobTemplateDescription;
@@ -169,7 +175,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * JobTemplateId.
+         * <p>The job template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>jt-xxxx</p>
          */
         public Builder jobTemplateId(String jobTemplateId) {
             this.jobTemplateId = jobTemplateId;
@@ -177,7 +186,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * JobTemplateName.
+         * <p>The template name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-template</p>
          */
         public Builder jobTemplateName(String jobTemplateName) {
             this.jobTemplateName = jobTemplateName;
@@ -185,7 +197,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>896D338C-E4F4-41EC-A154-D605E5DE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +208,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the job template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Working</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -201,7 +219,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * UpdateTime.
+         * <p>The update time. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-04-20 11:09:59</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
@@ -267,7 +288,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * EnableExternalIpAddress.
+             * <p>Specifies whether to create a public IP address for the job. Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableExternalIpAddress(Boolean enableExternalIpAddress) {
                 this.enableExternalIpAddress = enableExternalIpAddress;
@@ -275,7 +299,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Vswitch.
+             * <p>The vSwitches.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-xxxx</p>
              */
             public Builder vswitch(java.util.List<String> vswitch) {
                 this.vswitch = vswitch;
@@ -342,7 +369,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -350,7 +380,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -469,7 +502,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * AllocationSpec.
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Dedicated</p>
              */
             public Builder allocationSpec(String allocationSpec) {
                 this.allocationSpec = allocationSpec;
@@ -477,7 +513,14 @@ public class GetJobTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * <p>The computing power level. This parameter is valid only when the resource type is economy. Valid values:</p>
+             * <ul>
+             * <li>General: general-purpose.</li>
+             * <li>Performance: compute-optimized.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>General</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -485,7 +528,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Network.
+             * <p>The network configuration.</p>
              */
             public Builder network(Network network) {
                 this.network = network;
@@ -493,7 +536,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Pool.
+             * <p>The job resource pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-pool</p>
              */
             public Builder pool(String pool) {
                 this.pool = pool;
@@ -501,7 +547,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * <p>The job priority. A larger value indicates a higher scheduling priority for the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -509,7 +558,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The tags of the job.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -563,7 +612,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * SecurityGroupIds.
+             * <p>The security group IDs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-xxxx</p>
              */
             public Builder securityGroupIds(java.util.List<String> securityGroupIds) {
                 this.securityGroupIds = securityGroupIds;
@@ -617,7 +669,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * SecurityGroup.
+             * <p>The security group.</p>
              */
             public Builder securityGroup(SecurityGroup securityGroup) {
                 this.securityGroup = securityGroup;
@@ -697,7 +749,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * IndexEnd.
+             * <p>The end index of the array job. Valid values: 0 to 4999. The value must be greater than or equal to the value of IndexStart.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9</p>
              */
             public Builder indexEnd(Integer indexEnd) {
                 this.indexEnd = indexEnd;
@@ -705,7 +760,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * IndexStart.
+             * <p>The start index of the array job. Valid values: 0 to 4999.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder indexStart(Integer indexStart) {
                 this.indexStart = indexStart;
@@ -713,7 +771,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * IndexStep.
+             * <p>The step size of the array job index.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder indexStep(Integer indexStep) {
                 this.indexStep = indexStep;
@@ -780,7 +841,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * ArraySpec.
+             * <p>The details of the array job.</p>
              */
             public Builder arraySpec(ArraySpec arraySpec) {
                 this.arraySpec = arraySpec;
@@ -788,7 +849,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * MaxCount.
+             * <p>The maximum number of nodes for the job execution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder maxCount(Integer maxCount) {
                 this.maxCount = maxCount;
@@ -855,7 +919,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * Size.
+             * <p>The size of the cloud disk. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40</p>
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -863,7 +930,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the cloud disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>System</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -982,7 +1052,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * Cores.
+             * <p>The number of CPU cores in the runtime environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder cores(Float cores) {
                 this.cores = cores;
@@ -990,7 +1063,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Disks.
+             * <p>The array of cloud disks.</p>
              */
             public Builder disks(java.util.List<Disks> disks) {
                 this.disks = disks;
@@ -998,7 +1071,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * EnableHT.
+             * <p>Indicates whether hyper-threading is enabled in the runtime environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableHT(Boolean enableHT) {
                 this.enableHT = enableHT;
@@ -1006,7 +1082,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * HostNamePrefix.
+             * <p>The hostname prefix of the runtime environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>compute</p>
              */
             public Builder hostNamePrefix(String hostNamePrefix) {
                 this.hostNamePrefix = hostNamePrefix;
@@ -1014,7 +1093,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceTypes.
+             * <p>The instance types of the runtime environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.c7a.8xlarge</p>
              */
             public Builder instanceTypes(java.util.List<String> instanceTypes) {
                 this.instanceTypes = instanceTypes;
@@ -1022,7 +1104,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * <p>The memory size of the runtime environment. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder memory(Float memory) {
                 this.memory = memory;
@@ -1089,7 +1174,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * Action.
+             * <p>The next action of the task. Valid values: Retry: retries the task. Exit: exits the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Retry</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -1097,7 +1185,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * ExitCode.
+             * <p>The exit code of the task. It is used together with the Action parameter to form the job retry rule. Valid values: 0 to 255.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder exitCode(Long exitCode) {
                 this.exitCode = exitCode;
@@ -1164,7 +1255,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * ExitCodeActions.
+             * <p>The retry rules.</p>
              */
             public Builder exitCodeActions(java.util.List<ExitCodeActions> exitCodeActions) {
                 this.exitCodeActions = exitCodeActions;
@@ -1172,7 +1263,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * RetryCount.
+             * <p>The number of retries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder retryCount(Integer retryCount) {
                 this.retryCount = retryCount;
@@ -1239,7 +1333,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * Name.
+             * <p>The name of the environment variable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PATH</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1247,7 +1344,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the environment variable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/usr/local/bin</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1280,11 +1380,17 @@ public class GetJobTemplateResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnvironmentVars")
         private java.util.List<EnvironmentVars> environmentVars;
 
+        @com.aliyun.core.annotation.NameInMap("GpuDriverVersion")
+        private String gpuDriverVersion;
+
         @com.aliyun.core.annotation.NameInMap("Image")
         private String image;
 
         @com.aliyun.core.annotation.NameInMap("ImageRegistryOptions")
         private String imageRegistryOptions;
+
+        @com.aliyun.core.annotation.NameInMap("Privileged")
+        private Boolean privileged;
 
         @com.aliyun.core.annotation.NameInMap("WorkingDir")
         private String workingDir;
@@ -1294,8 +1400,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
             this.arg = builder.arg;
             this.command = builder.command;
             this.environmentVars = builder.environmentVars;
+            this.gpuDriverVersion = builder.gpuDriverVersion;
             this.image = builder.image;
             this.imageRegistryOptions = builder.imageRegistryOptions;
+            this.privileged = builder.privileged;
             this.workingDir = builder.workingDir;
         }
 
@@ -1336,6 +1444,13 @@ public class GetJobTemplateResponseBody extends TeaModel {
         }
 
         /**
+         * @return gpuDriverVersion
+         */
+        public String getGpuDriverVersion() {
+            return this.gpuDriverVersion;
+        }
+
+        /**
          * @return image
          */
         public String getImage() {
@@ -1350,6 +1465,13 @@ public class GetJobTemplateResponseBody extends TeaModel {
         }
 
         /**
+         * @return privileged
+         */
+        public Boolean getPrivileged() {
+            return this.privileged;
+        }
+
+        /**
          * @return workingDir
          */
         public String getWorkingDir() {
@@ -1361,8 +1483,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
             private java.util.List<String> arg; 
             private java.util.List<String> command; 
             private java.util.List<EnvironmentVars> environmentVars; 
+            private String gpuDriverVersion; 
             private String image; 
             private String imageRegistryOptions; 
+            private Boolean privileged; 
             private String workingDir; 
 
             private Builder() {
@@ -1373,13 +1497,18 @@ public class GetJobTemplateResponseBody extends TeaModel {
                 this.arg = model.arg;
                 this.command = model.command;
                 this.environmentVars = model.environmentVars;
+                this.gpuDriverVersion = model.gpuDriverVersion;
                 this.image = model.image;
                 this.imageRegistryOptions = model.imageRegistryOptions;
+                this.privileged = model.privileged;
                 this.workingDir = model.workingDir;
             } 
 
             /**
-             * AppId.
+             * <p>The application ID of the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ci-vm-32k6LXAi3cOG</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -1387,7 +1516,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Arg.
+             * <p>The arguments for the container startup commands.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60s</p>
              */
             public Builder arg(java.util.List<String> arg) {
                 this.arg = arg;
@@ -1395,7 +1527,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Command.
+             * <p>The startup commands of the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sleep</p>
              */
             public Builder command(java.util.List<String> command) {
                 this.command = command;
@@ -1403,7 +1538,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * EnvironmentVars.
+             * <p>The environment variables of the container.</p>
              */
             public Builder environmentVars(java.util.List<EnvironmentVars> environmentVars) {
                 this.environmentVars = environmentVars;
@@ -1411,7 +1546,21 @@ public class GetJobTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Image.
+             * <p>The GPU driver version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tesla=535</p>
+             */
+            public Builder gpuDriverVersion(String gpuDriverVersion) {
+                this.gpuDriverVersion = gpuDriverVersion;
+                return this;
+            }
+
+            /**
+             * <p>The container image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>registry-vpc.cn-hangzhou.aliyuncs.com/ehpc/hpl:latest</p>
              */
             public Builder image(String image) {
                 this.image = image;
@@ -1419,7 +1568,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * ImageRegistryOptions.
+             * <p>The mount parameters for the self-managed image registry. The parameters are in key-value pairs and passed in JSON format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder imageRegistryOptions(String imageRegistryOptions) {
                 this.imageRegistryOptions = imageRegistryOptions;
@@ -1427,7 +1579,21 @@ public class GetJobTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * WorkingDir.
+             * <p>Specifies whether the container runs in privileged mode. Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder privileged(Boolean privileged) {
+                this.privileged = privileged;
+                return this;
+            }
+
+            /**
+             * <p>The working directory of the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/usr/local/</p>
              */
             public Builder workingDir(String workingDir) {
                 this.workingDir = workingDir;
@@ -1533,7 +1699,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * AppId.
+             * <p>The VM application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ci-vm-9jc58Pm5Leky</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -1541,7 +1710,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Image.
+             * <p>The image ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m-xxxx</p>
              */
             public Builder image(String image) {
                 this.image = image;
@@ -1549,7 +1721,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Password.
+             * <p>The logon password for the VM environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EHPC@1234</p>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -1557,7 +1732,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * PrologScript.
+             * <p>The prolog script. It must be Base64-encoded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ZWNobyBoZWxsbyBlY3Mh</p>
              */
             public Builder prologScript(String prologScript) {
                 this.prologScript = prologScript;
@@ -1565,7 +1743,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Script.
+             * <p>The job script. It must be Base64-encoded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ZWNobyBoZWxsbyBlY3Mh</p>
              */
             public Builder script(String script) {
                 this.script = script;
@@ -1632,7 +1813,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * Container.
+             * <p>The container environment.</p>
              */
             public Builder container(Container container) {
                 this.container = container;
@@ -1640,7 +1821,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * VM.
+             * <p>The virtual machine environment.</p>
              */
             public Builder vm(Vm vm) {
                 this.vm = vm;
@@ -1733,7 +1914,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * MountOptions.
+             * <p>The list of mount options for the data volume. The options are passed in JSON format as key-value pairs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;server&quot;:&quot;xxxxx-xxxxx.cn-heyuan.nas.aliyuncs.com&quot;,&quot;vers&quot;:&quot;3&quot;,&quot;path&quot;:&quot;/data&quot;,&quot;options&quot;:&quot;nolock,tcp,noresvport&quot;}</p>
              */
             public Builder mountOptions(String mountOptions) {
                 this.mountOptions = mountOptions;
@@ -1741,7 +1925,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * MountPath.
+             * <p>The mount path of the data volume for the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/mnt</p>
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
@@ -1749,7 +1936,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * ReadOnly.
+             * <p>Indicates whether the data volume is read-only.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder readOnly(Boolean readOnly) {
                 this.readOnly = readOnly;
@@ -1757,7 +1947,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * VolumeDriver.
+             * <p>The type of the data volume.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alicloud/nas</p>
              */
             public Builder volumeDriver(String volumeDriver) {
                 this.volumeDriver = volumeDriver;
@@ -1850,7 +2043,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * Resource.
+             * <p>The resource information of the runtime environment.</p>
              */
             public Builder resource(Resource resource) {
                 this.resource = resource;
@@ -1858,7 +2051,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * RetryPolicy.
+             * <p>The retry policy for the task.</p>
              */
             public Builder retryPolicy(RetryPolicy retryPolicy) {
                 this.retryPolicy = retryPolicy;
@@ -1866,7 +2059,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TaskExecutor.
+             * <p>The task execution configuration.</p>
              */
             public Builder taskExecutor(java.util.List<TaskExecutor> taskExecutor) {
                 this.taskExecutor = taskExecutor;
@@ -1874,7 +2067,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * VolumeMount.
+             * <p>The list of data volumes mounted to the task. A maximum of 10 volumes can be mounted.</p>
              */
             public Builder volumeMount(java.util.List<VolumeMount> volumeMount) {
                 this.volumeMount = volumeMount;
@@ -1967,7 +2160,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * ExecutorPolicy.
+             * <p>The execution policy of the task.</p>
              */
             public Builder executorPolicy(ExecutorPolicy executorPolicy) {
                 this.executorPolicy = executorPolicy;
@@ -1975,7 +2168,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TaskName.
+             * <p>The task name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>task0</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -1983,7 +2179,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TaskSpec.
+             * <p>The task specifications.</p>
              */
             public Builder taskSpec(TaskSpec taskSpec) {
                 this.taskSpec = taskSpec;
@@ -1991,7 +2187,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TaskSustainable.
+             * <p>Indicates whether the job is a long-running job. Valid values: true: The job is a background service job. false: The job is a batch job. Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder taskSustainable(Boolean taskSustainable) {
                 this.taskSustainable = taskSustainable;
@@ -2110,7 +2309,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * DeploymentPolicy.
+             * <p>The resource deployment policy.</p>
              */
             public Builder deploymentPolicy(DeploymentPolicy deploymentPolicy) {
                 this.deploymentPolicy = deploymentPolicy;
@@ -2118,7 +2317,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * JobDescription.
+             * <p>The job description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Demo</p>
              */
             public Builder jobDescription(String jobDescription) {
                 this.jobDescription = jobDescription;
@@ -2126,7 +2328,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * JobName.
+             * <p>The job name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-job</p>
              */
             public Builder jobName(String jobName) {
                 this.jobName = jobName;
@@ -2134,7 +2339,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * JobScheduler.
+             * <p>The job scheduler type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HPC</p>
              */
             public Builder jobScheduler(String jobScheduler) {
                 this.jobScheduler = jobScheduler;
@@ -2142,7 +2350,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityPolicy.
+             * <p>The security policy.</p>
              */
             public Builder securityPolicy(SecurityPolicy securityPolicy) {
                 this.securityPolicy = securityPolicy;
@@ -2150,7 +2358,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Tasks.
+             * <p>The tasks.</p>
              */
             public Builder tasks(java.util.List<Tasks> tasks) {
                 this.tasks = tasks;

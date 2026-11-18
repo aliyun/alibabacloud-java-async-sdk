@@ -87,7 +87,7 @@ public class ListExecutorsRequest extends Request {
         } 
 
         /**
-         * <p>Queries the Executor filter conditions.</p>
+         * <p>The filter conditions for querying executors.</p>
          */
         public Builder filter(Filter filter) {
             String filterShrink = shrink(filter, "Filter", "json");
@@ -97,7 +97,7 @@ public class ListExecutorsRequest extends Request {
         }
 
         /**
-         * <p>The current page number.<br>Starting value: 1<br>Default value: 1</p>
+         * <p>The page number. Starting value: 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -109,7 +109,7 @@ public class ListExecutorsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. The number of entries returned per page. Default value: 50. Maximum value: 100.</p>
+         * <p>The number of entries per page in the paging Settings for a paged query. Default value: 50. Maximum value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -305,7 +305,7 @@ public class ListExecutorsRequest extends Request {
             }
 
             /**
-             * <p>Executor image.</p>
+             * <p>The executor image.</p>
              * 
              * <strong>example:</strong>
              * <p>m-f8z0dfa96luxxxxx</p>
@@ -324,7 +324,7 @@ public class ListExecutorsRequest extends Request {
             }
 
             /**
-             * <p>The job name. Exact filtering. Fuzzy query is not supported.</p>
+             * <p>The job name. Fuzzy match is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>testJob</p>
@@ -335,7 +335,10 @@ public class ListExecutorsRequest extends Request {
             }
 
             /**
-             * JobTemplateId.
+             * <p>The job template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>jt-xxxx</p>
              */
             public Builder jobTemplateId(String jobTemplateId) {
                 this.jobTemplateId = jobTemplateId;
@@ -343,7 +346,10 @@ public class ListExecutorsRequest extends Request {
             }
 
             /**
-             * PoolName.
+             * <p>The resource pool name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MyPool</p>
              */
             public Builder poolName(String poolName) {
                 this.poolName = poolName;
@@ -351,7 +357,7 @@ public class ListExecutorsRequest extends Request {
             }
 
             /**
-             * <p>Executor status list.</p>
+             * <p>The list of executor statuses.</p>
              */
             public Builder status(java.util.List<String> status) {
                 this.status = status;
@@ -359,7 +365,7 @@ public class ListExecutorsRequest extends Request {
             }
 
             /**
-             * <p>For jobs submitted after this time, the time in the region is converted into a UNIX timestamp (UI8).</p>
+             * <p>The time after which the job was submitted. The time is converted to a UNIX timestamp based on the time zone of the region. For regions in the Chinese mainland, the time zone is UTC+8.</p>
              * 
              * <strong>example:</strong>
              * <p>1703819914</p>
@@ -370,7 +376,7 @@ public class ListExecutorsRequest extends Request {
             }
 
             /**
-             * <p>For jobs submitted before this time, the time in the region is converted into a Unix timestamp (for domestic sites, the UI8 region).</p>
+             * <p>The time before which the job was submitted. The time is converted to a UNIX timestamp based on the time zone of the region. For regions in the Chinese mainland, the time zone is UTC+8.</p>
              * 
              * <strong>example:</strong>
              * <p>1703820113</p>
@@ -381,7 +387,10 @@ public class ListExecutorsRequest extends Request {
             }
 
             /**
-             * VpcId.
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-xxx</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -389,7 +398,7 @@ public class ListExecutorsRequest extends Request {
             }
 
             /**
-             * <p>The ID of the vSwitch.</p>
+             * <p>The vSwitch ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-xxx</p>

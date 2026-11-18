@@ -60,6 +60,7 @@ public class GetJobTemplateRequest extends Request {
         } 
 
         /**
+         * <p>The job template ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

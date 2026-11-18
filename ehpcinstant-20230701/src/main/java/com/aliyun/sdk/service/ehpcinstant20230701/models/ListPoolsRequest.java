@@ -87,7 +87,7 @@ public class ListPoolsRequest extends Request {
         } 
 
         /**
-         * <p>Queries the filter conditions of a resource pool.</p>
+         * <p>The filter conditions for querying resource pools.</p>
          */
         public Builder filter(Filter filter) {
             String filterShrink = shrink(filter, "Filter", "json");
@@ -97,7 +97,7 @@ public class ListPoolsRequest extends Request {
         }
 
         /**
-         * <p>The page number. Default value: 1.</p>
+         * <p>The current page number. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -109,7 +109,7 @@ public class ListPoolsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries on each page. Maximum value: 50. Default value: 10.</p>
+         * <p>The number of entries per page in a paging query. Maximum value: 50. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -206,7 +206,7 @@ public class ListPoolsRequest extends Request {
             } 
 
             /**
-             * <p>Queries the list of resource pool names.</p>
+             * <p>The list of resource pool names to query.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;MyPool&quot;]</p>
@@ -217,7 +217,7 @@ public class ListPoolsRequest extends Request {
             }
 
             /**
-             * <p>Queries resource pool status list.</p>
+             * <p>The list of resource pool statuses to query.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;Working&quot;]</p>
@@ -228,7 +228,7 @@ public class ListPoolsRequest extends Request {
             }
 
             /**
-             * <p>For node pools created after this time, the time in the region is converted into a UNIX timestamp.</p>
+             * <p>The UNIX timestamp. Only resource pools created after the specified time are queried. The time is converted to a UNIX timestamp based on the time zone of the region where the resource pool resides. For regions in the Chinese mainland, the time zone is UTC+8.</p>
              * 
              * <strong>example:</strong>
              * <p>1703819914</p>
@@ -239,7 +239,7 @@ public class ListPoolsRequest extends Request {
             }
 
             /**
-             * <p>For node pools created before this time, the time in the region is converted into a UNIX timestamp.</p>
+             * <p>The UNIX timestamp. Only resource pools created before the specified time are queried. The time is converted to a UNIX timestamp based on the time zone of the region where the resource pool resides. For regions in the Chinese mainland, the time zone is UTC+8.</p>
              * 
              * <strong>example:</strong>
              * <p>1703820113</p>

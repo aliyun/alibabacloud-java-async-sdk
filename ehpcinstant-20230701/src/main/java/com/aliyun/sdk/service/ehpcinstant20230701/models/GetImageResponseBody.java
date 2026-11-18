@@ -93,7 +93,7 @@ public class GetImageResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the image.</p>
+         * <p>The image details.</p>
          */
         public Builder image(Image image) {
             this.image = image;
@@ -112,10 +112,10 @@ public class GetImageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the process of executing the command and obtaining the result is successful. Valid values:</p>
          * <ul>
-         * <li>true: The task is successful.</li>
-         * <li>false: The error occurred.</li>
+         * <li>true: Successful.</li>
+         * <li>false: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -127,7 +127,7 @@ public class GetImageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total amount of data in this request.</p>
+         * <p>The total number of items that meet the request conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -209,7 +209,10 @@ public class GetImageResponseBody extends TeaModel {
             } 
 
             /**
-             * ImageId.
+             * <p>The image ID in the additional region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m-f8abcdef0123456789ab</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -217,7 +220,10 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The additional region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-heyuan</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -225,7 +231,10 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the image in the additional region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -305,7 +314,7 @@ public class GetImageResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The password of the logon user.</p>
+             * <p>The logon password.</p>
              * 
              * <strong>example:</strong>
              * <p>userpassword</p>
@@ -316,7 +325,7 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The registered address of the image repository.</p>
+             * <p>The server address of the image registry.</p>
              * 
              * <strong>example:</strong>
              * <p>registry-vpc.cn-hangzhou.aliyuncs.com</p>
@@ -327,7 +336,7 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The username of the logon user.</p>
+             * <p>The logon username.</p>
              * 
              * <strong>example:</strong>
              * <p>username</p>
@@ -475,7 +484,10 @@ public class GetImageResponseBody extends TeaModel {
             } 
 
             /**
-             * Architecture.
+             * <p>The architecture type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>x86_64</p>
              */
             public Builder architecture(String architecture) {
                 this.architecture = architecture;
@@ -483,10 +495,10 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether the instance is an Alibaba Cloud image repository Enterprise Edition.</p>
+             * <p>Indicates whether the image is stored in Container Registry Enterprise Edition. Valid values:</p>
              * <ul>
-             * <li>True</li>
-             * <li>False</li>
+             * <li>True: Yes.</li>
+             * <li>False: No.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -498,10 +510,10 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether it is an Alibaba Cloud image repository.</p>
+             * <p>Indicates whether the image is stored in Container Registry. Valid values:</p>
              * <ul>
-             * <li>True</li>
-             * <li>False</li>
+             * <li>True: Yes.</li>
+             * <li>False: No.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -513,7 +525,10 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * OsTag.
+             * <p>The specific version identifier of the operating system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CentOS  7.6 64 bit</p>
              */
             public Builder osTag(String osTag) {
                 this.osTag = osTag;
@@ -521,7 +536,10 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * Platform.
+             * <p>The platform type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CentOS</p>
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -529,7 +547,7 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The authentication of the private image repository.</p>
+             * <p>The authentication information for the private image registry.</p>
              */
             public Builder registryCredential(RegistryCredential registryCredential) {
                 this.registryCredential = registryCredential;
@@ -537,7 +555,7 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Container Registry Enterprise Edition image repository.</p>
+             * <p>The ID of the Container Registry Enterprise Edition instance.</p>
              * 
              * <strong>example:</strong>
              * <p>cri-xyz795ygf8k9****</p>
@@ -548,7 +566,7 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The endpoint of the container image.</p>
+             * <p>The access URL of the container image.</p>
              * 
              * <strong>example:</strong>
              * <p>registry-vpc.cn-hangzhou.aliyuncs.com/ehpc_open/nginx:latest</p>
@@ -631,7 +649,10 @@ public class GetImageResponseBody extends TeaModel {
             } 
 
             /**
-             * Document.
+             * <p>The content of the application document.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VGhpcyBpcyBhbiBleGFtcGxlIGFwcGxpY2F0aW9uIGRvY3VtZW50Lg==</p>
              */
             public Builder document(String document) {
                 this.document = document;
@@ -639,7 +660,10 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * DocumentId.
+             * <p>The application document ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001</p>
              */
             public Builder documentId(String documentId) {
                 this.documentId = documentId;
@@ -647,7 +671,10 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * EncodingMode.
+             * <p>The encoding method of the application document. Base64 and PlainText are supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Base64</p>
              */
             public Builder encodingMode(String encodingMode) {
                 this.encodingMode = encodingMode;
@@ -740,7 +767,7 @@ public class GetImageResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The type of the architecture.</p>
+             * <p>The architecture type.</p>
              * 
              * <strong>example:</strong>
              * <p>x86_64</p>
@@ -762,7 +789,7 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the specific OS version.</p>
+             * <p>The specific version identifier of the operating system.</p>
              * 
              * <strong>example:</strong>
              * <p>CentOS  7.6 64 bit</p>
@@ -773,7 +800,7 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the platform.</p>
+             * <p>The platform type.</p>
              * 
              * <strong>example:</strong>
              * <p>CentOS</p>
@@ -974,7 +1001,7 @@ public class GetImageResponseBody extends TeaModel {
             } 
 
             /**
-             * AdditionalRegionsInfo.
+             * <p>The list of status information of the image in additional regions.</p>
              */
             public Builder additionalRegionsInfo(java.util.List<AdditionalRegionsInfo> additionalRegionsInfo) {
                 this.additionalRegionsInfo = additionalRegionsInfo;
@@ -982,7 +1009,10 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * AppId.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ci-vm-0123456789abcdef</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -998,7 +1028,7 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the image was created.</p>
+             * <p>The time when the image was created. The time is displayed in the YYYY-MM-DDTHH:mm:ssZ format, where Z represents UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-12-23T09:51:39Z</p>
@@ -1009,7 +1039,10 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the image.</p>
+             * <p>The image description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Application test image</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1017,7 +1050,7 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * DocumentInfo.
+             * <p>The application document information associated with the image.</p>
              */
             public Builder documentInfo(DocumentInfo documentInfo) {
                 this.documentInfo = documentInfo;
@@ -1025,7 +1058,7 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the image.</p>
+             * <p>The image type.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1037,7 +1070,7 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the image.</p>
+             * <p>The image name.</p>
              * 
              * <strong>example:</strong>
              * <p>app-image</p>
@@ -1048,7 +1081,7 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the image. Unit: GiB.</p>
+             * <p>The image size. Unit: GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>40 GiB</p>
@@ -1059,7 +1092,10 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The image status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;

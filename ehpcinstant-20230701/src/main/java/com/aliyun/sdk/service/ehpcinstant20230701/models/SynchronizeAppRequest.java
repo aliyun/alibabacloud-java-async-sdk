@@ -87,7 +87,7 @@ public class SynchronizeAppRequest extends Request {
         }
 
         /**
-         * <p>The list of arrays that are synchronized to the specified region. If &quot;all&quot; is included, it is synchronized to all other unsynchronized regions by default.</p>
+         * <p>The list of target region IDs. If the list includes \&quot;all\&quot;, the application is synchronized to all other unsynchronized regions by default.</p>
          */
         public Builder targetRegionIds(java.util.List<String> targetRegionIds) {
             String targetRegionIdsShrink = shrink(targetRegionIds, "TargetRegionIds", "json");

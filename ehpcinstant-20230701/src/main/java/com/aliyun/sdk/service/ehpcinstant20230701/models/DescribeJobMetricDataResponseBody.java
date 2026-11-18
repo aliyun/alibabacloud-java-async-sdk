@@ -80,7 +80,7 @@ public class DescribeJobMetricDataResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Monitoring statistics points.</p>
+         * <p>The monitoring statistics data points.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;timestamp&quot;:1709540685000,&quot;Minimum&quot;:28.45,&quot;Maximum&quot;:28.45,&quot;Average&quot;:28.45}]</p>

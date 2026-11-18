@@ -102,10 +102,10 @@ public class AddImageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the command execution and result retrieval were successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: successful</li>
+         * <li>false: failed</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -59,7 +59,7 @@ public class GetJobRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the job.</p>
+         * <p>The job ID.</p>
          * 
          * <strong>example:</strong>
          * <p>job-xxxx</p>

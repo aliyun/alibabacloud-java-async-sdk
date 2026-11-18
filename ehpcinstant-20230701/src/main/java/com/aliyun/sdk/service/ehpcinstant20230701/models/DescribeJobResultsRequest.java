@@ -129,7 +129,10 @@ public class DescribeJobResultsRequest extends Request {
         } 
 
         /**
-         * ArrayIndex.
+         * <p>The executor index.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder arrayIndex(Integer arrayIndex) {
             this.putQueryParameter("ArrayIndex", arrayIndex);
@@ -138,7 +141,15 @@ public class DescribeJobResultsRequest extends Request {
         }
 
         /**
-         * ContentEncoding.
+         * <p>Specifies the encoding method for the CommandContent and Output fields in the response. Valid values:</p>
+         * <ul>
+         * <li>PlainText: Returns the original script content and output.</li>
+         * <li>Base64: Returns the Base64-encoded script content and output.</li>
+         * </ul>
+         * <p>Default value: Base64.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PlainText</p>
          */
         public Builder contentEncoding(String contentEncoding) {
             this.putQueryParameter("ContentEncoding", contentEncoding);
@@ -147,7 +158,10 @@ public class DescribeJobResultsRequest extends Request {
         }
 
         /**
-         * JobId.
+         * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job-xxxxxxx</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -156,7 +170,10 @@ public class DescribeJobResultsRequest extends Request {
         }
 
         /**
-         * LimitBytes.
+         * <p>The limit on the total size of the logs. Unit: bytes. Valid values: 1 to 1048576 (1 MB).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1048576</p>
          */
         public Builder limitBytes(String limitBytes) {
             this.putQueryParameter("LimitBytes", limitBytes);
@@ -165,7 +182,10 @@ public class DescribeJobResultsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time in UTC, in RFC 3339 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-09-02T16:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -174,7 +194,10 @@ public class DescribeJobResultsRequest extends Request {
         }
 
         /**
-         * TaskName.
+         * <p>The task name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Task0</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);

@@ -159,7 +159,7 @@ public class CreateJobRequest extends Request {
         } 
 
         /**
-         * <p>Dependency policy.</p>
+         * <p>The dependency policy.</p>
          */
         public Builder dependencyPolicy(DependencyPolicy dependencyPolicy) {
             String dependencyPolicyShrink = shrink(dependencyPolicy, "DependencyPolicy", "json");
@@ -179,7 +179,7 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * <p>The description of the job.</p>
+         * <p>The job description.</p>
          * 
          * <strong>example:</strong>
          * <p>Demo</p>
@@ -191,7 +191,7 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * <p>The job name. The name must be 2 to 64 characters in length and can contain letters, digits, and Chinese characters. It can contain hyphens (-) and underscores (_).</p>
+         * <p>The job name. The name must be 2 to 64 characters in length and can contain Chinese characters, English letters, and digits. It can also contain hyphens (-) and underscores (_).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -204,15 +204,7 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * <p>The type of the job scheduler.</p>
-         * <ul>
-         * <li>HPC</li>
-         * <li>K8S</li>
-         * </ul>
-         * <p>Default value: HPC</p>
-         * 
-         * <strong>example:</strong>
-         * <p>HPC</p>
+         * JobScheduler.
          */
         public Builder jobScheduler(String jobScheduler) {
             this.putQueryParameter("JobScheduler", jobScheduler);
@@ -221,7 +213,10 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * JobTemplateId.
+         * <p>The job template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>jt-xxxx</p>
          */
         public Builder jobTemplateId(String jobTemplateId) {
             this.putQueryParameter("JobTemplateId", jobTemplateId);
@@ -311,7 +306,7 @@ public class CreateJobRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the job.</p>
+             * <p>The job ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -323,12 +318,12 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * <p>The type of the dependency. Valid values:</p>
+             * <p>The dependency type. Valid values:</p>
              * <ul>
-             * <li>AfterSucceeded: <strong>All subtasks</strong> of the dependent job or array job succeed. The exit code is 0.</li>
-             * <li>AfterFailed: <strong>All subtasks</strong> of the dependent job or array job fail. The exit code is not 0.</li>
-             * <li>AfterAny: The dependent job completes (succeeds or fails).</li>
-             * <li>AfterCorresponding: The subtask corresponding to the dependent array job succeeds. The exit code is 0.</li>
+             * <li>AfterSucceeded: All child jobs of the dependent job or array job run successfully (the exit code is 0).</li>
+             * <li>AfterFailed: Any child job of the dependent job or array job fails (the exit code is not 0).</li>
+             * <li>AfterAny: The dependent job finishes running, regardless of success or failure.</li>
+             * <li>AfterCorresponding: The corresponding child job of the dependent array job runs successfully (the exit code is 0).</li>
              * </ul>
              * <p>Default value: AfterSucceeded.</p>
              * 
@@ -387,7 +382,7 @@ public class CreateJobRequest extends Request {
             } 
 
             /**
-             * <p>The job dependency. A maximum of 10 groups.</p>
+             * <p>The job dependencies. A maximum of 10 dependencies are supported.</p>
              */
             public Builder jobDependency(java.util.List<JobDependency> jobDependency) {
                 this.jobDependency = jobDependency;
@@ -408,6 +403,9 @@ public class CreateJobRequest extends Request {
      * <p>CreateJobRequest</p>
      */
     public static class Network extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EnableENIMapping")
+        private Boolean enableENIMapping;
+
         @com.aliyun.core.annotation.NameInMap("EnableExternalIpAddress")
         private Boolean enableExternalIpAddress;
 
@@ -415,6 +413,7 @@ public class CreateJobRequest extends Request {
         private java.util.List<String> vswitch;
 
         private Network(Builder builder) {
+            this.enableENIMapping = builder.enableENIMapping;
             this.enableExternalIpAddress = builder.enableExternalIpAddress;
             this.vswitch = builder.vswitch;
         }
@@ -425,6 +424,13 @@ public class CreateJobRequest extends Request {
 
         public static Network create() {
             return builder().build();
+        }
+
+        /**
+         * @return enableENIMapping
+         */
+        public Boolean getEnableENIMapping() {
+            return this.enableENIMapping;
         }
 
         /**
@@ -442,6 +448,7 @@ public class CreateJobRequest extends Request {
         }
 
         public static final class Builder {
+            private Boolean enableENIMapping; 
             private Boolean enableExternalIpAddress; 
             private java.util.List<String> vswitch; 
 
@@ -449,15 +456,27 @@ public class CreateJobRequest extends Request {
             } 
 
             private Builder(Network model) {
+                this.enableENIMapping = model.enableENIMapping;
                 this.enableExternalIpAddress = model.enableExternalIpAddress;
                 this.vswitch = model.vswitch;
             } 
 
             /**
-             * <p>Whether the job creates a public IP address.</p>
+             * <p>Specifies whether resource scheduling is restricted to the specified vSwitch. Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder enableENIMapping(Boolean enableENIMapping) {
+                this.enableENIMapping = enableENIMapping;
+                return this;
+            }
+
+            /**
+             * <p>Specifies whether to create a public IP address for the job. Valid values:</p>
              * <ul>
-             * <li>true: creates a public IP address.</li>
-             * <li>false: does not create a public IP address.</li>
+             * <li>true: A public IP address is created.</li>
+             * <li>false: No public IP address is created.</li>
              * </ul>
              * <p>Default value: false.</p>
              * 
@@ -470,7 +489,7 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * <p>The VSwitch array.</p>
+             * <p>The vSwitch array.</p>
              */
             public Builder vswitch(java.util.List<String> vswitch) {
                 this.vswitch = vswitch;
@@ -538,7 +557,7 @@ public class CreateJobRequest extends Request {
             } 
 
             /**
-             * <p>The key of the job tag. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</p>
+             * <p>The tag key. If this parameter is specified, it cannot be an empty string. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -550,7 +569,7 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * <p>The value of the job tag. You can specify empty strings as tag values. The tag value can be up to 128 characters in length and cannot contain http:// or https://.</p>
+             * <p>The tag value. If this parameter is specified, it can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://.</p>
              * 
              * <strong>example:</strong>
              * <p>TestValue</p>
@@ -672,11 +691,11 @@ public class CreateJobRequest extends Request {
             } 
 
             /**
-             * <p>The resource type,</p>
+             * <p>The resource type. Valid values:</p>
              * <ul>
-             * <li>Standard</li>
-             * <li>Dedicated: You must enable a whitelist for use.</li>
-             * <li>Economic: You must enable a whitelist for use.</li>
+             * <li>Standard: standard.</li>
+             * <li>Dedicated: dedicated. You must be added to the whitelist to use this type.</li>
+             * <li>Economic: economic. You must be added to the whitelist to use this type.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -688,10 +707,10 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * <p>The computing power level. This value is valid only when the resource type is Economic. The following disk categories are supported:</p>
+             * <p>The computing power level. This parameter is valid only when the resource type is economy. Valid values:</p>
              * <ul>
-             * <li>General</li>
-             * <li>Performance</li>
+             * <li>General: general-purpose.</li>
+             * <li>Performance: compute-optimized.</li>
              * </ul>
              * <p>Default value: General.</p>
              * 
@@ -723,7 +742,7 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * <p>The priorities of the jobs. A larger value indicates a higher job scheduling priority. Valid values: 1 to 100.</p>
+             * <p>The priority of the job. A larger value indicates a higher scheduling priority. Valid values: 1 to 100.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -734,7 +753,7 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * <p>The tag information of the job. A maximum of 20 groups.</p>
+             * <p>The tag information of the job. A maximum of 20 tags are supported.</p>
              */
             public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
@@ -842,7 +861,7 @@ public class CreateJobRequest extends Request {
             } 
 
             /**
-             * <p>The security group ID.</p>
+             * <p>The security group.</p>
              */
             public Builder securityGroup(SecurityGroup securityGroup) {
                 this.securityGroup = securityGroup;
@@ -922,7 +941,7 @@ public class CreateJobRequest extends Request {
             } 
 
             /**
-             * <p>The end value of the array job index. Valid values: 0 to 4999. The value must be greater than or equal to the value of IndexStart.</p>
+             * <p>The end value of the array job index. Valid values: 0 to 4999. The value must be greater than or equal to IndexStart.</p>
              * 
              * <strong>example:</strong>
              * <p>9</p>
@@ -933,7 +952,7 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * <p>The starting value of the array job index. Valid values: 0 to 4999.</p>
+             * <p>The start value of the array job index. Valid values: 0 to 4999.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -944,9 +963,9 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * <p>The interval of the array job index.</p>
+             * <p>The step of the array job index.</p>
              * <blockquote>
-             * <p>If the array job property is IndexStart=1,IndexEnd=5, and IndexStep=2, the array job contains three sub-jobs. The index values of the sub-jobs are 1,3, and 5. You can access the sub-jobs by using environment variables.</p>
+             * <p>If the array job attributes are IndexStart=1, IndexEnd=5, and IndexStep=2, the array job contains three sub-jobs with index values of 1, 3, and 5. User business programs can access these values through environment variables.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1017,17 +1036,17 @@ public class CreateJobRequest extends Request {
             } 
 
             /**
-             * <p>The details of the array job. The index value of the sub-job is passed to the running environment through environment variables to support user business program reference. Environment variables include:</p>
+             * <p>The array job details. The index values of sub-jobs are passed to the runtime environment through environment variables and can be referenced by user business programs. The environment variables include:</p>
              * <ul>
-             * <li>EHPC_JOB_NAME: the name of the job. This parameter corresponds to the JobName parameter.</li>
-             * <li>EHPC_JOB_ID: The ID of the job.</li>
-             * <li>EHPC_TASK_NAME: the name of the task. This parameter corresponds to the TaskName parameter.</li>
-             * <li>EHPC_EXECUTOR_ID: The ID of the execution unit.</li>
-             * <li>EHPC_ARRAY_TASK_ID: the sub-job index value.</li>
+             * <li>EHPC_JOB_NAME: the job name, which corresponds to the JobName parameter.</li>
+             * <li>EHPC_JOB_ID: the job ID.</li>
+             * <li>EHPC_TASK_NAME: the task name, which corresponds to the TaskName parameter.</li>
+             * <li>EHPC_EXECUTOR_ID: the executor ID.</li>
+             * <li>EHPC_ARRAY_TASK_ID: the index value of the sub-job.</li>
              * <li>EHPC_ARRAY_TASK_COUNT: the total number of sub-jobs.</li>
-             * <li>EHPC_ARRAY_TASK_MAX: the maximum sub-job index, which corresponds to the IndexStart parameter.</li>
-             * <li>EHPC_ARRAY_TASK_MIN: the minimum value of the sub-job index, which corresponds to the IndexEnd parameter.</li>
-             * <li>EHPC_ARRAY_TASK_STEP: the index step size of the sub-job, which corresponds to the IndexStep parameter.</li>
+             * <li>EHPC_ARRAY_TASK_MAX: the maximum index value of the sub-job, which corresponds to the IndexStart parameter.</li>
+             * <li>EHPC_ARRAY_TASK_MIN: the minimum index value of the sub-job, which corresponds to the IndexEnd parameter.</li>
+             * <li>EHPC_ARRAY_TASK_STEP: the index step of the sub-job, which corresponds to the IndexStep parameter.</li>
              * </ul>
              */
             public Builder arraySpec(ArraySpec arraySpec) {
@@ -1036,9 +1055,9 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * <p>The maximum number of nodes to run the job.</p>
+             * <p>The maximum number of nodes for the job execution.</p>
              * <blockquote>
-             * <p>Follow the calculation formula: <code>MaxCount = (IndexEnd - IndexStart) / IndexStep +1</code></p>
+             * <p>The value must follow the formula: <code>MaxCount = (IndexEnd - IndexStart) / IndexStep + 1</code>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1109,7 +1128,7 @@ public class CreateJobRequest extends Request {
             } 
 
             /**
-             * <p>The size of the disk. Unit: GiB.</p>
+             * <p>The size of the cloud disk. Unit: GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>40</p>
@@ -1120,7 +1139,7 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * <p>The type of the disk. Currently, only System is supported, which indicates the system disk.</p>
+             * <p>The cloud disk type. Only System is supported, which indicates a system cloud disk.</p>
              * 
              * <strong>example:</strong>
              * <p>System</p>
@@ -1242,7 +1261,7 @@ public class CreateJobRequest extends Request {
             } 
 
             /**
-             * <p>The number of CPUs in the running environment.</p>
+             * <p>The number of CPUs in the runtime environment.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -1253,7 +1272,7 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * <p>The array of the disks.</p>
+             * <p>The cloud disk array.</p>
              */
             public Builder disks(java.util.List<Disks> disks) {
                 this.disks = disks;
@@ -1261,7 +1280,10 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * EnableHT.
+             * <p>Specifies whether to enable hyper-threading in the runtime environment. Default value: true.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableHT(Boolean enableHT) {
                 this.enableHT = enableHT;
@@ -1269,7 +1291,15 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * HostNamePrefix.
+             * <p>The hostname prefix of the runtime environment. Limits:</p>
+             * <ul>
+             * <li>The prefix cannot start or end with a period (.) or a hyphen (-), and cannot contain consecutive periods (.) or hyphens (-).</li>
+             * <li>Windows environment: The prefix can be up to 10 characters in length and cannot contain periods (.). It cannot contain only digits. It can contain uppercase and lowercase letters, digits, and hyphens (-).</li>
+             * <li>Linux environment: The prefix can be up to 32 characters in length and can contain multiple periods (.). The string between two periods is a segment, and each segment can contain uppercase and lowercase letters, digits, and hyphens (-).</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>compute</p>
              */
             public Builder hostNamePrefix(String hostNamePrefix) {
                 this.hostNamePrefix = hostNamePrefix;
@@ -1277,7 +1307,7 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * <p>The instance type of the running environment. A maximum of 5 groups.</p>
+             * <p>The instance types of the runtime environment. A maximum of 5 instance types are supported.</p>
              */
             public Builder instanceTypes(java.util.List<String> instanceTypes) {
                 this.instanceTypes = instanceTypes;
@@ -1285,7 +1315,7 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * <p>The memory size of the running environment. Unit: GiB.</p>
+             * <p>The memory size of the runtime environment. Unit: GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -1357,10 +1387,12 @@ public class CreateJobRequest extends Request {
             } 
 
             /**
-             * <p>The next step behavior of the task.</p>
+             * <p>The next action of the task. Valid values:</p>
              * <ul>
-             * <li>Retry: The job starts a retry when a specific exit code is hit.</li>
-             * <li>Exit: The job exits when a specific exit code is hit.</li>
+             * <li><p>Retry: The job starts a new retry when the specified exit code is matched.</p>
+             * </li>
+             * <li><p>Exit: The job exits when the specified exit code is matched.</p>
+             * </li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -1373,7 +1405,7 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * <p>The task exit code, which is used together with the action to form a job retry rule. Valid values: 0 to 255.</p>
+             * <p>The task exit code, which is used together with Action to form the job retry rule. Valid values: 0 to 255.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1444,7 +1476,7 @@ public class CreateJobRequest extends Request {
             } 
 
             /**
-             * <p>The retry rule. A maximum of 10 groups.</p>
+             * <p>The retry rules. A maximum of 10 retry rules are supported.</p>
              */
             public Builder exitCodeActions(java.util.List<ExitCodeActions> exitCodeActions) {
                 this.exitCodeActions = exitCodeActions;
@@ -1452,7 +1484,7 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * <p>The maximum number of retries. Valid values: 1 to 10. Default value: 3.</p>
+             * <p>The number of retries. Valid values: 1 to 10. Default value: 3.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -1522,7 +1554,7 @@ public class CreateJobRequest extends Request {
             } 
 
             /**
-             * <p>The name of the environment variable for the container. It can be 1 to 128 characters in length. Format requirement: [0-9a-zA-Z], and underscores, cannot start with a number.</p>
+             * <p>The name of the environment variable. The name must be 1 to 128 characters in length and can contain letters, digits, and underscores (_). It cannot start with a digit.</p>
              * 
              * <strong>example:</strong>
              * <p>PATH</p>
@@ -1533,7 +1565,7 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * <p>The value of the environment variable for the container. The value must be 0 to 256 bits in length.</p>
+             * <p>The value of the environment variable. The value can be 0 to 256 characters in length.</p>
              * 
              * <strong>example:</strong>
              * <p>/usr/local/bin</p>
@@ -1569,12 +1601,18 @@ public class CreateJobRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("EnvironmentVars")
         private java.util.List<EnvironmentVars> environmentVars;
 
+        @com.aliyun.core.annotation.NameInMap("GpuDriverVersion")
+        private String gpuDriverVersion;
+
         @com.aliyun.core.annotation.NameInMap("Image")
         @com.aliyun.core.annotation.Validation(required = true)
         private String image;
 
         @com.aliyun.core.annotation.NameInMap("ImageRegistryOptions")
         private String imageRegistryOptions;
+
+        @com.aliyun.core.annotation.NameInMap("Privileged")
+        private Boolean privileged;
 
         @com.aliyun.core.annotation.NameInMap("WorkingDir")
         private String workingDir;
@@ -1584,8 +1622,10 @@ public class CreateJobRequest extends Request {
             this.arg = builder.arg;
             this.command = builder.command;
             this.environmentVars = builder.environmentVars;
+            this.gpuDriverVersion = builder.gpuDriverVersion;
             this.image = builder.image;
             this.imageRegistryOptions = builder.imageRegistryOptions;
+            this.privileged = builder.privileged;
             this.workingDir = builder.workingDir;
         }
 
@@ -1626,6 +1666,13 @@ public class CreateJobRequest extends Request {
         }
 
         /**
+         * @return gpuDriverVersion
+         */
+        public String getGpuDriverVersion() {
+            return this.gpuDriverVersion;
+        }
+
+        /**
          * @return image
          */
         public String getImage() {
@@ -1640,6 +1687,13 @@ public class CreateJobRequest extends Request {
         }
 
         /**
+         * @return privileged
+         */
+        public Boolean getPrivileged() {
+            return this.privileged;
+        }
+
+        /**
          * @return workingDir
          */
         public String getWorkingDir() {
@@ -1651,8 +1705,10 @@ public class CreateJobRequest extends Request {
             private java.util.List<String> arg; 
             private java.util.List<String> command; 
             private java.util.List<EnvironmentVars> environmentVars; 
+            private String gpuDriverVersion; 
             private String image; 
             private String imageRegistryOptions; 
+            private Boolean privileged; 
             private String workingDir; 
 
             private Builder() {
@@ -1663,13 +1719,15 @@ public class CreateJobRequest extends Request {
                 this.arg = model.arg;
                 this.command = model.command;
                 this.environmentVars = model.environmentVars;
+                this.gpuDriverVersion = model.gpuDriverVersion;
                 this.image = model.image;
                 this.imageRegistryOptions = model.imageRegistryOptions;
+                this.privileged = model.privileged;
                 this.workingDir = model.workingDir;
             } 
 
             /**
-             * <p>The application ID.</p>
+             * <p>The ID of the container application.</p>
              * 
              * <strong>example:</strong>
              * <p>ci-vm-32k6LXAi3cOG</p>
@@ -1680,7 +1738,7 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * <p>The startup argument of the init container. A maximum of 10 groups.</p>
+             * <p>The arguments for the container startup command. A maximum of 10 arguments are supported.</p>
              */
             public Builder arg(java.util.List<String> arg) {
                 this.arg = arg;
@@ -1688,15 +1746,13 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * <p>The container startup commands. You can specify up to 20 commands. Each command can be up to 256 characters in length.</p>
+             * <p>The list of container startup commands. A maximum of 20 commands are supported, and each command can be up to 256 characters in length.    </p>
              * <blockquote>
+             * <ol>
+             * <li>If a startup command contains spaces (for example, <code>sleep 60s</code>), pass the parameter in JSON format as <code>[&quot;sleep&quot;, &quot;60s&quot;]</code>.</li>
+             * <li>If the startup command is complex, you can combine <code>Command: [&quot;/bin/bash&quot;]</code> and <code>Arg:[&quot;-c&quot;, &quot;&lt;customized command&gt;&quot;]</code>. <code>&lt;customized command&gt;</code> is a custom command combination defined by the user and can contain spaces and other characters.</li>
+             * </ol>
              * </blockquote>
-             * <ul>
-             * <li><p>If the start command contains spaces (for example, <code>sleep 60s</code> ), the input JSON format parameter is <code>[&quot;sleep&quot;, &quot;60s&quot;]</code>.</p>
-             * </li>
-             * <li><p>If the startup command is complex, the parameter format may be a combination of <code>Command: [&quot;/bin/bash&quot;]</code> and <code>Arg:[&quot;-c&quot;, &quot;&lt;customized command&gt;&quot;]</code>. The <code>&lt;customized command&gt;</code> is a user-defined combination of commands and can contain characters such as spaces.</p>
-             * </li>
-             * </ul>
              */
             public Builder command(java.util.List<String> command) {
                 this.command = command;
@@ -1704,7 +1760,7 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * <p>The environment variables of the container. A maximum of 20 groups.</p>
+             * <p>The environment variables of the container. A maximum of 20 environment variables are supported.</p>
              */
             public Builder environmentVars(java.util.List<EnvironmentVars> environmentVars) {
                 this.environmentVars = environmentVars;
@@ -1712,7 +1768,18 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * <p>The image of the container.</p>
+             * <p>Specifies the GPU driver version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tesla=535</p>
+             */
+            public Builder gpuDriverVersion(String gpuDriverVersion) {
+                this.gpuDriverVersion = gpuDriverVersion;
+                return this;
+            }
+
+            /**
+             * <p>The container image.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1724,10 +1791,27 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * ImageRegistryOptions.
+             * <p>The list of mount parameters for the self-managed image registry. The parameters are passed in JSON format as key-value pairs.</p>
+             * <ul>
+             * <li>Sample format: {&quot;ImageRegistryType&quot;:&quot;https&quot;,&quot;ImageRegistryServer&quot;:&quot;xxx&quot;,&quot;ImageRegistryUserName&quot;:&quot;xxx&quot;,&quot;ImageRegistryPassword&quot;:&quot;xxx&quot;}</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;ImageRegistryType&quot;:&quot;https&quot;,&quot;ImageRegistryServer&quot;:&quot;xxx&quot;,&quot;ImageRegistryUserName&quot;:&quot;xxx&quot;,&quot;ImageRegistryPassword&quot;:&quot;xxx&quot;}</p>
              */
             public Builder imageRegistryOptions(String imageRegistryOptions) {
                 this.imageRegistryOptions = imageRegistryOptions;
+                return this;
+            }
+
+            /**
+             * <p>Specifies whether to run the container in privileged mode. Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder privileged(Boolean privileged) {
+                this.privileged = privileged;
                 return this;
             }
 
@@ -1802,7 +1886,7 @@ public class CreateJobRequest extends Request {
             } 
 
             /**
-             * <p>The name of the environment variable for the container. It can be 1 to 128 characters in length. Format requirement: [0-9a-zA-Z], and underscores, cannot start with a number.</p>
+             * <p>The name of the environment variable.</p>
              * 
              * <strong>example:</strong>
              * <p>PATH</p>
@@ -1813,7 +1897,7 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * <p>The value of the environment variable for the container. The value must be 0 to 256 bits in length.</p>
+             * <p>The value of the environment variable.</p>
              * 
              * <strong>example:</strong>
              * <p>/usr/local/bin</p>
@@ -1947,7 +2031,7 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * <p>The environment variables of the container. A maximum of 20 groups.</p>
+             * <p>The environment variables of the virtual machine.</p>
              */
             public Builder environmentVars(java.util.List<VmEnvironmentVars> environmentVars) {
                 this.environmentVars = environmentVars;
@@ -1955,7 +2039,7 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * <p>The ID of the image.</p>
+             * <p>The image ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1967,10 +2051,11 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * <p>The logon password of the virtual machine environment. The password must be 8 to 30 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. The following special characters are supported:</p>
-             * <p>()`~!@#$%^&amp;*-_+=|{}[]:;&quot;&lt;&gt;,.?/ In Windows, the password cannot contain a forward slash (/) as the first character.</p>
+             * <p>The logon password for the virtual machine environment. The password must be 8 to 30 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include:</p>
+             * <p>()`~!@#$%^&amp;*-_+=|{}[]:;\&quot;&lt;&gt;,.?/
+             * The password for a Windows environment cannot start with a forward slash (/).</p>
              * <blockquote>
-             * <p>We recommend that you use HTTPS to send requests if you specify Password to avoid password leakage.</p>
+             * <p>If you specify the Password parameter, use HTTPS to send the request to prevent password leaks.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1982,7 +2067,7 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * <p>The pre-processing script. Base64 encoding is required.</p>
+             * <p>The pre-processing script. The script must be Base64-encoded.</p>
              * 
              * <strong>example:</strong>
              * <p>ZWNobyBoZWxsbyBlY3Mh</p>
@@ -1993,7 +2078,7 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * <p>The running-job script. Base64 encoding is required.</p>
+             * <p>The job execution script. The script must be Base64-encoded.</p>
              * 
              * <strong>example:</strong>
              * <p>ZWNobyBoZWxsbyBlY3Mh</p>
@@ -2063,7 +2148,7 @@ public class CreateJobRequest extends Request {
             } 
 
             /**
-             * <p>Use the container environment.</p>
+             * <p>The container environment.</p>
              */
             public Builder container(Container container) {
                 this.container = container;
@@ -2071,7 +2156,7 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * <p>Use a virtual machine environment.</p>
+             * <p>The virtual machine environment.</p>
              */
             public Builder vm(Vm vm) {
                 this.vm = vm;
@@ -2164,19 +2249,19 @@ public class CreateJobRequest extends Request {
             } 
 
             /**
-             * <p>The list of data volume mount parameters. Each option is a key-value pair in a JSON string.</p>
+             * <p>The list of mount parameters for the data volume. The parameters are passed in JSON format as key-value pairs.</p>
              * <ul>
-             * <li>Format for mounting a NAS file system:{&quot;server&quot;:&quot;xxxxx-xxxxx.cn-heyuan.nas.aliyuncs.com&quot;,&quot;vers&quot;:&quot;3&quot;,&quot;path&quot;:&quot;/data&quot;,&quot;options&quot;:&quot;nolock,tcp,noresvport&quot;}</li>
-             * </ul>
+             * <li><p>Sample format for mounting a NAS file system: {&quot;server&quot;:&quot;xxxxx-xxxxx.cn-heyuan.nas.aliyuncs.com&quot;,&quot;vers&quot;:&quot;3&quot;,&quot;path&quot;:&quot;/data&quot;,&quot;options&quot;:&quot;nolock,tcp,noresvport&quot;}</p>
              * <blockquote>
-             * <p>server indicates the address of the mount point of the NAS file system. path indicates the subdirectory of the NAS file system. The subdirectory must start with a (/) and must already exist. vers indicates the version number of the NFS protocol used to mount the file system. We recommend that you use v3. options indicates the custom parameters in the format of &quot;xxx,xxx,xxx&quot;.</p>
+             * <p>server indicates the mount target address of the NAS file system. path indicates the subdirectory under the NAS path, which must start with a forward slash (/) and already exist. vers indicates the NFS protocol version used to mount the NAS file system. We recommend that you use v3. options indicates the custom parameters for mounting the NAS file system, in the format of &quot;xxx,xxx,xxx&quot;.</p>
              * </blockquote>
-             * <ul>
-             * <li>OSS mount format:{&quot;bucket&quot;:&quot;xxxxx&quot;, &quot;url&quot;:&quot;oss-cn-heyuan-internal.aliyuncs.com&quot;,&quot;path&quot;:&quot;/data&quot;,&quot;akId&quot;:&quot;xxxxx&quot;,&quot;akSecret&quot;:&quot;xxxxx&quot;}</li>
-             * </ul>
+             * </li>
+             * <li><p>Sample format for mounting an OSS bucket: {&quot;bucket&quot;:&quot;xxxxx&quot;, &quot;url&quot;:&quot;oss-cn-heyuan-internal.aliyuncs.com&quot;,&quot;path&quot;:&quot;/data&quot;,&quot;akId&quot;:&quot;xxxxx&quot;,&quot;akSecret&quot;:&quot;xxxxx&quot;}</p>
              * <blockquote>
-             * <p>bucket indicates the name of the OSS bucket. url indicates the endpoint of the OSS bucket. You can log on to the OSS console and obtain the endpoint on the Overview page of the destination bucket. path indicates the directory structure of the root file of the bucket. The default value is /, which requires that the directory already exists. akId indicates the AccessKey ID. akSecret indicates the AccessKey secret.</p>
+             * <p>bucket indicates the name of the OSS bucket. url indicates the endpoint of the OSS bucket. You can log on to the OSS console and obtain the endpoint on the Overview page of the bucket. path indicates the directory structure relative to the root directory of the bucket when the volume is mounted. The default value is /, and the directory must already exist. akId indicates the AccessKey ID used for direct authorization. akSecret indicates the AccessKey secret used for direct authorization.</p>
              * </blockquote>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>{&quot;server&quot;:&quot;xxxxx-xxxxx.cn-heyuan.nas.aliyuncs.com&quot;,&quot;vers&quot;:&quot;3&quot;,&quot;path&quot;:&quot;/data&quot;,&quot;options&quot;:&quot;nolock,tcp,noresvport&quot;}</p>
@@ -2187,9 +2272,9 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * <p>The directory where the task mounts the data volume.</p>
+             * <p>The directory to which the data volume is mounted.</p>
              * <blockquote>
-             * <p>The content of the mounted directory is overwritten by the content of the volume. Exercise caution when you use the directory.</p>
+             * <p>The content in the mount directory is directly overwritten by the content of the volume. Proceed with caution.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -2201,7 +2286,7 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether the volume is read-only. Default value: false.</p>
+             * <p>Specifies whether the data volume is read-only. Default value: false.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -2212,10 +2297,10 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * <p>Currently supported data volume types.</p>
+             * <p>The type of the data volume. Valid values:</p>
              * <ul>
-             * <li>alicloud/nas: mounts NAS.</li>
-             * <li>alicloud/oss: mounts OSS.</li>
+             * <li>alicloud/nas: mounts a NAS file system.</li>
+             * <li>alicloud/oss: mounts an OSS bucket.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2313,7 +2398,7 @@ public class CreateJobRequest extends Request {
             } 
 
             /**
-             * <p>The resource information of the running environment.</p>
+             * <p>The resource information of the runtime environment.</p>
              */
             public Builder resource(Resource resource) {
                 this.resource = resource;
@@ -2321,7 +2406,7 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * <p>Task retry policy.</p>
+             * <p>The task retry policy.</p>
              */
             public Builder retryPolicy(RetryPolicy retryPolicy) {
                 this.retryPolicy = retryPolicy;
@@ -2329,7 +2414,7 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * <p>The task execution configurations.</p>
+             * <p>The task execution configuration.</p>
              * <p>This parameter is required.</p>
              */
             public Builder taskExecutor(java.util.List<TaskExecutor> taskExecutor) {
@@ -2338,7 +2423,7 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * <p>The list of data volumes mounted to the task. A maximum of 10 groups.</p>
+             * <p>The list of data volumes mounted to the task. A maximum of 10 data volumes are supported.</p>
              */
             public Builder volumeMount(java.util.List<VolumeMount> volumeMount) {
                 this.volumeMount = volumeMount;
@@ -2439,7 +2524,7 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * <p>The job name. It must be 2 to 32 characters in length and can contain letters, digits, and Chinese characters. It can contain hyphens (-) and underscores (_).</p>
+             * <p>The task name. The name must be 2 to 32 characters in length and can contain Chinese characters, English letters, and digits. It can also contain hyphens (-) and underscores (_).</p>
              * 
              * <strong>example:</strong>
              * <p>task0</p>
@@ -2450,7 +2535,7 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * <p>The details of the task specification.</p>
+             * <p>The task specification details.</p>
              */
             public Builder taskSpec(TaskSpec taskSpec) {
                 this.taskSpec = taskSpec;
@@ -2458,10 +2543,10 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * <p>Indicate whether the job is a long-running job.</p>
+             * <p>Specifies whether the job runs for a long time. Valid values:</p>
              * <ul>
-             * <li>true: background service the job.</li>
-             * <li>false: batch jobs.</li>
+             * <li>true: The job is a background service job.</li>
+             * <li>false: The job is a batch job.</li>
              * </ul>
              * <p>Default value: false.</p>
              * 

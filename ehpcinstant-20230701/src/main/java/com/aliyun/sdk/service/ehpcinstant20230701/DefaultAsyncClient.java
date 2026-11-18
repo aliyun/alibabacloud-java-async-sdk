@@ -59,7 +59,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>*Make sure that you fully understand E-HPC Instnat billing methods and <a href="https://help.aliyun.com/zh/e-hpc/e-hpc-instant/product-overview/billing-overview?spm=a2c4g.11186623.help-menu-57664.d_0_2_0.5fdd28422y6UvO">prices</a>.</p>
+     * <p><em>Make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/help/en/e-hpc/e-hpc-instant/product-overview/billing-overview">pricing</a> of E-HPC Instant before you call this operation.</em>*</p>
      * 
      * @param request the request parameters of CreateActionPlan  CreateActionPlanRequest
      * @return CreateActionPlanResponse
@@ -444,7 +444,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries job executor information.</p>
+     * <p>Queries the executor information of a job.</p>
      * 
      * @param request the request parameters of ListExecutorEvents  ListExecutorEventsRequest
      * @return ListExecutorEventsResponse
@@ -501,7 +501,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries job executor information.</p>
+     * <p>Queries the executor information of a job.</p>
      * 
      * @param request the request parameters of ListJobExecutors  ListJobExecutorsRequest
      * @return ListJobExecutorsResponse

@@ -60,6 +60,7 @@ public class DeleteJobTemplateRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the job template.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -60,6 +60,7 @@ public class UpdateJobRecordDurationRequest extends Request {
         } 
 
         /**
+         * <p>The retention period of job records. Unit: days. Valid values: 1 to 30. Default value: 30.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

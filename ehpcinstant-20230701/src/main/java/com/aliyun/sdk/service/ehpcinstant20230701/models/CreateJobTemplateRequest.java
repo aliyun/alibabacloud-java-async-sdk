@@ -88,7 +88,7 @@ public class CreateJobTemplateRequest extends Request {
         } 
 
         /**
-         * JobTemplateConfig.
+         * <p>The configuration of the template.</p>
          */
         public Builder jobTemplateConfig(JobTemplateConfig jobTemplateConfig) {
             String jobTemplateConfigShrink = shrink(jobTemplateConfig, "JobTemplateConfig", "json");
@@ -98,7 +98,10 @@ public class CreateJobTemplateRequest extends Request {
         }
 
         /**
-         * JobTemplateDescription.
+         * <p>The description of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Demo</p>
          */
         public Builder jobTemplateDescription(String jobTemplateDescription) {
             this.putQueryParameter("JobTemplateDescription", jobTemplateDescription);
@@ -107,6 +110,7 @@ public class CreateJobTemplateRequest extends Request {
         }
 
         /**
+         * <p>The name of the template.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -178,7 +182,10 @@ public class CreateJobTemplateRequest extends Request {
             } 
 
             /**
-             * EnableExternalIpAddress.
+             * <p>Specifies whether to assign a public IP address to the job. Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableExternalIpAddress(Boolean enableExternalIpAddress) {
                 this.enableExternalIpAddress = enableExternalIpAddress;
@@ -186,7 +193,10 @@ public class CreateJobTemplateRequest extends Request {
             }
 
             /**
-             * Vswitch.
+             * <p>The vSwitches.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-xxxx</p>
              */
             public Builder vswitch(java.util.List<String> vswitch) {
                 this.vswitch = vswitch;
@@ -254,6 +264,7 @@ public class CreateJobTemplateRequest extends Request {
             } 
 
             /**
+             * <p>The key of the tag.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -265,7 +276,10 @@ public class CreateJobTemplateRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -384,7 +398,10 @@ public class CreateJobTemplateRequest extends Request {
             } 
 
             /**
-             * AllocationSpec.
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Dedicated</p>
              */
             public Builder allocationSpec(String allocationSpec) {
                 this.allocationSpec = allocationSpec;
@@ -392,7 +409,14 @@ public class CreateJobTemplateRequest extends Request {
             }
 
             /**
-             * Level.
+             * <p>The computing power level. This parameter is valid only when the resource type is economy. Valid values:</p>
+             * <ul>
+             * <li>General: general-purpose.</li>
+             * <li>Performance: performance-enhanced.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>General</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -400,7 +424,7 @@ public class CreateJobTemplateRequest extends Request {
             }
 
             /**
-             * Network.
+             * <p>The network configuration.</p>
              */
             public Builder network(Network network) {
                 this.network = network;
@@ -408,7 +432,10 @@ public class CreateJobTemplateRequest extends Request {
             }
 
             /**
-             * Pool.
+             * <p>The resource pool of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-pool</p>
              */
             public Builder pool(String pool) {
                 this.pool = pool;
@@ -416,7 +443,10 @@ public class CreateJobTemplateRequest extends Request {
             }
 
             /**
-             * Priority.
+             * <p>The priority of the job. A larger value indicates a higher scheduling priority for the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -424,7 +454,7 @@ public class CreateJobTemplateRequest extends Request {
             }
 
             /**
-             * Tags.
+             * <p>The tags of the job.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -478,7 +508,10 @@ public class CreateJobTemplateRequest extends Request {
             } 
 
             /**
-             * SecurityGroupIds.
+             * <p>The security group IDs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-xxxx</p>
              */
             public Builder securityGroupIds(java.util.List<String> securityGroupIds) {
                 this.securityGroupIds = securityGroupIds;
@@ -532,7 +565,7 @@ public class CreateJobTemplateRequest extends Request {
             } 
 
             /**
-             * SecurityGroup.
+             * <p>The security group.</p>
              */
             public Builder securityGroup(SecurityGroup securityGroup) {
                 this.securityGroup = securityGroup;
@@ -612,7 +645,10 @@ public class CreateJobTemplateRequest extends Request {
             } 
 
             /**
-             * IndexEnd.
+             * <p>The end value of the array job index. Valid values: 0 to 4999. The value must be greater than or equal to the value of IndexStart.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9</p>
              */
             public Builder indexEnd(Integer indexEnd) {
                 this.indexEnd = indexEnd;
@@ -620,7 +656,10 @@ public class CreateJobTemplateRequest extends Request {
             }
 
             /**
-             * IndexStart.
+             * <p>The start value of the array job index. Valid values: 0 to 4999.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder indexStart(Integer indexStart) {
                 this.indexStart = indexStart;
@@ -628,7 +667,10 @@ public class CreateJobTemplateRequest extends Request {
             }
 
             /**
-             * IndexStep.
+             * <p>The step size of the array job index.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder indexStep(Integer indexStep) {
                 this.indexStep = indexStep;
@@ -695,7 +737,7 @@ public class CreateJobTemplateRequest extends Request {
             } 
 
             /**
-             * ArraySpec.
+             * <p>The details of the array job.</p>
              */
             public Builder arraySpec(ArraySpec arraySpec) {
                 this.arraySpec = arraySpec;
@@ -703,7 +745,10 @@ public class CreateJobTemplateRequest extends Request {
             }
 
             /**
-             * MaxCount.
+             * <p>The maximum number of nodes on which the job can run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder maxCount(Integer maxCount) {
                 this.maxCount = maxCount;
@@ -770,7 +815,10 @@ public class CreateJobTemplateRequest extends Request {
             } 
 
             /**
-             * Size.
+             * <p>The size of the cloud disk. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40</p>
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -778,7 +826,10 @@ public class CreateJobTemplateRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The type of the cloud disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>System</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -897,7 +948,10 @@ public class CreateJobTemplateRequest extends Request {
             } 
 
             /**
-             * Cores.
+             * <p>The number of CPU cores in the runtime environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder cores(Float cores) {
                 this.cores = cores;
@@ -905,7 +959,7 @@ public class CreateJobTemplateRequest extends Request {
             }
 
             /**
-             * Disks.
+             * <p>The array of cloud disks.</p>
              */
             public Builder disks(java.util.List<Disks> disks) {
                 this.disks = disks;
@@ -913,7 +967,10 @@ public class CreateJobTemplateRequest extends Request {
             }
 
             /**
-             * EnableHT.
+             * <p>Specifies whether hyper-threading is enabled in the runtime environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableHT(Boolean enableHT) {
                 this.enableHT = enableHT;
@@ -921,7 +978,10 @@ public class CreateJobTemplateRequest extends Request {
             }
 
             /**
-             * HostNamePrefix.
+             * <p>The hostname prefix of the runtime environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>compute</p>
              */
             public Builder hostNamePrefix(String hostNamePrefix) {
                 this.hostNamePrefix = hostNamePrefix;
@@ -929,7 +989,10 @@ public class CreateJobTemplateRequest extends Request {
             }
 
             /**
-             * InstanceTypes.
+             * <p>The instance types of the runtime environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.c7a.8xlarge</p>
              */
             public Builder instanceTypes(java.util.List<String> instanceTypes) {
                 this.instanceTypes = instanceTypes;
@@ -937,7 +1000,10 @@ public class CreateJobTemplateRequest extends Request {
             }
 
             /**
-             * Memory.
+             * <p>The memory size of the runtime environment. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder memory(Float memory) {
                 this.memory = memory;
@@ -1004,7 +1070,14 @@ public class CreateJobTemplateRequest extends Request {
             } 
 
             /**
-             * Action.
+             * <p>The next action of the task. Valid values:</p>
+             * <ul>
+             * <li>Retry: Retries the task.</li>
+             * <li>Exit: Exits the task.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Retry</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -1012,7 +1085,10 @@ public class CreateJobTemplateRequest extends Request {
             }
 
             /**
-             * ExitCode.
+             * <p>The exit code of the task. This code is used together with the Action parameter to form the retry rules for the job. Valid values: 0 to 255.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder exitCode(Long exitCode) {
                 this.exitCode = exitCode;
@@ -1079,7 +1155,7 @@ public class CreateJobTemplateRequest extends Request {
             } 
 
             /**
-             * ExitCodeActions.
+             * <p>The retry rules.</p>
              */
             public Builder exitCodeActions(java.util.List<ExitCodeActions> exitCodeActions) {
                 this.exitCodeActions = exitCodeActions;
@@ -1087,7 +1163,10 @@ public class CreateJobTemplateRequest extends Request {
             }
 
             /**
-             * RetryCount.
+             * <p>The number of retries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder retryCount(Integer retryCount) {
                 this.retryCount = retryCount;
@@ -1154,7 +1233,10 @@ public class CreateJobTemplateRequest extends Request {
             } 
 
             /**
-             * Name.
+             * <p>The name of the environment variable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PATH</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1162,7 +1244,10 @@ public class CreateJobTemplateRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of the environment variable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/usr/local/bin</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1195,11 +1280,17 @@ public class CreateJobTemplateRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("EnvironmentVars")
         private java.util.List<EnvironmentVars> environmentVars;
 
+        @com.aliyun.core.annotation.NameInMap("GpuDriverVersion")
+        private String gpuDriverVersion;
+
         @com.aliyun.core.annotation.NameInMap("Image")
         private String image;
 
         @com.aliyun.core.annotation.NameInMap("ImageRegistryOptions")
         private String imageRegistryOptions;
+
+        @com.aliyun.core.annotation.NameInMap("Privileged")
+        private Boolean privileged;
 
         @com.aliyun.core.annotation.NameInMap("WorkingDir")
         private String workingDir;
@@ -1209,8 +1300,10 @@ public class CreateJobTemplateRequest extends Request {
             this.arg = builder.arg;
             this.command = builder.command;
             this.environmentVars = builder.environmentVars;
+            this.gpuDriverVersion = builder.gpuDriverVersion;
             this.image = builder.image;
             this.imageRegistryOptions = builder.imageRegistryOptions;
+            this.privileged = builder.privileged;
             this.workingDir = builder.workingDir;
         }
 
@@ -1251,6 +1344,13 @@ public class CreateJobTemplateRequest extends Request {
         }
 
         /**
+         * @return gpuDriverVersion
+         */
+        public String getGpuDriverVersion() {
+            return this.gpuDriverVersion;
+        }
+
+        /**
          * @return image
          */
         public String getImage() {
@@ -1265,6 +1365,13 @@ public class CreateJobTemplateRequest extends Request {
         }
 
         /**
+         * @return privileged
+         */
+        public Boolean getPrivileged() {
+            return this.privileged;
+        }
+
+        /**
          * @return workingDir
          */
         public String getWorkingDir() {
@@ -1276,8 +1383,10 @@ public class CreateJobTemplateRequest extends Request {
             private java.util.List<String> arg; 
             private java.util.List<String> command; 
             private java.util.List<EnvironmentVars> environmentVars; 
+            private String gpuDriverVersion; 
             private String image; 
             private String imageRegistryOptions; 
+            private Boolean privileged; 
             private String workingDir; 
 
             private Builder() {
@@ -1288,13 +1397,18 @@ public class CreateJobTemplateRequest extends Request {
                 this.arg = model.arg;
                 this.command = model.command;
                 this.environmentVars = model.environmentVars;
+                this.gpuDriverVersion = model.gpuDriverVersion;
                 this.image = model.image;
                 this.imageRegistryOptions = model.imageRegistryOptions;
+                this.privileged = model.privileged;
                 this.workingDir = model.workingDir;
             } 
 
             /**
-             * AppId.
+             * <p>The ID of the container application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ci-vm-32k6LXAi3cOG</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -1302,7 +1416,10 @@ public class CreateJobTemplateRequest extends Request {
             }
 
             /**
-             * Arg.
+             * <p>The arguments for the container startup commands.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60s</p>
              */
             public Builder arg(java.util.List<String> arg) {
                 this.arg = arg;
@@ -1310,7 +1427,10 @@ public class CreateJobTemplateRequest extends Request {
             }
 
             /**
-             * Command.
+             * <p>The list of startup commands for the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sleep</p>
              */
             public Builder command(java.util.List<String> command) {
                 this.command = command;
@@ -1318,7 +1438,7 @@ public class CreateJobTemplateRequest extends Request {
             }
 
             /**
-             * EnvironmentVars.
+             * <p>The environment variables of the container.</p>
              */
             public Builder environmentVars(java.util.List<EnvironmentVars> environmentVars) {
                 this.environmentVars = environmentVars;
@@ -1326,7 +1446,21 @@ public class CreateJobTemplateRequest extends Request {
             }
 
             /**
-             * Image.
+             * <p>The GPU driver version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tesla=535</p>
+             */
+            public Builder gpuDriverVersion(String gpuDriverVersion) {
+                this.gpuDriverVersion = gpuDriverVersion;
+                return this;
+            }
+
+            /**
+             * <p>The container image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>registry-vpc.cn-hangzhou.aliyuncs.com/ehpc/hpl:latest</p>
              */
             public Builder image(String image) {
                 this.image = image;
@@ -1334,7 +1468,10 @@ public class CreateJobTemplateRequest extends Request {
             }
 
             /**
-             * ImageRegistryOptions.
+             * <p>The list of mount parameters for the custom image registry. The parameters are in key-value pair format and passed in JSON.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder imageRegistryOptions(String imageRegistryOptions) {
                 this.imageRegistryOptions = imageRegistryOptions;
@@ -1342,7 +1479,21 @@ public class CreateJobTemplateRequest extends Request {
             }
 
             /**
-             * WorkingDir.
+             * <p>Specifies whether the container runs in privileged mode. Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder privileged(Boolean privileged) {
+                this.privileged = privileged;
+                return this;
+            }
+
+            /**
+             * <p>The working directory of the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/usr/local/</p>
              */
             public Builder workingDir(String workingDir) {
                 this.workingDir = workingDir;
@@ -1448,7 +1599,10 @@ public class CreateJobTemplateRequest extends Request {
             } 
 
             /**
-             * AppId.
+             * <p>The ID of the virtual machine application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ci-vm-9jc58Pm5Leky</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -1456,7 +1610,10 @@ public class CreateJobTemplateRequest extends Request {
             }
 
             /**
-             * Image.
+             * <p>The image ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m-xxxx</p>
              */
             public Builder image(String image) {
                 this.image = image;
@@ -1464,7 +1621,10 @@ public class CreateJobTemplateRequest extends Request {
             }
 
             /**
-             * Password.
+             * <p>The logon password for the virtual machine environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EHPC@1234</p>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -1472,7 +1632,10 @@ public class CreateJobTemplateRequest extends Request {
             }
 
             /**
-             * PrologScript.
+             * <p>The prolog script. The script must be Base64-encoded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ZWNobyBoZWxsbyBlY3Mh</p>
              */
             public Builder prologScript(String prologScript) {
                 this.prologScript = prologScript;
@@ -1480,7 +1643,10 @@ public class CreateJobTemplateRequest extends Request {
             }
 
             /**
-             * Script.
+             * <p>The job execution script. The script must be Base64-encoded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ZWNobyBoZWxsbyBlY3Mh</p>
              */
             public Builder script(String script) {
                 this.script = script;
@@ -1547,7 +1713,7 @@ public class CreateJobTemplateRequest extends Request {
             } 
 
             /**
-             * Container.
+             * <p>The container environment configuration.</p>
              */
             public Builder container(Container container) {
                 this.container = container;
@@ -1555,7 +1721,7 @@ public class CreateJobTemplateRequest extends Request {
             }
 
             /**
-             * VM.
+             * <p>The virtual machine environment configuration.</p>
              */
             public Builder vm(Vm vm) {
                 this.vm = vm;
@@ -1648,7 +1814,10 @@ public class CreateJobTemplateRequest extends Request {
             } 
 
             /**
-             * MountOptions.
+             * <p>The list of mount parameters for the data volume. The parameters are in key-value pair format and passed in JSON.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;server&quot;:&quot;xxxxx-xxxxx.cn-heyuan.nas.aliyuncs.com&quot;,&quot;vers&quot;:&quot;3&quot;,&quot;path&quot;:&quot;/data&quot;,&quot;options&quot;:&quot;nolock,tcp,noresvport&quot;}</p>
              */
             public Builder mountOptions(String mountOptions) {
                 this.mountOptions = mountOptions;
@@ -1656,7 +1825,10 @@ public class CreateJobTemplateRequest extends Request {
             }
 
             /**
-             * MountPath.
+             * <p>The directory where the data volume is mounted to the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/mnt</p>
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
@@ -1664,7 +1836,10 @@ public class CreateJobTemplateRequest extends Request {
             }
 
             /**
-             * ReadOnly.
+             * <p>Specifies whether the data volume is read-only.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder readOnly(Boolean readOnly) {
                 this.readOnly = readOnly;
@@ -1672,7 +1847,10 @@ public class CreateJobTemplateRequest extends Request {
             }
 
             /**
-             * VolumeDriver.
+             * <p>The type of the data volume.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alicloud/nas</p>
              */
             public Builder volumeDriver(String volumeDriver) {
                 this.volumeDriver = volumeDriver;
@@ -1765,7 +1943,7 @@ public class CreateJobTemplateRequest extends Request {
             } 
 
             /**
-             * Resource.
+             * <p>The resource information of the runtime environment.</p>
              */
             public Builder resource(Resource resource) {
                 this.resource = resource;
@@ -1773,7 +1951,7 @@ public class CreateJobTemplateRequest extends Request {
             }
 
             /**
-             * RetryPolicy.
+             * <p>The retry policy of the task.</p>
              */
             public Builder retryPolicy(RetryPolicy retryPolicy) {
                 this.retryPolicy = retryPolicy;
@@ -1781,7 +1959,7 @@ public class CreateJobTemplateRequest extends Request {
             }
 
             /**
-             * TaskExecutor.
+             * <p>The execution configuration of the task.</p>
              */
             public Builder taskExecutor(java.util.List<TaskExecutor> taskExecutor) {
                 this.taskExecutor = taskExecutor;
@@ -1789,7 +1967,7 @@ public class CreateJobTemplateRequest extends Request {
             }
 
             /**
-             * VolumeMount.
+             * <p>The list of data volumes mounted to the task. A maximum of 10 data volumes are supported.</p>
              */
             public Builder volumeMount(java.util.List<VolumeMount> volumeMount) {
                 this.volumeMount = volumeMount;
@@ -1882,7 +2060,7 @@ public class CreateJobTemplateRequest extends Request {
             } 
 
             /**
-             * ExecutorPolicy.
+             * <p>The task execution policy.</p>
              */
             public Builder executorPolicy(ExecutorPolicy executorPolicy) {
                 this.executorPolicy = executorPolicy;
@@ -1890,7 +2068,10 @@ public class CreateJobTemplateRequest extends Request {
             }
 
             /**
-             * TaskName.
+             * <p>The name of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>task0</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -1898,7 +2079,7 @@ public class CreateJobTemplateRequest extends Request {
             }
 
             /**
-             * TaskSpec.
+             * <p>The specification details of the task.</p>
              */
             public Builder taskSpec(TaskSpec taskSpec) {
                 this.taskSpec = taskSpec;
@@ -1906,7 +2087,15 @@ public class CreateJobTemplateRequest extends Request {
             }
 
             /**
-             * TaskSustainable.
+             * <p>Specifies whether the job is a long-running job. Valid values:</p>
+             * <ul>
+             * <li>true: The job is a background service job.</li>
+             * <li>false: The job is a batch job.
+             * Default value: false.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder taskSustainable(Boolean taskSustainable) {
                 this.taskSustainable = taskSustainable;
@@ -2025,7 +2214,7 @@ public class CreateJobTemplateRequest extends Request {
             } 
 
             /**
-             * DeploymentPolicy.
+             * <p>The resource deployment policy.</p>
              */
             public Builder deploymentPolicy(DeploymentPolicy deploymentPolicy) {
                 this.deploymentPolicy = deploymentPolicy;
@@ -2033,7 +2222,10 @@ public class CreateJobTemplateRequest extends Request {
             }
 
             /**
-             * JobDescription.
+             * <p>The description of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Demo</p>
              */
             public Builder jobDescription(String jobDescription) {
                 this.jobDescription = jobDescription;
@@ -2041,7 +2233,10 @@ public class CreateJobTemplateRequest extends Request {
             }
 
             /**
-             * JobName.
+             * <p>The name of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-job</p>
              */
             public Builder jobName(String jobName) {
                 this.jobName = jobName;
@@ -2057,7 +2252,7 @@ public class CreateJobTemplateRequest extends Request {
             }
 
             /**
-             * SecurityPolicy.
+             * <p>The security policy.</p>
              */
             public Builder securityPolicy(SecurityPolicy securityPolicy) {
                 this.securityPolicy = securityPolicy;
@@ -2065,7 +2260,7 @@ public class CreateJobTemplateRequest extends Request {
             }
 
             /**
-             * Tasks.
+             * <p>The list of tasks. A maximum of 5 tasks are supported.</p>
              */
             public Builder tasks(java.util.List<Tasks> tasks) {
                 this.tasks = tasks;

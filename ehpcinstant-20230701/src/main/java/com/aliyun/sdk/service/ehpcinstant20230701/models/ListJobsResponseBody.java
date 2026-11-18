@@ -125,7 +125,7 @@ public class ListJobsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The paging Settings for the number of entries per page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -147,7 +147,7 @@ public class ListJobsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned. This parameter is optional and is not returned by default.</p>
+         * <p>The total number of entries that meet the request conditions. This parameter is optional and is not returned by default.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -456,7 +456,7 @@ public class ListJobsResponseBody extends TeaModel {
              * <p>The additional information about the application.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;xxx&quot;: &quot;xxxxx&quot;}</p>
+             * <p>{\&quot;xxx\&quot;: \&quot;xxxxx\&quot;}</p>
              */
             public Builder appExtraInfo(String appExtraInfo) {
                 this.appExtraInfo = appExtraInfo;
@@ -464,7 +464,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alphafold3</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -472,7 +475,7 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the job was submitted.</p>
+             * <p>The time when the job was submitted. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-01-25 12:29:21</p>
@@ -483,7 +486,7 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the job.</p>
+             * <p>The time when the job ended. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-01-25 12:35:23</p>
@@ -494,7 +497,7 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of running nodes.</p>
+             * <p>The number of execution nodes.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -505,7 +508,7 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the job.</p>
+             * <p>The job description.</p>
              * 
              * <strong>example:</strong>
              * <p>Demo</p>
@@ -516,7 +519,7 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the job.</p>
+             * <p>The job ID.</p>
              * 
              * <strong>example:</strong>
              * <p>job-xxx</p>
@@ -549,7 +552,7 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the job.</p>
+             * <p>The time when the job started. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-01-25 12:29:23</p>
@@ -560,18 +563,19 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the job. Valid values:</p>
+             * <p>The job status. Valid values:</p>
              * <ul>
-             * <li>Pending</li>
-             * <li>Initing</li>
-             * <li>Succeed</li>
-             * <li>Failed</li>
-             * <li>Running</li>
-             * <li>Exception</li>
-             * <li>Retrying</li>
-             * <li>Expired</li>
-             * <li>Deleting</li>
-             * <li>Deleted</li>
+             * <li>Pending: The job is queued.</li>
+             * <li>Initing: The job is being initialized.</li>
+             * <li>Succeeded: The job ran successfully.</li>
+             * <li>Failed: The job failed to run.</li>
+             * <li>Running: The job is running.</li>
+             * <li>Exception: A scheduling exception occurred.</li>
+             * <li>Retrying: The job is being retried.</li>
+             * <li>Expired: The job timed out.</li>
+             * <li>Suspended: The job is hibernated.</li>
+             * <li>Restarting: The job is being restarted.</li>
+             * <li>Deleted: The job is deleted.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -602,7 +606,7 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicate whether the job is a long-running job.</p>
+             * <p>Specifies whether the job is a long-running job.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>

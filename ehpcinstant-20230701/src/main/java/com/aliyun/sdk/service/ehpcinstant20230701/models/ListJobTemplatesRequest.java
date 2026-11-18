@@ -73,7 +73,10 @@ public class ListJobTemplatesRequest extends Request {
         } 
 
         /**
-         * PageNumber.
+         * <p>The page number. Starting value: 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -82,7 +85,10 @@ public class ListJobTemplatesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The page size. Valid values: 1 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

@@ -67,7 +67,10 @@ public class GetJobRecordDurationResponseBody extends TeaModel {
         } 
 
         /**
-         * JobRecordDuration.
+         * <p>The retention period of job records, in days. Valid values: 1 to 30. Default value: 30.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder jobRecordDuration(Long jobRecordDuration) {
             this.jobRecordDuration = jobRecordDuration;

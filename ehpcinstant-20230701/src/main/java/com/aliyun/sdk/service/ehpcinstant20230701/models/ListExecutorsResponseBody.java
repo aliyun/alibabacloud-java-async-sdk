@@ -106,7 +106,7 @@ public class ListExecutorsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Executor list.</p>
+         * <p>The list of executors.</p>
          */
         public Builder executors(java.util.List<Executors> executors) {
             this.executors = executors;
@@ -114,7 +114,7 @@ public class ListExecutorsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The current page number.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class ListExecutorsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page in the paging Settings for a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -147,7 +147,7 @@ public class ListExecutorsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>40</p>
@@ -216,7 +216,7 @@ public class ListExecutorsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The size of the disk.</p>
+             * <p>The cloud disk size.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -227,10 +227,10 @@ public class ListExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The category of the disk. The following disk categories are supported:</p>
+             * <p>The cloud disk type. Valid values:</p>
              * <ul>
-             * <li>System: system disk.</li>
-             * <li>Data: data disk.</li>
+             * <li>System: System cloud disk.</li>
+             * <li>Data: Data cloud disk.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -327,7 +327,7 @@ public class ListExecutorsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of running CPUs.</p>
+             * <p>The number of CPUs.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -338,7 +338,7 @@ public class ListExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The array of the disks.</p>
+             * <p>The array of cloud disks.</p>
              */
             public Builder disks(java.util.List<Disks> disks) {
                 this.disks = disks;
@@ -346,7 +346,10 @@ public class ListExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * <p>The instance type of the runtime environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.c7a.8xlarge</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -354,7 +357,7 @@ public class ListExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total amount of memory resources. Unit: GiB.</p>
+             * <p>The total memory resources. Unit: GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -424,7 +427,7 @@ public class ListExecutorsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The key of the executor tag.</p>
+             * <p>The executor tag key.</p>
              * 
              * <strong>example:</strong>
              * <p>TestKey</p>
@@ -435,7 +438,7 @@ public class ListExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the executor tag.</p>
+             * <p>The executor tag value.</p>
              * 
              * <strong>example:</strong>
              * <p>TestValue</p>
@@ -804,7 +807,15 @@ public class ListExecutorsResponseBody extends TeaModel {
             } 
 
             /**
-             * AllocationSpec.
+             * <p>The resource type. Valid values:</p>
+             * <ul>
+             * <li>Standard: Standard.</li>
+             * <li>Dedicated: Dedicated. A whitelist is required.</li>
+             * <li>Economic: Economic. A whitelist is required.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Standard</p>
              */
             public Builder allocationSpec(String allocationSpec) {
                 this.allocationSpec = allocationSpec;
@@ -812,7 +823,10 @@ public class ListExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alphafold3</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -820,7 +834,7 @@ public class ListExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The executor number.</p>
+             * <p>The executor index.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -831,7 +845,10 @@ public class ListExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * BlockDuration.
+             * <p>The retention period of compute resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24</p>
              */
             public Builder blockDuration(Integer blockDuration) {
                 this.blockDuration = blockDuration;
@@ -839,7 +856,7 @@ public class ListExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the instance was created.</p>
+             * <p>The creation time. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-02-20 10:04:10</p>
@@ -850,7 +867,7 @@ public class ListExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time.</p>
+             * <p>The end time. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-02-20 10:04:18</p>
@@ -864,7 +881,7 @@ public class ListExecutorsResponseBody extends TeaModel {
              * <p>The executor ID. The format is JobId-TaskName-ArrayIndex.</p>
              * 
              * <strong>example:</strong>
-             * <p>job-xxxx-task0-1</p>
+             * <p>job-xxxx-Task0-1</p>
              */
             public Builder executorId(String executorId) {
                 this.executorId = executorId;
@@ -872,7 +889,10 @@ public class ListExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * ExpirationTime.
+             * <p>The expiration time. The time is returned in the YYYY-MM-DD HH:mm:ss format based on the UTC+8 time zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>202******:00</p>
              */
             public Builder expirationTime(String expirationTime) {
                 this.expirationTime = expirationTime;
@@ -880,7 +900,7 @@ public class ListExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of public IP addresses of the nodes.</p>
+             * <p>The list of public IP addresses of the node.</p>
              */
             public Builder externalIpAddress(java.util.List<String> externalIpAddress) {
                 this.externalIpAddress = externalIpAddress;
@@ -896,7 +916,7 @@ public class ListExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Executor image.</p>
+             * <p>The executor image.</p>
              * 
              * <strong>example:</strong>
              * <p>m-f8z0dfa96luxxxxx</p>
@@ -937,7 +957,7 @@ public class ListExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * Preemptible.
+             * <p>Indicates whether the execution instance is preemptible.</p>
              */
             public Builder preemptible(Boolean preemptible) {
                 this.preemptible = preemptible;
@@ -953,7 +973,7 @@ public class ListExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the resource.</p>
+             * <p>The resource type.</p>
              * 
              * <strong>example:</strong>
              * <p>ECI</p>
@@ -964,7 +984,7 @@ public class ListExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time.</p>
+             * <p>The start time. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-02-20 10:04:13</p>
@@ -975,18 +995,19 @@ public class ListExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the executor. Valid values:</p>
+             * <p>The executor status. Valid values:</p>
              * <ul>
-             * <li>Pending</li>
-             * <li>Initing</li>
-             * <li>Succeed</li>
-             * <li>Failed</li>
-             * <li>Running</li>
-             * <li>Unknown</li>
-             * <li>Exception</li>
-             * <li>Retrying</li>
-             * <li>Expired</li>
-             * <li>Deleted</li>
+             * <li>Pending: Queued.</li>
+             * <li>Initing: Initializing.</li>
+             * <li>Succeeded: Succeeded.</li>
+             * <li>Failed: Failed.</li>
+             * <li>Running: Running.</li>
+             * <li>Exception: Scheduling exception.</li>
+             * <li>Retrying: Retrying.</li>
+             * <li>Expired: Timed out.</li>
+             * <li>Suspended: Job suspended.</li>
+             * <li>Restarting: Job restarting.</li>
+             * <li>Deleted: Deleted.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1001,7 +1022,7 @@ public class ListExecutorsResponseBody extends TeaModel {
              * <p>The description of the status reason.</p>
              * 
              * <strong>example:</strong>
-             * <p>Succeeded to release executor resource</p>
+             * <p>ExecutorReady</p>
              */
             public Builder statusReason(String statusReason) {
                 this.statusReason = statusReason;
@@ -1017,10 +1038,10 @@ public class ListExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the task.</p>
+             * <p>The task name.</p>
              * 
              * <strong>example:</strong>
-             * <p>task0</p>
+             * <p>Task0</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -1028,7 +1049,7 @@ public class ListExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicate whether the job is a long-running job.</p>
+             * <p>Indicates whether the job is a long-running job.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1039,7 +1060,10 @@ public class ListExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-xxx</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -1047,7 +1071,7 @@ public class ListExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the vSwitch.</p>
+             * <p>The vSwitch ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-xxx</p>

@@ -104,8 +104,8 @@ public class UpdatePoolRequest extends Request {
         /**
          * <p>The name of the resource pool.</p>
          * <ul>
-         * <li>The value can be up to 15 characters in length.</li>
-         * <li>It can contain digits, uppercase letters, lowercase letters, underscores (_), and dots (.).</li>
+         * <li>The name can be up to 15 characters in length.</li>
+         * <li>The name can contain digits, uppercase letters, lowercase letters, underscores (_), and periods (.).</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -121,8 +121,8 @@ public class UpdatePoolRequest extends Request {
         /**
          * <p>The priority of the resource pool.</p>
          * <ul>
-         * <li>You can set a priority in the range of 1 to 99. The default value is 1, which is the lowest priority.</li>
-         * <li>Jobs submitted to a resource pool with a higher priority level value will be scheduled before pending jobs in a resource pool with a lower priority level value, and the priority level of the resource pool takes precedence over the priority of the job.</li>
+         * <li>Valid values: 1 to 99. Default value: 1, which indicates the lowest priority.</li>
+         * <li>Jobs submitted to a resource pool with a higher priority value are scheduled before pending jobs in resource pools with lower priority values. The priority of a resource pool takes precedence over the priority of a job.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -135,7 +135,7 @@ public class UpdatePoolRequest extends Request {
         }
 
         /**
-         * <p>The quota of resources that users are allowed to concurrently use in a resource pool.</p>
+         * <p>The resource quota limit for concurrent usage by a user within a resource pool.</p>
          */
         public Builder resourceLimits(ResourceLimits resourceLimits) {
             String resourceLimitsShrink = shrink(resourceLimits, "ResourceLimits", "json");
@@ -145,7 +145,10 @@ public class UpdatePoolRequest extends Request {
         }
 
         /**
-         * SchedulingPolicyId.
+         * <p>The scheduling policy ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>policy-xxxx</p>
          */
         public Builder schedulingPolicyId(String schedulingPolicyId) {
             this.putQueryParameter("SchedulingPolicyId", schedulingPolicyId);
@@ -200,7 +203,10 @@ public class UpdatePoolRequest extends Request {
             } 
 
             /**
-             * MaxExecutorNum.
+             * <p>The maximum number of executor nodes that a user can concurrently run within a resource pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maxExecutorNum(Integer maxExecutorNum) {
                 this.maxExecutorNum = maxExecutorNum;

@@ -60,10 +60,10 @@ public class DeletePoolRequest extends Request {
         } 
 
         /**
-         * <p>The name of the resource pool.</p>
+         * <p>The resource pool name.</p>
          * <ul>
-         * <li>The value can be up to 15 characters in length.</li>
-         * <li>It can contain digits, uppercase letters, lowercase letters, underscores (_), and dots (.).</li>
+         * <li>The name can be up to 15 characters in length.</li>
+         * <li>The name can contain digits, uppercase letters, lowercase letters, underscores (_), and periods (.).</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

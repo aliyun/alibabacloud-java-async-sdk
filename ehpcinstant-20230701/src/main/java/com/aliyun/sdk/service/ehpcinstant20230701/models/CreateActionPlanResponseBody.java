@@ -67,7 +67,7 @@ public class CreateActionPlanResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the execution plan.</p>
+         * <p>The execution plan ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ap-hz036ubmx2qmw93k****</p>

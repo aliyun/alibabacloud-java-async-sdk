@@ -87,9 +87,9 @@ public class RemoveImageRequest extends Request {
         }
 
         /**
-         * <p>The type of the images. Valid values:</p>
+         * <p>The image type. Valid values:</p>
          * <ul>
-         * <li>VM: Virtual Machine Image</li>
+         * <li>VM: virtual machine image</li>
          * <li>Container: container image</li>
          * </ul>
          * 
