@@ -806,6 +806,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StartUserAppAsyncEnhanceInMsaResponse> startUserAppAsyncEnhanceInMsa(StartUserAppAsyncEnhanceInMsaRequest request);
 
     /**
+     * @param request the request parameters of SyncMiniGameOnlineStatusByApp  SyncMiniGameOnlineStatusByAppRequest
+     * @return SyncMiniGameOnlineStatusByAppResponse
+     */
+    CompletableFuture<SyncMiniGameOnlineStatusByAppResponse> syncMiniGameOnlineStatusByApp(SyncMiniGameOnlineStatusByAppRequest request);
+
+    /**
      * @param request the request parameters of UpdateGatewayApi  UpdateGatewayApiRequest
      * @return UpdateGatewayApiResponse
      */
