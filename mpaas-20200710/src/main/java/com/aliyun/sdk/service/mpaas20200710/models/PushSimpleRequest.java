@@ -113,6 +113,10 @@ public class PushSimpleRequest extends Request {
     private String targetMsgkey;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TargetVendorTemplate")
+    private String targetVendorTemplate;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TaskName")
     private String taskName;
 
@@ -142,8 +146,16 @@ public class PushSimpleRequest extends Request {
     private String uri;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UseVoip")
+    private Boolean useVoip;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("VendorTemplate")
     private String vendorTemplate;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VoipMap")
+    private String voipMap;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
@@ -174,6 +186,7 @@ public class PushSimpleRequest extends Request {
         this.strategyContent = builder.strategyContent;
         this.strategyType = builder.strategyType;
         this.targetMsgkey = builder.targetMsgkey;
+        this.targetVendorTemplate = builder.targetVendorTemplate;
         this.taskName = builder.taskName;
         this.tenantId = builder.tenantId;
         this.thirdChannelCategory = builder.thirdChannelCategory;
@@ -181,7 +194,9 @@ public class PushSimpleRequest extends Request {
         this.transparentMessagePayload = builder.transparentMessagePayload;
         this.transparentMessageUrgency = builder.transparentMessageUrgency;
         this.uri = builder.uri;
+        this.useVoip = builder.useVoip;
         this.vendorTemplate = builder.vendorTemplate;
+        this.voipMap = builder.voipMap;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -353,6 +368,13 @@ public class PushSimpleRequest extends Request {
     }
 
     /**
+     * @return targetVendorTemplate
+     */
+    public String getTargetVendorTemplate() {
+        return this.targetVendorTemplate;
+    }
+
+    /**
      * @return taskName
      */
     public String getTaskName() {
@@ -402,10 +424,24 @@ public class PushSimpleRequest extends Request {
     }
 
     /**
+     * @return useVoip
+     */
+    public Boolean getUseVoip() {
+        return this.useVoip;
+    }
+
+    /**
      * @return vendorTemplate
      */
     public String getVendorTemplate() {
         return this.vendorTemplate;
+    }
+
+    /**
+     * @return voipMap
+     */
+    public String getVoipMap() {
+        return this.voipMap;
     }
 
     /**
@@ -438,6 +474,7 @@ public class PushSimpleRequest extends Request {
         private String strategyContent; 
         private Integer strategyType; 
         private String targetMsgkey; 
+        private String targetVendorTemplate; 
         private String taskName; 
         private String tenantId; 
         private java.util.Map<String, ?> thirdChannelCategory; 
@@ -445,7 +482,9 @@ public class PushSimpleRequest extends Request {
         private Object transparentMessagePayload; 
         private String transparentMessageUrgency; 
         private String uri; 
+        private Boolean useVoip; 
         private String vendorTemplate; 
+        private String voipMap; 
         private String workspaceId; 
 
         private Builder() {
@@ -476,6 +515,7 @@ public class PushSimpleRequest extends Request {
             this.strategyContent = request.strategyContent;
             this.strategyType = request.strategyType;
             this.targetMsgkey = request.targetMsgkey;
+            this.targetVendorTemplate = request.targetVendorTemplate;
             this.taskName = request.taskName;
             this.tenantId = request.tenantId;
             this.thirdChannelCategory = request.thirdChannelCategory;
@@ -483,7 +523,9 @@ public class PushSimpleRequest extends Request {
             this.transparentMessagePayload = request.transparentMessagePayload;
             this.transparentMessageUrgency = request.transparentMessageUrgency;
             this.uri = request.uri;
+            this.useVoip = request.useVoip;
             this.vendorTemplate = request.vendorTemplate;
+            this.voipMap = request.voipMap;
             this.workspaceId = request.workspaceId;
         } 
 
@@ -687,6 +729,15 @@ public class PushSimpleRequest extends Request {
         }
 
         /**
+         * TargetVendorTemplate.
+         */
+        public Builder targetVendorTemplate(String targetVendorTemplate) {
+            this.putBodyParameter("TargetVendorTemplate", targetVendorTemplate);
+            this.targetVendorTemplate = targetVendorTemplate;
+            return this;
+        }
+
+        /**
          * TaskName.
          */
         public Builder taskName(String taskName) {
@@ -751,11 +802,29 @@ public class PushSimpleRequest extends Request {
         }
 
         /**
+         * UseVoip.
+         */
+        public Builder useVoip(Boolean useVoip) {
+            this.putBodyParameter("UseVoip", useVoip);
+            this.useVoip = useVoip;
+            return this;
+        }
+
+        /**
          * VendorTemplate.
          */
         public Builder vendorTemplate(String vendorTemplate) {
             this.putBodyParameter("VendorTemplate", vendorTemplate);
             this.vendorTemplate = vendorTemplate;
+            return this;
+        }
+
+        /**
+         * VoipMap.
+         */
+        public Builder voipMap(String voipMap) {
+            this.putBodyParameter("VoipMap", voipMap);
+            this.voipMap = voipMap;
             return this;
         }
 

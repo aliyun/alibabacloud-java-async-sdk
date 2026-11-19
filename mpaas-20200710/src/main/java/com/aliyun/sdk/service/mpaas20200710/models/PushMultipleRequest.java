@@ -680,11 +680,15 @@ public class PushMultipleRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("TemplateKeyValue")
         private String templateKeyValue;
 
+        @com.aliyun.core.annotation.NameInMap("VendorTemplate")
+        private String vendorTemplate;
+
         private TargetMsg(Builder builder) {
             this.extendedParams = builder.extendedParams;
             this.msgKey = builder.msgKey;
             this.target = builder.target;
             this.templateKeyValue = builder.templateKeyValue;
+            this.vendorTemplate = builder.vendorTemplate;
         }
 
         public static Builder builder() {
@@ -723,11 +727,19 @@ public class PushMultipleRequest extends Request {
             return this.templateKeyValue;
         }
 
+        /**
+         * @return vendorTemplate
+         */
+        public String getVendorTemplate() {
+            return this.vendorTemplate;
+        }
+
         public static final class Builder {
             private String extendedParams; 
             private String msgKey; 
             private String target; 
             private String templateKeyValue; 
+            private String vendorTemplate; 
 
             private Builder() {
             } 
@@ -737,6 +749,7 @@ public class PushMultipleRequest extends Request {
                 this.msgKey = model.msgKey;
                 this.target = model.target;
                 this.templateKeyValue = model.templateKeyValue;
+                this.vendorTemplate = model.vendorTemplate;
             } 
 
             /**
@@ -768,6 +781,14 @@ public class PushMultipleRequest extends Request {
              */
             public Builder templateKeyValue(String templateKeyValue) {
                 this.templateKeyValue = templateKeyValue;
+                return this;
+            }
+
+            /**
+             * VendorTemplate.
+             */
+            public Builder vendorTemplate(String vendorTemplate) {
+                this.vendorTemplate = vendorTemplate;
                 return this;
             }
 
