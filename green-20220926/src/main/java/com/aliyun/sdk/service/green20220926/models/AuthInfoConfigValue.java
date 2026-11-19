@@ -115,7 +115,7 @@ public class AuthInfoConfigValue extends TeaModel {
         }
 
         /**
-         * <p>The project space.</p>
+         * <p>The project workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>proj-xxx</p>

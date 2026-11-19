@@ -162,7 +162,7 @@ public class ListImageLibResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of libraries supported.</p>
+         * <p>The maximum number of supported image libraries.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -173,7 +173,7 @@ public class ListImageLibResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The further description of the error code.</p>
+         * <p>The detailed description of the error code.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -184,7 +184,7 @@ public class ListImageLibResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The backend-assigned ID that uniquely identifies a request. This ID can be used for troubleshooting.</p>
+         * <p>The request ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -332,7 +332,7 @@ public class ListImageLibResponseBody extends TeaModel {
              * <p>The remarks.</p>
              * 
              * <strong>example:</strong>
-             * <p>备注</p>
+             * <p>Remarks</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -340,7 +340,7 @@ public class ListImageLibResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The review-free configuration.</p>
+             * <p>The moderation exemption configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -362,7 +362,7 @@ public class ListImageLibResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The modification time.</p>
+             * <p>The update time.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-06-03 15:20:14</p>
@@ -373,7 +373,7 @@ public class ListImageLibResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of images in the library.</p>
+             * <p>The number of images in the image library.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -384,7 +384,7 @@ public class ListImageLibResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The image library ID.</p>
+             * <p>The ID of the image library.</p>
              * 
              * <strong>example:</strong>
              * <p>custom_xxxx</p>
@@ -395,10 +395,10 @@ public class ListImageLibResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The image library name.</p>
+             * <p>The name of the image library.</p>
              * 
              * <strong>example:</strong>
-             * <p>测试</p>
+             * <p>Test</p>
              */
             public Builder libName(String libName) {
                 this.libName = libName;

@@ -67,7 +67,7 @@ public class GetOssCheckStatResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The bar chart data.</p>
+         * <p>The bar chart.</p>
          */
         public Builder barChart(BarChart barChart) {
             this.barChart = barChart;

@@ -133,7 +133,7 @@ public class AddKeywordLibRequest extends Request {
          * .</p>
          * 
          * <strong>example:</strong>
-         * <p>keyword1\nkeyword2</p>
+         * <p>Keyword1\nKeyword2</p>
          */
         public Builder keywords(String keywords) {
             this.putBodyParameter("Keywords", keywords);
@@ -157,7 +157,7 @@ public class AddKeywordLibRequest extends Request {
          * <p>The name of the keyword library.</p>
          * 
          * <strong>example:</strong>
-         * <p>TestLibrary.</p>
+         * <p>Test keyword library</p>
          */
         public Builder libName(String libName) {
             this.putBodyParameter("LibName", libName);
@@ -190,9 +190,9 @@ public class AddKeywordLibRequest extends Request {
         }
 
         /**
-         * <p>The library code.</p>
+         * <p>The code of the keyword library.</p>
          * <ul>
-         * <li>desensitize: desensitization library</li>
+         * <li>desensitize: desensitization keyword library.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -253,7 +253,7 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the service is copied.</p>
+             * <p>Specifies whether to copy.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -278,7 +278,7 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
              * <p>The service name.</p>
              * 
              * <strong>example:</strong>
-             * <p>General baseline detection.</p>
+             * <p>General baseline check</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -745,7 +745,7 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scheduled execution date of the task. An integer value, such as 1.</p>
+             * <p>The execution date of the scheduled task. The value is an integer, such as 1.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -756,7 +756,7 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scheduled execution time of the task. Format: HH:mm:ss.</p>
+             * <p>The expected execution time of the scheduled task. Format: HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>02:00:00</p>
@@ -789,7 +789,7 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to freeze high-risk audio and text.</p>
+             * <p>Specifies whether to freeze high-risk audio and text files.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -811,7 +811,7 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to freeze medium-risk audio and text.</p>
+             * <p>Specifies whether to freeze medium-risk audio and text files.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -855,7 +855,7 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The prefix.</p>
+             * <p>The prefixes.</p>
              */
             public Builder prefixFilters(java.util.List<String> prefixFilters) {
                 this.prefixFilters = prefixFilters;
@@ -874,12 +874,10 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Referer。</p>
+             * <p>The Referer header for hotlink protection.</p>
              * 
              * <strong>example:</strong>
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <p><a href="https://www.aliyun.com/">https://www.aliyun.com/</a></p>
              */
             public Builder referer(String referer) {
                 this.referer = referer;
@@ -898,7 +896,7 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to scan images without file extensions.</p>
+             * <p>Specifies whether to scan images without file name extensions.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -920,7 +918,7 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scan service code.</p>
+             * <p>The code of the scan service.</p>
              */
             public Builder scanService(java.util.List<String> scanService) {
                 this.scanService = scanService;
@@ -947,7 +945,7 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scheduling cycle. An integer value, such as 1.</p>
+             * <p>The scheduling date. The value is an integer, such as 1.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1194,7 +1192,7 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The storage space.</p>
+             * <p>The buckets.</p>
              * 
              * <strong>example:</strong>
              * <p>tmp</p>
@@ -1205,7 +1203,7 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configuration item.</p>
+             * <p>The configuration.</p>
              */
             public Builder config(Config config) {
                 this.config = config;
@@ -1224,7 +1222,7 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of completed tasks.</p>
+             * <p>The number of completed items.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -1235,7 +1233,7 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the task is a scheduled scan task.</p>
+             * <p>Specifies whether the task is a scheduled scan task.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1260,7 +1258,7 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
              * <p>The media asset type.</p>
              * 
              * <strong>example:</strong>
-             * <p>video</p>
+             * <p>1</p>
              */
             public Builder mediaType(Integer mediaType) {
                 this.mediaType = mediaType;
@@ -1337,7 +1335,7 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
              * <p>The task name.</p>
              * 
              * <strong>example:</strong>
-             * <p>ImageScheduledTask20231205135716797</p>
+             * <p>Image scheduled task 20231205135716797</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;

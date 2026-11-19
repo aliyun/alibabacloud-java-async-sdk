@@ -136,7 +136,7 @@ public class GetOssCheckFreezeResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
+         * <p>The ID of the request. You can use the ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>F0A594BB-FA7A-580F-AE9E-A4188E092823</p>
@@ -243,7 +243,7 @@ public class GetOssCheckFreezeResultResponseBody extends TeaModel {
              * <p>The label description.</p>
              * 
              * <strong>example:</strong>
-             * <p>涉政</p>
+             * <p>Political content</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -685,7 +685,7 @@ public class GetOssCheckFreezeResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The OSS bucket.</p>
+             * <p>The bucket.</p>
              * 
              * <strong>example:</strong>
              * <p>tmp</p>
@@ -707,7 +707,7 @@ public class GetOssCheckFreezeResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The audio or video scan type.</p>
+             * <p>The audio and video detection type.</p>
              * 
              * <strong>example:</strong>
              * <p>audio</p>
@@ -729,11 +729,7 @@ public class GetOssCheckFreezeResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The feedback. Valid values:</p>
-             * <ul>
-             * <li>misreport: False positive (not a violation).</li>
-             * <li>missOut: Missed violation.</li>
-             * </ul>
+             * <p>The feedback.</p>
              * 
              * <strong>example:</strong>
              * <p>misreport</p>
@@ -744,7 +740,7 @@ public class GetOssCheckFreezeResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the object is frozen.</p>
+             * <p>Indicates whether the item is frozen.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -755,7 +751,7 @@ public class GetOssCheckFreezeResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The freeze status.</p>
+             * <p>The freezing status.</p>
              * 
              * <strong>example:</strong>
              * <p>FREEZED</p>
@@ -766,7 +762,7 @@ public class GetOssCheckFreezeResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The freeze type.</p>
+             * <p>The freezing type.</p>
              * 
              * <strong>example:</strong>
              * <p>ACL</p>
@@ -788,7 +784,7 @@ public class GetOssCheckFreezeResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the task is copied.</p>
+             * <p>Indicates whether the item is copied.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -834,11 +830,7 @@ public class GetOssCheckFreezeResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The manual action status. Valid values:</p>
-             * <ul>
-             * <li>FREEZE: Frozen.</li>
-             * <li>UNFREEZE: Unfrozen.</li>
-             * </ul>
+             * <p>The manual disposal status.</p>
              * 
              * <strong>example:</strong>
              * <p>FREEZE</p>
@@ -849,7 +841,7 @@ public class GetOssCheckFreezeResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The action time. Format: YYYY-MM-DD HH:mm:ss.</p>
+             * <p>The disposal time. Specify the time in the YYYY-MM-DD HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-08-09 12:00:00</p>
@@ -860,10 +852,10 @@ public class GetOssCheckFreezeResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operator who performed the action.</p>
+             * <p>The operator.</p>
              * 
              * <strong>example:</strong>
-             * <p>xx</p>
+             * <p>John Doe</p>
              */
             public Builder manualOperator(String manualOperator) {
                 this.manualOperator = manualOperator;
@@ -948,7 +940,7 @@ public class GetOssCheckFreezeResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scan result details.</p>
+             * <p>The result details.</p>
              * 
              * <strong>example:</strong>
              * <p>{}</p>
@@ -973,7 +965,7 @@ public class GetOssCheckFreezeResultResponseBody extends TeaModel {
              * <p>The service name.</p>
              * 
              * <strong>example:</strong>
-             * <p>服务名称</p>
+             * <p>Service name</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -981,14 +973,7 @@ public class GetOssCheckFreezeResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The system action status. Valid values:</p>
-             * <ul>
-             * <li>FREEZING: Freezing in progress.</li>
-             * <li>FREEZED: Frozen.</li>
-             * <li>UNFREEZED: Unfrozen.</li>
-             * <li>NONE: No action taken.</li>
-             * <li>UNFREEZING: Unfreezing in progress.</li>
-             * </ul>
+             * <p>The system disposal status.</p>
              * 
              * <strong>example:</strong>
              * <p>FREEZED</p>
@@ -1010,7 +995,7 @@ public class GetOssCheckFreezeResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task URL.</p>
+             * <p>The URL of the task.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://www.aliyuncs.com/test.mp3">http://www.aliyuncs.com/test.mp3</a></p>

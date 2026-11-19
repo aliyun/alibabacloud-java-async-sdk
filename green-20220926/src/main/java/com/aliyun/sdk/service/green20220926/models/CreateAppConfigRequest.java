@@ -118,7 +118,7 @@ public class CreateAppConfigRequest extends Request {
          * <p>The name.</p>
          * 
          * <strong>example:</strong>
-         * <p>CustomReview</p>
+         * <p>Custom review</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

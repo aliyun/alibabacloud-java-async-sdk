@@ -115,7 +115,7 @@ public class UpdateOssCheckResultsUnfreezeRequest extends Request {
         } 
 
         /**
-         * <p>The end time. Format: YYYY-MM-DD HH:mm:ss.</p>
+         * <p>The end time. The format is YYYY-MM-DD HH:mm:ss. Note: This parameter is actually required. If it is not provided, the service returns a 400 error.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-10-21 16:08:38</p>
@@ -127,7 +127,7 @@ public class UpdateOssCheckResultsUnfreezeRequest extends Request {
         }
 
         /**
-         * <p>The frozen items.</p>
+         * <p>The freeze items. Note: This parameter is actually required. If it is not provided, the service returns a 400 error.</p>
          * 
          * <strong>example:</strong>
          * <p>[]</p>
@@ -151,7 +151,7 @@ public class UpdateOssCheckResultsUnfreezeRequest extends Request {
         }
 
         /**
-         * <p>The start time. Format: YYYY-MM-DD HH:mm:ss.</p>
+         * <p>The start time. The format is YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-08-21 16:08:38</p>
@@ -163,7 +163,7 @@ public class UpdateOssCheckResultsUnfreezeRequest extends Request {
         }
 
         /**
-         * <p>The task ID.</p>
+         * <p>The task ID. Note: This parameter is actually required. If it is not provided, the service returns a 400 error.</p>
          * 
          * <strong>example:</strong>
          * <p>P_B6YRVD</p>

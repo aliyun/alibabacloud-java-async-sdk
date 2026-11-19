@@ -153,7 +153,7 @@ public class GetAiAppStatsRequest extends Request {
         }
 
         /**
-         * <p>The query condition.</p>
+         * <p>The query conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>

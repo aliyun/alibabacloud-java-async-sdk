@@ -160,7 +160,7 @@ public class GetPromptTestResultResponseBody extends TeaModel {
              * <p>The label description.</p>
              * 
              * <strong>example:</strong>
-             * <p>暴恐</p>
+             * <p>Terrorism</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -179,10 +179,10 @@ public class GetPromptTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reason why the model determined this risk level for the text.</p>
+             * <p>The reason why the model determines this risk level for the text.</p>
              * 
              * <strong>example:</strong>
-             * <p>该文本涉及暴力恐怖信息</p>
+             * <p>The text contains violent and terrorist content</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -265,7 +265,7 @@ public class GetPromptTestResultResponseBody extends TeaModel {
              * <p>The content.</p>
              * 
              * <strong>example:</strong>
-             * <p>测试文本</p>
+             * <p>Test text</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -281,7 +281,7 @@ public class GetPromptTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The risk level, which is returned based on the configured high and low risk scores. Valid values:</p>
+             * <p>The risk level. The value is returned based on the configured high and low risk scores. Valid values:</p>
              * <ul>
              * <li><p>high: High risk.</p>
              * </li>

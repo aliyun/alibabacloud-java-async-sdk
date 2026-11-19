@@ -255,7 +255,7 @@ public class CreatePreCheckRequest extends Request {
         } 
 
         /**
-         * <p>The filter configuration for each bucket. The value can be parsed as a JSON map. The key is the bucket name, and the value is the filter configuration, which includes prefix/suffix filters and a list of filter strings.</p>
+         * <p>The filter configuration for each bucket. This parameter can be parsed as a JSON map. The key is the bucket name, and the value is the filter configuration, which includes prefix and suffix filters and a list of filter characters.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;{\&quot;test-bucket1\&quot;:{\&quot;prefixFilterType\&quot;:\&quot;include\&quot;,\&quot;prefixFilters\&quot;:[\&quot;test1\&quot;]},\&quot;test-bucket2\&quot;:{\&quot;prefixFilterType\&quot;:\&quot;exclude\&quot;,\&quot;prefixFilters\&quot;:[\&quot;test2\&quot;]}}&quot;</p>
@@ -267,7 +267,7 @@ public class CreatePreCheckRequest extends Request {
         }
 
         /**
-         * <p>The OSS buckets.</p>
+         * <p>The buckets.</p>
          * 
          * <strong>example:</strong>
          * <p>[{\&quot;Bucket\&quot;:\&quot;bucket01-test\&quot;,\&quot;Region\&quot;:\&quot;cn-beijing\&quot;}]</p>
@@ -279,7 +279,7 @@ public class CreatePreCheckRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to deduplicate against historically scanned tasks.</p>
+         * <p>Specifies whether to deduplicate historical scan tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -291,7 +291,7 @@ public class CreatePreCheckRequest extends Request {
         }
 
         /**
-         * <p>The task end time. Format: YYYY-MM-DD HH:mm:ss.</p>
+         * <p>The end time of the task. Format: YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-12-18 10:08:00</p>
@@ -375,7 +375,7 @@ public class CreatePreCheckRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of items to scan.</p>
+         * <p>The scan limit.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -411,7 +411,7 @@ public class CreatePreCheckRequest extends Request {
         }
 
         /**
-         * <p>The task start time. Format: YYYY-MM-DD HH:mm:ss.</p>
+         * <p>The start time of the task. Format: YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-12-17 10:08:00</p>
@@ -426,7 +426,7 @@ public class CreatePreCheckRequest extends Request {
          * <p>The task name.</p>
          * 
          * <strong>example:</strong>
-         * <p>图片任务 20240709101602004</p>
+         * <p>Image task 20240709101602004</p>
          */
         public Builder taskName(String taskName) {
             this.putBodyParameter("TaskName", taskName);

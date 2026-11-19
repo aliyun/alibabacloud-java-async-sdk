@@ -152,7 +152,7 @@ public class ModifyFeatureConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message.</p>
+         * <p>The response message for the request.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -163,7 +163,7 @@ public class ModifyFeatureConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID. You can use this ID to locate issues.</p>
+         * <p>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>

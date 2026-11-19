@@ -89,7 +89,7 @@ public class UpdateAiAppScanStatusRequest extends Request {
         } 
 
         /**
-         * <p>The application ID.</p>
+         * <p>The application IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,8 +116,8 @@ public class UpdateAiAppScanStatusRequest extends Request {
         /**
          * <p>The status. Valid values:</p>
          * <ul>
-         * <li>enable: enabled</li>
-         * <li>disable: disabled</li>
+         * <li>enable: Enabled.</li>
+         * <li>disable: Disabled.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

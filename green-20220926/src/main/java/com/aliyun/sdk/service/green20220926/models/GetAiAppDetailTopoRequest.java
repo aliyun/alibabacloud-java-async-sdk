@@ -88,7 +88,7 @@ public class GetAiAppDetailTopoRequest extends Request {
         } 
 
         /**
-         * <p>The application ID that identifies a specific AI application.</p>
+         * <p>The ID of the AI application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

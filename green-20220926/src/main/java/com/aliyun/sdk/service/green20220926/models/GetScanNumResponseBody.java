@@ -106,7 +106,7 @@ public class GetScanNumResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The upper limit on the number.</p>
+         * <p>The upper limit.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

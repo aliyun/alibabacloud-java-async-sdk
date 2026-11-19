@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetRiskStatsRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Channel")
+    private String channel;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Classify")
     private String classify;
 
@@ -40,6 +44,7 @@ public class GetRiskStatsRequest extends Request {
 
     private GetRiskStatsRequest(Builder builder) {
         super(builder);
+        this.channel = builder.channel;
         this.classify = builder.classify;
         this.endTime = builder.endTime;
         this.regionId = builder.regionId;
@@ -58,6 +63,13 @@ public class GetRiskStatsRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return channel
+     */
+    public String getChannel() {
+        return this.channel;
     }
 
     /**
@@ -96,6 +108,7 @@ public class GetRiskStatsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetRiskStatsRequest, Builder> {
+        private String channel; 
         private String classify; 
         private String endTime; 
         private String regionId; 
@@ -108,6 +121,7 @@ public class GetRiskStatsRequest extends Request {
 
         private Builder(GetRiskStatsRequest request) {
             super(request);
+            this.channel = request.channel;
             this.classify = request.classify;
             this.endTime = request.endTime;
             this.regionId = request.regionId;
@@ -116,7 +130,19 @@ public class GetRiskStatsRequest extends Request {
         } 
 
         /**
-         * <p>The classification.</p>
+         * <p>The channel identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qoder</p>
+         */
+        public Builder channel(String channel) {
+            this.putQueryParameter("Channel", channel);
+            this.channel = channel;
+            return this;
+        }
+
+        /**
+         * <p>The category.</p>
          * 
          * <strong>example:</strong>
          * <p>guard-scene</p>

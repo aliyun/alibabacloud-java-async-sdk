@@ -149,7 +149,7 @@ public class GetCipStatsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The further description of the error code.</p>
+         * <p>The detailed description of the error code.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -160,7 +160,7 @@ public class GetCipStatsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
+         * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -171,7 +171,7 @@ public class GetCipStatsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>The success flag.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -870,7 +870,7 @@ public class GetCipStatsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The X value of the coordinate point.</p>
+             * <p>The X-axis value of the coordinate point.</p>
              */
             public Builder x(java.util.List<String> x) {
                 this.x = x;
@@ -878,7 +878,7 @@ public class GetCipStatsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Y value of the coordinate point.</p>
+             * <p>The Y-axis value of the coordinate point.</p>
              */
             public Builder y(java.util.List<Y> y) {
                 this.y = y;
@@ -1161,7 +1161,10 @@ public class GetCipStatsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total count by category.</p>
+             * <p>The categorized statistics of the total count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;porn&quot;:{&quot;totalCount&quot;:10},&quot;ad&quot;:{&quot;totalCount&quot;:2}}</p>
              */
             public Builder totalStat(java.util.Map<String, java.util.Map<String, ?>> totalStat) {
                 this.totalStat = totalStat;
@@ -1177,7 +1180,7 @@ public class GetCipStatsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The X value of the coordinate point.</p>
+             * <p>The X-axis value of the coordinate point.</p>
              */
             public Builder x(java.util.List<String> x) {
                 this.x = x;
@@ -1185,7 +1188,7 @@ public class GetCipStatsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Y value of the coordinate point.</p>
+             * <p>The Y-axis value of the coordinate point.</p>
              */
             public Builder y(java.util.List<DataY> y) {
                 this.y = y;

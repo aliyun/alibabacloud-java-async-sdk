@@ -93,7 +93,7 @@ public class CreateAnswerLibResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the proxy answer library.</p>
+         * <p>The ID of the fallback answer library.</p>
          * 
          * <strong>example:</strong>
          * <p>alxxxx</p>
@@ -104,7 +104,7 @@ public class CreateAnswerLibResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
+         * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -299,7 +299,7 @@ public class CreateAnswerLibResponseBody extends TeaModel {
              * <p>The internationalization key.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>answer.lib.create.success</p>
              */
             public Builder i18nKey(String i18nKey) {
                 this.i18nKey = i18nKey;
@@ -307,7 +307,7 @@ public class CreateAnswerLibResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of invalid proxy answers.</p>
+             * <p>The list of invalid fallback answers.</p>
              */
             public Builder illegalLengthSamples(java.util.List<String> illegalLengthSamples) {
                 this.illegalLengthSamples = illegalLengthSamples;
@@ -326,7 +326,7 @@ public class CreateAnswerLibResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the proxy answer library.</p>
+             * <p>The ID of the fallback answer library.</p>
              * 
              * <strong>example:</strong>
              * <p>alxxxx</p>
@@ -337,7 +337,7 @@ public class CreateAnswerLibResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task progress percentage.</p>
+             * <p>The progress percentage of the task.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -359,7 +359,7 @@ public class CreateAnswerLibResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of duplicate proxy answers.</p>
+             * <p>The list of duplicate fallback answers.</p>
              */
             public Builder repeatSamples(java.util.List<String> repeatSamples) {
                 this.repeatSamples = repeatSamples;

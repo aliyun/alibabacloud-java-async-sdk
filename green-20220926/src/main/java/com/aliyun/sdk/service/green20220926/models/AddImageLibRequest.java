@@ -87,10 +87,10 @@ public class AddImageLibRequest extends Request {
         } 
 
         /**
-         * <p>The remarks of the image library.</p>
+         * <p>The remarks for the image library.</p>
          * 
          * <strong>example:</strong>
-         * <p>色情内容黑名单图库</p>
+         * <p>Pornographic content blacklist image library</p>
          */
         public Builder comment(String comment) {
             this.putBodyParameter("Comment", comment);
@@ -102,7 +102,7 @@ public class AddImageLibRequest extends Request {
          * <p>The name of the image library.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试图库</p>
+         * <p>Test image library</p>
          */
         public Builder libName(String libName) {
             this.putBodyParameter("LibName", libName);

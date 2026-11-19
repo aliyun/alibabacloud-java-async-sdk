@@ -183,7 +183,7 @@ public class OssCheckResultListRequest extends Request {
         }
 
         /**
-         * <p>The end time. Format: YYYY-MM-DD HH:mm:ss.</p>
+         * <p>The end time. The format is YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-10-21 16:08:38</p>
@@ -195,7 +195,7 @@ public class OssCheckResultListRequest extends Request {
         }
 
         /**
-         * <p>The number of completed items.</p>
+         * <p>The number of completed tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>55</p>
@@ -219,7 +219,7 @@ public class OssCheckResultListRequest extends Request {
         }
 
         /**
-         * <p>The query condition.</p>
+         * <p>The query conditions. Note: This parameter is required. You must specify a valid JSON string that contains at least one key-value pair, such as {&quot;Labels&quot;:&quot;porn&quot;}. The scan results cannot be filtered properly without query conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -244,6 +244,9 @@ public class OssCheckResultListRequest extends Request {
 
         /**
          * <p>The sort field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;GmtCreate&quot;:&quot;desc&quot;}</p>
          */
         public Builder sort(java.util.Map<String, String> sort) {
             String sortShrink = shrink(sort, "Sort", "json");
@@ -253,7 +256,7 @@ public class OssCheckResultListRequest extends Request {
         }
 
         /**
-         * <p>The start time. Format: YYYY-MM-DD HH:mm:ss.</p>
+         * <p>The start time. The format is YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-08-21 16:08:38</p>

@@ -23,14 +23,23 @@ public class GetAiAppDetailResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AppName")
     private String appName;
 
+    @com.aliyun.core.annotation.NameInMap("Channel")
+    private String channel;
+
     @com.aliyun.core.annotation.NameInMap("Chart")
     private Chart chart;
+
+    @com.aliyun.core.annotation.NameInMap("Property")
+    private Property property;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("RiskEvents")
     private java.util.List<RiskEvents> riskEvents;
+
+    @com.aliyun.core.annotation.NameInMap("RiskStats")
+    private java.util.List<RiskStats> riskStats;
 
     @com.aliyun.core.annotation.NameInMap("Score")
     private Integer score;
@@ -41,9 +50,12 @@ public class GetAiAppDetailResponseBody extends TeaModel {
     private GetAiAppDetailResponseBody(Builder builder) {
         this.appId = builder.appId;
         this.appName = builder.appName;
+        this.channel = builder.channel;
         this.chart = builder.chart;
+        this.property = builder.property;
         this.requestId = builder.requestId;
         this.riskEvents = builder.riskEvents;
+        this.riskStats = builder.riskStats;
         this.score = builder.score;
         this.uid = builder.uid;
     }
@@ -75,10 +87,24 @@ public class GetAiAppDetailResponseBody extends TeaModel {
     }
 
     /**
+     * @return channel
+     */
+    public String getChannel() {
+        return this.channel;
+    }
+
+    /**
      * @return chart
      */
     public Chart getChart() {
         return this.chart;
+    }
+
+    /**
+     * @return property
+     */
+    public Property getProperty() {
+        return this.property;
     }
 
     /**
@@ -93,6 +119,13 @@ public class GetAiAppDetailResponseBody extends TeaModel {
      */
     public java.util.List<RiskEvents> getRiskEvents() {
         return this.riskEvents;
+    }
+
+    /**
+     * @return riskStats
+     */
+    public java.util.List<RiskStats> getRiskStats() {
+        return this.riskStats;
     }
 
     /**
@@ -112,9 +145,12 @@ public class GetAiAppDetailResponseBody extends TeaModel {
     public static final class Builder {
         private String appId; 
         private String appName; 
+        private String channel; 
         private Chart chart; 
+        private Property property; 
         private String requestId; 
         private java.util.List<RiskEvents> riskEvents; 
+        private java.util.List<RiskStats> riskStats; 
         private Integer score; 
         private String uid; 
 
@@ -124,15 +160,18 @@ public class GetAiAppDetailResponseBody extends TeaModel {
         private Builder(GetAiAppDetailResponseBody model) {
             this.appId = model.appId;
             this.appName = model.appName;
+            this.channel = model.channel;
             this.chart = model.chart;
+            this.property = model.property;
             this.requestId = model.requestId;
             this.riskEvents = model.riskEvents;
+            this.riskStats = model.riskStats;
             this.score = model.score;
             this.uid = model.uid;
         } 
 
         /**
-         * <p>appId。</p>
+         * <p>The AI application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>id-xxx</p>
@@ -143,7 +182,7 @@ public class GetAiAppDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The application name.</p>
+         * <p>The name of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>app-xxx</p>
@@ -154,10 +193,29 @@ public class GetAiAppDetailResponseBody extends TeaModel {
         }
 
         /**
+         * <p>The channel information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qoder</p>
+         */
+        public Builder channel(String channel) {
+            this.channel = channel;
+            return this;
+        }
+
+        /**
          * <p>The chart.</p>
          */
         public Builder chart(Chart chart) {
             this.chart = chart;
+            return this;
+        }
+
+        /**
+         * <p>The properties.</p>
+         */
+        public Builder property(Property property) {
+            this.property = property;
             return this;
         }
 
@@ -181,6 +239,14 @@ public class GetAiAppDetailResponseBody extends TeaModel {
         }
 
         /**
+         * <p>The risk statistics information.</p>
+         */
+        public Builder riskStats(java.util.List<RiskStats> riskStats) {
+            this.riskStats = riskStats;
+            return this;
+        }
+
+        /**
          * <p>The score.</p>
          * 
          * <strong>example:</strong>
@@ -192,7 +258,7 @@ public class GetAiAppDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>UID。</p>
+         * <p>The UID of the user.</p>
          * 
          * <strong>example:</strong>
          * <p>17726*****370735</p>
@@ -339,7 +405,7 @@ public class GetAiAppDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The X value of the coordinate point.</p>
+             * <p>The X-coordinate of the data point.</p>
              */
             public Builder x(java.util.List<String> x) {
                 this.x = x;
@@ -347,7 +413,7 @@ public class GetAiAppDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Y value of the coordinate point.</p>
+             * <p>The Y-coordinate of the data point.</p>
              */
             public Builder y(java.util.List<Y> y) {
                 this.y = y;
@@ -356,6 +422,135 @@ public class GetAiAppDetailResponseBody extends TeaModel {
 
             public Chart build() {
                 return new Chart(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetAiAppDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAiAppDetailResponseBody</p>
+     */
+    public static class Property extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Email")
+        private String email;
+
+        @com.aliyun.core.annotation.NameInMap("Hostname")
+        private String hostname;
+
+        @com.aliyun.core.annotation.NameInMap("Ip")
+        private String ip;
+
+        @com.aliyun.core.annotation.NameInMap("Mac")
+        private String mac;
+
+        private Property(Builder builder) {
+            this.email = builder.email;
+            this.hostname = builder.hostname;
+            this.ip = builder.ip;
+            this.mac = builder.mac;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Property create() {
+            return builder().build();
+        }
+
+        /**
+         * @return email
+         */
+        public String getEmail() {
+            return this.email;
+        }
+
+        /**
+         * @return hostname
+         */
+        public String getHostname() {
+            return this.hostname;
+        }
+
+        /**
+         * @return ip
+         */
+        public String getIp() {
+            return this.ip;
+        }
+
+        /**
+         * @return mac
+         */
+        public String getMac() {
+            return this.mac;
+        }
+
+        public static final class Builder {
+            private String email; 
+            private String hostname; 
+            private String ip; 
+            private String mac; 
+
+            private Builder() {
+            } 
+
+            private Builder(Property model) {
+                this.email = model.email;
+                this.hostname = model.hostname;
+                this.ip = model.ip;
+                this.mac = model.mac;
+            } 
+
+            /**
+             * <p>The email address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:xx@qoder.alibaba-inc.com">xx@qoder.alibaba-inc.com</a></p>
+             */
+            public Builder email(String email) {
+                this.email = email;
+                return this;
+            }
+
+            /**
+             * <p>The hostname.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx.local</p>
+             */
+            public Builder hostname(String hostname) {
+                this.hostname = hostname;
+                return this;
+            }
+
+            /**
+             * <p>The IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.xx.xx</p>
+             */
+            public Builder ip(String ip) {
+                this.ip = ip;
+                return this;
+            }
+
+            /**
+             * <p>The MAC address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx.xx.xx</p>
+             */
+            public Builder mac(String mac) {
+                this.mac = mac;
+                return this;
+            }
+
+            public Property build() {
+                return new Property(this);
             } 
 
         } 
@@ -441,7 +636,7 @@ public class GetAiAppDetailResponseBody extends TeaModel {
              * <p>The label description.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>The output content contains insulting or discriminatory remarks</p>
              */
             public Builder labelDesc(String labelDesc) {
                 this.labelDesc = labelDesc;
@@ -571,7 +766,7 @@ public class GetAiAppDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The risk event code.</p>
+             * <p>The code of the risk event.</p>
              * 
              * <strong>example:</strong>
              * <p>hit_xxx</p>
@@ -601,10 +796,10 @@ public class GetAiAppDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The risk event name.</p>
+             * <p>The name of the risk event.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>Insults and personal attacks</p>
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -614,8 +809,8 @@ public class GetAiAppDetailResponseBody extends TeaModel {
             /**
              * <p>The event status. Valid values:</p>
              * <ul>
-             * <li><strong>unhandled</strong>: Not handled.</li>
-             * <li><strong>resolved</strong>: Handled.</li>
+             * <li><strong>unhandled</strong>: unhandled</li>
+             * <li><strong>resolved</strong>: resolved</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -636,6 +831,111 @@ public class GetAiAppDetailResponseBody extends TeaModel {
 
             public RiskEvents build() {
                 return new RiskEvents(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetAiAppDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAiAppDetailResponseBody</p>
+     */
+    public static class RiskStats extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("RequestCount")
+        private Long requestCount;
+
+        @com.aliyun.core.annotation.NameInMap("RiskCount")
+        private Long riskCount;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        private RiskStats(Builder builder) {
+            this.requestCount = builder.requestCount;
+            this.riskCount = builder.riskCount;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RiskStats create() {
+            return builder().build();
+        }
+
+        /**
+         * @return requestCount
+         */
+        public Long getRequestCount() {
+            return this.requestCount;
+        }
+
+        /**
+         * @return riskCount
+         */
+        public Long getRiskCount() {
+            return this.riskCount;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private Long requestCount; 
+            private Long riskCount; 
+            private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(RiskStats model) {
+                this.requestCount = model.requestCount;
+                this.riskCount = model.riskCount;
+                this.type = model.type;
+            } 
+
+            /**
+             * <p>The number of requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
+             */
+            public Builder requestCount(Long requestCount) {
+                this.requestCount = requestCount;
+                return this;
+            }
+
+            /**
+             * <p>The number of risks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder riskCount(Long riskCount) {
+                this.riskCount = riskCount;
+                return this;
+            }
+
+            /**
+             * <p>The risk statistics type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>content_moderation</p>
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public RiskStats build() {
+                return new RiskStats(this);
             } 
 
         } 

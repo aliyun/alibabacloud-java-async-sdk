@@ -67,7 +67,7 @@ public class ConfirmAiAppScanResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response data.</p>
+         * <p>The returned data.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -78,7 +78,7 @@ public class ConfirmAiAppScanResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
+         * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>

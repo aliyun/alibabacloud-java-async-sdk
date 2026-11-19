@@ -155,10 +155,10 @@ public class ModifyFeatureConfigRequest extends Request {
         }
 
         /**
-         * <p>The description of the label.</p>
+         * <p>The tag description.</p>
          * 
          * <strong>example:</strong>
-         * <p>标签2</p>
+         * <p>Tag 2</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -167,10 +167,10 @@ public class ModifyFeatureConfigRequest extends Request {
         }
 
         /**
-         * <p>The label value. This value is user-defined.</p>
+         * <p>The custom tag value. Valid values for Field must be obtained by calling the GetFeatureConfig API, such as labels and <strong>option</strong>.</p>
          * 
          * <strong>example:</strong>
-         * <p><strong>config</strong></p>
+         * <p>labels</p>
          */
         public Builder field(String field) {
             this.putBodyParameter("Field", field);
@@ -215,7 +215,7 @@ public class ModifyFeatureConfigRequest extends Request {
         }
 
         /**
-         * <p>The type.</p>
+         * <p>The type. This parameter is actually required. If it is not provided, the API returns the error \&quot;type may not be empty\&quot;.</p>
          * 
          * <strong>example:</strong>
          * <p>custom_llm_template</p>

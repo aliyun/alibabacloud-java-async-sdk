@@ -158,7 +158,7 @@ public class ModifyCallbackRequest extends Request {
          * <p>The name.</p>
          * 
          * <strong>example:</strong>
-         * <p>回调通知</p>
+         * <p>Callback notification</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);

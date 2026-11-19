@@ -155,7 +155,7 @@ public class ListKeywordsRequest extends Request {
         }
 
         /**
-         * <p>The keyword library ID.</p>
+         * <p>The ID of the keyword library.</p>
          * 
          * <strong>example:</strong>
          * <p>custom_xxxx</p>
@@ -194,7 +194,7 @@ public class ListKeywordsRequest extends Request {
          * <p>The sort field.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;GmtCreate\&quot;:\&quot;desc\&quot;}</p>
+         * <p>{&quot;GmtCreate&quot;:&quot;desc&quot;}</p>
          */
         public Builder sort(java.util.Map<String, String> sort) {
             String sortShrink = shrink(sort, "Sort", "json");
@@ -204,9 +204,9 @@ public class ListKeywordsRequest extends Request {
         }
 
         /**
-         * <p>The keyword library code. Valid values:</p>
+         * <p>The library code.</p>
          * <ul>
-         * <li>desensitize: desensitization keyword library.</li>
+         * <li>desensitize desensitization library</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -222,7 +222,7 @@ public class ListKeywordsRequest extends Request {
          * <p>The keyword.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试词</p>
+         * <p>Test word</p>
          */
         public Builder word(String word) {
             this.putBodyParameter("Word", word);

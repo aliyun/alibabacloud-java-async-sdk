@@ -23,13 +23,23 @@ public class GetAiAppDetailRequest extends Request {
     private String appId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    private String endTime;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    private String startTime;
 
     private GetAiAppDetailRequest(Builder builder) {
         super(builder);
         this.appId = builder.appId;
+        this.endTime = builder.endTime;
         this.regionId = builder.regionId;
+        this.startTime = builder.startTime;
     }
 
     public static Builder builder() {
@@ -53,15 +63,31 @@ public class GetAiAppDetailRequest extends Request {
     }
 
     /**
+     * @return endTime
+     */
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
     }
 
+    /**
+     * @return startTime
+     */
+    public String getStartTime() {
+        return this.startTime;
+    }
+
     public static final class Builder extends Request.Builder<GetAiAppDetailRequest, Builder> {
         private String appId; 
+        private String endTime; 
         private String regionId; 
+        private String startTime; 
 
         private Builder() {
             super();
@@ -70,11 +96,13 @@ public class GetAiAppDetailRequest extends Request {
         private Builder(GetAiAppDetailRequest request) {
             super(request);
             this.appId = request.appId;
+            this.endTime = request.endTime;
             this.regionId = request.regionId;
+            this.startTime = request.startTime;
         } 
 
         /**
-         * <p>The ID of the AI application. This parameter is required.</p>
+         * <p>The AI application ID. This parameter is required. The AppId is derived from AI applications on integrated external AI platforms, such as Model Studio and Dify. Before calling this API, you must call InitAiAppScan to initiate the activation and then call ConfirmAiAppScan to confirm the activation of the AI application detection service. To obtain a valid AppId, you can call ListAiAppByPage to query the list of integrated applications.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +115,18 @@ public class GetAiAppDetailRequest extends Request {
         }
 
         /**
+         * <p>The end time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-01-02 00:00:00</p>
+         */
+        public Builder endTime(String endTime) {
+            this.putQueryParameter("EndTime", endTime);
+            this.endTime = endTime;
+            return this;
+        }
+
+        /**
          * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
@@ -95,6 +135,18 @@ public class GetAiAppDetailRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>The start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-01-01 00:00:00</p>
+         */
+        public Builder startTime(String startTime) {
+            this.putQueryParameter("StartTime", startTime);
+            this.startTime = startTime;
             return this;
         }
 

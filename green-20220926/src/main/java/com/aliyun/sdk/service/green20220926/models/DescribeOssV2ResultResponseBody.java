@@ -125,7 +125,7 @@ public class DescribeOssV2ResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -136,7 +136,7 @@ public class DescribeOssV2ResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
+         * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -243,7 +243,7 @@ public class DescribeOssV2ResultResponseBody extends TeaModel {
              * <p>The label description.</p>
              * 
              * <strong>example:</strong>
-             * <p>Political sensitivity</p>
+             * <p>Political content</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -348,7 +348,7 @@ public class DescribeOssV2ResultResponseBody extends TeaModel {
              * <p>The label description.</p>
              * 
              * <strong>example:</strong>
-             * <p>Political sensitivity</p>
+             * <p>Political content</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -712,7 +712,7 @@ public class DescribeOssV2ResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The OSS bucket.</p>
+             * <p>The bucket.</p>
              * 
              * <strong>example:</strong>
              * <p>buckect_test</p>
@@ -734,7 +734,7 @@ public class DescribeOssV2ResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The moderation modality type.</p>
+             * <p>The detection modality type.</p>
              * 
              * <strong>example:</strong>
              * <p>image</p>
@@ -745,7 +745,7 @@ public class DescribeOssV2ResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether automatic freezing is configured.</p>
+             * <p>Specifies whether automatic freezing is configured.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -778,7 +778,7 @@ public class DescribeOssV2ResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The label details, corresponding to labels.</p>
+             * <p>The label details, which correspond to labels.</p>
              */
             public Builder labelDetails(java.util.List<LabelDetails> labelDetails) {
                 this.labelDetails = labelDetails;
@@ -786,7 +786,7 @@ public class DescribeOssV2ResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of labels2, corresponding to labels2.</p>
+             * <p>The label 2 details, which correspond to labels2.</p>
              */
             public Builder labelDetails2(java.util.List<LabelDetails2> labelDetails2) {
                 this.labelDetails2 = labelDetails2;
@@ -810,7 +810,7 @@ public class DescribeOssV2ResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The manual disposition status.</p>
+             * <p>The manual handling status.</p>
              * 
              * <strong>example:</strong>
              * <p>FREEZE</p>
@@ -821,7 +821,7 @@ public class DescribeOssV2ResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The disposition time. Format: yyyy-MM-dd HH:mm:ss.</p>
+             * <p>The handling time. Format: yyyy-MM-dd HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-08-09 12:00:00</p>
@@ -832,10 +832,10 @@ public class DescribeOssV2ResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operator who performed the disposition.</p>
+             * <p>The operator.</p>
              * 
              * <strong>example:</strong>
-             * <p>xx</p>
+             * <p>Sample reviewer</p>
              */
             public Builder manualOperator(String manualOperator) {
                 this.manualOperator = manualOperator;
@@ -898,7 +898,7 @@ public class DescribeOssV2ResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The audio or text risk level.</p>
+             * <p>The audio and text risk levels.</p>
              * 
              * <strong>example:</strong>
              * <p>none</p>
@@ -920,7 +920,7 @@ public class DescribeOssV2ResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Service code。</p>
+             * <p>The service code.</p>
              * 
              * <strong>example:</strong>
              * <p>baselineCheck</p>
@@ -931,7 +931,7 @@ public class DescribeOssV2ResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The automatic freeze operation performed by the system.</p>
+             * <p>The automatic system freeze operation.</p>
              * 
              * <strong>example:</strong>
              * <p>COPY</p>

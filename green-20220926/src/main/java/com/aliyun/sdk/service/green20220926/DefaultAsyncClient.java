@@ -137,6 +137,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Adds multiple images to an image library. Before calling this operation, call GetUploadInfo to obtain the Object Storage Service (OSS) upload credentials (Host, Policy, Signature, SecurityToken, and Key). Use the credentials to upload images to the returned Host. Finally, pass the Key value returned by GetUploadInfo as the ImgUrl parameter to this operation.</p>
+     * 
      * @param request the request parameters of AddImages2Lib  AddImages2LibRequest
      * @return AddImages2LibResponse
      */
@@ -354,11 +357,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before using this operation, complete the following steps:</p>
+     * <p>Before you call this operation, make sure that the following conditions are met:</p>
      * <ol>
-     * <li><a href="https://common-buy.aliyun.com/?commodityCode=lvwang_cip_public_cn">Activate Content Moderation Enhanced Edition</a>.</li>
-     * <li>Understand the <a href="https://help.aliyun.com/document_detail/467826.html?#section-h06-qz6-1pt">billing methods and pricing</a> of Image Moderation Enhanced Edition.</li>
-     * <li>For more information about API operations and parameters, see <a href="https://help.aliyun.com/document_detail/467829.html">API reference</a>.</li>
+     * <li>You have activated <a href="https://common-buy.aliyun.com/?commodityCode=lvwang_cip_public_cn">Content Moderation Enhanced Edition</a>.</li>
+     * <li>You fully understand the <a href="https://help.aliyun.com/document_detail/467826.html?#section-h06-qz6-1pt">billing methods and pricing</a> of Image Moderation Enhanced Edition.</li>
+     * <li>For more information about how to use the API operation and its parameters, refer to the <a href="https://help.aliyun.com/document_detail/467829.html">API reference</a>.</li>
      * </ol>
      * 
      * @param request the request parameters of CreateImageLib  CreateImageLibRequest
@@ -596,7 +599,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>API operation is used together with the Image Moderation Enhanced API. After you call the Image Moderation Enhanced API, you can call API operation to obtain more moderation details. API operation is free of charge.</p>
+     * <p>This API operation must be used in conjunction with the Image Moderation Enhanced Edition API. After calling the Image Moderation Enhanced Edition API, you can call this operation to obtain more detection information. This API operation is free of charge.</p>
      * 
      * @param request the request parameters of DescribeOssV2Result  DescribeOssV2ResultRequest
      * @return DescribeOssV2ResultResponse
@@ -796,6 +799,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>AI applications must be created through the Model Studio or Dify platform. Call chain: ListAiAppByPage (to obtain the AppId) → GetAiAppDetailTopo (to obtain the NodeId, NodeName, and NodeType) → GetAiAppNodeDetail.</p>
+     * 
      * @param request the request parameters of GetAiAppNodeDetail  GetAiAppNodeDetailRequest
      * @return GetAiAppNodeDetailResponse
      */
@@ -1156,6 +1162,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the freezing disposal results of OSS detection tasks.
+     * Prerequisites: Before calling this operation, you must call CreatStockOssCheckTask to create an OSS inventory detection task and generate freezing results. Then, call GetStockOssCheckTasksList to obtain an available TaskId and pass it as a query parameter to this operation.</p>
+     * 
      * @param request the request parameters of GetOssCheckFreezeResult  GetOssCheckFreezeResultRequest
      * @return GetOssCheckFreezeResultResponse
      */
@@ -1427,7 +1437,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>API operation is used together with the enhanced image moderation API. After you call the enhanced image moderation API, call API operation to retrieve additional detection information. API operation is free of charge.</p>
+     * <p>API operation must be used in conjunction with the enhanced image moderation API. After you call the enhanced image moderation API, you can call API operation to retrieve additional detection information. API operation is free of charge.</p>
      * 
      * @param request the request parameters of GetTuneProposalById  GetTuneProposalByIdRequest
      * @return GetTuneProposalByIdResponse
@@ -1818,7 +1828,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation is free of charge. Set the query interval to 30 seconds (that is, query results 30 seconds after you submit an asynchronous detection task). The maximum interval cannot exceed 24 hours. Otherwise, the results are automatically deleted.</p>
+     * <p>This API operation is free of charge. Set the query interval to 30 seconds (that is, query the results 30 seconds after submitting the asynchronous detection task). The maximum interval must not exceed 24 hours. Otherwise, the results are automatically deleted.</p>
      * 
      * @param request the request parameters of MarkOssV2Result  MarkOssV2ResultRequest
      * @return MarkOssV2ResultResponse
@@ -1910,6 +1920,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Prerequisites: Before calling ModifyFeatureConfig, call GetFeatureConfig to query valid Type/Field combinations and their corresponding Config structures. Submit modifications based on the query results to avoid configuration update failures caused by invalid combinations.</p>
+     * 
      * @param request the request parameters of ModifyFeatureConfig  ModifyFeatureConfigRequest
      * @return ModifyFeatureConfigResponse
      */

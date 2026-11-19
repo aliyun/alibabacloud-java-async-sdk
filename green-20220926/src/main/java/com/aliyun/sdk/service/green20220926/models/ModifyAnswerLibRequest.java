@@ -87,7 +87,7 @@ public class ModifyAnswerLibRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the proxy response library.</p>
+         * <p>The ID of the fallback library.</p>
          * 
          * <strong>example:</strong>
          * <p>custom_xxxx</p>
@@ -102,7 +102,7 @@ public class ModifyAnswerLibRequest extends Request {
          * <p>The name of the library.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试库</p>
+         * <p>Test library</p>
          */
         public Builder libName(String libName) {
             this.putQueryParameter("LibName", libName);

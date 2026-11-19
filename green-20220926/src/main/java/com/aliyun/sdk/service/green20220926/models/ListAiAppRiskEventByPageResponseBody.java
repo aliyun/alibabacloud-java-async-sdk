@@ -162,7 +162,7 @@ public class ListAiAppRiskEventByPageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token for the next page. An empty value indicates that no more pages exist.</p>
+         * <p>The token for the next page. An empty value indicates that there are no more pages.</p>
          * 
          * <strong>example:</strong>
          * <p>1a320d468c75e987f297484532c16e34d0ab6e7e43f8b73d</p>
@@ -173,7 +173,7 @@ public class ListAiAppRiskEventByPageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -468,7 +468,7 @@ public class ListAiAppRiskEventByPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The channel source.</p>
+             * <p>The source channel.</p>
              * 
              * <strong>example:</strong>
              * <p>bailian</p>
@@ -479,7 +479,7 @@ public class ListAiAppRiskEventByPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the event was resolved. Format: YYYY-MM-DD HH:mm:ss.</p>
+             * <p>The time when the event processing was completed. The format is YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-01-10 11:42:31</p>
@@ -490,7 +490,7 @@ public class ListAiAppRiskEventByPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The event code that identifies the type or category of the event.</p>
+             * <p>The code of the event, which identifies the type or category of the event.</p>
              * 
              * <strong>example:</strong>
              * <p>de_aamexg3015</p>
@@ -501,10 +501,10 @@ public class ListAiAppRiskEventByPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The detailed description of the risk event.</p>
+             * <p>The description of the event, which details the content of the risk event.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>Sensitive information detected in model output</p>
              */
             public Builder eventDesc(String eventDesc) {
                 this.eventDesc = eventDesc;
@@ -512,10 +512,10 @@ public class ListAiAppRiskEventByPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The detailed description of the risk event in English.</p>
+             * <p>The English description of the event, which details the content of the risk event.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>Sensitive information detected in model output</p>
              */
             public Builder eventDescEn(String eventDescEn) {
                 this.eventDescEn = eventDescEn;
@@ -523,7 +523,7 @@ public class ListAiAppRiskEventByPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The event ID that uniquely identifies a risk event.</p>
+             * <p>The ID of the event, which uniquely identifies a risk event.</p>
              * 
              * <strong>example:</strong>
              * <p>e-a7gvnv3vid536dfxj</p>
@@ -534,7 +534,7 @@ public class ListAiAppRiskEventByPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name that briefly describes the risk event.</p>
+             * <p>The name of the event, which provides a brief description of the risk event.</p>
              * 
              * <strong>example:</strong>
              * <p>ALL</p>
@@ -545,7 +545,7 @@ public class ListAiAppRiskEventByPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the event was handled. Format: YYYY-MM-DD HH:mm:ss.</p>
+             * <p>The time when the event was processed. The format is YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-01-10 11:42:31</p>
@@ -556,7 +556,7 @@ public class ListAiAppRiskEventByPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The label used to tag or categorize the event.</p>
+             * <p>The label used to mark or classify the event.</p>
              * 
              * <strong>example:</strong>
              * <p>label-03</p>
@@ -567,10 +567,10 @@ public class ListAiAppRiskEventByPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The detailed description of the label.</p>
+             * <p>The description of the label, which provides detailed information about the label.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxxx</p>
+             * <p>Sensitive data label</p>
              */
             public Builder labelDesc(String labelDesc) {
                 this.labelDesc = labelDesc;
@@ -578,7 +578,7 @@ public class ListAiAppRiskEventByPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The risk level that indicates the severity of the event, such as high, medium, or low.</p>
+             * <p>The risk level, which indicates the severity of the event, such as high, medium, or low.</p>
              * 
              * <strong>example:</strong>
              * <p>normal</p>
@@ -589,7 +589,7 @@ public class ListAiAppRiskEventByPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the event occurred. Format: YYYY-MM-DD HH:mm:ss.</p>
+             * <p>The time when the event started. The format is YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-12-21 15:30:19</p>
@@ -600,7 +600,7 @@ public class ListAiAppRiskEventByPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The event status that indicates the current processing state, such as pending or resolved.</p>
+             * <p>The status of the event, which indicates the processing status of the current event, such as pending or processed.</p>
              * 
              * <strong>example:</strong>
              * <p>resolved</p>
@@ -611,7 +611,7 @@ public class ListAiAppRiskEventByPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The event type that indicates the category of the risk event, such as security or performance.</p>
+             * <p>The event type, which indicates the category of the risk event, such as security or performance.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>

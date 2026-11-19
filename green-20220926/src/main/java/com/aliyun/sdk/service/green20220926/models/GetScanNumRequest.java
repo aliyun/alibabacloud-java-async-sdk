@@ -87,7 +87,7 @@ public class GetScanNumRequest extends Request {
         } 
 
         /**
-         * <p>The storage space.</p>
+         * <p>The buckets. Note: This parameter is required. If it is not provided, the service returns a 400 error.</p>
          * 
          * <strong>example:</strong>
          * <p>tmpsample</p>

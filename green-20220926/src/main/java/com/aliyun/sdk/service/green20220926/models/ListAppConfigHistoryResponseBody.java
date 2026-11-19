@@ -96,7 +96,7 @@ public class ListAppConfigHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID assigned by the backend to uniquely identify a request. It can be used to troubleshoot issues.</p>
+         * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -269,7 +269,7 @@ public class ListAppConfigHistoryResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>App ID。</p>
+             * <p>The app ID.</p>
              * 
              * <strong>example:</strong>
              * <p>txt_check_agent_01</p>
@@ -280,7 +280,7 @@ public class ListAppConfigHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p><strong>[Deprecated]</strong> The categorization.</p>
+             * <p><strong>[Deprecated]</strong> The category.</p>
              * 
              * <strong>example:</strong>
              * <p>guard-scene</p>
@@ -539,7 +539,7 @@ public class ListAppConfigHistoryResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>App ID。</p>
+             * <p>The app ID.</p>
              * 
              * <strong>example:</strong>
              * <p>txt_check_agent_01</p>
@@ -550,7 +550,7 @@ public class ListAppConfigHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p><strong>[Deprecated]</strong> The categorization.</p>
+             * <p><strong>[Deprecated]</strong> The category.</p>
              * 
              * <strong>example:</strong>
              * <p>guard-scene</p>

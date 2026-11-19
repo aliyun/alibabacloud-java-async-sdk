@@ -209,7 +209,7 @@ public class GetAiAppDetailTopoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The node category.</p>
+             * <p>The node category. Valid values:</p>
              * <ul>
              * <li><p>LLM</p>
              * </li>
@@ -230,7 +230,7 @@ public class GetAiAppDetailTopoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node ID.</p>
+             * <p>The ID of the node.</p>
              * 
              * <strong>example:</strong>
              * <p>idxxx</p>
@@ -241,7 +241,7 @@ public class GetAiAppDetailTopoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node name.</p>
+             * <p>The name of the node.</p>
              * 
              * <strong>example:</strong>
              * <p>namexxx</p>
@@ -254,9 +254,9 @@ public class GetAiAppDetailTopoResponseBody extends TeaModel {
             /**
              * <p>The node type. Valid values:</p>
              * <ul>
-             * <li><strong>APP</strong>: end-to-end agent.</li>
-             * <li><strong>MODEL</strong>: large language model.</li>
-             * <li><strong>TOOL</strong>: tool.</li>
+             * <li><strong>APP</strong>: The full agent trace.</li>
+             * <li><strong>MODEL</strong>: The large language model.</li>
+             * <li><strong>TOOL</strong>: The tool.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -268,7 +268,7 @@ public class GetAiAppDetailTopoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The request count.</p>
+             * <p>The number of requests.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -290,7 +290,7 @@ public class GetAiAppDetailTopoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The alert count.</p>
+             * <p>The number of alerts.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>

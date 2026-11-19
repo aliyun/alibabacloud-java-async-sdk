@@ -117,7 +117,7 @@ public class ExportTextScanResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The export result.</p>
+         * <p>The export results.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://oss-cip-shanghai.oss-cn-shanghai.aliyuncs.com/portal_data/production/scanResult/text/textScanResult_aliow2MAdWXCakCxlitVY8Lnn-1A9KEw.xlsx">https://oss-cip-shanghai.oss-cn-shanghai.aliyuncs.com/portal_data/production/scanResult/text/textScanResult_aliow2MAdWXCakCxlitVY8Lnn-1A9KEw.xlsx</a></p>
@@ -128,7 +128,7 @@ public class ExportTextScanResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The description of the error code.</p>
+         * <p>The detailed description of the error code.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -139,7 +139,7 @@ public class ExportTextScanResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
+         * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -150,7 +150,7 @@ public class ExportTextScanResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>The success indicator.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>

@@ -132,7 +132,7 @@ public class QueryAnswerSampleByPageRequest extends Request {
          * <p>The answer.</p>
          * 
          * <strong>example:</strong>
-         * <p>答案</p>
+         * <p>Answer</p>
          */
         public Builder answer(String answer) {
             this.putQueryParameter("Answer", answer);
@@ -153,7 +153,7 @@ public class QueryAnswerSampleByPageRequest extends Request {
         }
 
         /**
-         * <p>The ID of the proxy answer library.</p>
+         * <p>The ID of the fallback answer library. Note: This parameter is required. If you do not specify this parameter, the API returns a 400 error with the message &quot;libId may not be empty&quot;.</p>
          * 
          * <strong>example:</strong>
          * <p>custom_xxxx</p>
@@ -190,6 +190,9 @@ public class QueryAnswerSampleByPageRequest extends Request {
 
         /**
          * <p>The sort field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;field&quot;:&quot;GmtCreate&quot;,&quot;order&quot;:&quot;desc&quot;}</p>
          */
         public Builder sort(java.util.Map<String, String> sort) {
             String sortShrink = shrink(sort, "Sort", "json");

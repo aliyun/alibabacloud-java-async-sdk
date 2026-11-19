@@ -115,7 +115,7 @@ public class GetAppConfigRequest extends Request {
         } 
 
         /**
-         * <p>Agent ID。</p>
+         * <p>The agent ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ag.abcxxx</p>
@@ -127,7 +127,7 @@ public class GetAppConfigRequest extends Request {
         }
 
         /**
-         * <p>App ID。</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>txt_check_pro_agent_01</p>
@@ -163,7 +163,7 @@ public class GetAppConfigRequest extends Request {
         }
 
         /**
-         * <p>The resource type.</p>
+         * <p>The resource type. This parameter is required. If it is not provided, the service returns a 400 error.</p>
          * 
          * <strong>example:</strong>
          * <p>agent_text</p>

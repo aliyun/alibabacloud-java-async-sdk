@@ -59,7 +59,7 @@ public class GetOssCheckTaskInfoRequest extends Request {
         } 
 
         /**
-         * <p>The parent task ID.</p>
+         * <p>The ID of the parent task.</p>
          * 
          * <strong>example:</strong>
          * <p>P_AAA**</p>

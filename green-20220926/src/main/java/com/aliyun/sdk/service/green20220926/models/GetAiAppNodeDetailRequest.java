@@ -160,7 +160,7 @@ public class GetAiAppNodeDetailRequest extends Request {
         }
 
         /**
-         * <p>The end time of the query. Format: yyyy-MM-dd HH:mm:ss.</p>
+         * <p>The end time of the query. Specify the time in the yyyy-MM-dd HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-01-02 16:08:38</p>
@@ -189,7 +189,7 @@ public class GetAiAppNodeDetailRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>node-nanexxx</p>
          */
         public Builder nodeName(String nodeName) {
             this.putQueryParameter("NodeName", nodeName);
@@ -223,7 +223,7 @@ public class GetAiAppNodeDetailRequest extends Request {
         }
 
         /**
-         * <p>The start time of the query. Format: yyyy-MM-dd HH:mm:ss.</p>
+         * <p>The start time of the query. Specify the time in the yyyy-MM-dd HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-01-01 16:08:38</p>

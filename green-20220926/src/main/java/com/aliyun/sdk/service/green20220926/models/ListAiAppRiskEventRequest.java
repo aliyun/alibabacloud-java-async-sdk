@@ -102,7 +102,7 @@ public class ListAiAppRiskEventRequest extends Request {
         } 
 
         /**
-         * <p>The application ID. This parameter is required.</p>
+         * <p>The ID of the application. This parameter is required.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

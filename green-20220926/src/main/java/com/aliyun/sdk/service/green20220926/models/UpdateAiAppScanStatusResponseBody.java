@@ -93,7 +93,7 @@ public class UpdateAiAppScanStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of application IDs that failed.</p>
+         * <p>The list of failed application IDs.</p>
          */
         public Builder failedAppIds(java.util.List<String> failedAppIds) {
             this.failedAppIds = failedAppIds;
@@ -114,12 +114,9 @@ public class UpdateAiAppScanStatusResponseBody extends TeaModel {
         /**
          * <p>The status. Valid values:</p>
          * <ul>
-         * <li><p>SUCCESS: Succeeded.</p>
-         * </li>
-         * <li><p>PARTIAL_SUCCESS: Partially succeeded.</p>
-         * </li>
-         * <li><p>FAILED: Failed.</p>
-         * </li>
+         * <li>SUCCESS: Success.</li>
+         * <li>PARTIAL_SUCCESS: Partial success.</li>
+         * <li>FAILED: Failure.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -131,7 +128,7 @@ public class UpdateAiAppScanStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of application IDs that succeeded.</p>
+         * <p>The list of successful application IDs.</p>
          */
         public Builder successAppIds(java.util.List<String> successAppIds) {
             this.successAppIds = successAppIds;

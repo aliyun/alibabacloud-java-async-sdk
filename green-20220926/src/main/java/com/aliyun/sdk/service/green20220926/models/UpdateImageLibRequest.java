@@ -118,7 +118,7 @@ public class UpdateImageLibRequest extends Request {
          * <p>The remarks of the image library.</p>
          * 
          * <strong>example:</strong>
-         * <p>备注</p>
+         * <p>Remarks</p>
          */
         public Builder comment(String comment) {
             this.putBodyParameter("Comment", comment);
@@ -127,7 +127,7 @@ public class UpdateImageLibRequest extends Request {
         }
 
         /**
-         * <p>The review-free configuration.</p>
+         * <p>The moderation-free configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -154,7 +154,7 @@ public class UpdateImageLibRequest extends Request {
          * <p>The name of the image library.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试图库</p>
+         * <p>Test image library</p>
          */
         public Builder libName(String libName) {
             this.putBodyParameter("LibName", libName);

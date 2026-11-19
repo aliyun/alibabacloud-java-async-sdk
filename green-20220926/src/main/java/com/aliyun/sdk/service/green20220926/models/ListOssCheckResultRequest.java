@@ -195,7 +195,7 @@ public class ListOssCheckResultRequest extends Request {
         }
 
         /**
-         * <p>The number of completed tasks.</p>
+         * <p>The number of completed items.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -219,7 +219,7 @@ public class ListOssCheckResultRequest extends Request {
         }
 
         /**
-         * <p>The search condition.</p>
+         * <p>The search conditions. This parameter is required. You must pass a JSON string that contains a valid TaskId, such as {&quot;TaskId&quot;:&quot;P_11TL5T&quot;}. You can obtain the TaskId by calling the GetStockOssCheckTasksList operation. If this parameter is not provided, the API returns a 400 error with the error code oss.check.task.not.exists.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;TaskId&quot;:&quot;P_11TL5T&quot;}</p>
@@ -244,6 +244,9 @@ public class ListOssCheckResultRequest extends Request {
 
         /**
          * <p>The sort field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;StartTime&quot;:&quot;desc&quot;}</p>
          */
         public Builder sort(java.util.Map<String, String> sort) {
             String sortShrink = shrink(sort, "Sort", "json");

@@ -127,10 +127,10 @@ public class CreateCallbackRequest extends Request {
         }
 
         /**
-         * <p>The name of the scheme.</p>
+         * <p>The scheme name.</p>
          * 
          * <strong>example:</strong>
-         * <p>消息通知1</p>
+         * <p>MessageNotification1</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -151,7 +151,7 @@ public class CreateCallbackRequest extends Request {
         }
 
         /**
-         * <p>The moderation result.</p>
+         * <p>The moderation results.</p>
          * 
          * <strong>example:</strong>
          * <p>all</p>

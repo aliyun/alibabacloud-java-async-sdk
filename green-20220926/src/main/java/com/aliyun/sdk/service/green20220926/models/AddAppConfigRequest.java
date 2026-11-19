@@ -177,10 +177,10 @@ public class AddAppConfigRequest extends Request {
         }
 
         /**
-         * <p>appId</p>
+         * <p>The system application ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>txt_check_pro_agent_01</p>
          */
         public Builder sysAppId(String sysAppId) {
             this.putQueryParameter("SysAppId", sysAppId);

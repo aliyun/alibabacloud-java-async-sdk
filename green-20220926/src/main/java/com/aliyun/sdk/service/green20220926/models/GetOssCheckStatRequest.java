@@ -127,7 +127,7 @@ public class GetOssCheckStatRequest extends Request {
         }
 
         /**
-         * <p>The end time. Format: YYYY-MM-DD HH:mm:ss.</p>
+         * <p>The end time. The format is YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-08-24 10:01:55</p>
@@ -139,7 +139,7 @@ public class GetOssCheckStatRequest extends Request {
         }
 
         /**
-         * <p>The parent task ID.</p>
+         * <p>The ID of the parent task.</p>
          * 
          * <strong>example:</strong>
          * <p>P_UNHBH</p>
@@ -163,7 +163,7 @@ public class GetOssCheckStatRequest extends Request {
         }
 
         /**
-         * <p>The start time. Format: YYYY-MM-DD HH:mm:ss.</p>
+         * <p>The start time. The format is YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-08-11 09:00:19</p>

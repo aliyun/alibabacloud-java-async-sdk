@@ -215,7 +215,7 @@ public class ExportCipStatsRequest extends Request {
         }
 
         /**
-         * <p>The end time of the query. Format: yyyy-MM-dd HH:mm:ss.</p>
+         * <p>The end time of the query, in the yyyy-MM-dd HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-04-16 09:00:00</p>
@@ -246,7 +246,7 @@ public class ExportCipStatsRequest extends Request {
          * <p>The task label to export.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx</p>
+         * <p>politics</p>
          */
         public Builder label(String label) {
             this.putBodyParameter("Label", label);
@@ -255,7 +255,7 @@ public class ExportCipStatsRequest extends Request {
         }
 
         /**
-         * <p>The query condition.</p>
+         * <p>The query conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;Classify&quot;:&quot;guard-scene&quot;}</p>
@@ -303,7 +303,7 @@ public class ExportCipStatsRequest extends Request {
         }
 
         /**
-         * <p>The start time of the query. Format: yyyy-MM-dd HH:mm:ss.</p>
+         * <p>The start time of the query, in the yyyy-MM-dd HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-04-15 09:00:00</p>
@@ -329,11 +329,11 @@ public class ExportCipStatsRequest extends Request {
         /**
          * <p>The type. Valid values:</p>
          * <ul>
-         * <li><strong>cip</strong>: Content Moderation invoke volume statistics.</li>
+         * <li><strong>cip</strong>: Content Moderation usage statistics.</li>
          * <li><strong>risk_level</strong>: Content Moderation security risk level statistics.</li>
-         * <li><strong>content_moderation</strong>: AI Safety Guardrail content compliance risk level and tag statistics.</li>
-         * <li><strong>sensitive_data</strong>: AI Safety Guardrail sensitive data risk level and tag statistics.</li>
-         * <li><strong>prompt_attack</strong>: AI Safety Guardrail prompt risk level and tag statistics.</li>
+         * <li><strong>content_moderation</strong>: AI security guardrail content compliance risk level and tag statistics.</li>
+         * <li><strong>sensitive_data</strong>: AI security guardrail sensitive data risk level and tag statistics.</li>
+         * <li><strong>prompt_attack</strong>: AI security guardrail prompt risk level and tag statistics.</li>
          * </ul>
          * 
          * <strong>example:</strong>

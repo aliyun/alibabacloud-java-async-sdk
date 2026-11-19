@@ -148,7 +148,7 @@ public class GetAiAppTraceDetailResponseBody extends TeaModel {
          * <p>The AI analysis result.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxx</p>
+         * <p>This request triggered a politically sensitive content risk. The model confidence is high. Manual review is recommended</p>
          */
         public Builder analysis(String analysis) {
             this.analysis = analysis;
@@ -167,7 +167,7 @@ public class GetAiAppTraceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The application name.</p>
+         * <p>The name of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>appxxx</p>
@@ -178,7 +178,7 @@ public class GetAiAppTraceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The application channel.</p>
+         * <p>The channel of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>bailian</p>
@@ -197,7 +197,7 @@ public class GetAiAppTraceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -208,7 +208,7 @@ public class GetAiAppTraceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The trace ID, which is used to correlate and track alert events.</p>
+         * <p>The trace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0abb7ee117615311812886711e0a15</p>
@@ -219,7 +219,7 @@ public class GetAiAppTraceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The alert time. Format: YYYY-MM-DD HH:mm:ss.</p>
+         * <p>The time when the alert was triggered. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-01-01 16:08:38</p>
@@ -325,7 +325,7 @@ public class GetAiAppTraceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The label name.</p>
+             * <p>The name of the label.</p>
              * 
              * <strong>example:</strong>
              * <p>porn</p>
@@ -336,10 +336,10 @@ public class GetAiAppTraceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The label description.</p>
+             * <p>The description of the label.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>Politically sensitive content</p>
              */
             public Builder labelDesc(String labelDesc) {
                 this.labelDesc = labelDesc;

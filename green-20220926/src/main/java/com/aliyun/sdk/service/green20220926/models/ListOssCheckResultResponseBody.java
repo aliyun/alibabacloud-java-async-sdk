@@ -136,7 +136,7 @@ public class ListOssCheckResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
+         * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -219,7 +219,7 @@ public class ListOssCheckResultResponseBody extends TeaModel {
              * <p>The description of the label.</p>
              * 
              * <strong>example:</strong>
-             * <p>影音娱乐类</p>
+             * <p>Audio and video entertainment</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -227,7 +227,7 @@ public class ListOssCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The label hit by the video frame.</p>
+             * <p>The matched label for video frames.</p>
              * 
              * <strong>example:</strong>
              * <p>logo_streaming</p>
@@ -300,7 +300,7 @@ public class ListOssCheckResultResponseBody extends TeaModel {
              * <p>The description of the label.</p>
              * 
              * <strong>example:</strong>
-             * <p>辱骂内容</p>
+             * <p>Abusive content</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -308,7 +308,7 @@ public class ListOssCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The label hit by the audio.</p>
+             * <p>The matched label for audio.</p>
              * 
              * <strong>example:</strong>
              * <p>abuse</p>
@@ -664,7 +664,7 @@ public class ListOssCheckResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The OSS bucket.</p>
+             * <p>The bucket.</p>
              * 
              * <strong>example:</strong>
              * <p>tmp</p>
@@ -686,7 +686,7 @@ public class ListOssCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The audio and video detection type.</p>
+             * <p>The audio and video moderation type.</p>
              * 
              * <strong>example:</strong>
              * <p>audio</p>
@@ -730,7 +730,7 @@ public class ListOssCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the image.</p>
+             * <p>The image URL.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://www.aliyuncs.com/test.jpg">http://www.aliyuncs.com/test.jpg</a></p>
@@ -741,7 +741,7 @@ public class ListOssCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the task is copied.</p>
+             * <p>Indicates whether the item is copied.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -763,7 +763,7 @@ public class ListOssCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of labels hit by video frames.</p>
+             * <p>The list of matched labels for video frames.</p>
              */
             public Builder labelDetails(java.util.List<LabelDetails> labelDetails) {
                 this.labelDetails = labelDetails;
@@ -771,7 +771,7 @@ public class ListOssCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of labels hit by video audio.</p>
+             * <p>The list of matched labels for video audio.</p>
              */
             public Builder labelDetails2(java.util.List<LabelDetails2> labelDetails2) {
                 this.labelDetails2 = labelDetails2;
@@ -806,7 +806,7 @@ public class ListOssCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the error code.</p>
+             * <p>The detailed description of the error code.</p>
              * 
              * <strong>example:</strong>
              * <p>OK</p>
@@ -886,7 +886,7 @@ public class ListOssCheckResultResponseBody extends TeaModel {
              * <p>The service name.</p>
              * 
              * <strong>example:</strong>
-             * <p>服务名称</p>
+             * <p>Service name</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;

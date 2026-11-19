@@ -130,7 +130,7 @@ public class ListAiAppWarningByPageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The extension field.</p>
+         * <p>The extended fields.</p>
          */
         public Builder ext(Ext ext) {
             this.ext = ext;
@@ -138,7 +138,7 @@ public class ListAiAppWarningByPageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data on the current page.</p>
+         * <p>The entries on the current page.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -157,7 +157,7 @@ public class ListAiAppWarningByPageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</p>
+         * <p>The ID of the request. You can use the request ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -168,7 +168,7 @@ public class ListAiAppWarningByPageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of records.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -224,7 +224,10 @@ public class ListAiAppWarningByPageResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The option.</p>
+             * <p>The options.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;warningLevel&quot;:&quot;high&quot;}</p>
              */
             public Builder option(java.util.Map<String, ?> option) {
                 this.option = option;
@@ -328,7 +331,7 @@ public class ListAiAppWarningByPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The label name.</p>
+             * <p>The name of the label.</p>
              * 
              * <strong>example:</strong>
              * <p>porn</p>
@@ -339,7 +342,7 @@ public class ListAiAppWarningByPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The label description.</p>
+             * <p>The description of the label.</p>
              * 
              * <strong>example:</strong>
              * <p>desc-xxx</p>
@@ -485,7 +488,7 @@ public class ListAiAppWarningByPageResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>appId。</p>
+             * <p>The application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>id-xxx</p>
@@ -496,7 +499,7 @@ public class ListAiAppWarningByPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The application name.</p>
+             * <p>The name of the application.</p>
              * 
              * <strong>example:</strong>
              * <p>name-xxx</p>
@@ -526,7 +529,7 @@ public class ListAiAppWarningByPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The trace ID used to correlate and trace alert events.</p>
+             * <p>The trace ID used to associate and trace alert events.</p>
              * 
              * <strong>example:</strong>
              * <p>0bc3b4b0********516098843e19bc</p>
@@ -548,7 +551,7 @@ public class ListAiAppWarningByPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The alert time in the format of YYYY-MM-DD HH:mm:ss.</p>
+             * <p>The time when the alert was triggered. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-01-01 00:00:00</p>

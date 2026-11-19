@@ -177,7 +177,7 @@ public class LlmStreamChatResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The fault information content in the streaming response.</p>
+         * <p>The fault message content in the streaming response.</p>
          */
         public Builder error(Error error) {
             this.error = error;
@@ -185,7 +185,7 @@ public class LlmStreamChatResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique ID of this session.</p>
+         * <p>The unique ID of the current session.</p>
          * 
          * <strong>example:</strong>
          * <p>chatcmpl-777bce52-93d3-9f8c-89c3-e99884f4f57f</p>
@@ -240,7 +240,7 @@ public class LlmStreamChatResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token usage information.</p>
+         * <p>The token usage.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -312,7 +312,7 @@ public class LlmStreamChatResponseBody extends TeaModel {
              * <p>The text content generated in real time.</p>
              * 
              * <strong>example:</strong>
-             * <p>I am Deepseek-V3. How can I help you?</p>
+             * <p>I am DeepSeek-V3. How can I help you?</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -424,7 +424,7 @@ public class LlmStreamChatResponseBody extends TeaModel {
             }
 
             /**
-             * <p>During streaming output, this value is null while content is being generated. When generation is complete, the value is stop if the generation ended due to a stop token.</p>
+             * <p>For streaming output, this parameter is null during generation. If the generation ends due to a stop token, the value is stop.</p>
              * 
              * <strong>example:</strong>
              * <p>stop</p>

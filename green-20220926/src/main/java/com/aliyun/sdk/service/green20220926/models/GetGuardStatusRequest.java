@@ -76,7 +76,7 @@ public class GetGuardStatusRequest extends Request {
          * <p>The commodity code.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>lvwang_guardrail_public_cn</p>
          */
         public Builder commodityCode(String commodityCode) {
             this.putQueryParameter("CommodityCode", commodityCode);

@@ -157,7 +157,7 @@ public class ExportResultRequest extends Request {
         } 
 
         /**
-         * <p>The page number of the paginated query results. Default value: 1.</p>
+         * <p>The page number. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -169,7 +169,7 @@ public class ExportResultRequest extends Request {
         }
 
         /**
-         * <p>The end time. Format: YYYY-MM-DD HH:mm:ss.</p>
+         * <p>The end time. The format is YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-08-24 10:01:55</p>
@@ -181,7 +181,7 @@ public class ExportResultRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page in the paginated query results.</p>
+         * <p>The number of entries to return on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -193,7 +193,7 @@ public class ExportResultRequest extends Request {
         }
 
         /**
-         * <p>The query condition.</p>
+         * <p>The query conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;TaskId&quot;:&quot;P_11TL5T&quot;}</p>
@@ -218,6 +218,9 @@ public class ExportResultRequest extends Request {
 
         /**
          * <p>The sort field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;GmtCreate&quot;:&quot;desc&quot;}</p>
          */
         public Builder sort(java.util.Map<String, String> sort) {
             String sortShrink = shrink(sort, "Sort", "json");
@@ -227,7 +230,7 @@ public class ExportResultRequest extends Request {
         }
 
         /**
-         * <p>The operation source.</p>
+         * <p>The source of the operation.</p>
          * 
          * <strong>example:</strong>
          * <p>disposal</p>
@@ -239,7 +242,7 @@ public class ExportResultRequest extends Request {
         }
 
         /**
-         * <p>The start time. Format: YYYY-MM-DD HH:mm:ss.</p>
+         * <p>The start time. The format is YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-08-11 09:00:19</p>

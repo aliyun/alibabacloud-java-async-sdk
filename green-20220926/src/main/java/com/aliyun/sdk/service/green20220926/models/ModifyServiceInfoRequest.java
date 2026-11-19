@@ -154,7 +154,7 @@ public class ModifyServiceInfoRequest extends Request {
          * <p>The service description.</p>
          * 
          * <strong>example:</strong>
-         * <p>描述</p>
+         * <p>Description</p>
          */
         public Builder serviceDesc(String serviceDesc) {
             this.putBodyParameter("ServiceDesc", serviceDesc);
@@ -166,7 +166,7 @@ public class ModifyServiceInfoRequest extends Request {
          * <p>The service name.</p>
          * 
          * <strong>example:</strong>
-         * <p>通用基线检测</p>
+         * <p>General baseline check</p>
          */
         public Builder serviceName(String serviceName) {
             this.putBodyParameter("ServiceName", serviceName);

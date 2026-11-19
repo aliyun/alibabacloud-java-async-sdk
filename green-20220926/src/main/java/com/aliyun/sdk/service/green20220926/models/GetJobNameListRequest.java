@@ -115,7 +115,7 @@ public class GetJobNameListRequest extends Request {
         } 
 
         /**
-         * <p>The end time. Format: <code>YYYY-MM-DD HH:mm:ss</code>.</p>
+         * <p>The end time in the <code>YYYY-MM-DD HH:mm:ss</code> format.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-08-24 10:01:55</p>
@@ -127,7 +127,7 @@ public class GetJobNameListRequest extends Request {
         }
 
         /**
-         * <p>The query condition.</p>
+         * <p>The query conditions. This parameter is required and must be a valid JSON query condition, such as {&quot;TaskId&quot;:&quot;P_11TL5T&quot;}. Before calling this operation, call GetStockOssCheckTasksList to obtain an available TaskId. If this parameter is not provided, the API returns a 400 error.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;TaskId&quot;:&quot;P_11TL5T&quot;}</p>
@@ -152,6 +152,9 @@ public class GetJobNameListRequest extends Request {
 
         /**
          * <p>The sort field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;StartTime&quot;:&quot;desc&quot;}</p>
          */
         public Builder sort(java.util.Map<String, String> sort) {
             String sortShrink = shrink(sort, "Sort", "json");
@@ -161,7 +164,7 @@ public class GetJobNameListRequest extends Request {
         }
 
         /**
-         * <p>The start time. Format: <code>YYYY-MM-DD HH:mm:ss</code>.</p>
+         * <p>The start time in the <code>YYYY-MM-DD HH:mm:ss</code> format.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-08-11 09:00:19</p>

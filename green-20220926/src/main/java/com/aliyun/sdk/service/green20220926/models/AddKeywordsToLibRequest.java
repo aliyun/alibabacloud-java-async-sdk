@@ -142,7 +142,7 @@ public class AddKeywordsToLibRequest extends Request {
         }
 
         /**
-         * <p>The keyword file name.</p>
+         * <p>The name of the keyword file.</p>
          * 
          * <strong>example:</strong>
          * <p>upload/1e5353c0-0d91-40ba-9d41-ae7abd3fe561.txt</p>
@@ -154,7 +154,7 @@ public class AddKeywordsToLibRequest extends Request {
         }
 
         /**
-         * <p>The keyword library ID.</p>
+         * <p>The ID of the keyword library.</p>
          * 
          * <strong>example:</strong>
          * <p>customxx_xxxx</p>
@@ -190,9 +190,9 @@ public class AddKeywordsToLibRequest extends Request {
         }
 
         /**
-         * <p>The library code.</p>
+         * <p>The code of the keyword library.</p>
          * <ul>
-         * <li>desensitize: masking library</li>
+         * <li>desensitize: desensitization keyword library</li>
          * </ul>
          * 
          * <strong>example:</strong>

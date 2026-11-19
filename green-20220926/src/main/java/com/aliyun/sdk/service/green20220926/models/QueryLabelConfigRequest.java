@@ -115,7 +115,7 @@ public class QueryLabelConfigRequest extends Request {
         } 
 
         /**
-         * <p>The classification. Separate multiple values with commas.</p>
+         * <p>The category. Separate multiple values with commas.</p>
          * 
          * <strong>example:</strong>
          * <p>guard-scene</p>

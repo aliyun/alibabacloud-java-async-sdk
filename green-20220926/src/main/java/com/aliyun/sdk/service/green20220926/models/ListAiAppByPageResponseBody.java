@@ -125,7 +125,7 @@ public class ListAiAppByPageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -136,7 +136,7 @@ public class ListAiAppByPageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
+         * <p>The ID of the request, which is assigned by the backend to uniquely identify the request and can be used to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -243,7 +243,7 @@ public class ListAiAppByPageResponseBody extends TeaModel {
              * <p>The label description.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>The output content contains insulting or discriminatory remarks against others</p>
              */
             public Builder labelDesc(String labelDesc) {
                 this.labelDesc = labelDesc;
@@ -386,7 +386,7 @@ public class ListAiAppByPageResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The risk event code.</p>
+             * <p>The code of the risk event.</p>
              * 
              * <strong>example:</strong>
              * <p>hit-xxx</p>
@@ -424,10 +424,10 @@ public class ListAiAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The risk event name.</p>
+             * <p>The name of the risk event.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>Abuse and personal attacks</p>
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -470,6 +470,111 @@ public class ListAiAppByPageResponseBody extends TeaModel {
      *
      * <p>ListAiAppByPageResponseBody</p>
      */
+    public static class RiskStats extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("RequestCount")
+        private Long requestCount;
+
+        @com.aliyun.core.annotation.NameInMap("RiskCount")
+        private Long riskCount;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        private RiskStats(Builder builder) {
+            this.requestCount = builder.requestCount;
+            this.riskCount = builder.riskCount;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RiskStats create() {
+            return builder().build();
+        }
+
+        /**
+         * @return requestCount
+         */
+        public Long getRequestCount() {
+            return this.requestCount;
+        }
+
+        /**
+         * @return riskCount
+         */
+        public Long getRiskCount() {
+            return this.riskCount;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private Long requestCount; 
+            private Long riskCount; 
+            private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(RiskStats model) {
+                this.requestCount = model.requestCount;
+                this.riskCount = model.riskCount;
+                this.type = model.type;
+            } 
+
+            /**
+             * <p>The number of requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
+             */
+            public Builder requestCount(Long requestCount) {
+                this.requestCount = requestCount;
+                return this;
+            }
+
+            /**
+             * <p>The number of risks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder riskCount(Long riskCount) {
+                this.riskCount = riskCount;
+                return this;
+            }
+
+            /**
+             * <p>The type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>content_moderation</p>
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public RiskStats build() {
+                return new RiskStats(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListAiAppByPageResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAiAppByPageResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
@@ -492,6 +597,9 @@ public class ListAiAppByPageResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private String riskLevel;
 
+        @com.aliyun.core.annotation.NameInMap("RiskStats")
+        private java.util.List<RiskStats> riskStats;
+
         @com.aliyun.core.annotation.NameInMap("TraceStatus")
         private String traceStatus;
 
@@ -509,6 +617,7 @@ public class ListAiAppByPageResponseBody extends TeaModel {
             this.lastTraceTime = builder.lastTraceTime;
             this.riskEvents = builder.riskEvents;
             this.riskLevel = builder.riskLevel;
+            this.riskStats = builder.riskStats;
             this.traceStatus = builder.traceStatus;
             this.uid = builder.uid;
             this.warningCount = builder.warningCount;
@@ -572,6 +681,13 @@ public class ListAiAppByPageResponseBody extends TeaModel {
         }
 
         /**
+         * @return riskStats
+         */
+        public java.util.List<RiskStats> getRiskStats() {
+            return this.riskStats;
+        }
+
+        /**
          * @return traceStatus
          */
         public String getTraceStatus() {
@@ -600,6 +716,7 @@ public class ListAiAppByPageResponseBody extends TeaModel {
             private String lastTraceTime; 
             private java.util.List<RiskEvents> riskEvents; 
             private String riskLevel; 
+            private java.util.List<RiskStats> riskStats; 
             private String traceStatus; 
             private String uid; 
             private Integer warningCount; 
@@ -615,13 +732,14 @@ public class ListAiAppByPageResponseBody extends TeaModel {
                 this.lastTraceTime = model.lastTraceTime;
                 this.riskEvents = model.riskEvents;
                 this.riskLevel = model.riskLevel;
+                this.riskStats = model.riskStats;
                 this.traceStatus = model.traceStatus;
                 this.uid = model.uid;
                 this.warningCount = model.warningCount;
             } 
 
             /**
-             * <p>appId。</p>
+             * <p>The ID of the AI application.</p>
              * 
              * <strong>example:</strong>
              * <p>id-xxx</p>
@@ -632,7 +750,7 @@ public class ListAiAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The application name.</p>
+             * <p>The name of the application.</p>
              * 
              * <strong>example:</strong>
              * <p>name-xxx</p>
@@ -665,7 +783,7 @@ public class ListAiAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last active time. Format: YYYY-MM-DD HH:mm:ss.</p>
+             * <p>The last active time. The format is YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-01-01 00:00:00</p>
@@ -695,6 +813,14 @@ public class ListAiAppByPageResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The risk statistics.</p>
+             */
+            public Builder riskStats(java.util.List<RiskStats> riskStats) {
+                this.riskStats = riskStats;
+                return this;
+            }
+
+            /**
              * <p>The Tracing Analysis status.</p>
              * 
              * <strong>example:</strong>
@@ -706,7 +832,7 @@ public class ListAiAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>UID。</p>
+             * <p>The UID of the user.</p>
              * 
              * <strong>example:</strong>
              * <p>104813*****2399</p>

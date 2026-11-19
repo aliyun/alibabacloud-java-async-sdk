@@ -155,7 +155,7 @@ public class GetTextScanResultRequest extends Request {
         }
 
         /**
-         * <p>The end time. Format: YYYY-MM-DD HH:mm:ss.</p>
+         * <p>The end time. The format is YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-08-24 10:01:55</p>
@@ -179,7 +179,10 @@ public class GetTextScanResultRequest extends Request {
         }
 
         /**
-         * <p>The search condition.</p>
+         * <p>The search conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;DataId&quot;:&quot;data-test-001&quot;}</p>
          */
         public Builder query(java.util.Map<String, String> query) {
             String queryShrink = shrink(query, "Query", "json");
@@ -202,6 +205,9 @@ public class GetTextScanResultRequest extends Request {
 
         /**
          * <p>The sort field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;GmtCreate&quot;:&quot;desc&quot;}</p>
          */
         public Builder sort(java.util.Map<String, String> sort) {
             String sortShrink = shrink(sort, "Sort", "json");
@@ -211,7 +217,7 @@ public class GetTextScanResultRequest extends Request {
         }
 
         /**
-         * <p>The start time. Format: YYYY-MM-DD HH:mm:ss.</p>
+         * <p>The start time. The format is YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-08-11 09:00:19</p>

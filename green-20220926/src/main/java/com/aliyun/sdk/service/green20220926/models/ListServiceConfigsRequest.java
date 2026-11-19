@@ -115,7 +115,7 @@ public class ListServiceConfigsRequest extends Request {
         } 
 
         /**
-         * <p>The classification.</p>
+         * <p>The category.</p>
          * 
          * <strong>example:</strong>
          * <p>guard-scene</p>
@@ -129,12 +129,9 @@ public class ListServiceConfigsRequest extends Request {
         /**
          * <p>The protection type. Valid values:</p>
          * <ul>
-         * <li><p>modelProtection: model protection.</p>
-         * </li>
-         * <li><p>agentRealtimeProtection: agent real-time protection.</p>
-         * </li>
-         * <li><p>agentBehaviorAudit: agent behavior audit.</p>
-         * </li>
+         * <li>modelProtection: model protection</li>
+         * <li>agentRealtimeProtection: real-time agent protection</li>
+         * <li>agentBehaviorAudit: agent behavior audit</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -159,7 +156,7 @@ public class ListServiceConfigsRequest extends Request {
         }
 
         /**
-         * <p>The resource type.</p>
+         * <p>The resource type. This parameter is required. If you do not specify this parameter, the service returns a 400 error.</p>
          * 
          * <strong>example:</strong>
          * <p>text</p>

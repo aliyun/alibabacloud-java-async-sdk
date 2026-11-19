@@ -90,7 +90,7 @@ public class UpdateImageLibFreeInspectionRequest extends Request {
          * <p>The configuration.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;2833014490001\&quot;:0}</p>
+         * <p>{&quot;2833014490001&quot;:0}</p>
          */
         public Builder config(java.util.Map<String, Integer> config) {
             String configShrink = shrink(config, "Config", "json");
@@ -112,7 +112,7 @@ public class UpdateImageLibFreeInspectionRequest extends Request {
         }
 
         /**
-         * <p>The selected service identifier.</p>
+         * <p>The identifier of the selected service.</p>
          * 
          * <strong>example:</strong>
          * <p>response_security_check</p>

@@ -119,7 +119,7 @@ public class InitAiAppScanResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The access entry information.</p>
+         * <p>The access endpoint information.</p>
          */
         public Builder authInfo(AuthInfo authInfo) {
             this.authInfo = authInfo;
@@ -168,7 +168,7 @@ public class InitAiAppScanResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID for troubleshooting.</p>
+         * <p>The ID assigned by the backend to uniquely identify a request. You can use it to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -285,7 +285,7 @@ public class InitAiAppScanResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The project space.</p>
+             * <p>The project workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>proj-xxx</p>

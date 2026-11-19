@@ -90,7 +90,7 @@ public class GetUploadInfoRequest extends Request {
          * <p>The upload name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test.</p>
+         * <p>Test</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);

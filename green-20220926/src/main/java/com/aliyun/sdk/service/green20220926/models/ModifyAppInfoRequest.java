@@ -115,7 +115,7 @@ public class ModifyAppInfoRequest extends Request {
         } 
 
         /**
-         * <p>App ID。</p>
+         * <p>The app ID. Note: This parameter is actually required. If it is not provided, the service returns a 400 error (appId may not be empty).</p>
          * 
          * <strong>example:</strong>
          * <p>txt_check_agent_01</p>
@@ -127,7 +127,7 @@ public class ModifyAppInfoRequest extends Request {
         }
 
         /**
-         * <p>The sort number.</p>
+         * <p>The custom order number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -139,7 +139,7 @@ public class ModifyAppInfoRequest extends Request {
         }
 
         /**
-         * <p>The app name.</p>
+         * <p>The name of the app.</p>
          * 
          * <strong>example:</strong>
          * <p>Custom text moderation</p>
@@ -163,7 +163,7 @@ public class ModifyAppInfoRequest extends Request {
         }
 
         /**
-         * <p>The resource type.</p>
+         * <p>The resource type. Note: This parameter is actually required. If it is not provided, the service returns a 400 error (resourceType may not be empty).</p>
          * 
          * <strong>example:</strong>
          * <p>agent_text</p>

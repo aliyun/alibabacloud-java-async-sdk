@@ -149,7 +149,7 @@ public class GetScanResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The further description of the error code.</p>
+         * <p>The detailed description of the error code.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -160,7 +160,7 @@ public class GetScanResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID assigned by the backend that uniquely identifies a request. You can use this ID for troubleshooting.</p>
+         * <p>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -253,7 +253,7 @@ public class GetScanResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The confidence score, ranging from 0 to 100, rounded to two decimal places.</p>
+             * <p>The confidence score. The value ranges from 0 to 100 and is rounded to two decimal places.</p>
              * 
              * <strong>example:</strong>
              * <p>50.0</p>
@@ -267,7 +267,7 @@ public class GetScanResultResponseBody extends TeaModel {
              * <p>The description of the Label field.</p>
              * 
              * <strong>example:</strong>
-             * <p>疑似色情内容</p>
+             * <p>Suspected pornographic content</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1073,7 +1073,7 @@ public class GetScanResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The AccountId input parameter from the customer.</p>
+             * <p>The AccountId parameter provided by the customer.</p>
              * 
              * <strong>example:</strong>
              * <p>accountIdtest123</p>
@@ -1095,7 +1095,7 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The machine-assisted moderation time. The value is a Unix/POSIX timestamp in milliseconds.</p>
+             * <p>The machine-assisted moderation time. The value is a UNIX/POSIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1755501226</p>
@@ -1131,7 +1131,7 @@ public class GetScanResultResponseBody extends TeaModel {
              * <p>The machine-assisted moderation task ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>img-a1b2c3d4e5f60718</p>
              */
             public Builder apiTaskId(String apiTaskId) {
                 this.apiTaskId = apiTaskId;
@@ -1139,7 +1139,7 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>appId</p>
+             * <p>The application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>agent_01</p>
@@ -1150,16 +1150,12 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The attack level, returned based on the configured risk score thresholds. Valid values:</p>
+             * <p>The attack level. The value is returned based on the configured high and low risk scores. Valid values:</p>
              * <ul>
-             * <li><p>high: high risk.</p>
-             * </li>
-             * <li><p>medium: medium risk.</p>
-             * </li>
-             * <li><p>low: low risk.</p>
-             * </li>
-             * <li><p>none: no risk detected.</p>
-             * </li>
+             * <li>high: High risk.</li>
+             * <li>medium: Medium risk.</li>
+             * <li>low: Low risk.</li>
+             * <li>none: No risk detected.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1171,7 +1167,7 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Bailian request ID.</p>
+             * <p>The Model Studio request ID.</p>
              * 
              * <strong>example:</strong>
              * <p>93a2f484-ac61-9b2e-9765-88600c83c1ea</p>
@@ -1185,7 +1181,7 @@ public class GetScanResultResponseBody extends TeaModel {
              * <p>The content.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>This is a sample text content for detection</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -1193,7 +1189,7 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>dataId</p>
+             * <p>The data ID.</p>
              * 
              * <strong>example:</strong>
              * <p>4f27b8cc7c4544cb90b41882a5b36326</p>
@@ -1204,7 +1200,7 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The segment end time, in seconds.</p>
+             * <p>The end time of the segment, in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>22</p>
@@ -1229,7 +1225,7 @@ public class GetScanResultResponseBody extends TeaModel {
              * <p>The feedback information.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>Violating content was detected, and the review conclusion is a violation</p>
              */
             public Builder extFeedback(String extFeedback) {
                 this.extFeedback = extFeedback;
@@ -1248,7 +1244,7 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The frame count.</p>
+             * <p>The number of frames.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -1259,7 +1255,7 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time. Format: YYYY-MM-DD HH:mm:ss.</p>
+             * <p>The creation time. The format is YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-08-11 09:00:19</p>
@@ -1305,7 +1301,7 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>url</p>
+             * <p>The image URL.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://www.aliyuncs.com/xxx.png">https://www.aliyuncs.com/xxx.png</a></p>
@@ -1316,7 +1312,7 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>imageUrls</p>
+             * <p>The list of image URLs.</p>
              */
             public Builder imageUrls(java.util.List<String> imageUrls) {
                 this.imageUrls = imageUrls;
@@ -1335,7 +1331,7 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The LiveId input parameter from the customer.</p>
+             * <p>The LiveId parameter provided by the customer.</p>
              * 
              * <strong>example:</strong>
              * <p>liveIdtest123</p>
@@ -1368,7 +1364,7 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether only manual review is used.</p>
+             * <p>Specifies whether the task is exclusively manually reviewed.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1431,7 +1427,7 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The request time. Format: YYYY-MM-DD HH:mm:ss.</p>
+             * <p>The request time. The format is YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-08-11 09:00:19</p>
@@ -1453,7 +1449,7 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The result set.</p>
+             * <p>The returned collection.</p>
              */
             public Builder result(java.util.List<Result> result) {
                 this.result = result;
@@ -1483,7 +1479,7 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The review time. The value is a Unix/POSIX timestamp in milliseconds.</p>
+             * <p>The review time. The value is a UNIX/POSIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1755501226</p>
@@ -1497,7 +1493,7 @@ public class GetScanResultResponseBody extends TeaModel {
              * <p>The reviewer.</p>
              * 
              * <strong>example:</strong>
-             * <p>xx</p>
+             * <p>1234567890123456</p>
              */
             public Builder reviewUid(String reviewUid) {
                 this.reviewUid = reviewUid;
@@ -1505,7 +1501,7 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the content has been reviewed.</p>
+             * <p>Specifies whether the task has been reviewed.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1516,16 +1512,12 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The risk level, returned based on the configured risk score thresholds. Valid values:</p>
+             * <p>The risk level. The value is returned based on the configured high and low risk scores. Valid values:</p>
              * <ul>
-             * <li><p>high: high risk.</p>
-             * </li>
-             * <li><p>medium: medium risk.</p>
-             * </li>
-             * <li><p>low: low risk.</p>
-             * </li>
-             * <li><p>none: no risk detected.</p>
-             * </li>
+             * <li>high: High risk.</li>
+             * <li>medium: Medium risk.</li>
+             * <li>low: Low risk.</li>
+             * <li>none: No risk detected.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1537,10 +1529,10 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the matched risk.</p>
+             * <p>The details of the hit risk.</p>
              * 
              * <strong>example:</strong>
-             * <p>色情服务</p>
+             * <p>Pornographic services</p>
              */
             public Builder riskTips(String riskTips) {
                 this.riskTips = riskTips;
@@ -1548,10 +1540,10 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The matched risk keywords.</p>
+             * <p>The hit risk keywords.</p>
              * 
              * <strong>example:</strong>
-             * <p>色情_低俗词</p>
+             * <p>Pornography_vulgar words</p>
              */
             public Builder riskWords(String riskWords) {
                 this.riskWords = riskWords;
@@ -1581,13 +1573,13 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sensitivity level, returned based on the configured risk score thresholds. Valid values:</p>
+             * <p>The sensitivity level. The value is returned based on the configured sensitivity scores. Valid values:</p>
              * <ul>
              * <li><strong>S1</strong>: Low sensitivity.</li>
              * <li><strong>S2</strong>: Medium sensitivity.</li>
-             * <li><strong>S3</strong>: Moderately high sensitivity.</li>
+             * <li><strong>S3</strong>: Relatively high sensitivity.</li>
              * <li><strong>S4</strong>: High sensitivity.</li>
-             * <li><strong>S0</strong>: Not sensitive.</li>
+             * <li><strong>S0</strong>: Non-sensitive.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1610,7 +1602,7 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The segment start time, in seconds.</p>
+             * <p>The start time of the segment, in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>11</p>
@@ -1692,7 +1684,7 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether audio detection is enabled.</p>
+             * <p>Specifies whether audio detection is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>True</p>

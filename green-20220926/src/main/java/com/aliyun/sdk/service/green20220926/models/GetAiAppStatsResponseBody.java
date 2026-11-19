@@ -415,7 +415,10 @@ public class GetAiAppStatsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total count categorized statistics.</p>
+             * <p>The total count statistics by category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;porn&quot;:{&quot;Total&quot;:&quot;100&quot;,&quot;Share&quot;:&quot;12.50%&quot;}}</p>
              */
             public Builder totalStat(java.util.Map<String, DataTotalStatValue> totalStat) {
                 this.totalStat = totalStat;

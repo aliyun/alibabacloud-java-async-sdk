@@ -183,7 +183,7 @@ public class GetOssCheckFreezeResultRequest extends Request {
         }
 
         /**
-         * <p>The end time. Format: YYYY-MM-DD HH:mm:ss.</p>
+         * <p>The end time. Specify the time in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-05-19 10:05:11</p>
@@ -195,7 +195,7 @@ public class GetOssCheckFreezeResultRequest extends Request {
         }
 
         /**
-         * <p>The number of completed tasks.</p>
+         * <p>The number of completed items.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -219,7 +219,7 @@ public class GetOssCheckFreezeResultRequest extends Request {
         }
 
         /**
-         * <p>The query condition.</p>
+         * <p>The query conditions. Note: This parameter is actually required. You must provide a JSON string that contains the TaskId field, such as {&quot;TaskId&quot;:&quot;P_XXX&quot;}. If this parameter is not provided, the API returns a 400 error (oss.check.task.not.exists).</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;TaskId\&quot;:\&quot;P_O3SI0I\&quot;}</p>
@@ -244,6 +244,9 @@ public class GetOssCheckFreezeResultRequest extends Request {
 
         /**
          * <p>The sort field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;GmtCreate&quot;:&quot;desc&quot;}</p>
          */
         public Builder sort(java.util.Map<String, String> sort) {
             String sortShrink = shrink(sort, "Sort", "json");
@@ -253,7 +256,7 @@ public class GetOssCheckFreezeResultRequest extends Request {
         }
 
         /**
-         * <p>The start time. Format: YYYY-MM-DD HH:mm:ss.</p>
+         * <p>The start time. Specify the time in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-01-09 10:28:54</p>

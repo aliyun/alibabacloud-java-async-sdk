@@ -185,11 +185,7 @@ public class GetCipStatsRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether monthly indexing is supported. Valid values:</p>
-         * <ul>
-         * <li>true: Supported.</li>
-         * <li>false: Not supported.</li>
-         * </ul>
+         * <p>Specifies whether monthly indexing is supported. Valid values: true: Supported. false: Not supported.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -201,7 +197,7 @@ public class GetCipStatsRequest extends Request {
         }
 
         /**
-         * <p>The end time of the query. Format: yyyy-MM-dd HH:mm:ss.</p>
+         * <p>The end time of the query. Specify the time in the yyyy-MM-dd HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-03-11 10:00:00</p>
@@ -216,7 +212,7 @@ public class GetCipStatsRequest extends Request {
          * <p>The label.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx</p>
+         * <p>porn</p>
          */
         public Builder label(String label) {
             this.putBodyParameter("Label", label);
@@ -225,7 +221,7 @@ public class GetCipStatsRequest extends Request {
         }
 
         /**
-         * <p>The query condition.</p>
+         * <p>The query conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -273,7 +269,7 @@ public class GetCipStatsRequest extends Request {
         }
 
         /**
-         * <p>The start time of the query. Format: yyyy-MM-dd HH:mm:ss.</p>
+         * <p>The start time of the query. Specify the time in the yyyy-MM-dd HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-03-10 10:00:00</p>
@@ -297,7 +293,7 @@ public class GetCipStatsRequest extends Request {
         }
 
         /**
-         * <p>The type. Valid values: <strong>cip</strong>: Content Moderation invoke volume statistics. <strong>risk_level</strong>: Content Moderation risk level statistics. <strong>content_moderation</strong>: AI security guardrail content compliance risk level and tag statistics. <strong>sensitive_data</strong>: AI security guardrail sensitive data risk level and tag statistics. <strong>prompt_attack</strong>: AI security guardrail prompt risk level and tag statistics.</p>
+         * <p>The type. Valid values: <strong>cip</strong>: Content Moderation invoke usage statistics. <strong>risk_level</strong>: Content Moderation security risk level statistics. <strong>content_moderation</strong>: content compliance risk level and label statistics for AI security guardrails. <strong>sensitive_data</strong>: sensitive data risk level and label statistics for AI security guardrails. <strong>prompt_attack</strong>: prompt risk level and label statistics for AI security guardrails.</p>
          * 
          * <strong>example:</strong>
          * <p>risk_level</p>

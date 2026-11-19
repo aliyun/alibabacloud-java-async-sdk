@@ -119,7 +119,7 @@ public class UpdateImageLibResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code, which is the same as the HTTP status code.</p>
+         * <p>The error code, which is consistent with the HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -152,7 +152,7 @@ public class UpdateImageLibResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The description of the error code.</p>
+         * <p>The detailed description of the error code.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -174,7 +174,7 @@ public class UpdateImageLibResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>

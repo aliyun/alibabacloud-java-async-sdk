@@ -101,7 +101,7 @@ public class RecoverAppConfigHistoryRequest extends Request {
         } 
 
         /**
-         * <p>App ID。</p>
+         * <p>The app ID.</p>
          * 
          * <strong>example:</strong>
          * <p>txt_check_agent_01</p>

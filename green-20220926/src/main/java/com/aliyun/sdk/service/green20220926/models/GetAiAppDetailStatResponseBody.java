@@ -158,7 +158,7 @@ public class GetAiAppDetailStatResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The application ID.</p>
+         * <p>The ID of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>id-xxx</p>
@@ -169,7 +169,7 @@ public class GetAiAppDetailStatResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The average duration of model calls.</p>
+         * <p>The average duration of model invocations.</p>
          * 
          * <strong>example:</strong>
          * <p>2.55</p>
@@ -180,7 +180,7 @@ public class GetAiAppDetailStatResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The day-over-day change ratio of average model call duration.</p>
+         * <p>The day-over-day comparison of the average duration of model invocations.</p>
          * 
          * <strong>example:</strong>
          * <p>0.05</p>
@@ -191,7 +191,7 @@ public class GetAiAppDetailStatResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of model calls.</p>
+         * <p>The number of model invocations.</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>
@@ -202,7 +202,7 @@ public class GetAiAppDetailStatResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The day-over-day change ratio of model call count.</p>
+         * <p>The day-over-day comparison of the number of model invocations.</p>
          * 
          * <strong>example:</strong>
          * <p>0.15</p>
@@ -213,7 +213,7 @@ public class GetAiAppDetailStatResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</p>
+         * <p>The request ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -246,7 +246,7 @@ public class GetAiAppDetailStatResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The day-over-day change ratio of token consumption count.</p>
+         * <p>The day-over-day comparison of the number of tokens consumed.</p>
          * 
          * <strong>example:</strong>
          * <p>-0.15</p>

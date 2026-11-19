@@ -104,7 +104,7 @@ public class GetTuneProposalByIdResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response data.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -112,7 +112,7 @@ public class GetTuneProposalByIdResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The description of the error code.</p>
+         * <p>The detailed description of the error code.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -179,7 +179,7 @@ public class GetTuneProposalByIdResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The response data in JSON format.</p>
+             * <p>The returned data in JSON format.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;example&quot;:&quot;xxxx&quot;}</p>

@@ -73,9 +73,9 @@ public class GetQpsStatsRequest extends Request {
         } 
 
         /**
-         * <p>The query condition. The value is a string in JSON format.</p>
+         * <p>The query conditions in JSON format.</p>
          * <blockquote>
-         * <p>Different query conditions return different protected objects. For more information, see <strong>Query parameter description</strong>.</p>
+         * <p>The protected objects returned vary based on the query conditions. For more information, see <strong>Query parameter description</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

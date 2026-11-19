@@ -67,7 +67,7 @@ public class QueryLabelConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The content moderation configuration.</p>
+         * <p>The content compliance.</p>
          */
         public Builder contentModeration(java.util.List<?> contentModeration) {
             this.contentModeration = contentModeration;

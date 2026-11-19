@@ -93,7 +93,7 @@ public class AddAnswerSampleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the proxy answer library.</p>
+         * <p>The ID of the fallback answer library.</p>
          * 
          * <strong>example:</strong>
          * <p>alxxxx</p>
@@ -104,7 +104,7 @@ public class AddAnswerSampleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
+         * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -299,7 +299,7 @@ public class AddAnswerSampleResponseBody extends TeaModel {
              * <p>The internationalization key.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>common.success</p>
              */
             public Builder i18nKey(String i18nKey) {
                 this.i18nKey = i18nKey;
@@ -307,7 +307,7 @@ public class AddAnswerSampleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The collection of samples whose length is too long or too short.</p>
+             * <p>The collection of samples that are too long or too short.</p>
              */
             public Builder illegalLengthSamples(java.util.List<String> illegalLengthSamples) {
                 this.illegalLengthSamples = illegalLengthSamples;
@@ -326,7 +326,7 @@ public class AddAnswerSampleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the proxy answer library.</p>
+             * <p>The ID of the fallback answer library.</p>
              * 
              * <strong>example:</strong>
              * <p>alxxxx</p>
@@ -337,7 +337,7 @@ public class AddAnswerSampleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The progress. For example, 90 indicates 90%.</p>
+             * <p>The progress. A value of 90 indicates 90%.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

@@ -258,7 +258,7 @@ public class QueryAnswerSampleByPageResponseBody extends TeaModel {
              * <p>The answer.</p>
              * 
              * <strong>example:</strong>
-             * <p>答案</p>
+             * <p>Answer</p>
              */
             public Builder answer(String answer) {
                 this.answer = answer;
@@ -288,7 +288,7 @@ public class QueryAnswerSampleByPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the proxy answer library.</p>
+             * <p>The ID of the fallback answer library.</p>
              * 
              * <strong>example:</strong>
              * <p>custom_xxxx</p>
@@ -299,7 +299,7 @@ public class QueryAnswerSampleByPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>UID。</p>
+             * <p>The UID of the user.</p>
              * 
              * <strong>example:</strong>
              * <p>104813*****2399</p>

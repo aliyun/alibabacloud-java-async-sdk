@@ -131,7 +131,7 @@ public class UpdateEventStatusRequest extends Request {
         } 
 
         /**
-         * <p>The application ID that identifies the application to which the operation belongs.</p>
+         * <p>The ID of the application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,7 +167,7 @@ public class UpdateEventStatusRequest extends Request {
         }
 
         /**
-         * <p>The operation parameters that contain additional parameter information required to execute the operation.</p>
+         * <p>The operation parameters that contain additional information required to perform the operation.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -191,10 +191,10 @@ public class UpdateEventStatusRequest extends Request {
         }
 
         /**
-         * <p>The operation source that identifies the source system or module that triggered this status update request.</p>
+         * <p>The source of the operation, which identifies the system or module that triggered this status update request.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx</p>
+         * <p>disposal</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);

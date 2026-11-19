@@ -199,7 +199,7 @@ public class ListImagesFromLibResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The further description of the error code.</p>
+         * <p>The detailed description of the error code.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -221,7 +221,7 @@ public class ListImagesFromLibResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The backend-assigned ID that uniquely identifies a request. This ID can be used for troubleshooting.</p>
+         * <p>The request ID, which uniquely identifies the request and can be used for troubleshooting.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -232,7 +232,7 @@ public class ListImagesFromLibResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The success flag.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>

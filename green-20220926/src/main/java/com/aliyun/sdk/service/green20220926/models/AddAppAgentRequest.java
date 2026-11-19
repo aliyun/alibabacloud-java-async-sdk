@@ -144,7 +144,7 @@ public class AddAppAgentRequest extends Request {
          * <p>The agent name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Agent1</p>
+         * <p>Agent 1</p>
          */
         public Builder agentName(String agentName) {
             this.putQueryParameter("AgentName", agentName);
@@ -153,7 +153,7 @@ public class AddAppAgentRequest extends Request {
         }
 
         /**
-         * <p>App ID。</p>
+         * <p>The app ID.</p>
          * 
          * <strong>example:</strong>
          * <p>txt_check_agent_01</p>

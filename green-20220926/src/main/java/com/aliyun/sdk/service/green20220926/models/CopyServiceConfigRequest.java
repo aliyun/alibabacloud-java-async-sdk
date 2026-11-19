@@ -154,7 +154,7 @@ public class CopyServiceConfigRequest extends Request {
          * <p>The service description.</p>
          * 
          * <strong>example:</strong>
-         * <p>服务备注</p>
+         * <p>Service remarks</p>
          */
         public Builder serviceDesc(String serviceDesc) {
             this.putBodyParameter("ServiceDesc", serviceDesc);
@@ -166,7 +166,7 @@ public class CopyServiceConfigRequest extends Request {
          * <p>The service name.</p>
          * 
          * <strong>example:</strong>
-         * <p>用户昵称检测</p>
+         * <p>User nickname detection</p>
          */
         public Builder serviceName(String serviceName) {
             this.putBodyParameter("ServiceName", serviceName);

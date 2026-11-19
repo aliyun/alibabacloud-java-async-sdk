@@ -75,7 +75,7 @@ public class ListCallbackResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
+         * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -257,7 +257,7 @@ public class ListCallbackResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The modification time.</p>
+             * <p>The update time.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-06-03 15:20:14</p>
@@ -282,7 +282,7 @@ public class ListCallbackResponseBody extends TeaModel {
              * <p>The name.</p>
              * 
              * <strong>example:</strong>
-             * <p>回调通知</p>
+             * <p>Callback notification</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -301,7 +301,7 @@ public class ListCallbackResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Seed。</p>
+             * <p>The seed.</p>
              * 
              * <strong>example:</strong>
              * <p>cbupVnpBjkgjFxfINMHKkrHS-1zZPUm</p>
@@ -312,7 +312,7 @@ public class ListCallbackResponseBody extends TeaModel {
             }
 
             /**
-             * <p>UID。</p>
+             * <p>The UID.</p>
              * 
              * <strong>example:</strong>
              * <p>16537*****831937</p>

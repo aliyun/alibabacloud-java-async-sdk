@@ -87,10 +87,10 @@ public class DescribeOnlineTestResultRequest extends Request {
         } 
 
         /**
-         * <p>The resource type.</p>
+         * <p>The resource type. Valid value: video. If you specify image, audio, or document, the request is rejected and a 400 error is returned with the message &quot;resourceType should be in specific values annotated on @IsIn&quot;. Note: This parameter is actually required. If it is not provided, the API returns a 400 error with the message &quot;resourceType may not be empty&quot;, but the required field remains false.</p>
          * 
          * <strong>example:</strong>
-         * <p>image</p>
+         * <p>video</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

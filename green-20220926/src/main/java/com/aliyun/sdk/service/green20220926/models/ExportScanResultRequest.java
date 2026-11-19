@@ -169,7 +169,7 @@ public class ExportScanResultRequest extends Request {
         }
 
         /**
-         * <p>The end time of the query. Format: yyyy-MM-dd HH:mm:ss.</p>
+         * <p>The end time of the query. Specify the time in the yyyy-MM-dd HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-03-11 10:00:00</p>
@@ -194,6 +194,9 @@ public class ExportScanResultRequest extends Request {
 
         /**
          * <p>The query content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;RequestId&quot;:&quot;D83A46FF-9EA6-1477-A0C3-C8FD57C6F572&quot;}</p>
          */
         public Builder query(java.util.Map<String, String> query) {
             String queryShrink = shrink(query, "Query", "json");
@@ -228,6 +231,9 @@ public class ExportScanResultRequest extends Request {
 
         /**
          * <p>The sort field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;RequestTime&quot;:&quot;desc&quot;}</p>
          */
         public Builder sort(java.util.Map<String, String> sort) {
             String sortShrink = shrink(sort, "Sort", "json");
@@ -237,7 +243,7 @@ public class ExportScanResultRequest extends Request {
         }
 
         /**
-         * <p>The start time of the query. Format: yyyy-MM-dd HH:mm:ss.</p>
+         * <p>The start time of the query. Specify the time in the yyyy-MM-dd HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-03-10 10:00:00</p>

@@ -117,7 +117,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details data.</p>
+         * <p>The detailed data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The further description of the error code.</p>
+         * <p>The detailed description of the error code.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -136,7 +136,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID assigned by the backend to uniquely identify a request. This ID can be used to troubleshoot issues.</p>
+         * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>62E97001-1255-50A9-8E1E-4FD05473D952</p>
@@ -147,7 +147,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>The success flag.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -229,7 +229,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The confidence score, ranging from 0 to 100, rounded to two decimal places.</p>
+             * <p>The confidence score, which ranges from 0 to 100 and is rounded to two decimal places.</p>
              * 
              * <strong>example:</strong>
              * <p>50</p>
@@ -243,7 +243,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
              * <p>The label description.</p>
              * 
              * <strong>example:</strong>
-             * <p>涉政</p>
+             * <p>Political content</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -251,7 +251,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The labels.</p>
+             * <p>The label details.</p>
              * 
              * <strong>example:</strong>
              * <p>politics</p>
@@ -334,7 +334,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The confidence score, ranging from 0 to 100, rounded to two decimal places.</p>
+             * <p>The confidence score, which ranges from 0 to 100 and is rounded to two decimal places.</p>
              * 
              * <strong>example:</strong>
              * <p>50</p>
@@ -348,7 +348,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
              * <p>The label description.</p>
              * 
              * <strong>example:</strong>
-             * <p>涉政</p>
+             * <p>Political content</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -356,7 +356,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The labels.</p>
+             * <p>The label details.</p>
              * 
              * <strong>example:</strong>
              * <p>politics</p>
@@ -488,7 +488,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
              * <p>The service name.</p>
              * 
              * <strong>example:</strong>
-             * <p>服务名称</p>
+             * <p>Service name</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -893,7 +893,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The storage bucket.</p>
+             * <p>The bucket.</p>
              * 
              * <strong>example:</strong>
              * <p>oss-tmp</p>
@@ -981,7 +981,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task name.</p>
+             * <p>The job name.</p>
              * 
              * <strong>example:</strong>
              * <p>dhT20X2310</p>
@@ -992,7 +992,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The labels.</p>
+             * <p>The label details.</p>
              */
             public Builder labelDetails(java.util.List<LabelDetails> labelDetails) {
                 this.labelDetails = labelDetails;
@@ -1000,7 +1000,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The labels.</p>
+             * <p>The label details.</p>
              */
             public Builder labelDetails2(java.util.List<LabelDetails2> labelDetails2) {
                 this.labelDetails2 = labelDetails2;
@@ -1024,7 +1024,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The manual disposition status.</p>
+             * <p>The manual action status.</p>
              * 
              * <strong>example:</strong>
              * <p>FREEZE</p>
@@ -1035,7 +1035,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The disposition time. The format is YYYY-MM-DD HH:mm:ss.</p>
+             * <p>The action time. The format is YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-08-09 12:00:00</p>
@@ -1046,10 +1046,10 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operator who performed the disposition.</p>
+             * <p>The operator.</p>
              * 
              * <strong>example:</strong>
-             * <p>xx</p>
+             * <p>ops_admin_01</p>
              */
             public Builder manualOperator(String manualOperator) {
                 this.manualOperator = manualOperator;
@@ -1068,7 +1068,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The further description of the error code.</p>
+             * <p>The detailed description of the error code.</p>
              * 
              * <strong>example:</strong>
              * <p>success</p>
@@ -1156,7 +1156,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
              * <p>The service name.</p>
              * 
              * <strong>example:</strong>
-             * <p>服务名称</p>
+             * <p>Service name</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;

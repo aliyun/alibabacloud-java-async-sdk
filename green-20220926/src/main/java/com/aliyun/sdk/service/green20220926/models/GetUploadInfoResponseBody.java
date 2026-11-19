@@ -245,7 +245,7 @@ public class GetUploadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The expiration time. Unit: seconds.</p>
+         * <p>The expiration time in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>900</p>
@@ -289,7 +289,7 @@ public class GetUploadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The key used for uploading the file.</p>
+         * <p>The key used for the uploaded file.</p>
          * 
          * <strong>example:</strong>
          * <p>image/upload/xxx</p>
@@ -300,7 +300,7 @@ public class GetUploadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The further description of the error code.</p>
+         * <p>The detailed description of the error code.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -311,10 +311,10 @@ public class GetUploadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Used by the frontend for image upload.</p>
+         * <p>The name used for frontend image uploads.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test.</p>
+         * <p>Test</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -322,10 +322,10 @@ public class GetUploadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The policy for uploading files to OSS.</p>
+         * <p>The policy for uploading files to Object Storage Service (OSS).</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxx</p>
+         * <p>eyJleHBpcmF0aW9uIjoiMjAyNC0xMi0zMVQyMzo1OTo1OVoifQ==</p>
          */
         public Builder policy(String policy) {
             this.policy = policy;
@@ -333,7 +333,7 @@ public class GetUploadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID assigned by the backend to uniquely identify a request. This ID can be used for troubleshooting.</p>
+         * <p>The ID assigned by the backend to uniquely identify a request, which can be used for troubleshooting.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -344,10 +344,10 @@ public class GetUploadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>STS token</p>
+         * <p>The temporary Security Token Service (STS) token.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>CAISrgJ1q6Ft5B2yfSjIr5fYeeqHjqrv8KqThGzTrTcwOMT3nbHGtjz2IHhPenvFBusd/i2AGFBS75gc6bAadVQQRoTlYJrRbpNsqbMQ</p>
          */
         public Builder securityToken(String securityToken) {
             this.securityToken = securityToken;

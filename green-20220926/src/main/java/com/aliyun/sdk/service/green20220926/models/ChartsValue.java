@@ -152,7 +152,7 @@ public class ChartsValue extends TeaModel {
             }
 
             /**
-             * <p>The QPS at the point in time.</p>
+             * <p>The QPS at each time point.</p>
              */
             public Builder data(java.util.List<Long> data) {
                 this.data = data;

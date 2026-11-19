@@ -101,7 +101,7 @@ public class CopyAppConfigRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the source App to copy from.</p>
+         * <p>The ID of the source app.</p>
          * 
          * <strong>example:</strong>
          * <p>txt_check_agent_01</p>
@@ -113,10 +113,10 @@ public class CopyAppConfigRequest extends Request {
         }
 
         /**
-         * <p>The name of the new App to be created from the copy.</p>
+         * <p>The name of the new app.</p>
          * 
          * <strong>example:</strong>
-         * <p>CustomTextModeration</p>
+         * <p>Custom text moderation</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

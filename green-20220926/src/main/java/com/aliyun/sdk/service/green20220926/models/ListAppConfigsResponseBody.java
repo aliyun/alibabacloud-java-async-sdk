@@ -261,7 +261,7 @@ public class ListAppConfigsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>App ID。</p>
+             * <p>The application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>txt_check_pro_agent_01</p>
@@ -272,7 +272,7 @@ public class ListAppConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The classification.</p>
+             * <p>The category.</p>
              * 
              * <strong>example:</strong>
              * <p>guard-scene</p>
@@ -294,7 +294,7 @@ public class ListAppConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sort number.</p>
+             * <p>The sort order.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -316,7 +316,7 @@ public class ListAppConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last modified time.</p>
+             * <p>The last modification time.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-06-15 10:17:49</p>
@@ -339,6 +339,9 @@ public class ListAppConfigsResponseBody extends TeaModel {
 
             /**
              * <p>The preset options.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;models&quot;:[&quot;qwen3.7-plus&quot;,&quot;max3.7&quot;,&quot;deepseek-v4-pro&quot;,&quot;glm-5.1&quot;,&quot;glm-5.2&quot;]}</p>
              */
             public Builder option(java.util.Map<String, ?> option) {
                 this.option = option;

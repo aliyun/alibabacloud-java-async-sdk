@@ -131,7 +131,7 @@ public class AddAppConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>App ID。</p>
+             * <p>The application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>txt_check_pro_agent_01</p>

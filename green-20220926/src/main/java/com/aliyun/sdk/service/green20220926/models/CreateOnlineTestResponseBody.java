@@ -120,7 +120,7 @@ public class CreateOnlineTestResponseBody extends TeaModel {
          * <p>The service code.</p>
          * 
          * <strong>example:</strong>
-         * <p>VideoModeration</p>
+         * <p>videoDetection</p>
          */
         public Builder serviceCode(String serviceCode) {
             this.serviceCode = serviceCode;
@@ -150,7 +150,7 @@ public class CreateOnlineTestResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The URL to be detected.</p>
+         * <p>The detection URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://xxxxxxxxxx.com/data/data.png">https://xxxxxxxxxx.com/data/data.png</a></p>

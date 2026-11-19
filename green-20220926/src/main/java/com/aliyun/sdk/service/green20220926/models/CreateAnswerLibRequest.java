@@ -115,10 +115,10 @@ public class CreateAnswerLibRequest extends Request {
         } 
 
         /**
-         * <p>The name of the proxy answer library.</p>
+         * <p>The name of the fallback answer library.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试代答库</p>
+         * <p>Test fallback answer library</p>
          */
         public Builder libName(String libName) {
             this.putBodyParameter("LibName", libName);
@@ -139,7 +139,7 @@ public class CreateAnswerLibRequest extends Request {
         }
 
         /**
-         * <p>The name of the storage space.</p>
+         * <p>The name of the bucket.</p>
          * 
          * <strong>example:</strong>
          * <p>oss-cip-shanghai</p>
@@ -151,7 +151,7 @@ public class CreateAnswerLibRequest extends Request {
         }
 
         /**
-         * <p>The file name of the proxy answer sample to be added.</p>
+         * <p>The name of the file that contains the fallback answer samples to be added.</p>
          * 
          * <strong>example:</strong>
          * <p>data/xxx.xlsx</p>
@@ -166,7 +166,7 @@ public class CreateAnswerLibRequest extends Request {
          * <p>The samples to be added.</p>
          * 
          * <strong>example:</strong>
-         * <p>代答答案1\n代答答案2</p>
+         * <p>Fallback answer 1\nFallback answer 2</p>
          */
         public Builder samples(String samples) {
             this.putBodyParameter("Samples", samples);
