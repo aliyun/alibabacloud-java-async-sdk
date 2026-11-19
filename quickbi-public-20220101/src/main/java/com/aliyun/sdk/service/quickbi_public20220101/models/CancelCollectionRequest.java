@@ -75,7 +75,7 @@ public class CancelCollectionRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the favorite user. The user ID is the UserID of the Quick BI, not the UID of Alibaba Cloud.</p>
+         * <p>The ID of the user who favorited the work. The user ID here refers to the Quick BI user ID, not the Alibaba Cloud UID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class CancelCollectionRequest extends Request {
         }
 
         /**
-         * <p>The ID of the work to cancel the collection.</p>
+         * <p>The ID of the work to remove from favorites.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

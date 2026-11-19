@@ -91,12 +91,10 @@ public class CheckOrganizationMemberResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the API call succeeded. Valid values:</p>
+         * <p>The execution result of the operation. Valid values:</p>
          * <ul>
-         * <li><p>true: The call succeeded.</p>
-         * </li>
-         * <li><p>false: The call failed.</p>
-         * </li>
+         * <li>true: The execution succeeded.</li>
+         * <li>false: The execution failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -108,12 +106,10 @@ public class CheckOrganizationMemberResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
-         * <li><p>true: The request was successful.</p>
-         * </li>
-         * <li><p>false: The request failed.</p>
-         * </li>
+         * <li>true: The request succeeded.</li>
+         * <li>false: The request failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

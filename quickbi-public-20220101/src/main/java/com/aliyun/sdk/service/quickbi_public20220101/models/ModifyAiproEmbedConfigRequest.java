@@ -143,7 +143,10 @@ public class ModifyAiproEmbedConfigRequest extends Request {
         } 
 
         /**
-         * AgentName.
+         * <p>The nickname of the agent. The default value is Intelligent Data Analytics Assistant when you create a configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder agentName(String agentName) {
             this.putQueryParameter("AgentName", agentName);
@@ -152,7 +155,10 @@ public class ModifyAiproEmbedConfigRequest extends Request {
         }
 
         /**
-         * AiProId.
+         * <p>The AIPro configuration ID. If this parameter is not specified or is left empty, a new configuration is created. If this parameter is specified, the existing configuration is updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder aiProId(String aiProId) {
             this.putQueryParameter("AiProId", aiProId);
@@ -161,7 +167,15 @@ public class ModifyAiproEmbedConfigRequest extends Request {
         }
 
         /**
-         * ChatHistoryStatus.
+         * <p>Specifies whether to display the chat history. Valid values:</p>
+         * <ul>
+         * <li>1: Display.</li>
+         * <li>0: Do not display.</li>
+         * </ul>
+         * <p>Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder chatHistoryStatus(Integer chatHistoryStatus) {
             this.putQueryParameter("ChatHistoryStatus", chatHistoryStatus);
@@ -170,7 +184,10 @@ public class ModifyAiproEmbedConfigRequest extends Request {
         }
 
         /**
-         * Config.
+         * <p>The JSON string of the embedding appearance configuration saved on the frontend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);
@@ -179,7 +196,15 @@ public class ModifyAiproEmbedConfigRequest extends Request {
         }
 
         /**
-         * MemoryEnabled.
+         * <p>Specifies whether to enable memory. Valid values:</p>
+         * <ul>
+         * <li>1: Enable.</li>
+         * <li>0: Disable.</li>
+         * </ul>
+         * <p>Default value: 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder memoryEnabled(Integer memoryEnabled) {
             this.putQueryParameter("MemoryEnabled", memoryEnabled);
@@ -188,7 +213,10 @@ public class ModifyAiproEmbedConfigRequest extends Request {
         }
 
         /**
-         * ShowName.
+         * <p>The name of the configuration. This parameter is required and must be unique within the organization when you create a configuration. If this parameter is left empty when you update a configuration, the name is not updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder showName(String showName) {
             this.putQueryParameter("ShowName", showName);
@@ -197,7 +225,15 @@ public class ModifyAiproEmbedConfigRequest extends Request {
         }
 
         /**
-         * UploadEnabled.
+         * <p>Specifies whether to allow file uploads. Valid values:</p>
+         * <ul>
+         * <li>1: Allow.</li>
+         * <li>0: Do not allow.</li>
+         * </ul>
+         * <p>Default value: 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder uploadEnabled(Integer uploadEnabled) {
             this.putQueryParameter("UploadEnabled", uploadEnabled);

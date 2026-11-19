@@ -60,7 +60,7 @@ public class QueryTicketInfoRequest extends Request {
         } 
 
         /**
-         * <p>The value of the bill.</p>
+         * <p>The ticket value.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

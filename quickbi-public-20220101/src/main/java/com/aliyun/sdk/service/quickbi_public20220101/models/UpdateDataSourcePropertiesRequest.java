@@ -102,7 +102,10 @@ public class UpdateDataSourcePropertiesRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ssss</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -111,6 +114,7 @@ public class UpdateDataSourcePropertiesRequest extends Request {
         }
 
         /**
+         * <p>The data source ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -123,7 +127,10 @@ public class UpdateDataSourcePropertiesRequest extends Request {
         }
 
         /**
-         * QuickBIOwnerId.
+         * <p>The owner of the data source. Set this parameter to the user ID in Quick BI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sss</p>
          */
         public Builder quickBIOwnerId(String quickBIOwnerId) {
             this.putQueryParameter("QuickBIOwnerId", quickBIOwnerId);
@@ -132,7 +139,10 @@ public class UpdateDataSourcePropertiesRequest extends Request {
         }
 
         /**
-         * ShowName.
+         * <p>The display name of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wls</p>
          */
         public Builder showName(String showName) {
             this.putQueryParameter("ShowName", showName);

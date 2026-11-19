@@ -93,7 +93,7 @@ public class UpdateCubeBySqlResponseBody extends TeaModel {
         /**
          * <p>The execution result of the operation. Valid values:</p>
          * <ul>
-         * <li>true: The request was successful.</li>
+         * <li>true: The request succeeded.</li>
          * <li>false: The request failed.</li>
          * </ul>
          * 
@@ -106,9 +106,9 @@ public class UpdateCubeBySqlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
-         * <li>true: The request was successful.</li>
+         * <li>true: The request succeeded.</li>
          * <li>false: The request failed.</li>
          * </ul>
          * 

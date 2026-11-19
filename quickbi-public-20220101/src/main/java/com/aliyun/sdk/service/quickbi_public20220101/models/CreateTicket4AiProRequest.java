@@ -158,7 +158,10 @@ public class CreateTicket4AiProRequest extends Request {
         } 
 
         /**
-         * AccountName.
+         * <p>The account of the access user to bind. Use this parameter together with AccountType when QuickBIUserId is not specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -167,7 +170,17 @@ public class CreateTicket4AiProRequest extends Request {
         }
 
         /**
-         * AccountType.
+         * <p>The account type of the user. Valid values:</p>
+         * <ul>
+         * <li>1: Alibaba Cloud account.</li>
+         * <li>3: Quick BI custom account.</li>
+         * <li>4: DingTalk.</li>
+         * <li>5: RAM user.</li>
+         * <li>9: WeCom.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder accountType(Integer accountType) {
             this.putQueryParameter("AccountType", accountType);
@@ -176,6 +189,7 @@ public class CreateTicket4AiProRequest extends Request {
         }
 
         /**
+         * <p>The ID of the AIPro embedding configuration. The configuration must exist, belong to the current organization, and have a status of 1.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -188,7 +202,10 @@ public class CreateTicket4AiProRequest extends Request {
         }
 
         /**
-         * CustomParam.
+         * <p>The custom pass-through parameter. If specified, it must be a valid JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder customParam(String customParam) {
             this.putQueryParameter("CustomParam", customParam);
@@ -197,7 +214,10 @@ public class CreateTicket4AiProRequest extends Request {
         }
 
         /**
-         * ExpireTime.
+         * <p>The validity period of the ticket, in minutes. Default value: 240. The value must be greater than 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
          */
         public Builder expireTime(Integer expireTime) {
             this.putQueryParameter("ExpireTime", expireTime);
@@ -206,7 +226,10 @@ public class CreateTicket4AiProRequest extends Request {
         }
 
         /**
-         * QuickBIUserId.
+         * <p>The QuickBI user ID of the access user to bind. Specify either this parameter or the combination of AccountName and AccountType.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder quickBIUserId(String quickBIUserId) {
             this.putQueryParameter("QuickBIUserId", quickBIUserId);
@@ -215,7 +238,10 @@ public class CreateTicket4AiProRequest extends Request {
         }
 
         /**
-         * SystemUid.
+         * <p>The custom system identifier. The length must be less than 150 characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder systemUid(String systemUid) {
             this.putQueryParameter("SystemUid", systemUid);
@@ -224,7 +250,10 @@ public class CreateTicket4AiProRequest extends Request {
         }
 
         /**
-         * TicketNum.
+         * <p>The number of times the ticket can be used. Default value: 1. Valid values: 1 to 99999.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ticketNum(Integer ticketNum) {
             this.putQueryParameter("TicketNum", ticketNum);

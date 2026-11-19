@@ -74,10 +74,10 @@ public class QueryUserGroupMemberRequest extends Request {
         } 
 
         /**
-         * <p>Keyword for the username or nickname of the user group member.</p>
+         * <p>The keyword used to search for the username or nickname of a user group member.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>Xiao Liu</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -86,7 +86,7 @@ public class QueryUserGroupMemberRequest extends Request {
         }
 
         /**
-         * <p>User group ID.</p>
+         * <p>The ID of the user group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

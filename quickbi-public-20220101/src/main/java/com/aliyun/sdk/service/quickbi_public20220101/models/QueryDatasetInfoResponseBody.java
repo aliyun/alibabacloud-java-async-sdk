@@ -80,11 +80,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Whether the operation is successfully returned. Valid values:</p>
-         * <ul>
-         * <li>true: The call is successful.</li>
-         * <li>false: The call fails.</li>
-         * </ul>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>a4d1a221d-41za1-****</p>
@@ -103,7 +99,11 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique ID of the dataset.</p>
+         * <p>Specifies whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request is successful.</li>
+         * <li>false: The request fails.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -250,7 +250,10 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * Caption.
+             * <p>The display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder caption(String caption) {
                 this.caption = caption;
@@ -258,7 +261,10 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Customsql.
+             * <p>Specifies whether the table is a custom dataset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder customsql(Boolean customsql) {
                 this.customsql = customsql;
@@ -266,7 +272,10 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DatasourceId.
+             * <p>The data source ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder datasourceId(String datasourceId) {
                 this.datasourceId = datasourceId;
@@ -274,7 +283,10 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DsType.
+             * <p>The data source type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder dsType(String dsType) {
                 this.dsType = dsType;
@@ -282,7 +294,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * FactTable.
+             * <p>Specifies whether the table is the primary table.</p>
              */
             public Builder factTable(Boolean factTable) {
                 this.factTable = factTable;
@@ -290,7 +302,10 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Sql.
+             * <p>The SQL statement for the custom SQL dataset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder sql(String sql) {
                 this.sql = sql;
@@ -298,7 +313,10 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * <p>The physical table name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -306,7 +324,10 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * UniqueId.
+             * <p>The unique ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder uniqueId(String uniqueId) {
                 this.uniqueId = uniqueId;
@@ -464,11 +485,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the data source table is valid. Valid values:</p>
-             * <ul>
-             * <li>true: data source table</li>
-             * <li>false: custom table</li>
-             * </ul>
+             * <p>The display name of the table.</p>
              * 
              * <strong>example:</strong>
              * <p>odps_40</p>
@@ -479,7 +496,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ChildTables.
+             * <p>The actual physical tables used by the merged table.</p>
              */
             public Builder childTables(java.util.List<ChildTables> childTables) {
                 this.childTables = childTables;
@@ -487,7 +504,11 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the table.</p>
+             * <p>Specifies whether the table is a custom SQL table. Valid values:</p>
+             * <ul>
+             * <li>true: The table is a custom SQL table.</li>
+             * <li>false: The table is not a custom SQL table.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -498,7 +519,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the table.</p>
+             * <p>The data source ID.</p>
              * 
              * <strong>example:</strong>
              * <p>dfefd7f4-fc6e-42c9-b4******</p>
@@ -509,7 +530,13 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the data source.</p>
+             * <p>The data source type. Valid values:</p>
+             * <ul>
+             * <li>mysql</li>
+             * <li>odps</li>
+             * <li>oracle</li>
+             * <li>Other data source types supported by Quick BI.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>maxcompute</p>
@@ -520,7 +547,11 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique ID of the table.</p>
+             * <p>Specifies whether the table is a data source table. Valid values:</p>
+             * <ul>
+             * <li>true: The table is a data source table.</li>
+             * <li>false: The table is a custom table.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -531,11 +562,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the table is a custom SQL table. Valid values:</p>
-             * <ul>
-             * <li>true: custom SQL table</li>
-             * <li>false: non-custom SQL table</li>
-             * </ul>
+             * <p>The specific SQL statement when the table is a custom SQL table.</p>
              * 
              * <strong>example:</strong>
              * <p>select * from ****</p>
@@ -546,7 +573,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of tables used by the dataset.</p>
+             * <p>The table name.</p>
              * 
              * <strong>example:</strong>
              * <p>viewdasb8494aab2612473cb74992159fe****</p>
@@ -557,13 +584,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the data source. Valid values:</p>
-             * <ul>
-             * <li>mysql</li>
-             * <li>odps</li>
-             * <li>oracle</li>
-             * <li>... and other data source types supported by Quick BI</li>
-             * </ul>
+             * <p>The unique ID of the table.</p>
              * 
              * <strong>example:</strong>
              * <p>7a62530b36</p>
@@ -750,7 +771,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The unique ID of the field that is referenced by the group measure. Non-NULL if and only if the metric is a grouping metric.</p>
+             * <p>The display name of the dimension.</p>
              * 
              * <strong>example:</strong>
              * <p>city</p>
@@ -761,7 +782,12 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A list of all dimensions in the dataset.</p>
+             * <p>The data type. Valid values:</p>
+             * <ul>
+             * <li>string: String.</li>
+             * <li>number: Number.</li>
+             * <li>datetime: Datetime.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>string</p>
@@ -772,7 +798,12 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The actual physical field.</p>
+             * <p>The dimension type. Valid values:</p>
+             * <ul>
+             * <li>standard_dimension: Standard dimension.</li>
+             * <li>calculate_dimension: Calculated dimension.</li>
+             * <li>group_dimension: Grouped dimension.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>group_dimension</p>
@@ -783,12 +814,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Data type; value:</p>
-             * <ul>
-             * <li>string: character</li>
-             * <li>number: a number</li>
-             * <li>datetime: time</li>
-             * </ul>
+             * <p>The expression for the calculated dimension. This parameter is valid only for calculated dimensions.</p>
              * 
              * <strong>example:</strong>
              * <p>example_expression</p>
@@ -799,7 +825,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Expression for the flattened calculation dimensions.</p>
+             * <p>The flattened expression for the calculated dimension.</p>
              * 
              * <strong>example:</strong>
              * <p>example_expression</p>
@@ -810,7 +836,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Expression for a calculated dimension; valid only for calculated dimensions.</p>
+             * <p>The actual physical field.</p>
              * 
              * <strong>example:</strong>
              * <p>city</p>
@@ -821,7 +847,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the field.</p>
+             * <p>The field description.</p>
              * 
              * <strong>example:</strong>
              * <p>hhhh</p>
@@ -832,12 +858,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the dimension. Valid values:</p>
-             * <ul>
-             * <li>standard_dimension: General Dimension</li>
-             * <li>calculate_dimension: calculating dimensions</li>
-             * <li>group_dimension: grouping dimensions</li>
-             * </ul>
+             * <p>The granularity.</p>
              * 
              * <strong>example:</strong>
              * <p>example_granularity</p>
@@ -848,7 +869,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The granularity.</p>
+             * <p>The unique ID of the referenced field for a grouped measure. This parameter is not null only when the measure is a grouped measure.</p>
              * 
              * <strong>example:</strong>
              * <p>308f7****</p>
@@ -859,7 +880,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ARN.</p>
+             * <p>The unique ID of the table to which the dimension belongs. This corresponds to the UniqueId in CubeTypeList.</p>
              * 
              * <strong>example:</strong>
              * <p>7a62530***</p>
@@ -870,7 +891,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the dimension.</p>
+             * <p>The unique ID.</p>
              * 
              * <strong>example:</strong>
              * <p>a69774***</p>
@@ -966,7 +987,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Test directory</p>
+             * <p>The folder ID.</p>
              * 
              * <strong>example:</strong>
              * <p>a3eecab7-618d-4f9f-*****</p>
@@ -977,10 +998,10 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Test directory</p>
+             * <p>The folder name.</p>
              * 
              * <strong>example:</strong>
-             * <p>The name of the directory.</p>
+             * <p>Test folder</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -988,7 +1009,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the directory to which the dataset belongs.</p>
+             * <p>The path of the folder ID, such as aa/bb/cc/dd.</p>
              * 
              * <strong>example:</strong>
              * <p>88b680****</p>
@@ -999,10 +1020,10 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The path of the directory ID, for example, aa/bb/cc/dd.</p>
+             * <p>The path name of the folder ID, such as Level 1 folder/Level 2 folder.</p>
              * 
              * <strong>example:</strong>
-             * <p>The path name of the directory ID, for example, one-level directory /two-level directory.</p>
+             * <p>Test folder</p>
              */
             public Builder pathName(String pathName) {
                 this.pathName = pathName;
@@ -1160,7 +1181,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The actual physical field.</p>
+             * <p>The display name of the measure.</p>
              * 
              * <strong>example:</strong>
              * <p>profit_amt</p>
@@ -1171,7 +1192,12 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A list of all measures for the dataset.</p>
+             * <p>The data type. Valid values:</p>
+             * <ul>
+             * <li>string: String.</li>
+             * <li>number: Number.</li>
+             * <li>datetime: Datetime.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>string</p>
@@ -1182,12 +1208,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Data type; value:</p>
-             * <ul>
-             * <li>string: character</li>
-             * <li>number: a number</li>
-             * <li>datetime: time</li>
-             * </ul>
+             * <p>The expression for the calculated measure. This parameter is valid only for calculated measures.</p>
              * 
              * <strong>example:</strong>
              * <p>example_expression</p>
@@ -1198,7 +1219,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Expression for flattened computation metrics.</p>
+             * <p>The flattened expression for the calculated measure.</p>
              * 
              * <strong>example:</strong>
              * <p>example_expression</p>
@@ -1209,11 +1230,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the measure. Valid values:</p>
-             * <ul>
-             * <li>standard_measure: General Metrics</li>
-             * <li>calculate_measure: Calculating Measures</li>
-             * </ul>
+             * <p>The actual physical field.</p>
              * 
              * <strong>example:</strong>
              * <p>profit_amt</p>
@@ -1224,7 +1241,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the field.</p>
+             * <p>The field description.</p>
              * 
              * <strong>example:</strong>
              * <p>asadsda</p>
@@ -1235,7 +1252,11 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>An expression that calculates a measure; valid only for calculated measures.</p>
+             * <p>The metric type. Valid values:</p>
+             * <ul>
+             * <li>standard_measure: Standard measure.</li>
+             * <li>calculate_measure: Calculated measure.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>calculate_measure</p>
@@ -1246,7 +1267,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the metric.</p>
+             * <p>The unique ID of the table to which the dimension belongs. This corresponds to the UniqueId in CubeTypeList.</p>
              * 
              * <strong>example:</strong>
              * <p>7a62530b36</p>
@@ -1257,7 +1278,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique ID of the table to which the table belongs, which corresponds to the UniqueId of the CubeTypeList.</p>
+             * <p>The unique ID of the measure.</p>
              * 
              * <strong>example:</strong>
              * <p>88b680****</p>
@@ -1535,7 +1556,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The unique ID of the dataset.</p>
+             * <p>The list of tables used by the dataset.</p>
              */
             public Builder cubeTableList(java.util.List<CubeTableList> cubeTableList) {
                 this.cubeTableList = cubeTableList;
@@ -1543,7 +1564,11 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique ID of the workspace to which the dataset belongs.</p>
+             * <p>Specifies whether custom SQL is used. Valid values:</p>
+             * <ul>
+             * <li>true: Yes.</li>
+             * <li>false: No.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1554,13 +1579,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the data source. Valid values:</p>
-             * <ul>
-             * <li>mysql</li>
-             * <li>odps</li>
-             * <li>oracle</li>
-             * <li>... Data source types supported by Quick BI such as</li>
-             * </ul>
+             * <p>The unique ID of the dataset.</p>
              * 
              * <strong>example:</strong>
              * <p>a201c85c-******</p>
@@ -1571,7 +1590,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user ID of the dataset owner in the Quick BI.</p>
+             * <p>The dataset name.</p>
              * 
              * <strong>example:</strong>
              * <p>opds_40</p>
@@ -1582,7 +1601,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A list of all dimensions in the dataset.</p>
+             * <p>The list of all dimensions in the dataset.</p>
              */
             public Builder dimensionList(java.util.List<DimensionList> dimensionList) {
                 this.dimensionList = dimensionList;
@@ -1590,7 +1609,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique ID of the metric.</p>
+             * <p>The folder information of the dataset.</p>
              */
             public Builder directory(Directory directory) {
                 this.directory = directory;
@@ -1598,7 +1617,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the data source.</p>
+             * <p>The unique ID of the data source.</p>
              * 
              * <strong>example:</strong>
              * <p>a201c85c-******</p>
@@ -1609,7 +1628,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the dataset was last modified.</p>
+             * <p>The data source name.</p>
              * 
              * <strong>example:</strong>
              * <p>odps</p>
@@ -1620,7 +1639,13 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The point in time when the training dataset was created.</p>
+             * <p>The data source type. Valid values:</p>
+             * <ul>
+             * <li>mysql</li>
+             * <li>odps</li>
+             * <li>oracle</li>
+             * <li>Other data source types supported by Quick BI.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>odps</p>
@@ -1631,11 +1656,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether to customize SQL statements. Valid values:</p>
-             * <ul>
-             * <li>true</li>
-             * <li>false</li>
-             * </ul>
+             * <p>The time when the dataset was created.</p>
              * 
              * <strong>example:</strong>
              * <p>1629450382000</p>
@@ -1646,7 +1667,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the dataset.</p>
+             * <p>The time when the dataset was last modified.</p>
              * 
              * <strong>example:</strong>
              * <p>1629450382000</p>
@@ -1657,7 +1678,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A list of all measures for the dataset.</p>
+             * <p>The list of all measures in the dataset.</p>
              */
             public Builder measureList(java.util.List<MeasureList> measureList) {
                 this.measureList = measureList;
@@ -1665,10 +1686,10 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether to enable extraction acceleration. Valid values:</p>
+             * <p>Specifies whether extract acceleration is enabled. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li>true: Enabled.</li>
+             * <li>false: Disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1680,7 +1701,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Test Space</p>
+             * <p>The user ID of the dataset owner in Quick BI.</p>
              * 
              * <strong>example:</strong>
              * <p>b8494aab26124*****</p>
@@ -1691,10 +1712,10 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique ID of the data source.</p>
+             * <p>The name of the dataset owner.</p>
              * 
              * <strong>example:</strong>
-             * <p>The name of the dataset owner.</p>
+             * <p>Dawa</p>
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
@@ -1702,7 +1723,11 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the training dataset.</p>
+             * <p>Specifies whether row-level permissions are enabled. Valid values:</p>
+             * <ul>
+             * <li>true: Enabled.</li>
+             * <li>false: Disabled.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1713,11 +1738,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether row-level permissions are enabled. Valid values:</p>
-             * <ul>
-             * <li>true: The VIP Netty channel is enabled.</li>
-             * <li>false: The VIP Netty channel is disabled.</li>
-             * </ul>
+             * <p>The unique ID of the workspace to which the dataset belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>420abef4-a79b-4289-b12****</p>
@@ -1728,10 +1749,10 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Big Baby</p>
+             * <p>The name of the workspace to which the dataset belongs.</p>
              * 
              * <strong>example:</strong>
-             * <p>The name of the workspace in which the dataset resides.</p>
+             * <p>Test workspace</p>
              */
             public Builder workspaceName(String workspaceName) {
                 this.workspaceName = workspaceName;

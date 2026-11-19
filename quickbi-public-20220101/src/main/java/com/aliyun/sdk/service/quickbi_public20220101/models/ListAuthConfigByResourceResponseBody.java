@@ -99,7 +99,7 @@ public class ListAuthConfigByResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -246,7 +246,7 @@ public class ListAuthConfigByResourceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The array of permissions granted.</p>
+             * <p>The array of owned permissions.</p>
              */
             public Builder authorities(java.util.List<String> authorities) {
                 this.authorities = authorities;
@@ -276,7 +276,7 @@ public class ListAuthConfigByResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration time. This value is a UNIX timestamp in milliseconds.</p>
+             * <p>The expiration time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1788969600000</p>
@@ -287,7 +287,7 @@ public class ListAuthConfigByResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the permission record was created, in the yyyy-MM-dd mm:hh:ss format.</p>
+             * <p>The creation time of the permission record. The format is yyyy-MM-dd mm:hh:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-04-16 13:17:39</p>
@@ -311,14 +311,14 @@ public class ListAuthConfigByResourceResponseBody extends TeaModel {
             /**
              * <p>The resource type. Valid values:</p>
              * <ul>
-             * <li>dashboard: dashboard</li>
-             * <li>screen: data screen</li>
-             * <li>report: electron</li>
-             * <li>ANALYSIS: ad hoc analysis</li>
-             * <li>dashboardOfflineQuery: self-service data retrieval</li>
-             * <li>dataForm: data form</li>
-             * <li>cube: dataset</li>
-             * <li>datasource: data source</li>
+             * <li>dashboard: Dashboard.</li>
+             * <li>screen: Data screen.</li>
+             * <li>report: Workbook.</li>
+             * <li>ANALYSIS: Ad hoc analysis.</li>
+             * <li>dashboardOfflineQuery: Self-service data retrieval.</li>
+             * <li>dataForm: Data entry.</li>
+             * <li>cube: Dataset.</li>
+             * <li>datasource: Data source.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -332,10 +332,10 @@ public class ListAuthConfigByResourceResponseBody extends TeaModel {
             /**
              * <p>The authorization scope. Valid values:</p>
              * <ul>
-             * <li>0: user</li>
-             * <li>1: user group</li>
-             * <li>2: organization</li>
-             * <li>3: workspace</li>
+             * <li>0: User.</li>
+             * <li>1: User group.</li>
+             * <li>2: Organization.</li>
+             * <li>3: Workspace.</li>
              * </ul>
              * 
              * <strong>example:</strong>

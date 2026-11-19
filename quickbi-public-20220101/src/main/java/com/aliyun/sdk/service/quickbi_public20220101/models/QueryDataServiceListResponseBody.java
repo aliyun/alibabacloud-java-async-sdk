@@ -80,7 +80,7 @@ public class QueryDataServiceListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>78C1AA2D-9201-599E-A0BA-6FC462E57A95</p>
@@ -91,7 +91,7 @@ public class QueryDataServiceListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Return result.</p>
+         * <p>The returned result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -99,10 +99,10 @@ public class QueryDataServiceListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Value range:</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
-         * <li>true: The request was successful </li>
-         * <li>false: The request failed</li>
+         * <li>true: The request is successful.</li>
+         * <li>false: The request fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -185,7 +185,24 @@ public class QueryDataServiceListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Combined conditions.</p>
+             * <p>The combined conditions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{
+             *     &quot;field&quot;: {
+             *         &quot;fid&quot;: &quot;1c1f88cb7d&quot;,
+             *         &quot;granularity&quot;: &quot;yearRegion&quot;,
+             *         &quot;dataType&quot;: &quot;datetime&quot;,
+             *         &quot;column&quot;: &quot;s_date&quot;,
+             *         &quot;caption&quot;: &quot;Date (year)&quot;,
+             *         &quot;type&quot;: &quot;dimension&quot;
+             *     },
+             *     &quot;defaultValue&quot;: [&quot;2024&quot;],
+             *     &quot;alias&quot;: &quot;s_date&quot;,
+             *     &quot;type&quot;: &quot;basic&quot;,
+             *     &quot;operator&quot;: &quot;equal-to&quot;,
+             *     &quot;essential&quot;: true
+             * }]</p>
              */
             public Builder filters(java.util.List<java.util.Map<String, ?>> filters) {
                 this.filters = filters;
@@ -193,10 +210,10 @@ public class QueryDataServiceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Logical relationship between multiple SQL text keywords.</p>
+             * <p>The logical relationship between multiple SQL text keywords.</p>
              * <ul>
-             * <li><strong>or</strong>: or</li>
-             * <li><strong>and</strong>: and</li>
+             * <li><strong>or</strong>: OR.</li>
+             * <li><strong>and</strong>: AND.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -208,10 +225,10 @@ public class QueryDataServiceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Type.</p>
+             * <p>The type.</p>
              * <ul>
-             * <li>basic: basic</li>
-             * <li>combined: complex</li>
+             * <li>basic: Basic.</li>
+             * <li>combined: Complex.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -347,10 +364,10 @@ public class QueryDataServiceListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Display name in the cube model (can be in Chinese or English).</p>
+             * <p>The display name in the cube model, which can be in Chinese or English.</p>
              * 
              * <strong>example:</strong>
-             * <p>date(year)</p>
+             * <p>Date (year)</p>
              */
             public Builder caption(String caption) {
                 this.caption = caption;
@@ -369,16 +386,16 @@ public class QueryDataServiceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Data type.</p>
+             * <p>The data type.</p>
              * <ul>
-             * <li>number: numeric</li>
-             * <li>string: string</li>
-             * <li>date: date</li>
-             * <li>datetime: datetime</li>
-             * <li>time: time</li>
-             * <li>geographic: geographic</li>
-             * <li>boolean: boolean</li>
-             * <li>url: URL</li>
+             * <li>number: Number.</li>
+             * <li>string: String.</li>
+             * <li>date: Date.</li>
+             * <li>datetime: Datetime.</li>
+             * <li>time: Time.</li>
+             * <li>geographic: Geographic.</li>
+             * <li>boolean: Boolean.</li>
+             * <li>url: URL.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -390,7 +407,7 @@ public class QueryDataServiceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Unique identifier for the original field.</p>
+             * <p>The unique ID of the original field.</p>
              * 
              * <strong>example:</strong>
              * <p>1c1f88cb7d</p>
@@ -401,7 +418,7 @@ public class QueryDataServiceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This attribute is included for date and geographic dimensions, indicating the supported granularity.</p>
+             * <p>The supported granularity. This property is included in date and geographic dimensions.</p>
              * 
              * <strong>example:</strong>
              * <p>yearRegion</p>
@@ -412,7 +429,7 @@ public class QueryDataServiceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Unique name of the cube field, mainly used for unique positioning in the returned result.</p>
+             * <p>The unique name of the cube field, which is primarily used to uniquely locate the returned result.</p>
              * 
              * <strong>example:</strong>
              * <p>sss</p>
@@ -423,10 +440,10 @@ public class QueryDataServiceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Type.</p>
+             * <p>The type.</p>
              * <ul>
-             * <li>Dimension: Dimension</li>
-             * <li>Measure: Measure</li>
+             * <li>Dimension: Dimension.</li>
+             * <li>Measure: Measure.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -536,7 +553,7 @@ public class QueryDataServiceListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Aggregation operator. For example, SUM, AVG, and MAX.</p>
+             * <p>The aggregate operation (aggregation), such as SUM, AVG, and MAX.</p>
              * 
              * <strong>example:</strong>
              * <p>SUM</p>
@@ -547,7 +564,7 @@ public class QueryDataServiceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Field parameter name.</p>
+             * <p>The field parameter name.</p>
              * 
              * <strong>example:</strong>
              * <p>s_number</p>
@@ -558,10 +575,10 @@ public class QueryDataServiceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Remark for the returned field.</p>
+             * <p>The description of the returned field.</p>
              * 
              * <strong>example:</strong>
-             * <p>Theme Configuration already exists</p>
+             * <p>The theme configuration already exists</p>
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -569,7 +586,7 @@ public class QueryDataServiceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Corresponding cube field information.</p>
+             * <p>The corresponding cube field information.</p>
              */
             public Builder field(Field field) {
                 this.field = field;
@@ -577,11 +594,11 @@ public class QueryDataServiceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Sorting.</p>
+             * <p>The sort order.</p>
              * <ul>
-             * <li>asc: Ascending</li>
-             * <li>desc: Descending</li>
-             * <li>no: No sorting</li>
+             * <li>asc: Ascending.</li>
+             * <li>desc: Descending.</li>
+             * <li>no: Unsorted.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -691,7 +708,7 @@ public class QueryDataServiceListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Cube identifier ID.</p>
+             * <p>The cube ID.</p>
              * 
              * <strong>example:</strong>
              * <p>56f9f34a-bdba-496a-91a3-a18b1ff73a80</p>
@@ -702,10 +719,10 @@ public class QueryDataServiceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Dataset name.</p>
+             * <p>The name of the dataset.</p>
              * 
              * <strong>example:</strong>
-             * <p>test data source</p>
+             * <p>Test dataset</p>
              */
             public Builder cubeName(String cubeName) {
                 this.cubeName = cubeName;
@@ -713,7 +730,7 @@ public class QueryDataServiceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Detail or Summary</p>
+             * <p>The detail or aggregate type.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -724,7 +741,7 @@ public class QueryDataServiceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Request parameter information.</p>
+             * <p>The request parameter information.</p>
              */
             public Builder filter(Filter filter) {
                 this.filter = filter;
@@ -732,7 +749,7 @@ public class QueryDataServiceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Return information.</p>
+             * <p>The returned information.</p>
              */
             public Builder returnFields(java.util.List<ReturnFields> returnFields) {
                 this.returnFields = returnFields;
@@ -989,7 +1006,7 @@ public class QueryDataServiceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Creator ID.</p>
+             * <p>The ID of the creator.</p>
              * 
              * <strong>example:</strong>
              * <p>7cb94cd48701</p>
@@ -1000,10 +1017,10 @@ public class QueryDataServiceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Creator\&quot;s name.</p>
+             * <p>The name of the creator.</p>
              * 
              * <strong>example:</strong>
-             * <p>zhangsan</p>
+             * <p>Zhang Zilong</p>
              */
             public Builder creatorName(String creatorName) {
                 this.creatorName = creatorName;
@@ -1011,7 +1028,7 @@ public class QueryDataServiceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Cube identifier ID.</p>
+             * <p>The cube ID.</p>
              * 
              * <strong>example:</strong>
              * <p>d14e7448-0eb3-40d3-9375-4afef8de29fd</p>
@@ -1022,10 +1039,10 @@ public class QueryDataServiceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Dataset name.</p>
+             * <p>The name of the dataset.</p>
              * 
              * <strong>example:</strong>
-             * <p>test data source</p>
+             * <p>Test dataset</p>
              */
             public Builder cubeName(String cubeName) {
                 this.cubeName = cubeName;
@@ -1033,10 +1050,10 @@ public class QueryDataServiceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Description</p>
+             * <p>The description.</p>
              * 
              * <strong>example:</strong>
-             * <p>test</p>
+             * <p>For testing</p>
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -1044,7 +1061,7 @@ public class QueryDataServiceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Creation time.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-05-18 14:00:02.0</p>
@@ -1055,7 +1072,7 @@ public class QueryDataServiceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Modification time.</p>
+             * <p>The modification time.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-03-21 18:02:36</p>
@@ -1066,7 +1083,7 @@ public class QueryDataServiceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Modifier\&quot;s userId.</p>
+             * <p>The user ID of the modifier.</p>
              * 
              * <strong>example:</strong>
              * <p>7cb94cd48701</p>
@@ -1077,10 +1094,10 @@ public class QueryDataServiceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Modifier\&quot;s name</p>
+             * <p>The name of the modifier.</p>
              * 
              * <strong>example:</strong>
-             * <p>zhangsan</p>
+             * <p>Zhang Zilong</p>
              */
             public Builder modifierName(String modifierName) {
                 this.modifierName = modifierName;
@@ -1088,10 +1105,10 @@ public class QueryDataServiceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Data service name.</p>
+             * <p>The service name.</p>
              * 
              * <strong>example:</strong>
-             * <p>test report</p>
+             * <p>Test report</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1099,7 +1116,7 @@ public class QueryDataServiceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Owner ID</p>
+             * <p>The ID of the owner.</p>
              * 
              * <strong>example:</strong>
              * <p>862801339</p>
@@ -1110,10 +1127,10 @@ public class QueryDataServiceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Owner\&quot;s name</p>
+             * <p>The name of the owner.</p>
              * 
              * <strong>example:</strong>
-             * <p>lisi</p>
+             * <p>Li Si</p>
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
@@ -1121,7 +1138,7 @@ public class QueryDataServiceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Unique ID of the data service.</p>
+             * <p>The unique ID of the data service.</p>
              * 
              * <strong>example:</strong>
              * <p>dtsuq3i31f5j8v848b</p>
@@ -1132,7 +1149,7 @@ public class QueryDataServiceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Workspace ID.</p>
+             * <p>The workspace ID.</p>
              * 
              * <strong>example:</strong>
              * <p>7350a155-0e94-4c6c-8620-57bbec38****</p>
@@ -1143,10 +1160,10 @@ public class QueryDataServiceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Workspace name.</p>
+             * <p>The name of the workspace.</p>
              * 
              * <strong>example:</strong>
-             * <p>test workspace</p>
+             * <p>Test workspace</p>
              */
             public Builder workspaceName(String workspaceName) {
                 this.workspaceName = workspaceName;
@@ -1252,7 +1269,7 @@ public class QueryDataServiceListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Data service information.</p>
+             * <p>The data service information.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -1260,7 +1277,7 @@ public class QueryDataServiceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Page number.</p>
+             * <p>The page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1271,7 +1288,7 @@ public class QueryDataServiceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of records per page.</p>
+             * <p>The number of entries per page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1282,7 +1299,7 @@ public class QueryDataServiceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Total number of rows.</p>
+             * <p>The total number of rows.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1293,7 +1310,7 @@ public class QueryDataServiceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Total number of pages.</p>
+             * <p>The total number of pages.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

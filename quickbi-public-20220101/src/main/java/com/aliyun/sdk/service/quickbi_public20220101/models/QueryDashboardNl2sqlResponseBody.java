@@ -80,7 +80,7 @@ public class QueryDashboardNl2sqlResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>46e537a5****,3dadsu****</p>
@@ -91,10 +91,10 @@ public class QueryDashboardNl2sqlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Result of the API execution. Possible values:</p>
+         * <p>The execution result of the API operation. Valid values:</p>
          * <ul>
-         * <li>true: Request succeeded</li>
-         * <li>false: Request failed</li>
+         * <li>true: The request succeeded.</li>
+         * <li>false: The request failed.</li>
          * </ul>
          */
         public Builder result(java.util.List<Result> result) {
@@ -103,10 +103,10 @@ public class QueryDashboardNl2sqlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Possible values: </p>
+         * <p>Specifies whether the request is successful. Valid values: </p>
          * <ul>
-         * <li>true: Request succeeded</li>
-         * <li>false: Request failed</li>
+         * <li>true: The request succeeded.</li>
+         * <li>false: The request failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -202,7 +202,7 @@ public class QueryDashboardNl2sqlResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>If this parameter has a value and includes &quot;READ&quot;, it indicates that the user has read permission for the dashboard question resource.</p>
+             * <p>The permissions on the dashboard NL2SQL resource. If this parameter has a value and contains READ, it indicates that the user has NL2SQL permissions on the dashboard NL2SQL resource.</p>
              */
             public Builder authorities(java.util.List<String> authorities) {
                 this.authorities = authorities;
@@ -210,7 +210,7 @@ public class QueryDashboardNl2sqlResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Dashboard name</p>
+             * <p>The name of the dashboard.</p>
              * 
              * <strong>example:</strong>
              * <p>612b</p>
@@ -221,7 +221,7 @@ public class QueryDashboardNl2sqlResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Dashboard question resource ID</p>
+             * <p>The NL2SQL resource ID of the dashboard.</p>
              * 
              * <strong>example:</strong>
              * <p>sasdas****sawdau</p>
@@ -232,7 +232,7 @@ public class QueryDashboardNl2sqlResponseBody extends TeaModel {
             }
 
             /**
-             * <p>UserID of the dashboard creator</p>
+             * <p>The user ID of the dashboard creator.</p>
              * 
              * <strong>example:</strong>
              * <p>46e5374665ba4b679ee22e2a2927****</p>

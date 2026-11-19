@@ -80,7 +80,7 @@ public class AddUserTagMetaResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
@@ -91,7 +91,7 @@ public class AddUserTagMetaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returns the ID of the successfully added tag.</p>
+         * <p>The ID of the successfully added tag.</p>
          * 
          * <strong>example:</strong>
          * <p>0822a7d9-<strong><strong>-</strong></strong>-****-f20163ab9b0d</p>
@@ -102,10 +102,10 @@ public class AddUserTagMetaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Value range:</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
-         * <li>true: The request succeeded </li>
-         * <li>false: The request failed</li>
+         * <li>true: The request is successful.</li>
+         * <li>false: The request fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>

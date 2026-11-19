@@ -80,7 +80,7 @@ public class QueryDatasetSwitchInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>FAECEFA8-09BB-58AB-BC58-C8ACEFE4D232</p>
@@ -91,7 +91,7 @@ public class QueryDatasetSwitchInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Details of the dataset\&quot;s row and column permission switches.</p>
+         * <p>The details of the row- and column-level permission switches for the dataset.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -99,10 +99,10 @@ public class QueryDatasetSwitchInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Possible values:</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
-         * <li>true: The request was successful.</li>
-         * <li>false: The request failed.</li>
+         * <li>true: The request is successful.</li>
+         * <li>false: The request fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -185,7 +185,7 @@ public class QueryDatasetSwitchInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Dataset ID.</p>
+             * <p>The dataset ID.</p>
              * 
              * <strong>example:</strong>
              * <p>7c7223ae-****-3c744528014b</p>
@@ -196,10 +196,10 @@ public class QueryDatasetSwitchInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Status of the column-level field permission switch. Possible values:</p>
+             * <p>The status of the column-level field permission switch. Valid values:</p>
              * <ul>
-             * <li>1: Enabled</li>
-             * <li>0: Disabled</li>
+             * <li>1: Enabled.</li>
+             * <li>0: Disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -211,10 +211,10 @@ public class QueryDatasetSwitchInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Status of the row-level permission switch.</p>
+             * <p>The status of the row-level permission switch. Valid values:</p>
              * <ul>
-             * <li>1: Enabled</li>
-             * <li>0: Disabled</li>
+             * <li>1: Enabled.</li>
+             * <li>0: Disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>

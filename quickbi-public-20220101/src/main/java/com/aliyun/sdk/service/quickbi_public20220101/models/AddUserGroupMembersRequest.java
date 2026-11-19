@@ -75,7 +75,7 @@ public class AddUserGroupMembersRequest extends Request {
         } 
 
         /**
-         * <p>The IDs of the user groups. Separate the IDs with commas (,). Example: aGroupId,bGroupId,cGroupIds</p>
+         * <p>The IDs of the user groups, separated by commas. Example: aGroupId,bGroupId,cGroupIds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class AddUserGroupMembersRequest extends Request {
         }
 
         /**
-         * <p>The user ID of the Quick BI.</p>
+         * <p>The user ID in Quick BI.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

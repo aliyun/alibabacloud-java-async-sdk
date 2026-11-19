@@ -127,10 +127,10 @@ public class BatchAddFeishuUsersRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the user is an admin user. Valid values:</p>
+         * <p>Specifies whether the user is an administrator. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: Yes.</li>
+         * <li>false: No.</li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -146,8 +146,8 @@ public class BatchAddFeishuUsersRequest extends Request {
         /**
          * <p>Specifies whether the user is a permission management administrator. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: Yes.</li>
+         * <li>false: No.</li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -161,7 +161,7 @@ public class BatchAddFeishuUsersRequest extends Request {
         }
 
         /**
-         * <p>The user groups to which the users belong.</p>
+         * <p>The IDs of the user groups to which the users belong.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;0d5fb19b-5555-41f0-99da-1248fc27ca51,0f868dd6_68dd_4d13_8422_c5dca3bd4b61&quot;</p>
@@ -175,9 +175,9 @@ public class BatchAddFeishuUsersRequest extends Request {
         /**
          * <p>The user type. Valid values:</p>
          * <ul>
-         * <li>1: developer</li>
-         * <li>2: visitor</li>
-         * <li>3: analyst</li>
+         * <li>1: Developer.</li>
+         * <li>2: Visitor.</li>
+         * <li>3: Analyst.</li>
          * </ul>
          * 
          * <strong>example:</strong>

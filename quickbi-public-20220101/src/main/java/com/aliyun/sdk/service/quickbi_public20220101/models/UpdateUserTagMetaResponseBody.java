@@ -80,7 +80,7 @@ public class UpdateUserTagMetaResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
@@ -91,10 +91,10 @@ public class UpdateUserTagMetaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the interface was executed successfully. Possible values:</p>
+         * <p>Indicates whether the API operation was executed successfully. Valid values:</p>
          * <ul>
-         * <li>true: Execution succeeded</li>
-         * <li>false: Execution failed</li>
+         * <li>true: The operation was successful.</li>
+         * <li>false: The operation failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -106,9 +106,10 @@ public class UpdateUserTagMetaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Possible values:</p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li>true: The request succeeded - false: The request failed</li>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

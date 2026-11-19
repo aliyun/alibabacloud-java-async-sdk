@@ -91,9 +91,9 @@ public class AllotDatasetAccelerationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the IP address whitelist is updated. Valid values:</p>
+         * <p>The execution result. Valid values:</p>
          * <ul>
-         * <li>true: The task is triggered.</li>
+         * <li>true: The task is triggered successfully.</li>
          * <li>false: The task fails to be triggered.</li>
          * </ul>
          * 
@@ -106,10 +106,10 @@ public class AllotDatasetAccelerationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
-         * <li>true: The request was successful.</li>
-         * <li>false: The request failed.</li>
+         * <li>true: The request is successful.</li>
+         * <li>false: The request fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>

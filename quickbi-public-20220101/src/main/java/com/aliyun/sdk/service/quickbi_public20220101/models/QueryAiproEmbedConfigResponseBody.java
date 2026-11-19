@@ -80,7 +80,10 @@ public class QueryAiproEmbedConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D8749***C180FF3B4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class QueryAiproEmbedConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The array of AIPro configurations.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -96,7 +99,14 @@ public class QueryAiproEmbedConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request is successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -240,7 +250,10 @@ public class QueryAiproEmbedConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * AgentName.
+             * <p>The agent nickname.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Xiao Q</p>
              */
             public Builder agentName(String agentName) {
                 this.agentName = agentName;
@@ -248,7 +261,10 @@ public class QueryAiproEmbedConfigResponseBody extends TeaModel {
             }
 
             /**
-             * AiProId.
+             * <p>The embed configuration ID, which is used for CreateTicket4AiPro.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123124</p>
              */
             public Builder aiProId(String aiProId) {
                 this.aiProId = aiProId;
@@ -256,7 +272,14 @@ public class QueryAiproEmbedConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ChatHistoryStatus.
+             * <p>Indicates whether chat history is displayed. Valid values:</p>
+             * <ul>
+             * <li>1: Displayed.</li>
+             * <li>0: Not displayed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder chatHistoryStatus(Integer chatHistoryStatus) {
                 this.chatHistoryStatus = chatHistoryStatus;
@@ -264,7 +287,10 @@ public class QueryAiproEmbedConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Config.
+             * <p>The JSON string of the embed appearance configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder config(String config) {
                 this.config = config;
@@ -272,7 +298,14 @@ public class QueryAiproEmbedConfigResponseBody extends TeaModel {
             }
 
             /**
-             * MemoryEnabled.
+             * <p>Specifies whether memory is enabled. Valid values:</p>
+             * <ul>
+             * <li>1: Enabled.</li>
+             * <li>0: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder memoryEnabled(Integer memoryEnabled) {
                 this.memoryEnabled = memoryEnabled;
@@ -280,7 +313,10 @@ public class QueryAiproEmbedConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ShowName.
+             * <p>The configuration name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0327</p>
              */
             public Builder showName(String showName) {
                 this.showName = showName;
@@ -288,7 +324,14 @@ public class QueryAiproEmbedConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status. Valid values:</p>
+             * <ul>
+             * <li>1: Enabled.</li>
+             * <li>0: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -296,7 +339,14 @@ public class QueryAiproEmbedConfigResponseBody extends TeaModel {
             }
 
             /**
-             * UploadEnabled.
+             * <p>Specifies whether file upload is allowed. Valid values:</p>
+             * <ul>
+             * <li>1: Allowed.</li>
+             * <li>0: Not allowed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder uploadEnabled(Integer uploadEnabled) {
                 this.uploadEnabled = uploadEnabled;

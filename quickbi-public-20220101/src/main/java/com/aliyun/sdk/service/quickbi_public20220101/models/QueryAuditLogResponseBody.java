@@ -91,7 +91,7 @@ public class QueryAuditLogResponseBody extends TeaModel {
         }
 
         /**
-         * <p>An array of log objects.</p>
+         * <p>The log array.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -99,12 +99,10 @@ public class QueryAuditLogResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
-         * <li><p>true: The request was successful.</p>
-         * </li>
-         * <li><p>false: The request failed.</p>
-         * </li>
+         * <li>true: The request is successful.</li>
+         * <li>false: The request fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -252,7 +250,7 @@ public class QueryAuditLogResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the log was generated.</p>
+             * <p>The log time.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-04-16 13:17:39</p>
@@ -263,7 +261,7 @@ public class QueryAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The account name of the operator.</p>
+             * <p>The account of the operator.</p>
              * 
              * <strong>example:</strong>
              * <p>wukaibis</p>

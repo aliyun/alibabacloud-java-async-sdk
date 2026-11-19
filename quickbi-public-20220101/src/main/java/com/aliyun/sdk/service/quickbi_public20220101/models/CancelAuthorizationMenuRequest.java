@@ -116,9 +116,9 @@ public class CancelAuthorizationMenuRequest extends Request {
         }
 
         /**
-         * <p>The leaf node menu IDs of the data portal.</p>
+         * <p>The IDs of the leaf node menus in the data portal.</p>
          * <ul>
-         * <li>Supports batch parameters, with IDs separated by commas (,). The maximum number for batch modification is 100.</li>
+         * <li>You can specify multiple IDs. Separate multiple IDs with commas (,). A maximum of 100 IDs can be specified at a time.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -132,10 +132,10 @@ public class CancelAuthorizationMenuRequest extends Request {
         }
 
         /**
-         * <p>List of user group IDs.</p>
+         * <p>The IDs of the user groups.</p>
          * <ul>
-         * <li>Supports batch parameters, with IDs separated by commas (,). The maximum number for batch modification is 200.</li>
-         * <li>UserGroupIds and UserIds cannot both be empty.</li>
+         * <li>You can specify multiple IDs. Separate multiple IDs with commas (,). A maximum of 200 IDs can be specified at a time.</li>
+         * <li>UserGroupIds and UserIds cannot be empty at the same time.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -148,9 +148,9 @@ public class CancelAuthorizationMenuRequest extends Request {
         }
 
         /**
-         * <p>List of user IDs. These are Quick BI UserIDs, not Alibaba Cloud UIDs.</p>
+         * <p>The IDs of the users. These are Quick BI user IDs, not Alibaba Cloud UIDs.</p>
          * <ul>
-         * <li>Supports batch parameters, with IDs separated by commas (,). The maximum number for batch modification is 200.</li>
+         * <li>You can specify multiple IDs. Separate multiple IDs with commas (,). A maximum of 200 IDs can be specified at a time.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -60,7 +60,7 @@ public class QueryReadableResourcesListByUserIdRequest extends Request {
         } 
 
         /**
-         * <p>Quick BI the user ID.</p>
+         * <p>The Quick BI user ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

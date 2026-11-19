@@ -59,7 +59,10 @@ public class QueryAiproEmbedConfigRequest extends Request {
         } 
 
         /**
-         * Keyword.
+         * <p>The keyword used for fuzzy search by showName.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);

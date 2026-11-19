@@ -101,10 +101,10 @@ public class QueryDataServiceListRequest extends Request {
         } 
 
         /**
-         * <p>Data service name.</p>
+         * <p>The service name.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>Test SQL</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -113,7 +113,7 @@ public class QueryDataServiceListRequest extends Request {
         }
 
         /**
-         * <p>Page number. Default value: <strong>1</strong>.</p>
+         * <p>The page number. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class QueryDataServiceListRequest extends Request {
         }
 
         /**
-         * <p>Number of items per page in a paginated query:</p>
+         * <p>The number of entries per page for a paged query.</p>
          * <ul>
          * <li>Default value: 10</li>
          * <li>Maximum value: 1000</li>
@@ -141,7 +141,7 @@ public class QueryDataServiceListRequest extends Request {
         }
 
         /**
-         * <p>User ID.</p>
+         * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>dasdfdsa-csddf-dsadsa</p>
