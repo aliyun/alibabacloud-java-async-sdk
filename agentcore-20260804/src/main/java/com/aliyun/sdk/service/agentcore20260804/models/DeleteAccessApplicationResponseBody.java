@@ -128,7 +128,7 @@ public class DeleteAccessApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message about the request processing result.</p>
+         * <p>The request processing result message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>

@@ -264,7 +264,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of vSwitch IDs.</p>
+             * <p>The vSwitch IDs.</p>
              */
             public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -355,7 +355,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Returns the target configuration value. Updating indicates that the change is still being executed, and UpdateFailed indicates that the current change failed. This parameter only controls whether the latest versions of managed and custom agents use the public egress of the platform. It does not control fixed historical versions, model or MCP proxy egress, or the public egress of the user VPC.</p>
+             * <p>Returns the target configuration value. Updating indicates that the change is still being executed, and UpdateFailed indicates that the current change failed. This parameter only controls the use of the platform public egress for the latest versions of managed and custom agents. It does not control fixed historical versions, model or MCP proxy egress, or the public egress of the user VPC.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -366,7 +366,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Returns the target configuration value. Updating indicates that the change is in progress, and UpdateFailed indicates that the change failed. If disabled, the public ingress for all agent endpoints in the workspace is closed, and the original public ingress is restored when re-enabled. INNER_DIRECT and user VPC ingress are not affected. Collaboration and Element Web ingress are not controlled by this parameter.</p>
+             * <p>Returns the target configuration value. Updating indicates that the change is in progress, and UpdateFailed indicates that the change failed. When disabled, the public ingress for all agent endpoints in the workspace is closed, and the original public ingress is restored when re-enabled. INNER_DIRECT and user VPC ingress are not affected. Collaboration and Element Web ingress are not controlled by this parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -775,7 +775,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region where the workspace is located.</p>
+             * <p>The region ID of the workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -797,7 +797,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the workspace.</p>
+             * <p>The workspace status.</p>
              * 
              * <strong>example:</strong>
              * <p>Initialized</p>
@@ -839,7 +839,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the tenant to which the workspace belongs.</p>
+             * <p>The tenant ID.</p>
              * 
              * <strong>example:</strong>
              * <p>tenant-123456</p>

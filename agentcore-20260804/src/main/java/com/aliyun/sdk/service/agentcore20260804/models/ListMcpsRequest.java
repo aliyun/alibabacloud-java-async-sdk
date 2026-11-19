@@ -194,7 +194,7 @@ public class ListMcpsRequest extends Request {
         }
 
         /**
-         * <p>Filters the results by custom tags. An exact match with the tags is required.</p>
+         * <p>The custom tag used for filtering. An exact match is required.</p>
          * 
          * <strong>example:</strong>
          * <p>Knowledge base</p>
@@ -206,7 +206,7 @@ public class ListMcpsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return per page.</p>
+         * <p>The maximum number of entries to return per page. Valid values: 1 to 100. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -218,7 +218,7 @@ public class ListMcpsRequest extends Request {
         }
 
         /**
-         * <p>The service name or ID of the MCP service. This parameter is used in conjunction with SearchType.</p>
+         * <p>The MCP service name or service ID. This parameter is used in conjunction with SearchType.</p>
          * 
          * <strong>example:</strong>
          * <p>my-mcp-server</p>
@@ -242,7 +242,7 @@ public class ListMcpsRequest extends Request {
         }
 
         /**
-         * <p>Filters the results by official usage tags.</p>
+         * <p>The official usage tag used for filtering.</p>
          * 
          * <strong>example:</strong>
          * <p>KNOWLEDGE_BASE</p>
@@ -254,12 +254,7 @@ public class ListMcpsRequest extends Request {
         }
 
         /**
-         * <p>The name matching mode. This parameter takes effect only when Name is specified. Valid values:</p>
-         * <ul>
-         * <li>accurate: Exact match.</li>
-         * <li>blur: Fuzzy match.
-         * Default value: blur.</li>
-         * </ul>
+         * <p>The name match type. This parameter takes effect only when Name is specified. Valid values: accurate (exact match) and blur (fuzzy match). Default value: blur.</p>
          * 
          * <strong>example:</strong>
          * <p>blur</p>

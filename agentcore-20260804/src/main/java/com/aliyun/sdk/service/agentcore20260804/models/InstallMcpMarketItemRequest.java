@@ -132,7 +132,7 @@ public class InstallMcpMarketItemRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the AgentCore workspace.</p>
+         * <p>The AgentCore workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -145,7 +145,7 @@ public class InstallMcpMarketItemRequest extends Request {
         }
 
         /**
-         * <p>The ID of the MCP marketplace template.</p>
+         * <p>The MCP marketplace template ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,7 +167,7 @@ public class InstallMcpMarketItemRequest extends Request {
         }
 
         /**
-         * <p>The MCP configuration submitted when installing the template. The configuration must comply with the input schema of the template.</p>
+         * <p>The MCP configuration submitted when installing the template. The configuration must conform to the input schema of the template.</p>
          */
         public Builder body(InstallMcpMarketItemRequestBody body) {
             String bodyShrink = shrink(body, "body", "json");
@@ -177,7 +177,7 @@ public class InstallMcpMarketItemRequest extends Request {
         }
 
         /**
-         * <p>The reserved query request identifier. The console backend does not read this parameter and does not provide idempotency guarantees, such as deduplication or recovery of the original processing result, based on this identifier.</p>
+         * <p>The reserved query request identifier. The console backend does not read this parameter and does not provide idempotency guarantees for deduplication or restoring original results based on this identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -189,7 +189,7 @@ public class InstallMcpMarketItemRequest extends Request {
         }
 
         /**
-         * <p>The template version to install. You can query available versions by calling GetMcpMarketItem.</p>
+         * <p>The template version to be installed. You can call GetMcpMarketItem to query available versions.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -524,7 +524,7 @@ public class InstallMcpMarketItemRequest extends Request {
             }
 
             /**
-             * <p>The list of backend authentication configurations for HTTP-to-MCP.</p>
+             * <p>The list of backend authentication configurations for HTTP to MCP.</p>
              */
             public Builder httpToMcp(java.util.List<HttpToMcp> httpToMcp) {
                 this.httpToMcp = httpToMcp;
@@ -604,7 +604,7 @@ public class InstallMcpMarketItemRequest extends Request {
             } 
 
             /**
-             * <p>The AgentCore credential referenced when the mode is set to CREDENTIAL.</p>
+             * <p>The ID of the AgentCore credential referenced when the mode is set to CREDENTIAL.</p>
              * 
              * <strong>example:</strong>
              * <p>credential-id</p>
@@ -615,7 +615,7 @@ public class InstallMcpMarketItemRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether entry point access control is enabled.</p>
+             * <p>Specifies whether to enable ingress access control.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -623,7 +623,7 @@ public class InstallMcpMarketItemRequest extends Request {
             }
 
             /**
-             * <p>The access control mode. ANONYMOUS indicates anonymous access, and CREDENTIAL indicates the use of AgentCore access credentials.</p>
+             * <p>The access control mode. ANONYMOUS indicates anonymous access. CREDENTIAL indicates authentication by using AgentCore credentials.</p>
              * 
              * <strong>example:</strong>
              * <p>CREDENTIAL</p>
@@ -719,7 +719,7 @@ public class InstallMcpMarketItemRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether authorization is enabled.</p>
+             * <p>Specifies whether to enable authorization.</p>
              */
             public Builder authorizationEnabled(Boolean authorizationEnabled) {
                 this.authorizationEnabled = authorizationEnabled;
@@ -749,7 +749,7 @@ public class InstallMcpMarketItemRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether Agent Identity is enabled.</p>
+             * <p>Specifies whether to enable agent identity.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -842,7 +842,7 @@ public class InstallMcpMarketItemRequest extends Request {
             } 
 
             /**
-             * <p>The temporary code package token returned by GetMcpCodePackageUploadUrl. It is used to create a code deployment after a presigned upload is completed. This parameter and CodePackageUrl are mutually exclusive.</p>
+             * <p>The temporary code package token returned by GetMcpCodePackageUploadUrl. It is used to create a code deployment after the presigned upload is completed. This parameter and CodePackageUrl are mutually exclusive.</p>
              * 
              * <strong>example:</strong>
              * <p>upload-token</p>
@@ -872,7 +872,7 @@ public class InstallMcpMarketItemRequest extends Request {
             }
 
             /**
-             * <p>The runtime environment for the code package: python3.13, nodejs22, or java17.</p>
+             * <p>The runtime environment for the code package, such as python3.13, nodejs22, or java17.</p>
              * 
              * <strong>example:</strong>
              * <p>python3.13</p>
@@ -1026,7 +1026,7 @@ public class InstallMcpMarketItemRequest extends Request {
             }
 
             /**
-             * <p>The container entrypoint parameters.</p>
+             * <p>The entrypoint arguments for the container.</p>
              */
             public Builder entrypoint(java.util.List<String> entrypoint) {
                 this.entrypoint = entrypoint;
@@ -1045,7 +1045,7 @@ public class InstallMcpMarketItemRequest extends Request {
             }
 
             /**
-             * <p>The type of the image registry.</p>
+             * <p>The type of the image repository.</p>
              * 
              * <strong>example:</strong>
              * <p>ACR</p>
@@ -1056,7 +1056,7 @@ public class InstallMcpMarketItemRequest extends Request {
             }
 
             /**
-             * <p>The MCP runtime mode. Custom containers must currently expose the standard MCP themselves. Valid value: SELF_HOSTED.</p>
+             * <p>The MCP runtime mode. Custom containers must currently expose the standard MCP themselves. Set this parameter to SELF_HOSTED.</p>
              * 
              * <strong>example:</strong>
              * <p>SELF_HOSTED</p>
@@ -1067,7 +1067,7 @@ public class InstallMcpMarketItemRequest extends Request {
             }
 
             /**
-             * <p>The source type of the container. The value is fixed to CONTAINER_IMAGE.</p>
+             * <p>The container source type. Currently, this parameter is fixed to CONTAINER_IMAGE.</p>
              * 
              * <strong>example:</strong>
              * <p>CONTAINER_IMAGE</p>
@@ -1224,7 +1224,7 @@ public class InstallMcpMarketItemRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether the hook is enabled.</p>
+             * <p>Specifies whether to enable the hook.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -1251,7 +1251,7 @@ public class InstallMcpMarketItemRequest extends Request {
             }
 
             /**
-             * <p>The timeout period in milliseconds.</p>
+             * <p>The timeout period of the hook, in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>3000</p>
@@ -1262,7 +1262,7 @@ public class InstallMcpMarketItemRequest extends Request {
             }
 
             /**
-             * <p>The hook callback URL.</p>
+             * <p>The callback URL of the hook.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example.com/mcp-hook">https://example.com/mcp-hook</a></p>
@@ -1319,7 +1319,7 @@ public class InstallMcpMarketItemRequest extends Request {
             } 
 
             /**
-             * <p>Executes PRE_LIST_TOOLS, PRE_CALL_TOOL, POST_LIST_TOOLS, and POST_CALL_TOOL hooks in the order of the array.</p>
+             * <p>The ordered list of hooks. The system executes the PRE_LIST_TOOLS, PRE_CALL_TOOL, POST_LIST_TOOLS, and POST_CALL_TOOL hooks in the order of the array.</p>
              */
             public Builder hooks(java.util.List<Hooks> hooks) {
                 this.hooks = hooks;
@@ -1559,7 +1559,7 @@ public class InstallMcpMarketItemRequest extends Request {
             } 
 
             /**
-             * <p>The path of the MCP endpoint, such as /mcp or /sse.</p>
+             * <p>The MCP endpoint path, such as /mcp or /sse.</p>
              * 
              * <strong>example:</strong>
              * <p>/mcp</p>
@@ -1570,7 +1570,7 @@ public class InstallMcpMarketItemRequest extends Request {
             }
 
             /**
-             * <p>The number of concurrent sessions per instance. The value is fixed to 1.</p>
+             * <p>The number of concurrent sessions per instance. Currently, this parameter is fixed to 1.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1581,7 +1581,7 @@ public class InstallMcpMarketItemRequest extends Request {
             }
 
             /**
-             * <p>The session idle timeout in seconds. Default value: 1800.</p>
+             * <p>The session idle timeout period. Unit: seconds. Default value: 1800.</p>
              * 
              * <strong>example:</strong>
              * <p>1800</p>
@@ -1592,7 +1592,7 @@ public class InstallMcpMarketItemRequest extends Request {
             }
 
             /**
-             * <p>The maximum session lifetime in seconds. Default value: 21600.</p>
+             * <p>The maximum session lifetime. Unit: seconds. Default value: 21600.</p>
              * 
              * <strong>example:</strong>
              * <p>21600</p>
@@ -1777,7 +1777,7 @@ public class InstallMcpMarketItemRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the execution user group.</p>
+             * <p>The group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>
@@ -1796,7 +1796,7 @@ public class InstallMcpMarketItemRequest extends Request {
             }
 
             /**
-             * <p>The ID of the execution user.</p>
+             * <p>The user ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>
@@ -2053,7 +2053,7 @@ public class InstallMcpMarketItemRequest extends Request {
             }
 
             /**
-             * <p>The OSS service endpoint.</p>
+             * <p>The OSS endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://oss-cn-hangzhou.aliyuncs.com">https://oss-cn-hangzhou.aliyuncs.com</a></p>
@@ -2217,7 +2217,7 @@ public class InstallMcpMarketItemRequest extends Request {
             }
 
             /**
-             * <p>The reserved reference to the parameter transformation and result enhancement rule set.</p>
+             * <p>The reserved reference for the parameter transformation and result enhancement rule set.</p>
              * 
              * <strong>example:</strong>
              * <p>rules-1</p>
@@ -2228,7 +2228,7 @@ public class InstallMcpMarketItemRequest extends Request {
             }
 
             /**
-             * <p>The transformation rule version.</p>
+             * <p>The version of the transformation rule.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0</p>
@@ -2430,7 +2430,7 @@ public class InstallMcpMarketItemRequest extends Request {
             } 
 
             /**
-             * <p>The CPU specification in cores. Default value: 0.25.</p>
+             * <p>The CPU specifications. Unit: cores. Default value: 0.25.</p>
              * 
              * <strong>example:</strong>
              * <p>0.25</p>
@@ -2441,7 +2441,7 @@ public class InstallMcpMarketItemRequest extends Request {
             }
 
             /**
-             * <p>The ephemeral disk size in MB. Valid values: 512 and 10240.</p>
+             * <p>The size of the temporary disk. Unit: MB. Valid values: 512 and 10240.</p>
              * 
              * <strong>example:</strong>
              * <p>512</p>
@@ -2460,7 +2460,7 @@ public class InstallMcpMarketItemRequest extends Request {
             }
 
             /**
-             * <p>The ARN of the RAM role used by user code to access downstream Alibaba Cloud resources.</p>
+             * <p>The ARN of the RAM role used when user code accesses downstream Alibaba Cloud resources.</p>
              * 
              * <strong>example:</strong>
              * <p>acs:ram::1234567890123456:role/agentcore-mcp-execution</p>
@@ -2482,7 +2482,7 @@ public class InstallMcpMarketItemRequest extends Request {
             }
 
             /**
-             * <p>The memory specification in MB. Default value: 512.</p>
+             * <p>The memory specifications. Unit: MB. Default value: 512.</p>
              * 
              * <strong>example:</strong>
              * <p>512</p>
@@ -2504,7 +2504,7 @@ public class InstallMcpMarketItemRequest extends Request {
             }
 
             /**
-             * <p>The function timeout period in seconds. Default value: 300.</p>
+             * <p>The function timeout period. Unit: seconds. Default value: 300.</p>
              * 
              * <strong>example:</strong>
              * <p>300</p>
@@ -2730,7 +2730,7 @@ public class InstallMcpMarketItemRequest extends Request {
             } 
 
             /**
-             * <p>The access control for the MCP entry point.</p>
+             * <p>The MCP ingress access control configuration.</p>
              */
             public Builder accessControl(AccessControl accessControl) {
                 this.accessControl = accessControl;
@@ -2738,7 +2738,7 @@ public class InstallMcpMarketItemRequest extends Request {
             }
 
             /**
-             * <p>The Agent Identity configuration.</p>
+             * <p>The agent identity configuration.</p>
              */
             public Builder agentIdentityConfiguration(AgentIdentityConfiguration agentIdentityConfiguration) {
                 this.agentIdentityConfiguration = agentIdentityConfiguration;
@@ -3011,7 +3011,7 @@ public class InstallMcpMarketItemRequest extends Request {
             }
 
             /**
-             * <p>The custom tags. Multiple tags are supported. Custom tags are merged and deduplicated with the fixed tags of the template.</p>
+             * <p>The custom tags. Multiple tags are supported. These tags are merged and deduplicated with the fixed tags of the template.</p>
              */
             public Builder customTags(java.util.List<String> customTags) {
                 this.customTags = customTags;
@@ -3019,7 +3019,7 @@ public class InstallMcpMarketItemRequest extends Request {
             }
 
             /**
-             * <p>The deployment configuration for a code-deployed MCP.</p>
+             * <p>The deployment configuration for code-deployed MCP.</p>
              */
             public Builder deploymentConfig(DeploymentConfig deploymentConfig) {
                 this.deploymentConfig = deploymentConfig;
@@ -3060,7 +3060,7 @@ public class InstallMcpMarketItemRequest extends Request {
             }
 
             /**
-             * <p>The OpenAPI configuration used for HTTP-to-MCP conversion, represented as a JSON string.</p>
+             * <p>The OpenAPI configuration used for HTTP to MCP, represented as a JSON string.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;openapi&quot;:&quot;3.0.3&quot;,&quot;info&quot;:{&quot;title&quot;:&quot;Knowledge API&quot;,&quot;version&quot;:&quot;1.0.0&quot;},&quot;paths&quot;:{}}</p>
@@ -3071,7 +3071,7 @@ public class InstallMcpMarketItemRequest extends Request {
             }
 
             /**
-             * <p>The MCP type. Valid values: DIRECT_PROXY (direct proxy), HTTP_TO_MCP (HTTP-to-MCP), and CODE_PACKAGE (code deployment).</p>
+             * <p>The MCP type. Valid values: DIRECT_PROXY (direct proxy), HTTP_TO_MCP (HTTP to MCP), and CODE_PACKAGE (code deployment).</p>
              * 
              * <strong>example:</strong>
              * <p>CODE_PACKAGE</p>

@@ -208,7 +208,7 @@ public class CreateIdentityProviderRequest extends Request {
             } 
 
             /**
-             * <p>The app ID of the Lark application. This parameter is required when the binding type is Feishu.</p>
+             * <p>The App ID of the Lark application. This parameter is required when the binding type is Feishu.</p>
              * 
              * <strong>example:</strong>
              * <p>cli_exampleappid01</p>
@@ -230,7 +230,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Required. The secret of the external identity provider application. This parameter is used only for write operations and is not returned by query operations.</p>
+             * <p>Required. The secret of the external identity provider application. This parameter is used only for writing and is not returned by query APIs.</p>
              * 
              * <strong>example:</strong>
              * <p>example-app-secret</p>
@@ -252,7 +252,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>The data encryption key for event subscription. The value must be the same as the one configured in the external identity provider application. This parameter is used only for write operations and is not returned by query operations.</p>
+             * <p>The data encryption key for event subscription. The value must be the same as the one configured in the external identity provider application. This parameter is used only for writing and is not returned by query APIs.</p>
              * 
              * <strong>example:</strong>
              * <p>example-encrypt-key</p>
@@ -263,7 +263,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>The verification token for event subscription. The value must be the same as the one configured in the external identity provider application. This parameter is used only for write operations and is not returned by query operations.</p>
+             * <p>The verification token for event subscription. The value must be the same as the one configured in the external identity provider application. This parameter is used only for writing and is not returned by query APIs.</p>
              * 
              * <strong>example:</strong>
              * <p>example-verification-token</p>
@@ -344,7 +344,12 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>AllAuthorized: the entire authorized scope, which is limited by the application address book authorization. SelectedDepartments: the selected departments and all their sub-departments. When you explicitly submit syncScope, you must provide a valid mode, which is verified by the backend.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>AllAuthorized: the entire authorized scope, which is limited by the application address book authorization.</li>
+             * <li>SelectedDepartments: the selected departments and all their sub-departments.
+             * When explicitly submitting syncScope, you must provide a valid mode, which is verified by the backend.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>SelectedDepartments</p>
@@ -487,7 +492,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>The application configuration of the external identity provider. When you bind DingTalk, you must provide appKey, appSecret, and corpId. When you bind Lark, you must provide appId and appSecret.</p>
+             * <p>The application configuration of the external identity provider. When binding DingTalk, you must provide appKey, appSecret, and corpId. When binding Feishu, you must provide appId and appSecret.</p>
              */
             public Builder metadata(Metadata metadata) {
                 this.metadata = metadata;
@@ -503,7 +508,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Controls the initial synchronization when DingTalk or Feishu is bound. If this parameter is omitted or set to null, the default value is true. If this parameter is set to false, only the configuration is saved, and synchronization must be explicitly triggered later. CustomSSO does not use the provider pull channel.</p>
+             * <p>Controls the initial synchronization when DingTalk or Feishu is bound. If omitted or set to null, the default value is true. If set to false, only the configuration is saved, and synchronization must be explicitly triggered later. CustomSSO does not use the vendor pull pipeline.</p>
              */
             public Builder syncOnBind(Boolean syncOnBind) {
                 this.syncOnBind = syncOnBind;
@@ -511,7 +516,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Uses the department-based synchronization scope definition. If this parameter is omitted during creation, the default value is AllAuthorized. The initial provider synchronization is determined by syncOnBind. If this parameter is omitted or set to null during an update, the original value is retained. Updating and saving the scope does not automatically trigger full synchronization.</p>
+             * <p>Uses the department-based synchronization scope definition. If omitted during creation, the default value is AllAuthorized, and the initial vendor synchronization is determined by syncOnBind. If omitted or set to null during an update, the original value is retained. Updating and saving the scope does not automatically trigger full synchronization.</p>
              */
             public Builder syncScope(SyncScope syncScope) {
                 this.syncScope = syncScope;

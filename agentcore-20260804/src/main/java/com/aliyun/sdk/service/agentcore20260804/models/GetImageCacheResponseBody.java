@@ -137,7 +137,7 @@ public class GetImageCacheResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The query result for the image cache details.</p>
+         * <p>The query result of the image cache details.</p>
          * <p>This parameter is required.</p>
          */
         public Builder data(Data data) {
@@ -270,7 +270,7 @@ public class GetImageCacheResponseBody extends TeaModel {
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>Image cache creation failed. Try again</p>
+             * <p>Image cache creation failed. Please try again</p>
              */
             public Builder message(String message) {
                 this.message = message;

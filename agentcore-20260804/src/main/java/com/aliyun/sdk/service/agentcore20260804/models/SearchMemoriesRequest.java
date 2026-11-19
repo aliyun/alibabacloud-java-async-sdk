@@ -146,12 +146,16 @@ public class SearchMemoriesRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("sessionId")
         private String sessionId;
 
+        @com.aliyun.core.annotation.NameInMap("teamId")
+        private String teamId;
+
         @com.aliyun.core.annotation.NameInMap("userId")
         private String userId;
 
         private Scope(Builder builder) {
             this.agentId = builder.agentId;
             this.sessionId = builder.sessionId;
+            this.teamId = builder.teamId;
             this.userId = builder.userId;
         }
 
@@ -178,6 +182,13 @@ public class SearchMemoriesRequest extends Request {
         }
 
         /**
+         * @return teamId
+         */
+        public String getTeamId() {
+            return this.teamId;
+        }
+
+        /**
          * @return userId
          */
         public String getUserId() {
@@ -187,6 +198,7 @@ public class SearchMemoriesRequest extends Request {
         public static final class Builder {
             private String agentId; 
             private String sessionId; 
+            private String teamId; 
             private String userId; 
 
             private Builder() {
@@ -195,11 +207,12 @@ public class SearchMemoriesRequest extends Request {
             private Builder(Scope model) {
                 this.agentId = model.agentId;
                 this.sessionId = model.sessionId;
+                this.teamId = model.teamId;
                 this.userId = model.userId;
             } 
 
             /**
-             * <p>The agent ID. The ID must be 1 to 128 bytes in length and encoded in UTF-8. The ID cannot contain forward slashes (/) or asterisks (*). If the memory is not associated with an agent ID, this field is not returned.</p>
+             * <p>The agent ID. The length is limited to 1 to 128 UTF-8 bytes. The value cannot contain a forward slash (/) or an asterisk (*). This field is not returned if the memory is not associated with an agent ID.</p>
              * 
              * <strong>example:</strong>
              * <p>agent-001</p>
@@ -210,7 +223,7 @@ public class SearchMemoriesRequest extends Request {
             }
 
             /**
-             * <p>The session ID. The ID must be 1 to 128 bytes in length and encoded in UTF-8. The ID cannot contain forward slashes (/) or asterisks (*). If the memory is not associated with a session ID, this field is not returned.</p>
+             * <p>The session ID. The length is limited to 1 to 128 UTF-8 bytes. The value cannot contain a forward slash (/) or an asterisk (*). This field is not returned if the memory is not associated with a session ID.</p>
              * 
              * <strong>example:</strong>
              * <p>session-001</p>
@@ -221,7 +234,18 @@ public class SearchMemoriesRequest extends Request {
             }
 
             /**
-             * <p>The user ID. The ID must be 1 to 128 bytes in length and encoded in UTF-8. The ID cannot contain forward slashes (/) or asterisks (*). If the memory is not associated with a user ID, this field is not returned.</p>
+             * <p>The business team ID defined by the caller. If provided, it cannot be empty and can be up to 128 UTF-8 bytes in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>team-001</p>
+             */
+            public Builder teamId(String teamId) {
+                this.teamId = teamId;
+                return this;
+            }
+
+            /**
+             * <p>The user ID. The length is limited to 1 to 128 UTF-8 bytes. The value cannot contain a forward slash (/) or an asterisk (*). This field is not returned if the memory is not associated with a user ID.</p>
              * 
              * <strong>example:</strong>
              * <p>user-001</p>
@@ -252,11 +276,9 @@ public class SearchMemoriesRequest extends Request {
         private java.util.Map<String, String> metadata;
 
         @com.aliyun.core.annotation.NameInMap("minScore")
-        @com.aliyun.core.annotation.Validation(maximum = 1)
         private Float minScore;
 
         @com.aliyun.core.annotation.NameInMap("minSimilarity")
-        @com.aliyun.core.annotation.Validation(maximum = 1)
         private Float minSimilarity;
 
         @com.aliyun.core.annotation.NameInMap("query")
@@ -267,8 +289,10 @@ public class SearchMemoriesRequest extends Request {
         private Scope scope;
 
         @com.aliyun.core.annotation.NameInMap("topK")
-        @com.aliyun.core.annotation.Validation(maximum = 50)
         private Integer topK;
+
+        @com.aliyun.core.annotation.NameInMap("types")
+        private java.util.List<String> types;
 
         private SearchMemoriesRequestBody(Builder builder) {
             this.enableRerank = builder.enableRerank;
@@ -278,6 +302,7 @@ public class SearchMemoriesRequest extends Request {
             this.query = builder.query;
             this.scope = builder.scope;
             this.topK = builder.topK;
+            this.types = builder.types;
         }
 
         public static Builder builder() {
@@ -337,6 +362,13 @@ public class SearchMemoriesRequest extends Request {
             return this.topK;
         }
 
+        /**
+         * @return types
+         */
+        public java.util.List<String> getTypes() {
+            return this.types;
+        }
+
         public static final class Builder {
             private Boolean enableRerank; 
             private java.util.Map<String, String> metadata; 
@@ -345,6 +377,7 @@ public class SearchMemoriesRequest extends Request {
             private String query; 
             private Scope scope; 
             private Integer topK; 
+            private java.util.List<String> types; 
 
             private Builder() {
             } 
@@ -357,6 +390,7 @@ public class SearchMemoriesRequest extends Request {
                 this.query = model.query;
                 this.scope = model.scope;
                 this.topK = model.topK;
+                this.types = model.types;
             } 
 
             /**
@@ -368,7 +402,10 @@ public class SearchMemoriesRequest extends Request {
             }
 
             /**
-             * <p>The string key-value metadata for exact match. A maximum of 16 keys are supported. Each key can be up to 64 characters in length, and each value can be up to 1,024 characters in length.</p>
+             * <p>The string key-value metadata for exact matching. A maximum of 16 keys are supported. Each key can be up to 64 characters in length, and each value can be up to 1,024 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;topic&quot;:&quot;hiking&quot;}</p>
              */
             public Builder metadata(java.util.Map<String, String> metadata) {
                 this.metadata = metadata;
@@ -376,7 +413,7 @@ public class SearchMemoriesRequest extends Request {
             }
 
             /**
-             * <p>The minimum relevance score. Valid values: 0 to 1. Default value: 0.2. If both minScore and minSimilarity are specified, the AND logic is applied for filtering.</p>
+             * <p>The minimum relevance score. Default value: 0.2. Valid values: 0 to 1. If both minScore and minSimilarity are specified, the results are filtered based on the AND logic.</p>
              * 
              * <strong>example:</strong>
              * <p>0.2</p>
@@ -387,7 +424,7 @@ public class SearchMemoriesRequest extends Request {
             }
 
             /**
-             * <p>The minimum similarity. Valid values: 0 to 1. Default value: 0.3. If both minScore and minSimilarity are specified, the AND logic is applied for filtering.</p>
+             * <p>The minimum similarity score. Default value: 0.3. Valid values: 0 to 1. If both minSimilarity and minScore are specified, the results are filtered based on the AND logic.</p>
              * 
              * <strong>example:</strong>
              * <p>0.3</p>
@@ -398,7 +435,7 @@ public class SearchMemoriesRequest extends Request {
             }
 
             /**
-             * <p>The query text. The text can be up to 8,192 characters in length.</p>
+             * <p>The query text for retrieval, up to 8,192 characters.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -418,13 +455,21 @@ public class SearchMemoriesRequest extends Request {
             }
 
             /**
-             * <p>The number of returned results.</p>
+             * <p>The number of results to return.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
              */
             public Builder topK(Integer topK) {
                 this.topK = topK;
+                return this;
+            }
+
+            /**
+             * <p>The list of memory content types. Supported types include semantic, skill, user_profile, and session_summary. If omitted or left as an empty array, no type restriction is applied.</p>
+             */
+            public Builder types(java.util.List<String> types) {
+                this.types = types;
                 return this;
             }
 

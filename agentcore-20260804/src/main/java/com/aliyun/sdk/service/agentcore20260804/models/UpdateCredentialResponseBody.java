@@ -261,7 +261,7 @@ public class UpdateCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource name. This field is empty if the resource has been deleted.</p>
+             * <p>The resource name. This field is empty if the resource is deleted.</p>
              * 
              * <strong>example:</strong>
              * <p>my-mcp-service</p>
@@ -272,7 +272,7 @@ public class UpdateCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource type. Currently, the value is mcpServer, which indicates an MCP service.</p>
+             * <p>The resource type. The current value is mcpServer, which indicates an MCP service.</p>
              * 
              * <strong>example:</strong>
              * <p>mcpServer</p>
@@ -514,7 +514,7 @@ public class UpdateCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The credential name. The name must be unique within the workspace, contain only letters, digits, periods, underscores, and hyphens, and be 3 to 99 characters in length. Runtime reserved names cannot be used.</p>
+             * <p>The credential name. It must be unique within the workspace, contain only letters, digits, periods, underscores, and hyphens, and be 3 to 99 characters in length. Runtime reserved names cannot be used.</p>
              * 
              * <strong>example:</strong>
              * <p>model-api-key</p>

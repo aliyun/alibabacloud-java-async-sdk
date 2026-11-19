@@ -88,7 +88,7 @@ public class GetExternalAgentRequest extends Request {
         }
 
         /**
-         * <p>The ID of the managed agent.</p>
+         * <p>The managed agent ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

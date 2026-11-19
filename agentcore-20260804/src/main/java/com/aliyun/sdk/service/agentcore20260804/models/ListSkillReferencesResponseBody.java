@@ -67,7 +67,7 @@ public class ListSkillReferencesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The skill reference data returned in the paging query.</p>
+         * <p>The skill reference relationship data returned by the paged query.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,7 @@ public class ListSkillReferencesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID used for troubleshooting.</p>
+         * <p>The request ID, used for troubleshooting.</p>
          * 
          * <strong>example:</strong>
          * <p>5C6D9E10-1234-5678-9ABC-DEF012345678</p>
@@ -107,6 +107,9 @@ public class ListSkillReferencesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ownerVersion")
         private String ownerVersion;
 
+        @com.aliyun.core.annotation.NameInMap("refType")
+        private String refType;
+
         @com.aliyun.core.annotation.NameInMap("selectorType")
         private String selectorType;
 
@@ -116,6 +119,12 @@ public class ListSkillReferencesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("skillName")
         private String skillName;
 
+        @com.aliyun.core.annotation.NameInMap("sourceId")
+        private String sourceId;
+
+        @com.aliyun.core.annotation.NameInMap("sourceName")
+        private String sourceName;
+
         @com.aliyun.core.annotation.NameInMap("workspaceId")
         private String workspaceId;
 
@@ -123,9 +132,12 @@ public class ListSkillReferencesResponseBody extends TeaModel {
             this.ownerId = builder.ownerId;
             this.ownerType = builder.ownerType;
             this.ownerVersion = builder.ownerVersion;
+            this.refType = builder.refType;
             this.selectorType = builder.selectorType;
             this.selectorValue = builder.selectorValue;
             this.skillName = builder.skillName;
+            this.sourceId = builder.sourceId;
+            this.sourceName = builder.sourceName;
             this.workspaceId = builder.workspaceId;
         }
 
@@ -159,6 +171,13 @@ public class ListSkillReferencesResponseBody extends TeaModel {
         }
 
         /**
+         * @return refType
+         */
+        public String getRefType() {
+            return this.refType;
+        }
+
+        /**
          * @return selectorType
          */
         public String getSelectorType() {
@@ -180,6 +199,20 @@ public class ListSkillReferencesResponseBody extends TeaModel {
         }
 
         /**
+         * @return sourceId
+         */
+        public String getSourceId() {
+            return this.sourceId;
+        }
+
+        /**
+         * @return sourceName
+         */
+        public String getSourceName() {
+            return this.sourceName;
+        }
+
+        /**
          * @return workspaceId
          */
         public String getWorkspaceId() {
@@ -190,9 +223,12 @@ public class ListSkillReferencesResponseBody extends TeaModel {
             private String ownerId; 
             private String ownerType; 
             private String ownerVersion; 
+            private String refType; 
             private String selectorType; 
             private String selectorValue; 
             private String skillName; 
+            private String sourceId; 
+            private String sourceName; 
             private String workspaceId; 
 
             private Builder() {
@@ -202,14 +238,17 @@ public class ListSkillReferencesResponseBody extends TeaModel {
                 this.ownerId = model.ownerId;
                 this.ownerType = model.ownerType;
                 this.ownerVersion = model.ownerVersion;
+                this.refType = model.refType;
                 this.selectorType = model.selectorType;
                 this.selectorValue = model.selectorValue;
                 this.skillName = model.skillName;
+                this.sourceId = model.sourceId;
+                this.sourceName = model.sourceName;
                 this.workspaceId = model.workspaceId;
             } 
 
             /**
-             * <p>The ID of the referencing entity, which is the identifier of the agent or AgentSpec.</p>
+             * <p>The ID of the referencing entity, which is the identifier of the agent or agent spec.</p>
              * 
              * <strong>example:</strong>
              * <p>agent-1234567890abcdef</p>
@@ -220,7 +259,7 @@ public class ListSkillReferencesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the referencing entity. Valid values: AGENT and AGENTSPEC.</p>
+             * <p>The type of the referencing entity. Valid values: AGENT, AGENTSPEC.</p>
              * 
              * <strong>example:</strong>
              * <p>AGENT</p>
@@ -242,7 +281,18 @@ public class ListSkillReferencesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reference selector type. Valid values: LABEL and VERSION.</p>
+             * <p>The reference strength. Valid values: STRONG, WEAK. For legacy data, STRONG is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STRONG</p>
+             */
+            public Builder refType(String refType) {
+                this.refType = refType;
+                return this;
+            }
+
+            /**
+             * <p>The reference selector type. Valid values: LABEL, VERSION.</p>
              * 
              * <strong>example:</strong>
              * <p>LABEL</p>
@@ -275,7 +325,29 @@ public class ListSkillReferencesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the workspace to which the reference belongs.</p>
+             * <p>The reference source identifier. For legacy data, agentcore is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agentcore</p>
+             */
+            public Builder sourceId(String sourceId) {
+                this.sourceId = sourceId;
+                return this;
+            }
+
+            /**
+             * <p>The display name of the reference source. If no name is registered, the source identifier is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AgentCore</p>
+             */
+            public Builder sourceName(String sourceName) {
+                this.sourceName = sourceName;
+                return this;
+            }
+
+            /**
+             * <p>The workspace ID to which the reference belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>ws-1234567890abcdef</p>
@@ -379,7 +451,7 @@ public class ListSkillReferencesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The current page number. Pages start from 1.</p>
+             * <p>The current page number, starting from 1.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -390,7 +462,7 @@ public class ListSkillReferencesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of pages.</p>
+             * <p>The total number of available pages.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -401,7 +473,7 @@ public class ListSkillReferencesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of reference relationships that meet the specified conditions.</p>
+             * <p>The total number of reference relationships that meet the conditions.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

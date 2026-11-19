@@ -145,7 +145,7 @@ public class GetSandboxRebuildOperationRequest extends Request {
         }
 
         /**
-         * <p>The sandbox ID. Use the instance identity returned by ListSandboxes. The sandbox must belong to the runtime scope corresponding to the specified agent and service registration endpoint.</p>
+         * <p>The sandbox ID. Use the instance identity returned by ListSandboxes. The sandbox must belong to the runtime scope corresponding to the specified agent and service endpoint.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,7 +158,7 @@ public class GetSandboxRebuildOperationRequest extends Request {
         }
 
         /**
-         * <p>The initial rebuild task ID. Use the operationId returned by RebuildSandbox. Always use this ID to query the overall result. You do not need to switch to the ID of a subsequent creation task.</p>
+         * <p>The initial rebuild task ID. Use the operationId returned by RebuildSandbox. Always use this ID to query the overall result subsequently, without switching to the ID of subsequent creation tasks.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,7 +171,7 @@ public class GetSandboxRebuildOperationRequest extends Request {
         }
 
         /**
-         * <p>The service registration endpoint ID. This parameter is optional. If specified, the operation targets the runtime instance corresponding to the endpoint under the agent. If omitted, the default latest runtime identity is used. Pass the endpoint ID instead of the endpoint name. Keep this parameter consistent when querying instances, committing rebuilds, and querying tasks.</p>
+         * <p>The service endpoint ID. This parameter is optional. If specified, the operation targets the runtime instance corresponding to the endpoint under the agent. If omitted, the default latest runtime identity is used. Pass the endpoint ID, not the endpoint name. This parameter must remain consistent when querying instances, submitting rebuilds, and querying tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>se-7f3a92c1</p>

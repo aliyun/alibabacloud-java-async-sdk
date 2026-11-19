@@ -116,7 +116,7 @@ public class ConvertMcpToFreeEditRequest extends Request {
         }
 
         /**
-         * <p>The MCP server ID.</p>
+         * <p>The MCP service ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,7 +138,7 @@ public class ConvertMcpToFreeEditRequest extends Request {
         }
 
         /**
-         * <p>The reserved query request identifier. The current console backend does not read this parameter and does not provide idempotency guarantees for deduplication or recovery of the original processing result based on this identifier.</p>
+         * <p>The reserved query request identifier. The console backend does not read this parameter and does not provide idempotency guarantees, such as deduplication or restoration of the original processing result, based on this identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-426655440000</p>

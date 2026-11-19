@@ -129,7 +129,7 @@ public class UpdateTeamRequest extends Request {
         }
 
         /**
-         * <p>The request body for updating the team.</p>
+         * <p>The request body for updating a team.</p>
          */
         public Builder body(UpdateTeamRequestBody body) {
             String bodyShrink = shrink(body, "body", "json");
@@ -385,7 +385,7 @@ public class UpdateTeamRequest extends Request {
             } 
 
             /**
-             * <p>The new list of agent members. This list replaces the existing agent members based on full overwrite semantics. If not specified, the existing list remains unchanged.</p>
+             * <p>The new list of agent members, which replaces the existing agent members based on full overwrite semantics. If not specified, the list remains unchanged. The list must contain exactly one LEADER, and the LEADER must be a managed agent. External agents and high-code agents only support the WORKER role. High-code agents must also declare the AG-UI (agui) or OpenAI Chat Completions (openai-chat-completion) protocol in the latest version configuration.</p>
              */
             public Builder agents(java.util.List<Agents> agents) {
                 this.agents = agents;
@@ -393,7 +393,7 @@ public class UpdateTeamRequest extends Request {
             }
 
             /**
-             * <p>The new team description. If not specified, the existing description remains unchanged.</p>
+             * <p>The new description of the team. If not specified, the description remains unchanged.</p>
              * 
              * <strong>example:</strong>
              * <p>Team responsible for intelligent customer service</p>
@@ -404,7 +404,7 @@ public class UpdateTeamRequest extends Request {
             }
 
             /**
-             * <p>The new list of user members. This list replaces the existing user members based on full overwrite semantics. If this parameter is specified, it must contain exactly one member with the ADMIN role. If not specified, the existing list remains unchanged.</p>
+             * <p>The new list of user members, which replaces the existing user members based on full overwrite semantics. If this parameter is specified, it must contain exactly one member with the ADMIN role. If not specified, the list remains unchanged.</p>
              */
             public Builder users(java.util.List<Users> users) {
                 this.users = users;

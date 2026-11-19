@@ -188,7 +188,7 @@ public class ListPermissionRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of entries returned in the current request.</p>
+         * <p>The maximum number of results returned in this response.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -199,7 +199,7 @@ public class ListPermissionRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message about the request processing result.</p>
+         * <p>The request processing result message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -240,7 +240,7 @@ public class ListPermissionRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of rules that meet the conditions.</p>
+         * <p>The total number of rules that match the criteria.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -597,7 +597,7 @@ public class ListPermissionRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of targets to which the rule applies.</p>
+             * <p>The list of rule targets.</p>
              */
             public Builder targets(java.util.List<String> targets) {
                 this.targets = targets;

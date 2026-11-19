@@ -103,7 +103,7 @@ public class AddMemoriesRequest extends Request {
         }
 
         /**
-         * <p>The MemoryStore name.</p>
+         * <p>The name of the memory store.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,10 +139,118 @@ public class AddMemoriesRequest extends Request {
      *
      * <p>AddMemoriesRequest</p>
      */
+    public static class Memories extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("metadata")
+        private java.util.Map<String, String> metadata;
+
+        @com.aliyun.core.annotation.NameInMap("text")
+        private String text;
+
+        @com.aliyun.core.annotation.NameInMap("type")
+        private String type;
+
+        private Memories(Builder builder) {
+            this.metadata = builder.metadata;
+            this.text = builder.text;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Memories create() {
+            return builder().build();
+        }
+
+        /**
+         * @return metadata
+         */
+        public java.util.Map<String, String> getMetadata() {
+            return this.metadata;
+        }
+
+        /**
+         * @return text
+         */
+        public String getText() {
+            return this.text;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private java.util.Map<String, String> metadata; 
+            private String text; 
+            private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Memories model) {
+                this.metadata = model.metadata;
+                this.text = model.text;
+                this.type = model.type;
+            } 
+
+            /**
+             * <p>The string key-value tags set by the caller. A maximum of 16 tags are supported. A key can be up to 64 Unicode characters in length, and a value can be up to 1,024 Unicode characters in length. Empty strings are allowed. Nested objects or arrays are not supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;topic&quot;:&quot;hiking&quot;}</p>
+             */
+            public Builder metadata(java.util.Map<String, String> metadata) {
+                this.metadata = metadata;
+                return this;
+            }
+
+            /**
+             * <p>The content of the memory to be directly written. It cannot be empty and can be up to 32,000 UTF-8 bytes in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The user likes hiking</p>
+             */
+            public Builder text(String text) {
+                this.text = text;
+                return this;
+            }
+
+            /**
+             * <p>The content type of the memory. Valid values: semantic for semantic memory, skill for skill, user_profile for user preference, and session_summary for session summary.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>semantic</p>
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public Memories build() {
+                return new Memories(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link AddMemoriesRequest} extends {@link TeaModel}
+     *
+     * <p>AddMemoriesRequest</p>
+     */
     public static class Messages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("content")
         @com.aliyun.core.annotation.Validation(required = true)
         private String content;
+
+        @com.aliyun.core.annotation.NameInMap("referenceTime")
+        private String referenceTime;
 
         @com.aliyun.core.annotation.NameInMap("role")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -150,6 +258,7 @@ public class AddMemoriesRequest extends Request {
 
         private Messages(Builder builder) {
             this.content = builder.content;
+            this.referenceTime = builder.referenceTime;
             this.role = builder.role;
         }
 
@@ -169,6 +278,13 @@ public class AddMemoriesRequest extends Request {
         }
 
         /**
+         * @return referenceTime
+         */
+        public String getReferenceTime() {
+            return this.referenceTime;
+        }
+
+        /**
          * @return role
          */
         public String getRole() {
@@ -177,6 +293,7 @@ public class AddMemoriesRequest extends Request {
 
         public static final class Builder {
             private String content; 
+            private String referenceTime; 
             private String role; 
 
             private Builder() {
@@ -184,11 +301,12 @@ public class AddMemoriesRequest extends Request {
 
             private Builder(Messages model) {
                 this.content = model.content;
+                this.referenceTime = model.referenceTime;
                 this.role = model.role;
             } 
 
             /**
-             * <p>The message content.</p>
+             * <p>The content of the message.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -200,7 +318,18 @@ public class AddMemoriesRequest extends Request {
             }
 
             /**
-             * <p>The message role.</p>
+             * <p>The reference time of the message in RFC 3339 format with a time zone. If omitted, the request-level referenceTime is used. If both are omitted, the time of the current request is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-05-08T13:56:00+08:00</p>
+             */
+            public Builder referenceTime(String referenceTime) {
+                this.referenceTime = referenceTime;
+                return this;
+            }
+
+            /**
+             * <p>The role of the message.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -231,12 +360,16 @@ public class AddMemoriesRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("sessionId")
         private String sessionId;
 
+        @com.aliyun.core.annotation.NameInMap("teamId")
+        private String teamId;
+
         @com.aliyun.core.annotation.NameInMap("userId")
         private String userId;
 
         private Scope(Builder builder) {
             this.agentId = builder.agentId;
             this.sessionId = builder.sessionId;
+            this.teamId = builder.teamId;
             this.userId = builder.userId;
         }
 
@@ -263,6 +396,13 @@ public class AddMemoriesRequest extends Request {
         }
 
         /**
+         * @return teamId
+         */
+        public String getTeamId() {
+            return this.teamId;
+        }
+
+        /**
          * @return userId
          */
         public String getUserId() {
@@ -272,6 +412,7 @@ public class AddMemoriesRequest extends Request {
         public static final class Builder {
             private String agentId; 
             private String sessionId; 
+            private String teamId; 
             private String userId; 
 
             private Builder() {
@@ -280,11 +421,12 @@ public class AddMemoriesRequest extends Request {
             private Builder(Scope model) {
                 this.agentId = model.agentId;
                 this.sessionId = model.sessionId;
+                this.teamId = model.teamId;
                 this.userId = model.userId;
             } 
 
             /**
-             * <p>The agent ID. The length is limited to 1 to 128 UTF-8 bytes. The value cannot contain a forward slash (/) or an asterisk (*).</p>
+             * <p>The agent ID. The length is limited to 1 to 128 UTF-8 bytes. It cannot contain a forward slash (/) or an asterisk (*).</p>
              * 
              * <strong>example:</strong>
              * <p>agent-001</p>
@@ -295,7 +437,7 @@ public class AddMemoriesRequest extends Request {
             }
 
             /**
-             * <p>The session ID. The length is limited to 1 to 128 UTF-8 bytes. The value cannot contain a forward slash (/) or an asterisk (*).</p>
+             * <p>The session ID. The length is limited to 1 to 128 UTF-8 bytes. It cannot contain a forward slash (/) or an asterisk (*).</p>
              * 
              * <strong>example:</strong>
              * <p>session-001</p>
@@ -306,7 +448,18 @@ public class AddMemoriesRequest extends Request {
             }
 
             /**
-             * <p>The user ID. The length is limited to 1 to 128 UTF-8 bytes. The value cannot contain a forward slash (/) or an asterisk (*).</p>
+             * <p>The business team ID defined by the caller. It cannot be empty when provided and can be up to 128 UTF-8 bytes in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>team-001</p>
+             */
+            public Builder teamId(String teamId) {
+                this.teamId = teamId;
+                return this;
+            }
+
+            /**
+             * <p>The user ID. The length is limited to 1 to 128 UTF-8 bytes. It cannot contain a forward slash (/) or an asterisk (*).</p>
              * 
              * <strong>example:</strong>
              * <p>user-001</p>
@@ -330,6 +483,12 @@ public class AddMemoriesRequest extends Request {
      * <p>AddMemoriesRequest</p>
      */
     public static class AddMemoriesRequestBody extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("extract")
+        private Boolean extract;
+
+        @com.aliyun.core.annotation.NameInMap("memories")
+        private java.util.List<Memories> memories;
+
         @com.aliyun.core.annotation.NameInMap("messages")
         private java.util.List<Messages> messages;
 
@@ -349,6 +508,8 @@ public class AddMemoriesRequest extends Request {
         private String text;
 
         private AddMemoriesRequestBody(Builder builder) {
+            this.extract = builder.extract;
+            this.memories = builder.memories;
             this.messages = builder.messages;
             this.metadata = builder.metadata;
             this.referenceTime = builder.referenceTime;
@@ -363,6 +524,20 @@ public class AddMemoriesRequest extends Request {
 
         public static AddMemoriesRequestBody create() {
             return builder().build();
+        }
+
+        /**
+         * @return extract
+         */
+        public Boolean getExtract() {
+            return this.extract;
+        }
+
+        /**
+         * @return memories
+         */
+        public java.util.List<Memories> getMemories() {
+            return this.memories;
         }
 
         /**
@@ -408,6 +583,8 @@ public class AddMemoriesRequest extends Request {
         }
 
         public static final class Builder {
+            private Boolean extract; 
+            private java.util.List<Memories> memories; 
             private java.util.List<Messages> messages; 
             private java.util.Map<String, String> metadata; 
             private String referenceTime; 
@@ -419,6 +596,8 @@ public class AddMemoriesRequest extends Request {
             } 
 
             private Builder(AddMemoriesRequestBody model) {
+                this.extract = model.extract;
+                this.memories = model.memories;
                 this.messages = model.messages;
                 this.metadata = model.metadata;
                 this.referenceTime = model.referenceTime;
@@ -428,7 +607,23 @@ public class AddMemoriesRequest extends Request {
             } 
 
             /**
-             * <p>The message list. You must provide either this parameter or Text, but not both. You can specify 1 to 20 messages, and the total size of the content cannot exceed 32,000 UTF-8 bytes.</p>
+             * <p>Specifies whether to extract memories. If omitted or set to true, memories are extracted from text or messages. If set to false, memories are directly written.</p>
+             */
+            public Builder extract(Boolean extract) {
+                this.extract = extract;
+                return this;
+            }
+
+            /**
+             * <p>The list of memories to be directly written when extract is set to false. The list can contain 1 to 100 memories. You cannot provide text, messages, referenceTime, or request-level metadata at the same time.</p>
+             */
+            public Builder memories(java.util.List<Memories> memories) {
+                this.memories = memories;
+                return this;
+            }
+
+            /**
+             * <p>The list of messages. You must provide either text or messages, but not both. The list can contain 1 to 20 messages, and the total length of the content cannot exceed 32,000 UTF-8 bytes.</p>
              */
             public Builder messages(java.util.List<Messages> messages) {
                 this.messages = messages;
@@ -436,7 +631,10 @@ public class AddMemoriesRequest extends Request {
             }
 
             /**
-             * <p>The string key-value metadata. You can specify up to 16 keys. The maximum length of a key is 64 characters, and the maximum length of a value is 1,024 characters.</p>
+             * <p>The string key-value metadata. A maximum of 16 keys are supported. A key can be up to 64 characters in length, and a value can be up to 1,024 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;topic&quot;:&quot;hiking&quot;}</p>
              */
             public Builder metadata(java.util.Map<String, String> metadata) {
                 this.metadata = metadata;
@@ -444,7 +642,7 @@ public class AddMemoriesRequest extends Request {
             }
 
             /**
-             * <p>The time reference point for the batch of messages or text. The value must be in RFC 3339 format with a time zone and support fractional seconds.</p>
+             * <p>The time reference point for the batch of messages or text. It uses the RFC 3339 format with a time zone and supports fractional seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-05-08T13:56:00+08:00</p>
@@ -471,7 +669,7 @@ public class AddMemoriesRequest extends Request {
             }
 
             /**
-             * <p>The text to be written directly. You must provide either this parameter or Messages, but not both. The size cannot exceed 32,000 UTF-8 bytes.</p>
+             * <p>The text to be directly written. You must provide either text or messages, but not both. The text cannot exceed 32,000 UTF-8 bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>The user likes hiking</p>

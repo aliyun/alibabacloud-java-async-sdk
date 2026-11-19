@@ -341,7 +341,7 @@ public class GetAgentVersionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the managed or custom agent that owns the version.</p>
+             * <p>The ID of the managed or custom agent to which the version belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>agent-0123456789abcdef0123456789abcdef</p>
@@ -352,7 +352,7 @@ public class GetAgentVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The system-generated version number that increments for each agent, such as v1 and v2. This is used when querying or deleting versions, and when referencing versions in service endpoints.</p>
+             * <p>The system-generated version number that increments for the agent, such as v1 and v2. This is used when querying or deleting versions, and when server endpoints reference the version.</p>
              * 
              * <strong>example:</strong>
              * <p>v1</p>
@@ -363,7 +363,7 @@ public class GetAgentVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates only whether the version template and artifact archiving are complete, and does not represent the deployment or running status. A value of READY indicates that the archiving is complete. A value of INVALID indicates that the archiving is missing or inconsistent.</p>
+             * <p>Indicates only whether the version template and artifact archive are complete, and does not represent the deployment or running status. Valid values: READY indicates that the archive is complete. INVALID indicates that the archive is missing or inconsistent.</p>
              * 
              * <strong>example:</strong>
              * <p>READY</p>
@@ -374,7 +374,7 @@ public class GetAgentVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>For managed agents, the structure is consistent with the data structure of GetManagedAgent. For custom agents, the structure is consistent with the data structure of GetCustomAgent. The desensitization rules are the same.</p>
+             * <p>For managed agents, the structure is consistent with the data structure of GetManagedAgent. For custom agents, the structure is consistent with the data structure of GetCustomAgent. The data masking rules are the same.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;agentId&quot;:&quot;agent-0123456789abcdef0123456789abcdef&quot;,&quot;workspaceId&quot;:&quot;ws-0123456789abcdef01234&quot;,&quot;name&quot;:&quot;customer-service&quot;,&quot;description&quot;:&quot;Customer service agent&quot;,&quot;status&quot;:&quot;Running&quot;,&quot;latestSpecVersion&quot;:2,&quot;instruction&quot;:&quot;You are a customer service assistant.&quot;}</p>
@@ -396,7 +396,7 @@ public class GetAgentVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The UID of the Alibaba Cloud account of the caller who saved the version. If the API is called by a RAM user, this value is the UID of the Alibaba Cloud account to which the RAM user belongs.</p>
+             * <p>The UID of the Alibaba Cloud account of the caller who saved the version. If the API is called by a RAM user, this is the UID of the Alibaba Cloud account to which the RAM user belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>1234567890123456</p>
@@ -407,7 +407,7 @@ public class GetAgentVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version description provided when the version was saved. It can contain up to 1,024 characters. If no description was provided when the version was saved, this field is empty.</p>
+             * <p>The version description provided when the version was saved. It can be up to 1,024 characters in length. If no description was provided when the version was saved, this field is empty.</p>
              * 
              * <strong>example:</strong>
              * <p>Stable version for the production environment</p>
@@ -418,7 +418,7 @@ public class GetAgentVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The effective release serial number of the agent when the version was saved, which is the effectiveSpecVersion at that time. This value does not change after the version is saved.</p>
+             * <p>The effective release sequence number of the agent when the version was saved, which is the effectiveSpecVersion at that time. This value does not change after the version is saved.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -429,7 +429,7 @@ public class GetAgentVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name specified by the user when the version was saved. For earlier saved versions that did not record a name, the agentVersion is returned.</p>
+             * <p>The display name specified by the user when the version was saved. For earlier saved versions where no name was recorded, the agentVersion is returned.</p>
              * 
              * <strong>example:</strong>
              * <p>Production stable version V1.0</p>
@@ -440,7 +440,7 @@ public class GetAgentVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the AgentCore workspace where the agent that owns the version resides.</p>
+             * <p>The ID of the AgentCore workspace where the agent that owns this version resides.</p>
              * 
              * <strong>example:</strong>
              * <p>ws-0123456789abcdef01234</p>

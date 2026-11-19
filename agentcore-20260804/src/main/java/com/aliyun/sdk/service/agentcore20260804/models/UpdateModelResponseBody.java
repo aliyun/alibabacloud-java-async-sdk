@@ -331,7 +331,7 @@ public class UpdateModelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the model is able to invoke multiple tool calling in a single response.</p>
+             * <p>Indicates whether the model is able to invoke tool calling multiple times in a single response.</p>
              */
             public Builder multiToolCall(Boolean multiToolCall) {
                 this.multiToolCall = multiToolCall;
@@ -355,7 +355,7 @@ public class UpdateModelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the model is able to invoke tool calling.</p>
+             * <p>Indicates whether the model supports tool calling.</p>
              */
             public Builder toolCall(Boolean toolCall) {
                 this.toolCall = toolCall;
@@ -542,7 +542,7 @@ public class UpdateModelResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The model capability configuration.</p>
+             * <p>The model capability configurations.</p>
              */
             public Builder capabilities(Capabilities capabilities) {
                 this.capabilities = capabilities;
@@ -572,7 +572,7 @@ public class UpdateModelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the resource was created. The time is displayed in the RFC 3339 UTC format.</p>
+             * <p>The time when the resource was created, in RFC 3339 UTC format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-09T00:00:00Z</p>
@@ -594,7 +594,7 @@ public class UpdateModelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of output tokens supported by the model in a single generation.</p>
+             * <p>The maximum number of output tokens supported for a single generation by the model.</p>
              * 
              * <strong>example:</strong>
              * <p>131072</p>
@@ -627,7 +627,7 @@ public class UpdateModelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the resource was last updated. The time is displayed in the RFC 3339 UTC format.</p>
+             * <p>The time when the resource was last updated, in RFC 3339 UTC format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-09T00:00:00Z</p>

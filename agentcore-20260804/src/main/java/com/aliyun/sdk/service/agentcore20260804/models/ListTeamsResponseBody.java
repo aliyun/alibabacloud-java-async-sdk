@@ -180,7 +180,7 @@ public class ListTeamsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of teams.</p>
+         * <p>The team list.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -199,7 +199,7 @@ public class ListTeamsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message. An error description is returned when the request fails.</p>
+         * <p>The response message. An error description is returned if the request fails.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -210,7 +210,7 @@ public class ListTeamsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The cursor for the next page. This parameter is empty if there is no next page.</p>
+         * <p>The cursor for the next page. This parameter is empty if no next page exists.</p>
          * 
          * <strong>example:</strong>
          * <p>dGVhbS1vZmZzZXQ6MTA</p>
@@ -344,7 +344,7 @@ public class ListTeamsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The role of the agent in the team. Valid values: LEADER and WORKER.</p>
+             * <p>The role of the agent in the team. Valid values: LEADER, WORKER.</p>
              * 
              * <strong>example:</strong>
              * <p>WORKER</p>
@@ -427,7 +427,7 @@ public class ListTeamsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The role of the user in the team. Valid values: ADMIN and MEMBER. Each team must have exactly one ADMIN.</p>
+             * <p>The role of the user in the team. Valid values: ADMIN, MEMBER. Each team must have exactly one ADMIN.</p>
              * 
              * <strong>example:</strong>
              * <p>ADMIN</p>
@@ -618,7 +618,7 @@ public class ListTeamsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time in UTC format compliant with RFC 3339.</p>
+             * <p>The creation time in RFC 3339 UTC format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-12T03:04:05Z</p>
@@ -632,7 +632,7 @@ public class ListTeamsResponseBody extends TeaModel {
              * <p>The team description.</p>
              * 
              * <strong>example:</strong>
-             * <p>The team responsible for intelligent customer service</p>
+             * <p>Team responsible for intelligent customer service business</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -640,7 +640,7 @@ public class ListTeamsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The team name. It can contain only lowercase letters, digits, and hyphens, must start and end with a lowercase letter or a digit, and must be 1 to 128 characters in length.</p>
+             * <p>The team name. The name can contain only lowercase letters, digits, and hyphens. It must start and end with a lowercase letter or a digit, and must be 1 to 128 characters in length.</p>
              * 
              * <strong>example:</strong>
              * <p>team-01</p>
@@ -651,7 +651,7 @@ public class ListTeamsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The team status. Valid values: Creating, Active, Updating, Deleting, Failed, and Deleted.</p>
+             * <p>The team status. Valid values: Creating, Active, Updating, Deleting, Failed, Deleted.</p>
              * 
              * <strong>example:</strong>
              * <p>Active</p>
@@ -673,7 +673,7 @@ public class ListTeamsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time of the last modification in UTC format compliant with RFC 3339.</p>
+             * <p>The last modification time in RFC 3339 UTC format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-12T03:04:05Z</p>

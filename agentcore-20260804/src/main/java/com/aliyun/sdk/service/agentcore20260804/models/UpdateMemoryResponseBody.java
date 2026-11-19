@@ -192,6 +192,7 @@ public class UpdateMemoryResponseBody extends TeaModel {
      */
     public static class Content extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("text")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String text;
 
         private Content(Builder builder) {
@@ -225,6 +226,7 @@ public class UpdateMemoryResponseBody extends TeaModel {
 
             /**
              * <p>The memory text.</p>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>The user enjoys hiking</p>
@@ -254,12 +256,16 @@ public class UpdateMemoryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("sessionId")
         private String sessionId;
 
+        @com.aliyun.core.annotation.NameInMap("teamId")
+        private String teamId;
+
         @com.aliyun.core.annotation.NameInMap("userId")
         private String userId;
 
         private Scope(Builder builder) {
             this.agentId = builder.agentId;
             this.sessionId = builder.sessionId;
+            this.teamId = builder.teamId;
             this.userId = builder.userId;
         }
 
@@ -286,6 +292,13 @@ public class UpdateMemoryResponseBody extends TeaModel {
         }
 
         /**
+         * @return teamId
+         */
+        public String getTeamId() {
+            return this.teamId;
+        }
+
+        /**
          * @return userId
          */
         public String getUserId() {
@@ -295,6 +308,7 @@ public class UpdateMemoryResponseBody extends TeaModel {
         public static final class Builder {
             private String agentId; 
             private String sessionId; 
+            private String teamId; 
             private String userId; 
 
             private Builder() {
@@ -303,6 +317,7 @@ public class UpdateMemoryResponseBody extends TeaModel {
             private Builder(Scope model) {
                 this.agentId = model.agentId;
                 this.sessionId = model.sessionId;
+                this.teamId = model.teamId;
                 this.userId = model.userId;
             } 
 
@@ -325,6 +340,17 @@ public class UpdateMemoryResponseBody extends TeaModel {
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;
+                return this;
+            }
+
+            /**
+             * <p>The business team ID defined by the caller. It cannot be empty when provided and can be up to 128 UTF-8 bytes in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>team-001</p>
+             */
+            public Builder teamId(String teamId) {
+                this.teamId = teamId;
                 return this;
             }
 
@@ -368,8 +394,17 @@ public class UpdateMemoryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("scope")
         private Scope scope;
 
+        @com.aliyun.core.annotation.NameInMap("source")
+        private String source;
+
+        @com.aliyun.core.annotation.NameInMap("type")
+        private String type;
+
         @com.aliyun.core.annotation.NameInMap("updatedAt")
         private String updatedAt;
+
+        @com.aliyun.core.annotation.NameInMap("valid")
+        private Boolean valid;
 
         private Data(Builder builder) {
             this.content = builder.content;
@@ -377,7 +412,10 @@ public class UpdateMemoryResponseBody extends TeaModel {
             this.memoryId = builder.memoryId;
             this.metadata = builder.metadata;
             this.scope = builder.scope;
+            this.source = builder.source;
+            this.type = builder.type;
             this.updatedAt = builder.updatedAt;
+            this.valid = builder.valid;
         }
 
         public static Builder builder() {
@@ -424,10 +462,31 @@ public class UpdateMemoryResponseBody extends TeaModel {
         }
 
         /**
+         * @return source
+         */
+        public String getSource() {
+            return this.source;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
          * @return updatedAt
          */
         public String getUpdatedAt() {
             return this.updatedAt;
+        }
+
+        /**
+         * @return valid
+         */
+        public Boolean getValid() {
+            return this.valid;
         }
 
         public static final class Builder {
@@ -436,7 +495,10 @@ public class UpdateMemoryResponseBody extends TeaModel {
             private String memoryId; 
             private java.util.Map<String, String> metadata; 
             private Scope scope; 
+            private String source; 
+            private String type; 
             private String updatedAt; 
+            private Boolean valid; 
 
             private Builder() {
             } 
@@ -447,7 +509,10 @@ public class UpdateMemoryResponseBody extends TeaModel {
                 this.memoryId = model.memoryId;
                 this.metadata = model.metadata;
                 this.scope = model.scope;
+                this.source = model.source;
+                this.type = model.type;
                 this.updatedAt = model.updatedAt;
+                this.valid = model.valid;
             } 
 
             /**
@@ -470,7 +535,7 @@ public class UpdateMemoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The long-term memory ID.</p>
+             * <p>The ID of the long-term memory.</p>
              * 
              * <strong>example:</strong>
              * <p>mem-2f5f9c5a8d0e4c3b</p>
@@ -482,6 +547,9 @@ public class UpdateMemoryResponseBody extends TeaModel {
 
             /**
              * <p>The memory metadata.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;topic&quot;:&quot;hiking&quot;}</p>
              */
             public Builder metadata(java.util.Map<String, String> metadata) {
                 this.metadata = metadata;
@@ -497,13 +565,43 @@ public class UpdateMemoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last update time. The time is in RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</p>
+             * <p>The memory source. Valid values: session_extraction: Extracted from session events. content_extraction: Extracted from text or messages. direct: Written directly.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>session_extraction</p>
+             */
+            public Builder source(String source) {
+                this.source = source;
+                return this;
+            }
+
+            /**
+             * <p>The memory content type. Valid values: semantic: Semantic memory. skill: Skill. user_profile: User preference. session_summary: Session summary.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>semantic</p>
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            /**
+             * <p>The last updated time. The time is in RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-09-23T10:05:00Z</p>
              */
             public Builder updatedAt(String updatedAt) {
                 this.updatedAt = updatedAt;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether the memory is valid. A value of false indicates that the memory is revoked and is not included in valid memory retrieval.</p>
+             */
+            public Builder valid(Boolean valid) {
+                this.valid = valid;
                 return this;
             }
 

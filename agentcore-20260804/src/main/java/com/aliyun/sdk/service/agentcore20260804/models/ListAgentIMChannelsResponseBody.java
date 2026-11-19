@@ -180,7 +180,7 @@ public class ListAgentIMChannelsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The IM channels.</p>
+         * <p>The list of IM channels.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -188,7 +188,7 @@ public class ListAgentIMChannelsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of entries returned per page for this request.</p>
+         * <p>The maximum number of entries returned per page for the current request.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -199,7 +199,7 @@ public class ListAgentIMChannelsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result message of the request.</p>
+         * <p>The message about the request processing result.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -613,7 +613,7 @@ public class ListAgentIMChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The channel behavior configuration.</p>
+             * <p>The behavior configuration of the channel.</p>
              */
             public Builder channelConfig(ChannelConfig channelConfig) {
                 this.channelConfig = channelConfig;
@@ -621,7 +621,7 @@ public class ListAgentIMChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IM channel type. Valid values: DINGTALK (DingTalk), FEISHU (Lark), and WECOM (WeCom).</p>
+             * <p>The IM channel type. Valid values: DINGTALK (DingTalk), FEISHU (Lark), WECOM (WeCom).</p>
              * 
              * <strong>example:</strong>
              * <p>DINGTALK</p>
@@ -651,7 +651,7 @@ public class ListAgentIMChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the IM channel is enabled. Default value: true.</p>
+             * <p>Specifies whether the IM channel is enabled. The default value is true upon creation.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -659,7 +659,7 @@ public class ListAgentIMChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public network access address of the attached ServiceEndpoint.</p>
+             * <p>The public network access URL of the attached ServiceEndpoint.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://agent.example.com">https://agent.example.com</a></p>
@@ -681,7 +681,7 @@ public class ListAgentIMChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the bound service endpoint. The endpoint must belong to the specified agent and its current version, be in the ready state, and have a public endpoint URL.</p>
+             * <p>The ID of the bound ServiceEndpoint. The endpoint must belong to the specified agent and its current version, be in the Ready state, and have a public network address.</p>
              * 
              * <strong>example:</strong>
              * <p>se-1</p>
@@ -692,7 +692,7 @@ public class ListAgentIMChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IM channel status. Valid values: CREATING (Creating), READY (Ready), UPDATING (Updating), FAILED (Failed), DELETING (Deleting), and DELETE_FAILED (Delete failed).</p>
+             * <p>The IM channel status. Valid values: CREATING (Creating), READY (Ready), UPDATING (Updating), FAILED (Failed), DELETING (Deleting), DELETE_FAILED (Deletion failed).</p>
              * 
              * <strong>example:</strong>
              * <p>READY</p>

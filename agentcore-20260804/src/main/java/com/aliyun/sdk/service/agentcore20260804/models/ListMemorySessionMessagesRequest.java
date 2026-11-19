@@ -160,7 +160,7 @@ public class ListMemorySessionMessagesRequest extends Request {
         }
 
         /**
-         * <p>The MemoryStore name.</p>
+         * <p>The memory store name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -173,7 +173,7 @@ public class ListMemorySessionMessagesRequest extends Request {
         }
 
         /**
-         * <p>The agent ID. At least one of Agent ID and User ID must be provided. The length limit is 1 to 128 UTF-8 bytes. The value cannot contain / or *.</p>
+         * <p>The agent ID. At least one of UserId or AgentId must be provided. The length is limited to 1 to 128 UTF-8 bytes. The value cannot contain a forward slash (/) or an asterisk (*).</p>
          * 
          * <strong>example:</strong>
          * <p>agent-001</p>
@@ -209,7 +209,7 @@ public class ListMemorySessionMessagesRequest extends Request {
         }
 
         /**
-         * <p>The session ID. The length limit is 1 to 128 UTF-8 bytes. The value cannot contain / or *.</p>
+         * <p>The session ID. The length is limited to 1 to 128 UTF-8 bytes. The value cannot contain a forward slash (/) or an asterisk (*).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -222,7 +222,7 @@ public class ListMemorySessionMessagesRequest extends Request {
         }
 
         /**
-         * <p>The user ID. At least one of User ID and Agent ID must be provided. The length limit is 1 to 128 UTF-8 bytes. The value cannot contain / or *.</p>
+         * <p>The user ID. At least one of UserId or AgentId must be provided. The length is limited to 1 to 128 UTF-8 bytes. The value cannot contain a forward slash (/) or an asterisk (*).</p>
          * 
          * <strong>example:</strong>
          * <p>user-001</p>

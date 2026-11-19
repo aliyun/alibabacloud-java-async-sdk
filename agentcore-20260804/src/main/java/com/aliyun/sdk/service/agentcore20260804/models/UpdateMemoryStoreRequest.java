@@ -117,7 +117,7 @@ public class UpdateMemoryStoreRequest extends Request {
         }
 
         /**
-         * <p>The MemoryStore name.</p>
+         * <p>The name of the memory store.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +130,7 @@ public class UpdateMemoryStoreRequest extends Request {
         }
 
         /**
-         * <p>The update MemoryStore request.</p>
+         * <p>The update memory store request.</p>
          * <p>This parameter is required.</p>
          */
         public Builder body(UpdateMemoryStoreRequestBody body) {
@@ -212,10 +212,10 @@ public class UpdateMemoryStoreRequest extends Request {
             } 
 
             /**
-             * <p>The MemoryStore description. The maximum length is 1,024 characters.</p>
+             * <p>The description of the memory store. Maximum length: 1,024 characters.</p>
              * 
              * <strong>example:</strong>
-             * <p>Memory store used to save customers\&quot; long-term preferences</p>
+             * <p>Memory store used to save long-term customer preferences</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -223,7 +223,7 @@ public class UpdateMemoryStoreRequest extends Request {
             }
 
             /**
-             * <p>The custom memory extraction instructions. The maximum length is 4,096 characters.</p>
+             * <p>The custom memory extraction instructions. Maximum length: 4,096 characters.</p>
              * 
              * <strong>example:</strong>
              * <p>Extract only long-term preferences explicitly expressed by the user</p>

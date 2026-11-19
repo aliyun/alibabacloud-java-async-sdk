@@ -149,7 +149,7 @@ public class GetUserResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message. An error description is returned if the request fails.</p>
+         * <p>The response message. Returns an error description if the request fails.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -376,7 +376,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time in UTC format compliant with RFC 3339.</p>
+             * <p>The creation time in UTC format based on RFC 3339.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-12T03:04:05Z</p>
@@ -387,7 +387,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the user. The name must be 1 to 32 characters in length.</p>
+             * <p>The display name of the user. It must be 1 to 32 characters in length.</p>
              * 
              * <strong>example:</strong>
              * <p>Zhang San</p>
@@ -398,7 +398,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The email address of the user. The address can be up to 256 characters in length.</p>
+             * <p>The email address of the user. It can be up to 256 characters in length.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="mailto:user-01@example.com">user-01@example.com</a></p>
@@ -409,7 +409,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The username. The name must be unique within the workspace, contain only lowercase letters, digits, and hyphens, start and end with a lowercase letter or a digit, and be 1 to 32 characters in length.</p>
+             * <p>The username. It must be unique within the workspace, contain only lowercase letters, digits, and hyphens, start and end with a lowercase letter or digit, and be 1 to 32 characters in length.</p>
              * 
              * <strong>example:</strong>
              * <p>user-01</p>
@@ -420,7 +420,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The note for the user. The note can be up to 1,024 characters in length.</p>
+             * <p>The note for the user. It can be up to 1,024 characters in length.</p>
              * 
              * <strong>example:</strong>
              * <p>Agent operations team member</p>
@@ -442,7 +442,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the user. Valid values: Creating, Active, Updating, Deleting, Failed, and DeleteFailed.</p>
+             * <p>The user status. Valid values: Creating, Active, Updating, Deleting, Failed, and DeleteFailed.</p>
              * 
              * <strong>example:</strong>
              * <p>Active</p>
@@ -453,7 +453,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time of the last modification in UTC format compliant with RFC 3339.</p>
+             * <p>The last update time in UTC format based on RFC 3339.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-12T03:04:05Z</p>

@@ -134,7 +134,7 @@ public class CreateMcpRequest extends Request {
         }
 
         /**
-         * <p>The reserved query request identifier. The console backend currently does not read this parameter and does not provide idempotency guarantees for deduplication or restoring the original processing result based on this identifier.</p>
+         * <p>The reserved query request identifier. The console backend does not read this parameter and does not provide idempotency guarantees for deduplication or restoring the original processing result based on this identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-426614174000</p>
@@ -450,7 +450,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>The MCP type.</p>
+             * <p>The type.</p>
              * 
              * <strong>example:</strong>
              * <p>basic</p>
@@ -546,7 +546,7 @@ public class CreateMcpRequest extends Request {
             } 
 
             /**
-             * <p>The API Key authentication configuration for callers of the code deployment MCP.</p>
+             * <p>The caller API Key authentication configuration for code-deployed MCP.</p>
              */
             public Builder codePackage(CodePackage codePackage) {
                 this.codePackage = codePackage;
@@ -554,7 +554,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>The authentication configuration for the direct proxy.</p>
+             * <p>The direct proxy authentication configuration.</p>
              */
             public Builder directProxy(DirectProxy directProxy) {
                 this.directProxy = directProxy;
@@ -570,7 +570,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>The list of authentication configurations for HTTP_TO_MCP.</p>
+             * <p>The list of HTTP_TO_MCP authentication configurations.</p>
              */
             public Builder httpToMcp(java.util.List<HttpToMcp> httpToMcp) {
                 this.httpToMcp = httpToMcp;
@@ -650,7 +650,7 @@ public class CreateMcpRequest extends Request {
             } 
 
             /**
-             * <p>The access credential ID. This parameter references an AgentCore credential when the mode is set to CREDENTIAL.</p>
+             * <p>The ID of the AgentCore credential referenced when the mode is set to CREDENTIAL.</p>
              * 
              * <strong>example:</strong>
              * <p>credential-id</p>
@@ -669,7 +669,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>The access control mode. ANONYMOUS indicates anonymous access, and CREDENTIAL indicates that AgentCore access credentials are used.</p>
+             * <p>The access control mode. ANONYMOUS indicates anonymous access. CREDENTIAL indicates authentication by using AgentCore access credentials.</p>
              * 
              * <strong>example:</strong>
              * <p>CREDENTIAL</p>
@@ -888,7 +888,7 @@ public class CreateMcpRequest extends Request {
             } 
 
             /**
-             * <p>The temporary code package token returned by GetMcpCodePackageUploadUrl. Used to create a code deployment after a presigned upload is completed. Mutually exclusive with CodePackageUrl.</p>
+             * <p>The temporary code package token returned by GetMcpCodePackageUploadUrl. It is used to create a code deployment after a presigned upload is completed. Specify either this parameter or CodePackageUrl.</p>
              * 
              * <strong>example:</strong>
              * <p>upload-token</p>
@@ -899,7 +899,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>The public Alibaba Cloud OSS HTTP(S) URL that can be directly passed when creating a code deployment. Mutually exclusive with CodePackageToken. Only supported by CreateMcp, and not supported for update and query operations.</p>
+             * <p>The public Alibaba Cloud OSS HTTP(S) URL that can be directly passed when creating a code deployment. Specify either this parameter or CodePackageToken. This parameter is only supported by CreateMcp, and is not supported for update and query operations.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example-bucket.oss-cn-hangzhou.aliyuncs.com/server.zip">https://example-bucket.oss-cn-hangzhou.aliyuncs.com/server.zip</a></p>
@@ -918,7 +918,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>The runtime environment for the code package.</p>
+             * <p>The runtime of the code package. Valid values: python3.13, nodejs22, and java17.</p>
              * 
              * <strong>example:</strong>
              * <p>python3.13</p>
@@ -1091,7 +1091,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>The image registry type.</p>
+             * <p>The image repository type.</p>
              * 
              * <strong>example:</strong>
              * <p>ACR</p>
@@ -1102,7 +1102,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>The MCP runtime mode. Custom containers currently need to expose the standard MCP themselves. Set the value to SELF_HOSTED.</p>
+             * <p>Custom containers currently must expose the standard MCP themselves. Set the value to SELF_HOSTED.</p>
              * 
              * <strong>example:</strong>
              * <p>SELF_HOSTED</p>
@@ -1113,7 +1113,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>The container source type. Currently fixed to CONTAINER_IMAGE.</p>
+             * <p>Currently fixed to CONTAINER_IMAGE.</p>
              * 
              * <strong>example:</strong>
              * <p>CONTAINER_IMAGE</p>
@@ -1262,7 +1262,7 @@ public class CreateMcpRequest extends Request {
              * <p>The description of the hook.</p>
              * 
              * <strong>example:</strong>
-             * <p>Log MCP tool invocation</p>
+             * <p>Log MCP tool invoke</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1365,7 +1365,7 @@ public class CreateMcpRequest extends Request {
             } 
 
             /**
-             * <p>The ordered list of hooks. Executes PRE_LIST_TOOLS, PRE_CALL_TOOL, POST_LIST_TOOLS, and POST_CALL_TOOL hooks in the order of the array.</p>
+             * <p>Executes the PRE_LIST_TOOLS, PRE_CALL_TOOL, POST_LIST_TOOLS, and POST_CALL_TOOL hooks in array order.</p>
              */
             public Builder hooks(java.util.List<Hooks> hooks) {
                 this.hooks = hooks;
@@ -1487,7 +1487,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>The start rule for splitting Function Compute logs.</p>
+             * <p>The start rule for FC log splitting.</p>
              * 
              * <strong>example:</strong>
              * <p>DefaultRegex</p>
@@ -1616,7 +1616,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>The number of concurrent sessions per instance. Currently fixed to 1.</p>
+             * <p>Currently fixed to 1.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -2088,7 +2088,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>The path of the OSS bucket.</p>
+             * <p>The path in the OSS bucket.</p>
              * 
              * <strong>example:</strong>
              * <p>/data</p>
@@ -2263,7 +2263,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>The reserved reference to the parameter transformation and result enhancement rule set.</p>
+             * <p>The reserved parameter transformation and result enhancement rule set reference.</p>
              * 
              * <strong>example:</strong>
              * <p>rules-1</p>
@@ -2487,7 +2487,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>The temporary disk size in MB. Valid values: 512 or 10240.</p>
+             * <p>The ephemeral disk size in MB. Valid values: 512 and 10240.</p>
              * 
              * <strong>example:</strong>
              * <p>512</p>
@@ -2506,7 +2506,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>The ARN of the RAM role used by user code to access downstream Alibaba Cloud resources.</p>
+             * <p>The ARN of the RAM role used when user code accesses downstream Alibaba Cloud resources.</p>
              * 
              * <strong>example:</strong>
              * <p>acs:ram::1234567890123456:role/agentcore-mcp-execution</p>
@@ -2517,7 +2517,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>The maximum number of concurrent requests per instance. Default value: 200.</p>
+             * <p>Default value: 200.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -2539,7 +2539,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>The service port. Default value: 9000.</p>
+             * <p>Default value: 9000.</p>
              * 
              * <strong>example:</strong>
              * <p>9000</p>
@@ -2792,7 +2792,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>The artifact type. A value of Code indicates a ZIP code package, and a value of Container indicates a custom container.</p>
+             * <p>The artifact type. Code indicates a ZIP code package, and Container indicates a custom container.</p>
              * 
              * <strong>example:</strong>
              * <p>Code</p>
@@ -3056,7 +3056,7 @@ public class CreateMcpRequest extends Request {
             } 
 
             /**
-             * <p>The list of MCP service addresses. This parameter is required when Type is set to DIRECT_PROXY or HTTP_TO_MCP. Do not specify this parameter when Type is set to CODE_PACKAGE.</p>
+             * <p>The list of MCP service addresses.</p>
              */
             public Builder addresses(java.util.List<String> addresses) {
                 this.addresses = addresses;
@@ -3064,7 +3064,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>The backend authentication configuration. When enabled is set to true, specify directProxy (name and value) for DIRECT_PROXY, specify the httpToMcp array (each item includes id, type, and credential; apiKey also requires position and name) for HTTP_TO_MCP, and specify codePackage (headerName and apiKey) for CODE_PACKAGE to verify MCP callers. Multiple authentication objects are supported, and the first one is the default upstream credential. HTTP_TO_MCP credentials are merged into the securitySchemes of Swagger.</p>
+             * <p>The backend authentication configuration. When enabled is set to true: for DIRECT_PROXY, specify directProxy (name and value); for HTTP_TO_MCP, specify the httpToMcp array (each item includes id, type, and credential, and apiKey also requires position and name), which supports multiple authentication objects with the first one as the default upstream credential. HTTP_TO_MCP credentials are merged into the securitySchemes of Swagger.</p>
              */
             public Builder auth(Auth auth) {
                 this.auth = auth;
@@ -3080,7 +3080,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>The code deployment configuration. Required when Type is set to CODE_PACKAGE. When creating a Code artifact, you must specify either CodeConfiguration.CodePackageToken or CodePackageUrl, but not both. CodePackageUrl only supports public Alibaba Cloud OSS HTTP(S) URLs.</p>
+             * <p>The code deployment configuration. Required when Type is CODE_PACKAGE. When creating a Code artifact, you must specify exactly one of CodeConfiguration.CodePackageToken and CodePackageUrl. CodePackageUrl only supports public Alibaba Cloud OSS HTTP(S) URLs.</p>
              */
             public Builder deploymentConfig(DeploymentConfig deploymentConfig) {
                 this.deploymentConfig = deploymentConfig;
@@ -3091,7 +3091,7 @@ public class CreateMcpRequest extends Request {
              * <p>The description.</p>
              * 
              * <strong>example:</strong>
-             * <p>A sample description that illustrates the purpose of the resource</p>
+             * <p>A sample description to illustrate the purpose of the resource</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -3111,7 +3111,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>The access permission mode. PUBLIC indicates public access. CONTROLLED indicates that access is controlled based on permission rules.</p>
+             * <p>PUBLIC indicates public access. CONTROLLED indicates that access is controlled based on permission rules.</p>
              * 
              * <strong>example:</strong>
              * <p>CONTROLLED</p>
@@ -3133,7 +3133,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>The Swagger configuration. Specify this field when Type is set to HTTP_TO_MCP.</p>
+             * <p>Specify this field if Type is HTTP_TO_MCP.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;type&quot;:&quot;object&quot;}</p>
@@ -3144,7 +3144,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>The MCP type.</p>
+             * <p>The type.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

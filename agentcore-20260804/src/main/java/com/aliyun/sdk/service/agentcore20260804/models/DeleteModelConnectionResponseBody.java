@@ -119,7 +119,7 @@ public class DeleteModelConnectionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The business status code. A value of SUCCESS indicates success.</p>
+         * <p>The business status code. The value is SUCCESS if the request succeeds.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -130,7 +130,7 @@ public class DeleteModelConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The identifier of the model connection for which the deletion task has been accepted.</p>
+         * <p>The ID of the model connection for which the deletion request is accepted.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -138,7 +138,7 @@ public class DeleteModelConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code. A value of 200 indicates success.</p>
+         * <p>The HTTP status code. The value is 200 if the request succeeds.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -149,7 +149,7 @@ public class DeleteModelConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message indicating the request processing result.</p>
+         * <p>The message about the request processing result.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>

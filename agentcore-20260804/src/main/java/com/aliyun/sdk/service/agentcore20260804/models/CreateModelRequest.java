@@ -111,7 +111,7 @@ public class CreateModelRequest extends Request {
         }
 
         /**
-         * <p>The client token used for idempotence. This parameter is currently not supported.</p>
+         * <p>The client token used for idempotence. Not supported.</p>
          * 
          * <strong>example:</strong>
          * <p>client-token-1</p>
@@ -276,7 +276,7 @@ public class CreateModelRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether the model is able to invoke multiple tool calling operations in a single response.</p>
+             * <p>Specifies whether the model is able to invoke tool calling multiple times in a single response.</p>
              */
             public Builder multiToolCall(Boolean multiToolCall) {
                 this.multiToolCall = multiToolCall;
@@ -292,7 +292,7 @@ public class CreateModelRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether the model is able to invoke streaming tool calling.</p>
+             * <p>Specifies whether the model is able to invoke tool calling in a streaming manner.</p>
              */
             public Builder streamToolCall(Boolean streamToolCall) {
                 this.streamToolCall = streamToolCall;
@@ -457,7 +457,7 @@ public class CreateModelRequest extends Request {
             }
 
             /**
-             * <p>The context window size of the model, in tokens. The value must be a positive integer.</p>
+             * <p>The context window size of the model, in tokens. Must be a positive integer.</p>
              * 
              * <strong>example:</strong>
              * <p>128000</p>
@@ -468,7 +468,7 @@ public class CreateModelRequest extends Request {
             }
 
             /**
-             * <p>The model description, up to 255 characters in length.</p>
+             * <p>The model description. Maximum length: 255 characters.</p>
              * 
              * <strong>example:</strong>
              * <p>description</p>
@@ -479,7 +479,7 @@ public class CreateModelRequest extends Request {
             }
 
             /**
-             * <p>The maximum number of output tokens supported by the model per generation.</p>
+             * <p>The maximum number of output tokens supported by the model in a single generation.</p>
              * 
              * <strong>example:</strong>
              * <p>131072</p>

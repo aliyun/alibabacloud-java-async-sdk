@@ -192,6 +192,7 @@ public class AddMemoriesResponseBody extends TeaModel {
      */
     public static class Memories extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("memoryId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String memoryId;
 
         private Memories(Builder builder) {
@@ -225,6 +226,7 @@ public class AddMemoriesResponseBody extends TeaModel {
 
             /**
              * <p>The long-term memory ID.</p>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>mem-2f5f9c5a8d0e4c3b</p>
@@ -254,9 +256,13 @@ public class AddMemoriesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("taskId")
         private String taskId;
 
+        @com.aliyun.core.annotation.NameInMap("taskIds")
+        private java.util.List<String> taskIds;
+
         private Data(Builder builder) {
             this.memories = builder.memories;
             this.taskId = builder.taskId;
+            this.taskIds = builder.taskIds;
         }
 
         public static Builder builder() {
@@ -281,9 +287,17 @@ public class AddMemoriesResponseBody extends TeaModel {
             return this.taskId;
         }
 
+        /**
+         * @return taskIds
+         */
+        public java.util.List<String> getTaskIds() {
+            return this.taskIds;
+        }
+
         public static final class Builder {
             private java.util.List<Memories> memories; 
             private String taskId; 
+            private java.util.List<String> taskIds; 
 
             private Builder() {
             } 
@@ -291,10 +305,11 @@ public class AddMemoriesResponseBody extends TeaModel {
             private Builder(Data model) {
                 this.memories = model.memories;
                 this.taskId = model.taskId;
+                this.taskIds = model.taskIds;
             } 
 
             /**
-             * <p>The memory references. This parameter is returned only when sync is set to true. An empty array is allowed. This parameter is not returned together with taskId.</p>
+             * <p>The memory references returned only when sync is set to true. An empty array is allowed. It is not returned together with taskId.</p>
              */
             public Builder memories(java.util.List<Memories> memories) {
                 this.memories = memories;
@@ -302,13 +317,21 @@ public class AddMemoriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task ID. This parameter is returned only when sync is set to false. This parameter is not returned together with memories.</p>
+             * <p>The task ID returned only when sync is set to false. It is not returned together with memories.</p>
              * 
              * <strong>example:</strong>
              * <p>task-2f5f9c5a8d0e4c3b</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
+                return this;
+            }
+
+            /**
+             * <p>The list of extraction task IDs. Multiple tasks may be returned when multiple rules are enabled. It is not returned for direct writes.</p>
+             */
+            public Builder taskIds(java.util.List<String> taskIds) {
+                this.taskIds = taskIds;
                 return this;
             }
 

@@ -210,7 +210,7 @@ public class ListMcpMarketItemsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token used to query the next page.</p>
+         * <p>The pagination token for querying the next page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -221,7 +221,7 @@ public class ListMcpMarketItemsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID used to locate and troubleshoot the request.</p>
+         * <p>The request ID, used to locate and troubleshoot the request.</p>
          * 
          * <strong>example:</strong>
          * <p>request-123456</p>
@@ -489,7 +489,7 @@ public class ListMcpMarketItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the MCP service.</p>
+             * <p>The MCP service description.</p>
              * 
              * <strong>example:</strong>
              * <p>MCP service for querying knowledge bases</p>
@@ -508,7 +508,7 @@ public class ListMcpMarketItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The multilingual display content organized by BCP-47 language tags. If a language is not matched, the system falls back to the default fields.</p>
+             * <p>The multilingual display content, organized by BCP-47 language tags. Falls back to default fields if the language is not matched.</p>
              */
             public Builder i18n(java.util.Map<String, ItemsI18nValue> i18n) {
                 this.i18n = i18n;
@@ -538,7 +538,7 @@ public class ListMcpMarketItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the MCP marketplace template.</p>
+             * <p>The MCP marketplace template ID.</p>
              * 
              * <strong>example:</strong>
              * <p>market-1</p>
@@ -560,7 +560,7 @@ public class ListMcpMarketItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the MCP marketplace template.</p>
+             * <p>The MCP marketplace template name.</p>
              * 
              * <strong>example:</strong>
              * <p>Knowledge</p>
@@ -593,7 +593,7 @@ public class ListMcpMarketItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The usage instructions of the MCP marketplace template.</p>
+             * <p>The usage instructions for the MCP marketplace template.</p>
              * 
              * <strong>example:</strong>
              * <h1>Knowledge\nKnowledge base query service</h1>
@@ -604,7 +604,7 @@ public class ListMcpMarketItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The schema version of the template.</p>
+             * <p>The template schema version.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0</p>
@@ -615,7 +615,7 @@ public class ListMcpMarketItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The input schema of the template, represented as a JSON Schema string.</p>
+             * <p>The template input schema, represented as a JSON Schema string.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;type&quot;:&quot;object&quot;,&quot;properties&quot;:{&quot;addresses&quot;:{&quot;type&quot;:&quot;array&quot;,&quot;items&quot;:{&quot;type&quot;:&quot;string&quot;}}}}</p>
@@ -626,7 +626,7 @@ public class ListMcpMarketItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the MCP marketplace template.</p>
+             * <p>The MCP marketplace template version.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0.0</p>

@@ -223,7 +223,7 @@ public class ListSkillsRequest extends Request {
         }
 
         /**
-         * <p>The sort field. Valid value: download_count. Default value: gmt_modified.</p>
+         * <p>The field used for sorting. Supported value: download_count. Default value: gmt_modified.</p>
          * 
          * <strong>example:</strong>
          * <p>download_count</p>
@@ -235,7 +235,7 @@ public class ListSkillsRequest extends Request {
         }
 
         /**
-         * <p>Filters the skills by owner.</p>
+         * <p>The owner used to filter results.</p>
          * 
          * <strong>example:</strong>
          * <p>user123</p>
@@ -271,7 +271,7 @@ public class ListSkillsRequest extends Request {
         }
 
         /**
-         * <p>Filters the skills by visibility. Valid values: PUBLIC and PRIVATE.</p>
+         * <p>The visibility used to filter results. Valid values: PUBLIC and PRIVATE.</p>
          * 
          * <strong>example:</strong>
          * <p>PUBLIC</p>

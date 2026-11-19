@@ -111,7 +111,7 @@ public class CreateManagedAgentRequest extends Request {
         }
 
         /**
-         * <p>The reserved query parameter. Currently, the backend does not provide idempotency guarantees to deduplicate or recover the original acceptance result based on this identity.</p>
+         * <p>A reserved query parameter. The backend currently does not provide idempotency guarantees, such as deduplication or recovery of the original processing result based on this token.</p>
          * 
          * <strong>example:</strong>
          * <p>client-token-1</p>
@@ -208,7 +208,7 @@ public class CreateManagedAgentRequest extends Request {
             } 
 
             /**
-             * <p>The absolute mount path in the container, such as /data/train. Mount targets cannot be duplicated or form parent-child directory overwrites, and must avoid platform-reserved directories.</p>
+             * <p>The absolute mount path in the container, such as <code>/data/train</code>. Mount targets cannot be duplicated or form parent-child overwrites, and must avoid platform-reserved directories.</p>
              * 
              * <strong>example:</strong>
              * <p>/mnt/agenticfs/data</p>
@@ -219,7 +219,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The existing non-empty relative directory in the access point. This parameter is required and verified by the backend for each mount item. Root directories, absolute paths, and parent directory segments are not allowed.</p>
+             * <p>The existing non-empty relative directory under the access point. This is a required field validated by the backend for each mount item. Root directories, absolute paths, or parent directory segments are not allowed.</p>
              * 
              * <strong>example:</strong>
              * <p>workspace/data</p>
@@ -230,7 +230,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether the mount is read-only. If this parameter is omitted, the default value is false. This parameter does not represent a RAM role read-only policy.</p>
+             * <p>Specifies whether the mount is read-only. If omitted, the default value is false. This is not the read-only policy of a RAM role.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -241,7 +241,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The access point domain name. This parameter is required and verified by the backend for each mount item. The value cannot contain a protocol, port, or path. Set this parameter to the DomainName value in the NAS ListAccessPoints response.</p>
+             * <p>The access point domain name. This is a required field validated by the backend for each mount item. It does not contain a protocol, port, or path. Use the <code>DomainName</code> from the NAS <code>ListAccessPoints</code> response.</p>
              * 
              * <strong>example:</strong>
              * <p>ap-0123456789abcdef0.0123456789-vlm36.cn-hangzhou.nas.aliyuncs.com</p>
@@ -253,6 +253,165 @@ public class CreateManagedAgentRequest extends Request {
 
             public AgenticFsMounts build() {
                 return new AgenticFsMounts(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateManagedAgentRequest} extends {@link TeaModel}
+     *
+     * <p>CreateManagedAgentRequest</p>
+     */
+    public static class Bindings extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("resourceId")
+        private String resourceId;
+
+        @com.aliyun.core.annotation.NameInMap("type")
+        private String type;
+
+        private Bindings(Builder builder) {
+            this.resourceId = builder.resourceId;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Bindings create() {
+            return builder().build();
+        }
+
+        /**
+         * @return resourceId
+         */
+        public String getResourceId() {
+            return this.resourceId;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private String resourceId; 
+            private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Bindings model) {
+                this.resourceId = model.resourceId;
+                this.type = model.type;
+            } 
+
+            /**
+             * <p>The required field validated by the backend for each binding item. Null, blank, or control characters are not accepted. The backend trims leading and trailing spaces and then validates that the length is 1 to 128 characters. The first character must be a letter or digit, and the remaining characters can contain letters, digits, periods, hyphens, or underscores. Only resources in the current workspace can be referenced.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kb-example</p>
+             */
+            public Builder resourceId(String resourceId) {
+                this.resourceId = resourceId;
+                return this;
+            }
+
+            /**
+             * <p>The required field validated by the backend for each binding item. Only <code>KNOWLEDGE_BASE</code> (knowledge base) or <code>DATA_CONNECTOR</code> (data connector) is accepted. The value is case-sensitive. Null or blank values are not accepted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>KNOWLEDGE_BASE</p>
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public Bindings build() {
+                return new Bindings(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateManagedAgentRequest} extends {@link TeaModel}
+     *
+     * <p>CreateManagedAgentRequest</p>
+     */
+    public static class ContextConfiguration extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("bindings")
+        private java.util.List<Bindings> bindings;
+
+        @com.aliyun.core.annotation.NameInMap("enabled")
+        private Boolean enabled;
+
+        private ContextConfiguration(Builder builder) {
+            this.bindings = builder.bindings;
+            this.enabled = builder.enabled;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ContextConfiguration create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bindings
+         */
+        public java.util.List<Bindings> getBindings() {
+            return this.bindings;
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public static final class Builder {
+            private java.util.List<Bindings> bindings; 
+            private Boolean enabled; 
+
+            private Builder() {
+            } 
+
+            private Builder(ContextConfiguration model) {
+                this.bindings = model.bindings;
+                this.enabled = model.enabled;
+            } 
+
+            /**
+             * <p>The optional array. Null or null items are not accepted. Each item only allows <code>type</code> and <code>resourceId</code>. The combination of the same type and normalized resource ID cannot be duplicated. If omitted during creation, no resource is selected. If omitted during an update, the original selection is retained. A non-empty array replaces the entire selection. An empty array can only clear the selection when the merged <code>enabled</code> value is false. To disable and clear the selection at the same time, pass <code>enabled:false</code> and <code>bindings:[]</code>. Explicitly submitted non-empty selections are validated for resource ownership and readiness, including selections saved when disabled.</p>
+             */
+            public Builder bindings(java.util.List<Bindings> bindings) {
+                this.bindings = bindings;
+                return this;
+            }
+
+            /**
+             * <p>The optional Boolean value. Null is not accepted. If this field is omitted during creation, the value is false. If it is omitted during an update, the current value is retained and cannot be automatically filled with false by the client. When updated to true, saved <code>bindings</code> can be reused. The merged enabled configuration must contain at least one resource. When updated to false, the resources are only disabled, and the original resource selection is not cleared.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            public ContextConfiguration build() {
+                return new ContextConfiguration(this);
             } 
 
         } 
@@ -299,7 +458,7 @@ public class CreateManagedAgentRequest extends Request {
             } 
 
             /**
-             * <p>The credential ID.</p>
+             * <p>The ID of the credential.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -372,7 +531,7 @@ public class CreateManagedAgentRequest extends Request {
             } 
 
             /**
-             * <p>The environment variable name.</p>
+             * <p>The name of the environment variable.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -384,7 +543,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The environment variable value.</p>
+             * <p>The value of the environment variable.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -530,7 +689,7 @@ public class CreateManagedAgentRequest extends Request {
             } 
 
             /**
-             * <p>The account key record ID in the qodercli connector. You can query this ID by calling the ListConnectors operation. This parameter does not represent the original key. You can omit this parameter if only one record exists. You must specify this parameter if multiple records exist. Do not specify this parameter for qwenpaw.</p>
+             * <p>The account key record ID in the qodercli connector. You can query it by using <code>ListConnectors</code>. It is not the original key. This parameter can be omitted if there is only one record, but must be specified if there are multiple records. Do not specify this parameter for qwenpaw.</p>
              * 
              * <strong>example:</strong>
              * <p>key-example</p>
@@ -611,7 +770,7 @@ public class CreateManagedAgentRequest extends Request {
             } 
 
             /**
-             * <p>The runtime framework configurations.</p>
+             * <p>The runtime framework configuration.</p>
              */
             public Builder configuration(Configuration configuration) {
                 this.configuration = configuration;
@@ -619,7 +778,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The runtime framework type. This parameter is required when you provide the harness parameter. Valid values: qwenpaw and qodercli.</p>
+             * <p>The runtime framework type. This field is required when <code>harness</code> is provided. Valid values: qwenpaw and qodercli.</p>
              * 
              * <strong>example:</strong>
              * <p>qodercli</p>
@@ -715,7 +874,7 @@ public class CreateManagedAgentRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to enable the token quota. If you do not specify this parameter, the default value is true. If you set this parameter to false, the quota is disabled and existing quota rules are deleted.</p>
+             * <p>Specifies whether to enable the token quota. If not specified, the default value is true. If set to false, the quota is disabled and existing quota rules are deleted.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -726,7 +885,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The quota limit type. This parameter is required and verified by the backend when the quota is enabled. Fixed value: token.</p>
+             * <p>The quota limit type. This field is required and validated by the backend when the quota is enabled. Fixed value: token.</p>
              * 
              * <strong>example:</strong>
              * <p>token</p>
@@ -737,7 +896,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The statistical period of the quota. This parameter is required and verified by the backend when the quota is enabled. Valid values: day and month.</p>
+             * <p>The statistical period of the quota. This field is required and validated by the backend when the quota is enabled. Valid values: day (daily) and month (monthly).</p>
              * 
              * <strong>example:</strong>
              * <p>day</p>
@@ -748,7 +907,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The maximum number of tokens that can be consumed in a single period. This parameter is required and verified by the backend when the quota is enabled. The value must be greater than 0.</p>
+             * <p>The maximum number of tokens allowed to be consumed in a single period. This field is required and validated by the backend when the quota is enabled. The value must be greater than 0.</p>
              * 
              * <strong>example:</strong>
              * <p>1000000</p>
@@ -845,7 +1004,7 @@ public class CreateManagedAgentRequest extends Request {
             } 
 
             /**
-             * <p>For qwenpaw, set this parameter to the workspace model connection ID. For qodercli, set this parameter to the available model identifier returned by the ListConnectorModels operation.</p>
+             * <p>For qwenpaw, use the workspace model connection ID. For qodercli, use the available model identifier returned by <code>ListConnectorModels</code>.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -857,7 +1016,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>For qwenpaw, set this parameter to the name of the upstream model created under the model connection. This parameter is required. For qodercli, you can omit this parameter.</p>
+             * <p>For qwenpaw, use the name of the upstream model created under the model connection. This parameter is required. For qodercli, this parameter can be omitted.</p>
              * 
              * <strong>example:</strong>
              * <p>qwen-max</p>
@@ -868,7 +1027,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The model token quota configurations. If you do not pass this parameter, no quota is configured.</p>
+             * <p>The model token quota configuration. If this parameter is not passed, no quota is configured.</p>
              */
             public Builder quota(Quota quota) {
                 this.quota = quota;
@@ -876,7 +1035,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>Valid values: off, low, medium, high, xhigh, and max. If this parameter is not passed or is set to null during creation, the default value is used. When you update and submit model configurations, if the thinking level is not passed or is set to null, the default value is restored. Except for off, which is converted to none, the value is passed to the runtime framework as is. The system does not verify model support or automatically downgrade the level. If the model does not support the specified level, adjust the level.</p>
+             * <p>Valid values: off, low, medium, high, xhigh, and max. If not passed or set to null during creation, the default value is used. When updating and submitting the model configuration, if the thinking level is not passed or is null, it is restored to the default value. Except for off, which is converted to none, the value is passed to the runtime framework as is. The system does not validate model support or automatically downgrade the level. If the model does not support the specified level, adjust the level.</p>
              * 
              * <strong>example:</strong>
              * <p>high</p>
@@ -1161,7 +1320,7 @@ public class CreateManagedAgentRequest extends Request {
             } 
 
             /**
-             * <p>The name of the OSS bucket. Required for each mount item.</p>
+             * <p>The name of the OSS bucket. This field is required for each mount item and is validated by the backend.</p>
              * 
              * <strong>example:</strong>
              * <p>bucket-001</p>
@@ -1172,7 +1331,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The absolute mount path in the container, such as /data/train. Mount targets cannot be duplicated or form parent-child directory overwrites, and must avoid platform-reserved directories.</p>
+             * <p>The absolute mount path in the container, such as <code>/data/train</code>. Mount targets cannot be duplicated or form parent-child overwrites, and must avoid platform-reserved directories.</p>
              * 
              * <strong>example:</strong>
              * <p>/mnt/oss/datasets</p>
@@ -1183,7 +1342,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The non-empty relative object directory prefix in the bucket. Required for each mount item.</p>
+             * <p>The non-empty relative object directory prefix in the bucket. This field is required for each mount item.</p>
              * 
              * <strong>example:</strong>
              * <p>datasets</p>
@@ -1194,7 +1353,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to mount the directory as read-only. Default value: false.</p>
+             * <p>Specifies whether the mount is read-only. Default value: false.</p>
              */
             public Builder readOnly(Boolean readOnly) {
                 this.readOnly = readOnly;
@@ -1578,7 +1737,7 @@ public class CreateManagedAgentRequest extends Request {
             } 
 
             /**
-             * <p>The name of the request header for session identification. Required when type is ISOLATED_HEADER_FIELD, and must be a valid HTTP request header name. Do not specify this parameter for other policies.</p>
+             * <p>The name of the request header used for session identification. Required when type is set to ISOLATED_HEADER_FIELD. Must be a valid HTTP request header name. Do not specify this parameter for other policy types.</p>
              * 
              * <strong>example:</strong>
              * <p>X-Session-Id</p>
@@ -1589,7 +1748,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The session policy type.</p>
+             * <p>The type of the session policy.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1760,7 +1919,7 @@ public class CreateManagedAgentRequest extends Request {
             } 
 
             /**
-             * <p>The version selector type.</p>
+             * <p>The type of the version selector.</p>
              * 
              * <strong>example:</strong>
              * <p>LABEL</p>
@@ -1771,7 +1930,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The selector value. For LABEL, this is the tag name, such as latest. For VERSION, this is the specific version number.</p>
+             * <p>The value of the selector. For LABEL, specify the tag name, such as latest. For VERSION, specify the exact version number.</p>
              * 
              * <strong>example:</strong>
              * <p>latest</p>
@@ -1868,7 +2027,7 @@ public class CreateManagedAgentRequest extends Request {
             } 
 
             /**
-             * <p>The skill name.</p>
+             * <p>The name of the skill.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1880,7 +2039,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The skill source type.</p>
+             * <p>The source type of the skill.</p>
              * 
              * <strong>example:</strong>
              * <p>REFERENCE</p>
@@ -1902,7 +2061,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The version selector for skill references. Supports LABEL for tags and VERSION for specific versions. If omitted, LABEL/latest is used. Selectors are not provided for STATIC sources.</p>
+             * <p>The version selector for the skill reference. Supports LABEL for tags and VERSION for specific versions. Defaults to LABEL/latest when omitted. Not applicable for STATIC sources.</p>
              */
             public Builder versionSelector(VersionSelector versionSelector) {
                 this.versionSelector = versionSelector;
@@ -1969,7 +2128,7 @@ public class CreateManagedAgentRequest extends Request {
             } 
 
             /**
-             * <p>The skill name.</p>
+             * <p>The name of the skill.</p>
              * 
              * <strong>example:</strong>
              * <p>web-search</p>
@@ -1980,7 +2139,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The skill version.</p>
+             * <p>The version of the skill.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0.0</p>
@@ -2065,7 +2224,7 @@ public class CreateManagedAgentRequest extends Request {
             } 
 
             /**
-             * <p>The sub-agent instruction.</p>
+             * <p>The instruction for the sub-agent.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -2077,7 +2236,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The sub-agent name.</p>
+             * <p>The name of the sub-agent.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -2089,7 +2248,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The list of sub-agent skills.</p>
+             * <p>The list of skills for the sub-agent.</p>
              */
             public Builder skills(java.util.List<SubAgentsSkills> skills) {
                 this.skills = skills;
@@ -2157,7 +2316,7 @@ public class CreateManagedAgentRequest extends Request {
             } 
 
             /**
-             * <p>The name of the template in the AI Registry.</p>
+             * <p>The name of the template in the AI registry.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -2169,7 +2328,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The version of the template in the AI Registry.</p>
+             * <p>The version of the template in the AI registry.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0.0</p>
@@ -2226,7 +2385,7 @@ public class CreateManagedAgentRequest extends Request {
             } 
 
             /**
-             * <p>The AI Registry template configuration.</p>
+             * <p>The AI registry template configuration.</p>
              */
             public Builder aiRegistry(AiRegistry aiRegistry) {
                 this.aiRegistry = aiRegistry;
@@ -2295,7 +2454,7 @@ public class CreateManagedAgentRequest extends Request {
             } 
 
             /**
-             * <p>The tool name.</p>
+             * <p>The name of the tool.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -2307,7 +2466,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The tool type.</p>
+             * <p>The type of the tool.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -2340,6 +2499,9 @@ public class CreateManagedAgentRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("agenticFsMounts")
         private java.util.List<AgenticFsMounts> agenticFsMounts;
+
+        @com.aliyun.core.annotation.NameInMap("contextConfiguration")
+        private ContextConfiguration contextConfiguration;
 
         @com.aliyun.core.annotation.NameInMap("description")
         private String description;
@@ -2390,6 +2552,7 @@ public class CreateManagedAgentRequest extends Request {
             this.accessMode = builder.accessMode;
             this.accessScope = builder.accessScope;
             this.agenticFsMounts = builder.agenticFsMounts;
+            this.contextConfiguration = builder.contextConfiguration;
             this.description = builder.description;
             this.environment = builder.environment;
             this.harness = builder.harness;
@@ -2433,6 +2596,13 @@ public class CreateManagedAgentRequest extends Request {
          */
         public java.util.List<AgenticFsMounts> getAgenticFsMounts() {
             return this.agenticFsMounts;
+        }
+
+        /**
+         * @return contextConfiguration
+         */
+        public ContextConfiguration getContextConfiguration() {
+            return this.contextConfiguration;
         }
 
         /**
@@ -2537,6 +2707,7 @@ public class CreateManagedAgentRequest extends Request {
             private String accessMode; 
             private String accessScope; 
             private java.util.List<AgenticFsMounts> agenticFsMounts; 
+            private ContextConfiguration contextConfiguration; 
             private String description; 
             private Environment environment; 
             private Harness harness; 
@@ -2559,6 +2730,7 @@ public class CreateManagedAgentRequest extends Request {
                 this.accessMode = model.accessMode;
                 this.accessScope = model.accessScope;
                 this.agenticFsMounts = model.agenticFsMounts;
+                this.contextConfiguration = model.contextConfiguration;
                 this.description = model.description;
                 this.environment = model.environment;
                 this.harness = model.harness;
@@ -2598,10 +2770,18 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The NAS storage mount configurations. Currently, only the AgenticFS type is supported, which is used to mount file directories in access points to agent runtime instances. This is the list of AgenticFS directory mounts. The total number of AgenticFS mounts and OSS mounts cannot exceed 10. If you omit this parameter or set it to [] during creation, no mounts are configured. If you omit this parameter during an update, the existing mounts are retained. If you set it to [], the mounts are cleared. Null values are not accepted.</p>
+             * <p>The NAS storage mount configuration. Currently, only the AgenticFS type is supported, which is used to mount file directories in access points to agent runtime instances. The list of AgenticFS directory mounts. The total number of AgenticFS mounts and <code>ossMounts</code> cannot exceed 10. If omitted or set to <code>[]</code> during creation, no mount is configured. If omitted during an update, the original mounts are retained. If set to <code>[]</code> during an update, the mounts are cleared. Null is not accepted.</p>
              */
             public Builder agenticFsMounts(java.util.List<AgenticFsMounts> agenticFsMounts) {
                 this.agenticFsMounts = agenticFsMounts;
+                return this;
+            }
+
+            /**
+             * <p>The optional JSON object. Only <code>enabled</code> and <code>bindings</code> are allowed. Null, JSON character strings, or the legacy <code>contextSpaceId</code> field is not accepted. If the entire object is omitted, the server-side default configurations are used, which is typically disabled. Pass <code>{}</code> or <code>{enabled:false}</code> to explicitly keep it disabled. If <code>enabled</code> is set to true, you must select at least one resource in the current workspace. Non-empty <code>bindings</code> are validated for resource ownership and readiness even when disabled. Platform-managed context channels are not configured through regular tools.</p>
+             */
+            public Builder contextConfiguration(ContextConfiguration contextConfiguration) {
+                this.contextConfiguration = contextConfiguration;
                 return this;
             }
 
@@ -2625,7 +2805,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The runtime framework object. If this parameter is omitted, qwenpaw is used by default. Valid values: qwenpaw and qodercli. The type cannot be changed after creation.</p>
+             * <p>The runtime framework object. If omitted, the default value is qwenpaw. Supported values are qwenpaw and qodercli. The type cannot be changed after creation.</p>
              */
             public Builder harness(Harness harness) {
                 this.harness = harness;
@@ -2644,7 +2824,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The model configurations.</p>
+             * <p>The model configuration.</p>
              * <p>This parameter is required.</p>
              */
             public Builder model(Model model) {
@@ -2665,7 +2845,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The runtime network configuration. If provided, both accessInternet.enabled and accessVpc.enabled must be included. Actual access is subject to workspace network restrictions.</p>
+             * <p>The runtime network configuration. If provided, you must include both accessInternet.enabled and accessVpc.enabled. Actual access is subject to workspace network restrictions.</p>
              */
             public Builder network(Network network) {
                 this.network = network;
@@ -2673,7 +2853,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The list of OSS directory mounts. The total number of OSS mounts and agenticFsMounts cannot exceed 10. During an update, this list is replaced entirely. Pass an empty array [] to clear the list.</p>
+             * <p>The list of OSS directory mounts. The total number of items in this list and agenticFsMounts cannot exceed 10. Updates replace the entire list. Pass an empty array [] to clear the list.</p>
              */
             public Builder ossMounts(java.util.List<OssMounts> ossMounts) {
                 this.ossMounts = ossMounts;
@@ -2681,7 +2861,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The prompt variable declarations.</p>
+             * <p>The prompt variable declaration.</p>
              */
             public Builder promptVariables(java.util.List<PromptVariables> promptVariables) {
                 this.promptVariables = promptVariables;

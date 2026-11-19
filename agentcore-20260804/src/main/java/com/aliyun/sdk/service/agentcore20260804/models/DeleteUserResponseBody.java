@@ -130,7 +130,7 @@ public class DeleteUserResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the deleted user.</p>
+         * <p>The deleted user information.</p>
          */
         public Builder data(Data data) {
             this.data = data;

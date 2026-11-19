@@ -183,7 +183,7 @@ public class UploadSkillViaOssRequest extends Request {
             } 
 
             /**
-             * <p>The commit message. This parameter is optional.</p>
+             * <p>The commit message.</p>
              * 
              * <strong>example:</strong>
              * <p>Update documentation</p>
@@ -194,7 +194,7 @@ public class UploadSkillViaOssRequest extends Request {
             }
 
             /**
-             * <p>The name or path of the OSS object.</p>
+             * <p>The name of the OSS object.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -217,7 +217,7 @@ public class UploadSkillViaOssRequest extends Request {
             }
 
             /**
-             * <p>The target version to upload. This parameter is optional and serves as a fallback when no version information is included in the ZIP package.</p>
+             * <p>Specifies the target version number for the upload. This parameter is optional and serves as a fallback when no version information is included in the ZIP package.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0.0</p>

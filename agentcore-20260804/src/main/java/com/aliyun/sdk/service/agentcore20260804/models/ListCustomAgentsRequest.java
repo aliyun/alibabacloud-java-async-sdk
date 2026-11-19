@@ -88,7 +88,7 @@ public class ListCustomAgentsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the workspace to which the custom code or image agents belong.</p>
+         * <p>The ID of the workspace to which the custom code or image agent belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +113,7 @@ public class ListCustomAgentsRequest extends Request {
         }
 
         /**
-         * <p>The opaque token used to query the next page. Omit this parameter in the first request. For subsequent requests, use the <code>nextToken</code> value returned in the previous response as is, and keep the same workspace. Do not construct this token manually.</p>
+         * <p>The opaque token for querying the next page. Omit this parameter in the first request. For subsequent requests, use the <code>nextToken</code> value from the previous response as is and keep the same workspace. Do not construct the token manually.</p>
          * 
          * <strong>example:</strong>
          * <p>djE6YWdlbnRjb3JlLmFnZW50Lmxpc3QuY3VzdG9tOjIw</p>

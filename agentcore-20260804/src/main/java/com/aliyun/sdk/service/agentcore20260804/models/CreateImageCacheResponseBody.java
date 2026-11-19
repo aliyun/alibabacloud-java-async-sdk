@@ -182,7 +182,7 @@ public class CreateImageCacheResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful. A successful request does not mean that the cache creation is complete.</p>
+         * <p>Indicates whether the request is successful. This does not mean that the cache creation is complete.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -270,7 +270,7 @@ public class CreateImageCacheResponseBody extends TeaModel {
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>Image cache creation failed. Try again</p>
+             * <p>The image cache creation failed. Please try again</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -624,7 +624,7 @@ public class CreateImageCacheResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The repository path of the source image.</p>
+             * <p>The path of the source image repository.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

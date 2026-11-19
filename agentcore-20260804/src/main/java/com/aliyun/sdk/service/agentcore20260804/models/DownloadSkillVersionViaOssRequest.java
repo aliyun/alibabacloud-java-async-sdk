@@ -116,7 +116,7 @@ public class DownloadSkillVersionViaOssRequest extends Request {
         }
 
         /**
-         * <p>The version number.</p>
+         * <p>The version number. In HEAD draft mode, you can pass HEAD to download the content of the persistent draft. In VERSIONED mode, passing HEAD returns a 404 error.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

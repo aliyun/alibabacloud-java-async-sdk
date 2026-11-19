@@ -88,7 +88,7 @@ public class DeleteManagedAgentRequest extends Request {
         }
 
         /**
-         * <p>The ID of the managed Harness agent.</p>
+         * <p>The managed Harness agent ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

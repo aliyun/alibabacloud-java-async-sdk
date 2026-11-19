@@ -348,7 +348,7 @@ public class VerifyWorkspaceAcrRamAuthorizationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mount status of the policy for the current target repository.</p>
+             * <p>The current mount status of the target repository policy.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -360,7 +360,7 @@ public class VerifyWorkspaceAcrRamAuthorizationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The onboarding prerequisite, which is not Secret Ready.</p>
+             * <p>The prerequisite status for access. This is not the Secret Ready status.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -372,7 +372,7 @@ public class VerifyWorkspaceAcrRamAuthorizationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The stable reason code for unauthorized or unmet conditions. This field is omitted when no reason is available.</p>
+             * <p>The stable reason code for unauthorized or ineligible status. This field is omitted when there is no reason.</p>
              * 
              * <strong>example:</strong>
              * <p>AcrRamUnauthorized</p>
@@ -383,7 +383,7 @@ public class VerifyWorkspaceAcrRamAuthorizationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user-readable reason. This field is omitted when no reason is available.</p>
+             * <p>The user-readable reason. This field is omitted when there is no reason.</p>
              * 
              * <strong>example:</strong>
              * <p>Authorize the Workspace role for this ACR instance.</p>
@@ -394,7 +394,7 @@ public class VerifyWorkspaceAcrRamAuthorizationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the shared role selected by the backend. This field is not editable on the frontend.</p>
+             * <p>The shared role name selected by the backend. This field is not editable on the frontend.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

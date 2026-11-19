@@ -119,7 +119,7 @@ public class DeleteExternalAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The business status code. The value is SUCCESS when the request is successful.</p>
+         * <p>The business status code. A value of SUCCESS indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -138,7 +138,7 @@ public class DeleteExternalAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code. The value is 200 when the request is successful.</p>
+         * <p>The HTTP status code. A value of 200 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -149,7 +149,7 @@ public class DeleteExternalAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message about the request processing result.</p>
+         * <p>The request result message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -380,7 +380,7 @@ public class DeleteExternalAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The inbound access mode.</p>
+             * <p>The inbound access method.</p>
              * 
              * <strong>example:</strong>
              * <p>API_KEY</p>
@@ -402,7 +402,7 @@ public class DeleteExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The managed agent ID.</p>
+             * <p>The ID of the managed agent.</p>
              * 
              * <strong>example:</strong>
              * <p>agent-1</p>
@@ -457,7 +457,7 @@ public class DeleteExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The latest specification version number.</p>
+             * <p>The latest specification version.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

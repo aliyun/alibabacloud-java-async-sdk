@@ -41,6 +41,9 @@ public class ListMemoriesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
+    @com.aliyun.core.annotation.NameInMap("totalCount")
+    private Long totalCount;
+
     private ListMemoriesResponseBody(Builder builder) {
         this.code = builder.code;
         this.httpStatusCode = builder.httpStatusCode;
@@ -50,6 +53,7 @@ public class ListMemoriesResponseBody extends TeaModel {
         this.nextToken = builder.nextToken;
         this.requestId = builder.requestId;
         this.success = builder.success;
+        this.totalCount = builder.totalCount;
     }
 
     public static Builder builder() {
@@ -120,6 +124,13 @@ public class ListMemoriesResponseBody extends TeaModel {
         return this.success;
     }
 
+    /**
+     * @return totalCount
+     */
+    public Long getTotalCount() {
+        return this.totalCount;
+    }
+
     public static final class Builder {
         private String code; 
         private Integer httpStatusCode; 
@@ -129,6 +140,7 @@ public class ListMemoriesResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Boolean success; 
+        private Long totalCount; 
 
         private Builder() {
         } 
@@ -142,6 +154,7 @@ public class ListMemoriesResponseBody extends TeaModel {
             this.nextToken = model.nextToken;
             this.requestId = model.requestId;
             this.success = model.success;
+            this.totalCount = model.totalCount;
         } 
 
         /**
@@ -167,7 +180,7 @@ public class ListMemoriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of memory records.</p>
+         * <p>The list of memories.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -226,6 +239,17 @@ public class ListMemoriesResponseBody extends TeaModel {
             return this;
         }
 
+        /**
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
+        public Builder totalCount(Long totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+
         public ListMemoriesResponseBody build() {
             return new ListMemoriesResponseBody(this);
         } 
@@ -240,6 +264,7 @@ public class ListMemoriesResponseBody extends TeaModel {
      */
     public static class Content extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("text")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String text;
 
         private Content(Builder builder) {
@@ -273,6 +298,7 @@ public class ListMemoriesResponseBody extends TeaModel {
 
             /**
              * <p>The memory text.</p>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>The user likes hiking</p>
@@ -302,12 +328,16 @@ public class ListMemoriesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("sessionId")
         private String sessionId;
 
+        @com.aliyun.core.annotation.NameInMap("teamId")
+        private String teamId;
+
         @com.aliyun.core.annotation.NameInMap("userId")
         private String userId;
 
         private Scope(Builder builder) {
             this.agentId = builder.agentId;
             this.sessionId = builder.sessionId;
+            this.teamId = builder.teamId;
             this.userId = builder.userId;
         }
 
@@ -334,6 +364,13 @@ public class ListMemoriesResponseBody extends TeaModel {
         }
 
         /**
+         * @return teamId
+         */
+        public String getTeamId() {
+            return this.teamId;
+        }
+
+        /**
          * @return userId
          */
         public String getUserId() {
@@ -343,6 +380,7 @@ public class ListMemoriesResponseBody extends TeaModel {
         public static final class Builder {
             private String agentId; 
             private String sessionId; 
+            private String teamId; 
             private String userId; 
 
             private Builder() {
@@ -351,11 +389,12 @@ public class ListMemoriesResponseBody extends TeaModel {
             private Builder(Scope model) {
                 this.agentId = model.agentId;
                 this.sessionId = model.sessionId;
+                this.teamId = model.teamId;
                 this.userId = model.userId;
             } 
 
             /**
-             * <p>The agent ID. The value must be 1 to 128 UTF-8 bytes in length and cannot contain slashes (/) or asterisks (*). This field is not returned if the memory is not associated with an agent ID.</p>
+             * <p>The agent ID. The length is limited to 1 to 128 UTF-8 bytes. The value cannot contain a forward slash (/) or an asterisk (*). This field is not returned if the memory is not associated with an agent ID.</p>
              * 
              * <strong>example:</strong>
              * <p>agent-001</p>
@@ -366,7 +405,7 @@ public class ListMemoriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The session ID. The value must be 1 to 128 UTF-8 bytes in length and cannot contain slashes (/) or asterisks (*). This field is not returned if the memory is not associated with a session ID.</p>
+             * <p>The session ID. The length is limited to 1 to 128 UTF-8 bytes. The value cannot contain a forward slash (/) or an asterisk (*). This field is not returned if the memory is not associated with a session ID.</p>
              * 
              * <strong>example:</strong>
              * <p>session-001</p>
@@ -377,7 +416,18 @@ public class ListMemoriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user ID. The value must be 1 to 128 UTF-8 bytes in length and cannot contain slashes (/) or asterisks (*). This field is not returned if the memory is not associated with a user ID.</p>
+             * <p>The business team ID defined by the caller. This field cannot be empty when provided and can be up to 128 UTF-8 bytes in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>team-001</p>
+             */
+            public Builder teamId(String teamId) {
+                this.teamId = teamId;
+                return this;
+            }
+
+            /**
+             * <p>The user ID. The length is limited to 1 to 128 UTF-8 bytes. The value cannot contain a forward slash (/) or an asterisk (*). This field is not returned if the memory is not associated with a user ID.</p>
              * 
              * <strong>example:</strong>
              * <p>user-001</p>
@@ -416,8 +466,17 @@ public class ListMemoriesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("scope")
         private Scope scope;
 
+        @com.aliyun.core.annotation.NameInMap("source")
+        private String source;
+
+        @com.aliyun.core.annotation.NameInMap("type")
+        private String type;
+
         @com.aliyun.core.annotation.NameInMap("updatedAt")
         private String updatedAt;
+
+        @com.aliyun.core.annotation.NameInMap("valid")
+        private Boolean valid;
 
         private Items(Builder builder) {
             this.content = builder.content;
@@ -425,7 +484,10 @@ public class ListMemoriesResponseBody extends TeaModel {
             this.memoryId = builder.memoryId;
             this.metadata = builder.metadata;
             this.scope = builder.scope;
+            this.source = builder.source;
+            this.type = builder.type;
             this.updatedAt = builder.updatedAt;
+            this.valid = builder.valid;
         }
 
         public static Builder builder() {
@@ -472,10 +534,31 @@ public class ListMemoriesResponseBody extends TeaModel {
         }
 
         /**
+         * @return source
+         */
+        public String getSource() {
+            return this.source;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
          * @return updatedAt
          */
         public String getUpdatedAt() {
             return this.updatedAt;
+        }
+
+        /**
+         * @return valid
+         */
+        public Boolean getValid() {
+            return this.valid;
         }
 
         public static final class Builder {
@@ -484,7 +567,10 @@ public class ListMemoriesResponseBody extends TeaModel {
             private String memoryId; 
             private java.util.Map<String, String> metadata; 
             private Scope scope; 
+            private String source; 
+            private String type; 
             private String updatedAt; 
+            private Boolean valid; 
 
             private Builder() {
             } 
@@ -495,7 +581,10 @@ public class ListMemoriesResponseBody extends TeaModel {
                 this.memoryId = model.memoryId;
                 this.metadata = model.metadata;
                 this.scope = model.scope;
+                this.source = model.source;
+                this.type = model.type;
                 this.updatedAt = model.updatedAt;
+                this.valid = model.valid;
             } 
 
             /**
@@ -530,6 +619,9 @@ public class ListMemoriesResponseBody extends TeaModel {
 
             /**
              * <p>The memory metadata.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;topic&quot;:&quot;hiking&quot;}</p>
              */
             public Builder metadata(java.util.Map<String, String> metadata) {
                 this.metadata = metadata;
@@ -545,6 +637,39 @@ public class ListMemoriesResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The source of the memory. Valid values:</p>
+             * <ul>
+             * <li>session_extraction: Extracted from session events.</li>
+             * <li>content_extraction: Extracted from text or messages.</li>
+             * <li>direct: Written directly.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>session_extraction</p>
+             */
+            public Builder source(String source) {
+                this.source = source;
+                return this;
+            }
+
+            /**
+             * <p>The memory content type. Valid values:</p>
+             * <ul>
+             * <li>semantic: Semantic memory.</li>
+             * <li>skill: Skill.</li>
+             * <li>user_profile: User preference.</li>
+             * <li>session_summary: Session summary.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>semantic</p>
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            /**
              * <p>The last update time. The time is in RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</p>
              * 
              * <strong>example:</strong>
@@ -552,6 +677,14 @@ public class ListMemoriesResponseBody extends TeaModel {
              */
             public Builder updatedAt(String updatedAt) {
                 this.updatedAt = updatedAt;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether the memory is valid. A value of false indicates that the memory is revoked and is not included in valid memory retrieval.</p>
+             */
+            public Builder valid(Boolean valid) {
+                this.valid = valid;
                 return this;
             }
 

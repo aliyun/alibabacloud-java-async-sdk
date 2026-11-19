@@ -130,7 +130,7 @@ public class GetMcpMarketItemResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response data.</p>
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -160,7 +160,7 @@ public class GetMcpMarketItemResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID used to locate and troubleshoot the request.</p>
+         * <p>The request ID, which is used to locate and troubleshoot the request.</p>
          * 
          * <strong>example:</strong>
          * <p>request-123456</p>
@@ -406,7 +406,7 @@ public class GetMcpMarketItemResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The MCP marketplace template category.</p>
+             * <p>The category of the MCP marketplace template.</p>
              * 
              * <strong>example:</strong>
              * <p>knowledge</p>
@@ -417,7 +417,7 @@ public class GetMcpMarketItemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The MCP service description.</p>
+             * <p>The description of the MCP service.</p>
              * 
              * <strong>example:</strong>
              * <p>MCP service for querying knowledge bases</p>
@@ -428,7 +428,7 @@ public class GetMcpMarketItemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The template display metadata.</p>
+             * <p>The display metadata of the template.</p>
              */
             public Builder displayMetadata(java.util.Map<String, ?> displayMetadata) {
                 this.displayMetadata = displayMetadata;
@@ -436,7 +436,7 @@ public class GetMcpMarketItemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The multilingual display content organized by BCP-47 language tags. If a language is not matched, the default fields are used.</p>
+             * <p>The multilingual display content, organized by BCP-47 language tags. If a language is not matched, the system falls back to the default fields.</p>
              */
             public Builder i18n(java.util.Map<String, DataI18nValue> i18n) {
                 this.i18n = i18n;
@@ -455,7 +455,7 @@ public class GetMcpMarketItemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The template installation count.</p>
+             * <p>The number of times the template has been installed.</p>
              * 
              * <strong>example:</strong>
              * <p>12</p>
@@ -488,7 +488,7 @@ public class GetMcpMarketItemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The MCP marketplace template name.</p>
+             * <p>The name of the MCP marketplace template.</p>
              * 
              * <strong>example:</strong>
              * <p>Knowledge</p>
@@ -521,7 +521,7 @@ public class GetMcpMarketItemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The MCP marketplace template instructions.</p>
+             * <p>The instructions for the MCP marketplace template.</p>
              * 
              * <strong>example:</strong>
              * <h1>Knowledge\nKnowledge base query service</h1>
@@ -532,7 +532,7 @@ public class GetMcpMarketItemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The template schema version.</p>
+             * <p>The schema version of the template.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0</p>
@@ -543,7 +543,7 @@ public class GetMcpMarketItemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The template input schema, represented as a JSON Schema string.</p>
+             * <p>The input schema of the template, represented as a JSON Schema string.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;type&quot;:&quot;object&quot;,&quot;properties&quot;:{&quot;addresses&quot;:{&quot;type&quot;:&quot;array&quot;,&quot;items&quot;:{&quot;type&quot;:&quot;string&quot;}}}}</p>
@@ -554,7 +554,7 @@ public class GetMcpMarketItemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The MCP marketplace template version.</p>
+             * <p>The version of the MCP marketplace template.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0.0</p>

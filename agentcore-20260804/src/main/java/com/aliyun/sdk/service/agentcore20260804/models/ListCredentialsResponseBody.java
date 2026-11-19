@@ -180,7 +180,7 @@ public class ListCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The credential list.</p>
+         * <p>The list of credentials.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -188,7 +188,7 @@ public class ListCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of records per page that takes effect in the current query.</p>
+         * <p>The actual maximum number of records returned per page in the current query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -344,7 +344,7 @@ public class ListCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource type. Currently, the value is mcpServer, which indicates an MCP service.</p>
+             * <p>The resource type. The current value is mcpServer, which indicates an MCP service.</p>
              * 
              * <strong>example:</strong>
              * <p>mcpServer</p>
@@ -555,7 +555,7 @@ public class ListCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time in UTC format compliant with RFC 3339.</p>
+             * <p>The creation time in UTC, formatted according to RFC 3339.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-12T03:04:05Z</p>
@@ -577,7 +577,7 @@ public class ListCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The desensitized credential content. For the apiKey type, a key mask is returned. For the mcpHeader type, only the header name is returned, and the value is not returned.</p>
+             * <p>The masked credential content. For the apiKey type, a key mask is returned. For the mcpHeader type, only the header name is returned, and the header value is not returned.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;apiKey&quot;:&quot;****************&quot;}</p>
@@ -610,7 +610,7 @@ public class ListCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The credential name. The name must be unique within the workspace, can contain only letters, digits, periods, underscores, and hyphens, and must be 3 to 99 characters in length. Runtime reserved names cannot be used.</p>
+             * <p>The credential name. The name must be unique within the workspace, contain only letters, digits, periods, underscores, and hyphens, and be 3 to 99 characters in length. You cannot use runtime reserved names.</p>
              * 
              * <strong>example:</strong>
              * <p>model-api-key</p>
@@ -640,7 +640,7 @@ public class ListCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The application scope of the credential. ALL indicates all scopes. SPECIFIED indicates specified MCP services.</p>
+             * <p>The applicable scope of the credential. A value of ALL indicates all scopes. A value of SPECIFIED indicates specified MCP services.</p>
              * 
              * <strong>example:</strong>
              * <p>ALL</p>
@@ -651,7 +651,7 @@ public class ListCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time of the last modification in UTC format compliant with RFC 3339.</p>
+             * <p>The time of the last modification in UTC, formatted according to RFC 3339.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-12T03:04:05Z</p>

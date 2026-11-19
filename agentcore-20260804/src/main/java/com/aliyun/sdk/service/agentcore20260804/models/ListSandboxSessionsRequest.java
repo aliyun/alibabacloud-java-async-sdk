@@ -146,7 +146,7 @@ public class ListSandboxSessionsRequest extends Request {
         }
 
         /**
-         * <p>The managed Harness agent ID.</p>
+         * <p>The ID of the managed Harness agent.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,7 +159,7 @@ public class ListSandboxSessionsRequest extends Request {
         }
 
         /**
-         * <p>The sandbox ID. You can query the ID by calling the ListSandboxes operation.</p>
+         * <p>The sandbox ID. You can query it by calling ListSandboxes.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -196,7 +196,7 @@ public class ListSandboxSessionsRequest extends Request {
         }
 
         /**
-         * <p>The value must be consistent with the request parameters used in the ListSandboxes operation to obtain the sandboxId. If this parameter is omitted or left blank, the latest running unit of the agent is queried. If this parameter is specified, the service endpoint must belong to the agent and the target type must be AGENT_VERSION. Otherwise, Resource.NotFound is returned. If the target is not DEFAULT and is not running independently, ServiceEndpointTargetNotReady is returned. If the sandboxId does not belong to the specified running unit, Sandbox.NotFound is returned instead of an empty list.</p>
+         * <p>The value must be the same as the input parameter used when calling ListSandboxes to obtain the sandboxId. If this parameter is omitted or left empty, the latest running unit of the agent is queried. If this parameter is specified, the service endpoint must belong to the agent and the target type must be AGENT_VERSION. Otherwise, Resource.NotFound is returned. If the service endpoint is not DEFAULT and is not running independently, ServiceEndpointTargetNotReady is returned. If the sandboxId does not belong to the specified running unit, Sandbox.NotFound is returned instead of an empty list.</p>
          * 
          * <strong>example:</strong>
          * <p>se-7f3a92c1</p>

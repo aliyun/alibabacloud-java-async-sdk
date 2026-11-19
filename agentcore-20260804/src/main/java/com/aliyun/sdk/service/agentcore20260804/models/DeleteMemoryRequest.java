@@ -90,7 +90,7 @@ public class DeleteMemoryRequest extends Request {
         } 
 
         /**
-         * <p>The AgentCore workspace ID.</p>
+         * <p>The ID of the AgentCore workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -103,7 +103,7 @@ public class DeleteMemoryRequest extends Request {
         }
 
         /**
-         * <p>The MemoryStore name.</p>
+         * <p>The name of the MemoryStore.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class DeleteMemoryRequest extends Request {
         }
 
         /**
-         * <p>The long-term memory ID.</p>
+         * <p>The ID of the long-term memory.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

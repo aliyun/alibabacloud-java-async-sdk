@@ -119,7 +119,7 @@ public class RetryImageCacheRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cache record.</p>
+         * <p>The cache record ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,7 +132,7 @@ public class RetryImageCacheRequest extends Request {
         }
 
         /**
-         * <p>The request body for retrying image cache creation.</p>
+         * <p>The retry image cache request body.</p>
          */
         public Builder body(RetryImageCacheRequestBody body) {
             String bodyShrink = shrink(body, "body", "json");
@@ -155,7 +155,7 @@ public class RetryImageCacheRequest extends Request {
         }
 
         /**
-         * <p>The product entry region. This parameter is passed as a query parameter and must be consistent with the selected region endpoint and the workspace region.</p>
+         * <p>The product entry region. It is passed as a query parameter and must match the selected region endpoint and the workspace region.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

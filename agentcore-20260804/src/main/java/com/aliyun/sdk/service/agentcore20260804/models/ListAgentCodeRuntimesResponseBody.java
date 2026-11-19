@@ -180,7 +180,7 @@ public class ListAgentCodeRuntimesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The supported code runtime environments.</p>
+         * <p>The list of supported code runtime environments.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;

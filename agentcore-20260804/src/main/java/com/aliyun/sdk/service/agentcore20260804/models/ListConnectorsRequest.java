@@ -101,7 +101,7 @@ public class ListConnectorsRequest extends Request {
         }
 
         /**
-         * <p>The page size. This parameter is not supported in the current version.</p>
+         * <p>The maximum number of results to return. This parameter is not supported in the current version.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

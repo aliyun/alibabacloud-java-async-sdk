@@ -191,7 +191,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * <p>The cursor for querying the next page. Do not specify this parameter in the first call. Specify the nextToken value returned in the previous call for subsequent calls.</p>
+         * <p>The cursor for querying the next page. Do not specify this parameter for the first call. For subsequent calls, specify the nextToken value returned from the previous call.</p>
          * 
          * <strong>example:</strong>
          * <p>dXNlci1vZmZzZXQ6MTA</p>

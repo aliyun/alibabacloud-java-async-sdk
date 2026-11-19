@@ -355,7 +355,7 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Returns the target configuration value. Updating indicates that the change is still in progress, and UpdateFailed indicates that the current change failed. This parameter only controls whether the latest versions of managed and custom agents use the public network egress of the platform. It does not control fixed historical versions, model or MCP proxy egresses, or the public network egress of the user VPC.</p>
+             * <p>Returns the target configuration value. Updating indicates that the change is still in progress, and UpdateFailed indicates that the current change failed. This parameter only controls whether the latest versions of managed and custom agents use the public egress of the platform. It does not control fixed historical versions, model or MCP proxy egress, or the public egress of the user VPC.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -366,7 +366,7 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Returns the target configuration value. Updating indicates that the change is in progress, and UpdateFailed indicates that the change failed. When disabled, the public network ingress for all agent endpoints in the workspace is closed, and the original public network ingress is restored when re-enabled. INNER_DIRECT and user VPC ingress are not affected, and collaboration and Element Web ingress are not controlled by this parameter.</p>
+             * <p>Returns the target configuration value. Updating indicates that the change is in progress, and UpdateFailed indicates that the change failed. When disabled, the public ingress for all agent endpoints in the workspace is closed, and the original public ingress is restored when re-enabled. INNER_DIRECT and user VPC ingress are not affected. Collaboration and Element Web ingress are not controlled by this parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -535,7 +535,7 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The OSS storage authorization status.</p>
+             * <p>The authorization status of OSS storage.</p>
              * 
              * <strong>example:</strong>
              * <p>AUTHORIZED</p>
@@ -557,7 +557,7 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the workspace.</p>
+             * <p>The workspace name.</p>
              * 
              * <strong>example:</strong>
              * <p>production-agents-v2</p>
@@ -568,7 +568,7 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network configuration of the workspace.</p>
+             * <p>The workspace network configuration.</p>
              */
             public Builder networkConfiguration(NetworkConfiguration networkConfiguration) {
                 this.networkConfiguration = networkConfiguration;
@@ -576,7 +576,7 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the workspace.</p>
+             * <p>The ID of the region where the workspace resides.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -587,7 +587,7 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the workspace. Valid values: Initializing, Initialized, Deleting, and Deleted.</p>
+             * <p>The workspace status. Valid values: Initializing, Initialized, Deleting, and Deleted.</p>
              * 
              * <strong>example:</strong>
              * <p>Initialized</p>
@@ -598,7 +598,7 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage type of the workspace.</p>
+             * <p>The workspace storage type.</p>
              * 
              * <strong>example:</strong>
              * <p>PRIVATE</p>
@@ -609,7 +609,7 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the tenant to which the workspace belongs.</p>
+             * <p>The ID of the tenant.</p>
              * 
              * <strong>example:</strong>
              * <p>tenant-123456</p>

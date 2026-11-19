@@ -119,7 +119,7 @@ public class GetModelConnectionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The business status code. The value is SUCCESS when the operation is successful.</p>
+         * <p>The business status code. The value is SUCCESS if the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -138,7 +138,7 @@ public class GetModelConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code. The value is 200 if the request is successful.</p>
+         * <p>The HTTP status code. A value of 200 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -149,7 +149,7 @@ public class GetModelConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message about the request processing result.</p>
+         * <p>The request processing result message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -417,7 +417,7 @@ public class GetModelConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of API keys used to access the upstream model service. The list contains at least one non-empty value.</p>
+             * <p>The list of API keys used to access the upstream model service. The list must contain at least one non-empty value.</p>
              */
             public Builder apiKeys(java.util.List<String> apiKeys) {
                 this.apiKeys = apiKeys;
@@ -477,7 +477,7 @@ public class GetModelConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the model connection. The name is 1 to 128 non-whitespace characters in length.</p>
+             * <p>The name of the model connection. The name must be 1 to 128 non-whitespace characters in length.</p>
              * 
              * <strong>example:</strong>
              * <p>name</p>
@@ -488,7 +488,7 @@ public class GetModelConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The protocol to invoke the model. Currently, only OpenAI/v1 is supported. If the Settings are not specified during model creation, this default value is used.</p>
+             * <p>The model invocation protocol. Currently, only OpenAI/v1 is supported. If this parameter is not specified when the model connection is created, this default value is used.</p>
              * 
              * <strong>example:</strong>
              * <p>OpenAI/v1</p>
@@ -510,7 +510,7 @@ public class GetModelConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region to which the resource belongs.</p>
+             * <p>The region ID of the resource.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -532,7 +532,7 @@ public class GetModelConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The failure summary returned when the model connection fails to be published, or when deletion fails but the connection remains in the deleting state. This field is empty in other states.</p>
+             * <p>The failure summary returned when the model connection fails to be published, or when deletion fails but the status remains Deleting. Empty for other statuses.</p>
              * 
              * <strong>example:</strong>
              * <p>GatewayOperationException</p>

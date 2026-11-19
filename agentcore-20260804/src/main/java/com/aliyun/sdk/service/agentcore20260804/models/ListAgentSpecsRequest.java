@@ -199,7 +199,7 @@ public class ListAgentSpecsRequest extends Request {
         }
 
         /**
-         * <p>The name of the AgentSpec, used as a search keyword in combination with the search parameter.</p>
+         * <p>The AgentSpec name, used as a search keyword in combination with the search parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>my-worker</p>
@@ -211,7 +211,7 @@ public class ListAgentSpecsRequest extends Request {
         }
 
         /**
-         * <p>The business tag used for fuzzy filtering.</p>
+         * <p>The business tag for fuzzy filtering.</p>
          * 
          * <strong>example:</strong>
          * <p>ai</p>
@@ -223,7 +223,7 @@ public class ListAgentSpecsRequest extends Request {
         }
 
         /**
-         * <p>The field by which to sort the results. Supports download_count. By default, the results are sorted by update time.</p>
+         * <p>The sort field. Supports download_count. By default, results are sorted by update time.</p>
          * 
          * <strong>example:</strong>
          * <p>download_count</p>
@@ -295,7 +295,7 @@ public class ListAgentSpecsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return the lists of skills and MCP servers. Default value: false.</p>
+         * <p>Specifies whether to return the Skills and McpServers lists. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

@@ -139,7 +139,7 @@ public class UpdateExternalAgentRequest extends Request {
         }
 
         /**
-         * <p>The reserved query parameter. The backend does not currently provide idempotence guarantees for deduplication or restoring the original acceptance result based on this identifier.</p>
+         * <p>The reserved query parameter. The backend does not currently provide idempotence guarantees for deduplication or recovery of original acceptance results based on this identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>client-token-1</p>
@@ -157,6 +157,117 @@ public class UpdateExternalAgentRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateExternalAgentRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateExternalAgentRequest</p>
+     */
+    public static class CredentialReferences extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("credentialId")
+        private String credentialId;
+
+        private CredentialReferences(Builder builder) {
+            this.credentialId = builder.credentialId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CredentialReferences create() {
+            return builder().build();
+        }
+
+        /**
+         * @return credentialId
+         */
+        public String getCredentialId() {
+            return this.credentialId;
+        }
+
+        public static final class Builder {
+            private String credentialId; 
+
+            private Builder() {
+            } 
+
+            private Builder(CredentialReferences model) {
+                this.credentialId = model.credentialId;
+            } 
+
+            /**
+             * <p>The credential ID. This parameter is required when passing a credential reference item and is verified by the backend.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cred-example</p>
+             */
+            public Builder credentialId(String credentialId) {
+                this.credentialId = credentialId;
+                return this;
+            }
+
+            public CredentialReferences build() {
+                return new CredentialReferences(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateExternalAgentRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateExternalAgentRequest</p>
+     */
+    public static class Environment extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("credentialReferences")
+        private java.util.List<CredentialReferences> credentialReferences;
+
+        private Environment(Builder builder) {
+            this.credentialReferences = builder.credentialReferences;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Environment create() {
+            return builder().build();
+        }
+
+        /**
+         * @return credentialReferences
+         */
+        public java.util.List<CredentialReferences> getCredentialReferences() {
+            return this.credentialReferences;
+        }
+
+        public static final class Builder {
+            private java.util.List<CredentialReferences> credentialReferences; 
+
+            private Builder() {
+            } 
+
+            private Builder(Environment model) {
+                this.credentialReferences = model.credentialReferences;
+            } 
+
+            /**
+             * <p>The list of credential references. You must explicitly provide this list when passing the environment object, and it cannot be null. The list is replaced in its entirety. If you do not pass environment during an update, the original binding is retained. If you pass an empty list or set environment to null, the binding is cleared. Pass only the credential ID, not the actual key.</p>
+             */
+            public Builder credentialReferences(java.util.List<CredentialReferences> credentialReferences) {
+                this.credentialReferences = credentialReferences;
+                return this;
+            }
+
+            public Environment build() {
+                return new Environment(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link UpdateExternalAgentRequest} extends {@link TeaModel}
@@ -236,7 +347,7 @@ public class UpdateExternalAgentRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to enable the token quota. If this parameter is not specified, the default value is true. If you set this parameter to false, the quota is disabled and existing quota rules are deleted.</p>
+             * <p>Specifies whether to enable the token quota. Default value: true. If you set this parameter to false, the quota is disabled and existing quota rules are deleted.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -258,7 +369,7 @@ public class UpdateExternalAgentRequest extends Request {
             }
 
             /**
-             * <p>The quota statistical period. This parameter is required and verified by the backend when the quota is enabled. Valid values: day (daily) and month (monthly).</p>
+             * <p>The statistical period of the quota. This parameter is required and verified by the backend when the quota is enabled. Valid values: day (daily) and month (monthly).</p>
              * 
              * <strong>example:</strong>
              * <p>day</p>
@@ -269,7 +380,7 @@ public class UpdateExternalAgentRequest extends Request {
             }
 
             /**
-             * <p>The maximum number of tokens allowed to be consumed in a single period. This parameter is required and verified by the backend when the quota is enabled, and must be greater than 0.</p>
+             * <p>The maximum number of tokens that can be consumed in a single period. This parameter is required and verified by the backend when the quota is enabled. The value must be greater than 0.</p>
              * 
              * <strong>example:</strong>
              * <p>1000000</p>
@@ -378,7 +489,7 @@ public class UpdateExternalAgentRequest extends Request {
             }
 
             /**
-             * <p>The model token quota configuration. If this parameter is not passed, no quota is configured.</p>
+             * <p>The model token quota configuration. If you do not pass this parameter, no quota is configured.</p>
              */
             public Builder quota(Quota quota) {
                 this.quota = quota;
@@ -576,7 +687,7 @@ public class UpdateExternalAgentRequest extends Request {
             }
 
             /**
-             * <p>The skill version field compatible with legacy requests. New requests use sourceType and versionSelector, and this parameter is not submitted in combination with sourceType.</p>
+             * <p>The skill version field for compatibility with legacy requests. For new requests, use sourceType and versionSelector. Do not submit this parameter in combination with sourceType.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0.0</p>
@@ -587,7 +698,7 @@ public class UpdateExternalAgentRequest extends Request {
             }
 
             /**
-             * <p>The skill reference version selector, which supports LABEL tags and specific VERSION numbers. If this parameter is omitted, LABEL/latest is used. Selectors are not provided for STATIC sources.</p>
+             * <p>The skill reference version selector, which supports LABEL tags and VERSION specific versions. If omitted, LABEL/latest is used. Selectors are not provided for STATIC sources.</p>
              */
             public Builder versionSelector(VersionSelector versionSelector) {
                 this.versionSelector = versionSelector;
@@ -835,6 +946,9 @@ public class UpdateExternalAgentRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("environment")
+        private Environment environment;
+
         @com.aliyun.core.annotation.NameInMap("instruction")
         private String instruction;
 
@@ -858,6 +972,7 @@ public class UpdateExternalAgentRequest extends Request {
 
         private UpdateExternalAgentRequestBody(Builder builder) {
             this.description = builder.description;
+            this.environment = builder.environment;
             this.instruction = builder.instruction;
             this.model = builder.model;
             this.modelSource = builder.modelSource;
@@ -880,6 +995,13 @@ public class UpdateExternalAgentRequest extends Request {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return environment
+         */
+        public Environment getEnvironment() {
+            return this.environment;
         }
 
         /**
@@ -933,6 +1055,7 @@ public class UpdateExternalAgentRequest extends Request {
 
         public static final class Builder {
             private String description; 
+            private Environment environment; 
             private String instruction; 
             private Model model; 
             private String modelSource; 
@@ -946,6 +1069,7 @@ public class UpdateExternalAgentRequest extends Request {
 
             private Builder(UpdateExternalAgentRequestBody model) {
                 this.description = model.description;
+                this.environment = model.environment;
                 this.instruction = model.instruction;
                 this.model = model.model;
                 this.modelSource = model.modelSource;
@@ -959,7 +1083,7 @@ public class UpdateExternalAgentRequest extends Request {
              * <p>The description of the managed agent.</p>
              * 
              * <strong>example:</strong>
-             * <p>Code review agent running in the user environment</p>
+             * <p>A code review agent that runs in the user environment</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -967,7 +1091,15 @@ public class UpdateExternalAgentRequest extends Request {
             }
 
             /**
-             * <p>The agent instructions used to guide the behavior of the agent.</p>
+             * <p>The credential binding configuration. If you do not pass this parameter, the original binding is retained. If you pass an object, you must explicitly provide a non-null credentialReferences list, and the list is replaced in its entirety. If the list is empty or environment is null, the binding is cleared. Empty objects and objects that contain only common environment variables are invalid.</p>
+             */
+            public Builder environment(Environment environment) {
+                this.environment = environment;
+                return this;
+            }
+
+            /**
+             * <p>The agent instruction, which is used to guide the behavior of the agent.</p>
              * 
              * <strong>example:</strong>
              * <p>You are a code review assistant</p>
@@ -986,7 +1118,7 @@ public class UpdateExternalAgentRequest extends Request {
             }
 
             /**
-             * <p>The model configuration source. PLATFORM indicates that the platform parses and delivers the model configuration. RUNTIME indicates that the external runtime manages the model itself, and the model parameter cannot be passed at the same time. Valid values: PLATFORM (platform model) and RUNTIME (runtime model).</p>
+             * <p>The source of the model configuration. PLATFORM indicates that the platform parses and delivers the model configuration. RUNTIME indicates that the external runtime manages the model itself, and the model parameter cannot be passed at the same time. Valid values: PLATFORM (platform model) and RUNTIME (runtime model).</p>
              * 
              * <strong>example:</strong>
              * <p>PLATFORM</p>

@@ -197,8 +197,14 @@ public class DeleteMemoryStoreResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("eventCount")
+        private Long eventCount;
+
         @com.aliyun.core.annotation.NameInMap("extractInstructions")
         private String extractInstructions;
+
+        @com.aliyun.core.annotation.NameInMap("memoryCount")
+        private Long memoryCount;
 
         @com.aliyun.core.annotation.NameInMap("memoryStoreId")
         private String memoryStoreId;
@@ -218,7 +224,9 @@ public class DeleteMemoryStoreResponseBody extends TeaModel {
         private Data(Builder builder) {
             this.createdAt = builder.createdAt;
             this.description = builder.description;
+            this.eventCount = builder.eventCount;
             this.extractInstructions = builder.extractInstructions;
+            this.memoryCount = builder.memoryCount;
             this.memoryStoreId = builder.memoryStoreId;
             this.memoryStoreName = builder.memoryStoreName;
             this.status = builder.status;
@@ -249,10 +257,24 @@ public class DeleteMemoryStoreResponseBody extends TeaModel {
         }
 
         /**
+         * @return eventCount
+         */
+        public Long getEventCount() {
+            return this.eventCount;
+        }
+
+        /**
          * @return extractInstructions
          */
         public String getExtractInstructions() {
             return this.extractInstructions;
+        }
+
+        /**
+         * @return memoryCount
+         */
+        public Long getMemoryCount() {
+            return this.memoryCount;
         }
 
         /**
@@ -293,7 +315,9 @@ public class DeleteMemoryStoreResponseBody extends TeaModel {
         public static final class Builder {
             private String createdAt; 
             private String description; 
+            private Long eventCount; 
             private String extractInstructions; 
+            private Long memoryCount; 
             private String memoryStoreId; 
             private String memoryStoreName; 
             private String status; 
@@ -306,7 +330,9 @@ public class DeleteMemoryStoreResponseBody extends TeaModel {
             private Builder(Data model) {
                 this.createdAt = model.createdAt;
                 this.description = model.description;
+                this.eventCount = model.eventCount;
                 this.extractInstructions = model.extractInstructions;
+                this.memoryCount = model.memoryCount;
                 this.memoryStoreId = model.memoryStoreId;
                 this.memoryStoreName = model.memoryStoreName;
                 this.status = model.status;
@@ -315,7 +341,7 @@ public class DeleteMemoryStoreResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time. It follows the RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</p>
+             * <p>The creation time. The time is in RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-09-23T10:00:00Z</p>
@@ -326,13 +352,24 @@ public class DeleteMemoryStoreResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The MemoryStore description.</p>
+             * <p>The description of the MemoryStore.</p>
              * 
              * <strong>example:</strong>
              * <p>Used to store the long-term preferences of users</p>
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * <p>The number of events. You can query this value by calling GetMemoryStore.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
+             */
+            public Builder eventCount(Long eventCount) {
+                this.eventCount = eventCount;
                 return this;
             }
 
@@ -348,7 +385,18 @@ public class DeleteMemoryStoreResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The MemoryStore ID.</p>
+             * <p>The number of valid memories. You can query this value by calling GetMemoryStore.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
+             */
+            public Builder memoryCount(Long memoryCount) {
+                this.memoryCount = memoryCount;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the MemoryStore.</p>
              * 
              * <strong>example:</strong>
              * <p>ms-2f5f9c5a8d0e4c3b</p>
@@ -359,7 +407,7 @@ public class DeleteMemoryStoreResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The MemoryStore name. It cannot be modified after creation.</p>
+             * <p>The name of the MemoryStore. It cannot be modified after creation.</p>
              * 
              * <strong>example:</strong>
              * <p>customer-memory</p>
@@ -370,7 +418,7 @@ public class DeleteMemoryStoreResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The lifecycle state of the MemoryStore.</p>
+             * <p>The lifecycle status of the MemoryStore.</p>
              * 
              * <strong>example:</strong>
              * <p>Ready</p>
@@ -381,7 +429,7 @@ public class DeleteMemoryStoreResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last update time. It follows the RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</p>
+             * <p>The last update time. The time is in RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-09-23T10:05:00Z</p>
@@ -392,7 +440,7 @@ public class DeleteMemoryStoreResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The AgentCore workspace ID.</p>
+             * <p>The ID of the AgentCore workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>ws-2f5f9c5a8d0e4c3b</p>

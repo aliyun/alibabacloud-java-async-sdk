@@ -129,7 +129,7 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * <p>The request body for updating the user.</p>
+         * <p>The request body for updating a user.</p>
          */
         public Builder body(UpdateUserRequestBody body) {
             String bodyShrink = shrink(body, "body", "json");
@@ -223,7 +223,7 @@ public class UpdateUserRequest extends Request {
             } 
 
             /**
-             * <p>The display name of the user. The name must be 1 to 32 characters in length. At least one of displayName, email, and note must be specified.</p>
+             * <p>The display name of the user. The name must be 1 to 32 characters in length. You must specify at least one of the displayName, email, and note parameters.</p>
              * 
              * <strong>example:</strong>
              * <p>John Doe</p>

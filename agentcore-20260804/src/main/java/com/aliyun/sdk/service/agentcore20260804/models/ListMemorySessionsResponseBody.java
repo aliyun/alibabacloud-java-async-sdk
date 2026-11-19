@@ -41,6 +41,9 @@ public class ListMemorySessionsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
+    @com.aliyun.core.annotation.NameInMap("totalCount")
+    private Long totalCount;
+
     private ListMemorySessionsResponseBody(Builder builder) {
         this.code = builder.code;
         this.httpStatusCode = builder.httpStatusCode;
@@ -50,6 +53,7 @@ public class ListMemorySessionsResponseBody extends TeaModel {
         this.nextToken = builder.nextToken;
         this.requestId = builder.requestId;
         this.success = builder.success;
+        this.totalCount = builder.totalCount;
     }
 
     public static Builder builder() {
@@ -120,6 +124,13 @@ public class ListMemorySessionsResponseBody extends TeaModel {
         return this.success;
     }
 
+    /**
+     * @return totalCount
+     */
+    public Long getTotalCount() {
+        return this.totalCount;
+    }
+
     public static final class Builder {
         private String code; 
         private Integer httpStatusCode; 
@@ -129,6 +140,7 @@ public class ListMemorySessionsResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Boolean success; 
+        private Long totalCount; 
 
         private Builder() {
         } 
@@ -142,6 +154,7 @@ public class ListMemorySessionsResponseBody extends TeaModel {
             this.nextToken = model.nextToken;
             this.requestId = model.requestId;
             this.success = model.success;
+            this.totalCount = model.totalCount;
         } 
 
         /**
@@ -167,7 +180,7 @@ public class ListMemorySessionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The session list.</p>
+         * <p>The list of sessions.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -226,6 +239,17 @@ public class ListMemorySessionsResponseBody extends TeaModel {
             return this;
         }
 
+        /**
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
+        public Builder totalCount(Long totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+
         public ListMemorySessionsResponseBody build() {
             return new ListMemorySessionsResponseBody(this);
         } 
@@ -242,15 +266,31 @@ public class ListMemorySessionsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("agentId")
         private String agentId;
 
+        @com.aliyun.core.annotation.NameInMap("createdAt")
+        private String createdAt;
+
+        @com.aliyun.core.annotation.NameInMap("metadata")
+        private java.util.Map<String, String> metadata;
+
         @com.aliyun.core.annotation.NameInMap("sessionId")
         private String sessionId;
+
+        @com.aliyun.core.annotation.NameInMap("teamId")
+        private String teamId;
+
+        @com.aliyun.core.annotation.NameInMap("title")
+        private String title;
 
         @com.aliyun.core.annotation.NameInMap("userId")
         private String userId;
 
         private Items(Builder builder) {
             this.agentId = builder.agentId;
+            this.createdAt = builder.createdAt;
+            this.metadata = builder.metadata;
             this.sessionId = builder.sessionId;
+            this.teamId = builder.teamId;
+            this.title = builder.title;
             this.userId = builder.userId;
         }
 
@@ -270,10 +310,38 @@ public class ListMemorySessionsResponseBody extends TeaModel {
         }
 
         /**
+         * @return createdAt
+         */
+        public String getCreatedAt() {
+            return this.createdAt;
+        }
+
+        /**
+         * @return metadata
+         */
+        public java.util.Map<String, String> getMetadata() {
+            return this.metadata;
+        }
+
+        /**
          * @return sessionId
          */
         public String getSessionId() {
             return this.sessionId;
+        }
+
+        /**
+         * @return teamId
+         */
+        public String getTeamId() {
+            return this.teamId;
+        }
+
+        /**
+         * @return title
+         */
+        public String getTitle() {
+            return this.title;
         }
 
         /**
@@ -285,7 +353,11 @@ public class ListMemorySessionsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String agentId; 
+            private String createdAt; 
+            private java.util.Map<String, String> metadata; 
             private String sessionId; 
+            private String teamId; 
+            private String title; 
             private String userId; 
 
             private Builder() {
@@ -293,7 +365,11 @@ public class ListMemorySessionsResponseBody extends TeaModel {
 
             private Builder(Items model) {
                 this.agentId = model.agentId;
+                this.createdAt = model.createdAt;
+                this.metadata = model.metadata;
                 this.sessionId = model.sessionId;
+                this.teamId = model.teamId;
+                this.title = model.title;
                 this.userId = model.userId;
             } 
 
@@ -309,6 +385,28 @@ public class ListMemorySessionsResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The creation time in RFC 3339 format with time zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-09-23T10:00:00Z</p>
+             */
+            public Builder createdAt(String createdAt) {
+                this.createdAt = createdAt;
+                return this;
+            }
+
+            /**
+             * <p>The string key-value tags set by the caller. A maximum of 16 tags are supported. A key can be up to 64 Unicode characters in length, and a value can be up to 1,024 Unicode characters in length. Empty strings are allowed. Nested objects or arrays are not supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;topic&quot;:&quot;hiking&quot;}</p>
+             */
+            public Builder metadata(java.util.Map<String, String> metadata) {
+                this.metadata = metadata;
+                return this;
+            }
+
+            /**
              * <p>The session ID.</p>
              * 
              * <strong>example:</strong>
@@ -316,6 +414,28 @@ public class ListMemorySessionsResponseBody extends TeaModel {
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;
+                return this;
+            }
+
+            /**
+             * <p>The business team ID defined by the caller. If specified, the value cannot be empty and can be up to 128 UTF-8 bytes in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>team-001</p>
+             */
+            public Builder teamId(String teamId) {
+                this.teamId = teamId;
+                return this;
+            }
+
+            /**
+             * <p>The session title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Travel plan</p>
+             */
+            public Builder title(String title) {
+                this.title = title;
                 return this;
             }
 

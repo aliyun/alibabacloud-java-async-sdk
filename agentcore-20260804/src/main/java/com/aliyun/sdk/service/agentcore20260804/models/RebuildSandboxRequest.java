@@ -104,7 +104,7 @@ public class RebuildSandboxRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the workspace. Pass the ID of the workspace to which the target agent belongs.</p>
+         * <p>The workspace ID. Pass the ID of the workspace to which the target agent belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,7 +117,7 @@ public class RebuildSandboxRequest extends Request {
         }
 
         /**
-         * <p>The ID of the managed agent. The agent must belong to the specified workspace.</p>
+         * <p>The managed agent ID. The agent must belong to the specified workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +130,7 @@ public class RebuildSandboxRequest extends Request {
         }
 
         /**
-         * <p>The sandbox ID. Use the instance identity returned by ListSandboxes. The sandbox must belong to the runtime scope that corresponds to the specified agent and service registration endpoint.</p>
+         * <p>The sandbox ID. Use the instance identity returned by ListSandboxes. The sandbox must belong to the runtime scope corresponding to the specified agent and service registration endpoint.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,7 +143,7 @@ public class RebuildSandboxRequest extends Request {
         }
 
         /**
-         * <p>The ID of the service registration endpoint. This parameter is optional. If you specify this parameter, the operation targets the runtime instance that corresponds to the service registration endpoint under the agent. If you omit this parameter, the default latest runtime identity is used. Pass the service registration endpoint ID instead of the service registration endpoint name. You must keep this parameter consistent when you query instances, commit rebuilds, and query nodes.</p>
+         * <p>The service registration endpoint ID. This parameter is optional. If specified, the operation targets the runtime instance corresponding to the endpoint under the agent. If omitted, the default latest runtime identity is used. Pass the endpoint ID, not the endpoint name. Keep this parameter consistent when querying instances, committing rebuilds, and querying nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>se-7f3a92c1</p>

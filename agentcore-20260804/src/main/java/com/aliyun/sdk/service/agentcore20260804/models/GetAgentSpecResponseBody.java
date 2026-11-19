@@ -222,7 +222,7 @@ public class GetAgentSpecResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The author of the version.</p>
+             * <p>The version author.</p>
              * 
              * <strong>example:</strong>
              * <p>alice</p>
@@ -233,7 +233,7 @@ public class GetAgentSpecResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time. It is a UNIX timestamp in milliseconds.</p>
+             * <p>The creation time, which is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1787671022000</p>
@@ -247,7 +247,7 @@ public class GetAgentSpecResponseBody extends TeaModel {
              * <p>The description.</p>
              * 
              * <strong>example:</strong>
-             * <p>A sample description used to illustrate the purpose of the resource</p>
+             * <p>Sample description to illustrate the purpose of the resource</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -288,7 +288,7 @@ public class GetAgentSpecResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time. It is a UNIX timestamp in milliseconds.</p>
+             * <p>The update time, which is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1787671022000</p>
@@ -526,7 +526,7 @@ public class GetAgentSpecResponseBody extends TeaModel {
              * <p>The description.</p>
              * 
              * <strong>example:</strong>
-             * <p>A sample description used to illustrate the purpose of the resource</p>
+             * <p>Sample description to illustrate the purpose of the resource</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -627,7 +627,7 @@ public class GetAgentSpecResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time. It is a UNIX timestamp in milliseconds.</p>
+             * <p>The update time, which is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1787671022000</p>

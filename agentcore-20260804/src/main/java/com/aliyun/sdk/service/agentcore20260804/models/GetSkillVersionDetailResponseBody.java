@@ -186,7 +186,7 @@ public class GetSkillVersionDetailResponseBody extends TeaModel {
              * <p>The description.</p>
              * 
              * <strong>example:</strong>
-             * <p>Sample description to illustrate the purpose of the resource</p>
+             * <p>A sample description used to illustrate the purpose of the resource</p>
              */
             public Builder description(String description) {
                 this.description = description;

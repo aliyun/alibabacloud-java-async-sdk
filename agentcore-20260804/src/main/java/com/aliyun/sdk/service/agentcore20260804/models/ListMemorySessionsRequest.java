@@ -33,12 +33,15 @@ public class ListMemorySessionsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("maxResults")
-    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer maxResults;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("teamId")
+    private String teamId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("userId")
@@ -51,6 +54,7 @@ public class ListMemorySessionsRequest extends Request {
         this.agentId = builder.agentId;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
+        this.teamId = builder.teamId;
         this.userId = builder.userId;
     }
 
@@ -103,6 +107,13 @@ public class ListMemorySessionsRequest extends Request {
     }
 
     /**
+     * @return teamId
+     */
+    public String getTeamId() {
+        return this.teamId;
+    }
+
+    /**
      * @return userId
      */
     public String getUserId() {
@@ -115,6 +126,7 @@ public class ListMemorySessionsRequest extends Request {
         private String agentId; 
         private Integer maxResults; 
         private String nextToken; 
+        private String teamId; 
         private String userId; 
 
         private Builder() {
@@ -128,6 +140,7 @@ public class ListMemorySessionsRequest extends Request {
             this.agentId = request.agentId;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
+            this.teamId = request.teamId;
             this.userId = request.userId;
         } 
 
@@ -158,7 +171,7 @@ public class ListMemorySessionsRequest extends Request {
         }
 
         /**
-         * <p>The agent ID. If not specified, all agents are matched. The length is limited to 1 to 128 UTF-8 bytes, and it cannot contain / or *.</p>
+         * <p>The agent ID. If you do not specify this parameter, all agents are matched. The value must be 1 to 128 UTF-8 bytes in length and cannot contain a forward slash (/) or an asterisk (*).</p>
          * 
          * <strong>example:</strong>
          * <p>agent-001</p>
@@ -194,7 +207,19 @@ public class ListMemorySessionsRequest extends Request {
         }
 
         /**
-         * <p>The user ID. If not specified, all users are matched. The length is limited to 1 to 128 UTF-8 bytes, and it cannot contain / or *.</p>
+         * <p>The business team ID defined by the caller.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>team-001</p>
+         */
+        public Builder teamId(String teamId) {
+            this.putQueryParameter("teamId", teamId);
+            this.teamId = teamId;
+            return this;
+        }
+
+        /**
+         * <p>The user ID. If you do not specify this parameter, all users are matched. The value must be 1 to 128 UTF-8 bytes in length and cannot contain a forward slash (/) or an asterisk (*).</p>
          * 
          * <strong>example:</strong>
          * <p>user-001</p>

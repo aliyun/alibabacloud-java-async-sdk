@@ -130,7 +130,7 @@ public class DeleteCredentialResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the deleted credential.</p>
+         * <p>The deleted credential information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -149,7 +149,7 @@ public class DeleteCredentialResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message. An error description is returned if the request fails.</p>
+         * <p>The response message. Returns an error description when the request fails.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -261,7 +261,7 @@ public class DeleteCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The credential name. The name must be unique within the workspace, contain only letters, digits, periods, underscores, and hyphens, and be 3 to 99 characters in length. You cannot use runtime reserved names.</p>
+             * <p>The credential name. It must be unique within the workspace, contain only letters, digits, periods, underscores, and hyphens, and be 3 to 99 characters in length. You cannot use runtime reserved names.</p>
              * 
              * <strong>example:</strong>
              * <p>model-api-key</p>

@@ -171,7 +171,7 @@ public class DisableConnectorResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -312,7 +312,7 @@ public class DisableConnectorResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The connector name. The current value is qodercli.</p>
+             * <p>The name of the connector. Currently, the value is qodercli.</p>
              * 
              * <strong>example:</strong>
              * <p>qodercli</p>
@@ -323,7 +323,7 @@ public class DisableConnectorResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The connector status.</p>
+             * <p>The status of the connector.</p>
              * 
              * <strong>example:</strong>
              * <p>ENABLED</p>

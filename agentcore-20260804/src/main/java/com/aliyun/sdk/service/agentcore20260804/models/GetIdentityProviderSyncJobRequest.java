@@ -116,7 +116,7 @@ public class GetIdentityProviderSyncJobRequest extends Request {
         }
 
         /**
-         * <p>The local AgentCore task ID returned by CreateIdentityProviderSyncJob, not the synchronizationJobId of AgentIdentity. You must use the same workspace and identity provider when querying.</p>
+         * <p>The local AgentCore task ID returned by CreateIdentityProviderSyncJob. This is not the synchronizationJobId of AgentIdentity. You must use the same workspace and identity provider when querying.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

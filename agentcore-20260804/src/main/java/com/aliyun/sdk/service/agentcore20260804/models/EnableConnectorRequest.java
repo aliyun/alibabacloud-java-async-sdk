@@ -116,7 +116,7 @@ public class EnableConnectorRequest extends Request {
         }
 
         /**
-         * <p>The request body for enabling the connector.</p>
+         * <p>The request body for the enable operation.</p>
          * <p>This parameter is required.</p>
          */
         public Builder body(EnableConnectorRequestBody body) {

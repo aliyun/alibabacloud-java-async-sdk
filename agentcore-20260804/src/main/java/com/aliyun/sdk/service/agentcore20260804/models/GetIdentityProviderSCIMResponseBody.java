@@ -119,7 +119,7 @@ public class GetIdentityProviderSCIMResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The business result code. If the request fails, handle the issue based on the HTTP status code and the message.</p>
+         * <p>If the request fails, handle the error based on the HTTP status code and the message.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -130,7 +130,7 @@ public class GetIdentityProviderSCIMResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result structure. For details, see the response fields of this operation. The response of an asynchronous write operation indicates that the request is accepted, but does not guarantee that the background task is completed.</p>
+         * <p>For the result structure, see the response fields of this operation. The response of an asynchronous write operation indicates that the request is accepted, but does not guarantee that the background task is completed.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -138,7 +138,7 @@ public class GetIdentityProviderSCIMResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The processing status of the current request, which is not equivalent to the final result of the background task.</p>
+         * <p>The processing status of this request, which is not equivalent to the final result of the background task.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -149,7 +149,7 @@ public class GetIdentityProviderSCIMResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request acceptance or error message. For asynchronous tasks, check the task result by using the corresponding query operation.</p>
+         * <p>The request acceptance or error message. For asynchronous tasks, verify the task result by using the corresponding query operation.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -160,7 +160,7 @@ public class GetIdentityProviderSCIMResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID. Used to associate this call with troubleshooting. Keep the ID if the request fails.</p>
+         * <p>Used to associate this call with troubleshooting. Retain this ID if the call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>request-example</p>
@@ -171,7 +171,7 @@ public class GetIdentityProviderSCIMResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the current request is successful. A value of true indicates that the request is processed successfully. For asynchronous writes, you must continue to query the task results.</p>
+         * <p>A value of true indicates that the current request is processed successfully. For asynchronous writes, you must continue to query the task results.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -248,7 +248,7 @@ public class GetIdentityProviderSCIMResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A value of Enabled indicates that SCIM receiving is enabled, and Disabled indicates that it is disabled. This is not equivalent to the expected value of syncEnabled in AgentCore.</p>
+             * <p>Enabled indicates that SCIM receiving is enabled, and Disabled indicates that it is disabled. This is not equivalent to the expected value of syncEnabled in AgentCore.</p>
              * 
              * <strong>example:</strong>
              * <p>Enabled</p>
@@ -374,7 +374,7 @@ public class GetIdentityProviderSCIMResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Do not pass true during CustomSSO initialization. It can only be updated later through UpdateIdentityProviderSCIM. Determine the result in combination with operationStatus.</p>
+             * <p>Do not pass true during CustomSSO initialization. Subsequently, it can only be updated through UpdateIdentityProviderSCIM, and the result is determined in combination with operationStatus.</p>
              */
             public Builder syncEnabled(Boolean syncEnabled) {
                 this.syncEnabled = syncEnabled;

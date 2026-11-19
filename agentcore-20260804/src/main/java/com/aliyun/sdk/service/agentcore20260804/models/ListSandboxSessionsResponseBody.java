@@ -188,7 +188,7 @@ public class ListSandboxSessionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of records per page for the current query.</p>
+         * <p>The maximum number of records per page for this query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -232,7 +232,7 @@ public class ListSandboxSessionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful. A value of true indicates that the request is successful. A value of false indicates that the request fails.</p>
+         * <p>Indicates whether the request is successful. A value of true indicates success. A value of false indicates failure.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -344,7 +344,7 @@ public class ListSandboxSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source type of the session. A value of API indicates an API call, CONSOLE_DEBUG indicates console debugging, EXTERNAL_CHANNEL indicates an external channel, and UNKNOWN indicates an unknown source.</p>
+             * <p>The source type of the session. A value of API indicates an API call. A value of CONSOLE_DEBUG indicates console debugging. A value of EXTERNAL_CHANNEL indicates an external channel. A value of UNKNOWN indicates an unknown source.</p>
              * 
              * <strong>example:</strong>
              * <p>EXTERNAL_CHANNEL</p>

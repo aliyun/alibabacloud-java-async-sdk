@@ -184,7 +184,7 @@ public class ListSandboxesRequest extends Request {
         }
 
         /**
-         * <p>The cursor for querying the next page. During pagination, you must keep workspaceId, agentId, searchText, sessionId, and maxResults unchanged.</p>
+         * <p>The cursor for querying the next page. When you turn the page, you must keep workspaceId, agentId, searchText, sessionId, and maxResults unchanged.</p>
          * 
          * <strong>example:</strong>
          * <p>next-token-1</p>
@@ -196,7 +196,7 @@ public class ListSandboxesRequest extends Request {
         }
 
         /**
-         * <p>Performs a case-insensitive fuzzy search by Sandbox ID fragment.</p>
+         * <p>Performs a case-insensitive fuzzy search by sandbox ID fragment.</p>
          * 
          * <strong>example:</strong>
          * <p>2f360</p>

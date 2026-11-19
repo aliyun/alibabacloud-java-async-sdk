@@ -172,7 +172,7 @@ public class UpdateSkillScopeRequest extends Request {
             } 
 
             /**
-             * <p>The visibility scope.</p>
+             * <p>The visibility.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

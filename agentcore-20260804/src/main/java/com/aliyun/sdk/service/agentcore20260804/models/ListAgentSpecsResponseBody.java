@@ -201,7 +201,7 @@ public class ListAgentSpecsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The type of the version selector. Valid values: LABEL (by label) and VERSION (by specific version).</p>
+             * <p>The version selector type. Valid values: LABEL (by tag) and VERSION (by specific version).</p>
              * 
              * <strong>example:</strong>
              * <p>LABEL</p>
@@ -212,7 +212,7 @@ public class ListAgentSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the selector. If the type is LABEL, the value is the label name, such as latest. If the type is VERSION, the value is the specific version number.</p>
+             * <p>The selector value. For LABEL, it is the tag name (such as latest). For VERSION, it is the specific version number.</p>
              * 
              * <strong>example:</strong>
              * <p>latest</p>
@@ -306,7 +306,7 @@ public class ListAgentSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source type of the skill. Valid values: REFERENCE (references the AI Registry) and STATIC (statically provided with the package).</p>
+             * <p>The skill source type. Valid values: REFERENCE (references AI Registry) and STATIC (statically provided with the package).</p>
              * 
              * <strong>example:</strong>
              * <p>REFERENCE</p>
@@ -317,7 +317,7 @@ public class ListAgentSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The referenced version selector. If omitted, the default value is LABEL/latest.</p>
+             * <p>The referenced version selector. If omitted, the default is LABEL/latest.</p>
              */
             public Builder versionSelector(VersionSelector versionSelector) {
                 this.versionSelector = versionSelector;
@@ -554,7 +554,7 @@ public class ListAgentSpecsResponseBody extends TeaModel {
              * <p>The description.</p>
              * 
              * <strong>example:</strong>
-             * <p>Sample description used to explain the purpose of the resource</p>
+             * <p>A sample description used to illustrate the purpose of the resource</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -584,7 +584,7 @@ public class ListAgentSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether it is enabled.</p>
+             * <p>Specifies whether it is enabled.</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -603,7 +603,7 @@ public class ListAgentSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version labels.</p>
+             * <p>The version tags.</p>
              */
             public Builder labels(java.util.Map<String, String> labels) {
                 this.labels = labels;
@@ -611,7 +611,7 @@ public class ListAgentSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of referenced MCP servers.</p>
+             * <p>The list of MCP service references.</p>
              */
             public Builder mcpServers(java.util.List<McpServers> mcpServers) {
                 this.mcpServers = mcpServers;
@@ -663,7 +663,7 @@ public class ListAgentSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of referenced skills.</p>
+             * <p>The list of skill references.</p>
              */
             public Builder skills(java.util.List<Skills> skills) {
                 this.skills = skills;
@@ -671,7 +671,7 @@ public class ListAgentSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time. The value is a UNIX timestamp in milliseconds.</p>
+             * <p>The update time. It is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1787671022000</p>

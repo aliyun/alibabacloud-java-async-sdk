@@ -60,7 +60,7 @@ public class DeleteWorkspaceRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the workspace to delete.</p>
+         * <p>The ID of the workspace to be deleted.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

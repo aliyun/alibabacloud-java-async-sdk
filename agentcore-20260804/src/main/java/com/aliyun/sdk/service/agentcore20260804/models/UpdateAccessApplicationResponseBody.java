@@ -149,7 +149,7 @@ public class UpdateAccessApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request processing result message.</p>
+         * <p>The message indicating the request processing result.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>

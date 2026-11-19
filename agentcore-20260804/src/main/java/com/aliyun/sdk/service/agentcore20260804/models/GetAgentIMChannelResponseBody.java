@@ -237,7 +237,7 @@ public class GetAgentIMChannelResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Specifies whether to display the thinking process in IM messages. Default value: false.</p>
+             * <p>Indicates whether to display the thinking process in IM messages. Default value: false.</p>
              */
             public Builder showThinking(Boolean showThinking) {
                 this.showThinking = showThinking;
@@ -245,7 +245,7 @@ public class GetAgentIMChannelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to display the tool calling process in IM messages. Default value: false.</p>
+             * <p>Indicates whether to display the tool calling process in IM messages. Default value: false.</p>
              */
             public Builder showToolCalls(Boolean showToolCalls) {
                 this.showToolCalls = showToolCalls;
@@ -549,7 +549,7 @@ public class GetAgentIMChannelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IM channel type. Valid values: DINGTALK (DingTalk), FEISHU (Lark), and WECOM (WeCom).</p>
+             * <p>The IM channel type. Valid values: DINGTALK (DingTalk), FEISHU (Lark), WECOM (WeCom).</p>
              * 
              * <strong>example:</strong>
              * <p>DINGTALK</p>
@@ -609,7 +609,7 @@ public class GetAgentIMChannelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the bound service endpoint. The endpoint must belong to the specified agent and its current version, be in the ready state, and have a public address.</p>
+             * <p>The ID of the bound service endpoint. The endpoint must belong to the specified agent and its current version, be ready, and have a public network address.</p>
              * 
              * <strong>example:</strong>
              * <p>se-1</p>
@@ -620,7 +620,7 @@ public class GetAgentIMChannelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IM channel status. Valid values: CREATING (creating), READY (ready), UPDATING (updating), FAILED (failed), DELETING (deleting), and DELETE_FAILED (deletion failed).</p>
+             * <p>The IM channel status. Valid values: CREATING (creating), READY (ready), UPDATING (updating), FAILED (failed), DELETING (deleting), DELETE_FAILED (delete failed).</p>
              * 
              * <strong>example:</strong>
              * <p>READY</p>

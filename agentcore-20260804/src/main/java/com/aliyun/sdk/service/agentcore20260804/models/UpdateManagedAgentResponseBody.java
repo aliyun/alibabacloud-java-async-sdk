@@ -119,7 +119,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The business status code. The value is SUCCESS if the request is successful.</p>
+         * <p>The business status code. A value of SUCCESS indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -138,7 +138,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code. The value is 200 if the request is successful.</p>
+         * <p>The HTTP status code. A value of 200 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -266,7 +266,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The absolute mount path in the container, such as /data/train. Mount targets cannot be duplicated or form parent-child overwrites, and must avoid platform reserved directories.</p>
+             * <p>The absolute mount path within the container, such as /data/train. Mount targets must not be duplicated or form parent-child overrides, and must avoid platform reserved directories.</p>
              * 
              * <strong>example:</strong>
              * <p>/mnt/agenticfs/data</p>
@@ -277,7 +277,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The existing non-empty relative directory under the AccessPoint. This field is required and validated by the backend for each mount item. Root directories, absolute paths, and parent directory segments are not allowed.</p>
+             * <p>An existing non-empty relative directory under the AccessPoint. Required and validated by the backend for each mount item. Root directories, absolute paths, or parent directory segments are not allowed.</p>
              * 
              * <strong>example:</strong>
              * <p>workspace/data</p>
@@ -288,7 +288,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the mount is read-only. If omitted, the default value is false. This is not a RAM role read-only policy.</p>
+             * <p>Specifies whether to mount as read-only. The default value is false if omitted. This is not a RAM role read-only policy.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -299,7 +299,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The AccessPoint domain name. This field is required and validated by the backend for each mount item. It does not include a protocol, port, or path. Use the DomainName from the NAS ListAccessPoints response.</p>
+             * <p>The AccessPoint domain name. Required and validated by the backend for each mount item. It does not contain a protocol, port, or path, and uses the DomainName from the NAS ListAccessPoints response.</p>
              * 
              * <strong>example:</strong>
              * <p>ap-0123456789abcdef0.0123456789-vlm36.cn-hangzhou.nas.aliyuncs.com</p>
@@ -500,7 +500,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The legacy compatibility field. Use sourceType and versionSelector for new requests.</p>
+             * <p>The legacy compatibility field. New requests use sourceType and versionSelector.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0.0</p>
@@ -511,7 +511,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version selector for the skill reference. Supports LABEL for tags and VERSION for specific versions. If omitted, LABEL/latest is used. Selectors are not provided for STATIC sources.</p>
+             * <p>The skill reference version selector. Supports LABEL for tags and VERSION for specific versions. If omitted, LABEL/latest is used. Selectors are not provided for STATIC sources.</p>
              */
             public Builder versionSelector(VersionSelector versionSelector) {
                 this.versionSelector = versionSelector;
@@ -520,6 +520,324 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
 
             public ConfiguredSkills build() {
                 return new ConfiguredSkills(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateManagedAgentResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateManagedAgentResponseBody</p>
+     */
+    public static class Bindings extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("resourceId")
+        private String resourceId;
+
+        @com.aliyun.core.annotation.NameInMap("type")
+        private String type;
+
+        private Bindings(Builder builder) {
+            this.resourceId = builder.resourceId;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Bindings create() {
+            return builder().build();
+        }
+
+        /**
+         * @return resourceId
+         */
+        public String getResourceId() {
+            return this.resourceId;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private String resourceId; 
+            private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Bindings model) {
+                this.resourceId = model.resourceId;
+                this.type = model.type;
+            } 
+
+            /**
+             * <p>The ID of the context resource in the current workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kb-example</p>
+             */
+            public Builder resourceId(String resourceId) {
+                this.resourceId = resourceId;
+                return this;
+            }
+
+            /**
+             * <p>Read-only string. Currently known types are KNOWLEDGE_BASE (knowledge base) and DATA_CONNECTOR (data connector). The response may include new types. The client should retain unknown values and must not fail to parse the entire response due to unknown types. New request types are subject to the actual support scope of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>KNOWLEDGE_BASE</p>
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public Bindings build() {
+                return new Bindings(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateManagedAgentResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateManagedAgentResponseBody</p>
+     */
+    public static class ContextConfiguration extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("bindings")
+        private java.util.List<Bindings> bindings;
+
+        @com.aliyun.core.annotation.NameInMap("enabled")
+        private Boolean enabled;
+
+        private ContextConfiguration(Builder builder) {
+            this.bindings = builder.bindings;
+            this.enabled = builder.enabled;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ContextConfiguration create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bindings
+         */
+        public java.util.List<Bindings> getBindings() {
+            return this.bindings;
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public static final class Builder {
+            private java.util.List<Bindings> bindings; 
+            private Boolean enabled; 
+
+            private Builder() {
+            } 
+
+            private Builder(ContextConfiguration model) {
+                this.bindings = model.bindings;
+                this.enabled = model.enabled;
+            } 
+
+            /**
+             * <p>Read-only resource references. This field may be omitted when no selection is made. A disabled configuration can still retain a non-empty selection. You cannot determine whether the configuration is enabled solely based on whether the array is empty.</p>
+             */
+            public Builder bindings(java.util.List<Bindings> bindings) {
+                this.bindings = bindings;
+                return this;
+            }
+
+            /**
+             * <p>Read-only. Indicates the enabled status of the configuration when the configuration object is returned. A value of false indicates that the configuration is disabled. The absence of the entire configuration object indicates that the response does not provide the configuration, which cannot be treated as false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            public ContextConfiguration build() {
+                return new ContextConfiguration(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateManagedAgentResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateManagedAgentResponseBody</p>
+     */
+    public static class EffectiveContextConfigurationBindings extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("resourceId")
+        private String resourceId;
+
+        @com.aliyun.core.annotation.NameInMap("type")
+        private String type;
+
+        private EffectiveContextConfigurationBindings(Builder builder) {
+            this.resourceId = builder.resourceId;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static EffectiveContextConfigurationBindings create() {
+            return builder().build();
+        }
+
+        /**
+         * @return resourceId
+         */
+        public String getResourceId() {
+            return this.resourceId;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private String resourceId; 
+            private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(EffectiveContextConfigurationBindings model) {
+                this.resourceId = model.resourceId;
+                this.type = model.type;
+            } 
+
+            /**
+             * <p>The ID of the context resource in the current workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kb-example</p>
+             */
+            public Builder resourceId(String resourceId) {
+                this.resourceId = resourceId;
+                return this;
+            }
+
+            /**
+             * <p>Read-only string. Currently known types are KNOWLEDGE_BASE (knowledge base) and DATA_CONNECTOR (data connector). The response may include new types. The client should retain unknown values and must not fail to parse the entire response due to unknown types. New request types are subject to the actual support scope of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>KNOWLEDGE_BASE</p>
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public EffectiveContextConfigurationBindings build() {
+                return new EffectiveContextConfigurationBindings(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateManagedAgentResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateManagedAgentResponseBody</p>
+     */
+    public static class EffectiveContextConfiguration extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("bindings")
+        private java.util.List<EffectiveContextConfigurationBindings> bindings;
+
+        @com.aliyun.core.annotation.NameInMap("enabled")
+        private Boolean enabled;
+
+        private EffectiveContextConfiguration(Builder builder) {
+            this.bindings = builder.bindings;
+            this.enabled = builder.enabled;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static EffectiveContextConfiguration create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bindings
+         */
+        public java.util.List<EffectiveContextConfigurationBindings> getBindings() {
+            return this.bindings;
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public static final class Builder {
+            private java.util.List<EffectiveContextConfigurationBindings> bindings; 
+            private Boolean enabled; 
+
+            private Builder() {
+            } 
+
+            private Builder(EffectiveContextConfiguration model) {
+                this.bindings = model.bindings;
+                this.enabled = model.enabled;
+            } 
+
+            /**
+             * <p>Read-only resource references. This field may be omitted when no selection is made. A disabled configuration can still retain a non-empty selection. You cannot determine whether the configuration is enabled solely based on whether the array is empty.</p>
+             */
+            public Builder bindings(java.util.List<EffectiveContextConfigurationBindings> bindings) {
+                this.bindings = bindings;
+                return this;
+            }
+
+            /**
+             * <p>Read-only. Indicates the enabled status of the configuration when the configuration object is returned. A value of false indicates that the configuration is disabled. The absence of the entire configuration object indicates that the response does not provide the configuration, which cannot be treated as false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            public EffectiveContextConfiguration build() {
+                return new EffectiveContextConfiguration(this);
             } 
 
         } 
@@ -797,7 +1115,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the connector account key record bound to qodercli. This is not the original service account key.</p>
+             * <p>The ID of the connector account key record bound to qodercli, not the original service account key.</p>
              * 
              * <strong>example:</strong>
              * <p>key-xxxx</p>
@@ -912,7 +1230,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Returned only in query responses. The server calculates this based on the complete instance distribution, which is not affected by pagination and filtering of the instance list. The value is empty if the image tag is missing, pagination is incomplete, or it cannot be confirmed. An empty value does not equal 0.</p>
+             * <p>Returned only in queries. The server calculates this based on the full instance distribution, which is not affected by the pagination and filtering of the instance list. It is empty when the image tag is missing, pagination is incomplete, or it cannot be confirmed, which is not equivalent to 0.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -934,7 +1252,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Returned only in query responses. Currently returns the tag of the pool target image. The value is empty if it cannot be parsed. Do not use the agent configuration version as a substitute.</p>
+             * <p>Returned only in queries. Currently returns the tag of the pool target image. It is empty when it cannot be parsed, and cannot be replaced by the agent configuration version.</p>
              * 
              * <strong>example:</strong>
              * <p>202611031754</p>
@@ -1069,7 +1387,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the quota is enabled. This field is not returned if no quota is configured.</p>
+             * <p>Indicates whether the quota is enabled. This field is not returned when no quota is configured.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1113,7 +1431,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the gateway quota rule. This field is read-only and returned by the backend.</p>
+             * <p>The gateway quota rule status. This field is read-only and returned by the backend.</p>
              * 
              * <strong>example:</strong>
              * <p>ACTIVE</p>
@@ -1242,7 +1560,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the upstream model.</p>
+             * <p>The upstream model name.</p>
              * 
              * <strong>example:</strong>
              * <p>qwen-max</p>
@@ -1253,7 +1571,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The model token quota configuration and quota usage status for the current cycle. The value is empty if no quota is configured.</p>
+             * <p>The model token quota configuration and the quota usage status for the current cycle. This field is empty when no quota is configured.</p>
              */
             public Builder quota(Quota quota) {
                 this.quota = quota;
@@ -1261,7 +1579,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The thinking level. If not configured, the value defaults to default. Empty strings, null values, or omitted fields are processed according to the default behavior of the model and Harness. Valid values: off, low, medium, high, xhigh, and max. If this parameter is not passed or is null during creation, default is used. When updating the model configuration, if the thinking level is not passed or is null, it reverts to default. Except for off, which is converted to none, the value is passed to the runtime framework as-is without validating model support or automatically downgrading. If the model does not support the specified level, adjust the level accordingly.</p>
+             * <p>The thinking level. When not configured, the value is default. An empty string, null, or omitted value is processed according to the default behavior of the model and Harness. Valid values: off, low, medium, high, xhigh, and max. If this parameter is not passed or is null during creation, default is used. When updating and submitting the model configuration, if the thinking level is not passed or is null, it is restored to default. Except for off which is converted to none, the value is passed to the runtime framework as-is without verifying model support or automatically downgrading. If the model does not support the level, adjust the level.</p>
              * 
              * <strong>example:</strong>
              * <p>high</p>
@@ -1546,7 +1864,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The OSS bucket name. This parameter is required and validated by the backend for each mount item.</p>
+             * <p>The name of the OSS bucket. This field is required and validated by the backend for each mount item.</p>
              * 
              * <strong>example:</strong>
              * <p>bucket-001</p>
@@ -1557,7 +1875,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The absolute mount path in the container, such as /data/train. Mount targets cannot be duplicated or form parent-child overwrites, and must avoid platform reserved directories.</p>
+             * <p>The absolute mount path within the container, such as /data/train. Mount targets must not be duplicated or form parent-child overrides, and must avoid platform reserved directories.</p>
              * 
              * <strong>example:</strong>
              * <p>/mnt/oss/datasets</p>
@@ -1568,7 +1886,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The non-empty relative directory prefix within the configured bucket.</p>
+             * <p>The non-empty relative directory prefix in the currently configured bucket.</p>
              * 
              * <strong>example:</strong>
              * <p>datasets</p>
@@ -1579,7 +1897,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to mount the directory in read-only mode. Default value: false.</p>
+             * <p>Specifies whether the mount is read-only. Default value: false.</p>
              */
             public Builder readOnly(Boolean readOnly) {
                 this.readOnly = readOnly;
@@ -1851,7 +2169,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether elastic scaling is enabled in the current configuration.</p>
+             * <p>Indicates whether elastic auto-scaling is enabled in the current configuration.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -1892,7 +2210,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum idle time for a session in the current configuration, in seconds.</p>
+             * <p>The maximum session idle time in the current configuration, in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>3600</p>
@@ -1963,7 +2281,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the HTTP header used for session affinity. This parameter takes effect when sessionPolicy.type is set to ISOLATED_HEADER_FIELD.</p>
+             * <p>The HTTP header name used for session affinity. This field takes effect when sessionPolicy.type is ISOLATED_HEADER_FIELD.</p>
              * 
              * <strong>example:</strong>
              * <p>X-Session-Id</p>
@@ -2069,7 +2387,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The automatic scaling and session configurations for the sandbox.</p>
+             * <p>The sandbox auto-scaling and session configuration.</p>
              */
             public Builder hpa(Hpa hpa) {
                 this.hpa = hpa;
@@ -2346,7 +2664,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The current target version for compatibility with legacy clients. New clients use resolvedVersion and determine the effective runtime version based on appliedVersion.</p>
+             * <p>The current target version for compatibility with legacy clients. New clients use resolvedVersion and rely on appliedVersion to determine the effective runtime version.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0.0</p>
@@ -2357,7 +2675,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version selector for the skill reference. Supports LABEL for tags and VERSION for specific versions. If omitted, LABEL/latest is used. Selectors are not provided for STATIC sources.</p>
+             * <p>The skill reference version selector. Supports LABEL for tags and VERSION for specific versions. If omitted, LABEL/latest is used. Selectors are not provided for STATIC sources.</p>
              */
             public Builder versionSelector(SkillsVersionSelector versionSelector) {
                 this.versionSelector = versionSelector;
@@ -2802,6 +3120,9 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("configuredSkills")
         private java.util.List<ConfiguredSkills> configuredSkills;
 
+        @com.aliyun.core.annotation.NameInMap("contextConfiguration")
+        private ContextConfiguration contextConfiguration;
+
         @com.aliyun.core.annotation.NameInMap("createMode")
         private String createMode;
 
@@ -2813,6 +3134,9 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("description")
         private String description;
+
+        @com.aliyun.core.annotation.NameInMap("effectiveContextConfiguration")
+        private EffectiveContextConfiguration effectiveContextConfiguration;
 
         @com.aliyun.core.annotation.NameInMap("environment")
         private Environment environment;
@@ -2880,10 +3204,12 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             this.agentId = builder.agentId;
             this.agenticFsMounts = builder.agenticFsMounts;
             this.configuredSkills = builder.configuredSkills;
+            this.contextConfiguration = builder.contextConfiguration;
             this.createMode = builder.createMode;
             this.createdAt = builder.createdAt;
             this.deployType = builder.deployType;
             this.description = builder.description;
+            this.effectiveContextConfiguration = builder.effectiveContextConfiguration;
             this.environment = builder.environment;
             this.harness = builder.harness;
             this.instruction = builder.instruction;
@@ -2950,6 +3276,13 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
         }
 
         /**
+         * @return contextConfiguration
+         */
+        public ContextConfiguration getContextConfiguration() {
+            return this.contextConfiguration;
+        }
+
+        /**
          * @return createMode
          */
         public String getCreateMode() {
@@ -2975,6 +3308,13 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return effectiveContextConfiguration
+         */
+        public EffectiveContextConfiguration getEffectiveContextConfiguration() {
+            return this.effectiveContextConfiguration;
         }
 
         /**
@@ -3123,10 +3463,12 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             private String agentId; 
             private java.util.List<AgenticFsMounts> agenticFsMounts; 
             private java.util.List<ConfiguredSkills> configuredSkills; 
+            private ContextConfiguration contextConfiguration; 
             private String createMode; 
             private String createdAt; 
             private String deployType; 
             private String description; 
+            private EffectiveContextConfiguration effectiveContextConfiguration; 
             private Environment environment; 
             private Harness harness; 
             private String instruction; 
@@ -3157,10 +3499,12 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
                 this.agentId = model.agentId;
                 this.agenticFsMounts = model.agenticFsMounts;
                 this.configuredSkills = model.configuredSkills;
+                this.contextConfiguration = model.contextConfiguration;
                 this.createMode = model.createMode;
                 this.createdAt = model.createdAt;
                 this.deployType = model.deployType;
                 this.description = model.description;
+                this.effectiveContextConfiguration = model.effectiveContextConfiguration;
                 this.environment = model.environment;
                 this.harness = model.harness;
                 this.instruction = model.instruction;
@@ -3217,7 +3561,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The NAS storage mount configuration. Currently, only the AgenticFS type is supported, which is used to mount file directories in the access point to the agent runtime instance. The total number of NAS mounts and ossMounts cannot exceed 10.</p>
+             * <p>The NAS storage mount configuration. Currently, the AgenticFS type is supported, which is used to mount file directories in access points to agent runtime instances. A maximum of 10 NAS mounts are allowed in total with ossMounts.</p>
              */
             public Builder agenticFsMounts(java.util.List<AgenticFsMounts> agenticFsMounts) {
                 this.agenticFsMounts = agenticFsMounts;
@@ -3229,6 +3573,14 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
              */
             public Builder configuredSkills(java.util.List<ConfiguredSkills> configuredSkills) {
                 this.configuredSkills = configuredSkills;
+                return this;
+            }
+
+            /**
+             * <p>The target configuration accepted by the managed agent, which does not necessarily mean it has taken effect at runtime. This field is used in the detail responses of CreateManagedAgent, UpdateManagedAgent, and GetManagedAgent. In the configuration of a fixed version, it represents the configuration snapshot saved for that version. A returned object with enabled:false indicates that the configuration is disabled. The absence of the entire object indicates that the response does not provide the configuration.</p>
+             */
+            public Builder contextConfiguration(ContextConfiguration contextConfiguration) {
+                this.contextConfiguration = contextConfiguration;
                 return this;
             }
 
@@ -3273,6 +3625,14 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * <p>Read-only. Provided only by GetManagedAgent when an effective version exists, corresponding to the configuration snapshot of effectiveSpecVersion. It remains the original effective configuration when a new version is being prepared or fails to be published. It is not returned before the first time it takes effect, or in CreateManagedAgent, UpdateManagedAgent, and the configuration of a fixed version. Omission does not indicate that it is disabled, and the client must not automatically fill it with enabled:false.</p>
+             */
+            public Builder effectiveContextConfiguration(EffectiveContextConfiguration effectiveContextConfiguration) {
+                this.effectiveContextConfiguration = effectiveContextConfiguration;
                 return this;
             }
 
@@ -3353,7 +3713,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of OSS mounts. A maximum of 10 items are allowed.</p>
+             * <p>The list of OSS mounts. A maximum of 10 items are supported.</p>
              */
             public Builder ossMounts(java.util.List<OssMounts> ossMounts) {
                 this.ossMounts = ossMounts;
@@ -3388,7 +3748,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of managed Harness agent instances by sandbox phase. Current keys: PENDING (creating or initializing), RUNNING (running), HIBERNATING (hibernating), HIBERNATED (hibernated), RESUMING (resuming), TERMINATING (terminating), and FAILED (failed at runtime). Only phases that actually occur are returned. Missing keys are treated as 0. This field is a dynamic map and new keys may be added in the future. The frontend can use FAILED &gt; 0 to determine whether abnormal instances exist.</p>
+             * <p>The number of managed Harness Agent instances by sandbox phase. Current keys: PENDING (creating or initializing), RUNNING (running), HIBERNATING (hibernating), HIBERNATED (hibernated), RESUMING (resuming), TERMINATING (terminating), and FAILED (failed at runtime). Only phases that actually occur are returned, and missing keys are treated as 0. This field is a dynamic map and new keys may be added in the future. The frontend can use FAILED &gt; 0 to determine whether abnormal instances exist.</p>
              */
             public Builder sandboxPhaseCounts(java.util.Map<String, Long> sandboxPhaseCounts) {
                 this.sandboxPhaseCounts = sandboxPhaseCounts;
@@ -3431,7 +3791,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tool configuration list.</p>
+             * <p>The list of tool configurations.</p>
              */
             public Builder tools(java.util.List<Tools> tools) {
                 this.tools = tools;

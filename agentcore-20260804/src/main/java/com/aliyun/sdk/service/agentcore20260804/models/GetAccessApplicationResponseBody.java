@@ -149,7 +149,7 @@ public class GetAccessApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned for the request.</p>
+         * <p>The request processing result message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>

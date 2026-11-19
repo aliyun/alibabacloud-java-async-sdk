@@ -171,7 +171,7 @@ public class GetCustomAgentImagePreparationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the API call is successful.</p>
+         * <p>Indicates whether the current API call is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -371,7 +371,7 @@ public class GetCustomAgentImagePreparationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error. This parameter is returned only when the task fails. Otherwise, the value is null.</p>
+             * <p>The error details. This parameter is returned only when the task fails. Otherwise, the value is null.</p>
              */
             public Builder error(Error error) {
                 this.error = error;
@@ -401,7 +401,7 @@ public class GetCustomAgentImagePreparationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Console task ID for the current submission.</p>
+             * <p>The console task ID for the current submission.</p>
              * 
              * <strong>example:</strong>
              * <p>agent-example:1</p>

@@ -263,7 +263,7 @@ public class CreateTeamRequest extends Request {
             } 
 
             /**
-             * <p>The role of the user in the team. Valid values: ADMIN and MEMBER. Each team must have exactly one ADMIN.</p>
+             * <p>The role of the user in the team. Valid values: ADMIN and MEMBER. Each team must include exactly one ADMIN.</p>
              * 
              * <strong>example:</strong>
              * <p>ADMIN</p>
@@ -371,7 +371,7 @@ public class CreateTeamRequest extends Request {
             } 
 
             /**
-             * <p>The list of agent members in the team.</p>
+             * <p>The list of agent members in the team. The list must include exactly one LEADER, and the LEADER must be a managed agent. External agents and high-code agents only support the WORKER role. In addition, high-code agents must declare the AG-UI (agui) or OpenAI Chat Completions (openai-chat-completion) protocol in the latest version configuration.</p>
              */
             public Builder agents(java.util.List<Agents> agents) {
                 this.agents = agents;
@@ -382,7 +382,7 @@ public class CreateTeamRequest extends Request {
              * <p>The team description.</p>
              * 
              * <strong>example:</strong>
-             * <p>Team responsible for intelligent customer service</p>
+             * <p>Team responsible for the intelligent customer service business</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -390,7 +390,7 @@ public class CreateTeamRequest extends Request {
             }
 
             /**
-             * <p>The team name. It can only contain lowercase letters, digits, and hyphens, must start and end with a lowercase letter or a digit, and must be 1 to 128 characters in length.</p>
+             * <p>The team name. The name can contain only lowercase letters, digits, and hyphens, must start and end with a lowercase letter or a digit, and must be 1 to 128 characters in length.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -402,7 +402,7 @@ public class CreateTeamRequest extends Request {
             }
 
             /**
-             * <p>The list of user members in the team. The list must contain exactly one member with the ADMIN role.</p>
+             * <p>The list of user members in the team. The list must include exactly one member with the ADMIN role.</p>
              */
             public Builder users(java.util.List<Users> users) {
                 this.users = users;

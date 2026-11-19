@@ -141,7 +141,7 @@ public class ListModelsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Valid values: 0 to 100. If this parameter is not specified or is set to 0, the default value is 10.</p>
+         * <p>The maximum number of entries to return per page. Valid values: 0 to 100. If this parameter is not specified or is set to 0, the default value is 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -165,7 +165,7 @@ public class ListModelsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token. Specify the token returned from the previous request to retrieve the next page. An empty response indicates that no more pages are available.</p>
+         * <p>The pagination token. Specify the token returned from the previous query. An empty response indicates that no more pages are available.</p>
          * 
          * <strong>example:</strong>
          * <p>bW9kZWwtbWFuYWdlbWVudC1vZmZzZXQ6bW9kZWw6MTA</p>

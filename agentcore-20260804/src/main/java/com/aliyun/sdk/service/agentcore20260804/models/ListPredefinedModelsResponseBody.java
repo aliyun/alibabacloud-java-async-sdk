@@ -149,7 +149,7 @@ public class ListPredefinedModelsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message about the request processing result.</p>
+         * <p>The request processing result message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -331,7 +331,7 @@ public class ListPredefinedModelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the model is able to invoke multiple tool calling operations in a single response.</p>
+             * <p>Specifies whether the model is able to invoke multiple tools in a single response through tool calling.</p>
              */
             public Builder multiToolCall(Boolean multiToolCall) {
                 this.multiToolCall = multiToolCall;
@@ -347,7 +347,7 @@ public class ListPredefinedModelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the model is able to invoke streaming tool calling.</p>
+             * <p>Specifies whether the model is able to invoke tools through streaming tool calling.</p>
              */
             public Builder streamToolCall(Boolean streamToolCall) {
                 this.streamToolCall = streamToolCall;
@@ -477,7 +477,7 @@ public class ListPredefinedModelsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The model capability configurations.</p>
+             * <p>The model capability configuration.</p>
              */
             public Builder capabilities(Capabilities capabilities) {
                 this.capabilities = capabilities;

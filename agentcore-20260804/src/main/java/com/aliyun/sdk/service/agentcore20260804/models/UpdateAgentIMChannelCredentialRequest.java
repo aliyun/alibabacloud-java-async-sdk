@@ -167,7 +167,7 @@ public class UpdateAgentIMChannelCredentialRequest extends Request {
         }
 
         /**
-         * <p>The reserved idempotence token. The backend does not provide persistent idempotence guarantees in the current phase.</p>
+         * <p>The reserved idempotency token. The backend does not provide persistent idempotency guarantees in the current phase.</p>
          * 
          * <strong>example:</strong>
          * <p>client-token-1</p>
@@ -226,7 +226,7 @@ public class UpdateAgentIMChannelCredentialRequest extends Request {
             } 
 
             /**
-             * <p>The channel credentials. You must pass all fields and ensure that the field values are non-empty strings. DingTalk uses clientID and clientSecret. Lark uses appId and appSecret. WeCom uses botId and secret.</p>
+             * <p>The channel credentials. All credentials must be provided, and field values must be non-empty strings. DingTalk uses clientID and clientSecret, Lark uses appId and appSecret, and WeCom uses botId and secret.</p>
              * <p>This parameter is required.</p>
              */
             public Builder credential(java.util.Map<String, String> credential) {

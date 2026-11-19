@@ -387,7 +387,7 @@ public class ListSkillsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The business tags in a JSON array string.</p>
+             * <p>The JSON array string of business tags.</p>
              * 
              * <strong>example:</strong>
              * <p>Sample property value</p>
@@ -420,7 +420,7 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The draft mode. Valid values: HEAD (the skill has a persistent draft) and VERSIONED (each edit creates a versioned draft). This is determined by the server and used by the caller to render the status column.</p>
+             * <p>The draft mode. Valid values: HEAD (the skill has a persistent draft) and VERSIONED (a versioned draft is created for each edit). This value is determined by the server and used by the caller to render the status column.</p>
              * 
              * <strong>example:</strong>
              * <p>HEAD</p>
@@ -431,7 +431,7 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the page item is editable.</p>
+             * <p>Specifies whether the page item is editable.</p>
              */
             public Builder editable(Boolean editable) {
                 this.editable = editable;
@@ -450,7 +450,7 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the skill is enabled.</p>
+             * <p>Specifies whether the skill is enabled.</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -532,7 +532,7 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time. It is a UNIX timestamp in milliseconds.</p>
+             * <p>The update time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1787671022000</p>
@@ -554,7 +554,7 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the current user has write permissions.</p>
+             * <p>Specifies whether the current user has write permissions.</p>
              */
             public Builder writeable(Boolean writeable) {
                 this.writeable = writeable;

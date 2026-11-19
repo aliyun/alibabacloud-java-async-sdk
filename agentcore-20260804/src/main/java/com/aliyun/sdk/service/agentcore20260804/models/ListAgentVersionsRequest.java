@@ -130,7 +130,7 @@ public class ListAgentVersionsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+         * <p>The maximum number of records per page. Valid values: 1 to 100. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -142,7 +142,7 @@ public class ListAgentVersionsRequest extends Request {
         }
 
         /**
-         * <p>The token used to query the next page. Pass the nextToken returned in the previous ListAgentVersions response. Do not pass this parameter for the first query.</p>
+         * <p>The pagination token returned in the previous ListAgentVersions response when you query the next page. Do not specify this parameter for the first query.</p>
          * 
          * <strong>example:</strong>
          * <p>YWdlbnQtdmVyc2lvbnM6MjA</p>

@@ -36,6 +36,10 @@ public class ListSkillReferencesRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("refType")
+    private String refType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("selectorType")
     private String selectorType;
 
@@ -43,14 +47,20 @@ public class ListSkillReferencesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("selectorValue")
     private String selectorValue;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("sourceId")
+    private String sourceId;
+
     private ListSkillReferencesRequest(Builder builder) {
         super(builder);
         this.workspaceId = builder.workspaceId;
         this.skillName = builder.skillName;
         this.pageNo = builder.pageNo;
         this.pageSize = builder.pageSize;
+        this.refType = builder.refType;
         this.selectorType = builder.selectorType;
         this.selectorValue = builder.selectorValue;
+        this.sourceId = builder.sourceId;
     }
 
     public static Builder builder() {
@@ -95,6 +105,13 @@ public class ListSkillReferencesRequest extends Request {
     }
 
     /**
+     * @return refType
+     */
+    public String getRefType() {
+        return this.refType;
+    }
+
+    /**
      * @return selectorType
      */
     public String getSelectorType() {
@@ -108,13 +125,22 @@ public class ListSkillReferencesRequest extends Request {
         return this.selectorValue;
     }
 
+    /**
+     * @return sourceId
+     */
+    public String getSourceId() {
+        return this.sourceId;
+    }
+
     public static final class Builder extends Request.Builder<ListSkillReferencesRequest, Builder> {
         private String workspaceId; 
         private String skillName; 
         private Integer pageNo; 
         private Integer pageSize; 
+        private String refType; 
         private String selectorType; 
         private String selectorValue; 
+        private String sourceId; 
 
         private Builder() {
             super();
@@ -126,8 +152,10 @@ public class ListSkillReferencesRequest extends Request {
             this.skillName = request.skillName;
             this.pageNo = request.pageNo;
             this.pageSize = request.pageSize;
+            this.refType = request.refType;
             this.selectorType = request.selectorType;
             this.selectorValue = request.selectorValue;
+            this.sourceId = request.sourceId;
         } 
 
         /**
@@ -157,7 +185,7 @@ public class ListSkillReferencesRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from 1. Default value: 1.</p>
+         * <p>The page number, starting from 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -181,7 +209,19 @@ public class ListSkillReferencesRequest extends Request {
         }
 
         /**
-         * <p>The reference selector type used for filtering. Valid values: LABEL and VERSION.</p>
+         * <p>Filters by reference strength. Valid values: STRONG, WEAK.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STRONG</p>
+         */
+        public Builder refType(String refType) {
+            this.putQueryParameter("refType", refType);
+            this.refType = refType;
+            return this;
+        }
+
+        /**
+         * <p>Filters by reference selector type. Valid values: LABEL, VERSION.</p>
          * 
          * <strong>example:</strong>
          * <p>LABEL</p>
@@ -193,7 +233,7 @@ public class ListSkillReferencesRequest extends Request {
         }
 
         /**
-         * <p>The reference selector value used for filtering. Valid values: latest, a named label, HEAD, or a specific version.</p>
+         * <p>Filters by reference selector value. Valid values: latest, a named label, HEAD, or a specific version.</p>
          * 
          * <strong>example:</strong>
          * <p>HEAD</p>
@@ -201,6 +241,18 @@ public class ListSkillReferencesRequest extends Request {
         public Builder selectorValue(String selectorValue) {
             this.putQueryParameter("selectorValue", selectorValue);
             this.selectorValue = selectorValue;
+            return this;
+        }
+
+        /**
+         * <p>Filters by reference source identifier. The value must be agentcore or a configured source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agentcore</p>
+         */
+        public Builder sourceId(String sourceId) {
+            this.putQueryParameter("sourceId", sourceId);
+            this.sourceId = sourceId;
             return this;
         }
 

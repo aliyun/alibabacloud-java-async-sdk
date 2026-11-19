@@ -118,7 +118,7 @@ public class UpdateMemoryRequest extends Request {
         }
 
         /**
-         * <p>The MemoryStore name.</p>
+         * <p>The name of the memory store.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,7 +131,7 @@ public class UpdateMemoryRequest extends Request {
         }
 
         /**
-         * <p>The long-term memory ID.</p>
+         * <p>The ID of the long-term memory.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,7 +144,7 @@ public class UpdateMemoryRequest extends Request {
         }
 
         /**
-         * <p>The update memory request.</p>
+         * <p>The request to update a memory.</p>
          * <p>This parameter is required.</p>
          */
         public Builder body(UpdateMemoryRequestBody body) {
@@ -214,7 +214,10 @@ public class UpdateMemoryRequest extends Request {
             } 
 
             /**
-             * <p>The updated string key-value metadata. You must provide at least one of Metadata or Text. A maximum of 16 keys are allowed. The maximum length of a key is 64 characters, and the maximum length of a value is 1,024 characters.</p>
+             * <p>The updated string key-value metadata. Provide at least one of Text or Metadata. A maximum of 16 keys are allowed. The maximum length is 64 characters for a key and 1,024 characters for a value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;topic&quot;:&quot;hiking&quot;}</p>
              */
             public Builder metadata(java.util.Map<String, String> metadata) {
                 this.metadata = metadata;
@@ -222,7 +225,7 @@ public class UpdateMemoryRequest extends Request {
             }
 
             /**
-             * <p>The updated memory text. You must provide at least one of Text or Metadata. The maximum size is 32,000 UTF-8 bytes.</p>
+             * <p>The updated memory text. Provide at least one of Text or Metadata. The size cannot exceed 32,000 UTF-8 bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>The user enjoys hiking on weekends</p>

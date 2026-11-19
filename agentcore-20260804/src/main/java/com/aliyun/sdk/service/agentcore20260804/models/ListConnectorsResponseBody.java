@@ -188,7 +188,7 @@ public class ListConnectorsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of connectors returned in this request.</p>
+         * <p>The number of connectors returned in the current response.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -362,7 +362,7 @@ public class ListConnectorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The activation time.</p>
+             * <p>The time when the connector was enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-09-01T08:00:00Z</p>
@@ -373,7 +373,7 @@ public class ListConnectorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The JSON string of the connector configuration. It may contain sensitive credentials after being enabled.</p>
+             * <p>The JSON string of the connector configuration, which may contain sensitive credentials after the connector is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;site&quot;:&quot;global&quot;,&quot;organizationId&quot;:&quot;org-xxxx&quot;}</p>

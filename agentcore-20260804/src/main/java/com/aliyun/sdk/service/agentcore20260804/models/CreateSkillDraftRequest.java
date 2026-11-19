@@ -196,7 +196,7 @@ public class CreateSkillDraftRequest extends Request {
             } 
 
             /**
-             * <p>The version to fork from. If you do not specify this parameter, a new skill is created.</p>
+             * <p>The version from which the draft is derived. If you leave this parameter empty, a new skill is created.</p>
              * 
              * <strong>example:</strong>
              * <p>0.0.1</p>
@@ -241,7 +241,7 @@ public class CreateSkillDraftRequest extends Request {
             }
 
             /**
-             * <p>Specifies the draft version number. If not specified, the version number automatically increments.</p>
+             * <p>The target version number of the draft. If you do not specify this parameter, the version number automatically increments.</p>
              * 
              * <strong>example:</strong>
              * <p>0.0.2</p>

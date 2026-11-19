@@ -119,7 +119,7 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The business status code. The value is SUCCESS when the operation succeeds.</p>
+         * <p>The business status code. The value is SUCCESS for a successful request.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -138,7 +138,7 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code. A value of 200 indicates success.</p>
+         * <p>The HTTP status code. The value is 200 for a successful request.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -149,7 +149,7 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result message of the request.</p>
+         * <p>The request processing result message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -368,7 +368,7 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The legacy compatibility field. Use sourceType and versionSelector for new requests.</p>
+             * <p>The legacy compatibility field. For new requests, use sourceType and versionSelector.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0.0</p>
@@ -379,7 +379,7 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The skill reference version selector, which supports LABEL tags and specific VERSION numbers. If this parameter is omitted, LABEL/latest is used. Selectors are not provided for STATIC sources.</p>
+             * <p>The skill reference version selector, which supports LABEL tags and VERSION specific versions. If omitted, LABEL/latest is used. Selectors are not provided for STATIC sources.</p>
              */
             public Builder versionSelector(VersionSelector versionSelector) {
                 this.versionSelector = versionSelector;
@@ -388,6 +388,117 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
 
             public ConfiguredSkills build() {
                 return new ConfiguredSkills(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateExternalAgentResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateExternalAgentResponseBody</p>
+     */
+    public static class CredentialReferences extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("credentialId")
+        private String credentialId;
+
+        private CredentialReferences(Builder builder) {
+            this.credentialId = builder.credentialId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CredentialReferences create() {
+            return builder().build();
+        }
+
+        /**
+         * @return credentialId
+         */
+        public String getCredentialId() {
+            return this.credentialId;
+        }
+
+        public static final class Builder {
+            private String credentialId; 
+
+            private Builder() {
+            } 
+
+            private Builder(CredentialReferences model) {
+                this.credentialId = model.credentialId;
+            } 
+
+            /**
+             * <p>The credential ID. This parameter is required when passing a credential reference item and is verified by the backend.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cred-example</p>
+             */
+            public Builder credentialId(String credentialId) {
+                this.credentialId = credentialId;
+                return this;
+            }
+
+            public CredentialReferences build() {
+                return new CredentialReferences(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateExternalAgentResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateExternalAgentResponseBody</p>
+     */
+    public static class Environment extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("credentialReferences")
+        private java.util.List<CredentialReferences> credentialReferences;
+
+        private Environment(Builder builder) {
+            this.credentialReferences = builder.credentialReferences;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Environment create() {
+            return builder().build();
+        }
+
+        /**
+         * @return credentialReferences
+         */
+        public java.util.List<CredentialReferences> getCredentialReferences() {
+            return this.credentialReferences;
+        }
+
+        public static final class Builder {
+            private java.util.List<CredentialReferences> credentialReferences; 
+
+            private Builder() {
+            } 
+
+            private Builder(Environment model) {
+                this.credentialReferences = model.credentialReferences;
+            } 
+
+            /**
+             * <p>The list of credential references. You must explicitly provide this list when passing the environment object, and it cannot be null. The list is replaced in its entirety. If you do not pass environment during an update, the original binding is retained. If you pass an empty list or set environment to null, the binding is cleared. Pass only the credential ID, not the actual key.</p>
+             */
+            public Builder credentialReferences(java.util.List<CredentialReferences> credentialReferences) {
+                this.credentialReferences = credentialReferences;
+                return this;
+            }
+
+            public Environment build() {
+                return new Environment(this);
             } 
 
         } 
@@ -485,7 +596,12 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The heartbeat status. ONLINE indicates that the latest heartbeat has not exceeded the configured timeout threshold. STALE indicates that the heartbeat has timed out. UNKNOWN indicates that the heartbeat is missing or the format is invalid. Valid values: ONLINE, STALE, and UNKNOWN.</p>
+             * <p>The heartbeat status. ONLINE indicates that the most recent heartbeat did not exceed the configured timeout threshold. STALE indicates that the heartbeat has timed out. UNKNOWN indicates that the heartbeat is missing or the format is invalid. Valid values:</p>
+             * <ul>
+             * <li>ONLINE: Online.</li>
+             * <li>STALE: Heartbeat expired.</li>
+             * <li>UNKNOWN: Unknown.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>ONLINE</p>
@@ -496,7 +612,7 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last active time of the managed agent in RFC 3339 format.</p>
+             * <p>The time when the managed agent was last active, in RFC 3339 format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-01-01T00:00:00Z</p>
@@ -507,7 +623,7 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last heartbeat time of the managed agent in RFC 3339 format.</p>
+             * <p>The time of the most recent heartbeat from the managed agent, in RFC 3339 format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-01-01T00:00:00Z</p>
@@ -664,7 +780,7 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Specifies whether the quota is enabled. This field is not returned if no quota is configured.</p>
+             * <p>Indicates whether the quota is enabled. This field is not returned if no quota is configured.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -675,7 +791,7 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The quota limit type. Only token is supported.</p>
+             * <p>The quota limit type. Currently, only token is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>token</p>
@@ -686,7 +802,7 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the quota has been exceeded in the current period. This is a read-only field returned by the backend.</p>
+             * <p>Indicates whether the quota is exceeded in the current period. This field is read-only and returned by the backend.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -708,7 +824,7 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The gateway quota rule status. This is a read-only field returned by the backend.</p>
+             * <p>The gateway quota rule status. This field is read-only and returned by the backend.</p>
              * 
              * <strong>example:</strong>
              * <p>ACTIVE</p>
@@ -730,7 +846,7 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of tokens consumed in the current period. This is a read-only field returned by the backend.</p>
+             * <p>The number of tokens consumed in the current period. This field is read-only and returned by the backend.</p>
              * 
              * <strong>example:</strong>
              * <p>12345</p>
@@ -1048,7 +1164,7 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The version that has taken effect at runtime. This is a read-only field.</p>
+             * <p>The effective version applied at runtime. This field is read-only.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0.0</p>
@@ -1059,7 +1175,7 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the skill is from a fixed template. This is a read-only field. Template items cannot be removed.</p>
+             * <p>Indicates whether the skill is from a fixed template. This field is read-only, and template items cannot be removed.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1103,7 +1219,7 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The current target version compatible with legacy clients. New clients use resolvedVersion and determine the effective runtime version based on appliedVersion.</p>
+             * <p>The current target version for compatibility with legacy clients. New clients use resolvedVersion and determine the effective runtime version based on appliedVersion.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0.0</p>
@@ -1114,7 +1230,7 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The skill reference version selector, which supports LABEL tags and specific VERSION numbers. If this parameter is omitted, LABEL/latest is used. Selectors are not provided for STATIC sources.</p>
+             * <p>The skill reference version selector, which supports LABEL tags and VERSION specific versions. If omitted, LABEL/latest is used. Selectors are not provided for STATIC sources.</p>
              */
             public Builder versionSelector(SkillsVersionSelector versionSelector) {
                 this.versionSelector = versionSelector;
@@ -1377,6 +1493,9 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("environment")
+        private Environment environment;
+
         @com.aliyun.core.annotation.NameInMap("externalAgentStatus")
         private ExternalAgentStatus externalAgentStatus;
 
@@ -1429,6 +1548,7 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
             this.createdAt = builder.createdAt;
             this.deployType = builder.deployType;
             this.description = builder.description;
+            this.environment = builder.environment;
             this.externalAgentStatus = builder.externalAgentStatus;
             this.instruction = builder.instruction;
             this.latestSpecVersion = builder.latestSpecVersion;
@@ -1494,6 +1614,13 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return environment
+         */
+        public Environment getEnvironment() {
+            return this.environment;
         }
 
         /**
@@ -1608,6 +1735,7 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
             private String createdAt; 
             private String deployType; 
             private String description; 
+            private Environment environment; 
             private ExternalAgentStatus externalAgentStatus; 
             private String instruction; 
             private Long latestSpecVersion; 
@@ -1634,6 +1762,7 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
                 this.createdAt = model.createdAt;
                 this.deployType = model.deployType;
                 this.description = model.description;
+                this.environment = model.environment;
                 this.externalAgentStatus = model.externalAgentStatus;
                 this.instruction = model.instruction;
                 this.latestSpecVersion = model.latestSpecVersion;
@@ -1707,10 +1836,18 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
              * <p>The description of the managed agent.</p>
              * 
              * <strong>example:</strong>
-             * <p>Code review agent running in the user environment</p>
+             * <p>A code review agent that runs in the user environment</p>
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * <p>The credential binding configuration.</p>
+             */
+            public Builder environment(Environment environment) {
+                this.environment = environment;
                 return this;
             }
 
@@ -1723,7 +1860,7 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The agent instructions used to guide the behavior of the agent.</p>
+             * <p>The agent instruction, which is used to guide the behavior of the agent.</p>
              * 
              * <strong>example:</strong>
              * <p>You are a code review assistant</p>
@@ -1764,7 +1901,7 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The model configuration source. PLATFORM indicates that the platform parses and delivers the model configuration. RUNTIME indicates that the external runtime manages the model itself, and the model parameter cannot be passed at the same time. Valid values: PLATFORM (platform model) and RUNTIME (runtime model).</p>
+             * <p>The source of the model configuration. PLATFORM indicates that the platform parses and delivers the model configuration. RUNTIME indicates that the external runtime manages the model itself, and the model parameter cannot be passed at the same time. Valid values: PLATFORM (platform model) and RUNTIME (runtime model).</p>
              * 
              * <strong>example:</strong>
              * <p>PLATFORM</p>

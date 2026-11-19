@@ -88,7 +88,7 @@ public class GetWorkspacePluginRequest extends Request {
         }
 
         /**
-         * <p>The workspace component identifier. The collaboration value corresponds to the Collaboration component in the console. Other component identifiers retain their original values in the API parameter enum.</p>
+         * <p>The identifier of the workspace component. The value collaboration corresponds to the Collaboration component in the console. Other component identifiers retain their original values from the API parameter enumeration.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

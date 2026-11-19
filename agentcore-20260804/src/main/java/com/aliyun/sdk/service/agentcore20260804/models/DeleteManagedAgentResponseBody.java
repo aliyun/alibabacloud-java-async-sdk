@@ -119,7 +119,7 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The business status code. The value is SUCCESS if the request is successful.</p>
+         * <p>The business status code. The value is SUCCESS for a successful request.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -138,7 +138,7 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code. The value is 200 if the request is successful.</p>
+         * <p>The HTTP status code. The value is 200 for a successful request.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -383,7 +383,7 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The inbound access mode.</p>
+             * <p>The inbound access method.</p>
              * 
              * <strong>example:</strong>
              * <p>API_KEY</p>
@@ -405,7 +405,7 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the managed Harness agent.</p>
+             * <p>The managed Harness agent ID.</p>
              * 
              * <strong>example:</strong>
              * <p>agent-1</p>
