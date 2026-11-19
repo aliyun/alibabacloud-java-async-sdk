@@ -125,7 +125,10 @@ public class RevokeResourcePermissionRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -303,7 +306,7 @@ public class RevokeResourcePermissionRequest extends Request {
             } 
 
             /**
-             * <p>The list of operations.</p>
+             * <p>The operation list.</p>
              */
             public Builder operateList(java.util.List<String> operateList) {
                 this.operateList = operateList;
@@ -311,10 +314,10 @@ public class RevokeResourcePermissionRequest extends Request {
             }
 
             /**
-             * <p>The reason for revoking the authorization.</p>
+             * <p>The revocation reason.</p>
              * 
              * <strong>example:</strong>
-             * <p>xx</p>
+             * <p>The business authorization has expired</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -322,7 +325,7 @@ public class RevokeResourcePermissionRequest extends Request {
             }
 
             /**
-             * <p>The list of resources.</p>
+             * <p>The resources.</p>
              * <p>This parameter is required.</p>
              */
             public Builder resourceList(java.util.List<ResourceList> resourceList) {

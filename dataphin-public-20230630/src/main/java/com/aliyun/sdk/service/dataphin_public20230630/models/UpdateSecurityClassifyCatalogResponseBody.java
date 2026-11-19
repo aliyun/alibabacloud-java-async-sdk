@@ -130,7 +130,7 @@ public class UpdateSecurityClassifyCatalogResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The full path of the updated folder.</p>
+         * <p>The full path of the updated catalog.</p>
          * 
          * <strong>example:</strong>
          * <p>/d1/d3/</p>
@@ -152,7 +152,7 @@ public class UpdateSecurityClassifyCatalogResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The backend exception details.</p>
+         * <p>The details of the backend exception.</p>
          * 
          * <strong>example:</strong>
          * <p>internal error</p>
@@ -174,7 +174,7 @@ public class UpdateSecurityClassifyCatalogResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

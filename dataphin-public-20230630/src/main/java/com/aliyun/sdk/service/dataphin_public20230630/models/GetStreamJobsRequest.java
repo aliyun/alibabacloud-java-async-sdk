@@ -127,11 +127,7 @@ public class GetStreamJobsRequest extends Request {
         }
 
         /**
-         * <p>The Dataphin environment. Valid values:</p>
-         * <ul>
-         * <li>DEV</li>
-         * <li>PROD.</li>
-         * </ul>
+         * <p>The Dataphin environment. Valid values: DEV and PROD.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,7 +153,10 @@ public class GetStreamJobsRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);

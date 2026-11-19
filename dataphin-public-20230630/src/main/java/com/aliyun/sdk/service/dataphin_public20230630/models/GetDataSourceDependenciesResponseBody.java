@@ -130,7 +130,7 @@ public class GetDataSourceDependenciesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dependency records.</p>
+         * <p>The reference records.</p>
          */
         public Builder dependencyList(java.util.List<DependencyList> dependencyList) {
             this.dependencyList = dependencyList;
@@ -171,7 +171,7 @@ public class GetDataSourceDependenciesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

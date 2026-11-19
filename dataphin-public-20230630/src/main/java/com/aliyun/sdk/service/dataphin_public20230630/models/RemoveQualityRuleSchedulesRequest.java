@@ -125,7 +125,10 @@ public class RemoveQualityRuleSchedulesRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The operator user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -134,7 +137,7 @@ public class RemoveQualityRuleSchedulesRequest extends Request {
         }
 
         /**
-         * <p>The unbinding instruction.</p>
+         * <p>The unbind command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder removeCommand(RemoveCommand removeCommand) {
@@ -241,11 +244,11 @@ public class RemoveQualityRuleSchedulesRequest extends Request {
             }
 
             /**
-             * <p>The ID of the monitored object.</p>
+             * <p>The monitored object ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>平均值</p>
+             * <p>Average value</p>
              */
             public Builder watchId(Long watchId) {
                 this.watchId = watchId;

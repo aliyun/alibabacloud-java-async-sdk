@@ -128,8 +128,8 @@ public class FixDataRequest extends Request {
         /**
          * <p>The environment identifier. Valid values:</p>
          * <ul>
-         * <li>DEV: development environment. </li>
-         * <li>PROD (default): production environment.</li>
+         * <li>DEV: development environment </li>
+         * <li>PROD: production environment (default)</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -142,7 +142,7 @@ public class FixDataRequest extends Request {
         }
 
         /**
-         * <p>The command to rerun downstream nodes to fix data link issues. You can choose to force a rerun.</p>
+         * <p>Reruns downstream nodes to repair pipeline data and allows you to force the rerun.</p>
          * <p>This parameter is required.</p>
          */
         public Builder fixDataCommand(FixDataCommand fixDataCommand) {
@@ -166,7 +166,10 @@ public class FixDataRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -313,7 +316,7 @@ public class FixDataRequest extends Request {
             } 
 
             /**
-             * <p>The field IDs. This parameter is available when the node is a logical table instance ID. If you do not specify this parameter, the full table is used by default.</p>
+             * <p>The field instance IDs. This parameter is applicable when the node is a logical table instance. If you do not specify this parameter, the entire table is used by default.</p>
              */
             public Builder fieldInstanceIdList(java.util.List<String> fieldInstanceIdList) {
                 this.fieldInstanceIdList = fieldInstanceIdList;
@@ -446,7 +449,7 @@ public class FixDataRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to rerun the root instance. If you do not specify this parameter, the default value is true.</p>
+             * <p>Specifies whether to rerun the root instance. Default value: true.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -457,7 +460,7 @@ public class FixDataRequest extends Request {
             }
 
             /**
-             * <p>The downstream instances. If you have specified a downstream range, you do not need to specify this parameter. Otherwise, you must specify the list of downstream instances.</p>
+             * <p>The downstream instances. If a downstream range is selected, you do not need to specify this parameter. Otherwise, you must provide a list of downstream instances.</p>
              */
             public Builder downStreamInstanceIdList(java.util.List<DownStreamInstanceIdList> downStreamInstanceIdList) {
                 this.downStreamInstanceIdList = downStreamInstanceIdList;
@@ -467,10 +470,10 @@ public class FixDataRequest extends Request {
             /**
              * <p>The downstream range. Valid values:</p>
              * <ul>
-             * <li>ALL_FAILED_INSTANCE: all failed instances.</li>
-             * <li>ALL_INSTANCE: all instances.</li>
-             * <li>ALL_FINAL_INSTANCE: all desired state instances.</li>
-             * <li>If you do not specify this parameter, the rerun is performed based on the specified downstream instances.</li>
+             * <li>ALL_FAILED_INSTANCE: all failed instances</li>
+             * <li>ALL_INSTANCE: all instances</li>
+             * <li>ALL_FINAL_INSTANCE: all instances in the desired state
+             * If you do not specify this parameter, the rerun is performed based on the specified downstream instances.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -482,7 +485,7 @@ public class FixDataRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to force a rerun.</p>
+             * <p>Specifies whether to force the rerun.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>

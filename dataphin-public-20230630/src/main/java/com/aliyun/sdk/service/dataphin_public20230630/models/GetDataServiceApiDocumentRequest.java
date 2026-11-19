@@ -164,7 +164,7 @@ public class GetDataServiceApiDocumentRequest extends Request {
         }
 
         /**
-         * <p>The version.</p>
+         * <p>The version ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

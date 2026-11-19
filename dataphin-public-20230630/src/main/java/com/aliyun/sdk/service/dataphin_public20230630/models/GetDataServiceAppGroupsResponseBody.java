@@ -119,7 +119,7 @@ public class GetDataServiceAppGroupsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of application groups.</p>
+         * <p>The application group list.</p>
          */
         public Builder appGroupList(java.util.List<AppGroupList> appGroupList) {
             this.appGroupList = appGroupList;
@@ -138,7 +138,7 @@ public class GetDataServiceAppGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The HTTP response code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -149,7 +149,7 @@ public class GetDataServiceAppGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the backend exception.</p>
+         * <p>The backend error details.</p>
          * 
          * <strong>example:</strong>
          * <p>internal error</p>
@@ -171,7 +171,7 @@ public class GetDataServiceAppGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

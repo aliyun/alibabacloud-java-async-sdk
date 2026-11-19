@@ -140,7 +140,10 @@ public class RevokeDataServiceApiRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The operator ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -162,7 +165,7 @@ public class RevokeDataServiceApiRequest extends Request {
         }
 
         /**
-         * <p>The revoke instruction.</p>
+         * <p>The authorization command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder revokeCommand(RevokeCommand revokeCommand) {
@@ -311,7 +314,7 @@ public class RevokeDataServiceApiRequest extends Request {
             }
 
             /**
-             * <p>The ID of the application.</p>
+             * <p>The app ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1203</p>
@@ -325,7 +328,7 @@ public class RevokeDataServiceApiRequest extends Request {
              * <p>The permission type. Valid values:</p>
              * <ul>
              * <li>USE: use permission</li>
-             * <li>DELEGATION: delegation permission.</li>
+             * <li>DELEGATION: delegation permission</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -340,7 +343,7 @@ public class RevokeDataServiceApiRequest extends Request {
              * <p>The API environment. Valid values:</p>
              * <ul>
              * <li>DEV: development environment</li>
-             * <li>PROD: production environment.</li>
+             * <li>PROD: production environment</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -355,7 +358,7 @@ public class RevokeDataServiceApiRequest extends Request {
              * <p>The authorization object type. Valid values:</p>
              * <ul>
              * <li>APP: application</li>
-             * <li>USER: user.</li>
+             * <li>USER: user</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -367,7 +370,7 @@ public class RevokeDataServiceApiRequest extends Request {
             }
 
             /**
-             * <p>The reason for the request.</p>
+             * <p>The reason for the application.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

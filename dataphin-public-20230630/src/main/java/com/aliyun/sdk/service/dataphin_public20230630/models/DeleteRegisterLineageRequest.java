@@ -112,7 +112,7 @@ public class DeleteRegisterLineageRequest extends Request {
         }
 
         /**
-         * <p>The command for deleting registered data lineage.</p>
+         * <p>The command to delete registered lineage.</p>
          * <p>This parameter is required.</p>
          */
         public Builder deleteRegisterLineageCommand(DeleteRegisterLineageCommand deleteRegisterLineageCommand) {
@@ -136,7 +136,10 @@ public class DeleteRegisterLineageRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -295,7 +298,7 @@ public class DeleteRegisterLineageRequest extends Request {
             } 
 
             /**
-             * <p>The catalog, which is an asset property. For tables, the catalog of compute source tables or logical tables is uniformly set to dataphin. This property is used to identify the corresponding asset by property when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property does not need to be specified.</p>
+             * <p>The catalog of the asset. For tables, the catalog of compute source tables or logical tables is uniformly set to dataphin. This property is used to identify the corresponding asset based on properties when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property is not required.</p>
              * 
              * <strong>example:</strong>
              * <p>dataphin</p>
@@ -306,7 +309,7 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
-             * <p>The environment to which the asset belongs. This property is used to identify the corresponding asset by property when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property does not need to be specified.</p>
+             * <p>The environment to which the asset belongs. This property is used to identify the corresponding asset based on properties when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property is not required.</p>
              * 
              * <strong>example:</strong>
              * <p>DEV, PROD</p>
@@ -325,7 +328,7 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
-             * <p>The asset GUID. This parameter is required when ReferenceType is set to BY_GUID.</p>
+             * <p>The GUID of the asset. This parameter is required when ReferenceType is set to BY_GUID.</p>
              * 
              * <strong>example:</strong>
              * <p>odps.300000001.project1.table1</p>
@@ -336,7 +339,7 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
-             * <p>The asset type. Set this parameter as needed.</p>
+             * <p>The asset type. Specify this parameter as needed.</p>
              * 
              * <strong>example:</strong>
              * <p>COLUMN</p>
@@ -347,7 +350,7 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
-             * <p>The asset name. This property is used to identify the corresponding asset by property when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property does not need to be specified.</p>
+             * <p>The name of the asset. This property is used to identify the corresponding asset based on properties when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property is not required.</p>
              * 
              * <strong>example:</strong>
              * <p>column1</p>
@@ -358,7 +361,7 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
-             * <p>The GUID of the parent asset. If the current object is a field, parentGuid is the GUID of the table to which the field belongs.</p>
+             * <p>The GUID of the parent asset. If the current object is a field, the parent GUID is the GUID of the table to which the field belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>odps.300000001.project1.table1</p>
@@ -369,7 +372,7 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
-             * <p>The asset reference data type. Valid values: BY_GUID, BY_PROPERTY.</p>
+             * <p>The asset reference data type. Valid values: BY_GUID and BY_PROPERTY.</p>
              * 
              * <strong>example:</strong>
              * <p>BY_GUID, BY_PROPERTY</p>
@@ -380,7 +383,7 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
-             * <p>The schema, which is an asset property. For tables, this is typically a project or business unit. This property is used to identify the corresponding asset by property when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property does not need to be specified.</p>
+             * <p>The schema of the asset. For tables, this is generally a project or a business unit. This property is used to identify the corresponding asset based on properties when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property is not required.</p>
              * 
              * <strong>example:</strong>
              * <p>project1, bizUnit1</p>
@@ -541,7 +544,7 @@ public class DeleteRegisterLineageRequest extends Request {
             } 
 
             /**
-             * <p>The catalog, which is an asset property. For tables, the catalog of compute source tables or logical tables is uniformly set to dataphin. This property is used to identify the corresponding asset by property when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property does not need to be specified.</p>
+             * <p>The catalog of the asset. For tables, the catalog of compute source tables or logical tables is uniformly set to dataphin. This property is used to identify the corresponding asset based on properties when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property is not required.</p>
              * 
              * <strong>example:</strong>
              * <p>dataphin</p>
@@ -552,7 +555,7 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
-             * <p>The environment to which the asset belongs. This property is used to identify the corresponding asset by property when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property does not need to be specified.</p>
+             * <p>The environment to which the asset belongs. This property is used to identify the corresponding asset based on properties when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property is not required.</p>
              * 
              * <strong>example:</strong>
              * <p>DEV, PROD</p>
@@ -571,7 +574,7 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
-             * <p>The asset GUID. This parameter is required when ReferenceType is set to BY_GUID.</p>
+             * <p>The GUID of the asset. This parameter is required when ReferenceType is set to BY_GUID.</p>
              * 
              * <strong>example:</strong>
              * <p>odps.300000001.project1.table1</p>
@@ -582,7 +585,7 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
-             * <p>The asset type. Set this parameter as needed.</p>
+             * <p>The asset type. Specify this parameter as needed.</p>
              * 
              * <strong>example:</strong>
              * <p>COLUMN</p>
@@ -593,7 +596,7 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
-             * <p>The asset name. This property is used to identify the corresponding asset by property when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property does not need to be specified.</p>
+             * <p>The name of the asset. This property is used to identify the corresponding asset based on properties when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property is not required.</p>
              * 
              * <strong>example:</strong>
              * <p>column1</p>
@@ -604,7 +607,7 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
-             * <p>The GUID of the parent asset. If the current object is a field, parentGuid is the GUID of the table to which the field belongs.</p>
+             * <p>The GUID of the parent asset. If the current object is a field, the parent GUID is the GUID of the table to which the field belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>odps.300000001.project1.table1</p>
@@ -615,7 +618,7 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
-             * <p>The asset reference data type. Valid values: BY_GUID, BY_PROPERTY.</p>
+             * <p>The asset reference data type. Valid values: BY_GUID and BY_PROPERTY.</p>
              * 
              * <strong>example:</strong>
              * <p>BY_GUID, BY_PROPERTY</p>
@@ -626,7 +629,7 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
-             * <p>The schema, which is an asset property. For tables, this is typically a project or business unit. This property is used to identify the corresponding asset by property when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property does not need to be specified.</p>
+             * <p>The schema of the asset. For tables, this is generally a project or a business unit. This property is used to identify the corresponding asset based on properties when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property is not required.</p>
              * 
              * <strong>example:</strong>
              * <p>project1, bizUnit1</p>
@@ -889,7 +892,7 @@ public class DeleteRegisterLineageRequest extends Request {
             } 
 
             /**
-             * <p>The catalog, which is an asset property. For tables, the catalog of compute source tables or logical tables is uniformly set to dataphin. This property is used to identify the corresponding asset by property when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property does not need to be specified.</p>
+             * <p>The catalog of the asset. For tables, the catalog of compute source tables or logical tables is uniformly set to dataphin. This property is used to identify the corresponding asset based on properties when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property is not required.</p>
              * 
              * <strong>example:</strong>
              * <p>dataphin</p>
@@ -900,7 +903,7 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
-             * <p>The environment to which the asset belongs. This property is used to identify the corresponding asset by property when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property does not need to be specified.</p>
+             * <p>The environment to which the asset belongs. This property is used to identify the corresponding asset based on properties when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property is not required.</p>
              * 
              * <strong>example:</strong>
              * <p>DEV, PROD</p>
@@ -919,7 +922,7 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
-             * <p>The asset GUID. This parameter is required when ReferenceType is set to BY_GUID.</p>
+             * <p>The GUID of the asset. This parameter is required when ReferenceType is set to BY_GUID.</p>
              * 
              * <strong>example:</strong>
              * <p>odps.300000001.project1.table1</p>
@@ -930,7 +933,7 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
-             * <p>The asset subtype. Specify this parameter only when MetadataType is set to TABLE and ReferenceType is not BY_GUID.</p>
+             * <p>The subtype of the asset. Specify this parameter only when MetadataType is set to TABLE and ReferenceType is not set to BY_GUID.</p>
              * 
              * <strong>example:</strong>
              * <p>PHYSICAL_TABLE, PHYSICAL_VIEW, PHYSICAL_MATERIALIZED_VIEW, DATASOURCE_TABLE, DATASOURCE_VIEW, DATASOURCE_MATERIALIZED_VIEW, DIM_NORMAL, DIM_LEVEL, DIM_ENUM, DIM_VIRTUAL, FACT_EVENT, FACT_PROCESS, FACT_SNAPSHOT, SUM_BIZ_UNIT</p>
@@ -941,7 +944,7 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
-             * <p>The asset type. Set this parameter as needed.</p>
+             * <p>The Asset Type. Specify this parameter based on actual conditions.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -953,7 +956,7 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
-             * <p>The asset name. This property is used to identify the corresponding asset by property when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property does not need to be specified.</p>
+             * <p>The name of the asset. This property is used to identify the corresponding asset based on properties when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property is not required.</p>
              * 
              * <strong>example:</strong>
              * <p>table1</p>
@@ -976,7 +979,7 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
-             * <p>The schema, which is an asset property. For tables, this is typically a project or business unit. This property is used to identify the corresponding asset by property when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property does not need to be specified.</p>
+             * <p>The schema of the asset. For tables, this is generally a project or a business unit. This property is used to identify the corresponding asset based on properties when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property is not required.</p>
              * 
              * <strong>example:</strong>
              * <p>project1, bizUnit1</p>
@@ -1139,7 +1142,7 @@ public class DeleteRegisterLineageRequest extends Request {
             } 
 
             /**
-             * <p>The catalog, which is an asset property. For tables, the catalog of compute source tables or logical tables is uniformly set to dataphin. This property is used to identify the corresponding asset by property when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property does not need to be specified.</p>
+             * <p>The catalog of the asset. For tables, the catalog of compute source tables or logical tables is uniformly set to dataphin. This property is used to identify the corresponding asset based on properties when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property is not required.</p>
              * 
              * <strong>example:</strong>
              * <p>dataphin</p>
@@ -1150,7 +1153,7 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
-             * <p>The environment to which the asset belongs. This property is used to identify the corresponding asset by property when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property does not need to be specified.</p>
+             * <p>The environment to which the asset belongs. This property is used to identify the corresponding asset based on properties when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property is not required.</p>
              * 
              * <strong>example:</strong>
              * <p>DEV, PROD</p>
@@ -1169,7 +1172,7 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
-             * <p>The asset GUID. This parameter is required when ReferenceType is set to BY_GUID.</p>
+             * <p>The GUID of the asset. This parameter is required when ReferenceType is set to BY_GUID.</p>
              * 
              * <strong>example:</strong>
              * <p>odps.300000001.project1.table1</p>
@@ -1180,7 +1183,7 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
-             * <p>The asset subtype. Specify this parameter only when MetadataType is set to TABLE and ReferenceType is not BY_GUID.</p>
+             * <p>The subtype of the asset. Specify this parameter only when MetadataType is set to TABLE and ReferenceType is not set to BY_GUID.</p>
              * 
              * <strong>example:</strong>
              * <p>PHYSICAL_TABLE, PHYSICAL_VIEW, PHYSICAL_MATERIALIZED_VIEW, DATASOURCE_TABLE, DATASOURCE_VIEW, DATASOURCE_MATERIALIZED_VIEW, DIM_NORMAL, DIM_LEVEL, DIM_ENUM, DIM_VIRTUAL, FACT_EVENT, FACT_PROCESS, FACT_SNAPSHOT,SUM_BIZ_UNIT</p>
@@ -1191,7 +1194,7 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
-             * <p>The asset type. Set this parameter as needed.</p>
+             * <p>The Asset Type. Specify this parameter based on actual conditions.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1203,7 +1206,7 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
-             * <p>The asset name. This property is used to identify the corresponding asset by property when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property does not need to be specified.</p>
+             * <p>The name of the asset. This property is used to identify the corresponding asset based on properties when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property is not required.</p>
              * 
              * <strong>example:</strong>
              * <p>table1</p>
@@ -1226,7 +1229,7 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
-             * <p>The schema, which is an asset property. For tables, this is typically a project or business unit. This property is used to identify the corresponding asset by property when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property does not need to be specified.</p>
+             * <p>The schema of the asset. For tables, this is generally a project or a business unit. This property is used to identify the corresponding asset based on properties when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property is not required.</p>
              * 
              * <strong>example:</strong>
              * <p>project1, bizUnit1</p>
@@ -1350,7 +1353,7 @@ public class DeleteRegisterLineageRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to automatically delete the object lineage after all detailedLineage entries are deleted. Default value: true.</p>
+             * <p>Specifies whether to automatically delete the object lineage after all detailed lineages are deleted. Default value: true.</p>
              */
             public Builder cascadeDeleteLineage(Boolean cascadeDeleteLineage) {
                 this.cascadeDeleteLineage = cascadeDeleteLineage;
@@ -1358,7 +1361,7 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
-             * <p>The detailed lineage relationships. For tables, the detailed lineage relationships refer to field-level lineage.</p>
+             * <p>The detailed lineage. For tables, the detailed lineage refers to field lineage.</p>
              */
             public Builder detailedLineages(java.util.List<DetailedLineages> detailedLineages) {
                 this.detailedLineages = detailedLineages;
@@ -1366,7 +1369,7 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
-             * <p>The source of the data lineage.</p>
+             * <p>The source of the lineage.</p>
              * <p>This parameter is required.</p>
              */
             public Builder source(DeleteRegisterLineageCommandSource source) {
@@ -1375,7 +1378,7 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
-             * <p>The target of the data lineage.</p>
+             * <p>The target of the lineage.</p>
              * <p>This parameter is required.</p>
              */
             public Builder target(DeleteRegisterLineageCommandTarget target) {
@@ -1395,7 +1398,7 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
-             * <p>The current user ID.</p>
+             * <p>The ID of the current user.</p>
              * 
              * <strong>example:</strong>
              * <p>300004567</p>

@@ -125,7 +125,10 @@ public class UpdateStandardWordRootRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -134,7 +137,7 @@ public class UpdateStandardWordRootRequest extends Request {
         }
 
         /**
-         * <p>The update instruction.</p>
+         * <p>The update command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder updateCommand(UpdateCommand updateCommand) {
@@ -247,7 +250,7 @@ public class UpdateStandardWordRootRequest extends Request {
             } 
 
             /**
-             * <p>The abbreviation of the root word.</p>
+             * <p>The abbreviation of the word root.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -259,7 +262,7 @@ public class UpdateStandardWordRootRequest extends Request {
             }
 
             /**
-             * <p>The description of the root word.</p>
+             * <p>The description of the word root.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -270,7 +273,7 @@ public class UpdateStandardWordRootRequest extends Request {
             }
 
             /**
-             * <p>The full name of the root word.</p>
+             * <p>The full name of the word root.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -282,11 +285,11 @@ public class UpdateStandardWordRootRequest extends Request {
             }
 
             /**
-             * <p>The name of the root word.</p>
+             * <p>The name of the word root.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>平均值</p>
+             * <p>Average</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -294,11 +297,11 @@ public class UpdateStandardWordRootRequest extends Request {
             }
 
             /**
-             * <p>The name of the root word before the update.</p>
+             * <p>The original name of the word root.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>平均值</p>
+             * <p>Average</p>
              */
             public Builder oldName(String oldName) {
                 this.oldName = oldName;

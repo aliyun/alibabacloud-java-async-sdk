@@ -112,7 +112,7 @@ public class AssignQualityRuleOfAllRuleScopeSchedulesRequest extends Request {
         }
 
         /**
-         * <p>The assignment binding command.</p>
+         * <p>The binding assignment command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder assignCommand(AssignCommand assignCommand) {
@@ -136,7 +136,7 @@ public class AssignQualityRuleOfAllRuleScopeSchedulesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the operator user.</p>
+         * <p>The operator user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>30001011</p>
@@ -223,7 +223,7 @@ public class AssignQualityRuleOfAllRuleScopeSchedulesRequest extends Request {
             } 
 
             /**
-             * <p>The rule ID.</p>
+             * <p>The rule IDs.</p>
              * <p>This parameter is required.</p>
              */
             public Builder ruleIdList(java.util.List<Long> ruleIdList) {
@@ -232,7 +232,7 @@ public class AssignQualityRuleOfAllRuleScopeSchedulesRequest extends Request {
             }
 
             /**
-             * <p>The schedule ID.</p>
+             * <p>The schedule IDs.</p>
              * <p>This parameter is required.</p>
              */
             public Builder scheduleIdList(java.util.List<Long> scheduleIdList) {
@@ -245,7 +245,7 @@ public class AssignQualityRuleOfAllRuleScopeSchedulesRequest extends Request {
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>平均值</p>
+             * <p>Average</p>
              */
             public Builder watchId(Long watchId) {
                 this.watchId = watchId;

@@ -112,7 +112,7 @@ public class ListFilesRequest extends Request {
         }
 
         /**
-         * <p>Query conditions</p>
+         * <p>The query conditions.</p>
          * <p>This parameter is required.</p>
          */
         public Builder listQuery(ListQuery listQuery) {
@@ -123,7 +123,7 @@ public class ListFilesRequest extends Request {
         }
 
         /**
-         * <p>Tenant ID</p>
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,7 +136,10 @@ public class ListFilesRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -248,19 +251,19 @@ public class ListFilesRequest extends Request {
             } 
 
             /**
-             * <p>Menu tree category</p>
+             * <p>The menu tree category. Valid values:</p>
              * <ul>
-             * <li>Ad hoc query: tempCode</li>
-             * <li>Code task: codeManage</li>
-             * <li>Offline pipeline: offlinePipeline</li>
-             * <li>Pipeline custom component: offlinePipelineCustomPlugin</li>
-             * <li>Sync task: dataX</li>
-             * <li>Real-time meta table: streamMeta</li>
-             * <li>Real-time custom source: streamCustomDataSource</li>
-             * <li>Real-time computing template: streamTemplate</li>
-             * <li>Resource management: resourceManage</li>
-             * <li>Offline function: udfResource</li>
-             * <li>Real-time function: streamFunction</li>
+             * <li>tempCode: Ad hoc query.</li>
+             * <li>codeManage: Code task.</li>
+             * <li>offlinePipeline: Offline pipeline.</li>
+             * <li>offlinePipelineCustomPlugin: Custom pipeline component.</li>
+             * <li>dataX: Synchronization task.</li>
+             * <li>streamMeta: Real-time metatable.</li>
+             * <li>streamCustomDataSource: Real-time custom data source.</li>
+             * <li>streamTemplate: Real-time computing template.</li>
+             * <li>resourceManage: Resource management.</li>
+             * <li>udfResource: Offline function.</li>
+             * <li>streamFunction: Real-time function.</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -273,7 +276,7 @@ public class ListFilesRequest extends Request {
             }
 
             /**
-             * <p>File directory</p>
+             * <p>The file directory.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -285,7 +288,7 @@ public class ListFilesRequest extends Request {
             }
 
             /**
-             * <p>Environment identifier</p>
+             * <p>The environment identifier. Valid values:</p>
              * <ul>
              * <li>DEV</li>
              * <li>PROD</li>
@@ -301,7 +304,7 @@ public class ListFilesRequest extends Request {
             }
 
             /**
-             * <p>Project ID</p>
+             * <p>The project ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -313,10 +316,10 @@ public class ListFilesRequest extends Request {
             }
 
             /**
-             * <p>Whether to recursively traverse and query</p>
+             * <p>Specifies whether to recursively traverse and query the directory. Valid values:</p>
              * <ul>
-             * <li>true: Yes, returns all nodes under the directory</li>
-             * <li>false: No, returns only the first-level nodes under the directory</li>
+             * <li>true: Yes. Returns all nodes under the directory.</li>
+             * <li>false: No. Returns only the first-level nodes under the directory.</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 

@@ -142,7 +142,7 @@ public class GetDataServiceApiCallTrendRequest extends Request {
         }
 
         /**
-         * <p>The end time in the format of yyyy-MM-dd HH:mm:ss.</p>
+         * <p>The end time. Format: yyyy-MM-dd HH:mm:ss.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -168,7 +168,10 @@ public class GetDataServiceApiCallTrendRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -190,7 +193,7 @@ public class GetDataServiceApiCallTrendRequest extends Request {
         }
 
         /**
-         * <p>The start time in the format of yyyy-MM-dd HH:mm:ss.</p>
+         * <p>The start time. Format: yyyy-MM-dd HH:mm:ss.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

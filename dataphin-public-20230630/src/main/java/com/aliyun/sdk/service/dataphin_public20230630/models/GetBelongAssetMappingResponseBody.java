@@ -354,7 +354,7 @@ public class GetBelongAssetMappingResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The asset type. Valid values: COLUMN (field) and INDEX (metric).</p>
+             * <p>The asset type. Valid values: COLUMN for field, INDEX for metric.</p>
              * 
              * <strong>example:</strong>
              * <p>COLUMN</p>

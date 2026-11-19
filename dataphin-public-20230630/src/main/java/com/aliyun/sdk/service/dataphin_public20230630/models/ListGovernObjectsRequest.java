@@ -136,7 +136,7 @@ public class ListGovernObjectsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the operator user.</p>
+         * <p>The ID of the operator.</p>
          * 
          * <strong>example:</strong>
          * <p>30001011</p>
@@ -286,15 +286,7 @@ public class ListGovernObjectsRequest extends Request {
             } 
 
             /**
-             * <p>The governance item type. Valid values:</p>
-             * <ul>
-             * <li>TABLE</li>
-             * <li>DATASOURCE_TABLE</li>
-             * <li>DATASOURCE</li>
-             * <li>INDEX</li>
-             * <li>REALTIME_LOGICAL_TABLE</li>
-             * <li>QD_FEATURE</li>
-             * </ul>
+             * <p>The governance item type. Valid values: TABLE, DATASOURCE_TABLE, DATASOURCE, INDEX, REALTIME_LOGICAL_TABLE, and QD_FEATURE.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -350,7 +342,7 @@ public class ListGovernObjectsRequest extends Request {
             }
 
             /**
-             * <p>The list of project names used to filter results.</p>
+             * <p>The list of project names used for filtering.</p>
              */
             public Builder projectNames(java.util.List<String> projectNames) {
                 this.projectNames = projectNames;
@@ -358,13 +350,7 @@ public class ListGovernObjectsRequest extends Request {
             }
 
             /**
-             * <p>The list of governance object statuses. Valid values:</p>
-             * <ul>
-             * <li>NEW</li>
-             * <li>VERIFY</li>
-             * <li>FINISHED</li>
-             * <li>IGNORE</li>
-             * </ul>
+             * <p>The list of governance object statuses. Valid values: NEW, VERIFY, FINISHED, and IGNORE.</p>
              */
             public Builder statusList(java.util.List<String> statusList) {
                 this.statusList = statusList;
@@ -372,12 +358,7 @@ public class ListGovernObjectsRequest extends Request {
             }
 
             /**
-             * <p>The view type. Valid values:</p>
-             * <ul>
-             * <li>ALL</li>
-             * <li>OWNER</li>
-             * <li>PROJECT</li>
-             * </ul>
+             * <p>The view type. Valid values: ALL, OWNER, and PROJECT.</p>
              * 
              * <strong>example:</strong>
              * <p>ALL</p>

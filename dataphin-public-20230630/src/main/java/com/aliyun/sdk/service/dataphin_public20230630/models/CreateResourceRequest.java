@@ -136,7 +136,10 @@ public class CreateResourceRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -290,11 +293,11 @@ public class CreateResourceRequest extends Request {
             } 
 
             /**
-             * <p>The commit remarks.</p>
+             * <p>The submission comment.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>xx 测试</p>
+             * <p>xx test</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -302,12 +305,7 @@ public class CreateResourceRequest extends Request {
             }
 
             /**
-             * <p>The compute engine type. Valid values:</p>
-             * <ul>
-             * <li>MAX_COMPUTE</li>
-             * <li>HADOOP</li>
-             * <li>NONE.</li>
-             * </ul>
+             * <p>The compute engine type. Valid values: MAX_COMPUTE, HADOOP, and NONE.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -319,11 +317,11 @@ public class CreateResourceRequest extends Request {
             }
 
             /**
-             * <p>The description of the resource file.</p>
+             * <p>The resource description.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>xx 测试</p>
+             * <p>xx test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -331,7 +329,7 @@ public class CreateResourceRequest extends Request {
             }
 
             /**
-             * <p>The folder in which the resource file is stored.</p>
+             * <p>The storage folder.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -367,13 +365,7 @@ public class CreateResourceRequest extends Request {
             }
 
             /**
-             * <p>The type of the resource file. Valid values:</p>
-             * <ul>
-             * <li>FILE: common file.</li>
-             * <li>JAR: JAR file.</li>
-             * <li>PYTHON: Python file.</li>
-             * <li>OTHERS: other type of file.</li>
-             * </ul>
+             * <p>The resource type. Valid values: FILE: common file, JAR: JAR file, PYTHON: Python file, and OTHERS: other types of files.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -385,7 +377,7 @@ public class CreateResourceRequest extends Request {
             }
 
             /**
-             * <p>The storage address of the resource file.</p>
+             * <p>The storage address of the resource.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

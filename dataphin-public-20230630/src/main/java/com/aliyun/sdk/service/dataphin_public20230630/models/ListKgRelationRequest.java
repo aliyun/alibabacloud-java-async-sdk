@@ -164,7 +164,7 @@ public class ListKgRelationRequest extends Request {
         }
 
         /**
-         * <p>The ID of the operator user.</p>
+         * <p>The operator user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>30001011</p>
@@ -176,7 +176,7 @@ public class ListKgRelationRequest extends Request {
         }
 
         /**
-         * <p>The relationship type code.</p>
+         * <p>The relation type code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

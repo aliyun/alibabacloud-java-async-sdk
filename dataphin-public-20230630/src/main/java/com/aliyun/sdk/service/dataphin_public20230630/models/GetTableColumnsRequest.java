@@ -139,7 +139,7 @@ public class GetTableColumnsRequest extends Request {
         }
 
         /**
-         * <p>The catalog of the asset table, which is the name of the business unit or project workspace.</p>
+         * <p>The catalog of the asset table, which is the name of the business unit or project space.</p>
          * 
          * <strong>example:</strong>
          * <p>LD_test01_dev</p>
@@ -164,7 +164,7 @@ public class GetTableColumnsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the operator.</p>
+         * <p>The ID of the operating user.</p>
          * 
          * <strong>example:</strong>
          * <p>30001011</p>
@@ -176,7 +176,7 @@ public class GetTableColumnsRequest extends Request {
         }
 
         /**
-         * <p>The GUID of the table. If this parameter is specified, it takes precedence in the query, and the Catalog and TableName parameters are ignored even if they are provided.</p>
+         * <p>The GUID of the table. If this parameter is specified, it is used for priority query, and the Catalog and TableName parameters are not required and will be ignored even if specified.</p>
          * 
          * <strong>example:</strong>
          * <p>dp_ds_table_xxx</p>
@@ -188,7 +188,7 @@ public class GetTableColumnsRequest extends Request {
         }
 
         /**
-         * <p>The name of the table.</p>
+         * <p>The table name.</p>
          * 
          * <strong>example:</strong>
          * <p>t_test01</p>

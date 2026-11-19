@@ -145,7 +145,7 @@ public class GetBatchTemplateVersionsRequest extends Request {
          * <ul>
          * <li>DEV: development environment.</li>
          * <li>PROD: production environment.
-         * Default value: DEV for dev_prod projects.</li>
+         * Default value for dev_prod projects: DEV.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -171,7 +171,7 @@ public class GetBatchTemplateVersionsRequest extends Request {
         }
 
         /**
-         * <p>The operator user ID.</p>
+         * <p>The ID of the operating user.</p>
          * 
          * <strong>example:</strong>
          * <p>30001011</p>

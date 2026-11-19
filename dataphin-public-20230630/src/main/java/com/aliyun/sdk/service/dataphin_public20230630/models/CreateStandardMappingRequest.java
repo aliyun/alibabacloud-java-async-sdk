@@ -112,7 +112,7 @@ public class CreateStandardMappingRequest extends Request {
         }
 
         /**
-         * <p>The create command.</p>
+         * <p>The creation command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder createCommand(CreateCommand createCommand) {
@@ -136,7 +136,10 @@ public class CreateStandardMappingRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -243,10 +246,10 @@ public class CreateStandardMappingRequest extends Request {
             /**
              * <p>The processing policy for invalid mappings when importing mapping relationships. Valid values:</p>
              * <ul>
-             * <li>SET_INVALID_TO_VALID: sets invalid mappings to valid mappings.</li>
-             * <li>KEEP_INVALID_AND_SKIP: retains invalid mappings and skips them.</li>
+             * <li>SET_INVALID_TO_VALID: Changes invalid mappings to valid mappings.</li>
+             * <li>KEEP_INVALID_AND_SKIP: Retains invalid mappings and skips them.
+             * Default value: SET_INVALID_TO_VALID.</li>
              * </ul>
-             * <p>Default value: SET_INVALID_TO_VALID.</p>
              * 
              * <strong>example:</strong>
              * <p>SET_INVALID_TO_VALID</p>
@@ -259,10 +262,10 @@ public class CreateStandardMappingRequest extends Request {
             /**
              * <p>The mapping relationship type. Valid values:</p>
              * <ul>
-             * <li>VALID: valid mapping.</li>
-             * <li>INVALID: invalid mapping.</li>
+             * <li>VALID: Valid mapping.</li>
+             * <li>INVALID: Invalid mapping.
+             * Default value: VALID.</li>
              * </ul>
-             * <p>Default value: VALID.</p>
              * 
              * <strong>example:</strong>
              * <p>VALID</p>

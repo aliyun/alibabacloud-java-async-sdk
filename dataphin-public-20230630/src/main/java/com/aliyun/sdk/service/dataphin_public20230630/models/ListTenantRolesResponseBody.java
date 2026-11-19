@@ -119,7 +119,7 @@ public class ListTenantRolesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request error code. OK indicates that the request is successful.</p>
+         * <p>The error code. A value of OK indicates that the request is normal.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -130,7 +130,7 @@ public class ListTenantRolesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code of the backend response.</p>
+         * <p>The HTTP status code returned by the backend.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -141,7 +141,7 @@ public class ListTenantRolesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message of the request.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -163,7 +163,7 @@ public class ListTenantRolesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The role list.</p>
+         * <p>The list of roles.</p>
          */
         public Builder roleList(java.util.List<RoleList> roleList) {
             this.roleList = roleList;
@@ -381,7 +381,7 @@ public class ListTenantRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user ID of the creator.</p>
+             * <p>The ID of the user who created the role.</p>
              * 
              * <strong>example:</strong>
              * <p>30121201</p>
@@ -392,7 +392,7 @@ public class ListTenantRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time.</p>
+             * <p>The time when the role was created.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-01-07 16:45:30</p>
@@ -403,7 +403,7 @@ public class ListTenantRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The modification time.</p>
+             * <p>The time when the role was last modified.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-01-07 16:45:30</p>
@@ -414,7 +414,7 @@ public class ListTenantRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user ID of the modifier.</p>
+             * <p>The ID of the user who last modified the role.</p>
              * 
              * <strong>example:</strong>
              * <p>30121201</p>
@@ -425,7 +425,7 @@ public class ListTenantRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The role description.</p>
+             * <p>The description of the role.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -436,7 +436,7 @@ public class ListTenantRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The role key.</p>
+             * <p>The key of the role.</p>
              * 
              * <strong>example:</strong>
              * <p>test::1212</p>
@@ -447,7 +447,7 @@ public class ListTenantRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The role name.</p>
+             * <p>The name of the role.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -458,10 +458,10 @@ public class ListTenantRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The role type. Valid values:</p>
+             * <p>The type of the role. Valid values:</p>
              * <ul>
-             * <li>BUILD_IN: built-in role</li>
-             * <li>CUSTOM: custom role</li>
+             * <li>BUILD_IN: built-in role.</li>
+             * <li>CUSTOM: custom role.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -473,11 +473,11 @@ public class ListTenantRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The role status. Valid values:</p>
+             * <p>The status of the role. Valid values:</p>
              * <ul>
-             * <li>ON: enabled</li>
-             * <li>OFF: disabled</li>
-             * <li>DEL: deleted</li>
+             * <li>ON: enabled.</li>
+             * <li>OFF: disabled.</li>
+             * <li>DEL: deleted.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -500,7 +500,7 @@ public class ListTenantRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tenant type.</p>
+             * <p>The type of the tenant.</p>
              * 
              * <strong>example:</strong>
              * <p>CUSTOM</p>

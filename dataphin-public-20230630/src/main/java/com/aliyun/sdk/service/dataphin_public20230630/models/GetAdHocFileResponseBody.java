@@ -119,7 +119,7 @@ public class GetAdHocFileResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code. A value of OK indicates that the request was successful.</p>
+         * <p>The error code. OK indicates that the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -130,7 +130,7 @@ public class GetAdHocFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the custom query file.</p>
+         * <p>The details of the ad hoc query file.</p>
          */
         public Builder fileInfo(FileInfo fileInfo) {
             this.fileInfo = fileInfo;
@@ -171,7 +171,7 @@ public class GetAdHocFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -324,7 +324,7 @@ public class GetAdHocFileResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The directory where the file is located.</p>
+             * <p>The directory of the file.</p>
              * 
              * <strong>example:</strong>
              * <p>/xx1/xx2/</p>
@@ -360,7 +360,7 @@ public class GetAdHocFileResponseBody extends TeaModel {
              * <p>The file name.</p>
              * 
              * <strong>example:</strong>
-             * <p>xx测试</p>
+             * <p>xx test</p>
              */
             public Builder name(String name) {
                 this.name = name;

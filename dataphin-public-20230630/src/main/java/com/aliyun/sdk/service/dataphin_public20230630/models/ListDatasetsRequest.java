@@ -134,7 +134,7 @@ public class ListDatasetsRequest extends Request {
         }
 
         /**
-         * <p>The operator ID.</p>
+         * <p>The operator user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>30001011</p>
@@ -455,7 +455,7 @@ public class ListDatasetsRequest extends Request {
             }
 
             /**
-             * <p>The dataset types. If this parameter is left empty, all types are queried.</p>
+             * <p>The dataset type. If this parameter is left empty, all types are queried.</p>
              */
             public Builder typeList(java.util.List<String> typeList) {
                 this.typeList = typeList;

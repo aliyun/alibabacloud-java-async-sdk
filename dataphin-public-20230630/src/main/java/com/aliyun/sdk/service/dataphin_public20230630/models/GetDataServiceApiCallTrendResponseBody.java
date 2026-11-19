@@ -130,7 +130,7 @@ public class GetDataServiceApiCallTrendResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The access trend data.</p>
+         * <p>The access trends.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -149,7 +149,7 @@ public class GetDataServiceApiCallTrendResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the backend exception.</p>
+         * <p>The backend exception details.</p>
          * 
          * <strong>example:</strong>
          * <p>internal error</p>
@@ -171,7 +171,7 @@ public class GetDataServiceApiCallTrendResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -271,7 +271,7 @@ public class GetDataServiceApiCallTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of APIs with call errors.</p>
+             * <p>The number of APIs with call exceptions.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -293,7 +293,7 @@ public class GetDataServiceApiCallTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time scale in minutes, in the format of yyyy-MM-dd HH:mm.</p>
+             * <p>The time scale in minutes. Format: yyyy-MM-dd HH:mm.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-06-30 08:00</p>
@@ -387,7 +387,7 @@ public class GetDataServiceApiCallTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of call errors.</p>
+             * <p>The number of call exceptions.</p>
              * 
              * <strong>example:</strong>
              * <p>102</p>
@@ -398,7 +398,7 @@ public class GetDataServiceApiCallTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The minute in the format of yyyy_MMdd_HHmm.</p>
+             * <p>The minute. Format: yyyy_MMdd_HHmm.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -468,7 +468,7 @@ public class GetDataServiceApiCallTrendResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The call error impact trends, sorted by minute in ascending order.</p>
+             * <p>The call exception impact trends in ascending order by minute.</p>
              */
             public Builder callErrorImpactTrendList(java.util.List<CallErrorImpactTrendList> callErrorImpactTrendList) {
                 this.callErrorImpactTrendList = callErrorImpactTrendList;
@@ -476,7 +476,7 @@ public class GetDataServiceApiCallTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The call error trends, sorted by minute in ascending order.</p>
+             * <p>The call exception trends in ascending order by minute.</p>
              */
             public Builder callErrorTrendList(java.util.List<CallErrorTrendList> callErrorTrendList) {
                 this.callErrorTrendList = callErrorTrendList;

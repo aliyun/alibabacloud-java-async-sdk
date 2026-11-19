@@ -142,7 +142,7 @@ public class GetUdfByVersionRequest extends Request {
         }
 
         /**
-         * <p>The custom function ID.</p>
+         * <p>The ID of the custom function.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -168,7 +168,7 @@ public class GetUdfByVersionRequest extends Request {
         }
 
         /**
-         * <p>The operator ID.</p>
+         * <p>The ID of the user who performs the operation.</p>
          * 
          * <strong>example:</strong>
          * <p>30001011</p>

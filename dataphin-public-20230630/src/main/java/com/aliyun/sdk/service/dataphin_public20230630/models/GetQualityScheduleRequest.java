@@ -112,7 +112,7 @@ public class GetQualityScheduleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the scheduling object.</p>
+         * <p>The ID of the schedule object.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,7 +138,7 @@ public class GetQualityScheduleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the operator.</p>
+         * <p>The user ID of the operator.</p>
          * 
          * <strong>example:</strong>
          * <p>30001011</p>

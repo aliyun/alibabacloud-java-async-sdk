@@ -119,7 +119,7 @@ public class ParseBatchTaskDependencyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code. A value of OK indicates that the request was successful.</p>
+         * <p>The error code. A value of OK indicates that the request is normal.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -171,7 +171,7 @@ public class ParseBatchTaskDependencyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -310,7 +310,7 @@ public class ParseBatchTaskDependencyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node ID. A value of -1 is returned if no node is found for the corresponding input table.</p>
+             * <p>The node ID. The value is -1 when the node corresponding to the input table is not found.</p>
              * 
              * <strong>example:</strong>
              * <p>n_11013121</p>
@@ -321,7 +321,7 @@ public class ParseBatchTaskDependencyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node name. This parameter is empty if no node is found for the corresponding input table.</p>
+             * <p>The node name. This parameter is empty when the node corresponding to the input table is not found.</p>
              * 
              * <strong>example:</strong>
              * <p>test11</p>
@@ -343,10 +343,10 @@ public class ParseBatchTaskDependencyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The owner of the node. This parameter is empty if no node is found for the corresponding input table.</p>
+             * <p>The owner of the node. This parameter is empty when the node corresponding to the input table is not found.</p>
              * 
              * <strong>example:</strong>
-             * <p>张三</p>
+             * <p>Zhang San</p>
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
@@ -354,7 +354,7 @@ public class ParseBatchTaskDependencyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The owner of the node. This parameter is empty if no node is found for the corresponding input table.</p>
+             * <p>The owner of the node. This parameter is empty when the node corresponding to the input table is not found.</p>
              * 
              * <strong>example:</strong>
              * <p>201122301</p>
@@ -435,7 +435,7 @@ public class ParseBatchTaskDependencyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The input/output type. Valid values: input (dependent node) and output (node output name).</p>
+             * <p>The input and output type. Valid values: input (dependent node) and output (node output name).</p>
              * 
              * <strong>example:</strong>
              * <p>input</p>
@@ -446,7 +446,7 @@ public class ParseBatchTaskDependencyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of schedule nodes.</p>
+             * <p>The list of scheduled nodes.</p>
              */
             public Builder scheduleNodeInfoList(java.util.List<ScheduleNodeInfoList> scheduleNodeInfoList) {
                 this.scheduleNodeInfoList = scheduleNodeInfoList;
@@ -500,7 +500,7 @@ public class ParseBatchTaskDependencyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of dependent nodes.</p>
+             * <p>The dependent nodes.</p>
              */
             public Builder dependNodeList(java.util.List<DependNodeList> dependNodeList) {
                 this.dependNodeList = dependNodeList;

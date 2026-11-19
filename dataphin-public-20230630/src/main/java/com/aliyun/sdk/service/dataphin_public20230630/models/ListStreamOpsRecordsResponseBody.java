@@ -130,7 +130,7 @@ public class ListStreamOpsRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The start and stop operation records of real-time tasks.</p>
+         * <p>The start and stop operation records for real-time tasks. You can use the log storage identifiers in the list to query the log content by calling the GetStreamOpsRecord operation.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -302,7 +302,7 @@ public class ListStreamOpsRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>deploymentId</p>
+             * <p>The deployment ID of the task. This ID is used to identify the deployment and is different from the specific running instance ID deploymentInstanceId.</p>
              * 
              * <strong>example:</strong>
              * <p>ac6e5a34bbd44d7f8b7851ef28c90d12</p>
@@ -313,7 +313,7 @@ public class ListStreamOpsRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>deploymentInstanceId</p>
+             * <p>The deployment instance ID associated with this operation. This ID corresponds to the DeploymentInstanceId request parameter in the log and TaskManager query operations.</p>
              * 
              * <strong>example:</strong>
              * <p>7db678957dc449aab0086b931c9f8218</p>
@@ -324,7 +324,7 @@ public class ListStreamOpsRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time.</p>
+             * <p>The end time of the operation. The time is in the yyyy-MM-dd HH:mm:ss format. If the operation has not ended, the value may be null.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-10-15 13:46:40</p>
@@ -335,7 +335,7 @@ public class ListStreamOpsRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The log content.</p>
+             * <p>The operation logs. In the ListStreamOpsRecords response, this field may contain a log storage identity. After you invoke the GetStreamOpsRecord operation, the log content or operation information is returned.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-10-15 13:46:26 INFO Starting Flink deployment</p>
@@ -346,7 +346,7 @@ public class ListStreamOpsRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance status. Valid values: START, PAUSE, RESUME, and STOP. Displayed as Start, Pause, Recover, or Stop.</p>
+             * <p>The type of the operation. Valid values: START, PAUSE, RESUME, and STOP. This field does not represent the running status of the task.</p>
              * 
              * <strong>example:</strong>
              * <p>START</p>
@@ -357,7 +357,7 @@ public class ListStreamOpsRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>opsRecordId</p>
+             * <p>The ID of the operation record. This ID corresponds to the OpsRecordId request parameter of the GetStreamOpsRecord operation.</p>
              * 
              * <strong>example:</strong>
              * <p>646</p>
@@ -368,7 +368,7 @@ public class ListStreamOpsRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time.</p>
+             * <p>The start time of the operation. The time is in the yyyy-MM-dd HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-10-15 13:46:26</p>

@@ -125,7 +125,10 @@ public class PublishStandardRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the user who performs the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -258,7 +261,7 @@ public class PublishStandardRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to automatically publish after approval. Default value: true.</p>
+             * <p>Specifies whether to automatically publish the standard after the approval succeeds. Default value: true.</p>
              */
             public Builder autoPublishAfterApproval(Boolean autoPublishAfterApproval) {
                 this.autoPublishAfterApproval = autoPublishAfterApproval;
@@ -266,7 +269,7 @@ public class PublishStandardRequest extends Request {
             }
 
             /**
-             * <p>The review comment. Maximum length: 128 characters.</p>
+             * <p>The review comment. The comment can be up to 128 characters in length.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -309,7 +312,7 @@ public class PublishStandardRequest extends Request {
             }
 
             /**
-             * <p>The version number. Default value: -1 (latest version).</p>
+             * <p>The version number. Default value: -1, which indicates the latest version.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

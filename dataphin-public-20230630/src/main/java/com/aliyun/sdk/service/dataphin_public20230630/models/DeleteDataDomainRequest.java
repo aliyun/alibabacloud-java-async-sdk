@@ -140,7 +140,7 @@ public class DeleteDataDomainRequest extends Request {
         }
 
         /**
-         * <p>The subject domain ID.</p>
+         * <p>The subject area ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,7 +166,10 @@ public class DeleteDataDomainRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The operator ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);

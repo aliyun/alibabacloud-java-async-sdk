@@ -130,7 +130,7 @@ public class GetQualityArchiveTableProgressResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The asynchronous task progress details.</p>
+         * <p>The progress details of the asynchronous task.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -149,7 +149,7 @@ public class GetQualityArchiveTableProgressResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The backend exception details.</p>
+         * <p>The details of the backend exception.</p>
          * 
          * <strong>example:</strong>
          * <p>internal error</p>
@@ -171,7 +171,7 @@ public class GetQualityArchiveTableProgressResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -263,7 +263,7 @@ public class GetQualityArchiveTableProgressResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The archived table ID. This parameter is returned after the task succeeds and can be used to switch the active table.</p>
+             * <p>The ID of the archive table. This parameter is returned after the task succeeds and can be used to switch the active table later.</p>
              * 
              * <strong>example:</strong>
              * <p>88012</p>
@@ -274,7 +274,7 @@ public class GetQualityArchiveTableProgressResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The full name of the archived table. This parameter is returned after the task succeeds. When creating a table, the name includes the automatically appended _exception_data suffix.</p>
+             * <p>The full name of the archive table. This parameter is returned after the task succeeds. When a table is created, the _exception_data suffix is automatically appended to the name.</p>
              * 
              * <strong>example:</strong>
              * <p>Train.a01_reanme3_exception_data</p>
@@ -285,10 +285,10 @@ public class GetQualityArchiveTableProgressResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reason for the task failure. This parameter is returned only when Status is FAILED.</p>
+             * <p>The cause of the task failure. This parameter is returned only when Status is FAILED.</p>
              * 
              * <strong>example:</strong>
-             * <p>The archived table name already exists!</p>
+             * <p>The archive table name already exists!</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -298,10 +298,10 @@ public class GetQualityArchiveTableProgressResponseBody extends TeaModel {
             /**
              * <p>The task status. Valid values:</p>
              * <ul>
-             * <li>PROGRESS: In progress.</li>
-             * <li>SUCCESS: Succeeded.</li>
-             * <li>FAILED: Failed.</li>
-             * <li>CANCEL: Canceled.</li>
+             * <li>PROGRESS: The task is in progress.</li>
+             * <li>SUCCESS: The task is successful.</li>
+             * <li>FAILED: The task failed.</li>
+             * <li>CANCEL: The task is canceled.</li>
              * </ul>
              * 
              * <strong>example:</strong>

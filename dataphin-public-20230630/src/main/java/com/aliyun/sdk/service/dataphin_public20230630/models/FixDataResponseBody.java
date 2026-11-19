@@ -119,7 +119,7 @@ public class FixDataResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code. A value of OK indicates that the request was successful.</p>
+         * <p>The error code. OK indicates that the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -163,7 +163,7 @@ public class FixDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The submit ID of this submission.</p>
+         * <p>The submit ID of the current submission. If downstreamRange is set to a shortcut mode, this field returns the submit ID. You can call the [QueryOperationSubmitJobStatus] operation to query the submit status of the current submission. You can ignore this field if you manually select downstream instances.</p>
          * 
          * <strong>example:</strong>
          * <p>12324234</p>
@@ -174,7 +174,7 @@ public class FixDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

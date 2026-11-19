@@ -151,7 +151,10 @@ public class ListDataServiceApiImpactsRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -160,7 +163,7 @@ public class ListDataServiceApiImpactsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the data service project.</p>
+         * <p>The ID of the Data Service project.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -325,7 +328,7 @@ public class ListDataServiceApiImpactsRequest extends Request {
             }
 
             /**
-             * <p>The application name.</p>
+             * <p>The name of the application.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -348,7 +351,7 @@ public class ListDataServiceApiImpactsRequest extends Request {
             }
 
             /**
-             * <p>The column used for sorting. Valid values: CALL_COUNT: the number of calls. ERROR_COUNT: the number of errors. ERROR_RATE: the error rate. Default value: CALL_COUNT.</p>
+             * <p>The column by which to sort the results. Valid values: CALL_COUNT (number of calls), ERROR_COUNT (number of exceptions), and ERROR_RATE (error rate). Default value: CALL_COUNT.</p>
              * 
              * <strong>example:</strong>
              * <p>CALL_COUNT</p>
@@ -359,7 +362,7 @@ public class ListDataServiceApiImpactsRequest extends Request {
             }
 
             /**
-             * <p>The sort order. Valid values: 1: ascending order. 2: descending order. Default value: 1.</p>
+             * <p>The sort order. Valid values: 1 (ascending order) and 2 (descending order). Default value: 1.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -381,7 +384,7 @@ public class ListDataServiceApiImpactsRequest extends Request {
             }
 
             /**
-             * <p>The number of records per page. Default value: 20.</p>
+             * <p>The number of entries per page. Default value: 20.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>

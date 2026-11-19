@@ -119,7 +119,7 @@ public class ListComputeSourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code.</p>
+         * <p>The backend response code.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -141,7 +141,7 @@ public class ListComputeSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned if the request failed.</p>
+         * <p>The backend exception details.</p>
          * 
          * <strong>example:</strong>
          * <p>internal error</p>
@@ -152,7 +152,7 @@ public class ListComputeSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The paginated query result.</p>
+         * <p>The paging query result.</p>
          */
         public Builder pageResult(PageResult pageResult) {
             this.pageResult = pageResult;
@@ -160,7 +160,7 @@ public class ListComputeSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>82E78D6B-AA8F-1FEF-8AA3-5C9DA2A79140</p>
@@ -171,7 +171,7 @@ public class ListComputeSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -393,7 +393,7 @@ public class ListComputeSourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the compute source is bound to a project.</p>
+             * <p>Specifies whether the compute source is bound to a project.</p>
              */
             public Builder bindProject(Boolean bindProject) {
                 this.bindProject = bindProject;
@@ -423,7 +423,7 @@ public class ListComputeSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the creator.</p>
+             * <p>The creator.</p>
              * 
              * <strong>example:</strong>
              * <p>30012211</p>
@@ -434,10 +434,10 @@ public class ListComputeSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the creator.</p>
+             * <p>The creator.</p>
              * 
              * <strong>example:</strong>
-             * <p>张三</p>
+             * <p>Zhang San</p>
              */
             public Builder creatorName(String creatorName) {
                 this.creatorName = creatorName;
@@ -445,7 +445,7 @@ public class ListComputeSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the compute source.</p>
+             * <p>The description.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -456,7 +456,7 @@ public class ListComputeSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the compute source.</p>
+             * <p>The display name.</p>
              * 
              * <strong>example:</strong>
              * <p>test1011</p>
@@ -467,7 +467,7 @@ public class ListComputeSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the compute source was created, in the yyyy-MM-dd HH:mm:ss format.</p>
+             * <p>The creation time. Format: yyyy-MM-dd HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-06-30 08:00:00</p>
@@ -478,7 +478,7 @@ public class ListComputeSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the compute source was last modified, in the yyyy-MM-dd HH:mm:ss format.</p>
+             * <p>The update time. Format: yyyy-MM-dd HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-06-30 08:00:00</p>
@@ -511,7 +511,7 @@ public class ListComputeSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the compute source owner.</p>
+             * <p>The owner of the compute source.</p>
              * 
              * <strong>example:</strong>
              * <p>30012211</p>
@@ -522,10 +522,10 @@ public class ListComputeSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the compute source owner.</p>
+             * <p>The owner of the compute source.</p>
              * 
              * <strong>example:</strong>
-             * <p>张三</p>
+             * <p>Zhang San</p>
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
@@ -533,7 +533,7 @@ public class ListComputeSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the compute source.</p>
+             * <p>The compute source type.</p>
              * 
              * <strong>example:</strong>
              * <p>MaxCompute</p>
@@ -611,7 +611,7 @@ public class ListComputeSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of records.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>68</p>

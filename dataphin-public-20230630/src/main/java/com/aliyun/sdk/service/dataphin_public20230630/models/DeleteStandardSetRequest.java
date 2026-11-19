@@ -112,7 +112,7 @@ public class DeleteStandardSetRequest extends Request {
         }
 
         /**
-         * <p>The standard set ID.</p>
+         * <p>The ID of the standard set.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,7 +138,10 @@ public class DeleteStandardSetRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);

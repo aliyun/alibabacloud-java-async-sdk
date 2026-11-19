@@ -563,7 +563,17 @@ public class GetQualityTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The template category. Valid values: CONSISTENT: consistency, EFFECTIVE: effectiveness, TIMELINESE: timeliness, ACCURATE: accuracy, UNIQUENESS: uniqueness, COMPLETENESS: completeness, STABILITY: stability, and CUSTOM: custom.</p>
+             * <p>The template category. Valid values:</p>
+             * <ul>
+             * <li>CONSISTENT: Consistency.</li>
+             * <li>EFFECTIVE: Effectiveness.</li>
+             * <li>TIMELINESE: Timeliness.</li>
+             * <li>ACCURATE: Accuracy.</li>
+             * <li>UNIQUENESS: Uniqueness.</li>
+             * <li>COMPLETENESS: Completeness.</li>
+             * <li>STABILITY: Stability.</li>
+             * <li>CUSTOM: Custom.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>CONSISTENT</p>
@@ -629,7 +639,7 @@ public class GetQualityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The rule configuration key-value pairs.</p>
+             * <p>The key-value pairs for rule configuration.</p>
              */
             public Builder formPropertyList(java.util.List<FormPropertyList> formPropertyList) {
                 this.formPropertyList = formPropertyList;
@@ -648,7 +658,7 @@ public class GetQualityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the template is a system template.</p>
+             * <p>Specifies whether the template is a system template.</p>
              */
             public Builder isSystemTemplate(Boolean isSystemTemplate) {
                 this.isSystemTemplate = isSystemTemplate;
@@ -722,7 +732,7 @@ public class GetQualityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether all data source types are supported.</p>
+             * <p>Specifies whether all data source types are supported.</p>
              */
             public Builder supportAllDataSourceType(Boolean supportAllDataSourceType) {
                 this.supportAllDataSourceType = supportAllDataSourceType;
@@ -730,7 +740,7 @@ public class GetQualityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The supported specific data source types, such as MySQL, Oracle, Microsoft SQL Server, MaxCompute, and Hive.</p>
+             * <p>The specific data source types that are supported, such as MySQL, Oracle, Microsoft SQL Server, MaxCompute, and Hive.</p>
              */
             public Builder supportDataSourceTypeList(java.util.List<String> supportDataSourceTypeList) {
                 this.supportDataSourceTypeList = supportDataSourceTypeList;
@@ -738,7 +748,40 @@ public class GetQualityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The templatetype. Valid values: FIELD_NULL_VALUE_VALIDATE: field null value check, FIELD_EMPTY_STRING_VALIDATE: field empty character string check, FIELD_UNIQUE_VALIDATE: field uniqueness check, FIELD_GROUP_COUNT_VALIDATE: field unique value count check, FIELD_DUPLICATE_VALUE_COUNT_VALIDATE: field duplicate value count check, FUNCTION_TIME_COMPARE: time function comparison, SINGLE_TABLE_TIME_COMPARE: non-partitioned table time field comparison, DOUBLE_TABLE_TIME_COMPARE: double-table time field comparison, FIELD_FORMAT_VALIDATE: field format check, FIELD_LENGTH_VALIDATE: field length check, FIELD_VALUE_RANGE_VALIDATE: field value range check, CODE_TABLE_COMPARE: lookup table reference comparison, STANDARD_CODE_TABLE_COMPARE: data standard lookup table reference comparison, SINGLE_TABLE_FIELD_VALUE_COMPARE: non-partitioned table field value consistency comparison, SINGLE_TABLE_FIELD_STATISTICAL_COMPARE: non-partitioned table field statistical value consistency comparison, SINGLE_TABLE_FIELD_EXP_COMPARE: non-partitioned table field business logic consistency comparison, DOUBLE_TABLE_FIELD_VALUE_COMPARE: double-table field value consistency comparison, DOUBLE_TABLE_FIELD_STATISTICAL_COMPARE: double-table field statistical value consistency comparison, CROSS_DOUBLE_TABLE_FIELD_STATISTICAL_COMPARE: cross-source double-table field statistical value consistency comparison, DOUBLE_TABLE_FIELD_EXP_COMPARE: double-table field business logic consistency comparison, TABLE_STABILITY_VALIDATE: table stability check, TABLE_FLUCTUATION_VALIDATE: table fluctuation check, FIELD_STABILITY_VALIDATE: field stability check, FIELD_FLUCTUATION_VALIDATE: field fluctuation check, CUSTOM_STATISTICAL_VALIDATE: custom statistical metric check, CUSTOM_DATA_DETAILS_VALIDATE: custom data details check, DATASOURCE_AVAILABLE_CHECK: data source connectivity check, TABLE_SCHEMA_CHECK: table schema change check, REAL_TIME_OFFLINE_COMPARE: real-time and offline comparison, REAL_TIME_STATISTICAL_VALIDATE: real-time statistical value check, and REAL_TIME_MULTI_CHAIN_COMPARE: real-time multi-link comparison.</p>
+             * <p>The templatetype. Valid values:</p>
+             * <ul>
+             * <li>FIELD_NULL_VALUE_VALIDATE: Field null value check.</li>
+             * <li>FIELD_EMPTY_STRING_VALIDATE: Field empty character check.</li>
+             * <li>FIELD_UNIQUE_VALIDATE: Field uniqueness check.</li>
+             * <li>FIELD_GROUP_COUNT_VALIDATE: Field unique value count check.</li>
+             * <li>FIELD_DUPLICATE_VALUE_COUNT_VALIDATE: Field duplicate value count check.</li>
+             * <li>FUNCTION_TIME_COMPARE: Time function comparison.</li>
+             * <li>SINGLE_TABLE_TIME_COMPARE: Non-partitioned table time field comparison.</li>
+             * <li>DOUBLE_TABLE_TIME_COMPARE: Double-table time field comparison.</li>
+             * <li>FIELD_FORMAT_VALIDATE: Field format check.</li>
+             * <li>FIELD_LENGTH_VALIDATE: Field length check.</li>
+             * <li>FIELD_VALUE_RANGE_VALIDATE: Field value range check.</li>
+             * <li>CODE_TABLE_COMPARE: Lookup table reference comparison.</li>
+             * <li>STANDARD_CODE_TABLE_COMPARE: Data standard lookup table reference comparison.</li>
+             * <li>SINGLE_TABLE_FIELD_VALUE_COMPARE: Non-partitioned table field value consistency comparison.</li>
+             * <li>SINGLE_TABLE_FIELD_STATISTICAL_COMPARE: Non-partitioned table field statistical value consistency comparison.</li>
+             * <li>SINGLE_TABLE_FIELD_EXP_COMPARE: Non-partitioned table field business logic consistency comparison.</li>
+             * <li>DOUBLE_TABLE_FIELD_VALUE_COMPARE: Double-table field value consistency comparison.</li>
+             * <li>DOUBLE_TABLE_FIELD_STATISTICAL_COMPARE: Double-table field statistical value consistency comparison.</li>
+             * <li>CROSS_DOUBLE_TABLE_FIELD_STATISTICAL_COMPARE: Cross-source double-table field statistical value consistency comparison.</li>
+             * <li>DOUBLE_TABLE_FIELD_EXP_COMPARE: Double-table field business logic consistency comparison.</li>
+             * <li>TABLE_STABILITY_VALIDATE: Table stability check.</li>
+             * <li>TABLE_FLUCTUATION_VALIDATE: Table fluctuation check.</li>
+             * <li>FIELD_STABILITY_VALIDATE: Field stability check.</li>
+             * <li>FIELD_FLUCTUATION_VALIDATE: Field fluctuation check.</li>
+             * <li>CUSTOM_STATISTICAL_VALIDATE: Custom statistical metric check.</li>
+             * <li>CUSTOM_DATA_DETAILS_VALIDATE: Custom data details check.</li>
+             * <li>DATASOURCE_AVAILABLE_CHECK: Data source connectivity check.</li>
+             * <li>TABLE_SCHEMA_CHECK: Table schema change check.</li>
+             * <li>REAL_TIME_OFFLINE_COMPARE: Real-time and offline comparison.</li>
+             * <li>REAL_TIME_STATISTICAL_VALIDATE: Real-time statistical value check.</li>
+             * <li>REAL_TIME_MULTI_CHAIN_COMPARE: Real-time multi-link comparison.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>FIELD_NULL_VALUE_VALIDATE</p>

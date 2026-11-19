@@ -171,7 +171,7 @@ public class CreateStandardRelationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -237,7 +237,7 @@ public class CreateStandardRelationsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of standard IDs that do not exist.</p>
+             * <p>The list of non-existent standard IDs.</p>
              */
             public Builder notExistStandardIdList(java.util.List<Long> notExistStandardIdList) {
                 this.notExistStandardIdList = notExistStandardIdList;
@@ -245,7 +245,7 @@ public class CreateStandardRelationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of successfully added associations.</p>
+             * <p>The number of successful additions.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>

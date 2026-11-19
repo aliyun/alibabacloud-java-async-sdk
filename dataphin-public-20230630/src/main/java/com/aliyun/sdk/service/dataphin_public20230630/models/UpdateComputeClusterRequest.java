@@ -164,7 +164,7 @@ public class UpdateComputeClusterRequest extends Request {
         }
 
         /**
-         * <p>The ID of the operator user.</p>
+         * <p>The ID of the operator.</p>
          * 
          * <strong>example:</strong>
          * <p>30001011</p>
@@ -259,7 +259,7 @@ public class UpdateComputeClusterRequest extends Request {
             }
 
             /**
-             * <p>The list of whitelist user group IDs.</p>
+             * <p>The list of whitelisted user group IDs.</p>
              */
             public Builder userGroupIds(java.util.List<String> userGroupIds) {
                 this.userGroupIds = userGroupIds;
@@ -267,7 +267,7 @@ public class UpdateComputeClusterRequest extends Request {
             }
 
             /**
-             * <p>The list of whitelist user IDs.</p>
+             * <p>The list of whitelisted user IDs.</p>
              */
             public Builder userIds(java.util.List<String> userIds) {
                 this.userIds = userIds;
@@ -548,7 +548,7 @@ public class UpdateComputeClusterRequest extends Request {
             }
 
             /**
-             * <p>时区名称，例如 Asia/Shanghai。更新时不传则保留原值。</p>
+             * <p>The time zone name, such as Asia/Shanghai. If this parameter is not specified during an update, the original value is retained.</p>
              * 
              * <strong>example:</strong>
              * <p>Asia/Shanghai</p>

@@ -112,7 +112,7 @@ public class UpdateDataServiceAppRequest extends Request {
         }
 
         /**
-         * <p>Tenant ID.</p>
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,7 +125,10 @@ public class UpdateDataServiceAppRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The operator ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -134,7 +137,7 @@ public class UpdateDataServiceAppRequest extends Request {
         }
 
         /**
-         * <p>The command to update the data service application.</p>
+         * <p>The update command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder updateCommand(UpdateCommand updateCommand) {
@@ -244,7 +247,7 @@ public class UpdateDataServiceAppRequest extends Request {
             } 
 
             /**
-             * <p>Application group ID.</p>
+             * <p>The application group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>200000000</p>
@@ -255,7 +258,7 @@ public class UpdateDataServiceAppRequest extends Request {
             }
 
             /**
-             * <p>Application ID.</p>
+             * <p>The application ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -267,10 +270,10 @@ public class UpdateDataServiceAppRequest extends Request {
             }
 
             /**
-             * <p>Application name.</p>
+             * <p>The application name.</p>
              * 
              * <strong>example:</strong>
-             * <p>默认应用</p>
+             * <p>Default application</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -278,7 +281,7 @@ public class UpdateDataServiceAppRequest extends Request {
             }
 
             /**
-             * <p>List of owner IDs.</p>
+             * <p>The owner IDs.</p>
              */
             public Builder ownerIds(java.util.List<String> ownerIds) {
                 this.ownerIds = ownerIds;
@@ -286,10 +289,10 @@ public class UpdateDataServiceAppRequest extends Request {
             }
 
             /**
-             * <p>Application scenarios.</p>
+             * <p>The common scenarios.</p>
              * 
              * <strong>example:</strong>
-             * <p>数据分析</p>
+             * <p>Data analytics</p>
              */
             public Builder scenarios(String scenarios) {
                 this.scenarios = scenarios;

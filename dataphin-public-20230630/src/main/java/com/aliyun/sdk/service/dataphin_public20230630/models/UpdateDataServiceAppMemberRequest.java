@@ -125,7 +125,10 @@ public class UpdateDataServiceAppMemberRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The operator user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -134,7 +137,7 @@ public class UpdateDataServiceAppMemberRequest extends Request {
         }
 
         /**
-         * <p>The command to update regular members of a data service application.</p>
+         * <p>Updates the regular members of a data service application.</p>
          * <p>This parameter is required.</p>
          */
         public Builder updateCommand(UpdateCommand updateCommand) {
@@ -303,7 +306,7 @@ public class UpdateDataServiceAppMemberRequest extends Request {
             }
 
             /**
-             * <p>The list of members.</p>
+             * <p>The member list.</p>
              * <p>This parameter is required.</p>
              */
             public Builder memberList(java.util.List<MemberList> memberList) {

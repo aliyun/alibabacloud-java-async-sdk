@@ -130,7 +130,7 @@ public class CreateResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the resource file.</p>
+         * <p>The resource file ID.</p>
          * 
          * <strong>example:</strong>
          * <p>10112101</p>
@@ -152,7 +152,7 @@ public class CreateResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the backend exception.</p>
+         * <p>The backend exception details.</p>
          * 
          * <strong>example:</strong>
          * <p>internal error</p>
@@ -174,7 +174,7 @@ public class CreateResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

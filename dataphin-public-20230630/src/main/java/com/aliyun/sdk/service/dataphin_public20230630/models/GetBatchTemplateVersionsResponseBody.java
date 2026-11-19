@@ -149,7 +149,7 @@ public class GetBatchTemplateVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the backend exception.</p>
+         * <p>The backend exception details.</p>
          * 
          * <strong>example:</strong>
          * <p>internal error</p>
@@ -296,7 +296,7 @@ public class GetBatchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data source type of the database SQL template. Valid values: MYSQL, ORACLE, ADB_FOR_PG, OUSHUDB, PRESTO, POSTGRE_SQL, STARROCKS, CLICKHOUSE, ANALYTICDB, ADB_FOR_MYSQL_V3, GAUSSDB, SELECTDB, DORIS, SQL_SERVER, HOLOGRES, OPENGAUSS, DAMENG, OCEANBASE, TRINO, POLARDB_X2, LINDORM, EMR_SPARK_SERVERLESS, TDSQL_FOR_PG, TDSQL_FOR_MYSQL, GBASE_8A, and TDENGINE.</p>
+             * <p>The type of the data source for the database SQL template. Valid values: MYSQL, ORACLE, ADB_FOR_PG, OUSHUDB, PRESTO, POSTGRE_SQL, STARROCKS, CLICKHOUSE, ANALYTICDB, ADB_FOR_MYSQL_V3, GAUSSDB, SELECTDB, DORIS, SQL_SERVER, HOLOGRES, OPENGAUSS, DAMENG, OCEANBASE, TRINO, POLARDB_X2, LINDORM, EMR_SPARK_SERVERLESS, TDSQL_FOR_PG, TDSQL_FOR_MYSQL, GBASE_8A, and TDENGINE.</p>
              * 
              * <strong>example:</strong>
              * <p>MYSQL</p>
@@ -403,7 +403,7 @@ public class GetBatchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether encryption is enabled for the parameter.</p>
+             * <p>Specifies whether encryption is enabled for the parameter.</p>
              */
             public Builder encryptEnabled(Boolean encryptEnabled) {
                 this.encryptEnabled = encryptEnabled;
@@ -411,7 +411,7 @@ public class GetBatchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The key of the parameter.</p>
+             * <p>The parameter key.</p>
              * 
              * <strong>example:</strong>
              * <p>param1</p>
@@ -544,7 +544,7 @@ public class GetBatchTemplateVersionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the Python third-party package.</p>
+             * <p>The ID of the third-party Python package.</p>
              * 
              * <strong>example:</strong>
              * <p>1001</p>
@@ -566,7 +566,7 @@ public class GetBatchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the Python third-party package.</p>
+             * <p>The name of the third-party Python package.</p>
              * 
              * <strong>example:</strong>
              * <p>numpy</p>
@@ -588,7 +588,7 @@ public class GetBatchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the third-party package. Valid values: INSTALL_SUCCESS (installed), INSTALL_FAILED (installation failed), INSTALLING (installing), UPGRADE_SUCCESS (upgraded), UPGRADE_FAILED (upgrade failed), and UPGRADING (upgrading).</p>
+             * <p>The status of the third-party package. Valid values: INSTALL_SUCCESS (installation succeeded), INSTALL_FAILED (installation failed), INSTALLING (installing), UPGRADE_SUCCESS (upgrade succeeded), UPGRADE_FAILED (upgrade failed), and UPGRADING (upgrading).</p>
              * 
              * <strong>example:</strong>
              * <p>INSTALL_SUCCESS</p>
@@ -955,7 +955,7 @@ public class GetBatchTemplateVersionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The template submission comment.</p>
+             * <p>The comment for the template submission.</p>
              * 
              * <strong>example:</strong>
              * <p>Initial submission</p>
@@ -978,7 +978,7 @@ public class GetBatchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data source configuration of the database SQL template.</p>
+             * <p>The datasource config for the database SQL template.</p>
              */
             public Builder dataSourceConfig(DataSourceConfig dataSourceConfig) {
                 this.dataSourceConfig = dataSourceConfig;
@@ -1011,7 +1011,7 @@ public class GetBatchTemplateVersionsResponseBody extends TeaModel {
              * <p>The name of the resource group in the development environment.</p>
              * 
              * <strong>example:</strong>
-             * <p>Default resource group for the project</p>
+             * <p>Project default resource group</p>
              */
             public Builder devResourceGroupName(String devResourceGroupName) {
                 this.devResourceGroupName = devResourceGroupName;
@@ -1019,7 +1019,7 @@ public class GetBatchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the compute engine. Valid values: Python 2.7 and Python 3.7.</p>
+             * <p>The version of the compute engine. Currently, Python 2.7 and Python 3.7 are supported.</p>
              * 
              * <strong>example:</strong>
              * <p>Python 3.7</p>
@@ -1052,7 +1052,7 @@ public class GetBatchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the template, which is the same as the menu tree node ID.</p>
+             * <p>The template ID, which is the same as the menu tree node ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1001</p>
@@ -1063,7 +1063,7 @@ public class GetBatchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last user who updated the template.</p>
+             * <p>The user who last updated the template.</p>
              * 
              * <strong>example:</strong>
              * <p>Li Si</p>
@@ -1074,7 +1074,7 @@ public class GetBatchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the last user who updated the template.</p>
+             * <p>The ID of the user who last updated the template.</p>
              * 
              * <strong>example:</strong>
              * <p>100002</p>
@@ -1085,7 +1085,7 @@ public class GetBatchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the template.</p>
+             * <p>The template name.</p>
              * 
              * <strong>example:</strong>
              * <p>Data processing template</p>
@@ -1107,7 +1107,7 @@ public class GetBatchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The owner of the template.</p>
+             * <p>The template owner.</p>
              * 
              * <strong>example:</strong>
              * <p>Zhang San</p>
@@ -1137,7 +1137,7 @@ public class GetBatchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the project.</p>
+             * <p>The project ID.</p>
              * 
              * <strong>example:</strong>
              * <p>123456</p>
@@ -1148,7 +1148,7 @@ public class GetBatchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of dependent Python third-party packages.</p>
+             * <p>The list of dependent third-party Python packages.</p>
              */
             public Builder pythonModuleList(java.util.List<PythonModuleList> pythonModuleList) {
                 this.pythonModuleList = pythonModuleList;
@@ -1170,7 +1170,7 @@ public class GetBatchTemplateVersionsResponseBody extends TeaModel {
              * <p>The name of the resource group in the production environment.</p>
              * 
              * <strong>example:</strong>
-             * <p>Default resource group for the project</p>
+             * <p>Project default resource group</p>
              */
             public Builder resourceGroupName(String resourceGroupName) {
                 this.resourceGroupName = resourceGroupName;
@@ -1178,7 +1178,7 @@ public class GetBatchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether runtime resources are shared.</p>
+             * <p>Specifies whether runtime resources are shared.</p>
              */
             public Builder shareRuntimeResource(Boolean shareRuntimeResource) {
                 this.shareRuntimeResource = shareRuntimeResource;
@@ -1186,7 +1186,7 @@ public class GetBatchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the template. Valid values: 0 (draft), 2 (submitted), and 100 (in development).</p>
+             * <p>The template status. Valid values: 0 (Draft), 2 (Submitted), and 100 (In development).</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>

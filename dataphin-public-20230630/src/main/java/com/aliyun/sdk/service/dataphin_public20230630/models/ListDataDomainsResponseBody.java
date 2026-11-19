@@ -119,7 +119,7 @@ public class ListDataDomainsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code. A value of OK indicates that the request was successful.</p>
+         * <p>The error code. A value of OK indicates that the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -171,7 +171,7 @@ public class ListDataDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -413,10 +413,10 @@ public class ListDataDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the data domain.</p>
+             * <p>The display name.</p>
              * 
              * <strong>example:</strong>
-             * <p>测试</p>
+             * <p>Test</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -446,7 +446,7 @@ public class ListDataDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the data domain.</p>
+             * <p>The data domain ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1241844456</p>
@@ -457,7 +457,7 @@ public class ListDataDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the user who last modified the data domain.</p>
+             * <p>The user ID of the last modifier.</p>
              * 
              * <strong>example:</strong>
              * <p>30010010</p>
@@ -468,10 +468,10 @@ public class ListDataDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the user who last modified the data domain.</p>
+             * <p>The name of the last modifier.</p>
              * 
              * <strong>example:</strong>
-             * <p>张三</p>
+             * <p>Zhang San</p>
              */
             public Builder lastModifierName(String lastModifierName) {
                 this.lastModifierName = lastModifierName;
@@ -479,7 +479,7 @@ public class ListDataDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the data domain.</p>
+             * <p>The name.</p>
              * 
              * <strong>example:</strong>
              * <p>dm_code_name</p>
@@ -490,10 +490,10 @@ public class ListDataDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the owner of the business object.</p>
+             * <p>The user ID of the business object owner.</p>
              * 
              * <strong>example:</strong>
-             * <p>张三</p>
+             * <p>Zhang San</p>
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
@@ -501,7 +501,7 @@ public class ListDataDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the owner of the business object.</p>
+             * <p>The user ID of the business object owner.</p>
              * 
              * <strong>example:</strong>
              * <p>30010010</p>
@@ -569,7 +569,7 @@ public class ListDataDomainsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The details of the data domains.</p>
+             * <p>The data domain details.</p>
              */
             public Builder dataDomainList(java.util.List<DataDomainList> dataDomainList) {
                 this.dataDomainList = dataDomainList;

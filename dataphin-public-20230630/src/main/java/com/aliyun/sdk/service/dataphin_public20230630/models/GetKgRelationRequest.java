@@ -155,7 +155,7 @@ public class GetKgRelationRequest extends Request {
         }
 
         /**
-         * <p>The operator user ID.</p>
+         * <p>The operator ID.</p>
          * 
          * <strong>example:</strong>
          * <p>30001011</p>

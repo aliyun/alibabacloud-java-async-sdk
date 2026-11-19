@@ -112,11 +112,11 @@ public class DeleteStandardWordRootRequest extends Request {
         }
 
         /**
-         * <p>The name of the root word.</p>
+         * <p>The word root name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>平均值</p>
+         * <p>Average</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -138,7 +138,10 @@ public class DeleteStandardWordRootRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The operator user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);

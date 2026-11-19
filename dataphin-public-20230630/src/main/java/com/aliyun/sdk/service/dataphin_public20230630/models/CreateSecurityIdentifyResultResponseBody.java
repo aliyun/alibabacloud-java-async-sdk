@@ -119,7 +119,7 @@ public class CreateSecurityIdentifyResultResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code. A value of OK indicates that the request was successful.</p>
+         * <p>The error code returned by the backend. A value of OK indicates that the request is normal.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -130,7 +130,7 @@ public class CreateSecurityIdentifyResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The identification result ID.</p>
+         * <p>The ID of the identification result.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -152,7 +152,7 @@ public class CreateSecurityIdentifyResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message.</p>
+         * <p>The error message returned for the request.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -174,7 +174,7 @@ public class CreateSecurityIdentifyResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

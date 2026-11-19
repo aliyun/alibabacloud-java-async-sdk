@@ -126,7 +126,7 @@ public class ListDataServiceMyApiPermissionsRequest extends Request {
         }
 
         /**
-         * <p>Search conditions.</p>
+         * <p>The search criteria.</p>
          */
         public Builder listQuery(ListQuery listQuery) {
             String listQueryShrink = shrink(listQuery, "ListQuery", "json");
@@ -136,7 +136,7 @@ public class ListDataServiceMyApiPermissionsRequest extends Request {
         }
 
         /**
-         * <p>Tenant ID.</p>
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -149,7 +149,10 @@ public class ListDataServiceMyApiPermissionsRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The operator user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -158,7 +161,7 @@ public class ListDataServiceMyApiPermissionsRequest extends Request {
         }
 
         /**
-         * <p>Data service project ID.</p>
+         * <p>The data service project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -243,7 +246,7 @@ public class ListDataServiceMyApiPermissionsRequest extends Request {
             } 
 
             /**
-             * <p>Search keyword.</p>
+             * <p>The search keyword.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -254,7 +257,7 @@ public class ListDataServiceMyApiPermissionsRequest extends Request {
             }
 
             /**
-             * <p>Page number. Default value: 1.</p>
+             * <p>The page number. Default value: 1.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -265,7 +268,7 @@ public class ListDataServiceMyApiPermissionsRequest extends Request {
             }
 
             /**
-             * <p>Number of records per page. Default value: 20.</p>
+             * <p>The number of records per page. Default value: 20.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>

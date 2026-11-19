@@ -119,7 +119,7 @@ public class GetDataAssetsGovernObjectResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code.</p>
+         * <p>The backend response code.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -138,7 +138,7 @@ public class GetDataAssetsGovernObjectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The HTTP response code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -171,7 +171,7 @@ public class GetDataAssetsGovernObjectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -243,7 +243,7 @@ public class GetDataAssetsGovernObjectResponseBody extends TeaModel {
              * <p>The display name of the user.</p>
              * 
              * <strong>example:</strong>
-             * <p>龚恒菊2088822037866701</p>
+             * <p>Gong Hengju2088822037866701</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -436,7 +436,7 @@ public class GetDataAssetsGovernObjectResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the parent object.</p>
+             * <p>The parent object ID.</p>
              * 
              * <strong>example:</strong>
              * <p>913836</p>
@@ -458,10 +458,10 @@ public class GetDataAssetsGovernObjectResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The other contact information for the governance issue.</p>
+             * <p>Other contact information for the governance issue.</p>
              * 
              * <strong>example:</strong>
-             * <p>Jane</p>
+             * <p>Li Si</p>
              */
             public Builder problemContactOther(String problemContactOther) {
                 this.problemContactOther = problemContactOther;
@@ -491,7 +491,7 @@ public class GetDataAssetsGovernObjectResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The submission method of the issue.</p>
+             * <p>The submission method for the issue.</p>
              * 
              * <strong>example:</strong>
              * <p>SYSTEM</p>
@@ -516,7 +516,7 @@ public class GetDataAssetsGovernObjectResponseBody extends TeaModel {
              * <p>The username of the user who submitted the issue.</p>
              * 
              * <strong>example:</strong>
-             * <p>John</p>
+             * <p>Zhang San</p>
              */
             public Builder problemSubmitterUserName(String problemSubmitterUserName) {
                 this.problemSubmitterUserName = problemSubmitterUserName;
@@ -524,7 +524,7 @@ public class GetDataAssetsGovernObjectResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The types of the governance issue.</p>
+             * <p>The type of the governance issue.</p>
              */
             public Builder problemTypes(java.util.List<String> problemTypes) {
                 this.problemTypes = problemTypes;
@@ -678,7 +678,7 @@ public class GetDataAssetsGovernObjectResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the knowledge entry.</p>
+             * <p>The knowledge ID.</p>
              * 
              * <strong>example:</strong>
              * <p>522072057231</p>
@@ -974,7 +974,7 @@ public class GetDataAssetsGovernObjectResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the governance object was reported.</p>
+             * <p>The submission time.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-31 10:06:01</p>
@@ -1132,7 +1132,7 @@ public class GetDataAssetsGovernObjectResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the rectification.</p>
+             * <p>The rectification ID.</p>
              * 
              * <strong>example:</strong>
              * <p>49169072991</p>
@@ -1143,7 +1143,7 @@ public class GetDataAssetsGovernObjectResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the rectification.</p>
+             * <p>The rectification name.</p>
              * 
              * <strong>example:</strong>
              * <p>Rectification process 1</p>
@@ -1165,7 +1165,7 @@ public class GetDataAssetsGovernObjectResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the user who performs the rectification.</p>
+             * <p>The ID of the rectification user.</p>
              * 
              * <strong>example:</strong>
              * <p>566777</p>
@@ -1179,7 +1179,7 @@ public class GetDataAssetsGovernObjectResponseBody extends TeaModel {
              * <p>The display name of the rectification user.</p>
              * 
              * <strong>example:</strong>
-             * <p>John</p>
+             * <p>Zhang San</p>
              */
             public Builder rectifyUserName(String rectifyUserName) {
                 this.rectifyUserName = rectifyUserName;

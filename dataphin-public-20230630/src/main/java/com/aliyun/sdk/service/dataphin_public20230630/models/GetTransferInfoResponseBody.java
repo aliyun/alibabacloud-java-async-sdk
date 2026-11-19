@@ -119,7 +119,7 @@ public class GetTransferInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code. A value of OK indicates that the request was successful.</p>
+         * <p>The error code. A value of OK indicates that the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -171,7 +171,7 @@ public class GetTransferInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -237,7 +237,7 @@ public class GetTransferInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The username.</p>
+             * <p>The display name of the user.</p>
              * 
              * <strong>example:</strong>
              * <p>zhangsan</p>
@@ -318,7 +318,7 @@ public class GetTransferInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The username.</p>
+             * <p>The display name of the user.</p>
              * 
              * <strong>example:</strong>
              * <p>zhangsan</p>
@@ -399,7 +399,7 @@ public class GetTransferInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The username.</p>
+             * <p>The display name of the user.</p>
              * 
              * <strong>example:</strong>
              * <p>zhangsan</p>
@@ -480,7 +480,7 @@ public class GetTransferInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The username.</p>
+             * <p>The display name of the user.</p>
              * 
              * <strong>example:</strong>
              * <p>zhangsan</p>
@@ -585,7 +585,7 @@ public class GetTransferInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the transfer module.</p>
+             * <p>The name of the transferred module.</p>
              * 
              * <strong>example:</strong>
              * <p>table owner</p>
@@ -596,7 +596,7 @@ public class GetTransferInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the transfer module.</p>
+             * <p>The status of the transferred module.</p>
              * 
              * <strong>example:</strong>
              * <p>SUCCESS</p>
@@ -874,11 +874,7 @@ public class GetTransferInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The transfer mode. Valid values:</p>
-             * <ul>
-             * <li>ONE_STOP: one-click transfer.</li>
-             * <li>FUNCTION_MODULE_BASED: transfer by function module.</li>
-             * </ul>
+             * <p>The transfer mode. Valid values: ONE_STOP: one-click transfer. FUNCTION_MODULE_BASED: transfer by feature module.</p>
              * 
              * <strong>example:</strong>
              * <p>ONE_STOP</p>
@@ -889,7 +885,7 @@ public class GetTransferInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The transfer details of function modules.</p>
+             * <p>The transfer details of feature modules.</p>
              */
             public Builder privilegeTransferResultEntries(java.util.List<PrivilegeTransferResultEntries> privilegeTransferResultEntries) {
                 this.privilegeTransferResultEntries = privilegeTransferResultEntries;
@@ -897,7 +893,7 @@ public class GetTransferInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The approval ID.</p>
+             * <p>The approval ticket ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -908,7 +904,7 @@ public class GetTransferInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The approval title.</p>
+             * <p>The title of the approval ticket.</p>
              * 
              * <strong>example:</strong>
              * <p>transefer title</p>

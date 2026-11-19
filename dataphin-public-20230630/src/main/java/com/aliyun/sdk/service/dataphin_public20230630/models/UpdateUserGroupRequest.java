@@ -124,7 +124,10 @@ public class UpdateUserGroupRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The operator user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -133,7 +136,7 @@ public class UpdateUserGroupRequest extends Request {
         }
 
         /**
-         * <p>The command to edit the user group.</p>
+         * <p>The update user group command.</p>
          */
         public Builder updateCommand(UpdateCommand updateCommand) {
             String updateCommandShrink = shrink(updateCommand, "UpdateCommand", "json");
@@ -229,7 +232,7 @@ public class UpdateUserGroupRequest extends Request {
             } 
 
             /**
-             * <p>The list of administrator user IDs for the user group.</p>
+             * <p>The user group administrators.</p>
              */
             public Builder adminUserIdList(java.util.List<String> adminUserIdList) {
                 this.adminUserIdList = adminUserIdList;
@@ -237,10 +240,10 @@ public class UpdateUserGroupRequest extends Request {
             }
 
             /**
-             * <p>The description of the user group.</p>
+             * <p>The description.</p>
              * 
              * <strong>example:</strong>
-             * <p>xx</p>
+             * <p>Sample description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -248,7 +251,7 @@ public class UpdateUserGroupRequest extends Request {
             }
 
             /**
-             * <p>The ID of the user group.</p>
+             * <p>The user group ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -260,10 +263,10 @@ public class UpdateUserGroupRequest extends Request {
             }
 
             /**
-             * <p>The name of the user group.</p>
+             * <p>The user group name.</p>
              * 
              * <strong>example:</strong>
-             * <p>xx测试</p>
+             * <p>xx test</p>
              */
             public Builder name(String name) {
                 this.name = name;

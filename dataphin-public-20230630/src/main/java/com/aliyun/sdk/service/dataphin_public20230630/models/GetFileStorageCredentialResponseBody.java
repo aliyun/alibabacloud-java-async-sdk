@@ -350,7 +350,7 @@ public class GetFileStorageCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The file storage bucket.</p>
+             * <p>The bucket for file storage.</p>
              * 
              * <strong>example:</strong>
              * <p>dataphin</p>
@@ -405,7 +405,7 @@ public class GetFileStorageCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The security token.</p>
+             * <p>The temporary security token.</p>
              * 
              * <strong>example:</strong>
              * <p>temp.token</p>
@@ -416,7 +416,7 @@ public class GetFileStorageCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the storage cluster. Valid values: oss and ceph.</p>
+             * <p>The type of the storage cluster, such as oss or ceph.</p>
              * 
              * <strong>example:</strong>
              * <p>oss</p>

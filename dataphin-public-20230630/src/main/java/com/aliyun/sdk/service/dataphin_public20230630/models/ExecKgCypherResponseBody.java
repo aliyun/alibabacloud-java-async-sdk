@@ -171,7 +171,7 @@ public class ExecKgCypherResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -394,7 +394,7 @@ public class ExecKgCypherResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of relationship record properties.</p>
+             * <p>The list of properties for the relationship record.</p>
              */
             public Builder properties(java.util.List<Properties> properties) {
                 this.properties = properties;
@@ -632,7 +632,7 @@ public class ExecKgCypherResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of entity record properties.</p>
+             * <p>The list of properties for the entity record.</p>
              */
             public Builder properties(java.util.List<NodeListProperties> properties) {
                 this.properties = properties;
@@ -767,7 +767,7 @@ public class ExecKgCypherResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of columns in the row.</p>
+             * <p>The list of columns.</p>
              */
             public Builder columns(java.util.List<Columns> columns) {
                 this.columns = columns;
@@ -868,7 +868,7 @@ public class ExecKgCypherResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The transformed execution statement.</p>
+             * <p>The converted execution statement.</p>
              * 
              * <strong>example:</strong>
              * <p>MATCH p=()-[:Product]-&gt;() RETURN p, count(*) LIMIT 25</p>

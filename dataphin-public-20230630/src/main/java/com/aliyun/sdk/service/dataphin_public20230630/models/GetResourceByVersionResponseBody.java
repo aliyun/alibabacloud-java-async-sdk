@@ -141,7 +141,7 @@ public class GetResourceByVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the backend exception.</p>
+         * <p>The backend exception details.</p>
          * 
          * <strong>example:</strong>
          * <p>internal error</p>
@@ -163,7 +163,7 @@ public class GetResourceByVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the resource file.</p>
+         * <p>The resource file details.</p>
          */
         public Builder resourceInfo(ResourceInfo resourceInfo) {
             this.resourceInfo = resourceInfo;
@@ -171,7 +171,7 @@ public class GetResourceByVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -424,7 +424,7 @@ public class GetResourceByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time, in the yyyy-MM-dd HH:mm:ss format.</p>
+             * <p>The time when the resource was created. Format: yyyy-MM-dd HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-06-10 10:01:01</p>
@@ -435,7 +435,7 @@ public class GetResourceByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time, in the yyyy-MM-dd HH:mm:ss format.</p>
+             * <p>The time when the resource was updated. Format: yyyy-MM-dd HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-06-10 10:01:01</p>
@@ -501,7 +501,7 @@ public class GetResourceByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the resource, in bytes.</p>
+             * <p>The size of the resource. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>102400</p>

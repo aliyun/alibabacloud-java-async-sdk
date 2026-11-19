@@ -130,7 +130,7 @@ public class ListTablesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP response code.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -152,7 +152,7 @@ public class ListTablesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The paged query result.</p>
+         * <p>The paging query result.</p>
          */
         public Builder pageResult(PageResult pageResult) {
             this.pageResult = pageResult;
@@ -884,7 +884,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The lifecycle of the table, in days.</p>
+             * <p>The lifecycle of the table in days.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -1002,7 +1002,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total storage size of the table, in bytes.</p>
+             * <p>The total storage size of the table in bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>10241024</p>

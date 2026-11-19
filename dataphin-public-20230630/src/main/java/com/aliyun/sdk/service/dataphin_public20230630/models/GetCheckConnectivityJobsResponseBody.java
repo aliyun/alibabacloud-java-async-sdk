@@ -149,7 +149,7 @@ public class GetCheckConnectivityJobsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the backend response error.</p>
+         * <p>The details of the backend response exception.</p>
          * 
          * <strong>example:</strong>
          * <p>internal error</p>
@@ -316,7 +316,7 @@ public class GetCheckConnectivityJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message that provides a detailed description when a task fails.</p>
+             * <p>The error message, which provides a detailed description when the task fails.</p>
              * 
              * <strong>example:</strong>
              * <p>notFoundIp</p>
@@ -338,7 +338,7 @@ public class GetCheckConnectivityJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task type (application-level or cluster-level).</p>
+             * <p>The task type, which can be application-level or cluster-level.</p>
              * 
              * <strong>example:</strong>
              * <p>application/cluster</p>
@@ -371,7 +371,7 @@ public class GetCheckConnectivityJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Voldemort task ID used to associate the underlying execution task.</p>
+             * <p>The Voldemort task ID, which is used to associate the underlying execution task.</p>
              * 
              * <strong>example:</strong>
              * <p>t_7572319950395080706_20251225_7572319950395080707</p>

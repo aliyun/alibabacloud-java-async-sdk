@@ -163,7 +163,7 @@ public class GetUdfResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -171,7 +171,7 @@ public class GetUdfResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the user-defined function.</p>
+         * <p>The details of the custom function.</p>
          */
         public Builder udfInfo(UdfInfo udfInfo) {
             this.udfInfo = udfInfo;
@@ -367,19 +367,7 @@ public class GetUdfResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The category. Valid values:</p>
-             * <ul>
-             * <li>1: window function.</li>
-             * <li>2: statistical function.</li>
-             * <li>3: numerical function.</li>
-             * <li>4: string function.</li>
-             * <li>5: time function.</li>
-             * <li>6: IP address helper function.</li>
-             * <li>7: URL-related function.</li>
-             * <li>8: encoding and decoding function.</li>
-             * <li>9: business-related function.</li>
-             * <li>10: other.</li>
-             * </ul>
+             * <p>The category of the function. Valid values: 1 (Window function), 2 (Statistical function), 3 (Numerical function), 4 (String function), 5 (Time function), 6 (IP address helper function), 7 (URL-related function), 8 (Encoding and decoding function), 9 (Business-related function), and 10 (Other).</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -390,7 +378,7 @@ public class GetUdfResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The registered class name.</p>
+             * <p>The name of the registered class.</p>
              * 
              * <strong>example:</strong>
              * <p>com.lydaas.dataphin.UdfTest</p>
@@ -412,7 +400,7 @@ public class GetUdfResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The compute engine type. Valid values: HADOOP, MAX_COMPUTE, and FLINK.</p>
+             * <p>The compute engine. Valid values: HADOOP, MAX_COMPUTE, and FLINK.</p>
              * 
              * <strong>example:</strong>
              * <p>HADOOP</p>
@@ -423,7 +411,7 @@ public class GetUdfResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creator.</p>
+             * <p>The creator of the function.</p>
              * 
              * <strong>example:</strong>
              * <p>30012110</p>
@@ -434,7 +422,7 @@ public class GetUdfResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description.</p>
+             * <p>The description of the function.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -445,7 +433,7 @@ public class GetUdfResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage folder.</p>
+             * <p>The storage directory.</p>
              * 
              * <strong>example:</strong>
              * <p>/</p>
@@ -456,7 +444,7 @@ public class GetUdfResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time. Format: yyyy-MM-d HH:mm:ss.</p>
+             * <p>The time when the function was created. Format: yyyy-MM-d HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-06-10 10:01:01</p>
@@ -467,7 +455,7 @@ public class GetUdfResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time. Format: yyyy-MM-d HH:mm:ss.</p>
+             * <p>The time when the function was last updated. Format: yyyy-MM-d HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-06-10 10:01:01</p>
@@ -478,7 +466,7 @@ public class GetUdfResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user-defined function ID.</p>
+             * <p>The ID of the custom function.</p>
              * 
              * <strong>example:</strong>
              * <p>1030111021</p>
@@ -489,7 +477,7 @@ public class GetUdfResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last modifier.</p>
+             * <p>The user who last modified the function.</p>
              * 
              * <strong>example:</strong>
              * <p>30012110</p>
@@ -500,7 +488,7 @@ public class GetUdfResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The function name.</p>
+             * <p>The name of the function.</p>
              * 
              * <strong>example:</strong>
              * <p>udf_to_lower</p>

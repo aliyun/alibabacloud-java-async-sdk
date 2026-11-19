@@ -125,7 +125,10 @@ public class UpdateBatchTaskUdfLineagesRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -134,7 +137,7 @@ public class UpdateBatchTaskUdfLineagesRequest extends Request {
         }
 
         /**
-         * <p>The update instruction.</p>
+         * <p>The update command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder updateCommand(UpdateCommand updateCommand) {
@@ -234,7 +237,7 @@ public class UpdateBatchTaskUdfLineagesRequest extends Request {
             } 
 
             /**
-             * <p>The list of lineage fields.</p>
+             * <p>The list of lineage columns.</p>
              * <p>This parameter is required.</p>
              */
             public Builder columnList(java.util.List<String> columnList) {
@@ -264,7 +267,7 @@ public class UpdateBatchTaskUdfLineagesRequest extends Request {
             }
 
             /**
-             * <p>The table name.</p>
+             * <p>The name of the table.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -365,7 +368,7 @@ public class UpdateBatchTaskUdfLineagesRequest extends Request {
             } 
 
             /**
-             * <p>The list of lineage fields.</p>
+             * <p>The list of lineage columns.</p>
              * <p>This parameter is required.</p>
              */
             public Builder columnList(java.util.List<String> columnList) {
@@ -395,7 +398,7 @@ public class UpdateBatchTaskUdfLineagesRequest extends Request {
             }
 
             /**
-             * <p>The table name.</p>
+             * <p>The name of the table.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -468,7 +471,7 @@ public class UpdateBatchTaskUdfLineagesRequest extends Request {
             } 
 
             /**
-             * <p>The collection of lineage input tables.</p>
+             * <p>The collection of input tables for lineage.</p>
              * <p>This parameter is required.</p>
              */
             public Builder inputLineageList(java.util.List<InputLineageList> inputLineageList) {
@@ -477,7 +480,7 @@ public class UpdateBatchTaskUdfLineagesRequest extends Request {
             }
 
             /**
-             * <p>The collection of lineage output tables.</p>
+             * <p>The collection of output tables for lineage.</p>
              * <p>This parameter is required.</p>
              */
             public Builder outputLineageList(java.util.List<OutputLineageList> outputLineageList) {
@@ -561,7 +564,7 @@ public class UpdateBatchTaskUdfLineagesRequest extends Request {
             } 
 
             /**
-             * <p>The node ID in the logical definition subtree.</p>
+             * <p>The node ID in the task directory tree.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -582,7 +585,7 @@ public class UpdateBatchTaskUdfLineagesRequest extends Request {
             }
 
             /**
-             * <p>The project to which the node belongs.</p>
+             * <p>The project to which the task belongs.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

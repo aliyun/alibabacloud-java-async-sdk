@@ -112,7 +112,7 @@ public class CreateBizUnitRequest extends Request {
         }
 
         /**
-         * <p>The create request.</p>
+         * <p>The creation request.</p>
          * <p>This parameter is required.</p>
          */
         public Builder createCommand(CreateCommand createCommand) {
@@ -136,7 +136,10 @@ public class CreateBizUnitRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the user who performs the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -319,7 +322,7 @@ public class CreateBizUnitRequest extends Request {
             } 
 
             /**
-             * <p>The list of data domain architects.</p>
+             * <p>The business unit architects.</p>
              * <p>This parameter is required.</p>
              */
             public Builder bizUnitAccountList(java.util.List<BizUnitAccountList> bizUnitAccountList) {
@@ -361,8 +364,8 @@ public class CreateBizUnitRequest extends Request {
              * <li>icon-entertainment: Entertainment.</li>
              * <li>icon-traffic: Travel.</li>
              * <li>icon-health: Health.</li>
-             * <li>icon-social-contact: Social and communication.</li>
-             * <li>con-dining: Dining.</li>
+             * <li>icon-social-contact: Social and communications.</li>
+             * <li>con-dining: Catering.</li>
              * <li>icon-education: Education.</li>
              * <li>icon-environment: Environment.</li>
              * </ul>
@@ -380,7 +383,7 @@ public class CreateBizUnitRequest extends Request {
              * <p>The production mode. Valid values:</p>
              * <ul>
              * <li>BASIC: single-environment mode.</li>
-             * <li>DEV_PROD: development/production dual-environment mode.</li>
+             * <li>DEV_PROD: development and production dual-environment mode.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -392,7 +395,7 @@ public class CreateBizUnitRequest extends Request {
             }
 
             /**
-             * <p>The code name of the business object. The name can be up to 64 characters in length and can contain only letters, digits, and underscores. For ADB_PG engines, the code name can be up to 40 characters in length.</p>
+             * <p>The code name of the business object. The name can be up to 64 characters in length and can contain only letters, digits, and underscores. For the ADB_PG engine, the code name can be up to 40 characters in length.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

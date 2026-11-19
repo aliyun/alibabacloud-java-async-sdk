@@ -111,7 +111,7 @@ public class ListQualityWatchTasksRequest extends Request {
         }
 
         /**
-         * <p>The paged query conditions.</p>
+         * <p>The paging conditions for the paged query.</p>
          */
         public Builder listQuery(ListQuery listQuery) {
             String listQueryShrink = shrink(listQuery, "ListQuery", "json");
@@ -134,7 +134,7 @@ public class ListQualityWatchTasksRequest extends Request {
         }
 
         /**
-         * <p>The ID of the operator.</p>
+         * <p>The operator ID.</p>
          * 
          * <strong>example:</strong>
          * <p>30001011</p>
@@ -400,7 +400,7 @@ public class ListQualityWatchTasksRequest extends Request {
             } 
 
             /**
-             * <p>The business date filter.</p>
+             * <p>The business date filter. The format is YYYY-MM-DD.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-06-30</p>
@@ -411,7 +411,7 @@ public class ListQualityWatchTasksRequest extends Request {
             }
 
             /**
-             * <p>The name of the business unit to which the object belongs.</p>
+             * <p>The business unit names.</p>
              */
             public Builder bizUnitNameList(java.util.List<String> bizUnitNameList) {
                 this.bizUnitNameList = bizUnitNameList;
@@ -419,7 +419,7 @@ public class ListQualityWatchTasksRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to query only the watchtask objects owned by the current user.</p>
+             * <p>The monitoring task objects (nodes) for which the current user is responsible.</p>
              */
             public Builder currentUserOwned(Boolean currentUserOwned) {
                 this.currentUserOwned = currentUserOwned;
@@ -427,7 +427,7 @@ public class ListQualityWatchTasksRequest extends Request {
             }
 
             /**
-             * <p>The data source ID.</p>
+             * <p>The data source IDs.</p>
              */
             public Builder dataSourceIdList(java.util.List<String> dataSourceIdList) {
                 this.dataSourceIdList = dataSourceIdList;
@@ -435,7 +435,7 @@ public class ListQualityWatchTasksRequest extends Request {
             }
 
             /**
-             * <p>The data source owner.</p>
+             * <p>The data source owners.</p>
              */
             public Builder dataSourceOwnerList(java.util.List<String> dataSourceOwnerList) {
                 this.dataSourceOwnerList = dataSourceOwnerList;
@@ -443,12 +443,7 @@ public class ListQualityWatchTasksRequest extends Request {
             }
 
             /**
-             * <p>The data source scope. Valid values:</p>
-             * <ul>
-             * <li>STREAMING: real-time only.</li>
-             * <li>OFFLINE: offline only.</li>
-             * <li>ALL: real-time and offline.</li>
-             * </ul>
+             * <p>The data source scope. Valid values: STREAMING (real-time only), OFFLINE (offline only), and ALL (real-time and offline).</p>
              */
             public Builder dataSourceScopeList(java.util.List<String> dataSourceScopeList) {
                 this.dataSourceScopeList = dataSourceScopeList;
@@ -456,7 +451,7 @@ public class ListQualityWatchTasksRequest extends Request {
             }
 
             /**
-             * <p>The data source type, such as MAX_COMPUTE, HADOOP, or MYSQL.</p>
+             * <p>The data source types, such as MAX_COMPUTE, HADOOP, and MYSQL.</p>
              */
             public Builder dataSourceTypeList(java.util.List<String> dataSourceTypeList) {
                 this.dataSourceTypeList = dataSourceTypeList;
@@ -464,11 +459,7 @@ public class ListQualityWatchTasksRequest extends Request {
             }
 
             /**
-             * <p>The rule exception type. Valid values:</p>
-             * <ul>
-             * <li>STRONG: strong.</li>
-             * <li>WEAK: weak.</li>
-             * </ul>
+             * <p>The rule exception type. Valid values: STRONG (strong) and WEAK (weak).</p>
              */
             public Builder errorRuleStrengthList(java.util.List<String> errorRuleStrengthList) {
                 this.errorRuleStrengthList = errorRuleStrengthList;
@@ -476,7 +467,7 @@ public class ListQualityWatchTasksRequest extends Request {
             }
 
             /**
-             * <p>The search keyword. This parameter specifies the name of the monitored table.</p>
+             * <p>The search keyword, such as the name of the monitored table.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -509,7 +500,7 @@ public class ListQualityWatchTasksRequest extends Request {
             }
 
             /**
-             * <p>The name of the project to which the object belongs.</p>
+             * <p>The project names.</p>
              */
             public Builder projectNameList(java.util.List<String> projectNameList) {
                 this.projectNameList = projectNameList;
@@ -517,7 +508,7 @@ public class ListQualityWatchTasksRequest extends Request {
             }
 
             /**
-             * <p>The quality owner.</p>
+             * <p>The quality owners.</p>
              */
             public Builder qualityOwnerList(java.util.List<String> qualityOwnerList) {
                 this.qualityOwnerList = qualityOwnerList;
@@ -525,17 +516,7 @@ public class ListQualityWatchTasksRequest extends Request {
             }
 
             /**
-             * <p>The task status. Valid values:</p>
-             * <ul>
-             * <li>NOT_RUN: not executed.</li>
-             * <li>WAITING: waiting.</li>
-             * <li>RUNNING: running.</li>
-             * <li>SUCCESS: succeeded.</li>
-             * <li>FAILED: failed.</li>
-             * <li>CANCEL: canceled.</li>
-             * <li>TIMEOUT: timed out.</li>
-             * <li>OFFLINE: offline.</li>
-             * </ul>
+             * <p>The task status. Valid values: NOT_RUN (not run), WAITING (waiting), RUNNING (running), SUCCESS (successful), FAILED (failed), CANCEL (canceled), TIMEOUT (timed out), and OFFLINE (offline).</p>
              */
             public Builder statusList(java.util.List<String> statusList) {
                 this.statusList = statusList;
@@ -543,7 +524,7 @@ public class ListQualityWatchTasksRequest extends Request {
             }
 
             /**
-             * <p>The table owner.</p>
+             * <p>The table owners.</p>
              */
             public Builder tableOwnerList(java.util.List<String> tableOwnerList) {
                 this.tableOwnerList = tableOwnerList;
@@ -551,15 +532,7 @@ public class ListQualityWatchTasksRequest extends Request {
             }
 
             /**
-             * <p>The table type. Valid values:</p>
-             * <ul>
-             * <li>LOGIC_DIM_TABLE: logical dimension table.</li>
-             * <li>LOGIC_FACT_TABLE: logical fact table.</li>
-             * <li>LOGIC_SUM_TABLE: logical aggregate table.</li>
-             * <li>LOGIC_LABEL_TABLE: logical label table.</li>
-             * <li>PHYSICAL_TABLE: physical table.</li>
-             * <li>REALTIME_LOGICAL_TABLE: real-time meta table.</li>
-             * </ul>
+             * <p>The table type. Valid values: LOGIC_DIM_TABLE (logical dimension table), LOGIC_FACT_TABLE (logical fact table), LOGIC_SUM_TABLE (logical aggregate table), LOGIC_LABEL_TABLE (logical label table), PHYSICAL_TABLE (physical table), and REALTIME_LOGICAL_TABLE (real-time metatable).</p>
              */
             public Builder tableTypeList(java.util.List<String> tableTypeList) {
                 this.tableTypeList = tableTypeList;
@@ -567,14 +540,7 @@ public class ListQualityWatchTasksRequest extends Request {
             }
 
             /**
-             * <p>The monitored object type. Valid values:</p>
-             * <ul>
-             * <li>TABLE: Dataphin table.</li>
-             * <li>DATASOURCE_TABLE: global domain table.</li>
-             * <li>DATASOURCE: data source.</li>
-             * <li>INDEX: metric.</li>
-             * <li>REALTIME_LOGICAL_TABLE: real-time meta table.</li>
-             * </ul>
+             * <p>The monitored object type. Valid values: TABLE (Dataphin table), DATASOURCE_TABLE (global table), DATASOURCE (data source), INDEX (metric), and REALTIME_LOGICAL_TABLE (real-time metatable).</p>
              */
             public Builder watchTypeList(java.util.List<String> watchTypeList) {
                 this.watchTypeList = watchTypeList;

@@ -123,7 +123,7 @@ public class ListComputeSourcesRequest extends Request {
         }
 
         /**
-         * <p>Tenant ID.</p>
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,7 +136,10 @@ public class ListComputeSourcesRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -251,7 +254,7 @@ public class ListComputeSourcesRequest extends Request {
             }
 
             /**
-             * <p>The keyword used for filtering.</p>
+             * <p>The keyword.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -273,7 +276,7 @@ public class ListComputeSourcesRequest extends Request {
             }
 
             /**
-             * <p>The number of records per page. Default value: 20.</p>
+             * <p>The number of entries per page. Default value: 20.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -284,7 +287,7 @@ public class ListComputeSourcesRequest extends Request {
             }
 
             /**
-             * <p>The type of the compute source.</p>
+             * <p>The compute source type.</p>
              * 
              * <strong>example:</strong>
              * <p>MaxCompute</p>

@@ -141,7 +141,7 @@ public class GetSecurityClassifyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the backend exception.</p>
+         * <p>The backend exception details.</p>
          * 
          * <strong>example:</strong>
          * <p>internal error</p>
@@ -171,7 +171,7 @@ public class GetSecurityClassifyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -324,7 +324,7 @@ public class GetSecurityClassifyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The security level abbreviation.</p>
+             * <p>The level abbreviation.</p>
              * 
              * <strong>example:</strong>
              * <p>lv_test</p>
@@ -335,7 +335,7 @@ public class GetSecurityClassifyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The security level index.</p>
+             * <p>The level index.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -346,7 +346,7 @@ public class GetSecurityClassifyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The security level name.</p>
+             * <p>The level name.</p>
              * 
              * <strong>example:</strong>
              * <p>lv_teat</p>

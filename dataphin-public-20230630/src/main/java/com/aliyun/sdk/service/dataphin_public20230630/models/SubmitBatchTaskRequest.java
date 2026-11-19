@@ -125,7 +125,7 @@ public class SubmitBatchTaskRequest extends Request {
         }
 
         /**
-         * <p>The operator user ID.</p>
+         * <p>The ID of the operator.</p>
          * 
          * <strong>example:</strong>
          * <p>30001011</p>
@@ -272,7 +272,7 @@ public class SubmitBatchTaskRequest extends Request {
             } 
 
             /**
-             * <p>条件名称</p>
+             * <p>The condition name.</p>
              * 
              * <strong>example:</strong>
              * <p>workday</p>
@@ -283,7 +283,7 @@ public class SubmitBatchTaskRequest extends Request {
             }
 
             /**
-             * <p>命中后的cron表达式</p>
+             * <p>The cron expression used after a condition is matched.</p>
              * 
              * <strong>example:</strong>
              * <p>0 0 5 * * ?</p>
@@ -294,7 +294,7 @@ public class SubmitBatchTaskRequest extends Request {
             }
 
             /**
-             * <p>是否启用该条件</p>
+             * <p>Specifies whether to enable the condition.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -305,7 +305,7 @@ public class SubmitBatchTaskRequest extends Request {
             }
 
             /**
-             * <p>是否跟随主调度参数</p>
+             * <p>Specifies whether to follow the primary scheduling parameters.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -316,7 +316,12 @@ public class SubmitBatchTaskRequest extends Request {
             }
 
             /**
-             * <p>命中后的调度状态：1正常，2暂停，3空跑</p>
+             * <p>The scheduling status used after a condition is matched. Valid values:</p>
+             * <ul>
+             * <li>1: Normal.</li>
+             * <li>2: Paused.</li>
+             * <li>3: Dry run.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -327,7 +332,7 @@ public class SubmitBatchTaskRequest extends Request {
             }
 
             /**
-             * <p>条件表达式树JSON字符串，内部键名使用小驼峰</p>
+             * <p>The JSON character string of the conditional expression tree. Internal key names use lower camel case.</p>
              * 
              * <strong>example:</strong>
              * <p>{}</p>
@@ -338,7 +343,7 @@ public class SubmitBatchTaskRequest extends Request {
             }
 
             /**
-             * <p>命中后的调度时间</p>
+             * <p>The scheduling time used after a condition is matched.</p>
              * 
              * <strong>example:</strong>
              * <p>05:00</p>
@@ -421,7 +426,7 @@ public class SubmitBatchTaskRequest extends Request {
             } 
 
             /**
-             * <p>是否启用条件调度。传入ConditionScheduleConfig对象时必须提供，由后端校验；false关闭并清除旧配置。</p>
+             * <p>Specifies whether to enable conditional scheduling. This parameter is required when the ConditionScheduleConfig object is passed and is verified by the backend. If this parameter is set to false, conditional scheduling is disabled and the previous configuration is cleared.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -432,7 +437,7 @@ public class SubmitBatchTaskRequest extends Request {
             }
 
             /**
-             * <p>自定义条件列表；与TemplateId互斥，空列表清除旧条件</p>
+             * <p>The list of custom conditions. This parameter is mutually exclusive with TemplateId. An empty list clears the previous conditions.</p>
              */
             public Builder paramList(java.util.List<ParamList> paramList) {
                 this.paramList = paramList;
@@ -440,7 +445,7 @@ public class SubmitBatchTaskRequest extends Request {
             }
 
             /**
-             * <p>条件调度模板ID，与ParamList互斥</p>
+             * <p>The ID of the conditional scheduling template. This parameter is mutually exclusive with ParamList.</p>
              * 
              * <strong>example:</strong>
              * <p>1002</p>
@@ -580,8 +585,8 @@ public class SubmitBatchTaskRequest extends Request {
             /**
              * <p>The interval unit. Valid values:</p>
              * <ul>
-             * <li>MINUTE: Minute.</li>
-             * <li>HOUR: Hour.</li>
+             * <li>MINUTE: Minutes.</li>
+             * <li>HOUR: Hours.</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -594,7 +599,7 @@ public class SubmitBatchTaskRequest extends Request {
             }
 
             /**
-             * <p>The schedule period. Valid values:</p>
+             * <p>The scheduling period. Valid values:</p>
              * <ul>
              * <li>YEARLY: Yearly.</li>
              * <li>MONTHLY: Monthly.</li>
@@ -698,7 +703,7 @@ public class SubmitBatchTaskRequest extends Request {
             } 
 
             /**
-             * <p>自定义失败重试间隔。</p>
+             * <p>The custom retry interval for failures.</p>
              * 
              * <strong>example:</strong>
              * <p>60</p>
@@ -709,7 +714,7 @@ public class SubmitBatchTaskRequest extends Request {
             }
 
             /**
-             * <p>自定义失败重试次数。</p>
+             * <p>The custom number of retries for failures.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -720,7 +725,7 @@ public class SubmitBatchTaskRequest extends Request {
             }
 
             /**
-             * <p>是否跟随系统配置。</p>
+             * <p>Specifies whether to follow the system configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -790,7 +795,7 @@ public class SubmitBatchTaskRequest extends Request {
             } 
 
             /**
-             * <p>自定义超时时间。</p>
+             * <p>The custom timeout period.</p>
              * 
              * <strong>example:</strong>
              * <p>1800</p>
@@ -801,7 +806,7 @@ public class SubmitBatchTaskRequest extends Request {
             }
 
             /**
-             * <p>是否跟随系统配置。</p>
+             * <p>Specifies whether to follow the system configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -897,7 +902,7 @@ public class SubmitBatchTaskRequest extends Request {
             } 
 
             /**
-             * <p>The description of the parameter.</p>
+             * <p>The parameter description.</p>
              * 
              * <strong>example:</strong>
              * <p>Parameter description</p>
@@ -916,7 +921,7 @@ public class SubmitBatchTaskRequest extends Request {
             }
 
             /**
-             * <p>The key of the parameter.</p>
+             * <p>The parameter key.</p>
              * 
              * <strong>example:</strong>
              * <p>paramKey</p>
@@ -927,7 +932,7 @@ public class SubmitBatchTaskRequest extends Request {
             }
 
             /**
-             * <p>The value of the parameter.</p>
+             * <p>The parameter value.</p>
              * 
              * <strong>example:</strong>
              * <p>paramValue</p>
@@ -999,7 +1004,7 @@ public class SubmitBatchTaskRequest extends Request {
             } 
 
             /**
-             * <p>The name of the parameter.</p>
+             * <p>The parameter name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1011,7 +1016,7 @@ public class SubmitBatchTaskRequest extends Request {
             }
 
             /**
-             * <p>The value of the parameter.</p>
+             * <p>The parameter value.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1069,7 +1074,7 @@ public class SubmitBatchTaskRequest extends Request {
             } 
 
             /**
-             * <p>基础调度模板ID，必须为正数</p>
+             * <p>The ID of the basic scheduling template. The value must be a positive number.</p>
              * 
              * <strong>example:</strong>
              * <p>1001</p>
@@ -1212,10 +1217,10 @@ public class SubmitBatchTaskRequest extends Request {
             /**
              * <p>The dependency period type. Valid values:</p>
              * <ul>
-             * <li>CURRENT_PERIOD: Current period.</li>
-             * <li>LAST_PERIOD: Last period.</li>
-             * <li>LAST_N_PERIOD: Last N days.</li>
-             * <li>LAST_24_HOUR: Last 24 hours.</li>
+             * <li>CURRENT_PERIOD: current period</li>
+             * <li>LAST_PERIOD: last period</li>
+             * <li>LAST_N_PERIOD: last N days</li>
+             * <li>LAST_24_HOUR: last 24 hours</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -1389,10 +1394,10 @@ public class SubmitBatchTaskRequest extends Request {
             /**
              * <p>The dependency strategy. Valid values:</p>
              * <ul>
-             * <li>ALL: All.</li>
-             * <li>FIRST: First.</li>
-             * <li>LAST: Last.</li>
-             * <li>NEAR: Nearest.</li>
+             * <li>ALL: all</li>
+             * <li>FIRST: first</li>
+             * <li>LAST: last</li>
+             * <li>NEAR: nearest</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1414,8 +1419,8 @@ public class SubmitBatchTaskRequest extends Request {
             /**
              * <p>The upstream dependency node type. Valid values:</p>
              * <ul>
-             * <li>PHYSICAL: Physical node.</li>
-             * <li>LOGICAL: Logical table dependency.</li>
+             * <li>PHYSICAL: physical node</li>
+             * <li>LOGICAL: logical table dependency</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1427,7 +1432,7 @@ public class SubmitBatchTaskRequest extends Request {
             }
 
             /**
-             * <p>The period difference. A value of 0 indicates a dependency on the same period. A positive number indicates a dependency on the previous N periods.</p>
+             * <p>The period difference. A value of 0 indicates a dependency on the same period. A positive value indicates a dependency on the previous N periods.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1921,7 +1926,7 @@ public class SubmitBatchTaskRequest extends Request {
             } 
 
             /**
-             * <p>The code of the task.</p>
+             * <p>The task code.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1933,7 +1938,7 @@ public class SubmitBatchTaskRequest extends Request {
             }
 
             /**
-             * <p>The version number of the code template.</p>
+             * <p>The code template version number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1956,7 +1961,7 @@ public class SubmitBatchTaskRequest extends Request {
             }
 
             /**
-             * <p>条件调度；不传保留，Enable=false关闭并清除原条件，仅周期任务支持</p>
+             * <p>The conditional scheduling configuration. If this parameter is not specified, the current configuration is retained. If Enable is set to false, conditional scheduling is disabled and the original conditions are cleared. This parameter is supported only for periodic tasks.</p>
              */
             public Builder conditionScheduleConfig(ConditionScheduleConfig conditionScheduleConfig) {
                 this.conditionScheduleConfig = conditionScheduleConfig;
@@ -1964,7 +1969,7 @@ public class SubmitBatchTaskRequest extends Request {
             }
 
             /**
-             * <p>不传时保留任务当前配置。</p>
+             * <p>The amount of CPU resources. If this parameter is not specified, the current configuration of the task is retained.</p>
              * 
              * <strong>example:</strong>
              * <p>0.5</p>
@@ -1986,7 +1991,7 @@ public class SubmitBatchTaskRequest extends Request {
             }
 
             /**
-             * <p>The custom schedule interval configuration.</p>
+             * <p>The custom scheduling interval configuration.</p>
              */
             public Builder customScheduleConfig(CustomScheduleConfig customScheduleConfig) {
                 this.customScheduleConfig = customScheduleConfig;
@@ -1994,7 +1999,7 @@ public class SubmitBatchTaskRequest extends Request {
             }
 
             /**
-             * <p>The execution engine of the task. Valid values for Python tasks:</p>
+             * <p>The task execution engine. For Python tasks, valid values:</p>
              * <ul>
              * <li>PYTHON2_7</li>
              * <li>PYTHON3_7</li>
@@ -2010,7 +2015,7 @@ public class SubmitBatchTaskRequest extends Request {
             }
 
             /**
-             * <p>失败重试配置。不传时保留任务当前配置。传入时整体替换该配置对象。</p>
+             * <p>The failure retry configuration. If this parameter is not specified, the current configuration of the task is retained. If this parameter is specified, the entire configuration object is replaced.</p>
              */
             public Builder executeRerunConfig(ExecuteRerunConfig executeRerunConfig) {
                 this.executeRerunConfig = executeRerunConfig;
@@ -2018,7 +2023,7 @@ public class SubmitBatchTaskRequest extends Request {
             }
 
             /**
-             * <p>执行超时配置。不传时保留任务当前配置。传入时整体替换该配置对象。</p>
+             * <p>The execution timeout configuration. If this parameter is not specified, the current configuration of the task is retained. If this parameter is specified, the entire configuration object is replaced.</p>
              */
             public Builder executeTimeOutConfig(ExecuteTimeOutConfig executeTimeOutConfig) {
                 this.executeTimeOutConfig = executeTimeOutConfig;
@@ -2038,7 +2043,7 @@ public class SubmitBatchTaskRequest extends Request {
             }
 
             /**
-             * <p>不传时保留任务当前配置。</p>
+             * <p>The amount of CPU resources. If this parameter is not specified, the current configuration of the task is retained.</p>
              * 
              * <strong>example:</strong>
              * <p>1024</p>
@@ -2061,7 +2066,7 @@ public class SubmitBatchTaskRequest extends Request {
             }
 
             /**
-             * <p>The description of the task.</p>
+             * <p>The task description.</p>
              * 
              * <strong>example:</strong>
              * <p>xx test</p>
@@ -2080,7 +2085,7 @@ public class SubmitBatchTaskRequest extends Request {
             }
 
             /**
-             * <p>The status of the node. Valid values:</p>
+             * <p>The node status. Valid values:</p>
              * <ul>
              * <li>1: Normal.</li>
              * <li>2: Paused.</li>
@@ -2107,7 +2112,7 @@ public class SubmitBatchTaskRequest extends Request {
             }
 
             /**
-             * <p>The list of parameters for the offline code template.</p>
+             * <p>The list of offline code template parameters.</p>
              */
             public Builder offlineCodeTemplateParams(java.util.List<OfflineCodeTemplateParams> offlineCodeTemplateParams) {
                 this.offlineCodeTemplateParams = offlineCodeTemplateParams;
@@ -2123,7 +2128,7 @@ public class SubmitBatchTaskRequest extends Request {
             }
 
             /**
-             * <p>The scheduling priority of the task. Valid values: 1 to 9. A larger value indicates a lower priority.</p>
+             * <p>The task scheduling priority. Valid values: 1 to 9. A larger value indicates a lower priority.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -2134,7 +2139,7 @@ public class SubmitBatchTaskRequest extends Request {
             }
 
             /**
-             * <p>The ID of the project to which the task belongs.</p>
+             * <p>The ID of the project to which the node belongs.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -2146,7 +2151,7 @@ public class SubmitBatchTaskRequest extends Request {
             }
 
             /**
-             * <p>The Python third-party packages required by the task.</p>
+             * <p>The list of Python third-party packages on which the node depends.</p>
              */
             public Builder pythonModuleList(java.util.List<String> pythonModuleList) {
                 this.pythonModuleList = pythonModuleList;
@@ -2154,7 +2159,7 @@ public class SubmitBatchTaskRequest extends Request {
             }
 
             /**
-             * <p>资源引用列表，元素为资源名称。不传时使用原有任务的资源引用；传入列表时整体替换，空列表表示清空引用。</p>
+             * <p>The list of referenced resources. Each element is a resource name. If this parameter is not specified, the resource references of the original node are used. If a list is specified, the existing references are completely replaced. An empty list clears all references.</p>
              */
             public Builder resourceReferenceList(java.util.List<String> resourceReferenceList) {
                 this.resourceReferenceList = resourceReferenceList;
@@ -2162,7 +2167,7 @@ public class SubmitBatchTaskRequest extends Request {
             }
 
             /**
-             * <p>超时重试开关。不传时保留任务当前配置。显式传入false时关闭。</p>
+             * <p>Specifies whether to enable retry on timeout. If this parameter is not specified, the current configuration of the node is retained. If this parameter is explicitly set to false, the feature is disabled.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -2173,14 +2178,14 @@ public class SubmitBatchTaskRequest extends Request {
             }
 
             /**
-             * <p>The schedule period. Valid values:</p>
+             * <p>The scheduling period. Valid values:</p>
              * <ul>
-             * <li>YEARLY: Yearly.</li>
-             * <li>MONTHLY: Monthly.</li>
-             * <li>WEEKLY: Weekly.</li>
-             * <li>DAILY: Daily.</li>
-             * <li>HOURLY: Hourly.</li>
-             * <li>MINUTELY: Minutely.</li>
+             * <li>YEARLY: yearly</li>
+             * <li>MONTHLY: monthly</li>
+             * <li>WEEKLY: weekly</li>
+             * <li>DAILY: daily</li>
+             * <li>HOURLY: hourly</li>
+             * <li>MINUTELY: minutely</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2192,7 +2197,7 @@ public class SubmitBatchTaskRequest extends Request {
             }
 
             /**
-             * <p>基础调度模板；不传保留，空对象解除绑定，仅周期任务支持</p>
+             * <p>The basic scheduling template. If this parameter is not specified, the current template is retained. An empty object unbinds the template. This parameter is supported only for periodic nodes.</p>
              */
             public Builder scheduleTemplate(ScheduleTemplate scheduleTemplate) {
                 this.scheduleTemplate = scheduleTemplate;
@@ -2208,7 +2213,7 @@ public class SubmitBatchTaskRequest extends Request {
             }
 
             /**
-             * <p>不传时保留任务当前配置。显式传入false时关闭。</p>
+             * <p>Specifies whether to enable dynamic resources for Spark. If this parameter is not specified, the current configuration of the node is retained. If this parameter is explicitly set to false, the feature is disabled.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -2219,7 +2224,7 @@ public class SubmitBatchTaskRequest extends Request {
             }
 
             /**
-             * <p>ONLY_PROD表示仅生产环境，PROD_AND_DEV表示生产和开发环境。不传时保留任务当前配置。</p>
+             * <p>The effective scope of the Spark resource configuration. ONLY_PROD indicates the production environment only. PROD_AND_DEV indicates both the production and development environments. If this parameter is not specified, the current configuration of the node is retained.</p>
              * 
              * <strong>example:</strong>
              * <p>ONLY_PROD</p>
@@ -2230,7 +2235,7 @@ public class SubmitBatchTaskRequest extends Request {
             }
 
             /**
-             * <p>Spark SQL资源配置，键为配置项名称，值为字符串。不传时保留任务当前配置。传入空Map时清空配置。</p>
+             * <p>The Spark SQL resource configurations. The key is the configuration item name, and the value is a string. If this parameter is not specified, the current configurations of the node are retained. An empty map clears all configurations.</p>
              */
             public Builder sparkSqlResourceConfigMap(java.util.Map<String, String> sparkSqlResourceConfigMap) {
                 this.sparkSqlResourceConfigMap = sparkSqlResourceConfigMap;

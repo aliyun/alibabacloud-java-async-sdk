@@ -119,7 +119,7 @@ public class CreateDataSourceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Error code. OK indicates that the request is successful.</p>
+         * <p>The error code. A value of OK indicates that the request is normal.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -130,7 +130,7 @@ public class CreateDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Data source creation result</p>
+         * <p>The result of creating the data source.</p>
          */
         public Builder createResult(CreateResult createResult) {
             this.createResult = createResult;
@@ -138,7 +138,7 @@ public class CreateDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>HTTP status code returned by the backend</p>
+         * <p>The HTTP status code returned by the backend.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -149,7 +149,7 @@ public class CreateDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error message</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -160,7 +160,7 @@ public class CreateDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
@@ -171,7 +171,7 @@ public class CreateDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -240,7 +240,7 @@ public class CreateDataSourceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Development environment data source ID</p>
+             * <p>The ID of the development environment data source.</p>
              * 
              * <strong>example:</strong>
              * <p>123</p>
@@ -251,7 +251,7 @@ public class CreateDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Production environment data source ID</p>
+             * <p>The ID of the production environment data source.</p>
              * 
              * <strong>example:</strong>
              * <p>12345</p>

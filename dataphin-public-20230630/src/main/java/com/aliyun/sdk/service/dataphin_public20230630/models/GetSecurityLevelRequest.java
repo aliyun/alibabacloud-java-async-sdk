@@ -112,7 +112,7 @@ public class GetSecurityLevelRequest extends Request {
         }
 
         /**
-         * <p>The sensitivity level of the data classification.</p>
+         * <p>The sensitivity of the data classification level.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,7 +138,10 @@ public class GetSecurityLevelRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);

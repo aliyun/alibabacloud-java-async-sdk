@@ -112,7 +112,7 @@ public class CreateStandardSetRequest extends Request {
         }
 
         /**
-         * <p>The create instruction.</p>
+         * <p>The create command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder createCommand(CreateCommand createCommand) {
@@ -136,7 +136,10 @@ public class CreateStandardSetRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -233,11 +236,7 @@ public class CreateStandardSetRequest extends Request {
             } 
 
             /**
-             * <p>The approval process type. Valid values:</p>
-             * <ul>
-             * <li>BY_DEFAULT: the default approval type.</li>
-             * <li>BY_TEMPLATE: approval based on an approval template.</li>
-             * </ul>
+             * <p>The approval flow type. Valid values: BY_DEFAULT: Default approval type. BY_TEMPLATE: Based on an approval template.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -267,7 +266,7 @@ public class CreateStandardSetRequest extends Request {
             }
 
             /**
-             * <p>The ID of the approval template. This parameter takes effect only when the approval process type is set to BY_TEMPLATE.</p>
+             * <p>The ID of the approval template. This parameter takes effect only when the approval flow type is set to BY_TEMPLATE.</p>
              * 
              * <strong>example:</strong>
              * <p>1121</p>
@@ -325,7 +324,7 @@ public class CreateStandardSetRequest extends Request {
             } 
 
             /**
-             * <p>The directory to which the standard set belongs.</p>
+             * <p>The folder.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -425,11 +424,7 @@ public class CreateStandardSetRequest extends Request {
             } 
 
             /**
-             * <p>The approval process type. Valid values:</p>
-             * <ul>
-             * <li>BY_DEFAULT: the default approval type.</li>
-             * <li>BY_TEMPLATE: approval based on an approval template.</li>
-             * </ul>
+             * <p>The approval flow type. Valid values: BY_DEFAULT: Default approval type. BY_TEMPLATE: Based on an approval template.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -459,7 +454,7 @@ public class CreateStandardSetRequest extends Request {
             }
 
             /**
-             * <p>The ID of the approval template. This parameter takes effect only when the approval process type is set to BY_TEMPLATE.</p>
+             * <p>The ID of the approval template. This parameter takes effect only when the approval flow type is set to BY_TEMPLATE.</p>
              * 
              * <strong>example:</strong>
              * <p>1121</p>
@@ -538,12 +533,7 @@ public class CreateStandardSetRequest extends Request {
             }
 
             /**
-             * <p>The visibility type. Valid values:</p>
-             * <ul>
-             * <li>PUBLIC: visible to all users.</li>
-             * <li>PRIVATE: visible only to standard set members and administrators.</li>
-             * <li>SPECIFIED: visible only to specified users.</li>
-             * </ul>
+             * <p>The visibility type. Valid values: PUBLIC: Public. PRIVATE: Private, visible only to standard set members and administrators. SPECIFIED: Visible to specified users.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -733,7 +723,7 @@ public class CreateStandardSetRequest extends Request {
             } 
 
             /**
-             * <p>The approval configuration for going online.</p>
+             * <p>The online approval configuration.</p>
              */
             public Builder approvalConfig(ApprovalConfig approvalConfig) {
                 this.approvalConfig = approvalConfig;
@@ -775,7 +765,7 @@ public class CreateStandardSetRequest extends Request {
             }
 
             /**
-             * <p>The directory to which the standard set belongs.</p>
+             * <p>The parent folder.</p>
              */
             public Builder directoryReference(DirectoryReference directoryReference) {
                 this.directoryReference = directoryReference;
@@ -783,7 +773,7 @@ public class CreateStandardSetRequest extends Request {
             }
 
             /**
-             * <p>The list of maintainers.</p>
+             * <p>The maintainers.</p>
              */
             public Builder maintainerList(java.util.List<String> maintainerList) {
                 this.maintainerList = maintainerList;
@@ -791,7 +781,7 @@ public class CreateStandardSetRequest extends Request {
             }
 
             /**
-             * <p>The list of member groups.</p>
+             * <p>The member group list.</p>
              */
             public Builder memberGroupList(java.util.List<String> memberGroupList) {
                 this.memberGroupList = memberGroupList;
@@ -799,7 +789,7 @@ public class CreateStandardSetRequest extends Request {
             }
 
             /**
-             * <p>The list of members.</p>
+             * <p>The member list.</p>
              */
             public Builder memberList(java.util.List<String> memberList) {
                 this.memberList = memberList;
@@ -819,7 +809,7 @@ public class CreateStandardSetRequest extends Request {
             }
 
             /**
-             * <p>The approval configuration for going offline.</p>
+             * <p>The offline approval configuration.</p>
              */
             public Builder offlineApprovalConfig(OfflineApprovalConfig offlineApprovalConfig) {
                 this.offlineApprovalConfig = offlineApprovalConfig;

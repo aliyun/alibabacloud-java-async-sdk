@@ -141,7 +141,7 @@ public class ExportKgSchemaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The backend exception details.</p>
+         * <p>The details of the backend exception.</p>
          * 
          * <strong>example:</strong>
          * <p>internal error</p>
@@ -163,7 +163,7 @@ public class ExportKgSchemaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The knowledge graph definition details.</p>
+         * <p>The details of the knowledge graph definition.</p>
          */
         public Builder schemaInfo(SchemaInfo schemaInfo) {
             this.schemaInfo = schemaInfo;
@@ -171,7 +171,7 @@ public class ExportKgSchemaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -237,7 +237,7 @@ public class ExportKgSchemaResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The knowledge graph definition content converted based on the specified format.</p>
+             * <p>The content of the knowledge graph definition converted based on the specified format.</p>
              * 
              * <strong>example:</strong>
              * <p>workspaceId: f1d4559a4db044158305e2d89bccf81f

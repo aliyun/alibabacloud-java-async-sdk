@@ -112,7 +112,7 @@ public class GetTableColumnLineageByTaskIdRequest extends Request {
         }
 
         /**
-         * <p>Tenant ID.</p>
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,7 +125,10 @@ public class GetTableColumnLineageByTaskIdRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -134,7 +137,7 @@ public class GetTableColumnLineageByTaskIdRequest extends Request {
         }
 
         /**
-         * <p>Data structure for querying table column lineage.</p>
+         * <p>The data structure used to query table column lineage.</p>
          * <p>This parameter is required.</p>
          */
         public Builder tableColumnLineageByTaskIdQuery(TableColumnLineageByTaskIdQuery tableColumnLineageByTaskIdQuery) {
@@ -226,7 +229,7 @@ public class GetTableColumnLineageByTaskIdRequest extends Request {
             }
 
             /**
-             * <p>Environment of the task to query: DEV or PROD.</p>
+             * <p>The environment to which the node belongs, such as DEV or PROD.</p>
              * 
              * <strong>example:</strong>
              * <p>DEV</p>
@@ -237,7 +240,7 @@ public class GetTableColumnLineageByTaskIdRequest extends Request {
             }
 
             /**
-             * <p>Task (node) ID used to filter the query.</p>
+             * <p>The ID of the node used to filter the query.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

@@ -149,7 +149,7 @@ public class BatchCreateKgEntityResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the backend exception.</p>
+         * <p>The backend exception details.</p>
          * 
          * <strong>example:</strong>
          * <p>internal error</p>
@@ -171,7 +171,7 @@ public class BatchCreateKgEntityResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -191,6 +191,9 @@ public class BatchCreateKgEntityResponseBody extends TeaModel {
      * <p>BatchCreateKgEntityResponseBody</p>
      */
     public static class SuccessEntityList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BizId")
+        private String bizId;
+
         @com.aliyun.core.annotation.NameInMap("EntityId")
         private String entityId;
 
@@ -198,6 +201,7 @@ public class BatchCreateKgEntityResponseBody extends TeaModel {
         private String entityType;
 
         private SuccessEntityList(Builder builder) {
+            this.bizId = builder.bizId;
             this.entityId = builder.entityId;
             this.entityType = builder.entityType;
         }
@@ -208,6 +212,13 @@ public class BatchCreateKgEntityResponseBody extends TeaModel {
 
         public static SuccessEntityList create() {
             return builder().build();
+        }
+
+        /**
+         * @return bizId
+         */
+        public String getBizId() {
+            return this.bizId;
         }
 
         /**
@@ -225,6 +236,7 @@ public class BatchCreateKgEntityResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String bizId; 
             private String entityId; 
             private String entityType; 
 
@@ -232,9 +244,21 @@ public class BatchCreateKgEntityResponseBody extends TeaModel {
             } 
 
             private Builder(SuccessEntityList model) {
+                this.bizId = model.bizId;
                 this.entityId = model.entityId;
                 this.entityType = model.entityType;
             } 
+
+            /**
+             * <p>The business ID of the entity record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
+             */
+            public Builder bizId(String bizId) {
+                this.bizId = bizId;
+                return this;
+            }
 
             /**
              * <p>The ID of the entity record.</p>
@@ -331,7 +355,7 @@ public class BatchCreateKgEntityResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of failed records.</p>
+             * <p>The number of failed creations.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -342,7 +366,7 @@ public class BatchCreateKgEntityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of successfully created records.</p>
+             * <p>The number of successful creations.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -353,7 +377,7 @@ public class BatchCreateKgEntityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of IDs of successfully created entity records.</p>
+             * <p>The list of IDs for successfully created entity records.</p>
              */
             public Builder successEntityList(java.util.List<SuccessEntityList> successEntityList) {
                 this.successEntityList = successEntityList;

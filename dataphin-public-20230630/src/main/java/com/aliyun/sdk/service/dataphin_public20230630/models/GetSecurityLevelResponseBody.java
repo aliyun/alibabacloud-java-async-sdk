@@ -141,7 +141,7 @@ public class GetSecurityLevelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the backend response exception.</p>
+         * <p>The backend exception details.</p>
          * 
          * <strong>example:</strong>
          * <p>internal error</p>
@@ -163,7 +163,7 @@ public class GetSecurityLevelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data classification level details.</p>
+         * <p>The details of the data classification level.</p>
          */
         public Builder securityLevelInfo(SecurityLevelInfo securityLevelInfo) {
             this.securityLevelInfo = securityLevelInfo;
@@ -171,7 +171,7 @@ public class GetSecurityLevelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -276,7 +276,7 @@ public class GetSecurityLevelResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The abbreviated name of the data classification level.</p>
+             * <p>The abbreviation of the data classification level.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -298,7 +298,7 @@ public class GetSecurityLevelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sensitivity level of the data classification.</p>
+             * <p>The sensitivity of the data classification level.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -320,7 +320,7 @@ public class GetSecurityLevelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of data categorization IDs associated with the current data classification level.</p>
+             * <p>The list of data category IDs associated with the current data classification level.</p>
              */
             public Builder relatedClassifyIdList(java.util.List<Long> relatedClassifyIdList) {
                 this.relatedClassifyIdList = relatedClassifyIdList;

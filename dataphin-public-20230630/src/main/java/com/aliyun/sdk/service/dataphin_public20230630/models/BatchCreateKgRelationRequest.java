@@ -349,7 +349,7 @@ public class BatchCreateKgRelationRequest extends Request {
             } 
 
             /**
-             * <p>The relationship record property list.</p>
+             * <p>The property list of the relation record.</p>
              */
             public Builder propertyList(java.util.List<PropertyList> propertyList) {
                 this.propertyList = propertyList;
@@ -357,7 +357,7 @@ public class BatchCreateKgRelationRequest extends Request {
             }
 
             /**
-             * <p>The relationship type code.</p>
+             * <p>The relation type code.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -440,7 +440,7 @@ public class BatchCreateKgRelationRequest extends Request {
             } 
 
             /**
-             * <p>The relationship list.</p>
+             * <p>The relation list.</p>
              * <p>This parameter is required.</p>
              */
             public Builder relationList(java.util.List<RelationList> relationList) {

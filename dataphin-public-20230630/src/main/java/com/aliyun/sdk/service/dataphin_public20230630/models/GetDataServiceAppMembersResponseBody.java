@@ -130,7 +130,7 @@ public class GetDataServiceAppMembersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The member list of the data service application.</p>
+         * <p>The members of the data service application.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -149,7 +149,7 @@ public class GetDataServiceAppMembersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned from the backend.</p>
+         * <p>The details of the backend response exception.</p>
          * 
          * <strong>example:</strong>
          * <p>internal error</p>
@@ -171,7 +171,7 @@ public class GetDataServiceAppMembersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -250,7 +250,7 @@ public class GetDataServiceAppMembersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The authorization expiration time.</p>
+             * <p>The expiration time of the authorization.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-12-12</p>
@@ -261,10 +261,10 @@ public class GetDataServiceAppMembersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The role of the user. Valid values:</p>
+             * <p>The user role. Valid values:</p>
              * <ul>
-             * <li>general: regular member.</li>
-             * <li>owner: application owner.</li>
+             * <li>general: regular member</li>
+             * <li>owner: application owner</li>
              * </ul>
              * 
              * <strong>example:</strong>

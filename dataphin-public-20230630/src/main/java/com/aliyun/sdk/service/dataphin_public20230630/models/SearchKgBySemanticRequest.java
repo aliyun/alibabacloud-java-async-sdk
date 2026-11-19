@@ -249,7 +249,7 @@ public class SearchKgBySemanticRequest extends Request {
             } 
 
             /**
-             * <p>The entity type codes used for filtering. If this parameter is not specified, all entity types are searched.</p>
+             * <p>The entity type code filter. If this parameter is not specified, all entity types are searched.</p>
              */
             public Builder entityTypeCodes(java.util.List<String> entityTypeCodes) {
                 this.entityTypeCodes = entityTypeCodes;
@@ -257,7 +257,7 @@ public class SearchKgBySemanticRequest extends Request {
             }
 
             /**
-             * <p>The minimum similarity threshold. Valid values: 0.0 to 1.0. Default value: 0.0 (no filtering). This parameter takes effect only for the semantic search path.</p>
+             * <p>The minimum similarity threshold. Valid values: 0.0 to 1.0. Default value: 0.0, which indicates no filtering. This parameter takes effect only for semantic search paths.</p>
              * 
              * <strong>example:</strong>
              * <p>0.5</p>
@@ -279,7 +279,7 @@ public class SearchKgBySemanticRequest extends Request {
             }
 
             /**
-             * <p>The natural language query text. The value can be 0 to 500 characters in length.</p>
+             * <p>The natural language query text. The maximum length is 500 characters.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -291,7 +291,7 @@ public class SearchKgBySemanticRequest extends Request {
             }
 
             /**
-             * <p>The maximum number of results to return. Default value: 20. Valid values: 1 to 100.</p>
+             * <p>The maximum number of returned results. Default value: 20. Valid values: 1 to 100.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>

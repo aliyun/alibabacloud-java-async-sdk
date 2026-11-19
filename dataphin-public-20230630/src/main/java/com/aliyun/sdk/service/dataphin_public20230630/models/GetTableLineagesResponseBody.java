@@ -119,7 +119,7 @@ public class GetTableLineagesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code.</p>
+         * <p>The backend response code.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -141,7 +141,7 @@ public class GetTableLineagesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message.</p>
+         * <p>The details of the backend exception.</p>
          * 
          * <strong>example:</strong>
          * <p>internal error</p>
@@ -163,7 +163,7 @@ public class GetTableLineagesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -489,7 +489,7 @@ public class GetTableLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the input table has been deleted.</p>
+             * <p>Indicates whether the input table is deleted.</p>
              */
             public Builder inputTableDeleted(Boolean inputTableDeleted) {
                 this.inputTableDeleted = inputTableDeleted;
@@ -508,7 +508,7 @@ public class GetTableLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The GUID of the input table. Each asset has a unique identifier.</p>
+             * <p>The GUID of the input table, which is the unique identifier of each asset.</p>
              * 
              * <strong>example:</strong>
              * <p>123211</p>
@@ -530,7 +530,7 @@ public class GetTableLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The environment to which the task belongs. Valid values: dev and prod.</p>
+             * <p>The environment to which the node belongs. Valid values: dev and prod.</p>
              * 
              * <strong>example:</strong>
              * <p>dev</p>
@@ -541,7 +541,7 @@ public class GetTableLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task ID associated with the lineage.</p>
+             * <p>The ID of the node corresponding to the lineage.</p>
              * 
              * <strong>example:</strong>
              * <p>110021</p>
@@ -596,7 +596,7 @@ public class GetTableLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the output table has been deleted.</p>
+             * <p>Indicates whether the output table is deleted.</p>
              */
             public Builder outputTableDeleted(Boolean outputTableDeleted) {
                 this.outputTableDeleted = outputTableDeleted;
@@ -615,7 +615,7 @@ public class GetTableLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The GUID of the output table. Each asset has a unique identifier.</p>
+             * <p>The GUID of the output table, which is the unique identifier of each asset.</p>
              * 
              * <strong>example:</strong>
              * <p>2231</p>

@@ -149,7 +149,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the backend exception.</p>
+         * <p>The details of the backend response exception.</p>
          * 
          * <strong>example:</strong>
          * <p>internal error</p>
@@ -171,7 +171,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful.</p>
+         * <p>Specifies whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -523,7 +523,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the data classification.</p>
+             * <p>The data classification ID.</p>
              * 
              * <strong>example:</strong>
              * <p>12345</p>
@@ -534,7 +534,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the data classification.</p>
+             * <p>The data classification name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -545,7 +545,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The comment of the field.</p>
+             * <p>The field comment.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -578,7 +578,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the data source.</p>
+             * <p>The data source ID.</p>
              * 
              * <strong>example:</strong>
              * <p>3301</p>
@@ -589,7 +589,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the data source.</p>
+             * <p>The data source type.</p>
              * 
              * <strong>example:</strong>
              * <p>MAX_COMPUTE</p>
@@ -633,7 +633,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The environment to which the field belongs. Valid values: dev and prod.</p>
+             * <p>The environment to which the table belongs. Valid values: dev and prod.</p>
              * 
              * <strong>example:</strong>
              * <p>dev</p>
@@ -655,7 +655,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the field is a foreign key.</p>
+             * <p>Specifies whether the column is a foreign key.</p>
              */
             public Builder isForeignKey(Boolean isForeignKey) {
                 this.isForeignKey = isForeignKey;
@@ -663,7 +663,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the field is a partition key.</p>
+             * <p>Specifies whether the column is a partition key.</p>
              */
             public Builder isPartitionColumn(Boolean isPartitionColumn) {
                 this.isPartitionColumn = isPartitionColumn;
@@ -671,7 +671,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the field is a primary key.</p>
+             * <p>Specifies whether the column is a primary key.</p>
              */
             public Builder isPrimaryKey(Boolean isPrimaryKey) {
                 this.isPrimaryKey = isPrimaryKey;
@@ -679,7 +679,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user who last modified the field.</p>
+             * <p>The last modifier.</p>
              * 
              * <strong>example:</strong>
              * <p>30012011</p>
@@ -690,7 +690,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The abbreviation of the data security level.</p>
+             * <p>The abbreviation of the data classification level.</p>
              * 
              * <strong>example:</strong>
              * <p>L1</p>
@@ -712,7 +712,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the field.</p>
+             * <p>The field name.</p>
              * 
              * <strong>example:</strong>
              * <p>age</p>
@@ -723,7 +723,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the field can be null.</p>
+             * <p>Specifies whether the column can be null.</p>
              */
             public Builder nullable(Boolean nullable) {
                 this.nullable = nullable;
@@ -731,7 +731,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sequence number.</p>
+             * <p>The ordinal number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -753,7 +753,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the table.</p>
+             * <p>The table name.</p>
              * 
              * <strong>example:</strong>
              * <p>t_test</p>

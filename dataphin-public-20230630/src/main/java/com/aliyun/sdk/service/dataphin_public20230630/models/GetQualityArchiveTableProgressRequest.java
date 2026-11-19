@@ -125,7 +125,7 @@ public class GetQualityArchiveTableProgressRequest extends Request {
         }
 
         /**
-         * <p>The ID of the operator.</p>
+         * <p>The operator ID.</p>
          * 
          * <strong>example:</strong>
          * <p>30001011</p>
@@ -137,7 +137,7 @@ public class GetQualityArchiveTableProgressRequest extends Request {
         }
 
         /**
-         * <p>The asynchronous task progress ID returned by the UpsertQualityArchiveTable operation.</p>
+         * <p>The progress ID of the asynchronous task, which is returned by the UpsertQualityArchiveTable operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

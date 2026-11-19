@@ -125,7 +125,10 @@ public class GetDataServiceAppGroupsRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The operating user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -136,7 +139,7 @@ public class GetDataServiceAppGroupsRequest extends Request {
         /**
          * <p>The data service project ID.</p>
          * <blockquote>
-         * <p>Notice: This field is deprecated.</notice>.</p>
+         * <p>Notice: This field is deprecated.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

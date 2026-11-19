@@ -171,7 +171,7 @@ public class DeleteSecurityLevelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -261,7 +261,7 @@ public class DeleteSecurityLevelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of data classification IDs that are associated with the current classification level. This parameter is returned only when this error is triggered.</p>
+             * <p>The list of data classification IDs that are bound to the current data classification level. This parameter is returned only when this error is triggered.</p>
              */
             public Builder relatedClassifyIdList(java.util.List<Long> relatedClassifyIdList) {
                 this.relatedClassifyIdList = relatedClassifyIdList;
@@ -269,7 +269,7 @@ public class DeleteSecurityLevelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the deletion was successful.</p>
+             * <p>Indicates whether the deletion is successful.</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;

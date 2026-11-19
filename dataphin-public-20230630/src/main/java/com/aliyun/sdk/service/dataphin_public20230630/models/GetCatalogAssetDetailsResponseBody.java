@@ -149,7 +149,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The backend response exception details.</p>
+         * <p>The backend exception details.</p>
          * 
          * <strong>example:</strong>
          * <p>internal error</p>
@@ -171,7 +171,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -301,7 +301,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
              * <p>The display name of the dimension.</p>
              * 
              * <strong>example:</strong>
-             * <p>上药erp数据源</p>
+             * <p>SPH ERP data source</p>
              */
             public Builder dimensionDisplayName(String dimensionDisplayName) {
                 this.dimensionDisplayName = dimensionDisplayName;
@@ -612,7 +612,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The associated entity. This parameter is returned when the business type is DIMENSION.</p>
+             * <p>The associated entity. Returned when the business type is DIMENSION.</p>
              */
             public Builder associatedEntity(AssociatedEntity associatedEntity) {
                 this.associatedEntity = associatedEntity;
@@ -620,12 +620,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The business type. Valid values:</p>
-             * <ul>
-             * <li>INDEX: metric.</li>
-             * <li>STAT_PERIOD: statistical period.</li>
-             * <li>DIMENSION: dimension.</li>
-             * </ul>
+             * <p>The business type. Valid values: INDEX (metric), STAT_PERIOD (statistical period), and DIMENSION (dimension).</p>
              * 
              * <strong>example:</strong>
              * <p>DIMENSION</p>
@@ -639,7 +634,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
              * <p>The data classification.</p>
              * 
              * <strong>example:</strong>
-             * <p>/交易信息/0000001</p>
+             * <p>/Transaction information/0000001</p>
              */
             public Builder classifyName(String classifyName) {
                 this.classifyName = classifyName;
@@ -691,7 +686,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data classification level.</p>
+             * <p>The data grade.</p>
              * 
              * <strong>example:</strong>
              * <p>L4</p>
@@ -817,7 +812,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The attribute type. Valid values: BUSINESS (business attribute), MANAGEMENT (management attribute), TECHNOLOGY (technical attribute).</p>
+             * <p>The type of the attribute. Valid values: BUSINESS (business attribute), MANAGEMENT (management attribute), and TECHNOLOGY (technical attribute).</p>
              * 
              * <strong>example:</strong>
              * <p>MANAGEMENT</p>
@@ -828,7 +823,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The attribute code.</p>
+             * <p>The code of the attribute.</p>
              * 
              * <strong>example:</strong>
              * <p>gkglbm</p>
@@ -839,10 +834,10 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The attribute name.</p>
+             * <p>The name of the attribute.</p>
              * 
              * <strong>example:</strong>
-             * <p>Supervising department</p>
+             * <p>Managing department</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -850,7 +845,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The attribute value.</p>
+             * <p>The value of the attribute.</p>
              * 
              * <strong>example:</strong>
              * <p>abc</p>
@@ -946,10 +941,10 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The directory description.</p>
+             * <p>The description of the directory.</p>
              * 
              * <strong>example:</strong>
-             * <p>Data assets related to transactions</p>
+             * <p>Transaction-related data assets</p>
              */
             public Builder directoryDescription(String directoryDescription) {
                 this.directoryDescription = directoryDescription;
@@ -957,7 +952,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The directory ID.</p>
+             * <p>The ID of the directory.</p>
              * 
              * <strong>example:</strong>
              * <p>2001</p>
@@ -968,7 +963,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The directory name.</p>
+             * <p>The name of the directory.</p>
              * 
              * <strong>example:</strong>
              * <p>Transaction domain</p>
@@ -979,7 +974,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The folder level.</p>
+             * <p>The directory level.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1114,7 +1109,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The complete directory hierarchy chain from the top-level directory to the current directory, including the current directory.</p>
+             * <p>The complete hierarchy chain of the directory, from the top-level directory to the current directory, including the current directory.</p>
              */
             public Builder directoryChain(java.util.List<DirectoryChain> directoryChain) {
                 this.directoryChain = directoryChain;
@@ -1122,7 +1117,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The directory description.</p>
+             * <p>The description of the directory.</p>
              * 
              * <strong>example:</strong>
              * <p>Data tables related to order details</p>
@@ -1133,7 +1128,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The directory ID.</p>
+             * <p>The ID of the directory.</p>
              * 
              * <strong>example:</strong>
              * <p>102260</p>
@@ -1144,7 +1139,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The directory name.</p>
+             * <p>The name of the directory.</p>
              * 
              * <strong>example:</strong>
              * <p>Online e-commerce platform</p>
@@ -1155,7 +1150,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The topic description.</p>
+             * <p>The description of the topic.</p>
              * 
              * <strong>example:</strong>
              * <p>Core data asset catalog for the entire company, covering all online and offline channels</p>
@@ -1166,7 +1161,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The topic ID.</p>
+             * <p>The ID of the topic.</p>
              * 
              * <strong>example:</strong>
              * <p>101676</p>
@@ -1177,10 +1172,10 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The topic name.</p>
+             * <p>The name of the topic.</p>
              * 
              * <strong>example:</strong>
-             * <p>Omni-channel data topic</p>
+             * <p>Omnichannel data topic</p>
              */
             public Builder topicName(String topicName) {
                 this.topicName = topicName;
@@ -1247,10 +1242,10 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The username.</p>
+             * <p>The display name of the user.</p>
              * 
              * <strong>example:</strong>
-             * <p>John</p>
+             * <p>Zhang San</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -1258,7 +1253,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user ID.</p>
+             * <p>The ID of the user.</p>
              * 
              * <strong>example:</strong>
              * <p>12345</p>
@@ -1328,10 +1323,10 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The username.</p>
+             * <p>The display name of the user.</p>
              * 
              * <strong>example:</strong>
-             * <p>John</p>
+             * <p>Zhang San</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -1339,7 +1334,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user ID.</p>
+             * <p>The ID of the user.</p>
              * 
              * <strong>example:</strong>
              * <p>12345</p>
@@ -1409,10 +1404,10 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The username.</p>
+             * <p>The display name of the user.</p>
              * 
              * <strong>example:</strong>
-             * <p>John</p>
+             * <p>Zhang San</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -1420,7 +1415,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user ID.</p>
+             * <p>The ID of the user.</p>
              * 
              * <strong>example:</strong>
              * <p>12345</p>
@@ -1621,7 +1616,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of validated rules.</p>
+             * <p>The number of checked rules.</p>
              * 
              * <strong>example:</strong>
              * <p>12</p>
@@ -1747,7 +1742,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of validated rules.</p>
+             * <p>The number of checked rules.</p>
              * 
              * <strong>example:</strong>
              * <p>12</p>
@@ -1817,10 +1812,10 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The username.</p>
+             * <p>The display name of the user.</p>
              * 
              * <strong>example:</strong>
-             * <p>John</p>
+             * <p>Zhang San</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -1828,7 +1823,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user ID.</p>
+             * <p>The ID of the user.</p>
              * 
              * <strong>example:</strong>
              * <p>12345</p>
@@ -1898,7 +1893,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The project ID.</p>
+             * <p>The ID of the project.</p>
              * 
              * <strong>example:</strong>
              * <p>6865331517728384</p>
@@ -1909,7 +1904,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The project name.</p>
+             * <p>The name of the project.</p>
              * 
              * <strong>example:</strong>
              * <p>fashion_cdm</p>
@@ -2068,7 +2063,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The environment to which the asset belongs.</p>
+             * <p>The environment.</p>
              * 
              * <strong>example:</strong>
              * <p>PROD</p>
@@ -2079,7 +2074,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node ID.</p>
+             * <p>The ID of the node.</p>
              * 
              * <strong>example:</strong>
              * <p>n_7443633109495119872</p>
@@ -2090,7 +2085,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node name.</p>
+             * <p>The name of the node.</p>
              * 
              * <strong>example:</strong>
              * <p>2345</p>
@@ -2101,7 +2096,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scheduling type. Valid values: NORMAL (timed scheduling), MANUAL (manual scheduling).</p>
+             * <p>The scheduling mode. Valid values: NORMAL (periodic scheduling) and MANUAL (manual scheduling).</p>
              * 
              * <strong>example:</strong>
              * <p>NORMAL</p>
@@ -2112,7 +2107,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of O&amp;M owners.</p>
+             * <p>The O&amp;M owners.</p>
              */
             public Builder owners(java.util.List<Owners> owners) {
                 this.owners = owners;
@@ -2128,7 +2123,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node type. Example valid values: DLINK (offline integration), PYTHON37 (Python compute node).</p>
+             * <p>The type of the node. Example valid values: DLINK (offline integration) and PYTHON37 (Python computing node).</p>
              * 
              * <strong>example:</strong>
              * <p>DLINK</p>
@@ -2939,7 +2934,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The API call mode. Returned when the asset type is API. Valid values: 1=Synchronous call, 2=Asynchronous call.</p>
+             * <p>The call mode of the API. This parameter is returned when the asset type is API. Valid values: 1 (synchronous call) and 2 (asynchronous call).</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -2950,7 +2945,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The API group name. Returned when the asset type is API.</p>
+             * <p>The name of the API group. This parameter is returned when the asset type is API.</p>
              * 
              * <strong>example:</strong>
              * <p>Default API group</p>
@@ -2961,7 +2956,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The API ID. Returned when the asset type is API.</p>
+             * <p>The API ID. This parameter is returned when the asset type is API.</p>
              * 
              * <strong>example:</strong>
              * <p>10441</p>
@@ -2972,7 +2967,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The API operation type. Returned when the asset type is API. Valid values: 1=Get, 2=List, 3=Create, 4=Update, 5=Delete.</p>
+             * <p>The type of the API operation. This parameter is returned when the asset type is API. Valid values: 1 (Get), 2 (List), 3 (Create), 4 (Update), and 5 (Delete).</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -2994,7 +2989,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the asset catalog detail page.</p>
+             * <p>The URL to the asset catalog details.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://dataphin.poc.lydaas.com/market/catalog/detail/table/">https://dataphin.poc.lydaas.com/market/catalog/detail/table/</a>...</p>
@@ -3008,7 +3003,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
              * <p>The display name of the asset. This parameter is returned when the asset type is TABLE, INDEX, or BIZ_INDEX.</p>
              * 
              * <strong>example:</strong>
-             * <p>abc表</p>
+             * <p>Table abc</p>
              */
             public Builder assetDisplayName(String assetDisplayName) {
                 this.assetDisplayName = assetDisplayName;
@@ -3016,10 +3011,10 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source of the asset. TABLE (physical table) returns &quot;Dataphin-workspace type-project Chinese name (project English name)&quot;. TABLE (logical table) returns &quot;Dataphin-workspace type-data domain Chinese name (data domain English name)&quot;. TABLE (data source table) returns &quot;source system name-data source name-database/schema name&quot;. INDEX (standard modeling metric) returns the asset source of the associated aggregate logical table. INDEX (custom metric) returns the asset source of the source table. API returns &quot;data service project name&quot;. PAGE returns &quot;application system name&quot;.</p>
+             * <p>The source of the asset. If the asset type is TABLE (physical table), the format is Dataphin-space type-project Chinese name (project English name). If the asset type is TABLE (logical table), the format is Dataphin-space type-data block Chinese name (data block English name). If the asset type is TABLE (data source table), the format is source system name-data source name-database or schema name. If the asset type is INDEX (standardized modeling metric), the value is the asset source of the associated aggregate logical table. If the asset type is INDEX (custom metric), the value is the asset source of the source table. If the asset type is API, the value is the data service project name. If the asset type is PAGE, the value is the application system name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Dataphin-中间层-服饰零售 (LD_Fashion)</p>
+             * <p>Dataphin-Middle layer-Apparel retail (LD_Fashion)</p>
              */
             public Builder assetFrom(String assetFrom) {
                 this.assetFrom = assetFrom;
@@ -3057,14 +3052,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The asset type. Valid values:</p>
-             * <ul>
-             * <li>TABLE: table, including views and materialized views.</li>
-             * <li>INDEX: technical metric.</li>
-             * <li>BIZ_INDEX: business metric.</li>
-             * <li>API: API.</li>
-             * <li>PAGE: dashboard.</li>
-             * </ul>
+             * <p>The asset type. Valid values: TABLE (tables, including views and materialized views), INDEX (technical metrics), BIZ_INDEX (business metrics), API, and PAGE (dashboards).</p>
              * 
              * <strong>example:</strong>
              * <p>TABLE</p>
@@ -3075,10 +3063,10 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The BI workspace or folder to which the asset belongs. Returned when the asset type is PAGE (dashboard).</p>
+             * <p>The BI workspace or directory. This parameter is returned when the asset type is PAGE (dashboard).</p>
              * 
              * <strong>example:</strong>
-             * <p>dataphin演示空间</p>
+             * <p>Dataphin demo workspace</p>
              */
             public Builder biCatalog(String biCatalog) {
                 this.biCatalog = biCatalog;
@@ -3086,7 +3074,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the data domain to which the asset belongs. This parameter is returned when the asset type is TABLE (logical tables only) or INDEX (technical metrics whose source table is a logical table only).</p>
+             * <p>The ID of the data block to which the asset belongs. This parameter is returned when the asset type is TABLE (logical tables only) or INDEX (technical metrics whose source table is a logical table only).</p>
              * 
              * <strong>example:</strong>
              * <p>6865277495315392</p>
@@ -3097,10 +3085,10 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the data domain to which the asset belongs. This parameter is returned when the asset type is TABLE (logical tables only) or INDEX (technical metrics whose source table is a logical table only).</p>
+             * <p>The name of the data block to which the asset belongs. This parameter is returned when the asset type is TABLE (logical tables only) or INDEX (technical metrics whose source table is a logical table only).</p>
              * 
              * <strong>example:</strong>
-             * <p>服饰零售（LD_Fashion）</p>
+             * <p>Apparel retail (LD_Fashion)</p>
              */
             public Builder bizUnitName(String bizUnitName) {
                 this.bizUnitName = bizUnitName;
@@ -3108,7 +3096,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of charts. Returned when the asset type is PAGE (dashboard).</p>
+             * <p>The total number of charts. This parameter is returned when the asset type is PAGE (dashboard).</p>
              * 
              * <strong>example:</strong>
              * <p>23</p>
@@ -3119,7 +3107,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The collection count.</p>
+             * <p>The number of favorites.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -3130,7 +3118,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of columns. This parameter is returned when the asset type is TABLE.</p>
+             * <p>The list of columns. Returned when the asset type is TABLE.</p>
              */
             public Builder columns(java.util.List<Columns> columns) {
                 this.columns = columns;
@@ -3149,7 +3137,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The custom attributes. Returned when includeDetailedAttributes is set to true.</p>
+             * <p>The custom attributes. This parameter is returned when includeDetailedAttributes is set to true.</p>
              */
             public Builder customAttributes(java.util.List<CustomAttributes> customAttributes) {
                 this.customAttributes = customAttributes;
@@ -3157,7 +3145,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the data domain. Returned when the asset type is TABLE (logical tables only) or INDEX (technical metrics whose source table is a logical table only).</p>
+             * <p>The ID of the data domain. This parameter is returned when the asset type is TABLE (logical tables only) or INDEX (technical metrics whose source tables are logical tables only).</p>
              * 
              * <strong>example:</strong>
              * <p>49837403</p>
@@ -3168,7 +3156,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the data domain. Returned when the asset type is TABLE (logical tables only) or INDEX (technical metrics whose source table is a logical table only).</p>
+             * <p>The name of the data domain. This parameter is returned when the asset type is TABLE (logical tables only) or INDEX (technical metrics whose source tables are logical tables only).</p>
              * 
              * <strong>example:</strong>
              * <p>Course domain</p>
@@ -3201,7 +3189,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The directories to which the asset belongs, including topic ID, topic name, directory ID, and directory name.</p>
+             * <p>The directories to which the asset belongs, including the topic ID, topic name, directory ID, and directory name.</p>
              */
             public Builder directories(java.util.List<Directories> directories) {
                 this.directories = directories;
@@ -3209,7 +3197,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time of the first listing.</p>
+             * <p>The first listing time.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-05-22 10:06:20</p>
@@ -3220,7 +3208,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user who performed the first listing.</p>
+             * <p>The first listing user.</p>
              */
             public Builder firstOnShelveUser(FirstOnShelveUser firstOnShelveUser) {
                 this.firstOnShelveUser = firstOnShelveUser;
@@ -3228,7 +3216,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The statistical granularity name of the technical metric. Returned when the asset type is INDEX.</p>
+             * <p>The name of the statistical granularity for the technical metric. This parameter is returned when the asset type is INDEX.</p>
              * 
              * <strong>example:</strong>
              * <p>Course</p>
@@ -3269,11 +3257,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the table is a partitioned table. Returned when the asset type is TABLE. Valid values:</p>
-             * <ul>
-             * <li>true: The table is a partitioned table.</li>
-             * <li>false: The table is not a partitioned table.</li>
-             * </ul>
+             * <p>Specifies whether the table is a partitioned table. This parameter is returned when the asset type is TABLE. Valid values: true and false.</p>
              */
             public Builder isPartitionTable(Boolean isPartitionTable) {
                 this.isPartitionTable = isPartitionTable;
@@ -3281,7 +3265,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time of the last DDL change.</p>
+             * <p>The last DDL time.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-10-11 16:10:19</p>
@@ -3292,7 +3276,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time of the last DML update.</p>
+             * <p>The last update time.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-10-11 16:10:19</p>
@@ -3303,7 +3287,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time of the last listing.</p>
+             * <p>The last listing time.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-05-22 10:06:20</p>
@@ -3314,7 +3298,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user who performed the last listing.</p>
+             * <p>The last listing user.</p>
              */
             public Builder lastOnShelveUser(LastOnShelveUser lastOnShelveUser) {
                 this.lastOnShelveUser = lastOnShelveUser;
@@ -3322,7 +3306,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The listing maintenance user groups.</p>
+             * <p>The listing maintainer groups.</p>
              */
             public Builder maintainUserGroups(java.util.List<String> maintainUserGroups) {
                 this.maintainUserGroups = maintainUserGroups;
@@ -3330,7 +3314,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IDs of the listing maintenance users.</p>
+             * <p>The listing maintainers.</p>
              */
             public Builder maintainUserIds(java.util.List<String> maintainUserIds) {
                 this.maintainUserIds = maintainUserIds;
@@ -3368,7 +3352,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The partition key. Returned when the asset type is TABLE.</p>
+             * <p>The partition field. This parameter is returned when the asset type is TABLE.</p>
              * 
              * <strong>example:</strong>
              * <p>ds</p>
@@ -3379,7 +3363,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The primary key. Returned when the asset type is TABLE.</p>
+             * <p>The primary key. This parameter is returned when the asset type is TABLE.</p>
              * 
              * <strong>example:</strong>
              * <p>employee_id</p>
@@ -3390,11 +3374,11 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The visibility scope type of the profiling report. This parameter is returned only when the asset type is TABLE or INDEX. Valid values:</p>
+             * <p>The visibility scope type of the profiling report. This parameter is returned when the asset type is TABLE or INDEX. Valid values:</p>
              * <ul>
              * <li>ALL_USERS_CAN_VIEW: Visible to all users.</li>
              * <li>PART_USERS_CAN_VIEW: Visible to some users.</li>
-             * <li>ALL_USERS_CAN_NOT_VIEW: Not visible to any users.</li>
+             * <li>ALL_USERS_CAN_NOT_VIEW: Invisible to all users.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3406,7 +3390,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user groups within the profiling report visibility scope.</p>
+             * <p>The user groups within the visibility scope of the profiling report.</p>
              */
             public Builder profilingReportViewScopeUserGroups(java.util.List<String> profilingReportViewScopeUserGroups) {
                 this.profilingReportViewScopeUserGroups = profilingReportViewScopeUserGroups;
@@ -3414,7 +3398,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The users within the profiling report visibility scope.</p>
+             * <p>The users within the visibility scope of the profiling report.</p>
              */
             public Builder profilingReportViewScopeUserIds(java.util.List<String> profilingReportViewScopeUserIds) {
                 this.profilingReportViewScopeUserIds = profilingReportViewScopeUserIds;
@@ -3444,7 +3428,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The quality score radar chart information. This parameter is returned only when includeDetailedAttributes is set to true. It contains the total score, the number of passed/validated rules, and the score details for each dimension.</p>
+             * <p>The quality score radar chart information. This parameter is returned when includeDetailedAttributes is set to true. It includes the total score, the number of passed and checked rules, and the score details for each dimension.</p>
              */
             public Builder qualityScoreRadar(QualityScoreRadar qualityScoreRadar) {
                 this.qualityScoreRadar = qualityScoreRadar;
@@ -3452,7 +3436,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The view count.</p>
+             * <p>The number of views.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -3467,7 +3451,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
              * <ul>
              * <li>ALL_USERS_CAN_VIEW: Visible to all users.</li>
              * <li>PART_USERS_CAN_VIEW: Visible to some users.</li>
-             * <li>PART_USERS_CAN_NOT_VIEW: Not visible to some users.</li>
+             * <li>PART_USERS_CAN_NOT_VIEW: Invisible to some users.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3495,7 +3479,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The output nodes. Returned when the asset type is TABLE.</p>
+             * <p>The output nodes. This parameter is returned when the asset type is TABLE.</p>
              */
             public Builder simpleNodeInfos(java.util.List<SimpleNodeInfos> simpleNodeInfos) {
                 this.simpleNodeInfos = simpleNodeInfos;
@@ -3503,23 +3487,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The subtype. Valid values:</p>
-             * <ul>
-             * <li>DIM_NORMAL: common logical dimension table.</li>
-             * <li>DIM_ENUM: enumeration logical dimension table.</li>
-             * <li>DIM_VIRTUAL: virtual logical dimension table.</li>
-             * <li>SUM_BIZ_UNIT: aggregate logical table.</li>
-             * <li>FACT_EVENT: event fact logical table.</li>
-             * <li>FACT_SNAPSHOT: snapshot fact logical table.</li>
-             * <li>DATASOURCE_TABLE: data source table.</li>
-             * <li>PHYSICAL_TABLE: physical table.</li>
-             * <li>DATASOURCE_VIEW: view (data source view).</li>
-             * <li>PHYSICAL_VIEW: physical view.</li>
-             * <li>MATERIALIZED_VIEW: materialized view.</li>
-             * <li>BIZ_INDEX: business metric.</li>
-             * <li>INDEX: technical metric (standard modeling metric).</li>
-             * <li>CUSTOM_INDEX: technical metric (custom metric).</li>
-             * </ul>
+             * <p>The subtype. Valid values: DIM_NORMAL (common logical dimension table), DIM_ENUM (enumeration logical dimension table), DIM_VIRTUAL (virtual logical dimension table), SUM_BIZ_UNIT (aggregate logical table), FACT_EVENT (event fact logical table), FACT_SNAPSHOT (snapshot fact logical table), DATASOURCE_TABLE (data source table), PHYSICAL_TABLE (physical table), DATASOURCE_VIEW (data source view), PHYSICAL_VIEW (physical view), MATERIALIZED_VIEW (materialized view), BIZ_INDEX (business metric), INDEX (technical metric - standardized modeling metric), and CUSTOM_INDEX (technical metric - custom metric).</p>
              * 
              * <strong>example:</strong>
              * <p>DIM_NORMAL</p>
@@ -3530,7 +3498,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The GUID of the aggregate table to which the asset belongs. Returned when the asset type is INDEX.</p>
+             * <p>The GUID of the summary table. This parameter is returned when the asset type is INDEX.</p>
              * 
              * <strong>example:</strong>
              * <p>odps.300023201.test.ads_gross</p>
@@ -3541,7 +3509,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the aggregate table to which the asset belongs. Returned when the asset type is INDEX.</p>
+             * <p>The name of the summary table. This parameter is returned when the asset type is INDEX.</p>
              * 
              * <strong>example:</strong>
              * <p>ads_gross</p>
@@ -3552,7 +3520,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The lifecycle. Returned when the asset type is TABLE.</p>
+             * <p>The lifecycle. This parameter is returned when the asset type is TABLE.</p>
              * 
              * <strong>example:</strong>
              * <p>36000</p>
@@ -3563,7 +3531,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage size. This parameter is returned only when the asset type is TABLE.</p>
+             * <p>The storage size. This parameter is returned when the asset type is TABLE.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>

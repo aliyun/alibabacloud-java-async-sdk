@@ -127,7 +127,7 @@ public class ExecKgCypherRequest extends Request {
         }
 
         /**
-         * <p>The custom Cypher query instruction.</p>
+         * <p>The custom Cypher query command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder execCommand(ExecCommand execCommand) {
@@ -151,7 +151,10 @@ public class ExecKgCypherRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operating user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -350,7 +353,7 @@ public class ExecKgCypherRequest extends Request {
             } 
 
             /**
-             * <p>The maximum number of records to return.</p>
+             * <p>The limit on the number of returned records.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -361,7 +364,7 @@ public class ExecKgCypherRequest extends Request {
             }
 
             /**
-             * <p>The input parameters of the query statement.</p>
+             * <p>The input parameters for the query statement.</p>
              */
             public Builder params(java.util.List<Params> params) {
                 this.params = params;

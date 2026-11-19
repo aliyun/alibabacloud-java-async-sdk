@@ -112,7 +112,7 @@ public class UpdateStandardSetRequest extends Request {
         }
 
         /**
-         * <p>Tenant ID.</p>
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,7 +125,10 @@ public class UpdateStandardSetRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -134,7 +137,7 @@ public class UpdateStandardSetRequest extends Request {
         }
 
         /**
-         * <p>Update command.</p>
+         * <p>The update command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder updateCommand(UpdateCommand updateCommand) {
@@ -233,7 +236,11 @@ public class UpdateStandardSetRequest extends Request {
             } 
 
             /**
-             * <p>Approval process type. Valid values: BY_DEFAULT (default approval type) and BY_TEMPLATE (template-based approval).</p>
+             * <p>The approval process type. Valid values:</p>
+             * <ul>
+             * <li>BY_DEFAULT: Default approval type.</li>
+             * <li>BY_TEMPLATE: Based on an approval template.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -254,7 +261,7 @@ public class UpdateStandardSetRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to submit approvals in batch.</p>
+             * <p>Specifies whether to submit approvals in batches.</p>
              * <p>This parameter is required.</p>
              */
             public Builder isSubmitInBatch(Boolean isSubmitInBatch) {
@@ -263,7 +270,7 @@ public class UpdateStandardSetRequest extends Request {
             }
 
             /**
-             * <p>Approval template ID. This parameter takes effect only when the approval process type is set to BY_TEMPLATE.</p>
+             * <p>The ID of the approval template. This parameter takes effect only when the approval process type is set to BY_TEMPLATE.</p>
              * 
              * <strong>example:</strong>
              * <p>1121</p>
@@ -321,7 +328,7 @@ public class UpdateStandardSetRequest extends Request {
             } 
 
             /**
-             * <p>Directory.</p>
+             * <p>The parent folder.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -421,7 +428,11 @@ public class UpdateStandardSetRequest extends Request {
             } 
 
             /**
-             * <p>Approval process type. Valid values: BY_DEFAULT (default approval type) and BY_TEMPLATE (template-based approval).</p>
+             * <p>The approval process type. Valid values:</p>
+             * <ul>
+             * <li>BY_DEFAULT: Default approval type.</li>
+             * <li>BY_TEMPLATE: Based on an approval template.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -442,7 +453,7 @@ public class UpdateStandardSetRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to submit approvals in batch.</p>
+             * <p>Specifies whether to submit approvals in batches.</p>
              * <p>This parameter is required.</p>
              */
             public Builder isSubmitInBatch(Boolean isSubmitInBatch) {
@@ -451,7 +462,7 @@ public class UpdateStandardSetRequest extends Request {
             }
 
             /**
-             * <p>Approval template ID. This parameter takes effect only when the approval process type is set to BY_TEMPLATE.</p>
+             * <p>The ID of the approval template. This parameter takes effect only when the approval process type is set to BY_TEMPLATE.</p>
              * 
              * <strong>example:</strong>
              * <p>1121</p>
@@ -522,7 +533,7 @@ public class UpdateStandardSetRequest extends Request {
             } 
 
             /**
-             * <p>List of specified visible users. This parameter takes effect only when the visibility type is set to SPECIFIED.</p>
+             * <p>The list of specified users who have visibility. This parameter takes effect only when the visibility type is set to SPECIFIED.</p>
              */
             public Builder specifiedUserList(java.util.List<String> specifiedUserList) {
                 this.specifiedUserList = specifiedUserList;
@@ -530,7 +541,12 @@ public class UpdateStandardSetRequest extends Request {
             }
 
             /**
-             * <p>Visibility type. Valid values: PUBLIC (public access), PRIVATE (private access, visible only to standard set members and administrators), and SPECIFIED (visible to specified users).</p>
+             * <p>The visibility type. Valid values:</p>
+             * <ul>
+             * <li>PUBLIC: Public.</li>
+             * <li>PRIVATE: Private. Visible only to standard set members and administrators.</li>
+             * <li>SPECIFIED: Visible to specified users.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -734,7 +750,7 @@ public class UpdateStandardSetRequest extends Request {
             } 
 
             /**
-             * <p>Publishing approval configuration.</p>
+             * <p>The online approval configuration.</p>
              */
             public Builder approvalConfig(ApprovalConfig approvalConfig) {
                 this.approvalConfig = approvalConfig;
@@ -742,7 +758,7 @@ public class UpdateStandardSetRequest extends Request {
             }
 
             /**
-             * <p>Standard set code.</p>
+             * <p>The code of the standard set.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -754,7 +770,7 @@ public class UpdateStandardSetRequest extends Request {
             }
 
             /**
-             * <p>Default standard template ID.</p>
+             * <p>The ID of the default standard template.</p>
              * 
              * <strong>example:</strong>
              * <p>1001</p>
@@ -765,7 +781,7 @@ public class UpdateStandardSetRequest extends Request {
             }
 
             /**
-             * <p>Standard set description.</p>
+             * <p>The description of the standard set.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -776,7 +792,7 @@ public class UpdateStandardSetRequest extends Request {
             }
 
             /**
-             * <p>Parent directory.</p>
+             * <p>The parent folder.</p>
              */
             public Builder directoryReference(DirectoryReference directoryReference) {
                 this.directoryReference = directoryReference;
@@ -784,7 +800,7 @@ public class UpdateStandardSetRequest extends Request {
             }
 
             /**
-             * <p>Maintainers.</p>
+             * <p>The maintainers.</p>
              */
             public Builder maintainerList(java.util.List<String> maintainerList) {
                 this.maintainerList = maintainerList;
@@ -792,7 +808,7 @@ public class UpdateStandardSetRequest extends Request {
             }
 
             /**
-             * <p>Member group list.</p>
+             * <p>The member group list.</p>
              */
             public Builder memberGroupList(java.util.List<String> memberGroupList) {
                 this.memberGroupList = memberGroupList;
@@ -800,7 +816,7 @@ public class UpdateStandardSetRequest extends Request {
             }
 
             /**
-             * <p>Member list.</p>
+             * <p>The member list.</p>
              */
             public Builder memberList(java.util.List<String> memberList) {
                 this.memberList = memberList;
@@ -808,7 +824,7 @@ public class UpdateStandardSetRequest extends Request {
             }
 
             /**
-             * <p>Standard set name.</p>
+             * <p>The name of the standard set.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -820,7 +836,7 @@ public class UpdateStandardSetRequest extends Request {
             }
 
             /**
-             * <p>Unpublishing approval configuration.</p>
+             * <p>The offline approval configuration.</p>
              */
             public Builder offlineApprovalConfig(OfflineApprovalConfig offlineApprovalConfig) {
                 this.offlineApprovalConfig = offlineApprovalConfig;
@@ -828,7 +844,7 @@ public class UpdateStandardSetRequest extends Request {
             }
 
             /**
-             * <p>Standard set ID.</p>
+             * <p>The ID of the standard set.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -840,7 +856,7 @@ public class UpdateStandardSetRequest extends Request {
             }
 
             /**
-             * <p>Visibility configuration.</p>
+             * <p>The visibility configuration.</p>
              */
             public Builder visibilityConfig(VisibilityConfig visibilityConfig) {
                 this.visibilityConfig = visibilityConfig;

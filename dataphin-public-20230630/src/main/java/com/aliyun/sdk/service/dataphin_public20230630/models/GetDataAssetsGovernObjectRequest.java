@@ -112,7 +112,7 @@ public class GetDataAssetsGovernObjectRequest extends Request {
         }
 
         /**
-         * <p>The query instruction.</p>
+         * <p>The query command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder command(Command command) {
@@ -136,7 +136,7 @@ public class GetDataAssetsGovernObjectRequest extends Request {
         }
 
         /**
-         * <p>The ID of the operation user.</p>
+         * <p>The operator user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>30001011</p>

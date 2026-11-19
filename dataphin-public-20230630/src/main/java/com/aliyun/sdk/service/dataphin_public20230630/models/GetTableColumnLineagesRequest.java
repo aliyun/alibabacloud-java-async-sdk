@@ -149,7 +149,10 @@ public class GetTableColumnLineagesRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -158,7 +161,7 @@ public class GetTableColumnLineagesRequest extends Request {
         }
 
         /**
-         * <p>The GUID of the table, which is the unique identifier of the asset.</p>
+         * <p>The GUID of the table, which uniquely identifies the asset.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -293,7 +296,7 @@ public class GetTableColumnLineagesRequest extends Request {
             }
 
             /**
-             * <p>The environment of the nodes to query. Valid values: dev and prod.</p>
+             * <p>The environment of the node to query. Valid values: dev and prod.</p>
              * 
              * <strong>example:</strong>
              * <p>dev</p>
@@ -304,7 +307,7 @@ public class GetTableColumnLineagesRequest extends Request {
             }
 
             /**
-             * <p>The list of node IDs to filter.</p>
+             * <p>The list of node IDs to query.</p>
              */
             public Builder nodeIdList(java.util.List<String> nodeIdList) {
                 this.nodeIdList = nodeIdList;

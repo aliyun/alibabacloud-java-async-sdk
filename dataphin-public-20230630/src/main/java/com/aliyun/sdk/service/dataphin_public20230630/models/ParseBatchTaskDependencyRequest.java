@@ -125,7 +125,10 @@ public class ParseBatchTaskDependencyRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the user who performs the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -134,7 +137,7 @@ public class ParseBatchTaskDependencyRequest extends Request {
         }
 
         /**
-         * <p>The parse request.</p>
+         * <p>The parsing request.</p>
          * <p>This parameter is required.</p>
          */
         public Builder parseCommand(ParseCommand parseCommand) {
@@ -297,7 +300,7 @@ public class ParseBatchTaskDependencyRequest extends Request {
             }
 
             /**
-             * <p>The catalog for a database SQL node. This parameter takes effect only for data source types that require a catalog, such as Presto.</p>
+             * <p>The data source catalog for database SQL nodes. This parameter takes effect only for data source types that require a catalog, such as Presto.</p>
              * 
              * <strong>example:</strong>
              * <p>mysql_catalog</p>
@@ -308,7 +311,7 @@ public class ParseBatchTaskDependencyRequest extends Request {
             }
 
             /**
-             * <p>The data source ID for a database SQL node.</p>
+             * <p>The data source ID for database SQL nodes.</p>
              * 
              * <strong>example:</strong>
              * <p>12131111</p>
@@ -319,7 +322,7 @@ public class ParseBatchTaskDependencyRequest extends Request {
             }
 
             /**
-             * <p>The schema for a database SQL node. This parameter takes effect only for data source types that require a schema, such as Oracle.</p>
+             * <p>The data source schema for database SQL nodes. This parameter takes effect only for data source types that require a schema, such as Oracle.</p>
              * 
              * <strong>example:</strong>
              * <p>erp</p>
@@ -330,7 +333,7 @@ public class ParseBatchTaskDependencyRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to include dependency information for input tables that have no corresponding nodes. Default value: false.</p>
+             * <p>Specifies whether to include dependency information for input tables that do not have corresponding nodes. Default value: false.</p>
              */
             public Builder includeAllInputTables(Boolean includeAllInputTables) {
                 this.includeAllInputTables = includeAllInputTables;
@@ -338,7 +341,7 @@ public class ParseBatchTaskDependencyRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to query data lineage when querying upstream dependencies. Default value: false.</p>
+             * <p>Specifies whether to query lineage data when querying upstream dependencies. Default value: false.</p>
              */
             public Builder needQueryLineages(Boolean needQueryLineages) {
                 this.needQueryLineages = needQueryLineages;

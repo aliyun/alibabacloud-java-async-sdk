@@ -136,7 +136,10 @@ public class CreateUdfRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The operator ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -317,7 +320,19 @@ public class CreateUdfRequest extends Request {
             } 
 
             /**
-             * <p>The UDF category identifier. Valid values: 1: window function. 2: statistical function. 3: numerical function. 4: string function. 5: time function. 6: IP address utility function. 7: URL-related function. 8: encoding and decoding function. 9: business-related function. 10: other.</p>
+             * <p>The category identifier of the user-defined function (UDF). Valid values:</p>
+             * <ul>
+             * <li>1: window function</li>
+             * <li>2: statistical function</li>
+             * <li>3: numerical function</li>
+             * <li>4: string function</li>
+             * <li>5: time function</li>
+             * <li>6: IP address helper function</li>
+             * <li>7: URL-related function</li>
+             * <li>8: encoding and decoding function</li>
+             * <li>9: business-related function</li>
+             * <li>10: other</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -329,7 +344,7 @@ public class CreateUdfRequest extends Request {
             }
 
             /**
-             * <p>The class name that implements the function in the resource.</p>
+             * <p>The name of the class that implements the function in the resource.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -341,7 +356,7 @@ public class CreateUdfRequest extends Request {
             }
 
             /**
-             * <p>The command format for function calling invoke.</p>
+             * <p>The command format for function invocation.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -353,11 +368,11 @@ public class CreateUdfRequest extends Request {
             }
 
             /**
-             * <p>The commit remarks.</p>
+             * <p>The submission comment.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>测试</p>
+             * <p>Test</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -365,7 +380,7 @@ public class CreateUdfRequest extends Request {
             }
 
             /**
-             * <p>The compute engine type. Valid values: MAX_COMPUTE, HADOOP.</p>
+             * <p>The compute engine type. Valid values: MAX_COMPUTE and HADOOP.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -381,7 +396,7 @@ public class CreateUdfRequest extends Request {
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>测试</p>
+             * <p>Test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -389,7 +404,7 @@ public class CreateUdfRequest extends Request {
             }
 
             /**
-             * <p>The directory in which the function is stored.</p>
+             * <p>The storage directory. Default value: /.</p>
              * 
              * <strong>example:</strong>
              * <p>/</p>
@@ -424,7 +439,7 @@ public class CreateUdfRequest extends Request {
             }
 
             /**
-             * <p>The IDs of referenced resources.</p>
+             * <p>The IDs of the referenced resources.</p>
              * <p>This parameter is required.</p>
              */
             public Builder refResourceIdList(java.util.List<Long> refResourceIdList) {

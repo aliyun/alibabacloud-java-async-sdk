@@ -125,7 +125,10 @@ public class UpdateSecurityClassifyCatalogRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -134,7 +137,7 @@ public class UpdateSecurityClassifyCatalogRequest extends Request {
         }
 
         /**
-         * <p>The update instruction.</p>
+         * <p>The update command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder updateCommand(UpdateCommand updateCommand) {
@@ -245,7 +248,7 @@ public class UpdateSecurityClassifyCatalogRequest extends Request {
             } 
 
             /**
-             * <p>The name of the classification folder.</p>
+             * <p>The name of the classification catalog.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -257,7 +260,7 @@ public class UpdateSecurityClassifyCatalogRequest extends Request {
             }
 
             /**
-             * <p>The list of administrator IDs. This parameter takes effect only when the parent folder is the root folder.</p>
+             * <p>The list of administrator IDs. This parameter is valid only when the parent catalog is the root catalog.</p>
              */
             public Builder ownerList(java.util.List<String> ownerList) {
                 this.ownerList = ownerList;
@@ -265,7 +268,7 @@ public class UpdateSecurityClassifyCatalogRequest extends Request {
             }
 
             /**
-             * <p>The full path of the parent classification folder. Default value: /.</p>
+             * <p>The full path of the parent classification catalog. Default value: /.</p>
              * 
              * <strong>example:</strong>
              * <p>/d1/</p>
@@ -276,7 +279,7 @@ public class UpdateSecurityClassifyCatalogRequest extends Request {
             }
 
             /**
-             * <p>The original full path of the folder.</p>
+             * <p>The original full path of the catalog.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -288,12 +291,7 @@ public class UpdateSecurityClassifyCatalogRequest extends Request {
             }
 
             /**
-             * <p>The visibility scope of the classification. Valid values:</p>
-             * <ul>
-             * <li>PUBLIC: visible to all users.</li>
-             * <li>PRIVATE: visible only to administrators.</li>
-             * </ul>
-             * <p>Default value: PUBLIC. This parameter takes effect only when the parent folder is the root folder.</p>
+             * <p>The classification visibility scope. Valid values: PUBLIC (public) and PRIVATE (visible only to administrators). Default value: PUBLIC. This parameter is valid only when the parent catalog is the root catalog.</p>
              * 
              * <strong>example:</strong>
              * <p>PUBLIC</p>

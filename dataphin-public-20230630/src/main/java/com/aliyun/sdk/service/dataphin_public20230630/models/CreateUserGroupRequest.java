@@ -134,7 +134,10 @@ public class CreateUserGroupRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -239,7 +242,7 @@ public class CreateUserGroupRequest extends Request {
             }
 
             /**
-             * <p>The user IDs of the user group administrators.</p>
+             * <p>The IDs of the administrator users in the user group.</p>
              */
             public Builder adminUserIdList(java.util.List<String> adminUserIdList) {
                 this.adminUserIdList = adminUserIdList;
@@ -250,7 +253,7 @@ public class CreateUserGroupRequest extends Request {
              * <p>The description of the user group.</p>
              * 
              * <strong>example:</strong>
-             * <p>xx</p>
+             * <p>Sample user group description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -261,7 +264,7 @@ public class CreateUserGroupRequest extends Request {
              * <p>The name of the user group.</p>
              * 
              * <strong>example:</strong>
-             * <p>xx用户组</p>
+             * <p>xx user group</p>
              */
             public Builder name(String name) {
                 this.name = name;

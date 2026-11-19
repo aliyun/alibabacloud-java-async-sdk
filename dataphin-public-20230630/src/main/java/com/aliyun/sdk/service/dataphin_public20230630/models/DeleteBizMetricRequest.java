@@ -112,7 +112,7 @@ public class DeleteBizMetricRequest extends Request {
         }
 
         /**
-         * <p>The delete request.</p>
+         * <p>The deletion request.</p>
          * <p>This parameter is required.</p>
          */
         public Builder deleteBizMetricCommand(DeleteBizMetricCommand deleteBizMetricCommand) {
@@ -136,7 +136,10 @@ public class DeleteBizMetricRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);

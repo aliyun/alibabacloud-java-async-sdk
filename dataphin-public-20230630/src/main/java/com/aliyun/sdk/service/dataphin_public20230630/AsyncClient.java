@@ -807,7 +807,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the latest status and error message of a data source connectivity check task by task ID. This operation is used to poll the asynchronous task returned by CheckDataSourceConnectivityOnResourceGroup. If the task does not exist, Data is empty.</p>
+     * <p>Queries the latest status and fault message of a data source connectivity check node by node ID. This operation is used to poll the asynchronous task returned by CheckDataSourceConnectivityOnResourceGroup. If the node does not exist, Data is empty.</p>
      * 
      * @param request the request parameters of GetCheckConnectivityJobByJobId  GetCheckConnectivityJobByJobIdRequest
      * @return GetCheckConnectivityJobByJobIdResponse
@@ -816,7 +816,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of tested connectivity tasks based on the data source ID.</p>
+     * <p>Queries the details of tested connectivity tasks for a data source ID.</p>
      * 
      * @param request the request parameters of GetCheckConnectivityJobs  GetCheckConnectivityJobsRequest
      * @return GetCheckConnectivityJobsResponse
@@ -831,7 +831,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of a tested connectivity task based on the datasource ID.</p>
+     * <p>Queries the details of tested connectivity tasks based on the data source ID.</p>
      * 
      * @param request the request parameters of GetComputeCluster  GetComputeClusterRequest
      * @return GetComputeClusterResponse
@@ -846,7 +846,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the details of a Query Governance object by governance item ID.</p>
+     * <p>Queries the details of a governance object based on the Query Governance project ID.</p>
      * 
      * @param request the request parameters of GetDataAssetsGovernObject  GetDataAssetsGovernObjectRequest
      * @return GetDataAssetsGovernObjectResponse
@@ -951,7 +951,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of a tested connectivity task based on the data source ID.</p>
+     * <p>Queries the details of tested connectivity tasks based on the data source ID.</p>
      * 
      * @param request the request parameters of GetDataset  GetDatasetRequest
      * @return GetDatasetResponse
@@ -1652,7 +1652,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <h2>Request description</h2>
-     * <p>This API allows you to retrieve dataset information for a specific project by providing the tenant ID, project ID, and other optional parameters such as keywords and type lists. Paging is supported for paged query, and the returned packet includes the basic information of the datasets and their version details. Note that ProjectId is required, while other parameters are options that you can configure in Settings as needed to filter the results.</p>
+     * <p>This API allows you to retrieve dataset information in a specific project by providing the tenant ID, project ID, and other optional parameters such as keywords and type lists. Paging is supported for paged query. The returned data packets include the basic information of the datasets and their version details. Note that <code>ProjectId</code> is required, while other parameters are options, and you can configure the Settings as needed to filter the results.</p>
      * 
      * @param request the request parameters of ListDatasets  ListDatasetsRequest
      * @return ListDatasetsResponse
@@ -1667,8 +1667,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>This API operation allows you to retrieve dataset information under a specific project by providing a tenant ID, project ID, and other optional parameters such as keywords and type lists. Paging is supported. The returned data includes basic dataset information and version details. Note that <code>ProjectId</code> is required, while other parameters are options that can be configured as needed to filter results.</p>
+     * <h2>Request description</h2>
+     * <p>This API operation allows you to retrieve dataset information for a specific project by providing the tenant ID, project ID, and other options such as keywords and type lists. It supports paging and paged query. The returned data packet includes the basic information and version details of the datasets. Note that <code>ProjectId</code> is required. Other parameters are options and can be configured in Settings to filter the results as needed.</p>
      * 
      * @param request the request parameters of ListGovernObjects  ListGovernObjectsRequest
      * @return ListGovernObjectsResponse
@@ -1731,15 +1731,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the list of project roles for a specified project type under a tenant. The roleType field in the returned role list indicates the role type:</p>
+     * <p>Retrieves a list of project roles under a specified project type for a tenant. The roleType field in the returned role list identifies the role type:</p>
      * <ul>
-     * <li>BUILD_IN: built-in role.</li>
-     * <li>CUSTOM: custom role.
-     * The ProjectType request parameter is required. Valid values:</li>
-     * <li>BASIC: basic mode project.</li>
-     * <li>DEV: development environment project.</li>
-     * <li>PROD: production environment project.</li>
-     * <li>TAG: tag platform project.</li>
+     * <li>BUILD_IN: built-in role</li>
+     * <li>CUSTOM: custom role
+     * The ProjectType request parameter is required. Valid values: BASIC (basic mode project), DEV (development environment project), PROD (production environment project), and TAG (tag platform project).</li>
      * </ul>
      * 
      * @param request the request parameters of ListProjectRoles  ListProjectRolesRequest
@@ -1887,7 +1883,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the start and stop operation records of real-time tasks in the production environment.</p>
+     * <p>Retrieves a list of start and stop operation records for real-time tasks in the production environment.</p>
      * 
      * @param request the request parameters of ListStreamOpsRecords  ListStreamOpsRecordsRequest
      * @return ListStreamOpsRecordsResponse
@@ -1934,8 +1930,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <p>Retrieves the list of tenant roles. The roleType field in the returned role list indicates the role type:</p>
      * <ul>
-     * <li>BUILD_IN: built-in role</li>
-     * <li>CUSTOM: custom role (created by the tenant)
+     * <li>BUILD_IN: built-in role.</li>
+     * <li>CUSTOM: custom role (created by the tenant).
      * This operation does not require additional business request parameters. The tenantId parameter is automatically injected by the POP gateway context.</li>
      * </ul>
      * 
@@ -2210,7 +2206,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of a published API operation by AppKey.</p>
+     * <p>Queries the details of published APIs based on the appKey.</p>
      * 
      * @param request the request parameters of SyncDepartment  SyncDepartmentRequest
      * @return SyncDepartmentResponse

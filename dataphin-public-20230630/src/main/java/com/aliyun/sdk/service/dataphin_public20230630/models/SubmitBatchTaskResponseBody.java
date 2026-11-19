@@ -119,7 +119,7 @@ public class SubmitBatchTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code returned for the request. A value of OK indicates that the request is normal.</p>
+         * <p>The error code. OK indicates that the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -141,7 +141,7 @@ public class SubmitBatchTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned for the request.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -152,7 +152,7 @@ public class SubmitBatchTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
@@ -163,7 +163,7 @@ public class SubmitBatchTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The edit result.</p>
+         * <p>The submission result.</p>
          */
         public Builder submitResult(SubmitResult submitResult) {
             this.submitResult = submitResult;

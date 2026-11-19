@@ -692,7 +692,7 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The business date. Format: YYYY-MM-DD.</p>
+             * <p>The business date in the YYYY-MM-DD format.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-06-30</p>
@@ -703,7 +703,7 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Chinese name of the business unit.</p>
+             * <p>The Chinese display name of the business unit.</p>
              * 
              * <strong>example:</strong>
              * <p>LD_test</p>
@@ -736,7 +736,7 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The classification abbreviation.</p>
+             * <p>The abbreviation of the classification.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -747,7 +747,7 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The classification ID.</p>
+             * <p>The ID of the classification.</p>
              * 
              * <strong>example:</strong>
              * <p>33</p>
@@ -758,7 +758,7 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The classification name.</p>
+             * <p>The name of the classification.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -769,7 +769,7 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time. Format: YYYY-MM-DD HH:mm:ss.</p>
+             * <p>The creation time in the YYYY-MM-DD HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-06-30 10:30:30</p>
@@ -813,7 +813,7 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The field description.</p>
+             * <p>The description of the field.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -846,7 +846,7 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether a better match is available.</p>
+             * <p>Indicates whether a better matched result exists.</p>
              */
             public Builder hasBetterRule(Boolean hasBetterRule) {
                 this.hasBetterRule = hasBetterRule;
@@ -854,7 +854,7 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The recognition result ID.</p>
+             * <p>The ID of the recognition result.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -876,7 +876,7 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether a custom identification rule is used.</p>
+             * <p>Indicates whether a custom tagging rule is used.</p>
              */
             public Builder isCustomIdentify(Boolean isCustomIdentify) {
                 this.isCustomIdentify = isCustomIdentify;
@@ -892,7 +892,7 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The abbreviation of the classification level.</p>
+             * <p>The abbreviation of the level.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -903,7 +903,7 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The color of the classification level.</p>
+             * <p>The color of the level.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -914,7 +914,7 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The classification level.</p>
+             * <p>The grading level.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -925,7 +925,7 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the classification level.</p>
+             * <p>The name of the level.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -958,7 +958,7 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Chinese name of the project.</p>
+             * <p>The Chinese display name of the project.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -1013,7 +1013,7 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The table catalog.</p>
+             * <p>The catalog of the table.</p>
              * 
              * <strong>example:</strong>
              * <p>testdb</p>
@@ -1024,7 +1024,7 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The table description.</p>
+             * <p>The description of the table.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -1035,7 +1035,7 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The table environment.</p>
+             * <p>The environment of the table.</p>
              * 
              * <strong>example:</strong>
              * <p>DEV</p>
@@ -1079,17 +1079,7 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The table type. Valid values:</p>
-             * <ul>
-             * <li>LOGIC_TABLE: logical table</li>
-             * <li>LOGIC_DIM_TABLE: logical dimension table</li>
-             * <li>LOGIC_FACT_TABLE: logical fact table</li>
-             * <li>LOGIC_SUM_TABLE: logical aggregate table</li>
-             * <li>LOGIC_ODM_SOURCE: source table</li>
-             * <li>LOGIC_LABEL_TABLE: logical label table</li>
-             * <li>PHYSICAL_TABLE: physical table</li>
-             * <li>REAL_TIME_LOGIC_TABLE: real-time configured logical table</li>
-             * </ul>
+             * <p>The type of the table. Valid values: LOGIC_TABLE (logical table), LOGIC_DIM_TABLE (logical dimension table), LOGIC_FACT_TABLE (logical fact table), LOGIC_SUM_TABLE (logical aggregate table), LOGIC_ODM_SOURCE (source table), LOGIC_LABEL_TABLE (logical label table), PHYSICAL_TABLE (physical table), and REAL_TIME_LOGIC_TABLE (real-time configured logical table).</p>
              * 
              * <strong>example:</strong>
              * <p>LOGIC_TABLE</p>

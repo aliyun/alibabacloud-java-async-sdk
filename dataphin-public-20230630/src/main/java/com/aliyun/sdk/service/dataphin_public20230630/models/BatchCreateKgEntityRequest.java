@@ -274,6 +274,9 @@ public class BatchCreateKgEntityRequest extends Request {
      * <p>BatchCreateKgEntityRequest</p>
      */
     public static class EntityList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BizId")
+        private String bizId;
+
         @com.aliyun.core.annotation.NameInMap("EntityType")
         @com.aliyun.core.annotation.Validation(required = true)
         private String entityType;
@@ -283,6 +286,7 @@ public class BatchCreateKgEntityRequest extends Request {
         private java.util.List<PropertyList> propertyList;
 
         private EntityList(Builder builder) {
+            this.bizId = builder.bizId;
             this.entityType = builder.entityType;
             this.propertyList = builder.propertyList;
         }
@@ -293,6 +297,13 @@ public class BatchCreateKgEntityRequest extends Request {
 
         public static EntityList create() {
             return builder().build();
+        }
+
+        /**
+         * @return bizId
+         */
+        public String getBizId() {
+            return this.bizId;
         }
 
         /**
@@ -310,6 +321,7 @@ public class BatchCreateKgEntityRequest extends Request {
         }
 
         public static final class Builder {
+            private String bizId; 
             private String entityType; 
             private java.util.List<PropertyList> propertyList; 
 
@@ -317,9 +329,21 @@ public class BatchCreateKgEntityRequest extends Request {
             } 
 
             private Builder(EntityList model) {
+                this.bizId = model.bizId;
                 this.entityType = model.entityType;
                 this.propertyList = model.propertyList;
             } 
+
+            /**
+             * <p>The business ID of the entity record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
+             */
+            public Builder bizId(String bizId) {
+                this.bizId = bizId;
+                return this;
+            }
 
             /**
              * <p>The entity type code.</p>

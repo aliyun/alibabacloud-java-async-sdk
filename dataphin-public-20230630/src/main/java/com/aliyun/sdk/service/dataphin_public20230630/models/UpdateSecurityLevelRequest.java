@@ -125,7 +125,10 @@ public class UpdateSecurityLevelRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -134,7 +137,7 @@ public class UpdateSecurityLevelRequest extends Request {
         }
 
         /**
-         * <p>The update instruction.</p>
+         * <p>The update command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder updateCommand(UpdateCommand updateCommand) {
@@ -217,7 +220,7 @@ public class UpdateSecurityLevelRequest extends Request {
             } 
 
             /**
-             * <p>The classification description.</p>
+             * <p>The description of the classification level.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -228,7 +231,7 @@ public class UpdateSecurityLevelRequest extends Request {
             }
 
             /**
-             * <p>The classification order. If this parameter is not specified, the classification name is used for matching.</p>
+             * <p>The order of the classification level. If this parameter is not specified, the classification level is matched by name.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -239,7 +242,7 @@ public class UpdateSecurityLevelRequest extends Request {
             }
 
             /**
-             * <p>The classification name.</p>
+             * <p>The name of the classification level.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>

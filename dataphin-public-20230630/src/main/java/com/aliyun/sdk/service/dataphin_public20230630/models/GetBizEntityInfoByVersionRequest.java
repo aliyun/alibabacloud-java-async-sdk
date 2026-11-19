@@ -168,7 +168,10 @@ public class GetBizEntityInfoByVersionRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The operator ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -190,7 +193,7 @@ public class GetBizEntityInfoByVersionRequest extends Request {
         }
 
         /**
-         * <p>The version.</p>
+         * <p>The version ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

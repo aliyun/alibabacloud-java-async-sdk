@@ -140,7 +140,10 @@ public class UpdateKgEntityRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -234,7 +237,7 @@ public class UpdateKgEntityRequest extends Request {
             } 
 
             /**
-             * <p>The property code.</p>
+             * <p>The code of the property.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -246,7 +249,7 @@ public class UpdateKgEntityRequest extends Request {
             }
 
             /**
-             * <p>The property value.</p>
+             * <p>The value of the property.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -333,7 +336,7 @@ public class UpdateKgEntityRequest extends Request {
             } 
 
             /**
-             * <p>The entity record ID.</p>
+             * <p>The ID of the entity record.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -345,7 +348,7 @@ public class UpdateKgEntityRequest extends Request {
             }
 
             /**
-             * <p>The entity type code.</p>
+             * <p>The code of the entity type.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -357,7 +360,7 @@ public class UpdateKgEntityRequest extends Request {
             }
 
             /**
-             * <p>The entity record property list.</p>
+             * <p>The property list of the entity record.</p>
              * <p>This parameter is required.</p>
              */
             public Builder propertyList(java.util.List<PropertyList> propertyList) {

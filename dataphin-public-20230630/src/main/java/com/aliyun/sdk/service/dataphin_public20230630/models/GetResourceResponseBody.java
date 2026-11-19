@@ -163,7 +163,7 @@ public class GetResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The resource file details.</p>
+         * <p>The details of the resource file.</p>
          */
         public Builder resourceInfo(ResourceInfo resourceInfo) {
             this.resourceInfo = resourceInfo;
@@ -171,7 +171,7 @@ public class GetResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -380,7 +380,7 @@ public class GetResourceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The compute engine type.</p>
+             * <p>The compute engine source type.</p>
              * 
              * <strong>example:</strong>
              * <p>MAX_COMPUTE</p>
@@ -405,7 +405,7 @@ public class GetResourceResponseBody extends TeaModel {
              * <p>The description.</p>
              * 
              * <strong>example:</strong>
-             * <p>测试</p>
+             * <p>Test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -413,7 +413,7 @@ public class GetResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The directory where the resource is stored.</p>
+             * <p>The storage directory.</p>
              * 
              * <strong>example:</strong>
              * <p>/</p>
@@ -424,7 +424,7 @@ public class GetResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time, in the yyyy-MM-dd HH:mm:ss format.</p>
+             * <p>The time when the resource was created. Format: yyyy-MM-dd HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-06-10 10:01:01</p>
@@ -435,7 +435,7 @@ public class GetResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last modification time, in the yyyy-MM-dd HH:mm:ss format.</p>
+             * <p>The time when the resource was updated. Format: yyyy-MM-dd HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-06-10 10:01:01</p>

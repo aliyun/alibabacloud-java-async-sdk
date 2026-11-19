@@ -125,7 +125,10 @@ public class UpdateDataDomainRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -286,7 +289,7 @@ public class UpdateDataDomainRequest extends Request {
             }
 
             /**
-             * <p>The ID of the data board.</p>
+             * <p>The business unit ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -298,7 +301,7 @@ public class UpdateDataDomainRequest extends Request {
             }
 
             /**
-             * <p>The ID of the data domain.</p>
+             * <p>The data domain ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -325,7 +328,7 @@ public class UpdateDataDomainRequest extends Request {
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>主题域测试</p>
+             * <p>Data domain test</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -333,7 +336,7 @@ public class UpdateDataDomainRequest extends Request {
             }
 
             /**
-             * <p>The code of the data domain.</p>
+             * <p>The data domain code.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

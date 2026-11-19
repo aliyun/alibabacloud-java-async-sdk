@@ -130,7 +130,7 @@ public class BatchCreateKgRelationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result of creating relationship records in batches.</p>
+         * <p>The result of creating relation records in batches.</p>
          */
         public Builder createResult(CreateResult createResult) {
             this.createResult = createResult;
@@ -197,9 +197,17 @@ public class BatchCreateKgRelationResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RelationType")
         private String relationType;
 
+        @com.aliyun.core.annotation.NameInMap("SourceEntityId")
+        private String sourceEntityId;
+
+        @com.aliyun.core.annotation.NameInMap("TargetEntityId")
+        private String targetEntityId;
+
         private SuccessRelationList(Builder builder) {
             this.relationId = builder.relationId;
             this.relationType = builder.relationType;
+            this.sourceEntityId = builder.sourceEntityId;
+            this.targetEntityId = builder.targetEntityId;
         }
 
         public static Builder builder() {
@@ -224,9 +232,25 @@ public class BatchCreateKgRelationResponseBody extends TeaModel {
             return this.relationType;
         }
 
+        /**
+         * @return sourceEntityId
+         */
+        public String getSourceEntityId() {
+            return this.sourceEntityId;
+        }
+
+        /**
+         * @return targetEntityId
+         */
+        public String getTargetEntityId() {
+            return this.targetEntityId;
+        }
+
         public static final class Builder {
             private String relationId; 
             private String relationType; 
+            private String sourceEntityId; 
+            private String targetEntityId; 
 
             private Builder() {
             } 
@@ -234,10 +258,12 @@ public class BatchCreateKgRelationResponseBody extends TeaModel {
             private Builder(SuccessRelationList model) {
                 this.relationId = model.relationId;
                 this.relationType = model.relationType;
+                this.sourceEntityId = model.sourceEntityId;
+                this.targetEntityId = model.targetEntityId;
             } 
 
             /**
-             * <p>The relationship record ID.</p>
+             * <p>The relation record ID.</p>
              * 
              * <strong>example:</strong>
              * <p>abc-xxx</p>
@@ -248,13 +274,35 @@ public class BatchCreateKgRelationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The relationship type code.</p>
+             * <p>The relation type code.</p>
              * 
              * <strong>example:</strong>
              * <p>BELONG_TO</p>
              */
             public Builder relationType(String relationType) {
                 this.relationType = relationType;
+                return this;
+            }
+
+            /**
+             * <p>The source entity ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e1d4559a4db044158305e2d89bccf81f</p>
+             */
+            public Builder sourceEntityId(String sourceEntityId) {
+                this.sourceEntityId = sourceEntityId;
+                return this;
+            }
+
+            /**
+             * <p>The target entity ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e1d4559a4db044158305e2d89bccf82f</p>
+             */
+            public Builder targetEntityId(String targetEntityId) {
+                this.targetEntityId = targetEntityId;
                 return this;
             }
 
@@ -331,7 +379,7 @@ public class BatchCreateKgRelationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of failed records.</p>
+             * <p>The number of failed creations.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -342,7 +390,7 @@ public class BatchCreateKgRelationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of successfully created records.</p>
+             * <p>The number of successful creations.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -353,7 +401,7 @@ public class BatchCreateKgRelationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of successfully created entity records.</p>
+             * <p>The list of successfully created relation records.</p>
              */
             public Builder successRelationList(java.util.List<SuccessRelationList> successRelationList) {
                 this.successRelationList = successRelationList;

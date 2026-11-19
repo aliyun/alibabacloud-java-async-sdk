@@ -112,7 +112,7 @@ public class ListDataServiceAppsRequest extends Request {
         }
 
         /**
-         * <p>Query the list of all applications under the tenant.</p>
+         * <p>The query parameters for listing all applications under the tenant.</p>
          * <p>This parameter is required.</p>
          */
         public Builder listQuery(ListQuery listQuery) {
@@ -123,7 +123,7 @@ public class ListDataServiceAppsRequest extends Request {
         }
 
         /**
-         * <p>Tenant ID.</p>
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,7 +136,10 @@ public class ListDataServiceAppsRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -230,7 +233,7 @@ public class ListDataServiceAppsRequest extends Request {
             } 
 
             /**
-             * <p>Application group ID.</p>
+             * <p>The application group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>12345</p>
@@ -241,10 +244,10 @@ public class ListDataServiceAppsRequest extends Request {
             }
 
             /**
-             * <p>Application name search keyword.</p>
+             * <p>The keyword used to search for application names.</p>
              * 
              * <strong>example:</strong>
-             * <p>营销看板</p>
+             * <p>Marketing dashboard</p>
              */
             public Builder keyword(String keyword) {
                 this.keyword = keyword;
@@ -252,7 +255,7 @@ public class ListDataServiceAppsRequest extends Request {
             }
 
             /**
-             * <p>Page number. Default value: 1.</p>
+             * <p>The page number. Default value: 1.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -263,7 +266,7 @@ public class ListDataServiceAppsRequest extends Request {
             }
 
             /**
-             * <p>Number of records per page. Default value: 20.</p>
+             * <p>The number of records per page. Default value: 20.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>

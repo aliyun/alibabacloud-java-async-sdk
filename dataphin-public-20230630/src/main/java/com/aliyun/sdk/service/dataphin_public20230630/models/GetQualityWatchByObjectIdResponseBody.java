@@ -341,7 +341,7 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time.</p>
+             * <p>The creation time in the YYYY-MM-DD HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-06-30 00:00:00</p>
@@ -396,7 +396,7 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time.</p>
+             * <p>The update time in the YYYY-MM-DD HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-06-30 00:00:00</p>
@@ -418,7 +418,7 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user ID of the owner.</p>
+             * <p>The owner ID.</p>
              * 
              * <strong>example:</strong>
              * <p>30012011</p>
@@ -429,7 +429,7 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The username of the owner.</p>
+             * <p>The owner name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -751,7 +751,7 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the cell summary logical table.</p>
+             * <p>The unit aggregate table name.</p>
              * 
              * <strong>example:</strong>
              * <p>dws_all</p>
@@ -762,7 +762,7 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The compute type of the metric. Valid values: AUTO, CUSTOM, MOUNT, and COMBINE.</p>
+             * <p>The metric computation type. Valid values: AUTO, CUSTOM, MOUNT, and COMBINE.</p>
              * 
              * <strong>example:</strong>
              * <p>AUTO</p>
@@ -773,7 +773,7 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data type of the metric.</p>
+             * <p>The metric data type.</p>
              * 
              * <strong>example:</strong>
              * <p>bigint</p>
@@ -795,7 +795,7 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the metric.</p>
+             * <p>The metric display name.</p>
              * 
              * <strong>example:</strong>
              * <p>logic</p>
@@ -809,7 +809,7 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
              * <p>The statistical granularity name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Site-wide summary table</p>
+             * <p>Global aggregate table</p>
              */
             public Builder granularityDisplayName(String granularityDisplayName) {
                 this.granularityDisplayName = granularityDisplayName;
@@ -861,7 +861,7 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user ID of the owner.</p>
+             * <p>The owner ID.</p>
              * 
              * <strong>example:</strong>
              * <p>30012011</p>
@@ -872,7 +872,7 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The username of the owner.</p>
+             * <p>The owner name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -1251,7 +1251,7 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user ID of the owner.</p>
+             * <p>The owner ID.</p>
              * 
              * <strong>example:</strong>
              * <p>30012011</p>
@@ -1262,7 +1262,7 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The username of the owner.</p>
+             * <p>The owner name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -1295,7 +1295,7 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type. Valid values: LOGIC_DIM_TABLE (logical dimension table), LOGIC_FACT_TABLE (logical fact table), LOGIC_SUM_TABLE (logical aggregate table), LOGIC_LABEL_TABLE (logical tag table), PHYSICAL_TABLE (physical table), and REALTIME_LOGICAL_TABLE (real-time metadata table).</p>
+             * <p>The type. Valid values: LOGIC_DIM_TABLE (logical dimension table), LOGIC_FACT_TABLE (logical fact table), LOGIC_SUM_TABLE (logical aggregate table), LOGIC_LABEL_TABLE (logical tag table), PHYSICAL_TABLE (physical table), and REALTIME_LOGICAL_TABLE (real-time metatable).</p>
              * 
              * <strong>example:</strong>
              * <p>LOGIC_DIM_TABLE</p>
@@ -1573,7 +1573,7 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time.</p>
+             * <p>The creation time in the YYYY-MM-DD HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-06-30 00:00:00</p>
@@ -1677,7 +1677,7 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time.</p>
+             * <p>The update time in the YYYY-MM-DD HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-06-30 00:00:00</p>
@@ -1751,7 +1751,7 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The monitored object type. Valid values: TABLE (Dataphin table), DATASOURCE_TABLE (global table), DATASOURCE (data source), INDEX (metric), and REALTIME_LOGICAL_TABLE (real-time metadata table).</p>
+             * <p>The monitored object type. Valid values: TABLE (Dataphin table), DATASOURCE_TABLE (global table), DATASOURCE (data source), INDEX (metric), and REALTIME_LOGICAL_TABLE (real-time metatable).</p>
              * 
              * <strong>example:</strong>
              * <p>TABLE</p>

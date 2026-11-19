@@ -136,7 +136,10 @@ public class ListDataDomainsRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -217,7 +220,7 @@ public class ListDataDomainsRequest extends Request {
             } 
 
             /**
-             * <p>The IDs of the business units to which the data domains belong.</p>
+             * <p>The IDs of the business units.</p>
              */
             public Builder bizUnitIdList(java.util.List<Long> bizUnitIdList) {
                 this.bizUnitIdList = bizUnitIdList;
@@ -225,7 +228,7 @@ public class ListDataDomainsRequest extends Request {
             }
 
             /**
-             * <p>The search keyword. You can search by data domain name, code, or description.</p>
+             * <p>The search keyword, which can be the data domain name, code, or description.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>

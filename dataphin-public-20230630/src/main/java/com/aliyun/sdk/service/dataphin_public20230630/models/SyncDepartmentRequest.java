@@ -125,7 +125,10 @@ public class SyncDepartmentRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -219,7 +222,7 @@ public class SyncDepartmentRequest extends Request {
             } 
 
             /**
-             * <p>The department ID (unique identifier of the department).</p>
+             * <p>The unique identifier of the department.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -235,7 +238,7 @@ public class SyncDepartmentRequest extends Request {
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>研发中心</p>
+             * <p>R&amp;D Center</p>
              */
             public Builder departmentName(String departmentName) {
                 this.departmentName = departmentName;
@@ -243,7 +246,7 @@ public class SyncDepartmentRequest extends Request {
             }
 
             /**
-             * <p>The parent department ID (unique identifier of the parent department). Set to null if no parent department exists.</p>
+             * <p>The unique identifier of the parent department. If the department has no parent, the value is null.</p>
              * 
              * <strong>example:</strong>
              * <p>10001</p>

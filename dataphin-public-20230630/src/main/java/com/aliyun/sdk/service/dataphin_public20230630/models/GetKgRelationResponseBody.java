@@ -261,7 +261,7 @@ public class GetKgRelationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The property data type. Valid values: STRING (string), INTEGER (integer), FLOAT (floating-point number), BOOLEAN (Boolean), DATE (date), and LIST (list).</p>
+             * <p>The property data type. Valid values include STRING, INTEGER, FLOAT, BOOLEAN, DATE, and LIST.</p>
              * 
              * <strong>example:</strong>
              * <p>STRING</p>

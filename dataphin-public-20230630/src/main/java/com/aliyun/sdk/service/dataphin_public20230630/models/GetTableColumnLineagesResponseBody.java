@@ -163,7 +163,7 @@ public class GetTableColumnLineagesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -171,7 +171,7 @@ public class GetTableColumnLineagesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of table column lineage records.</p>
+         * <p>The list of table column lineage.</p>
          */
         public Builder tableColumnLineageList(java.util.List<TableColumnLineageList> tableColumnLineageList) {
             this.tableColumnLineageList = tableColumnLineageList;
@@ -508,7 +508,7 @@ public class GetTableColumnLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The GUID of the input column. Format: TableGuid.ColumnName.</p>
+             * <p>The GUID of the input column. Format: table GUID.column name.</p>
              * 
              * <strong>example:</strong>
              * <p>1121.col1</p>
@@ -563,7 +563,7 @@ public class GetTableColumnLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the input table has been deleted.</p>
+             * <p>Indicates whether the input table is deleted.</p>
              */
             public Builder inputTableDeleted(Boolean inputTableDeleted) {
                 this.inputTableDeleted = inputTableDeleted;
@@ -571,7 +571,7 @@ public class GetTableColumnLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The environment of the input table. Valid values: dev and prod.</p>
+             * <p>The environment to which the input table belongs. Valid values: dev and prod.</p>
              * 
              * <strong>example:</strong>
              * <p>dev</p>
@@ -582,7 +582,7 @@ public class GetTableColumnLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The GUID of the input table. Each asset has a unique identifier.</p>
+             * <p>The GUID of the input table, which uniquely identifies the asset.</p>
              * 
              * <strong>example:</strong>
              * <p>123211</p>
@@ -604,7 +604,7 @@ public class GetTableColumnLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The environment of the node. Valid values: dev and prod.</p>
+             * <p>The environment to which the node belongs. Valid values: dev and prod.</p>
              * 
              * <strong>example:</strong>
              * <p>dev</p>
@@ -615,7 +615,7 @@ public class GetTableColumnLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node ID associated with the lineage.</p>
+             * <p>The ID of the node corresponding to the lineage.</p>
              * 
              * <strong>example:</strong>
              * <p>110021</p>
@@ -637,7 +637,7 @@ public class GetTableColumnLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The GUID of the output column. Format: TableId.ColumnName.</p>
+             * <p>The GUID of the output column. Format: table ID.column name.</p>
              * 
              * <strong>example:</strong>
              * <p>2231.col2</p>
@@ -692,7 +692,7 @@ public class GetTableColumnLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the output table has been deleted.</p>
+             * <p>Indicates whether the output table is deleted.</p>
              */
             public Builder outputTableDeleted(Boolean outputTableDeleted) {
                 this.outputTableDeleted = outputTableDeleted;
@@ -700,7 +700,7 @@ public class GetTableColumnLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The environment of the output table. Valid values: dev and prod.</p>
+             * <p>The environment to which the output table belongs. Valid values: dev and prod.</p>
              * 
              * <strong>example:</strong>
              * <p>dev</p>
@@ -711,7 +711,7 @@ public class GetTableColumnLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The GUID of the output table. Each asset has a unique identifier.</p>
+             * <p>The GUID of the output table, which uniquely identifies the asset.</p>
              * 
              * <strong>example:</strong>
              * <p>2231</p>

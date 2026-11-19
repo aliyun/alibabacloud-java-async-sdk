@@ -142,11 +142,11 @@ public class UpdateFileDirectoryRequest extends Request {
         }
 
         /**
-         * <p>The updated file folder after the move.</p>
+         * <p>The new directory of the file.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>/xx测试/目录new</p>
+         * <p>/xxTest/directoryNew</p>
          */
         public Builder directory(String directory) {
             this.putQueryParameter("Directory", directory);
@@ -181,7 +181,10 @@ public class UpdateFileDirectoryRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);

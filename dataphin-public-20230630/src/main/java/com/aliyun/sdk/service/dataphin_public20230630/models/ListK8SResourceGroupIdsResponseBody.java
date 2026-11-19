@@ -130,7 +130,7 @@ public class ListK8SResourceGroupIdsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of custom Kubernetes resource groups.</p>
+         * <p>The custom K8s resource groups used for Flink tasks under the tenant. The ListK8SResourceGroupIds operation returns only available resource groups.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -149,7 +149,7 @@ public class ListK8SResourceGroupIdsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the backend response error.</p>
+         * <p>The details of the backend response exception.</p>
          * 
          * <strong>example:</strong>
          * <p>internal error</p>
@@ -250,7 +250,7 @@ public class ListK8SResourceGroupIdsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the custom Kubernetes resource group.</p>
+             * <p>The ID of the custom K8s resource group, which can be used to select the compute queue for real-time tasks.</p>
              * 
              * <strong>example:</strong>
              * <p>1052061</p>
@@ -261,10 +261,10 @@ public class ListK8SResourceGroupIdsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the custom Kubernetes resource group.</p>
+             * <p>The name of the custom K8s resource group.</p>
              * 
              * <strong>example:</strong>
-             * <p>Dedicated to real-time R&amp;D</p>
+             * <p>Dedicated for real-time development</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -272,7 +272,7 @@ public class ListK8SResourceGroupIdsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the resource group.</p>
+             * <p>The status of the resource group. NORMAL indicates that the resource group is available.</p>
              * 
              * <strong>example:</strong>
              * <p>NORMAL</p>

@@ -245,6 +245,9 @@ public class UpdateDataAssetsGovernObjectStatusRequest extends Request {
             /**
              * <p>The list of governance object IDs.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[12345, 12346]</p>
              */
             public Builder governObjectIds(java.util.List<Long> governObjectIds) {
                 this.governObjectIds = governObjectIds;

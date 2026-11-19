@@ -130,7 +130,7 @@ public class ListStreamTaskManagersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of TaskManagers for the real-time task.</p>
+         * <p>The TaskManager information retrieved in real time. You can use the taskmanagerId to query the logs of the TaskManager.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -149,7 +149,7 @@ public class ListStreamTaskManagersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the backend response exception.</p>
+         * <p>The details of the backend exception.</p>
          * 
          * <strong>example:</strong>
          * <p>internal error</p>
@@ -237,7 +237,7 @@ public class ListStreamTaskManagersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The communication address or machine information.</p>
+             * <p>The communication address or host machine information of the TaskManager returned by the engine. This is not the log download URL.</p>
              * 
              * <strong>example:</strong>
              * <p>akka.tcp://<a href="mailto:flink@10.0.0.12">flink@10.0.0.12</a>:6122/user/rpc/taskmanager_0</p>
@@ -248,7 +248,7 @@ public class ListStreamTaskManagersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>taskmanagerId</p>
+             * <p>The identifier of the TaskManager. This corresponds to the TaskmanagerId input parameter of ListStreamTaskManagerLogs and GetStreamLogContent.</p>
              * 
              * <strong>example:</strong>
              * <p>dataphin-session-7db678957dc449aab0086b931c9f8218-taskmanazjkxq</p>

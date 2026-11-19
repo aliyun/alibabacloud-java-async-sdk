@@ -127,7 +127,7 @@ public class CreateKgEntityRequest extends Request {
         }
 
         /**
-         * <p>The create command.</p>
+         * <p>The creation command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder createCommand(CreateCommand createCommand) {
@@ -151,7 +151,10 @@ public class CreateKgEntityRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -331,7 +334,7 @@ public class CreateKgEntityRequest extends Request {
             }
 
             /**
-             * <p>The entity record property list.</p>
+             * <p>The property list of the entity record.</p>
              * <p>This parameter is required.</p>
              */
             public Builder propertyList(java.util.List<PropertyList> propertyList) {

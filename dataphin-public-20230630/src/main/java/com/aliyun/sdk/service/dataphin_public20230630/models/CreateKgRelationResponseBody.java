@@ -130,7 +130,7 @@ public class CreateKgRelationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result of creating the relationship record.</p>
+         * <p>The creation result of the relationship record.</p>
          */
         public Builder createResult(CreateResult createResult) {
             this.createResult = createResult;
@@ -171,7 +171,7 @@ public class CreateKgRelationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -112,7 +112,7 @@ public class GetCatalogAssetDetailsRequest extends Request {
         }
 
         /**
-         * <p>The paged query for the listed asset catalog.</p>
+         * <p>The paging query for the list of listed asset catalogs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder getCatalogAssetDetailsQuery(GetCatalogAssetDetailsQuery getCatalogAssetDetailsQuery) {
@@ -136,7 +136,7 @@ public class GetCatalogAssetDetailsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the operator user.</p>
+         * <p>The ID of the operator.</p>
          * 
          * <strong>example:</strong>
          * <p>30001011</p>
@@ -233,10 +233,11 @@ public class GetCatalogAssetDetailsRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to include the field list. Default value: false. Valid values:</p>
+             * <p>Specifies whether to include the column list. Valid values:</p>
              * <ul>
-             * <li>false: Not included.</li>
              * <li>true: Included.</li>
+             * <li>false: Not included.
+             * Default value: false.</li>
              * </ul>
              */
             public Builder includeColumns(Boolean includeColumns) {
@@ -245,10 +246,11 @@ public class GetCatalogAssetDetailsRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to include detailed data. Default value: false. Valid values:</p>
+             * <p>Specifies whether to include detailed data. Valid values:</p>
              * <ul>
-             * <li>false: Not included.</li>
              * <li>true: Included.</li>
+             * <li>false: Not included.
+             * Default value: false.</li>
              * </ul>
              */
             public Builder includeDetailedAttributes(Boolean includeDetailedAttributes) {

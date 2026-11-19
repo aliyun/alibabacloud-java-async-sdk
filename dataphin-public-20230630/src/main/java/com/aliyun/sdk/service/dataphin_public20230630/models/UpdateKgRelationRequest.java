@@ -140,7 +140,10 @@ public class UpdateKgRelationRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The operator user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -332,7 +335,7 @@ public class UpdateKgRelationRequest extends Request {
             } 
 
             /**
-             * <p>The list of relationship record properties.</p>
+             * <p>The relationship record property list.</p>
              */
             public Builder propertyList(java.util.List<PropertyList> propertyList) {
                 this.propertyList = propertyList;

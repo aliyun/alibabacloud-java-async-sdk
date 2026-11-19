@@ -136,7 +136,10 @@ public class CreateDirectoryRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -236,17 +239,17 @@ public class CreateDirectoryRequest extends Request {
             /**
              * <p>The menu tree category. Valid values:</p>
              * <ul>
-             * <li>tempCode: custom query</li>
-             * <li>codeManage: code node</li>
-             * <li>offlinePipeline: offline pipeline</li>
-             * <li>offlinePipelineCustomPlugin: pipeline custom component</li>
-             * <li>dataX: synchronization task</li>
-             * <li>streamMeta: real-time meta table</li>
-             * <li>streamCustomDataSource: real-time custom source</li>
-             * <li>streamTemplate: real-time compute template</li>
-             * <li>resourceManage: resource management</li>
-             * <li>udfResource: offline function</li>
-             * <li>streamFunction: real-time function.</li>
+             * <li>tempCode: Ad hoc query.</li>
+             * <li>codeManage: Code task.</li>
+             * <li>offlinePipeline: Offline pipeline.</li>
+             * <li>offlinePipelineCustomPlugin: Custom pipeline component.</li>
+             * <li>dataX: Synchronization task.</li>
+             * <li>streamMeta: Real-time meta table.</li>
+             * <li>streamCustomDataSource: Real-time custom data source.</li>
+             * <li>streamTemplate: Real-time compute template.</li>
+             * <li>resourceManage: Resource management.</li>
+             * <li>udfResource: Offline function.</li>
+             * <li>streamFunction: Real-time function.</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -259,7 +262,7 @@ public class CreateDirectoryRequest extends Request {
             }
 
             /**
-             * <p>The parent directory of the new file directory.</p>
+             * <p>The parent directory of the new directory.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -271,7 +274,7 @@ public class CreateDirectoryRequest extends Request {
             }
 
             /**
-             * <p>The name of the new file directory.</p>
+             * <p>The name of the new directory.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

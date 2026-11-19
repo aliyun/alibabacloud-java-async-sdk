@@ -119,7 +119,7 @@ public class GetDataDomainInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code. A value of OK indicates that the request was successful.</p>
+         * <p>The error code. A value of OK indicates that the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -171,7 +171,7 @@ public class GetDataDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -416,7 +416,7 @@ public class GetDataDomainInfoResponseBody extends TeaModel {
              * <p>The display name.</p>
              * 
              * <strong>example:</strong>
-             * <p>测试</p>
+             * <p>Test</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -471,7 +471,7 @@ public class GetDataDomainInfoResponseBody extends TeaModel {
              * <p>The name of the user who last modified the data domain.</p>
              * 
              * <strong>example:</strong>
-             * <p>张三</p>
+             * <p>Zhang San</p>
              */
             public Builder lastModifierName(String lastModifierName) {
                 this.lastModifierName = lastModifierName;
@@ -490,10 +490,10 @@ public class GetDataDomainInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the business object owner.</p>
+             * <p>The ID of the owner of the business object.</p>
              * 
              * <strong>example:</strong>
-             * <p>张三</p>
+             * <p>Zhang San</p>
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
@@ -501,7 +501,7 @@ public class GetDataDomainInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the business object owner.</p>
+             * <p>The ID of the owner of the business object.</p>
              * 
              * <strong>example:</strong>
              * <p>30010010</p>

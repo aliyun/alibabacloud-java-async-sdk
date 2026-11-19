@@ -111,7 +111,7 @@ public class ListTablesRequest extends Request {
         }
 
         /**
-         * <p>The paged query conditions.</p>
+         * <p>The paging query conditions.</p>
          */
         public Builder listQuery(ListQuery listQuery) {
             String listQueryShrink = shrink(listQuery, "ListQuery", "json");
@@ -257,7 +257,7 @@ public class ListTablesRequest extends Request {
             } 
 
             /**
-             * <p>The asset catalog: project name and business unit name.</p>
+             * <p>The asset catalog: project name, business unit name, or data source ID. If this parameter is not specified, all table assets are queried.</p>
              * 
              * <strong>example:</strong>
              * <p>LD_test01_dev</p>
@@ -312,7 +312,7 @@ public class ListTablesRequest extends Request {
             }
 
             /**
-             * <p>The table types. If you do not specify this parameter or pass an empty list, all table types are queried. Valid values:</p>
+             * <p>The table types. If this parameter is not specified or an empty list is passed, all table types are queried. Valid values:</p>
              * <ul>
              * <li>PHYSICAL_TABLE: Physical table of the compute source.</li>
              * <li>PHYSICAL_VIEW: View of the compute source.</li>

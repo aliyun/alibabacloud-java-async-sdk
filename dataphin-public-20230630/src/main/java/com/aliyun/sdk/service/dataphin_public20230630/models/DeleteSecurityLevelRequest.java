@@ -112,7 +112,7 @@ public class DeleteSecurityLevelRequest extends Request {
         }
 
         /**
-         * <p>The delete instruction.</p>
+         * <p>The delete command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder deleteCommand(DeleteCommand deleteCommand) {
@@ -136,7 +136,10 @@ public class DeleteSecurityLevelRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the user who performs the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -204,7 +207,7 @@ public class DeleteSecurityLevelRequest extends Request {
             } 
 
             /**
-             * <p>The sensitivity level of the classification level. If this parameter is not specified, the classification level is deleted based on an exact match of the classification level name.</p>
+             * <p>The sensitivity level of the data classification. If this parameter is not specified, the system deletes the data classification level by exact match on the name.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -215,7 +218,7 @@ public class DeleteSecurityLevelRequest extends Request {
             }
 
             /**
-             * <p>The classification level name.</p>
+             * <p>The name of the data classification level.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>

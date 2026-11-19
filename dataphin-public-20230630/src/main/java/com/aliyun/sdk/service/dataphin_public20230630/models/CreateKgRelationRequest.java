@@ -127,7 +127,7 @@ public class CreateKgRelationRequest extends Request {
         }
 
         /**
-         * <p>The create command.</p>
+         * <p>The creation command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder createCommand(CreateCommand createCommand) {
@@ -151,7 +151,10 @@ public class CreateKgRelationRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The operator ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -346,7 +349,7 @@ public class CreateKgRelationRequest extends Request {
             } 
 
             /**
-             * <p>The relationship record property list.</p>
+             * <p>The property list of the relationship record.</p>
              */
             public Builder propertyList(java.util.List<PropertyList> propertyList) {
                 this.propertyList = propertyList;

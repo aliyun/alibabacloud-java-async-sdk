@@ -153,7 +153,10 @@ public class ExportKgSchemaRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -174,7 +177,7 @@ public class ExportKgSchemaRequest extends Request {
         }
 
         /**
-         * <p>The version number. If this parameter is empty or set to -1, the model metadata in draft state is returned. If this parameter is set to 0, the model metadata of the latest version is returned.</p>
+         * <p>The version ID. An empty value or -1 indicates the draft model metadata. 0 indicates the latest model metadata.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

@@ -125,7 +125,10 @@ public class UpdateDataSourceBasicInfoRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -134,7 +137,7 @@ public class UpdateDataSourceBasicInfoRequest extends Request {
         }
 
         /**
-         * <p>The basic information to edit for the data source.</p>
+         * <p>The update of the basic information for a data source.</p>
          * <p>This parameter is required.</p>
          */
         public Builder updateCommand(UpdateCommand updateCommand) {
@@ -224,7 +227,7 @@ public class UpdateDataSourceBasicInfoRequest extends Request {
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>xx</p>
+             * <p>Sample data source description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -248,7 +251,7 @@ public class UpdateDataSourceBasicInfoRequest extends Request {
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>xx测试</p>
+             * <p>xx test</p>
              */
             public Builder name(String name) {
                 this.name = name;

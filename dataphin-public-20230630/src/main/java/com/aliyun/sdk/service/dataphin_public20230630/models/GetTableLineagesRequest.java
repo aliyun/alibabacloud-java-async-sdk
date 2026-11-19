@@ -136,7 +136,7 @@ public class GetTableLineagesRequest extends Request {
         }
 
         /**
-         * <p>Tenant ID.</p>
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -149,7 +149,10 @@ public class GetTableLineagesRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The operator user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -277,7 +280,7 @@ public class GetTableLineagesRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to return tables that do not exist in the asset list. Default value: false.</p>
+             * <p>Specifies whether to return tables that do not exist in the asset inventory. Default value: false.</p>
              */
             public Builder needNotExistObject(Boolean needNotExistObject) {
                 this.needNotExistObject = needNotExistObject;
@@ -293,7 +296,7 @@ public class GetTableLineagesRequest extends Request {
             }
 
             /**
-             * <p>The environment to which the task belongs. This parameter is used for filtering. Valid values: dev and prod.</p>
+             * <p>The environment of the node to be queried. Valid values: dev and prod.</p>
              * 
              * <strong>example:</strong>
              * <p>dev</p>
@@ -304,7 +307,7 @@ public class GetTableLineagesRequest extends Request {
             }
 
             /**
-             * <p>The list of task IDs used for filtering.</p>
+             * <p>The list of node IDs to be queried.</p>
              */
             public Builder nodeIdList(java.util.List<String> nodeIdList) {
                 this.nodeIdList = nodeIdList;

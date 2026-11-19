@@ -106,7 +106,7 @@ public class PublishStandardResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code.</p>
+         * <p>The backend response code.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -128,7 +128,7 @@ public class PublishStandardResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message.</p>
+         * <p>The backend exception details.</p>
          * 
          * <strong>example:</strong>
          * <p>internal error</p>

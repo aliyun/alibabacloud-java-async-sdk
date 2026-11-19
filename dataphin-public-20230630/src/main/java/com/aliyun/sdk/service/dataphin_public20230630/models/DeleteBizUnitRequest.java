@@ -112,7 +112,7 @@ public class DeleteBizUnitRequest extends Request {
         }
 
         /**
-         * <p>The business domain ID.</p>
+         * <p>The business block ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,7 +138,10 @@ public class DeleteBizUnitRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The operator ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);

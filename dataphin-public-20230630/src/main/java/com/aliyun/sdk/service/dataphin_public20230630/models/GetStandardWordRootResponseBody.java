@@ -141,7 +141,7 @@ public class GetStandardWordRootResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The backend exception details.</p>
+         * <p>The details of the backend exception.</p>
          * 
          * <strong>example:</strong>
          * <p>internal error</p>
@@ -171,7 +171,7 @@ public class GetStandardWordRootResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The word root details.</p>
+         * <p>The details of the word root.</p>
          */
         public Builder wordRootInfo(WordRootInfo wordRootInfo) {
             this.wordRootInfo = wordRootInfo;
@@ -363,7 +363,7 @@ public class GetStandardWordRootResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user ID of the creator.</p>
+             * <p>The ID of the creator.</p>
              * 
              * <strong>example:</strong>
              * <p>30012021</p>
@@ -407,7 +407,7 @@ public class GetStandardWordRootResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user ID of the last modifier.</p>
+             * <p>The ID of the last modifier.</p>
              * 
              * <strong>example:</strong>
              * <p>30012021</p>

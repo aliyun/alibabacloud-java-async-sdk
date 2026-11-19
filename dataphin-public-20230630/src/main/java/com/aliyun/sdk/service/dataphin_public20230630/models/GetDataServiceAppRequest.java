@@ -138,7 +138,7 @@ public class GetDataServiceAppRequest extends Request {
         }
 
         /**
-         * <p>The ID of the operator.</p>
+         * <p>The operator user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>30001011</p>

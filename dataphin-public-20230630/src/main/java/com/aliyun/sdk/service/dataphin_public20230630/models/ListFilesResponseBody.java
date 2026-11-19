@@ -119,7 +119,7 @@ public class ListFilesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Request error code. OK indicates a normal request.</p>
+         * <p>The error code. A value of OK indicates that the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -130,7 +130,7 @@ public class ListFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>File list</p>
+         * <p>The list of files.</p>
          */
         public Builder fileList(java.util.List<FileList> fileList) {
             this.fileList = fileList;
@@ -138,7 +138,7 @@ public class ListFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Backend response HTTP code</p>
+         * <p>The HTTP status code returned by the backend.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -149,7 +149,7 @@ public class ListFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request error message</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -160,7 +160,7 @@ public class ListFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
@@ -171,7 +171,7 @@ public class ListFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether the request was successful</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -357,7 +357,7 @@ public class ListFilesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>File category</p>
+             * <p>The file category.</p>
              * 
              * <strong>example:</strong>
              * <p>tempCode</p>
@@ -368,7 +368,7 @@ public class ListFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>File content</p>
+             * <p>The file content.</p>
              * 
              * <strong>example:</strong>
              * <p>select 1;</p>
@@ -379,7 +379,7 @@ public class ListFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Creator</p>
+             * <p>The creator.</p>
              * 
              * <strong>example:</strong>
              * <p>1212111</p>
@@ -390,7 +390,7 @@ public class ListFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>File directory</p>
+             * <p>The file directory.</p>
              * 
              * <strong>example:</strong>
              * <p>/xx/x</p>
@@ -401,7 +401,7 @@ public class ListFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>File type, such as directory</p>
+             * <p>The file type, such as directory.</p>
              * 
              * <strong>example:</strong>
              * <p>directory</p>
@@ -412,7 +412,7 @@ public class ListFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Creation time</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>1717483193830</p>
@@ -423,7 +423,7 @@ public class ListFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Modification time</p>
+             * <p>The last modification time.</p>
              * 
              * <strong>example:</strong>
              * <p>1717483193830</p>
@@ -434,7 +434,7 @@ public class ListFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>File ID</p>
+             * <p>The file ID.</p>
              * 
              * <strong>example:</strong>
              * <p>111231112</p>
@@ -445,7 +445,7 @@ public class ListFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Last modifier</p>
+             * <p>The last modifier.</p>
              * 
              * <strong>example:</strong>
              * <p>1212111</p>
@@ -456,10 +456,10 @@ public class ListFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>File name</p>
+             * <p>The file name.</p>
              * 
              * <strong>example:</strong>
-             * <p>xx测试</p>
+             * <p>xxTest</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -467,7 +467,7 @@ public class ListFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Project ID</p>
+             * <p>The project ID.</p>
              * 
              * <strong>example:</strong>
              * <p>312112121</p>

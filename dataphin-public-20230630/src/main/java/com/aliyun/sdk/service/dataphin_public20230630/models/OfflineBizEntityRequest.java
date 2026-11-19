@@ -112,7 +112,7 @@ public class OfflineBizEntityRequest extends Request {
         }
 
         /**
-         * <p>Offline request</p>
+         * <p>The offline request.</p>
          * <p>This parameter is required.</p>
          */
         public Builder offlineCommand(OfflineCommand offlineCommand) {
@@ -123,7 +123,7 @@ public class OfflineBizEntityRequest extends Request {
         }
 
         /**
-         * <p>Tenant ID</p>
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,7 +136,10 @@ public class OfflineBizEntityRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -234,7 +237,7 @@ public class OfflineBizEntityRequest extends Request {
             } 
 
             /**
-             * <p>Business unit ID</p>
+             * <p>The ID of the business unit.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -246,7 +249,7 @@ public class OfflineBizEntityRequest extends Request {
             }
 
             /**
-             * <p>Offline comment</p>
+             * <p>The comment for the offline operation.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -258,7 +261,7 @@ public class OfflineBizEntityRequest extends Request {
             }
 
             /**
-             * <p>Business entity ID</p>
+             * <p>The ID of the business entity.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -270,7 +273,7 @@ public class OfflineBizEntityRequest extends Request {
             }
 
             /**
-             * <p>Business entity type. For more information, see the &quot;CreateBizEntity&quot; operation.</p>
+             * <p>The type of the business entity. For more information, see the create business entity operation.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

@@ -112,7 +112,7 @@ public class GetUsersRequest extends Request {
         }
 
         /**
-         * <p>The operator tenant ID.</p>
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,7 +125,7 @@ public class GetUsersRequest extends Request {
         }
 
         /**
-         * <p>The operator user ID.</p>
+         * <p>The ID of the operator.</p>
          * 
          * <strong>example:</strong>
          * <p>30001011</p>

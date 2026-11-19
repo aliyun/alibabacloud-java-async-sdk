@@ -127,7 +127,7 @@ public class GetUdfRequest extends Request {
         }
 
         /**
-         * <p>The user-defined function ID.</p>
+         * <p>The ID of the custom function.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -153,7 +153,7 @@ public class GetUdfRequest extends Request {
         }
 
         /**
-         * <p>The ID of the operator user.</p>
+         * <p>The ID of the operator.</p>
          * 
          * <strong>example:</strong>
          * <p>30001011</p>
