@@ -103,9 +103,9 @@ public class RejectOperationTaskApprovalRequest extends Request {
         } 
 
         /**
-         * <p>The O&amp;M task approval ID.</p>
+         * <p>The approval ID of the O&amp;M task.</p>
          * <blockquote>
-         * <p>You can call the ListTodoOpsTaskApprovals operation to query the value of this parameter.</p>
+         * <p>You can call the ListTodoOpsTaskApprovals operation to obtain this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -121,7 +121,7 @@ public class RejectOperationTaskApprovalRequest extends Request {
         /**
          * <p>The instance ID of the Bastionhost instance.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the value of this parameter.</p>
+         * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -149,7 +149,7 @@ public class RejectOperationTaskApprovalRequest extends Request {
         /**
          * <p>The region ID of the Bastionhost instance.</p>
          * <blockquote>
-         * <p>For the mappings between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

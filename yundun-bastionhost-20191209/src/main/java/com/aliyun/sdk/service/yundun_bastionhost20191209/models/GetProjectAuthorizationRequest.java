@@ -105,9 +105,9 @@ public class GetProjectAuthorizationRequest extends Request {
         }
 
         /**
-         * <p>The instance ID of the bastion host.</p>
+         * <p>The instance ID of the Bastionhost instance.</p>
          * <blockquote>
-         * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -121,9 +121,9 @@ public class GetProjectAuthorizationRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the bastion host.</p>
+         * <p>The region ID of the Bastionhost instance.</p>
          * <blockquote>
-         * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * <p>For more information about the mappings between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

@@ -157,13 +157,13 @@ public class AttachHostAccountsToUserResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The result returned for the operation of authorizing host accounts for the user. Valid values:</p>
+             * <p>The result returned for the operation of granting the user access to host accounts. Valid values:</p>
              * <ul>
              * <li><strong>OK</strong>: The operation is successful.</li>
              * <li><strong>UNEXPECTED</strong>: An unknown error occurred.</li>
              * <li><strong>INVALID_ARGUMENT</strong>: A request parameter is invalid.</li>
-             * <li><strong>OBJECT_NOT_FOUND</strong>: The object on which the operation is performed does not exist.</li>
-             * <li><strong>OBJECT_AlREADY_EXISTS</strong>: The object on which the operation is performed already exists.</li>
+             * <li><strong>OBJECT_NOT_FOUND</strong>: The object on which you want to perform the operation does not exist.</li>
+             * <li><strong>OBJECT_AlREADY_EXISTS</strong>: The object on which you want to perform the operation already exists.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -186,7 +186,7 @@ public class AttachHostAccountsToUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p><strong>[Deprecated]</strong> This parameter is deprecated. You can ignore it.</p>
+             * <p><strong>[Deprecated]</strong> This parameter is deprecated. You can ignore this parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>None</p>
@@ -303,15 +303,15 @@ public class AttachHostAccountsToUserResponseBody extends TeaModel {
              * </li>
              * <li><p><strong>INVALID_ARGUMENT</strong>: A request parameter is invalid.</p>
              * <blockquote>
-             * <p>Check the request parameters, ensure that they are correct, and then call the operation again.</p>
+             * <p>Check the request parameters and call the API operation again after you ensure that the parameters are valid.</p>
              * </blockquote>
              * </li>
-             * <li><p><strong>OBJECT_NOT_FOUND</strong>: The object on which the operation is performed does not exist.</p>
+             * <li><p><strong>OBJECT_NOT_FOUND</strong>: The object on which you want to perform the operation does not exist.</p>
              * <blockquote>
-             * <p>Check whether the ID of the Bastionhost instance exists, whether the host exists, and whether the host ID is correct, and then call the operation again.</p>
+             * <p>Check whether the ID of the Bastionhost instance exists, whether the host exists, and whether the host ID is correct, and then call the API operation again.</p>
              * </blockquote>
              * </li>
-             * <li><p><strong>OBJECT_AlREADY_EXISTS</strong>: The object on which the operation is performed already exists.</p>
+             * <li><p><strong>OBJECT_AlREADY_EXISTS</strong>: The object on which you want to perform the operation already exists.</p>
              * </li>
              * </ul>
              * 
@@ -324,7 +324,7 @@ public class AttachHostAccountsToUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The results returned for the operation of authorizing host accounts for the user.</p>
+             * <p>The results returned for the operation of granting the user access to host accounts.</p>
              */
             public Builder hostAccounts(java.util.List<HostAccounts> hostAccounts) {
                 this.hostAccounts = hostAccounts;
@@ -343,7 +343,7 @@ public class AttachHostAccountsToUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p><strong>[Deprecated]</strong> This parameter is deprecated. You can ignore it.</p>
+             * <p><strong>[Deprecated]</strong> This parameter is deprecated. You can ignore this parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>None</p>

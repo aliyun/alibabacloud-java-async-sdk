@@ -156,6 +156,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AttachReviewersToReviewRuleResponse> attachReviewersToReviewRule(AttachReviewersToReviewRuleRequest request);
 
     /**
+     * @param request the request parameters of CancelOperationTicket  CancelOperationTicketRequest
+     * @return CancelOperationTicketResponse
+     */
+    CompletableFuture<CancelOperationTicketResponse> cancelOperationTicket(CancelOperationTicketRequest request);
+
+    /**
      * @param request the request parameters of ConfigInstanceSecurityGroups  ConfigInstanceSecurityGroupsRequest
      * @return ConfigInstanceSecurityGroupsResponse
      */
@@ -677,8 +683,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This API operation allows administrators to retrieve the list of commands that require approval.
-     * The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation as needed.</p>
+     * <p>This operation allows administrators to retrieve a list of commands pending approval.
+     * The queries per second (QPS) limit for a single user is 10. If this limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</p>
      * 
      * @param request the request parameters of ListApproveCommands  ListApproveCommandsRequest
      * @return ListApproveCommandsResponse
@@ -849,8 +855,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This API operation allows administrators to retrieve a list of O&amp;M tickets pending approval.
-     * The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</p>
+     * <p>This API operation is used by administrators to retrieve a list of O&amp;M tickets pending approval.
+     * The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate.</p>
      * 
      * @param request the request parameters of ListOperationTickets  ListOperationTicketsRequest
      * @return ListOperationTicketsResponse

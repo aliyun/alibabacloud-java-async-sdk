@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListOperationTicketsRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApprovalStatus")
+    private Integer approvalStatus;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AssetAddress")
     private String assetAddress;
 
@@ -25,6 +29,10 @@ public class ListOperationTicketsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OperationTicketId")
+    private String operationTicketId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
@@ -44,8 +52,10 @@ public class ListOperationTicketsRequest extends Request {
 
     private ListOperationTicketsRequest(Builder builder) {
         super(builder);
+        this.approvalStatus = builder.approvalStatus;
         this.assetAddress = builder.assetAddress;
         this.instanceId = builder.instanceId;
+        this.operationTicketId = builder.operationTicketId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.projectId = builder.projectId;
@@ -66,6 +76,13 @@ public class ListOperationTicketsRequest extends Request {
     }
 
     /**
+     * @return approvalStatus
+     */
+    public Integer getApprovalStatus() {
+        return this.approvalStatus;
+    }
+
+    /**
      * @return assetAddress
      */
     public String getAssetAddress() {
@@ -77,6 +94,13 @@ public class ListOperationTicketsRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    /**
+     * @return operationTicketId
+     */
+    public String getOperationTicketId() {
+        return this.operationTicketId;
     }
 
     /**
@@ -108,8 +132,10 @@ public class ListOperationTicketsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListOperationTicketsRequest, Builder> {
+        private Integer approvalStatus; 
         private String assetAddress; 
         private String instanceId; 
+        private String operationTicketId; 
         private String pageNumber; 
         private String pageSize; 
         private Long projectId; 
@@ -121,13 +147,36 @@ public class ListOperationTicketsRequest extends Request {
 
         private Builder(ListOperationTicketsRequest request) {
             super(request);
+            this.approvalStatus = request.approvalStatus;
             this.assetAddress = request.assetAddress;
             this.instanceId = request.instanceId;
+            this.operationTicketId = request.operationTicketId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.projectId = request.projectId;
             this.regionId = request.regionId;
         } 
+
+        /**
+         * <p>The status of the O&amp;M ticket. Valid values:</p>
+         * <ul>
+         * <li><p><strong>1</strong>: Pending approval.</p>
+         * </li>
+         * <li><p><strong>2</strong>: Approved.</p>
+         * <blockquote>
+         * <p>If this parameter is not specified, the default value is 1, and only tickets pending approval are queried.</p>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        public Builder approvalStatus(Integer approvalStatus) {
+            this.putQueryParameter("ApprovalStatus", approvalStatus);
+            this.approvalStatus = approvalStatus;
+            return this;
+        }
 
         /**
          * <p>The address of the O&amp;M asset for exact search.</p>
@@ -142,9 +191,9 @@ public class ListOperationTicketsRequest extends Request {
         }
 
         /**
-         * <p>The instance ID of the Bastionhost instance.</p>
+         * <p>The instance ID of the Bastionhost.</p>
          * <blockquote>
-         * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
+         * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the parameter value.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -154,6 +203,18 @@ public class ListOperationTicketsRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the O&amp;M ticket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        public Builder operationTicketId(String operationTicketId) {
+            this.putQueryParameter("OperationTicketId", operationTicketId);
+            this.operationTicketId = operationTicketId;
             return this;
         }
 
@@ -170,9 +231,9 @@ public class ListOperationTicketsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return on each page in a paged query.<br>The maximum value of the PageSize parameter is 1000. The default value is 20. If this parameter is left empty, 20 entries are returned by default.</p>
+         * <p>The maximum number of entries to return on each page in a paged query.<br>Maximum value of PageSize: 1000. Default value: 20. If PageSize is left empty, 20 entries are returned by default.</p>
          * <blockquote>
-         * <p>We recommend that you specify a value for the PageSize parameter.</p>
+         * <p>Specify a value for PageSize.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -199,7 +260,7 @@ public class ListOperationTicketsRequest extends Request {
         /**
          * <p>The region ID of the Bastionhost instance.</p>
          * <blockquote>
-         * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * <p>For the mappings between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

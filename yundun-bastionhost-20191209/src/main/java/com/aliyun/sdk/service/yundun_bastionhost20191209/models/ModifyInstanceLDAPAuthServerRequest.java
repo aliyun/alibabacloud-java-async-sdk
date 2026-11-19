@@ -246,7 +246,7 @@ public class ModifyInstanceLDAPAuthServerRequest extends Request {
         } 
 
         /**
-         * <p>The account of the server.</p>
+         * <p>The server account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -272,7 +272,7 @@ public class ModifyInstanceLDAPAuthServerRequest extends Request {
         }
 
         /**
-         * <p>The server attribute name that corresponds to the user email address.</p>
+         * <p>The server attribute name that maps to the user email address.</p>
          * 
          * <strong>example:</strong>
          * <p>emailAttr</p>
@@ -298,7 +298,7 @@ public class ModifyInstanceLDAPAuthServerRequest extends Request {
         /**
          * <p>The instance ID of the Bastionhost instance.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the parameter value.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the instance ID.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -328,7 +328,7 @@ public class ModifyInstanceLDAPAuthServerRequest extends Request {
         }
 
         /**
-         * <p>The server attribute name that corresponds to the user logon name.</p>
+         * <p>The server attribute name that maps to the user logon name.</p>
          * 
          * <strong>example:</strong>
          * <p>userNameAttr</p>
@@ -340,7 +340,7 @@ public class ModifyInstanceLDAPAuthServerRequest extends Request {
         }
 
         /**
-         * <p>The server attribute name that corresponds to the user mobile phone number.</p>
+         * <p>The server attribute name that maps to the user mobile phone number.</p>
          * 
          * <strong>example:</strong>
          * <p>mobileAttr</p>
@@ -352,7 +352,7 @@ public class ModifyInstanceLDAPAuthServerRequest extends Request {
         }
 
         /**
-         * <p>The server attribute name that corresponds to the username.</p>
+         * <p>The server attribute name that maps to the username.</p>
          * 
          * <strong>example:</strong>
          * <p>nameAttr</p>
@@ -364,10 +364,10 @@ public class ModifyInstanceLDAPAuthServerRequest extends Request {
         }
 
         /**
-         * <p>The password of the server account. This parameter is required when you add an LDAP authentication server. When you modify the information of an LDAP authentication server, if you do not specify this parameter, the current password is retained.</p>
+         * <p>The password of the server account. This parameter is required when you add an LDAP authentication server. If you do not specify this parameter when you modify the LDAP authentication server, the current password is retained.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>Demo****123!</p>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);

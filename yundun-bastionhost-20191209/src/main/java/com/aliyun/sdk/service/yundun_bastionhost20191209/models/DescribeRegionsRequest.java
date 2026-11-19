@@ -73,14 +73,11 @@ public class DescribeRegionsRequest extends Request {
         } 
 
         /**
-         * <p>The language of the response. Valid values:</p>
+         * <p>Specifies the language of the response. Valid values:</p>
          * <ul>
-         * <li><p><strong>zh-CN</strong> (default): Chinese</p>
-         * </li>
-         * <li><p><strong>en-US</strong>: English</p>
-         * </li>
-         * <li><p><strong>ja</strong>: Japanese</p>
-         * </li>
+         * <li><strong>zh-CN</strong> (default): Chinese</li>
+         * <li><strong>en-US</strong>: English</li>
+         * <li><strong>ja</strong>: Japanese</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -93,7 +90,7 @@ public class DescribeRegionsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shenzhen</p>

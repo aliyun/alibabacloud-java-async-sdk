@@ -359,7 +359,7 @@ public class ModifyInstanceADAuthServerRequest extends Request {
         } 
 
         /**
-         * <p>The server account.</p>
+         * <p>The account of the server.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -422,9 +422,9 @@ public class ModifyInstanceADAuthServerRequest extends Request {
         }
 
         /**
-         * <p>The instance ID of the Bastionhost instance.</p>
+         * <p>The ID of the Bastionhost instance.</p>
          * <blockquote>
-         * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the instance ID.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -438,7 +438,7 @@ public class ModifyInstanceADAuthServerRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the AD authentication server is the default server. A value of true indicates that the server is the default AD authentication server. A value of false indicates that the server is not the default AD authentication server.</p>
+         * <p>Specifies whether the AD authentication server is the default server. Valid values: true and false. A value of true indicates that the server is the default AD authentication server, and a value of false indicates that the server is not the default AD authentication server.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -466,7 +466,7 @@ public class ModifyInstanceADAuthServerRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to synchronize the email address. A value of true indicates that the email address is synchronized. A value of false indicates that the email address is not synchronized.</p>
+         * <p>Specifies whether to synchronize the email address. Valid values: true and false. A value of true indicates that the email address is synchronized, and a value of false indicates that the email address is not synchronized.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -478,7 +478,7 @@ public class ModifyInstanceADAuthServerRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to synchronize the mobile phone number. A value of true indicates that the mobile phone number is synchronized. A value of false indicates that the mobile phone number is not synchronized.</p>
+         * <p>Specifies whether to synchronize the mobile phone number. Valid values: true and false. A value of true indicates that the mobile phone number is synchronized, and a value of false indicates that the mobile phone number is not synchronized.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -490,7 +490,7 @@ public class ModifyInstanceADAuthServerRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to synchronize the display name. A value of true indicates that the display name is synchronized. A value of false indicates that the display name is not synchronized.</p>
+         * <p>Specifies whether to synchronize the display name. Valid values: true and false. A value of true indicates that the display name is synchronized, and a value of false indicates that the display name is not synchronized.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -502,7 +502,7 @@ public class ModifyInstanceADAuthServerRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to synchronize the organization to which the user belongs as a user group. A value of true indicates that the organization is synchronized as a user group. A value of false indicates that the organization is not synchronized as a user group.</p>
+         * <p>Specifies whether to synchronize the organization to which the user belongs as a user group. Valid values: true and false. A value of true indicates that the organization is synchronized as a user group, and a value of false indicates that the organization is not synchronized as a user group.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -541,7 +541,7 @@ public class ModifyInstanceADAuthServerRequest extends Request {
          * <p>The password of the server account.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>Demo****123!</p>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -615,7 +615,7 @@ public class ModifyInstanceADAuthServerRequest extends Request {
         }
 
         /**
-         * <p>The interval at which user snapshots are automatically synchronized, in hours. Valid values: 0, and 4 to 168. A value of 0 indicates that automatic synchronization is disabled.</p>
+         * <p>The interval at which user snapshots are automatically synchronized. Unit: hours. Valid values: 0, and 4 to 168. A value of 0 indicates that automatic synchronization is disabled.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>

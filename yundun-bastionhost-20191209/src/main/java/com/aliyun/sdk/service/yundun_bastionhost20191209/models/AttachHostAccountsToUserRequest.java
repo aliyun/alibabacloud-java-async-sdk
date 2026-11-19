@@ -104,10 +104,7 @@ public class AttachHostAccountsToUserRequest extends Request {
         } 
 
         /**
-         * <p>The IDs of the hosts and host accounts to be authorized for the user. You can specify up to 10 host IDs, and up to 9 host account IDs for each host. If you do not specify host account IDs, only the hosts are authorized for the user. For more information about the structure of this parameter, see the Hosts parameter structure description in the request parameters section.</p>
-         * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to query host IDs and call the <a href="https://help.aliyun.com/document_detail/204372.html">ListHostAccounts</a> operation to query host account IDs.</p>
-         * </blockquote>
+         * <p>The IDs of the hosts and host accounts to which you want to grant the user access. You can specify up to 10 host IDs, and up to 9 host account IDs for each host. If you do not specify host account IDs, only the hosts are authorized for the user. For more information about the structure of this parameter, see the Hosts parameter structure description in the request parameters section. You can call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to query host IDs and call the <a href="https://help.aliyun.com/document_detail/204372.html">ListHostAccounts</a> operation to query host account IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -120,9 +117,9 @@ public class AttachHostAccountsToUserRequest extends Request {
         }
 
         /**
-         * <p>The instance ID of the Bastionhost instance to which the user to be granted authorization for hosts and host accounts belongs.</p>
+         * <p>The ID of the Bastionhost instance to which the user to be authorized for hosts and host accounts belongs.</p>
          * <blockquote>
-         * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -136,7 +133,7 @@ public class AttachHostAccountsToUserRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the Bastionhost instance where the user to be authorized for hosts and host accounts resides.</p>
+         * <p>Specifies the region ID of the Bastionhost instance where the user to be authorized to access hosts and host accounts is located.</p>
          * <blockquote>
          * <p>For the mappings between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
          * </blockquote>
@@ -151,10 +148,7 @@ public class AttachHostAccountsToUserRequest extends Request {
         }
 
         /**
-         * <p>The ID of the user to whom you want to authorize hosts and host accounts.</p>
-         * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/204522.html">ListUsers</a> operation to query the value of this parameter.</p>
-         * </blockquote>
+         * <p>The ID of the user to whom you want to grant access to hosts and host accounts. You can call the <a href="https://help.aliyun.com/document_detail/204522.html">ListUsers</a> operation to query the user ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

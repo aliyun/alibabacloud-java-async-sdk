@@ -122,6 +122,9 @@ public class ListApproveCommandsResponseBody extends TeaModel {
      * <p>ListApproveCommandsResponseBody</p>
      */
     public static class ApproveCommands extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ApprovalStatus")
+        private Integer approvalStatus;
+
         @com.aliyun.core.annotation.NameInMap("ApproveCommandId")
         private String approveCommandId;
 
@@ -156,6 +159,7 @@ public class ListApproveCommandsResponseBody extends TeaModel {
         private String state;
 
         private ApproveCommands(Builder builder) {
+            this.approvalStatus = builder.approvalStatus;
             this.approveCommandId = builder.approveCommandId;
             this.assetAccountName = builder.assetAccountName;
             this.assetIp = builder.assetIp;
@@ -175,6 +179,13 @@ public class ListApproveCommandsResponseBody extends TeaModel {
 
         public static ApproveCommands create() {
             return builder().build();
+        }
+
+        /**
+         * @return approvalStatus
+         */
+        public Integer getApprovalStatus() {
+            return this.approvalStatus;
         }
 
         /**
@@ -255,6 +266,7 @@ public class ListApproveCommandsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer approvalStatus; 
             private String approveCommandId; 
             private String assetAccountName; 
             private String assetIp; 
@@ -271,6 +283,7 @@ public class ListApproveCommandsResponseBody extends TeaModel {
             } 
 
             private Builder(ApproveCommands model) {
+                this.approvalStatus = model.approvalStatus;
                 this.approveCommandId = model.approveCommandId;
                 this.assetAccountName = model.assetAccountName;
                 this.assetIp = model.assetIp;
@@ -285,6 +298,23 @@ public class ListApproveCommandsResponseBody extends TeaModel {
             } 
 
             /**
+             * <p>The status of the approval request. Valid values:</p>
+             * <ul>
+             * <li><p><strong>1</strong>: Pending approval.</p>
+             * </li>
+             * <li><p><strong>2</strong>: Approved.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder approvalStatus(Integer approvalStatus) {
+                this.approvalStatus = approvalStatus;
+                return this;
+            }
+
+            /**
              * <p>The ID of the command pending approval.</p>
              * 
              * <strong>example:</strong>
@@ -296,7 +326,7 @@ public class ListApproveCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the asset account.</p>
+             * <p>The name of the O&amp;M asset account.</p>
              * 
              * <strong>example:</strong>
              * <p>root</p>
@@ -329,7 +359,7 @@ public class ListApproveCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source IP address from which the application is submitted.</p>
+             * <p>The source IP address from which the request was submitted.</p>
              * 
              * <strong>example:</strong>
              * <p>172.18.XX.XX</p>
@@ -340,7 +370,7 @@ public class ListApproveCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Bastionhost user who submitted the application.</p>
+             * <p>The Bastionhost user who submitted the request.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -362,7 +392,7 @@ public class ListApproveCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the application was submitted. Unit: seconds. The value is a UNIX timestamp.</p>
+             * <p>The time when the request was submitted. The value is a UNIX timestamp in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1679393152</p>
@@ -395,8 +425,10 @@ public class ListApproveCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The approval status.
-             * <strong>Wait</strong>: Pending approval.</p>
+             * <p>The approval status. Valid value:</p>
+             * <ul>
+             * <li><strong>Wait</strong>: Pending approval.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Wait</p>

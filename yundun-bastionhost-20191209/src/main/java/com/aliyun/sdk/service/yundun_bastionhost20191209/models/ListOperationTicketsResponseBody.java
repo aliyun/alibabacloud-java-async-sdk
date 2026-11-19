@@ -128,6 +128,9 @@ public class ListOperationTicketsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApplyUsername")
         private String applyUsername;
 
+        @com.aliyun.core.annotation.NameInMap("ApprovalStatus")
+        private Integer approvalStatus;
+
         @com.aliyun.core.annotation.NameInMap("ApproveComment")
         private String approveComment;
 
@@ -182,6 +185,7 @@ public class ListOperationTicketsResponseBody extends TeaModel {
         private OperationTickets(Builder builder) {
             this.applyUserId = builder.applyUserId;
             this.applyUsername = builder.applyUsername;
+            this.approvalStatus = builder.approvalStatus;
             this.approveComment = builder.approveComment;
             this.assetAccountId = builder.assetAccountId;
             this.assetAccountName = builder.assetAccountName;
@@ -221,6 +225,13 @@ public class ListOperationTicketsResponseBody extends TeaModel {
          */
         public String getApplyUsername() {
             return this.applyUsername;
+        }
+
+        /**
+         * @return approvalStatus
+         */
+        public Integer getApprovalStatus() {
+            return this.approvalStatus;
         }
 
         /**
@@ -345,6 +356,7 @@ public class ListOperationTicketsResponseBody extends TeaModel {
         public static final class Builder {
             private String applyUserId; 
             private String applyUsername; 
+            private Integer approvalStatus; 
             private String approveComment; 
             private String assetAccountId; 
             private String assetAccountName; 
@@ -369,6 +381,7 @@ public class ListOperationTicketsResponseBody extends TeaModel {
             private Builder(OperationTickets model) {
                 this.applyUserId = model.applyUserId;
                 this.applyUsername = model.applyUsername;
+                this.approvalStatus = model.approvalStatus;
                 this.approveComment = model.approveComment;
                 this.assetAccountId = model.assetAccountId;
                 this.assetAccountName = model.assetAccountName;
@@ -411,7 +424,24 @@ public class ListOperationTicketsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The remarks entered by the O&amp;M engineer when applying for O&amp;M.</p>
+             * <p>The status of the O&amp;M ticket. Valid values:</p>
+             * <ul>
+             * <li><p><strong>1</strong>: Pending approval.</p>
+             * </li>
+             * <li><p><strong>2</strong>: Approved.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder approvalStatus(Integer approvalStatus) {
+                this.approvalStatus = approvalStatus;
+                return this;
+            }
+
+            /**
+             * <p>The remarks entered by the O&amp;M engineer when submitting the O&amp;M ticket.</p>
              * 
              * <strong>example:</strong>
              * <p>Comment</p>
@@ -501,10 +531,10 @@ public class ListOperationTicketsResponseBody extends TeaModel {
             /**
              * <p>The name of the asset source to which the asset for which O&amp;M is requested belongs. Valid values:</p>
              * <ul>
-             * <li><strong>Local</strong>: local host</li>
+             * <li><strong>Local</strong>: Local host</li>
              * <li><strong>Ecs</strong>: ECS instance</li>
-             * <li><strong>Rds</strong>: ApsaraDB RDS instance</li>
-             * <li>name of a third-party asset source</li>
+             * <li><strong>Rds</strong>: RDS instance</li>
+             * <li>The name of a third-party asset source</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -527,7 +557,7 @@ public class ListOperationTicketsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the application was submitted. The value is a UNIX timestamp in seconds.</p>
+             * <p>The time when the O&amp;M ticket was submitted. The value is a UNIX timestamp in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1669965908</p>
@@ -540,7 +570,7 @@ public class ListOperationTicketsResponseBody extends TeaModel {
             /**
              * <p>The limit on the number of logons requested by the O&amp;M engineer. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: No limit is imposed on the number of logons. The O&amp;M engineer can log on an unlimited number of times within the validity period.</li>
+             * <li><strong>0</strong>: No limit on the number of logons. The O&amp;M engineer can log on an unlimited number of times within the validity period.</li>
              * <li><strong>1</strong>: The O&amp;M engineer is allowed to log on only once within the validity period.</li>
              * </ul>
              * 
@@ -555,7 +585,7 @@ public class ListOperationTicketsResponseBody extends TeaModel {
             /**
              * <p>The end time of the approved O&amp;M period specified by the O&amp;M engineer. The value is a UNIX timestamp in seconds.</p>
              * <blockquote>
-             * <p>A value of 0 indicates that the O&amp;M engineer did not specify a time when submitting the application.</p>
+             * <p>A value of 0 indicates that the O&amp;M engineer did not specify an end time when submitting the ticket.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -569,7 +599,7 @@ public class ListOperationTicketsResponseBody extends TeaModel {
             /**
              * <p>The start time of the approved O&amp;M period specified by the O&amp;M engineer. The value is a UNIX timestamp in seconds.</p>
              * <blockquote>
-             * <p>A value of 0 indicates that the O&amp;M engineer did not specify a time when submitting the application.</p>
+             * <p>A value of 0 indicates that the O&amp;M engineer did not specify a start time when submitting the ticket.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -592,7 +622,7 @@ public class ListOperationTicketsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the protocol for the O&amp;M request.</p>
+             * <p>The name of the protocol used for the O&amp;M request.</p>
              * 
              * <strong>example:</strong>
              * <p>SSH</p>
@@ -605,7 +635,7 @@ public class ListOperationTicketsResponseBody extends TeaModel {
             /**
              * <p>The approval status. Valid values:</p>
              * <ul>
-             * <li>Normal: pending approval</li>
+             * <li>Normal: Pending approval.</li>
              * </ul>
              * 
              * <strong>example:</strong>

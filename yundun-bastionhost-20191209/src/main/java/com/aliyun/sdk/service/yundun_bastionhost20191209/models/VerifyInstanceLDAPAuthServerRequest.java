@@ -203,7 +203,7 @@ public class VerifyInstanceLDAPAuthServerRequest extends Request {
         }
 
         /**
-         * <p>The Base DN.</p>
+         * <p>The base distinguished name (Base DN).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -228,7 +228,7 @@ public class VerifyInstanceLDAPAuthServerRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Bastionhost instance. You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
+         * <p>The ID of the Bastionhost instance. You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -243,10 +243,8 @@ public class VerifyInstanceLDAPAuthServerRequest extends Request {
         /**
          * <p>Specifies whether SSL is supported. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: supported</p>
-         * </li>
-         * <li><p><strong>false</strong>: not supported</p>
-         * </li>
+         * <li><strong>true</strong>: Supported.</li>
+         * <li><strong>false</strong>: Not supported.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -262,7 +260,7 @@ public class VerifyInstanceLDAPAuthServerRequest extends Request {
          * <p>The password of the server account.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>Demo****123!</p>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -284,7 +282,7 @@ public class VerifyInstanceLDAPAuthServerRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the Bastionhost instance. For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * <p>The region ID of the Bastionhost instance. For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

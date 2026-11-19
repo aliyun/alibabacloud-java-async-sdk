@@ -18,6 +18,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListApproveCommandsRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApprovalStatus")
+    private Integer approvalStatus;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApproveCommandId")
+    private String approveCommandId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
@@ -42,6 +50,8 @@ public class ListApproveCommandsRequest extends Request {
 
     private ListApproveCommandsRequest(Builder builder) {
         super(builder);
+        this.approvalStatus = builder.approvalStatus;
+        this.approveCommandId = builder.approveCommandId;
         this.instanceId = builder.instanceId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -60,6 +70,20 @@ public class ListApproveCommandsRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return approvalStatus
+     */
+    public Integer getApprovalStatus() {
+        return this.approvalStatus;
+    }
+
+    /**
+     * @return approveCommandId
+     */
+    public String getApproveCommandId() {
+        return this.approveCommandId;
     }
 
     /**
@@ -98,6 +122,8 @@ public class ListApproveCommandsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListApproveCommandsRequest, Builder> {
+        private Integer approvalStatus; 
+        private String approveCommandId; 
         private String instanceId; 
         private String pageNumber; 
         private String pageSize; 
@@ -110,6 +136,8 @@ public class ListApproveCommandsRequest extends Request {
 
         private Builder(ListApproveCommandsRequest request) {
             super(request);
+            this.approvalStatus = request.approvalStatus;
+            this.approveCommandId = request.approveCommandId;
             this.instanceId = request.instanceId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -118,9 +146,42 @@ public class ListApproveCommandsRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID of the Bastionhost instance.</p>
+         * <p>The status of the approval request. Valid values:</p>
+         * <ul>
+         * <li><p><strong>1</strong>: Pending approval.</p>
+         * </li>
+         * <li><p><strong>2</strong>: Approved.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the value of this parameter.</p>
+         * <p>If this parameter is not specified, the default value is 1, and only approval requests in the pending approval status are queried.</p>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        public Builder approvalStatus(Integer approvalStatus) {
+            this.putQueryParameter("ApprovalStatus", approvalStatus);
+            this.approvalStatus = approvalStatus;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the command approval request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        public Builder approveCommandId(String approveCommandId) {
+            this.putQueryParameter("ApproveCommandId", approveCommandId);
+            this.approveCommandId = approveCommandId;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the Bastionhost instance.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the instance ID.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -134,7 +195,7 @@ public class ListApproveCommandsRequest extends Request {
         }
 
         /**
-         * <p>The page number of the page to return in a paged query. Default value: <strong>1</strong>.</p>
+         * <p>The page number of the current page in a paging query. Default value: <strong>1</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -147,9 +208,9 @@ public class ListApproveCommandsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return on each page in a paged query.<br>The maximum value of the PageSize parameter is 1000. Default value: 20. If the PageSize parameter is left empty, 20 entries are returned by default.</p>
+         * <p>The maximum number of entries to return on each page in a paging query.<br>The maximum value of the PageSize parameter is 1000. The default value is 20. If this parameter is left empty, 20 entries are returned by default.</p>
          * <blockquote>
-         * <p>Specify the PageSize parameter.</p>
+         * <p>Do not leave the PageSize parameter empty.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -177,7 +238,7 @@ public class ListApproveCommandsRequest extends Request {
         /**
          * <p>The region ID of the Bastionhost instance.</p>
          * <blockquote>
-         * <p>For more information about the mappings between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * <p>For the mappings between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
