@@ -125,7 +125,7 @@ public class GetBillingOverviewResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The description of the request result.</p>
+         * <p>The result message of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -274,7 +274,7 @@ public class GetBillingOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the grouping dimension. If the value is null, DIMENSION_FILTER_NULL_VALUE is returned.</p>
+             * <p>The value of the grouping dimension. If the value is empty, DIMENSION_FILTER_NULL_VALUE is returned.</p>
              * 
              * <strong>example:</strong>
              * <p>inference</p>
@@ -285,7 +285,7 @@ public class GetBillingOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the group, which is affected by the locale parameter. If the value is null, a hyphen (-) is displayed.</p>
+             * <p>The display name of the group, which is affected by the locale parameter. If the value is empty, a hyphen (-) is displayed.</p>
              * 
              * <strong>example:</strong>
              * <p>Model invocation</p>

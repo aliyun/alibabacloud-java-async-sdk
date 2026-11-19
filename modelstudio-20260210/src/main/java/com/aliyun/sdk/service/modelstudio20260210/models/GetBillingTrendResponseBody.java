@@ -106,7 +106,7 @@ public class GetBillingTrendResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request result code.</p>
+         * <p>The result code of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -125,7 +125,7 @@ public class GetBillingTrendResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The description of the request result.</p>
+         * <p>The result message of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -677,7 +677,7 @@ public class GetBillingTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The dimension value of the group. If the value is null, DIMENSION_FILTER_NULL_VALUE is returned.</p>
+             * <p>The dimension value of the group. A null value returns DIMENSION_FILTER_NULL_VALUE.</p>
              * 
              * <strong>example:</strong>
              * <p>qwen-plus</p>
@@ -688,7 +688,7 @@ public class GetBillingTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the group, which is affected by the locale parameter. If the value is null, a hyphen (-) is displayed.</p>
+             * <p>The display name of the group, which is affected by the locale parameter. A null value is displayed as a hyphen (-).</p>
              * 
              * <strong>example:</strong>
              * <p>qwen-plus</p>
@@ -843,7 +843,7 @@ public class GetBillingTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The dimension value of the group. If the value is null, DIMENSION_FILTER_NULL_VALUE is returned.</p>
+             * <p>The dimension value of the group. A null value returns DIMENSION_FILTER_NULL_VALUE.</p>
              * 
              * <strong>example:</strong>
              * <p>qwen-plus</p>
@@ -854,7 +854,7 @@ public class GetBillingTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the group, which is affected by the locale parameter. If the value is null, a hyphen (-) is displayed.</p>
+             * <p>The display name of the group, which is affected by the locale parameter. A null value is displayed as a hyphen (-).</p>
              * 
              * <strong>example:</strong>
              * <p>qwen-plus</p>
@@ -865,7 +865,7 @@ public class GetBillingTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The percentage of the group amount.</p>
+             * <p>The proportion of the group amount.</p>
              * 
              * <strong>example:</strong>
              * <p>0.5</p>
@@ -1118,7 +1118,7 @@ public class GetBillingTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total costs of the current period.</p>
+             * <p>The total cost of the current period.</p>
              */
             public Builder total(Total total) {
                 this.total = total;
@@ -1198,7 +1198,7 @@ public class GetBillingTrendResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The total costs within the historical range, including the top N items and Other.</p>
+             * <p>The total cost within the historical range, including the top N groups and Others.</p>
              */
             public Builder costTotals(HistoryPeriodCostTotals costTotals) {
                 this.costTotals = costTotals;
@@ -1206,7 +1206,7 @@ public class GetBillingTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total costs of the top N groups and the optional Other group within the historical period.</p>
+             * <p>The total cost of the top N groups and the optional Others group within the historical period.</p>
              */
             public Builder groupByTotal(java.util.List<HistoryPeriodGroupByTotal> groupByTotal) {
                 this.groupByTotal = groupByTotal;
@@ -1333,7 +1333,7 @@ public class GetBillingTrendResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The amount of the group in the current period.</p>
+             * <p>The amount of the group within the current period.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -1344,7 +1344,7 @@ public class GetBillingTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The dimension value of the group. For data other than the top N items, DIMENSION_GROUP_OTHERS_VALUE is used.</p>
+             * <p>The dimension value of the group. Data other than the top N uses DIMENSION_GROUP_OTHERS_VALUE.</p>
              * 
              * <strong>example:</strong>
              * <p>qwen-plus</p>
@@ -1366,7 +1366,7 @@ public class GetBillingTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ratio of the current group amount to the total amount of the current period.</p>
+             * <p>The proportion of the current group amount to the total amount of the current period.</p>
              * 
              * <strong>example:</strong>
              * <p>0.6667</p>
@@ -1377,7 +1377,7 @@ public class GetBillingTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The pretax amount of the group in the current period.</p>
+             * <p>The pretax amount of the group within the current period.</p>
              * 
              * <strong>example:</strong>
              * <p>18.87</p>
@@ -1388,7 +1388,7 @@ public class GetBillingTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tax amount of the group in the current period.</p>
+             * <p>The tax amount of the group within the current period.</p>
              * 
              * <strong>example:</strong>
              * <p>1.13</p>
@@ -1495,7 +1495,7 @@ public class GetBillingTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The currency of the amount in the current period.</p>
+             * <p>The currency of the amount for the current period.</p>
              * 
              * <strong>example:</strong>
              * <p>CNY</p>
@@ -1619,7 +1619,7 @@ public class GetBillingTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total costs of the current period.</p>
+             * <p>The total cost of the current period.</p>
              */
             public Builder total(ResultByTimeTotal total) {
                 this.total = total;
@@ -1712,7 +1712,7 @@ public class GetBillingTrendResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The total costs within the entire query time range, including the top N items and Other.</p>
+             * <p>The total cost within the entire query time range, including the top N groups and Others.</p>
              */
             public Builder costTotals(CostTotals costTotals) {
                 this.costTotals = costTotals;
@@ -1720,7 +1720,7 @@ public class GetBillingTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total costs of the top N groups and the optional Other group within the period.</p>
+             * <p>The total cost of the top N groups and the optional Others group within the period.</p>
              */
             public Builder groupByTotal(java.util.List<GroupByTotal> groupByTotal) {
                 this.groupByTotal = groupByTotal;

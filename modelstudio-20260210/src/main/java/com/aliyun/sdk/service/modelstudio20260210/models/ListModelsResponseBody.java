@@ -158,7 +158,7 @@ public class ListModelsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code. This field is empty when the call is successful.</p>
+         * <p>The error code. This field is empty if the call is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -169,7 +169,7 @@ public class ListModelsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message. This field is empty when the call is successful.</p>
+         * <p>The error message. This field is empty if the call is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>The specified parameter is invalid</p>
@@ -590,7 +590,7 @@ public class ListModelsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The price. The currency unit depends on the account type: ￥ for accounts in the Chinese mainland and $ for international accounts.</p>
+             * <p>The price. The currency depends on the account type: CNY (￥) for accounts in the Chinese mainland and USD ($) for international accounts.</p>
              * 
              * <strong>example:</strong>
              * <p>12</p>
@@ -612,7 +612,7 @@ public class ListModelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing method.</p>
+             * <p>The pricing unit.</p>
              * 
              * <strong>example:</strong>
              * <p>Per 1M tokens</p>
@@ -627,7 +627,7 @@ public class ListModelsResponseBody extends TeaModel {
              * <ul>
              * <li>peak: Peak hours.</li>
              * <li>offpeak: Off-peak hours.</li>
-             * <li>standard: No time-based tiering.</li>
+             * <li>standard: No time band distinction.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -706,7 +706,7 @@ public class ListModelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tier name. If tiered pricing is not used, the value is Default.</p>
+             * <p>The name of the pricing tier. If tiered pricing is not used, the value is Default.</p>
              * 
              * <strong>example:</strong>
              * <p>Default</p>

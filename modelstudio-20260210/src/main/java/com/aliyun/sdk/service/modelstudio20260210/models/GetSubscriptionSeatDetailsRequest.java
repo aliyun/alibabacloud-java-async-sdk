@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetSubscriptionSeatDetailsRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceCode")
+    private String instanceCode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNo")
     private Integer pageNo;
 
@@ -43,6 +47,7 @@ public class GetSubscriptionSeatDetailsRequest extends Request {
 
     private GetSubscriptionSeatDetailsRequest(Builder builder) {
         super(builder);
+        this.instanceCode = builder.instanceCode;
         this.pageNo = builder.pageNo;
         this.pageSize = builder.pageSize;
         this.queryAssigned = builder.queryAssigned;
@@ -62,6 +67,13 @@ public class GetSubscriptionSeatDetailsRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return instanceCode
+     */
+    public String getInstanceCode() {
+        return this.instanceCode;
     }
 
     /**
@@ -107,6 +119,7 @@ public class GetSubscriptionSeatDetailsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetSubscriptionSeatDetailsRequest, Builder> {
+        private String instanceCode; 
         private Integer pageNo; 
         private Integer pageSize; 
         private Boolean queryAssigned; 
@@ -120,6 +133,7 @@ public class GetSubscriptionSeatDetailsRequest extends Request {
 
         private Builder(GetSubscriptionSeatDetailsRequest request) {
             super(request);
+            this.instanceCode = request.instanceCode;
             this.pageNo = request.pageNo;
             this.pageSize = request.pageSize;
             this.queryAssigned = request.queryAssigned;
@@ -129,7 +143,19 @@ public class GetSubscriptionSeatDetailsRequest extends Request {
         } 
 
         /**
-         * <p>The page number. Default value: 1. Valid values: positive integers.</p>
+         * <p>The instance code of the seat.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>subs_xxxxx</p>
+         */
+        public Builder instanceCode(String instanceCode) {
+            this.putQueryParameter("InstanceCode", instanceCode);
+            this.instanceCode = instanceCode;
+            return this;
+        }
+
+        /**
+         * <p>The page number. Default value: 1. Valid values: a positive integer.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -153,11 +179,11 @@ public class GetSubscriptionSeatDetailsRequest extends Request {
         }
 
         /**
-         * <p>The filter for the seat assignment status. Valid values:</p>
+         * <p>Specifies whether to filter by seat assignment status. Valid values:</p>
          * <ul>
-         * <li>true: assigned</li>
-         * <li>false: unassigned</li>
-         * <li>null: all</li>
+         * <li>true: Assigned.</li>
+         * <li>false: Unassigned.</li>
+         * <li>null: All.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -182,11 +208,11 @@ public class GetSubscriptionSeatDetailsRequest extends Request {
         }
 
         /**
-         * <p>The seat type (specType). Valid values:</p>
+         * <p>The seat type. Valid values:</p>
          * <ul>
-         * <li>standard: standard seat</li>
-         * <li>pro: advanced seat</li>
-         * <li>max: premium seat</li>
+         * <li>standard: Standard seat.</li>
+         * <li>pro: Pro seat.</li>
+         * <li>max: Premium seat.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -232,7 +232,7 @@ public class ListModelLimitsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the API call succeeded.</p>
+         * <p>Indicates whether the API call is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -377,7 +377,7 @@ public class ListModelLimitsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The maximum number of concurrent requests.</p>
+             * <p>The maximum concurrency.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -388,7 +388,7 @@ public class ListModelLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of queued requests.</p>
+             * <p>The queue limit.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -399,7 +399,7 @@ public class ListModelLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The request throttling value.</p>
+             * <p>The request throttling limit.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -410,7 +410,7 @@ public class ListModelLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time period for request throttling. Unit: seconds.</p>
+             * <p>The time period for request throttling, in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -421,7 +421,7 @@ public class ListModelLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The usage throttling value.</p>
+             * <p>The usage throttling limit.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -432,7 +432,7 @@ public class ListModelLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The usage throttling unit.</p>
+             * <p>The unit for usage throttling.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -443,7 +443,7 @@ public class ListModelLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time period for usage throttling. Unit: seconds.</p>
+             * <p>The time period for usage throttling, in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -578,7 +578,7 @@ public class ListModelLimitsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The maximum number of concurrent requests.</p>
+             * <p>The maximum concurrency.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -589,7 +589,7 @@ public class ListModelLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of queued requests.</p>
+             * <p>The queue limit.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -600,7 +600,7 @@ public class ListModelLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The request throttling value.</p>
+             * <p>The request throttling limit.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -611,7 +611,7 @@ public class ListModelLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time period for request throttling. Unit: seconds.</p>
+             * <p>The time period for request throttling, in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -622,7 +622,7 @@ public class ListModelLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The usage throttling value.</p>
+             * <p>The usage throttling limit.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -633,7 +633,7 @@ public class ListModelLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The usage throttling unit.</p>
+             * <p>The unit for usage throttling.</p>
              * 
              * <strong>example:</strong>
              * <p>token</p>
@@ -644,7 +644,7 @@ public class ListModelLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time period for usage throttling. Unit: seconds.</p>
+             * <p>The time period for usage throttling, in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -764,7 +764,7 @@ public class ListModelLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The model throttling for the current user account.</p>
+             * <p>The model throttling configurations for the current user account.</p>
              */
             public Builder modelLimit(ModelLimit modelLimit) {
                 this.modelLimit = modelLimit;
@@ -794,7 +794,7 @@ public class ListModelLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The custom model throttling for the current workspace.</p>
+             * <p>The custom model throttling configurations for the current workspace.</p>
              */
             public Builder workspaceLimit(WorkspaceLimit workspaceLimit) {
                 this.workspaceLimit = workspaceLimit;

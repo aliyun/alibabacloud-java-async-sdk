@@ -171,7 +171,7 @@ public class GetBillingTrendRequest extends Request {
         } 
 
         /**
-         * <p>The dimension filter condition.</p>
+         * <p>The dimension filter conditions.</p>
          */
         public Builder filter(Filter filter) {
             String filterShrink = shrink(filter, "filter", "json");
@@ -239,7 +239,7 @@ public class GetBillingTrendRequest extends Request {
         }
 
         /**
-         * <p>The time range to query, including the start time and end time. This parameter is required.</p>
+         * <p>The time range for the query, which includes the start time and end time. This parameter is required.</p>
          */
         public Builder timePeriod(TimePeriod timePeriod) {
             String timePeriodShrink = shrink(timePeriod, "timePeriod", "json");
@@ -345,7 +345,7 @@ public class GetBillingTrendRequest extends Request {
             } 
 
             /**
-             * <p>The filter dimension code. For more information, see the &quot;Additional notes&quot; section below.</p>
+             * <p>The code of the filter dimension. For more information, see the &quot;Additional notes&quot; section below.</p>
              * 
              * <strong>example:</strong>
              * <p>CHARGE_TYPE</p>
@@ -475,7 +475,7 @@ public class GetBillingTrendRequest extends Request {
             } 
 
             /**
-             * <p>The grouping dimension code. For more information, see the &quot;Additional notes&quot; section below.</p>
+             * <p>The code of the grouping dimension. For more information, see the &quot;Additional notes&quot; section below.</p>
              * 
              * <strong>example:</strong>
              * <p>BASE_MODEL</p>

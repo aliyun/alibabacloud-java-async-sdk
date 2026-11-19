@@ -244,7 +244,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Only the API key value changes. The API key ID remains unchanged.</p>
+     * <p>Only the API key changes. The API key ID remains unchanged.</p>
      * 
      * @param request the request parameters of ResetApiKey  ResetApiKeyRequest
      * @return ResetApiKeyResponse

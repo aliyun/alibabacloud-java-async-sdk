@@ -115,7 +115,7 @@ public class ListModelLimitsRequest extends Request {
         } 
 
         /**
-         * <p>The maximum number of results. Valid values: 0 to 200.</p>
+         * <p>The maximum number of results to return. Valid values: 0 to 200.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -127,7 +127,7 @@ public class ListModelLimitsRequest extends Request {
         }
 
         /**
-         * <p>The single model for exact match.</p>
+         * <p>The model for exact match.</p>
          * 
          * <strong>example:</strong>
          * <p>qwen-plus</p>
@@ -151,7 +151,7 @@ public class ListModelLimitsRequest extends Request {
         }
 
         /**
-         * <p>The page token.</p>
+         * <p>The next token.</p>
          * 
          * <strong>example:</strong>
          * <p>lwytFRtLdNk=</p>

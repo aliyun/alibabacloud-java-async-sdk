@@ -205,7 +205,7 @@ public class GetBillingOverviewRequest extends Request {
         }
 
         /**
-         * <p>The list of grouping conditions. Currently, you must specify exactly one grouping dimension.</p>
+         * <p>The list of grouping conditions. Currently, exactly one grouping dimension must be specified.</p>
          */
         public Builder groupBy(java.util.List<GroupBy> groupBy) {
             String groupByShrink = shrink(groupBy, "groupBy", "json");
@@ -239,7 +239,7 @@ public class GetBillingOverviewRequest extends Request {
         }
 
         /**
-         * <p>The query time range, which includes the start and end times. Both the start and end times are included in the query range. The time format must be consistent with the granularity, and the start time cannot be later than the end time.</p>
+         * <p>The query time range, which includes start and end. Both the start time and end time are included in the query range. The time format must be consistent with granularity, and start cannot be later than end.</p>
          */
         public Builder timePeriod(TimePeriod timePeriod) {
             String timePeriodShrink = shrink(timePeriod, "timePeriod", "json");
@@ -345,7 +345,7 @@ public class GetBillingOverviewRequest extends Request {
             } 
 
             /**
-             * <p>The filter field. For more information, see the &quot;Additional notes&quot; section below.</p>
+             * <p>The filter field. For more information, see the supplementary notes below.</p>
              * 
              * <strong>example:</strong>
              * <p>CHARGE_TYPE</p>
@@ -475,7 +475,7 @@ public class GetBillingOverviewRequest extends Request {
             } 
 
             /**
-             * <p>The code of the grouping dimension. For more information, see the &quot;Additional notes&quot; section below.</p>
+             * <p>The code of the grouping dimension. For more information, see the supplementary notes below.</p>
              * 
              * <strong>example:</strong>
              * <p>BASE_MODEL</p>
@@ -545,7 +545,7 @@ public class GetBillingOverviewRequest extends Request {
             } 
 
             /**
-             * <p>The end time of the query. This time point is included in the query range. The format is determined by granularity.</p>
+             * <p>The end time of the query. This time point is included. The format is determined by <code>granularity</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>202609</p>
@@ -556,7 +556,7 @@ public class GetBillingOverviewRequest extends Request {
             }
 
             /**
-             * <p>The start time of the query. This time point is included in the query range. The format is determined by granularity.</p>
+             * <p>The start time of the query. This time point is included. The format is determined by <code>granularity</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>202609</p>
