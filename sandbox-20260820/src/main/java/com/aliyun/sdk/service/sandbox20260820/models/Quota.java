@@ -26,6 +26,9 @@ public class Quota extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("memoryGB")
     private Integer memoryGB;
 
+    @com.aliyun.core.annotation.NameInMap("scalingCpuCoresPerMinute")
+    private Long scalingCpuCoresPerMinute;
+
     @com.aliyun.core.annotation.NameInMap("tagValue")
     private String tagValue;
 
@@ -33,6 +36,7 @@ public class Quota extends TeaModel {
         this.cpuCores = builder.cpuCores;
         this.instanceCount = builder.instanceCount;
         this.memoryGB = builder.memoryGB;
+        this.scalingCpuCoresPerMinute = builder.scalingCpuCoresPerMinute;
         this.tagValue = builder.tagValue;
     }
 
@@ -70,6 +74,13 @@ public class Quota extends TeaModel {
     }
 
     /**
+     * @return scalingCpuCoresPerMinute
+     */
+    public Long getScalingCpuCoresPerMinute() {
+        return this.scalingCpuCoresPerMinute;
+    }
+
+    /**
      * @return tagValue
      */
     public String getTagValue() {
@@ -80,6 +91,7 @@ public class Quota extends TeaModel {
         private Integer cpuCores; 
         private Integer instanceCount; 
         private Integer memoryGB; 
+        private Long scalingCpuCoresPerMinute; 
         private String tagValue; 
 
         private Builder() {
@@ -89,11 +101,12 @@ public class Quota extends TeaModel {
             this.cpuCores = model.cpuCores;
             this.instanceCount = model.instanceCount;
             this.memoryGB = model.memoryGB;
+            this.scalingCpuCoresPerMinute = model.scalingCpuCoresPerMinute;
             this.tagValue = model.tagValue;
         } 
 
         /**
-         * <p>The vCPU quota. Unit: cores.</p>
+         * <p>The vCPU quota, in cores.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -104,7 +117,7 @@ public class Quota extends TeaModel {
         }
 
         /**
-         * <p>The quota for the number of running instances.</p>
+         * <p>The quota for the number of active instances.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -115,13 +128,24 @@ public class Quota extends TeaModel {
         }
 
         /**
-         * <p>The memory quota. Unit: GB.</p>
+         * <p>The memory quota, in GB.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
          */
         public Builder memoryGB(Integer memoryGB) {
             this.memoryGB = memoryGB;
+            return this;
+        }
+
+        /**
+         * <p>The team CPU creation rate in cores per minute. To retain the original configuration during an update, omit this parameter or set it to null. A positive integer sets an exclusive rate. A value of 0 prevents adding new CPU capacity. A value of -1 clears the exclusive rate and restores the remaining shared account rate. When queried, this parameter is omitted if it is not configured, an explicit 0 is retained, and -1 is not returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120</p>
+         */
+        public Builder scalingCpuCoresPerMinute(Long scalingCpuCoresPerMinute) {
+            this.scalingCpuCoresPerMinute = scalingCpuCoresPerMinute;
             return this;
         }
 

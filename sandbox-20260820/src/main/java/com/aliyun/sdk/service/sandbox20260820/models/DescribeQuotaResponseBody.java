@@ -117,7 +117,7 @@ public class DescribeQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message. A value of success indicates success.</p>
+         * <p>The response message. A value of success indicates a successful request.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>

@@ -404,7 +404,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Views monitoring metrics at a specific point in time or queries trends over a period of time. Supports querying by account, team, template, or sandbox.</p>
+     * <p>Retrieves monitoring metrics at a specific point in time or queries metric trends over a period of time. You can filter queries by account, team, template, or sandbox.</p>
      * 
      * @param request the request parameters of GetMetricData  GetMetricDataRequest
      * @return GetMetricDataResponse

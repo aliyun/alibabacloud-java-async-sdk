@@ -26,10 +26,14 @@ public class QuotaUsage extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("memoryGB")
     private Double memoryGB;
 
+    @com.aliyun.core.annotation.NameInMap("scalingCpuCoresPerMinute")
+    private Double scalingCpuCoresPerMinute;
+
     private QuotaUsage(Builder builder) {
         this.cpuCores = builder.cpuCores;
         this.instanceCount = builder.instanceCount;
         this.memoryGB = builder.memoryGB;
+        this.scalingCpuCoresPerMinute = builder.scalingCpuCoresPerMinute;
     }
 
     public static Builder builder() {
@@ -65,10 +69,18 @@ public class QuotaUsage extends TeaModel {
         return this.memoryGB;
     }
 
+    /**
+     * @return scalingCpuCoresPerMinute
+     */
+    public Double getScalingCpuCoresPerMinute() {
+        return this.scalingCpuCoresPerMinute;
+    }
+
     public static final class Builder {
         private Double cpuCores; 
         private Long instanceCount; 
         private Double memoryGB; 
+        private Double scalingCpuCoresPerMinute; 
 
         private Builder() {
         } 
@@ -77,10 +89,11 @@ public class QuotaUsage extends TeaModel {
             this.cpuCores = model.cpuCores;
             this.instanceCount = model.instanceCount;
             this.memoryGB = model.memoryGB;
+            this.scalingCpuCoresPerMinute = model.scalingCpuCoresPerMinute;
         } 
 
         /**
-         * <p>The consumed CPU quota in vCPUs, not the CPU utilization.</p>
+         * <p>The consumed CPU quota in vCPUs, which does not represent CPU utilization.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -102,13 +115,24 @@ public class QuotaUsage extends TeaModel {
         }
 
         /**
-         * <p>The consumed memory quota in GB, not the actual memory used by processes.</p>
+         * <p>The consumed memory quota in GB, which does not represent the actual memory used by processes.</p>
          * 
          * <strong>example:</strong>
          * <p>1.5</p>
          */
         public Builder memoryGB(Double memoryGB) {
             this.memoryGB = memoryGB;
+            return this;
+        }
+
+        /**
+         * <p>The number of cores consumed from the team\&quot;s exclusive CPU creation quota that have not yet been naturally replenished. This is not the cumulative creation volume over the last minute. This field is omitted when no valid exclusive bucket snapshot is available, and actual zeros and decimals are retained.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19.875</p>
+         */
+        public Builder scalingCpuCoresPerMinute(Double scalingCpuCoresPerMinute) {
+            this.scalingCpuCoresPerMinute = scalingCpuCoresPerMinute;
             return this;
         }
 
