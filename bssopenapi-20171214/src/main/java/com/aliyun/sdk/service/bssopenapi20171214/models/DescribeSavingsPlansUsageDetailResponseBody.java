@@ -147,7 +147,7 @@ public class DescribeSavingsPlansUsageDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -370,7 +370,7 @@ public class DescribeSavingsPlansUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The amount spent from the savings plan, which is the used commitment.</p>
+             * <p>The deducted amount of the savings plan, which represents the used commitment.</p>
              * 
              * <strong>example:</strong>
              * <p>3.94</p>
@@ -425,7 +425,7 @@ public class DescribeSavingsPlansUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The net savings amount.</p>
+             * <p>The net savings.</p>
              * 
              * <strong>example:</strong>
              * <p>0.08</p>
@@ -449,8 +449,8 @@ public class DescribeSavingsPlansUsageDetailResponseBody extends TeaModel {
             /**
              * <p>The current status. Valid values:</p>
              * <ul>
-             * <li>-1: overdue payment.</li>
-             * <li>1: active.</li>
+             * <li>-1: overdue payment</li>
+             * <li>1: active</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -462,7 +462,11 @@ public class DescribeSavingsPlansUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the savings plan, such as general-purpose or ECS compute.</p>
+             * <p>The type of the savings plan. Valid values:</p>
+             * <ul>
+             * <li>general-purpose</li>
+             * <li>ECS compute</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>General-purpose</p>
@@ -473,7 +477,7 @@ public class DescribeSavingsPlansUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The usage percentage.</p>
+             * <p>The usage rate.</p>
              * 
              * <strong>example:</strong>
              * <p>0.9</p>

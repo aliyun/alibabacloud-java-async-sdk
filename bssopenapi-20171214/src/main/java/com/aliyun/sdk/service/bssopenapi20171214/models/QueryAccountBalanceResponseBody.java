@@ -147,7 +147,7 @@ public class QueryAccountBalanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -268,7 +268,7 @@ public class QueryAccountBalanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The available credit.</p>
+             * <p>The available amount.</p>
              * 
              * <strong>example:</strong>
              * <p>10000.00</p>
@@ -279,7 +279,7 @@ public class QueryAccountBalanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The available cash balance.</p>
+             * <p>The cash balance.</p>
              * 
              * <strong>example:</strong>
              * <p>10000.00</p>
@@ -303,12 +303,9 @@ public class QueryAccountBalanceResponseBody extends TeaModel {
             /**
              * <p>The currency. Valid values:</p>
              * <ul>
-             * <li><p>CNY: Chinese Yuan</p>
-             * </li>
-             * <li><p>USD: US Dollar</p>
-             * </li>
-             * <li><p>JPY: Japanese Yen</p>
-             * </li>
+             * <li>CNY: Chinese yuan</li>
+             * <li>USD: US dollar</li>
+             * <li>JPY: Japanese yen</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -320,7 +317,7 @@ public class QueryAccountBalanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The credit limit granted by MYbank.</p>
+             * <p>The MYbank credit limit.</p>
              * 
              * <strong>example:</strong>
              * <p>0.00</p>

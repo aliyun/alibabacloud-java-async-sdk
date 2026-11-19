@@ -198,8 +198,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>Currently, only financial management linking is supported. The linked account needs to confirm the invitation only when the real-name verification information of the main account and the linked account is inconsistent.</li>
-     * <li>The permissions to be confirmed must be exactly the same as the permissions specified in the invitation initiated by the main account for the confirmation to succeed.</li>
+     * <li>Currently, secondary account confirmation is required only for financial management associations when the real-name verification information of the primary and secondary accounts is inconsistent. 2. To ensure a successful confirmation, the confirmed permissions must match the permissions specified in the invitation initiated by the primary account.</li>
      * </ol>
      * 
      * @param request the request parameters of ConfirmRelation  ConfirmRelationRequest
@@ -239,7 +238,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Creates a master-member relationship for financial management.</p>
+     * <p>Creates a primary and secondary account relationship for finance trusteeship.</p>
      * 
      * @param request the request parameters of CreateAgAccount  CreateAgAccountRequest
      * @return CreateAgAccountResponse
@@ -390,12 +389,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Amortized costs cannot be used for settlement or reconciliation. They are used to allocate your subscription and pay-as-you-go fees based on specified allocation rules.</li>
-     * <li>The final data for a month is available after 12:00 on the sixth day of the following month. The reason for this delay is that scenarios such as delayed billing, refunds, bill adjustments, and overdue payment write-offs can occur during the month. The data for the current month does not include unsettled pay-as-you-go fees for which bills have not yet been generated.</li>
-     * <li>Amortized cost data from the last 12 months is available.</li>
-     * <li>Data for attached resources is reflected in the amortized costs 48 hours after the split bill is generated. To use this feature, you must first enable <a href="https://usercenter2.aliyun.com/finance/split-bill">split bills</a>. Data for items that are not attached resources is updated 48 hours after the detailed bill is generated.</li>
-     * <li>For months before August 2021, amortized costs are not updated intra-month. They are updated only after 12:00 on the sixth day of the following month. Consequently, specific costs for attached resources, such as domain names, buckets, and EIPs, for products such as CDN, OSS, and Internet Shared Bandwidth are not available for these months.</li>
-     * <li>Amortized cost data is available for querying 48 hours after you enable the <a href="https://usercenter2.aliyun.com/finance/amortized-costs">Amortized Cost</a> feature.</li>
+     * <li>Amortized costs are not used as the basis for settlement and reconciliation. Amortized costs provide the cost allocation capability, which allocates the expenses incurred on the cloud (including upfront and pay-as-you-go expenses) based on specified allocation rules.</li>
+     * <li>The final data for the current month is available after 12:00 on the 6th day of the next month. During the month, a few scenarios may occur, including but not limited to delayed billing, refunds, account adjustments, and overdue payment write-offs. The data for the current month does not include unsettled pay-as-you-go data (unbilled or being accumulated).</li>
+     * <li>Amortized cost data is available for the last 12 months.</li>
+     * <li>Data related to attached resources in amortized costs is updated 48 hours after the split bill data is generated. To use the costs of attached resources, activate the <a href="https://usercenter2.aliyun.com/finance/split-bill">split bill</a> feature in advance. Data not related to attached resources is updated 48 hours after the detailed bill is generated.</li>
+     * <li>Amortized costs before August 2021 (exclusive) are not updated during the month. They are updated uniformly only after 12:00 on the 6th day of the next amortization month. Specific costs for each attached resource (such as domain names, buckets, and EIPs) of split cloud services (such as CDN, OSS, and Internet Shared Bandwidth) are not provided.</li>
+     * <li>Amortized cost data is available only after you activate the <a href="https://usercenter2.aliyun.com/finance/amortized-costs">amortized costs</a> feature. The data is available 48 hours after activation.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeInstanceAmortizedCostByAmortizationPeriod  DescribeInstanceAmortizedCostByAmortizationPeriodRequest
@@ -436,12 +435,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Amortized costs are not used for settlement or reconciliation. They are used to allocate your cloud expenses, including both subscription and pay-as-you-go fees, based on specified allocation rules.</li>
-     * <li>The final data for a month is available after 12:00 on the sixth day of the following month. This delay accounts for events such as delayed billing, refunds, bill adjustments, and overdue payment write-offs. Data for the current month does not include unsettled pay-as-you-go fees.</li>
-     * <li>Amortized cost data is available for the past 12 months.</li>
-     * <li>Data for attached resources in the amortized costs is updated 48 hours after the split bill is generated. To view the costs of attached resources, you must first enable <a href="https://usercenter2.aliyun.com/finance/split-bill">split bills</a>. Data for other resources is updated 48 hours after the detailed bill is generated.</li>
-     * <li>For months before August 2021, amortized costs are not updated mid-month. They are updated only after 12:00 on the sixth day of the following month. In addition, specific costs for attached resources, such as domain names, buckets, and EIPs, of products such as CDN, OSS, and Internet Shared Bandwidth, are not provided for this period.</li>
-     * <li>Amortized cost data is available only after you enable the <a href="https://usercenter2.aliyun.com/finance/amortized-costs">Amortized Costs</a> feature. The data becomes available 48 hours after enablement.</li>
+     * <li>Amortized costs are not used as the basis for settlement and reconciliation. Amortized costs provide the cost allocation capability, which allocates the costs incurred on the cloud (including subscription and pay-as-you-go costs) according to specified allocation rules.</li>
+     * <li>The final data for the current month is available after 12:00 on the 6th day of the following month. During the month, a few scenarios may occur, including but not limited to delayed billing, refunds, account adjustments, and overdue payment write-offs. The data for the current month does not include unsettled (unbilled or accumulating) pay-as-you-go data.</li>
+     * <li>Amortized cost data is available for the last 12 months.</li>
+     * <li>Data related to attached resources in amortized costs is updated 48 hours after the split bill data is generated. If you need to use split costs, activate <a href="https://usercenter2.aliyun.com/finance/split-bill">Split Bill</a> in advance. Data not related to attached resources is updated 48 hours after the detailed bill is generated.</li>
+     * <li>Amortized costs before August 2021 (exclusive) are not updated during the month. They are updated uniformly after 12:00 on the 6th day of the month following the amortization month. Additionally, specific costs for each attached resource (such as domain names, buckets, and EIPs) of split cloud services (such as CDN, OSS, and Internet Shared Bandwidth) are not supported.</li>
+     * <li>Amortized cost data is available only after you activate <a href="https://usercenter2.aliyun.com/finance/amortized-costs">Amortized Costs</a>. The data is available 48 hours after activation.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeInstanceAmortizedCostByConsumePeriod  DescribeInstanceAmortizedCostByConsumePeriodRequest
@@ -529,12 +528,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Amortized costs are for cost allocation purposes only and cannot be used for settlement or reconciliation. This feature allocates your cloud expenses, including both subscription and pay-as-you-go fees, based on specified allocation rules.</li>
-     * <li>The final data for a month is available after 12:00 on the sixth day of the following month. Data for the current month is not final. This is because it does not include unsettled pay-as-you-go fees and may change due to events such as delayed billing, refunds, bill adjustments, and overdue payment write-offs.</li>
-     * <li>Amortized cost data for the past 12 months is available.</li>
-     * <li>Data for attached resources, which requires you to enable <a href="https://usercenter2.aliyun.com/finance/split-bill">split bills</a>, is updated 48 hours after the split bill is generated. Data for other resources is updated 48 hours after the detailed bill is generated.</li>
-     * <li>For months before August 2021, amortized costs were not updated during the month. They were updated only after 12:00 on the sixth day of the following month. In addition, cost details for attached resources, such as domain names, buckets, and EIPs, for products such as CDN, OSS, and Internet Shared Bandwidth are not available for this period.</li>
-     * <li>Amortized cost data becomes available 48 hours after you enable the <a href="https://usercenter2.aliyun.com/finance/amortized-costs">Amortized Cost</a> feature.</li>
+     * <li>Amortized costs are not used as the basis for settlement and reconciliation. Amortized costs provide the cost allocation capability, which allocates the costs incurred on the cloud (including prepaid and pay-as-you-go costs) based on specified allocation rules.</li>
+     * <li>The final data for the current month is available after 12:00 on the 6th day of the next month. During the month, a few scenarios may occur, including but not limited to delayed billing, refunds, account adjustments, and overdue payment write-offs. The data for the current month does not include unsettled pay-as-you-go data (unbilled or being accumulated).</li>
+     * <li>Amortized cost data is available for the last 12 months.</li>
+     * <li>Data related to attached resources in amortized costs is updated 48 hours after the split bill data is generated. If you need to use the costs of attached resources, activate <a href="https://usercenter2.aliyun.com/finance/split-bill">Split Bill</a> in advance. Data not related to attached resources is updated 48 hours after the detailed bill is generated.</li>
+     * <li>Amortized costs before August 2021 (exclusive) are not updated during the month. They are updated uniformly only after 12:00 on the 6th day of the next amortization month. Specific costs for each attached resource (such as domain names, buckets, and EIPs) of cloud products that support split billing (such as CDN, OSS, and Internet Shared Bandwidth) are not supported.</li>
+     * <li>Amortized cost data is available only after you activate <a href="https://usercenter2.aliyun.com/finance/amortized-costs">Amortized Costs</a>. The data is available 48 hours after activation.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeProductAmortizedCostByAmortizationPeriod  DescribeProductAmortizedCostByAmortizationPeriodRequest
@@ -557,12 +556,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Amortized costs are used for cost allocation and cannot be used for settlement or reconciliation. This feature allocates your cloud expenses, including both subscription and pay-as-you-go fees, based on specified rules.</li>
-     * <li>The final data for a given month is available after 12:00 on the sixth day of the following month. This delay ensures that potential mid-month events, such as delayed billing, refunds, bill adjustments, and overdue payment write-offs, are included. Data for the current month does not include unsettled pay-as-you-go fees that have not yet been billed or are still accumulating.</li>
-     * <li>Amortized cost data for the past 12 months is available.</li>
-     * <li>Data related to attached resources is updated in the amortized costs 48 hours after the corresponding split bill is generated. To view the costs of attached resources, you must first enable <a href="https://usercenter2.aliyun.com/finance/split-bill">split bills</a>. Data that is not related to attached resources is updated 48 hours after the detailed bill is generated.</li>
-     * <li>For months before August 2021, amortized costs were not updated mid-month and were only updated after 12:00 on the sixth day of the following month. Additionally, for this period, specific costs for attached resources, such as domain names, buckets, and EIPs, for products such as CDN, OSS, and Internet Shared Bandwidth are not available.</li>
-     * <li>Amortized cost data is provided only after you enable the <a href="https://usercenter2.aliyun.com/finance/amortized-costs">Amortized Cost</a> feature. The data is available 48 hours after you enable it.</li>
+     * <li>Amortized costs are not used as the basis for settlement and reconciliation. Amortized costs provide the cost allocation capability, which allocates the costs incurred on the cloud (including subscription and pay-as-you-go costs) based on specified allocation rules.</li>
+     * <li>The final data for the current month is available after 12:00 on the 6th day of the following month (a few scenarios may occur during the month, including but not limited to delayed billing, refunds, adjustments, and overdue payment write-offs). The data for the current month does not include unsettled (unbilled or accumulating) pay-as-you-go data.</li>
+     * <li>Amortized cost data is available for the last 12 months.</li>
+     * <li>Data related to attached resources in amortized costs is updated 48 hours after the split bill data is generated (if you need to use split costs, enable <a href="https://usercenter2.aliyun.com/finance/split-bill">Split Bill</a> in advance). Data not related to attached resources is updated 48 hours after the detailed bill is generated.</li>
+     * <li>Amortized cost data before August 2021 (exclusive) is not updated during the month. It is updated uniformly after 12:00 on the 6th day of the month following the amortization month. It also does not support providing specific costs for each attached resource (such as domain names, buckets, and EIPs) of split cloud services (such as CDN, OSS, and Internet Shared Bandwidth).</li>
+     * <li>Amortized cost data is available only after you enable <a href="https://usercenter2.aliyun.com/finance/amortized-costs">Amortized Costs</a>. It takes 48 hours to take effect after you enable the feature.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeProductAmortizedCostByConsumePeriod  DescribeProductAmortizedCostByConsumePeriodRequest
@@ -859,11 +858,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Operation description</h3>
+     * <h3>API description</h3>
      * <ol>
      * <li>Call QueryProductList to obtain the product code. For more information, see <a href="https://help.aliyun.com/document_detail/95984.html">Query product information</a>.</li>
-     * <li>Call the DescribePricingModule operation to obtain the configuration parameters of a product. For more information, see <a href="https://help.aliyun.com/document_detail/96469.html">Query pricing module information</a>.</li>
-     * <li>Call this operation with the obtained product configuration parameters to query the price of a pay-as-you-go product.</li>
+     * <li>Call the DescribePricingModule operation to retrieve the configuration parameters of the product. For more information, see <a href="https://help.aliyun.com/document_detail/96469.html">Query product module information</a>.</li>
+     * <li>Call this operation to query the prices of pay-as-you-go products based on the retrieved configuration parameters.</li>
      * </ol>
      * 
      * @param request the request parameters of GetPayAsYouGoPrice  GetPayAsYouGoPriceRequest
@@ -1275,7 +1274,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <p>Limits:</p>
      * <ul>
-     * <li>Only usage records from the past year are supported.</li>
+     * <li>Only usage records for the last year are supported.</li>
      * </ul>
      * 
      * @param request the request parameters of QueryDPUtilizationDetail  QueryDPUtilizationDetailRequest
@@ -1582,7 +1581,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the alarm thresholds for low quotas.</p>
+     * <p>Queries the low-balance alert rules for quotas.</p>
      * 
      * @param request the request parameters of QueryResellerUserAlarmThreshold  QueryResellerUserAlarmThresholdRequest
      * @return QueryResellerUserAlarmThresholdResponse
@@ -1676,11 +1675,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>The query results for the current month are for reference only and cannot be used for reconciliation. The final bill for the current month is available for viewing or export after 12:00 on the 2nd of the following month. During the month, a few scenarios may occur, including but not limited to delayed billing, refunds, adjustments, and overdue payment write-offs.</li>
-     * <li>Bill data is updated with a 5-hour delay relative to actual cost consumption.</li>
-     * <li>For bills in the &quot;Unsettled&quot; state in historical billing cycles, the status is updated to settled 5 hours after payment. For bills in the &quot;Unsettled&quot; state in the current month, the status is updated to settled when the bill is generated at 12:00 on the 2nd of the following month.</li>
-     * <li>This API supports graceful backoff with a request rate of 600/60(s).</li>
-     * <li>The rate limit per user is 10 requests per second. If a timeout occurs, retry the request.</li>
+     * <li>The query results for the current month are for reference only and cannot be used as the basis for reconciliation. The final bill for the current month can be viewed or exported after 12:00 on the 2nd day of the next month. During the month, a few scenarios may occur, including but not limited to delayed billing, refunds, adjustments, and overdue payment write-offs.</li>
+     * <li>Bill data is updated with a 5-hour delay compared to actual expense consumption.</li>
+     * <li>For bills in the &quot;Uncleared&quot; status from historical billing cycles, the status is updated to &quot;Cleared&quot; 5 hours after repayment. For bills in the &quot;Uncleared&quot; status for the current month, the status is updated to &quot;Cleared&quot; when the bill is generated at 12:00 on the 2nd day of the next month after repayment.</li>
+     * <li>This API supports graceful backoff. The request rate is 600 requests per 60 seconds.</li>
+     * <li>The rate limit for a single user is 10 requests per second. If a timeout occurs, retry the request.</li>
      * </ul>
      * 
      * @param request the request parameters of QuerySettleBill  QuerySettleBillRequest
@@ -1745,17 +1744,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>API description</h2>
-     * <ul>
-     * <li>The specified cloud service parameter must be one of the following cloud service codes. The metering data types include hourly and daily.</li>
-     * <li>The time format must comply with the ISO 8601 standard. Time specification constraints:<ul>
-     * <li>   Due to delays in data push, the data integrity of hourly metering data is guaranteed for the past 24 hours, and the data integrity of daily metering data is guaranteed for the past 2 days.</li>
-     * <li>   The time span can cover the metering data of the most recent quarter.</li>
-     * </ul>
-     * </li>
-     * </ul>
-     * 
      * @param request the request parameters of QueryUserOmsData  QueryUserOmsDataRequest
      * @return QueryUserOmsDataResponse
      */
@@ -1794,6 +1782,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<RefundInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Releases <strong>upfront</strong> instances that have <strong>expired and stopped</strong>. After an instance expires and stops, you can use this operation to release it in advance instead of waiting for the automatic release by the system after the retention period. <strong>The release operation is irreversible. Before you invoke this operation, confirm that you no longer need the instance data or underlying resources.</strong></p>
+     * 
+     * @param request the request parameters of ReleaseExpiredPrepaidInstance  ReleaseExpiredPrepaidInstanceRequest
+     * @return ReleaseExpiredPrepaidInstanceResponse
+     */
+    @Override
+    public CompletableFuture<ReleaseExpiredPrepaidInstanceResponse> releaseExpiredPrepaidInstance(ReleaseExpiredPrepaidInstanceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ReleaseExpiredPrepaidInstance").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ReleaseExpiredPrepaidInstanceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ReleaseExpiredPrepaidInstanceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1950,9 +1959,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <p>设置用户配额账本的Quota额度</p>
-     * 
      * @param request the request parameters of SetResellerUserQuota  SetResellerUserQuotaRequest
      * @return SetResellerUserQuotaResponse
      */

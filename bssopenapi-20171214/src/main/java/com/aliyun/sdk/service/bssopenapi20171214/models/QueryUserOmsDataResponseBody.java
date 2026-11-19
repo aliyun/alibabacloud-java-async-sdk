@@ -106,10 +106,7 @@ public class QueryUserOmsDataResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Success</p>
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -117,7 +114,7 @@ public class QueryUserOmsDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,10 +122,7 @@ public class QueryUserOmsDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Successful！</p>
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -136,10 +130,7 @@ public class QueryUserOmsDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>6000EE23-274B-4E07-A697-FF2E999520A4</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -147,10 +138,7 @@ public class QueryUserOmsDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -229,10 +217,7 @@ public class QueryUserOmsDataResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The host ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn</p>
+             * HostId.
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;
@@ -240,10 +225,7 @@ public class QueryUserOmsDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The NextToken field for the start of the next page. If this field is empty or not present, it indicates that no more data is available.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>NextToken</p>
+             * Marker.
              */
             public Builder marker(String marker) {
                 this.marker = marker;
@@ -251,7 +233,7 @@ public class QueryUserOmsDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The OMS data list.</p>
+             * OmsData.
              */
             public Builder omsData(java.util.List<java.util.Map<String, ?>> omsData) {
                 this.omsData = omsData;

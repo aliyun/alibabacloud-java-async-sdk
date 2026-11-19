@@ -74,10 +74,10 @@ public class QueryResellerAvailableQuotaRequest extends Request {
         } 
 
         /**
-         * <p>You do not need to specify this parameter.</p>
+         * <p>This parameter is not required.</p>
          * 
          * <strong>example:</strong>
-         * <p>无</p>
+         * <p>None</p>
          */
         public Builder itemCodes(String itemCodes) {
             this.putQueryParameter("ItemCodes", itemCodes);

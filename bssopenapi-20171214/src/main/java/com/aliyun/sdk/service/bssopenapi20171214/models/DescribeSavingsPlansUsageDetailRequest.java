@@ -146,7 +146,7 @@ public class DescribeSavingsPlansUsageDetailRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the account. If this parameter is left empty, data of the current account and its trusteeship linked accounts is queried. You can specify a trusteeship linked account ID to query data of that account.</p>
+         * <p>The ID of the account whose data you want to query. If this parameter is left empty, the data of the current account and its trusteeship linked accounts is queried. You can specify the ID of a trusteeship linked account to query only the data of that account.</p>
          * 
          * <strong>example:</strong>
          * <p>123745698925000</p>
@@ -158,7 +158,7 @@ public class DescribeSavingsPlansUsageDetailRequest extends Request {
         }
 
         /**
-         * <p>The end time. Format: yyyy-MM-dd HH:mm:ss. The query excludes data at this time. If this parameter is left empty, the query covers data up to the current time.</p>
+         * <p>The end time of the query. Format: yyyy-MM-dd HH:mm:ss. The specified time is excluded from the query. If this parameter is left empty, the current time is used.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-02 00:00:00</p>
@@ -170,7 +170,7 @@ public class DescribeSavingsPlansUsageDetailRequest extends Request {
         }
 
         /**
-         * FilterParam.
+         * <p>The filter parameters.</p>
          */
         public Builder filterParam(FilterParam filterParam) {
             String filterParamShrink = shrink(filterParam, "FilterParam", "json");
@@ -180,7 +180,7 @@ public class DescribeSavingsPlansUsageDetailRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of data records to return. Default value: 20. Maximum value: 300.</p>
+         * <p>The maximum number of data records to return in the current request. Default value: 20. Maximum value: 300.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -192,11 +192,11 @@ public class DescribeSavingsPlansUsageDetailRequest extends Request {
         }
 
         /**
-         * <p>The time granularity for querying usage details. Valid values:</p>
+         * <p>The time granularity for querying the usage summary. Valid values:</p>
          * <ul>
-         * <li>MONTH: monthly granularity.</li>
-         * <li>DAY: daily granularity.</li>
-         * <li>HOUR: hourly granularity.</li>
+         * <li>MONTH: monthly</li>
+         * <li>DAY: daily</li>
+         * <li>HOUR: hourly</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -210,7 +210,7 @@ public class DescribeSavingsPlansUsageDetailRequest extends Request {
         }
 
         /**
-         * <p>The start time. Format: yyyy-MM-dd HH:mm:ss. The query includes data at this time.</p>
+         * <p>The start time of the query. Format: yyyy-MM-dd HH:mm:ss. The specified time is included in the query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -223,7 +223,7 @@ public class DescribeSavingsPlansUsageDetailRequest extends Request {
         }
 
         /**
-         * <p>The pagination token. Leave this parameter empty for the first page. The query result returns the token for the next page. If the returned token is empty, all data has been retrieved.</p>
+         * <p>The pagination token. Leave this parameter empty when you query the first page. The token for the next page is returned in the response. If the returned token is empty, all results are returned.</p>
          * 
          * <strong>example:</strong>
          * <p>eyJwYWdlTnVtIjoyLCJwYWdlU2l6ZSI6MTB9</p>
@@ -307,7 +307,7 @@ public class DescribeSavingsPlansUsageDetailRequest extends Request {
             } 
 
             /**
-             * Code.
+             * <p>The dimension code.</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -315,7 +315,7 @@ public class DescribeSavingsPlansUsageDetailRequest extends Request {
             }
 
             /**
-             * SelectType.
+             * <p>The selection method for the dimension filter.</p>
              */
             public Builder selectType(String selectType) {
                 this.selectType = selectType;
@@ -323,7 +323,7 @@ public class DescribeSavingsPlansUsageDetailRequest extends Request {
             }
 
             /**
-             * Values.
+             * <p>The list of dimension filter values.</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;
@@ -403,7 +403,7 @@ public class DescribeSavingsPlansUsageDetailRequest extends Request {
             } 
 
             /**
-             * Code.
+             * <p>The tag code.</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -411,7 +411,7 @@ public class DescribeSavingsPlansUsageDetailRequest extends Request {
             }
 
             /**
-             * SelectType.
+             * <p>The selection method for the tag filter.</p>
              */
             public Builder selectType(String selectType) {
                 this.selectType = selectType;
@@ -419,7 +419,7 @@ public class DescribeSavingsPlansUsageDetailRequest extends Request {
             }
 
             /**
-             * Values.
+             * <p>The list of tag filter values.</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;
@@ -486,7 +486,7 @@ public class DescribeSavingsPlansUsageDetailRequest extends Request {
             } 
 
             /**
-             * Dimensions.
+             * <p>The list of dimension filter conditions.</p>
              */
             public Builder dimensions(java.util.List<Dimensions> dimensions) {
                 this.dimensions = dimensions;
@@ -494,7 +494,7 @@ public class DescribeSavingsPlansUsageDetailRequest extends Request {
             }
 
             /**
-             * Tags.
+             * <p>The list of tag filter conditions.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;

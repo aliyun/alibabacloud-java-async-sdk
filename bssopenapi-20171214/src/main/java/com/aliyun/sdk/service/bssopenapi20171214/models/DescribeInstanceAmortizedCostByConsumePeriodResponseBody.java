@@ -117,7 +117,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The message.</p>
          * 
          * <strong>example:</strong>
          * <p>Successful！</p>
@@ -136,7 +136,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</p>
@@ -147,7 +147,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -996,7 +996,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             } 
 
             /**
-             * <p>The amount after a discount.</p>
+             * <p>The amount after discount.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1007,8 +1007,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * <p>The amortization month.
-             * Format: YYYYMM.</p>
+             * <p>The amortization month. Format: YYYYMM.</p>
              * 
              * <strong>example:</strong>
              * <p>202210</p>
@@ -1021,10 +1020,8 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             /**
              * <p>The amortization status. Valid values:</p>
              * <ul>
-             * <li><p>amortized: The cost is amortized.</p>
-             * </li>
-             * <li><p>unAmortized: The cost is not amortized.</p>
-             * </li>
+             * <li>amortized: Amortized.</li>
+             * <li>unAmortized: Unamortized.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1058,7 +1055,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * <p>The ID of the resource owner.</p>
+             * <p>The resource ownership account ID.</p>
              * 
              * <strong>example:</strong>
              * <p>185xxxxx489</p>
@@ -1069,7 +1066,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * <p>The name of the resource owner.</p>
+             * <p>The name of the account to which the resource belongs.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="mailto:test@test.aliyunid.com">test@test.aliyunid.com</a></p>
@@ -1091,8 +1088,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * <p>The billing cycle.
-             * Format: YYYYMM.</p>
+             * <p>The billing cycle. Format: YYYYMM.</p>
              * 
              * <strong>example:</strong>
              * <p>202210</p>
@@ -1103,10 +1099,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * <p>The cost center.</p>
+             * <p>The cost unit.</p>
              * 
              * <strong>example:</strong>
-             * <p>未分配</p>
+             * <p>Unallocated</p>
              */
             public Builder costUnit(String costUnit) {
                 this.costUnit = costUnit;
@@ -1114,7 +1110,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * <p>The code of the cost center.</p>
+             * <p>The code of the cost unit.</p>
              * 
              * <strong>example:</strong>
              * <p>1234</p>
@@ -1125,7 +1121,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * <p>The amount after a discount for the cost that is amortized in the current amortization period.</p>
+             * <p>The current amortization amount after discount.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1136,7 +1132,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * <p>The amount deducted by cash coupons from the cost that is amortized in the current amortization period.</p>
+             * <p>The current amortization amount deducted by cash coupons.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1147,7 +1143,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * <p>The amount deducted by coupons from the cost that is amortized in the current amortization period.</p>
+             * <p>The current amortization amount deducted by coupons.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1158,7 +1154,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * <p>The amount paid with a prepaid card for the cost that is amortized in the current amortization period.</p>
+             * <p>The current amortization amount paid by prepaid cards.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1169,7 +1165,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * <p>The expenditure amount of the cost that is amortized in the current amortization period.</p>
+             * <p>The current amortization expenditure amount that can be invoiced.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1180,7 +1176,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * <p>The discount on the cost that is amortized in the current amortization period.</p>
+             * <p>The current amortization discount amount.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1191,7 +1187,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * <p>The pretax amount of the cost that is amortized in the current amortization period.</p>
+             * <p>The current amortization payable amount.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1202,7 +1198,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * <p>The list price of the cost that is amortized in the current amortization period.</p>
+             * <p>The current amortization list price.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1213,7 +1209,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * <p>The rounding discount of the cost that is amortized in the current amortization period.</p>
+             * <p>The current amortization round-down discount amount.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1246,7 +1242,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * <p>The amount paid with a prepaid card.</p>
+             * <p>The amount paid by prepaid cards.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1257,7 +1253,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * <p>The expenditure amount (invoicable).</p>
+             * <p>The expenditure amount that can be invoiced.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1290,7 +1286,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * <p>The private IP address.</p>
+             * <p>The internal IP address.</p>
              * 
              * <strong>example:</strong>
              * <p>192.xx.xx.xx</p>
@@ -1301,7 +1297,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * <p>The discount.</p>
+             * <p>The discount amount.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1312,7 +1308,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * <p>The pretax amount.</p>
+             * <p>The payable amount.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1334,7 +1330,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * <p>The amount after a discount for the cost that was amortized before the current amortization period.</p>
+             * <p>The previously amortized amount after discount.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1345,7 +1341,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * <p>The amount deducted by cash coupons from the cost that was amortized before the current amortization period.</p>
+             * <p>The previously amortized amount deducted by cash coupons.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1356,7 +1352,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * <p>The amount deducted by coupons from the cost that was amortized before the current amortization period.</p>
+             * <p>The previously amortized amount deducted by coupons.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1367,7 +1363,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * <p>The amount paid with a prepaid card for the cost that was amortized before the current amortization period.</p>
+             * <p>The previously amortized amount paid by prepaid cards.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1378,7 +1374,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * <p>The expenditure amount of the cost that was amortized before the current amortization period.</p>
+             * <p>The previously amortized expenditure amount that can be invoiced.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1389,7 +1385,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * <p>The discount on the cost that was amortized before the current amortization period.</p>
+             * <p>The previously amortized discount amount.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1400,7 +1396,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * <p>The pretax amount of the cost that was amortized before the current amortization period.</p>
+             * <p>The previously amortized payable amount.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1411,7 +1407,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * <p>The list price of the cost that was amortized before the current amortization period.</p>
+             * <p>The previously amortized list price.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1422,7 +1418,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * <p>The rounding discount of the cost that was amortized before the current amortization period.</p>
+             * <p>The previously amortized round-down discount amount.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1444,10 +1440,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * <p>The details of the product.</p>
+             * <p>The product detail.</p>
              * 
              * <strong>example:</strong>
-             * <p>云数据库RDS</p>
+             * <p>ApsaraDB RDS</p>
              */
             public Builder productDetail(String productDetail) {
                 this.productDetail = productDetail;
@@ -1455,7 +1451,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * <p>The code of the product details.</p>
+             * <p>The product detail code.</p>
              * 
              * <strong>example:</strong>
              * <p>rds</p>
@@ -1469,7 +1465,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
              * <p>The product name.</p>
              * 
              * <strong>example:</strong>
-             * <p>云数据库RDS</p>
+             * <p>ApsaraDB RDS</p>
              */
             public Builder productName(String productName) {
                 this.productName = productName;
@@ -1480,7 +1476,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
              * <p>The region.</p>
              * 
              * <strong>example:</strong>
-             * <p>杭州</p>
+             * <p>Hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -1488,7 +1484,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * <p>The amount after a discount for the cost that is not amortized at the end of the current amortization period.</p>
+             * <p>The remaining amortization amount after discount.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1499,7 +1495,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * <p>The amount deducted by cash coupons from the cost that is not amortized at the end of the current amortization period.</p>
+             * <p>The remaining amortization amount deducted by cash coupons.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1510,7 +1506,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * <p>The amount deducted by coupons from the cost that is not amortized at the end of the current amortization period.</p>
+             * <p>The remaining amortization amount deducted by coupons.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1521,7 +1517,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * <p>The amount paid with a prepaid card for the cost that is not amortized at the end of the current amortization period.</p>
+             * <p>The remaining amortization amount paid by prepaid cards.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1532,7 +1528,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * <p>The expenditure amount of the cost that is not amortized at the end of the current amortization period.</p>
+             * <p>The remaining amortization expenditure amount that can be invoiced.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1543,7 +1539,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * <p>The discount on the cost that is not amortized at the end of the current amortization period.</p>
+             * <p>The remaining amortization discount amount.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1554,7 +1550,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * <p>The pretax amount of the cost that is not amortized at the end of the current amortization period.</p>
+             * <p>The remaining amortization payable amount.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1565,7 +1561,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * <p>The list price of the cost that is not amortized at the end of the current amortization period.</p>
+             * <p>The remaining amortization list price.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1576,7 +1572,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * <p>The rounding discount of the cost that is not amortized at the end of the current amortization period.</p>
+             * <p>The remaining amortization round-down discount amount.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1590,7 +1586,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
              * <p>The resource group.</p>
              * 
              * <strong>example:</strong>
-             * <p>默认资源组</p>
+             * <p>Default resource group</p>
              */
             public Builder resourceGroup(String resourceGroup) {
                 this.resourceGroup = resourceGroup;
@@ -1598,7 +1594,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * <p>The amount deducted by rounding down.</p>
+             * <p>The round-down discount amount.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1642,7 +1638,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * <p>The name of the attached resource\&quot;s product details.</p>
+             * <p>The product detail name of the attached resource.</p>
              * 
              * <strong>example:</strong>
              * <p>rds</p>
@@ -1655,10 +1651,8 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             /**
              * <p>The subscription type. Valid values:</p>
              * <ul>
-             * <li><p>Subscription: subscription.</p>
-             * </li>
-             * <li><p>PayAsYouGo: pay-as-you-go.</p>
-             * </li>
+             * <li>Subscription: subscription.</li>
+             * <li>PayAsYouGo: pay-as-you-go.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1670,7 +1664,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * <p>The tags of the instance.</p>
+             * <p>The instance tag.</p>
              * 
              * <strong>example:</strong>
              * <p>tag</p>
@@ -1684,7 +1678,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
              * <p>The zone.</p>
              * 
              * <strong>example:</strong>
-             * <p>杭州1</p>
+             * <p>Hangzhou Zone 1</p>
              */
             public Builder zone(String zone) {
                 this.zone = zone;
@@ -1803,7 +1797,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             } 
 
             /**
-             * <p>The ID of the account.</p>
+             * <p>The account ID.</p>
              * 
              * <strong>example:</strong>
              * <p>185766xxxx</p>
@@ -1814,7 +1808,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * <p>The name of the account.</p>
+             * <p>The user account.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="mailto:test@test.aliyunid.com">test@test.aliyunid.com</a></p>
@@ -1833,7 +1827,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * <p>The maximum number of entries returned on the current page.</p>
+             * <p>The maximum number of entries returned for the current request.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -1844,7 +1838,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * <p>The token that is used to retrieve the next page of results. If this parameter is empty, all the results are returned.</p>
+             * <p>The token that specifies the position where the current call starts to read. The value must be empty or set to the NextToken value returned in the previous response. Otherwise, an error occurs. An empty value indicates that the read starts from the beginning.</p>
              * 
              * <strong>example:</strong>
              * <p>CAESEgoQCg4KCmdtdF9jcmVhdGUEARgBIkgKCQBwhGmPcAEAAAo7AzYAAAAxTDgwMDcxMjg3ZDJhNmM3ZDguTDgwMDAwMDAwMDAwMzE1MTIuTDgwMDcyZDMyZTJkYzg3N2U</p>

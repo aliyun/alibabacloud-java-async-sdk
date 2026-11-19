@@ -80,7 +80,7 @@ public class SelectedComponentConfigDTO extends TeaModel {
         } 
 
         /**
-         * <p>The property configuration list.</p>
+         * <p>The list of property configurations.</p>
          */
         public Builder attributeConfigs(java.util.List<AttributeConfigs> attributeConfigs) {
             this.attributeConfigs = attributeConfigs;
@@ -400,7 +400,7 @@ public class SelectedComponentConfigDTO extends TeaModel {
             } 
 
             /**
-             * <p>The upper and lower bound values, used for bounded properties.</p>
+             * <p>The upper and lower bounds, used for bounded properties.</p>
              */
             public Builder boundedValue(BoundedValue boundedValue) {
                 this.boundedValue = boundedValue;

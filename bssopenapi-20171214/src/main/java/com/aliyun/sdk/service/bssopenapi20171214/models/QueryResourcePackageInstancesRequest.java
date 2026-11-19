@@ -143,7 +143,7 @@ public class QueryResourcePackageInstancesRequest extends Request {
         } 
 
         /**
-         * <p>The expiration end time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The end time of the expiration period. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-02-02T13:00:00Z</p>
@@ -155,7 +155,7 @@ public class QueryResourcePackageInstancesRequest extends Request {
         }
 
         /**
-         * <p>The expiration start time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The start time of the expiration period. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-02-02T12:00:00Z</p>

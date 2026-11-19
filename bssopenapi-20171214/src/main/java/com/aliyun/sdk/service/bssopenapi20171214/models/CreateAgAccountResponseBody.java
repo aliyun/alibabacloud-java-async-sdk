@@ -106,7 +106,7 @@ public class CreateAgAccountResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The level 2 relationship between the master account (MPK) and the member account (PK).</p>
+         * <p>The secondary relationship between the MPK and the PK.</p>
          */
         public Builder agRelationDto(AgRelationDto agRelationDto) {
             this.agRelationDto = agRelationDto;
@@ -147,7 +147,7 @@ public class CreateAgAccountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -242,7 +242,7 @@ public class CreateAgAccountResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The UID of the master account (MPK).</p>
+             * <p>The MPK (UID).</p>
              * 
              * <strong>example:</strong>
              * <p>1785287436011964</p>
@@ -253,7 +253,7 @@ public class CreateAgAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The UID of the member account (PK) that is managed by the master account (MPK).</p>
+             * <p>The PK (UID) under the MPK.</p>
              * 
              * <strong>example:</strong>
              * <p>1728240534507590</p>
@@ -275,7 +275,7 @@ public class CreateAgAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the account linking relationship.</p>
+             * <p>The type of the association.</p>
              * 
              * <strong>example:</strong>
              * <p>FINACE_CLOUD</p>

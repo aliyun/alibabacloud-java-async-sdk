@@ -251,7 +251,7 @@ public class QueryAvailableInstancesRequest extends Request {
         }
 
         /**
-         * <p>The end time of the expiration time range. Specify the time in the ISO 8601 standard in the UTC format. Example: 2016-05-23T12:00:00Z.</p>
+         * <p>The end time of the end time range. Specify the time in the ISO 8601 standard in the UTC format. Example: 2016-05-23T12:00:00Z.</p>
          * 
          * <strong>example:</strong>
          * <p>2016-05-23T12:00:00Z</p>
@@ -263,7 +263,7 @@ public class QueryAvailableInstancesRequest extends Request {
         }
 
         /**
-         * <p>The start time of the expiration time range. Specify the time in the ISO 8601 standard in the UTC format. Example: 2016-05-23T12:00:00Z.</p>
+         * <p>The start time of the end time range. Specify the time in the ISO 8601 standard in the UTC format. Example: 2016-05-23T12:00:00Z.</p>
          * 
          * <strong>example:</strong>
          * <p>2016-05-23T12:00:00Z</p>
@@ -275,7 +275,7 @@ public class QueryAvailableInstancesRequest extends Request {
         }
 
         /**
-         * <p>The instance IDs. Separate multiple IDs with commas. You can specify up to 100 IDs.</p>
+         * <p>The instance IDs. Separate multiple IDs with commas. Maximum number of IDs: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-xxxxxxxxxxxx</p>
@@ -322,7 +322,7 @@ public class QueryAvailableInstancesRequest extends Request {
         /**
          * <p>The product code. You can call the <strong>QueryProductList</strong> operation to query product codes.</p>
          * <blockquote>
-         * <p>If the region is specified, this parameter cannot be empty.</p>
+         * <p>This parameter cannot be empty when the region is specified.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -376,7 +376,7 @@ public class QueryAvailableInstancesRequest extends Request {
         }
 
         /**
-         * <p>The subscription type.</p>
+         * <p>The subscription type. Valid values:</p>
          * <ul>
          * <li>Subscription: subscription.</li>
          * <li>PayAsYouGo: pay-as-you-go.</li>

@@ -118,7 +118,7 @@ public class DescribeSavingsPlansUsageTotalRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the resource ownership account. The resource ownership account is the account that actually uses the resources.</p>
+         * <p>The ID of the account with resource ownership, which is the account that actually uses the resources.</p>
          * 
          * <strong>example:</strong>
          * <p>123745698925000</p>
@@ -130,7 +130,7 @@ public class DescribeSavingsPlansUsageTotalRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. The end time is excluded from the time range. If you do not set this parameter, the end time is the current time. Format: yyyy-MM-dd HH:mm:ss.</p>
+         * <p>The end time of the time range to query. The end time is not included in the time range. If you do not specify this parameter, the end time is the current time. Specify the time in the yyyy-MM-dd HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-02 00:00:00</p>
@@ -142,7 +142,7 @@ public class DescribeSavingsPlansUsageTotalRequest extends Request {
         }
 
         /**
-         * FilterParam.
+         * <p>The filter parameters.</p>
          */
         public Builder filterParam(FilterParam filterParam) {
             String filterParamShrink = shrink(filterParam, "FilterParam", "json");
@@ -152,7 +152,7 @@ public class DescribeSavingsPlansUsageTotalRequest extends Request {
         }
 
         /**
-         * <p>The time granularity of the usage summary. Valid values: MONTH, DAY, HOUR.</p>
+         * <p>The time granularity for querying the usage summary. Valid values: MONTH, DAY, and HOUR.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -165,7 +165,7 @@ public class DescribeSavingsPlansUsageTotalRequest extends Request {
         }
 
         /**
-         * <p>The start of the time range to query. The start time is included in the time range. Format: yyyy-MM-dd HH:mm:ss.</p>
+         * <p>The start time of the time range to query. The start time is included in the time range. Specify the time in the yyyy-MM-dd HH:mm:ss format.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -250,7 +250,7 @@ public class DescribeSavingsPlansUsageTotalRequest extends Request {
             } 
 
             /**
-             * Code.
+             * <p>The dimension code.</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -258,7 +258,7 @@ public class DescribeSavingsPlansUsageTotalRequest extends Request {
             }
 
             /**
-             * SelectType.
+             * <p>The selection method for dimension filtering.</p>
              */
             public Builder selectType(String selectType) {
                 this.selectType = selectType;
@@ -266,7 +266,7 @@ public class DescribeSavingsPlansUsageTotalRequest extends Request {
             }
 
             /**
-             * Values.
+             * <p>The list of dimension filter values.</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;
@@ -346,7 +346,7 @@ public class DescribeSavingsPlansUsageTotalRequest extends Request {
             } 
 
             /**
-             * Code.
+             * <p>The tag code.</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -354,7 +354,7 @@ public class DescribeSavingsPlansUsageTotalRequest extends Request {
             }
 
             /**
-             * SelectType.
+             * <p>The selection method for tag filtering.</p>
              */
             public Builder selectType(String selectType) {
                 this.selectType = selectType;
@@ -362,7 +362,7 @@ public class DescribeSavingsPlansUsageTotalRequest extends Request {
             }
 
             /**
-             * Values.
+             * <p>The list of tag filter values.</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;
@@ -429,7 +429,7 @@ public class DescribeSavingsPlansUsageTotalRequest extends Request {
             } 
 
             /**
-             * Dimensions.
+             * <p>The list of dimension filter conditions.</p>
              */
             public Builder dimensions(java.util.List<Dimensions> dimensions) {
                 this.dimensions = dimensions;
@@ -437,7 +437,7 @@ public class DescribeSavingsPlansUsageTotalRequest extends Request {
             }
 
             /**
-             * Tags.
+             * <p>The list of tag filter conditions.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;

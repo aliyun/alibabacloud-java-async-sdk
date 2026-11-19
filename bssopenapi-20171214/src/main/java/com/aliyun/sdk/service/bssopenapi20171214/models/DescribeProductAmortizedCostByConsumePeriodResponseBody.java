@@ -117,7 +117,7 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The message description.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The message description.</p>
          * 
          * <strong>example:</strong>
          * <p>Successful！</p>
@@ -147,7 +147,7 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -852,10 +852,8 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             /**
              * <p>The amortization status. Valid values:</p>
              * <ul>
-             * <li><p>amortized: The cost is amortized.</p>
-             * </li>
-             * <li><p>unAmortized: The cost is not amortized.</p>
-             * </li>
+             * <li>amortized: amortized</li>
+             * <li>unAmortized: unamortized</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -889,7 +887,7 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * <p>The ID of the resource owner.</p>
+             * <p>The resource ownership account ID.</p>
              * 
              * <strong>example:</strong>
              * <p>185xxxxx489</p>
@@ -900,7 +898,7 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * <p>The name of the resource owner.</p>
+             * <p>The name of the account to which the resource belongs.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="mailto:test@test.aliyunid.com">test@test.aliyunid.com</a></p>
@@ -934,7 +932,7 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * <p>The amortized amount for the current period after discount.</p>
+             * <p>The current amortization amount after discount.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -945,7 +943,7 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * <p>The amount deducted by cash coupons that is amortized in the current period.</p>
+             * <p>The current amortization amount deducted by vouchers.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -956,7 +954,7 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * <p>The amount deducted by coupons that is amortized in the current period.</p>
+             * <p>The current amortization amount deducted by coupons.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -967,7 +965,7 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * <p>The amount paid with a prepaid card that is amortized in the current period.</p>
+             * <p>The current amortization amount paid by prepaid cards.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -978,7 +976,7 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * <p>The expenditure amount (which can be invoiced) amortized in the current period.</p>
+             * <p>The current amortization expenditure amount (invoiceable).</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -989,7 +987,7 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * <p>The discount amortized in the current period.</p>
+             * <p>The current amortization discount amount.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1000,7 +998,7 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * <p>The pretax amount amortized in the current period.</p>
+             * <p>The current amortization payable amount.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1011,7 +1009,7 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * <p>The list price amortized in the current period.</p>
+             * <p>The current amortization list price.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1022,7 +1020,7 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * <p>The amount deducted by rounding down that is amortized in the current period.</p>
+             * <p>The current amortization round-down discount amount.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1033,7 +1031,7 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * <p>The amount deducted by cash coupons.</p>
+             * <p>The amount deducted by vouchers.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1055,7 +1053,7 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * <p>The amount paid with a prepaid card.</p>
+             * <p>The amount paid by prepaid cards.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1066,7 +1064,7 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * <p>The expenditure amount (which can be invoiced).</p>
+             * <p>The expenditure amount (invoiceable).</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1077,7 +1075,7 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * <p>The discount.</p>
+             * <p>The discount amount.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1088,7 +1086,7 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * <p>The pretax amount.</p>
+             * <p>The payable amount.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1121,7 +1119,7 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * <p>The previously amortized amount deducted by cash coupons.</p>
+             * <p>The previously amortized amount deducted by vouchers.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1143,7 +1141,7 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * <p>The previously amortized amount paid with a prepaid card.</p>
+             * <p>The previously amortized amount paid by prepaid cards.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1154,7 +1152,7 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * <p>The previously amortized expenditure amount (which can be invoiced).</p>
+             * <p>The previously amortized expenditure amount (invoiceable).</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1165,7 +1163,7 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * <p>The previously amortized discount.</p>
+             * <p>The previously amortized discount amount.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1176,7 +1174,7 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * <p>The previously amortized pretax amount.</p>
+             * <p>The previously amortized payable amount.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1198,7 +1196,7 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * <p>The previously amortized amount deducted by rounding down.</p>
+             * <p>The previously amortized round-down discount amount.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1220,10 +1218,10 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * <p>The product details.</p>
+             * <p>The product detail.</p>
              * 
              * <strong>example:</strong>
-             * <p>云数据库RDS</p>
+             * <p>ApsaraDB RDS</p>
              */
             public Builder productDetail(String productDetail) {
                 this.productDetail = productDetail;
@@ -1231,7 +1229,7 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * <p>The code of the product details.</p>
+             * <p>The product detail code.</p>
              * 
              * <strong>example:</strong>
              * <p>rds</p>
@@ -1245,7 +1243,7 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
              * <p>The product name.</p>
              * 
              * <strong>example:</strong>
-             * <p>云数据库RDS</p>
+             * <p>ApsaraDB RDS</p>
              */
             public Builder productName(String productName) {
                 this.productName = productName;
@@ -1253,7 +1251,7 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * <p>The remaining unamortized amount after discount.</p>
+             * <p>The remaining amortization amount after discount.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1264,7 +1262,7 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * <p>The remaining unamortized amount deducted by cash coupons.</p>
+             * <p>The remaining amortization amount deducted by vouchers.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1275,7 +1273,7 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * <p>The remaining unamortized amount deducted by coupons.</p>
+             * <p>The remaining amortization amount deducted by coupons.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1286,7 +1284,7 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * <p>The remaining unamortized amount paid with a prepaid card.</p>
+             * <p>The remaining amortization amount paid by prepaid cards.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1297,7 +1295,7 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * <p>The remaining unamortized expenditure amount (which can be invoiced).</p>
+             * <p>The remaining amortization expenditure amount (invoiceable).</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1308,7 +1306,7 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * <p>The remaining unamortized discount.</p>
+             * <p>The remaining amortization discount amount.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1319,7 +1317,7 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * <p>The remaining unamortized pretax amount.</p>
+             * <p>The remaining amortization payable amount.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1330,7 +1328,7 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * <p>The remaining unamortized list price.</p>
+             * <p>The remaining amortization list price.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1341,7 +1339,7 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * <p>The remaining unamortized amount deducted by rounding down.</p>
+             * <p>The remaining amortization round-down discount amount.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1352,7 +1350,7 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * <p>The amount deducted by rounding down.</p>
+             * <p>The round-down discount amount.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1365,10 +1363,8 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             /**
              * <p>The subscription type. Valid values:</p>
              * <ul>
-             * <li><p>Subscription: subscription.</p>
-             * </li>
-             * <li><p>PayAsYouGo: pay-as-you-go.</p>
-             * </li>
+             * <li>Subscription: subscription</li>
+             * <li>PayAsYouGo: pay-as-you-go</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1521,7 +1517,7 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * <p>The maximum number of entries returned for the current request.</p>
+             * <p>The maximum number of records returned for the current request.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -1532,7 +1528,7 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * <p>The token that marks the position of the next query.</p>
+             * <p>The token that specifies the position from which the current call starts reading. The value must be empty or set to the NextToken value returned in the previous response. Otherwise, an error occurs. An empty value indicates that the reading starts from the beginning.</p>
              * 
              * <strong>example:</strong>
              * <p>CAESEgoQCg4KCmdtdF9jcmVhdGUEARgBIkgKCQBwhGmPcAEAAAo7AzYAAAAxTDgwMDcxMjg3ZDJhNmM3ZDguTDgwMDAwMDAwMDAwMzE1MTIuTDgwMDcyZDMyZTJkYzg3N2U</p>
@@ -1543,7 +1539,7 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * <p>The total number of entries.</p>
+             * <p>The total number of records.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

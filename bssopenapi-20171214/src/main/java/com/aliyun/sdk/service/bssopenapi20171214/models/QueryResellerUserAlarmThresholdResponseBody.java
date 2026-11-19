@@ -119,7 +119,7 @@ public class QueryResellerUserAlarmThresholdResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code of the request. If the call fails, an error code is returned.</p>
+         * <p>The code returned by the call. Typically, this is an error code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -130,7 +130,7 @@ public class QueryResellerUserAlarmThresholdResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total count.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -141,7 +141,7 @@ public class QueryResellerUserAlarmThresholdResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -149,7 +149,7 @@ public class QueryResellerUserAlarmThresholdResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned. If the call fails, an error message is returned.</p>
+         * <p>The message returned by the call. Typically, this is an error message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -160,7 +160,7 @@ public class QueryResellerUserAlarmThresholdResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>EAE08A27-386C-579E-966D-8853EC3C5D0E</p>
@@ -266,7 +266,7 @@ public class QueryResellerUserAlarmThresholdResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The denominator of the alert percentage. This parameter is valid only when ThresholdType is set to 1.</p>
+             * <p>The denominator of the alert percentage. This parameter is valid when the alert type is 1.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -277,7 +277,7 @@ public class QueryResellerUserAlarmThresholdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The numerator of the alert percentage. This parameter is valid only when ThresholdType is set to 1.</p>
+             * <p>The numerator of the alert percentage. This parameter is valid when the alert type is 1.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -288,7 +288,7 @@ public class QueryResellerUserAlarmThresholdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The alert threshold in amount. This parameter is valid only when ThresholdType is set to 0.</p>
+             * <p>The alert threshold amount. This parameter is valid when the alert type is 0.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -299,7 +299,7 @@ public class QueryResellerUserAlarmThresholdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the alert threshold. Valid values: 0 (amount) and 1 (percentage).</p>
+             * <p>The alert type. Valid values: 0: Numerical value. 1: Percentage.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>

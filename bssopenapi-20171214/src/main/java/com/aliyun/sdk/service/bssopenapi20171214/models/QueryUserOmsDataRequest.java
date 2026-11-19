@@ -147,17 +147,7 @@ public class QueryUserOmsDataRequest extends Request {
         } 
 
         /**
-         * <p>The data timestamp type of the metering data. Refer to the specific service documentation for details. Valid values:</p>
-         * <ul>
-         * <li>Raw: hourly</li>
-         * <li>Hour: hourly</li>
-         * <li>Day: daily</li>
-         * <li>Month: monthly</li>
-         * </ul>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Hour</p>
          */
         public Builder dataType(String dataType) {
             this.putQueryParameter("DataType", dataType);
@@ -166,12 +156,7 @@ public class QueryUserOmsDataRequest extends Request {
         }
 
         /**
-         * <p>The end time of the request.</p>
-         * <p>The date format must comply with the ISO 8601 standard and use UTC time. Format: yyyy-mm-ddThh:mm:ssZ.</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2020-02-21T12:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -180,10 +165,7 @@ public class QueryUserOmsDataRequest extends Request {
         }
 
         /**
-         * <p>The marker that specifies the starting point for returning results in alphabetical order after the NextToken. By default, results are returned from the beginning.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>NextToken</p>
+         * Marker.
          */
         public Builder marker(String marker) {
             this.putQueryParameter("Marker", marker);
@@ -201,10 +183,7 @@ public class QueryUserOmsDataRequest extends Request {
         }
 
         /**
-         * <p>The number of rows per page for paging in a paged query. Valid values: 1 to 200. Default value: 100.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -213,12 +192,7 @@ public class QueryUserOmsDataRequest extends Request {
         }
 
         /**
-         * <p>The start time of the request.</p>
-         * <p>The date format must comply with the ISO 8601 standard and use UTC time. Format: yyyy-mm-ddThh:mm:ssZ.</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2020-02-20T12:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -227,11 +201,7 @@ public class QueryUserOmsDataRequest extends Request {
         }
 
         /**
-         * <p>The product and detail information for the usage data, which is typically the ProductCode. Different services support multiple metering models.</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rds</p>
          */
         public Builder table(String table) {
             this.putQueryParameter("Table", table);

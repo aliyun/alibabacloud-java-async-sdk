@@ -118,7 +118,7 @@ public class DescribeSavingsPlansCoverageTotalRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the resource ownership account. The resource ownership account is the account that actually uses the resource.</p>
+         * <p>The ID of the resource ownership account. The resource ownership account is the account that actually uses the resources.</p>
          * 
          * <strong>example:</strong>
          * <p>123745698925000</p>
@@ -130,7 +130,7 @@ public class DescribeSavingsPlansCoverageTotalRequest extends Request {
         }
 
         /**
-         * <p>Format: yyyy-MM-dd HH:mm:ss. The query excludes this time. If this parameter is left empty, the query covers data up to the current time.</p>
+         * <p>The end time of the query. Format: yyyy-MM-dd HH:mm:ss. The specified end time is excluded from the query. If this parameter is left empty, the current time is used as the end time.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-07-20 00:00:00</p>
@@ -142,7 +142,7 @@ public class DescribeSavingsPlansCoverageTotalRequest extends Request {
         }
 
         /**
-         * FilterParam.
+         * <p>The filter parameters.</p>
          */
         public Builder filterParam(FilterParam filterParam) {
             String filterParamShrink = shrink(filterParam, "FilterParam", "json");
@@ -152,11 +152,11 @@ public class DescribeSavingsPlansCoverageTotalRequest extends Request {
         }
 
         /**
-         * <p>Valid values:</p>
+         * <p>The time granularity. Valid values:</p>
          * <ul>
-         * <li>MONTH: month granularity.</li>
-         * <li>DAY: day granularity.</li>
-         * <li>HOUR: hour granularity.</li>
+         * <li>MONTH: month</li>
+         * <li>DAY: day</li>
+         * <li>HOUR: hour</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -170,7 +170,7 @@ public class DescribeSavingsPlansCoverageTotalRequest extends Request {
         }
 
         /**
-         * <p>Format: yyyy-MM-dd HH:mm:ss. The query includes this time.</p>
+         * <p>The start time of the query. Format: yyyy-MM-dd HH:mm:ss. The specified start time is included in the query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -255,7 +255,10 @@ public class DescribeSavingsPlansCoverageTotalRequest extends Request {
             } 
 
             /**
-             * Code.
+             * <p>The dimension code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>COMMODITY</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -263,7 +266,10 @@ public class DescribeSavingsPlansCoverageTotalRequest extends Request {
             }
 
             /**
-             * SelectType.
+             * <p>The selection method for dimension filtering.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IN</p>
              */
             public Builder selectType(String selectType) {
                 this.selectType = selectType;
@@ -271,7 +277,7 @@ public class DescribeSavingsPlansCoverageTotalRequest extends Request {
             }
 
             /**
-             * Values.
+             * <p>The list of dimension filter values.</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;
@@ -351,7 +357,7 @@ public class DescribeSavingsPlansCoverageTotalRequest extends Request {
             } 
 
             /**
-             * Code.
+             * <p>The tag code.</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -359,7 +365,7 @@ public class DescribeSavingsPlansCoverageTotalRequest extends Request {
             }
 
             /**
-             * SelectType.
+             * <p>The selection method for tag filtering.</p>
              */
             public Builder selectType(String selectType) {
                 this.selectType = selectType;
@@ -367,7 +373,7 @@ public class DescribeSavingsPlansCoverageTotalRequest extends Request {
             }
 
             /**
-             * Values.
+             * <p>The list of tag filter values.</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;
@@ -434,7 +440,7 @@ public class DescribeSavingsPlansCoverageTotalRequest extends Request {
             } 
 
             /**
-             * Dimensions.
+             * <p>The list of dimension filter conditions.</p>
              */
             public Builder dimensions(java.util.List<Dimensions> dimensions) {
                 this.dimensions = dimensions;
@@ -442,7 +448,7 @@ public class DescribeSavingsPlansCoverageTotalRequest extends Request {
             }
 
             /**
-             * Tags.
+             * <p>The list of tag filter conditions.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;

@@ -149,7 +149,7 @@ public class RenewResourcePackageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the order.</p>
+         * <p>The order ID.</p>
          * 
          * <strong>example:</strong>
          * <p>204322301110333</p>
@@ -160,7 +160,7 @@ public class RenewResourcePackageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>6000EE23-274B-4E07-A697-FF2E999520A4</p>
@@ -171,7 +171,7 @@ public class RenewResourcePackageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -240,7 +240,7 @@ public class RenewResourcePackageResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the instance.</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>OSSBAG-cn-0xl0n****003</p>
@@ -251,7 +251,7 @@ public class RenewResourcePackageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the order.</p>
+             * <p>The order ID.</p>
              * 
              * <strong>example:</strong>
              * <p>204322560333</p>

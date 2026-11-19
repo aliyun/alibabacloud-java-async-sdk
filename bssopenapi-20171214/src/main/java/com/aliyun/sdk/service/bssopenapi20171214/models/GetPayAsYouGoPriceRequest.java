@@ -176,7 +176,7 @@ public class GetPayAsYouGoPriceRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the instance.</p>
+         * <p>The region ID of the instance. If DescribePricingModule returns a region ID, this parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -188,7 +188,7 @@ public class GetPayAsYouGoPriceRequest extends Request {
         }
 
         /**
-         * <p>The subscription type. Valid values: PayAsYouGo.</p>
+         * <p>The subscription type. Valid values: PayAsYouGo (pay-as-you-go).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -276,9 +276,9 @@ public class GetPayAsYouGoPriceRequest extends Request {
             } 
 
             /**
-             * <p>The configuration of the Nth pricing module. The value of N ranges from 1 to 50. Format: &quot;AA:aa,BB:bb&quot;, where AA and BB are the property codes of the pricing module, and aa and bb are the corresponding property values.</p>
+             * <p>The configuration of the Nth pricing module. Valid values of N: 1 to 50. Format: AA:aa,BB:bb, where AA and BB are the identifiers of the pricing module attributes, and aa and bb are the attribute values of the pricing module attributes.</p>
              * <blockquote>
-             * <p>You can call the <a href="https://help.aliyun.com/document_detail/96469.html">DescribePricingModule</a> operation to obtain the Module parameter.</p>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/96469.html">DescribePricingModule</a> operation to retrieve the Module parameter.</p>
              * </blockquote>
              * <p>This parameter is required.</p>
              * 
@@ -291,9 +291,9 @@ public class GetPayAsYouGoPriceRequest extends Request {
             }
 
             /**
-             * <p>The module code of the Nth pricing module.</p>
+             * <p>The identifier of the Nth pricing module.</p>
              * <blockquote>
-             * <p>You can call the <a href="https://help.aliyun.com/document_detail/96469.html">DescribePricingModule</a> operation to obtain the Module parameter.</p>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/96469.html">DescribePricingModule</a> operation to retrieve the Module parameter.</p>
              * </blockquote>
              * <p>This parameter is required.</p>
              * 
@@ -309,12 +309,12 @@ public class GetPayAsYouGoPriceRequest extends Request {
              * <p>The price type of the Nth pricing module. Valid values:</p>
              * <ul>
              * <li>Hour: hourly price.</li>
-             * <li>Usage: usage-based price.</li>
+             * <li>Usage: usage.</li>
              * <li>Month: monthly price.</li>
              * <li>Year: yearly price.</li>
              * </ul>
              * <blockquote>
-             * <p>You can call the <a href="https://help.aliyun.com/document_detail/96469.html">DescribePricingModule</a> operation to obtain the Module parameter.</p>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/96469.html">DescribePricingModule</a> operation to retrieve the Module parameter.</p>
              * </blockquote>
              * <p>This parameter is required.</p>
              * 

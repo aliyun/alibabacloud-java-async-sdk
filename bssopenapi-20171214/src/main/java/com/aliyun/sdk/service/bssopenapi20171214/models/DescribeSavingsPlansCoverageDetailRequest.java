@@ -146,7 +146,7 @@ public class DescribeSavingsPlansCoverageDetailRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the resource ownership account. The resource ownership account is the account that actually uses the resource.</p>
+         * <p>The ID of the account with resource ownership. The account with resource ownership is the account that actually uses the resource.</p>
          * 
          * <strong>example:</strong>
          * <p>123745698925000</p>
@@ -158,7 +158,7 @@ public class DescribeSavingsPlansCoverageDetailRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. The end time is excluded from the time range. If you do not set this parameter, the end time is the current time. Format: yyyy-MM-dd HH:mm:ss.</p>
+         * <p>The end time of the time range to query. The end time is not included in the time range. If you do not specify this parameter, the end time is the current time. Specify the time in the yyyy-MM-dd HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-01 00:00:00</p>
@@ -170,7 +170,7 @@ public class DescribeSavingsPlansCoverageDetailRequest extends Request {
         }
 
         /**
-         * FilterParam.
+         * <p>The filter parameters.</p>
          */
         public Builder filterParam(FilterParam filterParam) {
             String filterParamShrink = shrink(filterParam, "FilterParam", "json");
@@ -180,7 +180,7 @@ public class DescribeSavingsPlansCoverageDetailRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return.</p>
+         * <p>The maximum number of results to return.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -192,7 +192,7 @@ public class DescribeSavingsPlansCoverageDetailRequest extends Request {
         }
 
         /**
-         * <p>The time granularity for querying the usage summary. Valid values: MONTH, DAY, HOUR.</p>
+         * <p>The time granularity for querying the usage summary. Valid values: MONTH, DAY, and HOUR.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -205,7 +205,7 @@ public class DescribeSavingsPlansCoverageDetailRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. The start time is included in the time range. Format: yyyy-MM-dd HH:mm:ss.</p>
+         * <p>The start time of the time range to query. The start time is included in the time range. Specify the time in the yyyy-MM-dd HH:mm:ss format.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -218,7 +218,7 @@ public class DescribeSavingsPlansCoverageDetailRequest extends Request {
         }
 
         /**
-         * <p>The pagination token. Leave this parameter empty for the first page. The response returns the token for the next page. An empty token in the response indicates that all data has been returned.</p>
+         * <p>The pagination token. Leave this parameter empty when you query the first page. The token for the next page is returned in the response. An empty token indicates that all results have been retrieved.</p>
          * 
          * <strong>example:</strong>
          * <p>eyJwYWdlTnVtIjoyLCJwYWdlU2l6ZSI6MTB9</p>
@@ -302,7 +302,7 @@ public class DescribeSavingsPlansCoverageDetailRequest extends Request {
             } 
 
             /**
-             * Code.
+             * <p>The dimension code.</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -310,7 +310,7 @@ public class DescribeSavingsPlansCoverageDetailRequest extends Request {
             }
 
             /**
-             * SelectType.
+             * <p>The selection method for dimension filtering.</p>
              */
             public Builder selectType(String selectType) {
                 this.selectType = selectType;
@@ -318,7 +318,7 @@ public class DescribeSavingsPlansCoverageDetailRequest extends Request {
             }
 
             /**
-             * Values.
+             * <p>The list of dimension filter values.</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;
@@ -398,7 +398,7 @@ public class DescribeSavingsPlansCoverageDetailRequest extends Request {
             } 
 
             /**
-             * Code.
+             * <p>The tag code.</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -406,7 +406,7 @@ public class DescribeSavingsPlansCoverageDetailRequest extends Request {
             }
 
             /**
-             * SelectType.
+             * <p>The selection method for tag filtering.</p>
              */
             public Builder selectType(String selectType) {
                 this.selectType = selectType;
@@ -414,7 +414,7 @@ public class DescribeSavingsPlansCoverageDetailRequest extends Request {
             }
 
             /**
-             * Values.
+             * <p>The list of tag filter values.</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;
@@ -481,7 +481,7 @@ public class DescribeSavingsPlansCoverageDetailRequest extends Request {
             } 
 
             /**
-             * Dimensions.
+             * <p>The list of dimension filter conditions.</p>
              */
             public Builder dimensions(java.util.List<Dimensions> dimensions) {
                 this.dimensions = dimensions;
@@ -489,7 +489,7 @@ public class DescribeSavingsPlansCoverageDetailRequest extends Request {
             }
 
             /**
-             * Tags.
+             * <p>The list of tag filter conditions.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;

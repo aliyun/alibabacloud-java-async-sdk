@@ -424,7 +424,7 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time. The time is in the ISO 8601 standard in the UTC format (YYYY-MM-DDTHH:mm:ssZ).</p>
+             * <p>The creation time in the ISO 8601 standard in the UTC format (YYYY-MM-DDTHH:mm:ssZ).</p>
              * 
              * <strong>example:</strong>
              * <p>2019-09-08T16:00:00Z</p>
@@ -435,7 +435,7 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time. The time is in the ISO 8601 standard in the UTC format (YYYY-MM-DDTHH:mm:ssZ).</p>
+             * <p>The end time in the ISO 8601 standard in the UTC format (YYYY-MM-DDTHH:mm:ssZ).</p>
              * 
              * <strong>example:</strong>
              * <p>2019-09-08T16:00:00Z</p>
@@ -446,7 +446,7 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expected release time. The time is in the ISO 8601 standard in the UTC format (YYYY-MM-DDTHH:mm:ssZ).</p>
+             * <p>The expected release time in the ISO 8601 standard in the UTC format (YYYY-MM-DDTHH:mm:ssZ).</p>
              * 
              * <strong>example:</strong>
              * <p>2019-09-08T16:00:00Z</p>
@@ -512,7 +512,7 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The release time. The time is in the ISO 8601 standard in the UTC format (YYYY-MM-DDTHH:mm:ssZ).</p>
+             * <p>The release time in the ISO 8601 standard in the UTC format (YYYY-MM-DDTHH:mm:ssZ).</p>
              * 
              * <strong>example:</strong>
              * <p>2019-09-08T16:00:00Z</p>
@@ -539,7 +539,7 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of auto-renewal epochs.</p>
+             * <p>The number of units for the auto-renewal cycle.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -550,7 +550,7 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unit of the auto-renewal epoch. Valid values:</p>
+             * <p>The unit of the auto-renewal cycle. Valid values:</p>
              * <ul>
              * <li>M: month.</li>
              * <li>Y: year.</li>
@@ -601,7 +601,7 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The stop time. The time is in the ISO 8601 standard in the UTC format (YYYY-MM-DDTHH:mm:ssZ).</p>
+             * <p>The stop time in the ISO 8601 standard in the UTC format (YYYY-MM-DDTHH:mm:ssZ).</p>
              * 
              * <strong>example:</strong>
              * <p>2019-09-08T16:00:00Z</p>
@@ -755,7 +755,7 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries.</p>
+             * <p>The total number of records.</p>
              * 
              * <strong>example:</strong>
              * <p>11</p>

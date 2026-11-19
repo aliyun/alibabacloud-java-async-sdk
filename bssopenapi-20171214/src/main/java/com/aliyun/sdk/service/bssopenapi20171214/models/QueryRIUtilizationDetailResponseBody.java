@@ -106,7 +106,7 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>

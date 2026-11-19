@@ -201,7 +201,7 @@ public class QueryBillRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the resource ownership account. The resource ownership account is the account that actually uses the resource.</p>
+         * <p>The ID of the account with resource ownership. The account with resource ownership is the account that actually uses the resource.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -213,7 +213,7 @@ public class QueryBillRequest extends Request {
         }
 
         /**
-         * <p>The billing cycle, in the YYYY-MM format.</p>
+         * <p>The billing cycle. Format: YYYY-MM.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -235,10 +235,10 @@ public class QueryBillRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to filter out bills with a original price (PretaxGrossAmount) of 0. Default value: false (compatible with existing logic). Valid values:</p>
+         * <p>Specifies whether to filter out bills whose original price (PretaxGrossAmount) is 0. Default value: false (for compatibility with existing logic). Valid values:</p>
          * <ul>
-         * <li>true: filters out zero-charge bills.</li>
-         * <li>false: does not filter out zero-charge bills.</li>
+         * <li>true: Yes.</li>
+         * <li>false: No.</li>
          * </ul>
          * 
          * <strong>example:</strong>

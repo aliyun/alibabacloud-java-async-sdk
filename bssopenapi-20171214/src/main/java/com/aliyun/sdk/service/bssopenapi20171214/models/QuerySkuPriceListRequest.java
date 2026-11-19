@@ -196,6 +196,9 @@ public class QuerySkuPriceListRequest extends Request {
 
         /**
          * <p>The collection of pricing factor conditions. You can call the <strong>QueryPriceEntityList</strong> operation to query pricing factor codes and pricing factor values.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;vm_region_no&quot;:[&quot;cn-shiwei-shenshu&quot;]}</p>
          */
         public Builder priceFactorConditionMap(java.util.Map<String, java.util.List<String>> priceFactorConditionMap) {
             String priceFactorConditionMapShrink = shrink(priceFactorConditionMap, "PriceFactorConditionMap", "json");

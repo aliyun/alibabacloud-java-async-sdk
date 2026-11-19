@@ -106,7 +106,7 @@ public class QueryResellerAvailableQuotaResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code returned if the call fails. See the &quot;Error codes&quot; section of this topic.</p>
+         * <p>The error code returned when the call fails. For more information, see Error codes.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class QueryResellerAvailableQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The available quota balance of the user.</p>
+         * <p>The available quota balance information for the user.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -128,7 +128,7 @@ public class QueryResellerAvailableQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Additional information about the result.</p>
+         * <p>The additional information about the call result.</p>
          * 
          * <strong>example:</strong>
          * <p>Successful!</p>
@@ -150,7 +150,7 @@ public class QueryResellerAvailableQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful. A value of <code>true</code> indicates that the call was successful. A value of <code>false</code> indicates that the call failed.</p>
+         * <p>Indicates whether the call was successful. A value of true indicates that the call was successful. A value of false indicates that an error occurred.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

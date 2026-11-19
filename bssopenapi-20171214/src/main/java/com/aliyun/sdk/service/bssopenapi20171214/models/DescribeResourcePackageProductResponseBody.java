@@ -119,7 +119,7 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code returned.</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -130,7 +130,7 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -138,7 +138,7 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>Successful!</p>
@@ -149,7 +149,7 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the order.</p>
+         * <p>The order ID.</p>
          * 
          * <strong>example:</strong>
          * <p>72353765387</p>
@@ -160,7 +160,7 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>BBEF51A3-E933-4F40-A534-C673CBDB9C80</p>
@@ -695,7 +695,7 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The status code returned.</p>
+             * <p>The status code.</p>
              * 
              * <strong>example:</strong>
              * <p>Success</p>

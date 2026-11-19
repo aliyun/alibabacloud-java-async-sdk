@@ -125,7 +125,7 @@ public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned for the API call.</p>
+         * <p>The API call message.</p>
          * 
          * <strong>example:</strong>
          * <p>Successful!</p>
@@ -147,7 +147,7 @@ public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the API call was successful.</p>
+         * <p>Indicates whether the API call is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -216,7 +216,7 @@ public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The usage percentage.</p>
+             * <p>The usage rate.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -227,7 +227,7 @@ public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time period to which the data belongs. Format: yyyyMMddHH.</p>
+             * <p>The time period to which the data belongs, in the yyyyMMddHH format.</p>
              * 
              * <strong>example:</strong>
              * <p>2021041500</p>
@@ -323,7 +323,7 @@ public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The total amount of savings plans.</p>
+             * <p>The total amount of the savings plan.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -356,7 +356,7 @@ public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total usage percentage.</p>
+             * <p>The total usage rate.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -434,7 +434,7 @@ public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total usage overview.</p>
+             * <p>The overview of the total usage rate.</p>
              */
             public Builder totalUsage(TotalUsage totalUsage) {
                 this.totalUsage = totalUsage;

@@ -125,7 +125,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned for the API call.</p>
+         * <p>The API call message.</p>
          * 
          * <strong>example:</strong>
          * <p>Successful!</p>
@@ -147,7 +147,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the API call was successful.</p>
+         * <p>Indicates whether the API call is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -359,7 +359,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The coverage percentage.</p>
+             * <p>The coverage rate.</p>
              * 
              * <strong>example:</strong>
              * <p>0.9</p>
@@ -425,7 +425,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the owner of the deducted commodity.</p>
+             * <p>The ID of the owner of the deducted product.</p>
              * 
              * <strong>example:</strong>
              * <p>1906589291020438</p>
@@ -469,7 +469,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total expenditure.</p>
+             * <p>The total amount.</p>
              * 
              * <strong>example:</strong>
              * <p>6.11</p>
@@ -491,7 +491,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The username.</p>
+             * <p>The account username.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="mailto:xxx@test.aliyunid.com">xxx@test.aliyunid.com</a></p>
@@ -593,7 +593,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries.</p>
+             * <p>The total number of data entries.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

@@ -223,7 +223,7 @@ public class AttributeInfoDTO extends TeaModel {
         } 
 
         /**
-         * <p>The property categories.</p>
+         * <p>The attribute categories.</p>
          */
         public Builder attributeCategories(java.util.List<String> attributeCategories) {
             this.attributeCategories = attributeCategories;
@@ -231,7 +231,7 @@ public class AttributeInfoDTO extends TeaModel {
         }
 
         /**
-         * <p>The property source.</p>
+         * <p>The attribute source.</p>
          */
         public Builder attributeSource(String attributeSource) {
             this.attributeSource = attributeSource;
@@ -239,7 +239,7 @@ public class AttributeInfoDTO extends TeaModel {
         }
 
         /**
-         * <p>The property type.</p>
+         * <p>The attribute type.</p>
          */
         public Builder attributeType(String attributeType) {
             this.attributeType = attributeType;
@@ -247,7 +247,7 @@ public class AttributeInfoDTO extends TeaModel {
         }
 
         /**
-         * <p>The property code.</p>
+         * <p>The attribute code.</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -255,7 +255,7 @@ public class AttributeInfoDTO extends TeaModel {
         }
 
         /**
-         * <p>The composite properties (basic information).</p>
+         * <p>The composite attributes (basic information).</p>
          */
         public Builder compositeAttributes(java.util.List<BaseAttributeInfoDTO> compositeAttributes) {
             this.compositeAttributes = compositeAttributes;
@@ -263,7 +263,7 @@ public class AttributeInfoDTO extends TeaModel {
         }
 
         /**
-         * <p>The property description (translated).</p>
+         * <p>The attribute description (translated).</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -271,7 +271,7 @@ public class AttributeInfoDTO extends TeaModel {
         }
 
         /**
-         * <p>The description properties (basic information).</p>
+         * <p>The description attributes (basic information).</p>
          */
         public Builder descriptionAttributes(java.util.List<BaseAttributeInfoDTO> descriptionAttributes) {
             this.descriptionAttributes = descriptionAttributes;
@@ -279,7 +279,7 @@ public class AttributeInfoDTO extends TeaModel {
         }
 
         /**
-         * <p>The property name (translated).</p>
+         * <p>The attribute name (translated).</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -287,7 +287,7 @@ public class AttributeInfoDTO extends TeaModel {
         }
 
         /**
-         * <p>The O&amp;M property configuration.</p>
+         * <p>The O&amp;M attribute configuration.</p>
          */
         public Builder operationalAttributeConfig(String operationalAttributeConfig) {
             this.operationalAttributeConfig = operationalAttributeConfig;
@@ -295,7 +295,7 @@ public class AttributeInfoDTO extends TeaModel {
         }
 
         /**
-         * <p>The O&amp;M property type.</p>
+         * <p>The O&amp;M attribute type.</p>
          */
         public Builder operationalAttributeType(String operationalAttributeType) {
             this.operationalAttributeType = operationalAttributeType;
@@ -303,7 +303,7 @@ public class AttributeInfoDTO extends TeaModel {
         }
 
         /**
-         * <p>The sub-properties (complete information).</p>
+         * <p>The sub-attributes (complete information).</p>
          */
         public Builder subAttributes(java.util.List<AttributeInfoDTO> subAttributes) {
             this.subAttributes = subAttributes;
@@ -327,7 +327,7 @@ public class AttributeInfoDTO extends TeaModel {
         }
 
         /**
-         * <p>The property value list.</p>
+         * <p>The attribute value list.</p>
          */
         public Builder values(java.util.List<AttributeValueInfoDTO> values) {
             this.values = values;

@@ -188,7 +188,7 @@ public class QueryDPUtilizationDetailRequest extends Request {
         } 
 
         /**
-         * <p>The commodity code, such as ecsRi and scu_bag. If this parameter is specified, the ProdCode parameter does not take effect.</p>
+         * <p>The commodity code, such as ecsRi or scu_bag. If this parameter is specified, the ProdCode parameter does not take effect.</p>
          * 
          * <strong>example:</strong>
          * <p>ecsRi</p>
@@ -225,7 +225,7 @@ public class QueryDPUtilizationDetailRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to include the resource plan usage of member accounts in finance trusteeship. Valid values:</p>
+         * <p>Specifies whether to include the resource plan usage of linked accounts in finance trusteeship. Valid values:</p>
          * <ul>
          * <li>true: Included.</li>
          * <li>false: Not included.</li>
@@ -266,7 +266,7 @@ public class QueryDPUtilizationDetailRequest extends Request {
         }
 
         /**
-         * <p>The token that specifies the start position of the query. Set this parameter to null for the first query. For subsequent queries, use the NextToken value returned in the previous response.</p>
+         * <p>The token that specifies the start of the query. Set this parameter to null for the first query. For subsequent queries, use the NextToken value returned in the previous response.</p>
          * 
          * <strong>example:</strong>
          * <p>CAESF***zNTAw</p>

@@ -243,7 +243,7 @@ public class BaseAttributeInfoDTO extends TeaModel {
         }
 
         /**
-         * <p>The property value list.</p>
+         * <p>The list of property values.</p>
          */
         public Builder values(java.util.List<AttributeValueInfoDTO> values) {
             this.values = values;

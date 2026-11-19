@@ -106,7 +106,7 @@ public class CreateResellerUserQuotaResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code that is returned if the call fails. For more information, see Error codes.</p>
+         * <p>The error code returned if the call fails. For more information, see Error codes.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class CreateResellerUserQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful.</p>
+         * <p>Indicates whether the call is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -128,7 +128,7 @@ public class CreateResellerUserQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The additional information about the call result.</p>
          * 
          * <strong>example:</strong>
          * <p>Successful!</p>
@@ -150,7 +150,7 @@ public class CreateResellerUserQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. A value of true indicates that the request was successful. A value of false indicates that the request failed.</p>
+         * <p>Indicates whether the call is successful. A value of true indicates that the call is completed. A value of false indicates that an error occurred during execution.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
