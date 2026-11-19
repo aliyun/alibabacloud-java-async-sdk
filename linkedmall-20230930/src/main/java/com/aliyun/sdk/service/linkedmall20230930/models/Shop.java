@@ -171,7 +171,10 @@ public class Shop extends TeaModel {
         } 
 
         /**
-         * cooperationShops.
+         * <p>The partner shops.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;shopId&quot;:&quot;22000019&quot;,&quot;cooperationCompanyId&quot;:&quot;11200003&quot;,&quot;cooperationShopId&quot;:&quot;21000026&quot;}]</p>
          */
         public Builder cooperationShops(java.util.List<CooperationShop> cooperationShops) {
             this.cooperationShops = cooperationShops;
@@ -179,7 +182,10 @@ public class Shop extends TeaModel {
         }
 
         /**
-         * distributorId.
+         * <p>The distributor ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12****09</p>
          */
         public Builder distributorId(String distributorId) {
             this.distributorId = distributorId;
@@ -187,7 +193,10 @@ public class Shop extends TeaModel {
         }
 
         /**
-         * endDate.
+         * <p>The end time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-09-11T12:22:24.000+08:00</p>
          */
         public Builder endDate(String endDate) {
             this.endDate = endDate;
@@ -195,7 +204,10 @@ public class Shop extends TeaModel {
         }
 
         /**
-         * purchaserId.
+         * <p>The purchaser ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PID56****2304</p>
          */
         public Builder purchaserId(String purchaserId) {
             this.purchaserId = purchaserId;
@@ -203,7 +215,10 @@ public class Shop extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>48A34399-A72C-1E23-8388-7E63****E927</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -211,7 +226,10 @@ public class Shop extends TeaModel {
         }
 
         /**
-         * shopId.
+         * <p>The shop ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22****09</p>
          */
         public Builder shopId(String shopId) {
             this.shopId = shopId;
@@ -219,7 +237,10 @@ public class Shop extends TeaModel {
         }
 
         /**
-         * shopName.
+         * <p>The shop name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Children\&quot;s distribution shop</p>
          */
         public Builder shopName(String shopName) {
             this.shopName = shopName;
@@ -227,7 +248,10 @@ public class Shop extends TeaModel {
         }
 
         /**
-         * shopType.
+         * <p>The shop type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DistributorQYG</p>
          */
         public Builder shopType(String shopType) {
             this.shopType = shopType;
@@ -235,7 +259,10 @@ public class Shop extends TeaModel {
         }
 
         /**
-         * startDate.
+         * <p>The start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-09-11T12:22:24.000+08:00</p>
          */
         public Builder startDate(String startDate) {
             this.startDate = startDate;
@@ -243,7 +270,10 @@ public class Shop extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The shop status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Working</p>
          */
         public Builder status(String status) {
             this.status = status;

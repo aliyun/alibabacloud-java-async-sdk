@@ -55,6 +55,7 @@ public class DivisionQuery extends TeaModel {
         } 
 
         /**
+         * <p>divisionCode</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

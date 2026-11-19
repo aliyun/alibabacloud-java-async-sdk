@@ -59,7 +59,7 @@ public class SplitPurchaseOrderRequest extends Request {
         } 
 
         /**
-         * body.
+         * <p>Input parameters for splitting and rendering a purchase order</p>
          */
         public Builder body(PurchaseOrderRenderQuery body) {
             this.putBodyParameter("body", body);

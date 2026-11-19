@@ -158,7 +158,10 @@ public class EticketInfo extends TeaModel {
         } 
 
         /**
-         * availableNum.
+         * <p>The number of unredeemed voucher electronic credentials.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder availableNum(Long availableNum) {
             this.availableNum = availableNum;
@@ -166,7 +169,10 @@ public class EticketInfo extends TeaModel {
         }
 
         /**
-         * code.
+         * <p>The code of the voucher electronic credential.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>taobao******tpg</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -174,7 +180,19 @@ public class EticketInfo extends TeaModel {
         }
 
         /**
-         * codeStatus.
+         * <p>The status of the voucher electronic credential.</p>
+         * <blockquote>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>1: valid</li>
+         * <li>-1: redeemed</li>
+         * <li>-2: expired</li>
+         * <li>100: locked</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder codeStatus(Long codeStatus) {
             this.codeStatus = codeStatus;
@@ -182,7 +200,10 @@ public class EticketInfo extends TeaModel {
         }
 
         /**
-         * endTime.
+         * <p>The end time of the validity period for the voucher electronic credential.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-08-02T23:59:59.000+08:00</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -190,7 +211,10 @@ public class EticketInfo extends TeaModel {
         }
 
         /**
-         * lockNum.
+         * <p>The number of voucher electronic credentials in locked status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder lockNum(Long lockNum) {
             this.lockNum = lockNum;
@@ -198,7 +222,10 @@ public class EticketInfo extends TeaModel {
         }
 
         /**
-         * qrcodeUrl.
+         * <p>The URL of the QR code image for the voucher electronic credential.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://qrcode.alicdn.com/img.jpg">http://qrcode.alicdn.com/img.jpg</a></p>
          */
         public Builder qrcodeUrl(String qrcodeUrl) {
             this.qrcodeUrl = qrcodeUrl;
@@ -206,7 +233,10 @@ public class EticketInfo extends TeaModel {
         }
 
         /**
-         * startTime.
+         * <p>The start time of the validity period for the voucher electronic credential.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-02-04T00:00:00.000+08:00</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -214,7 +244,10 @@ public class EticketInfo extends TeaModel {
         }
 
         /**
-         * useTime.
+         * <p>The redemption time of the voucher electronic credential.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-02-04T15:07:59.000+08:00</p>
          */
         public Builder useTime(String useTime) {
             this.useTime = useTime;
@@ -222,7 +255,10 @@ public class EticketInfo extends TeaModel {
         }
 
         /**
-         * usedNum.
+         * <p>The number of redeemed voucher electronic credentials.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder usedNum(Long usedNum) {
             this.usedNum = usedNum;

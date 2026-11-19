@@ -106,7 +106,10 @@ public class Category extends TeaModel {
         } 
 
         /**
-         * categoryId.
+         * <p>The ID of the category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>201792301</p>
          */
         public Builder categoryId(Long categoryId) {
             this.categoryId = categoryId;
@@ -114,7 +117,10 @@ public class Category extends TeaModel {
         }
 
         /**
-         * isLeaf.
+         * <p>Indicates whether the category is a leaf category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isLeaf(Boolean isLeaf) {
             this.isLeaf = isLeaf;
@@ -122,7 +128,10 @@ public class Category extends TeaModel {
         }
 
         /**
-         * level.
+         * <p>The level of the category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder level(Integer level) {
             this.level = level;
@@ -130,7 +139,10 @@ public class Category extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The name of the category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>名称测试</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -138,7 +150,10 @@ public class Category extends TeaModel {
         }
 
         /**
-         * parentId.
+         * <p>The ID of the parent category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder parentId(Long parentId) {
             this.parentId = parentId;

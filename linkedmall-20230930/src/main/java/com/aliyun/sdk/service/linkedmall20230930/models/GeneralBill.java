@@ -171,7 +171,10 @@ public class GeneralBill extends TeaModel {
         } 
 
         /**
-         * billId.
+         * <p>The bill ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bill_demo_001</p>
          */
         public Builder billId(String billId) {
             this.billId = billId;
@@ -179,7 +182,10 @@ public class GeneralBill extends TeaModel {
         }
 
         /**
-         * billPeriod.
+         * <p>The billing cycle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-08</p>
          */
         public Builder billPeriod(String billPeriod) {
             this.billPeriod = billPeriod;
@@ -187,7 +193,7 @@ public class GeneralBill extends TeaModel {
         }
 
         /**
-         * downloadUrl.
+         * <p>The details download URL.</p>
          */
         public Builder downloadUrl(java.util.List<String> downloadUrl) {
             this.downloadUrl = downloadUrl;
@@ -195,7 +201,10 @@ public class GeneralBill extends TeaModel {
         }
 
         /**
-         * endTime.
+         * <p>The end time of the billing cycle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-01-01 00:00:00</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -203,7 +212,10 @@ public class GeneralBill extends TeaModel {
         }
 
         /**
-         * gmtCreate.
+         * <p>The bill creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-01-01 00:00:00</p>
          */
         public Builder gmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
@@ -211,7 +223,10 @@ public class GeneralBill extends TeaModel {
         }
 
         /**
-         * gmtModified.
+         * <p>The bill modification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-01-01 00:00:00</p>
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
@@ -219,7 +234,10 @@ public class GeneralBill extends TeaModel {
         }
 
         /**
-         * shopId.
+         * <p>The shop ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21000017</p>
          */
         public Builder shopId(String shopId) {
             this.shopId = shopId;
@@ -227,7 +245,10 @@ public class GeneralBill extends TeaModel {
         }
 
         /**
-         * shopName.
+         * <p>The shop name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Children\&quot;s distribution store</p>
          */
         public Builder shopName(String shopName) {
             this.shopName = shopName;
@@ -235,7 +256,10 @@ public class GeneralBill extends TeaModel {
         }
 
         /**
-         * startTime.
+         * <p>The start time of the billing cycle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-01-01 00:00:00</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -243,7 +267,7 @@ public class GeneralBill extends TeaModel {
         }
 
         /**
-         * totalAmount.
+         * <p>The bill amount.</p>
          */
         public Builder totalAmount(Money totalAmount) {
             this.totalAmount = totalAmount;

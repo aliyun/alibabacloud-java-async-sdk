@@ -67,7 +67,10 @@ public class SkuSaleInfoListResult extends TeaModel {
         } 
 
         /**
-         * requestId.
+         * <p>The API request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3239281273464326823</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class SkuSaleInfoListResult extends TeaModel {
         }
 
         /**
-         * skuSaleInfos.
+         * <p>The SKU inventory collection.</p>
          */
         public Builder skuSaleInfos(java.util.List<SkuSaleInfo> skuSaleInfos) {
             this.skuSaleInfos = skuSaleInfos;

@@ -54,7 +54,10 @@ public class ConfirmReceiptCmd extends TeaModel {
         } 
 
         /**
-         * disputeId.
+         * <p>The refund dispute ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6693****4352</p>
          */
         public Builder disputeId(String disputeId) {
             this.disputeId = disputeId;

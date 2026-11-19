@@ -89,6 +89,7 @@ public class GetSelectionProductRequest extends Request {
         } 
 
         /**
+         * <p>The product ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +102,10 @@ public class GetSelectionProductRequest extends Request {
         }
 
         /**
-         * divisionCode.
+         * <p>The division code. A fifth-level township or subdistrict address code is recommended.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>330106109</p>
          */
         public Builder divisionCode(String divisionCode) {
             this.putQueryParameter("divisionCode", divisionCode);
@@ -110,10 +114,11 @@ public class GetSelectionProductRequest extends Request {
         }
 
         /**
+         * <p>The purchaser ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>56****2304</p>
+         * <p>PID22000009</p>
          */
         public Builder purchaserId(String purchaserId) {
             this.putQueryParameter("purchaserId", purchaserId);

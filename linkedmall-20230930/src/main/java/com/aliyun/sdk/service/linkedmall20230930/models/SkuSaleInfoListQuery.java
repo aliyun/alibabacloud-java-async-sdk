@@ -82,7 +82,10 @@ public class SkuSaleInfoListQuery extends TeaModel {
         } 
 
         /**
-         * divisionCode.
+         * <p>The division code. A level-5 township or sub-district address code is recommended.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>330106109</p>
          */
         public Builder divisionCode(String divisionCode) {
             this.divisionCode = divisionCode;
@@ -90,6 +93,7 @@ public class SkuSaleInfoListQuery extends TeaModel {
         }
 
         /**
+         * <p>The purchaser ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +105,10 @@ public class SkuSaleInfoListQuery extends TeaModel {
         }
 
         /**
+         * <p>The product query parameters.</p>
+         * <blockquote>
+         * <p>The maximum number of SKUs that can be queried in a single request is 20.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          */
         public Builder skuQueryParams(java.util.List<SkuQueryParam> skuQueryParams) {

@@ -54,7 +54,7 @@ public class SelectionGroupRemoveProductResponseBody extends TeaModel {
         } 
 
         /**
-         * productIds.
+         * <p>The set of successfully dispatched product IDs.</p>
          */
         public Builder productIds(java.util.List<String> productIds) {
             this.productIds = productIds;

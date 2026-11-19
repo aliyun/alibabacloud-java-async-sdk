@@ -171,7 +171,7 @@ public class GeneralBillPageQuery extends TeaModel {
         } 
 
         /**
-         * asc.
+         * <p>asc</p>
          */
         public Builder asc(Boolean asc) {
             this.asc = asc;
@@ -179,7 +179,10 @@ public class GeneralBillPageQuery extends TeaModel {
         }
 
         /**
-         * billId.
+         * <p>billId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bill_demo_001</p>
          */
         public Builder billId(String billId) {
             this.billId = billId;
@@ -187,7 +190,10 @@ public class GeneralBillPageQuery extends TeaModel {
         }
 
         /**
-         * billPeriod.
+         * <p>billPeriod</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-08</p>
          */
         public Builder billPeriod(String billPeriod) {
             this.billPeriod = billPeriod;
@@ -195,7 +201,7 @@ public class GeneralBillPageQuery extends TeaModel {
         }
 
         /**
-         * limit.
+         * <p>limit</p>
          */
         public Builder limit(Integer limit) {
             this.limit = limit;
@@ -203,7 +209,7 @@ public class GeneralBillPageQuery extends TeaModel {
         }
 
         /**
-         * orderBy.
+         * <p>orderBy</p>
          */
         public Builder orderBy(String orderBy) {
             this.orderBy = orderBy;
@@ -211,7 +217,7 @@ public class GeneralBillPageQuery extends TeaModel {
         }
 
         /**
-         * orderDirection.
+         * <p>orderDirection</p>
          */
         public Builder orderDirection(String orderDirection) {
             this.orderDirection = orderDirection;
@@ -219,7 +225,10 @@ public class GeneralBillPageQuery extends TeaModel {
         }
 
         /**
-         * pageNumber.
+         * <p>pageNumber</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -227,7 +236,10 @@ public class GeneralBillPageQuery extends TeaModel {
         }
 
         /**
-         * pageSize.
+         * <p>pageSize</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -235,7 +247,10 @@ public class GeneralBillPageQuery extends TeaModel {
         }
 
         /**
-         * shopId.
+         * <p>shopId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21000017</p>
          */
         public Builder shopId(String shopId) {
             this.shopId = shopId;
@@ -243,7 +258,7 @@ public class GeneralBillPageQuery extends TeaModel {
         }
 
         /**
-         * start.
+         * <p>start</p>
          */
         public Builder start(Integer start) {
             this.start = start;

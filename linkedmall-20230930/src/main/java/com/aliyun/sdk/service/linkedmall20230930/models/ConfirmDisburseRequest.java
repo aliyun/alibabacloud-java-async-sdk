@@ -60,6 +60,7 @@ public class ConfirmDisburseRequest extends Request {
         } 
 
         /**
+         * <p>The request parameters for confirming receipt.</p>
          * <p>This parameter is required.</p>
          */
         public Builder body(ConfirmDisburseCmd body) {

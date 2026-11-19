@@ -164,6 +164,7 @@ public class RefundOrderCmd extends TeaModel {
         } 
 
         /**
+         * <p>The refund reason ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -175,7 +176,10 @@ public class RefundOrderCmd extends TeaModel {
         }
 
         /**
-         * applyReasonTips.
+         * <p>The refund reason text.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>I no longer want it</p>
          */
         public Builder applyReasonTips(String applyReasonTips) {
             this.applyReasonTips = applyReasonTips;
@@ -183,6 +187,7 @@ public class RefundOrderCmd extends TeaModel {
         }
 
         /**
+         * <p>The return quantity.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -194,6 +199,7 @@ public class RefundOrderCmd extends TeaModel {
         }
 
         /**
+         * <p>The requested refund amount in cents.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -205,6 +211,11 @@ public class RefundOrderCmd extends TeaModel {
         }
 
         /**
+         * <p>The refund type. Valid values:</p>
+         * <ul>
+         * <li>1: Refund only. </li>
+         * <li>3: Return and refund.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -216,6 +227,12 @@ public class RefundOrderCmd extends TeaModel {
         }
 
         /**
+         * <p>The goods status. Valid values:</p>
+         * <ul>
+         * <li>4: Not shipped. </li>
+         * <li>1: Not received.</li>
+         * <li>2: Received.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -227,7 +244,10 @@ public class RefundOrderCmd extends TeaModel {
         }
 
         /**
-         * leaveMessage.
+         * <p>The message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>I no longer want it</p>
          */
         public Builder leaveMessage(String leaveMessage) {
             this.leaveMessage = leaveMessage;
@@ -235,7 +255,7 @@ public class RefundOrderCmd extends TeaModel {
         }
 
         /**
-         * leavePictureLists.
+         * <p>The image list.</p>
          */
         public Builder leavePictureLists(java.util.List<LeavePictureList> leavePictureLists) {
             this.leavePictureLists = leavePictureLists;
@@ -243,6 +263,7 @@ public class RefundOrderCmd extends TeaModel {
         }
 
         /**
+         * <p>The sub-distribution order ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

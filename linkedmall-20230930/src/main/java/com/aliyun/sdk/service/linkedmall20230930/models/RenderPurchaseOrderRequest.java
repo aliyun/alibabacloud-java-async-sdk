@@ -60,6 +60,7 @@ public class RenderPurchaseOrderRequest extends Request {
         } 
 
         /**
+         * <p>Render purchase order</p>
          * <p>This parameter is required.</p>
          */
         public Builder body(PurchaseOrderRenderQuery body) {

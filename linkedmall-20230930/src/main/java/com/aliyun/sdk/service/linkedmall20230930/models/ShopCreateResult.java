@@ -67,7 +67,10 @@ public class ShopCreateResult extends TeaModel {
         } 
 
         /**
-         * shopId.
+         * <p>The store ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder shopId(String shopId) {
             this.shopId = shopId;
@@ -75,7 +78,10 @@ public class ShopCreateResult extends TeaModel {
         }
 
         /**
-         * shopStatus.
+         * <p>The store status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WORKING</p>
          */
         public Builder shopStatus(String shopStatus) {
             this.shopStatus = shopStatus;

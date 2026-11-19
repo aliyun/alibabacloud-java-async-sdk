@@ -54,7 +54,10 @@ public class ProductPrice extends TeaModel {
         } 
 
         /**
-         * fundAmountMoney.
+         * <p>Amount payable</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120</p>
          */
         public Builder fundAmountMoney(String fundAmountMoney) {
             this.fundAmountMoney = fundAmountMoney;

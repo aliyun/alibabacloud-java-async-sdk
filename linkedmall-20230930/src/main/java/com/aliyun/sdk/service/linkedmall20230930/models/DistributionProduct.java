@@ -197,7 +197,7 @@ public class DistributionProduct extends TeaModel {
         } 
 
         /**
-         * categoryChain.
+         * <p>The category chain name.</p>
          */
         public Builder categoryChain(String categoryChain) {
             this.categoryChain = categoryChain;
@@ -205,7 +205,10 @@ public class DistributionProduct extends TeaModel {
         }
 
         /**
-         * categoryLeafId.
+         * <p>The leaf category ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50016422</p>
          */
         public Builder categoryLeafId(Long categoryLeafId) {
             this.categoryLeafId = categoryLeafId;
@@ -213,7 +216,10 @@ public class DistributionProduct extends TeaModel {
         }
 
         /**
-         * categoryLeafName.
+         * <p>The leaf category name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例类目</p>
          */
         public Builder categoryLeafName(String categoryLeafName) {
             this.categoryLeafName = categoryLeafName;
@@ -221,7 +227,10 @@ public class DistributionProduct extends TeaModel {
         }
 
         /**
-         * channelCode.
+         * <p>The channel ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LM_DEMO</p>
          */
         public Builder channelCode(String channelCode) {
             this.channelCode = channelCode;
@@ -229,7 +238,7 @@ public class DistributionProduct extends TeaModel {
         }
 
         /**
-         * distributeStatus.
+         * <p>The distribution status.</p>
          */
         public Builder distributeStatus(String distributeStatus) {
             this.distributeStatus = distributeStatus;
@@ -237,7 +246,10 @@ public class DistributionProduct extends TeaModel {
         }
 
         /**
-         * picUrl.
+         * <p>The main image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/images/product.png">https://example.com/images/product.png</a></p>
          */
         public Builder picUrl(String picUrl) {
             this.picUrl = picUrl;
@@ -245,7 +257,10 @@ public class DistributionProduct extends TeaModel {
         }
 
         /**
-         * productId.
+         * <p>The product ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>660057403063402509</p>
          */
         public Builder productId(String productId) {
             this.productId = productId;
@@ -253,7 +268,10 @@ public class DistributionProduct extends TeaModel {
         }
 
         /**
-         * sellerId.
+         * <p>The seller ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456789</p>
          */
         public Builder sellerId(String sellerId) {
             this.sellerId = sellerId;
@@ -261,7 +279,10 @@ public class DistributionProduct extends TeaModel {
         }
 
         /**
-         * shortTitle.
+         * <p>The short product title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例商品</p>
          */
         public Builder shortTitle(String shortTitle) {
             this.shortTitle = shortTitle;
@@ -269,7 +290,7 @@ public class DistributionProduct extends TeaModel {
         }
 
         /**
-         * skus.
+         * <p>The SKU list.</p>
          */
         public Builder skus(java.util.List<DistributionSku> skus) {
             this.skus = skus;
@@ -277,7 +298,10 @@ public class DistributionProduct extends TeaModel {
         }
 
         /**
-         * title.
+         * <p>The long product title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例商品名称</p>
          */
         public Builder title(String title) {
             this.title = title;
@@ -285,7 +309,10 @@ public class DistributionProduct extends TeaModel {
         }
 
         /**
-         * whiteBackgroundPicUrl.
+         * <p>The white background image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/images/product-white.png">https://example.com/images/product-white.png</a></p>
          */
         public Builder whiteBackgroundPicUrl(String whiteBackgroundPicUrl) {
             this.whiteBackgroundPicUrl = whiteBackgroundPicUrl;

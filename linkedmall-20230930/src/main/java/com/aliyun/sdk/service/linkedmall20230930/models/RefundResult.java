@@ -327,7 +327,10 @@ public class RefundResult extends TeaModel {
         } 
 
         /**
-         * applyDisputeDesc.
+         * <p>Current buyer\&quot;s refund request description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>多拍不想要</p>
          */
         public Builder applyDisputeDesc(String applyDisputeDesc) {
             this.applyDisputeDesc = applyDisputeDesc;
@@ -335,7 +338,7 @@ public class RefundResult extends TeaModel {
         }
 
         /**
-         * applyReason.
+         * <p>Request reason</p>
          */
         public Builder applyReason(ApplyReason applyReason) {
             this.applyReason = applyReason;
@@ -343,7 +346,10 @@ public class RefundResult extends TeaModel {
         }
 
         /**
-         * bizClaimType.
+         * <p>Order return method<br>1 – identity indicates refund only<br>3 – identity indicates return and refund</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder bizClaimType(Integer bizClaimType) {
             this.bizClaimType = bizClaimType;
@@ -351,7 +357,10 @@ public class RefundResult extends TeaModel {
         }
 
         /**
-         * disputeCreateTime.
+         * <p>Dispute creation time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-09-02T00:00:00.000Z</p>
          */
         public Builder disputeCreateTime(String disputeCreateTime) {
             this.disputeCreateTime = disputeCreateTime;
@@ -359,7 +368,10 @@ public class RefundResult extends TeaModel {
         }
 
         /**
-         * disputeDesc.
+         * <p>Reverse request description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>多拍不想要</p>
          */
         public Builder disputeDesc(String disputeDesc) {
             this.disputeDesc = disputeDesc;
@@ -367,7 +379,10 @@ public class RefundResult extends TeaModel {
         }
 
         /**
-         * disputeEndTime.
+         * <p>Reverse process end time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-09-02T12:00:00.000Z</p>
          */
         public Builder disputeEndTime(String disputeEndTime) {
             this.disputeEndTime = disputeEndTime;
@@ -375,7 +390,10 @@ public class RefundResult extends TeaModel {
         }
 
         /**
-         * disputeId.
+         * <p>Reverse order ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6693****4352</p>
          */
         public Builder disputeId(String disputeId) {
             this.disputeId = disputeId;
@@ -383,7 +401,10 @@ public class RefundResult extends TeaModel {
         }
 
         /**
-         * disputeStatus.
+         * <p>Reverse order status<br>1 – Return pending<br>2 – Awaiting buyer return<br>3 – Awaiting merchant receipt<br>4 – Refund shutdown<br>5 – Refund succeeded<br>6 – Refund denied<br>17 – Canceling refund</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder disputeStatus(Integer disputeStatus) {
             this.disputeStatus = disputeStatus;
@@ -391,7 +412,10 @@ public class RefundResult extends TeaModel {
         }
 
         /**
-         * orderId.
+         * <p>Main order ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6692****5457</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -399,7 +423,10 @@ public class RefundResult extends TeaModel {
         }
 
         /**
-         * orderLineId.
+         * <p>Sub-order ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6692****5458</p>
          */
         public Builder orderLineId(String orderLineId) {
             this.orderLineId = orderLineId;
@@ -407,7 +434,10 @@ public class RefundResult extends TeaModel {
         }
 
         /**
-         * orderLogisticsStatus.
+         * <p>Order logistics status<br>1 – Not shipped → Awaiting seller shipment<br>2 – Shipped → Awaiting buyer confirmation of receipt<br>3 – Received → Transaction succeeded<br>6 – Partially shipping<br>8 – Logistics order not yet created</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder orderLogisticsStatus(Integer orderLogisticsStatus) {
             this.orderLogisticsStatus = orderLogisticsStatus;
@@ -415,7 +445,10 @@ public class RefundResult extends TeaModel {
         }
 
         /**
-         * refundFee.
+         * <p>Refund amount</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder refundFee(Long refundFee) {
             this.refundFee = refundFee;
@@ -423,7 +456,7 @@ public class RefundResult extends TeaModel {
         }
 
         /**
-         * refundFeeData.
+         * <p>Refund period</p>
          */
         public Builder refundFeeData(RefundFeeData refundFeeData) {
             this.refundFeeData = refundFeeData;
@@ -431,7 +464,10 @@ public class RefundResult extends TeaModel {
         }
 
         /**
-         * refunderAddress.
+         * <p>Merchant return address (available when disputeStatus=2, indicating the status is pending buyer return; save the return address during this status if needed)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>阿里云云谷</p>
          */
         public Builder refunderAddress(String refunderAddress) {
             this.refunderAddress = refunderAddress;
@@ -439,7 +475,10 @@ public class RefundResult extends TeaModel {
         }
 
         /**
-         * refunderName.
+         * <p>Return recipient name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>赵先生</p>
          */
         public Builder refunderName(String refunderName) {
             this.refunderName = refunderName;
@@ -447,7 +486,10 @@ public class RefundResult extends TeaModel {
         }
 
         /**
-         * refunderTel.
+         * <p>Return contact information</p>
+         * 
+         * <strong>example:</strong>
+         * <p>182****1334</p>
          */
         public Builder refunderTel(String refunderTel) {
             this.refunderTel = refunderTel;
@@ -455,7 +497,10 @@ public class RefundResult extends TeaModel {
         }
 
         /**
-         * refunderZipCode.
+         * <p>Return address ZIP code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>331001</p>
          */
         public Builder refunderZipCode(String refunderZipCode) {
             this.refunderZipCode = refunderZipCode;
@@ -463,7 +508,10 @@ public class RefundResult extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>841471F6-5D61-1331-8C38-2****B55</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -471,7 +519,10 @@ public class RefundResult extends TeaModel {
         }
 
         /**
-         * returnGoodLogisticsStatus.
+         * <p>Return logistics status<br>0 – Return not initiated<br>1 – Awaiting pickup<br>2 – Package picked up<br>3 – In transit<br>4 – Out for delivery<br>5 – Delivered<br>6 – Delivery failed</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder returnGoodLogisticsStatus(Integer returnGoodLogisticsStatus) {
             this.returnGoodLogisticsStatus = returnGoodLogisticsStatus;
@@ -479,7 +530,10 @@ public class RefundResult extends TeaModel {
         }
 
         /**
-         * sellerAgreeMsg.
+         * <p>Seller’s return approval message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>同意退款</p>
          */
         public Builder sellerAgreeMsg(String sellerAgreeMsg) {
             this.sellerAgreeMsg = sellerAgreeMsg;
@@ -487,7 +541,10 @@ public class RefundResult extends TeaModel {
         }
 
         /**
-         * sellerRefuseAgreementMessage.
+         * <p>Merchant\&quot;s message explaining the denial</p>
+         * 
+         * <strong>example:</strong>
+         * <p>不同意退款</p>
          */
         public Builder sellerRefuseAgreementMessage(String sellerRefuseAgreementMessage) {
             this.sellerRefuseAgreementMessage = sellerRefuseAgreementMessage;
@@ -495,7 +552,10 @@ public class RefundResult extends TeaModel {
         }
 
         /**
-         * sellerRefuseReason.
+         * <p>Merchant denial reason</p>
+         * 
+         * <strong>example:</strong>
+         * <p>商品没问题，买家举证无效</p>
          */
         public Builder sellerRefuseReason(String sellerRefuseReason) {
             this.sellerRefuseReason = sellerRefuseReason;

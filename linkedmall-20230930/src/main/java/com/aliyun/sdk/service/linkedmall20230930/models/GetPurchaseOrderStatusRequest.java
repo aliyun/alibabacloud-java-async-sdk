@@ -60,6 +60,7 @@ public class GetPurchaseOrderStatusRequest extends Request {
         } 
 
         /**
+         * <p>The purchase order ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

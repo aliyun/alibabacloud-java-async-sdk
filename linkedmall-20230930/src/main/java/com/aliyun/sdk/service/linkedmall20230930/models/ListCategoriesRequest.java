@@ -59,7 +59,7 @@ public class ListCategoriesRequest extends Request {
         } 
 
         /**
-         * body.
+         * <p>The category query parameters.</p>
          */
         public Builder body(CategoryListQuery body) {
             this.putBodyParameter("body", body);

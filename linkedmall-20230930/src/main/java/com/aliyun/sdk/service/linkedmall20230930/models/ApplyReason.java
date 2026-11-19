@@ -67,7 +67,10 @@ public class ApplyReason extends TeaModel {
         } 
 
         /**
-         * reasonTextId.
+         * <p>The reason ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>403769</p>
          */
         public Builder reasonTextId(Long reasonTextId) {
             this.reasonTextId = reasonTextId;
@@ -75,7 +78,10 @@ public class ApplyReason extends TeaModel {
         }
 
         /**
-         * reasonTips.
+         * <p>The reason text.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>不想要了</p>
          */
         public Builder reasonTips(String reasonTips) {
             this.reasonTips = reasonTips;

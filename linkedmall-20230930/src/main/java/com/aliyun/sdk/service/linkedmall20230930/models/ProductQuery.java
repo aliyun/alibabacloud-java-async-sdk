@@ -68,6 +68,7 @@ public class ProductQuery extends TeaModel {
         } 
 
         /**
+         * <p>Distributor shop ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -79,7 +80,10 @@ public class ProductQuery extends TeaModel {
         }
 
         /**
-         * divisionCode.
+         * <p>Area code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>110000</p>
          */
         public Builder divisionCode(String divisionCode) {
             this.divisionCode = divisionCode;

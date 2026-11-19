@@ -97,6 +97,7 @@ public class OrderRenderProductDTO extends TeaModel {
         } 
 
         /**
+         * <p>Product ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -108,6 +109,7 @@ public class OrderRenderProductDTO extends TeaModel {
         }
 
         /**
+         * <p>Purchaser ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -119,6 +121,7 @@ public class OrderRenderProductDTO extends TeaModel {
         }
 
         /**
+         * <p>Quantity</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,6 +133,7 @@ public class OrderRenderProductDTO extends TeaModel {
         }
 
         /**
+         * <p>skuID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

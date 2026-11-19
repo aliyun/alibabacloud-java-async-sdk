@@ -83,6 +83,7 @@ public class RefundRenderCmd extends TeaModel {
         } 
 
         /**
+         * <p>Refund Type: 1 for refund only, 3 for return and refund</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -94,6 +95,7 @@ public class RefundRenderCmd extends TeaModel {
         }
 
         /**
+         * <p>Goods Status: 4 for not shipped, 1 for not received, 2 for received</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -105,6 +107,7 @@ public class RefundRenderCmd extends TeaModel {
         }
 
         /**
+         * <p>Sub-distribution order ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

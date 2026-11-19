@@ -93,7 +93,10 @@ public class DeliveryInfo extends TeaModel {
         } 
 
         /**
-         * displayName.
+         * <p>Display name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>快递 免邮</p>
          */
         public Builder displayName(String displayName) {
             this.displayName = displayName;
@@ -101,7 +104,10 @@ public class DeliveryInfo extends TeaModel {
         }
 
         /**
-         * id.
+         * <p>Unique ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -109,7 +115,10 @@ public class DeliveryInfo extends TeaModel {
         }
 
         /**
-         * postFee.
+         * <p>Shipping fee amount</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder postFee(Long postFee) {
             this.postFee = postFee;
@@ -117,7 +126,10 @@ public class DeliveryInfo extends TeaModel {
         }
 
         /**
-         * serviceType.
+         * <p>serviceType</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-4</p>
          */
         public Builder serviceType(Long serviceType) {
             this.serviceType = serviceType;

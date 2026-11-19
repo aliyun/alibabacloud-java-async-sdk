@@ -301,7 +301,10 @@ public class Sku extends TeaModel {
         } 
 
         /**
-         * barcode.
+         * <p>The barcode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6922454329176</p>
          */
         public Builder barcode(String barcode) {
             this.barcode = barcode;
@@ -309,7 +312,10 @@ public class Sku extends TeaModel {
         }
 
         /**
-         * canSell.
+         * <p>Indicates whether the SKU is available for sale.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder canSell(Boolean canSell) {
             this.canSell = canSell;
@@ -317,7 +323,10 @@ public class Sku extends TeaModel {
         }
 
         /**
-         * discountRetailPrice.
+         * <p>The reserved field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder discountRetailPrice(Long discountRetailPrice) {
             this.discountRetailPrice = discountRetailPrice;
@@ -325,7 +334,10 @@ public class Sku extends TeaModel {
         }
 
         /**
-         * divisionCode.
+         * <p>The region code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>110000</p>
          */
         public Builder divisionCode(String divisionCode) {
             this.divisionCode = divisionCode;
@@ -333,7 +345,12 @@ public class Sku extends TeaModel {
         }
 
         /**
-         * fuzzyQuantity.
+         * <p>The fuzzy available inventory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>In stock
+         * Out of stock
+         * Low stock</p>
          */
         public Builder fuzzyQuantity(String fuzzyQuantity) {
             this.fuzzyQuantity = fuzzyQuantity;
@@ -341,7 +358,10 @@ public class Sku extends TeaModel {
         }
 
         /**
-         * markPrice.
+         * <p>The list price in cents.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>999900</p>
          */
         public Builder markPrice(Long markPrice) {
             this.markPrice = markPrice;
@@ -349,7 +369,10 @@ public class Sku extends TeaModel {
         }
 
         /**
-         * picUrl.
+         * <p>The SKU image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>https:////img.alicdn.com/imgextra///img.alicdn.com/imgextra/i2/2216003305543/O1CN010DEQCX1qokFYGRfPE_!!2216003305543.png</p>
          */
         public Builder picUrl(String picUrl) {
             this.picUrl = picUrl;
@@ -357,7 +380,10 @@ public class Sku extends TeaModel {
         }
 
         /**
-         * platformPrice.
+         * <p>The suggested retail price in cents.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>999900</p>
          */
         public Builder platformPrice(Long platformPrice) {
             this.platformPrice = platformPrice;
@@ -365,7 +391,10 @@ public class Sku extends TeaModel {
         }
 
         /**
-         * price.
+         * <p>The distributor purchase price in cents.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19800</p>
          */
         public Builder price(Long price) {
             this.price = price;
@@ -373,7 +402,10 @@ public class Sku extends TeaModel {
         }
 
         /**
-         * productId.
+         * <p>The product ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>660460842235822080</p>
          */
         public Builder productId(String productId) {
             this.productId = productId;
@@ -381,7 +413,10 @@ public class Sku extends TeaModel {
         }
 
         /**
-         * quantity.
+         * <p>The available inventory. <notice>Currently, the value of this field is uniformly set to -1 and has no practical significance.</notice></p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder quantity(Long quantity) {
             this.quantity = quantity;
@@ -389,7 +424,10 @@ public class Sku extends TeaModel {
         }
 
         /**
-         * rankValue.
+         * <p>The SKU sort order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder rankValue(Long rankValue) {
             this.rankValue = rankValue;
@@ -397,7 +435,10 @@ public class Sku extends TeaModel {
         }
 
         /**
-         * shopId.
+         * <p>The shop ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21000017</p>
          */
         public Builder shopId(String shopId) {
             this.shopId = shopId;
@@ -405,7 +446,10 @@ public class Sku extends TeaModel {
         }
 
         /**
-         * skuAlias.
+         * <p>The SKU remark.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sample SKU remark</p>
          */
         public Builder skuAlias(String skuAlias) {
             this.skuAlias = skuAlias;
@@ -413,7 +457,10 @@ public class Sku extends TeaModel {
         }
 
         /**
-         * skuId.
+         * <p>skuId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>660460842235822081</p>
          */
         public Builder skuId(String skuId) {
             this.skuId = skuId;
@@ -421,7 +468,7 @@ public class Sku extends TeaModel {
         }
 
         /**
-         * skuSpecs.
+         * <p>sku</p>
          */
         public Builder skuSpecs(java.util.List<SkuSpec> skuSpecs) {
             this.skuSpecs = skuSpecs;
@@ -429,7 +476,10 @@ public class Sku extends TeaModel {
         }
 
         /**
-         * skuSpecsCode.
+         * <p>The SKU sales specifications used to assist frontend filtering.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Color:Sky blue</p>
          */
         public Builder skuSpecsCode(String skuSpecsCode) {
             this.skuSpecsCode = skuSpecsCode;
@@ -437,7 +487,10 @@ public class Sku extends TeaModel {
         }
 
         /**
-         * skuStatus.
+         * <p>The SKU control status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Online</p>
          */
         public Builder skuStatus(String skuStatus) {
             this.skuStatus = skuStatus;
@@ -445,7 +498,10 @@ public class Sku extends TeaModel {
         }
 
         /**
-         * suggestedRetailPrice.
+         * <p>The reserved field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder suggestedRetailPrice(Long suggestedRetailPrice) {
             this.suggestedRetailPrice = suggestedRetailPrice;
@@ -453,7 +509,10 @@ public class Sku extends TeaModel {
         }
 
         /**
-         * title.
+         * <p>The SKU title. <notice>Distributors should concatenate the value or valueAlias (if available) from the SkuSpec struct to form the SKU title for customer display. Do not use this field directly as the SKU title for customer display.</notice></p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sky blue</p>
          */
         public Builder title(String title) {
             this.title = title;

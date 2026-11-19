@@ -184,7 +184,10 @@ public class OrderProductResult extends TeaModel {
         } 
 
         /**
-         * canSell.
+         * <p>Indicates whether the product is available for sale</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder canSell(Boolean canSell) {
             this.canSell = canSell;
@@ -192,7 +195,7 @@ public class OrderProductResult extends TeaModel {
         }
 
         /**
-         * features.
+         * <p>Additional product information</p>
          */
         public Builder features(java.util.Map<String, ?> features) {
             this.features = features;
@@ -200,7 +203,10 @@ public class OrderProductResult extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>Reason for unavailability</p>
+         * 
+         * <strong>example:</strong>
+         * <p>库存为0</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -208,7 +214,10 @@ public class OrderProductResult extends TeaModel {
         }
 
         /**
-         * price.
+         * <p>Product price (unit: cent)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder price(Long price) {
             this.price = price;
@@ -216,7 +225,10 @@ public class OrderProductResult extends TeaModel {
         }
 
         /**
-         * productId.
+         * <p>Product ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6600****6736</p>
          */
         public Builder productId(String productId) {
             this.productId = productId;
@@ -224,7 +236,10 @@ public class OrderProductResult extends TeaModel {
         }
 
         /**
-         * productPicUrl.
+         * <p>Product image link</p>
+         * 
+         * <strong>example:</strong>
+         * <p>//img.alicdn.com/imgextra/i4/2216003305543/O1CN01bip3Un1qokG0</p>
          */
         public Builder productPicUrl(String productPicUrl) {
             this.productPicUrl = productPicUrl;
@@ -232,7 +247,10 @@ public class OrderProductResult extends TeaModel {
         }
 
         /**
-         * productTitle.
+         * <p>Product title</p>
+         * 
+         * <strong>example:</strong>
+         * <p>儿童学习桌</p>
          */
         public Builder productTitle(String productTitle) {
             this.productTitle = productTitle;
@@ -240,7 +258,10 @@ public class OrderProductResult extends TeaModel {
         }
 
         /**
-         * purchaserId.
+         * <p>Purchaser ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>56****2304</p>
          */
         public Builder purchaserId(String purchaserId) {
             this.purchaserId = purchaserId;
@@ -248,7 +269,10 @@ public class OrderProductResult extends TeaModel {
         }
 
         /**
-         * quantity.
+         * <p>Quantity</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder quantity(Integer quantity) {
             this.quantity = quantity;
@@ -256,7 +280,10 @@ public class OrderProductResult extends TeaModel {
         }
 
         /**
-         * skuId.
+         * <p>SKUID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6600****6737</p>
          */
         public Builder skuId(String skuId) {
             this.skuId = skuId;
@@ -264,7 +291,10 @@ public class OrderProductResult extends TeaModel {
         }
 
         /**
-         * skuTitle.
+         * <p>SKU title</p>
+         * 
+         * <strong>example:</strong>
+         * <p>浅绿色</p>
          */
         public Builder skuTitle(String skuTitle) {
             this.skuTitle = skuTitle;

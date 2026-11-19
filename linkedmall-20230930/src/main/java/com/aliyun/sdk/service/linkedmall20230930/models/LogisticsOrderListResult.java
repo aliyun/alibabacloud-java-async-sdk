@@ -67,7 +67,7 @@ public class LogisticsOrderListResult extends TeaModel {
         } 
 
         /**
-         * logisticsOrderList.
+         * <p>The logistics order list.</p>
          */
         public Builder logisticsOrderList(java.util.List<LogisticsOrderResult> logisticsOrderList) {
             this.logisticsOrderList = logisticsOrderList;
@@ -75,7 +75,10 @@ public class LogisticsOrderListResult extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The API request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>841471F6-5D61-1331-8C38-2****B55</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

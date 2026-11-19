@@ -132,7 +132,7 @@ public class PurchaseOrderRenderResult extends TeaModel {
         } 
 
         /**
-         * addressList.
+         * <p>The address list.</p>
          */
         public Builder addressList(java.util.List<AddressInfo> addressList) {
             this.addressList = addressList;
@@ -140,7 +140,10 @@ public class PurchaseOrderRenderResult extends TeaModel {
         }
 
         /**
-         * canSell.
+         * <p>Indicates whether the item is sellable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder canSell(Boolean canSell) {
             this.canSell = canSell;
@@ -148,7 +151,7 @@ public class PurchaseOrderRenderResult extends TeaModel {
         }
 
         /**
-         * extInfo.
+         * <p>The extended information.</p>
          */
         public Builder extInfo(java.util.Map<String, ?> extInfo) {
             this.extInfo = extInfo;
@@ -156,7 +159,10 @@ public class PurchaseOrderRenderResult extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The reason why the item is unsellable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Out of stock</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -164,7 +170,7 @@ public class PurchaseOrderRenderResult extends TeaModel {
         }
 
         /**
-         * orderList.
+         * <p>The list of sellable primary orders.</p>
          */
         public Builder orderList(java.util.List<OrderRenderResult> orderList) {
             this.orderList = orderList;
@@ -172,7 +178,10 @@ public class PurchaseOrderRenderResult extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>841471F6-5D61-1331-8C38-2****B55</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +189,7 @@ public class PurchaseOrderRenderResult extends TeaModel {
         }
 
         /**
-         * unsellableOrderList.
+         * <p>The list of unsellable primary orders.</p>
          */
         public Builder unsellableOrderList(java.util.List<OrderRenderResult> unsellableOrderList) {
             this.unsellableOrderList = unsellableOrderList;

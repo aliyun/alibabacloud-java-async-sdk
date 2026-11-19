@@ -122,10 +122,11 @@ public class AddressInfo extends TeaModel {
         } 
 
         /**
+         * <p>The detailed shipping address. Enter the full address in the format of province, city, district/county, street, and community.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>陕西省西安市新城区xxx大厦xx室</p>
+         * <p>陕西省西安市新城区xx街道xxx大厦xx室</p>
          */
         public Builder addressDetail(String addressDetail) {
             this.addressDetail = addressDetail;
@@ -133,7 +134,10 @@ public class AddressInfo extends TeaModel {
         }
 
         /**
-         * addressId.
+         * <p>The address ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder addressId(Long addressId) {
             this.addressId = addressId;
@@ -141,7 +145,10 @@ public class AddressInfo extends TeaModel {
         }
 
         /**
-         * divisionCode.
+         * <p>The level-4 address code for the district or county. This parameter is recommended.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>610102</p>
          */
         public Builder divisionCode(String divisionCode) {
             this.divisionCode = divisionCode;
@@ -149,6 +156,7 @@ public class AddressInfo extends TeaModel {
         }
 
         /**
+         * <p>The recipient.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,6 +168,7 @@ public class AddressInfo extends TeaModel {
         }
 
         /**
+         * <p>The phone number of the recipient.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,7 +180,10 @@ public class AddressInfo extends TeaModel {
         }
 
         /**
-         * townDivisionCode.
+         * <p>The level-5 address code for the town or street. This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>61010212</p>
          */
         public Builder townDivisionCode(String townDivisionCode) {
             this.townDivisionCode = townDivisionCode;

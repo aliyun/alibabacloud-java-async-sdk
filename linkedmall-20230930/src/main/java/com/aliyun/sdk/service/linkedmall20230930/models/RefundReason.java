@@ -93,7 +93,10 @@ public class RefundReason extends TeaModel {
         } 
 
         /**
-         * proofRequired.
+         * <p>Is upload credential required</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder proofRequired(Boolean proofRequired) {
             this.proofRequired = proofRequired;
@@ -101,7 +104,10 @@ public class RefundReason extends TeaModel {
         }
 
         /**
-         * reasonTextId.
+         * <p>Reason text ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47683</p>
          */
         public Builder reasonTextId(String reasonTextId) {
             this.reasonTextId = reasonTextId;
@@ -109,7 +115,10 @@ public class RefundReason extends TeaModel {
         }
 
         /**
-         * reasonTips.
+         * <p>Reason text</p>
+         * 
+         * <strong>example:</strong>
+         * <p>不想要了</p>
          */
         public Builder reasonTips(String reasonTips) {
             this.reasonTips = reasonTips;
@@ -117,7 +126,10 @@ public class RefundReason extends TeaModel {
         }
 
         /**
-         * refundDescRequired.
+         * <p>Is a message required</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder refundDescRequired(Boolean refundDescRequired) {
             this.refundDescRequired = refundDescRequired;

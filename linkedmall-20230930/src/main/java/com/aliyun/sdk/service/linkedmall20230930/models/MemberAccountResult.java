@@ -67,7 +67,10 @@ public class MemberAccountResult extends TeaModel {
         } 
 
         /**
-         * accountNo.
+         * <p>The signed and bound Alipay auto-debit account (masked).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;yue***@newburn.cn&quot;]</p>
          */
         public Builder accountNo(java.util.List<String> accountNo) {
             this.accountNo = accountNo;
@@ -75,7 +78,10 @@ public class MemberAccountResult extends TeaModel {
         }
 
         /**
-         * shopId.
+         * <p>The store ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder shopId(String shopId) {
             this.shopId = shopId;

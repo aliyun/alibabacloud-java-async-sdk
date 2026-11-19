@@ -60,6 +60,7 @@ public class QueryOrdersRequest extends Request {
         } 
 
         /**
+         * <p>The main order list.</p>
          * <p>This parameter is required.</p>
          */
         public Builder body(OrderPageQuery body) {

@@ -60,6 +60,7 @@ public class ListSelectionSkuSaleInfosRequest extends Request {
         } 
 
         /**
+         * <p>The parameters for batch querying SKU sales information.</p>
          * <p>This parameter is required.</p>
          */
         public Builder body(SkuSaleInfoListQuery body) {

@@ -59,6 +59,7 @@ public class CreateAliPayUrlRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the applied shop.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

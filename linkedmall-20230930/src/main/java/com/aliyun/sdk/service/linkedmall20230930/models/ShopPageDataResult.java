@@ -145,7 +145,10 @@ public class ShopPageDataResult extends TeaModel {
         } 
 
         /**
-         * cooperationShops.
+         * <p>The partner shops.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;shopId&quot;:&quot;22000019&quot;,&quot;cooperationCompanyId&quot;:&quot;11200003&quot;,&quot;cooperationShopId&quot;:&quot;21000026&quot;}]</p>
          */
         public Builder cooperationShops(java.util.List<CooperationShop> cooperationShops) {
             this.cooperationShops = cooperationShops;
@@ -153,7 +156,10 @@ public class ShopPageDataResult extends TeaModel {
         }
 
         /**
-         * endDate.
+         * <p>The end time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-09-11T12:22:24.000+08:00</p>
          */
         public Builder endDate(String endDate) {
             this.endDate = endDate;
@@ -161,7 +167,10 @@ public class ShopPageDataResult extends TeaModel {
         }
 
         /**
-         * purchaserId.
+         * <p>The purchaser ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PID56****2304</p>
          */
         public Builder purchaserId(String purchaserId) {
             this.purchaserId = purchaserId;
@@ -169,7 +178,10 @@ public class ShopPageDataResult extends TeaModel {
         }
 
         /**
-         * shopId.
+         * <p>The shop ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22****09</p>
          */
         public Builder shopId(String shopId) {
             this.shopId = shopId;
@@ -177,7 +189,10 @@ public class ShopPageDataResult extends TeaModel {
         }
 
         /**
-         * shopName.
+         * <p>The shop name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Child seat distribution shop</p>
          */
         public Builder shopName(String shopName) {
             this.shopName = shopName;
@@ -185,7 +200,10 @@ public class ShopPageDataResult extends TeaModel {
         }
 
         /**
-         * shopType.
+         * <p>The shop type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DistributorQYG</p>
          */
         public Builder shopType(String shopType) {
             this.shopType = shopType;
@@ -193,7 +211,10 @@ public class ShopPageDataResult extends TeaModel {
         }
 
         /**
-         * startDate.
+         * <p>The start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-09-11T12:22:24.000+08:00</p>
          */
         public Builder startDate(String startDate) {
             this.startDate = startDate;
@@ -201,7 +222,10 @@ public class ShopPageDataResult extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The shop status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Working</p>
          */
         public Builder status(String status) {
             this.status = status;

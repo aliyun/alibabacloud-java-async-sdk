@@ -34,6 +34,10 @@ public class SearchProductsRequest extends Request {
     private String createStartTime;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("cursor")
+    private String cursor;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("distributionHighPrice")
     private Long distributionHighPrice;
 
@@ -146,6 +150,7 @@ public class SearchProductsRequest extends Request {
         this.categoryIds = builder.categoryIds;
         this.createEndTime = builder.createEndTime;
         this.createStartTime = builder.createStartTime;
+        this.cursor = builder.cursor;
         this.distributionHighPrice = builder.distributionHighPrice;
         this.distributionHighPriceRatio = builder.distributionHighPriceRatio;
         this.distributionLowPrice = builder.distributionLowPrice;
@@ -213,6 +218,13 @@ public class SearchProductsRequest extends Request {
      */
     public String getCreateStartTime() {
         return this.createStartTime;
+    }
+
+    /**
+     * @return cursor
+     */
+    public String getCursor() {
+        return this.cursor;
     }
 
     /**
@@ -402,6 +414,7 @@ public class SearchProductsRequest extends Request {
         private java.util.List<String> categoryIds; 
         private String createEndTime; 
         private String createStartTime; 
+        private String cursor; 
         private Long distributionHighPrice; 
         private Long distributionHighPriceRatio; 
         private Long distributionLowPrice; 
@@ -439,6 +452,7 @@ public class SearchProductsRequest extends Request {
             this.categoryIds = request.categoryIds;
             this.createEndTime = request.createEndTime;
             this.createStartTime = request.createStartTime;
+            this.cursor = request.cursor;
             this.distributionHighPrice = request.distributionHighPrice;
             this.distributionHighPriceRatio = request.distributionHighPriceRatio;
             this.distributionLowPrice = request.distributionLowPrice;
@@ -468,7 +482,10 @@ public class SearchProductsRequest extends Request {
         } 
 
         /**
-         * brandName.
+         * <p>The brand name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Plants</p>
          */
         public Builder brandName(String brandName) {
             this.putBodyParameter("brandName", brandName);
@@ -477,7 +494,7 @@ public class SearchProductsRequest extends Request {
         }
 
         /**
-         * categoryIds.
+         * <p>The list of category IDs.</p>
          */
         public Builder categoryIds(java.util.List<String> categoryIds) {
             this.putBodyParameter("categoryIds", categoryIds);
@@ -486,7 +503,11 @@ public class SearchProductsRequest extends Request {
         }
 
         /**
-         * createEndTime.
+         * <p>The end time of the creation. The format is yyyy-MM-dd HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-01-02 12:23:34
+         * (yyyy-MM-dd HH:mm:ss)</p>
          */
         public Builder createEndTime(String createEndTime) {
             this.putBodyParameter("createEndTime", createEndTime);
@@ -495,7 +516,11 @@ public class SearchProductsRequest extends Request {
         }
 
         /**
-         * createStartTime.
+         * <p>The start time of the creation. The format is yyyy-MM-dd HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-01-02 12:23:34
+         * (yyyy-MM-dd HH:mm:ss)</p>
          */
         public Builder createStartTime(String createStartTime) {
             this.putBodyParameter("createStartTime", createStartTime);
@@ -504,7 +529,22 @@ public class SearchProductsRequest extends Request {
         }
 
         /**
-         * distributionHighPrice.
+         * <p>The cursor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>899192313AB192938441CCW</p>
+         */
+        public Builder cursor(String cursor) {
+            this.putBodyParameter("cursor", cursor);
+            this.cursor = cursor;
+            return this;
+        }
+
+        /**
+         * <p>The maximum distribution purchase price, in cents.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder distributionHighPrice(Long distributionHighPrice) {
             this.putBodyParameter("distributionHighPrice", distributionHighPrice);
@@ -513,7 +553,10 @@ public class SearchProductsRequest extends Request {
         }
 
         /**
-         * distributionHighPriceRatio.
+         * <p>The maximum distribution premium rate. A value of 244 indicates 2.44%.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>244</p>
          */
         public Builder distributionHighPriceRatio(Long distributionHighPriceRatio) {
             this.putBodyParameter("distributionHighPriceRatio", distributionHighPriceRatio);
@@ -522,7 +565,10 @@ public class SearchProductsRequest extends Request {
         }
 
         /**
-         * distributionLowPrice.
+         * <p>The minimum distribution purchase price, in cents.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder distributionLowPrice(Long distributionLowPrice) {
             this.putBodyParameter("distributionLowPrice", distributionLowPrice);
@@ -531,7 +577,10 @@ public class SearchProductsRequest extends Request {
         }
 
         /**
-         * distributionLowPriceRatio.
+         * <p>The minimum distribution premium rate. A value of 133 indicates 1.33%.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>133</p>
          */
         public Builder distributionLowPriceRatio(Long distributionLowPriceRatio) {
             this.putBodyParameter("distributionLowPriceRatio", distributionLowPriceRatio);
@@ -540,7 +589,10 @@ public class SearchProductsRequest extends Request {
         }
 
         /**
-         * highMarkPrice.
+         * <p>The maximum strikethrough price, in cents.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder highMarkPrice(Long highMarkPrice) {
             this.putBodyParameter("highMarkPrice", highMarkPrice);
@@ -549,7 +601,10 @@ public class SearchProductsRequest extends Request {
         }
 
         /**
-         * highPrice.
+         * <p>The maximum suggested retail price, in cents.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder highPrice(Long highPrice) {
             this.putBodyParameter("highPrice", highPrice);
@@ -558,7 +613,10 @@ public class SearchProductsRequest extends Request {
         }
 
         /**
-         * inGroup.
+         * <p>Specifies whether the product is added to the inventory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder inGroup(Boolean inGroup) {
             this.putBodyParameter("inGroup", inGroup);
@@ -567,7 +625,11 @@ public class SearchProductsRequest extends Request {
         }
 
         /**
-         * inGroupEndTime.
+         * <p>The end time when the product was added to the inventory. The format is yyyy-MM-dd HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-01-02 12:23:34
+         * (yyyy-MM-dd HH:mm:ss)</p>
          */
         public Builder inGroupEndTime(String inGroupEndTime) {
             this.putBodyParameter("inGroupEndTime", inGroupEndTime);
@@ -576,7 +638,11 @@ public class SearchProductsRequest extends Request {
         }
 
         /**
-         * inGroupStartTime.
+         * <p>The start time when the product was added to the inventory. The format is yyyy-MM-dd HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-01-02 12:23:34
+         * (yyyy-MM-dd HH:mm:ss)</p>
          */
         public Builder inGroupStartTime(String inGroupStartTime) {
             this.putBodyParameter("inGroupStartTime", inGroupStartTime);
@@ -585,7 +651,10 @@ public class SearchProductsRequest extends Request {
         }
 
         /**
-         * inventoryRiskLevel.
+         * <p>The inventory risk level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Low</p>
          */
         public Builder inventoryRiskLevel(String inventoryRiskLevel) {
             this.putBodyParameter("inventoryRiskLevel", inventoryRiskLevel);
@@ -594,7 +663,10 @@ public class SearchProductsRequest extends Request {
         }
 
         /**
-         * lmItemId.
+         * <p>The LM product ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx-xxxxx</p>
          */
         public Builder lmItemId(String lmItemId) {
             this.putBodyParameter("lmItemId", lmItemId);
@@ -603,7 +675,10 @@ public class SearchProductsRequest extends Request {
         }
 
         /**
-         * lowMarkPrice.
+         * <p>The minimum strikethrough price, in cents.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder lowMarkPrice(Long lowMarkPrice) {
             this.putBodyParameter("lowMarkPrice", lowMarkPrice);
@@ -612,7 +687,10 @@ public class SearchProductsRequest extends Request {
         }
 
         /**
-         * lowPrice.
+         * <p>The minimum suggested retail price, in cents.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder lowPrice(Long lowPrice) {
             this.putBodyParameter("lowPrice", lowPrice);
@@ -621,7 +699,11 @@ public class SearchProductsRequest extends Request {
         }
 
         /**
-         * modifyEndTime.
+         * <p>The end time of the modification. The format is yyyy-MM-dd HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-01-02 12:23:34
+         * (yyyy-MM-dd HH:mm:ss)</p>
          */
         public Builder modifyEndTime(String modifyEndTime) {
             this.putBodyParameter("modifyEndTime", modifyEndTime);
@@ -630,7 +712,11 @@ public class SearchProductsRequest extends Request {
         }
 
         /**
-         * modifyStartTime.
+         * <p>The start time of the modification. The format is yyyy-MM-dd HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-01-02 12:23:34
+         * (yyyy-MM-dd HH:mm:ss)</p>
          */
         public Builder modifyStartTime(String modifyStartTime) {
             this.putBodyParameter("modifyStartTime", modifyStartTime);
@@ -639,7 +725,15 @@ public class SearchProductsRequest extends Request {
         }
 
         /**
-         * orderBy.
+         * <p>The sort field.</p>
+         * <blockquote>
+         * <ul>
+         * <li>This parameter must be used in combination with the sort direction parameter.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>soldQuantity (sorts by sales volume. If not specified, the default is descending order of creation time)</p>
          */
         public Builder orderBy(String orderBy) {
             this.putBodyParameter("orderBy", orderBy);
@@ -648,7 +742,15 @@ public class SearchProductsRequest extends Request {
         }
 
         /**
-         * orderDirection.
+         * <p>The sort direction.</p>
+         * <blockquote>
+         * <ul>
+         * <li>This parameter must be used in combination with the sort field parameter.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ASC</p>
          */
         public Builder orderDirection(String orderDirection) {
             this.putBodyParameter("orderDirection", orderDirection);
@@ -657,6 +759,7 @@ public class SearchProductsRequest extends Request {
         }
 
         /**
+         * <p>The page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -669,6 +772,12 @@ public class SearchProductsRequest extends Request {
         }
 
         /**
+         * <p>The number of items per page.</p>
+         * <blockquote>
+         * <ul>
+         * <li>Maximum value: 20.</li>
+         * </ul>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -681,7 +790,12 @@ public class SearchProductsRequest extends Request {
         }
 
         /**
-         * platform.
+         * <p>The source platform.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Taobao (sourced from Taobao)
+         * Tmall (sourced from Tmall)
+         * Cbu (sourced from the 1688 distribution platform)</p>
          */
         public Builder platform(String platform) {
             this.putBodyParameter("platform", platform);
@@ -690,7 +804,10 @@ public class SearchProductsRequest extends Request {
         }
 
         /**
-         * productId.
+         * <p>The product ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxxx</p>
          */
         public Builder productId(String productId) {
             this.putBodyParameter("productId", productId);
@@ -699,7 +816,10 @@ public class SearchProductsRequest extends Request {
         }
 
         /**
-         * productName.
+         * <p>The product name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Plants</p>
          */
         public Builder productName(String productName) {
             this.putBodyParameter("productName", productName);
@@ -708,7 +828,10 @@ public class SearchProductsRequest extends Request {
         }
 
         /**
-         * productStatus.
+         * <p>The product status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sellable</p>
          */
         public Builder productStatus(String productStatus) {
             this.putBodyParameter("productStatus", productStatus);
@@ -717,6 +840,7 @@ public class SearchProductsRequest extends Request {
         }
 
         /**
+         * <p>The ID of the purchaser.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -729,7 +853,16 @@ public class SearchProductsRequest extends Request {
         }
 
         /**
-         * taxRate.
+         * <p>The tax rate.</p>
+         * <blockquote>
+         * <ul>
+         * <li>You can combine multiple tax rate enum values. Separate the values with commas (,). Example: Rate0,Rate1.</li>
+         * <li>HasRate cannot be combined with other enum values.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Rate0</p>
          */
         public Builder taxRate(String taxRate) {
             this.putBodyParameter("taxRate", taxRate);
@@ -738,7 +871,10 @@ public class SearchProductsRequest extends Request {
         }
 
         /**
-         * tradeModeAndCredit.
+         * <p>The sales mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JingXiao</p>
          */
         public Builder tradeModeAndCredit(String tradeModeAndCredit) {
             this.putBodyParameter("tradeModeAndCredit", tradeModeAndCredit);

@@ -106,7 +106,10 @@ public class SkuSpec extends TeaModel {
         } 
 
         /**
-         * key.
+         * <p>Specification key</p>
+         * 
+         * <strong>example:</strong>
+         * <p>颜色分类</p>
          */
         public Builder key(String key) {
             this.key = key;
@@ -114,7 +117,10 @@ public class SkuSpec extends TeaModel {
         }
 
         /**
-         * keyId.
+         * <p>Specification ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder keyId(Long keyId) {
             this.keyId = keyId;
@@ -122,7 +128,10 @@ public class SkuSpec extends TeaModel {
         }
 
         /**
-         * value.
+         * <p>Specification value</p>
+         * 
+         * <strong>example:</strong>
+         * <p>天蓝色</p>
          */
         public Builder value(String value) {
             this.value = value;
@@ -130,7 +139,10 @@ public class SkuSpec extends TeaModel {
         }
 
         /**
-         * valueAlias.
+         * <p>Specification value alias (Recommendation: If this field is not empty (null), use its value as the frontend display specification; if this field is empty (null), use the value field as the frontend display specification.)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>秘色</p>
          */
         public Builder valueAlias(String valueAlias) {
             this.valueAlias = valueAlias;
@@ -138,7 +150,10 @@ public class SkuSpec extends TeaModel {
         }
 
         /**
-         * valueId.
+         * <p>Specification value ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder valueId(Long valueId) {
             this.valueId = valueId;

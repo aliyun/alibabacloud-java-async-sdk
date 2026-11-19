@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SearchProductsResponseBody</p>
  */
 public class SearchProductsResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("nextCursor")
+    private String nextCursor;
+
     @com.aliyun.core.annotation.NameInMap("products")
     private java.util.List<Products> products;
 
@@ -24,6 +27,7 @@ public class SearchProductsResponseBody extends TeaModel {
     private Integer total;
 
     private SearchProductsResponseBody(Builder builder) {
+        this.nextCursor = builder.nextCursor;
         this.products = builder.products;
         this.total = builder.total;
     }
@@ -41,6 +45,13 @@ public class SearchProductsResponseBody extends TeaModel {
     }
 
     /**
+     * @return nextCursor
+     */
+    public String getNextCursor() {
+        return this.nextCursor;
+    }
+
+    /**
      * @return products
      */
     public java.util.List<Products> getProducts() {
@@ -55,6 +66,7 @@ public class SearchProductsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String nextCursor; 
         private java.util.List<Products> products; 
         private Integer total; 
 
@@ -62,12 +74,24 @@ public class SearchProductsResponseBody extends TeaModel {
         } 
 
         private Builder(SearchProductsResponseBody model) {
+            this.nextCursor = model.nextCursor;
             this.products = model.products;
             this.total = model.total;
         } 
 
         /**
-         * products.
+         * <p>The cursor for the next page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>899192313AB192938441CCW</p>
+         */
+        public Builder nextCursor(String nextCursor) {
+            this.nextCursor = nextCursor;
+            return this;
+        }
+
+        /**
+         * <p>The product collection.</p>
          */
         public Builder products(java.util.List<Products> products) {
             this.products = products;
@@ -75,7 +99,10 @@ public class SearchProductsResponseBody extends TeaModel {
         }
 
         /**
-         * total.
+         * <p>The total number of items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -180,7 +207,10 @@ public class SearchProductsResponseBody extends TeaModel {
             } 
 
             /**
-             * categoryId.
+             * <p>The category ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>201792301</p>
              */
             public Builder categoryId(Long categoryId) {
                 this.categoryId = categoryId;
@@ -188,7 +218,10 @@ public class SearchProductsResponseBody extends TeaModel {
             }
 
             /**
-             * isLeaf.
+             * <p>Indicates whether the node is a leaf node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isLeaf(Boolean isLeaf) {
                 this.isLeaf = isLeaf;
@@ -196,7 +229,10 @@ public class SearchProductsResponseBody extends TeaModel {
             }
 
             /**
-             * level.
+             * <p>The level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder level(Integer level) {
                 this.level = level;
@@ -204,7 +240,10 @@ public class SearchProductsResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The category name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Name test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -212,7 +251,10 @@ public class SearchProductsResponseBody extends TeaModel {
             }
 
             /**
-             * parentId.
+             * <p>The parent category ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder parentId(Long parentId) {
                 this.parentId = parentId;
@@ -591,7 +633,10 @@ public class SearchProductsResponseBody extends TeaModel {
             } 
 
             /**
-             * bandName.
+             * <p>The brand name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Plants</p>
              */
             public Builder bandName(String bandName) {
                 this.bandName = bandName;
@@ -599,7 +644,10 @@ public class SearchProductsResponseBody extends TeaModel {
             }
 
             /**
-             * canNotSellReason.
+             * <p>The reason why the product is unavailable for sale.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Insufficient inventory</p>
              */
             public Builder canNotSellReason(String canNotSellReason) {
                 this.canNotSellReason = canNotSellReason;
@@ -607,7 +655,10 @@ public class SearchProductsResponseBody extends TeaModel {
             }
 
             /**
-             * canSell.
+             * <p>Indicates whether the product is available for sale. This is a calculated value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder canSell(Boolean canSell) {
                 this.canSell = canSell;
@@ -615,7 +666,7 @@ public class SearchProductsResponseBody extends TeaModel {
             }
 
             /**
-             * categoryChain.
+             * <p>The category chain.</p>
              */
             public Builder categoryChain(java.util.List<CategoryChain> categoryChain) {
                 this.categoryChain = categoryChain;
@@ -623,7 +674,7 @@ public class SearchProductsResponseBody extends TeaModel {
             }
 
             /**
-             * credit.
+             * <p>The billing cycle.</p>
              */
             public Builder credit(java.util.List<String> credit) {
                 this.credit = credit;
@@ -631,7 +682,10 @@ public class SearchProductsResponseBody extends TeaModel {
             }
 
             /**
-             * diffPrice.
+             * <p>The price difference range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>￥-9998.95 ~ ￥-9977.90</p>
              */
             public Builder diffPrice(String diffPrice) {
                 this.diffPrice = diffPrice;
@@ -639,7 +693,10 @@ public class SearchProductsResponseBody extends TeaModel {
             }
 
             /**
-             * distributionPrice.
+             * <p>The distribution purchase price range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>￥0.05 ~ ￥21.10</p>
              */
             public Builder distributionPrice(String distributionPrice) {
                 this.distributionPrice = distributionPrice;
@@ -647,7 +704,10 @@ public class SearchProductsResponseBody extends TeaModel {
             }
 
             /**
-             * distributionPriceRatio.
+             * <p>The distribution premium rate range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-100.00% ~ -99.79%</p>
              */
             public Builder distributionPriceRatio(String distributionPriceRatio) {
                 this.distributionPriceRatio = distributionPriceRatio;
@@ -655,7 +715,12 @@ public class SearchProductsResponseBody extends TeaModel {
             }
 
             /**
-             * externalPlatformType.
+             * <p>The source platform.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Taobao (sourced from Taobao)
+             * Tmall (sourced from Tmall)
+             * Cbu (sourced from the 1688 distribution platform)</p>
              */
             public Builder externalPlatformType(String externalPlatformType) {
                 this.externalPlatformType = externalPlatformType;
@@ -663,7 +728,11 @@ public class SearchProductsResponseBody extends TeaModel {
             }
 
             /**
-             * gmtCreate.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-01-02 12:23:34
+             * (yyyy-MM-dd HH:mm:ss)</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -671,7 +740,11 @@ public class SearchProductsResponseBody extends TeaModel {
             }
 
             /**
-             * gmtModified.
+             * <p>The last modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-01-02 12:23:34
+             * (yyyy-MM-dd HH:mm:ss)</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -679,7 +752,10 @@ public class SearchProductsResponseBody extends TeaModel {
             }
 
             /**
-             * inGroup.
+             * <p>Specifies whether the product is added to the inventory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder inGroup(Boolean inGroup) {
                 this.inGroup = inGroup;
@@ -687,7 +763,11 @@ public class SearchProductsResponseBody extends TeaModel {
             }
 
             /**
-             * inGroupTime.
+             * <p>The time when the product was added to the inventory. The format is yyyy-MM-dd HH:mm:ss.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-01-02 12:23:34
+             * (yyyy-MM-dd HH:mm:ss)</p>
              */
             public Builder inGroupTime(String inGroupTime) {
                 this.inGroupTime = inGroupTime;
@@ -695,7 +775,10 @@ public class SearchProductsResponseBody extends TeaModel {
             }
 
             /**
-             * inventoryRiskLevel.
+             * <p>The inventory risk level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Low</p>
              */
             public Builder inventoryRiskLevel(String inventoryRiskLevel) {
                 this.inventoryRiskLevel = inventoryRiskLevel;
@@ -703,7 +786,10 @@ public class SearchProductsResponseBody extends TeaModel {
             }
 
             /**
-             * invoiceType.
+             * <p>The invoice type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HasInvoice</p>
              */
             public Builder invoiceType(String invoiceType) {
                 this.invoiceType = invoiceType;
@@ -711,7 +797,10 @@ public class SearchProductsResponseBody extends TeaModel {
             }
 
             /**
-             * lmItemId.
+             * <p>The LM product ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx-xxxxx</p>
              */
             public Builder lmItemId(String lmItemId) {
                 this.lmItemId = lmItemId;
@@ -719,7 +808,10 @@ public class SearchProductsResponseBody extends TeaModel {
             }
 
             /**
-             * picUrl.
+             * <p>The main image URL of the product.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://img.alicdn.com/xxx.jpg">https://img.alicdn.com/xxx.jpg</a></p>
              */
             public Builder picUrl(String picUrl) {
                 this.picUrl = picUrl;
@@ -727,7 +819,10 @@ public class SearchProductsResponseBody extends TeaModel {
             }
 
             /**
-             * platformPrice.
+             * <p>The suggested retail price range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>￥9999.00 ~ ￥9999.00</p>
              */
             public Builder platformPrice(String platformPrice) {
                 this.platformPrice = platformPrice;
@@ -735,7 +830,10 @@ public class SearchProductsResponseBody extends TeaModel {
             }
 
             /**
-             * platformReservePrice.
+             * <p>The strikethrough price range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>￥9999.00 ~ ￥9999.00</p>
              */
             public Builder platformReservePrice(String platformReservePrice) {
                 this.platformReservePrice = platformReservePrice;
@@ -743,7 +841,10 @@ public class SearchProductsResponseBody extends TeaModel {
             }
 
             /**
-             * productId.
+             * <p>The product ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxxx</p>
              */
             public Builder productId(String productId) {
                 this.productId = productId;
@@ -751,7 +852,10 @@ public class SearchProductsResponseBody extends TeaModel {
             }
 
             /**
-             * productName.
+             * <p>The product name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Plants</p>
              */
             public Builder productName(String productName) {
                 this.productName = productName;
@@ -759,7 +863,10 @@ public class SearchProductsResponseBody extends TeaModel {
             }
 
             /**
-             * shopName.
+             * <p>The channel store name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder shopName(String shopName) {
                 this.shopName = shopName;
@@ -767,7 +874,10 @@ public class SearchProductsResponseBody extends TeaModel {
             }
 
             /**
-             * soldQuantity.
+             * <p>The cumulative sales volume.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder soldQuantity(String soldQuantity) {
                 this.soldQuantity = soldQuantity;
@@ -775,7 +885,10 @@ public class SearchProductsResponseBody extends TeaModel {
             }
 
             /**
-             * taxCode.
+             * <p>The tax code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3040203000000000000</p>
              */
             public Builder taxCode(String taxCode) {
                 this.taxCode = taxCode;
@@ -783,7 +896,11 @@ public class SearchProductsResponseBody extends TeaModel {
             }
 
             /**
-             * taxRate.
+             * <p>The tax rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>600 (6%)
+             * -100 (Tax-exempt)</p>
              */
             public Builder taxRate(Long taxRate) {
                 this.taxRate = taxRate;
@@ -791,7 +908,10 @@ public class SearchProductsResponseBody extends TeaModel {
             }
 
             /**
-             * tradeMode.
+             * <p>The sales mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>JingXiao</p>
              */
             public Builder tradeMode(String tradeMode) {
                 this.tradeMode = tradeMode;

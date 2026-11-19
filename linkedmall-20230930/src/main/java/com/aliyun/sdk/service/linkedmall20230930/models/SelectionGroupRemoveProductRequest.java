@@ -75,6 +75,12 @@ public class SelectionGroupRemoveProductRequest extends Request {
         } 
 
         /**
+         * <p>The list of product IDs to be dispatched.</p>
+         * <blockquote>
+         * <ul>
+         * <li>A single call supports a maximum of 30 products.</li>
+         * </ul>
+         * </blockquote>
          * <p>This parameter is required.</p>
          */
         public Builder productIds(java.util.List<String> productIds) {
@@ -84,6 +90,7 @@ public class SelectionGroupRemoveProductRequest extends Request {
         }
 
         /**
+         * <p>The purchaser ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

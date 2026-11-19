@@ -67,7 +67,10 @@ public class ProductProperty extends TeaModel {
         } 
 
         /**
-         * text.
+         * <p>The attribute text.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Color</p>
          */
         public Builder text(String text) {
             this.text = text;
@@ -75,7 +78,7 @@ public class ProductProperty extends TeaModel {
         }
 
         /**
-         * values.
+         * <p>The attribute value set.</p>
          */
         public Builder values(java.util.List<String> values) {
             this.values = values;

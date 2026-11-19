@@ -60,6 +60,7 @@ public class ListSelectionProductSaleInfosRequest extends Request {
         } 
 
         /**
+         * <p>The parameters for batch querying product sales information.</p>
          * <p>This parameter is required.</p>
          */
         public Builder body(ProductSaleInfoListQuery body) {

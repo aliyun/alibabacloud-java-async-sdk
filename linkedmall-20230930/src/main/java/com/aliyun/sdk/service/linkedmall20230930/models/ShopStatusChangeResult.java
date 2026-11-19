@@ -54,7 +54,10 @@ public class ShopStatusChangeResult extends TeaModel {
         } 
 
         /**
-         * operate.
+         * <p>Indicates whether the operation is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder operate(Boolean operate) {
             this.operate = operate;

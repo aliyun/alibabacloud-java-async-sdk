@@ -106,7 +106,10 @@ public class OrderRenderResult extends TeaModel {
         } 
 
         /**
-         * canSell.
+         * <p>Indicates whether the item is sellable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder canSell(Boolean canSell) {
             this.canSell = canSell;
@@ -114,7 +117,7 @@ public class OrderRenderResult extends TeaModel {
         }
 
         /**
-         * deliveryInfoList.
+         * <p>The fulfillment information.</p>
          */
         public Builder deliveryInfoList(java.util.List<DeliveryInfo> deliveryInfoList) {
             this.deliveryInfoList = deliveryInfoList;
@@ -122,7 +125,7 @@ public class OrderRenderResult extends TeaModel {
         }
 
         /**
-         * extInfo.
+         * <p>The extension information.</p>
          */
         public Builder extInfo(java.util.Map<String, ?> extInfo) {
             this.extInfo = extInfo;
@@ -130,7 +133,10 @@ public class OrderRenderResult extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The unsellable reason.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Inventory is 0</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +144,7 @@ public class OrderRenderResult extends TeaModel {
         }
 
         /**
-         * productList.
+         * <p>The product collection.</p>
          */
         public Builder productList(java.util.List<OrderProductResult> productList) {
             this.productList = productList;

@@ -67,7 +67,10 @@ public class PurchaseOrderStatusResult extends TeaModel {
         } 
 
         /**
-         * requestId.
+         * <p>API request requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3239281273464326823</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class PurchaseOrderStatusResult extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>Purchase order status</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder status(String status) {
             this.status = status;

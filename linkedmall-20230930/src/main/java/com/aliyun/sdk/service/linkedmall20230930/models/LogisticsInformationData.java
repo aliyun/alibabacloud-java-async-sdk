@@ -158,7 +158,10 @@ public class LogisticsInformationData extends TeaModel {
         } 
 
         /**
-         * logisticsStatus.
+         * <p>The logistics status. A value of 2 indicates that the order is shipped and awaits the buyer\&quot;s confirmation of receipt.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder logisticsStatus(String logisticsStatus) {
             this.logisticsStatus = logisticsStatus;
@@ -166,7 +169,10 @@ public class LogisticsInformationData extends TeaModel {
         }
 
         /**
-         * modifiedTime.
+         * <p>The time when the information was last updated, in yyyy-MM-dd HH:mm:ss format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1713407100321</p>
          */
         public Builder modifiedTime(String modifiedTime) {
             this.modifiedTime = modifiedTime;
@@ -174,7 +180,10 @@ public class LogisticsInformationData extends TeaModel {
         }
 
         /**
-         * orderId.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6696070566****8593</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -182,7 +191,10 @@ public class LogisticsInformationData extends TeaModel {
         }
 
         /**
-         * orderLineId.
+         * <p>The ID of the order line.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6692****5458</p>
          */
         public Builder orderLineId(String orderLineId) {
             this.orderLineId = orderLineId;
@@ -190,7 +202,10 @@ public class LogisticsInformationData extends TeaModel {
         }
 
         /**
-         * outerPurchaseOrderId.
+         * <p>The external ID of the purchase order, provided upon creation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>233111</p>
          */
         public Builder outerPurchaseOrderId(String outerPurchaseOrderId) {
             this.outerPurchaseOrderId = outerPurchaseOrderId;
@@ -198,7 +213,10 @@ public class LogisticsInformationData extends TeaModel {
         }
 
         /**
-         * purchaserId.
+         * <p>The ID of the purchaser.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PID22000009</p>
          */
         public Builder purchaserId(String purchaserId) {
             this.purchaserId = purchaserId;
@@ -206,7 +224,10 @@ public class LogisticsInformationData extends TeaModel {
         }
 
         /**
-         * trackingCompanyCode.
+         * <p>The code of the logistics company.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SF</p>
          */
         public Builder trackingCompanyCode(String trackingCompanyCode) {
             this.trackingCompanyCode = trackingCompanyCode;
@@ -214,7 +235,10 @@ public class LogisticsInformationData extends TeaModel {
         }
 
         /**
-         * trackingCompanyName.
+         * <p>The name of the logistics company.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>顺丰快递</p>
          */
         public Builder trackingCompanyName(String trackingCompanyName) {
             this.trackingCompanyName = trackingCompanyName;
@@ -222,7 +246,10 @@ public class LogisticsInformationData extends TeaModel {
         }
 
         /**
-         * trackingNumber.
+         * <p>The tracking number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SF198913131</p>
          */
         public Builder trackingNumber(String trackingNumber) {
             this.trackingNumber = trackingNumber;

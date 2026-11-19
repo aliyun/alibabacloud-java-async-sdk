@@ -67,7 +67,10 @@ public class ConfirmDisburseResult extends TeaModel {
         } 
 
         /**
-         * requestId.
+         * <p>API Request requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3239281273464326823</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class ConfirmDisburseResult extends TeaModel {
         }
 
         /**
-         * result.
+         * <p>Return Result of Confirm Delivery</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder result(String result) {
             this.result = result;

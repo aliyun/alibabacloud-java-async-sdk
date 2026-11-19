@@ -106,7 +106,10 @@ public class Division extends TeaModel {
         } 
 
         /**
-         * divisionCode.
+         * <p>Address encoding</p>
+         * 
+         * <strong>example:</strong>
+         * <p>310000</p>
          */
         public Builder divisionCode(Long divisionCode) {
             this.divisionCode = divisionCode;
@@ -114,7 +117,10 @@ public class Division extends TeaModel {
         }
 
         /**
-         * divisionLevel.
+         * <p>Address Level</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder divisionLevel(Long divisionLevel) {
             this.divisionLevel = divisionLevel;
@@ -122,7 +128,10 @@ public class Division extends TeaModel {
         }
 
         /**
-         * divisionName.
+         * <p>Address Name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>上海</p>
          */
         public Builder divisionName(String divisionName) {
             this.divisionName = divisionName;
@@ -130,7 +139,10 @@ public class Division extends TeaModel {
         }
 
         /**
-         * parentId.
+         * <p>Parent ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder parentId(Long parentId) {
             this.parentId = parentId;
@@ -138,7 +150,10 @@ public class Division extends TeaModel {
         }
 
         /**
-         * pinyin.
+         * <p>Address pinyin</p>
+         * 
+         * <strong>example:</strong>
+         * <p>shang hai</p>
          */
         public Builder pinyin(String pinyin) {
             this.pinyin = pinyin;

@@ -67,7 +67,7 @@ public class ProductSaleInfoListResult extends TeaModel {
         } 
 
         /**
-         * productSaleInfos.
+         * <p>The commodity sales information.</p>
          */
         public Builder productSaleInfos(java.util.List<ProductSaleInfo> productSaleInfos) {
             this.productSaleInfos = productSaleInfos;
@@ -75,7 +75,10 @@ public class ProductSaleInfoListResult extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The ID of the API request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3239281273464326823</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

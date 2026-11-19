@@ -106,7 +106,13 @@ public class LimitRule extends TeaModel {
         } 
 
         /**
-         * beginTime.
+         * <p>Start time of validity</p>
+         * <blockquote>
+         * <p>UNIX timestamp in milliseconds</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1724947200000</p>
          */
         public Builder beginTime(Long beginTime) {
             this.beginTime = beginTime;
@@ -114,7 +120,13 @@ public class LimitRule extends TeaModel {
         }
 
         /**
-         * condcase.
+         * <p>Period condition</p>
+         * <blockquote>
+         * <p>This field applies only when ruleType is UpperNumberPerUserPeriod.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>day</p>
          */
         public Builder condcase(String condcase) {
             this.condcase = condcase;
@@ -122,7 +134,13 @@ public class LimitRule extends TeaModel {
         }
 
         /**
-         * endTime.
+         * <p>End time of validity</p>
+         * <blockquote>
+         * <p>UNIX timestamp in milliseconds</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1724947200000</p>
          */
         public Builder endTime(Long endTime) {
             this.endTime = endTime;
@@ -130,7 +148,13 @@ public class LimitRule extends TeaModel {
         }
 
         /**
-         * limitNum.
+         * <p>Purchase limit quantity</p>
+         * <blockquote>
+         * <p>If multiple purchase limit rules are active at the same time, the final limit is the minimum value.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder limitNum(Integer limitNum) {
             this.limitNum = limitNum;
@@ -138,7 +162,10 @@ public class LimitRule extends TeaModel {
         }
 
         /**
-         * ruleType.
+         * <p>Purchase limit type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UpperNumberPerUser</p>
          */
         public Builder ruleType(String ruleType) {
             this.ruleType = ruleType;

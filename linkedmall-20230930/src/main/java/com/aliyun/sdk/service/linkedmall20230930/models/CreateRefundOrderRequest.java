@@ -60,6 +60,7 @@ public class CreateRefundOrderRequest extends Request {
         } 
 
         /**
+         * <p>Creates a reverse ticket.</p>
          * <p>This parameter is required.</p>
          */
         public Builder body(RefundOrderCmd body) {

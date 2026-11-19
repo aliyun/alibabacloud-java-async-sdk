@@ -197,7 +197,7 @@ public class OrderLineResult extends TeaModel {
         } 
 
         /**
-         * eticketInfos.
+         * <p>A list of electronic vouchers.</p>
          */
         public Builder eticketInfos(java.util.List<EticketInfo> eticketInfos) {
             this.eticketInfos = eticketInfos;
@@ -205,7 +205,10 @@ public class OrderLineResult extends TeaModel {
         }
 
         /**
-         * logisticsStatus.
+         * <p>The logistics status of the order line.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder logisticsStatus(String logisticsStatus) {
             this.logisticsStatus = logisticsStatus;
@@ -213,7 +216,10 @@ public class OrderLineResult extends TeaModel {
         }
 
         /**
-         * number.
+         * <p>The number of items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder number(String number) {
             this.number = number;
@@ -221,7 +227,10 @@ public class OrderLineResult extends TeaModel {
         }
 
         /**
-         * orderId.
+         * <p>The unique ID of the main order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6692****5457</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -229,7 +238,10 @@ public class OrderLineResult extends TeaModel {
         }
 
         /**
-         * orderLineId.
+         * <p>The unique ID of the order line.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6692****5458</p>
          */
         public Builder orderLineId(String orderLineId) {
             this.orderLineId = orderLineId;
@@ -237,7 +249,10 @@ public class OrderLineResult extends TeaModel {
         }
 
         /**
-         * orderLineStatus.
+         * <p>The status of the order line.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder orderLineStatus(String orderLineStatus) {
             this.orderLineStatus = orderLineStatus;
@@ -245,7 +260,10 @@ public class OrderLineResult extends TeaModel {
         }
 
         /**
-         * payFee.
+         * <p>The payable amount for the order line.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder payFee(Long payFee) {
             this.payFee = payFee;
@@ -253,7 +271,10 @@ public class OrderLineResult extends TeaModel {
         }
 
         /**
-         * productId.
+         * <p>The unique ID of the product.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6600****6736</p>
          */
         public Builder productId(String productId) {
             this.productId = productId;
@@ -261,7 +282,10 @@ public class OrderLineResult extends TeaModel {
         }
 
         /**
-         * productPic.
+         * <p>The URL of the product image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>//img.alicdn.com/imgextra/i4/2216003305543/O1CN01bip3Un1qokG0</p>
          */
         public Builder productPic(String productPic) {
             this.productPic = productPic;
@@ -269,7 +293,10 @@ public class OrderLineResult extends TeaModel {
         }
 
         /**
-         * productTitle.
+         * <p>The product name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>儿童学习桌</p>
          */
         public Builder productTitle(String productTitle) {
             this.productTitle = productTitle;
@@ -277,7 +304,10 @@ public class OrderLineResult extends TeaModel {
         }
 
         /**
-         * skuId.
+         * <p>The unique ID of the SKU.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6600****6737</p>
          */
         public Builder skuId(String skuId) {
             this.skuId = skuId;
@@ -285,7 +315,10 @@ public class OrderLineResult extends TeaModel {
         }
 
         /**
-         * skuTitle.
+         * <p>The SKU name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>浅绿色</p>
          */
         public Builder skuTitle(String skuTitle) {
             this.skuTitle = skuTitle;

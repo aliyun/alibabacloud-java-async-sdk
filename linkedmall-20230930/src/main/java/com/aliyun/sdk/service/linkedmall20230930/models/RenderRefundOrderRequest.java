@@ -60,6 +60,7 @@ public class RenderRefundOrderRequest extends Request {
         } 
 
         /**
+         * <p>The reverse order rendering.</p>
          * <p>This parameter is required.</p>
          */
         public Builder body(RefundRenderCmd body) {

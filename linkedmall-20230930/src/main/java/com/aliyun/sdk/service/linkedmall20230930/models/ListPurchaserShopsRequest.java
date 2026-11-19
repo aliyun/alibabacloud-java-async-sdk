@@ -73,7 +73,10 @@ public class ListPurchaserShopsRequest extends Request {
         } 
 
         /**
-         * pageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -82,7 +85,10 @@ public class ListPurchaserShopsRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of items per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);

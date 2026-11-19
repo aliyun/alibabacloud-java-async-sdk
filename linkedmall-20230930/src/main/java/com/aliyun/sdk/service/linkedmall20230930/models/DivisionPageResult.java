@@ -67,7 +67,7 @@ public class DivisionPageResult extends TeaModel {
         } 
 
         /**
-         * divisionList.
+         * <p>The list of divisions.</p>
          */
         public Builder divisionList(java.util.List<Division> divisionList) {
             this.divisionList = divisionList;
@@ -75,7 +75,10 @@ public class DivisionPageResult extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>841471F6-5D61-1331-8C38-2****B55</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -80,7 +80,10 @@ public class ProductSpec extends TeaModel {
         } 
 
         /**
-         * key.
+         * <p>The specification key name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Color category</p>
          */
         public Builder key(String key) {
             this.key = key;
@@ -88,7 +91,10 @@ public class ProductSpec extends TeaModel {
         }
 
         /**
-         * keyId.
+         * <p>The specification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder keyId(Long keyId) {
             this.keyId = keyId;
@@ -96,7 +102,7 @@ public class ProductSpec extends TeaModel {
         }
 
         /**
-         * values.
+         * <p>The specification key values.</p>
          */
         public Builder values(java.util.List<ProductSpecValue> values) {
             this.values = values;

@@ -132,7 +132,10 @@ public class LogisticsOrderResult extends TeaModel {
         } 
 
         /**
-         * dataProvider.
+         * <p>The data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Cainiao</p>
          */
         public Builder dataProvider(String dataProvider) {
             this.dataProvider = dataProvider;
@@ -140,7 +143,10 @@ public class LogisticsOrderResult extends TeaModel {
         }
 
         /**
-         * dataProviderTitle.
+         * <p>The data text.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Cainiao Guoguo</p>
          */
         public Builder dataProviderTitle(String dataProviderTitle) {
             this.dataProviderTitle = dataProviderTitle;
@@ -148,7 +154,7 @@ public class LogisticsOrderResult extends TeaModel {
         }
 
         /**
-         * goods.
+         * <p>The product details.</p>
          */
         public Builder goods(java.util.List<Good> goods) {
             this.goods = goods;
@@ -156,7 +162,40 @@ public class LogisticsOrderResult extends TeaModel {
         }
 
         /**
-         * logisticsCompanyCode.
+         * <p>The logistics company code.</p>
+         * <blockquote>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>ZTKY: China Railway Logistics</li>
+         * <li>POST: China Post</li>
+         * <li>DBKD: Deppon Express</li>
+         * <li>JT: J&amp;T Express</li>
+         * <li>QFKD: Quanfeng Express</li>
+         * <li>EYB: China Post E-commerce Express EYB</li>
+         * <li>STO: STO Express</li>
+         * <li>SF: SF Express</li>
+         * <li>ZTO: ZTO Express</li>
+         * <li>YTO: YTO Express</li>
+         * <li>TTKDEX: Tiantian Express</li>
+         * <li>JDLEx: JD Express</li>
+         * <li>ETICKET: Electronic vouchers</li>
+         * <li>HTKY: Best Express</li>
+         * <li>SHQ: Huaqiang Logistics</li>
+         * <li>TAOBAO: Taobao Logistics</li>
+         * <li>YUNDA: Yunda Express</li>
+         * <li>ZJS: ZJS Express</li>
+         * <li>FEDEX: FedEx</li>
+         * <li>EMS: EMS</li>
+         * <li>POSTB: China Post Parcel</li>
+         * <li>OTHER: Other</li>
+         * <li>CNDJWL: Cainiao Large Item Logistics</li>
+         * <li>TN: Teneng</li>
+         * <li>ZMKM: Cainiao Express</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>SF</p>
          */
         public Builder logisticsCompanyCode(String logisticsCompanyCode) {
             this.logisticsCompanyCode = logisticsCompanyCode;
@@ -164,7 +203,10 @@ public class LogisticsOrderResult extends TeaModel {
         }
 
         /**
-         * logisticsCompanyName.
+         * <p>The logistics company name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SF Express</p>
          */
         public Builder logisticsCompanyName(String logisticsCompanyName) {
             this.logisticsCompanyName = logisticsCompanyName;
@@ -172,7 +214,7 @@ public class LogisticsOrderResult extends TeaModel {
         }
 
         /**
-         * logisticsDetailList.
+         * <p>The logistics details.</p>
          */
         public Builder logisticsDetailList(java.util.List<LogisticsDetail> logisticsDetailList) {
             this.logisticsDetailList = logisticsDetailList;
@@ -180,7 +222,13 @@ public class LogisticsOrderResult extends TeaModel {
         }
 
         /**
-         * mailNo.
+         * <p>The logistics tracking number.</p>
+         * <blockquote>
+         * <p>The logistics tracking number for electronic vouchers is a fixed value: *.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>SF234***2345</p>
          */
         public Builder mailNo(String mailNo) {
             this.mailNo = mailNo;

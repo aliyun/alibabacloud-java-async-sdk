@@ -108,7 +108,7 @@ public class OrderPageQuery extends TeaModel {
         } 
 
         /**
-         * orderIdList.
+         * <p>The collection of primary order IDs.</p>
          */
         public Builder orderIdList(java.util.List<String> orderIdList) {
             this.orderIdList = orderIdList;
@@ -116,7 +116,10 @@ public class OrderPageQuery extends TeaModel {
         }
 
         /**
-         * outPurchaseOrderId.
+         * <p>The external purchase order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6692****56121</p>
          */
         public Builder outPurchaseOrderId(String outPurchaseOrderId) {
             this.outPurchaseOrderId = outPurchaseOrderId;
@@ -124,6 +127,7 @@ public class OrderPageQuery extends TeaModel {
         }
 
         /**
+         * <p>The page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -135,6 +139,7 @@ public class OrderPageQuery extends TeaModel {
         }
 
         /**
+         * <p>The number of entries per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,7 +151,10 @@ public class OrderPageQuery extends TeaModel {
         }
 
         /**
-         * purchaseOrderId.
+         * <p>The purchase order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6692****5696</p>
          */
         public Builder purchaseOrderId(String purchaseOrderId) {
             this.purchaseOrderId = purchaseOrderId;

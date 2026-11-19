@@ -80,7 +80,10 @@ public class ShopPageResult extends TeaModel {
         } 
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>841471F6-5D61-1331-8C38-2****B55</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class ShopPageResult extends TeaModel {
         }
 
         /**
-         * shopList.
+         * <p>The shop list.</p>
          */
         public Builder shopList(java.util.List<ShopPageDataResult> shopList) {
             this.shopList = shopList;
@@ -96,7 +99,10 @@ public class ShopPageResult extends TeaModel {
         }
 
         /**
-         * total.
+         * <p>The total count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24</p>
          */
         public Builder total(Integer total) {
             this.total = total;

@@ -82,7 +82,10 @@ public class SkuQueryParam extends TeaModel {
         } 
 
         /**
-         * buyAmount.
+         * <p>The quantity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder buyAmount(Integer buyAmount) {
             this.buyAmount = buyAmount;
@@ -90,6 +93,7 @@ public class SkuQueryParam extends TeaModel {
         }
 
         /**
+         * <p>The commodity ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +105,7 @@ public class SkuQueryParam extends TeaModel {
         }
 
         /**
+         * <p>skuid</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

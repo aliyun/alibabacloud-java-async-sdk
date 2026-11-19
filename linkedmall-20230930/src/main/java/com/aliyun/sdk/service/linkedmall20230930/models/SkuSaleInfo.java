@@ -197,7 +197,10 @@ public class SkuSaleInfo extends TeaModel {
         } 
 
         /**
-         * canNotSellReason.
+         * <p>The unsellable reason.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Unsellable</p>
          */
         public Builder canNotSellReason(String canNotSellReason) {
             this.canNotSellReason = canNotSellReason;
@@ -205,7 +208,10 @@ public class SkuSaleInfo extends TeaModel {
         }
 
         /**
-         * canSell.
+         * <p>The sellable status of the SKU.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder canSell(Boolean canSell) {
             this.canSell = canSell;
@@ -213,7 +219,10 @@ public class SkuSaleInfo extends TeaModel {
         }
 
         /**
-         * divisionCode.
+         * <p>The division code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>330106109</p>
          */
         public Builder divisionCode(String divisionCode) {
             this.divisionCode = divisionCode;
@@ -221,7 +230,10 @@ public class SkuSaleInfo extends TeaModel {
         }
 
         /**
-         * fuzzyQuantity.
+         * <p>The fuzzy available inventory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>In stock</p>
          */
         public Builder fuzzyQuantity(String fuzzyQuantity) {
             this.fuzzyQuantity = fuzzyQuantity;
@@ -229,7 +241,10 @@ public class SkuSaleInfo extends TeaModel {
         }
 
         /**
-         * markPrice.
+         * <p>The strikethrough price in cents.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>999900</p>
          */
         public Builder markPrice(Long markPrice) {
             this.markPrice = markPrice;
@@ -237,7 +252,10 @@ public class SkuSaleInfo extends TeaModel {
         }
 
         /**
-         * price.
+         * <p>The distributor purchase price in cents.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19800</p>
          */
         public Builder price(Long price) {
             this.price = price;
@@ -245,7 +263,10 @@ public class SkuSaleInfo extends TeaModel {
         }
 
         /**
-         * productId.
+         * <p>The product ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>660460842235822080</p>
          */
         public Builder productId(String productId) {
             this.productId = productId;
@@ -253,7 +274,10 @@ public class SkuSaleInfo extends TeaModel {
         }
 
         /**
-         * quantity.
+         * <p>The available inventory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder quantity(Long quantity) {
             this.quantity = quantity;
@@ -261,7 +285,10 @@ public class SkuSaleInfo extends TeaModel {
         }
 
         /**
-         * shopId.
+         * <p>The store ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21000017</p>
          */
         public Builder shopId(String shopId) {
             this.shopId = shopId;
@@ -269,7 +296,10 @@ public class SkuSaleInfo extends TeaModel {
         }
 
         /**
-         * skuId.
+         * <p>skuId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>660460842235822081</p>
          */
         public Builder skuId(String skuId) {
             this.skuId = skuId;
@@ -277,7 +307,10 @@ public class SkuSaleInfo extends TeaModel {
         }
 
         /**
-         * skuStatus.
+         * <p>The control status of the SKU.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Online</p>
          */
         public Builder skuStatus(String skuStatus) {
             this.skuStatus = skuStatus;
@@ -285,7 +318,10 @@ public class SkuSaleInfo extends TeaModel {
         }
 
         /**
-         * title.
+         * <p>The SKU title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sky blue</p>
          */
         public Builder title(String title) {
             this.title = title;

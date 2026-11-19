@@ -67,7 +67,7 @@ public class CategoryListQuery extends TeaModel {
         } 
 
         /**
-         * categoryIds.
+         * <p>Collection of category IDs</p>
          */
         public Builder categoryIds(java.util.List<Long> categoryIds) {
             this.categoryIds = categoryIds;
@@ -75,7 +75,10 @@ public class CategoryListQuery extends TeaModel {
         }
 
         /**
-         * parentCategoryId.
+         * <p>Parent category ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5200001</p>
          */
         public Builder parentCategoryId(Long parentCategoryId) {
             this.parentCategoryId = parentCategoryId;

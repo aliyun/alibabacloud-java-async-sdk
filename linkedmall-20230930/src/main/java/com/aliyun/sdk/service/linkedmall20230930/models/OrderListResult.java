@@ -80,7 +80,7 @@ public class OrderListResult extends TeaModel {
         } 
 
         /**
-         * orderList.
+         * <p>The order list.</p>
          */
         public Builder orderList(java.util.List<OrderResult> orderList) {
             this.orderList = orderList;
@@ -88,7 +88,10 @@ public class OrderListResult extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The API request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>841471F6-5D61-1331-8C38-2****B55</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class OrderListResult extends TeaModel {
         }
 
         /**
-         * total.
+         * <p>The total count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24</p>
          */
         public Builder total(Integer total) {
             this.total = total;

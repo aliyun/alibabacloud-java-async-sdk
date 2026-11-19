@@ -80,7 +80,10 @@ public class CreateAliPayUrlResult extends TeaModel {
         } 
 
         /**
-         * accountId.
+         * <p>The LM account ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456789</p>
          */
         public Builder accountId(String accountId) {
             this.accountId = accountId;
@@ -88,7 +91,10 @@ public class CreateAliPayUrlResult extends TeaModel {
         }
 
         /**
-         * memberId.
+         * <p>The LM member ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>223456789</p>
          */
         public Builder memberId(String memberId) {
             this.memberId = memberId;
@@ -96,7 +102,10 @@ public class CreateAliPayUrlResult extends TeaModel {
         }
 
         /**
-         * zftWithholdSignUrl.
+         * <p>The Alipay auto-debit signing URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/withhold/sign">https://example.com/withhold/sign</a></p>
          */
         public Builder zftWithholdSignUrl(String zftWithholdSignUrl) {
             this.zftWithholdSignUrl = zftWithholdSignUrl;

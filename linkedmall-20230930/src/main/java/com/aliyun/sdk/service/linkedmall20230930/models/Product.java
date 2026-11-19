@@ -392,7 +392,10 @@ public class Product extends TeaModel {
         } 
 
         /**
-         * brandName.
+         * <p>The brand name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Apple</p>
          */
         public Builder brandName(String brandName) {
             this.brandName = brandName;
@@ -400,7 +403,10 @@ public class Product extends TeaModel {
         }
 
         /**
-         * canSell.
+         * <p>The calculated value indicating whether the product is available for sale.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder canSell(Boolean canSell) {
             this.canSell = canSell;
@@ -408,7 +414,7 @@ public class Product extends TeaModel {
         }
 
         /**
-         * categoryChain.
+         * <p>The category chain.</p>
          */
         public Builder categoryChain(java.util.List<Category> categoryChain) {
             this.categoryChain = categoryChain;
@@ -416,7 +422,10 @@ public class Product extends TeaModel {
         }
 
         /**
-         * categoryLeafId.
+         * <p>The leaf category ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>201****501</p>
          */
         public Builder categoryLeafId(Long categoryLeafId) {
             this.categoryLeafId = categoryLeafId;
@@ -424,7 +433,10 @@ public class Product extends TeaModel {
         }
 
         /**
-         * descPath.
+         * <p>The product details URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://img.alicdn.com/descpath/O1CN01wciRDp22AEU1*******f34">https://img.alicdn.com/descpath/O1CN01wciRDp22AEU1*******f34</a></p>
          */
         public Builder descPath(String descPath) {
             this.descPath = descPath;
@@ -432,7 +444,10 @@ public class Product extends TeaModel {
         }
 
         /**
-         * divisionCode.
+         * <p>The division code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>110000</p>
          */
         public Builder divisionCode(String divisionCode) {
             this.divisionCode = divisionCode;
@@ -440,7 +455,7 @@ public class Product extends TeaModel {
         }
 
         /**
-         * extendProperties.
+         * <p>The extended product properties.</p>
          */
         public Builder extendProperties(java.util.List<ProductExtendProperty> extendProperties) {
             this.extendProperties = extendProperties;
@@ -448,7 +463,10 @@ public class Product extends TeaModel {
         }
 
         /**
-         * fuzzyQuantity.
+         * <p>The approximate inventory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>In stock</p>
          */
         public Builder fuzzyQuantity(String fuzzyQuantity) {
             this.fuzzyQuantity = fuzzyQuantity;
@@ -456,7 +474,7 @@ public class Product extends TeaModel {
         }
 
         /**
-         * images.
+         * <p>images</p>
          */
         public Builder images(java.util.List<String> images) {
             this.images = images;
@@ -464,7 +482,10 @@ public class Product extends TeaModel {
         }
 
         /**
-         * inGroup.
+         * <p>The warehousing status of the product.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder inGroup(Boolean inGroup) {
             this.inGroup = inGroup;
@@ -472,7 +493,7 @@ public class Product extends TeaModel {
         }
 
         /**
-         * limitRules.
+         * <p>The purchase limit rules.</p>
          */
         public Builder limitRules(java.util.List<LimitRule> limitRules) {
             this.limitRules = limitRules;
@@ -480,7 +501,10 @@ public class Product extends TeaModel {
         }
 
         /**
-         * lmItemId.
+         * <p>The LM product ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2100<strong><strong>7-458</strong></strong>812</p>
          */
         public Builder lmItemId(String lmItemId) {
             this.lmItemId = lmItemId;
@@ -488,7 +512,10 @@ public class Product extends TeaModel {
         }
 
         /**
-         * picUrl.
+         * <p>The product main image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://img.alicdn.com/imgextra/i3/221*******988/O1CN01w4vomR1QYYEx6nyr5_!!221******988.jpg">https://img.alicdn.com/imgextra/i3/221*******988/O1CN01w4vomR1QYYEx6nyr5_!!221******988.jpg</a></p>
          */
         public Builder picUrl(String picUrl) {
             this.picUrl = picUrl;
@@ -496,7 +523,10 @@ public class Product extends TeaModel {
         }
 
         /**
-         * productId.
+         * <p>The product ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>660460842******080</p>
          */
         public Builder productId(String productId) {
             this.productId = productId;
@@ -504,7 +534,7 @@ public class Product extends TeaModel {
         }
 
         /**
-         * productSpecs.
+         * <p>The product specifications.</p>
          */
         public Builder productSpecs(java.util.List<ProductSpec> productSpecs) {
             this.productSpecs = productSpecs;
@@ -512,7 +542,10 @@ public class Product extends TeaModel {
         }
 
         /**
-         * productStatus.
+         * <p>The product status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Online</p>
          */
         public Builder productStatus(String productStatus) {
             this.productStatus = productStatus;
@@ -520,7 +553,10 @@ public class Product extends TeaModel {
         }
 
         /**
-         * productType.
+         * <p>The product type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder productType(String productType) {
             this.productType = productType;
@@ -528,7 +564,7 @@ public class Product extends TeaModel {
         }
 
         /**
-         * properties.
+         * <p>The product properties.</p>
          */
         public Builder properties(java.util.List<ProductProperty> properties) {
             this.properties = properties;
@@ -536,7 +572,15 @@ public class Product extends TeaModel {
         }
 
         /**
-         * quantity.
+         * <p>The inventory.</p>
+         * <blockquote>
+         * <ul>
+         * <li>This field is currently a fixed value of -1 and can be ignored.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder quantity(Long quantity) {
             this.quantity = quantity;
@@ -544,7 +588,10 @@ public class Product extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The API request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3239281273******823</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -552,7 +599,7 @@ public class Product extends TeaModel {
         }
 
         /**
-         * servicePromises.
+         * <p>The service commitments.<notice>Service commitments are maintained by suppliers. If suppliers fail to maintain or update them promptly, the service commitment labels for some products may be inaccurate. Distributors should display these commitments to their customers with caution.</notice></p>
          */
         public Builder servicePromises(java.util.List<String> servicePromises) {
             this.servicePromises = servicePromises;
@@ -560,7 +607,10 @@ public class Product extends TeaModel {
         }
 
         /**
-         * shopId.
+         * <p>The channel store ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>210*****7</p>
          */
         public Builder shopId(String shopId) {
             this.shopId = shopId;
@@ -568,7 +618,7 @@ public class Product extends TeaModel {
         }
 
         /**
-         * skus.
+         * <p>skus</p>
          */
         public Builder skus(java.util.List<Sku> skus) {
             this.skus = skus;
@@ -576,7 +626,10 @@ public class Product extends TeaModel {
         }
 
         /**
-         * soldQuantity.
+         * <p>The sales volume.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100+</p>
          */
         public Builder soldQuantity(String soldQuantity) {
             this.soldQuantity = soldQuantity;
@@ -584,7 +637,10 @@ public class Product extends TeaModel {
         }
 
         /**
-         * taxCode.
+         * <p>The tax code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3040203000*******000</p>
          */
         public Builder taxCode(String taxCode) {
             this.taxCode = taxCode;
@@ -592,7 +648,10 @@ public class Product extends TeaModel {
         }
 
         /**
-         * taxRate.
+         * <p>The tax rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>600</p>
          */
         public Builder taxRate(Integer taxRate) {
             this.taxRate = taxRate;
@@ -600,7 +659,10 @@ public class Product extends TeaModel {
         }
 
         /**
-         * title.
+         * <p>The title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Money tree</p>
          */
         public Builder title(String title) {
             this.title = title;

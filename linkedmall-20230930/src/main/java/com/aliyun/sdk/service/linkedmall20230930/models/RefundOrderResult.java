@@ -93,7 +93,10 @@ public class RefundOrderResult extends TeaModel {
         } 
 
         /**
-         * disputeId.
+         * <p>Dispute ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6693****4352</p>
          */
         public Builder disputeId(String disputeId) {
             this.disputeId = disputeId;
@@ -101,7 +104,10 @@ public class RefundOrderResult extends TeaModel {
         }
 
         /**
-         * disputeStatus.
+         * <p>Status of the reverse operation<br>1 – Return pending<br>2 – Awaiting buyer return<br>3 – Awaiting merchant receipt<br>4 – Refund closed<br>5 – Refund succeeded<br>6 – Refund denied<br>17 – Canceling refund</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder disputeStatus(Integer disputeStatus) {
             this.disputeStatus = disputeStatus;
@@ -109,7 +115,10 @@ public class RefundOrderResult extends TeaModel {
         }
 
         /**
-         * orderLineId.
+         * <p>Sub-distribution order ID for which the reverse operation was initiated</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6692****5458</p>
          */
         public Builder orderLineId(String orderLineId) {
             this.orderLineId = orderLineId;
@@ -117,7 +126,10 @@ public class RefundOrderResult extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>API request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3239281273464326823</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

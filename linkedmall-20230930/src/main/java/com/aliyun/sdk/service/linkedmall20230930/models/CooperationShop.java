@@ -80,7 +80,10 @@ public class CooperationShop extends TeaModel {
         } 
 
         /**
-         * cooperationCompanyId.
+         * <p>The partner enterprise ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11200003</p>
          */
         public Builder cooperationCompanyId(String cooperationCompanyId) {
             this.cooperationCompanyId = cooperationCompanyId;
@@ -88,7 +91,10 @@ public class CooperationShop extends TeaModel {
         }
 
         /**
-         * cooperationShopId.
+         * <p>The partner store ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21000026</p>
          */
         public Builder cooperationShopId(String cooperationShopId) {
             this.cooperationShopId = cooperationShopId;
@@ -96,7 +102,10 @@ public class CooperationShop extends TeaModel {
         }
 
         /**
-         * shopId.
+         * <p>The store ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22000019</p>
          */
         public Builder shopId(String shopId) {
             this.shopId = shopId;

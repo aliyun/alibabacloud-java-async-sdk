@@ -67,7 +67,10 @@ public class ConfirmDisburseCmd extends TeaModel {
         } 
 
         /**
-         * orderId.
+         * <p>The primary distribution order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6692****5457</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -75,7 +78,10 @@ public class ConfirmDisburseCmd extends TeaModel {
         }
 
         /**
-         * purchaseOrderId.
+         * <p>The distribution transaction ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6692****5696</p>
          */
         public Builder purchaseOrderId(String purchaseOrderId) {
             this.purchaseOrderId = purchaseOrderId;

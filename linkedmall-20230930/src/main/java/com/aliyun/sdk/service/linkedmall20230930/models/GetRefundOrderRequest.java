@@ -59,7 +59,10 @@ public class GetRefundOrderRequest extends Request {
         } 
 
         /**
-         * disputeId.
+         * <p>The ID of the after-sales ticket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6696233432****5024</p>
          */
         public Builder disputeId(String disputeId) {
             this.putPathParameter("disputeId", disputeId);

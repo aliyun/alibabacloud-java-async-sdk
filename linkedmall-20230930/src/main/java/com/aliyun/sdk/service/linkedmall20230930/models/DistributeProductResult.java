@@ -80,7 +80,7 @@ public class DistributeProductResult extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The return code.</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -88,7 +88,10 @@ public class DistributeProductResult extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The return message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>操作成功</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -96,7 +99,10 @@ public class DistributeProductResult extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>48A34399-A72C-1E23-8388-7E63A1B2E927</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

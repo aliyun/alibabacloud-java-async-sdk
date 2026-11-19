@@ -106,7 +106,10 @@ public class StopDistributionCommand extends TeaModel {
         } 
 
         /**
-         * lmShopId.
+         * <p>The LM shop ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21000019</p>
          */
         public Builder lmShopId(String lmShopId) {
             this.lmShopId = lmShopId;
@@ -114,7 +117,10 @@ public class StopDistributionCommand extends TeaModel {
         }
 
         /**
-         * productId.
+         * <p>The product ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>660057403063402509</p>
          */
         public Builder productId(String productId) {
             this.productId = productId;
@@ -122,7 +128,10 @@ public class StopDistributionCommand extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>48A34399-A72C-1E23-8388-7E63A1B2E927</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,10 @@ public class StopDistributionCommand extends TeaModel {
         }
 
         /**
-         * requestTime.
+         * <p>The submission time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-12-01 10:01:00</p>
          */
         public Builder requestTime(String requestTime) {
             this.requestTime = requestTime;
@@ -138,7 +150,10 @@ public class StopDistributionCommand extends TeaModel {
         }
 
         /**
-         * requestUser.
+         * <p>The submitter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo_user</p>
          */
         public Builder requestUser(String requestUser) {
             this.requestUser = requestUser;

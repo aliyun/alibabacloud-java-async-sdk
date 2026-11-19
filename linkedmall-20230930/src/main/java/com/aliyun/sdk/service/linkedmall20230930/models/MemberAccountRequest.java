@@ -59,6 +59,7 @@ public class MemberAccountRequest extends Request {
         } 
 
         /**
+         * <p>The shop ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

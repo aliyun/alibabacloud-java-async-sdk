@@ -67,7 +67,10 @@ public class DistributionMaxRefundFee extends TeaModel {
         } 
 
         /**
-         * maxRefundFee.
+         * <p>Maximum refundable amount for this order</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxRefundFee(Long maxRefundFee) {
             this.maxRefundFee = maxRefundFee;
@@ -75,7 +78,10 @@ public class DistributionMaxRefundFee extends TeaModel {
         }
 
         /**
-         * minRefundFee.
+         * <p>Minimum refundable amount for this order</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder minRefundFee(Long minRefundFee) {
             this.minRefundFee = minRefundFee;

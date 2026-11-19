@@ -54,7 +54,7 @@ public class SelectionGroupAddProductResponseBody extends TeaModel {
         } 
 
         /**
-         * productIds.
+         * <p>The IDs of the products that are successfully added to the selection pool.</p>
          */
         public Builder productIds(java.util.List<String> productIds) {
             this.productIds = productIds;

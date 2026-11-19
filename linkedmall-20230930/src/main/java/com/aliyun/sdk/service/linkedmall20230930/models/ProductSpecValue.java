@@ -80,7 +80,10 @@ public class ProductSpecValue extends TeaModel {
         } 
 
         /**
-         * value.
+         * <p>Specification value</p>
+         * 
+         * <strong>example:</strong>
+         * <p>白色</p>
          */
         public Builder value(String value) {
             this.value = value;
@@ -88,7 +91,10 @@ public class ProductSpecValue extends TeaModel {
         }
 
         /**
-         * valueAlias.
+         * <p>Specification value alias</p>
+         * 
+         * <strong>example:</strong>
+         * <p>秘色</p>
          */
         public Builder valueAlias(String valueAlias) {
             this.valueAlias = valueAlias;
@@ -96,7 +102,10 @@ public class ProductSpecValue extends TeaModel {
         }
 
         /**
-         * valueId.
+         * <p>Rule value ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder valueId(Long valueId) {
             this.valueId = valueId;

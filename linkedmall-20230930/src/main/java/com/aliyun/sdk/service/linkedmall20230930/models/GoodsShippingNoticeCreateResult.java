@@ -67,7 +67,10 @@ public class GoodsShippingNoticeCreateResult extends TeaModel {
         } 
 
         /**
-         * requestId.
+         * <p>API request requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3239281273464326823</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class GoodsShippingNoticeCreateResult extends TeaModel {
         }
 
         /**
-         * result.
+         * <p>Return result of submitting logistics information</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder result(String result) {
             this.result = result;

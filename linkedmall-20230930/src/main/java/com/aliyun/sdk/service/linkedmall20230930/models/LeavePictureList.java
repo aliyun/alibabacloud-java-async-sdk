@@ -67,7 +67,10 @@ public class LeavePictureList extends TeaModel {
         } 
 
         /**
-         * desc.
+         * <p>Description&gt;Notice: If the after-sales order rendering API returns that a message description is required, this field is mandatory.</notice></p>
+         * 
+         * <strong>example:</strong>
+         * <p>外观破损了。</p>
          */
         public Builder desc(String desc) {
             this.desc = desc;
@@ -75,7 +78,10 @@ public class LeavePictureList extends TeaModel {
         }
 
         /**
-         * picture.
+         * <p>Image of the after-sales Credential&gt;Notice: If the after-sales order rendering API returns that an after-sales image is required, this field is mandatory.</notice></p>
+         * 
+         * <strong>example:</strong>
+         * <p>https://</p>
          */
         public Builder picture(String picture) {
             this.picture = picture;

@@ -67,7 +67,7 @@ public class CategoryListResult extends TeaModel {
         } 
 
         /**
-         * categories.
+         * <p>The category collection.</p>
          */
         public Builder categories(java.util.List<Category> categories) {
             this.categories = categories;
@@ -75,7 +75,10 @@ public class CategoryListResult extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4D1FC14F-CE54-1A1F-A322-D6DC87D49AFE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -110,7 +110,10 @@ public class ProductDTO extends TeaModel {
         } 
 
         /**
-         * price.
+         * <p>Product price (unit: cent)&gt;Notice: It is recommended to include this field.</notice></p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder price(Long price) {
             this.price = price;
@@ -118,6 +121,7 @@ public class ProductDTO extends TeaModel {
         }
 
         /**
+         * <p>Product ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +133,7 @@ public class ProductDTO extends TeaModel {
         }
 
         /**
+         * <p>Purchaser ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,6 +145,7 @@ public class ProductDTO extends TeaModel {
         }
 
         /**
+         * <p>Quantity</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,6 +157,7 @@ public class ProductDTO extends TeaModel {
         }
 
         /**
+         * <p>SKUID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

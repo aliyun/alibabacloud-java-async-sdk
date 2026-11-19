@@ -96,6 +96,7 @@ public class PurchaseOrderRenderQuery extends TeaModel {
         } 
 
         /**
+         * <p>The actual buyer ID for distribution. <notice>Assign a unique ID to each buyer. Do not use the same ID for different buyers.</notice></p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -107,6 +108,7 @@ public class PurchaseOrderRenderQuery extends TeaModel {
         }
 
         /**
+         * <p>The address information.</p>
          * <p>This parameter is required.</p>
          */
         public Builder deliveryAddress(AddressInfo deliveryAddress) {
@@ -115,7 +117,10 @@ public class PurchaseOrderRenderQuery extends TeaModel {
         }
 
         /**
-         * extInfo.
+         * <p>The extension information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder extInfo(java.util.Map<String, ?> extInfo) {
             this.extInfo = extInfo;
@@ -123,6 +128,10 @@ public class PurchaseOrderRenderQuery extends TeaModel {
         }
 
         /**
+         * <p>The product list.</p>
+         * <blockquote>
+         * <p>Maximum number of SKUs per purchase order: 20.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          */
         public Builder productList(java.util.List<OrderRenderProductDTO> productList) {

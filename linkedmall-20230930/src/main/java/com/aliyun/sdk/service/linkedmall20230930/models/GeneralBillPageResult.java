@@ -106,7 +106,7 @@ public class GeneralBillPageResult extends TeaModel {
         } 
 
         /**
-         * generalBills.
+         * <p>The list of bills.</p>
          */
         public Builder generalBills(java.util.List<GeneralBill> generalBills) {
             this.generalBills = generalBills;
@@ -114,7 +114,10 @@ public class GeneralBillPageResult extends TeaModel {
         }
 
         /**
-         * pageNumber.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class GeneralBillPageResult extends TeaModel {
         }
 
         /**
-         * pageSize.
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class GeneralBillPageResult extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The ID of the API request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3239281273464326823</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class GeneralBillPageResult extends TeaModel {
         }
 
         /**
-         * total.
+         * <p>The total count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24</p>
          */
         public Builder total(Integer total) {
             this.total = total;

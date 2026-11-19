@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ProductPageResult</p>
  */
 public class ProductPageResult extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("nextCursor")
+    private String nextCursor;
+
     @com.aliyun.core.annotation.NameInMap("pageNumber")
     @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageNumber;
@@ -36,6 +39,7 @@ public class ProductPageResult extends TeaModel {
     private Integer total;
 
     private ProductPageResult(Builder builder) {
+        this.nextCursor = builder.nextCursor;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.products = builder.products;
@@ -53,6 +57,13 @@ public class ProductPageResult extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return nextCursor
+     */
+    public String getNextCursor() {
+        return this.nextCursor;
     }
 
     /**
@@ -91,6 +102,7 @@ public class ProductPageResult extends TeaModel {
     }
 
     public static final class Builder {
+        private String nextCursor; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private java.util.List<Product> products; 
@@ -101,6 +113,7 @@ public class ProductPageResult extends TeaModel {
         } 
 
         private Builder(ProductPageResult model) {
+            this.nextCursor = model.nextCursor;
             this.pageNumber = model.pageNumber;
             this.pageSize = model.pageSize;
             this.products = model.products;
@@ -109,6 +122,18 @@ public class ProductPageResult extends TeaModel {
         } 
 
         /**
+         * <p>The cursor value for the next page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7091510713</p>
+         */
+        public Builder nextCursor(String nextCursor) {
+            this.nextCursor = nextCursor;
+            return this;
+        }
+
+        /**
+         * <p>The current page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -120,6 +145,7 @@ public class ProductPageResult extends TeaModel {
         }
 
         /**
+         * <p>The page size.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,7 +157,7 @@ public class ProductPageResult extends TeaModel {
         }
 
         /**
-         * products.
+         * <p>The product collection.</p>
          */
         public Builder products(java.util.List<Product> products) {
             this.products = products;
@@ -139,7 +165,10 @@ public class ProductPageResult extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3239281273464326823</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -147,6 +176,7 @@ public class ProductPageResult extends TeaModel {
         }
 
         /**
+         * <p>The total count.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

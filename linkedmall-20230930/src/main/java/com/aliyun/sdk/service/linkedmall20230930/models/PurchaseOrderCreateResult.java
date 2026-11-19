@@ -67,7 +67,10 @@ public class PurchaseOrderCreateResult extends TeaModel {
         } 
 
         /**
-         * purchaseOrderId.
+         * <p>Purchase Order ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6692****5696</p>
          */
         public Builder purchaseOrderId(String purchaseOrderId) {
             this.purchaseOrderId = purchaseOrderId;
@@ -75,7 +78,10 @@ public class PurchaseOrderCreateResult extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>API Request requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3239281273464326823</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -158,7 +158,10 @@ public class OrderResult extends TeaModel {
         } 
 
         /**
-         * createDate.
+         * <p>The order creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-09-01T12:00:00.000Z</p>
          */
         public Builder createDate(String createDate) {
             this.createDate = createDate;
@@ -166,7 +169,10 @@ public class OrderResult extends TeaModel {
         }
 
         /**
-         * distributorId.
+         * <p>The distributor ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12****01</p>
          */
         public Builder distributorId(String distributorId) {
             this.distributorId = distributorId;
@@ -174,7 +180,10 @@ public class OrderResult extends TeaModel {
         }
 
         /**
-         * logisticsStatus.
+         * <p>The logistics status. Valid values: 1 (Awaiting Seller\&quot;s Shipment), 2 (Awaiting Buyer\&quot;s Confirmation), 3 (Received), 4 (Returned), 5 (Partially Received), 6 (Partially Shipped), and 8 (Logistics Order Not Created).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder logisticsStatus(String logisticsStatus) {
             this.logisticsStatus = logisticsStatus;
@@ -182,7 +191,10 @@ public class OrderResult extends TeaModel {
         }
 
         /**
-         * orderAmount.
+         * <p>The order amount, in cents.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder orderAmount(Long orderAmount) {
             this.orderAmount = orderAmount;
@@ -190,7 +202,10 @@ public class OrderResult extends TeaModel {
         }
 
         /**
-         * orderClosedReason.
+         * <p>The reason the order was closed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>系统关单</p>
          */
         public Builder orderClosedReason(String orderClosedReason) {
             this.orderClosedReason = orderClosedReason;
@@ -198,7 +213,10 @@ public class OrderResult extends TeaModel {
         }
 
         /**
-         * orderId.
+         * <p>The ID of the main order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6692****5457</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -206,7 +224,7 @@ public class OrderResult extends TeaModel {
         }
 
         /**
-         * orderLineList.
+         * <p>The list of sub-orders.</p>
          */
         public Builder orderLineList(java.util.List<OrderLineResult> orderLineList) {
             this.orderLineList = orderLineList;
@@ -214,7 +232,10 @@ public class OrderResult extends TeaModel {
         }
 
         /**
-         * orderStatus.
+         * <p>The order status. Valid values: 1 (Pending Payment), 2 (Paid), 4 (Closed with Refund), 6 (Transaction Successful), and 8 (Closed).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder orderStatus(String orderStatus) {
             this.orderStatus = orderStatus;
@@ -222,7 +243,10 @@ public class OrderResult extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The unique identifier for the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D12***111</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

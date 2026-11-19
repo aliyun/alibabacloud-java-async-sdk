@@ -75,6 +75,12 @@ public class SelectionGroupAddProductRequest extends Request {
         } 
 
         /**
+         * <p>The IDs of the products to be added to the selection pool.</p>
+         * <blockquote>
+         * <ul>
+         * <li>A maximum of 30 products can be added in a single call.</li>
+         * </ul>
+         * </blockquote>
          * <p>This parameter is required.</p>
          */
         public Builder productIds(java.util.List<String> productIds) {
@@ -84,6 +90,7 @@ public class SelectionGroupAddProductRequest extends Request {
         }
 
         /**
+         * <p>The ID of the purchaser.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

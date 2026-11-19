@@ -197,7 +197,10 @@ public class ProductSaleInfo extends TeaModel {
         } 
 
         /**
-         * canSell.
+         * <p>The calculated value that indicates whether the product is sellable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder canSell(Boolean canSell) {
             this.canSell = canSell;
@@ -205,7 +208,10 @@ public class ProductSaleInfo extends TeaModel {
         }
 
         /**
-         * divisionCode.
+         * <p>The division code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>330106109</p>
          */
         public Builder divisionCode(String divisionCode) {
             this.divisionCode = divisionCode;
@@ -213,7 +219,10 @@ public class ProductSaleInfo extends TeaModel {
         }
 
         /**
-         * fuzzyQuantity.
+         * <p>The fuzzy inventory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>In stock</p>
          */
         public Builder fuzzyQuantity(String fuzzyQuantity) {
             this.fuzzyQuantity = fuzzyQuantity;
@@ -221,7 +230,7 @@ public class ProductSaleInfo extends TeaModel {
         }
 
         /**
-         * limitRules.
+         * <p>The purchase limit configuration.</p>
          */
         public Builder limitRules(java.util.List<LimitRule> limitRules) {
             this.limitRules = limitRules;
@@ -229,7 +238,10 @@ public class ProductSaleInfo extends TeaModel {
         }
 
         /**
-         * lmItemId.
+         * <p>The LM product ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21000017-4580902812</p>
          */
         public Builder lmItemId(String lmItemId) {
             this.lmItemId = lmItemId;
@@ -237,7 +249,10 @@ public class ProductSaleInfo extends TeaModel {
         }
 
         /**
-         * productId.
+         * <p>The product ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>660460842235822080</p>
          */
         public Builder productId(String productId) {
             this.productId = productId;
@@ -245,7 +260,10 @@ public class ProductSaleInfo extends TeaModel {
         }
 
         /**
-         * productStatus.
+         * <p>The product status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Online</p>
          */
         public Builder productStatus(String productStatus) {
             this.productStatus = productStatus;
@@ -253,7 +271,10 @@ public class ProductSaleInfo extends TeaModel {
         }
 
         /**
-         * quantity.
+         * <p>The inventory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder quantity(Long quantity) {
             this.quantity = quantity;
@@ -261,7 +282,10 @@ public class ProductSaleInfo extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The API request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3239281273464326823</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -269,7 +293,10 @@ public class ProductSaleInfo extends TeaModel {
         }
 
         /**
-         * shopId.
+         * <p>The channel shop ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21000017</p>
          */
         public Builder shopId(String shopId) {
             this.shopId = shopId;
@@ -277,7 +304,7 @@ public class ProductSaleInfo extends TeaModel {
         }
 
         /**
-         * skus.
+         * <p>The SKU collection.</p>
          */
         public Builder skus(java.util.List<SkuSaleInfo> skus) {
             this.skus = skus;
@@ -285,7 +312,10 @@ public class ProductSaleInfo extends TeaModel {
         }
 
         /**
-         * title.
+         * <p>The title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Money tree</p>
          */
         public Builder title(String title) {
             this.title = title;

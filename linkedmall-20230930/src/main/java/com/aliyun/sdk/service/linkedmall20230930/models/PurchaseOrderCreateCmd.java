@@ -110,10 +110,14 @@ public class PurchaseOrderCreateCmd extends TeaModel {
         } 
 
         /**
+         * <p>The user ID in the distributor business, which is defined by the distributor.</p>
+         * <blockquote>
+         * <p>Notice: Assign different buyerIds to different buyers.</notice></p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>buyer2138237</p>
+         * <p>buyer123456</p>
          */
         public Builder buyerId(String buyerId) {
             this.buyerId = buyerId;
@@ -121,6 +125,7 @@ public class PurchaseOrderCreateCmd extends TeaModel {
         }
 
         /**
+         * <p>The address information.</p>
          * <p>This parameter is required.</p>
          */
         public Builder deliveryAddress(AddressInfo deliveryAddress) {
@@ -129,7 +134,7 @@ public class PurchaseOrderCreateCmd extends TeaModel {
         }
 
         /**
-         * extInfo.
+         * <p>The extended information.</p>
          */
         public Builder extInfo(java.util.Map<String, ?> extInfo) {
             this.extInfo = extInfo;
@@ -137,6 +142,7 @@ public class PurchaseOrderCreateCmd extends TeaModel {
         }
 
         /**
+         * <p>The order ID in the distributor business, which is defined by the distributor.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -148,6 +154,10 @@ public class PurchaseOrderCreateCmd extends TeaModel {
         }
 
         /**
+         * <p>The product list.</p>
+         * <blockquote>
+         * <p>Maximum number of SKUs per purchase order: 20</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          */
         public Builder productList(java.util.List<ProductDTO> productList) {

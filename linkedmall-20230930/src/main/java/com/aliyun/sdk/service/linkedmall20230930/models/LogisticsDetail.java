@@ -67,7 +67,10 @@ public class LogisticsDetail extends TeaModel {
         } 
 
         /**
-         * ocurrTimeStr.
+         * <p>Time when the logistics event occurred</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-09-01 00:00:00</p>
          */
         public Builder ocurrTimeStr(String ocurrTimeStr) {
             this.ocurrTimeStr = ocurrTimeStr;
@@ -75,7 +78,10 @@ public class LogisticsDetail extends TeaModel {
         }
 
         /**
-         * standerdDesc.
+         * <p>Description of the logistics event</p>
+         * 
+         * <strong>example:</strong>
+         * <p>已签收</p>
          */
         public Builder standerdDesc(String standerdDesc) {
             this.standerdDesc = standerdDesc;

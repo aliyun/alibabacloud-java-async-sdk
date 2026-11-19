@@ -60,10 +60,11 @@ public class GetPurchaserShopRequest extends Request {
         } 
 
         /**
+         * <p>The purchaser ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>56****2304</p>
+         * <p>PID22000016</p>
          */
         public Builder purchaserId(String purchaserId) {
             this.putPathParameter("purchaserId", purchaserId);

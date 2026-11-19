@@ -60,6 +60,7 @@ public class QueryChildDivisionCodeRequest extends Request {
         } 
 
         /**
+         * <p>The sub-region code.</p>
          * <p>This parameter is required.</p>
          */
         public Builder body(DivisionQuery body) {

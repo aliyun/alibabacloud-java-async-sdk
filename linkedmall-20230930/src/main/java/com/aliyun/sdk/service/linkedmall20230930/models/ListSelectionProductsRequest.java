@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListSelectionProductsRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("cursor")
+    private String cursor;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("pageNumber")
     @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageNumber;
@@ -34,6 +38,7 @@ public class ListSelectionProductsRequest extends Request {
 
     private ListSelectionProductsRequest(Builder builder) {
         super(builder);
+        this.cursor = builder.cursor;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.purchaserId = builder.purchaserId;
@@ -50,6 +55,13 @@ public class ListSelectionProductsRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return cursor
+     */
+    public String getCursor() {
+        return this.cursor;
     }
 
     /**
@@ -74,6 +86,7 @@ public class ListSelectionProductsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListSelectionProductsRequest, Builder> {
+        private String cursor; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String purchaserId; 
@@ -84,12 +97,26 @@ public class ListSelectionProductsRequest extends Request {
 
         private Builder(ListSelectionProductsRequest request) {
             super(request);
+            this.cursor = request.cursor;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.purchaserId = request.purchaserId;
         } 
 
         /**
+         * <p>The cursor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>134412333321</p>
+         */
+        public Builder cursor(String cursor) {
+            this.putQueryParameter("cursor", cursor);
+            this.cursor = cursor;
+            return this;
+        }
+
+        /**
+         * <p>The current page number. Pages start from 1.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +129,7 @@ public class ListSelectionProductsRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page. Valid values: 1 to 20.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,10 +142,11 @@ public class ListSelectionProductsRequest extends Request {
         }
 
         /**
+         * <p>The ID of the purchaser.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>56****2304</p>
+         * <p>PID22000009</p>
          */
         public Builder purchaserId(String purchaserId) {
             this.putQueryParameter("purchaserId", purchaserId);

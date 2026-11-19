@@ -223,7 +223,10 @@ public class DistributionSku extends TeaModel {
         } 
 
         /**
-         * aliasTitle.
+         * <p>The alias.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例规格</p>
          */
         public Builder aliasTitle(String aliasTitle) {
             this.aliasTitle = aliasTitle;
@@ -231,7 +234,10 @@ public class DistributionSku extends TeaModel {
         }
 
         /**
-         * barCode.
+         * <p>The barcode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6901234567892</p>
          */
         public Builder barCode(String barCode) {
             this.barCode = barCode;
@@ -239,7 +245,7 @@ public class DistributionSku extends TeaModel {
         }
 
         /**
-         * creditPeriod.
+         * <p>The maximum acceptable credit period.</p>
          */
         public Builder creditPeriod(Integer creditPeriod) {
             this.creditPeriod = creditPeriod;
@@ -247,7 +253,7 @@ public class DistributionSku extends TeaModel {
         }
 
         /**
-         * dxPrice.
+         * <p>The consignment supply price.</p>
          */
         public Builder dxPrice(Long dxPrice) {
             this.dxPrice = dxPrice;
@@ -255,7 +261,7 @@ public class DistributionSku extends TeaModel {
         }
 
         /**
-         * hasCredit.
+         * <p>Specifies whether credit periods are supported.</p>
          */
         public Builder hasCredit(Boolean hasCredit) {
             this.hasCredit = hasCredit;
@@ -263,7 +269,7 @@ public class DistributionSku extends TeaModel {
         }
 
         /**
-         * hasInvoice.
+         * <p>Specifies whether invoicing is supported.</p>
          */
         public Builder hasInvoice(Boolean hasInvoice) {
             this.hasInvoice = hasInvoice;
@@ -271,7 +277,7 @@ public class DistributionSku extends TeaModel {
         }
 
         /**
-         * jxPrice.
+         * <p>The distribution supply price.</p>
          */
         public Builder jxPrice(Long jxPrice) {
             this.jxPrice = jxPrice;
@@ -279,7 +285,10 @@ public class DistributionSku extends TeaModel {
         }
 
         /**
-         * picUrl.
+         * <p>The image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/images/product.png">https://example.com/images/product.png</a></p>
          */
         public Builder picUrl(String picUrl) {
             this.picUrl = picUrl;
@@ -287,7 +296,10 @@ public class DistributionSku extends TeaModel {
         }
 
         /**
-         * quantity.
+         * <p>The inventory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder quantity(Integer quantity) {
             this.quantity = quantity;
@@ -295,7 +307,10 @@ public class DistributionSku extends TeaModel {
         }
 
         /**
-         * skuId.
+         * <p>sku id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>660460842235822082</p>
          */
         public Builder skuId(String skuId) {
             this.skuId = skuId;
@@ -303,7 +318,7 @@ public class DistributionSku extends TeaModel {
         }
 
         /**
-         * skuStatus.
+         * <p>The status.</p>
          */
         public Builder skuStatus(String skuStatus) {
             this.skuStatus = skuStatus;
@@ -311,7 +326,7 @@ public class DistributionSku extends TeaModel {
         }
 
         /**
-         * taxCode.
+         * <p>The tax code.</p>
          */
         public Builder taxCode(String taxCode) {
             this.taxCode = taxCode;
@@ -319,7 +334,7 @@ public class DistributionSku extends TeaModel {
         }
 
         /**
-         * taxRate.
+         * <p>The tax rate.</p>
          */
         public Builder taxRate(Integer taxRate) {
             this.taxRate = taxRate;
@@ -327,7 +342,10 @@ public class DistributionSku extends TeaModel {
         }
 
         /**
-         * title.
+         * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例商品名称</p>
          */
         public Builder title(String title) {
             this.title = title;

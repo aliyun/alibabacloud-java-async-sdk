@@ -106,7 +106,10 @@ public class RefundRenderResult extends TeaModel {
         } 
 
         /**
-         * bizClaimType.
+         * <p>The supported order return methods.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder bizClaimType(Integer bizClaimType) {
             this.bizClaimType = bizClaimType;
@@ -114,7 +117,10 @@ public class RefundRenderResult extends TeaModel {
         }
 
         /**
-         * maxRefundFeeData.
+         * <p>The refund fee.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;minRefundFee&quot;:1,&quot;maxRefundFee&quot;:100}</p>
          */
         public Builder maxRefundFeeData(DistributionMaxRefundFee maxRefundFeeData) {
             this.maxRefundFeeData = maxRefundFeeData;
@@ -122,7 +128,10 @@ public class RefundRenderResult extends TeaModel {
         }
 
         /**
-         * orderLineId.
+         * <p>The sub-distribution order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6692****5458</p>
          */
         public Builder orderLineId(String orderLineId) {
             this.orderLineId = orderLineId;
@@ -130,7 +139,7 @@ public class RefundRenderResult extends TeaModel {
         }
 
         /**
-         * refundReasonList.
+         * <p>The refund reason list.</p>
          */
         public Builder refundReasonList(java.util.List<RefundReason> refundReasonList) {
             this.refundReasonList = refundReasonList;
@@ -138,7 +147,10 @@ public class RefundRenderResult extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The API request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>841471F6-5D61-1331-8C38-2****B55</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

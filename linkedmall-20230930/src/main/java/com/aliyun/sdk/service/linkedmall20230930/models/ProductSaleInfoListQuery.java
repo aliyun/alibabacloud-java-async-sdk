@@ -82,7 +82,10 @@ public class ProductSaleInfoListQuery extends TeaModel {
         } 
 
         /**
-         * divisionCode.
+         * <p>Area code (recommended to use a five-level township/street-level address code)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>110000</p>
          */
         public Builder divisionCode(String divisionCode) {
             this.divisionCode = divisionCode;
@@ -90,6 +93,7 @@ public class ProductSaleInfoListQuery extends TeaModel {
         }
 
         /**
+         * <p>Collection of product IDs to query, supporting batch queries of 1 to 10 items</p>
          * <p>This parameter is required.</p>
          */
         public Builder productIds(java.util.List<String> productIds) {
@@ -98,6 +102,7 @@ public class ProductSaleInfoListQuery extends TeaModel {
         }
 
         /**
+         * <p>Purchaser ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

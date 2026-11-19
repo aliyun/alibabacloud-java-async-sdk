@@ -113,7 +113,10 @@ public class ShopCreateRequest extends Request {
         } 
 
         /**
-         * afterSaleDingTalkId.
+         * <p>The after-sales DingTalk ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12344335</p>
          */
         public Builder afterSaleDingTalkId(String afterSaleDingTalkId) {
             this.afterSaleDingTalkId = afterSaleDingTalkId;
@@ -121,10 +124,11 @@ public class ShopCreateRequest extends Request {
         }
 
         /**
+         * <p>The shop description.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>店铺描述</p>
+         * <p>Shop description</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -132,6 +136,7 @@ public class ShopCreateRequest extends Request {
         }
 
         /**
+         * <p>The operations DingTalk ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,7 +148,10 @@ public class ShopCreateRequest extends Request {
         }
 
         /**
-         * preSaleDingTalkId.
+         * <p>The pre-sales DingTalk ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12344335</p>
          */
         public Builder preSaleDingTalkId(String preSaleDingTalkId) {
             this.preSaleDingTalkId = preSaleDingTalkId;
@@ -151,10 +159,11 @@ public class ShopCreateRequest extends Request {
         }
 
         /**
+         * <p>The shop name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>店铺名称</p>
+         * <p>Shop name</p>
          */
         public Builder shopName(String shopName) {
             this.shopName = shopName;

@@ -106,7 +106,10 @@ public class Good extends TeaModel {
         } 
 
         /**
-         * goodName.
+         * <p>Product name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>儿童学习桌</p>
          */
         public Builder goodName(String goodName) {
             this.goodName = goodName;
@@ -114,7 +117,10 @@ public class Good extends TeaModel {
         }
 
         /**
-         * productId.
+         * <p>Product ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6600****6736</p>
          */
         public Builder productId(String productId) {
             this.productId = productId;
@@ -122,7 +128,10 @@ public class Good extends TeaModel {
         }
 
         /**
-         * quantity.
+         * <p>Quantity</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder quantity(Integer quantity) {
             this.quantity = quantity;
@@ -130,7 +139,10 @@ public class Good extends TeaModel {
         }
 
         /**
-         * skuId.
+         * <p>SKU ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7232****2321</p>
          */
         public Builder skuId(String skuId) {
             this.skuId = skuId;
@@ -138,7 +150,10 @@ public class Good extends TeaModel {
         }
 
         /**
-         * skuTitle.
+         * <p>SKU title</p>
+         * 
+         * <strong>example:</strong>
+         * <p>白色</p>
          */
         public Builder skuTitle(String skuTitle) {
             this.skuTitle = skuTitle;

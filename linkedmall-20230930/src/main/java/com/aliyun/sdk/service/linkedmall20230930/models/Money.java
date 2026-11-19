@@ -132,7 +132,10 @@ public class Money extends TeaModel {
         } 
 
         /**
-         * amount.
+         * <p>amount</p>
+         * 
+         * <strong>example:</strong>
+         * <p>128</p>
          */
         public Builder amount(Long amount) {
             this.amount = amount;
@@ -140,7 +143,7 @@ public class Money extends TeaModel {
         }
 
         /**
-         * amountAsString.
+         * <p>amountAsString</p>
          */
         public Builder amountAsString(String amountAsString) {
             this.amountAsString = amountAsString;
@@ -148,7 +151,7 @@ public class Money extends TeaModel {
         }
 
         /**
-         * amountString.
+         * <p>amountString</p>
          */
         public Builder amountString(String amountString) {
             this.amountString = amountString;
@@ -156,7 +159,10 @@ public class Money extends TeaModel {
         }
 
         /**
-         * cent.
+         * <p>cent</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12800</p>
          */
         public Builder cent(Long cent) {
             this.cent = cent;
@@ -164,7 +170,7 @@ public class Money extends TeaModel {
         }
 
         /**
-         * currency.
+         * <p>currency</p>
          */
         public Builder currency(Currency currency) {
             this.currency = currency;
@@ -172,7 +178,10 @@ public class Money extends TeaModel {
         }
 
         /**
-         * currencyCode.
+         * <p>currencyCode</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CNY</p>
          */
         public Builder currencyCode(String currencyCode) {
             this.currencyCode = currencyCode;
@@ -180,7 +189,7 @@ public class Money extends TeaModel {
         }
 
         /**
-         * positive.
+         * <p>positive</p>
          */
         public Builder positive(Boolean positive) {
             this.positive = positive;
@@ -285,7 +294,10 @@ public class Money extends TeaModel {
             } 
 
             /**
-             * currencyCode.
+             * <p>currencyCode</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CNY</p>
              */
             public Builder currencyCode(String currencyCode) {
                 this.currencyCode = currencyCode;
@@ -293,7 +305,10 @@ public class Money extends TeaModel {
             }
 
             /**
-             * defaultFractionDigits.
+             * <p>defaultFractionDigits</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder defaultFractionDigits(Integer defaultFractionDigits) {
                 this.defaultFractionDigits = defaultFractionDigits;
@@ -301,7 +316,10 @@ public class Money extends TeaModel {
             }
 
             /**
-             * displayName.
+             * <p>displayName</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CNY</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -309,7 +327,10 @@ public class Money extends TeaModel {
             }
 
             /**
-             * numericCode.
+             * <p>numericCode</p>
+             * 
+             * <strong>example:</strong>
+             * <p>156</p>
              */
             public Builder numericCode(Integer numericCode) {
                 this.numericCode = numericCode;
@@ -317,7 +338,10 @@ public class Money extends TeaModel {
             }
 
             /**
-             * symbol.
+             * <p>symbol</p>
+             * 
+             * <strong>example:</strong>
+             * <p>￥</p>
              */
             public Builder symbol(String symbol) {
                 this.symbol = symbol;

@@ -59,7 +59,10 @@ public class CancelRefundOrderRequest extends Request {
         } 
 
         /**
-         * disputeId.
+         * <p>The ID of the after-sales ticket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>601853367760207872</p>
          */
         public Builder disputeId(String disputeId) {
             this.putPathParameter("disputeId", disputeId);
