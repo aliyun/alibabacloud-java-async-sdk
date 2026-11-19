@@ -51,6 +51,10 @@ public class CreateNodeRequest extends Request {
     private String DBInstanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NodeClass")
     @com.aliyun.core.annotation.Validation(required = true)
     private String nodeClass;
@@ -111,6 +115,7 @@ public class CreateNodeRequest extends Request {
         this.clientToken = builder.clientToken;
         this.couponNo = builder.couponNo;
         this.DBInstanceId = builder.DBInstanceId;
+        this.dryRun = builder.dryRun;
         this.nodeClass = builder.nodeClass;
         this.nodeStorage = builder.nodeStorage;
         this.nodeType = builder.nodeType;
@@ -192,6 +197,13 @@ public class CreateNodeRequest extends Request {
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -287,6 +299,7 @@ public class CreateNodeRequest extends Request {
         private String clientToken; 
         private String couponNo; 
         private String DBInstanceId; 
+        private Boolean dryRun; 
         private String nodeClass; 
         private Integer nodeStorage; 
         private String nodeType; 
@@ -314,6 +327,7 @@ public class CreateNodeRequest extends Request {
             this.clientToken = request.clientToken;
             this.couponNo = request.couponNo;
             this.DBInstanceId = request.DBInstanceId;
+            this.dryRun = request.dryRun;
             this.nodeClass = request.nodeClass;
             this.nodeStorage = request.nodeStorage;
             this.nodeType = request.nodeType;
@@ -346,7 +360,7 @@ public class CreateNodeRequest extends Request {
          * </ul>
          * <blockquote>
          * <ul>
-         * <li>ApsaraDB for MongoDB does not support using keywords as usernames.</li>
+         * <li>ApsaraDB for MongoDB does not support keywords as usernames.</li>
          * <li>The permissions of the account are fixed to read-only.</li>
          * <li>When you apply for a direct connection endpoint for the shard node for the first time, you must set the username and password. You do not need to set them again for subsequent applications.</li>
          * </ul>
@@ -362,14 +376,14 @@ public class CreateNodeRequest extends Request {
         }
 
         /**
-         * <p>The password of the account. Valid values:</p>
+         * <p>The password. Valid values:</p>
          * <ul>
          * <li>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
          * <li>Special characters include !@#$%^&amp;*()_+-=.</li>
          * <li>The password must be 8 to 32 characters in length.</li>
          * </ul>
          * <blockquote>
-         * <p>ApsaraDB for MongoDB does not support resetting the password of the account for the shard node.</p>
+         * <p>ApsaraDB for MongoDB does not support resetting the password for the shard node account.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -384,7 +398,7 @@ public class CreateNodeRequest extends Request {
         /**
          * <p>Specifies whether to enable automatic payment. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: enables automatic payment. This is the default value. Make sure that your account has sufficient balance.
+         * <li><strong>true</strong> (default): enables automatic payment. Make sure that your account has sufficient balance.
          * &lt;props=&quot;china&quot;&gt;- <strong>false</strong>: disables automatic payment. You can log on to the ApsaraDB for MongoDB console, choose <strong>Expenses</strong> &gt; <strong>Expenses and Costs</strong> in the upper-right corner, choose <strong>Subscription Orders</strong> &gt; <strong>My Orders</strong> in the left-side navigation pane, and then pay for the order on the <strong>Orders</strong> tab.
          * &lt;props=&quot;intl&quot;&gt;- <strong>false</strong>: disables automatic payment. You can log on to the ApsaraDB for MongoDB console, choose <strong>Expenses</strong> &gt; <strong>Expenses and Costs</strong> in the upper-right corner, click <strong>Order Management</strong> in the left-side navigation pane, and then pay for the order on the <strong>Orders</strong> page.</li>
          * </ul>
@@ -402,7 +416,7 @@ public class CreateNodeRequest extends Request {
         }
 
         /**
-         * <p>The additional parameter that contains business information.</p>
+         * <p>The additional parameter for business information.</p>
          * 
          * <strong>example:</strong>
          * <p>{“ActivityId&quot;:&quot;000000000&quot;}</p>
@@ -414,7 +428,7 @@ public class CreateNodeRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The value can contain a maximum of 64 ASCII characters and cannot contain non-ASCII characters.</p>
          * 
          * <strong>example:</strong>
          * <p>ETnLKlblzczshOTUbOCz****</p>
@@ -428,7 +442,7 @@ public class CreateNodeRequest extends Request {
         /**
          * <p>Specifies whether to use a coupon. Valid values:</p>
          * <ul>
-         * <li><strong>default</strong> or <strong>null</strong>: uses a coupon. This is the default value.</li>
+         * <li><strong>default</strong> or <strong>null</strong> (default): uses a coupon.</li>
          * <li><strong>youhuiquan_promotion_option_id_for_blank</strong>: does not use a coupon.</li>
          * </ul>
          * 
@@ -455,7 +469,20 @@ public class CreateNodeRequest extends Request {
         }
 
         /**
-         * <p>The instance type of the shard node or mongos node. For more information about instance types, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</p>
+         * <p>Specifies whether to perform a dry run on the request. Valid values:</p>
+         * <ul>
+         * <li>true: performs a dry run without calling the operation. The system checks the request parameters, request format, service limits, and available resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.</li>
+         * <li>false (default): sends the request. If the request passes the dry run, the operation is performed.</li>
+         * </ul>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * <p>The instance type of the shard or mongos node. For more information, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -471,7 +498,7 @@ public class CreateNodeRequest extends Request {
          * <p>The disk space of the node. Unit: GB.</p>
          * <p>The valid values vary based on the storage type. For more information, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</p>
          * <blockquote>
-         * <p>This parameter is required when the node type is <strong>Shard</strong>.</p>
+         * <p>This parameter is required when the node type is <strong>shard</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -522,7 +549,7 @@ public class CreateNodeRequest extends Request {
          * <p>The number of read-only nodes in the shard node.</p>
          * <p>Valid values: <strong>0</strong> to <strong>5</strong>. Default value: <strong>0</strong>.</p>
          * <blockquote>
-         * <p>This parameter is supported only on the Alibaba Cloud China site.</p>
+         * <p>This parameter is supported only on the China site.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -553,7 +580,10 @@ public class CreateNodeRequest extends Request {
         }
 
         /**
-         * SearchDBInstanceClass.
+         * <p>The instance type of the search node to be added.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mdb.shard.4x.large.d</p>
          */
         public Builder searchDBInstanceClass(String searchDBInstanceClass) {
             this.putQueryParameter("SearchDBInstanceClass", searchDBInstanceClass);
@@ -562,7 +592,10 @@ public class CreateNodeRequest extends Request {
         }
 
         /**
-         * SearchNodeCount.
+         * <p>The number of search nodes to be added.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder searchNodeCount(Integer searchNodeCount) {
             this.putQueryParameter("SearchNodeCount", searchNodeCount);
@@ -571,7 +604,10 @@ public class CreateNodeRequest extends Request {
         }
 
         /**
-         * SearchStorage.
+         * <p>The storage capacity of the search node to be added.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder searchStorage(Integer searchStorage) {
             this.putQueryParameter("SearchStorage", searchStorage);
@@ -583,7 +619,7 @@ public class CreateNodeRequest extends Request {
          * <p>Specifies whether to apply for a direct connection endpoint for the shard node. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: applies for a direct connection endpoint for the shard node.</li>
-         * <li><strong>false</strong>: does not apply for a direct connection endpoint for the shard node. This is the default value.</li>
+         * <li><strong>false</strong> (default): does not apply for a direct connection endpoint for the shard node.</li>
          * </ul>
          * 
          * <strong>example:</strong>

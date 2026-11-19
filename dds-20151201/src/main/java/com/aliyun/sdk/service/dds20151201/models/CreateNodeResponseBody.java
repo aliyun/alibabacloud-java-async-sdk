@@ -80,7 +80,7 @@ public class CreateNodeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the node.</p>
+         * <p>The node ID.</p>
          * 
          * <strong>example:</strong>
          * <p>d-bp1b234bf7a4****</p>
@@ -91,7 +91,7 @@ public class CreateNodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the order.</p>
+         * <p>The order ID.</p>
          * 
          * <strong>example:</strong>
          * <p>20951063702****</p>
@@ -102,7 +102,7 @@ public class CreateNodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>7D48FB19-20CA-4725-A870-3D8F5CE6****</p>

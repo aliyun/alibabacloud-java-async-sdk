@@ -279,7 +279,7 @@ public class DescribeClusterBackupsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the cluster backup.</p>
+         * <p>The cluster backup ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5664****</p>
@@ -291,7 +291,7 @@ public class DescribeClusterBackupsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the backup job.</p>
+         * <p>The backup job ID.</p>
          * 
          * <strong>example:</strong>
          * <p>775051</p>
@@ -303,7 +303,7 @@ public class DescribeClusterBackupsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -316,9 +316,9 @@ public class DescribeClusterBackupsRequest extends Request {
         }
 
         /**
-         * <p>The region where the geo-redundant backup resides.</p>
+         * <p>The region where the cross-region backup resides.</p>
          * <blockquote>
-         * <p>This parameter is required when you query geo-redundant backups.</p>
+         * <p>This parameter is required when you query cross-region backups.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -331,9 +331,9 @@ public class DescribeClusterBackupsRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+         * <p>The end time of the query. The end time must be later than the start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</p>
          * <blockquote>
-         * <p>This parameter is invalid if you specify the BackupId parameter.</p>
+         * <p>This parameter does not take effect when BackupId is specified.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -346,12 +346,10 @@ public class DescribeClusterBackupsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to query the information about the child nodes in the cluster backup. Valid values:</p>
+         * <p>Specifies whether to query the information about child nodes in the cluster backup. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: Returns only the basic information about the cluster backup, not the backup information about all child nodes.</p>
-         * </li>
-         * <li><p><strong>false</strong> (Default): Returns the backup information about all child nodes.</p>
-         * </li>
+         * <li><strong>true</strong>: returns only the basic information about the cluster backup and does not return the backup information about all child nodes.</li>
+         * <li><strong>false</strong> (default): returns the backup information about all child nodes.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -382,7 +380,7 @@ public class DescribeClusterBackupsRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. The value must be a positive integer. Default value: <strong>1</strong>.</p>
+         * <p>The page number. Default value: <strong>1</strong>. Valid values: positive integers.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -394,14 +392,11 @@ public class DescribeClusterBackupsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Valid values:</p>
+         * <p>The number of entries per page. Valid values:</p>
          * <ul>
-         * <li><p><strong>30</strong> (Default)</p>
-         * </li>
-         * <li><p><strong>50</strong></p>
-         * </li>
-         * <li><p><strong>100</strong></p>
-         * </li>
+         * <li><strong>30</strong> (default)</li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -414,7 +409,7 @@ public class DescribeClusterBackupsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-xxxx</p>
@@ -447,10 +442,8 @@ public class DescribeClusterBackupsRequest extends Request {
          * <p>The region where the instance resides.</p>
          * <blockquote>
          * <ul>
-         * <li><p>This parameter is required when you query the backup sets of a released instance.</p>
-         * </li>
-         * <li><p>This parameter is required when you query geo-redundant backups.</p>
-         * </li>
+         * <li>This parameter is required when you query the backup sets of a released instance.</li>
+         * <li>This parameter is required when you query cross-region backups.</li>
          * </ul>
          * </blockquote>
          * 
@@ -464,9 +457,9 @@ public class DescribeClusterBackupsRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in Coordinated Universal Time (UTC).</p>
+         * <p>The start time of the query. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</p>
          * <blockquote>
-         * <p>This parameter is invalid if you specify the BackupId parameter.</p>
+         * <p>This parameter does not take effect when BackupId is specified.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

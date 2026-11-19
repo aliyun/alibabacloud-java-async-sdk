@@ -67,7 +67,10 @@ public class ModifyDBInstanceConnectionStringResponseBody extends TeaModel {
         } 
 
         /**
-         * ModifiedConnectionString.
+         * <p>The modified endpoint of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo-instance-pub.mongodb.rds.aliyuncs.com</p>
          */
         public Builder modifiedConnectionString(String modifiedConnectionString) {
             this.modifiedConnectionString = modifiedConnectionString;

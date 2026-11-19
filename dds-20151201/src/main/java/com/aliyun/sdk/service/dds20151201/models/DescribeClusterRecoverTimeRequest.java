@@ -208,10 +208,10 @@ public class DescribeClusterRecoverTimeRequest extends Request {
         }
 
         /**
-         * <p>The region where the geo-redundancy backup set resides.</p>
+         * <p>The region where the geo-redundancy backup set is stored.</p>
          * <blockquote>
          * <ul>
-         * <li>This parameter is required when you query a geo-redundancy backup.</li>
+         * <li>This parameter is required when you query geo-redundancy backups.</li>
          * </ul>
          * </blockquote>
          * 
@@ -225,7 +225,11 @@ public class DescribeClusterRecoverTimeRequest extends Request {
         }
 
         /**
-         * OnlyDbTableRecovery.
+         * <p>Specifies whether to query only the restorable time ranges that support database and table restoration. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: returns only the restorable time ranges that support database and table restoration.</li>
+         * <li><strong>false</strong> (default): returns all restorable time ranges.</li>
+         * </ul>
          */
         public Builder onlyDbTableRecovery(Boolean onlyDbTableRecovery) {
             this.putQueryParameter("OnlyDbTableRecovery", onlyDbTableRecovery);
@@ -282,10 +286,10 @@ public class DescribeClusterRecoverTimeRequest extends Request {
         }
 
         /**
-         * <p>The region where the source instance of the geo-redundancy backup resides.</p>
+         * <p>The region of the source instance for geo-redundancy backups.</p>
          * <blockquote>
          * <ul>
-         * <li>This parameter is required when you query a geo-redundancy backup.</li>
+         * <li>This parameter is required when you query geo-redundancy backups.</li>
          * </ul>
          * </blockquote>
          * 

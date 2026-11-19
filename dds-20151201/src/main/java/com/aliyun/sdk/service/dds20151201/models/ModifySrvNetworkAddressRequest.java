@@ -169,12 +169,10 @@ public class ModifySrvNetworkAddressRequest extends Request {
         }
 
         /**
-         * <p>The type of the SRV connection address to modify. Valid values:</p>
+         * <p>The type of the SRV endpoint to be modified. Valid values:</p>
          * <ul>
-         * <li><p><strong>VPC</strong>: virtual private cloud (VPC)</p>
-         * </li>
-         * <li><p><strong>Public</strong>: Internet connection</p>
-         * </li>
+         * <li><strong>VPC</strong>: VPC</li>
+         * <li><strong>Public</strong>: public network connection</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -201,19 +199,15 @@ public class ModifySrvNetworkAddressRequest extends Request {
         }
 
         /**
-         * <p>The new connection address. The address must meet the following requirements:</p>
+         * <p>The new endpoint. The endpoint must meet the following requirements:</p>
          * <ul>
-         * <li><p>Starts with a lowercase letter.</p>
-         * </li>
-         * <li><p>Ends with a lowercase letter or a digit.</p>
-         * </li>
-         * <li><p>Contains only lowercase letters, digits, and hyphens (-).</p>
-         * </li>
-         * <li><p>Is 8 to 63 characters in length.</p>
-         * </li>
+         * <li>Start with a lowercase letter.</li>
+         * <li>End with a lowercase letter or a digit.</li>
+         * <li>Contain only lowercase letters, digits, and hyphens (-).</li>
+         * <li>Be 8 to 63 characters in length.</li>
          * </ul>
          * <blockquote>
-         * <p>You only need to specify the prefix of the connection address. The rest of the address cannot be modified.</p>
+         * <p>Specify only the prefix of the endpoint. The remaining part cannot be modified.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

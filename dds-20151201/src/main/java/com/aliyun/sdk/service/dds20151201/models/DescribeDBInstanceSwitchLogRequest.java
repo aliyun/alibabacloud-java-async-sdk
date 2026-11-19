@@ -164,7 +164,7 @@ public class DescribeDBInstanceSwitchLogRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-mm-dd</em>T<em>hh:mm</em>Z format. The time must be in UTC. The end time must be later than the start time.</p>
+         * <p>The end time of the query. The end time must be later than the start time. The time is in the <i>yyyy-mm-dd</i>T<i>hh:mm</i>Z format (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2023-05-28T02:00Z</p>
@@ -176,7 +176,7 @@ public class DescribeDBInstanceSwitchLogRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. The value must be an integer that is greater than 0 and less than or equal to the maximum value supported by the integer data type. Default value: <strong>1</strong>.</p>
+         * <p>The page number. Valid values: an integer greater than 0 and less than or equal to the maximum value of the INTEGER data type. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -188,7 +188,7 @@ public class DescribeDBInstanceSwitchLogRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Valid values: <strong>30, 50, and 100</strong>. Default value: <strong>30</strong>.</p>
+         * <p>The number of entries per page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>. Default value: <strong>30</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -209,7 +209,7 @@ public class DescribeDBInstanceSwitchLogRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-mm-dd</em>T<em>hh:mm</em>Z format. The time must be in UTC.</p>
+         * <p>The start time of the query. The time is in the <i>yyyy-mm-dd</i>T<i>hh:mm</i>Z format (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2023-05-27T02:46Z</p>

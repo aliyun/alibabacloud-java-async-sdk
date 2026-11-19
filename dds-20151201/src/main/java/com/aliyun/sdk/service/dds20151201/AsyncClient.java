@@ -90,8 +90,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Shard accounts can be created only for ApsaraDB for MongoDB sharded cluster instances with cloud disks.</li>
-     * <li>Shard accounts are granted fixed read-only permissions.</li>
+     * <li>Supports <strong>cloud disk</strong> and <strong>local disk</strong> instances, and supports <strong>replica set</strong> and <strong>sharded cluster</strong> architectures.</li>
+     * <li>Accounts use a non-persistent architecture, and account information is read from the instance in real time. During the transition period before an account is created, the account does not appear in the DescribeAccounts list. After the account is created, it directly appears in the Available state.</li>
+     * <li>The combination of account name and database name (DBName) must be unique within the same instance. Creating a duplicate account is rejected.</li>
+     * <li>The account name cannot use the system reserved name root (case-insensitive) or the reserved prefix __cloud.</li>
+     * <li>The requirement for Roles depends on the instance architecture: it is <strong>required</strong> for replica set and sharded cluster ConfigServer (cs) accounts. It is <strong>prohibited</strong> for sharded cluster Shard direct connection (db) accounts (passing it returns InvalidRoles.NotSupported).</li>
      * </ul>
      * 
      * @param request the request parameters of CreateAccount  CreateAccountRequest
@@ -110,8 +113,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before using this operation, make sure you understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
-     * For information about instance specifications, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance specifications</a>.
+     * <p>Before you call this operation, make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
+     * For more information about ApsaraDB for MongoDB instance specifications, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance specifications</a>.
      * To create a sharded cluster instance, call the <a href="https://help.aliyun.com/document_detail/61884.html">CreateShardingDBInstance</a> operation.</p>
      * 
      * @param request the request parameters of CreateDBInstance  CreateDBInstanceRequest
@@ -137,7 +140,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB before you call this operation.
+     * <p>Before calling this operation, make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
      * This operation is applicable only to ApsaraDB for MongoDB sharded cluster instances.</p>
      * 
      * @param request the request parameters of CreateNodeBatch  CreateNodeBatchRequest
@@ -167,7 +170,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <p>Only manual backups can be deleted.
-     * Only MongoDB instances with cloud disks are supported.</p>
+     * Only MongoDB instances with cloud disks are supported.
+     * Before calling this operation, you must call the DescribeBackups operation to obtain the list of backup sets and use the returned BackupId (backup set ID) as the input parameter for this operation. The BackupId returned by the CreateBackup operation is a backup task ID and cannot be used in this operation.</p>
      * 
      * @param request the request parameters of DeleteBackup  DeleteBackupRequest
      * @return DeleteBackupResponse
@@ -176,11 +180,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The instance must meet the following conditions:</p>
+     * <p>When you invoke this operation, the instance must meet the following conditions: </p>
      * <ul>
-     * <li>The instance status is running.</li>
+     * <li>The instance status is Running.</li>
      * <li>The billing method of the instance is pay-as-you-go.<blockquote>
-     * <p>After an instance is released, its data cannot be recovered. Proceed with caution.</p>
+     * <p>After the instance is released, its data cannot be recovered. Proceed with caution.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -212,6 +216,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteNodeResponse> deleteNode(DeleteNodeRequest request);
 
     /**
+     * @param request the request parameters of DescribeAccountRoles  DescribeAccountRolesRequest
+     * @return DescribeAccountRolesResponse
+     */
+    CompletableFuture<DescribeAccountRolesResponse> describeAccountRoles(DescribeAccountRolesRequest request);
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Accounts use an architecture where information is not stored in a central database, and account information is read from the instance in real time. External accounts (not stored in the central database) are returned through direct connection queries to the instance and displayed in the same way as internal accounts. The response includes the system account <code>root</code>.</li>
+     * <li>If <code>DBName</code> is specified, only the accounts under this database are returned (filtered by the database to which the account belongs).</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeAccounts  DescribeAccountsRequest
      * @return DescribeAccountsResponse
      */
@@ -315,7 +331,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the zones in which an ApsaraDB for MongoDB instance can be deployed under specified purchase conditions. The region ID is required in the purchase condition.</p>
+     * <p>Queries the list of supported MongoDB zones based on the specified purchasing conditions. The region ID is required in the purchasing conditions.</p>
      * 
      * @param request the request parameters of DescribeAvailabilityZones  DescribeAvailabilityZonesRequest
      * @return DescribeAvailabilityZonesResponse
@@ -386,8 +402,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>For sharded cluster instances that use cloud disks and were created before October 19, 2023, you must first call the <a href="https://help.aliyun.com/document_detail/2587931.html">TransferClusterBackup</a> operation to convert shard backups to cluster backups.
-     * Sharded cluster instances that use cloud disks and were created after October 19, 2023 use cluster backups by default.</p>
+     * <p>For sharded cluster instances with cloud disks created before October 19, 2023, you must call the <a href="https://help.aliyun.com/document_detail/2587931.html">TransferClusterBackup</a> operation to convert shard backups to cluster backups before calling this operation.
+     * Sharded cluster instances with cloud disks created on or after October 19, 2023 use cluster backups by default.</p>
      * 
      * @param request the request parameters of DescribeClusterBackups  DescribeClusterBackupsRequest
      * @return DescribeClusterBackupsResponse
@@ -397,8 +413,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>The MongoDB instance must be a sharded cluster instance that runs major engine version 4.4 or later and uses standard SSDs as the storage pattern.</li>
-     * <li>Only instances created before October 19, 2023 need to invoke the TransferClusterBackup operation to switch to the cluster backup mode. Instances that have been switched to the cluster backup mode or sharded cluster instances with cloud disks created on or after October 19, 2023 can directly invoke this operation.</li>
+     * <li>The MongoDB instance must be a sharded cluster instance running major engine version 4.4 or later and using ESSD cloud disks.</li>
+     * <li>Only instances created before October 19, 2023, need to call the TransferClusterBackup operation to switch to cluster backup mode. Instances that have already switched to cluster backup mode, or MongoDB sharded cluster instances with cloud disks created on or after October 19, 2023, can directly call this operation.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeClusterRecoverTime  DescribeClusterRecoverTimeRequest
@@ -458,10 +474,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:</p>
+     * <p>When you call this operation, the instance must meet the following conditions:</p>
      * <ul>
-     * <li>The instance is a replica set or sharded cluster instance.</li>
-     * <li>The instance uses local physical disks to store data.</li>
+     * <li>The instance is a replica set instance or a sharded cluster instance.</li>
+     * <li>The instance uses local physical disks.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeDBInstanceSwitchLog  DescribeDBInstanceSwitchLogRequest
@@ -499,14 +515,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>If you do not specify any instances, the operation returns overview information for all instances in the destination region associated with your Alibaba Cloud account.</li>
-     * <li>The results of this operation are not paginated.</li>
+     * <li>If you do not specify the details of an instance, the overview information of all instances in the specified region within the current account is returned.</li>
+     * <li>The response of this operation is not paginated.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeDBInstancesOverview  DescribeDBInstancesOverviewRequest
      * @return DescribeDBInstancesOverviewResponse
      */
     CompletableFuture<DescribeDBInstancesOverviewResponse> describeDBInstancesOverview(DescribeDBInstancesOverviewRequest request);
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li><strong>Read-only API operation with synchronous responses</strong> (not processed asynchronously).</li>
+     * <li>The data source is a direct connection to the instance (<code>listDatabases</code>), and no metadata is persisted. The response includes the system databases <code>admin</code>, <code>local</code>, and <code>config</code>, which are returned as-is without filtering. The control plane uses a short-term cache, so repeated calls within a short period may not return real-time results.</li>
+     * <li>Supports cloud disk and local disk instances.</li>
+     * <li>If the <code>DBName</code> (the database to which the account belongs) field in the account creation form is implemented as a drop-down list, this API operation serves as the data source. The <code>local</code> database must be filtered out from the drop-down list because the backend prohibits creating accounts in the <code>local</code> database, whereas the <code>admin</code> database can be retained.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeDatabases  DescribeDatabasesRequest
+     * @return DescribeDatabasesResponse
+     */
+    CompletableFuture<DescribeDatabasesResponse> describeDatabases(DescribeDatabasesRequest request);
 
     /**
      * <b>description</b> :
@@ -652,7 +682,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation applies to replica set instances and single-node instances. It does not apply to sharded cluster instances.</p>
+     * <p>This operation is applicable to replica set instances and standalone instances, but not to sharded cluster instances.</p>
      * 
      * @param request the request parameters of DescribeReplicaSetRole  DescribeReplicaSetRoleRequest
      * @return DescribeReplicaSetRoleResponse
@@ -751,13 +781,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that the instance meets the following requirements:</p>
+     * <p>When you call this operation, the instance must meet the following conditions:</p>
      * <ul>
-     * <li>The instance is a replica set instance or a sharded cluster instance that uses local disks.</li>
-     * <li>The billing method of the instance is subscription.</li>
-     * <li>The instance has expired and is in the <strong>Locking</strong> state.
-     * **
-     * <strong>Warning</strong> Data cannot be restored after the instance is destroyed. Proceed with caution.</li>
+     * <li>The billing method cloud disk instance is subscription.</li>
+     * <li>The instance is in the <strong>Locked due to expiration</strong> state and has not been released.<blockquote>
+     * <p>If you call this operation on an instance with local disks, the instance is directly destroyed.
+     * If you call this operation on an instance with cloud disks, the instance is deleted, and the backup policy is changed to &quot;Delete all backup sets cloud disk instance immediately upon instance release&quot;.
+     * Danger:  Data cannot be recovered after an instance is destroyed. Proceed with caution.</p>
+     * </blockquote>
+     * </li>
      * </ul>
      * 
      * @param request the request parameters of DestroyInstance  DestroyInstanceRequest
@@ -813,7 +845,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation is not supported for sharded cluster instances.</p>
+     * <ul>
+     * <li><strong>Asynchronous operation</strong>: Returns <code>RequestId</code> to indicate that the request is accepted.</li>
+     * <li>System account handling: The description of the <code>root</code> account can be modified (it is a database account, and the accounts table is updated, which is a standard online capability). The descriptions of system accounts with prefixes such as <code>__cloud</code> cannot be modified, and the <code>InvalidAccountName.Malformed</code> error is returned.</li>
+     * <li>If the account does not exist or the <code>DBName</code> does not match, the <code>InvalidAccountName.NotFound</code> error is returned.</li>
+     * </ul>
      * 
      * @param request the request parameters of ModifyAccountDescription  ModifyAccountDescriptionRequest
      * @return ModifyAccountDescriptionResponse
@@ -909,9 +945,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The instance types that support modifying the endpoint and port are as follows:</p>
+     * <p>The following instance types support endpoint and port modifications:</p>
      * <ul>
-     * <li>You can modify the endpoints of instances with local disks and cloud disks.</li>
+     * <li>You can modify the endpoints of instances that use local disks or cloud disks.</li>
      * <li>For sharded cluster instances, you can modify only the endpoints of Mongos nodes.</li>
      * </ul>
      * 
@@ -929,9 +965,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>This feature is not supported for instances with less than 40 GB of disk space.</li>
-     * <li>You can change the disk type only to an ESSD AutoPL disk (cloud_auto).</li>
-     * <li>The interval between two consecutive modifications to the provisioned input/output operations per second (IOPS) of an instance must be longer than one hour. For more information, see <a href="https://help.aliyun.com/document_detail/413275.html">Modify the performance of an ESSD AutoPL disk</a>.</li>
+     * <li>This feature is not supported if the disk space is less than 40 GB.</li>
+     * <li>Only Upgrade/Downgrade to the cloud_auto cloud disk type is supported.</li>
+     * <li>The interval between two modifications of the IOPS provisioned performance for a single instance must exceed one hour. For more information, see <a href="https://help.aliyun.com/document_detail/413275.html">Modify the performance configurations of an ESSD AutoPL cloud disk</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of ModifyDBInstanceDiskType  ModifyDBInstanceDiskTypeRequest
@@ -995,9 +1031,9 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <ul>
      * <li>The instance is in the Running state.</li>
      * <li>The instance is a replica set or sharded cluster instance.<ul>
-     * <li>The MongoDB version of a replica set instance must be 3.4 or later.</li>
-     * <li>The storage mode of a sharded cluster instance must be ESSD cloud disk.<blockquote>
-     * <p>When you enable, update, or disable SSL, the instance restarts once. Perform this operation during off-peak hours.</p>
+     * <li>The version of a replica set instance must be 3.4 or later.</li>
+     * <li>The storage mode of a sharded cluster instance must be the ESSD cloud disk edition.<blockquote>
+     * <p>The instance restarts once when you enable, update, or disable SSL. Perform this operation during off-peak hours.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -1012,7 +1048,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <p>Before you call this operation, make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
-     * This operation is applicable only to ApsaraDB for MongoDB &lt;props=&quot;china&quot;&gt;<ph>standalone instances, replica set instances, and serverless instances</ph>&lt;props=&quot;intl&quot;&gt;<ph>standalone instances and replica set instances</ph>. To modify the configurations of a sharded cluster instance, call the <a href="https://help.aliyun.com/document_detail/61923.html">ModifyNodeSpec</a>, <a href="https://help.aliyun.com/document_detail/61911.html">CreateNode</a>, <a href="https://help.aliyun.com/document_detail/61922.html">DeleteNode</a>, or <a href="https://help.aliyun.com/document_detail/61816.html">ModifyNodeSpecBatch</a> operation based on your business requirements.</p>
+     * This operation is applicable only to ApsaraDB for MongoDB &lt;props=&quot;china&quot;&gt;<ph>standalone instances, replica set instances, and serverless instances</ph>&lt;props=&quot;intl&quot;&gt;<ph>standalone instances and replica set instances</ph>. To modify the configurations of a sharded cluster instance, you can call the <a href="https://help.aliyun.com/document_detail/61923.html">ModifyNodeSpec</a>, <a href="https://help.aliyun.com/document_detail/61911.html">CreateNode</a>, <a href="https://help.aliyun.com/document_detail/61922.html">DeleteNode</a>, or <a href="https://help.aliyun.com/document_detail/61816.html">ModifyNodeSpecBatch</a> operation based on your business requirements.</p>
      * 
      * @param request the request parameters of ModifyDBInstanceSpec  ModifyDBInstanceSpecRequest
      * @return ModifyDBInstanceSpecResponse
@@ -1148,7 +1184,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation applies only to replica set instances and sharded cluster instances that use disks.</p>
+     * <p>Applicable only to cloud disk replica set instances and cloud disk sharded cluster instances. Before calling this operation, ensure that an SRV address is assigned to the target instance. For newly created instances, call AllocateDBInstanceSrvNetworkAddress first to assign an SRV address. Also, ensure that the instance is in the Running state. You can verify this by checking the DBInstanceStatus field returned by DescribeDBInstanceAttribute.</p>
      * 
      * @param request the request parameters of ModifySrvNetworkAddress  ModifySrvNetworkAddressRequest
      * @return ModifySrvNetworkAddressResponse
@@ -1157,7 +1193,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The actions performed by this operation for a task vary based on the current state of the task. The supported actions for a task can be obtained from the value of the actionInfo parameter in the DescribeHistoryTasks operation.</p>
+     * <p>Performs Related operations based on the current status of the node. Supported operations are identified based on the actionInfo of the node obtained from the API.</p>
      * 
      * @param request the request parameters of ModifyTaskInfo  ModifyTaskInfoRequest
      * @return ModifyTaskInfoResponse
@@ -1167,8 +1203,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>This operation releases the internal endpoint of a shard or Configserver node for a sharded cluster instance. For more information, see <a href="https://help.aliyun.com/document_detail/134067.html">Release the endpoint of a shard or Configserver node</a>.</li>
-     * <li>To release the public endpoint of a shard or Configserver node for a sharded cluster instance, call the <a href="https://help.aliyun.com/document_detail/67604.html">ReleasePublicNetworkAddress</a> operation.</li>
+     * <li>Releases the internal endpoint of a shard or ConfigServer node in a sharded cluster instance. For more information, see <a href="https://help.aliyun.com/document_detail/134067.html">Release the endpoint of a shard or ConfigServer node</a>.</li>
+     * <li>To release the public endpoint of a shard or ConfigServer node in a sharded cluster instance, call the <a href="https://help.aliyun.com/document_detail/67604.html">ReleasePublicNetworkAddress</a> operation.</li>
+     * <li>Prerequisites: The instance must be in the Running state. You can call the DescribeDBInstanceAttribute operation and check the DBInstanceStatus field to confirm the state. After you call an operation that changes the instance state, such as AllocateNodePrivateNetworkAddress, wait until the instance returns to the Running state before you call this operation.</li>
      * </ul>
      * 
      * @param request the request parameters of ReleaseNodePrivateNetworkAddress  ReleaseNodePrivateNetworkAddressRequest
@@ -1184,8 +1221,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Make sure that you fully understand the billing methods and pricing of ApsaraDB for MongoDB before you call this operation. For more information about the pricing of ApsaraDB for MongoDB, visit the <a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing tab of the product buy page</a>.
-     * This operation is only applicable to instances that use the subscription billing method.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;Before calling this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a> of ApsaraDB for MongoDB.
+     * &lt;props=&quot;intl&quot;&gt;Before calling this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
+     * This operation is applicable only to subscription instances.</p>
      * 
      * @param request the request parameters of RenewDBInstance  RenewDBInstanceRequest
      * @return RenewDBInstanceResponse
@@ -1193,6 +1231,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RenewDBInstanceResponse> renewDBInstance(RenewDBInstanceRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li><strong>Asynchronous operation</strong>: Returns a <code>RequestId</code> to indicate that the request is accepted.</li>
+     * <li>The backend verifies whether the account exists. For accounts in the database, the system queries the accounts table. For accounts outside the database, the system queries the instance directly by using a fail-closed mechanism. If the account does not exist or the <code>DBName</code> does not match the actual database where the account resides, <code>InvalidAccountName.NotFound</code> is returned.</li>
+     * <li>System account handling: The password of the <code>root</code> account can be reset. This is a standard feature, and accounts in the database follow the original path. In scenarios outside the database, requests to reset the password of the <code>root</code> account or accounts with the <code>__cloud</code> prefix are rejected, and <code>IncorrectDBInstanceAccountMode</code> is returned.</li>
+     * <li>For sharded cluster instances, <code>CharacterType</code> is <strong>required</strong> and must be set to <code>db</code> or <code>cs</code>. If you set this parameter to <code>normal</code> or leave it empty, <code>InvalidCharacterType</code> is returned.</li>
+     * </ul>
+     * 
      * @param request the request parameters of ResetAccountPassword  ResetAccountPasswordRequest
      * @return ResetAccountPasswordResponse
      */
@@ -1200,7 +1246,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to restart an instance, or a specific shard or mongos node in a sharded cluster instance.</p>
+     * <p>You can call this operation to restart an instance, or to restart a specific shard or mongos node in a sharded cluster instance.</p>
      * 
      * @param request the request parameters of RestartDBInstance  RestartDBInstanceRequest
      * @return RestartDBInstanceResponse
@@ -1254,8 +1300,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>The instance is an ApsaraDB for MongoDB sharded cluster instance that runs MongoDB 4.4 or later and uses enhanced SSDs (ESSDs) to store data.</li>
-     * <li>You can call the TransferClusterBackup operation only for instances that are created before October 19, 2023 to switch the instances to the cluster backup mode. Cloud disk-based sharded cluster instances that are created on or after October 19, 2023 are set to the cluster backup mode by default.</li>
+     * <li>The ApsaraDB for MongoDB database instance must be a sharded cluster instance, run major version 4.4 or later, and use the ESSD standard SSD storage pattern.</li>
+     * <li>Only instances created before October 19, 2023 need to execute this operation to switch to the cluster backup mode. Sharded cluster instances with cloud disks created on or after October 19, 2023 use the cluster backup mode by default.</li>
      * </ul>
      * 
      * @param request the request parameters of TransferClusterBackup  TransferClusterBackupRequest
@@ -1283,15 +1329,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a>.
-     * A subscription instance cannot be changed to a pay-as-you-go instance. To avoid wasting resources, proceed with caution.
-     * Before you call this API operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:</p>
+     * <p>Before you call this operation, make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
+     * Subscription instances cannot be converted to pay-as-you-go instances. Proceed with caution to avoid wasting resources.
+     * When you call this operation, the instance must meet the following conditions:</p>
      * <ul>
-     * <li>The instance is in the running state.</li>
+     * <li>The instance status is Running.</li>
      * <li>The billing method of the instance is pay-as-you-go.</li>
-     * <li>The instance has no unpaid subscription orders.</li>
-     * <li>The instance type is available for purchase. For more information about unavailable instance types, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.<blockquote>
-     * <p>To change the billing method of an instance whose instance type is no longer available to subscription, call the <a href="https://help.aliyun.com/document_detail/61816.html">ModifyDBInstanceSpec</a> or <a href="https://help.aliyun.com/document_detail/61923.html">ModifyNodeSpec</a> operation to first change the instance type.</p>
+     * <li>The instance does not have unpaid orders for converting to a subscription instance.</li>
+     * <li>The instance type is not a legacy instance type (no longer available for sale). For a list of legacy instance types, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.<blockquote>
+     * <p>To convert an instance of a legacy instance type to a subscription instance, call the <a href="https://help.aliyun.com/document_detail/61816.html">ModifyDBInstanceSpec</a> or <a href="https://help.aliyun.com/document_detail/61923.html">ModifyNodeSpec</a> operation to change the instance type first.</p>
      * </blockquote>
      * </li>
      * </ul>

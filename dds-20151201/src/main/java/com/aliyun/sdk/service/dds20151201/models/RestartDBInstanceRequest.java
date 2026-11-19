@@ -195,7 +195,7 @@ public class RestartDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The instance ID. Before calling this operation, ensure that the instance is in the Running state. You can check the current status of the instance by checking the DBInstanceStatus field returned by the DescribeDBInstanceAttribute operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -210,7 +210,7 @@ public class RestartDBInstanceRequest extends Request {
         /**
          * <p>The ID of the shard or mongos node in the sharded cluster instance.</p>
          * <blockquote>
-         * <p>If you do not specify this parameter for a sharded cluster instance, the entire sharded cluster instance is restarted.</p>
+         * <p>If the instance is a sharded cluster instance and this parameter is not specified, the entire sharded cluster instance is restarted.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -223,7 +223,15 @@ public class RestartDBInstanceRequest extends Request {
         }
 
         /**
-         * NodeType.
+         * <p>The type of the node to be restarted in the sharded cluster instance. Valid values:</p>
+         * <ul>
+         * <li><strong>db</strong>: shard node.</li>
+         * <li><strong>mongos</strong>: mongos node.</li>
+         * <li><strong>cs</strong>: Configserver node.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>db</p>
          */
         public Builder nodeType(String nodeType) {
             this.putQueryParameter("NodeType", nodeType);
@@ -250,7 +258,7 @@ public class RestartDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to restart mongos nodes in parallel. This parameter takes effect only when you restart multiple mongos nodes at a time.</p>
+         * <p>Specifies whether to restart mongos nodes in parallel. This parameter takes effect only when multiple mongos nodes are restarted in a batch.</p>
          */
         public Builder parallelRestartMongos(Boolean parallelRestartMongos) {
             this.putQueryParameter("ParallelRestartMongos", parallelRestartMongos);
@@ -279,8 +287,8 @@ public class RestartDBInstanceRequest extends Request {
         /**
          * <p>The time when the instance is restarted. Valid values:</p>
          * <ul>
-         * <li>0: Immediately.</li>
-         * <li>1: Within the O&amp;M window.</li>
+         * <li>0: Restarts the instance immediately.</li>
+         * <li>1: Restarts the instance within the O&amp;M window.</li>
          * </ul>
          * 
          * <strong>example:</strong>

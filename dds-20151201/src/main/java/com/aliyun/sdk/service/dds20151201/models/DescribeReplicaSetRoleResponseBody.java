@@ -93,7 +93,7 @@ public class DescribeReplicaSetRoleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The domain name suffix for the connection string.</p>
+         * <p>The domain name suffix of the connection string.</p>
          * 
          * <strong>example:</strong>
          * <p>.mongodb.rds.aliyuncs.com</p>
@@ -115,7 +115,7 @@ public class DescribeReplicaSetRoleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Details of the replica set.</p>
+         * ReplicaSets.
          */
         public Builder replicaSets(ReplicaSets replicaSets) {
             this.replicaSets = replicaSets;
@@ -158,6 +158,9 @@ public class DescribeReplicaSetRoleResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
+        @com.aliyun.core.annotation.NameInMap("IPAddress")
+        private String IPAddress;
+
         @com.aliyun.core.annotation.NameInMap("NetworkType")
         private String networkType;
 
@@ -172,6 +175,7 @@ public class DescribeReplicaSetRoleResponseBody extends TeaModel {
             this.connectionPort = builder.connectionPort;
             this.connectionType = builder.connectionType;
             this.expiredTime = builder.expiredTime;
+            this.IPAddress = builder.IPAddress;
             this.networkType = builder.networkType;
             this.replicaSetRole = builder.replicaSetRole;
             this.roleId = builder.roleId;
@@ -214,6 +218,13 @@ public class DescribeReplicaSetRoleResponseBody extends TeaModel {
         }
 
         /**
+         * @return IPAddress
+         */
+        public String getIPAddress() {
+            return this.IPAddress;
+        }
+
+        /**
          * @return networkType
          */
         public String getNetworkType() {
@@ -239,6 +250,7 @@ public class DescribeReplicaSetRoleResponseBody extends TeaModel {
             private String connectionPort; 
             private String connectionType; 
             private String expiredTime; 
+            private String IPAddress; 
             private String networkType; 
             private String replicaSetRole; 
             private String roleId; 
@@ -251,6 +263,7 @@ public class DescribeReplicaSetRoleResponseBody extends TeaModel {
                 this.connectionPort = model.connectionPort;
                 this.connectionType = model.connectionType;
                 this.expiredTime = model.expiredTime;
+                this.IPAddress = model.IPAddress;
                 this.networkType = model.networkType;
                 this.replicaSetRole = model.replicaSetRole;
                 this.roleId = model.roleId;
@@ -285,6 +298,14 @@ public class DescribeReplicaSetRoleResponseBody extends TeaModel {
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
+                return this;
+            }
+
+            /**
+             * IPAddress.
+             */
+            public Builder IPAddress(String IPAddress) {
+                this.IPAddress = IPAddress;
                 return this;
             }
 

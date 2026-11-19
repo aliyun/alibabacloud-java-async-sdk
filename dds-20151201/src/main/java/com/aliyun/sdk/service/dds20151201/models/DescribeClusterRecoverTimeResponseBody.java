@@ -78,7 +78,7 @@ public class DescribeClusterRecoverTimeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of cluster backup sets. A cluster backup contains the backup set of each node.</p>
+         * <p>The list of cluster backup sets. A cluster backup contains the backup sets of each node.</p>
          */
         public Builder restoreRanges(java.util.List<RestoreRanges> restoreRanges) {
             this.restoreRanges = restoreRanges;
@@ -157,7 +157,7 @@ public class DescribeClusterRecoverTimeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The beginning of the restorable time range.</p>
+             * <p>The start time of the restorable time range. The time is in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-10-16T19:33:20Z</p>
@@ -168,7 +168,7 @@ public class DescribeClusterRecoverTimeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end of the restorable time range.</p>
+             * <p>The end time of the restorable time range. The time is in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-10-16T19:43:20Z</p>

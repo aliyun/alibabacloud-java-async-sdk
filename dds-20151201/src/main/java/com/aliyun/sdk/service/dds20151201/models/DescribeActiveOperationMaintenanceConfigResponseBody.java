@@ -88,12 +88,10 @@ public class DescribeActiveOperationMaintenanceConfigResponseBody extends TeaMod
         }
 
         /**
-         * <p>Indicates whether a configuration is set.</p>
+         * <p>Indicates whether the O&amp;M task is configured. Valid values:</p>
          * <ul>
-         * <li><p>1: A configuration is set.</p>
-         * </li>
-         * <li><p>0: No configuration is set.</p>
-         * </li>
+         * <li>1: Configured.</li>
+         * <li>0: Not configured.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -105,7 +103,7 @@ public class DescribeActiveOperationMaintenanceConfigResponseBody extends TeaMod
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>72651AF9-7897-41A7-8B67-6C15C7F26A0A</p>
@@ -239,7 +237,7 @@ public class DescribeActiveOperationMaintenanceConfigResponseBody extends TeaMod
             } 
 
             /**
-             * <p>The time when the O\&amp;M task configuration was created. The time is in the <em>yyyy-mm-dd</em>T<em>hh:mm:ss</em>Z format and is displayed in UTC.</p>
+             * <p>The time when the O&amp;M task configuration was created. The time is in the <i>yyyy-mm-dd</i>T<i>hh:mm:ss</i>Z format. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2018-05-30T14:30:00Z</p>
@@ -250,13 +248,12 @@ public class DescribeActiveOperationMaintenanceConfigResponseBody extends TeaMod
             }
 
             /**
-             * <p>The days of the cycle.</p>
+             * <p>The cycle time.</p>
              * <ul>
-             * <li><p>If CycleType is set to Month, this parameter returns the days of the month. Valid values: 1 to 28. Multiple values are separated by commas (,).</p>
-             * </li>
-             * <li><p>If CycleType is set to Week, this parameter returns the days of the week. Valid values: 1 to 7. Multiple values are separated by commas (,).</p>
-             * </li>
+             * <li>If CycleType is set to Month, the return value is a number from 1 to 28, which indicates the day of the month. Multiple values are separated by commas (,).</li>
+             * <li>If CycleType is set to Week, the return value is a number from 1 to 7, which indicates the day of the week. Multiple values are separated by commas (,).</li>
              * </ul>
+             * <p>Value format: This field returns a list of numeric serial numbers separated by commas (,), such as &quot;1,2,3&quot;, which indicates the execution days of the O&amp;M cycle. It is not a datetime value and does not involve time formats or time zones.</p>
              * 
              * <strong>example:</strong>
              * <p>1,2,3</p>
@@ -267,12 +264,10 @@ public class DescribeActiveOperationMaintenanceConfigResponseBody extends TeaMod
             }
 
             /**
-             * <p>The cycle type.</p>
+             * <p>The cycle type. Valid values:</p>
              * <ul>
-             * <li><p>Month</p>
-             * </li>
-             * <li><p>Week</p>
-             * </li>
+             * <li>Month: Monthly.</li>
+             * <li>Week: Weekly.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -284,7 +279,7 @@ public class DescribeActiveOperationMaintenanceConfigResponseBody extends TeaMod
             }
 
             /**
-             * <p>The end time of the O\&amp;M time window. The time is in the <em>hh:mm:ss</em>Z format and is displayed in UTC.</p>
+             * <p>The end time of the O&amp;M time window. The time is in the <i>hh:mm:ss</i>Z format. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>20:00:00Z</p>
@@ -295,7 +290,7 @@ public class DescribeActiveOperationMaintenanceConfigResponseBody extends TeaMod
             }
 
             /**
-             * <p>The start time of the O\&amp;M time window. The time is in the <em>hh:mm:ss</em>Z format and is displayed in UTC.</p>
+             * <p>The start time of the O&amp;M time window. The time is in the <i>hh:mm:ss</i>Z format. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>18:00:00Z</p>
@@ -306,7 +301,7 @@ public class DescribeActiveOperationMaintenanceConfigResponseBody extends TeaMod
             }
 
             /**
-             * <p>The time when the operations and maintenance (O\&amp;M) task configuration was modified. The time is in the <em>yyyy-mm-dd</em>T<em>hh:mm:ss</em>Z format and is displayed in UTC.</p>
+             * <p>The time when the O&amp;M task configuration was modified. The time is in the <i>yyyy-mm-dd</i>T<i>hh:mm:ss</i>Z format. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-05-30T14:30:00Z</p>
@@ -317,12 +312,10 @@ public class DescribeActiveOperationMaintenanceConfigResponseBody extends TeaMod
             }
 
             /**
-             * <p>Indicates whether the configuration is enabled.</p>
+             * <p>Indicates whether the configuration is effective. Valid values:</p>
              * <ul>
-             * <li><p>1: Enabled</p>
-             * </li>
-             * <li><p>2: Disabled</p>
-             * </li>
+             * <li>1: Effective.</li>
+             * <li>2: Invalid.</li>
              * </ul>
              * 
              * <strong>example:</strong>

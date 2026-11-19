@@ -67,7 +67,7 @@ public class RenewDBInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the order.</p>
+         * <p>The ID of the generated order.</p>
          * 
          * <strong>example:</strong>
          * <p>203317xxxxxxxx</p>
@@ -78,7 +78,7 @@ public class RenewDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>B118EF45-9633-4EE3-8405-42ED4373721B</p>

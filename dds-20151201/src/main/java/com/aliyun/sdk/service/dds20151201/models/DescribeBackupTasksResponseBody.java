@@ -67,7 +67,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the backup jobs.</p>
+         * <p>The backup job details.</p>
          */
         public Builder backupJobs(java.util.List<BackupJobs> backupJobs) {
             this.backupJobs = backupJobs;
@@ -183,16 +183,12 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The status of the backup job.</p>
+             * <p>The backup job status. Valid values:</p>
              * <ul>
-             * <li><p><strong>Scheduled</strong>: The backup job is scheduled. This includes regular backup jobs that have not started.</p>
-             * </li>
-             * <li><p><strong>Checking</strong>: The instance is being checked before the backup.</p>
-             * </li>
-             * <li><p><strong>Backuping</strong>: The backup is in progress.</p>
-             * </li>
-             * <li><p><strong>Finished</strong>: The backup is complete.</p>
-             * </li>
+             * <li><strong>Scheduled</strong>: The backup task is scheduled, including routine backup tasks that have not started.</li>
+             * <li><strong>Checking</strong>: The instance is being checked before the backup.</li>
+             * <li><strong>Backuping</strong>: The backup is in progress.</li>
+             * <li><strong>Finished</strong>: The backup is completed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -204,7 +200,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the backup.</p>
+             * <p>The backup start time in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2024-01-16T11:04:56Z</p>
@@ -226,12 +222,10 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The backup mode. Valid values:</p>
+             * <p>The backup pattern. Valid values:</p>
              * <ul>
-             * <li><p><strong>Automated</strong>: automatic backup.</p>
-             * </li>
-             * <li><p><strong>Manual</strong>: manual backup.</p>
-             * </li>
+             * <li><strong>Automated</strong>: Automatic backup.</li>
+             * <li><strong>Manual</strong>: Manual backup.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -243,7 +237,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The backup progress in percentage. The progress is displayed only for running backup jobs.</p>
+             * <p>The backup progress in percentage. The progress is displayed only for running backups.</p>
              * 
              * <strong>example:</strong>
              * <p>18%</p>

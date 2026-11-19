@@ -199,10 +199,9 @@ public class ModifyAccountDescriptionRequest extends Request {
         /**
          * <p>The description of the account.</p>
          * <ul>
-         * <li><p>The description must start with a letter and cannot start with http\:// or https\://.</p>
-         * </li>
-         * <li><p>The description must be 2 to 256 characters in length, and can contain letters, digits, underscores (_), and hyphens (-).</p>
-         * </li>
+         * <li>It cannot start with http:// or https://.</li>
+         * <li>It must start with a letter or a Chinese character.</li>
+         * <li>It can contain letters, Chinese characters, underscores (_), hyphens (-), and digits, and must be 2 to 256 characters in length.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -216,7 +215,7 @@ public class ModifyAccountDescriptionRequest extends Request {
         }
 
         /**
-         * <p>The name of the account whose description is to be modified.</p>
+         * <p>The name of the account whose description you want to modify.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -229,18 +228,12 @@ public class ModifyAccountDescriptionRequest extends Request {
         }
 
         /**
-         * <p>The type of the account whose description you can modify. Valid values:</p>
+         * <p>The type of the account whose description you want to modify. Valid values:</p>
          * <ul>
-         * <li><p><strong>db</strong>: shard account</p>
-         * </li>
-         * <li><p><strong>cs</strong>: ConfigServer account</p>
-         * </li>
-         * <li><p><strong>normal</strong> (default): replica set account (available)</p>
-         * </li>
+         * <li><strong>db</strong>: shard account</li>
+         * <li><strong>cs</strong>: config server account</li>
+         * <li><strong>normal</strong>: replica set account (default)</li>
          * </ul>
-         * <blockquote>
-         * <p>You can set this parameter only to <strong>normal</strong>.</p>
-         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>normal</p>
@@ -265,7 +258,10 @@ public class ModifyAccountDescriptionRequest extends Request {
         }
 
         /**
-         * DBName.
+         * <p>The database to which the account belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>admin</p>
          */
         public Builder DBName(String DBName) {
             this.putQueryParameter("DBName", DBName);
