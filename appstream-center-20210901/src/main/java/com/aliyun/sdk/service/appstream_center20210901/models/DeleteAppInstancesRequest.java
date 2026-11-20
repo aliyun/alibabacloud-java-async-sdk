@@ -90,7 +90,7 @@ public class DeleteAppInstancesRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the delivery group. You can call the <a href="https://help.aliyun.com/document_detail/428506.html">ListAppInstanceGroup</a> operation to query the ID.</p>
+         * <p>The ID of the delivery group. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/428506.html">ListAppInstanceGroup</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -103,7 +103,7 @@ public class DeleteAppInstancesRequest extends Request {
         }
 
         /**
-         * <p>The application instance IDs.</p>
+         * <p>The list of application instance IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder appInstanceIds(java.util.List<String> appInstanceIds) {

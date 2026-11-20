@@ -159,7 +159,7 @@ public class SendRuntimeQrCodeConfigChannelMessageRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the runtime resources, such as cloud desktop IDs. You can specify 1 to 200 IDs.</p>
+         * <p>The list of runtime resource IDs, such as cloud desktop IDs. You can specify 1 to 200 IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder runtimeIds(java.util.List<String> runtimeIds) {

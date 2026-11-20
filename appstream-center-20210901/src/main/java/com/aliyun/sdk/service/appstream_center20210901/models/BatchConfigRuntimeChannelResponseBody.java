@@ -99,7 +99,7 @@ public class BatchConfigRuntimeChannelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of configuration results, which is the same as the number of configuration items in ChannelConfigs.</p>
+         * <p>The total number of configuration results, which is the same as the number of configuration items in ChannelConfigs.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -229,7 +229,7 @@ public class BatchConfigRuntimeChannelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error description returned when the configuration fails. This parameter is returned only when Success is false.</p>
+             * <p>The error message returned when the configuration fails. This parameter is returned only when Success is false.</p>
              * 
              * <strong>example:</strong>
              * <p>The runtime is not found.</p>
@@ -251,10 +251,10 @@ public class BatchConfigRuntimeChannelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the channel configuration item is configured successfully. Valid values:</p>
+             * <p>Specifies whether the channel configuration item is configured successfully. Valid values:</p>
              * <ul>
              * <li>true: The configuration is successful.</li>
-             * <li>false: The configuration fails. For the cause of the failure, see ErrorCode and Message.</li>
+             * <li>false: The configuration failed. For the cause of the failure, see ErrorCode and Message.</li>
              * </ul>
              */
             public Builder success(Boolean success) {

@@ -80,7 +80,7 @@ public class ApproveOtaTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The execution result. A value of <code>success</code> indicates success. Otherwise, an error message is returned.</p>
+         * <p>The execution result. A value of <code>success</code> indicates that the call was successful. Otherwise, an error message is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>OtaTask.Running</p>
@@ -91,7 +91,7 @@ public class ApproveOtaTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message. This parameter is not returned if <code>Code</code> is <code>success</code>.</p>
+         * <p>The error message. This parameter is not returned when <code>Code</code> is <code>success</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>The task is running and cannot be sumitted.</p>

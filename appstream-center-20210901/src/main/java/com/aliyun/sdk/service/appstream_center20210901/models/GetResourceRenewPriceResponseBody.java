@@ -183,7 +183,7 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The coupon code.</p>
+             * <p>The coupon option code.</p>
              * 
              * <strong>example:</strong>
              * <p>coupon****</p>
@@ -194,10 +194,10 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The coupon descriptions.</p>
+             * <p>The coupon description.</p>
              * 
              * <strong>example:</strong>
-             * <p>**活动</p>
+             * <p>**Promotion</p>
              */
             public Builder promotionDesc(String promotionDesc) {
                 this.promotionDesc = promotionDesc;
@@ -219,7 +219,7 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
              * <p>The coupon name.</p>
              * 
              * <strong>example:</strong>
-             * <p>**活动</p>
+             * <p>**Promotion</p>
              */
             public Builder promotionName(String promotionName) {
                 this.promotionName = promotionName;
@@ -347,7 +347,7 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The discount amount. The actual price equals the original price minus the discount amount.</p>
+             * <p>The discount amount. The actual price is the original price minus the discount amount.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -369,7 +369,7 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The coupon descriptions.</p>
+             * <p>The coupon description.</p>
              */
             public Builder promotions(java.util.List<Promotions> promotions) {
                 this.promotions = promotions;
@@ -377,7 +377,7 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The actual price. The actual price equals the original price minus the discount amount.</p>
+             * <p>The transaction price. The actual price is the original price minus the discount amount.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -447,10 +447,10 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The pricing rule description.</p>
+             * <p>The description of the price calculation rule.</p>
              * 
              * <strong>example:</strong>
-             * <p>**活动</p>
+             * <p>**Promotion</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -458,7 +458,7 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The pricing rule ID.</p>
+             * <p>The ID of the price calculation rule.</p>
              * 
              * <strong>example:</strong>
              * <p>20002****</p>
@@ -536,7 +536,7 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The pricing rules.</p>
+             * <p>The price calculation rules.</p>
              */
             public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;

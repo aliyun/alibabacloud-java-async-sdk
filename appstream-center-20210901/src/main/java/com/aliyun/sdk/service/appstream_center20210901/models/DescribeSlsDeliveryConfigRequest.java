@@ -113,7 +113,7 @@ public class DescribeSlsDeliveryConfigRequest extends Request {
         }
 
         /**
-         * <p>The name of the SLS Logstore. Exact match is used. If this parameter is omitted, delivery scopes are not filtered by Logstore name.</p>
+         * <p>The name of the SLS Logstore. Exact match is used. If this parameter is omitted, the results are not filtered by Logstore name.</p>
          * 
          * <strong>example:</strong>
          * <p>wuying-session-audit</p>
@@ -125,7 +125,7 @@ public class DescribeSlsDeliveryConfigRequest extends Request {
         }
 
         /**
-         * <p>The name of the SLS project. Exact match is used. If this parameter is omitted, delivery scopes are not filtered by project name.</p>
+         * <p>The name of the SLS project. Exact match is used. If this parameter is omitted, the results are not filtered by project name.</p>
          * 
          * <strong>example:</strong>
          * <p>wuying-audit-cn-hangzhou</p>
@@ -137,7 +137,7 @@ public class DescribeSlsDeliveryConfigRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the SLS project is located. Exact match is used. If this parameter is omitted, delivery scopes are not filtered by region.</p>
+         * <p>The ID of the region where the SLS project is located. Exact match is used. If this parameter is omitted, the results are not filtered by region.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -196,7 +196,7 @@ public class DescribeSlsDeliveryConfigRequest extends Request {
             } 
 
             /**
-             * <p>The query condition for the product type to which the logs belong. If you specify this parameter, delivery scopes are filtered by the specified product type. The value must be consistent with the existing delivery configurations. For example, <code>WuyingServer</code> indicates Enterprise Edition workstations.</p>
+             * <p>The query condition for the product type to which the logs belong. If you specify this parameter, the results are filtered by the specified product type, which must be consistent with the existing delivery configurations. For example, <code>WuyingServer</code> indicates Enterprise Edition workstations.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

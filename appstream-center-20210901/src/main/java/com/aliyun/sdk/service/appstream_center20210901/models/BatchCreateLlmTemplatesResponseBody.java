@@ -144,7 +144,7 @@ public class BatchCreateLlmTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The code of the skipped model.</p>
+             * <p>The skipped model code.</p>
              * 
              * <strong>example:</strong>
              * <p>qwen3.5-plus</p>
@@ -155,7 +155,7 @@ public class BatchCreateLlmTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reason why the item is skipped.</p>
+             * <p>The reason for skipping.</p>
              * 
              * <strong>example:</strong>
              * <p>LLM template already exists with same providerTemplateId and llmCode.</p>
@@ -267,7 +267,7 @@ public class BatchCreateLlmTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of successfully created items.</p>
+             * <p>The number of successfully created models.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -278,7 +278,7 @@ public class BatchCreateLlmTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of requested items.</p>
+             * <p>The total number of requests.</p>
              * 
              * <strong>example:</strong>
              * <p>6</p>

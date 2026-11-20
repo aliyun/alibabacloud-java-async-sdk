@@ -103,7 +103,7 @@ public class ModifyNodePoolAmountRequest extends Request {
         }
 
         /**
-         * <p>The parameters for node pool specification changes.</p>
+         * <p>The parameters for changing the specifications of the node pool.</p>
          * <p>This parameter is required.</p>
          */
         public Builder nodePool(NodePool nodePool) {
@@ -203,7 +203,7 @@ public class ModifyNodePoolAmountRequest extends Request {
              * <p>The total number of subscription nodes after the upgrade.</p>
              * <blockquote>
              * <ul>
-             * <li>This value must be greater than the current number of purchased nodes (Amount) in the delivery group. Otherwise, the API returns InvalidAmount.UnIncrease.</li>
+             * <li>The value must be greater than the number of purchased nodes (Amount) in the current delivery group. Otherwise, the API returns InvalidAmount.UnIncrease.</li>
              * </ul>
              * </blockquote>
              * <p>This parameter is required.</p>
@@ -228,7 +228,7 @@ public class ModifyNodePoolAmountRequest extends Request {
             }
 
             /**
-             * <p>The list of nodes whose billing type is to be modified.</p>
+             * <p>The list of nodes whose billing method is to be changed.</p>
              */
             public Builder prePaidNodeAmountModifyNodeIds(java.util.List<String> prePaidNodeAmountModifyNodeIds) {
                 this.prePaidNodeAmountModifyNodeIds = prePaidNodeAmountModifyNodeIds;

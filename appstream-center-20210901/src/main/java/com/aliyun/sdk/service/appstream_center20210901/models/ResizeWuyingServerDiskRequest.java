@@ -123,7 +123,7 @@ public class ResizeWuyingServerDiskRequest extends Request {
         }
 
         /**
-         * <p>The new size of the system cloud disk, in GB.</p>
+         * <p>The new capacity of the system cloud disk, in GB.</p>
          * 
          * <strong>example:</strong>
          * <p>220</p>
@@ -135,7 +135,7 @@ public class ResizeWuyingServerDiskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the WUYING Workspace.</p>
+         * <p>The workstation ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ws-0bw2f11****dial</p>
@@ -254,7 +254,7 @@ public class ResizeWuyingServerDiskRequest extends Request {
             }
 
             /**
-             * <p>The type of disk data included in the image. By default, the system cloud disk and data cloud disks of the instance are included.</p>
+             * <p>The types of disk data included in the image. By default, the system cloud disk and data cloud disks of the instance are included.</p>
              * 
              * <strong>example:</strong>
              * <p>SYSTEM</p>
@@ -265,7 +265,7 @@ public class ResizeWuyingServerDiskRequest extends Request {
             }
 
             /**
-             * <p>The new size.</p>
+             * <p>The new capacity.</p>
              * 
              * <strong>example:</strong>
              * <p>220</p>

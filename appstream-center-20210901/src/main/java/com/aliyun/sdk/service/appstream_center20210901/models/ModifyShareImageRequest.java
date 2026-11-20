@@ -138,7 +138,7 @@ public class ModifyShareImageRequest extends Request {
         }
 
         /**
-         * <p>The Alibaba Cloud account IDs to add for sharing.</p>
+         * <p>The IDs of the Alibaba Cloud accounts to add for sharing.</p>
          */
         public Builder addAccount(java.util.List<Long> addAccount) {
             this.putBodyParameter("AddAccount", addAccount);
@@ -159,7 +159,7 @@ public class ModifyShareImageRequest extends Request {
         }
 
         /**
-         * <p>The source image ID.</p>
+         * <p>The ID of the source image.</p>
          * 
          * <strong>example:</strong>
          * <p>img-bp13mu****</p>
@@ -171,7 +171,7 @@ public class ModifyShareImageRequest extends Request {
         }
 
         /**
-         * <p>The product type, such as cloud desktop, cloud application, and workstation.</p>
+         * <p>The product type, such as cloud desktop, cloud application, or workstation.</p>
          * 
          * <strong>example:</strong>
          * <p>CloudDesktop</p>
@@ -183,7 +183,7 @@ public class ModifyShareImageRequest extends Request {
         }
 
         /**
-         * <p>The Alibaba Cloud account IDs to remove from sharing.</p>
+         * <p>The IDs of the Alibaba Cloud accounts to remove from sharing.</p>
          */
         public Builder removeAccount(java.util.List<Long> removeAccount) {
             this.putBodyParameter("RemoveAccount", removeAccount);

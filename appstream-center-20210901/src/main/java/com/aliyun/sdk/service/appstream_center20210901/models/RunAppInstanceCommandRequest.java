@@ -202,7 +202,7 @@ public class RunAppInstanceCommandRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the delivery group. This parameter is used to execute commands within a single delivery group. You can call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the ID. If AppInstanceGroupIds is not specified, you must specify this parameter. Otherwise, a parameter error is returned. If AppInstanceGroupIds is specified, this parameter does not take effect.</p>
+         * <p>The ID of the delivery group, which is used to execute commands in a single delivery group. You can call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the ID. This parameter is required if AppInstanceGroupIds is not specified. Otherwise, a parameter error is returned. This parameter does not take effect if AppInstanceGroupIds is specified.</p>
          * 
          * <strong>example:</strong>
          * <p>aig-9ciijz60n4xsv****</p>
@@ -214,7 +214,7 @@ public class RunAppInstanceCommandRequest extends Request {
         }
 
         /**
-         * <p>The list of delivery group IDs. This parameter is used to issue commands in batches to multiple delivery groups in the same region. The command is executed on all persistent sessions in each delivery group in the list, and only one command execution ID is returned. You can specify up to 100 delivery group IDs. Duplicate IDs are automatically deduplicated. All delivery groups must belong to the same region. Otherwise, the InvalidRegion.NotMatch error is returned. If any delivery group does not exist, the InvalidAppInstanceGroup.NotFound error is returned. If this parameter is specified, AppInstanceGroupId and AppInstancePersistentIds do not take effect.</p>
+         * <p>The list of delivery group IDs, which is used to issue commands in batches to multiple delivery groups in the same region. The commands are executed on all persistent sessions in each delivery group in the list, and only one command execution ID is returned. A maximum of 100 delivery group IDs are supported, and duplicate IDs are deduplicated. All delivery groups must belong to the same region. Otherwise, InvalidRegion.NotMatch is returned. If any delivery group does not exist, InvalidAppInstanceGroup.NotFound is returned. When this parameter is specified, AppInstanceGroupId and AppInstancePersistentIds do not take effect.</p>
          */
         public Builder appInstanceGroupIds(java.util.List<String> appInstanceGroupIds) {
             this.putBodyParameter("AppInstanceGroupIds", appInstanceGroupIds);
@@ -223,7 +223,7 @@ public class RunAppInstanceCommandRequest extends Request {
         }
 
         /**
-         * <p>The ID of the persistent session. This parameter is used to select a single persistent session within the delivery group specified by AppInstanceGroupId to execute the command. The session must belong to the specified delivery group. Otherwise, an error is returned.</p>
+         * <p>The ID of the persistent session, which is used to select a single persistent session in the delivery group specified by AppInstanceGroupId to execute commands. The session must belong to the specified delivery group. Otherwise, an error is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>p-0cc7s3mw2fg4j****</p>
@@ -235,7 +235,7 @@ public class RunAppInstanceCommandRequest extends Request {
         }
 
         /**
-         * <p>The list of persistent session IDs. This parameter is used to select multiple persistent sessions within the delivery group specified by AppInstanceGroupId to execute the command. You can specify up to 100 session IDs. If AppInstanceGroupIds is specified, this parameter does not take effect, and the command is executed on all persistent sessions in each delivery group.</p>
+         * <p>The list of persistent session IDs, which is used to select multiple persistent sessions in the delivery group specified by AppInstanceGroupId to execute commands. A maximum of 100 IDs are supported. This parameter does not take effect when AppInstanceGroupIds is specified, and the commands are executed on all persistent sessions in each delivery group.</p>
          */
         public Builder appInstancePersistentIds(java.util.List<String> appInstancePersistentIds) {
             this.putBodyParameter("AppInstancePersistentIds", appInstancePersistentIds);
@@ -244,7 +244,7 @@ public class RunAppInstanceCommandRequest extends Request {
         }
 
         /**
-         * <p>The command content, which is the script content executed in the session. The content must match the script type specified by RunScriptType.</p>
+         * <p>The command content, which is the script content executed in the session. It must match the script type specified by RunScriptType.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -257,7 +257,7 @@ public class RunAppInstanceCommandRequest extends Request {
         }
 
         /**
-         * <p>The command parameters, which are passed through to the session execution end along with the command content. Whether to specify this parameter and the specific format depend on the command content. If not required, you can leave this parameter empty.</p>
+         * <p>The command parameters, which are passed through to the session execution end along with the command content. Whether to pass them and the specific format depend on the command content. You can leave this parameter empty if it is not required.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;name&quot;:&quot;value&quot;}</p>
@@ -269,7 +269,7 @@ public class RunAppInstanceCommandRequest extends Request {
         }
 
         /**
-         * <p>The command type. Currently, only CloudAssistantCmd (Cloud Assistant command) is supported. Specifying other values results in a parameter error.</p>
+         * <p>The command type. Currently, only CloudAssistantCmd (Cloud Assistant command) is supported. Specifying other values returns a parameter error.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -282,7 +282,7 @@ public class RunAppInstanceCommandRequest extends Request {
         }
 
         /**
-         * <p>The description of the command. This parameter is used to describe the purpose of the issued command for subsequent identification.</p>
+         * <p>The command description, which is used to describe the purpose of the issued command for subsequent identification.</p>
          * 
          * <strong>example:</strong>
          * <p>Clean up temporary files</p>
@@ -294,7 +294,7 @@ public class RunAppInstanceCommandRequest extends Request {
         }
 
         /**
-         * <p>The product type. Currently, only WuyingServer (WUYING Workspace) is supported. Specifying other values results in a parameter error.</p>
+         * <p>The product type. Currently, only WuyingServer (WUYING Workspace) is supported. Specifying other values returns a parameter error.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -309,10 +309,10 @@ public class RunAppInstanceCommandRequest extends Request {
         /**
          * <p>The type of the script to execute. Valid values:</p>
          * <ul>
-         * <li>RunBatScript: BAT script.</li>
-         * <li>RunPowerShellScript: PowerShell script.</li>
-         * <li>RunShellScript: Shell script.</li>
-         * <li>RunAIAgentScript: AI agent script.</li>
+         * <li>RunBatScript: bat script</li>
+         * <li>RunPowerShellScript: PowerShell script</li>
+         * <li>RunShellScript: shell script</li>
+         * <li>RunAIAgentScript: AI Agent script</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -325,7 +325,7 @@ public class RunAppInstanceCommandRequest extends Request {
         }
 
         /**
-         * <p>The timeout period for command execution, in seconds. If this parameter is not specified, the default value is 60 seconds.</p>
+         * <p>The timeout period for command execution, in seconds. Default value: 60.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>

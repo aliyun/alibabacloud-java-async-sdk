@@ -156,7 +156,7 @@ public class ListImageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries.</p>
+         * <p>The total count.</p>
          * 
          * <strong>example:</strong>
          * <p>22</p>
@@ -175,7 +175,7 @@ public class ListImageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned for the API request.</p>
+         * <p>The message returned by the API request.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -197,7 +197,7 @@ public class ListImageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of items returned per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -219,7 +219,7 @@ public class ListImageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful.</p>
+         * <p>Indicates whether the call is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -302,7 +302,7 @@ public class ListImageResponseBody extends TeaModel {
              * <p>The application name.</p>
              * 
              * <strong>example:</strong>
-             * <p>应用名称</p>
+             * <p>Application name</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -408,7 +408,7 @@ public class ListImageResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The image ID. System image IDs are meaningful, while custom image IDs are auto-generated.</p>
+             * <p>The image ID. System image IDs have specific meanings, while custom image IDs are automatically generated.</p>
              * 
              * <strong>example:</strong>
              * <p>imgc-xxx</p>
@@ -705,7 +705,10 @@ public class ListImageResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1630348213973321</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -713,7 +716,10 @@ public class ListImageResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>inner</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1430,7 +1436,7 @@ public class ListImageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the compatibility mode is enabled.</p>
+             * <p>Indicates whether compatibility mode is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1441,7 +1447,7 @@ public class ListImageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data cloud disk size. Unit: GiB.</p>
+             * <p>The size of the data cloud disk. Unit: GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -1455,7 +1461,7 @@ public class ListImageResponseBody extends TeaModel {
              * <p>The image description.</p>
              * 
              * <strong>example:</strong>
-             * <p>描述</p>
+             * <p>Description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1466,7 +1472,7 @@ public class ListImageResponseBody extends TeaModel {
              * <p>The distribution name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Ubuntu 22.04 64位</p>
+             * <p>Ubuntu 22.04 64-bit</p>
              */
             public Builder distro(String distro) {
                 this.distro = distro;
@@ -1474,7 +1480,7 @@ public class ListImageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of driver information.</p>
+             * <p>The driver information list.</p>
              */
             public Builder driverList(java.util.List<String> driverList) {
                 this.driverList = driverList;
@@ -1482,7 +1488,10 @@ public class ListImageResponseBody extends TeaModel {
             }
 
             /**
-             * EnvironmentId.
+             * <p>The ID of the environment where the image is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env-164c321f405ca84143e4b730dbe4</p>
              */
             public Builder environmentId(String environmentId) {
                 this.environmentId = environmentId;
@@ -1499,11 +1508,11 @@ public class ListImageResponseBody extends TeaModel {
 
             /**
              * <blockquote>
-             * <p>This parameter is not publicly available.</p>
+             * <p>This parameter is not available for public use.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
-             * <p>镜像支持的fota渠道，暂未启用</p>
+             * <p>FOTA channel supported by the image, currently disabled</p>
              */
             public Builder fotaChannel(String fotaChannel) {
                 this.fotaChannel = fotaChannel;
@@ -1544,7 +1553,7 @@ public class ListImageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The image creation type.</p>
+             * <p>The image creation mode.</p>
              * 
              * <strong>example:</strong>
              * <p>BUILDER_MANUAL</p>
@@ -1555,7 +1564,7 @@ public class ListImageResponseBody extends TeaModel {
             }
 
             /**
-             * ImageIconUrl.
+             * <p>The URL of the image icon.</p>
              */
             public Builder imageIconUrl(String imageIconUrl) {
                 this.imageIconUrl = imageIconUrl;
@@ -1563,7 +1572,7 @@ public class ListImageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The image ID. System image IDs are meaningful, while custom image IDs are auto-generated.</p>
+             * <p>The image ID. System image IDs have specific meanings, while custom image IDs are automatically generated.</p>
              * 
              * <strong>example:</strong>
              * <p>imgc-xxxx</p>
@@ -1585,7 +1594,7 @@ public class ListImageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The overlay effective region information.</p>
+             * <p>The effective region information.</p>
              */
             public Builder imageRegionDistributeList(java.util.List<ImageRegionDistributeList> imageRegionDistributeList) {
                 this.imageRegionDistributeList = imageRegionDistributeList;
@@ -1593,7 +1602,7 @@ public class ListImageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The regions.</p>
+             * <p>The region.</p>
              */
             public Builder imageRegionList(java.util.List<String> imageRegionList) {
                 this.imageRegionList = imageRegionList;
@@ -1612,7 +1621,7 @@ public class ListImageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The image language. If the package type is VHD/Container, this property is inherited from the ECS package type image in the image combination.</p>
+             * <p>The image language. If the package type is VHD or Container, this property is inherited from the image with the ECS package type in the same image combination.</p>
              * 
              * <strong>example:</strong>
              * <p>zh-CN</p>
@@ -1645,7 +1654,7 @@ public class ListImageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sub-version from which the current image reads the main image information. An image consists of multiple sub-versions.</p>
+             * <p>The online version ID of the current image. The main image information is read from this sub-version. An image consists of multiple sub-versions.</p>
              * 
              * <strong>example:</strong>
              * <p>iv-xxxx</p>
@@ -1678,7 +1687,7 @@ public class ListImageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parent image ID. This only indicates the inheritance relationship. System images have no parent image.</p>
+             * <p>The parent image ID. This ID only indicates an inheritance relationship. System images do not have parent images.</p>
              * 
              * <strong>example:</strong>
              * <p>imgc-xxx</p>
@@ -1700,9 +1709,9 @@ public class ListImageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The image operating system platform.</p>
+             * <p>The operating system platform of the image.</p>
              * <blockquote>
-             * <p>If the package type is VHD/Container, this property is inherited from the ECS package type image in the image combination.</p>
+             * <p>If the package type is VHD or Container, this property is inherited from the image with the ECS package type in the same image combination.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1747,7 +1756,10 @@ public class ListImageResponseBody extends TeaModel {
             }
 
             /**
-             * Rating.
+             * <p>The rating of the image, with a maximum score of 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>95</p>
              */
             public Builder rating(Integer rating) {
                 this.rating = rating;
@@ -1755,7 +1767,7 @@ public class ListImageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource type supported by the image.</p>
+             * <p>The supported resource type for the image.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;eds.cpu.category&quot;]</p>
@@ -1766,7 +1778,10 @@ public class ListImageResponseBody extends TeaModel {
             }
 
             /**
-             * Scene.
+             * <p>The usage scenario of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AIGC</p>
              */
             public Builder scene(String scene) {
                 this.scene = scene;
@@ -1804,7 +1819,7 @@ public class ListImageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of supported languages.</p>
+             * <p>The supported language list.</p>
              */
             public Builder supportedLanguageList(java.util.List<String> supportedLanguageList) {
                 this.supportedLanguageList = supportedLanguageList;
@@ -1812,9 +1827,9 @@ public class ListImageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The system cloud disk size. Unit: GiB.</p>
+             * <p>The size of the system cloud disk. Unit: GiB.</p>
              * <blockquote>
-             * <p>The system cloud disk size cannot be smaller than the image file.</p>
+             * <p>The size of the system cloud disk cannot be smaller than the image file.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1826,7 +1841,7 @@ public class ListImageResponseBody extends TeaModel {
             }
 
             /**
-             * TagList.
+             * <p>The tag list.</p>
              */
             public Builder tagList(java.util.List<TagList> tagList) {
                 this.tagList = tagList;

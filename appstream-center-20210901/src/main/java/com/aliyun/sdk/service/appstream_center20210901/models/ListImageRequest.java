@@ -376,7 +376,7 @@ public class ListImageRequest extends Request {
         }
 
         /**
-         * <p>The list of supported regions. WUYING images are centralized. Use this parameter to query the regions where the image is deployed.</p>
+         * <p>The list of supported regions. WUYING images are centralized. You can use this parameter to query the regions where the image is deployed.</p>
          */
         public Builder bizRegionIdList(java.util.List<String> bizRegionIdList) {
             this.putBodyParameter("BizRegionIdList", bizRegionIdList);
@@ -385,7 +385,7 @@ public class ListImageRequest extends Request {
         }
 
         /**
-         * <p>The business type. This parameter is not publicly available.</p>
+         * <p>The business type. This parameter is not exposed for external use.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -397,7 +397,7 @@ public class ListImageRequest extends Request {
         }
 
         /**
-         * <p>The list of all business types. This parameter is not publicly available.</p>
+         * <p>The list of all business types. This parameter is not exposed for external use.</p>
          */
         public Builder bizTypeList(java.util.List<Integer> bizTypeList) {
             this.putBodyParameter("BizTypeList", bizTypeList);
@@ -448,7 +448,7 @@ public class ListImageRequest extends Request {
         }
 
         /**
-         * <p>The image name. Fuzzy match is supported.</p>
+         * <p>The image name. Fuzzy search is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>DemoImage</p>
@@ -520,7 +520,7 @@ public class ListImageRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page for paging queries. Maximum value: 100. Default value: 10.</p>
+         * <p>The number of entries per page for a paging query. Maximum value: 100. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -544,7 +544,7 @@ public class ListImageRequest extends Request {
         }
 
         /**
-         * <p>The list of supported platform types. For valid values, refer to PlatformName above.</p>
+         * <p>The list of supported platform types. For valid values, refer to PlatformName.</p>
          */
         public Builder platformNameList(java.util.List<String> platformNameList) {
             this.putBodyParameter("PlatformNameList", platformNameList);
@@ -565,7 +565,7 @@ public class ListImageRequest extends Request {
         }
 
         /**
-         * <p>The list of products supported when the image supports multiple products.</p>
+         * <p>The list of supported products when the image supports multiple products.</p>
          */
         public Builder productTypeList(java.util.List<String> productTypeList) {
             this.putBodyParameter("ProductTypeList", productTypeList);
@@ -574,7 +574,7 @@ public class ListImageRequest extends Request {
         }
 
         /**
-         * <p>The protocol type of the image.</p>
+         * <p>The image protocol type.</p>
          * 
          * <strong>example:</strong>
          * <p>ASP</p>
@@ -586,7 +586,7 @@ public class ListImageRequest extends Request {
         }
 
         /**
-         * <p>Queries images of specific defined specifications.</p>
+         * <p>Queries images with specific defined specifications.</p>
          * 
          * <strong>example:</strong>
          * <p>eds.enterprise_office.2c4g</p>
@@ -598,7 +598,7 @@ public class ListImageRequest extends Request {
         }
 
         /**
-         * <p>The image status. Specifies the status of images to query. By default, all images that are not deleted are queried.</p>
+         * <p>The image status. Specifies the status of the images to query. By default, all images that are not deleted are queried.</p>
          * 
          * <strong>example:</strong>
          * <p>INIT</p>
@@ -610,7 +610,7 @@ public class ListImageRequest extends Request {
         }
 
         /**
-         * <p>The tags for query.</p>
+         * <p>The tags used for querying.</p>
          */
         public Builder tagList(java.util.List<TagList> tagList) {
             this.putQueryParameter("TagList", tagList);
@@ -678,7 +678,7 @@ public class ListImageRequest extends Request {
             } 
 
             /**
-             * <p>The user-defined tag key.</p>
+             * <p>The custom tag key.</p>
              * 
              * <strong>example:</strong>
              * <p>env</p>
@@ -689,7 +689,7 @@ public class ListImageRequest extends Request {
             }
 
             /**
-             * <p>The user-defined tag value.</p>
+             * <p>The custom tag value.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
