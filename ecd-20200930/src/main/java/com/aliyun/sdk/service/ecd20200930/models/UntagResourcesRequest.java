@@ -130,7 +130,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service (EDS).</p>
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the list of regions supported by cloud computers.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,11 +143,8 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the resources, that is, the IDs of the cloud desktops. You can specify 1 to 50 IDs.</p>
+         * <p>The list of resource IDs, which are the cloud computer IDs. You can specify 1 to 50 IDs.</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ecd-ia2zw38bi6cm7****</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -156,7 +153,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The type of the resource.</p>
+         * <p>The resource type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,9 +167,6 @@ public class UntagResourcesRequest extends Request {
 
         /**
          * <p>The tag keys. You can specify 1 to 20 tag keys.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TestKey</p>
          */
         public Builder tagKey(java.util.List<String> tagKey) {
             this.putQueryParameter("TagKey", tagKey);

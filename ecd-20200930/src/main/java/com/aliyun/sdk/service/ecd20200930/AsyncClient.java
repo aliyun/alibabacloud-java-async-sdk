@@ -334,8 +334,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>For information about the features, common scenarios, limits, and scaling policy of shared cloud desktops, see <a href="https://help.aliyun.com/document_detail/290959.html">Overview of shared cloud desktops (formerly cloud desktop pools)</a>.</li>
-     * <li>Before you invoke this operation, make sure that required prerequisite resources such as office networks, cloud desktop templates, and policies are created.</li>
+     * <li>For information about the features, Common scenarios, limits, and scaling policy of shared cloud desktops, see <a href="https://help.aliyun.com/document_detail/290959.html">Overview of shared cloud desktops (formerly cloud desktop pools)</a>.</li>
+     * <li>Before you invoke this operation, make sure that required prerequisite resources such as office networks, cloud desktop templates, and policy are created.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateDesktopGroup  CreateDesktopGroupRequest
@@ -962,6 +962,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDesktopGroupsResponse> describeDesktopGroups(DescribeDesktopGroupsRequest request);
 
     /**
+     * @param request the request parameters of DescribeDesktopIdsByVulNames  DescribeDesktopIdsByVulNamesRequest
+     * @return DescribeDesktopIdsByVulNamesResponse
+     */
+    CompletableFuture<DescribeDesktopIdsByVulNamesResponse> describeDesktopIdsByVulNames(DescribeDesktopIdsByVulNamesRequest request);
+
+    /**
      * @param request the request parameters of DescribeDesktopInfo  DescribeDesktopInfoRequest
      * @return DescribeDesktopInfoResponse
      */
@@ -1355,6 +1361,17 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeResourceByCenterPolicyIdResponse
      */
     CompletableFuture<DescribeResourceByCenterPolicyIdResponse> describeResourceByCenterPolicyId(DescribeResourceByCenterPolicyIdRequest request);
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>该接口为中心化接口，只可通过上海或新加坡地域的服务进行调用。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeResourceStatisticByRegion  DescribeResourceStatisticByRegionRequest
+     * @return DescribeResourceStatisticByRegionResponse
+     */
+    CompletableFuture<DescribeResourceStatisticByRegionResponse> describeResourceStatisticByRegion(DescribeResourceStatisticByRegionRequest request);
 
     /**
      * @param request the request parameters of DescribeRouteEntryList  DescribeRouteEntryListRequest
@@ -1823,7 +1840,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>After you create a shared cloud computer, the system performs automatic creation of the corresponding number of cloud computers in the shared cloud computer based on the scaling policy in Settings and the connection status of end users. These cloud computers use the same cloud computer template and security policy. In different scenarios, you can modify the shared cloud computer configurations as needed, including the shared cloud computer name, cloud computer template, and associated policies.</p>
+     * <p>After a shared cloud desktop is created, the system performs automatic creation of a corresponding number of cloud desktops within the shared cloud desktop based on the shared cloud desktop scaling policy Settings and the end-user connection status. These cloud desktops share the same cloud desktop template and security policy. You can modify the configurations of the shared cloud desktop as needed in different scenarios, such as the name, cloud desktop template, and associated policies.</p>
      * 
      * @param request the request parameters of ModifyDesktopGroup  ModifyDesktopGroupRequest
      * @return ModifyDesktopGroupResponse

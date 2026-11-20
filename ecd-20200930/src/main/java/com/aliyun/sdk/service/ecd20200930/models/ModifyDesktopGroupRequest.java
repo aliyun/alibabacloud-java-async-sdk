@@ -91,7 +91,7 @@ public class ModifyDesktopGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MinDesktopsCount")
-    @com.aliyun.core.annotation.Validation(maximum = 500)
+    @com.aliyun.core.annotation.Validation(maximum = 1000)
     private Integer minDesktopsCount;
 
     @com.aliyun.core.annotation.Query
@@ -429,7 +429,7 @@ public class ModifyDesktopGroupRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to allow automatic creation of cloud computers in the subscription shared cloud computer. This parameter takes effect only when the <code>ChargeType</code> parameter is set to <code>PrePaid</code>, and is required in this case.</p>
+         * <p>Specifies whether to allow automatic creation of cloud desktops in a subscription shared cloud desktop. This parameter takes effect and is required only when the <code>ChargeType</code> parameter is set to <code>PrePaid</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -441,13 +441,13 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The number of cloud computers that can be reserved in a pay-as-you-go shared cloud computer. This parameter takes effect only when the <code>ChargeType</code> parameter is set to <code>PostPaid</code>, and is required in this case. Valid values: </p>
+         * <p>The number of reserved cloud desktops allowed in a pay-as-you-go shared cloud desktop. This parameter takes effect and is required only when the <code>ChargeType</code> parameter is set to <code>PostPaid</code>. Valid values: </p>
          * <ul>
-         * <li>0: no reservation</li>
-         * <li>N: reserve N cloud computers (1 ≤ N ≤ 100)</li>
+         * <li>0: No reserved cloud desktops.</li>
+         * <li>N: N reserved cloud desktops (1 ≤ N ≤ 100).</li>
          * </ul>
          * <blockquote>
-         * <p>If no available cloud computers are reserved, the system must create and start a cloud computer before assigning it to the user when an end user initiates a connection request. This process takes a relatively long time. Reserve a certain number of cloud computers as needed to ensure a good experience for end users.</p>
+         * <p>If no available cloud desktops are reserved, when an end user initiates a connection request, the system must first create and start a cloud desktop and then assign it to the user, which takes a relatively long time. Reserve a certain number of cloud desktops as needed to ensure the user experience.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -460,9 +460,9 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The number of concurrent sessions allowed on each cloud computer in a multi-session shared cloud computer with multiple cloud computers.</p>
+         * <p>The number of concurrent sessions allowed per cloud desktop in multi-session and multi-desktop shared cloud desktops.</p>
          * <blockquote>
-         * <p>This parameter is not yet available.</p>
+         * <p>This parameter is not available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -476,8 +476,8 @@ public class ModifyDesktopGroupRequest extends Request {
 
         /**
          * <ul>
-         * <li>For subscription shared cloud computers: the number of cloud computers to purchase. Valid values: 0 to 200.</li>
-         * <li>For pay-as-you-go shared cloud computers: the minimum number of cloud computers to create in the pool. Default value: 1. Valid values: 0 to the value of <code>MaxDesktopsCount</code>.</li>
+         * <li>For a subscription shared cloud desktop: the number of cloud desktops to purchase. Valid values: 0 to 200.</li>
+         * <li>For a pay-as-you-go shared cloud desktop: the minimum number of cloud desktops to create in the pool. Default value: 1. Valid values: 0 to the value of <code>MaxDesktopsCount</code>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -490,9 +490,9 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The type of the shared cloud computer.</p>
+         * <p>The type of the shared cloud desktop.</p>
          * <blockquote>
-         * <p>This parameter is not yet available.</p>
+         * <p>This parameter is not available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -505,7 +505,7 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The remarks.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>comment</p>
@@ -517,7 +517,7 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The maximum duration that a session can remain in the connected state. The session is automatically disconnected when this duration is reached. Unit: milliseconds. Valid values: 900000 (15 minutes) to 345600000 (4 days).</p>
+         * <p>The maximum duration for which a session can remain connected. When the session connection duration reaches this value, the session is automatically disconnected. Unit: milliseconds. Valid values: 900000 (15 minutes) to 345600000 (4 days).</p>
          * 
          * <strong>example:</strong>
          * <p>900000</p>
@@ -529,7 +529,7 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The retention period before cloud computers in the cloud computer pool are automatically deleted.</p>
+         * <p>The retention period before a cloud desktop in the cloud desktop pool is automatically deleted.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -541,7 +541,7 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The shared cloud computer ID.</p>
+         * <p>The ID of the shared cloud desktop.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -554,7 +554,7 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The shared cloud computer name.</p>
+         * <p>The name of the shared cloud desktop.</p>
          * 
          * <strong>example:</strong>
          * <p>desktopGroupName1</p>
@@ -578,9 +578,9 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The NAS file system ID used by the user data roaming feature.</p>
+         * <p>The ID of the NAS file system used for the user data roaming feature.</p>
          * <blockquote>
-         * <p>This parameter is not yet available.</p>
+         * <p>This parameter is not available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -593,10 +593,10 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The maximum idle duration after a user session is connected. If no keyboard or mouse activity occurs within this duration, the session is disconnected. Unit: milliseconds. Valid values: 360000 (6 minutes) to 3600000 (60 minutes).</p>
-         * <p>30 seconds before this duration is reached, the end user in the session receives a prompt to save document data. The end user must save document data promptly to avoid data loss.</p>
+         * <p>The maximum idle time before a user session is disconnected. If no keyboard or mouse operations are performed within this maximum duration after a user session is connected, the session is disconnected. Unit: milliseconds. Valid values: 360000 (6 minutes) to 3600000 (60 minutes).</p>
+         * <p>30 seconds before this duration is reached, the end user in the session receives a prompt message to save document data. The end user must save the document data promptly to avoid data loss.</p>
          * <blockquote>
-         * <p>This parameter applies only to cloud computers with an image version of 1.0.2 or later.</p>
+         * <p>This parameter applies only to cloud desktops with an image version of 1.0.2 or later.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -622,7 +622,7 @@ public class ModifyDesktopGroupRequest extends Request {
 
         /**
          * <p>The retention period after a session is disconnected. Unit: milliseconds. Valid values: 180000 (3 minutes) to 345600000 (4 days). A value of 0 indicates that the session is always retained.</p>
-         * <p>When a session is disconnected because the user actively disconnects or because of other unexpected factors, the retention period starts from the time of disconnection. If the user does not reconnect to the session within the retention period, the session is logged off and all unsaved data is destroyed. If the user successfully reconnects within the retention period, the user can access the original session and the data that existed before the disconnection.</p>
+         * <p>If a session is disconnected intentionally by the user or unexpectedly due to other factors, the retention period starts from the time of disconnection. If the user does not reconnect to the session within this period, the session is logged off and unsaved data is destroyed. If the user successfully reconnects within this period, the user can enter the original session and access the data before the disconnection.</p>
          * 
          * <strong>example:</strong>
          * <p>180000</p>
@@ -634,9 +634,9 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The load balancing policy for multi-session shared cloud computers with multiple cloud computers.</p>
+         * <p>The load balancing policy for multi-session and multi-desktop shared cloud desktops.</p>
          * <blockquote>
-         * <p>This parameter is not yet available.</p>
+         * <p>This parameter is not available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -649,7 +649,7 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of cloud computers that a pay-as-you-go shared cloud computer can contain. Valid values: 0 to 500.</p>
+         * <p>The maximum number of cloud desktops that can be accommodated in a pay-as-you-go shared cloud desktop. Valid values: 0 to 500.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -661,7 +661,7 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of cloud computers that can be subject to automatic creation in a subscription shared cloud computer. This parameter takes effect only when the <code>ChargeType</code> parameter is set to <code>PrePaid</code>, and is required in this case. Default value: 1. Valid values: 0 to the value of <code>MaxDesktopsCount</code>.</p>
+         * <p>The upper limit for the automatic creation of cloud desktops in a subscription shared cloud desktop. This parameter takes effect and is required only when the <code>ChargeType</code> parameter is set to <code>PrePaid</code>. Default value: 1. Valid values: 0 to the value of <code>MaxDesktopsCount</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -673,7 +673,7 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The cloud computer template ID.</p>
+         * <p>The ID of the cloud desktop template.</p>
          * 
          * <strong>example:</strong>
          * <p>b-7t275tpgjueeu****</p>
@@ -685,7 +685,7 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The policy ID.</p>
+         * <p>The ID of the policy.</p>
          * 
          * <strong>example:</strong>
          * <p>pg-53iyi2aar0nd6****</p>
@@ -708,7 +708,7 @@ public class ModifyDesktopGroupRequest extends Request {
         /**
          * <p>Specifies whether to enable user data roaming.</p>
          * <blockquote>
-         * <p>This parameter is not yet available.</p>
+         * <p>This parameter is not available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -721,11 +721,11 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The session occupancy threshold, which is used as the auto scaling trigger condition for multi-session shared cloud computers with multiple cloud computers. The session occupancy is calculated by using the following formula:</p>
-         * <p><code>Session occupancy = Number of attached sessions / (Total number of cloud computer resources × Maximum number of sessions supported per cloud computer) × 100%</code></p>
-         * <p>When the session occupancy reaches this threshold, new cloud computers are created. When the session occupancy is below this threshold, excess cloud computers are deleted.</p>
+         * <p>The session usage threshold, which is used as the trigger for automatic scaling of multi-session and multi-desktop shared cloud desktops. The formula for session usage is:</p>
+         * <p><code>Session usage = Number of attached sessions / (Total number of cloud desktop resources × Maximum number of sessions supported per cloud desktop) × 100%</code></p>
+         * <p>When the session usage reaches this threshold, new cloud desktops are created. When the session usage does not reach this threshold, excess cloud desktops are deleted.</p>
          * <blockquote>
-         * <p>This parameter is not yet available.</p>
+         * <p>This parameter is not available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -738,7 +738,7 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -751,7 +751,7 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The cloud computer reset type.</p>
+         * <p>The reset type of the cloud desktop.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -763,9 +763,9 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The scaling policy group ID.</p>
+         * <p>The ID of the scaling policy group.</p>
          * <blockquote>
-         * <p>This parameter is not yet available.</p>
+         * <p>This parameter is not available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -778,7 +778,7 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The idle shutdown duration. When the idle duration of a cloud computer reaches this value, the cloud computer is automatically shut down. If a user connects after the shutdown, the cloud computer is automatically started. Unit: milliseconds.</p>
+         * <p>The idle shutdown time. When the idle time of a cloud desktop reaches this value, the cloud desktop is automatically shut down. If a user connects to the cloud desktop after it is shut down, the cloud desktop is automatically started. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>300000</p>
