@@ -162,7 +162,7 @@ public class UpdateMcpRequest extends Request {
         }
 
         /**
-         * <p>The reserved query request identifier. The current console backend does not read this parameter and does not provide idempotency guarantees for deduplication or restoring the original acceptance result based on this identifier.</p>
+         * <p>The reserved query request identifier. The console backend does not read this parameter and does not provide idempotency guarantees for deduplication or restoring original results based on this identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-426614174000</p>
@@ -574,7 +574,7 @@ public class UpdateMcpRequest extends Request {
             } 
 
             /**
-             * <p>The caller API key authentication configuration for code-deployed MCP.</p>
+             * <p>The caller API key authentication configuration for a code-deployed MCP.</p>
              */
             public Builder codePackage(CodePackage codePackage) {
                 this.codePackage = codePackage;
@@ -689,7 +689,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable ingress access control.</p>
+             * <p>Specifies whether to enable entry access control.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -697,7 +697,11 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The access control mode. ANONYMOUS indicates anonymous access, and CREDENTIAL indicates authentication by using AgentCore access credentials.</p>
+             * <p>The access control mode. Valid values:</p>
+             * <ul>
+             * <li>ANONYMOUS: anonymous access</li>
+             * <li>CREDENTIAL: AgentCore credential authentication</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>CREDENTIAL</p>
@@ -793,7 +797,7 @@ public class UpdateMcpRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether authorization is enabled.</p>
+             * <p>Specifies whether to enable authorization.</p>
              */
             public Builder authorizationEnabled(Boolean authorizationEnabled) {
                 this.authorizationEnabled = authorizationEnabled;
@@ -823,7 +827,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether agent identity is enabled.</p>
+             * <p>Specifies whether to enable agent identity.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -914,7 +918,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The complete startup command, passed sequentially by parameter boundaries. For example, when using supergateway to start a stdio MCP, pass supergateway, --stdio, the complete subcommand, and the remaining parameters.</p>
+             * <p>The complete startup command, passed sequentially as separate arguments. For example, when using supergateway to start a stdio MCP, pass supergateway, --stdio, the complete subcommand, and the remaining parameters.</p>
              */
             public Builder command(java.util.List<String> command) {
                 this.command = command;
@@ -922,7 +926,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The runtime of the code package. Valid values: python3.13, nodejs22, and java17.</p>
+             * <p>The code package runtime. Valid values: python3.13, nodejs22, or java17.</p>
              * 
              * <strong>example:</strong>
              * <p>python3.13</p>
@@ -1076,7 +1080,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The container entrypoint parameters.</p>
+             * <p>The container entrypoint arguments.</p>
              */
             public Builder entrypoint(java.util.List<String> entrypoint) {
                 this.entrypoint = entrypoint;
@@ -1106,7 +1110,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The MCP runtime mode. Custom containers must currently expose the standard MCP themselves. Set the value to SELF_HOSTED.</p>
+             * <p>The MCP runtime mode. Custom containers must currently expose standard MCP themselves. Set the value to SELF_HOSTED.</p>
              * 
              * <strong>example:</strong>
              * <p>SELF_HOSTED</p>
@@ -1369,7 +1373,7 @@ public class UpdateMcpRequest extends Request {
             } 
 
             /**
-             * <p>The ordered list of hooks. The PRE_LIST_TOOLS, PRE_CALL_TOOL, POST_LIST_TOOLS, and POST_CALL_TOOL hooks are executed in the order of the array.</p>
+             * <p>The list of hooks executed in array order, including PRE_LIST_TOOLS, PRE_CALL_TOOL, POST_LIST_TOOLS, and POST_CALL_TOOL hooks.</p>
              */
             public Builder hooks(java.util.List<Hooks> hooks) {
                 this.hooks = hooks;
@@ -1549,11 +1553,15 @@ public class UpdateMcpRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("sessionMaxLifetimeSeconds")
         private Integer sessionMaxLifetimeSeconds;
 
+        @com.aliyun.core.annotation.NameInMap("sessionMode")
+        private String sessionMode;
+
         private McpConfiguration(Builder builder) {
             this.endpointPath = builder.endpointPath;
             this.sessionConcurrencyPerInstance = builder.sessionConcurrencyPerInstance;
             this.sessionIdleTimeoutSeconds = builder.sessionIdleTimeoutSeconds;
             this.sessionMaxLifetimeSeconds = builder.sessionMaxLifetimeSeconds;
+            this.sessionMode = builder.sessionMode;
         }
 
         public static Builder builder() {
@@ -1592,11 +1600,19 @@ public class UpdateMcpRequest extends Request {
             return this.sessionMaxLifetimeSeconds;
         }
 
+        /**
+         * @return sessionMode
+         */
+        public String getSessionMode() {
+            return this.sessionMode;
+        }
+
         public static final class Builder {
             private String endpointPath; 
             private Integer sessionConcurrencyPerInstance; 
             private Integer sessionIdleTimeoutSeconds; 
             private Integer sessionMaxLifetimeSeconds; 
+            private String sessionMode; 
 
             private Builder() {
             } 
@@ -1606,6 +1622,7 @@ public class UpdateMcpRequest extends Request {
                 this.sessionConcurrencyPerInstance = model.sessionConcurrencyPerInstance;
                 this.sessionIdleTimeoutSeconds = model.sessionIdleTimeoutSeconds;
                 this.sessionMaxLifetimeSeconds = model.sessionMaxLifetimeSeconds;
+                this.sessionMode = model.sessionMode;
             } 
 
             /**
@@ -1649,6 +1666,17 @@ public class UpdateMcpRequest extends Request {
              */
             public Builder sessionMaxLifetimeSeconds(Integer sessionMaxLifetimeSeconds) {
                 this.sessionMaxLifetimeSeconds = sessionMaxLifetimeSeconds;
+                return this;
+            }
+
+            /**
+             * <p>The session mode. This parameter applies only to StreamableHTTP. Default value: STATEFUL. If omitted during an update, the original value is retained. STATELESS disables Function Compute session affinity, and the stdio gateway does not enable stateful mode. Native HTTP services must support stateless MCP themselves.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STATEFUL</p>
+             */
+            public Builder sessionMode(String sessionMode) {
+                this.sessionMode = sessionMode;
                 return this;
             }
 
@@ -1827,7 +1855,7 @@ public class UpdateMcpRequest extends Request {
             } 
 
             /**
-             * <p>The group ID.</p>
+             * <p>The user group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>
@@ -2259,7 +2287,7 @@ public class UpdateMcpRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether parameter transformation and result enhancement is enabled.</p>
+             * <p>Specifies whether to enable parameter transformation and result enhancement.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -2480,7 +2508,7 @@ public class UpdateMcpRequest extends Request {
             } 
 
             /**
-             * <p>The CPU specifications in cores. Default value: 0.25.</p>
+             * <p>The CPU specification in cores. Default value: 0.25.</p>
              * 
              * <strong>example:</strong>
              * <p>0.25</p>
@@ -2491,7 +2519,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The temporary disk size in MB. Valid values: 512 and 10240.</p>
+             * <p>The ephemeral disk size in MB. Valid values: 512 or 10240.</p>
              * 
              * <strong>example:</strong>
              * <p>512</p>
@@ -2510,7 +2538,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The ARN of the RAM role used when user code accesses downstream Alibaba Cloud resources.</p>
+             * <p>The ARN of the RAM role used by user code to access downstream Alibaba Cloud resources.</p>
              * 
              * <strong>example:</strong>
              * <p>acs:ram::1234567890123456:role/agentcore-mcp-execution</p>
@@ -2532,7 +2560,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The memory specifications in MB. Default value: 512.</p>
+             * <p>The memory specification in MB. Default value: 512.</p>
              * 
              * <strong>example:</strong>
              * <p>512</p>
@@ -2780,7 +2808,7 @@ public class UpdateMcpRequest extends Request {
             } 
 
             /**
-             * <p>The MCP ingress access control configuration.</p>
+             * <p>The MCP entry access control.</p>
              */
             public Builder accessControl(AccessControl accessControl) {
                 this.accessControl = accessControl;
@@ -2914,6 +2942,9 @@ public class UpdateMcpRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("auth")
         private Auth auth;
 
+        @com.aliyun.core.annotation.NameInMap("backendMcpProtocol")
+        private String backendMcpProtocol;
+
         @com.aliyun.core.annotation.NameInMap("customTags")
         private java.util.List<String> customTags;
 
@@ -2923,8 +2954,14 @@ public class UpdateMcpRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("originProtocolVersion")
+        private String originProtocolVersion;
+
         @com.aliyun.core.annotation.NameInMap("permissionMode")
         private String permissionMode;
+
+        @com.aliyun.core.annotation.NameInMap("protocol")
+        private String protocol;
 
         @com.aliyun.core.annotation.NameInMap("swaggerConfig")
         private String swaggerConfig;
@@ -2932,10 +2969,13 @@ public class UpdateMcpRequest extends Request {
         private UpdateMcpRequestBody(Builder builder) {
             this.addresses = builder.addresses;
             this.auth = builder.auth;
+            this.backendMcpProtocol = builder.backendMcpProtocol;
             this.customTags = builder.customTags;
             this.deploymentConfig = builder.deploymentConfig;
             this.description = builder.description;
+            this.originProtocolVersion = builder.originProtocolVersion;
             this.permissionMode = builder.permissionMode;
+            this.protocol = builder.protocol;
             this.swaggerConfig = builder.swaggerConfig;
         }
 
@@ -2962,6 +3002,13 @@ public class UpdateMcpRequest extends Request {
         }
 
         /**
+         * @return backendMcpProtocol
+         */
+        public String getBackendMcpProtocol() {
+            return this.backendMcpProtocol;
+        }
+
+        /**
          * @return customTags
          */
         public java.util.List<String> getCustomTags() {
@@ -2983,10 +3030,24 @@ public class UpdateMcpRequest extends Request {
         }
 
         /**
+         * @return originProtocolVersion
+         */
+        public String getOriginProtocolVersion() {
+            return this.originProtocolVersion;
+        }
+
+        /**
          * @return permissionMode
          */
         public String getPermissionMode() {
             return this.permissionMode;
+        }
+
+        /**
+         * @return protocol
+         */
+        public String getProtocol() {
+            return this.protocol;
         }
 
         /**
@@ -2999,10 +3060,13 @@ public class UpdateMcpRequest extends Request {
         public static final class Builder {
             private java.util.List<String> addresses; 
             private Auth auth; 
+            private String backendMcpProtocol; 
             private java.util.List<String> customTags; 
             private DeploymentConfig deploymentConfig; 
             private String description; 
+            private String originProtocolVersion; 
             private String permissionMode; 
+            private String protocol; 
             private String swaggerConfig; 
 
             private Builder() {
@@ -3011,10 +3075,13 @@ public class UpdateMcpRequest extends Request {
             private Builder(UpdateMcpRequestBody model) {
                 this.addresses = model.addresses;
                 this.auth = model.auth;
+                this.backendMcpProtocol = model.backendMcpProtocol;
                 this.customTags = model.customTags;
                 this.deploymentConfig = model.deploymentConfig;
                 this.description = model.description;
+                this.originProtocolVersion = model.originProtocolVersion;
                 this.permissionMode = model.permissionMode;
+                this.protocol = model.protocol;
                 this.swaggerConfig = model.swaggerConfig;
             } 
 
@@ -3027,7 +3094,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The backend authentication configuration. When enabled is set to true: for DIRECT_PROXY, specify directProxy (name and value); for HTTP_TO_MCP, specify the httpToMcp array (each item includes id, type, and credential, and apiKey also requires position and name). Multiple authentication objects are supported, and the first one is the default upstream credential. HTTP_TO_MCP credentials are merged into the securitySchemes of Swagger.</p>
+             * <p>The backend authentication configuration. When enabled is set to true: for DIRECT_PROXY, specify directProxy (name/value); for HTTP_TO_MCP, specify the httpToMcp array (each item includes id, type, and credential, and apiKey also requires position and name). Multiple authentication objects are supported, and the first one is the default upstream credential. HTTP_TO_MCP credentials are merged into the securitySchemes of Swagger.</p>
              */
             public Builder auth(Auth auth) {
                 this.auth = auth;
@@ -3035,7 +3102,18 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The custom tags. You can specify multiple tags. Pass an empty list to clear the tags.</p>
+             * <p>Optional. Valid values: legacy and modern. This parameter is used only for DIRECT_PROXY. If omitted for direct connection, the current value is retained and validated against the existing protocol of the resource. The modern value is incompatible with SSE. Updates are rejected if they break existing client access contracts. For CODE_PACKAGE, this parameter is not required. Valid inputs are ignored, existing field values are not changed, and no publication or Function Compute (FC) session affinity changes are triggered. FC session affinity is configured only based on protocol and DeploymentConfig.McpConfiguration.SessionMode. The gateway protocol is determined by the result of successful probing after FC deployment. For HTTP_TO_MCP, valid values are ignored and not saved.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>modern</p>
+             */
+            public Builder backendMcpProtocol(String backendMcpProtocol) {
+                this.backendMcpProtocol = backendMcpProtocol;
+                return this;
+            }
+
+            /**
+             * <p>The custom tags. Multiple tags are supported. Pass an empty list to clear the tags.</p>
              */
             public Builder customTags(java.util.List<String> customTags) {
                 this.customTags = customTags;
@@ -3043,7 +3121,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The deployment configuration patch for CODE_PACKAGE MCP. Object fields are merged hierarchically. Omit CodeConfiguration.CodePackageToken to retain the current code package, and the server reuses the currently deployed code package. Provide a new non-empty token to replace the code package. CodePackageUrl is only supported in CreateMcp and is not supported during updates.</p>
+             * <p>The deployment configuration patch for CODE_PACKAGE MCP. Object fields are merged hierarchically. If you do not replace the code package, omit CodeConfiguration.CodePackageToken, and the server reuses the currently deployed code package. If you replace the code package, pass a new non-empty token. CodePackageUrl is supported only for CreateMcp and is not supported for updates.</p>
              */
             public Builder deploymentConfig(DeploymentConfig deploymentConfig) {
                 this.deploymentConfig = deploymentConfig;
@@ -3062,7 +3140,18 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The access permission mode. PUBLIC indicates public access. CONTROLLED indicates that access is controlled based on permission rules.</p>
+             * <p>Optional. The format is YYYY-MM-DD. This parameter can be specified during creation and modified during updates. If omitted during an update, the current value is retained. It only saves and displays the origin protocol date metadata. It is not a software version, does not restrict the external gateway protocol, does not control backend requests, does not indicate that real-time verification has passed, and does not trigger deployment. No default value is set, and the date is not restricted by legacy or modern. For HTTP_TO_MCP, valid dates are ignored and not saved.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-03-26</p>
+             */
+            public Builder originProtocolVersion(String originProtocolVersion) {
+                this.originProtocolVersion = originProtocolVersion;
+                return this;
+            }
+
+            /**
+             * <p>PUBLIC indicates public access. CONTROLLED indicates that access is controlled based on permission rules.</p>
              * 
              * <strong>example:</strong>
              * <p>CONTROLLED</p>
@@ -3073,7 +3162,18 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The Swagger configuration. Specify this field if the type is HTTP_TO_MCP.</p>
+             * <p>Optional. Valid values: SSE and StreamableHTTP. If this parameter is omitted or set to the current value, the original protocol is retained. Actual modifications are allowed only when the initial origin probing for a CODE_PACKAGE fails and the status is CREATE_PROBE_FAILED. After the server verifies that there are no successfully published versions, no gateway publications, and no pending tasks, a new compute deployment and origin probing are initiated, and the status returns to CREATING. Protocol modifications are not allowed for update failures after a successful publication.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>StreamableHTTP</p>
+             */
+            public Builder protocol(String protocol) {
+                this.protocol = protocol;
+                return this;
+            }
+
+            /**
+             * <p>If Type is set to HTTP_TO_MCP, specify this field.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;type&quot;:&quot;object&quot;}</p>

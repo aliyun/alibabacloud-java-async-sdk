@@ -158,7 +158,7 @@ public class ListModelsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The business status code. A value of SUCCESS indicates success.</p>
+         * <p>The business status code. The value is SUCCESS if the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -169,7 +169,7 @@ public class ListModelsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code. A value of 200 indicates success.</p>
+         * <p>The HTTP status code. The value is 200 if the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -210,7 +210,7 @@ public class ListModelsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token. Specify the token returned from the previous query. An empty response indicates that no more pages are available.</p>
+         * <p>The pagination token. Pass the token returned by the previous query in the request. An empty value in the response indicates that no more pages are available.</p>
          * 
          * <strong>example:</strong>
          * <p>bW9kZWwtbWFuYWdlbWVudC1vZmZzZXQ6bW9kZWw6MTA</p>
@@ -387,7 +387,7 @@ public class ListModelsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the model supports audio input or output.</p>
+             * <p>Specifies whether the model supports audio input or output.</p>
              */
             public Builder audio(Boolean audio) {
                 this.audio = audio;
@@ -395,7 +395,7 @@ public class ListModelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the model supports document input.</p>
+             * <p>Specifies whether the model supports document input.</p>
              */
             public Builder document(Boolean document) {
                 this.document = document;
@@ -403,7 +403,7 @@ public class ListModelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the model supports multiple tool calls in a single response.</p>
+             * <p>Specifies whether the model is able to invoke multiple tool calling operations in a single response.</p>
              */
             public Builder multiToolCall(Boolean multiToolCall) {
                 this.multiToolCall = multiToolCall;
@@ -411,7 +411,7 @@ public class ListModelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the model supports reasoning capabilities.</p>
+             * <p>Specifies whether the model supports reasoning capabilities.</p>
              */
             public Builder reasoning(Boolean reasoning) {
                 this.reasoning = reasoning;
@@ -419,7 +419,7 @@ public class ListModelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the model supports streaming tool calls.</p>
+             * <p>Specifies whether the model is able to invoke tool calling in a streaming manner.</p>
              */
             public Builder streamToolCall(Boolean streamToolCall) {
                 this.streamToolCall = streamToolCall;
@@ -427,7 +427,7 @@ public class ListModelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the model supports tool calling.</p>
+             * <p>Specifies whether the model supports tool calling.</p>
              */
             public Builder toolCall(Boolean toolCall) {
                 this.toolCall = toolCall;
@@ -435,7 +435,7 @@ public class ListModelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the model supports video input.</p>
+             * <p>Specifies whether the model supports video input.</p>
              */
             public Builder video(Boolean video) {
                 this.video = video;
@@ -443,7 +443,7 @@ public class ListModelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the model supports image input.</p>
+             * <p>Specifies whether the model supports image input.</p>
              */
             public Builder vision(Boolean vision) {
                 this.vision = vision;
@@ -488,6 +488,9 @@ public class ListModelsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("modelName")
         private String modelName;
 
+        @com.aliyun.core.annotation.NameInMap("supportedThinkingLevels")
+        private java.util.List<String> supportedThinkingLevels;
+
         @com.aliyun.core.annotation.NameInMap("updatedAt")
         private String updatedAt;
 
@@ -503,6 +506,7 @@ public class ListModelsResponseBody extends TeaModel {
             this.maxTokens = builder.maxTokens;
             this.modelId = builder.modelId;
             this.modelName = builder.modelName;
+            this.supportedThinkingLevels = builder.supportedThinkingLevels;
             this.updatedAt = builder.updatedAt;
             this.workspaceId = builder.workspaceId;
         }
@@ -572,6 +576,13 @@ public class ListModelsResponseBody extends TeaModel {
         }
 
         /**
+         * @return supportedThinkingLevels
+         */
+        public java.util.List<String> getSupportedThinkingLevels() {
+            return this.supportedThinkingLevels;
+        }
+
+        /**
          * @return updatedAt
          */
         public String getUpdatedAt() {
@@ -594,6 +605,7 @@ public class ListModelsResponseBody extends TeaModel {
             private Long maxTokens; 
             private String modelId; 
             private String modelName; 
+            private java.util.List<String> supportedThinkingLevels; 
             private String updatedAt; 
             private String workspaceId; 
 
@@ -609,6 +621,7 @@ public class ListModelsResponseBody extends TeaModel {
                 this.maxTokens = model.maxTokens;
                 this.modelId = model.modelId;
                 this.modelName = model.modelName;
+                this.supportedThinkingLevels = model.supportedThinkingLevels;
                 this.updatedAt = model.updatedAt;
                 this.workspaceId = model.workspaceId;
             } 
@@ -644,7 +657,7 @@ public class ListModelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the resource was created, in RFC 3339 UTC format.</p>
+             * <p>The time when the resource was created. The time is in RFC 3339 UTC format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-09T00:00:00Z</p>
@@ -655,7 +668,7 @@ public class ListModelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The model description, which can be up to 255 characters in length.</p>
+             * <p>The model description. The description can be up to 255 characters in length.</p>
              * 
              * <strong>example:</strong>
              * <p>description</p>
@@ -699,7 +712,15 @@ public class ListModelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the resource was last updated, in RFC 3339 UTC format.</p>
+             * <p>The explicit thinking levels supported by the model. An empty list indicates that only the default setting is supported. If this field is omitted, no level information is available.</p>
+             */
+            public Builder supportedThinkingLevels(java.util.List<String> supportedThinkingLevels) {
+                this.supportedThinkingLevels = supportedThinkingLevels;
+                return this;
+            }
+
+            /**
+             * <p>The time when the resource was last updated. The time is in RFC 3339 UTC format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-09T00:00:00Z</p>

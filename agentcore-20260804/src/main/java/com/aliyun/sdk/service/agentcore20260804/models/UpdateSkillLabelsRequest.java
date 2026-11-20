@@ -138,11 +138,15 @@ public class UpdateSkillLabelsRequest extends Request {
      * <p>UpdateSkillLabelsRequest</p>
      */
     public static class UpdateSkillLabelsRequestBody extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("labelDescriptions")
+        private String labelDescriptions;
+
         @com.aliyun.core.annotation.NameInMap("labels")
         @com.aliyun.core.annotation.Validation(required = true)
         private String labels;
 
         private UpdateSkillLabelsRequestBody(Builder builder) {
+            this.labelDescriptions = builder.labelDescriptions;
             this.labels = builder.labels;
         }
 
@@ -155,6 +159,13 @@ public class UpdateSkillLabelsRequest extends Request {
         }
 
         /**
+         * @return labelDescriptions
+         */
+        public String getLabelDescriptions() {
+            return this.labelDescriptions;
+        }
+
+        /**
          * @return labels
          */
         public String getLabels() {
@@ -162,14 +173,27 @@ public class UpdateSkillLabelsRequest extends Request {
         }
 
         public static final class Builder {
+            private String labelDescriptions; 
             private String labels; 
 
             private Builder() {
             } 
 
             private Builder(UpdateSkillLabelsRequestBody model) {
+                this.labelDescriptions = model.labelDescriptions;
                 this.labels = model.labels;
             } 
+
+            /**
+             * <p>The label descriptions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;stable&quot;:&quot;prod environment usage&quot;}</p>
+             */
+            public Builder labelDescriptions(String labelDescriptions) {
+                this.labelDescriptions = labelDescriptions;
+                return this;
+            }
 
             /**
              * <p>The version label mapping JSON string.</p>

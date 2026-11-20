@@ -132,7 +132,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the AgentCore workspace.</p>
+         * <p>The AgentCore workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -145,7 +145,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
         }
 
         /**
-         * <p>The ID of the MCP service.</p>
+         * <p>The MCP service ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,7 +167,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
         }
 
         /**
-         * <p>The MCP configuration updated based on the specified template version. The configuration must comply with the input schema of the template.</p>
+         * <p>The MCP configuration updated based on the specified template version, which must comply with the input schema of the template.</p>
          */
         public Builder body(UpdateMcpTemplateConfigRequestBody body) {
             String bodyShrink = shrink(body, "body", "json");
@@ -177,7 +177,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
         }
 
         /**
-         * <p>The reserved query request identifier. The console backend does not read this parameter and does not provide idempotency guarantees such as deduplication or returning the original processing result based on this identifier.</p>
+         * <p>The reserved query request identifier. The console backend does not read this parameter and does not provide idempotency guarantees such as deduplication or restoring the original processing result based on this identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -381,7 +381,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             } 
 
             /**
-             * <p>The credential for backend authentication.</p>
+             * <p>The credential for the backend authentication.</p>
              * 
              * <strong>example:</strong>
              * <p>example-api-key</p>
@@ -403,7 +403,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             }
 
             /**
-             * <p>The parameter name of the API key.</p>
+             * <p>The name of the API key parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>X-API-Key</p>
@@ -414,7 +414,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             }
 
             /**
-             * <p>The location where the API key is passed.</p>
+             * <p>The position where the API key is passed.</p>
              * 
              * <strong>example:</strong>
              * <p>header</p>
@@ -425,7 +425,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             }
 
             /**
-             * <p>The type of backend authentication.</p>
+             * <p>The type of the backend authentication.</p>
              * 
              * <strong>example:</strong>
              * <p>apiKey</p>
@@ -516,7 +516,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable the configuration.</p>
+             * <p>Specifies whether to enable this configuration.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -604,7 +604,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the AgentCore credential referenced when the mode is set to CREDENTIAL.</p>
+             * <p>The AgentCore credential ID referenced when the mode is set to CREDENTIAL.</p>
              * 
              * <strong>example:</strong>
              * <p>credential-id</p>
@@ -623,7 +623,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             }
 
             /**
-             * <p>The access control mode. ANONYMOUS indicates anonymous access, and CREDENTIAL indicates authentication by using AgentCore credentials.</p>
+             * <p>The access control mode. ANONYMOUS indicates anonymous access, and CREDENTIAL indicates authentication using AgentCore access credentials.</p>
              * 
              * <strong>example:</strong>
              * <p>CREDENTIAL</p>
@@ -848,7 +848,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             }
 
             /**
-             * <p>The code package runtime. Valid values: python3.13, nodejs22, and java17.</p>
+             * <p>The runtime environment for the code package. Valid values: python3.13, nodejs22, and java17.</p>
              * 
              * <strong>example:</strong>
              * <p>python3.13</p>
@@ -1021,7 +1021,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             }
 
             /**
-             * <p>The image repository type.</p>
+             * <p>The image registry type.</p>
              * 
              * <strong>example:</strong>
              * <p>ACR</p>
@@ -1032,7 +1032,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             }
 
             /**
-             * <p>The MCP runtime mode. Custom containers must currently expose standard MCP by themselves. Set this parameter to SELF_HOSTED.</p>
+             * <p>The MCP runtime mode. Custom containers must currently expose the standard MCP themselves. Set this value to SELF_HOSTED.</p>
              * 
              * <strong>example:</strong>
              * <p>SELF_HOSTED</p>
@@ -1043,7 +1043,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             }
 
             /**
-             * <p>The container source type. Currently, this parameter is fixed to CONTAINER_IMAGE.</p>
+             * <p>The container source type. Currently, this value is fixed to CONTAINER_IMAGE.</p>
              * 
              * <strong>example:</strong>
              * <p>CONTAINER_IMAGE</p>
@@ -1192,7 +1192,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
              * <p>The description of the hook.</p>
              * 
              * <strong>example:</strong>
-             * <p>Log MCP tool invocations</p>
+             * <p>Record MCP tool calls</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1295,7 +1295,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             } 
 
             /**
-             * <p>The list of hooks executed in array order, including PRE_LIST_TOOLS, PRE_CALL_TOOL, POST_LIST_TOOLS, and POST_CALL_TOOL hooks.</p>
+             * <p>The ordered list of hooks. Executes the PRE_LIST_TOOLS, PRE_CALL_TOOL, POST_LIST_TOOLS, and POST_CALL_TOOL hooks in array order.</p>
              */
             public Builder hooks(java.util.List<Hooks> hooks) {
                 this.hooks = hooks;
@@ -1417,7 +1417,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             }
 
             /**
-             * <p>The start rule for splitting Function Compute logs.</p>
+             * <p>The start rule for FC log splitting.</p>
              * 
              * <strong>example:</strong>
              * <p>DefaultRegex</p>
@@ -1428,7 +1428,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             }
 
             /**
-             * <p>The name of the Logstore.</p>
+             * <p>The Logstore name.</p>
              * 
              * <strong>example:</strong>
              * <p>mcp-logs</p>
@@ -1439,7 +1439,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             }
 
             /**
-             * <p>The name of the Simple Log Service project.</p>
+             * <p>The Simple Log Service project name.</p>
              * 
              * <strong>example:</strong>
              * <p>agentcore-mcp-logs</p>
@@ -1475,11 +1475,15 @@ public class UpdateMcpTemplateConfigRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("sessionMaxLifetimeSeconds")
         private Integer sessionMaxLifetimeSeconds;
 
+        @com.aliyun.core.annotation.NameInMap("sessionMode")
+        private String sessionMode;
+
         private McpConfiguration(Builder builder) {
             this.endpointPath = builder.endpointPath;
             this.sessionConcurrencyPerInstance = builder.sessionConcurrencyPerInstance;
             this.sessionIdleTimeoutSeconds = builder.sessionIdleTimeoutSeconds;
             this.sessionMaxLifetimeSeconds = builder.sessionMaxLifetimeSeconds;
+            this.sessionMode = builder.sessionMode;
         }
 
         public static Builder builder() {
@@ -1518,11 +1522,19 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             return this.sessionMaxLifetimeSeconds;
         }
 
+        /**
+         * @return sessionMode
+         */
+        public String getSessionMode() {
+            return this.sessionMode;
+        }
+
         public static final class Builder {
             private String endpointPath; 
             private Integer sessionConcurrencyPerInstance; 
             private Integer sessionIdleTimeoutSeconds; 
             private Integer sessionMaxLifetimeSeconds; 
+            private String sessionMode; 
 
             private Builder() {
             } 
@@ -1532,6 +1544,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
                 this.sessionConcurrencyPerInstance = model.sessionConcurrencyPerInstance;
                 this.sessionIdleTimeoutSeconds = model.sessionIdleTimeoutSeconds;
                 this.sessionMaxLifetimeSeconds = model.sessionMaxLifetimeSeconds;
+                this.sessionMode = model.sessionMode;
             } 
 
             /**
@@ -1546,7 +1559,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             }
 
             /**
-             * <p>The number of concurrent sessions per instance. Currently, this parameter is fixed to 1.</p>
+             * <p>The number of concurrent sessions per instance. Currently, this value is fixed to 1.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1557,7 +1570,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             }
 
             /**
-             * <p>The session idle timeout period. Unit: seconds. Default value: 1800.</p>
+             * <p>The session idle timeout period in seconds. Default value: 1800.</p>
              * 
              * <strong>example:</strong>
              * <p>1800</p>
@@ -1568,13 +1581,24 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             }
 
             /**
-             * <p>The maximum session lifetime. Unit: seconds. Default value: 21600.</p>
+             * <p>The maximum session lifetime in seconds. Default value: 21600.</p>
              * 
              * <strong>example:</strong>
              * <p>21600</p>
              */
             public Builder sessionMaxLifetimeSeconds(Integer sessionMaxLifetimeSeconds) {
                 this.sessionMaxLifetimeSeconds = sessionMaxLifetimeSeconds;
+                return this;
+            }
+
+            /**
+             * <p>The session mode. This parameter applies only to StreamableHTTP. Default value for creation: STATEFUL. If omitted during an update, the original value is retained. STATELESS disables Function Compute session affinity, and the stdio gateway does not enable stateful mode. Native HTTP services must support stateless MCP themselves.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STATEFUL</p>
+             */
+            public Builder sessionMode(String sessionMode) {
+                this.sessionMode = sessionMode;
                 return this;
             }
 
@@ -1670,7 +1694,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             }
 
             /**
-             * <p>The NAS server address.</p>
+             * <p>The NAS service address.</p>
              * 
              * <strong>example:</strong>
              * <p>example.cn-hangzhou.nas.aliyuncs.com</p>
@@ -1753,7 +1777,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             } 
 
             /**
-             * <p>The user group ID.</p>
+             * <p>The runtime user group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>
@@ -1772,7 +1796,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             }
 
             /**
-             * <p>The user ID.</p>
+             * <p>The runtime user ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>
@@ -2018,7 +2042,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             }
 
             /**
-             * <p>The path in the OSS bucket.</p>
+             * <p>The path of the OSS bucket.</p>
              * 
              * <strong>example:</strong>
              * <p>/data</p>
@@ -2029,7 +2053,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             }
 
             /**
-             * <p>The OSS endpoint.</p>
+             * <p>The OSS service endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://oss-cn-hangzhou.aliyuncs.com">https://oss-cn-hangzhou.aliyuncs.com</a></p>
@@ -2193,7 +2217,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             }
 
             /**
-             * <p>The reserved reference to the parameter transformation and result enhancement rule set.</p>
+             * <p>The reserved parameter transformation and result enhancement rule set reference.</p>
              * 
              * <strong>example:</strong>
              * <p>rules-1</p>
@@ -2406,7 +2430,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             } 
 
             /**
-             * <p>The CPU specification. Unit: cores. Default value: 0.25.</p>
+             * <p>The CPU specification in cores. Default value: 0.25.</p>
              * 
              * <strong>example:</strong>
              * <p>0.25</p>
@@ -2417,7 +2441,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             }
 
             /**
-             * <p>The ephemeral disk size. Unit: MB. Valid values: 512 and 10240.</p>
+             * <p>The temporary disk size in MB. Valid values: 512 and 10240.</p>
              * 
              * <strong>example:</strong>
              * <p>512</p>
@@ -2447,7 +2471,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             }
 
             /**
-             * <p>The maximum number of concurrent requests per instance. Default value: 200.</p>
+             * <p>The number of concurrent requests per instance. Default value: 200.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -2458,7 +2482,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             }
 
             /**
-             * <p>The memory specification. Unit: MB. Default value: 512.</p>
+             * <p>The memory specification in MB. Default value: 512.</p>
              * 
              * <strong>example:</strong>
              * <p>512</p>
@@ -2480,7 +2504,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             }
 
             /**
-             * <p>The function timeout period. Unit: seconds. Default value: 300.</p>
+             * <p>The function timeout period in seconds. Default value: 300.</p>
              * 
              * <strong>example:</strong>
              * <p>300</p>
@@ -2722,7 +2746,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             }
 
             /**
-             * <p>The artifact type. A value of Code indicates a ZIP code package, and a value of Container indicates a custom container.</p>
+             * <p>The artifact type. Code indicates a ZIP code package, and Container indicates a custom container.</p>
              * 
              * <strong>example:</strong>
              * <p>Code</p>
@@ -2927,7 +2951,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             }
 
             /**
-             * <p>The authentication configuration for the MCP service.</p>
+             * <p>The MCP authentication configuration.</p>
              */
             public Builder auth(Auth auth) {
                 this.auth = auth;
@@ -2935,7 +2959,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             }
 
             /**
-             * <p>The deployment configuration for code-deployed MCP.</p>
+             * <p>The deployment configuration for a code-deployed MCP.</p>
              */
             public Builder deploymentConfig(DeploymentConfig deploymentConfig) {
                 this.deploymentConfig = deploymentConfig;

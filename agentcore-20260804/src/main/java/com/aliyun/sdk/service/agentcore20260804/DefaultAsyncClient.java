@@ -109,8 +109,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Converts an MCP service installed from a marketplace template to free edit mode to allow direct modification of the service configuration.
-     * After the conversion, the original source and tag information are retained, and the template editing restrictions are removed. The service no longer appears on the usage page associated with the template.</p>
+     * <p>Converts an MCP service installed from a marketplace template to free-edit mode, allowing you to directly modify the service configuration. After the conversion, the original source and tag information are retained, and the editing restrictions of the template are removed. The service will no longer appear on the use case page corresponding to the template.</p>
      * 
      * @param request the request parameters of ConvertMcpToFreeEdit  ConvertMcpToFreeEditRequest
      * @return ConvertMcpToFreeEditResponse
@@ -802,9 +801,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <p>Creates an MCP service in a workspace for agents to use the tools provided by the service.
-     * The creation process is asynchronous. After submission, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcp">GetMcp</a> to check whether the service is ready.
-     * To deploy using a local code package, first call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcpCodePackageUploadUrl">GetMcpCodePackageUploadUrl</a> to obtain the upload URL and upload the file. Then, fill the returned code package token into the deployment configuration.
-     * The <code>clientToken</code> parameter does not currently provide idempotency guarantees. If the request result is not confirmed, query existing services before deciding whether to recreate.</p>
+     * The creation process is executed asynchronously. After submission, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcp">GetMcp</a> to query whether the service is ready.
+     * When deploying with a local code package, first call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcpCodePackageUploadUrl">GetMcpCodePackageUploadUrl</a> to obtain the URL and upload the file, and then fill the returned code package token into the deployment configuration.
+     * <code>clientToken</code> currently does not provide idempotency guarantees. If the request result is not confirmed, query existing services before deciding whether to recreate.</p>
      * 
      * @param request the request parameters of CreateMcp  CreateMcpRequest
      * @return CreateMcpResponse
@@ -3668,7 +3667,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paging query for the MCP services and their configurations and statuses in a specified workspace.</p>
+     * <p>Performs a paged query to retrieve the MCP services, configurations, and statuses in a specified workspace by using paging.</p>
      * 
      * @param request the request parameters of ListMcps  ListMcpsRequest
      * @return ListMcpsResponse
@@ -3841,7 +3840,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paging query for models in a specified workspace and supports filtering by model connection and model name.</p>
+     * <p>Performs a paged query for models in a specified workspace and supports filtering by model connection and model name during paging.</p>
      * 
      * @param request the request parameters of ListModels  ListModelsRequest
      * @return ListModelsResponse
@@ -4222,6 +4221,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<PrepareIdentityProviderSCIMResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Validates a single direct MCP or HTTP origin server before creating an MCP. This operation does not require an MCP resource ID, create resources, or persist probe results. For direct connections, the protocol, transport method, and version are not passed. The server discovers them automatically, prioritizing the validation of the modern protocol and falling back to the legacy protocol only if the modern one is confirmed to be unsupported. The returned backend protocol and transport method can be used for creation configurations and do not limit the external protocol conversion compatibility of the gateway. A direct connection protocol check is still considered SUCCESS even if no capabilities are declared. For HTTP, the operation validates the complete OpenAPI definition and origin server authentication configuration, and sends a HEAD request without business parameters or origin server credentials to the configured address to check connectivity. It does not select or execute business interfaces defined in the specification, nor does it verify whether the credentials are accepted by the origin server. It only accepts origin server configurations supported by the creation interface, does not accept detection-specific headers, and does not execute tools/call. A success response from the interface only indicates that the validation request has been processed. The origin server result is indicated by data.status.</p>
+     * 
+     * @param request the request parameters of ProbeMcpOrigin  ProbeMcpOriginRequest
+     * @return ProbeMcpOriginResponse
+     */
+    @Override
+    public CompletableFuture<ProbeMcpOriginResponse> probeMcpOrigin(ProbeMcpOriginRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ProbeMcpOrigin").setMethod(HttpMethod.POST).setPathRegex("/workspaces/{workspaceId}/mcp-origin-probes").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ProbeMcpOriginResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ProbeMcpOriginResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -5118,7 +5138,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <p>Updates the address, description, authentication, or Swagger configuration of an MCP service. The service type and protocol cannot be modified after creation.
-     * The update process is executed asynchronously. After submission, you can call the <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcp">GetMcp</a> operation to query the processing result. The <code>clientToken</code> parameter does not currently provide idempotency guarantees. If the request result is not confirmed, query the current configuration and status first.</p>
+     * The update process is executed asynchronously. After submission, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcp">GetMcp</a> to query the processing result. The clientToken parameter does not currently provide idempotency guarantees. If the request result is not confirmed, query the current configuration and status first.</p>
      * 
      * @param request the request parameters of UpdateMcp  UpdateMcpRequest
      * @return UpdateMcpResponse
@@ -5139,7 +5159,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Updates parameters based on the marketplace template bound to the MCP service to adjust the configuration of the templated service. This operation uses the same template version that was bound when the MCP service was created to update the parameters exposed by the schema, without upgrading the template version.</p>
+     * <p>Updates parameters based on the marketplace template bound to the MCP service to adjust the configuration of the templated service.
+     * Updates the parameters exposed by the schema using the same template version bound during MCP creation, without upgrading the template version.</p>
      * 
      * @param request the request parameters of UpdateMcpTemplateConfig  UpdateMcpTemplateConfigRequest
      * @return UpdateMcpTemplateConfigResponse

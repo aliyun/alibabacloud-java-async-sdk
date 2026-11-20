@@ -237,7 +237,7 @@ public class CreateMcpResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The API Key used to verify MCP callers.</p>
+             * <p>The API key used to verify MCP callers.</p>
              * 
              * <strong>example:</strong>
              * <p>example-api-key</p>
@@ -248,7 +248,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the request header that carries the API Key.</p>
+             * <p>The name of the request header that carries the API key.</p>
              * 
              * <strong>example:</strong>
              * <p>X-API-Key</p>
@@ -471,7 +471,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The location of the credential.</p>
+             * <p>The position of the credential.</p>
              * 
              * <strong>example:</strong>
              * <p>header</p>
@@ -578,7 +578,7 @@ public class CreateMcpResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The caller API Key authentication configuration for code-deployed MCP.</p>
+             * <p>The caller API key authentication configuration for code-deployed MCP.</p>
              */
             public Builder codePackage(CodePackage codePackage) {
                 this.codePackage = codePackage;
@@ -693,7 +693,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to enable entry access control.</p>
+             * <p>Specifies whether to enable ingress access control.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -701,7 +701,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The access control mode. ANONYMOUS indicates anonymous access. CREDENTIAL indicates authentication by using AgentCore access credentials.</p>
+             * <p>The access control mode. ANONYMOUS indicates anonymous access, and CREDENTIAL indicates authentication by using AgentCore credentials.</p>
              * 
              * <strong>example:</strong>
              * <p>CREDENTIAL</p>
@@ -907,7 +907,7 @@ public class CreateMcpResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The temporary code package token returned by GetMcpCodePackageUploadUrl, which is used to create or update a code deployment after a presigned upload is complete.</p>
+             * <p>The temporary code package token returned by GetMcpCodePackageUploadUrl. This token is used to create or update a code deployment after a presigned upload is completed.</p>
              * 
              * <strong>example:</strong>
              * <p>upload-token</p>
@@ -926,7 +926,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The runtime of the code package. Valid values: python3.13, nodejs22, and java17.</p>
+             * <p>The code package runtime: python3.13, nodejs22, or java17.</p>
              * 
              * <strong>example:</strong>
              * <p>python3.13</p>
@@ -1099,7 +1099,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The image repository type.</p>
+             * <p>The image registry type.</p>
              * 
              * <strong>example:</strong>
              * <p>ACR</p>
@@ -1110,7 +1110,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Custom containers currently must expose the standard MCP themselves. Set the value to SELF_HOSTED.</p>
+             * <p>The MCP runtime mode. Custom containers currently need to expose standard MCP by themselves. Set the value to SELF_HOSTED.</p>
              * 
              * <strong>example:</strong>
              * <p>SELF_HOSTED</p>
@@ -1121,7 +1121,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Currently fixed to CONTAINER_IMAGE.</p>
+             * <p>The container source type. Currently fixed to CONTAINER_IMAGE.</p>
              * 
              * <strong>example:</strong>
              * <p>CONTAINER_IMAGE</p>
@@ -1305,7 +1305,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timeout period of the hook, in milliseconds.</p>
+             * <p>The timeout period in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>3000</p>
@@ -1373,7 +1373,7 @@ public class CreateMcpResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Executes the PRE_LIST_TOOLS, PRE_CALL_TOOL, POST_LIST_TOOLS, and POST_CALL_TOOL hooks in array order.</p>
+             * <p>Executes the PRE_LIST_TOOLS, PRE_CALL_TOOL, POST_LIST_TOOLS, and POST_CALL_TOOL hooks in the order of the array.</p>
              */
             public Builder hooks(java.util.List<Hooks> hooks) {
                 this.hooks = hooks;
@@ -1495,7 +1495,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start rule for FC log splitting.</p>
+             * <p>The start rule for log segmentation.</p>
              * 
              * <strong>example:</strong>
              * <p>DefaultRegex</p>
@@ -1553,11 +1553,15 @@ public class CreateMcpResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("sessionMaxLifetimeSeconds")
         private Integer sessionMaxLifetimeSeconds;
 
+        @com.aliyun.core.annotation.NameInMap("sessionMode")
+        private String sessionMode;
+
         private McpConfiguration(Builder builder) {
             this.endpointPath = builder.endpointPath;
             this.sessionConcurrencyPerInstance = builder.sessionConcurrencyPerInstance;
             this.sessionIdleTimeoutSeconds = builder.sessionIdleTimeoutSeconds;
             this.sessionMaxLifetimeSeconds = builder.sessionMaxLifetimeSeconds;
+            this.sessionMode = builder.sessionMode;
         }
 
         public static Builder builder() {
@@ -1596,11 +1600,19 @@ public class CreateMcpResponseBody extends TeaModel {
             return this.sessionMaxLifetimeSeconds;
         }
 
+        /**
+         * @return sessionMode
+         */
+        public String getSessionMode() {
+            return this.sessionMode;
+        }
+
         public static final class Builder {
             private String endpointPath; 
             private Integer sessionConcurrencyPerInstance; 
             private Integer sessionIdleTimeoutSeconds; 
             private Integer sessionMaxLifetimeSeconds; 
+            private String sessionMode; 
 
             private Builder() {
             } 
@@ -1610,6 +1622,7 @@ public class CreateMcpResponseBody extends TeaModel {
                 this.sessionConcurrencyPerInstance = model.sessionConcurrencyPerInstance;
                 this.sessionIdleTimeoutSeconds = model.sessionIdleTimeoutSeconds;
                 this.sessionMaxLifetimeSeconds = model.sessionMaxLifetimeSeconds;
+                this.sessionMode = model.sessionMode;
             } 
 
             /**
@@ -1624,7 +1637,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Currently fixed to 1.</p>
+             * <p>The session concurrency per instance. Currently fixed to 1.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1653,6 +1666,17 @@ public class CreateMcpResponseBody extends TeaModel {
              */
             public Builder sessionMaxLifetimeSeconds(Integer sessionMaxLifetimeSeconds) {
                 this.sessionMaxLifetimeSeconds = sessionMaxLifetimeSeconds;
+                return this;
+            }
+
+            /**
+             * <p>The session mode. Only applicable to StreamableHTTP. Default value for creation: STATEFUL. If omitted during an update, the original value is retained. STATELESS disables Function Compute session affinity, and the stdio gateway does not enable stateful mode. Native HTTP services must support stateless MCP by themselves.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STATEFUL</p>
+             */
+            public Builder sessionMode(String sessionMode) {
+                this.sessionMode = sessionMode;
                 return this;
             }
 
@@ -1748,7 +1772,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The NAS service address.</p>
+             * <p>The NAS server address.</p>
              * 
              * <strong>example:</strong>
              * <p>example.cn-hangzhou.nas.aliyuncs.com</p>
@@ -1831,7 +1855,7 @@ public class CreateMcpResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The runtime user group ID.</p>
+             * <p>The ID of the user group.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>
@@ -1850,7 +1874,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The runtime user ID.</p>
+             * <p>The user ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>
@@ -1957,7 +1981,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The security group ID.</p>
+             * <p>The ID of the security group.</p>
              * 
              * <strong>example:</strong>
              * <p>sg-example</p>
@@ -1976,7 +2000,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The VPC ID.</p>
+             * <p>The ID of the virtual private cloud (VPC).</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-example</p>
@@ -2107,7 +2131,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The OSS service endpoint.</p>
+             * <p>The endpoint of the OSS service.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://oss-cn-hangzhou.aliyuncs.com">https://oss-cn-hangzhou.aliyuncs.com</a></p>
@@ -2271,7 +2295,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reserved parameter transformation and result enhancement rule set reference.</p>
+             * <p>The reserved reference to the parameter transformation and result enhancement rule set.</p>
              * 
              * <strong>example:</strong>
              * <p>rules-1</p>
@@ -2484,7 +2508,7 @@ public class CreateMcpResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The CPU specification in cores. Default value: 0.25.</p>
+             * <p>The CPU specifications in cores. Default value: 0.25.</p>
              * 
              * <strong>example:</strong>
              * <p>0.25</p>
@@ -2495,7 +2519,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ephemeral disk size in MB. Valid values: 512 and 10240.</p>
+             * <p>The temporary disk size in MB. Valid values: 512 and 10240.</p>
              * 
              * <strong>example:</strong>
              * <p>512</p>
@@ -2525,7 +2549,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Default value: 200.</p>
+             * <p>The request concurrency per instance. Default value: 200.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -2536,7 +2560,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The memory specification in MB. Default value: 512.</p>
+             * <p>The memory specifications in MB. Default value: 512.</p>
              * 
              * <strong>example:</strong>
              * <p>512</p>
@@ -2547,7 +2571,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Default value: 9000.</p>
+             * <p>The service port. Default value: 9000.</p>
              * 
              * <strong>example:</strong>
              * <p>9000</p>
@@ -2784,7 +2808,7 @@ public class CreateMcpResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The MCP entry access control.</p>
+             * <p>The MCP ingress access control configuration.</p>
              */
             public Builder accessControl(AccessControl accessControl) {
                 this.accessControl = accessControl;
@@ -2945,7 +2969,7 @@ public class CreateMcpResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The MCP marketplace template ID.</p>
+             * <p>The ID of the MCP marketplace template.</p>
              * 
              * <strong>example:</strong>
              * <p>market-1</p>
@@ -2957,6 +2981,810 @@ public class CreateMcpResponseBody extends TeaModel {
 
             public MarketSource build() {
                 return new MarketSource(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateMcpResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateMcpResponseBody</p>
+     */
+    public static class Error extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("code")
+        private String code;
+
+        @com.aliyun.core.annotation.NameInMap("message")
+        private String message;
+
+        @com.aliyun.core.annotation.NameInMap("retryable")
+        private Boolean retryable;
+
+        @com.aliyun.core.annotation.NameInMap("source")
+        private String source;
+
+        @com.aliyun.core.annotation.NameInMap("stage")
+        private String stage;
+
+        private Error(Builder builder) {
+            this.code = builder.code;
+            this.message = builder.message;
+            this.retryable = builder.retryable;
+            this.source = builder.source;
+            this.stage = builder.stage;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Error create() {
+            return builder().build();
+        }
+
+        /**
+         * @return code
+         */
+        public String getCode() {
+            return this.code;
+        }
+
+        /**
+         * @return message
+         */
+        public String getMessage() {
+            return this.message;
+        }
+
+        /**
+         * @return retryable
+         */
+        public Boolean getRetryable() {
+            return this.retryable;
+        }
+
+        /**
+         * @return source
+         */
+        public String getSource() {
+            return this.source;
+        }
+
+        /**
+         * @return stage
+         */
+        public String getStage() {
+            return this.stage;
+        }
+
+        public static final class Builder {
+            private String code; 
+            private String message; 
+            private Boolean retryable; 
+            private String source; 
+            private String stage; 
+
+            private Builder() {
+            } 
+
+            private Builder(Error model) {
+                this.code = model.code;
+                this.message = model.message;
+                this.retryable = model.retryable;
+                this.source = model.source;
+                this.stage = model.stage;
+            } 
+
+            /**
+             * <p>Returns only bounded diagnostic codes and does not return the original error body of the origin server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PROBE_TIMEOUT</p>
+             */
+            public Builder code(String code) {
+                this.code = code;
+                return this;
+            }
+
+            /**
+             * <p>The necessary diagnostics that are trimmed and desensitized. This parameter does not contain credentials or original responses.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The probe deadline was exceeded.</p>
+             */
+            public Builder message(String message) {
+                this.message = message;
+                return this;
+            }
+
+            /**
+             * <p>Specifies whether the operation is suitable for retry based on a restricted policy. This parameter does not trigger automatic retries.</p>
+             */
+            public Builder retryable(Boolean retryable) {
+                this.retryable = retryable;
+                return this;
+            }
+
+            /**
+             * <p>The source of the error. Valid values: MAGIC, ROUTER, NETWORK, ORIGIN, and UNKNOWN. The value is determined only based on actual evidence.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UNKNOWN</p>
+             */
+            public Builder source(String source) {
+                this.source = source;
+                return this;
+            }
+
+            /**
+             * <p>The detection or release stage where the error occurred.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>INITIALIZE</p>
+             */
+            public Builder stage(String stage) {
+                this.stage = stage;
+                return this;
+            }
+
+            public Error build() {
+                return new Error(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateMcpResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateMcpResponseBody</p>
+     */
+    public static class Operation extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("error")
+        private Error error;
+
+        @com.aliyun.core.annotation.NameInMap("operationId")
+        private String operationId;
+
+        @com.aliyun.core.annotation.NameInMap("stage")
+        private String stage;
+
+        @com.aliyun.core.annotation.NameInMap("status")
+        private String status;
+
+        @com.aliyun.core.annotation.NameInMap("type")
+        private String type;
+
+        @com.aliyun.core.annotation.NameInMap("updatedAt")
+        private String updatedAt;
+
+        private Operation(Builder builder) {
+            this.error = builder.error;
+            this.operationId = builder.operationId;
+            this.stage = builder.stage;
+            this.status = builder.status;
+            this.type = builder.type;
+            this.updatedAt = builder.updatedAt;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Operation create() {
+            return builder().build();
+        }
+
+        /**
+         * @return error
+         */
+        public Error getError() {
+            return this.error;
+        }
+
+        /**
+         * @return operationId
+         */
+        public String getOperationId() {
+            return this.operationId;
+        }
+
+        /**
+         * @return stage
+         */
+        public String getStage() {
+            return this.stage;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
+         * @return updatedAt
+         */
+        public String getUpdatedAt() {
+            return this.updatedAt;
+        }
+
+        public static final class Builder {
+            private Error error; 
+            private String operationId; 
+            private String stage; 
+            private String status; 
+            private String type; 
+            private String updatedAt; 
+
+            private Builder() {
+            } 
+
+            private Builder(Operation model) {
+                this.error = model.error;
+                this.operationId = model.operationId;
+                this.stage = model.stage;
+                this.status = model.status;
+                this.type = model.type;
+                this.updatedAt = model.updatedAt;
+            } 
+
+            /**
+             * <p>The desensitized error of the current release operation. This field indicates the failure of the gateway or formal link after the origin server passes the verification.</p>
+             */
+            public Builder error(Error error) {
+                this.error = error;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the current or most recent release operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3541f1af-87cc-45d1-a28e-94ec5633b931</p>
+             */
+            public Builder operationId(String operationId) {
+                this.operationId = operationId;
+                return this;
+            }
+
+            /**
+             * <p>The release stage, such as compute deployment, origin verification, summary saving, gateway release, ingress credential synchronization, formal link verification, or deployment submission. Old tasks retain their original stage semantics.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VALIDATE_ORIGIN</p>
+             */
+            public Builder stage(String stage) {
+                this.stage = stage;
+                return this;
+            }
+
+            /**
+             * <p>The status of the operation. Valid values: PENDING, RUNNING, SUCCEEDED, and FAILED.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * <p>The type of the operation. Valid value: PUBLISH.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PUBLISH</p>
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            /**
+             * <p>The time when the operation was updated in ISO 8601 UTC format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-11-19T08:30:00Z</p>
+             */
+            public Builder updatedAt(String updatedAt) {
+                this.updatedAt = updatedAt;
+                return this;
+            }
+
+            public Operation build() {
+                return new Operation(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateMcpResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateMcpResponseBody</p>
+     */
+    public static class ActualConfiguration extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("backendMcpProtocol")
+        private String backendMcpProtocol;
+
+        @com.aliyun.core.annotation.NameInMap("protocol")
+        private String protocol;
+
+        @com.aliyun.core.annotation.NameInMap("protocolVersion")
+        private String protocolVersion;
+
+        @com.aliyun.core.annotation.NameInMap("sessionMode")
+        private String sessionMode;
+
+        private ActualConfiguration(Builder builder) {
+            this.backendMcpProtocol = builder.backendMcpProtocol;
+            this.protocol = builder.protocol;
+            this.protocolVersion = builder.protocolVersion;
+            this.sessionMode = builder.sessionMode;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ActualConfiguration create() {
+            return builder().build();
+        }
+
+        /**
+         * @return backendMcpProtocol
+         */
+        public String getBackendMcpProtocol() {
+            return this.backendMcpProtocol;
+        }
+
+        /**
+         * @return protocol
+         */
+        public String getProtocol() {
+            return this.protocol;
+        }
+
+        /**
+         * @return protocolVersion
+         */
+        public String getProtocolVersion() {
+            return this.protocolVersion;
+        }
+
+        /**
+         * @return sessionMode
+         */
+        public String getSessionMode() {
+            return this.sessionMode;
+        }
+
+        public static final class Builder {
+            private String backendMcpProtocol; 
+            private String protocol; 
+            private String protocolVersion; 
+            private String sessionMode; 
+
+            private Builder() {
+            } 
+
+            private Builder(ActualConfiguration model) {
+                this.backendMcpProtocol = model.backendMcpProtocol;
+                this.protocol = model.protocol;
+                this.protocolVersion = model.protocolVersion;
+                this.sessionMode = model.sessionMode;
+            } 
+
+            /**
+             * <p>The verified backend MCP protocol policy. Valid values: legacy and modern. This parameter is empty if the policy is not confirmed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>modern</p>
+             */
+            public Builder backendMcpProtocol(String backendMcpProtocol) {
+                this.backendMcpProtocol = backendMcpProtocol;
+                return this;
+            }
+
+            /**
+             * <p>The verified MCP transport. Valid values: SSE and StreamableHTTP. This parameter is empty if the transport is not confirmed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>StreamableHTTP</p>
+             */
+            public Builder protocol(String protocol) {
+                this.protocol = protocol;
+                return this;
+            }
+
+            /**
+             * <p>The actual negotiated or selected and verified date version of the MCP protocol. This parameter is empty if the version is not confirmed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-03-26</p>
+             */
+            public Builder protocolVersion(String protocolVersion) {
+                this.protocolVersion = protocolVersion;
+                return this;
+            }
+
+            /**
+             * <p>The actual session mode. Valid values: STATEFUL, STATELESS, and NOT_APPLICABLE. This parameter is empty if the mode is not confirmed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STATELESS</p>
+             */
+            public Builder sessionMode(String sessionMode) {
+                this.sessionMode = sessionMode;
+                return this;
+            }
+
+            public ActualConfiguration build() {
+                return new ActualConfiguration(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateMcpResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateMcpResponseBody</p>
+     */
+    public static class LastResultError extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("code")
+        private String code;
+
+        @com.aliyun.core.annotation.NameInMap("message")
+        private String message;
+
+        @com.aliyun.core.annotation.NameInMap("retryable")
+        private Boolean retryable;
+
+        @com.aliyun.core.annotation.NameInMap("source")
+        private String source;
+
+        @com.aliyun.core.annotation.NameInMap("stage")
+        private String stage;
+
+        private LastResultError(Builder builder) {
+            this.code = builder.code;
+            this.message = builder.message;
+            this.retryable = builder.retryable;
+            this.source = builder.source;
+            this.stage = builder.stage;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static LastResultError create() {
+            return builder().build();
+        }
+
+        /**
+         * @return code
+         */
+        public String getCode() {
+            return this.code;
+        }
+
+        /**
+         * @return message
+         */
+        public String getMessage() {
+            return this.message;
+        }
+
+        /**
+         * @return retryable
+         */
+        public Boolean getRetryable() {
+            return this.retryable;
+        }
+
+        /**
+         * @return source
+         */
+        public String getSource() {
+            return this.source;
+        }
+
+        /**
+         * @return stage
+         */
+        public String getStage() {
+            return this.stage;
+        }
+
+        public static final class Builder {
+            private String code; 
+            private String message; 
+            private Boolean retryable; 
+            private String source; 
+            private String stage; 
+
+            private Builder() {
+            } 
+
+            private Builder(LastResultError model) {
+                this.code = model.code;
+                this.message = model.message;
+                this.retryable = model.retryable;
+                this.source = model.source;
+                this.stage = model.stage;
+            } 
+
+            /**
+             * <p>Returns only bounded diagnostic codes and does not return the original error body of the origin server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PROBE_TIMEOUT</p>
+             */
+            public Builder code(String code) {
+                this.code = code;
+                return this;
+            }
+
+            /**
+             * <p>The necessary diagnostics that are trimmed and desensitized. This parameter does not contain credentials or original responses.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The probe deadline was exceeded.</p>
+             */
+            public Builder message(String message) {
+                this.message = message;
+                return this;
+            }
+
+            /**
+             * <p>Specifies whether the operation is suitable for retry based on a restricted policy. This parameter does not trigger automatic retries.</p>
+             */
+            public Builder retryable(Boolean retryable) {
+                this.retryable = retryable;
+                return this;
+            }
+
+            /**
+             * <p>The source of the error. Valid values: MAGIC, ROUTER, NETWORK, ORIGIN, and UNKNOWN. The value is determined only based on actual evidence.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UNKNOWN</p>
+             */
+            public Builder source(String source) {
+                this.source = source;
+                return this;
+            }
+
+            /**
+             * <p>The detection or release stage where the error occurred.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>INITIALIZE</p>
+             */
+            public Builder stage(String stage) {
+                this.stage = stage;
+                return this;
+            }
+
+            public LastResultError build() {
+                return new LastResultError(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateMcpResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateMcpResponseBody</p>
+     */
+    public static class LastResult extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("actualConfiguration")
+        private ActualConfiguration actualConfiguration;
+
+        @com.aliyun.core.annotation.NameInMap("error")
+        private LastResultError error;
+
+        @com.aliyun.core.annotation.NameInMap("probedAt")
+        private String probedAt;
+
+        @com.aliyun.core.annotation.NameInMap("stage")
+        private String stage;
+
+        @com.aliyun.core.annotation.NameInMap("status")
+        private String status;
+
+        private LastResult(Builder builder) {
+            this.actualConfiguration = builder.actualConfiguration;
+            this.error = builder.error;
+            this.probedAt = builder.probedAt;
+            this.stage = builder.stage;
+            this.status = builder.status;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static LastResult create() {
+            return builder().build();
+        }
+
+        /**
+         * @return actualConfiguration
+         */
+        public ActualConfiguration getActualConfiguration() {
+            return this.actualConfiguration;
+        }
+
+        /**
+         * @return error
+         */
+        public LastResultError getError() {
+            return this.error;
+        }
+
+        /**
+         * @return probedAt
+         */
+        public String getProbedAt() {
+            return this.probedAt;
+        }
+
+        /**
+         * @return stage
+         */
+        public String getStage() {
+            return this.stage;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        public static final class Builder {
+            private ActualConfiguration actualConfiguration; 
+            private LastResultError error; 
+            private String probedAt; 
+            private String stage; 
+            private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(LastResult model) {
+                this.actualConfiguration = model.actualConfiguration;
+                this.error = model.error;
+                this.probedAt = model.probedAt;
+                this.stage = model.stage;
+                this.status = model.status;
+            } 
+
+            /**
+             * <p>The actual configuration confirmed by evidence in the current verification. This parameter is empty if no confirmed information is available and is not inferred from the expected configuration.</p>
+             */
+            public Builder actualConfiguration(ActualConfiguration actualConfiguration) {
+                this.actualConfiguration = actualConfiguration;
+                return this;
+            }
+
+            /**
+             * <p>The verification error. This parameter is empty if the verification is successful. It saves only the desensitized diagnostics required for the current verification.</p>
+             */
+            public Builder error(LastResultError error) {
+                this.error = error;
+                return this;
+            }
+
+            /**
+             * <p>The time of the current origin verification in ISO 8601 UTC format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-11-19T08:30:00Z</p>
+             */
+            public Builder probedAt(String probedAt) {
+                this.probedAt = probedAt;
+                return this;
+            }
+
+            /**
+             * <p>The verification stage. Valid values: CONNECT, DISCOVER, INITIALIZE, SESSION_CHECK, CLEANUP, and COMPLETE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>COMPLETE</p>
+             */
+            public Builder stage(String stage) {
+                this.stage = stage;
+                return this;
+            }
+
+            /**
+             * <p>The verification result. Valid values: SUCCESS and FAILED. The value is SUCCESS if the protocol and applicable session checks pass. Not declaring any capabilities does not affect the result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            public LastResult build() {
+                return new LastResult(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateMcpResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateMcpResponseBody</p>
+     */
+    public static class OriginProbe extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("lastResult")
+        private LastResult lastResult;
+
+        private OriginProbe(Builder builder) {
+            this.lastResult = builder.lastResult;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OriginProbe create() {
+            return builder().build();
+        }
+
+        /**
+         * @return lastResult
+         */
+        public LastResult getLastResult() {
+            return this.lastResult;
+        }
+
+        public static final class Builder {
+            private LastResult lastResult; 
+
+            private Builder() {
+            } 
+
+            private Builder(OriginProbe model) {
+                this.lastResult = model.lastResult;
+            } 
+
+            /**
+             * <p>Returned only for CODE_PACKAGE. This parameter is cleared when a new task starts and is empty if no verification has been performed or if an old task did not perform verification. If a subsequent release fails, the current summary is retained. This parameter does not indicate real-time health or the status of the effective version.</p>
+             */
+            public Builder lastResult(LastResult lastResult) {
+                this.lastResult = lastResult;
+                return this;
+            }
+
+            public OriginProbe build() {
+                return new OriginProbe(this);
             } 
 
         } 
@@ -3054,7 +3882,7 @@ public class CreateMcpResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The applied template version of the current MCP.</p>
+             * <p>The template version currently applied to the MCP.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0.0</p>
@@ -3076,7 +3904,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The template schema version.</p>
+             * <p>The schema version of the template.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0</p>
@@ -3087,7 +3915,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The template input schema, represented as a JSON Schema string.</p>
+             * <p>The input schema of the template, represented as a JSON Schema string.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;type&quot;:&quot;object&quot;,&quot;properties&quot;:{&quot;addresses&quot;:{&quot;type&quot;:&quot;array&quot;,&quot;items&quot;:{&quot;type&quot;:&quot;string&quot;}}}}</p>
@@ -3098,7 +3926,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether an updated template version is available.</p>
+             * <p>Indicates whether a newer template version is available.</p>
              */
             public Builder updateAvailable(Boolean updateAvailable) {
                 this.updateAvailable = updateAvailable;
@@ -3124,6 +3952,9 @@ public class CreateMcpResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("auth")
         private Auth auth;
+
+        @com.aliyun.core.annotation.NameInMap("backendMcpProtocol")
+        private String backendMcpProtocol;
 
         @com.aliyun.core.annotation.NameInMap("customTags")
         private java.util.List<String> customTags;
@@ -3155,6 +3986,15 @@ public class CreateMcpResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("officialTag")
         private String officialTag;
 
+        @com.aliyun.core.annotation.NameInMap("operation")
+        private Operation operation;
+
+        @com.aliyun.core.annotation.NameInMap("originProbe")
+        private OriginProbe originProbe;
+
+        @com.aliyun.core.annotation.NameInMap("originProtocolVersion")
+        private String originProtocolVersion;
+
         @com.aliyun.core.annotation.NameInMap("permissionMode")
         private String permissionMode;
 
@@ -3182,6 +4022,7 @@ public class CreateMcpResponseBody extends TeaModel {
         private Data(Builder builder) {
             this.addresses = builder.addresses;
             this.auth = builder.auth;
+            this.backendMcpProtocol = builder.backendMcpProtocol;
             this.customTags = builder.customTags;
             this.deploymentConfig = builder.deploymentConfig;
             this.description = builder.description;
@@ -3192,6 +4033,9 @@ public class CreateMcpResponseBody extends TeaModel {
             this.mcpServerId = builder.mcpServerId;
             this.name = builder.name;
             this.officialTag = builder.officialTag;
+            this.operation = builder.operation;
+            this.originProbe = builder.originProbe;
+            this.originProtocolVersion = builder.originProtocolVersion;
             this.permissionMode = builder.permissionMode;
             this.protocol = builder.protocol;
             this.status = builder.status;
@@ -3222,6 +4066,13 @@ public class CreateMcpResponseBody extends TeaModel {
          */
         public Auth getAuth() {
             return this.auth;
+        }
+
+        /**
+         * @return backendMcpProtocol
+         */
+        public String getBackendMcpProtocol() {
+            return this.backendMcpProtocol;
         }
 
         /**
@@ -3295,6 +4146,27 @@ public class CreateMcpResponseBody extends TeaModel {
         }
 
         /**
+         * @return operation
+         */
+        public Operation getOperation() {
+            return this.operation;
+        }
+
+        /**
+         * @return originProbe
+         */
+        public OriginProbe getOriginProbe() {
+            return this.originProbe;
+        }
+
+        /**
+         * @return originProtocolVersion
+         */
+        public String getOriginProtocolVersion() {
+            return this.originProtocolVersion;
+        }
+
+        /**
          * @return permissionMode
          */
         public String getPermissionMode() {
@@ -3353,6 +4225,7 @@ public class CreateMcpResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> addresses; 
             private Auth auth; 
+            private String backendMcpProtocol; 
             private java.util.List<String> customTags; 
             private DeploymentConfig deploymentConfig; 
             private String description; 
@@ -3363,6 +4236,9 @@ public class CreateMcpResponseBody extends TeaModel {
             private String mcpServerId; 
             private String name; 
             private String officialTag; 
+            private Operation operation; 
+            private OriginProbe originProbe; 
+            private String originProtocolVersion; 
             private String permissionMode; 
             private String protocol; 
             private String status; 
@@ -3378,6 +4254,7 @@ public class CreateMcpResponseBody extends TeaModel {
             private Builder(Data model) {
                 this.addresses = model.addresses;
                 this.auth = model.auth;
+                this.backendMcpProtocol = model.backendMcpProtocol;
                 this.customTags = model.customTags;
                 this.deploymentConfig = model.deploymentConfig;
                 this.description = model.description;
@@ -3388,6 +4265,9 @@ public class CreateMcpResponseBody extends TeaModel {
                 this.mcpServerId = model.mcpServerId;
                 this.name = model.name;
                 this.officialTag = model.officialTag;
+                this.operation = model.operation;
+                this.originProbe = model.originProbe;
+                this.originProtocolVersion = model.originProtocolVersion;
                 this.permissionMode = model.permissionMode;
                 this.protocol = model.protocol;
                 this.status = model.status;
@@ -3399,7 +4279,7 @@ public class CreateMcpResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of MCP service addresses.</p>
+             * <p>The list of MCP service addresses. Required when Type is DIRECT_PROXY or HTTP_TO_MCP. Do not specify when Type is CODE_PACKAGE.</p>
              */
             public Builder addresses(java.util.List<String> addresses) {
                 this.addresses = addresses;
@@ -3407,10 +4287,21 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The backend authentication configuration. The enabled field indicates whether authentication is enabled. The directProxy field specifies the custom authentication header for the direct proxy. The httpToMcp field specifies the list of OpenAPI credentials for HTTP_TO_MCP.</p>
+             * <p>The backend authentication configuration. enabled indicates whether it is enabled; directProxy specifies the custom authentication headers for direct proxy; httpToMcp specifies the list of OpenAPI credentials for HTTP_TO_MCP.</p>
              */
             public Builder auth(Auth auth) {
                 this.auth = auth;
+                return this;
+            }
+
+            /**
+             * <p>The saved legacy or modern backend policy, which is separate from the transport indicated by protocol and does not indicate verification. This field is not saved for newly created CODE_PACKAGE. For historical CODE_PACKAGE, the existing value does not control Function Compute session affinity or gateway protocol; for the actual protocol, refer to OriginProbe.LastResult.ActualConfiguration.BackendMcpProtocol. This field is returned as empty for historically unspecified values and HTTP_TO_MCP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>modern</p>
+             */
+            public Builder backendMcpProtocol(String backendMcpProtocol) {
+                this.backendMcpProtocol = backendMcpProtocol;
                 return this;
             }
 
@@ -3423,7 +4314,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The deployment configuration for the code deployment MCP.</p>
+             * <p>The deployment configuration of the code deployment MCP.</p>
              */
             public Builder deploymentConfig(DeploymentConfig deploymentConfig) {
                 this.deploymentConfig = deploymentConfig;
@@ -3442,7 +4333,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The MCP endpoint available for users or agents to invoke. This field is empty before deployment is complete.</p>
+             * <p>The MCP endpoint that can be called by users or agents. This parameter is empty before the deployment is completed.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example.com/mcp">https://example.com/mcp</a></p>
@@ -3453,7 +4344,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Function Compute function name corresponding to the CODE_PACKAGE MCP. This field is empty before deployment is complete and for other types.</p>
+             * <p>The name of the Function Compute function corresponding to the CODE_PACKAGE MCP. This parameter is empty before the deployment is completed or for other types.</p>
              * 
              * <strong>example:</strong>
              * <p>agentcore-mcp-example</p>
@@ -3464,7 +4355,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The MCP source marketplace template.</p>
+             * <p>The MCP marketplace source template.</p>
              */
             public Builder marketSource(MarketSource marketSource) {
                 this.marketSource = marketSource;
@@ -3516,7 +4407,34 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>PUBLIC indicates public access. CONTROLLED indicates that access is controlled based on permission rules.</p>
+             * <p>The read-only progress that reuses an existing release task. This parameter does not change the primary status of the resource and is empty if no historical operation information is available.</p>
+             */
+            public Builder operation(Operation operation) {
+                this.operation = operation;
+                return this;
+            }
+
+            /**
+             * <p>Returns the minimal origin verification summary of the most recent task only for code deployment. This parameter is empty for direct connection and HTTP-to-MCP scenarios. Querying this parameter does not trigger probing.</p>
+             */
+            public Builder originProbe(OriginProbe originProbe) {
+                this.originProbe = originProbe;
+                return this;
+            }
+
+            /**
+             * <p>The optional saved origin MCP protocol date display metadata in the YYYY-MM-DD format. You can specify this parameter when you create the resource and modify it when you update the resource. If you omit this parameter during an update, the current value is retained. This parameter is used only to save and display information. It does not represent a software version, restrict the external protocol of the gateway, control backend requests, or indicate that real-time verification is passed. If this parameter is omitted during creation and not updated, is missing in history, or is set to HTTP_TO_MCP, null is returned. No default value is provided.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-03-26</p>
+             */
+            public Builder originProtocolVersion(String originProtocolVersion) {
+                this.originProtocolVersion = originProtocolVersion;
+                return this;
+            }
+
+            /**
+             * <p>The access permission mode. PUBLIC indicates public access. CONTROLLED indicates that access is controlled based on permission rules.</p>
              * 
              * <strong>example:</strong>
              * <p>CONTROLLED</p>

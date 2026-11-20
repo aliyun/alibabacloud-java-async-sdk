@@ -269,7 +269,7 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The access control mode. ANONYMOUS indicates anonymous access. CREDENTIAL indicates authentication by using AgentCore credentials.</p>
+             * <p>The access control mode. ANONYMOUS indicates anonymous access, and CREDENTIAL indicates authentication by using AgentCore credentials.</p>
              * 
              * <strong>example:</strong>
              * <p>CREDENTIAL</p>
@@ -494,7 +494,7 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The runtime environment for the code package, such as python3.13, nodejs22, or java17.</p>
+             * <p>The code package runtime. Valid values: python3.13, nodejs22, and java17.</p>
              * 
              * <strong>example:</strong>
              * <p>python3.13</p>
@@ -629,7 +629,7 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the ACR instance.</p>
+             * <p>The ACR instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cri-example</p>
@@ -648,7 +648,7 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The entrypoint arguments for the container.</p>
+             * <p>The container entrypoint arguments.</p>
              */
             public Builder entrypoint(java.util.List<String> entrypoint) {
                 this.entrypoint = entrypoint;
@@ -656,7 +656,7 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the container image.</p>
+             * <p>The container image URL.</p>
              * 
              * <strong>example:</strong>
              * <p>registry.cn-hangzhou.aliyuncs.com/example/mcp:1.0.0</p>
@@ -667,7 +667,7 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the image repository.</p>
+             * <p>The image repository type.</p>
              * 
              * <strong>example:</strong>
              * <p>ACR</p>
@@ -678,7 +678,7 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The MCP runtime mode. Custom containers must currently expose the standard MCP themselves. Set this parameter to SELF_HOSTED.</p>
+             * <p>The MCP runtime mode. Custom containers must expose standard MCP by themselves. Set the value to SELF_HOSTED.</p>
              * 
              * <strong>example:</strong>
              * <p>SELF_HOSTED</p>
@@ -689,7 +689,7 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The container source type. Currently, this parameter is fixed to CONTAINER_IMAGE.</p>
+             * <p>The container source type. Currently fixed to CONTAINER_IMAGE.</p>
              * 
              * <strong>example:</strong>
              * <p>CONTAINER_IMAGE</p>
@@ -838,7 +838,7 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
              * <p>The description of the hook.</p>
              * 
              * <strong>example:</strong>
-             * <p>Records MCP tool calling</p>
+             * <p>Log MCP tool calling</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -873,7 +873,7 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timeout period of the hook, in milliseconds.</p>
+             * <p>The timeout in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>3000</p>
@@ -941,7 +941,7 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ordered list of hooks. The system executes the PRE_LIST_TOOLS, PRE_CALL_TOOL, POST_LIST_TOOLS, and POST_CALL_TOOL hooks in the order of the array.</p>
+             * <p>The ordered list of hooks. The PRE_LIST_TOOLS, PRE_CALL_TOOL, POST_LIST_TOOLS, and POST_CALL_TOOL hooks are executed in the sequence of the array.</p>
              */
             public Builder hooks(java.util.List<Hooks> hooks) {
                 this.hooks = hooks;
@@ -1063,7 +1063,7 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start rule for Function Compute log splitting.</p>
+             * <p>The start rule for splitting Function Compute logs.</p>
              * 
              * <strong>example:</strong>
              * <p>DefaultRegex</p>
@@ -1121,11 +1121,15 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("sessionMaxLifetimeSeconds")
         private Integer sessionMaxLifetimeSeconds;
 
+        @com.aliyun.core.annotation.NameInMap("sessionMode")
+        private String sessionMode;
+
         private McpConfiguration(Builder builder) {
             this.endpointPath = builder.endpointPath;
             this.sessionConcurrencyPerInstance = builder.sessionConcurrencyPerInstance;
             this.sessionIdleTimeoutSeconds = builder.sessionIdleTimeoutSeconds;
             this.sessionMaxLifetimeSeconds = builder.sessionMaxLifetimeSeconds;
+            this.sessionMode = builder.sessionMode;
         }
 
         public static Builder builder() {
@@ -1164,11 +1168,19 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
             return this.sessionMaxLifetimeSeconds;
         }
 
+        /**
+         * @return sessionMode
+         */
+        public String getSessionMode() {
+            return this.sessionMode;
+        }
+
         public static final class Builder {
             private String endpointPath; 
             private Integer sessionConcurrencyPerInstance; 
             private Integer sessionIdleTimeoutSeconds; 
             private Integer sessionMaxLifetimeSeconds; 
+            private String sessionMode; 
 
             private Builder() {
             } 
@@ -1178,6 +1190,7 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
                 this.sessionConcurrencyPerInstance = model.sessionConcurrencyPerInstance;
                 this.sessionIdleTimeoutSeconds = model.sessionIdleTimeoutSeconds;
                 this.sessionMaxLifetimeSeconds = model.sessionMaxLifetimeSeconds;
+                this.sessionMode = model.sessionMode;
             } 
 
             /**
@@ -1192,7 +1205,7 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of concurrent sessions per instance. Currently, this parameter is fixed to 1.</p>
+             * <p>The session concurrency per instance. Currently fixed to 1.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1203,7 +1216,7 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The session idle timeout period. Unit: seconds. Default value: 1800.</p>
+             * <p>The session idle timeout period in seconds. Default value: 1800.</p>
              * 
              * <strong>example:</strong>
              * <p>1800</p>
@@ -1214,13 +1227,24 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum session lifetime. Unit: seconds. Default value: 21600.</p>
+             * <p>The maximum session lifetime in seconds. Default value: 21600.</p>
              * 
              * <strong>example:</strong>
              * <p>21600</p>
              */
             public Builder sessionMaxLifetimeSeconds(Integer sessionMaxLifetimeSeconds) {
                 this.sessionMaxLifetimeSeconds = sessionMaxLifetimeSeconds;
+                return this;
+            }
+
+            /**
+             * <p>The session mode. This parameter applies only to StreamableHTTP. Default value for creation: STATEFUL. If omitted during an update, the original value is retained. STATELESS disables Function Compute session affinity, and the stdio gateway does not enable stateful mode. Native HTTP services must support stateless MCP by themselves.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STATEFUL</p>
+             */
+            public Builder sessionMode(String sessionMode) {
+                this.sessionMode = sessionMode;
                 return this;
             }
 
@@ -1399,7 +1423,7 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The group ID.</p>
+             * <p>The user group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>
@@ -1410,7 +1434,7 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of NAS mount points.</p>
+             * <p>The NAS mount points.</p>
              */
             public Builder mountPoints(java.util.List<MountPoints> mountPoints) {
                 this.mountPoints = mountPoints;
@@ -1536,7 +1560,7 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of vSwitch IDs.</p>
+             * <p>The vSwitch IDs.</p>
              */
             public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -1751,7 +1775,7 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of OSS mount points.</p>
+             * <p>The OSS mount points.</p>
              */
             public Builder mountPoints(java.util.List<OssMountConfigurationMountPoints> mountPoints) {
                 this.mountPoints = mountPoints;
@@ -1839,7 +1863,7 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reserved reference for the parameter transformation and result enhancement rule set.</p>
+             * <p>The reserved reference to the parameter transformation and result enhancement rule set.</p>
              * 
              * <strong>example:</strong>
              * <p>rules-1</p>
@@ -2052,7 +2076,7 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The CPU specifications. Unit: cores. Default value: 0.25.</p>
+             * <p>The CPU specification in cores. Default value: 0.25.</p>
              * 
              * <strong>example:</strong>
              * <p>0.25</p>
@@ -2063,7 +2087,7 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the temporary disk. Unit: MB. Valid values: 512 and 10240.</p>
+             * <p>The ephemeral disk size in MB. Valid values: 512 and 10240.</p>
              * 
              * <strong>example:</strong>
              * <p>512</p>
@@ -2093,7 +2117,7 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of concurrent requests per instance. Default value: 200.</p>
+             * <p>The request concurrency per instance. Default value: 200.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -2104,7 +2128,7 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The memory specifications. Unit: MB. Default value: 512.</p>
+             * <p>The memory specification in MB. Default value: 512.</p>
              * 
              * <strong>example:</strong>
              * <p>512</p>
@@ -2126,7 +2150,7 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The function timeout period. Unit: seconds. Default value: 300.</p>
+             * <p>The function timeout period in seconds. Default value: 300.</p>
              * 
              * <strong>example:</strong>
              * <p>300</p>
@@ -2352,7 +2376,7 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The MCP ingress access control configuration.</p>
+             * <p>The MCP ingress access control.</p>
              */
             public Builder accessControl(AccessControl accessControl) {
                 this.accessControl = accessControl;
@@ -2513,7 +2537,7 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The MCP marketplace template ID.</p>
+             * <p>The ID of the MCP marketplace template.</p>
              * 
              * <strong>example:</strong>
              * <p>market-1</p>
@@ -2666,7 +2690,7 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether an updated template version is available.</p>
+             * <p>Indicates whether a template update is available.</p>
              */
             public Builder updateAvailable(Boolean updateAvailable) {
                 this.updateAvailable = updateAvailable;
@@ -2961,7 +2985,7 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Function Compute function name for the code-deployed MCP.</p>
+             * <p>The name of the Function Compute function for the code-deployed MCP.</p>
              * 
              * <strong>example:</strong>
              * <p>agentcore-mcp-example</p>
@@ -3046,7 +3070,7 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The bound template version and input schema of the MCP.</p>
+             * <p>The template version and input schema bound to the MCP.</p>
              */
             public Builder template(Template template) {
                 this.template = template;
@@ -3054,7 +3078,7 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The MCP type. Valid values: DIRECT_PROXY (direct proxy), HTTP_TO_MCP (HTTP to MCP), and CODE_PACKAGE (code deployment).</p>
+             * <p>The type of the MCP service. Valid values: DIRECT_PROXY (direct proxy), HTTP_TO_MCP (HTTP to MCP), and CODE_PACKAGE (code deployment).</p>
              * 
              * <strong>example:</strong>
              * <p>CODE_PACKAGE</p>
@@ -3065,7 +3089,7 @@ public class InstallMcpMarketItemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the MCP is still subject to the usage constraints of the official template.</p>
+             * <p>Indicates whether the MCP is still subject to the usage constraints of the official template.</p>
              */
             public Builder usageActive(Boolean usageActive) {
                 this.usageActive = usageActive;
