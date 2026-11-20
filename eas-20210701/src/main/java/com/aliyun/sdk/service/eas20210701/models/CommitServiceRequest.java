@@ -73,7 +73,7 @@ public class CommitServiceRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the region where the service is deployed.</p>
+         * <p>The region ID of the service.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -85,7 +85,7 @@ public class CommitServiceRequest extends Request {
         }
 
         /**
-         * <p>The service name. For more information about how to query the service name, see <a href="https://help.aliyun.com/document_detail/412109.html">ListServices</a>.</p>
+         * <p>The name of the service. For more information about how to view the service name, see <a href="https://help.aliyun.com/document_detail/412109.html">ListServices</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>foo</p>

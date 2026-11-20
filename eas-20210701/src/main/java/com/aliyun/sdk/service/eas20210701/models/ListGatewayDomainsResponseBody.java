@@ -80,7 +80,7 @@ public class ListGatewayDomainsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The custom domain names.</p>
+         * <p>The list of custom domain names.</p>
          */
         public Builder customDomains(java.util.List<CustomDomains> customDomains) {
             this.customDomains = customDomains;
@@ -88,7 +88,7 @@ public class ListGatewayDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message that is returned.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>Successfully get custom domains</p>
@@ -99,7 +99,7 @@ public class ListGatewayDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>40325405-579C-4D82****</p>
@@ -259,7 +259,10 @@ public class ListGatewayDomainsResponseBody extends TeaModel {
             } 
 
             /**
-             * CertificateEndDate.
+             * <p>The certificate expiration date in the YYYY-MM-DD format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-10-25</p>
              */
             public Builder certificateEndDate(String certificateEndDate) {
                 this.certificateEndDate = certificateEndDate;
@@ -267,7 +270,7 @@ public class ListGatewayDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the SSL certificate bound to the domain name. Obtain the certificate ID after you upload or purchase a certificate in the <a href="https://yundunnext.console.aliyun.com/?spm=5176.2020520163.console-base_help.2.4b3baJixaJixOc&p=cas">Certificate Management Service</a> console.</p>
+             * <p>The ID of the SSL certificate bound to the domain name. Obtain the certificate ID after uploading or purchasing a certificate in <a href="https://yundunnext.console.aliyun.com/?spm=5176.2020520163.console-base_help.2.4b3baJixaJixOc&p=cas">Certificate Management Service</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>1473**25</p>
@@ -278,7 +281,10 @@ public class ListGatewayDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * CertificateName.
+             * <p>The SSL certificate name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cert-9955038</p>
              */
             public Builder certificateName(String certificateName) {
                 this.certificateName = certificateName;
@@ -286,7 +292,10 @@ public class ListGatewayDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * CertificateStartDate.
+             * <p>The certificate issuance date in the YYYY-MM-DD format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-07-13</p>
              */
             public Builder certificateStartDate(String certificateStartDate) {
                 this.certificateStartDate = certificateStartDate;
@@ -294,7 +303,10 @@ public class ListGatewayDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * CertificateStatus.
+             * <p>The domain name status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Succeeded</p>
              */
             public Builder certificateStatus(String certificateStatus) {
                 this.certificateStatus = certificateStatus;
@@ -302,7 +314,10 @@ public class ListGatewayDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the domain name was created, in UTC and RFC 3339 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-05-19T14:19:42Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -322,11 +337,6 @@ public class ListGatewayDomainsResponseBody extends TeaModel {
 
             /**
              * <p>The domain name type.</p>
-             * <p>Valid value:</p>
-             * <ul>
-             * <li>intranet: internal network.</li>
-             * <li>internet: public network.</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>intranet</p>
@@ -337,7 +347,10 @@ public class ListGatewayDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The time when the domain name was last updated, in UTC and RFC 3339 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-05-19T14:19:42Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

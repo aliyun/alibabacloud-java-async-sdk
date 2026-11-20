@@ -197,7 +197,10 @@ public class ResourceInstanceWorker extends TeaModel {
         } 
 
         /**
-         * CpuLimit.
+         * <p>The CPU core limit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder cpuLimit(Integer cpuLimit) {
             this.cpuLimit = cpuLimit;
@@ -205,7 +208,10 @@ public class ResourceInstanceWorker extends TeaModel {
         }
 
         /**
-         * CpuRequest.
+         * <p>The number of CPU cores requested.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder cpuRequest(Integer cpuRequest) {
             this.cpuRequest = cpuRequest;
@@ -213,7 +219,10 @@ public class ResourceInstanceWorker extends TeaModel {
         }
 
         /**
-         * GpuLimit.
+         * <p>The GPU limit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder gpuLimit(Integer gpuLimit) {
             this.gpuLimit = gpuLimit;
@@ -221,7 +230,10 @@ public class ResourceInstanceWorker extends TeaModel {
         }
 
         /**
-         * GpuRequest.
+         * <p>The number of GPUs requested.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder gpuRequest(Integer gpuRequest) {
             this.gpuRequest = gpuRequest;
@@ -229,7 +241,10 @@ public class ResourceInstanceWorker extends TeaModel {
         }
 
         /**
-         * MemoryLimit.
+         * <p>The memory limit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
          */
         public Builder memoryLimit(Long memoryLimit) {
             this.memoryLimit = memoryLimit;
@@ -237,7 +252,10 @@ public class ResourceInstanceWorker extends TeaModel {
         }
 
         /**
-         * MemoryRquest.
+         * <p>The requested memory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder memoryRquest(Integer memoryRquest) {
             this.memoryRquest = memoryRquest;
@@ -245,7 +263,10 @@ public class ResourceInstanceWorker extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name of the service instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-india-5bbbfdbc98-****</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -253,7 +274,10 @@ public class ResourceInstanceWorker extends TeaModel {
         }
 
         /**
-         * Ready.
+         * <p>Indicates whether the instance is ready.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder ready(Boolean ready) {
             this.ready = ready;
@@ -261,7 +285,10 @@ public class ResourceInstanceWorker extends TeaModel {
         }
 
         /**
-         * RestartCount.
+         * <p>The number of times the instance has been restarted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder restartCount(Long restartCount) {
             this.restartCount = restartCount;
@@ -269,7 +296,10 @@ public class ResourceInstanceWorker extends TeaModel {
         }
 
         /**
-         * ServiceName.
+         * <p>The name of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-in****</p>
          */
         public Builder serviceName(String serviceName) {
             this.serviceName = serviceName;
@@ -277,7 +307,10 @@ public class ResourceInstanceWorker extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The start time of the instance, in UTC (ISO 8601 format).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-05-09T09:56:19Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -285,7 +318,10 @@ public class ResourceInstanceWorker extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.status = status;

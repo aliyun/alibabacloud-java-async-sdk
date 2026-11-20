@@ -86,7 +86,7 @@ public class DescribeServiceEndpointsRequest extends Request {
         }
 
         /**
-         * <p>The service name. For more information about how to obtain the service name, see <a href="https://help.aliyun.com/document_detail/412109.html">ListServices</a>.</p>
+         * <p>The service name. For more information, see <a href="https://help.aliyun.com/document_detail/412109.html">ListServices</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

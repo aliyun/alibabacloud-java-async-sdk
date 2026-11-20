@@ -101,7 +101,10 @@ public class CreateGroupRequest extends Request {
         } 
 
         /**
-         * Labels.
+         * <p>The user-defined labels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:null}</p>
          */
         public Builder labels(java.util.Map<String, String> labels) {
             this.putBodyParameter("Labels", labels);
@@ -110,7 +113,10 @@ public class CreateGroupRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the service group. Only lowercase letters, digits, and underscores are allowed. The format is [a-z0-9_]+.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>foo</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -119,7 +125,7 @@ public class CreateGroupRequest extends Request {
         }
 
         /**
-         * Network.
+         * <p>The VPC configuration.</p>
          */
         public Builder network(Network network) {
             this.putBodyParameter("Network", network);
@@ -128,7 +134,10 @@ public class CreateGroupRequest extends Request {
         }
 
         /**
-         * WorkSpaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12xx34</p>
          */
         public Builder workSpaceId(String workSpaceId) {
             this.putBodyParameter("WorkSpaceId", workSpaceId);
@@ -222,7 +231,10 @@ public class CreateGroupRequest extends Request {
             } 
 
             /**
-             * GatewayId.
+             * <p>The dedicated gateway ID. This parameter is required. If this parameter is not specified, the request fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-248xxxxxxvlkhtbrda</p>
              */
             public Builder gatewayId(String gatewayId) {
                 this.gatewayId = gatewayId;
@@ -230,7 +242,10 @@ public class CreateGroupRequest extends Request {
             }
 
             /**
-             * SecurityGroupId.
+             * <p>The security group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-584xxxxxx7h08llvoww5tv5gl</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -238,7 +253,10 @@ public class CreateGroupRequest extends Request {
             }
 
             /**
-             * VSwitchId.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp1xxxxxxwmssgq28gye8</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -246,7 +264,10 @@ public class CreateGroupRequest extends Request {
             }
 
             /**
-             * VpcId.
+             * <p>The VPC ID. This parameter is required when GatewayId is set to an ALB gateway, and you must specify the VPC ID associated with the gateway. You can call the ListGatewayIntranetLinkedVpc operation to query the association.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1xxxxxx0qrykjr9b</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

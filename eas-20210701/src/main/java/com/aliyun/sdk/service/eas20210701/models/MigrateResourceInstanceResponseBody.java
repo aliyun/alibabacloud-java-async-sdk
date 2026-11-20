@@ -80,7 +80,7 @@ public class MigrateResourceInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The instance IDs.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             this.instanceIds = instanceIds;
@@ -88,7 +88,7 @@ public class MigrateResourceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The message returned in the response.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -99,7 +99,7 @@ public class MigrateResourceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>40325405-579C-4D82***</p>

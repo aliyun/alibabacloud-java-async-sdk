@@ -104,6 +104,7 @@ public class ScaleServiceRequest extends Request {
         } 
 
         /**
+         * <p>The region where the service is located.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,6 +117,7 @@ public class ScaleServiceRequest extends Request {
         }
 
         /**
+         * <p>The name of the service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,6 +130,7 @@ public class ScaleServiceRequest extends Request {
         }
 
         /**
+         * <p>The target instance count for scaling.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,7 +143,7 @@ public class ScaleServiceRequest extends Request {
         }
 
         /**
-         * InstancesToDelete.
+         * <p>The list of instance names to prioritize for deletion during a scale-in operation. Note: This parameter takes effect only during scale-in.</p>
          */
         public Builder instancesToDelete(java.util.List<String> instancesToDelete) {
             this.putBodyParameter("InstancesToDelete", instancesToDelete);

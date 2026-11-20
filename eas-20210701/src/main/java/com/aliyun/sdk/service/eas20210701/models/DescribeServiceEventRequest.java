@@ -159,7 +159,7 @@ public class DescribeServiceEventRequest extends Request {
         } 
 
         /**
-         * <p>The region ID of the service.</p>
+         * <p>The ID of the region where the service is deployed.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -172,7 +172,7 @@ public class DescribeServiceEventRequest extends Request {
         }
 
         /**
-         * <p>The service name. For more information about how to query the service name, see <a href="https://help.aliyun.com/document_detail/412109.html">ListServices</a>.</p>
+         * <p>The name of the service. For information about how to obtain the service name, see <a href="https://help.aliyun.com/document_detail/412109.html">ListServices</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -185,7 +185,7 @@ public class DescribeServiceEventRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. By default, the current point in time is the end of the time range to query.</p>
+         * <p>The end time of the query. The format is YYYY-MM-DD HH:mm:ss. If this parameter is not specified, the current time is used.</p>
          * 
          * <strong>example:</strong>
          * <p>2006-01-02 15:04:05</p>
@@ -199,8 +199,8 @@ public class DescribeServiceEventRequest extends Request {
         /**
          * <p>The event type. Valid values:</p>
          * <ul>
-         * <li>Normal</li>
-         * <li>Warning</li>
+         * <li>Normal: normal events.</li>
+         * <li>Warning: abnormal events.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -213,7 +213,7 @@ public class DescribeServiceEventRequest extends Request {
         }
 
         /**
-         * <p>The instance name. For more information about how to obtain the instance name, see <a href="https://help.aliyun.com/document_detail/412108.html">ListServiceInstances</a>.</p>
+         * <p>The name of the service instance. For information about how to obtain the instance name, see <a href="https://help.aliyun.com/document_detail/412108.html">ListServiceInstances</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>echo-test-784xxxx85d-hhnd8</p>
@@ -225,7 +225,7 @@ public class DescribeServiceEventRequest extends Request {
         }
 
         /**
-         * <p>The page number. Default value: 1.</p>
+         * <p>The page number of the service event list. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -237,7 +237,7 @@ public class DescribeServiceEventRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 100.</p>
+         * <p>The number of events to display per page in a paged query. Default value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -249,7 +249,7 @@ public class DescribeServiceEventRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. The time must be in UTC. The default value is seven days ago.</p>
+         * <p>The start time of the query in UTC. Default value: 7 days ago.</p>
          * 
          * <strong>example:</strong>
          * <p>2006-01-02 15:04:05</p>

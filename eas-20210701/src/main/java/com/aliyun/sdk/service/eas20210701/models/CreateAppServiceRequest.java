@@ -18,6 +18,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateAppServiceRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("QuotaId")
     private String quotaId;
 
@@ -55,6 +63,8 @@ public class CreateAppServiceRequest extends Request {
 
     private CreateAppServiceRequest(Builder builder) {
         super(builder);
+        this.clientToken = builder.clientToken;
+        this.dryRun = builder.dryRun;
         this.quotaId = builder.quotaId;
         this.workspaceId = builder.workspaceId;
         this.appType = builder.appType;
@@ -76,6 +86,20 @@ public class CreateAppServiceRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -135,6 +159,8 @@ public class CreateAppServiceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateAppServiceRequest, Builder> {
+        private String clientToken; 
+        private Boolean dryRun; 
         private String quotaId; 
         private String workspaceId; 
         private String appType; 
@@ -150,6 +176,8 @@ public class CreateAppServiceRequest extends Request {
 
         private Builder(CreateAppServiceRequest request) {
             super(request);
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
             this.quotaId = request.quotaId;
             this.workspaceId = request.workspaceId;
             this.appType = request.appType;
@@ -159,6 +187,34 @@ public class CreateAppServiceRequest extends Request {
             this.serviceName = request.serviceName;
             this.serviceSpec = request.serviceSpec;
         } 
+
+        /**
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5db780a0-9d3e-4f35-a84a-xxxxx</p>
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to perform a dry run on the request. Valid values:</p>
+         * <ul>
+         * <li>true: performs a dry run without performing the actual operation. If the request fails the dry run, an error is returned. If the request passes the dry run, the DryRunOperation error code is returned.</li>
+         * <li>false (default): sends a normal request.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
 
         /**
          * <p>The quota ID.</p>
@@ -176,7 +232,7 @@ public class CreateAppServiceRequest extends Request {
          * <p>The workspace ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>123456</p>
+         * <p>12****</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);
@@ -185,16 +241,7 @@ public class CreateAppServiceRequest extends Request {
         }
 
         /**
-         * <p>The application service type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>LLM</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
+         * <p>The type of the application service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -219,7 +266,10 @@ public class CreateAppServiceRequest extends Request {
         }
 
         /**
-         * <p>The additional configurations that are required for service deployment.</p>
+         * <p>The additional configuration information required for deployment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;ModelStorage&quot;: &quot;oss&quot;, &quot;OssPath&quot;: &quot;oss://examplebucket/xxxx/&quot; }</p>
          */
         public Builder config(java.util.Map<String, ?> config) {
             this.putBodyParameter("Config", config);
@@ -241,7 +291,7 @@ public class CreateAppServiceRequest extends Request {
         }
 
         /**
-         * <p>The service name.</p>
+         * <p>The name of the service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

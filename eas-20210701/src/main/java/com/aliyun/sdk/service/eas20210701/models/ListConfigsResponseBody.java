@@ -132,10 +132,10 @@ public class ListConfigsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>配置项列表</p>
+         * <p>The list of dynamic parameters.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;Key&quot;: &quot;rate_limit&quot;, &quot;Value&quot;: &quot;{&quot;limit&quot;: 100}&quot;, &quot;CreatedAt&quot;: &quot;2024-01-15T10:30:00Z&quot;, &quot;UpdatedAt&quot;: &quot;2024-01-15T10:30:00Z&quot;}]</p>
+         * <p>[{&quot;Key&quot;: &quot;rate_limit&quot;, &quot;Value&quot;: &quot;{\&quot;limit\&quot;: 100}&quot;, &quot;CreatedAt&quot;: &quot;2024-01-15T10:30:00Z&quot;, &quot;UpdatedAt&quot;: &quot;2024-01-15T10:30:00Z&quot;}]</p>
          */
         public Builder configs(java.util.List<Configs> configs) {
             this.configs = configs;
@@ -143,7 +143,7 @@ public class ListConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>是否有更多数据</p>
+         * <p>Indicates whether more data is available.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -154,7 +154,7 @@ public class ListConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>服务名称</p>
+         * <p>The service name.</p>
          * 
          * <strong>example:</strong>
          * <p>my-service</p>
@@ -165,7 +165,7 @@ public class ListConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>当前页码</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -176,7 +176,7 @@ public class ListConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>每页数量</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -187,7 +187,7 @@ public class ListConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>总数量</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>150</p>
@@ -198,7 +198,7 @@ public class ListConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>配置类型</p>
+         * <p>The configuration type.</p>
          * 
          * <strong>example:</strong>
          * <p>Service</p>
@@ -293,7 +293,7 @@ public class ListConfigsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>创建时间</p>
+             * <p>The creation time of the dynamic parameter, in UTC and RFC 3339 format.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-01-01T10:00:00Z</p>
@@ -304,7 +304,7 @@ public class ListConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>配置项键名</p>
+             * <p>The name of the dynamic parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>rate_limit</p>
@@ -315,7 +315,7 @@ public class ListConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>更新时间</p>
+             * <p>The update time of the dynamic parameter, in UTC and RFC 3339 format.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-01-01T10:00:00Z</p>
@@ -326,7 +326,7 @@ public class ListConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>配置值</p>
+             * <p>The value of the dynamic parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

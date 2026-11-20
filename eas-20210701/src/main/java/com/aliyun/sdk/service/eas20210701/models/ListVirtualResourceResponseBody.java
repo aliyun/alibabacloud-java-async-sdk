@@ -106,7 +106,7 @@ public class ListVirtualResourceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the returned virtual resource group list.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -117,7 +117,7 @@ public class ListVirtualResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of virtual resource groups displayed per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -128,7 +128,7 @@ public class ListVirtualResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>40325405-579C-4D82****</p>
@@ -139,7 +139,7 @@ public class ListVirtualResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of virtual resource groups.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -150,7 +150,7 @@ public class ListVirtualResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The virtual resource groups.</p>
+         * <p>The list of virtual resource groups.</p>
          */
         public Builder virtualResources(java.util.List<VirtualResources> virtualResources) {
             this.virtualResources = virtualResources;
@@ -255,7 +255,7 @@ public class ListVirtualResourceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the virtual resource group was created.</p>
+             * <p>The time when the virtual resource group was created, in UTC in RFC 3339 format.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-10-16T17:52:49Z</p>
@@ -277,7 +277,7 @@ public class ListVirtualResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the virtual resource group was last updated.</p>
+             * <p>The time when the virtual resource group was last updated, in UTC in RFC 3339 format.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-10-16T19:52:49Z</p>
@@ -288,7 +288,7 @@ public class ListVirtualResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the virtual resource group.</p>
+             * <p>The virtual resource group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>eas-vr-npovr28onap1xxxxxx</p>
@@ -299,7 +299,7 @@ public class ListVirtualResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the virtual resource group.</p>
+             * <p>The virtual resource group name.</p>
              * 
              * <strong>example:</strong>
              * <p>MyVirtualResource</p>

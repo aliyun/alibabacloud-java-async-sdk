@@ -65,6 +65,10 @@ public class ListGatewayRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    private String workspaceId;
+
     private ListGatewayRequest(Builder builder) {
         super(builder);
         this.chargeType = builder.chargeType;
@@ -79,6 +83,7 @@ public class ListGatewayRequest extends Request {
         this.resourceName = builder.resourceName;
         this.sort = builder.sort;
         this.status = builder.status;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
@@ -178,6 +183,13 @@ public class ListGatewayRequest extends Request {
         return this.status;
     }
 
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
     public static final class Builder extends Request.Builder<ListGatewayRequest, Builder> {
         private String chargeType; 
         private String gatewayId; 
@@ -191,6 +203,7 @@ public class ListGatewayRequest extends Request {
         private String resourceName; 
         private String sort; 
         private String status; 
+        private String workspaceId; 
 
         private Builder() {
             super();
@@ -210,10 +223,14 @@ public class ListGatewayRequest extends Request {
             this.resourceName = request.resourceName;
             this.sort = request.sort;
             this.status = request.status;
+            this.workspaceId = request.workspaceId;
         } 
 
         /**
-         * ChargeType.
+         * <p>The billing method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -222,7 +239,7 @@ public class ListGatewayRequest extends Request {
         }
 
         /**
-         * <p>The private gateway ID. To obtain the private gateway ID, see the private_gateway_id parameter in the response parameters of the ListResources operation.</p>
+         * <p>The ID of the private gateway. To obtain the private gateway ID, see the private_gateway_id field in the response of the ListResources operation.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-1uhcqmsc7x22******</p>
@@ -234,7 +251,7 @@ public class ListGatewayRequest extends Request {
         }
 
         /**
-         * <p>The private gateway alias.</p>
+         * <p>The alias of the private gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>mygateway1</p>
@@ -246,7 +263,10 @@ public class ListGatewayRequest extends Request {
         }
 
         /**
-         * GatewayType.
+         * <p>The type of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Application</p>
          */
         public Builder gatewayType(String gatewayType) {
             this.putQueryParameter("GatewayType", gatewayType);
@@ -255,7 +275,10 @@ public class ListGatewayRequest extends Request {
         }
 
         /**
-         * InternetEnabled.
+         * <p>Specifies whether public network access is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder internetEnabled(Boolean internetEnabled) {
             this.putQueryParameter("InternetEnabled", internetEnabled);
@@ -264,7 +287,10 @@ public class ListGatewayRequest extends Request {
         }
 
         /**
-         * Label.
+         * <p>Filters the results by label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:null}</p>
          */
         public Builder label(java.util.Map<String, String> label) {
             String labelShrink = shrink(label, "Label", "json");
@@ -274,7 +300,10 @@ public class ListGatewayRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sort order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asc</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -283,7 +312,7 @@ public class ListGatewayRequest extends Request {
         }
 
         /**
-         * <p>The page number. Default value: 1.</p>
+         * <p>The page number of the gateway list. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -295,7 +324,7 @@ public class ListGatewayRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 100.</p>
+         * <p>The paging settings for the number of entries to return on each page in a paged query. Default value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -307,7 +336,7 @@ public class ListGatewayRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group. To obtain a resource group ID, see the ResourceId field in the response of the <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a> operation.</p>
+         * <p>The ID of the resource group. To obtain the resource group ID, see the ResourceId field in the response of the <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>eas-r-4gt8twzwllfo******</p>
@@ -319,7 +348,10 @@ public class ListGatewayRequest extends Request {
         }
 
         /**
-         * Sort.
+         * <p>The field used for sorting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateTime</p>
          */
         public Builder sort(String sort) {
             this.putQueryParameter("Sort", sort);
@@ -328,11 +360,26 @@ public class ListGatewayRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
             this.status = status;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.putQueryParameter("WorkspaceId", workspaceId);
+            this.workspaceId = workspaceId;
             return this;
         }
 

@@ -445,7 +445,10 @@ public class Instance extends TeaModel {
         } 
 
         /**
-         * CreateTime.
+         * <p>The creation time of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-05-27T09:46:05Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -453,7 +456,10 @@ public class Instance extends TeaModel {
         }
 
         /**
-         * CurrentAmount.
+         * <p>The current hourly price of the spot instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.444</p>
          */
         public Builder currentAmount(Float currentAmount) {
             this.currentAmount = currentAmount;
@@ -461,7 +467,10 @@ public class Instance extends TeaModel {
         }
 
         /**
-         * Detached.
+         * <p>Indicates whether the instance is removed from active service rotation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder detached(Boolean detached) {
             this.detached = detached;
@@ -469,7 +478,10 @@ public class Instance extends TeaModel {
         }
 
         /**
-         * ExternalIP.
+         * <p>The IP address of the instance in your VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.1.100</p>
          */
         public Builder externalIP(String externalIP) {
             this.externalIP = externalIP;
@@ -477,7 +489,10 @@ public class Instance extends TeaModel {
         }
 
         /**
-         * ExternalInstancePort.
+         * <p>The port number of the instance in your VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
          */
         public Builder externalInstancePort(Integer externalInstancePort) {
             this.externalInstancePort = externalInstancePort;
@@ -485,7 +500,10 @@ public class Instance extends TeaModel {
         }
 
         /**
-         * HostIP.
+         * <p>The IP address of the instance\&quot;s host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11.0.XX.XX</p>
          */
         public Builder hostIP(String hostIP) {
             this.hostIP = hostIP;
@@ -493,7 +511,10 @@ public class Instance extends TeaModel {
         }
 
         /**
-         * HostName.
+         * <p>The name of the instance\&quot;s host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>smart-scene-cls-854dbdc99d-****</p>
          */
         public Builder hostName(String hostName) {
             this.hostName = hostName;
@@ -501,7 +522,10 @@ public class Instance extends TeaModel {
         }
 
         /**
-         * InnerIP.
+         * <p>The internal IP address of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.17.0.17</p>
          */
         public Builder innerIP(String innerIP) {
             this.innerIP = innerIP;
@@ -509,7 +533,10 @@ public class Instance extends TeaModel {
         }
 
         /**
-         * InstanceName.
+         * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>foo-5fc8946767-v****</p>
          */
         public Builder instanceName(String instanceName) {
             this.instanceName = instanceName;
@@ -517,7 +544,10 @@ public class Instance extends TeaModel {
         }
 
         /**
-         * InstancePort.
+         * <p>The network port of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
          */
         public Builder instancePort(Integer instancePort) {
             this.instancePort = instancePort;
@@ -525,7 +555,10 @@ public class Instance extends TeaModel {
         }
 
         /**
-         * InstanceType.
+         * <p>The instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.c7.large</p>
          */
         public Builder instanceType(String instanceType) {
             this.instanceType = instanceType;
@@ -533,7 +566,10 @@ public class Instance extends TeaModel {
         }
 
         /**
-         * IsLatest.
+         * <p>Indicates whether the instance is running the latest version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isLatest(Boolean isLatest) {
             this.isLatest = isLatest;
@@ -541,7 +577,10 @@ public class Instance extends TeaModel {
         }
 
         /**
-         * IsReplica.
+         * <p>Indicates whether the instance is a replica.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isReplica(Boolean isReplica) {
             this.isReplica = isReplica;
@@ -549,7 +588,10 @@ public class Instance extends TeaModel {
         }
 
         /**
-         * IsSpot.
+         * <p>Indicates whether the instance is a spot instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isSpot(Boolean isSpot) {
             this.isSpot = isSpot;
@@ -557,7 +599,10 @@ public class Instance extends TeaModel {
         }
 
         /**
-         * Isolated.
+         * <p>Indicates whether the instance accepts traffic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isolated(Boolean isolated) {
             this.isolated = isolated;
@@ -565,7 +610,7 @@ public class Instance extends TeaModel {
         }
 
         /**
-         * LastState.
+         * <p>The status of the instance when it last exited.</p>
          */
         public Builder lastState(java.util.List<java.util.Map<String, ?>> lastState) {
             this.lastState = lastState;
@@ -573,7 +618,10 @@ public class Instance extends TeaModel {
         }
 
         /**
-         * Namespace.
+         * <p>The namespace of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>foo</p>
          */
         public Builder namespace(String namespace) {
             this.namespace = namespace;
@@ -581,7 +629,10 @@ public class Instance extends TeaModel {
         }
 
         /**
-         * OriginalAmount.
+         * <p>The original price of the spot instance before discounts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.2</p>
          */
         public Builder originalAmount(Float originalAmount) {
             this.originalAmount = originalAmount;
@@ -589,7 +640,10 @@ public class Instance extends TeaModel {
         }
 
         /**
-         * ReadyProcesses.
+         * <p>The number of processes that have started in the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder readyProcesses(Integer readyProcesses) {
             this.readyProcesses = readyProcesses;
@@ -597,7 +651,10 @@ public class Instance extends TeaModel {
         }
 
         /**
-         * Reason.
+         * <p>The identifier for the current status of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
          */
         public Builder reason(String reason) {
             this.reason = reason;
@@ -605,7 +662,10 @@ public class Instance extends TeaModel {
         }
 
         /**
-         * ReplicaName.
+         * <p>The name of the replica.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xwq-sglang-dist-7dff0</p>
          */
         public Builder replicaName(String replicaName) {
             this.replicaName = replicaName;
@@ -613,7 +673,10 @@ public class Instance extends TeaModel {
         }
 
         /**
-         * ResourceType.
+         * <p>The type of the resource group to which the instance belongs. Valid values include PublicResource and PrivateResource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PublicResource</p>
          */
         public Builder resourceType(String resourceType) {
             this.resourceType = resourceType;
@@ -621,7 +684,10 @@ public class Instance extends TeaModel {
         }
 
         /**
-         * RestartCount.
+         * <p>The number of times the instance has been restarted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder restartCount(Integer restartCount) {
             this.restartCount = restartCount;
@@ -629,7 +695,10 @@ public class Instance extends TeaModel {
         }
 
         /**
-         * Role.
+         * <p>The server role of the instance. Valid values include Queue, DataLoader, and Standard.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Standard</p>
          */
         public Builder role(String role) {
             this.role = role;
@@ -637,7 +706,10 @@ public class Instance extends TeaModel {
         }
 
         /**
-         * StartAt.
+         * <p>The start time of the instance. (Deprecated. Use StartTime instead.)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-05-27T09:46:05Z</p>
          */
         public Builder startAt(String startAt) {
             this.startAt = startAt;
@@ -645,7 +717,10 @@ public class Instance extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The start time of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-05-27T09:46:05Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -653,7 +728,10 @@ public class Instance extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -661,7 +739,10 @@ public class Instance extends TeaModel {
         }
 
         /**
-         * TenantHostIP.
+         * <p>The IP address of the host in the dedicated network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.xx.xx</p>
          */
         public Builder tenantHostIP(String tenantHostIP) {
             this.tenantHostIP = tenantHostIP;
@@ -669,7 +750,10 @@ public class Instance extends TeaModel {
         }
 
         /**
-         * TenantInstanceIP.
+         * <p>The IP address of the instance in the dedicated network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.xx.xx</p>
          */
         public Builder tenantInstanceIP(String tenantInstanceIP) {
             this.tenantInstanceIP = tenantInstanceIP;
@@ -677,7 +761,10 @@ public class Instance extends TeaModel {
         }
 
         /**
-         * TotalProcesses.
+         * <p>The total number of processes for the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalProcesses(Integer totalProcesses) {
             this.totalProcesses = totalProcesses;
@@ -685,7 +772,10 @@ public class Instance extends TeaModel {
         }
 
         /**
-         * Zone.
+         * <p>The zone where the instance is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai-a</p>
          */
         public Builder zone(String zone) {
             this.zone = zone;

@@ -106,7 +106,7 @@ public class ListResourceInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The instances.</p>
+         * <p>The list of instances.</p>
          */
         public Builder instances(java.util.List<ResourceInstance> instances) {
             this.instances = instances;
@@ -114,7 +114,7 @@ public class ListResourceInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the returned machine instance list in the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class ListResourceInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of machines returned on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -147,7 +147,7 @@ public class ListResourceInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of instances.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>

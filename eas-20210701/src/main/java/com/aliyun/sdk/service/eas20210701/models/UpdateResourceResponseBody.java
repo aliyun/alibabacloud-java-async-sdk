@@ -80,7 +80,7 @@ public class UpdateResourceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>40325405-579C-4D82****</p>
@@ -94,7 +94,7 @@ public class UpdateResourceResponseBody extends TeaModel {
          * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
-         * <p>eas-r-asdasdasd</p>
+         * <p>eas-r-asdasdasd****</p>
          */
         public Builder resourceId(String resourceId) {
             this.resourceId = resourceId;

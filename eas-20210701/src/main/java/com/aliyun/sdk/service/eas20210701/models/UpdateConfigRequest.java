@@ -115,7 +115,10 @@ public class UpdateConfigRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * <p>The ID of the cluster or region. This parameter is required. Example: cn-hangzhou.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -124,7 +127,10 @@ public class UpdateConfigRequest extends Request {
         }
 
         /**
-         * ConfigType.
+         * <p>The configuration type. This parameter is required. Currently, only service is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>service</p>
          */
         public Builder configType(String configType) {
             this.putPathParameter("ConfigType", configType);
@@ -133,7 +139,10 @@ public class UpdateConfigRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The service name. This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-llm-service</p>
          */
         public Builder name(String name) {
             this.putPathParameter("Name", name);
@@ -142,7 +151,10 @@ public class UpdateConfigRequest extends Request {
         }
 
         /**
-         * ConfigKey.
+         * <p>The name of the dynamic parameter. This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rate_limit</p>
          */
         public Builder configKey(String configKey) {
             this.putPathParameter("ConfigKey", configKey);
@@ -151,7 +163,7 @@ public class UpdateConfigRequest extends Request {
         }
 
         /**
-         * <p>新的配置值</p>
+         * <p>The value of the dynamic parameter. This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>

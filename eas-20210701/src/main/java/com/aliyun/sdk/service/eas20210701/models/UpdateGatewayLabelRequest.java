@@ -90,6 +90,7 @@ public class UpdateGatewayLabelRequest extends Request {
         } 
 
         /**
+         * <p>The region where the gateway is deployed.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class UpdateGatewayLabelRequest extends Request {
         }
 
         /**
+         * <p>The gateway ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +116,11 @@ public class UpdateGatewayLabelRequest extends Request {
         }
 
         /**
+         * <p>The custom gateway tags.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;key&quot;:&quot;value&quot;}</p>
          */
         public Builder labels(java.util.Map<String, String> labels) {
             this.putBodyParameter("Labels", labels);

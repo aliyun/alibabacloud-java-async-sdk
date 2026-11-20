@@ -210,7 +210,10 @@ public class Group extends TeaModel {
         } 
 
         /**
-         * AccessToken.
+         * <p>The access token for the traffic ingress of the service group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MzJiMDI5MDliODc0MTlkYmI0ZDhlYmExYjczYTIyZTE3Zm********</p>
          */
         public Builder accessToken(String accessToken) {
             this.accessToken = accessToken;
@@ -218,7 +221,10 @@ public class Group extends TeaModel {
         }
 
         /**
-         * CallerUid.
+         * <p>The UID of the account that created the service group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20123*******</p>
          */
         public Builder callerUid(String callerUid) {
             this.callerUid = callerUid;
@@ -226,7 +232,10 @@ public class Group extends TeaModel {
         }
 
         /**
-         * ClusterId.
+         * <p>The ID of the cluster where the service group is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -234,7 +243,10 @@ public class Group extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The time when the service group was created. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-05-19T14:19:42Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -242,7 +254,10 @@ public class Group extends TeaModel {
         }
 
         /**
-         * InternetEndpoint.
+         * <p>The public endpoint of the service group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://1110*****.cn-hangzhou.pai-eas.aliyuncs.com/api/predict/test_group">http://1110*****.cn-hangzhou.pai-eas.aliyuncs.com/api/predict/test_group</a></p>
          */
         public Builder internetEndpoint(String internetEndpoint) {
             this.internetEndpoint = internetEndpoint;
@@ -250,7 +265,10 @@ public class Group extends TeaModel {
         }
 
         /**
-         * IntranetEndpoint.
+         * <p>The internal endpoint of the service group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://1110*****.vpc.cn-hangzhou.pai-eas.aliyuncs.com/api/predict/test_group">http://1110*****.vpc.cn-hangzhou.pai-eas.aliyuncs.com/api/predict/test_group</a></p>
          */
         public Builder intranetEndpoint(String intranetEndpoint) {
             this.intranetEndpoint = intranetEndpoint;
@@ -258,7 +276,7 @@ public class Group extends TeaModel {
         }
 
         /**
-         * Labels.
+         * <p>The list of labels for the service group.</p>
          */
         public Builder labels(java.util.List<Labels> labels) {
             this.labels = labels;
@@ -266,7 +284,10 @@ public class Group extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name of the service group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>foo</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -274,7 +295,7 @@ public class Group extends TeaModel {
         }
 
         /**
-         * Network.
+         * <p>The virtual private cloud (VPC) configuration of the service group.</p>
          */
         public Builder network(Network network) {
             this.network = network;
@@ -282,7 +303,10 @@ public class Group extends TeaModel {
         }
 
         /**
-         * ParentUid.
+         * <p>The UID of the parent account that created the service group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11234*******</p>
          */
         public Builder parentUid(String parentUid) {
             this.parentUid = parentUid;
@@ -290,7 +314,10 @@ public class Group extends TeaModel {
         }
 
         /**
-         * QueueService.
+         * <p>The queue services included in the service group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qservice</p>
          */
         public Builder queueService(String queueService) {
             this.queueService = queueService;
@@ -298,7 +325,10 @@ public class Group extends TeaModel {
         }
 
         /**
-         * TrafficMode.
+         * <p>The traffic mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>auto</p>
          */
         public Builder trafficMode(String trafficMode) {
             this.trafficMode = trafficMode;
@@ -306,7 +336,10 @@ public class Group extends TeaModel {
         }
 
         /**
-         * UpdateTime.
+         * <p>The time when the service group was updated. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-29T11:13:20Z</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
@@ -372,7 +405,10 @@ public class Group extends TeaModel {
             } 
 
             /**
-             * LabelKey.
+             * <p>The label key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key1</p>
              */
             public Builder labelKey(String labelKey) {
                 this.labelKey = labelKey;
@@ -380,7 +416,10 @@ public class Group extends TeaModel {
             }
 
             /**
-             * LabelValue.
+             * <p>The label value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder labelValue(String labelValue) {
                 this.labelValue = labelValue;
@@ -473,7 +512,10 @@ public class Group extends TeaModel {
             } 
 
             /**
-             * GatewayId.
+             * <p>The dedicated gateway ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-248xxxxxxvlkhtbrda</p>
              */
             public Builder gatewayId(String gatewayId) {
                 this.gatewayId = gatewayId;
@@ -481,7 +523,10 @@ public class Group extends TeaModel {
             }
 
             /**
-             * SecurityGroupId.
+             * <p>The security group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-584xxxxxx7h08llvoww5tv5gl</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -489,7 +534,10 @@ public class Group extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp1xxxxxxwmssgq28gye8</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -497,7 +545,10 @@ public class Group extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1xxxxxx0qrykjr9b</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

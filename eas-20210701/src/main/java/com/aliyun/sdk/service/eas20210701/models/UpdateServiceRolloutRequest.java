@@ -117,6 +117,13 @@ public class UpdateServiceRolloutRequest extends Request {
         } 
 
         /**
+         * <p><strong>ClusterId</strong>  </p>
+         * <ul>
+         * <li>Type: string</li>
+         * <li>Required: yes</li>
+         * <li>Description: The region ID. The identifier of the region where the service is located.</li>
+         * <li>Example: cn-shanghai</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +136,13 @@ public class UpdateServiceRolloutRequest extends Request {
         }
 
         /**
+         * <p><strong>ServiceName</strong>  </p>
+         * <ul>
+         * <li>Type: string</li>
+         * <li>Required: yes</li>
+         * <li>Description: The service name. The name of the service whose rollout policy is to be updated.</li>
+         * <li>Example: my-service</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,7 +155,12 @@ public class UpdateServiceRolloutRequest extends Request {
         }
 
         /**
-         * Batch.
+         * <p><strong>Batch</strong>  </p>
+         * <ul>
+         * <li>Type: object</li>
+         * <li>Required: no</li>
+         * <li>Description: The batch rollout configuration. Used to adjust batch policy parameters. Mutually exclusive with Partition.</li>
+         * </ul>
          */
         public Builder batch(Batch batch) {
             this.putBodyParameter("Batch", batch);
@@ -150,7 +169,12 @@ public class UpdateServiceRolloutRequest extends Request {
         }
 
         /**
-         * Partition.
+         * <p><strong>Partition</strong>  </p>
+         * <ul>
+         * <li>Type: object</li>
+         * <li>Required: no</li>
+         * <li>Description: The partition rollout configuration. Used to adjust partition policy parameters. Mutually exclusive with Batch.</li>
+         * </ul>
          */
         public Builder partition(Partition partition) {
             this.putBodyParameter("Partition", partition);
@@ -159,7 +183,10 @@ public class UpdateServiceRolloutRequest extends Request {
         }
 
         /**
-         * Paused.
+         * <p>Specifies whether to pause the rollout. A value of true indicates that the rollout is paused. A value of false indicates that the rollout is resumed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder paused(Boolean paused) {
             this.putBodyParameter("Paused", paused);
@@ -227,7 +254,10 @@ public class UpdateServiceRolloutRequest extends Request {
             } 
 
             /**
-             * BatchSize.
+             * <p>The batch size. The number of replicas updated per batch. Integer or percentage formats are supported. Default value: &quot;25%&quot;.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25%</p>
              */
             public Builder batchSize(String batchSize) {
                 this.batchSize = batchSize;
@@ -235,7 +265,10 @@ public class UpdateServiceRolloutRequest extends Request {
             }
 
             /**
-             * Interval.
+             * <p>The batch interval. The wait time between two rollouts. Supported units: s (seconds), m (minutes), and h (hours).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60s</p>
              */
             public Builder interval(String interval) {
                 this.interval = interval;
@@ -289,7 +322,26 @@ public class UpdateServiceRolloutRequest extends Request {
             } 
 
             /**
-             * Partition.
+             * <p><strong>Partition</strong>  </p>
+             * <ul>
+             * <li>Type: string</li>
+             * <li>Required: yes</li>
+             * <li>Description: The partition value. Two formats are supported:<ol>
+             * <li>Integer format: such as &quot;5&quot;, which means retaining 5 old replicas.</li>
+             * <li>Percentage format: such as &quot;50%&quot;, which means retaining 50% of the old replicas.
+             * Adjustment policy:</li>
+             * </ol>
+             * <ul>
+             * <li>Increase the value: Roll back to the old version and increase the proportion of old replicas.</li>
+             * <li>Decrease the value: Proceed to the new version and decrease the proportion of old replicas.</li>
+             * <li>Set to &quot;0%&quot;: Complete the full update and switch all replicas to the new version.</li>
+             * </ul>
+             * </li>
+             * <li>Example: 30%</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>30%</p>
              */
             public Builder partition(String partition) {
                 this.partition = partition;

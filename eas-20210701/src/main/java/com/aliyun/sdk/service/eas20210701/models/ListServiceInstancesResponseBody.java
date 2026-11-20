@@ -106,7 +106,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The instances.</p>
+         * <p>The list of service instances.</p>
          */
         public Builder instances(java.util.List<Instance> instances) {
             this.instances = instances;
@@ -114,7 +114,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the returned page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries returned per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -147,7 +147,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of instances.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

@@ -134,7 +134,7 @@ public class UpdateResourceInstanceRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the region to which the instance belongs.</p>
+         * <p>The region ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -147,11 +147,11 @@ public class UpdateResourceInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the instance belongs. For more information about how to query the ID of a resource group, see <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a>.</p>
+         * <p>The ID of the resource group to which the instance belongs. For information about how to query the resource group ID, see <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>eas-r-asdasdasd</p>
+         * <p>eas-r-asdas****</p>
          */
         public Builder resourceId(String resourceId) {
             this.putPathParameter("ResourceId", resourceId);
@@ -160,11 +160,11 @@ public class UpdateResourceInstanceRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. For more information about how to query the instance ID, see <a href="https://help.aliyun.com/document_detail/412129.html">ListResourceInstances</a>.</p>
+         * <p>The ID of the instance. For information about how to obtain the instance ID, see <a href="https://help.aliyun.com/document_detail/412129.html">ListResourceInstances</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>eas-i-asdasdasd</p>
+         * <p>eas-i-asdas****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -173,11 +173,11 @@ public class UpdateResourceInstanceRequest extends Request {
         }
 
         /**
-         * <p>The operation that updates the scheduling state of the instance in a dedicated resource group. Valid values:</p>
+         * <p>Updates the schedulable behavior of the machine instance in the dedicated resource group. Valid values:</p>
          * <ul>
-         * <li>Uncordon: allows scheduling the service to this instance.</li>
-         * <li>Cordon: prohibits scheduling the service to this instance.</li>
-         * <li>Drain: evicts the service that has been scheduled to this instance.</li>
+         * <li>Uncordon: Allows services to be scheduled to this instance.</li>
+         * <li>Cordon: Prevents services from being scheduled to this instance.</li>
+         * <li>Drain: Evicts service instances that are already scheduled to this instance.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -191,7 +191,10 @@ public class UpdateResourceInstanceRequest extends Request {
         }
 
         /**
-         * NewDiskSize.
+         * <p>The size of the system cloud disk after scaling, in GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder newDiskSize(String newDiskSize) {
             this.putBodyParameter("NewDiskSize", newDiskSize);
@@ -200,7 +203,10 @@ public class UpdateResourceInstanceRequest extends Request {
         }
 
         /**
-         * Reason.
+         * <p>Takes effect when Action is set to Cordon or Drain. Records the reason for the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Node maintenance</p>
          */
         public Builder reason(String reason) {
             this.putBodyParameter("Reason", reason);

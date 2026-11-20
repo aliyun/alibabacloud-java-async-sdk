@@ -131,11 +131,11 @@ public class CreateGatewayIntranetLinkedVpcRequest extends Request {
         } 
 
         /**
-         * <p>The region ID of the private gateway.</p>
+         * <p>The region of the private gateway.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
+         * <p>cn-wulanchabu</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -144,7 +144,7 @@ public class CreateGatewayIntranetLinkedVpcRequest extends Request {
         }
 
         /**
-         * <p>The private gateway ID.</p>
+         * <p>The ID of the private gateway. To obtain the private gateway ID, refer to the private_gateway_id field in the response of the <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,7 +157,10 @@ public class CreateGatewayIntranetLinkedVpcRequest extends Request {
         }
 
         /**
-         * AccountId.
+         * <p>The Alibaba Cloud account ID to which the VPC belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19*****10</p>
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -166,7 +169,10 @@ public class CreateGatewayIntranetLinkedVpcRequest extends Request {
         }
 
         /**
-         * EnableAuthoritativeDns.
+         * <p>Specifies whether to enable authoritative DNS resolution. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableAuthoritativeDns(Boolean enableAuthoritativeDns) {
             this.putQueryParameter("EnableAuthoritativeDns", enableAuthoritativeDns);
@@ -175,7 +181,7 @@ public class CreateGatewayIntranetLinkedVpcRequest extends Request {
         }
 
         /**
-         * <p>The vSwitch ID.</p>
+         * <p>The ID of the vSwitch. To obtain the vSwitch ID, refer to <a href="https://help.aliyun.com/document_detail/448581.html">DescribeVpcs</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-8vbqn2at0kljjxxxx****</p>
@@ -187,7 +193,7 @@ public class CreateGatewayIntranetLinkedVpcRequest extends Request {
         }
 
         /**
-         * <p>The virtual private cloud (VPC) ID.</p>
+         * <p>The ID of the VPC. To obtain the VPC ID, refer to <a href="https://help.aliyun.com/document_detail/448581.html">DescribeVpcs</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-uf66uio7md****</p>

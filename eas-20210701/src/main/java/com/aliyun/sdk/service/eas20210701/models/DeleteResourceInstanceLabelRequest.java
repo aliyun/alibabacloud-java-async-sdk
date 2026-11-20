@@ -145,7 +145,7 @@ public class DeleteResourceInstanceLabelRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID. For more information about how to obtain the resource group ID, see <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a>.</p>
+         * <p>The ID of the resource group. To query the resource group ID, see <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,7 +158,7 @@ public class DeleteResourceInstanceLabelRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the delete operation takes effect on all instances in the resource group. If you set this parameter to true, the InstanceIds parameter does not take effect.</p>
+         * <p>Specifies whether the operation applies to all instances in the resource group. If this parameter is set to true, the InstanceIds parameter does not take effect.</p>
          */
         public Builder allInstances(Boolean allInstances) {
             this.putQueryParameter("AllInstances", allInstances);
@@ -177,7 +177,7 @@ public class DeleteResourceInstanceLabelRequest extends Request {
         }
 
         /**
-         * <p>The keys of the tags that you want to delete.</p>
+         * <p><strong>[Deprecated]</strong> The tags to delete. Use LabelKeys instead.</p>
          */
         public Builder keys(java.util.List<String> keys) {
             String keysShrink = shrink(keys, "Keys", "simple");
@@ -187,7 +187,7 @@ public class DeleteResourceInstanceLabelRequest extends Request {
         }
 
         /**
-         * LabelKeys.
+         * <p>The tags to delete.</p>
          */
         public Builder labelKeys(java.util.List<String> labelKeys) {
             String labelKeysShrink = shrink(labelKeys, "LabelKeys", "json");

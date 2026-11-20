@@ -67,7 +67,15 @@ public class UpdateServiceRolloutResponseBody extends TeaModel {
         } 
 
         /**
-         * Message.
+         * <p>The response message. Describes the request processing result. Valid values:</p>
+         * <ul>
+         * <li>&quot;Rollout updated successfully&quot;: The policy is updated successfully.</li>
+         * <li>&quot;Rollout paused successfully&quot;: The rollout is paused successfully.</li>
+         * <li>&quot;Rollout resumed successfully&quot;: The rollout is resumed successfully.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Rollout updated successfully</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -75,7 +83,10 @@ public class UpdateServiceRolloutResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. The unique identifier returned for each request, used for troubleshooting and tracking.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40325405-579C-4D82****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

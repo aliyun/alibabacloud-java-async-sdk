@@ -104,7 +104,7 @@ public class CreateAclPolicyRequest extends Request {
         } 
 
         /**
-         * <p>The region ID of the private gateway.</p>
+         * <p>The region where the private gateway is located.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,7 +117,7 @@ public class CreateAclPolicyRequest extends Request {
         }
 
         /**
-         * <p>The private gateway ID. To obtain the private gateway ID, see the private_gateway_id parameter in the response parameters of the ListResources operation.</p>
+         * <p>The ID of the private gateway. For more information about how to obtain the private gateway ID, see the private_gateway_id field in the response of the ListResources operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +130,7 @@ public class CreateAclPolicyRequest extends Request {
         }
 
         /**
-         * <p>The whitelisted IP CIDR blocks in the VPC that can access the private gateway.</p>
+         * <p>The whitelist of IP address segments that are allowed to access the VPC.</p>
          * <p>This parameter is required.</p>
          */
         public Builder aclPolicyList(java.util.List<AclPolicyList> aclPolicyList) {
@@ -213,7 +213,7 @@ public class CreateAclPolicyRequest extends Request {
             } 
 
             /**
-             * <p>The comment on the IP CIDR block in the VPC that can access the private gateway.</p>
+             * <p>The description of the IP address segment that is allowed to access the VPC.</p>
              * 
              * <strong>example:</strong>
              * <p>default</p>
@@ -224,7 +224,7 @@ public class CreateAclPolicyRequest extends Request {
             }
 
             /**
-             * <p>The IP CIDR block in the VPC that can access the private gateway.</p>
+             * <p>The IP address segment that is allowed to access the VPC.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

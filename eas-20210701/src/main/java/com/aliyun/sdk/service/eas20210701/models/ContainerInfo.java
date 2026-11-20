@@ -184,7 +184,10 @@ public class ContainerInfo extends TeaModel {
         } 
 
         /**
-         * CurrentReaon.
+         * <p>The reason for the current status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PodInitializing</p>
          */
         public Builder currentReaon(String currentReaon) {
             this.currentReaon = currentReaon;
@@ -192,7 +195,15 @@ public class ContainerInfo extends TeaModel {
         }
 
         /**
-         * CurrentStatus.
+         * <p>The current status. Valid values:</p>
+         * <ul>
+         * <li>Waiting: waiting</li>
+         * <li>Running: running</li>
+         * <li>Terminated: terminated.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Waiting</p>
          */
         public Builder currentStatus(String currentStatus) {
             this.currentStatus = currentStatus;
@@ -200,7 +211,10 @@ public class ContainerInfo extends TeaModel {
         }
 
         /**
-         * CurrentTimestamp.
+         * <p>The time when the current status occurred.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-03-21T06:17:57Z</p>
          */
         public Builder currentTimestamp(String currentTimestamp) {
             this.currentTimestamp = currentTimestamp;
@@ -208,7 +222,10 @@ public class ContainerInfo extends TeaModel {
         }
 
         /**
-         * Image.
+         * <p>The image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registry.cn-shanghai.aliyuncs.com/eas/echo_cn-shanghai:v0.0.1-20210129111320</p>
          */
         public Builder image(String image) {
             this.image = image;
@@ -216,7 +233,10 @@ public class ContainerInfo extends TeaModel {
         }
 
         /**
-         * LastReason.
+         * <p>The reason for the previous status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Error</p>
          */
         public Builder lastReason(String lastReason) {
             this.lastReason = lastReason;
@@ -224,7 +244,15 @@ public class ContainerInfo extends TeaModel {
         }
 
         /**
-         * LastStatus.
+         * <p>The previous status. Valid values:</p>
+         * <ul>
+         * <li>Waiting: waiting</li>
+         * <li>Running: running</li>
+         * <li>Terminated: terminated.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Terminated</p>
          */
         public Builder lastStatus(String lastStatus) {
             this.lastStatus = lastStatus;
@@ -232,7 +260,10 @@ public class ContainerInfo extends TeaModel {
         }
 
         /**
-         * LastTimestamp.
+         * <p>The time when the previous status occurred.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-03-21T05:17:57Z</p>
          */
         public Builder lastTimestamp(String lastTimestamp) {
             this.lastTimestamp = lastTimestamp;
@@ -240,7 +271,10 @@ public class ContainerInfo extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The container name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>worker0</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -248,7 +282,10 @@ public class ContainerInfo extends TeaModel {
         }
 
         /**
-         * Port.
+         * <p>The port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
          */
         public Builder port(Integer port) {
             this.port = port;
@@ -256,7 +293,10 @@ public class ContainerInfo extends TeaModel {
         }
 
         /**
-         * Ready.
+         * <p>Indicates whether the health check is passed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder ready(Boolean ready) {
             this.ready = ready;
@@ -264,7 +304,10 @@ public class ContainerInfo extends TeaModel {
         }
 
         /**
-         * RestartCount.
+         * <p>The number of restarts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder restartCount(Integer restartCount) {
             this.restartCount = restartCount;

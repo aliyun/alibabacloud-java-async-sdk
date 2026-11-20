@@ -67,10 +67,10 @@ public class UpdateServiceMirrorResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
-         * <p>Traffic mirroring is updating for service [foo] in region [cn-shanghia], ratio [70%]</p>
+         * <p>Traffic mirroring is updating for service [foo] in region [cn-shanghai], ratio [70%]</p>
          */
         public Builder message(String message) {
             this.message = message;

@@ -71,6 +71,9 @@ public class DescribeGatewayResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("UpdateTime")
     private String updateTime;
 
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    private String workspaceId;
+
     private DescribeGatewayResponseBody(Builder builder) {
         this.chargeType = builder.chargeType;
         this.createTime = builder.createTime;
@@ -90,6 +93,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
         this.SSLRedirectionEnabled = builder.SSLRedirectionEnabled;
         this.status = builder.status;
         this.updateTime = builder.updateTime;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
@@ -230,6 +234,13 @@ public class DescribeGatewayResponseBody extends TeaModel {
         return this.updateTime;
     }
 
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
     public static final class Builder {
         private String chargeType; 
         private String createTime; 
@@ -249,6 +260,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
         private Boolean SSLRedirectionEnabled; 
         private String status; 
         private String updateTime; 
+        private String workspaceId; 
 
         private Builder() {
         } 
@@ -272,10 +284,14 @@ public class DescribeGatewayResponseBody extends TeaModel {
             this.SSLRedirectionEnabled = model.SSLRedirectionEnabled;
             this.status = model.status;
             this.updateTime = model.updateTime;
+            this.workspaceId = model.workspaceId;
         } 
 
         /**
-         * ChargeType.
+         * <p>The billing method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
          */
         public Builder chargeType(String chargeType) {
             this.chargeType = chargeType;
@@ -328,16 +344,9 @@ public class DescribeGatewayResponseBody extends TeaModel {
 
         /**
          * <p>The instance type used by the private gateway.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>8c16g</li>
-         * <li>4c8g</li>
-         * <li>2c4g</li>
-         * <li>16c32g</li>
-         * </ul>
          * 
          * <strong>example:</strong>
-         * <p>ecs.c6.4xlarge</p>
+         * <p>2c4g</p>
          */
         public Builder instanceType(String instanceType) {
             this.instanceType = instanceType;
@@ -345,10 +354,10 @@ public class DescribeGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The public endpoint.</p>
+         * <p>The domain name for public network access.</p>
          * 
          * <strong>example:</strong>
-         * <p>gw-1uhcqmsc7x22******-1801786532******.cn-hangzhou.pai-eas.aliyuncs.com</p>
+         * <p>gw-1uhcqmsc7x22******-1801786532******.cn-wulanchabu.pai-eas.aliyuncs.com</p>
          */
         public Builder internetDomain(String internetDomain) {
             this.internetDomain = internetDomain;
@@ -356,7 +365,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether Internet access is enabled.</p>
+         * <p>Indicates whether public network access is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -367,15 +376,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether Internet access is enabled.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Creating: Internet access is being enabled.</li>
-         * <li>Failed: Internet access failed to be enabled or deleted.</li>
-         * <li>Running: Internet access is running.</li>
-         * <li>Deleted: Internet access is deleted.</li>
-         * <li>Deleting: Internet access is being deleted.</li>
-         * </ul>
+         * <p>The status of public network access.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -386,10 +387,10 @@ public class DescribeGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The internal endpoint.</p>
+         * <p>The domain name for internal network access.</p>
          * 
          * <strong>example:</strong>
-         * <p>gw-1uhcqmsc7x22******-1801786532******-vpc.cn-hangzhou.pai-eas.aliyuncs.com</p>
+         * <p>gw-1uhcqmsc7x22******-1801786532******-vpc.cn-wulanchabu.pai-eas.aliyuncs.com</p>
          */
         public Builder intranetDomain(String intranetDomain) {
             this.intranetDomain = intranetDomain;
@@ -397,7 +398,10 @@ public class DescribeGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * IntranetEnabled.
+         * <p>Indicates whether internal network access is enabled. A value of true indicates that internal network access is enabled. A value of false indicates that internal network access is disabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder intranetEnabled(Boolean intranetEnabled) {
             this.intranetEnabled = intranetEnabled;
@@ -405,7 +409,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether it is the default private gateway.</p>
+         * <p>Indicates whether the private gateway is the default private gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -416,7 +420,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * Labels.
+         * <p>The list of gateway labels.</p>
          */
         public Builder labels(java.util.List<Labels> labels) {
             this.labels = labels;
@@ -446,7 +450,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the HTTP to HTTPS redirection is enabled.</p>
+         * <p>Indicates whether HTTP redirection to HTTPS is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -458,19 +462,9 @@ public class DescribeGatewayResponseBody extends TeaModel {
 
         /**
          * <p>The status of the private gateway.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Creating</li>
-         * <li>Stopped</li>
-         * <li>Failed</li>
-         * <li>Running</li>
-         * <li>Deleted</li>
-         * <li>Deleting</li>
-         * <li>Waiting</li>
-         * </ul>
          * 
          * <strong>example:</strong>
-         * <p>PrivateGatewayRunning</p>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -485,6 +479,17 @@ public class DescribeGatewayResponseBody extends TeaModel {
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
+            return this;
+        }
+
+        /**
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.workspaceId = workspaceId;
             return this;
         }
 
@@ -547,7 +552,10 @@ public class DescribeGatewayResponseBody extends TeaModel {
             } 
 
             /**
-             * LabelKey.
+             * <p>The key of the gateway label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key1</p>
              */
             public Builder labelKey(String labelKey) {
                 this.labelKey = labelKey;
@@ -555,7 +563,10 @@ public class DescribeGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * LabelValue.
+             * <p>The value of the gateway label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder labelValue(String labelValue) {
                 this.labelValue = labelValue;

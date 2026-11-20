@@ -75,6 +75,13 @@ public class DeleteServiceRolloutRequest extends Request {
         } 
 
         /**
+         * <p><strong>ClusterId</strong>  </p>
+         * <ul>
+         * <li>Type: <code>string</code>  </li>
+         * <li>Required: Yes  </li>
+         * <li>Description: The region ID. The identifier of the region where the service is located.  </li>
+         * <li>Example: <code>cn-shanghai</code></li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +94,13 @@ public class DeleteServiceRolloutRequest extends Request {
         }
 
         /**
+         * <p><strong>ServiceName</strong>  </p>
+         * <ul>
+         * <li>Type: <code>string</code>  </li>
+         * <li>Required: Yes  </li>
+         * <li>Description: The service name. The name of the service whose release policy is to be deleted.  </li>
+         * <li>Example: <code>my-service</code></li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

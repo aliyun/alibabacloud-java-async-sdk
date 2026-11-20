@@ -67,7 +67,15 @@ public class DeleteServiceRolloutResponseBody extends TeaModel {
         } 
 
         /**
-         * Message.
+         * <p><strong>Message</strong>  </p>
+         * <ul>
+         * <li>Type: <code>string</code>  </li>
+         * <li>Description: The returned message. Describes the request processing result.  </li>
+         * <li>Example: <code>Rollout deleted successfully</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Rollout deleted successfully</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -75,7 +83,15 @@ public class DeleteServiceRolloutResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p><strong>RequestId</strong>  </p>
+         * <ul>
+         * <li>Type: <code>string</code>  </li>
+         * <li>Description: The request ID. The unique identifier returned for each request, used for troubleshooting and tracking.  </li>
+         * <li>Example: <code>40325405-579C-4D82-9B4F-8A7C6D5E4F3A</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>40325405-579C-4D82****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

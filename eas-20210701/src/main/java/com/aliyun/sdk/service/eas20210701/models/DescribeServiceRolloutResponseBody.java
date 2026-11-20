@@ -67,7 +67,10 @@ public class DescribeServiceRolloutResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID. The unique identifier returned for each request, used for troubleshooting and tracking.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40325405-579C-4D82****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class DescribeServiceRolloutResponseBody extends TeaModel {
         }
 
         /**
-         * Rollout.
+         * <p>The rollout information. Includes the strategy configuration and execution status.</p>
          */
         public Builder rollout(Rollout rollout) {
             this.rollout = rollout;
@@ -193,7 +196,10 @@ public class DescribeServiceRolloutResponseBody extends TeaModel {
             } 
 
             /**
-             * CurrentRevision.
+             * <p>The current revision. The identifier of the version that is currently running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>service-abc123-v1</p>
              */
             public Builder currentRevision(String currentRevision) {
                 this.currentRevision = currentRevision;
@@ -201,7 +207,10 @@ public class DescribeServiceRolloutResponseBody extends TeaModel {
             }
 
             /**
-             * NextBatchStartTime.
+             * <p>The start time of the next batch update, in the YYYY/MM/DD HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026/05/08 16:10:56</p>
              */
             public Builder nextBatchStartTime(String nextBatchStartTime) {
                 this.nextBatchStartTime = nextBatchStartTime;
@@ -209,7 +218,17 @@ public class DescribeServiceRolloutResponseBody extends TeaModel {
             }
 
             /**
-             * Phase.
+             * <p>The rollout phase. Valid values:</p>
+             * <ul>
+             * <li>Pending: The rollout is waiting to start.</li>
+             * <li>Running: The rollout is in progress.</li>
+             * <li>Paused: The rollout is paused.</li>
+             * <li>Completed: The rollout is completed.</li>
+             * <li>Failed: The rollout failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder phase(String phase) {
                 this.phase = phase;
@@ -217,7 +236,10 @@ public class DescribeServiceRolloutResponseBody extends TeaModel {
             }
 
             /**
-             * TotalReplicas.
+             * <p>The total number of replicas. The total number of replicas for the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalReplicas(Integer totalReplicas) {
                 this.totalReplicas = totalReplicas;
@@ -225,7 +247,10 @@ public class DescribeServiceRolloutResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateRevision.
+             * <p>The update revision. The identifier of the target version to which the service is being updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>service-abc123-v2</p>
              */
             public Builder updateRevision(String updateRevision) {
                 this.updateRevision = updateRevision;
@@ -233,7 +258,10 @@ public class DescribeServiceRolloutResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedReplicas.
+             * <p>The number of updated replicas. The number of replicas that have been updated to the new version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder updatedReplicas(Integer updatedReplicas) {
                 this.updatedReplicas = updatedReplicas;
@@ -300,7 +328,10 @@ public class DescribeServiceRolloutResponseBody extends TeaModel {
             } 
 
             /**
-             * BatchSize.
+             * <p>The batch size. The number or percentage of replicas to update in each batch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder batchSize(String batchSize) {
                 this.batchSize = batchSize;
@@ -308,7 +339,10 @@ public class DescribeServiceRolloutResponseBody extends TeaModel {
             }
 
             /**
-             * Interval.
+             * <p>The batch interval. The waiting time between two rollouts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5m</p>
              */
             public Builder interval(String interval) {
                 this.interval = interval;
@@ -362,7 +396,10 @@ public class DescribeServiceRolloutResponseBody extends TeaModel {
             } 
 
             /**
-             * Partition.
+             * <p>The partition value. Indicates the number or percentage of old replicas to retain. For example, \&quot;50%\&quot; indicates that 50% of the old replicas are retained.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50%</p>
              */
             public Builder partition(String partition) {
                 this.partition = partition;
@@ -429,7 +466,7 @@ public class DescribeServiceRolloutResponseBody extends TeaModel {
             } 
 
             /**
-             * Batch.
+             * <p>The batch rollout configuration. This parameter is returned if a batch rollout strategy is used. Otherwise, it is not returned.</p>
              */
             public Builder batch(Batch batch) {
                 this.batch = batch;
@@ -437,7 +474,7 @@ public class DescribeServiceRolloutResponseBody extends TeaModel {
             }
 
             /**
-             * Partition.
+             * <p>The partition rollout configuration. This parameter is returned if a partition rollout strategy is used. Otherwise, it is not returned.</p>
              */
             public Builder partition(Partition partition) {
                 this.partition = partition;
@@ -504,7 +541,7 @@ public class DescribeServiceRolloutResponseBody extends TeaModel {
             } 
 
             /**
-             * Status.
+             * <p>The rollout execution status. Includes the current rollout progress and phase information.</p>
              */
             public Builder status(Status status) {
                 this.status = status;
@@ -512,7 +549,7 @@ public class DescribeServiceRolloutResponseBody extends TeaModel {
             }
 
             /**
-             * Strategy.
+             * <p>The rollout strategy configuration. Includes the specific configuration parameters for partition or batch rollouts.</p>
              */
             public Builder strategy(Strategy strategy) {
                 this.strategy = strategy;

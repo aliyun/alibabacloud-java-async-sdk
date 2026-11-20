@@ -131,7 +131,7 @@ public class DeleteServiceInstancesRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the region where the service is deployed.</p>
+         * <p>The region where the service is located.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,7 +144,7 @@ public class DeleteServiceInstancesRequest extends Request {
         }
 
         /**
-         * <p>The service name. For more information about how to query the service name, see <a href="https://help.aliyun.com/document_detail/412109.html">ListServices</a>.</p>
+         * <p>The name of the service. For more information, see <a href="https://help.aliyun.com/document_detail/412109.html">ListServices</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,7 +157,7 @@ public class DeleteServiceInstancesRequest extends Request {
         }
 
         /**
-         * <p>The name of the container whose process needs to be restarted. This parameter takes effect only if the SoftRestart parameter is set to true.</p>
+         * <p>The name of the container in which to restart the process. This parameter is valid only when \<code>SoftRestart\\</code> is set to \<code>true\\</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>worker0</p>
@@ -169,7 +169,7 @@ public class DeleteServiceInstancesRequest extends Request {
         }
 
         /**
-         * <p>The instances that you want to restart. Separate multiple instance names with commas (,). For more information about how to query the instance name, see <a href="https://help.aliyun.com/document_detail/412108.html">ListServiceInstances</a>.</p>
+         * <p>The instances to restart. Separate multiple instance names with a comma (,). For more information, see <a href="https://help.aliyun.com/document_detail/412108.html">ListServiceInstances</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>foo-rdsbxxxx,foo-rdsaxxxx</p>
@@ -181,7 +181,10 @@ public class DeleteServiceInstancesRequest extends Request {
         }
 
         /**
-         * IsReplica.
+         * <p>Specifies whether the instance is a replica.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isReplica(Boolean isReplica) {
             this.putQueryParameter("IsReplica", isReplica);
@@ -190,7 +193,7 @@ public class DeleteServiceInstancesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to restart only the container process without recreating the instance. Default value: false. Valid values: true and false.</p>
+         * <p>Specifies whether to restart only the container process without rebuilding the instance. The default value is false.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

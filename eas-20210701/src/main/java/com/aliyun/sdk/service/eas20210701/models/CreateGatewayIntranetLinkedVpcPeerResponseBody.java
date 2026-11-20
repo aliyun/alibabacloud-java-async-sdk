@@ -91,7 +91,7 @@ public class CreateGatewayIntranetLinkedVpcPeerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message that is returned.</p>
+         * <p>The message returned in the response.</p>
          * 
          * <strong>example:</strong>
          * <p>Successfully add intranet linked vpc Peer for gateway</p>
@@ -102,7 +102,7 @@ public class CreateGatewayIntranetLinkedVpcPeerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>40325405-579C-4D82****</p>

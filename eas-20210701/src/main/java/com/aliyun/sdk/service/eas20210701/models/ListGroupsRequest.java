@@ -157,7 +157,7 @@ public class ListGroupsRequest extends Request {
         } 
 
         /**
-         * <p>The name of the filter that is used to filter out unwanted service groups. Fuzzy match is supported.</p>
+         * <p>The name filter. Fuzzy match is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>foo</p>
@@ -169,7 +169,10 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * Labels.
+         * <p>The custom labels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:null}</p>
          */
         public Builder labels(java.util.Map<String, String> labels) {
             String labelsShrink = shrink(labels, "Labels", "json");
@@ -179,7 +182,10 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sort order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -188,7 +194,7 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * <p>The page number. Default value: 1.</p>
+         * <p>The current page number of the service group list. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -200,7 +206,7 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 100.</p>
+         * <p>The Settings for the number of service groups to return on each page during paging in a paged query. Default value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -212,7 +218,10 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * Sort.
+         * <p>The sort field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateTime</p>
          */
         public Builder sort(String sort) {
             this.putQueryParameter("Sort", sort);
@@ -221,7 +230,10 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * TrafficMode.
+         * <p>The traffic distribution mode filter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>auto</p>
          */
         public Builder trafficMode(String trafficMode) {
             this.putQueryParameter("TrafficMode", trafficMode);

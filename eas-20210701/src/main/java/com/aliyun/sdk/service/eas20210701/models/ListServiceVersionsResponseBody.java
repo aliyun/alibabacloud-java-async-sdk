@@ -106,7 +106,7 @@ public class ListServiceVersionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The page number.</p>
+         * <p>The current page number of the returned historical versions.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -117,7 +117,7 @@ public class ListServiceVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of historical versions returned on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -139,7 +139,7 @@ public class ListServiceVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of versions.</p>
          * 
          * <strong>example:</strong>
          * <p>166</p>
@@ -150,7 +150,7 @@ public class ListServiceVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The historical versions of the service.</p>
+         * <p>The list of versions.</p>
          */
         public Builder versions(java.util.List<Versions> versions) {
             this.versions = versions;
@@ -182,6 +182,9 @@ public class ListServiceVersionsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
+        @com.aliyun.core.annotation.NameInMap("Remark")
+        private String remark;
+
         @com.aliyun.core.annotation.NameInMap("ServiceConfig")
         private String serviceConfig;
 
@@ -193,6 +196,7 @@ public class ListServiceVersionsResponseBody extends TeaModel {
             this.imageAvailable = builder.imageAvailable;
             this.imageId = builder.imageId;
             this.message = builder.message;
+            this.remark = builder.remark;
             this.serviceConfig = builder.serviceConfig;
             this.serviceRunnable = builder.serviceRunnable;
         }
@@ -234,6 +238,13 @@ public class ListServiceVersionsResponseBody extends TeaModel {
         }
 
         /**
+         * @return remark
+         */
+        public String getRemark() {
+            return this.remark;
+        }
+
+        /**
          * @return serviceConfig
          */
         public String getServiceConfig() {
@@ -252,6 +263,7 @@ public class ListServiceVersionsResponseBody extends TeaModel {
             private String imageAvailable; 
             private Integer imageId; 
             private String message; 
+            private String remark; 
             private String serviceConfig; 
             private String serviceRunnable; 
 
@@ -263,12 +275,13 @@ public class ListServiceVersionsResponseBody extends TeaModel {
                 this.imageAvailable = model.imageAvailable;
                 this.imageId = model.imageId;
                 this.message = model.message;
+                this.remark = model.remark;
                 this.serviceConfig = model.serviceConfig;
                 this.serviceRunnable = model.serviceRunnable;
             } 
 
             /**
-             * <p>The time when the service version was created. The time is displayed in UTC.</p>
+             * <p>The UTC time when the version was created.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-08-29T22:02:14Z</p>
@@ -279,11 +292,11 @@ public class ListServiceVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the image is available. Valid values:</p>
+             * <p>The availability of the image. Valid values:</p>
              * <ul>
-             * <li>true: The image is available.</li>
-             * <li>false: The image is unavailable.</li>
-             * <li>unknown: The availability of the image is unknown.</li>
+             * <li>true: Available.</li>
+             * <li>false: Unavailable.</li>
+             * <li>unknown: Unknown.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -306,7 +319,7 @@ public class ListServiceVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The returned message.</p>
+             * <p>The summary of the service.</p>
              * 
              * <strong>example:</strong>
              * <p>Service is Running</p>
@@ -317,7 +330,18 @@ public class ListServiceVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service deployment configurations. This parameter is returned only if the service is deployed by using a custom image.</p>
+             * <p>The remarks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>new version.</p>
+             */
+            public Builder remark(String remark) {
+                this.remark = remark;
+                return this;
+            }
+
+            /**
+             * <p>The deployment configuration of the service. This field is returned only for custom image deployments.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -335,11 +359,11 @@ public class ListServiceVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether Elastic Algorithm service (EAS) is activated. Valid values:</p>
+             * <p>Indicates whether the EAS service is enabled. Valid values:</p>
              * <ul>
-             * <li>true: EAS is activated.</li>
-             * <li>false: EAS is not activated.</li>
-             * <li>unknown: The activation of EAS is unknown.</li>
+             * <li>true: Enabled.</li>
+             * <li>false: Disabled.</li>
+             * <li>unknown: Unknown.</li>
              * </ul>
              * 
              * <strong>example:</strong>

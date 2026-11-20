@@ -53,6 +53,10 @@ public class CreateGatewayRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Replicas")
     private Integer replicas;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    private String workspaceId;
+
     private CreateGatewayRequest(Builder builder) {
         super(builder);
         this.resourceName = builder.resourceName;
@@ -64,6 +68,7 @@ public class CreateGatewayRequest extends Request {
         this.instanceType = builder.instanceType;
         this.name = builder.name;
         this.replicas = builder.replicas;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
@@ -142,6 +147,13 @@ public class CreateGatewayRequest extends Request {
         return this.replicas;
     }
 
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
     public static final class Builder extends Request.Builder<CreateGatewayRequest, Builder> {
         private String resourceName; 
         private Boolean autoRenewal; 
@@ -152,6 +164,7 @@ public class CreateGatewayRequest extends Request {
         private String instanceType; 
         private String name; 
         private Integer replicas; 
+        private String workspaceId; 
 
         private Builder() {
             super();
@@ -168,10 +181,11 @@ public class CreateGatewayRequest extends Request {
             this.instanceType = request.instanceType;
             this.name = request.name;
             this.replicas = request.replicas;
+            this.workspaceId = request.workspaceId;
         } 
 
         /**
-         * <p>The resource group ID. To obtain a resource group ID, see the ResourceId field in the response of the <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a> operation.</p>
+         * <p>The name of the resource group. For more information, see the ResourceName field returned by the <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a> operation when ResourceType is set to SelfManaged.</p>
          * 
          * <strong>example:</strong>
          * <p>eas-r-4gt8twzwllfo******</p>
@@ -185,8 +199,8 @@ public class CreateGatewayRequest extends Request {
         /**
          * <p>Specifies whether to enable auto-renewal. Valid values:</p>
          * <ul>
-         * <li>false (default)</li>
-         * <li>true</li>
+         * <li>false: Disables auto-renewal. This is the default value.</li>
+         * <li>true: Enables auto-renewal.</li>
          * </ul>
          */
         public Builder autoRenewal(Boolean autoRenewal) {
@@ -198,8 +212,8 @@ public class CreateGatewayRequest extends Request {
         /**
          * <p>The billing method. Valid values:</p>
          * <ul>
-         * <li>PrePaid: subscription.</li>
-         * <li>PostPaid: pay-as-you-go.</li>
+         * <li>PrePaid: Subscription.</li>
+         * <li>PostPaid: Pay-as-you-go.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -212,12 +226,7 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable Internet access. Default value: false.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
+         * <p>Specifies whether to enable public network access. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -229,12 +238,7 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable private access. Default value: true.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
+         * <p>Specifies whether to enable internal network access. Default value: true.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -246,7 +250,10 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
-         * GatewayType.
+         * <p>The type of the private gateway. A value of ALB indicates an application-type dedicated gateway. A value of FullyManaged indicates a fully managed dedicated gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALB</p>
          */
         public Builder gatewayType(String gatewayType) {
             this.putBodyParameter("GatewayType", gatewayType);
@@ -264,7 +271,7 @@ public class CreateGatewayRequest extends Request {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>ecs.c6.4xlarge</p>
+         * <p>2c4g</p>
          */
         public Builder instanceType(String instanceType) {
             this.putBodyParameter("InstanceType", instanceType);
@@ -293,6 +300,18 @@ public class CreateGatewayRequest extends Request {
         public Builder replicas(Integer replicas) {
             this.putBodyParameter("Replicas", replicas);
             this.replicas = replicas;
+            return this;
+        }
+
+        /**
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.putBodyParameter("WorkspaceId", workspaceId);
+            this.workspaceId = workspaceId;
             return this;
         }
 

@@ -67,7 +67,7 @@ public class ListTenantAddonsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the plug-in.</p>
+         * <p>The plugin information.</p>
          */
         public Builder addons(java.util.List<Addons> addons) {
             this.addons = addons;
@@ -144,7 +144,14 @@ public class ListTenantAddonsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The attributes of the plug-in.</p>
+             * <p>The plugin attributes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *  &quot;AccessToken&quot;:&quot;ld***.eY***.&quot;,
+             *  &quot;InternetEndpoint&quot;: &quot;<strong><strong>.com/prometheus&quot;,
+             *  &quot;IntranetEndpoint&quot;: &quot;</strong></strong>.vpc.com/prometheus&quot;
+             * }</p>
              */
             public Builder attributes(java.util.Map<String, String> attributes) {
                 this.attributes = attributes;
@@ -152,7 +159,7 @@ public class ListTenantAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the plug-in.</p>
+             * <p>The plugin name.</p>
              * 
              * <strong>example:</strong>
              * <p>prometheus_discovery</p>

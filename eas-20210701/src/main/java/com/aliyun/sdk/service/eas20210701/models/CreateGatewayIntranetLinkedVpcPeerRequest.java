@@ -101,7 +101,7 @@ public class CreateGatewayIntranetLinkedVpcPeerRequest extends Request {
         } 
 
         /**
-         * <p>The region where the private gateway resides.</p>
+         * <p>The region of the private gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-wulanchabu</p>
@@ -113,7 +113,7 @@ public class CreateGatewayIntranetLinkedVpcPeerRequest extends Request {
         }
 
         /**
-         * <p>The ID of the private gateway. To obtain the private gateway ID, see <a href="https://help.aliyun.com/document_detail/2841911.html">ListGateway</a>.</p>
+         * <p>The ID of the private gateway. For information about how to obtain the private gateway ID, see <a href="https://help.aliyun.com/document_detail/2841911.html">ListGateway</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-1uhcqmsc7x22******</p>
@@ -125,7 +125,7 @@ public class CreateGatewayIntranetLinkedVpcPeerRequest extends Request {
         }
 
         /**
-         * <p>The list of VPC peers.</p>
+         * <p>The list of peered VPCs.</p>
          */
         public Builder peerVpcs(java.util.List<PeerVpcs> peerVpcs) {
             String peerVpcsShrink = shrink(peerVpcs, "PeerVpcs", "json");
@@ -135,7 +135,7 @@ public class CreateGatewayIntranetLinkedVpcPeerRequest extends Request {
         }
 
         /**
-         * <p>The VPC ID. To obtain the VPC ID, see <a href="https://help.aliyun.com/document_detail/2621223.html">ListGatewayIntranetLinkedVpc</a>.</p>
+         * <p>The ID of the VPC. For information about how to obtain the VPC ID, see <a href="https://help.aliyun.com/document_detail/2621223.html">ListGatewayIntranetLinkedVpc</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-2zetuli9ws0qgjd******</p>
@@ -206,7 +206,7 @@ public class CreateGatewayIntranetLinkedVpcPeerRequest extends Request {
             } 
 
             /**
-             * <p>The region where the VPC peer resides.</p>
+             * <p>The region where the peered VPC resides.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-shanghai</p>
@@ -217,7 +217,7 @@ public class CreateGatewayIntranetLinkedVpcPeerRequest extends Request {
             }
 
             /**
-             * <p>The ID of the VPC peer. To obtain the VPC ID, see <a href="https://help.aliyun.com/document_detail/35739.html">DescribeVpcs</a>.</p>
+             * <p>The ID of the peered VPC. For information about how to obtain the VPC ID, see <a href="https://help.aliyun.com/document_detail/35739.html">DescribeVpcs</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-uf66uio7md****</p>

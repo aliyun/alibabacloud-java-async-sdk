@@ -154,7 +154,7 @@ public class CreateAppServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The region ID of the service.</p>
+         * <p>The region where the service is deployed.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -187,7 +187,7 @@ public class CreateAppServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The service name.</p>
+         * <p>The name of the service.</p>
          * 
          * <strong>example:</strong>
          * <p>foo</p>
@@ -198,7 +198,7 @@ public class CreateAppServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The service state.</p>
+         * <p>The status of the service.</p>
          * 
          * <strong>example:</strong>
          * <p>Creating</p>

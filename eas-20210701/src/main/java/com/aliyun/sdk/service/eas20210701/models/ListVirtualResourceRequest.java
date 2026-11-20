@@ -129,7 +129,14 @@ public class ListVirtualResourceRequest extends Request {
         } 
 
         /**
-         * Order.
+         * <p>The sort order. Valid values:</p>
+         * <ul>
+         * <li>Desc: descending order.</li>
+         * <li>Asc: ascending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Desc</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -138,7 +145,7 @@ public class ListVirtualResourceRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * <p>The page number of the virtual resource group list. Minimum value: 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -150,7 +157,7 @@ public class ListVirtualResourceRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 100.</p>
+         * <p>The number of virtual resource groups to display per page in a paged query. Default value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -162,7 +169,10 @@ public class ListVirtualResourceRequest extends Request {
         }
 
         /**
-         * Sort.
+         * <p>The sort field. Results are sorted by timestamp in descending order by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateTime</p>
          */
         public Builder sort(String sort) {
             this.putQueryParameter("Sort", sort);
@@ -171,7 +181,7 @@ public class ListVirtualResourceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the virtual resource group.</p>
+         * <p>The virtual resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>eas-vr-npovr28onap1xxxxxx</p>
@@ -183,7 +193,7 @@ public class ListVirtualResourceRequest extends Request {
         }
 
         /**
-         * <p>The name of the virtual resource group.</p>
+         * <p>The virtual resource group name.</p>
          * 
          * <strong>example:</strong>
          * <p>MyVirtualResource</p>

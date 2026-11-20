@@ -118,6 +118,7 @@ public class CreateServiceInstanceTokenRequest extends Request {
         } 
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,6 +131,7 @@ public class CreateServiceInstanceTokenRequest extends Request {
         }
 
         /**
+         * <p>The service name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,6 +144,7 @@ public class CreateServiceInstanceTokenRequest extends Request {
         }
 
         /**
+         * <p>The name of the service instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,7 +157,14 @@ public class CreateServiceInstanceTokenRequest extends Request {
         }
 
         /**
-         * ActionType.
+         * <p>The type of URL to retrieve. Valid values:</p>
+         * <ul>
+         * <li><strong>WorkBench</strong>: Logs on to the container through the Workbench page.</li>
+         * <li><strong>WebShell</strong>: Logs on to the container through a WebSocket URL. This value is not supported for processor-type services or services created before June 2026.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>WorkBench</p>
          */
         public Builder actionType(String actionType) {
             this.putQueryParameter("ActionType", actionType);
@@ -163,7 +173,10 @@ public class CreateServiceInstanceTokenRequest extends Request {
         }
 
         /**
-         * WorkerName.
+         * <p>The name of the service worker. You can call the ListServiceContainers operation to obtain the worker name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>worker0</p>
          */
         public Builder workerName(String workerName) {
             this.putQueryParameter("WorkerName", workerName);

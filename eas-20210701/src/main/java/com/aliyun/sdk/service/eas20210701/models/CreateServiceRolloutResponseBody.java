@@ -67,7 +67,10 @@ public class CreateServiceRolloutResponseBody extends TeaModel {
         } 
 
         /**
-         * Message.
+         * <p>The response message that describes the result of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Rollout created successfully</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -75,7 +78,10 @@ public class CreateServiceRolloutResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. It is a unique identifier returned for each request and is used for troubleshooting and tracking.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40325405-579C-4D82****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -106,7 +106,7 @@ public class ListBenchmarkTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the returned stress testing task list.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -117,7 +117,7 @@ public class ListBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of stress testing tasks returned on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -139,7 +139,7 @@ public class ListBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The stress testing tasks.</p>
+         * <p>The list of tasks.</p>
          */
         public Builder tasks(java.util.List<Tasks> tasks) {
             this.tasks = tasks;
@@ -147,10 +147,10 @@ public class ListBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of tasks queried.</p>
          * 
          * <strong>example:</strong>
-         * <p>2</p>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -307,7 +307,7 @@ public class ListBenchmarkTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of instances that are available for stress testing.</p>
+             * <p>The number of available stress testing instances.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -318,10 +318,10 @@ public class ListBenchmarkTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the stress testing task was created.</p>
+             * <p>The time when the stress testing task was created. The time is in UTC and follows the RFC3339 format.</p>
              * 
              * <strong>example:</strong>
-             * <p>2020-12-04T02:43:15Z</p>
+             * <p>2020-02-04T02:43:15Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -329,7 +329,7 @@ public class ListBenchmarkTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The returned message.</p>
+             * <p>The summary information of the service.</p>
              * 
              * <strong>example:</strong>
              * <p>Benchmark task [benchmark-larec-test-1076] is Running</p>
@@ -340,7 +340,7 @@ public class ListBenchmarkTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the stress testing task.</p>
+             * <p>The region where the stress testing task is located.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-shanghai</p>
@@ -351,7 +351,7 @@ public class ListBenchmarkTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the service on which you want to perform a stress testing.</p>
+             * <p>The name of the service to be stress tested.</p>
              * 
              * <strong>example:</strong>
              * <p>test_quota</p>
@@ -362,72 +362,7 @@ public class ListBenchmarkTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the stress testing task.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li><p>Creating</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>Starting</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>DeleteFailed</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>Running</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>Stopping</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>Error</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>Updating</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>Deleting</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>CreateFailed</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- --></li>
-             * </ul>
+             * <p>The status of the stress testing task.</p>
              * 
              * <strong>example:</strong>
              * <p>Running</p>
@@ -460,7 +395,7 @@ public class ListBenchmarkTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the stress testing task was updated.</p>
+             * <p>The time when the stress testing task was updated. The time is in UTC and follows the RFC3339 format.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-06-24T03:11:30Z</p>

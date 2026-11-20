@@ -67,10 +67,10 @@ public class CreateResourceLogResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned message.</p>
+         * <p>The operation result message.</p>
          * 
          * <strong>example:</strong>
-         * <p>Resource [eas-r-asdasdasd] is deleted.</p>
+         * <p>Resource [eas-r-asdasdasd****] is deleted.</p>
          */
         public Builder message(String message) {
             this.message = message;

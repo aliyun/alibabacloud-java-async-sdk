@@ -106,7 +106,7 @@ public class ListResourceInstanceWorkerResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The page number.</p>
+         * <p>The returned page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -117,7 +117,7 @@ public class ListResourceInstanceWorkerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries returned per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -128,7 +128,7 @@ public class ListResourceInstanceWorkerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The workers.</p>
+         * <p>The list of workers.</p>
          */
         public Builder pods(java.util.List<ResourceInstanceWorker> pods) {
             this.pods = pods;
@@ -147,7 +147,7 @@ public class ListResourceInstanceWorkerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of workers.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

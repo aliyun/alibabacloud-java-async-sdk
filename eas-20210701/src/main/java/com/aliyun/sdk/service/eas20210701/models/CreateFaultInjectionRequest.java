@@ -118,6 +118,7 @@ public class CreateFaultInjectionRequest extends Request {
         } 
 
         /**
+         * <p>The region of the private gateway.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,6 +131,7 @@ public class CreateFaultInjectionRequest extends Request {
         }
 
         /**
+         * <p>The service name. For more information about how to view the service name, see <a href="https://help.aliyun.com/document_detail/412109.html">ListServices</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,6 +144,7 @@ public class CreateFaultInjectionRequest extends Request {
         }
 
         /**
+         * <p>The name of the service instance. For more information about how to view the instance name, see <a href="https://help.aliyun.com/document_detail/412108.html">ListServiceInstances</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,7 +157,33 @@ public class CreateFaultInjectionRequest extends Request {
         }
 
         /**
-         * FaultArgs.
+         * <p>Detailed parameters for each fault type:</p>
+         * <ol>
+         * <li>CpuFullloadTask (CPU full-load fault)
+         * <code>{   &quot;FaultType&quot;: &quot;CpuFullloadTask&quot;,   &quot;FaultArgs&quot;: {  &quot;FaultAction&quot;: &quot;fullload&quot;,  &quot;CpuPercent&quot;: 50   } }</code></li>
+         * <li>MemLoadTask (Memory load fault)
+         * <code>{   &quot;FaultType&quot;: &quot;MemLoadTask&quot;,   &quot;FaultArgs&quot;: {  &quot;FaultAction&quot;: &quot;load&quot;,  &quot;MemPercent&quot;: 80   } }</code></li>
+         * <li>NetworkTask (Network fault)
+         * 3.a. NetworkDelayAction (Network delay)
+         * <code>{   &quot;FaultType&quot;: &quot;NetworkTask&quot;,   &quot;FaultArgs&quot;: {  &quot;FaultAction&quot;: &quot;delay&quot;,  &quot;Time&quot;: 3000,  &quot;Offset&quot;: 100   } }</code>
+         * 3.b. NetworkCorruptAction (Network packet corruption)
+         * <code>{   &quot;FaultType&quot;: &quot;NetworkTask&quot;,   &quot;FaultArgs&quot;: {  &quot;FaultAction&quot;: &quot;corrupt&quot;,  &quot;Percent&quot;: 50   } }</code>
+         * 3.c. NetworkLossAction (Network packet loss)
+         * <code>{   &quot;FaultType&quot;: &quot;NetworkTask&quot;,   &quot;FaultArgs&quot;: {  &quot;FaultAction&quot;: &quot;loss&quot;,  &quot;Percent&quot;: 30   } }</code></li>
+         * <li>DiskBurnTask (Disk read/write fault)
+         * <code>{   &quot;FaultType&quot;: &quot;DiskBurnTask&quot;,   &quot;FaultArgs&quot;: {  &quot;FaultAction&quot;: &quot;burn&quot;,  &quot;Read&quot;: true,  &quot;Write&quot;: true,  &quot;Size&quot;: 100   } }</code></li>
+         * <li>DiskFillTask (Disk fill fault)
+         * <code>{   &quot;FaultType&quot;: &quot;DiskFillTask&quot;,   &quot;FaultArgs&quot;: {  &quot;FaultAction&quot;: &quot;fill&quot;,  &quot;Percent&quot;: 80   } }</code></li>
+         * </ol>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;FaultType&quot;: &quot;DiskFillTask&quot;,
+         *   &quot;FaultArgs&quot;: {
+         *     &quot;FaultAction&quot;: &quot;fill&quot;,
+         *     &quot;Percent&quot;: 80
+         *   }
+         * }</p>
          */
         public Builder faultArgs(Object faultArgs) {
             this.putBodyParameter("FaultArgs", faultArgs);
@@ -163,7 +192,10 @@ public class CreateFaultInjectionRequest extends Request {
         }
 
         /**
-         * FaultType.
+         * <p>The fault type. Device faults include CPU full load, memory load, network fault, disk read/write hang, and disk fill.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CpuFullloadTask</p>
          */
         public Builder faultType(String faultType) {
             this.putBodyParameter("FaultType", faultType);

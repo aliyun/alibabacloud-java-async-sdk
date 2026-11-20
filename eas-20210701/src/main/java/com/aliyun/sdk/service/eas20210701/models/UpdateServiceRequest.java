@@ -28,6 +28,14 @@ public class UpdateServiceRequest extends Request {
     private String serviceName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MemberToUpdate")
     private String memberToUpdate;
 
@@ -43,6 +51,8 @@ public class UpdateServiceRequest extends Request {
         super(builder);
         this.clusterId = builder.clusterId;
         this.serviceName = builder.serviceName;
+        this.clientToken = builder.clientToken;
+        this.dryRun = builder.dryRun;
         this.memberToUpdate = builder.memberToUpdate;
         this.updateType = builder.updateType;
         this.body = builder.body;
@@ -76,6 +86,20 @@ public class UpdateServiceRequest extends Request {
     }
 
     /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    /**
      * @return memberToUpdate
      */
     public String getMemberToUpdate() {
@@ -99,6 +123,8 @@ public class UpdateServiceRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateServiceRequest, Builder> {
         private String clusterId; 
         private String serviceName; 
+        private String clientToken; 
+        private Boolean dryRun; 
         private String memberToUpdate; 
         private String updateType; 
         private String body; 
@@ -111,6 +137,8 @@ public class UpdateServiceRequest extends Request {
             super(request);
             this.clusterId = request.clusterId;
             this.serviceName = request.serviceName;
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
             this.memberToUpdate = request.memberToUpdate;
             this.updateType = request.updateType;
             this.body = request.body;
@@ -130,7 +158,7 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
-         * <p>The service name. For more information about how to query the service name, see <a href="https://help.aliyun.com/document_detail/412109.html">ListServices</a>.</p>
+         * <p>The name of the service. For more information about how to view the service name, see <a href="https://help.aliyun.com/document_detail/412109.html">ListServices</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,7 +171,40 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
-         * MemberToUpdate.
+         * <p>The client token used to ensure the idempotence of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5db780a0-9d3e-4f35-a84a-xxxxx</p>
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to only precheck the request.</p>
+         * <ul>
+         * <li><p>true: sends a precheck request without performing the actual operation. If the precheck fails, the corresponding error is returned. If the precheck succeeds, the error code DryRunOperation is returned.</p>
+         * </li>
+         * <li><p>false: sends a normal request. This is the default value.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * <p>The type of the child service to update. Note: This parameter takes effect only for aggregated services.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LLMPrefill</p>
          */
         public Builder memberToUpdate(String memberToUpdate) {
             this.putQueryParameter("MemberToUpdate", memberToUpdate);
@@ -152,10 +213,12 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
-         * <p>The type of the service update. Valid values: merge and replace. By default, merge is used if you do not specify this parameter.</p>
+         * <p>The update type of the service. Both merge and replace modes are supported. If this parameter is not specified, the merge mode is used by default.</p>
          * <ul>
-         * <li>merge: If the JSON string configured for the existing service is <code>{&quot;a&quot;:&quot;b&quot;}</code> and the JSON string specified in the body parameter is <code>{&quot;c&quot;:&quot;d&quot;}</code>, the JSON string is <code>{&quot;a&quot;:&quot;b&quot;,&quot;c&quot;:&quot;d&quot;}</code> after the service update.</li>
-         * <li>replace: If the JSON string configured for the existing service is <code>{&quot;a&quot;:&quot;b&quot;}</code> and the JSON string specified in the body parameter is <code>{&quot;c&quot;:&quot;d&quot;}</code>, the JSON string is <code>{&quot;c&quot;:&quot;d&quot;}</code> after the service update.</li>
+         * <li>merge: the merge mode. If the original service configuration JSON is
+         * <code>{&quot;a&quot;:&quot;b&quot;}</code> and the updated configuration is <code>{&quot;c&quot;:&quot;d&quot;}</code>, the final configuration in merge mode is <code>{&quot;a&quot;:&quot;b&quot;,&quot;c&quot;:&quot;d&quot;}</code>.</li>
+         * <li>replace: the replace mode. If the original service configuration JSON is
+         * <code>{&quot;a&quot;:&quot;b&quot;}</code> and the updated configuration is <code>{&quot;c&quot;:&quot;d&quot;}</code>, the final configuration in replace mode is <code>{&quot;c&quot;:&quot;d&quot;}</code>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -168,10 +231,19 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
-         * <p>The request body. The body includes the request parameters that you want to update. For more information about the request parameters, see <a href="https://help.aliyun.com/document_detail/412086.html">CreateService</a>.</p>
+         * <p>The updated configuration. For more information about parameter settings, see <a href="https://help.aliyun.com/document_detail/412086.html">CreateService</a>.</p>
          * 
          * <strong>example:</strong>
-         * <p>{   &quot;name&quot;: &quot;foo&quot;,   &quot;model_path&quot;: &quot;<a href="http://path/to/model.tar.gz">http://path/to/model.tar.gz</a>&quot;,   &quot;processor&quot;: &quot;tensorflow_cpu&quot;,   &quot;metadata&quot;: {     &quot;instance&quot;: 2,     &quot;memory&quot;: 7000,     &quot;cpu&quot;: 4   } }</p>
+         * <p>{
+         *       &quot;name&quot;: &quot;foo&quot;,
+         *       &quot;model_path&quot;: &quot;<a href="http://path/to/model.tar.gz">http://path/to/model.tar.gz</a>&quot;,
+         *       &quot;processor&quot;: &quot;tensorflow_cpu&quot;,
+         *       &quot;metadata&quot;: {
+         *             &quot;instance&quot;: 2,
+         *             &quot;memory&quot;: 7000,
+         *             &quot;cpu&quot;: 4
+         *       }
+         * }</p>
          */
         public Builder body(String body) {
             this.putBodyParameter("body", body);

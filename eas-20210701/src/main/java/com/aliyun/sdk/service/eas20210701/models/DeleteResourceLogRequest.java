@@ -75,7 +75,7 @@ public class DeleteResourceLogRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the region to which the resource group belongs.</p>
+         * <p>The ID of the region where the resource group resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,11 +88,11 @@ public class DeleteResourceLogRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group. For more information about how to query the ID of a resource group, see <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a>.</p>
+         * <p>The ID of the resource group. Before calling this operation, ensure that log delivery is enabled for the resource group. You can call the DescribeResourceLog operation to query the log status. A Status value of Ready indicates that log delivery is enabled. For more information about how to query the resource group ID, see <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>eas-r-asdasdasd</p>
+         * <p>eas-r-asdas****</p>
          */
         public Builder resourceId(String resourceId) {
             this.putPathParameter("ResourceId", resourceId);

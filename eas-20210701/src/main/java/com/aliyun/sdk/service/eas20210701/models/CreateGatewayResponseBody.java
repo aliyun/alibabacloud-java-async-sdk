@@ -93,10 +93,10 @@ public class CreateGatewayResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The region ID of the private gateway.</p>
+         * <p>The region where the private gateway is located.</p>
          * 
          * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
+         * <p>cn-wulanchabu</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -115,10 +115,10 @@ public class CreateGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The message returned in the response.</p>
          * 
          * <strong>example:</strong>
-         * <p>Successfully create gateway.</p>
+         * <p>Successfully create gateway for user-managed resource</p>
          */
         public Builder message(String message) {
             this.message = message;

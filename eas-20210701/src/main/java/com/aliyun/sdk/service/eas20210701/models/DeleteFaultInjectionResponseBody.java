@@ -67,7 +67,10 @@ public class DeleteFaultInjectionResponseBody extends TeaModel {
         } 
 
         /**
-         * Message.
+         * <p>The operation result message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successfully delete acl policy for gateway</p>
          */
         public Builder message(String message) {
             this.message = message;

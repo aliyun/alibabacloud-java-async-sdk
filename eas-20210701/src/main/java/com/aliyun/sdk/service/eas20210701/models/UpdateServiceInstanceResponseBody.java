@@ -67,10 +67,10 @@ public class UpdateServiceInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned message.</p>
+         * <p>The success message.</p>
          * 
          * <strong>example:</strong>
-         * <p>Success</p>
+         * <p>instance xxxx isolation updated to true。</p>
          */
         public Builder message(String message) {
             this.message = message;

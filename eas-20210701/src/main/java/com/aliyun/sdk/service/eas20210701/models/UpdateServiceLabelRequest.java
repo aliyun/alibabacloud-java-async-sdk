@@ -90,7 +90,7 @@ public class UpdateServiceLabelRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the region where the service is deployed.</p>
+         * <p>The region where the service is located.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -103,7 +103,7 @@ public class UpdateServiceLabelRequest extends Request {
         }
 
         /**
-         * <p>The service name. For more information about how to query the service name, see <a href="https://help.aliyun.com/document_detail/412109.html">ListServices</a>.</p>
+         * <p>The service name. For more information about how to view the service name, see <a href="https://help.aliyun.com/document_detail/412109.html">ListServices</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -118,6 +118,9 @@ public class UpdateServiceLabelRequest extends Request {
         /**
          * <p>The custom service tags.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;key&quot;:&quot;value&quot;}</p>
          */
         public Builder labels(java.util.Map<String, String> labels) {
             this.putBodyParameter("Labels", labels);

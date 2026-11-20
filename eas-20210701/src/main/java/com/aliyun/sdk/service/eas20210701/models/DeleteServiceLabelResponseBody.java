@@ -78,7 +78,7 @@ public class DeleteServiceLabelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>40325405-579C-4D82****</p>

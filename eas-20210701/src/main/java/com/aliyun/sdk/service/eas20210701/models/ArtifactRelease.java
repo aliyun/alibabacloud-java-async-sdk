@@ -119,7 +119,10 @@ public class ArtifactRelease extends TeaModel {
         } 
 
         /**
-         * ArtifactRef.
+         * <p>The artifact reference name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>python-env</p>
          */
         public Builder artifactRef(String artifactRef) {
             this.artifactRef = artifactRef;
@@ -127,7 +130,10 @@ public class ArtifactRelease extends TeaModel {
         }
 
         /**
-         * CreatedAt.
+         * <p>The creation time of the artifact release record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-01-15T10:30:00Z</p>
          */
         public Builder createdAt(String createdAt) {
             this.createdAt = createdAt;
@@ -135,7 +141,10 @@ public class ArtifactRelease extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The artifact description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Container image for model inference</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -143,7 +152,10 @@ public class ArtifactRelease extends TeaModel {
         }
 
         /**
-         * Image.
+         * <p>The container image address used by the artifact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registry.cn-shanghai.aliyuncs.com/eas/echo_cn-shanghai:v0.0.1-20210129111320</p>
          */
         public Builder image(String image) {
             this.image = image;
@@ -151,7 +163,10 @@ public class ArtifactRelease extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>The artifact type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Image</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -159,7 +174,10 @@ public class ArtifactRelease extends TeaModel {
         }
 
         /**
-         * Version.
+         * <p>The artifact version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>V2.0</p>
          */
         public Builder version(String version) {
             this.version = version;

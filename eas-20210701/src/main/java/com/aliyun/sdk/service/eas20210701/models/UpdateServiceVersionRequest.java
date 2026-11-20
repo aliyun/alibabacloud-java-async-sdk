@@ -90,7 +90,7 @@ public class UpdateServiceVersionRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the region where the service is deployed.</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -103,7 +103,7 @@ public class UpdateServiceVersionRequest extends Request {
         }
 
         /**
-         * <p>The service name. For more information about how to query the service name, see <a href="https://help.aliyun.com/document_detail/412109.html">ListServices</a>.</p>
+         * <p>The name of the service. For more information about how to view the service name, see <a href="https://help.aliyun.com/document_detail/412109.html">ListServices</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class UpdateServiceVersionRequest extends Request {
         }
 
         /**
-         * <p>The destination version of the service. The value must be of the INT type. The value must be greater than 0 and smaller than the current version of the service.</p>
+         * <p>The target version to which the service is switched. The value must be an integer greater than 0 and less than the current version of the service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

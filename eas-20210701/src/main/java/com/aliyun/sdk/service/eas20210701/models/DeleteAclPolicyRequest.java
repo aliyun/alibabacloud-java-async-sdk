@@ -103,7 +103,7 @@ public class DeleteAclPolicyRequest extends Request {
         } 
 
         /**
-         * <p>The region ID of the private gateway.</p>
+         * <p>The region of the private gateway.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class DeleteAclPolicyRequest extends Request {
         }
 
         /**
-         * <p>The private gateway ID. To obtain the private gateway ID, see the private_gateway_id parameter in the response parameters of the ListResources operation.</p>
+         * <p>The ID of the private gateway. This operation supports only FullyManaged (non-ALB backend) gateways. If you call this operation for an ALB backend gateway, an InvalidParameter error is returned. You can call the ListGateway operation and set GatewayType to FullyManaged to filter FullyManaged gateways.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +129,7 @@ public class DeleteAclPolicyRequest extends Request {
         }
 
         /**
-         * <p>The whitelisted IP CIDR blocks in the VPC that can access the private gateway.</p>
+         * <p>The whitelist of IP address ranges that are allowed to access the VPC. This parameter is required. If this parameter is not specified, an InvalidParameter error is returned, indicating that AclPolicyList must be set.</p>
          */
         public Builder aclPolicyList(java.util.List<AclPolicyList> aclPolicyList) {
             String aclPolicyListShrink = shrink(aclPolicyList, "AclPolicyList", "json");
@@ -139,7 +139,7 @@ public class DeleteAclPolicyRequest extends Request {
         }
 
         /**
-         * <p>The ID of the virtual private cloud (VPC). For more information about how to obtain the VPC ID, see DescribeVpcs.</p>
+         * <p>The ID of the VPC. For information about how to obtain the VPC ID, see DescribeVpcs.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-uf66uio7md****</p>
@@ -210,7 +210,7 @@ public class DeleteAclPolicyRequest extends Request {
             } 
 
             /**
-             * <p>The comment on the IP CIDR block in the VPC that can access the private gateway.</p>
+             * <p>The comment for the IP address range that is allowed to access the VPC.</p>
              * 
              * <strong>example:</strong>
              * <p>default</p>
@@ -221,7 +221,7 @@ public class DeleteAclPolicyRequest extends Request {
             }
 
             /**
-             * <p>The IP CIDR block in the VPC that can access the private gateway.</p>
+             * <p>The IP address range that is allowed to access the VPC.</p>
              * 
              * <strong>example:</strong>
              * <p>10.23.XX.XX/32</p>

@@ -89,7 +89,7 @@ public class UpdateBenchmarkTaskRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the region where the stress testing task is performed.</p>
+         * <p>The region where the stress testing task is located.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +115,7 @@ public class UpdateBenchmarkTaskRequest extends Request {
         }
 
         /**
-         * <p>The request body. The body includes the parameters that are set to create a stress testing task. For more information, see <strong>Table 1. Fields in the base parameter</strong>.</p>
+         * <p>The configuration parameters of the stress testing task. For more information, see <strong>Table 1. base description table</strong>. The target stress testing task must be in the Running state. You can call the DescribeBenchmarkTask operation to query the task status. If the task is in the Stopped state, you must first call the StartBenchmarkTask operation and wait until the task enters the Running state.</p>
          * 
          * <strong>example:</strong>
          * <p>{

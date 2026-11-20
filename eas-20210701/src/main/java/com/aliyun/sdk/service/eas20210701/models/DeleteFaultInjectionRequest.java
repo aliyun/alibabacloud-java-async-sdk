@@ -101,7 +101,10 @@ public class DeleteFaultInjectionRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * <p>The region of the private gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -110,7 +113,10 @@ public class DeleteFaultInjectionRequest extends Request {
         }
 
         /**
-         * ServiceName.
+         * <p>The service name. For more information about how to view the service name, see <a href="https://help.aliyun.com/document_detail/412109.html">ListServices</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>foo</p>
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("ServiceName", serviceName);
@@ -119,7 +125,10 @@ public class DeleteFaultInjectionRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * <p>The name of the service instance. For more information about how to view the instance name, see <a href="https://help.aliyun.com/document_detail/412108.html">ListServiceInstances</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>echo-da290ac8-7fckm</p>
          */
         public Builder instanceName(String instanceName) {
             this.putPathParameter("InstanceName", instanceName);
@@ -128,7 +137,10 @@ public class DeleteFaultInjectionRequest extends Request {
         }
 
         /**
-         * FaultType.
+         * <p>The device fault. Valid values: 1. CPU overload fault. 2. Memory load fault. 3. Network fault. 4. Disk read/write hang. 5. Disk fill fault.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CpuFullloadTask</p>
          */
         public Builder faultType(String faultType) {
             this.putPathParameter("FaultType", faultType);

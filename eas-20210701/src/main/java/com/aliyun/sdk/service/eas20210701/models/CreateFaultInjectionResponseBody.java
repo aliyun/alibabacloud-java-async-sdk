@@ -67,7 +67,10 @@ public class CreateFaultInjectionResponseBody extends TeaModel {
         } 
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Addon prometheus_discovery is successfully reinstalled</p>
          */
         public Builder message(String message) {
             this.message = message;

@@ -88,7 +88,7 @@ public class ReinstallTenantAddonRequest extends Request {
         }
 
         /**
-         * <p>The plug-in name.</p>
+         * <p>The name of the add-on.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

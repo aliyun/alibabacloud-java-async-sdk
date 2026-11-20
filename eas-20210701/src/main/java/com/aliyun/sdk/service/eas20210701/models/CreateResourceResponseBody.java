@@ -130,7 +130,7 @@ public class CreateResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The instance IDs.</p>
+         * <p>The list of instance IDs.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             this.instanceIds = instanceIds;
@@ -138,7 +138,7 @@ public class CreateResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The user ID (UID) of the resource group owner.</p>
+         * <p>The UID of the resource group owner.</p>
          * 
          * <strong>example:</strong>
          * <p>14401087478****</p>

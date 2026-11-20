@@ -78,7 +78,7 @@ public class ListGatewayIntranetSupportedZoneResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The zones that are supported by the region.</p>
+         * <p>The list of zones supported in the current region.</p>
          */
         public Builder zones(java.util.List<String> zones) {
             this.zones = zones;

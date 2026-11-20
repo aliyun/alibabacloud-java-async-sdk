@@ -103,7 +103,7 @@ public class UpdateServiceMirrorRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the region where the service is deployed.</p>
+         * <p>The region ID of the service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class UpdateServiceMirrorRequest extends Request {
         }
 
         /**
-         * <p>The service name. For more information about how to query the service name, see <a href="https://help.aliyun.com/document_detail/412109.html">ListServices</a>.</p>
+         * <p>The name of the service. For more information about how to view the service name, see <a href="https://help.aliyun.com/document_detail/412109.html">ListServices</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +129,7 @@ public class UpdateServiceMirrorRequest extends Request {
         }
 
         /**
-         * <p>The percentage of traffic that you want to mirror. Valid values: 0 to 100.</p>
+         * <p>The traffic ratio. Valid values: 0 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -141,7 +141,7 @@ public class UpdateServiceMirrorRequest extends Request {
         }
 
         /**
-         * <p>The service instances.</p>
+         * <p>The list of service instances.</p>
          */
         public Builder target(java.util.List<String> target) {
             this.putBodyParameter("Target", target);

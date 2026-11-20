@@ -67,7 +67,7 @@ public class RestartServiceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned message.</p>
+         * <p>The message returned in the response.</p>
          * 
          * <strong>example:</strong>
          * <p>Service is restarting</p>
@@ -78,7 +78,7 @@ public class RestartServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>40325405-579C-4D82****</p>

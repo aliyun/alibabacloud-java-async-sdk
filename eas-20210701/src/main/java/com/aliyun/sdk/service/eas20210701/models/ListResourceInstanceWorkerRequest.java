@@ -202,7 +202,7 @@ public class ListResourceInstanceWorkerRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cluster to which the resource group belongs.</p>
+         * <p>The ID of the cluster where the resource group is located.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -215,7 +215,7 @@ public class ListResourceInstanceWorkerRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group. For more information about how to query the ID of a resource group, see <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a>.</p>
+         * <p>The ID of the resource group. For more information, see <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -228,7 +228,7 @@ public class ListResourceInstanceWorkerRequest extends Request {
         }
 
         /**
-         * <p>The name of the instance in a resource group. For more information about how to obtain the instance name, see <a href="https://help.aliyun.com/document_detail/412129.html">ListServiceInstances</a>. HostName in the returned result indicates the name of the instance.</p>
+         * <p>The name of the instance in the resource group. For more information, see <a href="https://help.aliyun.com/document_detail/412129.html">ListResourceInstances</a>. The instance name is the value of the HostName parameter in the response.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -241,7 +241,16 @@ public class ListResourceInstanceWorkerRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sort order.</p>
+         * <ul>
+         * <li><p>Asc: ascending order.</p>
+         * </li>
+         * <li><p>Desc: descending order.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Desc</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -250,7 +259,7 @@ public class ListResourceInstanceWorkerRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * <p>The page number. The value starts from 1. The default value is 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -262,7 +271,7 @@ public class ListResourceInstanceWorkerRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 100.</p>
+         * <p>The number of entries to return on each page. The default value is 100.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -274,7 +283,10 @@ public class ListResourceInstanceWorkerRequest extends Request {
         }
 
         /**
-         * Ready.
+         * <p>Indicates whether the health check passed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder ready(Boolean ready) {
             this.putQueryParameter("Ready", ready);
@@ -283,7 +295,10 @@ public class ListResourceInstanceWorkerRequest extends Request {
         }
 
         /**
-         * ServiceName.
+         * <p>The service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>echo</p>
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);
@@ -292,7 +307,10 @@ public class ListResourceInstanceWorkerRequest extends Request {
         }
 
         /**
-         * Sort.
+         * <p>The field to sort by.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateTime</p>
          */
         public Builder sort(String sort) {
             this.putQueryParameter("Sort", sort);
@@ -301,7 +319,10 @@ public class ListResourceInstanceWorkerRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of the worker instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -310,7 +331,7 @@ public class ListResourceInstanceWorkerRequest extends Request {
         }
 
         /**
-         * <p>The worker name.</p>
+         * <p>The name of the worker instance.</p>
          * 
          * <strong>example:</strong>
          * <p>test-fd95xxxxx-xxxxxx</p>

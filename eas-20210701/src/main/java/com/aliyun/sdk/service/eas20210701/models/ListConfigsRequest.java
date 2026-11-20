@@ -115,7 +115,10 @@ public class ListConfigsRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * <p><strong>The region of the service</strong> (Required)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -124,7 +127,10 @@ public class ListConfigsRequest extends Request {
         }
 
         /**
-         * ConfigType.
+         * <p><strong>The configuration type</strong> (Required). Currently, only <code>service</code> is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>service</p>
          */
         public Builder configType(String configType) {
             this.putPathParameter("ConfigType", configType);
@@ -133,7 +139,10 @@ public class ListConfigsRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p><strong>The service name</strong> (Required)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-llm-service</p>
          */
         public Builder name(String name) {
             this.putPathParameter("Name", name);
@@ -142,7 +151,10 @@ public class ListConfigsRequest extends Request {
         }
 
         /**
-         * Page.
+         * <p><strong>The page number</strong>. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Integer page) {
             this.putQueryParameter("Page", page);
@@ -151,7 +163,10 @@ public class ListConfigsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p><strong>The number of entries per page</strong>. Default value: 100. Maximum value: 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

@@ -106,7 +106,7 @@ public class DescribeServiceEventResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The events.</p>
+         * <p>The list of events.</p>
          */
         public Builder events(java.util.List<Events> events) {
             this.events = events;
@@ -114,7 +114,7 @@ public class DescribeServiceEventResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -136,7 +136,7 @@ public class DescribeServiceEventResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>29</p>
@@ -147,7 +147,7 @@ public class DescribeServiceEventResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of pages returned.</p>
+         * <p>The total number of pages.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -255,10 +255,10 @@ public class DescribeServiceEventResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The returned message. The message is formatted and returned in the JSON format.</p>
+             * <p>The event information (a formatted JSON string).</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;versionId&quot;:1,&quot;message&quot;:&quot;Stage scale complete&quot;,&quot;availableInstance&quot;:1,&quot;unavailableInstance&quot;:0}</p>
+             * <p>{\&quot;versionId\&quot;:1,\&quot;message\&quot;:\&quot;Stage scale complete\&quot;,\&quot;availableInstance\&quot;:1,\&quot;unavailableInstance\&quot;:0}</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -266,7 +266,7 @@ public class DescribeServiceEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cause of the event. The information about the change in the service status is returned.</p>
+             * <p>The reason for the event (information about service status changes).</p>
              * 
              * <strong>example:</strong>
              * <p>Updating</p>
@@ -277,7 +277,16 @@ public class DescribeServiceEventResponseBody extends TeaModel {
             }
 
             /**
-             * Resource.
+             * <p>The resource type. Valid values:</p>
+             * <ul>
+             * <li><p>Service: service.</p>
+             * </li>
+             * <li><p>Pod: service instance.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Service</p>
              */
             public Builder resource(String resource) {
                 this.resource = resource;
@@ -285,7 +294,7 @@ public class DescribeServiceEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the event occurred. The time must be in UTC.</p>
+             * <p>The UTC time when the event occurred.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-04-09 06:30:00</p>
@@ -298,8 +307,8 @@ public class DescribeServiceEventResponseBody extends TeaModel {
             /**
              * <p>The event type. Valid values:</p>
              * <ul>
-             * <li>Normal</li>
-             * <li>Warning</li>
+             * <li>Normal: normal events.</li>
+             * <li>Warning: abnormal events.</li>
              * </ul>
              * 
              * <strong>example:</strong>

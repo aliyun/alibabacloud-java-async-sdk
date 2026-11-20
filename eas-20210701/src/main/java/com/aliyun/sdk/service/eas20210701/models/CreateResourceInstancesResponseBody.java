@@ -80,7 +80,7 @@ public class CreateResourceInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The instance IDs.</p>
+         * <p>The list of machine instance IDs.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             this.instanceIds = instanceIds;
@@ -88,7 +88,7 @@ public class CreateResourceInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The message returned when the operation is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>Create 5 new ecs instance(s) in resource [eas-r-asdasdasd] successfully</p>

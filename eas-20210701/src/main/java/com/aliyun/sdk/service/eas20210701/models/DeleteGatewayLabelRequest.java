@@ -90,6 +90,7 @@ public class DeleteGatewayLabelRequest extends Request {
         } 
 
         /**
+         * <p>The region where the gateway resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class DeleteGatewayLabelRequest extends Request {
         }
 
         /**
+         * <p>The ID of the gateway.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class DeleteGatewayLabelRequest extends Request {
         }
 
         /**
+         * <p>The gateway labels to delete.</p>
          * <p>This parameter is required.</p>
          */
         public Builder labelKeys(java.util.List<String> labelKeys) {

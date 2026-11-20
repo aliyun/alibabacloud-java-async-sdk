@@ -103,7 +103,7 @@ public class UpdateResourceRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the region to which the resource group belongs.</p>
+         * <p>The ID of the cluster where the resource group resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -120,7 +120,7 @@ public class UpdateResourceRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>eas-r-asdasdasd</p>
+         * <p>eas-r-asdasdasd****</p>
          */
         public Builder resourceId(String resourceId) {
             this.putPathParameter("ResourceId", resourceId);
@@ -129,7 +129,7 @@ public class UpdateResourceRequest extends Request {
         }
 
         /**
-         * <p>The new name of the resource group after the update. The name can be up to 27 characters in length.</p>
+         * <p>The new name of the resource group. The name cannot exceed 27 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>iot</p>
@@ -141,7 +141,7 @@ public class UpdateResourceRequest extends Request {
         }
 
         /**
-         * <p>The configuration items of the self-managed resource group.</p>
+         * <p>The configuration options for the self-managed resource group.</p>
          */
         public Builder selfManagedResourceOptions(SelfManagedResourceOptions selfManagedResourceOptions) {
             this.putBodyParameter("SelfManagedResourceOptions", selfManagedResourceOptions);
@@ -235,13 +235,7 @@ public class UpdateResourceRequest extends Request {
             } 
 
             /**
-             * <p>The effect.
-             * Valid values:</p>
-             * <ul>
-             * <li>PreferNoSchedule</li>
-             * <li>NoSchedule</li>
-             * <li>NoExecute</li>
-             * </ul>
+             * <p>The effect.</p>
              * 
              * <strong>example:</strong>
              * <p>NoSchedule</p>
@@ -263,12 +257,7 @@ public class UpdateResourceRequest extends Request {
             }
 
             /**
-             * <p>Relationship between key names and key values.
-             * Valid values:</p>
-             * <ul>
-             * <li>Equal</li>
-             * <li>Exists</li>
-             * </ul>
+             * <p>The relationship between the key name and the key value.</p>
              * 
              * <strong>example:</strong>
              * <p>Equal</p>
@@ -349,7 +338,10 @@ public class UpdateResourceRequest extends Request {
             } 
 
             /**
-             * <p>Tag tag key-value pairs for nodes.</p>
+             * <p>The set of label key-value pairs for nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;key1&quot;: &quot;value1&quot;</p>
              */
             public Builder nodeMatchLabels(java.util.Map<String, String> nodeMatchLabels) {
                 this.nodeMatchLabels = nodeMatchLabels;
@@ -357,7 +349,7 @@ public class UpdateResourceRequest extends Request {
             }
 
             /**
-             * <p>Tolerations for nodes.</p>
+             * <p>The list of tolerations for node taints.</p>
              */
             public Builder nodeTolerations(java.util.List<NodeTolerations> nodeTolerations) {
                 this.nodeTolerations = nodeTolerations;

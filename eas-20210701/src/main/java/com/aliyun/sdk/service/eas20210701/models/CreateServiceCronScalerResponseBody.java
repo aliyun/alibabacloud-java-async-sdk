@@ -67,7 +67,7 @@ public class CreateServiceCronScalerResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>Create cron scaler for service [foo] successfully</p>

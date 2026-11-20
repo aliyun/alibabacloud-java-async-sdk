@@ -93,7 +93,10 @@ public class Artifact extends TeaModel {
         } 
 
         /**
-         * CreatedAt.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-01-15T10:30:00Z</p>
          */
         public Builder createdAt(String createdAt) {
             this.createdAt = createdAt;
@@ -101,7 +104,10 @@ public class Artifact extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The artifact name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>foo</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -109,7 +115,10 @@ public class Artifact extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>The artifact type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Image</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -117,7 +126,7 @@ public class Artifact extends TeaModel {
         }
 
         /**
-         * Versions.
+         * <p>The version list.</p>
          */
         public Builder versions(java.util.List<Versions> versions) {
             this.versions = versions;
@@ -209,7 +218,10 @@ public class Artifact extends TeaModel {
             } 
 
             /**
-             * Alias.
+             * <p>The version alias.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>foo</p>
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -217,7 +229,10 @@ public class Artifact extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The template description associated with the version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Supports new xx feature</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -225,7 +240,10 @@ public class Artifact extends TeaModel {
             }
 
             /**
-             * ReleaseName.
+             * <p>The version name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ali-ahpa-hz</p>
              */
             public Builder releaseName(String releaseName) {
                 this.releaseName = releaseName;
@@ -233,7 +251,10 @@ public class Artifact extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>V2.0</p>
              */
             public Builder version(String version) {
                 this.version = version;

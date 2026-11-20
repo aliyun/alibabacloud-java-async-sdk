@@ -67,7 +67,7 @@ public class ListServiceInstanceFaultInjectionInfoResponseBody extends TeaModel 
         } 
 
         /**
-         * FaultInfoList.
+         * <p>The list of injected faults.</p>
          */
         public Builder faultInfoList(java.util.List<FaultInfoList> faultInfoList) {
             this.faultInfoList = faultInfoList;
@@ -144,7 +144,15 @@ public class ListServiceInstanceFaultInjectionInfoResponseBody extends TeaModel 
             } 
 
             /**
-             * FaultStatus.
+             * <p>The fault status. Valid values:</p>
+             * <ul>
+             * <li>FaultNotInjected: The task is created but the fault is not injected.</li>
+             * <li>FaultInjectedSuccess: The fault is successfully injected.</li>
+             * <li>FaultInjectedFailure: The fault injection failed, which may be caused by parameter errors or system issues.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>FaultInjectedSuccess</p>
              */
             public Builder faultStatus(String faultStatus) {
                 this.faultStatus = faultStatus;
@@ -152,7 +160,10 @@ public class ListServiceInstanceFaultInjectionInfoResponseBody extends TeaModel 
             }
 
             /**
-             * FaultStatusMessage.
+             * <p>The description of the fault injection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Network interface not found</p>
              */
             public Builder faultStatusMessage(String faultStatusMessage) {
                 this.faultStatusMessage = faultStatusMessage;
@@ -232,7 +243,35 @@ public class ListServiceInstanceFaultInjectionInfoResponseBody extends TeaModel 
             } 
 
             /**
-             * FaultArgs.
+             * <p>Detailed parameters for each fault type:</p>
+             * <ol>
+             * <li>CpuFullloadTask (CPU full load fault)
+             * <code>{   &quot;FaultType&quot;: &quot;CpuFullloadTask&quot;,   &quot;FaultArgs&quot;: {  &quot;FaultAction&quot;: &quot;fullload&quot;,  &quot;CpuPercent&quot;: 50   } }</code></li>
+             * <li>MemLoadTask (memory load fault)
+             * <code>{   &quot;FaultType&quot;: &quot;MemLoadTask&quot;,   &quot;FaultArgs&quot;: {  &quot;FaultAction&quot;: &quot;load&quot;,  &quot;MemPercent&quot;: 80   } }</code></li>
+             * <li>NetworkTask (network fault)
+             * 3.a. NetworkDelayAction (network delay)
+             * <code>{   &quot;FaultType&quot;: &quot;NetworkTask&quot;,   &quot;FaultArgs&quot;: {  &quot;FaultAction&quot;: &quot;delay&quot;,  &quot;Time&quot;: 3000,  &quot;Offset&quot;: 100   } }</code>
+             * 3.b. NetworkCorruptAction (network packet corruption)
+             * <code>{   &quot;FaultType&quot;: &quot;NetworkTask&quot;,   &quot;FaultArgs&quot;: {  &quot;FaultAction&quot;: &quot;corrupt&quot;,  &quot;Percent&quot;: 50   } }</code>
+             * 3.c. NetworkLossAction (network packet loss)
+             * <code>{   &quot;FaultType&quot;: &quot;NetworkTask&quot;,   &quot;FaultArgs&quot;: {  &quot;FaultAction&quot;: &quot;loss&quot;,  &quot;Percent&quot;: 30   } }</code></li>
+             * <li>DiskBurnTask (disk read/write fault)
+             * <code>{   &quot;FaultType&quot;: &quot;DiskBurnTask&quot;,   &quot;FaultArgs&quot;: {  &quot;FaultAction&quot;: &quot;burn&quot;,  &quot;Read&quot;: true,  &quot;Write&quot;: true,  &quot;Size&quot;: 100   } }</code></li>
+             * <li>DiskFillTask (disk fill fault)
+             * <code>{   &quot;FaultType&quot;: &quot;DiskFillTask&quot;,   &quot;FaultArgs&quot;: {  &quot;FaultAction&quot;: &quot;fill&quot;,  &quot;Percent&quot;: 80   } }</code></li>
+             * </ol>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *   &quot;FaultType&quot;: &quot;DiskBurnTask&quot;,
+             *   &quot;FaultArgs&quot;: {
+             *     &quot;FaultAction&quot;: &quot;burn&quot;,
+             *     &quot;Read&quot;: true,
+             *     &quot;Write&quot;: true,
+             *     &quot;Size&quot;: 100
+             *   }
+             * }</p>
              */
             public Builder faultArgs(Object faultArgs) {
                 this.faultArgs = faultArgs;
@@ -240,7 +279,7 @@ public class ListServiceInstanceFaultInjectionInfoResponseBody extends TeaModel 
             }
 
             /**
-             * FaultStatus.
+             * <p>The fault status.</p>
              */
             public Builder faultStatus(FaultStatus faultStatus) {
                 this.faultStatus = faultStatus;
@@ -248,7 +287,17 @@ public class ListServiceInstanceFaultInjectionInfoResponseBody extends TeaModel 
             }
 
             /**
-             * FaultType.
+             * <p>The fault type. Valid values:</p>
+             * <ul>
+             * <li>CpuFullloadTask: CPU full load fault.</li>
+             * <li>MemLoadTask: memory load fault.</li>
+             * <li>NetworkTask: network fault.</li>
+             * <li>DiskBurnTask: disk read/write fault.</li>
+             * <li>DiskFillTask: disk fill fault.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DiskFillTask</p>
              */
             public Builder faultType(String faultType) {
                 this.faultType = faultType;

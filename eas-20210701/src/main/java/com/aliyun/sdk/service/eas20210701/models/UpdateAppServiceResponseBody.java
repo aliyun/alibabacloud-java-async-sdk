@@ -67,7 +67,7 @@ public class UpdateAppServiceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>

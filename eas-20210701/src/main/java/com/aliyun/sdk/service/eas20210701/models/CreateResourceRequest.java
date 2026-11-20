@@ -202,8 +202,8 @@ public class CreateResourceRequest extends Request {
         /**
          * <p>Specifies whether to enable auto-renewal. Valid values:</p>
          * <ul>
-         * <li>false (default)</li>
-         * <li>true</li>
+         * <li>false (default): disables auto-renewal.</li>
+         * <li>true: enables auto-renewal.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -218,12 +218,12 @@ public class CreateResourceRequest extends Request {
         /**
          * <p>The billing method. Valid values:</p>
          * <ul>
-         * <li>PrePaid: the subscription billing method.</li>
-         * <li>PostPaid: the pay-as-you-go billing method.</li>
-         * </ul>
-         * <blockquote>
-         * <p> This parameter is required when the ResourceType parameter is set to Dedicated.</p>
+         * <li>PrePaid: subscription.</li>
+         * <li>PostPaid: pay-as-you-go.<blockquote>
+         * <p>This parameter is required when ResourceType is set to Dedicated.</p>
          * </blockquote>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>PostPaid</p>
@@ -235,9 +235,9 @@ public class CreateResourceRequest extends Request {
         }
 
         /**
-         * <p>The number of ECS instances.</p>
+         * <p>The number of instances.</p>
          * <blockquote>
-         * <p> This parameter is required when the ResourceType parameter is set to Dedicated.</p>
+         * <p>This parameter is required when ResourceType is set to Dedicated.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -250,9 +250,9 @@ public class CreateResourceRequest extends Request {
         }
 
         /**
-         * <p>The type of the Elastic Compute Service (ECS) instance.</p>
+         * <p>The ECS instance type.</p>
          * <blockquote>
-         * <p> This parameter is required when the ResourceType parameter is set to Dedicated.</p>
+         * <p>This parameter is required when ResourceType is set to Dedicated.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -265,7 +265,10 @@ public class CreateResourceRequest extends Request {
         }
 
         /**
-         * <p>The labels.</p>
+         * <p>The user-defined labels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;key&quot;:&quot;value&quot;}</p>
          */
         public Builder labels(java.util.Map<String, String> labels) {
             this.putBodyParameter("Labels", labels);
@@ -274,7 +277,10 @@ public class CreateResourceRequest extends Request {
         }
 
         /**
-         * ResourceName.
+         * <p>The name of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyResource</p>
          */
         public Builder resourceName(String resourceName) {
             this.putBodyParameter("ResourceName", resourceName);
@@ -285,12 +291,12 @@ public class CreateResourceRequest extends Request {
         /**
          * <p>The type of the resource group. Valid values:</p>
          * <ul>
-         * <li>Dedicated: the dedicated resource group.</li>
-         * <li>SelfManaged: the self-managed resource group.</li>
-         * </ul>
-         * <blockquote>
-         * <p> If you use a self-managed resource group, you must configure a whitelist.</p>
+         * <li>Dedicated: dedicated resource group.</li>
+         * <li>SelfManaged: self-managed resource group.<blockquote>
+         * <p>To use a self-managed resource group, you must apply to be added to the whitelist.</p>
          * </blockquote>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Dedicated</p>
@@ -302,7 +308,7 @@ public class CreateResourceRequest extends Request {
         }
 
         /**
-         * <p>The configurations of the self-managed resource group.</p>
+         * <p>The configuration options for the self-managed resource group.</p>
          */
         public Builder selfManagedResourceOptions(SelfManagedResourceOptions selfManagedResourceOptions) {
             this.putBodyParameter("SelfManagedResourceOptions", selfManagedResourceOptions);
@@ -311,7 +317,7 @@ public class CreateResourceRequest extends Request {
         }
 
         /**
-         * <p>The size of the system disk. Unit: GiB. Valid values: 200 to 2000. Default value: 200.</p>
+         * <p>The size of the system cloud disk. Unit: GiB. Valid values: 200 to 2000. Default value: 200.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -323,7 +329,10 @@ public class CreateResourceRequest extends Request {
         }
 
         /**
-         * UsageMode.
+         * <p>The usage mode of the resource group. Valid values: inference (inference service resource group) and sandbox (sandbox resource group).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>inference</p>
          */
         public Builder usageMode(String usageMode) {
             this.putBodyParameter("UsageMode", usageMode);
@@ -332,7 +341,7 @@ public class CreateResourceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the zone in which the instance resides.</p>
+         * <p>The zone to which the instance belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai-f</p>
@@ -430,12 +439,6 @@ public class CreateResourceRequest extends Request {
 
             /**
              * <p>The effect.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>PreferNoSchedule</li>
-             * <li>NoSchedule</li>
-             * <li>NoExecute</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>NoSchedule</p>
@@ -446,7 +449,7 @@ public class CreateResourceRequest extends Request {
             }
 
             /**
-             * <p>The key name.</p>
+             * <p>The key.</p>
              * 
              * <strong>example:</strong>
              * <p>key1</p>
@@ -457,12 +460,7 @@ public class CreateResourceRequest extends Request {
             }
 
             /**
-             * <p>The relationship between key names and key values.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>Equal</li>
-             * <li>Exists</li>
-             * </ul>
+             * <p>The operator that defines the relationship between the key and the value.</p>
              * 
              * <strong>example:</strong>
              * <p>Equal</p>
@@ -473,7 +471,7 @@ public class CreateResourceRequest extends Request {
             }
 
             /**
-             * <p>The key value.</p>
+             * <p>The value.</p>
              * 
              * <strong>example:</strong>
              * <p>value1</p>
@@ -580,7 +578,10 @@ public class CreateResourceRequest extends Request {
             }
 
             /**
-             * <p>The tag key-value pairs of the node.</p>
+             * <p>The label key-value pairs for nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;key1&quot;: &quot;value1&quot;</p>
              */
             public Builder nodeMatchLabels(java.util.Map<String, String> nodeMatchLabels) {
                 this.nodeMatchLabels = nodeMatchLabels;
@@ -588,7 +589,7 @@ public class CreateResourceRequest extends Request {
             }
 
             /**
-             * <p>The tolerations for the node taint.</p>
+             * <p>The list of tolerations for node taints.</p>
              */
             public Builder nodeTolerations(java.util.List<NodeTolerations> nodeTolerations) {
                 this.nodeTolerations = nodeTolerations;
@@ -596,7 +597,7 @@ public class CreateResourceRequest extends Request {
             }
 
             /**
-             * <p>The name of the RAM user to which the permissions on Elastic Algorithm Service (EAS) of Platform for AI (PAI) are granted.</p>
+             * <p>The name of the RAM role to which PAI-EAS-related permissions are granted.</p>
              * 
              * <strong>example:</strong>
              * <p>clusterrole</p>

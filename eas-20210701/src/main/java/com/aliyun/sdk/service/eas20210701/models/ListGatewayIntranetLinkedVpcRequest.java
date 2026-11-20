@@ -85,7 +85,7 @@ public class ListGatewayIntranetLinkedVpcRequest extends Request {
         }
 
         /**
-         * <p>The private gateway ID.</p>
+         * <p>The ID of the private gateway. To obtain the ID, see the private_gateway_id field in the response of the <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-1uhcqmsc7x22******</p>

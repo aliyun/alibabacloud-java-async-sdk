@@ -67,7 +67,7 @@ public class DeleteConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>删除的配置数量</p>
+         * <p>The number of deleted configurations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -78,7 +78,7 @@ public class DeleteConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>操作结果消息</p>
+         * <p>The operation result message.</p>
          * 
          * <strong>example:</strong>
          * <p>Successfully deleted 1 configs</p>

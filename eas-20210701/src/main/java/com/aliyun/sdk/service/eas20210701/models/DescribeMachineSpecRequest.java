@@ -88,7 +88,10 @@ public class DescribeMachineSpecRequest extends Request {
         } 
 
         /**
-         * ChargeType.
+         * <p>The billing method. The default value is \<code>PostPaid\\</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -98,6 +101,9 @@ public class DescribeMachineSpecRequest extends Request {
 
         /**
          * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>No input required</p>
          */
         public Builder instanceTypes(java.util.List<String> instanceTypes) {
             String instanceTypesShrink = shrink(instanceTypes, "InstanceTypes", "simple");
@@ -107,7 +113,10 @@ public class DescribeMachineSpecRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>The resource type. The default value is \<code>Public\\</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Public</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

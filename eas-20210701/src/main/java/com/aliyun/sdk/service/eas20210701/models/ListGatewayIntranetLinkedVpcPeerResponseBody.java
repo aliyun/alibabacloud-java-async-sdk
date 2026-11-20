@@ -91,7 +91,7 @@ public class ListGatewayIntranetLinkedVpcPeerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The VPC peers.</p>
+         * <p>The list of peered VPCs.</p>
          */
         public Builder peerVpcList(java.util.List<PeerVpcList> peerVpcList) {
             this.peerVpcList = peerVpcList;
@@ -181,7 +181,7 @@ public class ListGatewayIntranetLinkedVpcPeerResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The region where the VPC peer resides.</p>
+             * <p>The region where the peered VPC is located.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-shanghai</p>
@@ -192,7 +192,10 @@ public class ListGatewayIntranetLinkedVpcPeerResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The network connectivity status of the peered VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -200,7 +203,7 @@ public class ListGatewayIntranetLinkedVpcPeerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the VPC peer.</p>
+             * <p>The ID of the peered VPC.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-uf66uio7md****</p>
@@ -270,7 +273,7 @@ public class ListGatewayIntranetLinkedVpcPeerResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The IDs of the VPC peers.</p>
+             * <p>The list of peered VPC IDs.</p>
              */
             public Builder peerVpcs(java.util.List<PeerVpcs> peerVpcs) {
                 this.peerVpcs = peerVpcs;
@@ -278,7 +281,7 @@ public class ListGatewayIntranetLinkedVpcPeerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The VPC ID.</p>
+             * <p>The ID of the VPC.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-2zetuli9ws0qgjd******</p>

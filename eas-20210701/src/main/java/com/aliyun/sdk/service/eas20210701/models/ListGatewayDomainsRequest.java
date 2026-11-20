@@ -75,7 +75,7 @@ public class ListGatewayDomainsRequest extends Request {
         } 
 
         /**
-         * <p>The region where the private gateway resides.</p>
+         * <p>The region where the dedicated gateway resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class ListGatewayDomainsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the private gateway. To obtain the private gateway ID, see the GatewayId parameter in the response parameters of the <a href="https://apiworkbench.aliyun-inc.com/document/eas/2021-07-01/ListGateway?spm=openapi-amp.newDocPublishment.0.0.765e281fL2IcjJ&ampEnv=online">ListGateway</a> operation.</p>
+         * <p>The dedicated gateway ID. To obtain the dedicated gateway ID, refer to the GatewayId field in the response of the <a href="https://apiworkbench.aliyun-inc.com/document/eas/2021-07-01/ListGateway?spm=openapi-amp.newDocPublishment.0.0.765e281fL2IcjJ&ampEnv=online">ListGateway</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -20,6 +20,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before binding a custom domain name to a dedicated gateway, enable internal network access (EnableIntranet) or public network access (EnableInternet) by calling UpdateGateway. To enable internal network access, determine the VpcId and VSwitchIds first. Query existing resources by calling ListGateway, DescribeGateway, DescribeVpcs, and DescribeVSwitches in sequence. If necessary, call CreateVSwitch to create a vSwitch, and then call UpdateGateway to complete the network configuration.</p>
+     * 
      * @param request the request parameters of AttachGatewayDomain  AttachGatewayDomainRequest
      * @return AttachGatewayDomainResponse
      */
@@ -56,12 +59,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateBenchmarkTaskResponse> createBenchmarkTask(CreateBenchmarkTaskRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>This API sends a POST request to a specified path to create a dynamic parameter.</li>
+     * <li>The name of the dynamic parameter (ConfigKey) supports letters, digits, periods, underscores, hyphens, and forward slashes, with a maximum length of 100 characters.</li>
+     * <li>The request body must contain the specific value (Value) of the dynamic parameter.</li>
+     * <li>After the dynamic parameter is created, the API returns the key information of the new dynamic parameter, including the parameter name (Key), value (Value), and the creation and update timestamps.</li>
+     * </ul>
+     * 
      * @param request the request parameters of CreateConfig  CreateConfigRequest
      * @return CreateConfigResponse
      */
     CompletableFuture<CreateConfigResponse> createConfig(CreateConfigRequest request);
 
     /**
+     * <b>description</b> :
+     * <p><em>Make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS) before you call this operation.</em>*</p>
+     * 
      * @param request the request parameters of CreateFaultInjection  CreateFaultInjectionRequest
      * @return CreateFaultInjectionResponse
      */
@@ -74,6 +89,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateGatewayResponse> createGateway(CreateGatewayRequest request);
 
     /**
+     * <b>description</b> :
+     * <p><em>Before calling this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of EAS.</em>*</p>
+     * 
      * @param request the request parameters of CreateGatewayIntranetLinkedVpc  CreateGatewayIntranetLinkedVpcRequest
      * @return CreateGatewayIntranetLinkedVpcResponse
      */
@@ -86,6 +104,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateGatewayIntranetLinkedVpcPeerResponse> createGatewayIntranetLinkedVpcPeer(CreateGatewayIntranetLinkedVpcPeerRequest request);
 
     /**
+     * <b>description</b> :
+     * <p><em>Make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS) before you call this operation.</em>*</p>
+     * 
      * @param request the request parameters of CreateGroup  CreateGroupRequest
      * @return CreateGroupResponse
      */
@@ -93,7 +114,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>*Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/144261.html">billing</a> of Elastic Algorithm Service (EAS).</p>
+     * <p><em>Make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of EAS before you call this operation.</em>*</p>
      * 
      * @param request the request parameters of CreateResource  CreateResourceRequest
      * @return CreateResourceResponse
@@ -101,6 +122,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateResourceResponse> createResource(CreateResourceRequest request);
 
     /**
+     * <b>description</b> :
+     * <p><em>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS).</em>*</p>
+     * 
      * @param request the request parameters of CreateResourceInstances  CreateResourceInstancesRequest
      * @return CreateResourceInstancesResponse
      */
@@ -114,7 +138,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>*Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/144261.html">billing</a> of Elastic Algorithm Service (EAS).</p>
+     * <p><em>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of EAS.</em>*</p>
      * 
      * @param request the request parameters of CreateService  CreateServiceRequest
      * @return CreateServiceResponse
@@ -147,14 +171,14 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li><strong>策略互斥</strong>：<code>Partition</code>（分区发布）和<code>Batch</code>（批量发布）两种策略只能选择其中一种，不能同时使用。</li>
-     * <li><strong>请求速率限制</strong>：每秒最多100次请求。</li>
-     * <li><strong>授权信息</strong>：需要具备<code>eas:CreateServiceRollout</code>权限才能调用此接口。</li>
-     * <li><strong>资源ARN</strong>：<code>acs:eas:{#regionId}:{#accountId}:service/{#ServiceName}</code>。</li>
-     * <li><strong>暂停发布</strong>：通过设置<code>Paused</code>参数为<code>true</code>可以暂停发布流程，之后可通过<code>UpdateServiceRollout</code>接口恢复或取消发布。</li>
-     * <li><strong>监控与回滚</strong>：在发布过程中建议持续监控服务指标，以便及时发现并处理问题；如需回滚，可以通过调整<code>Partition</code>值或删除发布策略来实现。</li>
+     * <li><strong>Mutually exclusive policies</strong>: You can select only one of the Partition (partition-based rollout) and Batch (batch-based rollout) policies. They cannot be used simultaneously.</li>
+     * <li><strong>Request rate limit</strong>: A maximum of 100 requests per second.</li>
+     * <li><strong>Authorization information</strong>: You must have the eas:CreateServiceRollout permission to call this operation.</li>
+     * <li><strong>Resource ARN</strong>: acs:eas:{#regionId}:{#accountId}:service/{#ServiceName}.</li>
+     * <li><strong>Pause a rollout</strong>: You can pause the rollout process by setting the Paused parameter to true. You can then resume or cancel the rollout by calling the UpdateServiceRollout operation.</li>
+     * <li><strong>Monitoring and rollback</strong>: Continuously monitor service metrics during the rollout to promptly identify and resolve issues. To roll back, adjust the Partition value or delete the rollout policy.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateServiceRollout  CreateServiceRolloutRequest
@@ -181,12 +205,19 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteBenchmarkTaskResponse> deleteBenchmarkTask(DeleteBenchmarkTaskRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>This API allows you to delete a specific configuration item by specifying the cluster ID, configuration type, service name, and configuration item name. Ensure that the provided parameter values are accurate to avoid accidental deletion of important configurations.</p>
+     * 
      * @param request the request parameters of DeleteConfig  DeleteConfigRequest
      * @return DeleteConfigResponse
      */
     CompletableFuture<DeleteConfigResponse> deleteConfig(DeleteConfigRequest request);
 
     /**
+     * <b>description</b> :
+     * <p><em>Before calling this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS).</em>*</p>
+     * 
      * @param request the request parameters of DeleteFaultInjection  DeleteFaultInjectionRequest
      * @return DeleteFaultInjectionResponse
      */
@@ -211,6 +242,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteGatewayIntranetLinkedVpcPeerResponse> deleteGatewayIntranetLinkedVpcPeer(DeleteGatewayIntranetLinkedVpcPeerRequest request);
 
     /**
+     * <b>description</b> :
+     * <p><em>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS).</em>*</p>
+     * 
      * @param request the request parameters of DeleteGatewayLabel  DeleteGatewayLabelRequest
      * @return DeleteGatewayLabelResponse
      */
@@ -271,6 +305,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteServiceCronScalerResponse> deleteServiceCronScaler(DeleteServiceCronScalerRequest request);
 
     /**
+     * <b>description</b> :
+     * <p><em>Before you call this operation, make sure that you understand the billing methods and&#x20;<strong><a href="https://help.aliyun.com/document_detail/144261.html"><strong>pricing</strong></a></strong>&#x20;of Elastic Algorithm Service (EAS).*</em></p>
+     * 
      * @param request the request parameters of DeleteServiceInstances  DeleteServiceInstancesRequest
      * @return DeleteServiceInstancesResponse
      */
@@ -290,16 +327,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <ul>
-     * <li><strong>不可恢复</strong>：删除操作不可撤销，请谨慎操作。</li>
-     * <li><strong>不自动回退</strong>：删除策略不会回退已更新的副本。</li>
-     * <li><strong>停止发布</strong>：正在进行的发布会立即停止。</li>
-     * <li><strong>状态保留</strong>：已更新的副本保持新版本，未更新的保持旧版本。</li>
-     * <li>删除后，后续服务更新将采用默认的滚动更新方式。</li>
-     * <li>在删除前，请确认要删除的服务名称和地域，并了解当前发布状态（可以通过调用<code>DescribeServiceRollout</code>接口获取）。</li>
-     * <li>如果需要回退版本，请在删除策略后通过重新创建策略或直接更新服务镜像来实现。</li>
-     * </ul>
+     * <p>Deletes the update plan for a specified service.</p>
      * 
      * @param request the request parameters of DeleteServiceRollout  DeleteServiceRolloutRequest
      * @return DeleteServiceRolloutResponse
@@ -434,14 +462,14 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>该接口用于查询特定服务的发布策略（Rollout）配置和当前执行状态。</li>
-     * <li>返回的信息包括但不限于发布策略的具体参数、当前发布进度等。</li>
-     * <li>请求时需提供<code>ClusterId</code>和服务名称<code>ServiceName</code>作为路径参数。</li>
-     * <li>注意，请求速率限制为每秒最多100次。</li>
-     * <li>如果服务不存在或未创建发布策略，调用此接口将返回错误。</li>
-     * <li>返回的状态是实时查询的结果，可能会随时间而变化，请根据实际需要调整轮询间隔。</li>
+     * <li>This operation queries the rollout configuration and current execution status of a specific service.</li>
+     * <li>The returned information includes but is not limited to the specific parameters of the rollout and the current rollout progress.</li>
+     * <li>You must provide ClusterId and the service name ServiceName as path parameters in the request.</li>
+     * <li>Note that the request rate limit is up to 100 requests per second.</li>
+     * <li>If the service does not exist or no rollout is created, calling this operation returns an error.</li>
+     * <li>The returned status is the result of a real-time query and may change over time. Adjust the polling interval as needed.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeServiceRollout  DescribeServiceRolloutRequest
@@ -486,12 +514,26 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListAclPolicyResponse> listAclPolicy(ListAclPolicyRequest request);
 
     /**
+     * <b>description</b> :
+     * <p><em>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of EAS.</em>*</p>
+     * 
      * @param request the request parameters of ListBenchmarkTask  ListBenchmarkTaskRequest
      * @return ListBenchmarkTaskResponse
      */
     CompletableFuture<ListBenchmarkTaskResponse> listBenchmarkTask(ListBenchmarkTaskRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>This operation queries the list of dynamic parameters for a specific service.</li>
+     * <li><code>ClusterId</code> specifies the region of the service to query.</li>
+     * <li><code>ConfigType</code> currently supports only the <code>service</code> type.</li>
+     * <li><code>Name</code> specifies the service name.</li>
+     * <li>You can use the <code>Page</code> and <code>PageSize</code> parameters to perform a paged query. By default, 100 records are displayed per page, and a maximum of 200 records are supported.</li>
+     * <li>The response includes the details of the dynamic parameters and paging information.</li>
+     * </ul>
+     * 
      * @param request the request parameters of ListConfigs  ListConfigsRequest
      * @return ListConfigsResponse
      */
@@ -510,6 +552,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListGatewayDomainsResponse> listGatewayDomains(ListGatewayDomainsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p><em>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS).</em>*</p>
+     * 
      * @param request the request parameters of ListGatewayIntranetLinkedVpc  ListGatewayIntranetLinkedVpcRequest
      * @return ListGatewayIntranetLinkedVpcResponse
      */
@@ -565,12 +610,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListServiceContainersResponse> listServiceContainers(ListServiceContainersRequest request);
 
     /**
+     * <b>description</b> :
+     * <p><em>Before calling this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS).</em>*</p>
+     * 
      * @param request the request parameters of ListServiceInstanceFaultInjectionInfo  ListServiceInstanceFaultInjectionInfoRequest
      * @return ListServiceInstanceFaultInjectionInfoResponse
      */
     CompletableFuture<ListServiceInstanceFaultInjectionInfoResponse> listServiceInstanceFaultInjectionInfo(ListServiceInstanceFaultInjectionInfoRequest request);
 
     /**
+     * <b>description</b> :
+     * <p><em>Ensure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS) before you call this operation.</em>*</p>
+     * 
      * @param request the request parameters of ListServiceInstances  ListServiceInstancesRequest
      * @return ListServiceInstancesResponse
      */
@@ -661,12 +712,19 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateAppServiceResponse> updateAppService(UpdateAppServiceRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Updates a specified stress testing task. Only stress testing tasks whose mode is manual or async and that are in the Running state can be updated. You can call the DescribeBenchmarkTask operation to query the task status. If the task is in the Stopped state, you must first call the StartBenchmarkTask operation and wait until the task enters the Running state.</p>
+     * 
      * @param request the request parameters of UpdateBenchmarkTask  UpdateBenchmarkTaskRequest
      * @return UpdateBenchmarkTaskResponse
      */
     CompletableFuture<UpdateBenchmarkTaskResponse> updateBenchmarkTask(UpdateBenchmarkTaskRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>This API allows you to update the value of a specific dynamic parameter by specifying ClusterId, ConfigType, Name, and ConfigKey. The request body must include the new parameter value Value. Ensure that the provided path parameters are accurate to avoid updating the wrong dynamic parameter.</p>
+     * 
      * @param request the request parameters of UpdateConfig  UpdateConfigRequest
      * @return UpdateConfigResponse
      */
@@ -679,6 +737,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateGatewayResponse> updateGateway(UpdateGatewayRequest request);
 
     /**
+     * <b>description</b> :
+     * <p><em>Make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of EAS before you call this operation.</em>*</p>
+     * 
      * @param request the request parameters of UpdateGatewayLabel  UpdateGatewayLabelRequest
      * @return UpdateGatewayLabelResponse
      */
@@ -733,6 +794,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateServiceCronScalerResponse> updateServiceCronScaler(UpdateServiceCronScalerRequest request);
 
     /**
+     * <b>description</b> :
+     * <p><em>Make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS) before you call this operation.</em>*</p>
+     * 
      * @param request the request parameters of UpdateServiceInstance  UpdateServiceInstanceRequest
      * @return UpdateServiceInstanceResponse
      */
@@ -745,6 +809,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateServiceLabelResponse> updateServiceLabel(UpdateServiceLabelRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Updates the traffic mirror configuration of a service. Before calling this operation, you must enable traffic mirroring for the target service by calling CreateServiceMirror. If traffic mirroring is not enabled, an InvalidServiceMirror.NotFound error is returned.</p>
+     * 
      * @param request the request parameters of UpdateServiceMirror  UpdateServiceMirrorRequest
      * @return UpdateServiceMirrorResponse
      */
@@ -752,13 +819,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li><strong>至少提供一个参数</strong>：必须在请求中指定<code>Partition</code>、<code>Batch</code>或<code>Paused</code>中的至少一个参数。</li>
-     * <li><strong>互斥策略</strong>：不能同时提供<code>Partition</code>和<code>Batch</code>配置。</li>
-     * <li><strong>实时生效</strong>：更新将立即生效，影响正在进行的服务发布过程。</li>
-     * <li><strong>回退操作</strong>：通过增加<code>Partition</code>值可以实现版本回退，但不会自动触发，需要手动更新服务镜像。</li>
-     * <li><strong>暂停不影响参数</strong>：暂停发布不会改变已设置的<code>Partition</code>或<code>Batch</code>参数，仅暂停执行当前策略。</li>
+     * <li><strong>Provide at least one parameter</strong>: You must specify at least one of the Partition, Batch, or Paused parameters in the request.</li>
+     * <li><strong>Mutually exclusive policies</strong>: You cannot provide both Partition and Batch configurations at the same time.</li>
+     * <li><strong>Immediate effect</strong>: Updates take effect immediately and affect the ongoing service rollout process.</li>
+     * <li><strong>Rollback operation</strong>: You can roll back to a previous version by increasing the Partition value. However, this is not triggered automatically and requires a manual update of the service image.</li>
+     * <li><strong>Pause does not affect parameters</strong>: Pausing the rollout does not change the configured Partition or Batch parameters. It only pauses the execution of the current policy.</li>
      * </ul>
      * 
      * @param request the request parameters of UpdateServiceRollout  UpdateServiceRolloutRequest
@@ -777,6 +844,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateServiceVersionResponse
      */
     CompletableFuture<UpdateServiceVersionResponse> updateServiceVersion(UpdateServiceVersionRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Updates the traffic mirroring configuration for a service. Before you call this operation, you must enable traffic mirroring for the target service by calling CreateServiceMirror. If traffic mirroring is not enabled, the InvalidServiceMirror.NotFound error is returned.</p>
+     * 
+     * @param request the request parameters of UpdateServiceVersionRemark  UpdateServiceVersionRemarkRequest
+     * @return UpdateServiceVersionRemarkResponse
+     */
+    CompletableFuture<UpdateServiceVersionRemarkResponse> updateServiceVersionRemark(UpdateServiceVersionRemarkRequest request);
 
     /**
      * @param request the request parameters of UpdateVirtualResource  UpdateVirtualResourceRequest

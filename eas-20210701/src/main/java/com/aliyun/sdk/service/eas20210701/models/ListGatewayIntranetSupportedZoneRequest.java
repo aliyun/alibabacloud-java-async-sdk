@@ -73,7 +73,7 @@ public class ListGatewayIntranetSupportedZoneRequest extends Request {
         } 
 
         /**
-         * <p>The private gateway ID. For more information about how to obtain the private gateway ID, see the GatewayId parameter in the response parameters of the <a href="https://apiworkbench.aliyun-inc.com/document/eas/2021-07-01/ListGateway?spm=openapi-amp.newDocPublishment.0.0.765e281fL2IcjJ&ampEnv=online">ListGateway</a> operation.</p>
+         * <p>The ID of the private gateway. For information about how to obtain the ID of a private gateway, see the GatewayId field in the response of the <a href="https://apiworkbench.aliyun-inc.com/document/eas/2021-07-01/ListGateway?spm=openapi-amp.newDocPublishment.0.0.765e281fL2IcjJ&ampEnv=online">ListGateway</a> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-1uhcqmsc7x22******</p>
@@ -85,7 +85,7 @@ public class ListGatewayIntranetSupportedZoneRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the private gateway.</p>
+         * <p>The region where the private gateway resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-wulanchabu</p>

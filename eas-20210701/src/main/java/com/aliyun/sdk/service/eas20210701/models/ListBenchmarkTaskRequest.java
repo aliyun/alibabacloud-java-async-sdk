@@ -171,7 +171,7 @@ public class ListBenchmarkTaskRequest extends Request {
         } 
 
         /**
-         * <p>The keyword used to query required stress testing tasks. If this parameter is specified, the system returns stress testing tasks based on the names of the stress testing tasks in the matched Elastic Algorithm Service (EAS).</p>
+         * <p>The filter parameter. If specified, the system searches for records that match the specified value in the EAS service name and stress testing task name.</p>
          * 
          * <strong>example:</strong>
          * <p>test_bench</p>
@@ -183,7 +183,10 @@ public class ListBenchmarkTaskRequest extends Request {
         }
 
         /**
-         * ModelId.
+         * <p>The model ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Qwen3.5-27B</p>
          */
         public Builder modelId(String modelId) {
             this.putQueryParameter("ModelId", modelId);
@@ -192,7 +195,14 @@ public class ListBenchmarkTaskRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sort order. Valid values:</p>
+         * <ul>
+         * <li>desc: Descending order. This is the default value.</li>
+         * <li>asc: Ascending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -201,7 +211,7 @@ public class ListBenchmarkTaskRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * <p>The page number of the stress testing task list. Pages start from 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -213,7 +223,7 @@ public class ListBenchmarkTaskRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 100.</p>
+         * <p>The number of stress testing tasks to return on each page. Default value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -225,7 +235,15 @@ public class ListBenchmarkTaskRequest extends Request {
         }
 
         /**
-         * RequestMethod.
+         * <p>The request method for stress testing. Valid values:</p>
+         * <ul>
+         * <li>concurrency: Fixed concurrency mode.</li>
+         * <li>requestRate: Fixed request rate mode.</li>
+         * <li>peakThroughput: Peak throughput mode.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>requestRate</p>
          */
         public Builder requestMethod(String requestMethod) {
             this.putQueryParameter("RequestMethod", requestMethod);
@@ -246,7 +264,10 @@ public class ListBenchmarkTaskRequest extends Request {
         }
 
         /**
-         * Sort.
+         * <p>The sort field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateTime</p>
          */
         public Builder sort(String sort) {
             this.putQueryParameter("Sort", sort);
@@ -255,7 +276,10 @@ public class ListBenchmarkTaskRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The execution status used to filter stress testing tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Creating</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

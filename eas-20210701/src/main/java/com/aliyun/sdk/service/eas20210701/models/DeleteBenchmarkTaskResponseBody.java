@@ -67,7 +67,7 @@ public class DeleteBenchmarkTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned message.</p>
+         * <p>The message returned in the response.</p>
          * 
          * <strong>example:</strong>
          * <p>Benchmark task [benchmark-test-service-234c] is Deleting</p>

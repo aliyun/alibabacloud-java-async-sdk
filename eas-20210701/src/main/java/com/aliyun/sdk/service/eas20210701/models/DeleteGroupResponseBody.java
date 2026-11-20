@@ -67,7 +67,10 @@ public class DeleteGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * Message.
+         * <p>The message returned in the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Delete service group foo successfully</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -75,7 +78,10 @@ public class DeleteGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40325405-579C-4D82********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

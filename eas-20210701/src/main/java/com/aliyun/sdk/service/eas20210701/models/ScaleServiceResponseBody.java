@@ -67,7 +67,10 @@ public class ScaleServiceResponseBody extends TeaModel {
         } 
 
         /**
-         * Message.
+         * <p>The operation result message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Service [foo] in region [cn-shanghai] is scaling</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -75,7 +78,10 @@ public class ScaleServiceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40325405-579C-4D82****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

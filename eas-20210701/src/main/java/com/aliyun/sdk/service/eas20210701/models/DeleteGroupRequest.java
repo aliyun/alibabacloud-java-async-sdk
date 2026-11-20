@@ -87,7 +87,10 @@ public class DeleteGroupRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -96,7 +99,10 @@ public class DeleteGroupRequest extends Request {
         }
 
         /**
-         * GroupName.
+         * <p>The name of the service group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>foo</p>
          */
         public Builder groupName(String groupName) {
             this.putPathParameter("GroupName", groupName);
@@ -105,7 +111,10 @@ public class DeleteGroupRequest extends Request {
         }
 
         /**
-         * CascadeDelete.
+         * <p>Specifies whether cascade delete is enabled. If enabled, deleting the service group automatically deletes all services in the service group. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder cascadeDelete(String cascadeDelete) {
             this.putQueryParameter("CascadeDelete", cascadeDelete);

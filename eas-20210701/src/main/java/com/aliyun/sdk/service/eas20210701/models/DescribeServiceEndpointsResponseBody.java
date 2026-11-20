@@ -104,7 +104,7 @@ public class DescribeServiceEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The service endpoints.</p>
+         * <p>The list of service endpoints.</p>
          */
         public Builder endpoints(java.util.List<Endpoints> endpoints) {
             this.endpoints = endpoints;
@@ -112,10 +112,10 @@ public class DescribeServiceEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The message returned.</p>
          * 
          * <strong>example:</strong>
-         * <p>Execution successful.</p>
+         * <p>Execution succeeded.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -244,7 +244,20 @@ public class DescribeServiceEndpointsResponseBody extends TeaModel {
             } 
 
             /**
-             * BackendId.
+             * <p>The ID of the backend service. The value of this parameter varies based on the value of EndpointType:</p>
+             * <ul>
+             * <li><p>If EndpointType is DefaultGateway, this parameter is set to default.</p>
+             * </li>
+             * <li><p>If EndpointType is PrivateGateway, this parameter is the ID of the dedicated gateway.</p>
+             * </li>
+             * <li><p>If EndpointType is Nlb, this parameter is the ID of the NLB instance.</p>
+             * </li>
+             * <li><p>If EndpointType is Nacos, this parameter is the ID of the Nacos instance.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>nlb-5q4sp7u6oorkha****</p>
              */
             public Builder backendId(String backendId) {
                 this.backendId = backendId;
@@ -252,7 +265,20 @@ public class DescribeServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * EndpointType.
+             * <p>The connection type of the service endpoint. Valid values:</p>
+             * <ul>
+             * <li><p>DefaultGateway: The service is connected using a shared gateway.</p>
+             * </li>
+             * <li><p>PrivateGateway: The service is connected using a dedicated gateway.</p>
+             * </li>
+             * <li><p>Nlb: The service is attached to a Network Load Balancer (NLB) instance.</p>
+             * </li>
+             * <li><p>Nacos: The service is attached to a Nacos instance.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Nlb</p>
              */
             public Builder endpointType(String endpointType) {
                 this.endpointType = endpointType;
@@ -260,7 +286,7 @@ public class DescribeServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * InternetEndpoints.
+             * <p>The list of internet-facing endpoints.</p>
              */
             public Builder internetEndpoints(java.util.List<String> internetEndpoints) {
                 this.internetEndpoints = internetEndpoints;
@@ -268,7 +294,7 @@ public class DescribeServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetEndpoints.
+             * <p>The list of internal endpoints.</p>
              */
             public Builder intranetEndpoints(java.util.List<String> intranetEndpoints) {
                 this.intranetEndpoints = intranetEndpoints;
@@ -276,7 +302,16 @@ public class DescribeServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * PathType.
+             * <p>The type of the endpoint. Valid values:</p>
+             * <ul>
+             * <li><p>Group: The endpoint of an audience group.</p>
+             * </li>
+             * <li><p>Service: The endpoint of a service.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Service</p>
              */
             public Builder pathType(String pathType) {
                 this.pathType = pathType;
@@ -284,7 +319,10 @@ public class DescribeServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * <p>The port number. This parameter is returned only when the service is attached to an NLB or Nacos instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9090</p>
              */
             public Builder port(Integer port) {
                 this.port = port;

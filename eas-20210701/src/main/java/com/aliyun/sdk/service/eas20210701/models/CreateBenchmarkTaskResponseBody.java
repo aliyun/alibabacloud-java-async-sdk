@@ -93,7 +93,7 @@ public class CreateBenchmarkTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned message.</p>
+         * <p>The message returned for the request.</p>
          * 
          * <strong>example:</strong>
          * <p>Benchmark  task [foo] is Creating</p>
@@ -104,7 +104,7 @@ public class CreateBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the region where the stress testing task is performed.</p>
+         * <p>The region where the stress testing task resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>

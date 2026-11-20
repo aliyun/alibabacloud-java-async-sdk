@@ -424,7 +424,10 @@ public class ListServicesRequest extends Request {
         } 
 
         /**
-         * Accessibility.
+         * <p>Filters services by visibility. PUBLIC indicates a public service, and PRIVATE indicates a private service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PUBLIC</p>
          */
         public Builder accessibility(String accessibility) {
             this.putQueryParameter("Accessibility", accessibility);
@@ -433,7 +436,10 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * AutoscalerEnabled.
+         * <p>Specifies whether elastic scaling is enabled for the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoscalerEnabled(Boolean autoscalerEnabled) {
             this.putQueryParameter("AutoscalerEnabled", autoscalerEnabled);
@@ -442,7 +448,10 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * CallerUid.
+         * <p>The UID of the account that created the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19989224166xxxxxxx</p>
          */
         public Builder callerUid(String callerUid) {
             this.putQueryParameter("CallerUid", callerUid);
@@ -451,7 +460,10 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * CronscalerEnabled.
+         * <p>Specifies whether scheduled scaling is enabled for the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder cronscalerEnabled(Boolean cronscalerEnabled) {
             this.putQueryParameter("CronscalerEnabled", cronscalerEnabled);
@@ -460,7 +472,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * <p>The field that is used for fuzzy matches. The system performs fuzzy matches only by service name.</p>
+         * <p>The fuzzy match field. Only fuzzy matching by service name is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>foo</p>
@@ -472,7 +484,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * <p>The private gateway ID.</p>
+         * <p>The ID of the private gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-1uhcqmsc7x22******</p>
@@ -484,7 +496,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * <p>The name of the service group. For more information about how to query the name of a service group, see <a href="https://help.aliyun.com/document_detail/412109.html">ListServices</a>.</p>
+         * <p>The name of the service group. For information about how to obtain the service group name, see <a href="https://help.aliyun.com/document_detail/412109.html">ListServices</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>foo</p>
@@ -496,7 +508,10 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * IncludeNoWorkspace.
+         * <p>Specifies whether to include services that do not belong to any workspace. Default value: true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder includeNoWorkspace(Boolean includeNoWorkspace) {
             this.putQueryParameter("IncludeNoWorkspace", includeNoWorkspace);
@@ -505,7 +520,10 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * <p>The tag that is used to filter services.</p>
+         * <p>The label used to filter services.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:null}</p>
          */
         public Builder label(java.util.Map<String, String> label) {
             String labelShrink = shrink(label, "Label", "json");
@@ -515,10 +533,10 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * <p>The sorting order. Valid values:</p>
+         * <p>The sort order. Valid values:</p>
          * <ul>
-         * <li>desc (default): The query results are sorted in descending order.</li>
-         * <li>asc: The query results are sorted in ascending order.</li>
+         * <li>desc: Descending order. This is the default value.</li>
+         * <li>asc: Ascending order.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -531,7 +549,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * <p>The page number. Default value: 1.</p>
+         * <p>The page number of the service list to return. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -543,7 +561,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 100.</p>
+         * <p>The number of services to return on each page during a paged query. Default value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -555,7 +573,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the primary service that corresponds to the Band member service.</p>
+         * <p>The ID of the primary service that corresponds to the band member service.</p>
          * 
          * <strong>example:</strong>
          * <p>eas-m-ijafy3c8cxxxx</p>
@@ -570,7 +588,7 @@ public class ListServicesRequest extends Request {
          * <p>The quota ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>quota12345</p>
+         * <p>quota1****</p>
          */
         public Builder quotaId(String quotaId) {
             this.putQueryParameter("QuotaId", quotaId);
@@ -579,7 +597,10 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * ResourceAliasName.
+         * <p>The custom name of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         public Builder resourceAliasName(String resourceAliasName) {
             this.putQueryParameter("ResourceAliasName", resourceAliasName);
@@ -588,7 +609,10 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * ResourceBurstable.
+         * <p>Specifies whether the burstable resource pool is enabled for the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder resourceBurstable(Boolean resourceBurstable) {
             this.putQueryParameter("ResourceBurstable", resourceBurstable);
@@ -597,7 +621,10 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * <p>The ID of the resource group. For information about how to query the resource group ID, see <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eas-r-asdas****</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -618,7 +645,16 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>The type of resource used by the service. Valid values:</p>
+         * <ul>
+         * <li>PublicResource</li>
+         * <li>DedicatedResource</li>
+         * <li>Lingjun</li>
+         * <li>SelfManagedLingjun</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PublicResource</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -627,19 +663,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * <p>The server role.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>DataLoader</li>
-         * <li>FrontEnd</li>
-         * <li>DataSet</li>
-         * <li>SDProxy</li>
-         * <li>LLMSscheduler</li>
-         * <li>ScalableJob</li>
-         * <li>LLMGateway</li>
-         * <li>Job</li>
-         * <li>Queue</li>
-         * </ul>
+         * <p>The service role.</p>
          * 
          * <strong>example:</strong>
          * <p>LLMGateway</p>
@@ -651,7 +675,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * <p>The service name.</p>
+         * <p>The name of the service.</p>
          * 
          * <strong>example:</strong>
          * <p>echo_test</p>
@@ -663,135 +687,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * <p>The service state.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>Creating</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>Stopped</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>Failed</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>Complete</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>Cloning</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>Stopping</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>Updating</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>Waiting</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>HotUpdate</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>Committing</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>Starting</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>DeleteFailed</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>Running</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>Developing</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>Scaling</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>Deleted</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>Pending</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>Deleting</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
+         * <p>The running status of the service.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -807,38 +703,16 @@ public class ListServicesRequest extends Request {
          * <ul>
          * <li>Async</li>
          * <li>Standard</li>
+         * <li>Queue</li>
+         * <li>LLM</li>
+         * <li>RAG</li>
+         * <li>Serverless</li>
+         * <li>LLMGatewayService</li>
          * <li>Offline Task</li>
-         * <li>Proxima</li>
-         * </ul>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>Async</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>Standard</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>OfflineTask</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>Proxima</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
+         * <li>SDCluster</li>
+         * <li>ScalableJob</li>
+         * <li>ScalableJobService</li>
+         * <li>AssistantJob</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -851,7 +725,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * <p>The user ID (UID) of the service.</p>
+         * <p>The UID of the service.</p>
          * 
          * <strong>example:</strong>
          * <p>eas-m-c9iw3yitxxxx</p>
@@ -863,7 +737,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * <p>The sort field. By default, the query results are sorted by the timestamp type in descending order.</p>
+         * <p>The sort field. By default, timestamp fields are sorted in descending order.</p>
          * 
          * <strong>example:</strong>
          * <p>CreateTime</p>
@@ -875,7 +749,10 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * TrafficState.
+         * <p>Specifies whether to receive group traffic. This parameter is valid only for group services.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>grouping</p>
          */
         public Builder trafficState(String trafficState) {
             this.putQueryParameter("TrafficState", trafficState);
@@ -887,7 +764,7 @@ public class ListServicesRequest extends Request {
          * <p>The workspace ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>123456</p>
+         * <p>1234**</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

@@ -75,7 +75,7 @@ public class DescribeResourceRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cluster to which the resource group belongs.</p>
+         * <p>The ID of the cluster where the resource group resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class DescribeResourceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group. For more information about how to query the ID of a resource group, see <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a>.</p>
+         * <p>The ID of the resource group. To query the resource group ID, see <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

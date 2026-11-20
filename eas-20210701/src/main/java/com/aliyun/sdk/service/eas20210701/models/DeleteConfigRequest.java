@@ -101,7 +101,10 @@ public class DeleteConfigRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * <p><strong>The cluster or region ID.</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -110,7 +113,10 @@ public class DeleteConfigRequest extends Request {
         }
 
         /**
-         * ConfigType.
+         * <p><strong>The configuration type.</strong> Currently, only <code>service</code> is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>service</p>
          */
         public Builder configType(String configType) {
             this.putPathParameter("ConfigType", configType);
@@ -119,7 +125,10 @@ public class DeleteConfigRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p><strong>The service name.</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-llm-service</p>
          */
         public Builder name(String name) {
             this.putPathParameter("Name", name);
@@ -128,7 +137,10 @@ public class DeleteConfigRequest extends Request {
         }
 
         /**
-         * ConfigKey.
+         * <p><strong>The name of the configuration item to delete.</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>rate_limit</p>
          */
         public Builder configKey(String configKey) {
             this.putPathParameter("ConfigKey", configKey);

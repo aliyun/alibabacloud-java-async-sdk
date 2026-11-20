@@ -146,7 +146,7 @@ public class UpdateServiceInstanceRequest extends Request {
         } 
 
         /**
-         * <p>The region ID of the service.</p>
+         * <p>The region where the service is deployed.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,7 +159,7 @@ public class UpdateServiceInstanceRequest extends Request {
         }
 
         /**
-         * <p>The service name. For more information about how to query the service name, see <a href="https://help.aliyun.com/document_detail/412109.html">ListServices</a>.</p>
+         * <p>The name of the service. For more information about how to view the service name, see <a href="https://help.aliyun.com/document_detail/412109.html">ListServices</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -172,7 +172,7 @@ public class UpdateServiceInstanceRequest extends Request {
         }
 
         /**
-         * <p>The instance name. For more information about how to query the instance name, see <a href="https://help.aliyun.com/document_detail/412108.html">ListServiceInstances</a>.</p>
+         * <p>The name of the service instance. For more information about how to view the instance name, see <a href="https://help.aliyun.com/document_detail/412108.html">ListServiceInstances</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -185,7 +185,10 @@ public class UpdateServiceInstanceRequest extends Request {
         }
 
         /**
-         * IsReplica.
+         * <p>Specifies whether the current instance is an instance unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isReplica(Boolean isReplica) {
             this.putQueryParameter("IsReplica", isReplica);
@@ -194,7 +197,13 @@ public class UpdateServiceInstanceRequest extends Request {
         }
 
         /**
-         * Detach.
+         * <p>Specifies whether to isolate the service instance. After an instance is isolated, it is no longer managed by the controller, and a new instance is created. The isolated instance is used to preserve the state or for debugging. Note: An isolated instance cannot be unisolated. Valid values:</p>
+         * <ul>
+         * <li>true: The instance is isolated.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder detach(Boolean detach) {
             this.putBodyParameter("Detach", detach);
@@ -203,7 +212,12 @@ public class UpdateServiceInstanceRequest extends Request {
         }
 
         /**
-         * Hibernate.
+         * <blockquote>
+         * <p>This parameter is in invitational preview and is not supported.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder hibernate(Boolean hibernate) {
             this.putBodyParameter("Hibernate", hibernate);
@@ -212,10 +226,10 @@ public class UpdateServiceInstanceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to isolate the service instance. Valid values:</p>
+         * <p>Specifies whether the instance receives traffic. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: The instance receives traffic.</li>
+         * <li>false: The instance does not receive traffic.</li>
          * </ul>
          * 
          * <strong>example:</strong>

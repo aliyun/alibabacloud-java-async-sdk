@@ -93,7 +93,10 @@ public class CreateConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * CreatedAt.
+         * <p>The creation time in UTC format that complies with RFC 3339.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-01-01T00:00:00Z</p>
          */
         public Builder createdAt(String createdAt) {
             this.createdAt = createdAt;
@@ -101,7 +104,10 @@ public class CreateConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Key.
+         * <p>The name of the dynamic parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>model-config</p>
          */
         public Builder key(String key) {
             this.key = key;
@@ -109,7 +115,10 @@ public class CreateConfigResponseBody extends TeaModel {
         }
 
         /**
-         * UpdatedAt.
+         * <p>The update time in UTC format that complies with RFC 3339.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-01-01T00:00:00Z</p>
          */
         public Builder updatedAt(String updatedAt) {
             this.updatedAt = updatedAt;
@@ -117,7 +126,10 @@ public class CreateConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Value.
+         * <p>The value of the dynamic parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;model&quot;: &quot;gpt-4&quot;}</p>
          */
         public Builder value(String value) {
             this.value = value;

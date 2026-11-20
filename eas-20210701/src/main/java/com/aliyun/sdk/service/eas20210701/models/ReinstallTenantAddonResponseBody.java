@@ -67,7 +67,7 @@ public class ReinstallTenantAddonResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned message.</p>
+         * <p>The operation result message.</p>
          * 
          * <strong>example:</strong>
          * <p>Addon prometheus_discovery is successfully reinstalled</p>

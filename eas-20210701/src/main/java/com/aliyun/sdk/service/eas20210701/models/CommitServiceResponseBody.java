@@ -67,7 +67,7 @@ public class CommitServiceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned message.</p>
+         * <p>The returned result message.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>

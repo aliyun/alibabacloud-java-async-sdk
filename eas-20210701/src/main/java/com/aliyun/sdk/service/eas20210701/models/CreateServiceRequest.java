@@ -18,8 +18,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateServiceRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Develop")
     private String develop;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Labels")
@@ -35,7 +43,9 @@ public class CreateServiceRequest extends Request {
 
     private CreateServiceRequest(Builder builder) {
         super(builder);
+        this.clientToken = builder.clientToken;
         this.develop = builder.develop;
+        this.dryRun = builder.dryRun;
         this.labels = builder.labels;
         this.workspaceId = builder.workspaceId;
         this.body = builder.body;
@@ -55,10 +65,24 @@ public class CreateServiceRequest extends Request {
     }
 
     /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
      * @return develop
      */
     public String getDevelop() {
         return this.develop;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -83,7 +107,9 @@ public class CreateServiceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateServiceRequest, Builder> {
+        private String clientToken; 
         private String develop; 
+        private Boolean dryRun; 
         private java.util.Map<String, String> labels; 
         private String workspaceId; 
         private String body; 
@@ -94,30 +120,28 @@ public class CreateServiceRequest extends Request {
 
         private Builder(CreateServiceRequest request) {
             super(request);
+            this.clientToken = request.clientToken;
             this.develop = request.develop;
+            this.dryRun = request.dryRun;
             this.labels = request.labels;
             this.workspaceId = request.workspaceId;
             this.body = request.body;
         } 
 
         /**
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5db780a0-9d3e-4f35-a84a-xxxxx</p>
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
          * <p>Specifies whether to enter development mode.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>true</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>false</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -129,7 +153,28 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * <p>The custom label.</p>
+         * <p>Specifies whether to only perform a dry run for this request.</p>
+         * <ul>
+         * <li><p>true: A check request is sent, and no actual operation is performed. If the check fails, the corresponding error is returned. If the check succeeds, the error code DryRunOperation is returned.</p>
+         * </li>
+         * <li><p>false (default): A normal request is sent.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * <p>The user-defined labels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;key&quot;:&quot;value&quot;}</p>
          */
         public Builder labels(java.util.Map<String, String> labels) {
             String labelsShrink = shrink(labels, "Labels", "json");
@@ -151,10 +196,10 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * <p>The request body. For more information about the key request parameters, see <strong>Table 1. Request body parameters</strong> and <strong>Table 2. Metadata parameters</strong>. For more information about all related parameters, see <a href="https://help.aliyun.com/document_detail/450525.html">Parameters of model services</a>.</p>
+         * <p>The request body. For instructions on key request parameter settings, see <strong>Table 1. Request body parameters</strong> and <strong>Table 2. Metadata parameters</strong> below. For more details about parameter settings, see <a href="https://help.aliyun.com/document_detail/450525.html">All related metric description for service models</a>.</p>
          * 
          * <strong>example:</strong>
-         * <p>Service deployment by using an image:
+         * <p>Service deployed by using an image:
          * {
          *   &quot;name&quot;: &quot;foo&quot;,
          *   &quot;metadata&quot;: {
@@ -182,7 +227,7 @@ public class CreateServiceRequest extends Request {
          *     }
          *   ]
          * }
-         * AI-Web application deployment by using an image:
+         * AI-Web application deployed by using an image:
          * {
          *   &quot;name&quot;: &quot;foo&quot;,
          *   &quot;metadata&quot;: {
@@ -211,7 +256,7 @@ public class CreateServiceRequest extends Request {
          *     }
          *   ]
          * }
-         * Service deployment by using models and processors:
+         * Service deployed by using a model and a processor:
          * {
          *   &quot;metadata&quot;: {
          *     &quot;instance&quot;: 1,

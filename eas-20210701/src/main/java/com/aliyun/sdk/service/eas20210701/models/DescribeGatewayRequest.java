@@ -75,11 +75,11 @@ public class DescribeGatewayRequest extends Request {
         } 
 
         /**
-         * <p>The region ID of the private gateway.</p>
+         * <p>The region of the private gateway.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
+         * <p>cn-wulanchabu</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -88,7 +88,7 @@ public class DescribeGatewayRequest extends Request {
         }
 
         /**
-         * <p>The ID of the private gateway. For more information about the private gateway ID, see the private_gateway_id parameter returned by <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a>.</p>
+         * <p>The ID of the private gateway. For information about how to obtain the private gateway ID, see the private_gateway_id field in the response of the <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

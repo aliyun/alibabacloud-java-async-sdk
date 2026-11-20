@@ -67,10 +67,10 @@ public class StopBenchmarkTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned message.</p>
+         * <p>The operation result message.</p>
          * 
          * <strong>example:</strong>
-         * <p>Benchmark task [benchmark-larec-test-1076] is Stopping</p>
+         * <p>Benchmark task [benchmark-larec-test-dbe5] is Stopping</p>
          */
         public Builder message(String message) {
             this.message = message;

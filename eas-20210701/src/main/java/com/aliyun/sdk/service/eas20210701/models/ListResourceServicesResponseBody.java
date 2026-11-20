@@ -106,7 +106,7 @@ public class ListResourceServicesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the returned service list.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -117,7 +117,7 @@ public class ListResourceServicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of services returned on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -128,7 +128,7 @@ public class ListResourceServicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>40325405-579C-4D82****</p>
@@ -139,7 +139,7 @@ public class ListResourceServicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The services.</p>
+         * <p>The list of services.</p>
          */
         public Builder services(java.util.List<Service> services) {
             this.services = services;
@@ -147,7 +147,7 @@ public class ListResourceServicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of services.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>

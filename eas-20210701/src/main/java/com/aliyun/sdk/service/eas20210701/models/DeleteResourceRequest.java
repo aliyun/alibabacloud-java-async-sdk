@@ -75,7 +75,7 @@ public class DeleteResourceRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the region to which the resource group belongs.</p>
+         * <p>The region ID where the resource group resides. For example, the region ID of China (Shanghai) is cn-shanghai.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,11 +88,11 @@ public class DeleteResourceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group. For more information about how to query the ID of a resource group, see <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a>.</p>
+         * <p>The ID of the resource group. For information about how to query the resource group ID, see <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>eas-r-asdasdasd</p>
+         * <p>eas-r-asdasdasd****</p>
          */
         public Builder resourceId(String resourceId) {
             this.putPathParameter("ResourceId", resourceId);

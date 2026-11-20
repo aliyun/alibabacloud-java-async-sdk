@@ -87,7 +87,7 @@ public class ListGatewayIntranetLinkedVpcPeerRequest extends Request {
         } 
 
         /**
-         * <p>The region where the private gateway resides.</p>
+         * <p>The region where the private gateway is located.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-wulanchabu</p>
@@ -99,7 +99,7 @@ public class ListGatewayIntranetLinkedVpcPeerRequest extends Request {
         }
 
         /**
-         * <p>The ID of the private gateway. To obtain the private gateway ID, see <a href="https://help.aliyun.com/document_detail/2841911.html">ListGateway</a>.</p>
+         * <p>The ID of the private gateway. For more information about how to obtain the private gateway ID, see <a href="https://help.aliyun.com/document_detail/2841911.html">ListGateway</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-1uhcqmsc7x22******</p>
@@ -111,10 +111,10 @@ public class ListGatewayIntranetLinkedVpcPeerRequest extends Request {
         }
 
         /**
-         * <p>The ID of the associated VPC. To obtain the VPC ID, see <a href="https://help.aliyun.com/document_detail/2621223.html">ListGatewayIntranetLinkedVpc</a>.</p>
+         * <p>The ID of the associated VPC. For more information about how to query the VPC ID, see <a href="https://help.aliyun.com/document_detail/2621223.html">ListGatewayIntranetLinkedVpc</a>.</p>
          * <ul>
-         * <li>If you specify a VPC ID, only VPC peers corresponding to the ID are queried.</li>
-         * <li>Otherwise, all VPC peers are queried.</li>
+         * <li>If you specify a VPC ID, only the VPC peers associated with the specified VPC ID are queried.</li>
+         * <li>If you do not specify a VPC ID, all VPC peers are queried.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -730,7 +730,10 @@ public class Service extends TeaModel {
         } 
 
         /**
-         * AccessToken.
+         * <p>The request token of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MzJiMDI5MDliODc0MTlkYmI0ZDhlYmExYjczYTIyZTE3Zm********</p>
          */
         public Builder accessToken(String accessToken) {
             this.accessToken = accessToken;
@@ -738,7 +741,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * AppConfig.
+         * <p>The configuration information of the application service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;ModelStorage&quot;:&quot;oss&quot;}</p>
          */
         public Builder appConfig(String appConfig) {
             this.appConfig = appConfig;
@@ -746,7 +752,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * AppSpecName.
+         * <p>The specification name of the application service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llama_7b_fp16</p>
          */
         public Builder appSpecName(String appSpecName) {
             this.appSpecName = appSpecName;
@@ -754,7 +763,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * AppType.
+         * <p>The type of the application service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LLM</p>
          */
         public Builder appType(String appType) {
             this.appType = appType;
@@ -762,7 +774,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * AppVersion.
+         * <p>The version of the application service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder appVersion(String appVersion) {
             this.appVersion = appVersion;
@@ -770,7 +785,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * AutoscalerEnabled.
+         * <p>Specifies whether elastic scaling is enabled for the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoscalerEnabled(Boolean autoscalerEnabled) {
             this.autoscalerEnabled = autoscalerEnabled;
@@ -778,7 +796,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * CallerUid.
+         * <p>The UID of the account that created the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20123*******</p>
          */
         public Builder callerUid(String callerUid) {
             this.callerUid = callerUid;
@@ -786,7 +807,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * Cpu.
+         * <p>The number of CPUs requested for each instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder cpu(Integer cpu) {
             this.cpu = cpu;
@@ -794,7 +818,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The time when the service was created. The time is displayed in UTC and follows the RFC 3339 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-29T11:13:20Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -802,7 +829,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * CronscalerEnabled.
+         * <p>Specifies whether scheduled scaling is enabled for the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder cronscalerEnabled(Boolean cronscalerEnabled) {
             this.cronscalerEnabled = cronscalerEnabled;
@@ -810,7 +840,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * CurrentVersion.
+         * <p>The version of the model that is currently running.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentVersion(Integer currentVersion) {
             this.currentVersion = currentVersion;
@@ -818,7 +851,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * ExtraData.
+         * <p>The extra information of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;blue_green_services&quot;:[&quot;test&quot;,&quot;testxxxx&quot;]}</p>
          */
         public Builder extraData(String extraData) {
             this.extraData = extraData;
@@ -826,7 +862,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * GPUCorePercentage.
+         * <p>The GPU compute capacity requested by each instance after GPU sharing is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder GPUCorePercentage(Integer GPUCorePercentage) {
             this.GPUCorePercentage = GPUCorePercentage;
@@ -834,7 +873,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * GPUMemory.
+         * <p>The GPU memory size requested by each instance after GPU sharing is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder GPUMemory(Integer GPUMemory) {
             this.GPUMemory = GPUMemory;
@@ -842,7 +884,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * Gateway.
+         * <p>The dedicated gateway ID of the service. This information is available only for services bound to a dedicated gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-xxxxxx</p>
          */
         public Builder gateway(String gateway) {
             this.gateway = gateway;
@@ -850,7 +895,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * Gpu.
+         * <p>The number of GPUs requested for each instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder gpu(Integer gpu) {
             this.gpu = gpu;
@@ -858,7 +906,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * Image.
+         * <p>The data image of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registry.cn-shanghai.aliyuncs.com/eas/echo_cn-shanghai:v0.0.1-20210129111320</p>
          */
         public Builder image(String image) {
             this.image = image;
@@ -866,7 +917,7 @@ public class Service extends TeaModel {
         }
 
         /**
-         * InstanceCountInResource.
+         * <p>The distribution of instances across different resource types.</p>
          */
         public Builder instanceCountInResource(InstanceCountInResource instanceCountInResource) {
             this.instanceCountInResource = instanceCountInResource;
@@ -874,7 +925,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * InternetEndpoint.
+         * <p>The public endpoint of the service. This field is returned only in the DescribeService operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://10123*****.cn-shanghai.aliyuncs.com/api/predict/echo">http://10123*****.cn-shanghai.aliyuncs.com/api/predict/echo</a></p>
          */
         public Builder internetEndpoint(String internetEndpoint) {
             this.internetEndpoint = internetEndpoint;
@@ -882,7 +936,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * IntranetEndpoint.
+         * <p>The internal endpoint of the service. This field is returned only in the DescribeService operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://10123*****.vpc.cn-shanghai.aliyuncs.com/api/predict/echo">http://10123*****.vpc.cn-shanghai.aliyuncs.com/api/predict/echo</a></p>
          */
         public Builder intranetEndpoint(String intranetEndpoint) {
             this.intranetEndpoint = intranetEndpoint;
@@ -890,7 +947,7 @@ public class Service extends TeaModel {
         }
 
         /**
-         * Labels.
+         * <p>The list of service labels.</p>
          */
         public Builder labels(java.util.List<Labels> labels) {
             this.labels = labels;
@@ -898,7 +955,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * LatestVersion.
+         * <p>The latest version of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder latestVersion(Integer latestVersion) {
             this.latestVersion = latestVersion;
@@ -906,7 +966,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * Memory.
+         * <p>The memory requested for each instance, in MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         public Builder memory(Integer memory) {
             this.memory = memory;
@@ -914,7 +977,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The summary information of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Service start successfully</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -922,7 +988,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * Namespace.
+         * <p>The namespace of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>echo</p>
          */
         public Builder namespace(String namespace) {
             this.namespace = namespace;
@@ -930,7 +999,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * ParentUid.
+         * <p>The UID of the primary account to which the account that created the service belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11234*******</p>
          */
         public Builder parentUid(String parentUid) {
             this.parentUid = parentUid;
@@ -938,7 +1010,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * PendingInstance.
+         * <p>The number of pending instances of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder pendingInstance(Integer pendingInstance) {
             this.pendingInstance = pendingInstance;
@@ -946,7 +1021,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * QuotaId.
+         * <p>The quota ID of the service. This information is available only for services deployed on Lingjun resource quotas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>quotaxxxxx</p>
          */
         public Builder quotaId(String quotaId) {
             this.quotaId = quotaId;
@@ -954,7 +1032,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * Reason.
+         * <p>The reason for the service status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
          */
         public Builder reason(String reason) {
             this.reason = reason;
@@ -962,7 +1043,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * Region.
+         * <p>The region where the service is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder region(String region) {
             this.region = region;
@@ -970,7 +1054,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40325405-579C-4D82********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -978,7 +1065,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * Resource.
+         * <p>The resource group of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eas-r-xxxxxxx</p>
          */
         public Builder resource(String resource) {
             this.resource = resource;
@@ -986,7 +1076,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * ResourceAlias.
+         * <p>The alias of the resource group to which the service belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_resource</p>
          */
         public Builder resourceAlias(String resourceAlias) {
             this.resourceAlias = resourceAlias;
@@ -994,7 +1087,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * ResourceBurstable.
+         * <p>Specifies whether the elastic resource pool is enabled for the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder resourceBurstable(Boolean resourceBurstable) {
             this.resourceBurstable = resourceBurstable;
@@ -1002,7 +1098,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * Role.
+         * <p>The service role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Queue</p>
          */
         public Builder role(String role) {
             this.role = role;
@@ -1010,7 +1109,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * RoleAttrs.
+         * <p>The additional attributes of the service role. This field is returned only in the DescribeService operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;ApproxMaxLength&quot;:null,&quot;Length&quot;:null,&quot;MaxPayloadBytes&quot;:null}</p>
          */
         public Builder roleAttrs(String roleAttrs) {
             this.roleAttrs = roleAttrs;
@@ -1018,7 +1120,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * RunningInstance.
+         * <p>The number of running instances of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder runningInstance(Integer runningInstance) {
             this.runningInstance = runningInstance;
@@ -1026,7 +1131,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * SafetyLock.
+         * <p>The service safety lock.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dangerous</p>
          */
         public Builder safetyLock(String safetyLock) {
             this.safetyLock = safetyLock;
@@ -1034,7 +1142,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * SecondaryInternetEndpoint.
+         * <p>The public endpoint for synchronous requests of asynchronous services. This field is returned only in the DescribeService operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://10123*****.cn-shanghai.aliyuncs.com/api/predict/async_path.echo">http://10123*****.cn-shanghai.aliyuncs.com/api/predict/async_path.echo</a></p>
          */
         public Builder secondaryInternetEndpoint(String secondaryInternetEndpoint) {
             this.secondaryInternetEndpoint = secondaryInternetEndpoint;
@@ -1042,7 +1153,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * SecondaryIntranetEndpoint.
+         * <p>The internal endpoint for synchronous requests of asynchronous services. This field is returned only in the DescribeService operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://10123*****.vpc.cn-shanghai.aliyuncs.com/api/predict/async_path.echo">http://10123*****.vpc.cn-shanghai.aliyuncs.com/api/predict/async_path.echo</a></p>
          */
         public Builder secondaryIntranetEndpoint(String secondaryIntranetEndpoint) {
             this.secondaryIntranetEndpoint = secondaryIntranetEndpoint;
@@ -1050,7 +1164,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * ServiceConfig.
+         * <p>The configuration of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;metadata&quot;:{&quot;cpu&quot;:1,&quot;instance&quot;:1,&quot;memory&quot;:1024},&quot;name&quot;:&quot;echo&quot;,&quot;processor_entry&quot;:&quot;libecho.so&quot;,&quot;processor_path&quot;:&quot;<a href="http://oss-cn-hangzhou-zmf.aliyuncs.com/059247/echo_processor_release.tar.gz%22,%22processor_type%22:%22cpp%22%7D">http://oss-cn-hangzhou-zmf.aliyuncs.com/059247/echo_processor_release.tar.gz&quot;,&quot;processor_type&quot;:&quot;cpp&quot;}</a></p>
          */
         public Builder serviceConfig(String serviceConfig) {
             this.serviceConfig = serviceConfig;
@@ -1058,7 +1175,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * ServiceGroup.
+         * <p>The group to which the service belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_group</p>
          */
         public Builder serviceGroup(String serviceGroup) {
             this.serviceGroup = serviceGroup;
@@ -1066,7 +1186,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * ServiceId.
+         * <p>The unique ID of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eas-m-xxasdat</p>
          */
         public Builder serviceId(String serviceId) {
             this.serviceId = serviceId;
@@ -1074,7 +1197,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * ServiceName.
+         * <p>The name of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>echo</p>
          */
         public Builder serviceName(String serviceName) {
             this.serviceName = serviceName;
@@ -1082,7 +1208,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * ServiceUid.
+         * <p>The ID of the service. This value is the same as ServiceId.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eas-m-xxasdat</p>
          */
         public Builder serviceUid(String serviceUid) {
             this.serviceUid = serviceUid;
@@ -1090,7 +1219,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * Source.
+         * <p>The deployment source of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dsw</p>
          */
         public Builder source(String source) {
             this.source = source;
@@ -1098,7 +1230,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -1106,7 +1241,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * TotalInstance.
+         * <p>The total number of instances of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalInstance(Integer totalInstance) {
             this.totalInstance = totalInstance;
@@ -1114,7 +1252,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * TrafficState.
+         * <p>The traffic status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>standalone</p>
          */
         public Builder trafficState(String trafficState) {
             this.trafficState = trafficState;
@@ -1122,7 +1263,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * UpdateTime.
+         * <p>The time when the service was updated. The time is displayed in UTC and follows the RFC 3339 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-29T11:13:20Z</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
@@ -1130,7 +1274,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * Weight.
+         * <p>The weight for the canary release of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder weight(Integer weight) {
             this.weight = weight;
@@ -1138,7 +1285,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * WorkloadType.
+         * <p>The workload type of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>stateless</p>
          */
         public Builder workloadType(String workloadType) {
             this.workloadType = workloadType;
@@ -1146,7 +1296,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123445</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;
@@ -1225,7 +1378,10 @@ public class Service extends TeaModel {
             } 
 
             /**
-             * Dedicated.
+             * <p>The number of instances that use dedicated resource groups or self-managed resource groups.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder dedicated(Integer dedicated) {
                 this.dedicated = dedicated;
@@ -1233,7 +1389,10 @@ public class Service extends TeaModel {
             }
 
             /**
-             * Public.
+             * <p>The number of instances that use public resource groups.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder _public(Integer _public) {
                 this._public = _public;
@@ -1241,7 +1400,10 @@ public class Service extends TeaModel {
             }
 
             /**
-             * Quota.
+             * <p>The number of instances that use Lingjun quotas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder quota(Integer quota) {
                 this.quota = quota;
@@ -1308,7 +1470,10 @@ public class Service extends TeaModel {
             } 
 
             /**
-             * LabelKey.
+             * <p>The key of the service label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key1</p>
              */
             public Builder labelKey(String labelKey) {
                 this.labelKey = labelKey;
@@ -1316,7 +1481,10 @@ public class Service extends TeaModel {
             }
 
             /**
-             * LabelValue.
+             * <p>The value of the service label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder labelValue(String labelValue) {
                 this.labelValue = labelValue;

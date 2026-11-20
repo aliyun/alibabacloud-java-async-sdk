@@ -103,7 +103,7 @@ public class ListResourceServicesRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the region to which the resource group belongs.</p>
+         * <p>The ID of the cluster where the resource group resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class ListResourceServicesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group. For more information about how to query the ID of a resource group, see <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a>.</p>
+         * <p>The ID of the resource group. For more information about how to obtain the resource group ID, see <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +129,7 @@ public class ListResourceServicesRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * <p>The page number of the service list. Pages start from 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -141,7 +141,7 @@ public class ListResourceServicesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 100.</p>
+         * <p>The number of services to return on each page during paging. Default value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

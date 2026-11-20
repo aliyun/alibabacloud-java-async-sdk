@@ -73,7 +73,10 @@ public class DescribeServiceRolloutRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * <p>The region ID of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -82,7 +85,10 @@ public class DescribeServiceRolloutRequest extends Request {
         }
 
         /**
-         * ServiceName.
+         * <p>The name of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>foo</p>
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("ServiceName", serviceName);

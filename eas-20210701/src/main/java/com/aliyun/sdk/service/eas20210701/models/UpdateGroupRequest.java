@@ -117,7 +117,7 @@ public class UpdateGroupRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the region in which the service group resides.</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +130,7 @@ public class UpdateGroupRequest extends Request {
         }
 
         /**
-         * <p>The service group name. For more information about how to obtain the service group name, see ListServices.</p>
+         * <p>The name of the service group. For information about how to obtain the group name, see ListServices.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,7 +143,10 @@ public class UpdateGroupRequest extends Request {
         }
 
         /**
-         * Labels.
+         * <p>The user-defined labels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:null}</p>
          */
         public Builder labels(java.util.Map<String, String> labels) {
             this.putBodyParameter("Labels", labels);
@@ -152,7 +155,7 @@ public class UpdateGroupRequest extends Request {
         }
 
         /**
-         * Network.
+         * <p>The VPC configuration.</p>
          */
         public Builder network(Network network) {
             this.putBodyParameter("Network", network);
@@ -161,7 +164,7 @@ public class UpdateGroupRequest extends Request {
         }
 
         /**
-         * <p>The traffic mode. Valid values: auto and customized. auto: The traffic is automatically allocated based on the proportion of the number of instances to the total number of instances. customized: The traffic is allocated based on a custom weight.</p>
+         * <p>The traffic mode. Valid values: auto and customized. In auto mode, weights are automatically allocated based on the proportion of instances. In customized mode, traffic is distributed based on custom fixed weights.</p>
          * 
          * <strong>example:</strong>
          * <p>auto</p>
@@ -258,7 +261,10 @@ public class UpdateGroupRequest extends Request {
             } 
 
             /**
-             * GatewayId.
+             * <p>The dedicated gateway ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-rcgxxxxxxzytgq9zrj</p>
              */
             public Builder gatewayId(String gatewayId) {
                 this.gatewayId = gatewayId;
@@ -266,7 +272,10 @@ public class UpdateGroupRequest extends Request {
             }
 
             /**
-             * SecurityGroupId.
+             * <p>The security group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-uf6xxxxxxc3lysxabg72i</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -274,7 +283,10 @@ public class UpdateGroupRequest extends Request {
             }
 
             /**
-             * VSwitchId.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp1xxxxxxjeqwbo3z2pux</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -282,7 +294,10 @@ public class UpdateGroupRequest extends Request {
             }
 
             /**
-             * VpcId.
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1xxxxxx17e0qrykjr9b</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

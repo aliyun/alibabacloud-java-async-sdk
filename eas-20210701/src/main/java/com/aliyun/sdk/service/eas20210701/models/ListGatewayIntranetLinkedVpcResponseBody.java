@@ -80,7 +80,7 @@ public class ListGatewayIntranetLinkedVpcResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The private gateway ID.</p>
+         * <p>The ID of the private gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-1uhcqmsc7x22******</p>
@@ -91,7 +91,7 @@ public class ListGatewayIntranetLinkedVpcResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The internal endpoints.</p>
+         * <p>The list of internal access endpoints.</p>
          */
         public Builder intranetLinkedVpcList(java.util.List<IntranetLinkedVpcList> intranetLinkedVpcList) {
             this.intranetLinkedVpcList = intranetLinkedVpcList;
@@ -233,7 +233,10 @@ public class ListGatewayIntranetLinkedVpcResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountId.
+             * <p>The ID of the Alibaba Cloud account that owns the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>161*******66</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -241,7 +244,10 @@ public class ListGatewayIntranetLinkedVpcResponseBody extends TeaModel {
             }
 
             /**
-             * AuthoritativeDnsEnabled.
+             * <p>Indicates whether authoritative DNS resolution is enabled. Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder authoritativeDnsEnabled(Boolean authoritativeDnsEnabled) {
                 this.authoritativeDnsEnabled = authoritativeDnsEnabled;
@@ -260,7 +266,7 @@ public class ListGatewayIntranetLinkedVpcResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The security group ID.</p>
+             * <p>The ID of the security group.</p>
              * 
              * <strong>example:</strong>
              * <p>sg-2ze4pgstgszvgq******</p>
@@ -271,26 +277,12 @@ public class ListGatewayIntranetLinkedVpcResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the private gateway.</p>
-             * <p>Valid values:</p>
+             * <p>The status. Valid values:</p>
              * <ul>
-             * <li><p>Creating</p>
-             * <!-- -->
-             * 
-             * <p>:</p>
-             * <!-- -->
-             * 
-             * <p>The private gateway is being created.</p>
-             * <!-- -->
+             * <li><p>Creating: The endpoint is being created.</p>
              * </li>
-             * <li><p>Running</p>
-             * <!-- -->
-             * 
-             * <p>:</p>
-             * <!-- -->
-             * 
-             * <p>The private gateway is running.</p>
-             * <!-- --></li>
+             * <li><p>Running: The endpoint is running.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -302,7 +294,7 @@ public class ListGatewayIntranetLinkedVpcResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The vSwitch ID.</p>
+             * <p>The ID of the virtual switch.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-8vb2qjoiio6m9pg******</p>
@@ -313,7 +305,7 @@ public class ListGatewayIntranetLinkedVpcResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The virtual private cloud (VPC) ID.</p>
+             * <p>The ID of the virtual private cloud (VPC).</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-2zetuli9ws0qgjd******</p>

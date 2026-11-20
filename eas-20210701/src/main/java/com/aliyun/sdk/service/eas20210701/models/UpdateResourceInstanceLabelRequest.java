@@ -117,7 +117,7 @@ public class UpdateResourceInstanceLabelRequest extends Request {
         } 
 
         /**
-         * <p>The region ID.</p>
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +130,7 @@ public class UpdateResourceInstanceLabelRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,7 +143,7 @@ public class UpdateResourceInstanceLabelRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the modification takes effect on all instances in the resource group. If you set this parameter to true, the InstanceIds parameter does not take effect.</p>
+         * <p>Specifies whether the operation applies to all instances in the resource group. If this parameter is set to true, the InstanceIds parameter does not take effect.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -165,7 +165,10 @@ public class UpdateResourceInstanceLabelRequest extends Request {
         }
 
         /**
-         * <p>The custom tag.</p>
+         * <p>The user-defined tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;key&quot;:&quot;value&quot;}</p>
          */
         public Builder labels(java.util.Map<String, String> labels) {
             this.putBodyParameter("Labels", labels);

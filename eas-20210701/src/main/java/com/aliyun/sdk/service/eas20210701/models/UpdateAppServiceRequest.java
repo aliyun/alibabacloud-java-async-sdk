@@ -186,7 +186,7 @@ public class UpdateAppServiceRequest extends Request {
         }
 
         /**
-         * <p>The service name.</p>
+         * <p>The name of the service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -214,7 +214,7 @@ public class UpdateAppServiceRequest extends Request {
          * <p>The workspace ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>123456</p>
+         * <p>1234**</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);
@@ -224,15 +224,6 @@ public class UpdateAppServiceRequest extends Request {
 
         /**
          * <p>The application type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>LLM: the large language model (LLM) application</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>LLM</p>
@@ -256,7 +247,10 @@ public class UpdateAppServiceRequest extends Request {
         }
 
         /**
-         * <p>The additional configurations that are required for service deployment.</p>
+         * <p>The additional configuration information required for deployment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;ModelStorage&quot;: &quot;oss&quot;, &quot;OssPath&quot;: &quot;oss://examplebucket/xxxx/&quot; }</p>
          */
         public Builder config(java.util.Map<String, ?> config) {
             this.putBodyParameter("Config", config);
@@ -265,7 +259,7 @@ public class UpdateAppServiceRequest extends Request {
         }
 
         /**
-         * <p>The number of instances. This value must be greater than 0.</p>
+         * <p>The number of instances. The value must be greater than 0.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -277,7 +271,7 @@ public class UpdateAppServiceRequest extends Request {
         }
 
         /**
-         * <p>The service specifications. Valid values:</p>
+         * <p>The service specification. Valid values:</p>
          * <ul>
          * <li>llama_7b_fp16</li>
          * <li>llama_7b_int8</li>

@@ -192,7 +192,7 @@ public class CreateResourceInstancesRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the region to which the resource group belongs.</p>
+         * <p>The ID of the cluster where the resource group resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -205,7 +205,7 @@ public class CreateResourceInstancesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group. For more information about how to query the ID of a resource group, see <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a>.</p>
+         * <p>The ID of the resource group. For more information about how to query the resource group ID, see <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -220,8 +220,8 @@ public class CreateResourceInstancesRequest extends Request {
         /**
          * <p>Specifies whether to enable auto-renewal. Valid values:</p>
          * <ul>
-         * <li>false (default)</li>
-         * <li>true</li>
+         * <li>false (default): disables auto-renewal.</li>
+         * <li>true: enables auto-renewal.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -234,7 +234,7 @@ public class CreateResourceInstancesRequest extends Request {
         }
 
         /**
-         * <p>The billing method of the instance. Valid values:</p>
+         * <p>The billing method. Valid values:</p>
          * <ul>
          * <li>PrePaid: subscription.</li>
          * <li>PostPaid: pay-as-you-go.</li>
@@ -251,7 +251,7 @@ public class CreateResourceInstancesRequest extends Request {
         }
 
         /**
-         * <p>The number of instances that you want to create. Valid values: 1 to 100.</p>
+         * <p>The number of instances to create. Valid values: 1 to 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -264,7 +264,7 @@ public class CreateResourceInstancesRequest extends Request {
         }
 
         /**
-         * <p>The type of the Elastic Compute Service (ECS) instance.</p>
+         * <p>The instance type, which corresponds to an ECS instance type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -277,7 +277,10 @@ public class CreateResourceInstancesRequest extends Request {
         }
 
         /**
-         * <p>The custom service tag.</p>
+         * <p>The user-defined labels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;key&quot;:&quot;value&quot;}</p>
          */
         public Builder labels(java.util.Map<String, String> labels) {
             this.putBodyParameter("Labels", labels);
@@ -286,7 +289,7 @@ public class CreateResourceInstancesRequest extends Request {
         }
 
         /**
-         * <p>The size of the system disk. Unit: GiB. Valid values: 200 to 2000. Default value: 200.</p>
+         * <p>The size of the system cloud disk. Unit: GiB. Valid values: 200 to 2000. Default value: 200.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -298,7 +301,7 @@ public class CreateResourceInstancesRequest extends Request {
         }
 
         /**
-         * <p>The user-defined information. This parameter is not in use.</p>
+         * <p>The custom user data. This parameter is not used.</p>
          * 
          * <strong>example:</strong>
          * <p>x112223333</p>

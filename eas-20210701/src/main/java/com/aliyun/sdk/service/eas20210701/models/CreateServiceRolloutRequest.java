@@ -117,6 +117,7 @@ public class CreateServiceRolloutRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the region where the service is deployed. You can call the ListServices operation to obtain a list of available regions.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +130,7 @@ public class CreateServiceRolloutRequest extends Request {
         }
 
         /**
+         * <p>The name of the service for which you want to create a rollout policy. The service name must be unique within the same region. You can call the DescribeService operation to obtain the service details.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,7 +143,7 @@ public class CreateServiceRolloutRequest extends Request {
         }
 
         /**
-         * Batch.
+         * <p>The automatic batching configuration.</p>
          */
         public Builder batch(Batch batch) {
             this.putBodyParameter("Batch", batch);
@@ -150,7 +152,7 @@ public class CreateServiceRolloutRequest extends Request {
         }
 
         /**
-         * Partition.
+         * <p>The manual batching configuration.</p>
          */
         public Builder partition(Partition partition) {
             this.putBodyParameter("Partition", partition);
@@ -159,7 +161,10 @@ public class CreateServiceRolloutRequest extends Request {
         }
 
         /**
-         * Paused.
+         * <p>Specifies whether to pause the update.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder paused(Boolean paused) {
             this.putBodyParameter("Paused", paused);
@@ -227,7 +232,10 @@ public class CreateServiceRolloutRequest extends Request {
             } 
 
             /**
-             * BatchSize.
+             * <p>The number of instances to update in each batch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder batchSize(String batchSize) {
                 this.batchSize = batchSize;
@@ -235,7 +243,10 @@ public class CreateServiceRolloutRequest extends Request {
             }
 
             /**
-             * Interval.
+             * <p>The wait interval after each batch update is completed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5m</p>
              */
             public Builder interval(String interval) {
                 this.interval = interval;
@@ -289,7 +300,10 @@ public class CreateServiceRolloutRequest extends Request {
             } 
 
             /**
-             * Partition.
+             * <p>The number of instances to update to the new version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder partition(String partition) {
                 this.partition = partition;

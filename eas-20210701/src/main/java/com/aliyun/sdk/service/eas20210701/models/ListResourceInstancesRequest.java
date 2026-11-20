@@ -243,7 +243,7 @@ public class ListResourceInstancesRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the region to which the resource group belongs.</p>
+         * <p>The ID of the cluster where the resource group resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -256,7 +256,7 @@ public class ListResourceInstancesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group. For more information about how to query the ID of a resource group, see <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a>.</p>
+         * <p>The ID of the resource group. For information about how to query the resource group ID, see <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -269,10 +269,10 @@ public class ListResourceInstancesRequest extends Request {
         }
 
         /**
-         * <p>The billing method of the instance. Valid values:</p>
+         * <p>The billing method of the machines to filter. Valid values:</p>
          * <ul>
-         * <li>PrePaid: subscription.</li>
-         * <li>PostPaid: pay-as-you-go.</li>
+         * <li>PrePaid: Subscription.</li>
+         * <li>PostPaid: Pay-as-you-go.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -285,7 +285,7 @@ public class ListResourceInstancesRequest extends Request {
         }
 
         /**
-         * <p>The keyword used to query instances. Instances can be queried by instance ID or instance IP address.</p>
+         * <p>The search keyword. You can search by machine ID or IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>10.224.xx.xx</p>
@@ -297,7 +297,7 @@ public class ListResourceInstancesRequest extends Request {
         }
 
         /**
-         * <p>The IP address of the instance.</p>
+         * <p>The IP address of the machine.</p>
          * 
          * <strong>example:</strong>
          * <p>10.224.xx.xx</p>
@@ -309,10 +309,10 @@ public class ListResourceInstancesRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. For more information about how to query the instance ID, see <a href="https://help.aliyun.com/document_detail/412129.html">ListResourceInstances</a>.</p>
+         * <p>Filters the results by instance ID. For information about how to obtain the instance ID, see <a href="https://help.aliyun.com/document_detail/412129.html">ListResourceInstances</a>.</p>
          * 
          * <strong>example:</strong>
-         * <p>i-bp1jd6x3uotsv****</p>
+         * <p>i-bp1jd6x3uots****a</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -321,7 +321,7 @@ public class ListResourceInstancesRequest extends Request {
         }
 
         /**
-         * <p>The instance name.</p>
+         * <p>Filters the results by instance name.</p>
          * 
          * <strong>example:</strong>
          * <p>e-xxxx***</p>
@@ -333,84 +333,7 @@ public class ListResourceInstancesRequest extends Request {
         }
 
         /**
-         * <p>The instance state.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>Ready-SchedulingDisabled</p>
-         * <!-- -->
-         * 
-         * <p>:</p>
-         * <!-- -->
-         * 
-         * <p>The instance is available but unschedulable</p>
-         * <!-- -->
-         * 
-         * <p>.</p>
-         * </li>
-         * <li><p>Ready</p>
-         * <!-- -->
-         * 
-         * <p>: The instance</p>
-         * <!-- -->
-         * 
-         * <p>is running</p>
-         * <!-- -->
-         * 
-         * <p>.</p>
-         * </li>
-         * <li><p>NotReady</p>
-         * <!-- -->
-         * 
-         * <p>: The instance is unready.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>Stopped</p>
-         * <!-- -->
-         * 
-         * <p>: The instance has stopped.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>NotReady-SchedulingDisabled</p>
-         * <!-- -->
-         * 
-         * <p>:</p>
-         * <!-- -->
-         * 
-         * <p>The instance is unavailable and unschedulable</p>
-         * <!-- -->
-         * 
-         * <p>.</p>
-         * </li>
-         * <li><p>Attaching</p>
-         * <!-- -->
-         * 
-         * <p>: The instance</p>
-         * <!-- -->
-         * 
-         * <p>is starting</p>
-         * <!-- -->
-         * 
-         * <p>.</p>
-         * </li>
-         * <li><p>Deleting</p>
-         * <!-- -->
-         * 
-         * <p>: The instance is being deleted.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>CreateFailed: The instance failed to be created.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
+         * <p>The status of the machine.</p>
          * 
          * <strong>example:</strong>
          * <p>Ready</p>
@@ -422,7 +345,10 @@ public class ListResourceInstancesRequest extends Request {
         }
 
         /**
-         * <p>The tag.</p>
+         * <p>Filters the results by label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:null}</p>
          */
         public Builder label(java.util.Map<String, String> label) {
             String labelShrink = shrink(label, "Label", "json");
@@ -432,24 +358,7 @@ public class ListResourceInstancesRequest extends Request {
         }
 
         /**
-         * <p>The sorting order.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>asc: The instances are sorted in ascending order.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>desc</p>
-         * <!-- -->
-         * 
-         * <p>: The instances are sorted in descending order.</p>
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
+         * <p>The sort order.</p>
          * 
          * <strong>example:</strong>
          * <p>desc</p>
@@ -461,7 +370,7 @@ public class ListResourceInstancesRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * <p>The page number of the machine instance list in the dedicated resource group. Pages start from 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -473,7 +382,7 @@ public class ListResourceInstancesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 100.</p>
+         * <p>The paging Settings for the number of machines to return on each page in a paged query. Default value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -485,53 +394,7 @@ public class ListResourceInstancesRequest extends Request {
         }
 
         /**
-         * <p>The field that you use to sort the query results.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>CreateTime</p>
-         * <!-- -->
-         * 
-         * <p>: The instances are sorted based on the time when the instances were created.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>MemoryUsed</p>
-         * <!-- -->
-         * 
-         * <p>:</p>
-         * <!-- -->
-         * 
-         * <p>The instances are sorted based on the memory usage of the instances</p>
-         * <!-- -->
-         * 
-         * <p>.</p>
-         * </li>
-         * <li><p>GpuUsed</p>
-         * <!-- -->
-         * 
-         * <p>: The instances are sorted based on the</p>
-         * <!-- -->
-         * 
-         * <p>GPU usage of the instances.</p>
-         * <!-- -->
-         * </li>
-         * <li><p>ExpireTime: The instances are sorted based on the time when the instances expired.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>CpuUsed</p>
-         * <!-- -->
-         * 
-         * <p>:</p>
-         * <!-- -->
-         * 
-         * <p>The instances are sorted based on the CPU utilization of the instances.</p>
-         * <!-- --></li>
-         * </ul>
+         * <p>The field used for sorting.</p>
          * 
          * <strong>example:</strong>
          * <p>CreateTime</p>
@@ -543,7 +406,10 @@ public class ListResourceInstancesRequest extends Request {
         }
 
         /**
-         * Zone.
+         * <p>The zone of the machine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>J</p>
          */
         public Builder zone(String zone) {
             this.putQueryParameter("Zone", zone);

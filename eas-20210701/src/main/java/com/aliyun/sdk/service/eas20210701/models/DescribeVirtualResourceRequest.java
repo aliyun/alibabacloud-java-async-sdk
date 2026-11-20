@@ -75,7 +75,7 @@ public class DescribeVirtualResourceRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the region to which the virtual resource group belongs.</p>
+         * <p>The region where the virtual resource group resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class DescribeVirtualResourceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the virtual resource group.</p>
+         * <p>The virtual resource group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

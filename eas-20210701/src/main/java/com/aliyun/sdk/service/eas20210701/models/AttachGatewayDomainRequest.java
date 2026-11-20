@@ -90,7 +90,7 @@ public class AttachGatewayDomainRequest extends Request {
         } 
 
         /**
-         * <p>The region where the private gateway resides.</p>
+         * <p>The region where the dedicated gateway resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -103,7 +103,7 @@ public class AttachGatewayDomainRequest extends Request {
         }
 
         /**
-         * <p>The ID of the private gateway. To obtain the private gateway ID, see the GatewayId parameter in the response parameters of the <a href="https://apiworkbench.aliyun-inc.com/document/eas/2021-07-01/ListGateway?spm=openapi-amp.newDocPublishment.0.0.765e281fL2IcjJ&ampEnv=online">ListGateway</a> operation.</p>
+         * <p>The dedicated gateway ID. To obtain the dedicated gateway ID, refer to the GatewayId field in the response of the <a href="https://apiworkbench.aliyun-inc.com/document/eas/2021-07-01/ListGateway?spm=openapi-amp.newDocPublishment.0.0.765e281fL2IcjJ&ampEnv=online">ListGateway</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -201,7 +201,7 @@ public class AttachGatewayDomainRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the SSL certificate bound to the domain name. Obtain the certificate ID after you upload or purchase a certificate in the <a href="https://yundunnext.console.aliyun.com/?spm=5176.2020520163.console-base_help.2.4b3baJixaJixOc&p=cas">Certificate Management Service</a> console.</p>
+             * <p>The ID of the SSL certificate bound to the domain name. Obtain the certificate ID after uploading or purchasing a certificate in <a href="https://yundunnext.console.aliyun.com/?spm=5176.2020520163.console-base_help.2.4b3baJixaJixOc&p=cas">Certificate Management Service</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>1473**25</p>
@@ -225,11 +225,6 @@ public class AttachGatewayDomainRequest extends Request {
 
             /**
              * <p>The domain name type.</p>
-             * <p>Valid value:</p>
-             * <ul>
-             * <li>intranet: internal network.</li>
-             * <li>internet: public network.</li>
-             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

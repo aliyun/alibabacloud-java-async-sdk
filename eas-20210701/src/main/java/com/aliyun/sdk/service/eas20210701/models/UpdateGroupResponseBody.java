@@ -67,7 +67,10 @@ public class UpdateGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Update service group foo successfully</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -75,7 +78,7 @@ public class UpdateGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>40325405-579C-4D82****</p>

@@ -104,7 +104,7 @@ public class DeleteServiceLabelRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the region where the service is deployed.</p>
+         * <p>The ID of the region where the service is located.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,7 +117,7 @@ public class DeleteServiceLabelRequest extends Request {
         }
 
         /**
-         * <p>The service name. For more information about how to query the service name, see <a href="https://help.aliyun.com/document_detail/412109.html">ListServices</a>.</p>
+         * <p>The service name. For more information, see <a href="https://help.aliyun.com/document_detail/412109.html">ListServices</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +130,7 @@ public class DeleteServiceLabelRequest extends Request {
         }
 
         /**
-         * <p>The service tags that you want to delete.</p>
+         * <p>The keys of the service labels that you want to delete. This parameter is deprecated. Use the LabelKeys parameter instead.</p>
          */
         public Builder keys(java.util.List<String> keys) {
             String keysShrink = shrink(keys, "Keys", "simple");
@@ -140,7 +140,7 @@ public class DeleteServiceLabelRequest extends Request {
         }
 
         /**
-         * LabelKeys.
+         * <p>The keys of the service labels that you want to delete.</p>
          */
         public Builder labelKeys(java.util.List<String> labelKeys) {
             String labelKeysShrink = shrink(labelKeys, "LabelKeys", "json");

@@ -119,7 +119,7 @@ public class MigrateResourceInstanceRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cluster to which the resource group belongs.</p>
+         * <p>The ID of the cluster where the resource group resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,7 +132,7 @@ public class MigrateResourceInstanceRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,7 +158,7 @@ public class MigrateResourceInstanceRequest extends Request {
         }
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The instance IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
@@ -168,7 +168,10 @@ public class MigrateResourceInstanceRequest extends Request {
         }
 
         /**
-         * MigrateToHybrid.
+         * <p>Specifies whether to migrate the instances to a general compute resource group. If this parameter is set to true, you must specify the ID of the general compute resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder migrateToHybrid(Boolean migrateToHybrid) {
             this.putBodyParameter("MigrateToHybrid", migrateToHybrid);

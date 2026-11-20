@@ -80,7 +80,7 @@ public class UpdateGatewayResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the gateway.</p>
+         * <p>The private gateway ID.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-1uhcqmsc7x22******</p>
@@ -102,7 +102,7 @@ public class UpdateGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>40325405-579C-4D82***</p>

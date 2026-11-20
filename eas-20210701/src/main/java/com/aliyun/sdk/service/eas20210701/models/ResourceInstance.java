@@ -392,7 +392,10 @@ public class ResourceInstance extends TeaModel {
         } 
 
         /**
-         * Arch.
+         * <p>The system architecture of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>arm64</p>
          */
         public Builder arch(String arch) {
             this.arch = arch;
@@ -400,7 +403,10 @@ public class ResourceInstance extends TeaModel {
         }
 
         /**
-         * AutoRenewal.
+         * <p>Indicates whether auto-renewal is enabled for the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoRenewal(Boolean autoRenewal) {
             this.autoRenewal = autoRenewal;
@@ -408,7 +414,10 @@ public class ResourceInstance extends TeaModel {
         }
 
         /**
-         * ChargeType.
+         * <p>The billing method for the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
          */
         public Builder chargeType(String chargeType) {
             this.chargeType = chargeType;
@@ -416,7 +425,10 @@ public class ResourceInstance extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The time when the instance was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-07-05T22:51:32Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -424,7 +436,10 @@ public class ResourceInstance extends TeaModel {
         }
 
         /**
-         * ExpiredTime.
+         * <p>The time when the instance expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-08-05T22:51:32Z</p>
          */
         public Builder expiredTime(String expiredTime) {
             this.expiredTime = expiredTime;
@@ -432,7 +447,10 @@ public class ResourceInstance extends TeaModel {
         }
 
         /**
-         * InstanceCpuCount.
+         * <p>The number of CPUs for the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder instanceCpuCount(Integer instanceCpuCount) {
             this.instanceCpuCount = instanceCpuCount;
@@ -440,7 +458,10 @@ public class ResourceInstance extends TeaModel {
         }
 
         /**
-         * InstanceGpuCount.
+         * <p>The number of GPUs for the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder instanceGpuCount(Integer instanceGpuCount) {
             this.instanceGpuCount = instanceGpuCount;
@@ -448,7 +469,10 @@ public class ResourceInstance extends TeaModel {
         }
 
         /**
-         * InstanceGpuMemory.
+         * <p>The VRAM size of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0G</p>
          */
         public Builder instanceGpuMemory(String instanceGpuMemory) {
             this.instanceGpuMemory = instanceGpuMemory;
@@ -456,7 +480,10 @@ public class ResourceInstance extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eas-i-1800z74n30kao****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -464,7 +491,10 @@ public class ResourceInstance extends TeaModel {
         }
 
         /**
-         * InstanceIp.
+         * <p>The IP address of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11.227.XX.XX</p>
          */
         public Builder instanceIp(String instanceIp) {
             this.instanceIp = instanceIp;
@@ -472,7 +502,10 @@ public class ResourceInstance extends TeaModel {
         }
 
         /**
-         * InstanceMemory.
+         * <p>The memory size of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8192M</p>
          */
         public Builder instanceMemory(String instanceMemory) {
             this.instanceMemory = instanceMemory;
@@ -480,7 +513,10 @@ public class ResourceInstance extends TeaModel {
         }
 
         /**
-         * InstanceName.
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eas01122713204*****</p>
          */
         public Builder instanceName(String instanceName) {
             this.instanceName = instanceName;
@@ -488,7 +524,10 @@ public class ResourceInstance extends TeaModel {
         }
 
         /**
-         * InstancePhase.
+         * <p>The lifecycle phase of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>succeeded</p>
          */
         public Builder instancePhase(String instancePhase) {
             this.instancePhase = instancePhase;
@@ -496,7 +535,10 @@ public class ResourceInstance extends TeaModel {
         }
 
         /**
-         * InstanceStatus.
+         * <p>The status of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ready</p>
          */
         public Builder instanceStatus(String instanceStatus) {
             this.instanceStatus = instanceStatus;
@@ -504,7 +546,10 @@ public class ResourceInstance extends TeaModel {
         }
 
         /**
-         * InstanceSystemDiskSize.
+         * <p>The system disk size of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder instanceSystemDiskSize(Integer instanceSystemDiskSize) {
             this.instanceSystemDiskSize = instanceSystemDiskSize;
@@ -512,7 +557,10 @@ public class ResourceInstance extends TeaModel {
         }
 
         /**
-         * InstanceTenantIp.
+         * <p>The IP address of the instance in a dedicated network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.xx.xx</p>
          */
         public Builder instanceTenantIp(String instanceTenantIp) {
             this.instanceTenantIp = instanceTenantIp;
@@ -520,7 +568,10 @@ public class ResourceInstance extends TeaModel {
         }
 
         /**
-         * InstanceType.
+         * <p>The instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.s6-c1m2.xlarge</p>
          */
         public Builder instanceType(String instanceType) {
             this.instanceType = instanceType;
@@ -528,7 +579,10 @@ public class ResourceInstance extends TeaModel {
         }
 
         /**
-         * InstanceUsedCpu.
+         * <p>The number of CPUs in use.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.4</p>
          */
         public Builder instanceUsedCpu(Float instanceUsedCpu) {
             this.instanceUsedCpu = instanceUsedCpu;
@@ -536,7 +590,10 @@ public class ResourceInstance extends TeaModel {
         }
 
         /**
-         * InstanceUsedGpu.
+         * <p>The number of GPUs in use.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder instanceUsedGpu(Float instanceUsedGpu) {
             this.instanceUsedGpu = instanceUsedGpu;
@@ -544,7 +601,10 @@ public class ResourceInstance extends TeaModel {
         }
 
         /**
-         * InstanceUsedGpuMemory.
+         * <p>The amount of VRAM in use.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>470M</p>
          */
         public Builder instanceUsedGpuMemory(String instanceUsedGpuMemory) {
             this.instanceUsedGpuMemory = instanceUsedGpuMemory;
@@ -552,7 +612,10 @@ public class ResourceInstance extends TeaModel {
         }
 
         /**
-         * InstanceUsedMemory.
+         * <p>The amount of memory in use.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000M</p>
          */
         public Builder instanceUsedMemory(String instanceUsedMemory) {
             this.instanceUsedMemory = instanceUsedMemory;
@@ -560,7 +623,7 @@ public class ResourceInstance extends TeaModel {
         }
 
         /**
-         * Labels.
+         * <p>The labels of the instance.</p>
          */
         public Builder labels(java.util.List<Labels> labels) {
             this.labels = labels;
@@ -568,7 +631,10 @@ public class ResourceInstance extends TeaModel {
         }
 
         /**
-         * LastCordonOperator.
+         * <p>The operator who performed the last cordon.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24340xxxxxxxx</p>
          */
         public Builder lastCordonOperator(String lastCordonOperator) {
             this.lastCordonOperator = lastCordonOperator;
@@ -576,7 +642,10 @@ public class ResourceInstance extends TeaModel {
         }
 
         /**
-         * LastCordonReason.
+         * <p>The reason for the last cordon.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>operating</p>
          */
         public Builder lastCordonReason(String lastCordonReason) {
             this.lastCordonReason = lastCordonReason;
@@ -584,7 +653,10 @@ public class ResourceInstance extends TeaModel {
         }
 
         /**
-         * Region.
+         * <p>The region of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.region = region;
@@ -592,7 +664,10 @@ public class ResourceInstance extends TeaModel {
         }
 
         /**
-         * ResourceId.
+         * <p>The ID of the resource group to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eas-r-xxxxx</p>
          */
         public Builder resourceId(String resourceId) {
             this.resourceId = resourceId;
@@ -600,7 +675,10 @@ public class ResourceInstance extends TeaModel {
         }
 
         /**
-         * Zone.
+         * <p>The zone of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-b</p>
          */
         public Builder zone(String zone) {
             this.zone = zone;
@@ -666,7 +744,10 @@ public class ResourceInstance extends TeaModel {
             } 
 
             /**
-             * LabelKey.
+             * <p>The label key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder labelKey(String labelKey) {
                 this.labelKey = labelKey;
@@ -674,7 +755,10 @@ public class ResourceInstance extends TeaModel {
             }
 
             /**
-             * LabelValue.
+             * <p>The label value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder labelValue(String labelValue) {
                 this.labelValue = labelValue;

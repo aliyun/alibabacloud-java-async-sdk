@@ -63,6 +63,10 @@ public class UpdateGatewayRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    private String workspaceId;
+
     private UpdateGatewayRequest(Builder builder) {
         super(builder);
         this.gatewayId = builder.gatewayId;
@@ -76,6 +80,7 @@ public class UpdateGatewayRequest extends Request {
         this.replicas = builder.replicas;
         this.vSwitchIds = builder.vSwitchIds;
         this.vpcId = builder.vpcId;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
@@ -168,6 +173,13 @@ public class UpdateGatewayRequest extends Request {
         return this.vpcId;
     }
 
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
     public static final class Builder extends Request.Builder<UpdateGatewayRequest, Builder> {
         private String gatewayId; 
         private String clusterId; 
@@ -180,6 +192,7 @@ public class UpdateGatewayRequest extends Request {
         private Integer replicas; 
         private java.util.List<String> vSwitchIds; 
         private String vpcId; 
+        private String workspaceId; 
 
         private Builder() {
             super();
@@ -198,10 +211,11 @@ public class UpdateGatewayRequest extends Request {
             this.replicas = request.replicas;
             this.vSwitchIds = request.vSwitchIds;
             this.vpcId = request.vpcId;
+            this.workspaceId = request.workspaceId;
         } 
 
         /**
-         * <p>The private gateway ID. For more information about how to query the ID of a private gateway, see the private_gateway_id parameter returned by <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a>.</p>
+         * <p>The private gateway ID. For information about how to obtain the private gateway ID, see the private_gateway_id field in the response of the <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -214,11 +228,11 @@ public class UpdateGatewayRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the private gateway.</p>
+         * <p>The region where the private gateway resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
+         * <p>cn-wulanchabu</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -227,12 +241,7 @@ public class UpdateGatewayRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable Internet access. Default value: false.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
+         * <p>Specifies whether to enable public network access. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -244,12 +253,7 @@ public class UpdateGatewayRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable private access. Default value: true.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
+         * <p>Specifies whether to enable internal network access. Default value: true.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -282,7 +286,7 @@ public class UpdateGatewayRequest extends Request {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>ecs.c6.4xlarge</p>
+         * <p>2c4g</p>
          */
         public Builder instanceType(String instanceType) {
             this.putBodyParameter("InstanceType", instanceType);
@@ -291,7 +295,7 @@ public class UpdateGatewayRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether it is the default private gateway.</p>
+         * <p>Specifies whether the private gateway is the default private gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -327,7 +331,7 @@ public class UpdateGatewayRequest extends Request {
         }
 
         /**
-         * VSwitchIds.
+         * <p>The list of vSwitches. This parameter is only applicable to application dedicated gateways.</p>
          */
         public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
             this.putBodyParameter("VSwitchIds", vSwitchIds);
@@ -336,11 +340,26 @@ public class UpdateGatewayRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * <p>The ID of the VPC to which the gateway belongs. This parameter is only applicable to application dedicated gateways.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1jkde2******3mew</p>
          */
         public Builder vpcId(String vpcId) {
             this.putBodyParameter("VpcId", vpcId);
             this.vpcId = vpcId;
+            return this;
+        }
+
+        /**
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.putBodyParameter("WorkspaceId", workspaceId);
+            this.workspaceId = workspaceId;
             return this;
         }
 

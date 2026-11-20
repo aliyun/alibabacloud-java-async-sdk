@@ -67,7 +67,7 @@ public class DeleteResourceInstanceLabelResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>

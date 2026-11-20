@@ -132,7 +132,7 @@ public class CreateServiceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The public endpoint of the created service.</p>
+         * <p>The public endpoint of the newly created service.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://pai-eas.vpc.cn-shanghai">http://pai-eas.vpc.cn-shanghai</a>.****</p>
@@ -143,7 +143,7 @@ public class CreateServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The internal endpoint of the created service.</p>
+         * <p>The internal endpoint of the newly created service.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://pai-eas.cn-shanghai">http://pai-eas.cn-shanghai</a>.****</p>
@@ -154,7 +154,7 @@ public class CreateServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The region ID of the created service.</p>
+         * <p>The region ID of the newly created service.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -176,7 +176,7 @@ public class CreateServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the created service.</p>
+         * <p>The ID of the newly created service.</p>
          * 
          * <strong>example:</strong>
          * <p>eas-m-aaxxxddf</p>
@@ -187,7 +187,7 @@ public class CreateServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the created service.</p>
+         * <p>The name of the newly created service.</p>
          * 
          * <strong>example:</strong>
          * <p>yourname</p>
@@ -198,7 +198,7 @@ public class CreateServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The service state.</p>
+         * <p>The current status of the new service.</p>
          * 
          * <strong>example:</strong>
          * <p>Creating</p>

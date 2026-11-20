@@ -59,7 +59,7 @@ public class CreateBenchmarkTaskRequest extends Request {
         } 
 
         /**
-         * <p>The request body. The body includes the parameters that are set to create a stress testing task.</p>
+         * <p>The configuration parameters of the stress testing task.</p>
          * 
          * <strong>example:</strong>
          * <p>{

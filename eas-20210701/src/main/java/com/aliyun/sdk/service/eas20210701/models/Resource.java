@@ -366,7 +366,10 @@ public class Resource extends TeaModel {
         } 
 
         /**
-         * ClusterId.
+         * <p>The ID of the cluster where the resource group is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -374,7 +377,10 @@ public class Resource extends TeaModel {
         }
 
         /**
-         * CpuCount.
+         * <p>The total number of CPU cores in the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>64</p>
          */
         public Builder cpuCount(Integer cpuCount) {
             this.cpuCount = cpuCount;
@@ -382,7 +388,10 @@ public class Resource extends TeaModel {
         }
 
         /**
-         * CpuUsed.
+         * <p>The number of used CPU cores in the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder cpuUsed(Integer cpuUsed) {
             this.cpuUsed = cpuUsed;
@@ -390,7 +399,10 @@ public class Resource extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The time the resource group was created, in ISO 8601 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-02-26T17:52:49Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -398,7 +410,10 @@ public class Resource extends TeaModel {
         }
 
         /**
-         * ExtraData.
+         * <p>Additional information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder extraData(java.util.Map<String, ?> extraData) {
             this.extraData = extraData;
@@ -406,7 +421,7 @@ public class Resource extends TeaModel {
         }
 
         /**
-         * Features.
+         * <p>The features supported by the resource group.</p>
          */
         public Builder features(java.util.List<String> features) {
             this.features = features;
@@ -414,7 +429,10 @@ public class Resource extends TeaModel {
         }
 
         /**
-         * GpuCount.
+         * <p>The total number of GPUs in the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder gpuCount(Integer gpuCount) {
             this.gpuCount = gpuCount;
@@ -422,7 +440,10 @@ public class Resource extends TeaModel {
         }
 
         /**
-         * GpuUsed.
+         * <p>The number of used GPUs in the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder gpuUsed(Float gpuUsed) {
             this.gpuUsed = gpuUsed;
@@ -430,7 +451,10 @@ public class Resource extends TeaModel {
         }
 
         /**
-         * InstanceCount.
+         * <p>The total number of instances (prepaid and postpaid) in the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder instanceCount(Integer instanceCount) {
             this.instanceCount = instanceCount;
@@ -438,7 +462,10 @@ public class Resource extends TeaModel {
         }
 
         /**
-         * InstanceMaxAllocatableCPU.
+         * <p>The maximum number of allocatable CPU cores per node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         public Builder instanceMaxAllocatableCPU(Integer instanceMaxAllocatableCPU) {
             this.instanceMaxAllocatableCPU = instanceMaxAllocatableCPU;
@@ -446,7 +473,10 @@ public class Resource extends TeaModel {
         }
 
         /**
-         * InstanceMaxAllocatableGPU.
+         * <p>The maximum number of allocatable GPUs per node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder instanceMaxAllocatableGPU(Float instanceMaxAllocatableGPU) {
             this.instanceMaxAllocatableGPU = instanceMaxAllocatableGPU;
@@ -454,7 +484,10 @@ public class Resource extends TeaModel {
         }
 
         /**
-         * InstanceMaxAllocatableMemory.
+         * <p>The maximum allocatable memory per node in the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2048</p>
          */
         public Builder instanceMaxAllocatableMemory(Integer instanceMaxAllocatableMemory) {
             this.instanceMaxAllocatableMemory = instanceMaxAllocatableMemory;
@@ -462,7 +495,10 @@ public class Resource extends TeaModel {
         }
 
         /**
-         * Memory.
+         * <p>The total memory of the resource group, in MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8192</p>
          */
         public Builder memory(Integer memory) {
             this.memory = memory;
@@ -470,7 +506,10 @@ public class Resource extends TeaModel {
         }
 
         /**
-         * MemoryUsed.
+         * <p>The amount of used memory in the resource group, in MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2048</p>
          */
         public Builder memoryUsed(Integer memoryUsed) {
             this.memoryUsed = memoryUsed;
@@ -478,7 +517,10 @@ public class Resource extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The latest status message for the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Resource is ready</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -486,7 +528,10 @@ public class Resource extends TeaModel {
         }
 
         /**
-         * PostPaidInstanceCount.
+         * <p>The number of postpaid instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder postPaidInstanceCount(Integer postPaidInstanceCount) {
             this.postPaidInstanceCount = postPaidInstanceCount;
@@ -494,7 +539,10 @@ public class Resource extends TeaModel {
         }
 
         /**
-         * PrePaidInstanceCount.
+         * <p>The number of prepaid instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder prePaidInstanceCount(Integer prePaidInstanceCount) {
             this.prePaidInstanceCount = prePaidInstanceCount;
@@ -502,7 +550,10 @@ public class Resource extends TeaModel {
         }
 
         /**
-         * ResourceId.
+         * <p>The unique identifier of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eas-r-asdasdasd</p>
          */
         public Builder resourceId(String resourceId) {
             this.resourceId = resourceId;
@@ -510,7 +561,10 @@ public class Resource extends TeaModel {
         }
 
         /**
-         * ResourceName.
+         * <p>The name of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot</p>
          */
         public Builder resourceName(String resourceName) {
             this.resourceName = resourceName;
@@ -518,7 +572,16 @@ public class Resource extends TeaModel {
         }
 
         /**
-         * ResourceType.
+         * <p>The type of the resource group. Valid values:</p>
+         * <ul>
+         * <li><p><code>Dedicated</code>: A dedicated resource group.</p>
+         * </li>
+         * <li><p><code>SelfManaged</code>: A self-managed resource group.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Dedicated</p>
          */
         public Builder resourceType(String resourceType) {
             this.resourceType = resourceType;
@@ -526,7 +589,10 @@ public class Resource extends TeaModel {
         }
 
         /**
-         * ServiceCount.
+         * <p>The number of services deployed in the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder serviceCount(Integer serviceCount) {
             this.serviceCount = serviceCount;
@@ -534,7 +600,10 @@ public class Resource extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ResouceReady</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -542,7 +611,10 @@ public class Resource extends TeaModel {
         }
 
         /**
-         * UpdateTime.
+         * <p>The time the resource group was last updated, in ISO 8601 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-02-26T19:52:49Z</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
@@ -550,7 +622,10 @@ public class Resource extends TeaModel {
         }
 
         /**
-         * UsageMode.
+         * <p>The usage mode of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>inference</p>
          */
         public Builder usageMode(String usageMode) {
             this.usageMode = usageMode;
@@ -558,7 +633,10 @@ public class Resource extends TeaModel {
         }
 
         /**
-         * Vendor.
+         * <p>The provider of the compute instances in the resource group, such as ECS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS</p>
          */
         public Builder vendor(String vendor) {
             this.vendor = vendor;

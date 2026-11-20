@@ -158,7 +158,7 @@ public class DescribeVirtualResourceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The time when the virtual resource group was created.</p>
+         * <p>The time when the virtual resource group was created, in UTC in RFC 3339 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-16T17:52:49Z</p>
@@ -169,7 +169,7 @@ public class DescribeVirtualResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the retention period of preemptible instances was disabled.</p>
+         * <p>Indicates whether the protection period for spot instances is disabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -180,7 +180,7 @@ public class DescribeVirtualResourceResponseBody extends TeaModel {
         }
 
         /**
-         * Features.
+         * <p>The set of features of the virtual resource group, which identifies the capabilities supported by the resource group.</p>
          */
         public Builder features(java.util.List<String> features) {
             this.features = features;
@@ -188,7 +188,7 @@ public class DescribeVirtualResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>40325405-579C-4D82****</p>
@@ -199,7 +199,7 @@ public class DescribeVirtualResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of resources in the virtual resource group.</p>
+         * <p>The list of resources contained in the virtual resource group.</p>
          */
         public Builder resources(java.util.List<Resources> resources) {
             this.resources = resources;
@@ -218,7 +218,7 @@ public class DescribeVirtualResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the virtual resource group was last updated.</p>
+         * <p>The time when the virtual resource group was last updated, in UTC in RFC 3339 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-16T19:52:49Z</p>
@@ -229,7 +229,7 @@ public class DescribeVirtualResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the virtual resource group.</p>
+         * <p>The virtual resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>eas-vr-npovr28onap1xxxxxx</p>
@@ -372,7 +372,7 @@ public class DescribeVirtualResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The priority of resource scheduling. A greater number specifies a higher priority.</p>
+             * <p>The scheduling priority of the resource. A larger value indicates a higher scheduling priority.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -383,7 +383,7 @@ public class DescribeVirtualResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance type of the public resource group.</p>
+             * <p>The Lingjun resource quota ID.</p>
              * 
              * <strong>example:</strong>
              * <p>quota185lqxxxxxx</p>
@@ -405,7 +405,7 @@ public class DescribeVirtualResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the dedicated resource group.</p>
+             * <p>The dedicated resource group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>eas-r-g55ieatgg3buxxxxxx</p>
@@ -416,7 +416,7 @@ public class DescribeVirtualResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum price of preemptible instances in a public resource group.</p>
+             * <p>The maximum price for spot instances in the public resource group.</p>
              * 
              * <strong>example:</strong>
              * <p>10.05</p>

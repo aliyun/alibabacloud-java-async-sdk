@@ -115,7 +115,10 @@ public class CreateConfigRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * <p>The region to which the service belongs. Required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -124,7 +127,10 @@ public class CreateConfigRequest extends Request {
         }
 
         /**
-         * ConfigType.
+         * <p>The configuration type. Required. Only <code>service</code> is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>service</p>
          */
         public Builder configType(String configType) {
             this.putPathParameter("ConfigType", configType);
@@ -133,7 +139,10 @@ public class CreateConfigRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The service name. Required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_llm_service</p>
          */
         public Builder name(String name) {
             this.putPathParameter("Name", name);
@@ -142,7 +151,10 @@ public class CreateConfigRequest extends Request {
         }
 
         /**
-         * ConfigKey.
+         * <p>The name of the dynamic parameter. Required. The name supports letters, digits, periods, underscores, hyphens, and forward slashes, and can be up to 100 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rate_limit</p>
          */
         public Builder configKey(String configKey) {
             this.putPathParameter("ConfigKey", configKey);
@@ -151,7 +163,7 @@ public class CreateConfigRequest extends Request {
         }
 
         /**
-         * <p>配置值</p>
+         * <p>The value of the dynamic parameter. Required.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;model&quot;: &quot;gpt-4&quot;}</p>

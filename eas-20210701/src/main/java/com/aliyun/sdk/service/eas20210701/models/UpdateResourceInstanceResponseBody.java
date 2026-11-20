@@ -80,7 +80,7 @@ public class UpdateResourceInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The instance name.</p>
          * 
          * <strong>example:</strong>
          * <p>eas-i-asdasdasd</p>
@@ -102,7 +102,7 @@ public class UpdateResourceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>eas-r-asdasdasd</p>
