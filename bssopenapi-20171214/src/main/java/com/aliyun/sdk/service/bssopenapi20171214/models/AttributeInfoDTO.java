@@ -248,6 +248,9 @@ public class AttributeInfoDTO extends TeaModel {
 
         /**
          * <p>The attribute code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpu</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -264,6 +267,9 @@ public class AttributeInfoDTO extends TeaModel {
 
         /**
          * <p>The attribute description (translated).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>实例 CPU 核数</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -280,6 +286,9 @@ public class AttributeInfoDTO extends TeaModel {
 
         /**
          * <p>The attribute name (translated).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CPU 核数</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -312,6 +321,9 @@ public class AttributeInfoDTO extends TeaModel {
 
         /**
          * <p>The unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>核</p>
          */
         public Builder unit(String unit) {
             this.unit = unit;

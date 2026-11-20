@@ -219,6 +219,9 @@ public class AttributeValueInfoDTO extends TeaModel {
 
         /**
          * <p>The property code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpu</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -227,6 +230,9 @@ public class AttributeValueInfoDTO extends TeaModel {
 
         /**
          * <p>The default value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder defaultValue(String defaultValue) {
             this.defaultValue = defaultValue;
@@ -235,6 +241,9 @@ public class AttributeValueInfoDTO extends TeaModel {
 
         /**
          * <p>The description (translated).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>实例 CPU 核数</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -251,6 +260,9 @@ public class AttributeValueInfoDTO extends TeaModel {
 
         /**
          * <p>The unique identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder identifyKey(String identifyKey) {
             this.identifyKey = identifyKey;
@@ -259,6 +271,9 @@ public class AttributeValueInfoDTO extends TeaModel {
 
         /**
          * <p>The maximum value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         public Builder max(String max) {
             this.max = max;
@@ -267,6 +282,9 @@ public class AttributeValueInfoDTO extends TeaModel {
 
         /**
          * <p>The minimum value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder min(String min) {
             this.min = min;
@@ -283,6 +301,9 @@ public class AttributeValueInfoDTO extends TeaModel {
 
         /**
          * <p>The step size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder step(String step) {
             this.step = step;
@@ -299,6 +320,9 @@ public class AttributeValueInfoDTO extends TeaModel {
 
         /**
          * <p>The enum value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder value(String value) {
             this.value = value;
@@ -307,6 +331,9 @@ public class AttributeValueInfoDTO extends TeaModel {
 
         /**
          * <p>The value name (translated).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2 核</p>
          */
         public Builder valueName(String valueName) {
             this.valueName = valueName;
