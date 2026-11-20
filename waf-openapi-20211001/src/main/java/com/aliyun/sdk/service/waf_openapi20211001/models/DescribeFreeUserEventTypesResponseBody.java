@@ -75,7 +75,7 @@ public class DescribeFreeUserEventTypesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>B9D6AD11-DD3D-5A27-B1D9-8A37F7777196</p>

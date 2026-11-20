@@ -99,7 +99,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of returned entries.</p>
          * 
          * <strong>example:</strong>
          * <p>73</p>
@@ -115,6 +115,103 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDefenseResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDefenseResourcesResponseBody</p>
+     */
+    public static class CookieConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AcwScV3SameSite")
+        private String acwScV3SameSite;
+
+        @com.aliyun.core.annotation.NameInMap("AcwTcSameSite")
+        private String acwTcSameSite;
+
+        private CookieConfig(Builder builder) {
+            this.acwScV3SameSite = builder.acwScV3SameSite;
+            this.acwTcSameSite = builder.acwTcSameSite;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CookieConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return acwScV3SameSite
+         */
+        public String getAcwScV3SameSite() {
+            return this.acwScV3SameSite;
+        }
+
+        /**
+         * @return acwTcSameSite
+         */
+        public String getAcwTcSameSite() {
+            return this.acwTcSameSite;
+        }
+
+        public static final class Builder {
+            private String acwScV3SameSite; 
+            private String acwTcSameSite; 
+
+            private Builder() {
+            } 
+
+            private Builder(CookieConfig model) {
+                this.acwScV3SameSite = model.acwScV3SameSite;
+                this.acwTcSameSite = model.acwTcSameSite;
+            } 
+
+            /**
+             * <p>The SameSite policy of the slider cookie. Valid values:</p>
+             * <ul>
+             * <li><strong>None</strong>: None.</li>
+             * <li><strong>Lax</strong>: Lax.</li>
+             * <li><strong>Strict</strong>: Strict.<blockquote>
+             * <p>An empty string indicates that the SameSite attribute is not configured.</p>
+             * </blockquote>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Lax</p>
+             */
+            public Builder acwScV3SameSite(String acwScV3SameSite) {
+                this.acwScV3SameSite = acwScV3SameSite;
+                return this;
+            }
+
+            /**
+             * <p>The SameSite policy of the tracking cookie. Valid values:</p>
+             * <ul>
+             * <li><strong>None</strong>: None.</li>
+             * <li><strong>Lax</strong>: Lax.</li>
+             * <li><strong>Strict</strong>: Strict.<blockquote>
+             * <p>An empty string indicates that the SameSite attribute is not configured.</p>
+             * </blockquote>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
+             */
+            public Builder acwTcSameSite(String acwTcSameSite) {
+                this.acwTcSameSite = acwTcSameSite;
+                return this;
+            }
+
+            public CookieConfig build() {
+                return new CookieConfig(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link DescribeDefenseResourcesResponseBody} extends {@link TeaModel}
@@ -168,7 +265,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The key of the custom response header.</p>
+             * <p>The key of the specified custom response header.</p>
              * 
              * <strong>example:</strong>
              * <p>Header-Key</p>
@@ -179,7 +276,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the custom response header.</p>
+             * <p>The value of the specified custom response header.</p>
              * 
              * <strong>example:</strong>
              * <p>Header-Value</p>
@@ -211,6 +308,9 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("AcwV3SecureStatus")
         private Integer acwV3SecureStatus;
+
+        @com.aliyun.core.annotation.NameInMap("CookieConfig")
+        private CookieConfig cookieConfig;
 
         @com.aliyun.core.annotation.NameInMap("CustomHeaders")
         private java.util.List<String> customHeaders;
@@ -264,6 +364,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             this.acwCookieStatus = builder.acwCookieStatus;
             this.acwSecureStatus = builder.acwSecureStatus;
             this.acwV3SecureStatus = builder.acwV3SecureStatus;
+            this.cookieConfig = builder.cookieConfig;
             this.customHeaders = builder.customHeaders;
             this.description = builder.description;
             this.detail = builder.detail;
@@ -309,6 +410,13 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
          */
         public Integer getAcwV3SecureStatus() {
             return this.acwV3SecureStatus;
+        }
+
+        /**
+         * @return cookieConfig
+         */
+        public CookieConfig getCookieConfig() {
+            return this.cookieConfig;
         }
 
         /**
@@ -427,6 +535,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             private Integer acwCookieStatus; 
             private Integer acwSecureStatus; 
             private Integer acwV3SecureStatus; 
+            private CookieConfig cookieConfig; 
             private java.util.List<String> customHeaders; 
             private String description; 
             private java.util.Map<String, ?> detail; 
@@ -451,6 +560,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
                 this.acwCookieStatus = model.acwCookieStatus;
                 this.acwSecureStatus = model.acwSecureStatus;
                 this.acwV3SecureStatus = model.acwV3SecureStatus;
+                this.cookieConfig = model.cookieConfig;
                 this.customHeaders = model.customHeaders;
                 this.description = model.description;
                 this.detail = model.detail;
@@ -470,11 +580,11 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The status of the tracking cookie.</p>
+             * <p>The status of the tracking cookie. Valid values:</p>
              * <ul>
-             * <li><p><strong>0</strong>: Disabled.</p>
+             * <li><p><strong>0</strong>: disabled.</p>
              * </li>
-             * <li><p><strong>1</strong>: Enabled.</p>
+             * <li><p><strong>1</strong>: enabled.</p>
              * </li>
              * </ul>
              * 
@@ -487,11 +597,11 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the secure attribute for the tracking cookie.</p>
+             * <p>The status of the Secure attribute for the tracking cookie. Valid values:</p>
              * <ul>
-             * <li><p><strong>0</strong>: Disabled.</p>
+             * <li><p><strong>0</strong>: disabled.</p>
              * </li>
-             * <li><p><strong>1</strong>: Enabled.</p>
+             * <li><p><strong>1</strong>: enabled.</p>
              * </li>
              * </ul>
              * 
@@ -504,11 +614,11 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the secure attribute for the slider cookie.</p>
+             * <p>The status of the Secure attribute for the slider cookie. Valid values:</p>
              * <ul>
-             * <li><p><strong>0</strong>: Disabled.</p>
+             * <li><p><strong>0</strong>: disabled.</p>
              * </li>
-             * <li><p><strong>1</strong>: Enabled.</p>
+             * <li><p><strong>1</strong>: enabled.</p>
              * </li>
              * </ul>
              * 
@@ -521,7 +631,15 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The custom XFF headers used to obtain the originating IP address of the client. If XFF is set to 1 and this field is empty, the first IP address in the XFF header is used as the originating IP address of the client.</p>
+             * <p>The cookie attribute aggregation configuration.</p>
+             */
+            public Builder cookieConfig(CookieConfig cookieConfig) {
+                this.cookieConfig = cookieConfig;
+                return this;
+            }
+
+            /**
+             * <p>The custom X-Forwarded-For (XFF) header used to obtain the actual originating IP address of the client. If XFF is set to 1 and this field is empty, the first IP address in the XFF header is used as the originating IP address of the client.</p>
              */
             public Builder customHeaders(java.util.List<String> customHeaders) {
                 this.customHeaders = customHeaders;
@@ -562,7 +680,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the protected object was last modified. Unit: milliseconds.</p>
+             * <p>The time when the protected object was modified. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1665633032000</p>
@@ -584,7 +702,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Alibaba Cloud account to which the protected object asset belongs in a multi-account management feature scenario.</p>
+             * <p>The account to which the protected object Asset belongs when the multi-account management feature is used.</p>
              * 
              * <strong>example:</strong>
              * <p>135*********46</p>
@@ -650,7 +768,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The origin of the protected object.</p>
+             * <p>The source of the protected object.</p>
              * 
              * <strong>example:</strong>
              * <p>custom</p>
@@ -663,11 +781,11 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             /**
              * <p>The status of the protected object. Valid values:</p>
              * <ul>
-             * <li><p><strong>initializing</strong>: Default protection is being initialized.</p>
+             * <li><p><strong>initializing</strong>: The default protection is being initialized.</p>
              * </li>
-             * <li><p><strong>active</strong>: Running normally.</p>
+             * <li><p><strong>active</strong>: The protected object is running normally.</p>
              * </li>
-             * <li><p><strong>init_failed</strong>: Default protection initialization failed.</p>
+             * <li><p><strong>init_failed</strong>: The default protection initialization failed.</p>
              * </li>
              * </ul>
              * 
@@ -688,7 +806,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether XFF proxy is enabled for the protected object.</p>
+             * <p>Indicates whether the X-Forwarded-For (XFF) proxy feature is enabled for the protected object.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

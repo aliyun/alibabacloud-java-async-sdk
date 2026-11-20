@@ -78,7 +78,7 @@ public class CreateLogDeliveryConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>26E46541-7AAB-5565-801D-F14DBDC5****</p>

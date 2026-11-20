@@ -106,7 +106,7 @@ public class DescribeIpAbroadCountryInfosResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of overseas country information.</p>
+         * <p>The list of countries outside China.</p>
          */
         public Builder abroadInfos(java.util.List<AbroadInfos> abroadInfos) {
             this.abroadInfos = abroadInfos;
@@ -114,7 +114,7 @@ public class DescribeIpAbroadCountryInfosResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries to return on each page for a paging query. Valid values: 1 to 500. Default value: 20.</p>
+         * <p>The number of entries to return on each page in a paging query. Valid values: 1 to 500. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -356,7 +356,7 @@ public class DescribeIpAbroadCountryInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of overseas region information.</p>
+             * <p>The list of regions outside China.</p>
              */
             public Builder regions(java.util.List<Regions> regions) {
                 this.regions = regions;

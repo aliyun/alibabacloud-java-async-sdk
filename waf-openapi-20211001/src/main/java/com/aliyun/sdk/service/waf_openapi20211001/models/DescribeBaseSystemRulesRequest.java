@@ -260,12 +260,12 @@ public class DescribeBaseSystemRulesRequest extends Request {
          * <li><strong>lfilei</strong>: local file inclusion (LFI).</li>
          * <li><strong>protocol_violation</strong>: protocol violation.</li>
          * <li><strong>scanner_behavior</strong>: scanner behavior.</li>
-         * <li><strong>logic_flaw</strong>: business logic bug.</li>
-         * <li><strong>arbitrary_file_reading</strong>: arbitrary file read.</li>
+         * <li><strong>logic_flaw</strong>: business logic flaw.</li>
+         * <li><strong>arbitrary_file_reading</strong>: arbitrary file reading.</li>
          * <li><strong>arbitrary_file_download</strong>: arbitrary file download.</li>
-         * <li><strong>xxe</strong>: XML external entity injection.</li>
-         * <li><strong>csrf</strong>: cross-site request forgery.</li>
-         * <li><strong>crlf</strong>: CRLF injection.</li>
+         * <li><strong>xxe</strong>: external entity injection.</li>
+         * <li><strong>csrf</strong>: cross-site request forgery (CSRF).</li>
+         * <li><strong>crlf</strong>: CRLF.</li>
          * <li><strong>other</strong>: other.</li>
          * </ul>
          * 
@@ -281,7 +281,7 @@ public class DescribeBaseSystemRulesRequest extends Request {
         /**
          * <p>The ID of the WAF instance.</p>
          * <blockquote>
-         * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the current WAF instance.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -311,7 +311,7 @@ public class DescribeBaseSystemRulesRequest extends Request {
         }
 
         /**
-         * <p>The page number to return in a paged query. Default value: <strong>1</strong>, which indicates the first page. This parameter is used for paging.</p>
+         * <p>The page number to return in a paged query. Default value: <strong>1</strong>, which indicates the first page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -323,7 +323,7 @@ public class DescribeBaseSystemRulesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page in a paged query. Default value: 100. This parameter is used for paging.</p>
+         * <p>The number of entries to return on each page in a paged query. Default value: 100, which indicates 100 entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -335,7 +335,7 @@ public class DescribeBaseSystemRulesRequest extends Request {
         }
 
         /**
-         * <p>The region where the WAF instance is deployed. Valid values:</p>
+         * <p>The region where the WAF instance resides. Valid values:</p>
          * <ul>
          * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
          * </li>
@@ -367,13 +367,13 @@ public class DescribeBaseSystemRulesRequest extends Request {
         /**
          * <p>The risk level. Valid values:</p>
          * <ul>
-         * <li><p><strong>super_strict</strong>: super strict.</p>
+         * <li><p><strong>super_strict</strong>: Super strict.</p>
          * </li>
-         * <li><p><strong>strict</strong>: strict.</p>
+         * <li><p><strong>strict</strong>: Strict.</p>
          * </li>
-         * <li><p><strong>medium</strong>: medium.</p>
+         * <li><p><strong>medium</strong>: Medium.</p>
          * </li>
-         * <li><p><strong>loose</strong>: loose.</p>
+         * <li><p><strong>loose</strong>: Loose.</p>
          * </li>
          * </ul>
          * 
@@ -387,7 +387,7 @@ public class DescribeBaseSystemRulesRequest extends Request {
         }
 
         /**
-         * <p>The rule action. Valid values:</p>
+         * <p>The action of the rule. Valid values:</p>
          * <ul>
          * <li><p><strong>block</strong>: Block.</p>
          * </li>
@@ -417,7 +417,7 @@ public class DescribeBaseSystemRulesRequest extends Request {
         }
 
         /**
-         * <p>The list of system protection rule IDs to query.</p>
+         * <p>The IDs of the system protection rules to query.</p>
          */
         public Builder ruleIds(java.util.List<Long> ruleIds) {
             this.putQueryParameter("RuleIds", ruleIds);
@@ -438,10 +438,10 @@ public class DescribeBaseSystemRulesRequest extends Request {
         }
 
         /**
-         * <p>The rule status. Valid values:</p>
+         * <p>The status of the rule. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: disabled.</li>
-         * <li><strong>0</strong>: enabled.</li>
+         * <li><strong>1</strong>: Disabled.</li>
+         * <li><strong>0</strong>: Enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -457,8 +457,8 @@ public class DescribeBaseSystemRulesRequest extends Request {
          * <p>The ID of the protection template.</p>
          * <blockquote>
          * <ul>
-         * <li>You can set this parameter to query the system protection rules in a specific Web core protection rule template. Settings apply to the specified template.</li>
-         * <li>If this parameter is left empty, the default configurations of system protection rules are queried.</li>
+         * <li>You can set this parameter to query the system protection rules in a specific web core protection rule template.</li>
+         * <li>If this parameter is left empty, the default configurations of the system protection rules are queried.</li>
          * </ul>
          * </blockquote>
          * 

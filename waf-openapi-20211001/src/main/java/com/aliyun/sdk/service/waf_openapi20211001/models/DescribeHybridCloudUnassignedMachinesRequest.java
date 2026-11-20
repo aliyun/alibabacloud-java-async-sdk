@@ -161,7 +161,7 @@ public class DescribeHybridCloudUnassignedMachinesRequest extends Request {
         /**
          * <p>The ID of the hybrid cloud cluster.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation and obtain the <strong>Id</strong> field value of the target hybrid cloud cluster from the <strong>ClusterInfos</strong> array in the response. If no cluster is available, call the <a href="https://help.aliyun.com/document_detail/2980286.html">CreateHybridCloudCluster</a> operation to create a hybrid cloud cluster.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to find the target hybrid cloud cluster from the <strong>ClusterInfos</strong> array in the returned result and obtain the value of its <strong>Id</strong> field. If no cluster is available, you can call the <a href="https://help.aliyun.com/document_detail/2980286.html">CreateHybridCloudCluster</a> operation to create a hybrid cloud cluster.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -215,7 +215,7 @@ public class DescribeHybridCloudUnassignedMachinesRequest extends Request {
         }
 
         /**
-         * <p>The page number to return in a paged query. Default value: <strong>1</strong>. For more information about paging, see the PageSize parameter.</p>
+         * <p>The page number to return in a paging query. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -227,7 +227,7 @@ public class DescribeHybridCloudUnassignedMachinesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page in a paged query. Default value: <strong>10</strong>, which indicates that each page contains 10 entries. For more information about paging, see the PageNumber parameter.</p>
+         * <p>The number of entries to return on each page in a paging query. Default value: <strong>10</strong>, which indicates that each page contains 10 entries.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -239,7 +239,7 @@ public class DescribeHybridCloudUnassignedMachinesRequest extends Request {
         }
 
         /**
-         * <p>The region where the WAF instance is deployed. Valid values:</p>
+         * <p>The region where the WAF instance resides. Valid values:</p>
          * <ul>
          * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
          * </li>

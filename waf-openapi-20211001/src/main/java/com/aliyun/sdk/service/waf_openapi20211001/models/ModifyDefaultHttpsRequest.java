@@ -173,10 +173,7 @@ public class ModifyDefaultHttpsRequest extends Request {
         }
 
         /**
-         * <p>The cipher suite type.</p>
-         * <blockquote>
-         * <p>This parameter is required. You must specify this parameter when you call this operation.</p>
-         * </blockquote>
+         * <p>The type of the cipher suite. This parameter is required when you call this operation.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -188,7 +185,10 @@ public class ModifyDefaultHttpsRequest extends Request {
         }
 
         /**
-         * <p>The custom cipher suites to add. This parameter is used only when <strong>CipherSuite</strong> is set to <strong>99</strong>.</p>
+         * <p>The custom cipher suites to be added. This parameter is used only when <strong>CipherSuite</strong> is set to <strong>99</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;ECDHE-ECDSA-AES128-GCM-SHA256&quot;,&quot;ECDHE-ECDSA-AES256-GCM-SHA384&quot;,&quot;ECDHE-RSA-AES128-GCM-SHA256&quot;,&quot;ECDHE-RSA-AES256-GCM-SHA384&quot;]</p>
          */
         public Builder customCiphers(java.util.List<String> customCiphers) {
             this.putQueryParameter("CustomCiphers", customCiphers);
@@ -197,15 +197,13 @@ public class ModifyDefaultHttpsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether TLS 1.3 is supported. Valid values:</p>
+         * <p>Specifies whether to support TLS 1.3. Valid values:</p>
          * <ul>
          * <li><p><strong>true</strong>: TLS 1.3 is supported.</p>
          * </li>
          * <li><p><strong>false</strong>: TLS 1.3 is not supported.</p>
          * <blockquote>
-         * <ul>
-         * <li>This parameter is used only when HttpsPorts is not empty, which indicates that the domain name uses the HTTPS protocol. If TLSVersion is set to tlsv1.3, this value must be true.</li>
-         * </ul>
+         * <p>This parameter is used only when HttpsPorts is not empty, which indicates that the domain name uses HTTPS. When TLSVersion is set to tlsv1.3, this parameter must be set to true.</p>
          * </blockquote>
          * </li>
          * </ul>
@@ -220,10 +218,7 @@ public class ModifyDefaultHttpsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the WAF instance.</p>
-         * <blockquote>
-         * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
-         * </blockquote>
+         * <p>The ID of the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -236,7 +231,7 @@ public class ModifyDefaultHttpsRequest extends Request {
         }
 
         /**
-         * <p>The region where the WAF instance is deployed. Valid values:</p>
+         * <p>The region where the WAF instance resides. Valid values:</p>
          * <ul>
          * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
          * </li>

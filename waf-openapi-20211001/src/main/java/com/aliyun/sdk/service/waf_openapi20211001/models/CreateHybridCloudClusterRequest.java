@@ -276,12 +276,10 @@ public class CreateHybridCloudClusterRequest extends Request {
         } 
 
         /**
-         * <p>The network access mode of the cluster. Valid values:</p>
+         * <p>The network access mode. Valid values:</p>
          * <ul>
-         * <li><p><strong>internet</strong>: access over the Internet.</p>
-         * </li>
-         * <li><p><strong>vpc</strong>: access over an Express Connect circuit.</p>
-         * </li>
+         * <li><strong>internet</strong>: Internet access.</li>
+         * <li><strong>vpc</strong>: Private network access over Express Connect.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -295,14 +293,11 @@ public class CreateHybridCloudClusterRequest extends Request {
         }
 
         /**
-         * <p>The region for Express Connect circuit access. Valid values:</p>
+         * <p>The region for Express Connect access. Valid values:</p>
          * <ul>
-         * <li><p><strong>cn-hangzhou</strong>: Hangzhou.</p>
-         * </li>
-         * <li><p><strong>cn-beijing</strong>: Beijing.</p>
-         * </li>
-         * <li><p><strong>cn-shanghai</strong>: Shanghai.</p>
-         * </li>
+         * <li><strong>cn-hangzhou</strong>: Hangzhou.</li>
+         * <li><strong>cn-beiijng</strong>: Beijing.</li>
+         * <li><strong>cn-shanghai</strong>: Shanghai.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -315,7 +310,7 @@ public class CreateHybridCloudClusterRequest extends Request {
         }
 
         /**
-         * <p>The name of the hybrid cloud cluster.</p>
+         * <p>The name of the cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -328,7 +323,7 @@ public class CreateHybridCloudClusterRequest extends Request {
         }
 
         /**
-         * <p>The listening ports for the HTTP protocol. Separate multiple ports with commas (,), such as <strong>port1,port2,port3</strong>.</p>
+         * <p>The list of available ports for the HTTP protocol. The value is a string. If multiple ports are specified, use the <strong>port1,port2,port3</strong> format.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -341,7 +336,7 @@ public class CreateHybridCloudClusterRequest extends Request {
         }
 
         /**
-         * <p>The listening ports for the HTTPS protocol. Separate multiple ports with commas (,), such as <strong>port1,port2,port3</strong>.</p>
+         * <p>The list of available ports for the HTTPS protocol. The value is a string. If multiple ports are specified, use the <strong>port1,port2,port3</strong> format.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -356,7 +351,7 @@ public class CreateHybridCloudClusterRequest extends Request {
         /**
          * <p>The ID of the WAF instance.</p>
          * <blockquote>
-         * <p>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the current WAF instance.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -371,7 +366,7 @@ public class CreateHybridCloudClusterRequest extends Request {
 
         /**
          * <blockquote>
-         * <p>This parameter is deprecated. It no longer returns meaningful data.</p>
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated and no longer returns meaningful data.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -384,7 +379,7 @@ public class CreateHybridCloudClusterRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of protection nodes that can be added to the hybrid cloud cluster.</p>
+         * <p>The number of protection nodes that can be added to the cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -397,12 +392,10 @@ public class CreateHybridCloudClusterRequest extends Request {
         }
 
         /**
-         * <p>Indicates whether the proxy gateway is enabled for the cluster. Valid values:</p>
+         * <p>The proxy gateway mode. Valid values:</p>
          * <ul>
-         * <li><p><strong>on</strong>: The proxy gateway is enabled.</p>
-         * </li>
-         * <li><p><strong>off</strong>: The proxy gateway is disabled.</p>
-         * </li>
+         * <li><strong>on</strong>: Enabled.</li>
+         * <li><strong>off</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -415,12 +408,10 @@ public class CreateHybridCloudClusterRequest extends Request {
         }
 
         /**
-         * <p>The type of the hybrid cloud cluster. Valid values:</p>
+         * <p>The cluster type. Valid values:</p>
          * <ul>
-         * <li><p><strong>cname</strong>: reverse proxy cluster. Traffic is forwarded through CNAME resolution.</p>
-         * </li>
-         * <li><p><strong>service</strong>: transparent proxy cluster. Traffic is forwarded at the service level.</p>
-         * </li>
+         * <li><strong>cname</strong>: Reverse proxy cluster.</li>
+         * <li><strong>service</strong>: Service cluster.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -435,10 +426,8 @@ public class CreateHybridCloudClusterRequest extends Request {
         /**
          * <p>The region where the WAF instance resides. Valid values:</p>
          * <ul>
-         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
-         * </li>
-         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
-         * </li>
+         * <li><strong>cn-hangzhou</strong>: The Chinese mainland.</li>
+         * <li><strong>ap-southeast-1</strong>: Outside the Chinese mainland.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -451,7 +440,7 @@ public class CreateHybridCloudClusterRequest extends Request {
         }
 
         /**
-         * <p>The description of the hybrid cloud cluster.</p>
+         * <p>The remark.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -475,7 +464,7 @@ public class CreateHybridCloudClusterRequest extends Request {
         }
 
         /**
-         * <p>The configuration of the bypass rule, in JSON format. This includes settings such as circuit breaker thresholds, request body size limits, and timeout values.</p>
+         * <p>The rule configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -499,12 +488,10 @@ public class CreateHybridCloudClusterRequest extends Request {
         }
 
         /**
-         * <p>Indicates whether manual bypass is enabled for the cluster. Valid values:</p>
+         * <p>The manual bypass status. Valid values:</p>
          * <ul>
-         * <li><p><strong>on</strong>: Manual bypass is enabled.</p>
-         * </li>
-         * <li><p><strong>off</strong>: Manual bypass is disabled.</p>
-         * </li>
+         * <li><strong>on</strong>: Enabled.</li>
+         * <li><strong>off</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -517,9 +504,9 @@ public class CreateHybridCloudClusterRequest extends Request {
         }
 
         /**
-         * <p>The type of the bypass rule. Valid values:</p>
+         * <p>The rule type. Valid values:</p>
          * <ul>
-         * <li><strong>bypass</strong>: skips WAF security checks and allows traffic to pass through directly.</li>
+         * <li><strong>bypass</strong>: Skips security checks and directly allows traffic.</li>
          * </ul>
          * 
          * <strong>example:</strong>

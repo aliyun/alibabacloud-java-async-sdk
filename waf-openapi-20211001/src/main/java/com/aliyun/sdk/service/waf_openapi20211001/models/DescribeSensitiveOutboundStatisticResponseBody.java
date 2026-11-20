@@ -80,7 +80,7 @@ public class DescribeSensitiveOutboundStatisticResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of statistics on outbound transfers of personal information.</p>
+         * <p>The list of statistics on the types of outbound personal information.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -88,7 +88,7 @@ public class DescribeSensitiveOutboundStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2EFCFE18-78F8-5079-B312-07***48B</p>
@@ -99,7 +99,7 @@ public class DescribeSensitiveOutboundStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned for outbound transfer statistics.</p>
+         * <p>The total number of returned entries.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -222,10 +222,8 @@ public class DescribeSensitiveOutboundStatisticResponseBody extends TeaModel {
             /**
              * <p>The assessment result. Valid values:</p>
              * <ul>
-             * <li><p><strong>report</strong>: a data outbound transfer threat exists.</p>
-             * </li>
-             * <li><p><strong>none</strong>: no data outbound transfer threat exists.</p>
-             * </li>
+             * <li><strong>report</strong>: Outbound data risks exist.</li>
+             * <li><strong>none</strong>: No outbound data risks exist.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -237,7 +235,7 @@ public class DescribeSensitiveOutboundStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of personal information data entries detected.</p>
+             * <p>The total number of data records.</p>
              * 
              * <strong>example:</strong>
              * <p>546</p>
@@ -248,7 +246,7 @@ public class DescribeSensitiveOutboundStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of outbound transfer data entries for the sensitive data type.</p>
+             * <p>The number of outbound data records.</p>
              * 
              * <strong>example:</strong>
              * <p>300</p>
@@ -259,9 +257,9 @@ public class DescribeSensitiveOutboundStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The code that represents the type of sensitive data.</p>
+             * <p>The sensitive data type.</p>
              * <blockquote>
-             * <p>Call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to obtain the supported sensitive data types.</p>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported sensitive data types.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -273,14 +271,11 @@ public class DescribeSensitiveOutboundStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sensitivity level. Valid values:</p>
+             * <p>The sensitivity level. Valid values: </p>
              * <ul>
-             * <li><p><strong>high</strong>: high.</p>
-             * </li>
-             * <li><p><strong>medium</strong>: medium.</p>
-             * </li>
-             * <li><p><strong>low</strong>: low.</p>
-             * </li>
+             * <li><strong>high</strong>: high sensitivity</li>
+             * <li><strong>medium</strong>: medium sensitivity</li>
+             * <li><strong>low</strong>: low sensitivity</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -292,12 +287,10 @@ public class DescribeSensitiveOutboundStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of information. Valid values:</p>
+             * <p>The type of queried information. Valid values: </p>
              * <ul>
-             * <li><p><strong>info</strong>: all personal information.</p>
-             * </li>
-             * <li><p><strong>sensitive</strong>: only sensitive personal information.</p>
-             * </li>
+             * <li><strong>info</strong>: all personal information</li>
+             * <li><strong>sensitive</strong>: only sensitive personal information</li>
              * </ul>
              * 
              * <strong>example:</strong>

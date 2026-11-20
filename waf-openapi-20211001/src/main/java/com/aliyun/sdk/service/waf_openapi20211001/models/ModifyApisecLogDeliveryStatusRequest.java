@@ -120,9 +120,9 @@ public class ModifyApisecLogDeliveryStatusRequest extends Request {
         /**
          * <p>The log subscription type. Valid values:</p>
          * <ul>
-         * <li><strong>risk</strong>: risk information.</li>
-         * <li><strong>event</strong>: attack event information.</li>
-         * <li><strong>asset</strong>: asset information.</li>
+         * <li><strong>risk</strong>: risk information</li>
+         * <li><strong>event</strong>: attack event information</li>
+         * <li><strong>asset</strong>: asset information</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -138,7 +138,7 @@ public class ModifyApisecLogDeliveryStatusRequest extends Request {
         /**
          * <p>Instance ID of the WAF instance.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the WAF instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the current WAF instance.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -154,9 +154,9 @@ public class ModifyApisecLogDeliveryStatusRequest extends Request {
         /**
          * <p>The region where the WAF instance resides. Valid values:</p>
          * <ul>
-         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland</p>
          * </li>
-         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland</p>
          * </li>
          * </ul>
          * 
@@ -182,11 +182,11 @@ public class ModifyApisecLogDeliveryStatusRequest extends Request {
         }
 
         /**
-         * <p>The enabling status of API security log subscribe. Valid values:</p>
+         * <p>The enabling status to subscribe to API security logs. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: subscribe is enabled.</p>
+         * <li><p><strong>true</strong>: enabled</p>
          * </li>
-         * <li><p><strong>false</strong>: subscribe is shutdown.</p>
+         * <li><p><strong>false</strong>: shutdown</p>
          * </li>
          * </ul>
          * <p>This parameter is required.</p>

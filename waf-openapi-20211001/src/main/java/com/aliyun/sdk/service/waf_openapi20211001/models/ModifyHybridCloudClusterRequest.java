@@ -292,8 +292,8 @@ public class ModifyHybridCloudClusterRequest extends Request {
         /**
          * <p>The network access mode. Valid values:</p>
          * <ul>
-         * <li><strong>internet</strong>: public network access.</li>
-         * <li><strong>vpc</strong>: Express Connect private network access.</li>
+         * <li><strong>internet</strong>: Internet access.</li>
+         * <li><strong>vpc</strong>: Private network access over Express Connect.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -337,7 +337,7 @@ public class ModifyHybridCloudClusterRequest extends Request {
         }
 
         /**
-         * <p>The list of available ports for the HTTP protocol. The value is a string. If multiple ports are specified, they are returned in the format of <strong>port1,port2,port3</strong>.</p>
+         * <p>The list of available ports for the HTTP protocol. The value is a string. For multiple ports, use the <strong>port1,port2,port3</strong> format.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -350,7 +350,7 @@ public class ModifyHybridCloudClusterRequest extends Request {
         }
 
         /**
-         * <p>The list of available ports for the HTTPS protocol. The value is a string. If multiple ports are specified, they are returned in the format of <strong>port1,port2,port3</strong>.</p>
+         * <p>The list of available ports for the HTTPS protocol. The value is a string. For multiple ports, use the <strong>port1,port2,port3</strong> format.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -392,7 +392,7 @@ public class ModifyHybridCloudClusterRequest extends Request {
         }
 
         /**
-         * <p>The log fields to be returned.</p>
+         * <p>The log fields that are not returned.</p>
          * 
          * <strong>example:</strong>
          * <p>log_example</p>
@@ -419,8 +419,8 @@ public class ModifyHybridCloudClusterRequest extends Request {
         /**
          * <p>The proxy gateway mode. Valid values:</p>
          * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
+         * <li><strong>on</strong>: Enabled.</li>
+         * <li><strong>off</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -435,8 +435,8 @@ public class ModifyHybridCloudClusterRequest extends Request {
         /**
          * <p>The cluster type. Valid values:</p>
          * <ul>
-         * <li><strong>cname</strong>: reverse proxy cluster.</li>
-         * <li><strong>service</strong>: service-based cluster.</li>
+         * <li><strong>cname</strong>: Reverse proxy cluster.</li>
+         * <li><strong>service</strong>: Service cluster.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -451,9 +451,9 @@ public class ModifyHybridCloudClusterRequest extends Request {
         /**
          * <p>The region where the WAF instance resides. Valid values:</p>
          * <ul>
-         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * <li><p><strong>cn-hangzhou</strong>: The Chinese mainland.</p>
          * </li>
-         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * <li><p><strong>ap-southeast-1</strong>: Outside the Chinese mainland.</p>
          * </li>
          * </ul>
          * 
@@ -467,7 +467,7 @@ public class ModifyHybridCloudClusterRequest extends Request {
         }
 
         /**
-         * <p>The remarks.</p>
+         * <p>The remark.</p>
          * 
          * <strong>example:</strong>
          * <p>remarkExample</p>
@@ -517,8 +517,8 @@ public class ModifyHybridCloudClusterRequest extends Request {
         /**
          * <p>The rule status. Valid values:</p>
          * <ul>
-         * <li><strong>on</strong>: enabled.</li>
-         * <li><strong>off</strong>: disabled.</li>
+         * <li><strong>on</strong>: Enabled.</li>
+         * <li><strong>off</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -532,7 +532,7 @@ public class ModifyHybridCloudClusterRequest extends Request {
 
         /**
          * <p>The rule type. Valid values:</p>
-         * <p>bypass: bypasses security checks and directly allows the request.</p>
+         * <p>bypass: Skips security checks and directly allows traffic.</p>
          * 
          * <strong>example:</strong>
          * <p>bypass</p>

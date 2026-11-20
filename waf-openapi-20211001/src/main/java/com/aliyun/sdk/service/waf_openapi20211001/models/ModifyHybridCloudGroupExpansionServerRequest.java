@@ -146,7 +146,7 @@ public class ModifyHybridCloudGroupExpansionServerRequest extends Request {
         }
 
         /**
-         * <p>The ID of the node group in the hybrid cloud cluster.</p>
+         * <p>The ID of the node group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,10 +159,7 @@ public class ModifyHybridCloudGroupExpansionServerRequest extends Request {
         }
 
         /**
-         * <p>The ID of the WAF instance.</p>
-         * <blockquote>
-         * <p>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
-         * </blockquote>
+         * <p>Instance ID of the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the WAF instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -175,7 +172,7 @@ public class ModifyHybridCloudGroupExpansionServerRequest extends Request {
         }
 
         /**
-         * <p>The ID of the node that you want to add to the node group.</p>
+         * <p>The IDs of the nodes.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -206,7 +203,7 @@ public class ModifyHybridCloudGroupExpansionServerRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Resource Manager resource group.</p>
+         * <p>The ID of the Alibaba Cloud resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfm***q</p>

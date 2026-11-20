@@ -134,7 +134,7 @@ public class DescribeApiExportsRequest extends Request {
         /**
          * <p>The ID of the WAF instance.</p>
          * <blockquote>
-         * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -164,7 +164,7 @@ public class DescribeApiExportsRequest extends Request {
         }
 
         /**
-         * <p>The page number to return in a paging query. Default value: <strong>1</strong>, which indicates the first page.</p>
+         * <p>The number of the page to return in a paged query. Default value: <strong>1</strong>, which indicates that the first page of paging data is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -176,7 +176,7 @@ public class DescribeApiExportsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page in a paging query. Default value: <strong>10</strong>, which indicates 10 entries per page.</p>
+         * <p>The number of entries to return on each page in a paged query. Default value: <strong>10</strong>, which indicates that each paging page contains 10 entries.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -188,11 +188,11 @@ public class DescribeApiExportsRequest extends Request {
         }
 
         /**
-         * <p>The region where the WAF instance is deployed. Valid values:</p>
+         * <p>The region where the WAF instance resides. Valid values:</p>
          * <ul>
-         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland</p>
          * </li>
-         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland</p>
          * </li>
          * </ul>
          * 

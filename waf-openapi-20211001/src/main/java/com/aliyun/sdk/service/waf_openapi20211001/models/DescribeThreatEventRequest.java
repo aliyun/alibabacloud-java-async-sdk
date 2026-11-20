@@ -160,7 +160,7 @@ public class DescribeThreatEventRequest extends Request {
         } 
 
         /**
-         * <p>The domain name that is protected by WAF. If you do not specify this parameter, security events for all domain names are queried.</p>
+         * <p>The domain name to query.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.abc.com">www.abc.com</a></p>
@@ -172,7 +172,7 @@ public class DescribeThreatEventRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. This value is a UNIX timestamp in milliseconds.</p>
+         * <p>The end time. The value is a UNIX timestamp in UTC. Unit: seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -187,7 +187,7 @@ public class DescribeThreatEventRequest extends Request {
         /**
          * <p>The ID of the Web Application Firewall (WAF) instance.</p>
          * <blockquote>
-         * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the WAF instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -201,7 +201,7 @@ public class DescribeThreatEventRequest extends Request {
         }
 
         /**
-         * <p>The page number of the page to return. Default value: 1.</p>
+         * <p>The page number to return when paging through results in a paged query. Default value: 1, which indicates that the first page is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -213,7 +213,7 @@ public class DescribeThreatEventRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: <strong>5</strong>. Valid values: 1 to 200.</p>
+         * <p>The number of entries to return on each page when paging through results in a paged query. Default value: <strong>5</strong>, which indicates that 5 entries are returned on each page. Valid values: 1 to 200.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -229,7 +229,7 @@ public class DescribeThreatEventRequest extends Request {
          * <ul>
          * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
          * </li>
-         * <li><p><strong>ap-southeast-1</strong>: a region outside the Chinese mainland.</p>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
          * </li>
          * </ul>
          * 
@@ -243,7 +243,7 @@ public class DescribeThreatEventRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The ID of the Alibaba Cloud resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aeky65ka*****</p>
@@ -255,7 +255,7 @@ public class DescribeThreatEventRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. This value is a UNIX timestamp in milliseconds.</p>
+         * <p>The start time. The value is a UNIX timestamp in UTC. Unit: seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

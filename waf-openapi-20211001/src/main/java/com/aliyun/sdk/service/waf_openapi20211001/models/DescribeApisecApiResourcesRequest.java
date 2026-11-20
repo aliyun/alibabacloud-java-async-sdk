@@ -440,7 +440,7 @@ public class DescribeApisecApiResourcesRequest extends Request {
         /**
          * <p>The status of the API. Valid values:</p>
          * <ul>
-         * <li><strong>NewbornInterface</strong>: New.</li>
+         * <li><strong>NewbornInterface</strong>: Newly added.</li>
          * <li><strong>OfflineInterface</strong>: Inactive.</li>
          * <li><strong>normal</strong>: Normal.</li>
          * </ul>
@@ -457,7 +457,7 @@ public class DescribeApisecApiResourcesRequest extends Request {
         /**
          * <p>The business purpose of the API.</p>
          * <blockquote>
-         * <p>You can call <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> to obtain the supported business purposes.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported business purposes.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -470,10 +470,10 @@ public class DescribeApisecApiResourcesRequest extends Request {
         }
 
         /**
-         * <p>The service object. Valid values:</p>
+         * <p>The service object of the API. Valid values:</p>
          * <ul>
          * <li><strong>PublicAPI</strong>: Public service.</li>
-         * <li><strong>ThirdpartAPI</strong>: Third-party collaboration.</li>
+         * <li><strong>ThirdpartAPI</strong>: Third-party cooperation.</li>
          * <li><strong>InternalAPI</strong>: Internal office.</li>
          * </ul>
          * 
@@ -489,8 +489,8 @@ public class DescribeApisecApiResourcesRequest extends Request {
         /**
          * <p>Specifies whether the API has an authentication field. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Has authentication.</li>
-         * <li><strong>1</strong>: Does not have authentication.</li>
+         * <li><strong>0</strong>: Has authentication field.</li>
+         * <li><strong>1</strong>: No authentication field.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -505,7 +505,7 @@ public class DescribeApisecApiResourcesRequest extends Request {
         /**
          * <p>The ID of the hybrid cloud cluster.</p>
          * <blockquote>
-         * <p>This parameter applies only to hybrid cloud scenarios. You can call <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> to obtain hybrid cloud cluster information.</p>
+         * <p>This parameter applies only to hybrid cloud scenarios. You can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query hybrid cloud cluster information.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -518,7 +518,7 @@ public class DescribeApisecApiResourcesRequest extends Request {
         }
 
         /**
-         * <p>The end time of the query, in UNIX timestamp (UTC) format. Unit: seconds.</p>
+         * <p>The end time of the query. The time is a UNIX timestamp in UTC. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1683388800</p>
@@ -548,7 +548,7 @@ public class DescribeApisecApiResourcesRequest extends Request {
         /**
          * <p>The ID of the WAF instance.</p>
          * <blockquote>
-         * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to obtain the ID of the current WAF instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -574,7 +574,7 @@ public class DescribeApisecApiResourcesRequest extends Request {
         }
 
         /**
-         * <p>The remarks.</p>
+         * <p>The note.</p>
          * 
          * <strong>example:</strong>
          * <p>loginApi</p>
@@ -586,15 +586,15 @@ public class DescribeApisecApiResourcesRequest extends Request {
         }
 
         /**
-         * <p>The name of the field used for sorting. Valid values:</p>
+         * <p>The name of the field by which to sort the results. Valid values:</p>
          * <ul>
-         * <li><strong>allCnt</strong>: total access volume in the last 30 days.</li>
-         * <li><strong>botCnt</strong>: bot access volume in the last 30 days.</li>
-         * <li><strong>crossBorderCnt</strong>: cross-border access volume in the last 30 days.</li>
-         * <li><strong>abnormalNum</strong>: number of risks associated with the API.</li>
-         * <li><strong>eventNum</strong>: number of events associated with the API.</li>
-         * <li><strong>farthestTs</strong>: first discovery time.</li>
-         * <li><strong>lastestTs</strong>: most recent access time.</li>
+         * <li><strong>allCnt</strong>: Total number of visits in the last 30 days.</li>
+         * <li><strong>botCnt</strong>: Number of bot visits in the last 30 days.</li>
+         * <li><strong>crossBorderCnt</strong>: Number of cross-border visits in the last 30 days.</li>
+         * <li><strong>abnormalNum</strong>: Number of risks associated with the API.</li>
+         * <li><strong>eventNum</strong>: Number of events associated with the API.</li>
+         * <li><strong>farthestTs</strong>: Time when the API was first discovered.</li>
+         * <li><strong>lastestTs</strong>: Time of the last visit.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -609,7 +609,7 @@ public class DescribeApisecApiResourcesRequest extends Request {
         /**
          * <p>The sort order. Valid values:</p>
          * <ul>
-         * <li><strong>desc</strong>: Descending order (default).</li>
+         * <li><strong>desc</strong>: Descending order. This is the default value.</li>
          * <li><strong>asc</strong>: Ascending order.</li>
          * </ul>
          * 
@@ -623,7 +623,7 @@ public class DescribeApisecApiResourcesRequest extends Request {
         }
 
         /**
-         * <p>The page number of the page to return in a paged query. Default value: <strong>1</strong>, which indicates the first page.</p>
+         * <p>The number of the page to return in a paging query. Default value: <strong>1</strong>, which indicates the first page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -635,7 +635,7 @@ public class DescribeApisecApiResourcesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page in a paged query. Default value: <strong>10</strong>, which indicates 10 entries per page.</p>
+         * <p>The number of entries to return on each page in a paging query. Default value: <strong>10</strong>, which indicates 10 entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -649,10 +649,8 @@ public class DescribeApisecApiResourcesRequest extends Request {
         /**
          * <p>The region where the WAF instance resides. Valid values:</p>
          * <ul>
-         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
-         * </li>
-         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
-         * </li>
+         * <li><strong>cn-hangzhou</strong>: The Chinese mainland.</li>
+         * <li><strong>ap-southeast-1</strong>: Outside the Chinese mainland.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -665,9 +663,9 @@ public class DescribeApisecApiResourcesRequest extends Request {
         }
 
         /**
-         * <p>The type of sensitive information in the request.</p>
+         * <p>The type of sensitive information in requests.</p>
          * <blockquote>
-         * <p>You can call <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> to obtain the supported sensitive information types.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported sensitive information types.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -680,7 +678,7 @@ public class DescribeApisecApiResourcesRequest extends Request {
         }
 
         /**
-         * <p>The Alibaba Cloud resource group ID.</p>
+         * <p>The ID of the Alibaba Cloud resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfm***q</p>
@@ -697,7 +695,7 @@ public class DescribeApisecApiResourcesRequest extends Request {
          * <li><strong>L1</strong>: High sensitivity.</li>
          * <li><strong>L2</strong>: Medium sensitivity.</li>
          * <li><strong>L3</strong>: Low sensitivity.</li>
-         * <li><strong>N</strong>: Not sensitive.</li>
+         * <li><strong>N</strong>: Non-sensitive.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -710,9 +708,9 @@ public class DescribeApisecApiResourcesRequest extends Request {
         }
 
         /**
-         * <p>The type of sensitive data in the response.</p>
+         * <p>The type of sensitive data in responses.</p>
          * <blockquote>
-         * <p>You can call <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> to obtain the supported sensitive data types.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported sensitive data types.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -725,7 +723,7 @@ public class DescribeApisecApiResourcesRequest extends Request {
         }
 
         /**
-         * <p>The start time of the query, in UNIX timestamp (UTC) format. Unit: seconds.</p>
+         * <p>The start time of the query. The time is a UNIX timestamp in UTC. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1681833600</p>

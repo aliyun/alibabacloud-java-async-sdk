@@ -67,7 +67,7 @@ public class DescribeDomainUsedPortsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>D7861F61-5B61-<em>-A47C-</em></p>

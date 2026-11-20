@@ -91,7 +91,7 @@ public class DescribeDefenseGroupValidResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The names of the protected objects.</p>
+         * <p>The names of the protection objects.</p>
          */
         public Builder resources(java.util.List<String> resources) {
             this.resources = resources;
@@ -99,7 +99,7 @@ public class DescribeDefenseGroupValidResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of returned results.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>

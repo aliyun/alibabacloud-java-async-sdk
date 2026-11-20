@@ -99,7 +99,7 @@ public class DescribeSensitiveRequestsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of returned entries.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -384,10 +384,10 @@ public class DescribeSensitiveRequestsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The assessment result. Valid values:</p>
+             * <p>The evaluation result. Valid values:</p>
              * <ul>
-             * <li><strong>leak</strong>: a leak risk exists.</li>
-             * <li><strong>none</strong>: no leak risk exists.</li>
+             * <li><strong>leak</strong>: A leakage risk exists.</li>
+             * <li><strong>none</strong>: No leakage risk exists.</li>
              * </ul>
              * 
              * <strong>example:</strong>

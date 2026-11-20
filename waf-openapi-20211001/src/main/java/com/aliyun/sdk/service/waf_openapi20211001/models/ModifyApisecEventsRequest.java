@@ -160,9 +160,9 @@ public class ModifyApisecEventsRequest extends Request {
         } 
 
         /**
-         * <p>The hybrid cloud cluster ID.</p>
+         * <p>The ID of the hybrid cloud cluster.</p>
          * <blockquote>
-         * <p>This parameter applies only to hybrid cloud scenarios. You can call <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> to obtain hybrid cloud cluster information.</p>
+         * <p>This parameter applies only to hybrid cloud scenarios. You can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query hybrid cloud cluster information.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -175,7 +175,7 @@ public class ModifyApisecEventsRequest extends Request {
         }
 
         /**
-         * <p>The list of API security event IDs.</p>
+         * <p>The IDs of the API security events.</p>
          * <p>This parameter is required.</p>
          */
         public Builder eventIds(java.util.List<String> eventIds) {
@@ -199,7 +199,7 @@ public class ModifyApisecEventsRequest extends Request {
         /**
          * <p>The ID of the WAF instance.</p>
          * <blockquote>
-         * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to obtain the ID of the current WAF instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -213,7 +213,7 @@ public class ModifyApisecEventsRequest extends Request {
         }
 
         /**
-         * <p>The remarks.</p>
+         * <p>The note.</p>
          * 
          * <strong>example:</strong>
          * <p>already confirmed.</p>
@@ -225,11 +225,11 @@ public class ModifyApisecEventsRequest extends Request {
         }
 
         /**
-         * <p>The region where the WAF instance is deployed. Valid values:</p>
+         * <p>The region where the WAF instance resides. Valid values:</p>
          * <ul>
-         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland</p>
          * </li>
-         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland</p>
          * </li>
          * </ul>
          * 
@@ -243,7 +243,7 @@ public class ModifyApisecEventsRequest extends Request {
         }
 
         /**
-         * <p>The Alibaba Cloud resource group ID.</p>
+         * <p>The ID of the Alibaba Cloud resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfm***q</p>
@@ -255,11 +255,11 @@ public class ModifyApisecEventsRequest extends Request {
         }
 
         /**
-         * <p>The event status. Valid values:</p>
+         * <p>The status of the event. Valid values:</p>
          * <ul>
-         * <li><strong>toBeConfirmed</strong>: To be confirmed.</li>
-         * <li><strong>confirmed</strong>: Confirmed.</li>
-         * <li><strong>ignored</strong>: Ignored.</li>
+         * <li><strong>toBeConfirmed</strong>: to be confirmed</li>
+         * <li><strong>confirmed</strong>: confirmed</li>
+         * <li><strong>ignored</strong>: ignored</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

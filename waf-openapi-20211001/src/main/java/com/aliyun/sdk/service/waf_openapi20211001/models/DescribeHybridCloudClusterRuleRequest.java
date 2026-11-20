@@ -132,7 +132,7 @@ public class DescribeHybridCloudClusterRuleRequest extends Request {
         } 
 
         /**
-         * <p><strong>[Deprecated]</strong> The hybrid cloud cluster ID.</p>
+         * <p><strong>[Deprecated]</strong> The ID of the hybrid cloud cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -144,7 +144,7 @@ public class DescribeHybridCloudClusterRuleRequest extends Request {
         }
 
         /**
-         * <p>The cluster rule resource ID.</p>
+         * <p>The ID of the cluster rule resource.</p>
          * 
          * <strong>example:</strong>
          * <p>hdbc-clusterrule-*******m0w</p>
@@ -158,7 +158,7 @@ public class DescribeHybridCloudClusterRuleRequest extends Request {
         /**
          * <p>The ID of the WAF instance.</p>
          * <blockquote>
-         * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to obtain the ID of the current WAF instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the current WAF instance.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -172,11 +172,11 @@ public class DescribeHybridCloudClusterRuleRequest extends Request {
         }
 
         /**
-         * <p>The region where the WAF instance is deployed. Valid values:</p>
+         * <p>The region where the WAF instance resides. Valid values:</p>
          * <ul>
-         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * <li><p><strong>cn-hangzhou</strong>: The Chinese mainland.</p>
          * </li>
-         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * <li><p><strong>ap-southeast-1</strong>: Outside the Chinese mainland.</p>
          * </li>
          * </ul>
          * 
@@ -190,7 +190,7 @@ public class DescribeHybridCloudClusterRuleRequest extends Request {
         }
 
         /**
-         * <p>The Alibaba Cloud resource group ID.</p>
+         * <p>The ID of the Alibaba Cloud resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfm***q</p>
@@ -204,7 +204,7 @@ public class DescribeHybridCloudClusterRuleRequest extends Request {
         /**
          * <p><strong>[Deprecated]</strong> The rule type. Valid values:</p>
          * <ul>
-         * <li><strong>pullin</strong>: cluster traffic redirection</li>
+         * <li><strong>pullin</strong>: cluster traffic diversion</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -78,7 +78,7 @@ public class DescribeDefenseRuleStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The statistics results.</p>
+         * <p>The statistics.</p>
          */
         public Builder statisticsInfos(java.util.List<StatisticsInfos> statisticsInfos) {
             this.statisticsInfos = statisticsInfos;
@@ -183,7 +183,7 @@ public class DescribeDefenseRuleStatisticsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of rules that meet all query conditions.</p>
+             * <p>The number of rules that meet all the query conditions.</p>
              * 
              * <strong>example:</strong>
              * <p>27</p>

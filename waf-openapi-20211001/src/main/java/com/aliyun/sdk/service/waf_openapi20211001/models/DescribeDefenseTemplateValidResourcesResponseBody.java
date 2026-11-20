@@ -91,7 +91,7 @@ public class DescribeDefenseTemplateValidResourcesResponseBody extends TeaModel 
         }
 
         /**
-         * <p>The names of the protected objects that are valid for the protection template.</p>
+         * <p>The list of protected object names.</p>
          */
         public Builder resources(java.util.List<String> resources) {
             this.resources = resources;
@@ -99,7 +99,7 @@ public class DescribeDefenseTemplateValidResourcesResponseBody extends TeaModel 
         }
 
         /**
-         * <p>The total number of protected objects that match the query criteria.</p>
+         * <p>The total number of returned entries.</p>
          * 
          * <strong>example:</strong>
          * <p>34</p>

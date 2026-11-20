@@ -103,7 +103,7 @@ public class DeleteHybridCloudClusterRuleRequest extends Request {
         } 
 
         /**
-         * <p>The resource ID of the cluster rule.</p>
+         * <p>The ID of the cluster rule resource.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,7 +132,7 @@ public class DeleteHybridCloudClusterRuleRequest extends Request {
         }
 
         /**
-         * <p>The region where the WAF instance is deployed. Valid values:</p>
+         * <p>The region where the WAF instance resides. Valid values:</p>
          * <ul>
          * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
          * </li>

@@ -171,7 +171,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The SSL certificate details.</p>
+         * <p>The details of the SSL certificate.</p>
          */
         public Builder certDetail(CertDetail certDetail) {
             this.certDetail = certDetail;
@@ -179,7 +179,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The CNAME assigned by WAF to the domain name.</p>
+         * <p>The CNAME address assigned by WAF to the domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxxxcvdaf.****.com</p>
@@ -201,7 +201,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The domain name ID.</p>
+         * <p>The ID of the domain name.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.aliyundoc.com-waf">www.aliyundoc.com-waf</a></p>
@@ -212,7 +212,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The listener configuration.</p>
+         * <p>The listener configuration information.</p>
          */
         public Builder listen(Listen listen) {
             this.listen = listen;
@@ -220,7 +220,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The forwarding configuration.</p>
+         * <p>The forwarding configuration information.</p>
          */
         public Builder redirect(Redirect redirect) {
             this.redirect = redirect;
@@ -239,7 +239,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The Alibaba Cloud resource group ID.</p>
+         * <p>The ID of the Alibaba Cloud resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfm***q</p>
@@ -259,6 +259,18 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
 
         /**
          * <p>The domain name status. Valid values:</p>
+         * <ul>
+         * <li><p><strong>1</strong>: The domain name is in a normal state.</p>
+         * </li>
+         * <li><p><strong>2</strong>: The domain name is being created.</p>
+         * </li>
+         * <li><p><strong>3</strong>: The domain name is being modified.</p>
+         * </li>
+         * <li><p><strong>4</strong>: The domain name is being released.</p>
+         * </li>
+         * <li><p><strong>5</strong>: Traffic forwarding for the domain name is stopped.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -390,7 +402,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the certificate expires. The value is a UNIX timestamp (UTC). Unit: milliseconds.</p>
+             * <p>The time when the certificate expires. The value is a UNIX timestamp in UTC. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1685590400000</p>
@@ -401,7 +413,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The SSL certificate ID.</p>
+             * <p>The ID of the SSL certificate.</p>
              * 
              * <strong>example:</strong>
              * <p>123-cn-hangzhou</p>
@@ -412,7 +424,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The certificate name.</p>
+             * <p>The name of the certificate.</p>
              * 
              * <strong>example:</strong>
              * <p>test-cert-name</p>
@@ -423,7 +435,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>All domain names that are bound to the certificate.</p>
+             * <p>All domain names bound to the certificate.</p>
              */
             public Builder sans(java.util.List<String> sans) {
                 this.sans = sans;
@@ -431,7 +443,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The effective period of the certificate. The value is in the format of a UNIX timestamp (UTC). Unit: milliseconds.</p>
+             * <p>The effective period of the certificate. The format is a UNIX timestamp in UTC. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1677772800000</p>
@@ -746,7 +758,15 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the cipher suite. Valid values:</p>
+             * <p>The cipher suite type. Valid values:</p>
+             * <ul>
+             * <li><p><strong>1</strong>: All cipher suites.</p>
+             * </li>
+             * <li><p><strong>2</strong>: Strong cipher suites. This value is available only when TLSVersion is set to tlsv1.2.</p>
+             * </li>
+             * <li><p><strong>99</strong>: Custom cipher suites. This value is available only when TLSVersion is not set to tlsv1.3.</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -765,7 +785,16 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether TLS 1.3 is supported. Valid values:</p>
+             * <p>Specifies whether TLS 1.3 is supported. Valid values:</p>
+             * <ul>
+             * <li><p><strong>true</strong>: TLS 1.3 is supported.</p>
+             * </li>
+             * <li><p><strong>false</strong>: TLS 1.3 is not supported.</p>
+             * </li>
+             * </ul>
+             * <blockquote>
+             * <p>This parameter is used only when the HttpsPorts parameter is not empty, which indicates that the domain name uses the HTTPS protocol. When TLSVersion is set to tlsv1.3, this value must be set to true.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -776,7 +805,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether an exclusive IP address is enabled. Valid values:</p>
+             * <p>Specifies whether an exclusive IP address is enabled. Valid values:</p>
              * <ul>
              * <li><p><strong>true</strong>: An exclusive IP address is enabled.</p>
              * </li>
@@ -793,7 +822,13 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether HTTPS forced redirect is enabled. Valid values:</p>
+             * <p>Specifies whether forcible redirect to HTTPS is enabled. Valid values:</p>
+             * <ul>
+             * <li><p><strong>true</strong>: Forcible redirect to HTTPS is enabled.</p>
+             * </li>
+             * <li><p><strong>false</strong>: Forcible redirect to HTTPS is not enabled.</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -804,11 +839,11 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether HSTS includes subdomains. Valid values:</p>
+             * <p>Specifies whether HTTP Strict Transport Security (HSTS) includes subdomains. Valid values:</p>
              * <ul>
-             * <li><p><strong>true</strong>: Enabled.</p>
+             * <li><p><strong>true</strong>: HSTS includes subdomains.</p>
              * </li>
-             * <li><p><strong>false</strong>: Not enabled.</p>
+             * <li><p><strong>false</strong>: HSTS does not include subdomains.</p>
              * </li>
              * </ul>
              */
@@ -818,7 +853,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The HSTS expiration time. Unit: seconds.</p>
+             * <p>The expiration time of HSTS, in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>365000</p>
@@ -829,7 +864,11 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether HSTS preloading is enabled. This feature is disabled by default. Valid values:</p>
+             * <p>Specifies whether HSTS preload is enabled. Default value: false. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: HSTS preload is enabled.</li>
+             * <li><strong>false</strong>: HSTS preload is disabled.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -840,7 +879,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether HTTP/2 is enabled. Valid values:</p>
+             * <p>Specifies whether HTTP/2 is enabled. Valid values:</p>
              * <ul>
              * <li><p><strong>true</strong>: HTTP/2 is enabled.</p>
              * </li>
@@ -857,7 +896,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The listening port for the HTTP protocol.</p>
+             * <p>The listening ports for the HTTP protocol.</p>
              */
             public Builder httpPorts(java.util.List<Long> httpPorts) {
                 this.httpPorts = httpPorts;
@@ -865,7 +904,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The listening port for the HTTPS protocol.</p>
+             * <p>The listening ports for the HTTPS protocol.</p>
              */
             public Builder httpsPorts(java.util.List<Long> httpsPorts) {
                 this.httpsPorts = httpsPorts;
@@ -873,7 +912,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether IPv6 is enabled. Valid values:</p>
+             * <p>Specifies whether IPv6 is enabled. Valid values:</p>
              * <ul>
              * <li><p><strong>true</strong>: IPv6 is enabled.</p>
              * </li>
@@ -890,7 +929,13 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of protection resource to use. Valid values:</p>
+             * <p>The type of protection resource to be used. Valid values:</p>
+             * <ul>
+             * <li><p><strong>share</strong>: Shared cluster.</p>
+             * </li>
+             * <li><p><strong>gslb</strong>: Intelligent load balancing for shared clusters.</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>share</p>
@@ -901,7 +946,13 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether only SM client access is allowed. This parameter is used only when SM2Enable is set to true.</p>
+             * <p>Specifies whether only SM2 clients are allowed to access. This parameter is used only when SM2Enabled is set to true. Valid values:</p>
+             * <ul>
+             * <li><p><strong>true</strong>: Only SM2 clients can access.</p>
+             * </li>
+             * <li><p><strong>false</strong>: Both SM2 and non-SM2 clients can access.</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -912,7 +963,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the China Encryption Standard (SM) certificate to add. This parameter is used only when SM2Enable is set to true.</p>
+             * <p>The ID of the SM2 certificate to be added. This parameter is used only when SM2Enabled is set to true.</p>
              * 
              * <strong>example:</strong>
              * <p>123-cn-hangzhou</p>
@@ -923,7 +974,13 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the China Encryption Standard (SM) certificate is enabled. Valid values:</p>
+             * <p>Specifies whether the SM2 certificate is enabled. Valid values:</p>
+             * <ul>
+             * <li><p><strong>true</strong>: The SM2 certificate is enabled.</p>
+             * </li>
+             * <li><p><strong>false</strong>: The SM2 certificate is not enabled.</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -936,13 +993,13 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             /**
              * <p>The TLS version. Valid values:</p>
              * <ul>
-             * <li><p><strong>tlsv1</strong>: Supports TLS 1.0 and later. Provides the highest compatibility and the lowest security.</p>
+             * <li><p><strong>tlsv1</strong>: Supports TLS 1.0 and later versions. This version provides the highest compatibility but lower security.</p>
              * </li>
-             * <li><p><strong>tlsv1.1</strong>: Supports TLS 1.1 and later. Provides good compatibility and good security.</p>
+             * <li><p><strong>tlsv1.1</strong>: Supports TLS 1.1 and later versions. This version provides good compatibility and better security.</p>
              * </li>
-             * <li><p><strong>tlsv1.2</strong>: Supports TLS 1.2 and later. Provides good compatibility and the highest security.</p>
+             * <li><p><strong>tlsv1.2</strong>: Supports TLS 1.2 and later versions. This version provides good compatibility and the highest security.</p>
              * </li>
-             * <li><p><strong>tlsv1.3</strong>: Supports only TLS 1.3. Provides the highest security and the lowest compatibility.</p>
+             * <li><p><strong>tlsv1.3</strong>: Supports only TLS 1.3. This version provides the highest security but lower compatibility.</p>
              * </li>
              * </ul>
              * 
@@ -955,15 +1012,15 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The method that WAF uses to obtain the originating IP address of the client. Valid values:</p>
+             * <p>The method used by WAF to obtain the actual IP address of the client. Valid values:</p>
              * <ul>
              * <li><p><strong>0</strong>: The client access traffic is not forwarded by other Layer 7 proxies before reaching WAF.</p>
              * </li>
-             * <li><p><strong>1</strong>: WAF reads the first value in the X-Forwarded-For (XFF) header field of the request as the client IP address.</p>
+             * <li><p><strong>1</strong>: WAF reads the first value of the X-Forwarded-For (XFF) field in the request header as the client IP address.</p>
              * </li>
-             * <li><p><strong>2</strong>: WAF reads the value of a custom header field that you specify in the request as the client IP address.</p>
+             * <li><p><strong>2</strong>: WAF reads the value of a custom field that you specified in the request header as the client IP address.</p>
              * </li>
-             * <li><p><strong>3</strong>: WAF reads the Client IP from the Proxy Protocol header as the client IP address.</p>
+             * <li><p><strong>3</strong>: WAF reads the Client IP in the Proxy Protocol header as the client IP address.</p>
              * </li>
              * </ul>
              * 
@@ -976,7 +1033,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The custom header fields used to obtain the client IP address.</p>
+             * <p>The list of custom fields used to obtain the client IP address.</p>
              */
             public Builder xffHeaders(java.util.List<String> xffHeaders) {
                 this.xffHeaders = xffHeaders;
@@ -1067,7 +1124,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The listener port.</p>
+             * <p>The listening port.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -1078,10 +1135,10 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The protocol type of the listener port. Valid values:</p>
+             * <p>The protocol type of the listening port. Valid values:</p>
              * <ul>
-             * <li><strong>http</strong>: HTTP protocol.</li>
-             * <li><strong>https</strong>: HTTPS protocol.</li>
+             * <li><strong>http</strong>: HTTP.</li>
+             * <li><strong>https</strong>: HTTPS.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1139,7 +1196,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The IP address or domain name of the origin server for the domain name.</p>
+             * <p>The IP address of the origin server or the back-to-origin domain name of the server for the domain name.</p>
              * 
              * <strong>example:</strong>
              * <p>1.1.XX.XX</p>
@@ -1196,7 +1253,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The IP address or domain name of the secondary origin server for the domain name.</p>
+             * <p>The IP address of the secondary origin server or the secondary back-to-origin domain name of the server for the domain name.</p>
              * 
              * <strong>example:</strong>
              * <p>[
@@ -1269,7 +1326,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The custom request header field.</p>
+             * <p>The specified custom request header field.</p>
              * 
              * <strong>example:</strong>
              * <p>aaa</p>
@@ -1280,7 +1337,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the custom request header field.</p>
+             * <p>The value set for the specified custom request header field.</p>
              * 
              * <strong>example:</strong>
              * <p>bbb</p>
@@ -1665,7 +1722,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of backup origin server IP addresses or back-to-origin domain names for the domain name.</p>
+             * <p>The list of IP addresses of secondary origin servers or back-to-origin domain names for the domain name.</p>
              */
             public Builder backUpBackendList(java.util.List<String> backUpBackendList) {
                 this.backUpBackendList = backUpBackendList;
@@ -1673,7 +1730,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of origin server IP addresses or back-to-origin domain names for the domain name.</p>
+             * <p>The list of IP addresses of the origin servers or back-to-origin domain names of the servers for the domain name.</p>
              */
             public Builder backendList(java.util.List<String> backendList) {
                 this.backendList = backendList;
@@ -1681,7 +1738,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The custom port configuration. By default, the port is the same as the listener port.</p>
+             * <p>The custom port configurations. By default, the ports are the same as the listening ports.</p>
              */
             public Builder backendPorts(java.util.List<BackendPorts> backendPorts) {
                 this.backendPorts = backendPorts;
@@ -1689,7 +1746,10 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The back-to-origin addresses of the domain name.</p>
+             * <p>The back-to-origin addresses for the domain name.</p>
+             * <blockquote>
+             * <p>This parameter will be deprecated. We recommend that you use <strong>BackendList</strong> to obtain the relevant information.</p>
+             * </blockquote>
              */
             public Builder backends(java.util.List<Backends> backends) {
                 this.backends = backends;
@@ -1697,9 +1757,9 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The secondary origin addresses of the domain name.</p>
+             * <p>The secondary back-to-origin addresses for the domain name.</p>
              * <blockquote>
-             * <p>This parameter is about to be deprecated. Use <strong>BackUpBackendList</strong> to obtain the related information.</p>
+             * <p>This parameter will be deprecated. We recommend that you use <strong>BackUpBackendList</strong> to obtain the relevant information.</p>
              * </blockquote>
              */
             public Builder backupBackends(java.util.List<BackupBackends> backupBackends) {
@@ -1708,7 +1768,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The connection timeout period. Unit: seconds.</p>
+             * <p>The connection timeout period, in seconds. Valid values: 5 to 120.</p>
              * 
              * <strong>example:</strong>
              * <p>120</p>
@@ -1719,11 +1779,11 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether forced HTTP back-to-origin is enabled. Valid values:</p>
+             * <p>Specifies whether forcible back-to-origin routing over HTTP is enabled. Valid values:</p>
              * <ul>
-             * <li><p><strong>true</strong>: Forced HTTP back-to-origin is enabled.</p>
+             * <li><p><strong>true</strong>: Forcible back-to-origin routing over HTTP is enabled.</p>
              * </li>
-             * <li><p><strong>false</strong>: Forced HTTP back-to-origin is not enabled.</p>
+             * <li><p><strong>false</strong>: Forcible back-to-origin routing over HTTP is not enabled.</p>
              * </li>
              * </ul>
              * 
@@ -1736,7 +1796,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether HTTP/2 back-to-origin is enabled.</p>
+             * <p>The HTTP/2 back-to-origin configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1747,7 +1807,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of concurrent connections for HTTP/2 back-to-origin.</p>
+             * <p>The maximum number of concurrent connections for HTTP/2 back-to-origin routing.</p>
              * 
              * <strong>example:</strong>
              * <p>128</p>
@@ -1758,11 +1818,11 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to keep the connection alive. Valid values:</p>
+             * <p>Specifies whether to maintain persistent connections. Valid values:</p>
              * <ul>
-             * <li><p><strong>true</strong> (default): The connection is kept alive.</p>
+             * <li><p><strong>true</strong>: Persistent connections are maintained. This is the default value.</p>
              * </li>
-             * <li><p><strong>false</strong>: The connection is not kept alive.</p>
+             * <li><p><strong>false</strong>: Persistent connections are not maintained.</p>
              * </li>
              * </ul>
              * 
@@ -1776,6 +1836,9 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
 
             /**
              * <p>The number of requests that reuse a persistent connection. Valid values: 60 to 1000.</p>
+             * <blockquote>
+             * <p>This parameter specifies the number of requests that can reuse a persistent connection after persistent connections are enabled.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>1000</p>
@@ -1786,7 +1849,10 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The idle timeout period for persistent connections. Valid values: 1 to 60. Default value: 15. Unit: seconds.</p>
+             * <p>The timeout period for idle persistent connections. Valid values: 1 to 60. Default value: 15. Unit: seconds.</p>
+             * <blockquote>
+             * <p>This parameter specifies the duration after which an idle persistent connection is released.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>15</p>
@@ -1797,13 +1863,13 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The load balancing algorithm used for back-to-origin requests. Valid values:</p>
+             * <p>The load balancing algorithm used for back-to-origin routing. Valid values:</p>
              * <ul>
-             * <li><p><strong>iphash</strong>: IP Hash algorithm.</p>
+             * <li><p><strong>iphash</strong>: IP hash algorithm.</p>
              * </li>
-             * <li><p><strong>roundRobin</strong>: round-robin algorithm.</p>
+             * <li><p><strong>roundRobin</strong>: Round-robin algorithm.</p>
              * </li>
-             * <li><p><strong>leastTime</strong>: Least Time algorithm.</p>
+             * <li><p><strong>leastTime</strong>: Least time algorithm.</p>
              * </li>
              * </ul>
              * 
@@ -1817,6 +1883,9 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
 
             /**
              * <p>The maximum request body size. Valid values: 2 to 10. Default value: 2. Unit: GB.</p>
+             * <blockquote>
+             * <p>This parameter is supported only by the Ultimate Edition.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -1827,10 +1896,10 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the client source IP address preservation feature is enabled.</p>
+             * <p>Specifies whether the feature to preserve the originating IP address of the client is enabled. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: The client source IP address preservation feature is enabled. After this feature is enabled, backend services can view the original IP address of the client.</li>
-             * <li><strong>false</strong>: The client source IP address preservation feature is not enabled.</li>
+             * <li><strong>true</strong>: The feature is enabled. After this feature is enabled, backend services can view the originating IP address of the client.</li>
+             * <li><strong>false</strong>: The feature is not enabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1842,7 +1911,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The read timeout period. Unit: seconds.</p>
+             * <p>The read timeout period, in seconds. Valid values: 5 to 1800.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -1853,7 +1922,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The traffic tag fields and values of the domain name, which are used to tag traffic processed by WAF.</p>
+             * <p>The traffic marking fields and values for the domain name, which are used to mark the traffic processed by WAF.</p>
              */
             public Builder requestHeaders(java.util.List<RequestHeaders> requestHeaders) {
                 this.requestHeaders = requestHeaders;
@@ -1861,11 +1930,11 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to retry when WAF fails to forward requests to the origin server. Valid values:</p>
+             * <p>Specifies whether to retry when WAF fails to route traffic back to the origin server. Valid values:</p>
              * <ul>
-             * <li><p><strong>true</strong> (default): Retry.</p>
+             * <li><p><strong>true</strong>: Retries are performed. This is the default value.</p>
              * </li>
-             * <li><p><strong>false</strong>: Do not retry.</p>
+             * <li><p><strong>false</strong>: Retries are not performed.</p>
              * </li>
              * </ul>
              * 
@@ -1878,11 +1947,11 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether Server Name Indication (SNI) is enabled for back-to-origin requests. Valid values:</p>
+             * <p>Specifies whether back-to-origin Server Name Indication (SNI) is enabled. Valid values:</p>
              * <ul>
-             * <li><p><strong>true</strong>: SNI is enabled for back-to-origin requests.</p>
+             * <li><p><strong>true</strong>: Back-to-origin SNI is enabled.</p>
              * </li>
-             * <li><p><strong>false</strong> (default): SNI is not enabled for back-to-origin requests.</p>
+             * <li><p><strong>false</strong>: Back-to-origin SNI is not enabled. This is the default value.</p>
              * </li>
              * </ul>
              * 
@@ -1908,7 +1977,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             /**
              * <p>Specifies whether WAF is allowed to overwrite the WL-Proxy-Client-IP header. Valid values:</p>
              * <ul>
-             * <li><p><strong>true</strong> (default): WAF is allowed to overwrite the header.</p>
+             * <li><p><strong>true</strong>: WAF is allowed to overwrite the header. This is the default value.</p>
              * </li>
              * <li><p><strong>false</strong>: WAF is not allowed to overwrite the header.</p>
              * </li>
@@ -1925,7 +1994,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             /**
              * <p>Specifies whether WAF is allowed to overwrite the Web-Server-Type header. Valid values:</p>
              * <ul>
-             * <li><p><strong>true</strong> (default): WAF is allowed to overwrite the header.</p>
+             * <li><p><strong>true</strong>: WAF is allowed to overwrite the header. This is the default value.</p>
              * </li>
              * <li><p><strong>false</strong>: WAF is not allowed to overwrite the header.</p>
              * </li>
@@ -1940,7 +2009,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The write timeout period. Unit: seconds.</p>
+             * <p>The write timeout period, in seconds. Valid values: 5 to 1800.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -1951,9 +2020,9 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether WAF is allowed to overwrite X-Client-IP. Valid values:</p>
+             * <p>Specifies whether WAF is allowed to overwrite the X-Client-IP header. Valid values:</p>
              * <ul>
-             * <li><p><strong>true</strong> (default): WAF is allowed to overwrite the header.</p>
+             * <li><p><strong>true</strong>: WAF is allowed to overwrite the header. This is the default value.</p>
              * </li>
              * <li><p><strong>false</strong>: WAF is not allowed to overwrite the header.</p>
              * </li>
@@ -1970,7 +2039,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             /**
              * <p>Specifies whether WAF is allowed to overwrite the X-True-IP header. Valid values:</p>
              * <ul>
-             * <li><p><strong>true</strong> (default): WAF is allowed to overwrite the header.</p>
+             * <li><p><strong>true</strong>: WAF is allowed to overwrite the header. This is the default value.</p>
              * </li>
              * <li><p><strong>false</strong>: WAF is not allowed to overwrite the header.</p>
              * </li>
@@ -1985,7 +2054,13 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether X-Forward-For-Proto is used to pass the protocol used by WAF. Valid values:</p>
+             * <p>Specifies whether the X-Forwarded-Proto header passes the protocol used by WAF. Valid values:</p>
+             * <ul>
+             * <li><p><strong>true</strong>: The protocol used by WAF is passed. This is the default value.</p>
+             * </li>
+             * <li><p><strong>false</strong>: The protocol used by WAF is not passed.</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -2118,7 +2193,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the certificate expires. The value is a UNIX timestamp (UTC). Unit: milliseconds.</p>
+             * <p>The time when the certificate expires. The value is a UNIX timestamp in UTC. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1665590400000</p>
@@ -2129,7 +2204,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The SSL certificate ID.</p>
+             * <p>The ID of the SSL certificate.</p>
              * 
              * <strong>example:</strong>
              * <p>123-cn-hangzhou</p>
@@ -2140,7 +2215,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The certificate name.</p>
+             * <p>The name of the certificate.</p>
              * 
              * <strong>example:</strong>
              * <p>test-sm2-cert-name</p>
@@ -2151,7 +2226,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>All domain names that are bound to the certificate.</p>
+             * <p>All domain names bound to the certificate.</p>
              */
             public Builder sans(java.util.List<String> sans) {
                 this.sans = sans;
@@ -2159,7 +2234,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The effective period of the certificate. The value is in the format of a UNIX timestamp (UTC). Unit: milliseconds.</p>
+             * <p>The effective period of the certificate. The format is a UNIX timestamp in UTC. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1657551525000</p>

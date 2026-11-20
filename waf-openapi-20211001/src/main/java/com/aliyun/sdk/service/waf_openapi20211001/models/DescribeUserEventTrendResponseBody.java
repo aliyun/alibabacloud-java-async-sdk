@@ -217,7 +217,7 @@ public class DescribeUserEventTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The statistics time in UNIX timestamp format (UTC). Unit: seconds.</p>
+             * <p><strong>[Deprecated]</strong> The statistical time. The time is a UNIX timestamp in UTC. Unit: seconds. Use the Timestamp parameter instead.</p>
              * <blockquote>
              * <p>Notice: This parameter is deprecated. Use the Timestamp parameter instead.</p>
              * </blockquote>
@@ -231,7 +231,7 @@ public class DescribeUserEventTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The statistics time in UNIX timestamp format (UTC). Unit: seconds.</p>
+             * <p>The statistical time. The time is a UNIX timestamp in UTC. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1723435200</p>

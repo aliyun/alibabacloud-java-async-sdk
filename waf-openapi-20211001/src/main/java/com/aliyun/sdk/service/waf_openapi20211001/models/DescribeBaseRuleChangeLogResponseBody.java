@@ -91,7 +91,7 @@ public class DescribeBaseRuleChangeLogResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of rule group changes.</p>
+         * <p>The list of rule library change records.</p>
          */
         public Builder rules(java.util.List<Rules> rules) {
             this.rules = rules;
@@ -220,8 +220,8 @@ public class DescribeBaseRuleChangeLogResponseBody extends TeaModel {
             /**
              * <p>The operation type. Valid values:</p>
              * <ul>
-             * <li>add: added.</li>
-             * <li>modify: modified.</li>
+             * <li>add: add.</li>
+             * <li>modify: modify.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -255,7 +255,7 @@ public class DescribeBaseRuleChangeLogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the rule was updated. The value is a UNIX timestamp in milliseconds.</p>
+             * <p>The update time of the rule. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1665460629000</p>

@@ -133,9 +133,9 @@ public class CreateLogDeliveryConfigRequest extends Request {
         } 
 
         /**
-         * <p>The content of the log delivery configuration. The value is a JSON string constructed from a series of parameters.</p>
+         * <p>The content of the log delivery configuration. The content is a JSON string constructed from a series of parameters.</p>
          * <blockquote>
-         * <p>The parameters vary based on the specified <strong>delivery type</strong> (<strong>DeliveryType</strong>). For more information, see <strong>Description of delivery configuration content parameters</strong>.</p>
+         * <p>The specific parameters vary based on the specified <strong>log delivery configuration type</strong> (<strong>DeliveryType</strong>). For more information, see <strong>Parameter descriptions for log delivery configuration content</strong>.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

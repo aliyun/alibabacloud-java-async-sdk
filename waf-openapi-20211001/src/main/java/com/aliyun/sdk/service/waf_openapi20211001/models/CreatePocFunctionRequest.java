@@ -103,9 +103,9 @@ public class CreatePocFunctionRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+         * <p>The ID of the WAF instance.</p>
          * <blockquote>
-         * <p>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the WAF instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -119,12 +119,10 @@ public class CreatePocFunctionRequest extends Request {
         }
 
         /**
-         * <p>The region of the WAF instance. Valid values:</p>
+         * <p>The region where the WAF instance resides. Valid values:</p>
          * <ul>
-         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
-         * </li>
-         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
-         * </li>
+         * <li><strong>cn-hangzhou</strong>: the Chinese mainland</li>
+         * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -151,14 +149,10 @@ public class CreatePocFunctionRequest extends Request {
         /**
          * <p>The type of the POC feature trial. Valid values:</p>
          * <ul>
-         * <li><p><strong>apisec</strong>: API security.</p>
-         * </li>
-         * <li><p><strong>botWeb</strong>: bot management for websites.</p>
-         * </li>
-         * <li><p><strong>botApp</strong>: bot management for applications.</p>
-         * </li>
-         * <li><p><strong>largeLanguageModel</strong>: protection for AI-powered applications.</p>
-         * </li>
+         * <li><strong>apisec</strong>: API security</li>
+         * <li><strong>botWeb</strong>: bot management for web</li>
+         * <li><strong>botApp</strong>: bot management for apps</li>
+         * <li><strong>largeLanguageModel</strong>: AI application protection</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

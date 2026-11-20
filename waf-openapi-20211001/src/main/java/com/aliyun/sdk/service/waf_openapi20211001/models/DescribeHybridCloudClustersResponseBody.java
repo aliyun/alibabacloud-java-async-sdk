@@ -75,7 +75,7 @@ public class DescribeHybridCloudClustersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>66A98669-ER12-WE34-23PO-301469*****E</p>
@@ -302,10 +302,8 @@ public class DescribeHybridCloudClustersResponseBody extends TeaModel {
             /**
              * <p>The network access mode. Valid values:</p>
              * <ul>
-             * <li><p><strong>internet</strong>: Internet access.</p>
-             * </li>
-             * <li><p><strong>vpc</strong>: leased line-based private network access.</p>
-             * </li>
+             * <li><strong>internet</strong>: Internet access.</li>
+             * <li><strong>vpc</strong>: Express Connect private network access.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -317,14 +315,11 @@ public class DescribeHybridCloudClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region where the leased line is connected. Valid values:</p>
+             * <p>The Express Connect access region. Valid values:</p>
              * <ul>
-             * <li><p><strong>cn-hangzhou</strong>: Hangzhou</p>
-             * </li>
-             * <li><p><strong>cn-beijing</strong>: Beijing</p>
-             * </li>
-             * <li><p><strong>cn-shanghai</strong>: Shanghai</p>
-             * </li>
+             * <li><strong>cn-hangzhou</strong>: Hangzhou.</li>
+             * <li><strong>cn-beiijng</strong>: Beijing.</li>
+             * <li><strong>cn-shanghai</strong>: Shanghai.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -358,7 +353,7 @@ public class DescribeHybridCloudClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ports that use the HTTP protocol. The value is a string. If multiple ports are returned, they are separated by commas in the <strong>port1,port2,port3</strong> format.</p>
+             * <p>The list of HTTP ports. Separate multiple ports with commas (,). Example: port1,port2,port3.</p>
              * 
              * <strong>example:</strong>
              * <p>80,8080</p>
@@ -369,7 +364,7 @@ public class DescribeHybridCloudClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ports that use the HTTPS protocol. The value is a string. If multiple ports are returned, they are separated by commas in the <strong>port1,port2,port3</strong> format.</p>
+             * <p>The list of HTTPS ports. Separate multiple ports with commas (,). Example: port1,port2,port3.</p>
              * 
              * <strong>example:</strong>
              * <p>443,8443</p>
@@ -380,7 +375,7 @@ public class DescribeHybridCloudClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cluster ID.</p>
+             * <p>The ID of the cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>524**8</p>
@@ -391,7 +386,7 @@ public class DescribeHybridCloudClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of protection nodes that you can add to the cluster.</p>
+             * <p>The number of protection nodes that can be added to the cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -402,12 +397,10 @@ public class DescribeHybridCloudClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the proxy. Valid values:</p>
+             * <p>The proxy gateway mode. Valid values:</p>
              * <ul>
-             * <li><p><strong>on</strong>: enabled</p>
-             * </li>
-             * <li><p><strong>off</strong>: disabled</p>
-             * </li>
+             * <li><strong>on</strong>: Enabled.</li>
+             * <li><strong>off</strong>: Disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -419,12 +412,10 @@ public class DescribeHybridCloudClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the cluster. Valid values:</p>
+             * <p>The cluster type. Valid values:</p>
              * <ul>
-             * <li><p><strong>cname</strong>: reverse proxy cluster</p>
-             * </li>
-             * <li><p><strong>service</strong>: service cluster</p>
-             * </li>
+             * <li><strong>cname</strong>: Reverse proxy cluster.</li>
+             * <li><strong>service</strong>: Service cluster.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -458,11 +449,11 @@ public class DescribeHybridCloudClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the manual bypass setting. Valid values:</p>
+             * <p>The manual bypass status. Valid values:</p>
              * <ul>
-             * <li><p><strong>on</strong>: enabled.</p>
+             * <li><p><strong>on</strong>: Enabled.</p>
              * </li>
-             * <li><p><strong>off</strong>: disabled.</p>
+             * <li><p><strong>off</strong>: Disabled.</p>
              * </li>
              * </ul>
              * 
@@ -475,9 +466,9 @@ public class DescribeHybridCloudClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the rule. Valid values:</p>
+             * <p>The rule type. Valid values:</p>
              * <ul>
-             * <li><strong>bypass</strong>: WAF does not perform security checks and allows traffic to pass through.</li>
+             * <li><strong>bypass</strong>: Skips security checks and directly allows requests.</li>
              * </ul>
              * 
              * <strong>example:</strong>

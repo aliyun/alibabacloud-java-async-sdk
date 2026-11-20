@@ -81,7 +81,7 @@ public class DescribeHybridCloudBasicMonitorResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of basic monitoring items.</p>
+         * <p>The list of basic monitoring metrics.</p>
          */
         public Builder basicMonitors(java.util.List<BasicMonitors> basicMonitors) {
             this.basicMonitors = basicMonitors;
@@ -101,7 +101,7 @@ public class DescribeHybridCloudBasicMonitorResponseBody extends TeaModel {
 
         /**
          * <blockquote>
-         * <p>This parameter is deprecated and no longer returns meaningful data.</p>
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated and no longer returns meaningful data.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -188,7 +188,7 @@ public class DescribeHybridCloudBasicMonitorResponseBody extends TeaModel {
              * <ul>
              * <li><p><strong>normal</strong>: Normal.</p>
              * </li>
-             * <li><p><code>****</code>: abnormal (four asterisk characters are returned).</p>
+             * <li><p><code>****</code>: Abnormal. Four asterisks are returned.</p>
              * </li>
              * </ul>
              * 
@@ -201,7 +201,7 @@ public class DescribeHybridCloudBasicMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The monitoring item. Valid values:</p>
+             * <p>The monitoring metric. Valid values:</p>
              * <ul>
              * <li><p><strong>basic_monitor_cpu_usage</strong>: CPU.</p>
              * </li>

@@ -160,7 +160,7 @@ public class DescribeApisecMatchedHostsRequest extends Request {
         /**
          * <p>The ID of the hybrid cloud cluster.</p>
          * <blockquote>
-         * <p>This parameter applies only to hybrid cloud scenarios. You can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to obtain the hybrid cloud cluster information.</p>
+         * <p>This parameter applies only to hybrid cloud scenarios. You can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to obtain hybrid cloud cluster information.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -201,7 +201,7 @@ public class DescribeApisecMatchedHostsRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return in a paged query. Default value: <strong>1</strong>, which indicates the first page of the paging result.</p>
+         * <p>The number of the page to return for a paged query. Default value: <strong>1</strong>, which indicates the first page of paging results.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -213,7 +213,7 @@ public class DescribeApisecMatchedHostsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page in a paged query. Default value: <strong>10</strong>, which indicates that 10 entries are returned on each page during paging.</p>
+         * <p>The number of entries to return on each page for a paged query. Default value: <strong>10</strong>, which indicates 10 entries per page of paging results.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -227,9 +227,9 @@ public class DescribeApisecMatchedHostsRequest extends Request {
         /**
          * <p>The region where the WAF instance resides. Valid values:</p>
          * <ul>
-         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland</p>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
          * </li>
-         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland</p>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
          * </li>
          * </ul>
          * 
@@ -257,9 +257,9 @@ public class DescribeApisecMatchedHostsRequest extends Request {
         /**
          * <p>The detection type. Valid values:</p>
          * <ul>
-         * <li><strong>api</strong>: the list of domain names for API assets</li>
-         * <li><strong>abnormal</strong>: the list of domain names with risks</li>
-         * <li><strong>event</strong>: the list of domain names for security events</li>
+         * <li><strong>api</strong>: the domain names of API assets.</li>
+         * <li><strong>abnormal</strong>: the domain names associated with risks.</li>
+         * <li><strong>event</strong>: the domain names associated with security events.</li>
          * </ul>
          * 
          * <strong>example:</strong>

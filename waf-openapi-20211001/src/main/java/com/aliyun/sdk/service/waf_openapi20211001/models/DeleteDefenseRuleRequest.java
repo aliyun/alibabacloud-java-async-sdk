@@ -43,6 +43,10 @@ public class DeleteDefenseRuleRequest extends Request {
     private String resourceManagerResourceGroupId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    private String resourceType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RuleIds")
     @com.aliyun.core.annotation.Validation(required = true)
     private String ruleIds;
@@ -59,6 +63,7 @@ public class DeleteDefenseRuleRequest extends Request {
         this.regionId = builder.regionId;
         this.resource = builder.resource;
         this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
+        this.resourceType = builder.resourceType;
         this.ruleIds = builder.ruleIds;
         this.templateId = builder.templateId;
     }
@@ -119,6 +124,13 @@ public class DeleteDefenseRuleRequest extends Request {
     }
 
     /**
+     * @return resourceType
+     */
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
+    /**
      * @return ruleIds
      */
     public String getRuleIds() {
@@ -139,6 +151,7 @@ public class DeleteDefenseRuleRequest extends Request {
         private String regionId; 
         private String resource; 
         private String resourceManagerResourceGroupId; 
+        private String resourceType; 
         private String ruleIds; 
         private Long templateId; 
 
@@ -154,6 +167,7 @@ public class DeleteDefenseRuleRequest extends Request {
             this.regionId = request.regionId;
             this.resource = request.resource;
             this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
+            this.resourceType = request.resourceType;
             this.ruleIds = request.ruleIds;
             this.templateId = request.templateId;
         } 
@@ -171,10 +185,10 @@ public class DeleteDefenseRuleRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the DryRun dry run mode. If you do not specify this parameter, a normal request is sent. Valid values:</p>
+         * <p>Specifies whether to enable the dry run mode. If you do not specify this parameter, a normal request is initiated. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: A dry run request is sent. The system checks whether the request meets the execution conditions without performing the specified operation. If the dry run fails, the corresponding error code is returned. If the dry run succeeds, the error code Defense.Control.DryRunOperation is returned.</li>
-         * <li><strong>false</strong>: A normal request is sent. The specified operation is performed after the request passes the check.</li>
+         * <li><strong>true</strong>: initiates a dry run request. The system only checks whether the request meets the execution conditions and does not perform the operations specified in the request. If the dry run fails, the system returns the corresponding error code. If the dry run succeeds, the system returns the Defense.Control.DryRunOperation error code.</li>
+         * <li><strong>false</strong>: initiates a normal request. If the check succeeds, the system performs the operations specified in the request.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -189,7 +203,7 @@ public class DeleteDefenseRuleRequest extends Request {
         /**
          * <p>The ID of the WAF instance.</p>
          * <blockquote>
-         * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the current WAF instance.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -203,7 +217,7 @@ public class DeleteDefenseRuleRequest extends Request {
         }
 
         /**
-         * <p>The region where the WAF instance is deployed. Valid values:</p>
+         * <p>The region where the WAF instance resides. Valid values:</p>
          * <ul>
          * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
          * </li>
@@ -221,7 +235,7 @@ public class DeleteDefenseRuleRequest extends Request {
         }
 
         /**
-         * <p>The protected object associated with the rule to delete.</p>
+         * <p>The protected object to which the rules to be deleted apply.</p>
          * <blockquote>
          * <p>This parameter is required only when <strong>DefenseType</strong> is set to <strong>resource</strong>.</p>
          * </blockquote>
@@ -248,7 +262,23 @@ public class DeleteDefenseRuleRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the protection rules to delete. Separate multiple IDs with commas (,).</p>
+         * <p>The type of the protection target. This parameter applies to rules whose <strong>DefenseType</strong> is <strong>resource</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>single</strong> (default): a single protected object.</li>
+         * <li><strong>group</strong>: a protection group.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>single</p>
+         */
+        public Builder resourceType(String resourceType) {
+            this.putQueryParameter("ResourceType", resourceType);
+            this.resourceType = resourceType;
+            return this;
+        }
+
+        /**
+         * <p>The IDs of the protection rules to be deleted. Separate multiple rule IDs with commas (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -261,7 +291,7 @@ public class DeleteDefenseRuleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the protection template to delete.</p>
+         * <p>The ID of the protection template to be deleted.</p>
          * <blockquote>
          * <p>This parameter is required only when <strong>DefenseType</strong> is set to <strong>template</strong>.</p>
          * </blockquote>

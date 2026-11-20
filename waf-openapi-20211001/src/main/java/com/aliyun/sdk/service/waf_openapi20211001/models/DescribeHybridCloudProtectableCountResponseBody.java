@@ -67,7 +67,7 @@ public class DescribeHybridCloudProtectableCountResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of protectable nodes that can be added to the cluster.</p>
+         * <p>The number of protection nodes that can be added to the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

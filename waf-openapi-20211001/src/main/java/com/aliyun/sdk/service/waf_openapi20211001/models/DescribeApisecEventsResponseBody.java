@@ -99,7 +99,7 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of returned results.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -507,7 +507,7 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The business purpose of the API.</p>
+             * <p>The API business purpose.</p>
              * <blockquote>
              * <p>You can call <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> to obtain the supported business purposes.</p>
              * </blockquote>
@@ -532,7 +532,7 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The attack count information, which is a string converted from a JSON object. The key is a timestamp in seconds, and the value is the number of attacks.</p>
+             * <p>The attack count information, converted to a string in JSON format constructed by a series of parameters. The key is a timestamp in seconds, and the value is the number of attacks.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -547,10 +547,7 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The attack IP address.</p>
-             * <blockquote>
-             * <p>Notice: This parameter is deprecated. Use the AttackIps parameter instead.</notice></p>
-             * </blockquote>
+             * <p>The attack IP address.<notice>This parameter is deprecated. Use the AttackIps parameter instead.</notice></p>
              * 
              * <strong>example:</strong>
              * <p>104.234.140.**</p>
@@ -561,12 +558,12 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The attack IP information, which is a string converted from a JSON object constructed with the following parameters:</p>
+             * <p>The attack IP address information, converted to a string in JSON format constructed by a series of parameters. Includes:</p>
              * <ul>
-             * <li><strong>ip</strong>: the IP address.</li>
-             * <li><strong>country_id</strong>: the country to which the IP address belongs.</li>
-             * <li><strong>region_id</strong>: the region to which the IP address belongs.</li>
-             * <li><strong>cnt</strong>: the number of attacks.</li>
+             * <li><strong>ip</strong>: The IP address.</li>
+             * <li><strong>country_id</strong>: The country.</li>
+             * <li><strong>region_id</strong>: The region.</li>
+             * <li><strong>cnt</strong>: The number of attacks.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -593,7 +590,7 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Attacker list associated with the event.</p>
+             * <p>The attacker list corresponding to the event.</p>
              */
             public Builder attackerList(java.util.List<String> attackerList) {
                 this.attackerList = attackerList;
@@ -601,7 +598,7 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the query, in UNIX timestamp (UTC) format. Unit: seconds.</p>
+             * <p>The end time of the query. The value is a UNIX timestamp in UTC. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1683703260</p>
@@ -623,11 +620,11 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The event details, which is a string converted from a JSON object constructed with the following parameters:</p>
+             * <p>The detailed event information, converted to a string in JSON format constructed by a series of parameters. Includes:</p>
              * <ul>
-             * <li><strong>ip_info</strong>: the attack IP information. Refer to the response parameter <strong>AttackIpInfo</strong> of this operation.</li>
-             * <li><strong>rule_id</strong>: the rule ID associated with the event.</li>
-             * <li><strong>rule_tag</strong>: the rule information associated with the event.</li>
+             * <li><strong>ip_info</strong>: The attack IP address information. You can refer to the <strong>AttackIpInfo</strong> response parameter of this operation.</li>
+             * <li><strong>rule_id</strong>: The ID of the rule corresponding to the event.</li>
+             * <li><strong>rule_tag</strong>: The rule information corresponding to the event.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -650,11 +647,11 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The event level. Valid values:</p>
+             * <p>The severity level of the event. Valid values:</p>
              * <ul>
-             * <li><strong>high</strong>: High-risk.</li>
-             * <li><strong>medium</strong>: Medium-risk.</li>
-             * <li><strong>low</strong>: Low-risk.</li>
+             * <li><strong>high</strong>: high risk.</li>
+             * <li><strong>medium</strong>: medium risk.</li>
+             * <li><strong>low</strong>: low risk.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -680,7 +677,7 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the event is followed. Valid values:</p>
+             * <p>Specifies whether the event is followed. Valid values:</p>
              * <ul>
              * <li><strong>1</strong>: Followed.</li>
              * <li><strong>0</strong>: Not followed.</li>
@@ -706,7 +703,7 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The remarks.</p>
+             * <p>The note.</p>
              * 
              * <strong>example:</strong>
              * <p>Notify</p>
@@ -717,10 +714,10 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source of the event type. Valid values:</p>
+             * <p>The origin of the event type. Valid values:</p>
              * <ul>
-             * <li><strong>custom</strong>: Custom.</li>
-             * <li><strong>default</strong>: Built-in.</li>
+             * <li><strong>custom</strong>: custom.</li>
+             * <li><strong>default</strong>: built-in.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -754,7 +751,7 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A sample API request data, which is a string converted from a JSON object constructed with a series of parameters.</p>
+             * <p>The API request data instance, converted to a string in JSON format constructed by a series of parameters.</p>
              * 
              * <strong>example:</strong>
              * <p>{}</p>
@@ -765,7 +762,7 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A sample API response data, which is a string converted from a JSON object constructed with a series of parameters.</p>
+             * <p>The API response data example, converted to a string in JSON format constructed by a series of parameters.</p>
              * 
              * <strong>example:</strong>
              * <p>{}</p>
@@ -776,7 +773,7 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the query, in UNIX timestamp (UTC) format. Unit: seconds.</p>
+             * <p>The start time of the query. The value is a UNIX timestamp in UTC. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1683648000</p>
@@ -787,12 +784,12 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The event status. Valid values:</p>
+             * <p>The status of the event. Valid values:</p>
              * <ul>
-             * <li><strong>toBeConfirmed</strong>: To be confirmed.</li>
-             * <li><strong>confirmed</strong>: Confirmed.</li>
-             * <li><strong>actioned</strong>: Handled.</li>
-             * <li><strong>ignored</strong>: Ignored.</li>
+             * <li><strong>toBeConfirmed</strong>: pending confirmation.</li>
+             * <li><strong>confirmed</strong>: confirmed.</li>
+             * <li><strong>actioned</strong>: handled.</li>
+             * <li><strong>ignored</strong>: ignored.</li>
              * </ul>
              * 
              * <strong>example:</strong>

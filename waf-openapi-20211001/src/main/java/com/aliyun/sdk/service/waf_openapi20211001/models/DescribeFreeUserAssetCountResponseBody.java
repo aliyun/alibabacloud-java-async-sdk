@@ -75,7 +75,7 @@ public class DescribeFreeUserAssetCountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>30488BF0-FD58-52DD-B396-D014549F43A3</p>

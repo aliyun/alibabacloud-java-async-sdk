@@ -157,7 +157,7 @@ public class CreateDomainResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The CNAME assigned by WAF to the domain name.</p>
+             * <p>The CNAME address assigned by WAF to the domain name.</p>
              * 
              * <strong>example:</strong>
              * <p>xxxxxwww.****.com</p>
@@ -168,7 +168,7 @@ public class CreateDomainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the added domain name.</p>
+             * <p>The name of the added domain.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
