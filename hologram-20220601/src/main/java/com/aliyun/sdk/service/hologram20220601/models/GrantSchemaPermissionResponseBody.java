@@ -119,7 +119,14 @@ public class GrantSchemaPermissionResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>Indicates whether the operation succeeded. Valid values:</p>
+         * <ul>
+         * <li>true: The operation succeeded.</li>
+         * <li>false: The operation failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -127,7 +134,10 @@ public class GrantSchemaPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -135,7 +145,10 @@ public class GrantSchemaPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -143,7 +156,10 @@ public class GrantSchemaPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -162,7 +178,10 @@ public class GrantSchemaPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether an exception occurred during the request. This is independent of the business logic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;

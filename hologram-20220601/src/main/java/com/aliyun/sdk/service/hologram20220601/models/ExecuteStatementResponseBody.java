@@ -119,7 +119,7 @@ public class ExecuteStatementResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>Specifies whether OpenAPI SQL execution is allowed. Valid values: true: Allowed. false: Not allowed.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,7 +127,10 @@ public class ExecuteStatementResponseBody extends TeaModel {
         }
 
         /**
-         * errorCode.
+         * <p>The error code. This field is empty if the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParameterValue</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -135,7 +138,10 @@ public class ExecuteStatementResponseBody extends TeaModel {
         }
 
         /**
-         * errorMessage.
+         * <p>The error message. This field is empty if the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid parameter value, such as an empty or excessively long SQL statement</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -143,7 +149,10 @@ public class ExecuteStatementResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -162,7 +171,10 @@ public class ExecuteStatementResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -241,7 +253,10 @@ public class ExecuteStatementResponseBody extends TeaModel {
             } 
 
             /**
-             * name.
+             * <p>The <strong>column name</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>id</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -249,7 +264,7 @@ public class ExecuteStatementResponseBody extends TeaModel {
             }
 
             /**
-             * nullable.
+             * <p>Indicates whether the column is nullable.</p>
              */
             public Builder nullable(Boolean nullable) {
                 this.nullable = nullable;
@@ -257,7 +272,10 @@ public class ExecuteStatementResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The data type, such as int4, text, or bool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>int4</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -428,7 +446,7 @@ public class ExecuteStatementResponseBody extends TeaModel {
             } 
 
             /**
-             * columnMetadata.
+             * <p>The <strong>column metadata</strong>.</p>
              */
             public Builder columnMetadata(java.util.List<ColumnMetadata> columnMetadata) {
                 this.columnMetadata = columnMetadata;
@@ -436,7 +454,10 @@ public class ExecuteStatementResponseBody extends TeaModel {
             }
 
             /**
-             * count.
+             * <p>The number of rows returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -444,7 +465,10 @@ public class ExecuteStatementResponseBody extends TeaModel {
             }
 
             /**
-             * errorCode.
+             * <p>The error code for the SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SQL_ERROR</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -452,7 +476,10 @@ public class ExecuteStatementResponseBody extends TeaModel {
             }
 
             /**
-             * errorMessage.
+             * <p>The error message for the SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ERROR: relation \&quot;non_existent_table\&quot; does not exist\n  Position: 15</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -471,7 +498,7 @@ public class ExecuteStatementResponseBody extends TeaModel {
             }
 
             /**
-             * records.
+             * <p>The set of query result rows. Each row is an array of strings. All values are serialized as strings, and NULL values are represented as \N.</p>
              */
             public Builder records(java.util.List<java.util.List<String>> records) {
                 this.records = records;
@@ -479,7 +506,10 @@ public class ExecuteStatementResponseBody extends TeaModel {
             }
 
             /**
-             * sql.
+             * <p>The SQL statement that is actually executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>select * from test_table limit 10;</p>
              */
             public Builder sql(String sql) {
                 this.sql = sql;
@@ -487,7 +517,10 @@ public class ExecuteStatementResponseBody extends TeaModel {
             }
 
             /**
-             * success.
+             * <p>Indicates whether the request is successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;
@@ -495,7 +528,7 @@ public class ExecuteStatementResponseBody extends TeaModel {
             }
 
             /**
-             * truncated.
+             * <p>Indicates whether the result is truncated. The value is true if the result exceeds MaxResults.</p>
              */
             public Builder truncated(Boolean truncated) {
                 this.truncated = truncated;
@@ -503,7 +536,10 @@ public class ExecuteStatementResponseBody extends TeaModel {
             }
 
             /**
-             * updateCount.
+             * <p>The number of rows affected by the INSERT, UPDATE, or DELETE statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder updateCount(Integer updateCount) {
                 this.updateCount = updateCount;
@@ -596,7 +632,10 @@ public class ExecuteStatementResponseBody extends TeaModel {
             } 
 
             /**
-             * errorCode.
+             * <p>The error code. This field is empty if the request is successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InvalidParameterValue</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -604,7 +643,10 @@ public class ExecuteStatementResponseBody extends TeaModel {
             }
 
             /**
-             * errorMessage.
+             * <p>The error message. This field is empty if the request is successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Invalid parameter value, such as an empty or excessively long SQL statement</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -612,7 +654,7 @@ public class ExecuteStatementResponseBody extends TeaModel {
             }
 
             /**
-             * results.
+             * <p>The list of execution results. The length is currently fixed to 1. If multiple SELECT queries are executed, only the result of the last SELECT query is returned.</p>
              */
             public Builder results(java.util.List<Results> results) {
                 this.results = results;
@@ -620,7 +662,7 @@ public class ExecuteStatementResponseBody extends TeaModel {
             }
 
             /**
-             * success.
+             * <p>Indicates whether the request is successful.</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;

@@ -134,6 +134,7 @@ public class CreateWarehouseScheduleTaskRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the Hologres instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,7 +147,10 @@ public class CreateWarehouseScheduleTaskRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>The description of the time-based elastic plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user stat</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -155,6 +159,7 @@ public class CreateWarehouseScheduleTaskRequest extends Request {
         }
 
         /**
+         * <p>The number of elastic CPU cores. The value must be a multiple of 16, greater than or equal to 16, and less than or equal to the specifications of the current compute group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,6 +172,8 @@ public class CreateWarehouseScheduleTaskRequest extends Request {
         }
 
         /**
+         * <p>The end time. The format is HHmm (four digits, 24-hour clock). The time must be on the hour or half hour, such as 0030, 0100, or 0400.
+         * The end time must be later than the start time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -179,6 +186,7 @@ public class CreateWarehouseScheduleTaskRequest extends Request {
         }
 
         /**
+         * <p>The start time. The format is HHmm (four digits, 24-hour clock). The time must be on the hour or half hour, such as 0030, 0100, or 0400.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,6 +199,7 @@ public class CreateWarehouseScheduleTaskRequest extends Request {
         }
 
         /**
+         * <p>The ID of the compute group. You can call ListWarehouses to obtain the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

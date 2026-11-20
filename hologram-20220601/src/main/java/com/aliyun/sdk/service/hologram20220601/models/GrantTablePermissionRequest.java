@@ -157,7 +157,10 @@ public class GrantTablePermissionRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hgpostcn-cn-zpr3426xxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -166,7 +169,10 @@ public class GrantTablePermissionRequest extends Request {
         }
 
         /**
-         * allTable.
+         * <p>Specifies whether to grant permissions on all existing tables.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder allTable(Boolean allTable) {
             this.putBodyParameter("allTable", allTable);
@@ -175,7 +181,7 @@ public class GrantTablePermissionRequest extends Request {
         }
 
         /**
-         * columnNames.
+         * <p>The list of column names to grant permissions on.</p>
          */
         public Builder columnNames(java.util.List<String> columnNames) {
             this.putBodyParameter("columnNames", columnNames);
@@ -184,7 +190,10 @@ public class GrantTablePermissionRequest extends Request {
         }
 
         /**
-         * databaseName.
+         * <p>The database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_db</p>
          */
         public Builder databaseName(String databaseName) {
             this.putBodyParameter("databaseName", databaseName);
@@ -193,7 +202,7 @@ public class GrantTablePermissionRequest extends Request {
         }
 
         /**
-         * privileges.
+         * <p>The list of permissions.</p>
          */
         public Builder privileges(java.util.List<String> privileges) {
             this.putBodyParameter("privileges", privileges);
@@ -202,7 +211,10 @@ public class GrantTablePermissionRequest extends Request {
         }
 
         /**
-         * schemaName.
+         * <p>The schema name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_schema</p>
          */
         public Builder schemaName(String schemaName) {
             this.putBodyParameter("schemaName", schemaName);
@@ -211,7 +223,10 @@ public class GrantTablePermissionRequest extends Request {
         }
 
         /**
-         * tableName.
+         * <p>The table name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>orders_pay</p>
          */
         public Builder tableName(String tableName) {
             this.putBodyParameter("tableName", tableName);
@@ -220,7 +235,10 @@ public class GrantTablePermissionRequest extends Request {
         }
 
         /**
-         * userName.
+         * <p>The user ID. For more information, see <a href="https://help.aliyun.com/document_detail/130393.html">Hologres account overview</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>p4_1234xxxx</p>
          */
         public Builder userName(String userName) {
             this.putBodyParameter("userName", userName);

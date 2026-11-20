@@ -87,7 +87,10 @@ public class DropUserRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hgprecn-cn-xxxxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -96,7 +99,10 @@ public class DropUserRequest extends Request {
         }
 
         /**
-         * superUser.
+         * <p>Specifies whether the user is a superuser.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder superUser(String superUser) {
             this.putBodyParameter("superUser", superUser);
@@ -105,7 +111,10 @@ public class DropUserRequest extends Request {
         }
 
         /**
-         * userName.
+         * <p>The username. Only RAM users and STS accounts are supported. If the user is a RAM user, the name must be prefixed with &quot;p4_&quot;, such as p4_234253434. If the user is an STS account, the name must be prefixed with &quot;v4_&quot;, such as v4_3234134.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>p4_234253434</p>
          */
         public Builder userName(String userName) {
             this.putBodyParameter("userName", userName);

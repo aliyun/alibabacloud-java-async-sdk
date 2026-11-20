@@ -89,7 +89,7 @@ public class RenewInstanceRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,13 +102,13 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable monthly auto-renewal. The default value is false. Valid values:</p>
+         * <p>Specifies whether to enable monthly auto-renewal. By default, monthly auto-renewal is disabled. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: enables monthly auto-renewal.</li>
+         * <li>false: does not enable monthly auto-renewal.</li>
          * </ul>
          * <blockquote>
-         * <p> If you enable auto-renewal for an instance for which auto-renewal is enabled, an error is reported.</p>
+         * <p>If you enable auto-renewal for an instance that already has auto-renewal enabled, an error is reported.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -121,7 +121,7 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * <p>The renewal duration. Unit: month.</p>
+         * <p>The renewal period. Unit: months.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

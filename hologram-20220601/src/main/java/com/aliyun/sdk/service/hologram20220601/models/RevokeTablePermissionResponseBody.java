@@ -67,7 +67,14 @@ public class RevokeTablePermissionResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true: Successful.</li>
+         * <li>false: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -75,7 +82,7 @@ public class RevokeTablePermissionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>819A7F0F-2951-540F-BD94-6A41ECF0281F</p>

@@ -119,7 +119,7 @@ public class ListDatabasesResponseBody extends TeaModel {
         } 
 
         /**
-         * DatabaseList.
+         * <p>The list of databases.</p>
          */
         public Builder databaseList(java.util.List<DatabaseList> databaseList) {
             this.databaseList = databaseList;
@@ -127,7 +127,10 @@ public class ListDatabasesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -135,7 +138,10 @@ public class ListDatabasesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -143,7 +149,10 @@ public class ListDatabasesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -162,7 +171,10 @@ public class ListDatabasesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -254,7 +266,10 @@ public class ListDatabasesResponseBody extends TeaModel {
             } 
 
             /**
-             * External.
+             * <p>Indicates whether the table is a foreign table. Valid values: true: yes, false: no.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder external(Boolean external) {
                 this.external = external;
@@ -262,7 +277,10 @@ public class ListDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my_db</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -270,7 +288,10 @@ public class ListDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * PermissionModel.
+             * <p>The permission model. For more information, see <a href="https://help.aliyun.com/document_detail/198734.html">Hologres permission models</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SPM</p>
              */
             public Builder permissionModel(String permissionModel) {
                 this.permissionModel = permissionModel;
@@ -278,7 +299,10 @@ public class ListDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * Privilege.
+             * <p>The permissions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>developer</p>
              */
             public Builder privilege(String privilege) {
                 this.privilege = privilege;

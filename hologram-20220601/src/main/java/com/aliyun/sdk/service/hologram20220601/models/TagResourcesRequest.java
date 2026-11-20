@@ -129,7 +129,10 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -138,7 +141,10 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>The instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -147,7 +153,10 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * category.
+         * <p>The resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Custom</p>
          */
         public Builder category(String category) {
             this.putBodyParameter("category", category);
@@ -156,7 +165,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * resourceIds.
+         * <p>The instance IDs.</p>
          */
         public Builder resourceIds(java.util.List<String> resourceIds) {
             this.putBodyParameter("resourceIds", resourceIds);
@@ -165,7 +174,10 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * tagOwnerUid.
+         * <p>The account ID of the tag owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1062017779051424</p>
          */
         public Builder tagOwnerUid(Long tagOwnerUid) {
             this.putBodyParameter("tagOwnerUid", tagOwnerUid);
@@ -174,7 +186,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * tags.
+         * <p>The new tags to add.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putBodyParameter("tags", tags);
@@ -242,7 +254,10 @@ public class TagResourcesRequest extends Request {
             } 
 
             /**
-             * key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>any_string</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -250,7 +265,10 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>any_string</p>
              */
             public Builder value(String value) {
                 this.value = value;

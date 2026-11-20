@@ -104,7 +104,7 @@ public class ListModelCatalogResponseBody extends TeaModel {
         }
 
         /**
-         * modelList.
+         * <p>The list of models.</p>
          */
         public Builder modelList(java.util.List<ModelList> modelList) {
             this.modelList = modelList;
@@ -112,7 +112,10 @@ public class ListModelCatalogResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token. Set this parameter to the value of NextToken returned from the previous API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -267,7 +270,10 @@ public class ListModelCatalogResponseBody extends TeaModel {
             } 
 
             /**
-             * defaultParams.
+             * <p>The default parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;timeout&quot;: 600, &quot;max_retries&quot;: 10, &quot;max_retry_delay&quot;: 8, &quot;initial_retry_delay&quot;: 0.5}</p>
              */
             public Builder defaultParams(String defaultParams) {
                 this.defaultParams = defaultParams;
@@ -275,7 +281,10 @@ public class ListModelCatalogResponseBody extends TeaModel {
             }
 
             /**
-             * extra.
+             * <p>The additional parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;deepThink\&quot;:false,\&quot;onlineSearch\&quot;:true}</p>
              */
             public Builder extra(String extra) {
                 this.extra = extra;
@@ -283,7 +292,10 @@ public class ListModelCatalogResponseBody extends TeaModel {
             }
 
             /**
-             * modelType.
+             * <p>The model name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen3.5-plus</p>
              */
             public Builder modelType(String modelType) {
                 this.modelType = modelType;
@@ -291,7 +303,33 @@ public class ListModelCatalogResponseBody extends TeaModel {
             }
 
             /**
-             * paramsExample.
+             * <p>The parameter example.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;extra_body&quot;: {
+             *         &quot;translation_options&quot;: {
+             *             &quot;source_lang&quot;: &quot;zh&quot;,
+             *             &quot;domains&quot;: &quot;The sentence is from Ali Cloud IT domain. &quot;, 
+             *             &quot;terms&quot;: [
+             *                 {
+             *                     &quot;source&quot;: &quot;Biosensor&quot;,
+             *                     &quot;target&quot;: &quot;biological sensor&quot;
+             *                 },
+             *                 {
+             *                     &quot;source&quot;: &quot;Physical health status&quot;,
+             *                     &quot;target&quot;: &quot;health status of the body&quot;
+             *                 }
+             *             ],
+             *             &quot;tm_list&quot;: [
+             *                 {
+             *                     &quot;source&quot;: &quot;You can use one of the following methods to view the kernel version information of a cluster:&quot;,
+             *                     &quot;target&quot;: &quot;You can use one of the following methods to query the engine version of a cluster:&quot;
+             *                 }
+             *             ]
+             *         }
+             *     }
+             * }</p>
              */
             public Builder paramsExample(String paramsExample) {
                 this.paramsExample = paramsExample;
@@ -299,7 +337,10 @@ public class ListModelCatalogResponseBody extends TeaModel {
             }
 
             /**
-             * provider.
+             * <p>The underlying model provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bailian</p>
              */
             public Builder provider(String provider) {
                 this.provider = provider;
@@ -307,7 +348,10 @@ public class ListModelCatalogResponseBody extends TeaModel {
             }
 
             /**
-             * serviceDeployRegion.
+             * <p>The deployment region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder serviceDeployRegion(String serviceDeployRegion) {
                 this.serviceDeployRegion = serviceDeployRegion;
@@ -315,7 +359,10 @@ public class ListModelCatalogResponseBody extends TeaModel {
             }
 
             /**
-             * supportApiKeyAccess.
+             * <p>Specifies whether the model service can be accessed by using an API key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder supportApiKeyAccess(Boolean supportApiKeyAccess) {
                 this.supportApiKeyAccess = supportApiKeyAccess;
@@ -323,7 +370,10 @@ public class ListModelCatalogResponseBody extends TeaModel {
             }
 
             /**
-             * taskType.
+             * <p>The model purpose.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>chat/completions</p>
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;

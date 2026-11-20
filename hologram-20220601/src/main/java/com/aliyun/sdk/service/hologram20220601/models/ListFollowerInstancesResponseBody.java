@@ -119,7 +119,10 @@ public class ListFollowerInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -127,7 +130,10 @@ public class ListFollowerInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -135,7 +141,10 @@ public class ListFollowerInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +152,7 @@ public class ListFollowerInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceList.
+         * <p>The instance details.</p>
          */
         public Builder instanceList(java.util.List<InstanceList> instanceList) {
             this.instanceList = instanceList;
@@ -162,7 +171,10 @@ public class ListFollowerInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful. This parameter is unrelated to business logic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -228,7 +240,10 @@ public class ListFollowerInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -236,7 +251,10 @@ public class ListFollowerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -394,7 +412,10 @@ public class ListFollowerInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * ChargeType.
+             * <p>The billing method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PostPaid</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -402,7 +423,10 @@ public class ListFollowerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CommodityCode.
+             * <p>The commodity code, which is consistent with the product detail code in the User Center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hologram_postpay_public_cn</p>
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -410,7 +434,10 @@ public class ListFollowerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * <p>The creation time. The time is in UTC and follows the ISO 8601 standard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-12-16T02:24:05Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -418,7 +445,10 @@ public class ListFollowerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ExpirationTime.
+             * <p>The expiration time. The time is in UTC and follows the ISO 8601 standard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-05-04T16:00:00.000Z</p>
              */
             public Builder expirationTime(String expirationTime) {
                 this.expirationTime = expirationTime;
@@ -426,7 +456,10 @@ public class ListFollowerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hgpostcn-cn-aaab9ad2d8fb</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -434,7 +467,10 @@ public class ListFollowerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_instance</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -442,7 +478,10 @@ public class ListFollowerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceStatus.
+             * <p>The instance status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder instanceStatus(String instanceStatus) {
                 this.instanceStatus = instanceStatus;
@@ -450,7 +489,10 @@ public class ListFollowerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * <p>The instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Standard</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -458,7 +500,7 @@ public class ListFollowerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The tag details.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;

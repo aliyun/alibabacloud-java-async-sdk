@@ -119,7 +119,7 @@ public class ResumeInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned result, which indicates whether the operation was successful.</p>
+         * <p>The returned result, which indicates whether the operation is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -133,7 +133,7 @@ public class ResumeInstanceResponseBody extends TeaModel {
          * <p>The error code.</p>
          * 
          * <strong>example:</strong>
-         * <p>404</p>
+         * <p>null</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -144,7 +144,7 @@ public class ResumeInstanceResponseBody extends TeaModel {
          * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>Internal server error.</p>
+         * <p>null</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -163,7 +163,7 @@ public class ResumeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>D3AE84AB-0873-5FC7-A4C4-8CF869D2FA70</p>
@@ -174,7 +174,7 @@ public class ResumeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request result, which indicates whether the request was successful.</p>
+         * <p>The request result, which indicates whether an exception occurred during the request and is independent of the business logic.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

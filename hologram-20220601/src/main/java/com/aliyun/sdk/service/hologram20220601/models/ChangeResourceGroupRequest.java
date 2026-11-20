@@ -85,7 +85,7 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>new resource group id</p>
+         * <p>The ID of the new resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmxwerqwerasfd</p>

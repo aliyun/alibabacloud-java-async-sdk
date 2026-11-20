@@ -119,23 +119,7 @@ public class EnableHiveAccessResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned data.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>true</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>false</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
+         * <p>The returned result.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -146,7 +130,7 @@ public class EnableHiveAccessResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned if the request failed.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>404</p>
@@ -157,7 +141,7 @@ public class EnableHiveAccessResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>Internal server error.</p>
@@ -179,7 +163,7 @@ public class EnableHiveAccessResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>EA8F0084-5831-5907-BB31-BD05D2617844</p>
@@ -190,7 +174,7 @@ public class EnableHiveAccessResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the operation is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

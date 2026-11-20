@@ -101,7 +101,10 @@ public class ListModelCatalogRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hgprecn-cn-i7m2ucpyu005</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -110,7 +113,14 @@ public class ListModelCatalogRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of entries per page.
+         * Default value:
+         *     20
+         * Maximum value:
+         *     100</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -119,7 +129,10 @@ public class ListModelCatalogRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token. Set this parameter to the value of NextToken returned from the previous API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>uat-assembly-cut-3d-bbig</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -128,7 +141,10 @@ public class ListModelCatalogRequest extends Request {
         }
 
         /**
-         * provider.
+         * <p>The model provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>holo_bailian</p>
          */
         public Builder provider(String provider) {
             this.putQueryParameter("provider", provider);

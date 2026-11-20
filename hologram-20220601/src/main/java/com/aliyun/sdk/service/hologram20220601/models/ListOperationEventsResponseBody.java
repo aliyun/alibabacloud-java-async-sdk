@@ -106,7 +106,7 @@ public class ListOperationEventsResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The list of events.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class ListOperationEventsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class ListOperationEventsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 50. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -141,7 +147,10 @@ public class ListOperationEventsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -207,7 +216,10 @@ public class ListOperationEventsResponseBody extends TeaModel {
             } 
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hgxxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -215,7 +227,10 @@ public class ListOperationEventsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hi</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -425,7 +440,10 @@ public class ListOperationEventsResponseBody extends TeaModel {
             } 
 
             /**
-             * Cancelable.
+             * <p>Indicates whether the event can be canceled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder cancelable(Boolean cancelable) {
                 this.cancelable = cancelable;
@@ -433,7 +451,10 @@ public class ListOperationEventsResponseBody extends TeaModel {
             }
 
             /**
-             * ChangeScheduleTime.
+             * <p>Indicates whether the event schedule can be modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder changeScheduleTime(Boolean changeScheduleTime) {
                 this.changeScheduleTime = changeScheduleTime;
@@ -441,7 +462,10 @@ public class ListOperationEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Detail.
+             * <p>The event details.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder detail(String detail) {
                 this.detail = detail;
@@ -449,7 +473,10 @@ public class ListOperationEventsResponseBody extends TeaModel {
             }
 
             /**
-             * EventName.
+             * <p>The event name filter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HOT_UPGRADE</p>
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -457,7 +484,10 @@ public class ListOperationEventsResponseBody extends TeaModel {
             }
 
             /**
-             * EventType.
+             * <p>The event type filter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UPGRADE_ON_CUSTOMERS_BEHALF</p>
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -465,7 +495,7 @@ public class ListOperationEventsResponseBody extends TeaModel {
             }
 
             /**
-             * FollowerInstances.
+             * <p>The list of follower instances.</p>
              */
             public Builder followerInstances(java.util.List<FollowerInstances> followerInstances) {
                 this.followerInstances = followerInstances;
@@ -484,7 +514,10 @@ public class ListOperationEventsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>haha</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -492,7 +525,10 @@ public class ListOperationEventsResponseBody extends TeaModel {
             }
 
             /**
-             * MaintainWindow.
+             * <p>The maintenance time window.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>21:00-22:00</p>
              */
             public Builder maintainWindow(String maintainWindow) {
                 this.maintainWindow = maintainWindow;
@@ -500,7 +536,10 @@ public class ListOperationEventsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hgpost-cn-sxfsdfsd</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -530,7 +569,10 @@ public class ListOperationEventsResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-k</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

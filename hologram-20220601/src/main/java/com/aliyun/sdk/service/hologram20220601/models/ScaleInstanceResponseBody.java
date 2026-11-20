@@ -106,7 +106,7 @@ public class ScaleInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned data.</p>
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class ScaleInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -125,7 +125,7 @@ public class ScaleInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -242,7 +242,7 @@ public class ScaleInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The error code returned.</p>
+             * <p>The error code.</p>
              * 
              * <strong>example:</strong>
              * <p>InvalidScaleType.Unsupported</p>
@@ -253,10 +253,10 @@ public class ScaleInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error details.</p>
+             * <p>The detailed error message.</p>
              * 
              * <strong>example:</strong>
-             * <p>null</p>
+             * <p>Invalid scale type</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -275,23 +275,7 @@ public class ScaleInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the change to specifications was successful.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li><p>true</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>false</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- --></li>
-             * </ul>
+             * <p>Indicates whether the specification change was successful.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>

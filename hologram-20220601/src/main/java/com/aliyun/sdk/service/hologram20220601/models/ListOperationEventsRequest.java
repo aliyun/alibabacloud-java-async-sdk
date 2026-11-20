@@ -157,7 +157,10 @@ public class ListOperationEventsRequest extends Request {
         } 
 
         /**
-         * eventName.
+         * <p>The event name filter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>COLD_UPGRADE</p>
          */
         public Builder eventName(String eventName) {
             this.putBodyParameter("eventName", eventName);
@@ -166,7 +169,10 @@ public class ListOperationEventsRequest extends Request {
         }
 
         /**
-         * eventNameDesc.
+         * <p>Specifies whether to sort the results in descending order of event name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder eventNameDesc(Boolean eventNameDesc) {
             this.putBodyParameter("eventNameDesc", eventNameDesc);
@@ -175,7 +181,10 @@ public class ListOperationEventsRequest extends Request {
         }
 
         /**
-         * eventType.
+         * <p>The event type filter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM_MAINTENANCE</p>
          */
         public Builder eventType(String eventType) {
             this.putBodyParameter("eventType", eventType);
@@ -184,7 +193,10 @@ public class ListOperationEventsRequest extends Request {
         }
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hgpost-cn-xxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("instanceId", instanceId);
@@ -193,7 +205,10 @@ public class ListOperationEventsRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putBodyParameter("pageNumber", pageNumber);
@@ -202,7 +217,10 @@ public class ListOperationEventsRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page. Default value: 50. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putBodyParameter("pageSize", pageSize);
@@ -211,7 +229,10 @@ public class ListOperationEventsRequest extends Request {
         }
 
         /**
-         * scheduleTimeDesc.
+         * <p>Specifies whether to sort the results in descending order of scheduled time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder scheduleTimeDesc(Boolean scheduleTimeDesc) {
             this.putBodyParameter("scheduleTimeDesc", scheduleTimeDesc);
@@ -220,7 +241,10 @@ public class ListOperationEventsRequest extends Request {
         }
 
         /**
-         * state.
+         * <p>The state filter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder state(String state) {
             this.putBodyParameter("state", state);

@@ -59,7 +59,7 @@ public class GetWarehouseDetailRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The instance ID. This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>hgprecn-cn-i7m2ucpyu005</p>

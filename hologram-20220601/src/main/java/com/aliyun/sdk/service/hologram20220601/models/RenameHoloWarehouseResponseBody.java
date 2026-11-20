@@ -67,7 +67,7 @@ public class RenameHoloWarehouseResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether the request was successful. Valid values: true and false.</p>
+         * <p>Indicates whether the operation is successful. Valid values: true: Successful. false: Failed.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

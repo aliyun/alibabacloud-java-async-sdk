@@ -73,7 +73,10 @@ public class DeleteModelResourceRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hgprecn-cn-i7m2ucxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -82,7 +85,10 @@ public class DeleteModelResourceRequest extends Request {
         }
 
         /**
-         * aiInstanceId.
+         * <p>The AI node instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hologram_aicombo_public_cn-yi34cxxxx</p>
          */
         public Builder aiInstanceId(String aiInstanceId) {
             this.putQueryParameter("aiInstanceId", aiInstanceId);

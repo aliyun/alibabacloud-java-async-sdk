@@ -87,7 +87,21 @@ public class ListInstancesRequest extends Request {
         } 
 
         /**
-         * cmsInstanceType.
+         * <p>The CloudMonitor instance type. Valid values:</p>
+         * <ul>
+         * <li>standard</li>
+         * <li>follower</li>
+         * <li>mc-acceleration</li>
+         * <li>warehouse</li>
+         * <li>high-memory</li>
+         * <li>serverless</li>
+         * </ul>
+         * <blockquote>
+         * <p>This is CloudMonitor.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>standard</p>
          */
         public Builder cmsInstanceType(String cmsInstanceType) {
             this.putBodyParameter("cmsInstanceType", cmsInstanceType);
@@ -108,7 +122,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * <p>The tags to add to the resource.</p>
+         * <p>The instance label.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putBodyParameter("tag", tag);

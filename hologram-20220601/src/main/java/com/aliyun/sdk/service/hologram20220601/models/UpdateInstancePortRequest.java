@@ -73,7 +73,10 @@ public class UpdateInstancePortRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hgprecn-cn-i7m2v08uxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -82,7 +85,10 @@ public class UpdateInstancePortRequest extends Request {
         }
 
         /**
-         * port.
+         * <p>The port number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>443</p>
          */
         public Builder port(Integer port) {
             this.putBodyParameter("port", port);

@@ -119,23 +119,7 @@ public class UpdateInstanceNameResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned result, which indicates whether the operation was successful.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>true</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>false</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
+         * <p>Indicates whether the operation is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -149,7 +133,7 @@ public class UpdateInstanceNameResponseBody extends TeaModel {
          * <p>The error code.</p>
          * 
          * <strong>example:</strong>
-         * <p>404</p>
+         * <p>null</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -160,7 +144,7 @@ public class UpdateInstanceNameResponseBody extends TeaModel {
          * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>Internal server error.</p>
+         * <p>null</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -179,7 +163,7 @@ public class UpdateInstanceNameResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>C6B55032-D41A-5FE0-9C07-8BD81C88422E</p>
@@ -190,23 +174,7 @@ public class UpdateInstanceNameResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request result, which indicates whether the request was successful.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>true</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>false</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
+         * <p>Indicates whether an exception occurred during the request.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

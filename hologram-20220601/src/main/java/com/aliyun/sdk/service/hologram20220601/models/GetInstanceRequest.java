@@ -59,7 +59,7 @@ public class GetInstanceRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the instance. This parameter is required.</p>
+         * <p>The instance ID. This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>hgprecn-cn-i7m2v08uu00a</p>

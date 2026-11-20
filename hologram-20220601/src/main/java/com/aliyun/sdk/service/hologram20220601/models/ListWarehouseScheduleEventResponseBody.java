@@ -106,7 +106,7 @@ public class ListWarehouseScheduleEventResponseBody extends TeaModel {
         } 
 
         /**
-         * EventList.
+         * <p>The list of events.</p>
          */
         public Builder eventList(java.util.List<EventList> eventList) {
             this.eventList = eventList;
@@ -114,7 +114,10 @@ public class ListWarehouseScheduleEventResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class ListWarehouseScheduleEventResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 30. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -141,7 +147,10 @@ public class ListWarehouseScheduleEventResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of events.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -337,7 +346,10 @@ public class ListWarehouseScheduleEventResponseBody extends TeaModel {
             } 
 
             /**
-             * ClusterCount.
+             * <p>The number of clusters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder clusterCount(Long clusterCount) {
                 this.clusterCount = clusterCount;
@@ -345,7 +357,10 @@ public class ListWarehouseScheduleEventResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterCpu.
+             * <p>The cluster specifications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder clusterCpu(Long clusterCpu) {
                 this.clusterCpu = clusterCpu;
@@ -353,7 +368,10 @@ public class ListWarehouseScheduleEventResponseBody extends TeaModel {
             }
 
             /**
-             * ElasticCpu.
+             * <p>The number of elastic CPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>48</p>
              */
             public Builder elasticCpu(Long elasticCpu) {
                 this.elasticCpu = elasticCpu;
@@ -361,7 +379,10 @@ public class ListWarehouseScheduleEventResponseBody extends TeaModel {
             }
 
             /**
-             * ElasticType.
+             * <p>The elastic scaling type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ScaleUp</p>
              */
             public Builder elasticType(String elasticType) {
                 this.elasticType = elasticType;
@@ -369,7 +390,10 @@ public class ListWarehouseScheduleEventResponseBody extends TeaModel {
             }
 
             /**
-             * EventName.
+             * <p>The event name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AlterWarehouse</p>
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -377,7 +401,10 @@ public class ListWarehouseScheduleEventResponseBody extends TeaModel {
             }
 
             /**
-             * EventTime.
+             * <p>The time when the event occurred (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-07-22T09:43:02.638Z</p>
              */
             public Builder eventTime(String eventTime) {
                 this.eventTime = eventTime;
@@ -385,7 +412,10 @@ public class ListWarehouseScheduleEventResponseBody extends TeaModel {
             }
 
             /**
-             * FailedReason.
+             * <p>The reason for the failure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>insufficient resource</p>
              */
             public Builder failedReason(String failedReason) {
                 this.failedReason = failedReason;
@@ -393,7 +423,10 @@ public class ListWarehouseScheduleEventResponseBody extends TeaModel {
             }
 
             /**
-             * InitClusterCount.
+             * <p>The number of reserved clusters, which refers to non-elastic clusters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder initClusterCount(Long initClusterCount) {
                 this.initClusterCount = initClusterCount;
@@ -401,7 +434,10 @@ public class ListWarehouseScheduleEventResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalElasticCpu.
+             * <p><strong>[Deprecated]</strong> This field is deprecated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder originalElasticCpu(Long originalElasticCpu) {
                 this.originalElasticCpu = originalElasticCpu;
@@ -409,7 +445,10 @@ public class ListWarehouseScheduleEventResponseBody extends TeaModel {
             }
 
             /**
-             * ReservedCpu.
+             * <p>The number of reserved CPUs, which refers to non-elastic CPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>64</p>
              */
             public Builder reservedCpu(Long reservedCpu) {
                 this.reservedCpu = reservedCpu;
@@ -417,7 +456,10 @@ public class ListWarehouseScheduleEventResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * <p>The result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder result(String result) {
                 this.result = result;
@@ -425,7 +467,10 @@ public class ListWarehouseScheduleEventResponseBody extends TeaModel {
             }
 
             /**
-             * WarehouseName.
+             * <p>The name of the compute group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>init_warehouse</p>
              */
             public Builder warehouseName(String warehouseName) {
                 this.warehouseName = warehouseName;

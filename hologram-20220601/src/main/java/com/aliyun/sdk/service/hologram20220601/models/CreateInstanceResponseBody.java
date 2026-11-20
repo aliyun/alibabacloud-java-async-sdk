@@ -106,7 +106,7 @@ public class CreateInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned data.</p>
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -125,7 +125,7 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -147,7 +147,7 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9CC37B9F-F4B4-5FF1-939B-AEE78DC70130</p>
@@ -255,7 +255,7 @@ public class CreateInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The error code returned.</p>
+             * <p>The error code.</p>
              * 
              * <strong>example:</strong>
              * <p>InvalidVpcOrVSwitch.NotAvailable</p>
@@ -277,10 +277,10 @@ public class CreateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error details.</p>
+             * <p>The detailed error message.</p>
              * 
              * <strong>example:</strong>
-             * <p>Vpc is not available</p>
+             * <p>InvalidVpcOrVSwitch.NotAvailable</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -299,10 +299,10 @@ public class CreateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the instance was created.</p>
+             * <p>Indicates whether the instance was created. Valid values:  </p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li>true: The instance was created.</li>
+             * <li>false: The instance failed to be created.</li>
              * </ul>
              * 
              * <strong>example:</strong>

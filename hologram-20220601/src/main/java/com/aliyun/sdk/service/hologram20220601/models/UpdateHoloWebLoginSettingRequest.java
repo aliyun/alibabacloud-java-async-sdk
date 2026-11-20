@@ -87,7 +87,10 @@ public class UpdateHoloWebLoginSettingRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hgprecn-cn-i7m2ucxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -96,7 +99,10 @@ public class UpdateHoloWebLoginSettingRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -105,7 +111,10 @@ public class UpdateHoloWebLoginSettingRequest extends Request {
         }
 
         /**
-         * allowExternalAccountsLogin.
+         * <p>Specifies whether external accounts are allowed to log on. Valid values: true (allowed) and false (not allowed).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder allowExternalAccountsLogin(Boolean allowExternalAccountsLogin) {
             this.putBodyParameter("allowExternalAccountsLogin", allowExternalAccountsLogin);

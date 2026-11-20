@@ -87,7 +87,10 @@ public class EnableWarehouseAutoScaleRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hgprecn-cn-xxxxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -96,7 +99,10 @@ public class EnableWarehouseAutoScaleRequest extends Request {
         }
 
         /**
-         * maxClusterCount.
+         * <p>The maximum number of clusters. The value must be greater than the number of reserved clusters and less than or equal to 4.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder maxClusterCount(String maxClusterCount) {
             this.putBodyParameter("maxClusterCount", maxClusterCount);
@@ -105,7 +111,10 @@ public class EnableWarehouseAutoScaleRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The name of the compute group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_warehouse</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);

@@ -333,14 +333,14 @@ public class CreateInstanceRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to enable auto-payment. Default value: true. Valid values:</p>
+         * <p>Specifies whether to enable automatic payment. Default value: true. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
-         * <blockquote>
-         * <p> The default value is true. If the balance of your account is insufficient, you can set this parameter to false. In this case, an unpaid order is generated. You can log on to the Expenses and Costs console to pay for the order.</p>
+         * <li>true: Automatic payment is enabled.</li>
+         * <li>false: Only an order is generated, and no payment is made.<blockquote>
+         * <p>Default value: true. If your payment method has insufficient balance, you can set the AutoPay parameter to false. In this case, an unpaid order is generated, and you can log on to the Expenses and Costs console to complete the payment.</p>
          * </blockquote>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -352,10 +352,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable monthly auto-renewal. The default value is false. Valid values:</p>
+         * <p>Specifies whether to enable monthly auto-renewal. Default value: false. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: Enabled.</li>
+         * <li>false: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -368,14 +368,14 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The billing method of the instance. Valid values:</p>
+         * <p>The billing method. Valid values:</p>
          * <ul>
-         * <li>PrePaid: subscription</li>
-         * <li>PostPaid: pay-as-you-go</li>
-         * </ul>
-         * <blockquote>
-         * <p> This parameter is invalid for Hologres Shared Cluster instances. Hologres Shared Cluster instances have fixed specifications and are pay-as-you-go instances.</p>
+         * <li>PrePaid: Subscription.</li>
+         * <li>PostPaid: Pay-as-you-go.<blockquote>
+         * <p>This parameter is ignored for Shared instances. Shared is a defined specifications type, and its billing method defaults to PostPaid.</p>
          * </blockquote>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -388,9 +388,9 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The infrequent access (IA) storage space of the instance. Unit: GB.</p>
+         * <p>The low-frequency storage capacity of the instance. Unit: GB.</p>
          * <blockquote>
-         * <p> This parameter is invalid for pay-as-you-go instances.</p>
+         * <p>This parameter is ignored for pay-as-you-go instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -405,25 +405,19 @@ public class CreateInstanceRequest extends Request {
         /**
          * <p>The instance specifications. Valid values:</p>
          * <ul>
-         * <li>8-core 32GB (number of compute nodes: 1)</li>
-         * <li>32-core 128GB (number of compute nodes: 2)</li>
-         * <li>64-core 256GB (number of compute nodes: 4)</li>
-         * <li>96-core 384GB (number of compute nodes: 6)</li>
-         * <li>128-core 512GB (number of compute nodes: 8)</li>
-         * <li>Others</li>
+         * <li>32 cores, 128 GB (Number of compute nodes: 2)</li>
+         * <li>64 cores, 256 GB (Number of compute nodes: 4)</li>
+         * <li>96 cores, 384 GB (Number of compute nodes: 6)</li>
+         * <li>128 cores, 512 GB (Number of compute nodes: 8)</li>
+         * <li>Other specifications</li>
          * </ul>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>Set this parameter to the number of cores.</p>
-         * </li>
-         * <li><p>If you want to set this parameter to specifications with more than 1,024 GB, you must submit a ticket.</p>
-         * </li>
-         * <li><p>This parameter is invalid for Hologres Shared Cluster instances.</p>
-         * </li>
-         * <li><p>The specifications of 8-core 32GB (number of compute nodes: 1) are for trial use only and cannot be used for production.</p>
-         * </li>
+         * <li>Specify the number of cores.</li>
+         * <li>To purchase an instance with more than 1,024 cores, submit a ticket.</li>
+         * <li>You do not need to specify the specifications for a Shared instance.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>64</p>
@@ -435,9 +429,9 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The validity period of the instance that you want to purchase. For example, you can specify a validity period of two months.</p>
+         * <p>The subscription duration. For example, set this parameter to 2 for a two-month subscription.</p>
          * <blockquote>
-         * <p> You do not need to configure this parameter for pay-as-you-go instances.</p>
+         * <p>This parameter is not required if the billing method is PostPaid.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -450,12 +444,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the Serverless Computing feature.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
+         * <p>Specifies whether to enable Serverless Computing.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -469,7 +458,7 @@ public class CreateInstanceRequest extends Request {
         /**
          * <p>The number of gateways. Valid values: 2 to 50.</p>
          * <blockquote>
-         * <p> This parameter is required only for virtual warehouse instances.</p>
+         * <p>This parameter is required only for Warehouse instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -482,7 +471,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The initial database.</p>
+         * <p>The initial databases.</p>
          * 
          * <strong>example:</strong>
          * <p>chatbot</p>
@@ -494,7 +483,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The name of the instance. The name must be 2 to 64 characters in length.</p>
+         * <p>The name of the instance. The name must be 2 to 64 characters in length. Each Chinese character or letter counts as one character.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -507,12 +496,13 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The category of the instance. Valid values:</p>
+         * <p>The instance type. Valid values:</p>
          * <ul>
-         * <li>Standard: general-purpose instance</li>
-         * <li>Follower: read-only secondary instance</li>
-         * <li>Warehouse: virtual warehouse instance</li>
-         * <li>Shared: Hologres Shared Cluster instance</li>
+         * <li>Standard: General-purpose.</li>
+         * <li>Follower: Read-only secondary instance.</li>
+         * <li>Warehouse: Compute group.</li>
+         * <li>Shared: Shared.</li>
+         * <li>Severless: Serverless.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -526,22 +516,17 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the primary instance. This parameter is required for read-only secondary instances.</p>
+         * <p>The ID of the primary instance. This parameter is required for Follower instances.</p>
          * <blockquote>
-         * <p> The primary and secondary instances must meet the following requirements:</p>
-         * </blockquote>
+         * <p>The primary and secondary instances must meet the following conditions:</p>
          * <ul>
-         * <li><p>The primary instance is in the Running state.</p>
-         * </li>
-         * <li><p>The primary instance and secondary instances are deployed in the same region.</p>
-         * </li>
-         * <li><p>The primary instance and secondary instances are deployed in the same zone.</p>
-         * </li>
-         * <li><p>Less than 10 secondary instances are associated with the primary instance.</p>
-         * </li>
-         * <li><p>The primary instance and secondary instances belong to the same Alibaba Cloud account.</p>
-         * </li>
+         * <li>The primary instance is in the Running state.</li>
+         * <li>The primary and secondary instances are in the same region.</li>
+         * <li>The primary and secondary instances are in the same zone.</li>
+         * <li>The primary instance is associated with fewer than 10 secondary instances.</li>
+         * <li>The primary and secondary instances belong to the same Alibaba Cloud account.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>hgpostcn-cn-lbj3aworq112</p>
@@ -555,17 +540,14 @@ public class CreateInstanceRequest extends Request {
         /**
          * <p>The billing cycle. Valid values:</p>
          * <ul>
-         * <li>Month</li>
-         * <li>Hour</li>
-         * </ul>
-         * <blockquote>
-         * </blockquote>
+         * <li>Month: Monthly billing.</li>
+         * <li>Hour: Hourly billing.<blockquote>
          * <ul>
-         * <li><p>This parameter can only be set to Month for subscription instances.</p>
-         * </li>
-         * <li><p>This parameter can only be set to Hour for pay-as-you-go instances.</p>
-         * </li>
-         * <li><p>By default, this parameter is set to Hour for Hologres Shared Cluster instances.</p>
+         * <li>PrePaid supports only Month.</li>
+         * <li>PostPaid supports only Hour.</li>
+         * <li>For Shared instances, this parameter is automatically set to Hour and does not need to be specified.</li>
+         * </ul>
+         * </blockquote>
          * </li>
          * </ul>
          * 
@@ -579,7 +561,8 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region. You can obtain region IDs in <a href="https://www.alibabacloud.com/help/en/maxcompute/user-guide/endpoints">Endpoints</a>.</p>
+         * <p>The region ID. You can go to &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/hologres/developer-reference/api-hologram-2022-06-01-endpoint">service registration endpoints</a>
+         * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/hologres/developer-reference/api-hologram-2022-06-01-endpoint">service registration endpoints</a> to view the supported regions.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -592,7 +575,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group. If you do not specify this parameter, the default resource group of the account is used.</p>
+         * <p>The ID of the resource group. If this parameter is left empty, the default resource group of the account is used.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
@@ -604,9 +587,9 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The standard storage space of the instance. Unit: GB.</p>
+         * <p>The standard storage capacity of the instance. Unit: GB.</p>
          * <blockquote>
-         * <p> This parameter is invalid for pay-as-you-go instances.</p>
+         * <p>This parameter is ignored for pay-as-you-go instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -619,7 +602,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * storageType.
+         * <p>The storage type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>redundant</p>
          */
         public Builder storageType(String storageType) {
             this.putBodyParameter("storageType", storageType);
@@ -628,7 +614,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the vSwitch. The zone in which the vSwitch resides must be the same as the zone in which the Hologres instance resides.</p>
+         * <p>The ID of the vSwitch. The zone ID of the vSwitch must be the same as that of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -641,7 +627,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the virtual private cloud (VPC). The region in which the VPC resides must be the same as the region in which the Hologres instance resides.</p>
+         * <p>The ID of the virtual private cloud (VPC). The region ID of the VPC must be the same as that of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -654,7 +640,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the zone. For more information, see the &quot;Operation description&quot; section in this topic.</p>
+         * <p>The zone ID. Refer to the usage notes.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

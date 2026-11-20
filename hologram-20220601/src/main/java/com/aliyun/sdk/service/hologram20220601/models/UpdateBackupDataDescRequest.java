@@ -101,7 +101,10 @@ public class UpdateBackupDataDescRequest extends Request {
         } 
 
         /**
-         * id.
+         * <p>The backup ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1597404937581527041</p>
          */
         public Builder id(String id) {
             this.putPathParameter("id", id);
@@ -110,7 +113,10 @@ public class UpdateBackupDataDescRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -119,7 +125,10 @@ public class UpdateBackupDataDescRequest extends Request {
         }
 
         /**
-         * desc.
+         * <p>The backup description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>back up test</p>
          */
         public Builder desc(String desc) {
             this.putBodyParameter("desc", desc);
@@ -128,7 +137,10 @@ public class UpdateBackupDataDescRequest extends Request {
         }
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hgpostcn-cn-721344a2z001</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("instanceId", instanceId);

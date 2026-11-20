@@ -89,6 +89,7 @@ public class DeleteWarehouseScheduleTaskRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +102,7 @@ public class DeleteWarehouseScheduleTaskRequest extends Request {
         }
 
         /**
+         * <p>The ID of the time-based elastic plan.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +115,10 @@ public class DeleteWarehouseScheduleTaskRequest extends Request {
         }
 
         /**
-         * warehouseId.
+         * <p>The compute group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder warehouseId(String warehouseId) {
             this.putBodyParameter("warehouseId", warehouseId);

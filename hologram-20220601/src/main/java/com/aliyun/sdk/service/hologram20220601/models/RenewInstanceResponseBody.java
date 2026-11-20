@@ -119,7 +119,7 @@ public class RenewInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned data.</p>
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,7 +127,7 @@ public class RenewInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -138,7 +138,7 @@ public class RenewInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -160,7 +160,7 @@ public class RenewInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>D3AE84AB-0873-5FC7-A4C4-8CF869D2FA70</p>
@@ -171,7 +171,7 @@ public class RenewInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request result, which indicates whether the request was successful.</p>
+         * <p>Indicates whether the request was successful. This parameter indicates whether an exception occurred during the request and is unrelated to the business logic.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -266,7 +266,7 @@ public class RenewInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The error code returned.</p>
+             * <p>The error code.</p>
              * 
              * <strong>example:</strong>
              * <p>InvalidChargeType.UnRenewable</p>
@@ -277,10 +277,10 @@ public class RenewInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error details.</p>
+             * <p>The detailed error message.</p>
              * 
              * <strong>example:</strong>
-             * <p>InvalidChargeType.UnRenewable</p>
+             * <p>Invalid charge type</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -288,7 +288,7 @@ public class RenewInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the order.</p>
+             * <p>The order ID.</p>
              * 
              * <strong>example:</strong>
              * <p>221625608580893</p>
@@ -299,10 +299,10 @@ public class RenewInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the renewal was successful.</p>
+             * <p>Indicates whether the renewal was successful. Valid values:  </p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li>true: The renewal was successful.</li>
+             * <li>false: The renewal failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>

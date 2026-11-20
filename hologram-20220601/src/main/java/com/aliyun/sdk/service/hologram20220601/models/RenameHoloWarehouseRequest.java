@@ -103,7 +103,7 @@ public class RenameHoloWarehouseRequest extends Request {
         }
 
         /**
-         * <p>The original name of the virtual warehouse.</p>
+         * <p>The original name of the compute group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class RenameHoloWarehouseRequest extends Request {
         }
 
         /**
-         * <p>The new name of the virtual warehouse.</p>
+         * <p>The new name of the compute group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -88,6 +88,7 @@ public class ListMigrationZonesRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +101,10 @@ public class ListMigrationZonesRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of results to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -109,7 +113,10 @@ public class ListMigrationZonesRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The token for the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);

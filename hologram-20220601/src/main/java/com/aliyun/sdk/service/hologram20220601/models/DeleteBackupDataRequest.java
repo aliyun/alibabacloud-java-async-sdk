@@ -73,7 +73,10 @@ public class DeleteBackupDataRequest extends Request {
         } 
 
         /**
-         * id.
+         * <p>The backup ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1597409847370362881</p>
          */
         public Builder id(String id) {
             this.putPathParameter("id", id);
@@ -82,7 +85,10 @@ public class DeleteBackupDataRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

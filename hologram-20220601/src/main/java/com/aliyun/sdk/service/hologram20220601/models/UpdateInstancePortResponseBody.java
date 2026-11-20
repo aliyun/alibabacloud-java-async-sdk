@@ -119,7 +119,10 @@ public class UpdateInstancePortResponseBody extends TeaModel {
         } 
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -127,7 +130,10 @@ public class UpdateInstancePortResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -135,7 +141,10 @@ public class UpdateInstancePortResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -154,7 +163,10 @@ public class UpdateInstancePortResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether an exception occurred during the request, which is independent of the business result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -162,7 +174,10 @@ public class UpdateInstancePortResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>Indicates whether the operation is successful. Valid values: true: Successful. false: Failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;

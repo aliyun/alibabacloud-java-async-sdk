@@ -93,7 +93,10 @@ public class ListMigrationZonesResponseBody extends TeaModel {
         } 
 
         /**
-         * maxResults.
+         * <p>The maximum number of results returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -101,7 +104,10 @@ public class ListMigrationZonesResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The token for the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -120,7 +126,7 @@ public class ListMigrationZonesResponseBody extends TeaModel {
         }
 
         /**
-         * zoneList.
+         * <p>The list of zones.</p>
          */
         public Builder zoneList(java.util.List<ZoneList> zoneList) {
             this.zoneList = zoneList;
@@ -186,7 +192,14 @@ public class ListMigrationZonesResponseBody extends TeaModel {
             } 
 
             /**
-             * available.
+             * <p>Indicates whether the instance can be migrated to the zone. Valid values:</p>
+             * <ul>
+             * <li>true: The instance can be migrated to the zone.</li>
+             * <li>false: The instance cannot be migrated to the zone because the migration conditions are not met.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder available(Boolean available) {
                 this.available = available;
@@ -194,7 +207,10 @@ public class ListMigrationZonesResponseBody extends TeaModel {
             }
 
             /**
-             * zoneId.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing-i</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

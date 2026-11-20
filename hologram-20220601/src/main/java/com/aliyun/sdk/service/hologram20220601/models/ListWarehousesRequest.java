@@ -59,7 +59,7 @@ public class ListWarehousesRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The instance ID. This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>hgpostcn-cn-x0r382joi001</p>

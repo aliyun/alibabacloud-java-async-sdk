@@ -129,7 +129,10 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -138,7 +141,10 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * category.
+         * <p>The resource category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Custom</p>
          */
         public Builder category(String category) {
             this.putBodyParameter("category", category);
@@ -147,7 +153,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * resourceIds.
+         * <p>The instance IDs.</p>
          */
         public Builder resourceIds(java.util.List<String> resourceIds) {
             this.putBodyParameter("resourceIds", resourceIds);
@@ -156,7 +162,10 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * resourceType.
+         * <p>The resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INSTANCe</p>
          */
         public Builder resourceType(String resourceType) {
             this.putBodyParameter("resourceType", resourceType);
@@ -165,7 +174,8 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * tagKeys.
+         * <p>The tag keys.
+         * To delete tags, provide the corresponding tag keys.</p>
          */
         public Builder tagKeys(java.util.List<String> tagKeys) {
             this.putBodyParameter("tagKeys", tagKeys);
@@ -174,7 +184,10 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * tagOwnerUid.
+         * <p>The account ID of the tag owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1062017779051424</p>
          */
         public Builder tagOwnerUid(Long tagOwnerUid) {
             this.putBodyParameter("tagOwnerUid", tagOwnerUid);

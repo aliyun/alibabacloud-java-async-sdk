@@ -90,6 +90,7 @@ public class UpdateOperationEventScheduleTimeRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class UpdateOperationEventScheduleTimeRequest extends Request {
         }
 
         /**
+         * <p>The ID of the event.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class UpdateOperationEventScheduleTimeRequest extends Request {
         }
 
         /**
+         * <p>The scheduled execution time. The format is YYYY-MM-DD HH:mm:ss, and the time zone is UTC+8.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

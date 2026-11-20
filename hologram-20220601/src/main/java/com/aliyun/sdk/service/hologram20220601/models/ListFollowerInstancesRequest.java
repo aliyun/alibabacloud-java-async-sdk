@@ -73,7 +73,10 @@ public class ListFollowerInstancesRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * <p>The instance ID. This parameter is in the request path and must be provided when you call this operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hgprecn-cn-xxxxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -82,7 +85,10 @@ public class ListFollowerInstancesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

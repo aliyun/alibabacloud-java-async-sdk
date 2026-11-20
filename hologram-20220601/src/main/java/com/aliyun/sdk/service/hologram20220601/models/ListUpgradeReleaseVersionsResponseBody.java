@@ -119,7 +119,7 @@ public class ListUpgradeReleaseVersionsResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -127,7 +127,10 @@ public class ListUpgradeReleaseVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -135,7 +138,10 @@ public class ListUpgradeReleaseVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -143,7 +149,10 @@ public class ListUpgradeReleaseVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -162,7 +171,10 @@ public class ListUpgradeReleaseVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request succeeded. This parameter is unrelated to the business logic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -254,7 +266,10 @@ public class ListUpgradeReleaseVersionsResponseBody extends TeaModel {
             } 
 
             /**
-             * ReleaseNotesUrl.
+             * <p>The URL of the release notes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://www.alibabacloud.com/help/en/hologres/product-overview/release-notes">https://www.alibabacloud.com/help/en/hologres/product-overview/release-notes</a></p>
              */
             public Builder releaseNotesUrl(String releaseNotesUrl) {
                 this.releaseNotesUrl = releaseNotesUrl;
@@ -262,7 +277,10 @@ public class ListUpgradeReleaseVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The version status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Stable</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -270,7 +288,7 @@ public class ListUpgradeReleaseVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * UpgradeStrategy.
+             * <p>The upgrade strategy.</p>
              */
             public Builder upgradeStrategy(java.util.List<String> upgradeStrategy) {
                 this.upgradeStrategy = upgradeStrategy;
@@ -278,7 +296,10 @@ public class ListUpgradeReleaseVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>r2.2.47</p>
              */
             public Builder version(String version) {
                 this.version = version;

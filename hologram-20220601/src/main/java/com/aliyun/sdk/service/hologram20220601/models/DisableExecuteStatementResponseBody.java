@@ -119,7 +119,7 @@ public class DisableExecuteStatementResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>Valid values: true: Successful. false: Failed.</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -127,7 +127,10 @@ public class DisableExecuteStatementResponseBody extends TeaModel {
         }
 
         /**
-         * errorCode.
+         * <p><strong>The error code. This parameter is empty if the request is successful.</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParameterValue</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -135,7 +138,10 @@ public class DisableExecuteStatementResponseBody extends TeaModel {
         }
 
         /**
-         * errorMessage.
+         * <p>The error message. This parameter is empty if the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid parameter value.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -143,7 +149,10 @@ public class DisableExecuteStatementResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +160,10 @@ public class DisableExecuteStatementResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p><strong>The request ID.</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>E3F4B2A7-1234-5678-9ABC-DEF012345678</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,7 @@ public class DisableExecuteStatementResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p><strong>Indicates whether the request is successful.</strong></p>
          */
         public Builder success(Boolean success) {
             this.success = success;

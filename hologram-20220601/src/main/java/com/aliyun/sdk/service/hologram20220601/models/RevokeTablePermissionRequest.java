@@ -157,7 +157,10 @@ public class RevokeTablePermissionRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hgprecn-cn-i7m2v08uu00a</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -166,7 +169,14 @@ public class RevokeTablePermissionRequest extends Request {
         }
 
         /**
-         * allTable.
+         * <p>Specifies whether the operation takes effect on all tables. Valid values:</p>
+         * <ul>
+         * <li>true: Yes.</li>
+         * <li>false or null: No.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder allTable(Boolean allTable) {
             this.putBodyParameter("allTable", allTable);
@@ -175,7 +185,7 @@ public class RevokeTablePermissionRequest extends Request {
         }
 
         /**
-         * columnNames.
+         * <p>The list of column names for which permissions are to be revoked.</p>
          */
         public Builder columnNames(java.util.List<String> columnNames) {
             this.putBodyParameter("columnNames", columnNames);
@@ -184,7 +194,10 @@ public class RevokeTablePermissionRequest extends Request {
         }
 
         /**
-         * databaseName.
+         * <p>The database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_db</p>
          */
         public Builder databaseName(String databaseName) {
             this.putBodyParameter("databaseName", databaseName);
@@ -193,7 +206,7 @@ public class RevokeTablePermissionRequest extends Request {
         }
 
         /**
-         * privileges.
+         * <p>The list of permissions.</p>
          */
         public Builder privileges(java.util.List<String> privileges) {
             this.putBodyParameter("privileges", privileges);
@@ -202,7 +215,10 @@ public class RevokeTablePermissionRequest extends Request {
         }
 
         /**
-         * schemaName.
+         * <p>The schema name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_schema</p>
          */
         public Builder schemaName(String schemaName) {
             this.putBodyParameter("schemaName", schemaName);
@@ -211,7 +227,10 @@ public class RevokeTablePermissionRequest extends Request {
         }
 
         /**
-         * tableName.
+         * <p>The table name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_table</p>
          */
         public Builder tableName(String tableName) {
             this.putBodyParameter("tableName", tableName);
@@ -220,7 +239,10 @@ public class RevokeTablePermissionRequest extends Request {
         }
 
         /**
-         * userName.
+         * <p>The user ID. For more information, see <a href="https://help.aliyun.com/document_detail/130393.html">Hologres account overview</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>p4_1234xxxx</p>
          */
         public Builder userName(String userName) {
             this.putBodyParameter("userName", userName);

@@ -119,7 +119,7 @@ public class PrepareUpgradeResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The response parameters.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,7 +127,10 @@ public class PrepareUpgradeResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -135,7 +138,10 @@ public class PrepareUpgradeResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -143,7 +149,10 @@ public class PrepareUpgradeResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -162,7 +171,10 @@ public class PrepareUpgradeResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>The request result, which is independent of the business logic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -241,7 +253,10 @@ public class PrepareUpgradeResponseBody extends TeaModel {
             } 
 
             /**
-             * FailReason.
+             * <p>The reason for the upgrade failure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder failReason(String failReason) {
                 this.failReason = failReason;
@@ -249,7 +264,10 @@ public class PrepareUpgradeResponseBody extends TeaModel {
             }
 
             /**
-             * ReasonKey.
+             * <p>The upgrade target key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder reasonKey(String reasonKey) {
                 this.reasonKey = reasonKey;
@@ -257,7 +275,10 @@ public class PrepareUpgradeResponseBody extends TeaModel {
             }
 
             /**
-             * Success.
+             * <p>Indicates whether the pre-upgrade preparation task was started successfully.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;

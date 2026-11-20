@@ -87,7 +87,10 @@ public class GetScheduledBackupConfigRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -96,7 +99,10 @@ public class GetScheduledBackupConfigRequest extends Request {
         }
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hgprecn-cn-9lb3bjg1n003</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("instanceId", instanceId);
@@ -105,7 +111,10 @@ public class GetScheduledBackupConfigRequest extends Request {
         }
 
         /**
-         * scheduleType.
+         * <p>The backup type. By default, periodic and manual backup configurations are returned. To return the remote backup configuration, set this parameter to remote.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>remote</p>
          */
         public Builder scheduleType(String scheduleType) {
             this.putQueryParameter("scheduleType", scheduleType);

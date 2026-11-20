@@ -216,6 +216,7 @@ public class CreateModelServiceRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -228,7 +229,10 @@ public class CreateModelServiceRequest extends Request {
         }
 
         /**
-         * apiKey.
+         * <p>The API key for Alibaba Cloud Model Studio. Log on to the Model Studio console or use the API to obtain the key. This parameter is required only for Alibaba Cloud Model Studio models.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api-key-xxx</p>
          */
         public Builder apiKey(String apiKey) {
             this.putBodyParameter("apiKey", apiKey);
@@ -237,7 +241,10 @@ public class CreateModelServiceRequest extends Request {
         }
 
         /**
-         * cpu.
+         * <p>The CPU specifications. This parameter is required only for Hologres AI nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         public Builder cpu(Long cpu) {
             this.putBodyParameter("cpu", cpu);
@@ -246,7 +253,10 @@ public class CreateModelServiceRequest extends Request {
         }
 
         /**
-         * gpu.
+         * <p>The GPU specifications. This parameter is required only for Hologres AI nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder gpu(Long gpu) {
             this.putBodyParameter("gpu", gpu);
@@ -255,7 +265,10 @@ public class CreateModelServiceRequest extends Request {
         }
 
         /**
-         * gpuMemory.
+         * <p>The GPU memory specifications. This parameter is required only for Hologres AI nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>64</p>
          */
         public Builder gpuMemory(Long gpuMemory) {
             this.putBodyParameter("gpuMemory", gpuMemory);
@@ -264,7 +277,10 @@ public class CreateModelServiceRequest extends Request {
         }
 
         /**
-         * memory.
+         * <p>The memory specifications. This parameter is required only for Hologres AI nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>64</p>
          */
         public Builder memory(Long memory) {
             this.putBodyParameter("memory", memory);
@@ -273,7 +289,10 @@ public class CreateModelServiceRequest extends Request {
         }
 
         /**
-         * modelParams.
+         * <p>The model parameters. Refer to the default parameters returned by ListModelCatalog. You can pass the parameters directly or modify them as needed before passing. This parameter is required only for Alibaba Cloud Model Studio models.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;timeout&quot;:600,&quot;max_retries&quot;:10,&quot;max_retry_delay&quot;:8,&quot;initial_retry_delay&quot;:0.5}</p>
          */
         public Builder modelParams(String modelParams) {
             this.putBodyParameter("modelParams", modelParams);
@@ -282,6 +301,7 @@ public class CreateModelServiceRequest extends Request {
         }
 
         /**
+         * <p>The custom service name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -294,6 +314,7 @@ public class CreateModelServiceRequest extends Request {
         }
 
         /**
+         * <p>The model name. To query Alibaba Cloud Model Studio models, call ListModelCatalog. To query Hologres AI nodes, call GetAvailableModelsResource.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -306,7 +327,10 @@ public class CreateModelServiceRequest extends Request {
         }
 
         /**
-         * provider.
+         * <p>The underlying model provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bailian</p>
          */
         public Builder provider(String provider) {
             this.putBodyParameter("provider", provider);
@@ -315,7 +339,10 @@ public class CreateModelServiceRequest extends Request {
         }
 
         /**
-         * serviceCount.
+         * <p>The number of service replicas. This parameter is required only for Hologres AI nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder serviceCount(Long serviceCount) {
             this.putBodyParameter("serviceCount", serviceCount);
@@ -324,7 +351,10 @@ public class CreateModelServiceRequest extends Request {
         }
 
         /**
-         * taskType.
+         * <p>The model type, such as chat/completions or embedding. Refer to the types returned by ListModelCatalog and create the model as needed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>embedding</p>
          */
         public Builder taskType(String taskType) {
             this.putBodyParameter("taskType", taskType);

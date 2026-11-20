@@ -119,7 +119,10 @@ public class ListLeaderInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>404</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -127,7 +130,10 @@ public class ListLeaderInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Internal server error.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -135,7 +141,10 @@ public class ListLeaderInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +152,7 @@ public class ListLeaderInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceList.
+         * <p>The list of instances.</p>
          */
         public Builder instanceList(java.util.List<InstanceList> instanceList) {
             this.instanceList = instanceList;
@@ -162,7 +171,10 @@ public class ListLeaderInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. This parameter is unrelated to the business logic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -228,7 +240,10 @@ public class ListLeaderInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tagKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -236,7 +251,10 @@ public class ListLeaderInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -407,7 +425,10 @@ public class ListLeaderInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * BindingCode.
+             * <p>The match level between the primary and secondary instances. A value of 0 indicates a perfect match, and other values indicate a mismatch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder bindingCode(String bindingCode) {
                 this.bindingCode = bindingCode;
@@ -415,7 +436,10 @@ public class ListLeaderInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ChargeType.
+             * <p>The billing method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PostPaid</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -423,7 +447,10 @@ public class ListLeaderInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CommodityCode.
+             * <p>The commodity code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hologram_combo_public_cn</p>
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -431,7 +458,10 @@ public class ListLeaderInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * <p>The creation time in UTC formatted according to ISO 8601.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-25T02:15:35Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -439,7 +469,10 @@ public class ListLeaderInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ExpirationTime.
+             * <p>The expiration time. Pay-as-you-go instances do not have an expiration time. The time is displayed in UTC and formatted in accordance with ISO 8601.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-25T02:15:35Z</p>
              */
             public Builder expirationTime(String expirationTime) {
                 this.expirationTime = expirationTime;
@@ -447,7 +480,10 @@ public class ListLeaderInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hgpostcn-cn-tl32vsdir00h</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -455,7 +491,10 @@ public class ListLeaderInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user_defined_name</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -463,7 +502,10 @@ public class ListLeaderInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceStatus.
+             * <p>The instance status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder instanceStatus(String instanceStatus) {
                 this.instanceStatus = instanceStatus;
@@ -471,7 +513,10 @@ public class ListLeaderInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * <p>The instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Standard</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -479,7 +524,7 @@ public class ListLeaderInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The list of tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;

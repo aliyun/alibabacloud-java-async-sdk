@@ -73,7 +73,10 @@ public class UnBindLeaderInstanceRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * <p>The ID of the read-only secondary instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hgpostcn-cn-7212z8edx001</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -82,7 +85,10 @@ public class UnBindLeaderInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

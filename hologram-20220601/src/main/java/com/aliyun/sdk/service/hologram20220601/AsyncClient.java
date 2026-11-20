@@ -52,27 +52,31 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.</p>
+     * <p>Warning: This API operation incurs fees. Make sure that you fully understand the billing methods and pricing of Hologres before you call this operation.
+     * &lt;props=&quot;china&quot;&gt;- For more information about Hologres billing, see <a href="https://www.alibabacloud.com/help/en/hologres/product-overview/billing-overview">Billing overview</a>.
+     * &lt;props=&quot;intl&quot;&gt; - For more information about Hologres billing, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview">Billing overview</a>.</p>
      * </blockquote>
      * <ul>
-     * <li>For more information about the billing details of Hologres, see <a href="https://www.alibabacloud.com/help/en/hologres/developer-reference/api-hologram-2022-06-01-createinstance">Pricing</a>.</li>
-     * <li>When you purchase a Hologres instance, you must specify the region and zone in which the Hologres instance resides. A region may correspond to multiple zones. Example:<!---->
-     * cn-hangzhou: cn-hangzhou-h, cn-hangzhou-j
-     *    cn-shanghai: cn-shanghai-e, cn-shanghai-f
-     *    cn-beijing: cn-beijing-i, cn-beijing-g
-     *    cn-zhangjiakou: cn-zhangjiakou-b
-     *    cn-shenzhen: cn-shenzhen-e
-     *    cn-hongkong: cn-hongkong-b
-     *    cn-shanghai-finance-1: cn-shanghai-finance-1z
-     *    ap-northeast-1: ap-northeast-1a
-     *    ap-southeast-1: ap-southeast-1c
-     *    ap-southeast-3: ap-southeast-3b
-     *    ap-southeast-5: ap-southeast-5b
-     *    ap-south-1: ap-south-1b
-     *    eu-central-1: eu-central-1a
-     *    us-east-1: us-east-1a
-     *    us-west-1: us-west-1b</li>
+     * <li>When you create a Hologres instance, you must specify the region and zone where the instance resides. A region may contain multiple zones, as follows:</li>
      * </ul>
+     * <pre><code>   cn-hangzhou (Hangzhou): cn-hangzhou-h, cn-hangzhou-j, cn-hangzhou-k
+     *    cn-shanghai (Shanghai): cn-shanghai-e, cn-shanghai-f, cn-shanghai-l
+     *    cn-beijing (Beijing): cn-beijing-i, cn-beijing-g, cn-beijing-l
+     *    cn-zhangjiakou (Zhangjiakou): cn-zhangjiakou-b
+     *    cn-shenzhen (Shenzhen): cn-shenzhen-d, cn-shenzhen-f, cn-shenzhen-e
+     *    cn-wulanchabu (Ulanqab): cn-wulanchabu-a
+     *    cn-hongkong (Hong Kong): cn-hongkong-b, cn-hongkong-d
+     *    cn-shanghai-finance-1 (Shanghai Finance Cloud): cn-shanghai-finance-1z, cn-shanghai-finance-1f
+     *    cn-hangzhou-finance (Hangzhou Finance Cloud): cn-hangzhou-finance-k
+     *    cn-shenzhen-finance-1 (Shenzhen Finance Cloud): cn-shenzhen-finance-1d
+     *    ap-northeast-1 (Japan): ap-northeast-1a
+     *    ap-southeast-1 (Singapore): ap-southeast-1c, ap-southeast-1a
+     *    ap-southeast-3 (Kuala Lumpur): ap-southeast-3b
+     *    ap-southeast-5 (Jakarta): ap-southeast-5b
+     *    eu-central-1 (Frankfurt): eu-central-1a
+     *    us-east-1 (Silicon Valley): us-east-1a
+     *    us-west-1 (Virginia): us-west-1b
+     * </code></pre>
      * 
      * @param request the request parameters of CreateInstance  CreateInstanceRequest
      * @return CreateInstanceResponse
@@ -86,6 +90,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateManualBackupResponse> createManualBackup(CreateManualBackupRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Creating a model service requires multiple parameters. For model creation of Alibaba Cloud Model Studio models, invoke ListModelCatalog to query model parameters. For model creation of Hologres AI nodes, invoke GetAvailableModelsResource to query model parameters.</p>
+     * 
      * @param request the request parameters of CreateModelService  CreateModelServiceRequest
      * @return CreateModelServiceResponse
      */
@@ -104,6 +111,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateWarehouseResponse> createWarehouse(CreateWarehouseRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Creates a time-based elastic plan for a compute group of a specified Hologres instance. Before calling this operation, call ListWarehouses to obtain the compute group ID.</p>
+     * 
      * @param request the request parameters of CreateWarehouseScheduleTask  CreateWarehouseScheduleTaskRequest
      * @return CreateWarehouseScheduleTaskResponse
      */
@@ -124,11 +134,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Before you call this operation, read the documentation and make sure that you understand the prerequisites and impacts of this operation.</p>
+     * <p>Warning: Before calling this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of this operation.</warning>
+     * &lt;props=&quot;china&quot;&gt;- After a Hologres instance is released, the data and objects in the instance cannot be recovered. Proceed with caution. For more information, see <a href="https://www.alibabacloud.com/help/en/hologres/product-overview/billing-overview">Billing overview</a>.
+     * &lt;props=&quot;intl&quot;&gt;- After a Hologres instance is released, the data and objects in the instance cannot be recovered. Proceed with caution. For more information, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview?spm=a2c63.p38356.0.0.efc33b87i5pDl7">Billing overview</a>.</p>
      * </blockquote>
      * <ul>
-     * <li>After you delete a Hologres instance, data and objects in the instance cannot be restored. Proceed with caution. For more information, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview?spm=a2c63.p38356.0.0.efc33b87i5pDl7">Billing overview</a>.</li>
-     * <li>You can delete only pay-as-you-go instances.</li>
+     * <li>Only pay-as-you-go instances can be released.
+     * &lt;props=&quot;china&quot;&gt;- To unsubscribe from a subscription instance, go to the Unsubscription page in the Alibaba Cloud Management Console. For more information, see <a href="https://www.alibabacloud.com/help/en/hologres/product-overview/subscription">Unsubscribe from subscription instances</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteInstance  DeleteInstanceRequest
@@ -149,6 +161,17 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteModelServiceResponse> deleteModelService(DeleteModelServiceRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Warning: Before calling this operation, read the feature documentation to ensure that you fully understand the prerequisites and impacts.
+     * &lt;props=&quot;china&quot;&gt;- After a Hologres instance is released, the data and objects in the instance cannot be recovered. Proceed with caution. For more information, see <a href="https://www.alibabacloud.com/help/en/hologres/product-overview/billing-overview">Billing overview</a>.
+     * &lt;props=&quot;intl&quot;&gt;- After a Hologres instance is released, the data and objects in the instance cannot be recovered. Proceed with caution. For more information, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview?spm=a2c63.p38356.0.0.efc33b87i5pDl7">Billing overview</a>.</p>
+     * </blockquote>
+     * <ul>
+     * <li>Only pay-as-you-go instances can be released.
+     * &lt;props=&quot;china&quot;&gt;- To unsubscribe from a subscription instance, go to the Unsubscription Management page in the Alibaba Cloud Management Console. For more information, see <a href="https://www.alibabacloud.com/help/en/hologres/product-overview/subscription">Unsubscribe from a subscription instance</a>.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DeleteWarehouseScheduleTask  DeleteWarehouseScheduleTaskRequest
      * @return DeleteWarehouseScheduleTaskResponse
      */
@@ -161,6 +184,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeTagsResponse> describeTags(DescribeTagsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Disables the OpenAPI SQL execution feature for a specified Hologres instance. After the feature is disabled, all ExecuteStatement calls return an error. You can call EnableExecuteStatement to re-enable it.</p>
+     * 
      * @param request the request parameters of DisableExecuteStatement  DisableExecuteStatementRequest
      * @return DisableExecuteStatementResponse
      */
@@ -185,6 +211,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DisableSSLResponse> disableSSL(DisableSSLRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Disables the OpenAPI SQL execution feature for a specified Hologres instance. After the feature is disabled, all ExecuteStatement calls return an error. You can call EnableExecuteStatement to re-enable it.</p>
+     * 
      * @param request the request parameters of DisableSupportAccount  DisableSupportAccountRequest
      * @return DisableSupportAccountResponse
      */
@@ -203,12 +232,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DiscardUpgradeResponse> discardUpgrade(DiscardUpgradeRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>删除实例内的用户。删除后该用户不能再登录实例，如需恢复请通过 CreateUser 重新添加。删除前需确认 userName：当前没有列举用户的 OpenAPI 接口，可通过 ExecuteStatement 执行 SELECT rolname FROM pg_roles 查询实例内已有角色，且不能删除当前发起调用的账号自身。</p>
+     * 
      * @param request the request parameters of DropUser  DropUserRequest
      * @return DropUserResponse
      */
     CompletableFuture<DropUserResponse> dropUser(DropUserRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Enables SQL execution via OpenAPI for a specified Hologres instance. Once enabled, RAM accounts with the <code>hologram:ExecuteStatement</code> permission can execute SQL statements by calling the <code>ExecuteStatement</code> API. To query the current status, call the <code>GetExecuteStatementEnabled</code> API. To disable the feature, call the <code>DisableExecuteStatement</code> API.</p>
+     * 
      * @param request the request parameters of EnableExecuteStatement  EnableExecuteStatementRequest
      * @return EnableExecuteStatementResponse
      */
@@ -227,6 +262,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<EnableSSLResponse> enableSSL(EnableSSLRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Enables the OpenAPI SQL execution feature for a specified Hologres instance. After the feature is enabled, RAM users that have the hologram:ExecuteStatement permission can execute SQL statements by calling the ExecuteStatement operation. You can call the GetExecuteStatementEnabled operation to query the current status and call the DisableExecuteStatement operation to disable the feature.</p>
+     * 
      * @param request the request parameters of EnableSupportAccount  EnableSupportAccountRequest
      * @return EnableSupportAccountResponse
      */
@@ -239,6 +277,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<EnableWarehouseAutoScaleResponse> enableWarehouseAutoScale(EnableWarehouseAutoScaleRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API is used to securely execute SQL statements on a Hologres instance by using OpenAPI.
+     *   Before you begin, meet the following conditions:</p>
+     * <ol>
+     * <li>On the instance details page in the console, turn on the Allow SQL Execution by Using OpenAPI switch in the Data Security section.</li>
+     * <li>The RAM user used to invoke the API has been granted the hologram:ExecuteStatement permission.
+     *   Statements such as SELECT, DDL, and DML are supported. The parameterized query feature with placeholders such as $1 and $2 is supported to prevent SQL injection. By default, a query returns a maximum of 200 rows (up to 1,000 rows) and 10 MB of data. Excess data is truncated, and the truncated field indicates the truncation. The timeout period for a single execution is 30 seconds.</li>
+     * </ol>
+     * 
      * @param request the request parameters of ExecuteStatement  ExecuteStatementRequest
      * @return ExecuteStatementResponse
      */
@@ -251,12 +298,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetCertificateAttributeResponse> getCertificateAttribute(GetCertificateAttributeRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This operation checks if the &quot;Allow SQL execution through OpenAPI&quot; feature is enabled for a specified Hologres instance. Returns <code>true</code> if the feature is enabled, and <code>false</code> otherwise. If enabled, you can call the <code>ExecuteStatement</code> operation to execute SQL statements.</p>
+     * 
      * @param request the request parameters of GetExecuteStatementEnabled  GetExecuteStatementEnabledRequest
      * @return GetExecuteStatementEnabledResponse
      */
     CompletableFuture<GetExecuteStatementEnabledResponse> getExecuteStatementEnabled(GetExecuteStatementEnabledRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Queries whether the feature that allows SQL execution through OpenAPI is enabled for a specified Hologres instance. A value of true indicates that the feature is enabled, and a value of false indicates that the feature is disabled. After the feature is enabled, you can execute SQL statements by calling the ExecuteStatement operation.</p>
+     * 
      * @param request the request parameters of GetHoloWebLoginSetting  GetHoloWebLoginSettingRequest
      * @return GetHoloWebLoginSettingResponse
      */
@@ -341,12 +394,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListDatabasesResponse> listDatabases(ListDatabasesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves a list of read-only secondary instances bound to a specified Hologres primary instance. instanceId is a path parameter and must be provided when you call this operation.</p>
+     * 
      * @param request the request parameters of ListFollowerInstances  ListFollowerInstancesRequest
      * @return ListFollowerInstancesResponse
      */
     CompletableFuture<ListFollowerInstancesResponse> listFollowerInstances(ListFollowerInstancesRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>Retrieves information about deployed model services on a specific Hologres instance, including but not limited to resource usage such as CPU, GPU, and memory.</li>
+     * <li>The <code>instanceId</code> parameter is optional. If not provided, the information of all related instances is returned by default.</li>
+     * <li>This operation applies to Hologres AI nodes. Some parameters may be invalid or inapplicable for non-AI nodes.</li>
+     * <li>Make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/113666.html">billing methods and pricing of Alibaba Cloud Hologres</a> before you call this operation.</li>
+     * </ul>
+     * 
      * @param request the request parameters of ListInstanceModel  ListInstanceModelRequest
      * @return ListInstanceModelResponse
      */
@@ -359,6 +424,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListInstancesResponse> listInstances(ListInstancesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves a list of primary instances that can be bound to a specified Hologres secondary instance. The <code>instanceId</code> parameter is a path parameter and is required.</p>
+     * 
      * @param request the request parameters of ListLeaderInstances  ListLeaderInstancesRequest
      * @return ListLeaderInstancesResponse
      */
@@ -395,6 +463,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListUpgradeReleaseVersionsResponse> listUpgradeReleaseVersions(ListUpgradeReleaseVersionsRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>This operation retrieves a list of elastic scaling events for compute groups of a specified instance.</li>
+     * <li>The <code>startTime</code> and <code>endTime</code> parameters specify the time range for the query. The default values are three days ago and the current time, respectively.</li>
+     * <li>The <code>pageSize</code> and <code>pageNumber</code> parameters are used for paging control. The maximum value of <code>pageSize</code> is 100.</li>
+     * <li>If the <code>elasticType</code> parameter is not provided, elastic scaling events of all types are returned.</li>
+     * </ul>
+     * 
      * @param request the request parameters of ListWarehouseScheduleEvent  ListWarehouseScheduleEventRequest
      * @return ListWarehouseScheduleEventResponse
      */
@@ -407,6 +484,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListWarehouseScheduleTaskResponse> listWarehouseScheduleTask(ListWarehouseScheduleTaskRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>获取指定计算组型实例下的计算组列表。instanceId 需为计算组型（InstanceType 为 Warehouse）实例，可通过 ListInstances 查询获取。返回结果中的 Name 为计算组名称、Status 为计算组状态（如 kRunning 表示运行中），可用于 RestartHoloWarehouse、SuspendHoloWarehouse 等接口。</p>
+     * 
      * @param request the request parameters of ListWarehouses  ListWarehousesRequest
      * @return ListWarehousesResponse
      */
@@ -439,12 +519,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.</p>
+     * <p>Warning: This API operation incurs fees. Make sure that you fully understand the billing methods and pricing of Hologres before you call this operation.</warning>
+     * &lt;props=&quot;china&quot;&gt;- For more information about Hologres billing, see <a href="https://www.alibabacloud.com/help/en/hologres/product-overview/billing-overview">Billing overview</a>.
+     * &lt;props=&quot;intl&quot;&gt;- For more information about Hologres billing, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview">Billing overview</a>.
+     * &lt;props=&quot;china&quot;&gt;- For more information about Hologres renewal, see <a href="https://www.alibabacloud.com/help/en/hologres/product-overview/manage-renewals">Renewal management</a>.
+     * &lt;props=&quot;intl&quot;&gt;- For more information about Hologres renewal, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/manage-renewals?spm=a2c63.p38356.0.0.38e731c9VAwtDP">Renewal management</a>.</p>
      * </blockquote>
      * <ul>
-     * <li>For more information about the billing of Hologres, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview">Billing overview</a>.</li>
-     * <li>For more information about how to renew a Hologres instance, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/manage-renewals?spm=a2c63.p38356.0.0.38e731c9VAwtDP">Manage renewals</a>.</li>
-     * <li>You can renew only subscription instances.</li>
+     * <li>Renewal applies only to subscription (PrePaid) instances.</li>
      * </ul>
      * 
      * @param request the request parameters of RenewInstance  RenewInstanceRequest
@@ -459,6 +541,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RenewSSLCertificateResponse> renewSSLCertificate(RenewSSLCertificateRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>重启指定计算组。前置条件：实例处于运行中（Running）状态，可通过 GetInstance 查询 InstanceStatus；计算组处于运行中状态（kRunning），可通过 ListWarehouses 查询 Status 获取计算组名称和当前状态。调用需要实例的 Superuser 权限，重启为异步操作，调用后可再次通过 ListWarehouses 轮询 Status 确认是否完成。</p>
+     * 
      * @param request the request parameters of RestartHoloWarehouse  RestartHoloWarehouseRequest
      * @return RestartHoloWarehouseResponse
      */
@@ -509,12 +594,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.</p>
+     * <p>Warning: This API operation incurs fees. Make sure that you fully understand the billing methods and pricing of Hologres before you call this operation.
+     * &lt;props=&quot;china&quot;&gt;- For more information about Hologres billing, see <a href="https://www.alibabacloud.com/help/en/hologres/product-overview/billing-overview">Billing overview</a>.
+     * &lt;props=&quot;intl&quot;&gt;- For more information about Hologres billing, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview">Billing overview</a>.
+     * &lt;props=&quot;china&quot;&gt;- The instance is unavailable while its compute resources are being changed. Changing instance storage resources of the instance does not affect its normal use. Do not change instance specifications frequently. For more information, see <a href="https://www.alibabacloud.com/help/en/hologres/product-overview/upgrade-or-downgrade-instance-specifications">Upgrade or downgrade instance specifications</a>.
+     * &lt;props=&quot;intl&quot;&gt;- The instance is unavailable while its compute resources are being changed. Changing instance storage resources of the instance does not affect its normal use. Do not change instance specifications frequently. For more information, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/upgrade-or-downgrade-instance-specifications">Upgrade or downgrade instance specifications</a>.</p>
      * </blockquote>
-     * <ul>
-     * <li>For more information about the billing of Hologres, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview">Billing overview</a>.</li>
-     * <li>During the change of computing resource specifications of a Hologres instance, the instance is unavailable. During the change of storage resource specifications of a Hologres instance, the instance can work normally. Do not frequently change instance specifications. For more information, see <a href="https://www.alibabacloud.com/help/en/hologres/product-overview/upgrade-or-downgrade-instance-specifications">Upgrade or downgrade instance specifications</a>.</li>
-     * </ul>
      * 
      * @param request the request parameters of ScaleInstance  ScaleInstanceRequest
      * @return ScaleInstanceResponse
@@ -528,6 +613,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StopInstanceResponse> stopInstance(StopInstanceRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>停止指定计算组。前置条件：instanceId 为计算组型（InstanceType 为 Warehouse）且处于运行中状态的实例，可通过 ListInstances 获取；name 为 ListWarehouses 返回的计算组名称，该计算组需处于运行中状态（kRunning）。若该计算组是 Table Group 的主计算组且存在从计算组，则无法停止。调用需要实例的 Superuser 权限，停止为异步操作。</p>
+     * 
      * @param request the request parameters of SuspendHoloWarehouse  SuspendHoloWarehouseRequest
      * @return SuspendHoloWarehouseResponse
      */
@@ -564,6 +652,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateBackupDataDescResponse> updateBackupDataDesc(UpdateBackupDataDescRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Model creation for a model service requires a large number of parameters. If you are performing model creation for a Model Studio model, invoke ListModelCatalog to query model parameters. If you are using a Hologres AI node, invoke GetAvailableModelsResource to query model parameters.</p>
+     * 
      * @param request the request parameters of UpdateHoloWebLoginSetting  UpdateHoloWebLoginSettingRequest
      * @return UpdateHoloWebLoginSettingResponse
      */
@@ -612,6 +703,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateScheduledBackupConfigResponse> updateScheduledBackupConfig(UpdateScheduledBackupConfigRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>更新计算组分时弹性计划。前置条件：instanceId 对应实例需处于运行中（Running）状态，可通过 GetInstance 查询 InstanceStatus；warehouseId 可通过 ListWarehouses 查询返回的 Id 获取。</p>
+     * 
      * @param request the request parameters of UpdateWarehouseScheduleTask  UpdateWarehouseScheduleTaskRequest
      * @return UpdateWarehouseScheduleTaskResponse
      */

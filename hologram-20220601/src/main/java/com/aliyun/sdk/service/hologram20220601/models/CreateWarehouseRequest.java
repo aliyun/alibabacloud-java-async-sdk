@@ -151,7 +151,7 @@ public class CreateWarehouseRequest extends Request {
         }
 
         /**
-         * <p>The number of vCPUs.</p>
+         * <p>The number of CPU cores.</p>
          * 
          * <strong>example:</strong>
          * <p>32</p>
@@ -163,7 +163,7 @@ public class CreateWarehouseRequest extends Request {
         }
 
         /**
-         * <p>The name of the virtual warehouse.</p>
+         * <p>The name of the warehouse.</p>
          * 
          * <strong>example:</strong>
          * <p>warehouse-test</p>

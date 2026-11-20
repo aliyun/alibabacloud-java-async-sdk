@@ -73,7 +73,10 @@ public class ListDatabasesRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hgpostcn-cn-jfj3zckut008</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -82,7 +85,10 @@ public class ListDatabasesRequest extends Request {
         }
 
         /**
-         * external.
+         * <p>Specifies whether to list foreign tables separately. Valid values: true: yes, false or null: no.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder external(Boolean external) {
             this.putQueryParameter("external", external);

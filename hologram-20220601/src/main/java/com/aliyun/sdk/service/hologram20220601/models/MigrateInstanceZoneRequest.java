@@ -73,7 +73,10 @@ public class MigrateInstanceZoneRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hgprecn-cn-i7m2v08uxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -82,7 +85,10 @@ public class MigrateInstanceZoneRequest extends Request {
         }
 
         /**
-         * zoneId.
+         * <p>The destination zone. Call ListMigrationZones to verify that the destination zone meets the migration conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
          */
         public Builder zoneId(String zoneId) {
             this.putBodyParameter("zoneId", zoneId);

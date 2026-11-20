@@ -67,7 +67,14 @@ public class DeleteWarehouseScheduleTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>Indicates whether the operation was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The operation was successful.</li>
+         * <li>false: The operation failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;

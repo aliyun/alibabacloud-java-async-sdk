@@ -288,7 +288,10 @@ public class GetInstanceModelResponseBody extends TeaModel {
         } 
 
         /**
-         * aiInstanceId.
+         * <p>The ID of the AI node instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hologram_aicombo_public_cn-77xxx</p>
          */
         public Builder aiInstanceId(String aiInstanceId) {
             this.aiInstanceId = aiInstanceId;
@@ -296,7 +299,14 @@ public class GetInstanceModelResponseBody extends TeaModel {
         }
 
         /**
-         * autoRenewal.
+         * <p>Specifies whether auto-renewal is enabled for the resource. Valid values:</p>
+         * <ul>
+         * <li>true: Auto-renewal is enabled. The resource is automatically renewed upon expiration.</li>
+         * <li>false: Auto-renewal is disabled. The resource is stopped upon expiration.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoRenewal(Boolean autoRenewal) {
             this.autoRenewal = autoRenewal;
@@ -304,7 +314,14 @@ public class GetInstanceModelResponseBody extends TeaModel {
         }
 
         /**
-         * chargeType.
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li>PrePaid: subscription.</li>
+         * <li>PostPaid: pay-as-you-go.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
          */
         public Builder chargeType(String chargeType) {
             this.chargeType = chargeType;
@@ -312,7 +329,10 @@ public class GetInstanceModelResponseBody extends TeaModel {
         }
 
         /**
-         * commodityCode.
+         * <p>The commodity code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hologram_aipostpay_public_cn</p>
          */
         public Builder commodityCode(String commodityCode) {
             this.commodityCode = commodityCode;
@@ -320,7 +340,10 @@ public class GetInstanceModelResponseBody extends TeaModel {
         }
 
         /**
-         * cpu.
+         * <p>The total CPU of the node. This parameter is applicable only to Hologres AI nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32</p>
          */
         public Builder cpu(Long cpu) {
             this.cpu = cpu;
@@ -328,7 +351,10 @@ public class GetInstanceModelResponseBody extends TeaModel {
         }
 
         /**
-         * cpuUsed.
+         * <p>The total CPU used by the node. This parameter is applicable only to Hologres AI nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32</p>
          */
         public Builder cpuUsed(Long cpuUsed) {
             this.cpuUsed = cpuUsed;
@@ -336,7 +362,10 @@ public class GetInstanceModelResponseBody extends TeaModel {
         }
 
         /**
-         * expirationTime.
+         * <p>The expiration time in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-01-28T07:44:27.535Z</p>
          */
         public Builder expirationTime(String expirationTime) {
             this.expirationTime = expirationTime;
@@ -344,7 +373,10 @@ public class GetInstanceModelResponseBody extends TeaModel {
         }
 
         /**
-         * gpu.
+         * <p>The total GPU of the node. This parameter is applicable only to Hologres AI nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder gpu(Long gpu) {
             this.gpu = gpu;
@@ -352,7 +384,10 @@ public class GetInstanceModelResponseBody extends TeaModel {
         }
 
         /**
-         * gpuMemory.
+         * <p>The total GPU memory of the node. This parameter is applicable only to Hologres AI nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>128</p>
          */
         public Builder gpuMemory(Long gpuMemory) {
             this.gpuMemory = gpuMemory;
@@ -360,7 +395,10 @@ public class GetInstanceModelResponseBody extends TeaModel {
         }
 
         /**
-         * gpuMemoryUsed.
+         * <p>The total GPU memory used by the node. This parameter is applicable only to Hologres AI nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>64</p>
          */
         public Builder gpuMemoryUsed(Long gpuMemoryUsed) {
             this.gpuMemoryUsed = gpuMemoryUsed;
@@ -368,7 +406,10 @@ public class GetInstanceModelResponseBody extends TeaModel {
         }
 
         /**
-         * gpuUsed.
+         * <p>The total GPU used by the node. This parameter is applicable only to Hologres AI nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder gpuUsed(Long gpuUsed) {
             this.gpuUsed = gpuUsed;
@@ -376,7 +417,10 @@ public class GetInstanceModelResponseBody extends TeaModel {
         }
 
         /**
-         * memory.
+         * <p>The total memory of the node. This parameter is applicable only to Hologres AI nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>128</p>
          */
         public Builder memory(Long memory) {
             this.memory = memory;
@@ -384,7 +428,10 @@ public class GetInstanceModelResponseBody extends TeaModel {
         }
 
         /**
-         * memoryUsed.
+         * <p>The total memory used by the node. This parameter is applicable only to Hologres AI nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>64</p>
          */
         public Builder memoryUsed(Long memoryUsed) {
             this.memoryUsed = memoryUsed;
@@ -392,7 +439,7 @@ public class GetInstanceModelResponseBody extends TeaModel {
         }
 
         /**
-         * modelServiceList.
+         * <p>The list of model services.</p>
          */
         public Builder modelServiceList(java.util.List<ModelServiceList> modelServiceList) {
             this.modelServiceList = modelServiceList;
@@ -400,7 +447,10 @@ public class GetInstanceModelResponseBody extends TeaModel {
         }
 
         /**
-         * nodeCount.
+         * <p>The number of nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder nodeCount(Long nodeCount) {
             this.nodeCount = nodeCount;
@@ -408,7 +458,10 @@ public class GetInstanceModelResponseBody extends TeaModel {
         }
 
         /**
-         * regionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -427,7 +480,10 @@ public class GetInstanceModelResponseBody extends TeaModel {
         }
 
         /**
-         * resourceType.
+         * <p>The resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>middle</p>
          */
         public Builder resourceType(String resourceType) {
             this.resourceType = resourceType;
@@ -435,7 +491,10 @@ public class GetInstanceModelResponseBody extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The node status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ResourceReady</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -696,7 +755,10 @@ public class GetInstanceModelResponseBody extends TeaModel {
             } 
 
             /**
-             * apiKey.
+             * <p>The Model Studio API key. This key is for display purposes only and cannot be used directly.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sk-42f6c8xxxxxb</p>
              */
             public Builder apiKey(String apiKey) {
                 this.apiKey = apiKey;
@@ -704,7 +766,10 @@ public class GetInstanceModelResponseBody extends TeaModel {
             }
 
             /**
-             * cpu.
+             * <p>The CPU occupied by this model service. This parameter is applicable only to Hologres AI nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder cpu(Long cpu) {
                 this.cpu = cpu;
@@ -712,7 +777,10 @@ public class GetInstanceModelResponseBody extends TeaModel {
             }
 
             /**
-             * gpu.
+             * <p>The GPU occupied by this model service. This parameter is applicable only to Hologres AI nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder gpu(Long gpu) {
                 this.gpu = gpu;
@@ -720,7 +788,10 @@ public class GetInstanceModelResponseBody extends TeaModel {
             }
 
             /**
-             * gpuMemory.
+             * <p>The GPU memory occupied by this model service. This parameter is applicable only to Hologres AI nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder gpuMemory(Long gpuMemory) {
                 this.gpuMemory = gpuMemory;
@@ -728,7 +799,10 @@ public class GetInstanceModelResponseBody extends TeaModel {
             }
 
             /**
-             * instanceRegion.
+             * <p>The deployment region of the AI node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder instanceRegion(String instanceRegion) {
                 this.instanceRegion = instanceRegion;
@@ -736,7 +810,10 @@ public class GetInstanceModelResponseBody extends TeaModel {
             }
 
             /**
-             * memory.
+             * <p>The memory occupied by this model service. This parameter is applicable only to Hologres AI nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder memory(Long memory) {
                 this.memory = memory;
@@ -744,7 +821,10 @@ public class GetInstanceModelResponseBody extends TeaModel {
             }
 
             /**
-             * message.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Failed</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -752,7 +832,10 @@ public class GetInstanceModelResponseBody extends TeaModel {
             }
 
             /**
-             * modelName.
+             * <p>The custom name of the model service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my_model</p>
              */
             public Builder modelName(String modelName) {
                 this.modelName = modelName;
@@ -760,7 +843,10 @@ public class GetInstanceModelResponseBody extends TeaModel {
             }
 
             /**
-             * modelParams.
+             * <p>The model parameters. This parameter is applicable only to Model Studio models.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;timeout&quot;:600,&quot;max_retries&quot;:10,&quot;max_retry_delay&quot;:8,&quot;initial_retry_delay&quot;:0.5}</p>
              */
             public Builder modelParams(String modelParams) {
                 this.modelParams = modelParams;
@@ -768,7 +854,10 @@ public class GetInstanceModelResponseBody extends TeaModel {
             }
 
             /**
-             * modelType.
+             * <p>The model name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen3.5-plus</p>
              */
             public Builder modelType(String modelType) {
                 this.modelType = modelType;
@@ -776,7 +865,10 @@ public class GetInstanceModelResponseBody extends TeaModel {
             }
 
             /**
-             * provider.
+             * <p>The underlying model provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bailian</p>
              */
             public Builder provider(String provider) {
                 this.provider = provider;
@@ -784,7 +876,10 @@ public class GetInstanceModelResponseBody extends TeaModel {
             }
 
             /**
-             * serviceCount.
+             * <p>The number of service replicas. This parameter is applicable only to Hologres AI nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder serviceCount(Long serviceCount) {
                 this.serviceCount = serviceCount;
@@ -792,7 +887,10 @@ public class GetInstanceModelResponseBody extends TeaModel {
             }
 
             /**
-             * serviceDeployRegion.
+             * <p>The deployment region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder serviceDeployRegion(String serviceDeployRegion) {
                 this.serviceDeployRegion = serviceDeployRegion;
@@ -800,7 +898,10 @@ public class GetInstanceModelResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -808,7 +909,10 @@ public class GetInstanceModelResponseBody extends TeaModel {
             }
 
             /**
-             * supportApiKeyAccess.
+             * <p>Specifies whether the model service supports access through an API key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder supportApiKeyAccess(Boolean supportApiKeyAccess) {
                 this.supportApiKeyAccess = supportApiKeyAccess;
@@ -816,7 +920,10 @@ public class GetInstanceModelResponseBody extends TeaModel {
             }
 
             /**
-             * taskType.
+             * <p>The model purpose.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>embedding</p>
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;
@@ -824,7 +931,10 @@ public class GetInstanceModelResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>The version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1.1</p>
              */
             public Builder version(String version) {
                 this.version = version;

@@ -119,7 +119,7 @@ public class GetHoloWebLoginSettingResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>true: Success. false: Failure.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,7 +127,10 @@ public class GetHoloWebLoginSettingResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -135,7 +138,10 @@ public class GetHoloWebLoginSettingResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -143,7 +149,10 @@ public class GetHoloWebLoginSettingResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -162,7 +171,10 @@ public class GetHoloWebLoginSettingResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>The request result. Indicates whether an exception occurred during the request. This parameter is unrelated to the business logic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -215,7 +227,10 @@ public class GetHoloWebLoginSettingResponseBody extends TeaModel {
             } 
 
             /**
-             * AllowExternalAccountsLogin.
+             * <p>Indicates whether external accounts are allowed to log on.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder allowExternalAccountsLogin(Boolean allowExternalAccountsLogin) {
                 this.allowExternalAccountsLogin = allowExternalAccountsLogin;

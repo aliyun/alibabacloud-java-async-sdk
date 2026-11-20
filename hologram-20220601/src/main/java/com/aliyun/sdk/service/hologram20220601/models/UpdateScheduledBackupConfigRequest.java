@@ -185,7 +185,10 @@ public class UpdateScheduledBackupConfigRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -194,7 +197,10 @@ public class UpdateScheduledBackupConfigRequest extends Request {
         }
 
         /**
-         * dataKeepQuantity.
+         * <p>The number of periodic backups to retain. For example, if you set this parameter to 3, the system automatically retains the latest three backups and deletes other expired backups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder dataKeepQuantity(Integer dataKeepQuantity) {
             this.putBodyParameter("dataKeepQuantity", dataKeepQuantity);
@@ -203,7 +209,10 @@ public class UpdateScheduledBackupConfigRequest extends Request {
         }
 
         /**
-         * dstRegion.
+         * <p>The destination region for backups. This parameter takes effect only for remote backups. You can back up data from the local region to another region to implement cross-region disaster recovery. For example, you can back up an instance in Hangzhou to Beijing.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder dstRegion(String dstRegion) {
             this.putBodyParameter("dstRegion", dstRegion);
@@ -212,7 +221,14 @@ public class UpdateScheduledBackupConfigRequest extends Request {
         }
 
         /**
-         * enabled.
+         * <p>Specifies whether to enable periodic backup. Valid values:</p>
+         * <ul>
+         * <li>true: Periodic backup is enabled.</li>
+         * <li>false: Periodic backup is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enabled(Boolean enabled) {
             this.putBodyParameter("enabled", enabled);
@@ -221,7 +237,10 @@ public class UpdateScheduledBackupConfigRequest extends Request {
         }
 
         /**
-         * hour.
+         * <p>The start time for backup dates. The backup task starts at this time. The time applies to all valid dates. For example, if week is set to 1,3,5 and hour is set to 20, backups start at 20:00:00 every Monday, Wednesday, and Friday.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder hour(Integer hour) {
             this.putBodyParameter("hour", hour);
@@ -230,7 +249,10 @@ public class UpdateScheduledBackupConfigRequest extends Request {
         }
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hgprecn-cn-zvp25ysxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("instanceId", instanceId);
@@ -239,7 +261,10 @@ public class UpdateScheduledBackupConfigRequest extends Request {
         }
 
         /**
-         * manualDataKeepQuantity.
+         * <p>The number of manual backups to retain. Manual backups and automatic backups are stored separately, and each has a completely independent data retention policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder manualDataKeepQuantity(Integer manualDataKeepQuantity) {
             this.putBodyParameter("manualDataKeepQuantity", manualDataKeepQuantity);
@@ -248,7 +273,10 @@ public class UpdateScheduledBackupConfigRequest extends Request {
         }
 
         /**
-         * scheduleType.
+         * <p>The backup type. You need to configure this field only for remote backups. You can ignore this field for other backup types.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>remote</p>
          */
         public Builder scheduleType(String scheduleType) {
             this.putBodyParameter("scheduleType", scheduleType);
@@ -257,7 +285,10 @@ public class UpdateScheduledBackupConfigRequest extends Request {
         }
 
         /**
-         * week.
+         * <p>The weekly configuration for backup dates. You can specify multiple days separated by commas. For example, to configure Monday, Wednesday, and Friday, set the value to &quot;1,3,5&quot;.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1,3,5</p>
          */
         public Builder week(String week) {
             this.putBodyParameter("week", week);
@@ -266,7 +297,10 @@ public class UpdateScheduledBackupConfigRequest extends Request {
         }
 
         /**
-         * zoneId.
+         * <p>The destination zone for backups. This parameter takes effect only for remote backups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing-i</p>
          */
         public Builder zoneId(String zoneId) {
             this.putBodyParameter("zoneId", zoneId);

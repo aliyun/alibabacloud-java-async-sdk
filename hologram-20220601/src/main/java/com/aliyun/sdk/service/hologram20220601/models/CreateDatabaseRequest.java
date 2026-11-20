@@ -87,7 +87,10 @@ public class CreateDatabaseRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * <p>The ID of the Hologres instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hgpostcn-cn-aic4onkyn002</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -96,7 +99,10 @@ public class CreateDatabaseRequest extends Request {
         }
 
         /**
-         * databaseName.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_db</p>
          */
         public Builder databaseName(String databaseName) {
             this.putBodyParameter("databaseName", databaseName);
@@ -105,7 +111,10 @@ public class CreateDatabaseRequest extends Request {
         }
 
         /**
-         * permissionModel.
+         * <p>The permission model. For more information, see <a href="https://www.alibabacloud.com/help/en/hologres/security-and-compliance/hologres-permission-model/">Hologres permission model</a>. Default value: Standard.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SPM</p>
          */
         public Builder permissionModel(String permissionModel) {
             this.putBodyParameter("permissionModel", permissionModel);

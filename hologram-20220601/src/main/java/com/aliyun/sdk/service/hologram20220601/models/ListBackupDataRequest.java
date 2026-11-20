@@ -73,16 +73,7 @@ public class ListBackupDataRequest extends Request {
         } 
 
         /**
-         * <p>The backup type. Specific backup data is filtered based on the type. If you leave this parameter empty, all backup data is returned.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>redundant_remote</li>
-         * <li>remote</li>
-         * <li>redundant</li>
-         * <li>full_remote</li>
-         * <li>local</li>
-         * <li>full</li>
-         * </ul>
+         * <p>The backup type. Filters specific backup data by type. If this parameter is left empty, all backup data is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>redundant</p>

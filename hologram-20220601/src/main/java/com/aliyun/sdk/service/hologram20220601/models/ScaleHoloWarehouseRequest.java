@@ -117,7 +117,10 @@ public class ScaleHoloWarehouseRequest extends Request {
         }
 
         /**
-         * clusterCount.
+         * <p>The number of clusters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder clusterCount(Long clusterCount) {
             this.putBodyParameter("clusterCount", clusterCount);
@@ -126,7 +129,7 @@ public class ScaleHoloWarehouseRequest extends Request {
         }
 
         /**
-         * <p>The specifications of the virtual warehouse. The number of vCPUs must be an integer multiple of 16.</p>
+         * <p>The specifications of the compute group. The value must be a multiple of 16.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,7 +142,7 @@ public class ScaleHoloWarehouseRequest extends Request {
         }
 
         /**
-         * <p>The name of the virtual warehouse.</p>
+         * <p>The name of the compute group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

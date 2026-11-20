@@ -59,7 +59,10 @@ public class EnableSSLRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * <p>The instance ID. This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hgpostcn-cn-7mz2vmu30003</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);

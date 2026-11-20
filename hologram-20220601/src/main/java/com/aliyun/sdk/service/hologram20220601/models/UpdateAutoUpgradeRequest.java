@@ -73,7 +73,10 @@ public class UpdateAutoUpgradeRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hgprecn-cn-wwoxxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -82,7 +85,14 @@ public class UpdateAutoUpgradeRequest extends Request {
         }
 
         /**
-         * autoUpgrade.
+         * <p>The upgrade type. Valid values:</p>
+         * <ul>
+         * <li>auto: Enables automatic minor version upgrades.</li>
+         * <li>manual: Manual upgrade.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>auto</p>
          */
         public Builder autoUpgrade(String autoUpgrade) {
             this.putBodyParameter("autoUpgrade", autoUpgrade);

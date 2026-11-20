@@ -67,7 +67,14 @@ public class UpdateWarehouseScheduleTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request is successful.</li>
+         * <li>false: The request fails.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;

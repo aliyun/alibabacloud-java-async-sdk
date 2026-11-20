@@ -88,7 +88,7 @@ public class DeleteHoloWarehouseRequest extends Request {
         }
 
         /**
-         * <p>The name of the virtual warehouse.</p>
+         * <p>The name of the compute group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

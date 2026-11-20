@@ -106,7 +106,7 @@ public class CreateWarehouseResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether the virtual warehouse was created. Valid values: true and false.</p>
+         * <p>The returned result. A value of true indicates that the warehouse was created successfully. A value of false indicates that the creation failed.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -139,7 +139,7 @@ public class CreateWarehouseResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>2A8DEF6E-067E-5DB0-BAE1-2894266E6C6A</p>
@@ -150,12 +150,7 @@ public class CreateWarehouseResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. The request result is irrelevant to the business.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
+         * <p>The request result, which is independent of the business logic.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

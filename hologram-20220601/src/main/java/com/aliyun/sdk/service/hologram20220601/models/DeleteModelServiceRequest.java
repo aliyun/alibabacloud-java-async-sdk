@@ -74,6 +74,7 @@ public class DeleteModelServiceRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,10 @@ public class DeleteModelServiceRequest extends Request {
         }
 
         /**
-         * modelServiceName.
+         * <p>The custom service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>model-qwen</p>
          */
         public Builder modelServiceName(String modelServiceName) {
             this.putQueryParameter("modelServiceName", modelServiceName);

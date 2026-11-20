@@ -67,7 +67,10 @@ public class DisableWarehouseAutoScaleResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>Indicates whether the operation is successful. Valid values: true: Successful. false: Failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;

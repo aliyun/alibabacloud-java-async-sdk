@@ -119,7 +119,7 @@ public class EnableExecuteStatementResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The result of the operation, where <code>true</code> indicates success and <code>false</code> indicates failure.</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -127,7 +127,10 @@ public class EnableExecuteStatementResponseBody extends TeaModel {
         }
 
         /**
-         * errorCode.
+         * <p>The error code returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParameterValue</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -135,7 +138,10 @@ public class EnableExecuteStatementResponseBody extends TeaModel {
         }
 
         /**
-         * errorMessage.
+         * <p>The error message returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>错误信息示例</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -143,7 +149,10 @@ public class EnableExecuteStatementResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +160,10 @@ public class EnableExecuteStatementResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E3F4B2A7-1234-5678-9ABC-DEF012345678</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,7 @@ public class EnableExecuteStatementResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the API call was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

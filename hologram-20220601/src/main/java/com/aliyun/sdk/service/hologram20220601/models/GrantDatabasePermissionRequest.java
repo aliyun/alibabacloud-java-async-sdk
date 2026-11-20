@@ -101,7 +101,10 @@ public class GrantDatabasePermissionRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hgpostcn-cn-zpr3426vm002</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -110,7 +113,10 @@ public class GrantDatabasePermissionRequest extends Request {
         }
 
         /**
-         * databaseName.
+         * <p>The database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_db</p>
          */
         public Builder databaseName(String databaseName) {
             this.putBodyParameter("databaseName", databaseName);
@@ -119,7 +125,7 @@ public class GrantDatabasePermissionRequest extends Request {
         }
 
         /**
-         * privileges.
+         * <p>The list of permissions.</p>
          */
         public Builder privileges(java.util.List<String> privileges) {
             this.putBodyParameter("privileges", privileges);
@@ -128,7 +134,10 @@ public class GrantDatabasePermissionRequest extends Request {
         }
 
         /**
-         * userName.
+         * <p>The user ID. For more information, see <a href="https://help.aliyun.com/document_detail/130393.html">Hologres account overview</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>p4_123444xxx</p>
          */
         public Builder userName(String userName) {
             this.putBodyParameter("userName", userName);

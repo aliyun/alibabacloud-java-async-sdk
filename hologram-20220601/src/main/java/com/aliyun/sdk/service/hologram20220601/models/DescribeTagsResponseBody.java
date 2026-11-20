@@ -119,7 +119,10 @@ public class DescribeTagsResponseBody extends TeaModel {
         } 
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>404</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -127,7 +130,10 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Internal server error.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -135,7 +141,10 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -154,7 +163,10 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful, regardless of the business result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -162,7 +174,7 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
 
         /**
-         * TagResources.
+         * <p>The resource collection.</p>
          */
         public Builder tagResources(java.util.List<TagResources> tagResources) {
             this.tagResources = tagResources;
@@ -254,7 +266,10 @@ public class DescribeTagsResponseBody extends TeaModel {
             } 
 
             /**
-             * ResourceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hgprecn-cn-0ju2uaanj001</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -262,7 +277,10 @@ public class DescribeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Instance</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -270,7 +288,10 @@ public class DescribeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * TagKey.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:rm:rgId</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -278,7 +299,7 @@ public class DescribeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * <p>The collection of all tag values under the same tag key.</p>
              */
             public Builder tagValue(java.util.List<String> tagValue) {
                 this.tagValue = tagValue;

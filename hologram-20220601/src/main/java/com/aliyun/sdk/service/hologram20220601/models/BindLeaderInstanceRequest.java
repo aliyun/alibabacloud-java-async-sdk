@@ -87,7 +87,10 @@ public class BindLeaderInstanceRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hgpostcn-cn-uqm3316l1004</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -96,7 +99,10 @@ public class BindLeaderInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -105,7 +111,10 @@ public class BindLeaderInstanceRequest extends Request {
         }
 
         /**
-         * leaderInstanceId.
+         * <p>The leader instance ID. The region ID, zone ID, and version of the follower instance must be the same as those of the leader instance. Select the leader instance ID from the list of instances returned by the ListFollowerInstances operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hgpostcn-cn-uqm3316l1004</p>
          */
         public Builder leaderInstanceId(String leaderInstanceId) {
             this.putBodyParameter("leaderInstanceId", leaderInstanceId);

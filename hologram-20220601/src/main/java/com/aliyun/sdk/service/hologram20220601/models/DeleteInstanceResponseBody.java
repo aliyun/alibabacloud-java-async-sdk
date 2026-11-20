@@ -119,23 +119,7 @@ public class DeleteInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned result, which indicates whether the request was successful.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>true</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>false</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
+         * <p>The returned result.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -146,7 +130,7 @@ public class DeleteInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -157,7 +141,7 @@ public class DeleteInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -168,7 +152,7 @@ public class DeleteInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status Code</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -179,7 +163,7 @@ public class DeleteInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>CB13FFDD-2DF8-5396-A848-2D6A31245B6D</p>
@@ -190,7 +174,7 @@ public class DeleteInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful.</p>
+         * <p>Indicates whether the call is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

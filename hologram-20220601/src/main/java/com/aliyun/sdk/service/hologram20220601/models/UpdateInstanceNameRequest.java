@@ -85,7 +85,7 @@ public class UpdateInstanceNameRequest extends Request {
         }
 
         /**
-         * <p>The new name of the instance. The name must be 2 to 64 characters in length.</p>
+         * <p>The new instance name. The name must be 2 to 64 characters in length. Each Chinese character or letter counts as one character.</p>
          * 
          * <strong>example:</strong>
          * <p>new_name</p>

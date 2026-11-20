@@ -131,6 +131,7 @@ public class UpdateWarehouseScheduleTaskRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,7 +144,10 @@ public class UpdateWarehouseScheduleTaskRequest extends Request {
         }
 
         /**
-         * elasticCu.
+         * <p>The number of CPU cores to scale out. The value must be a multiple of 16, greater than or equal to 16, and less than or equal to the specifications of the current compute group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32</p>
          */
         public Builder elasticCu(Long elasticCu) {
             this.putBodyParameter("elasticCu", elasticCu);
@@ -152,7 +156,10 @@ public class UpdateWarehouseScheduleTaskRequest extends Request {
         }
 
         /**
-         * endTime.
+         * <p>The end time. The format is HHmm (four digits, 24-hour clock). The time must be on the hour or half hour, such as 0030, 0100, or 0400. The end time must be later than the start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0400</p>
          */
         public Builder endTime(String endTime) {
             this.putBodyParameter("endTime", endTime);
@@ -161,7 +168,10 @@ public class UpdateWarehouseScheduleTaskRequest extends Request {
         }
 
         /**
-         * id.
+         * <p>The elastic plan ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1980869072412614657</p>
          */
         public Builder id(String id) {
             this.putBodyParameter("id", id);
@@ -170,7 +180,10 @@ public class UpdateWarehouseScheduleTaskRequest extends Request {
         }
 
         /**
-         * startTime.
+         * <p>The start time. The format is HHmm (four digits, 24-hour clock). The time must be on the hour or half hour, such as 0030, 0100, or 0400.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0200</p>
          */
         public Builder startTime(String startTime) {
             this.putBodyParameter("startTime", startTime);
@@ -179,6 +192,7 @@ public class UpdateWarehouseScheduleTaskRequest extends Request {
         }
 
         /**
+         * <p>The compute group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

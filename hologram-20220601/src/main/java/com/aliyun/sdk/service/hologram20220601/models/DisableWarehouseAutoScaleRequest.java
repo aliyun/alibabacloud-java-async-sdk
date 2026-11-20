@@ -73,7 +73,10 @@ public class DisableWarehouseAutoScaleRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hgprecn-cn-i7m2v08xxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -82,7 +85,10 @@ public class DisableWarehouseAutoScaleRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The name of the compute group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_warehouse</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);

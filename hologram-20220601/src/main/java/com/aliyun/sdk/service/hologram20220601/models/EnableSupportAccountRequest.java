@@ -115,7 +115,10 @@ public class EnableSupportAccountRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hgpostcn-cn-7mz2vmu30003</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -124,7 +127,10 @@ public class EnableSupportAccountRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -133,7 +139,10 @@ public class EnableSupportAccountRequest extends Request {
         }
 
         /**
-         * enabled.
+         * <p><strong>[Deprecated]</strong> The deprecated parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enabled(Boolean enabled) {
             this.putBodyParameter("enabled", enabled);
@@ -142,7 +151,10 @@ public class EnableSupportAccountRequest extends Request {
         }
 
         /**
-         * expireTime.
+         * <p>The expiration time. Format: YYYY-MM-DD HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-03-24 11:19:05</p>
          */
         public Builder expireTime(String expireTime) {
             this.putBodyParameter("expireTime", expireTime);
@@ -151,7 +163,10 @@ public class EnableSupportAccountRequest extends Request {
         }
 
         /**
-         * password.
+         * <p>The password.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
          */
         public Builder password(String password) {
             this.putBodyParameter("password", password);

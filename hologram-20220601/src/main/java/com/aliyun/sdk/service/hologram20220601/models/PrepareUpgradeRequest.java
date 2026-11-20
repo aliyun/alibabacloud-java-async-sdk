@@ -101,7 +101,10 @@ public class PrepareUpgradeRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hgpostcn-cn-nwy3e6yxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -110,7 +113,10 @@ public class PrepareUpgradeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -119,7 +125,10 @@ public class PrepareUpgradeRequest extends Request {
         }
 
         /**
-         * dryRun.
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putBodyParameter("dryRun", dryRun);
@@ -128,7 +137,10 @@ public class PrepareUpgradeRequest extends Request {
         }
 
         /**
-         * version.
+         * <p>The target version. Call ListUpgradeReleaseVersion to check the available target versions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r5.0.0</p>
          */
         public Builder version(String version) {
             this.putBodyParameter("version", version);

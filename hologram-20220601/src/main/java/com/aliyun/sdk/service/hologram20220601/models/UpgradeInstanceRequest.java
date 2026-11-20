@@ -101,7 +101,10 @@ public class UpgradeInstanceRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hgprecn-cn-jeo3n72xxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -110,7 +113,10 @@ public class UpgradeInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -119,7 +125,10 @@ public class UpgradeInstanceRequest extends Request {
         }
 
         /**
-         * type.
+         * <p>The upgrade type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hot</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);
@@ -128,7 +137,10 @@ public class UpgradeInstanceRequest extends Request {
         }
 
         /**
-         * upgradeTime.
+         * <p>The upgrade time. The format is YYYY-MM-DD HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-02-11 10:00:01</p>
          */
         public Builder upgradeTime(String upgradeTime) {
             this.putQueryParameter("upgradeTime", upgradeTime);

@@ -119,10 +119,10 @@ public class ListInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code returned if the request failed.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
-         * <p>404</p>
+         * <p>null</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -130,10 +130,10 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned if the request failed.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>Internal server error.</p>
+         * <p>null</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -152,7 +152,7 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The instances.</p>
+         * <p>The list of instances.</p>
          */
         public Builder instanceList(java.util.List<InstanceList> instanceList) {
             this.instanceList = instanceList;
@@ -171,7 +171,7 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the API call is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -292,23 +292,7 @@ public class ListInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the endpoint is enabled.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li><p>true</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>false</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- --></li>
-             * </ul>
+             * <p>Specifies whether the endpoint is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -331,50 +315,6 @@ public class ListInstancesResponseBody extends TeaModel {
 
             /**
              * <p>The network type.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li><p>VPCSingleTunnel</p>
-             * <!-- -->
-             * 
-             * <p>:</p>
-             * <!-- -->
-             * 
-             * <p>virtual private cloud (VPC)</p>
-             * <!-- -->
-             * 
-             * <p>.</p>
-             * </li>
-             * <li><p>Intranet</p>
-             * <!-- -->
-             * 
-             * <p>:</p>
-             * <!-- -->
-             * 
-             * <p>internal network</p>
-             * <!-- -->
-             * </li>
-             * <li><p>VPCAnyTunnel</p>
-             * <!-- -->
-             * 
-             * <p>: This value is not supported by new instances</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <p>.</p>
-             * </li>
-             * <li><p>Internet</p>
-             * <!-- -->
-             * 
-             * <p>:</p>
-             * <!-- -->
-             * 
-             * <p>Internet</p>
-             * <!-- -->
-             * 
-             * <p>.</p>
-             * </li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Internet</p>
@@ -407,7 +347,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the VPC to which the instance belongs.</p>
+             * <p>The ID of the VPC-connected instance.</p>
              * 
              * <strong>example:</strong>
              * <p>hgpostcn-cn-wwo3665tx004-frontend-st</p>
@@ -779,7 +719,7 @@ public class ListInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The commodity code, which is the same as that on the Billing Management page.</p>
+             * <p>The commodity code, which is consistent with the product detail code in the User Center.</p>
              * 
              * <strong>example:</strong>
              * <p>hologram_postpay_public_cn</p>
@@ -790,7 +730,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the cluster was created.</p>
+             * <p>The creation time. The time is displayed in UTC and formatted according to ISO 8601.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-12-16T02:24:05Z</p>
@@ -801,23 +741,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether lakehouse acceleration is enabled.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li><p>true</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>false</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- --></li>
-             * </ul>
+             * <p>Specifies whether data lakehouse acceleration is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -828,7 +752,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * EnableSSL.
+             * <p>Specifies whether SSL is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableSSL(String enableSSL) {
                 this.enableSSL = enableSSL;
@@ -844,7 +771,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the cluster expires.</p>
+             * <p>The expiration time. The time is displayed in UTC and formatted according to ISO 8601.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-05-04T16:00:00.000Z</p>
@@ -855,32 +782,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing method of the instance. Valid values:</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li><p>PostPaid</p>
-             * <!-- -->
-             * 
-             * <p>:</p>
-             * <!-- -->
-             * 
-             * <p>pay-as-you-go</p>
-             * <!-- -->
-             * 
-             * <p>.</p>
-             * </li>
-             * <li><p>PrePaid</p>
-             * <!-- -->
-             * 
-             * <p>:</p>
-             * <!-- -->
-             * 
-             * <p>subscription</p>
-             * <!-- -->
-             * 
-             * <p>.</p>
-             * </li>
-             * </ul>
+             * <p>The billing method of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>PrePaid</p>
@@ -902,7 +804,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the instance.</p>
+             * <p>The instance name.</p>
              * 
              * <strong>example:</strong>
              * <p>test_instance</p>
@@ -913,37 +815,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the instance.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li><p>Creating</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>Running</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>Suspended</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>Allocating</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- --></li>
-             * </ul>
+             * <p>The instance status.</p>
              * 
              * <strong>example:</strong>
              * <p>Running</p>
@@ -954,32 +826,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the instance.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li><p>Follower</p>
-             * <!-- -->
-             * 
-             * <p>:</p>
-             * <!-- -->
-             * 
-             * <p>read-only secondary instance</p>
-             * <!-- -->
-             * 
-             * <p>.</p>
-             * </li>
-             * <li><p>Standard</p>
-             * <!-- -->
-             * 
-             * <p>:</p>
-             * <!-- -->
-             * 
-             * <p>normal instance</p>
-             * <!-- -->
-             * 
-             * <p>.</p>
-             * </li>
-             * </ul>
+             * <p>The instance type.</p>
              * 
              * <strong>example:</strong>
              * <p>Standard</p>
@@ -990,7 +837,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the primary instance.</p>
+             * <p>The leader instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>hgprecn-cn-2r42sqvxm006</p>
@@ -1001,7 +848,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1020,7 +870,14 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * StorageType.
+             * <p>The storage type. Valid values:</p>
+             * <ul>
+             * <li>redundant: 3AZ</li>
+             * <li>local: 1AZ</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>redundant</p>
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -1028,7 +885,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reason for the suspension.</p>
+             * <p>The reason for suspension.</p>
              * 
              * <strong>example:</strong>
              * <p>Manual</p>
@@ -1039,7 +896,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags that are added to the resource.</p>
+             * <p>The list of tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -1047,7 +904,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the cluster.</p>
+             * <p>The instance version.</p>
              * 
              * <strong>example:</strong>
              * <p>1.3.37</p>
@@ -1058,7 +915,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-h</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

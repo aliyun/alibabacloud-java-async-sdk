@@ -67,7 +67,7 @@ public class ListWarehousesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of virtual warehouse instances.</p>
+         * <p>The list of compute groups.</p>
          */
         public Builder warehouseList(java.util.List<WarehouseList> warehouseList) {
             this.warehouseList = warehouseList;
@@ -75,7 +75,7 @@ public class ListWarehousesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>819A7F0F-2951-540F-BD94-6A41ECF0281F</p>
@@ -196,7 +196,7 @@ public class ListWarehousesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of CPU cores.</p>
+             * <p>cpu</p>
              * 
              * <strong>example:</strong>
              * <p>32</p>
@@ -207,7 +207,7 @@ public class ListWarehousesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID.</p>
+             * <p>id</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -218,7 +218,7 @@ public class ListWarehousesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The memory capacity.</p>
+             * <p>The memory.</p>
              * 
              * <strong>example:</strong>
              * <p>128</p>
@@ -229,7 +229,7 @@ public class ListWarehousesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the virtual warehouse instance.</p>
+             * <p>The name of the compute group.</p>
              * 
              * <strong>example:</strong>
              * <p>MyWarehouse</p>
@@ -252,43 +252,6 @@ public class ListWarehousesResponseBody extends TeaModel {
 
             /**
              * <p>The status.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li><p>kRunning</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>kSuspended</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>kInit</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>kFailed</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>kAllocating</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- --></li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>kRunning</p>

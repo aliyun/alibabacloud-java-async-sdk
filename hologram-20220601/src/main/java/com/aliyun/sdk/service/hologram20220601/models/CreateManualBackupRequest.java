@@ -73,7 +73,10 @@ public class CreateManualBackupRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -82,7 +85,10 @@ public class CreateManualBackupRequest extends Request {
         }
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hgpostcn-cn-721344a2z001</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("instanceId", instanceId);

@@ -67,7 +67,14 @@ public class MigrateInstanceZoneResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>Indicates whether the operation is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The operation is successful.</li>
+         * <li>false: The operation fails.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;

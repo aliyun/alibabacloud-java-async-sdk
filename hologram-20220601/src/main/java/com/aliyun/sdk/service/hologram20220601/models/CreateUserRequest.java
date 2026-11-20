@@ -87,7 +87,10 @@ public class CreateUserRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hgpostcn-cn-zpr3426vm002</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -96,7 +99,10 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * superUser.
+         * <p>Specifies whether the user is a superuser.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder superUser(Boolean superUser) {
             this.putBodyParameter("superUser", superUser);
@@ -105,7 +111,10 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * userName.
+         * <p>The username. Only RAM users and STS accounts are supported. If the account is a RAM user, the name must be prefixed with p4_, such as p4_234253434. If the account is an STS account, the name must be prefixed with v4_, such as v4_3234134.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>p4_2346134</p>
          */
         public Builder userName(String userName) {
             this.putBodyParameter("userName", userName);

@@ -145,6 +145,7 @@ public class UpdateModelServiceRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,7 +158,10 @@ public class UpdateModelServiceRequest extends Request {
         }
 
         /**
-         * cpu.
+         * <p>The CPU specifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32</p>
          */
         public Builder cpu(Long cpu) {
             this.putBodyParameter("cpu", cpu);
@@ -166,7 +170,10 @@ public class UpdateModelServiceRequest extends Request {
         }
 
         /**
-         * gpu.
+         * <p>The GPU specifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder gpu(Long gpu) {
             this.putBodyParameter("gpu", gpu);
@@ -175,7 +182,10 @@ public class UpdateModelServiceRequest extends Request {
         }
 
         /**
-         * memory.
+         * <p>The memory specifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder memory(Long memory) {
             this.putBodyParameter("memory", memory);
@@ -184,6 +194,7 @@ public class UpdateModelServiceRequest extends Request {
         }
 
         /**
+         * <p>The custom service name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -196,7 +207,10 @@ public class UpdateModelServiceRequest extends Request {
         }
 
         /**
-         * modelType.
+         * <p>The model name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Qwen/Qwen2.5-VL-32B-Instruct</p>
          */
         public Builder modelType(String modelType) {
             this.putBodyParameter("modelType", modelType);
@@ -205,7 +219,10 @@ public class UpdateModelServiceRequest extends Request {
         }
 
         /**
-         * serviceCount.
+         * <p>The number of service replicas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder serviceCount(Long serviceCount) {
             this.putBodyParameter("serviceCount", serviceCount);

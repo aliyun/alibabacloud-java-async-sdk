@@ -130,6 +130,7 @@ public class ListWarehouseScheduleEventRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,7 +143,10 @@ public class ListWarehouseScheduleEventRequest extends Request {
         }
 
         /**
-         * elasticType.
+         * <p>The elastic scaling type, including time-based scaling and auto scaling. By default, all types are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>timed</p>
          */
         public Builder elasticType(String elasticType) {
             this.putBodyParameter("elasticType", elasticType);
@@ -151,7 +155,10 @@ public class ListWarehouseScheduleEventRequest extends Request {
         }
 
         /**
-         * endTime.
+         * <p>The end timestamp. Default value: current time. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1777516201</p>
          */
         public Builder endTime(Long endTime) {
             this.putBodyParameter("endTime", endTime);
@@ -160,7 +167,10 @@ public class ListWarehouseScheduleEventRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putBodyParameter("pageNumber", pageNumber);
@@ -169,7 +179,10 @@ public class ListWarehouseScheduleEventRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page. Default value: 30. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putBodyParameter("pageSize", pageSize);
@@ -178,7 +191,10 @@ public class ListWarehouseScheduleEventRequest extends Request {
         }
 
         /**
-         * startTime.
+         * <p>The start timestamp. Default value: three days ago. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1777257001</p>
          */
         public Builder startTime(Long startTime) {
             this.putBodyParameter("startTime", startTime);

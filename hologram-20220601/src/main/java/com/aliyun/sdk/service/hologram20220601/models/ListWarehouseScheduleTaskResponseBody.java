@@ -67,7 +67,10 @@ public class ListWarehouseScheduleTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A0A16C46-5B56-1F9B-AA37-4C3EAD95AAA8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class ListWarehouseScheduleTaskResponseBody extends TeaModel {
         }
 
         /**
-         * ScheduleTaskList.
+         * <p>The list of time-based elastic plans.</p>
          */
         public Builder scheduleTaskList(java.util.List<ScheduleTaskList> scheduleTaskList) {
             this.scheduleTaskList = scheduleTaskList;
@@ -180,7 +183,10 @@ public class ListWarehouseScheduleTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The description of the elastic plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bill stat</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -188,7 +194,10 @@ public class ListWarehouseScheduleTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ElasticCu.
+             * <p>The elastic resources. The value must be a multiple of 16, greater than or equal to 16, and less than or equal to the compute group specifications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder elasticCu(Long elasticCu) {
                 this.elasticCu = elasticCu;
@@ -196,7 +205,10 @@ public class ListWarehouseScheduleTaskResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time. Only full hours and half hours are supported. The format is HHmm (four digits, 24-hour clock).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0400</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -204,7 +216,10 @@ public class ListWarehouseScheduleTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The elastic plan ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1802985780260052993</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -212,7 +227,10 @@ public class ListWarehouseScheduleTaskResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time. Only full hours and half hours are supported, such as 0100 for 1:00 AM. The format is HHmm (four digits, 24-hour clock).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0100</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -331,7 +349,10 @@ public class ListWarehouseScheduleTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * ElasticType.
+             * <p>The elastic type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>timed</p>
              */
             public Builder elasticType(String elasticType) {
                 this.elasticType = elasticType;
@@ -339,7 +360,7 @@ public class ListWarehouseScheduleTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Plans.
+             * <p>The list of elastic plans for a single compute group.</p>
              */
             public Builder plans(java.util.List<Plans> plans) {
                 this.plans = plans;
@@ -347,7 +368,10 @@ public class ListWarehouseScheduleTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ReservedCpu.
+             * <p>The reserved resources of the compute group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder reservedCpu(Long reservedCpu) {
                 this.reservedCpu = reservedCpu;
@@ -355,7 +379,10 @@ public class ListWarehouseScheduleTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the compute group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kRunning</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -363,7 +390,10 @@ public class ListWarehouseScheduleTaskResponseBody extends TeaModel {
             }
 
             /**
-             * WarehouseId.
+             * <p>The compute group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder warehouseId(String warehouseId) {
                 this.warehouseId = warehouseId;
@@ -371,7 +401,10 @@ public class ListWarehouseScheduleTaskResponseBody extends TeaModel {
             }
 
             /**
-             * WarehouseName.
+             * <p>The compute group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>init_warehouse</p>
              */
             public Builder warehouseName(String warehouseName) {
                 this.warehouseName = warehouseName;

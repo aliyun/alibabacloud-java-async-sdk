@@ -59,7 +59,10 @@ public class GetRootCertificateRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * <p>The instance ID. This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hgpostcn-cn-zpr3426vm002</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);

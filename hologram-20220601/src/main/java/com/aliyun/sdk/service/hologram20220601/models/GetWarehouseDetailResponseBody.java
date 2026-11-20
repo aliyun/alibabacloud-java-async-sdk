@@ -67,7 +67,7 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>D3AE84AB-0873-5FC7-A4C4-8CF869D2FA70</p>
@@ -78,7 +78,7 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned values.</p>
+         * <p>The return value.</p>
          */
         public Builder warehouseDetail(WarehouseDetail warehouseDetail) {
             this.warehouseDetail = warehouseDetail;
@@ -313,7 +313,10 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * AutoScaleType.
+             * <p>The auto-scaling type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Standard</p>
              */
             public Builder autoScaleType(String autoScaleType) {
                 this.autoScaleType = autoScaleType;
@@ -321,7 +324,10 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterCount.
+             * <p>The number of clusters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder clusterCount(String clusterCount) {
                 this.clusterCount = clusterCount;
@@ -329,7 +335,10 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterCpu.
+             * <p>The cluster specifications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder clusterCpu(String clusterCpu) {
                 this.clusterCpu = clusterCpu;
@@ -337,7 +346,7 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of CPU cores.</p>
+             * <p>cpu</p>
              * 
              * <strong>example:</strong>
              * <p>32</p>
@@ -348,7 +357,10 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultWarehouse.
+             * <p>Indicates whether the compute group is the default compute group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder defaultWarehouse(Boolean defaultWarehouse) {
                 this.defaultWarehouse = defaultWarehouse;
@@ -356,7 +368,10 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ElasticCpu.
+             * <p>The elastic compute resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder elasticCpu(Long elasticCpu) {
                 this.elasticCpu = elasticCpu;
@@ -364,7 +379,10 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ElasticType.
+             * <p>The elastic type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>auto</p>
              */
             public Builder elasticType(String elasticType) {
                 this.elasticType = elasticType;
@@ -372,7 +390,7 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID.</p>
+             * <p>id</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -383,7 +401,10 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InitClusterCount.
+             * <p>The number of reserved clusters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder initClusterCount(String initClusterCount) {
                 this.initClusterCount = initClusterCount;
@@ -391,7 +412,10 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
             }
 
             /**
-             * MaxClusterCount.
+             * <p>The maximum number of clusters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder maxClusterCount(String maxClusterCount) {
                 this.maxClusterCount = maxClusterCount;
@@ -399,7 +423,7 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The memory capacity.</p>
+             * <p>The memory.</p>
              * 
              * <strong>example:</strong>
              * <p>128</p>
@@ -410,7 +434,7 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the virtual warehouse instance.</p>
+             * <p>The name of the compute group.</p>
              * 
              * <strong>example:</strong>
              * <p>MyWarehouse</p>
@@ -432,7 +456,10 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RebalanceStatus.
+             * <p>The rebalance status of the compute group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DONE</p>
              */
             public Builder rebalanceStatus(String rebalanceStatus) {
                 this.rebalanceStatus = rebalanceStatus;
@@ -441,43 +468,6 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
 
             /**
              * <p>The status.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li><p>kRunning</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>kSuspended</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>kInit</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>kFailed</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>kAllocating</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- --></li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>kRunning</p>
@@ -586,7 +576,10 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * AutoElasticCpu.
+             * <p>The total auto-scaling elastic compute resources of the compute group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder autoElasticCpu(String autoElasticCpu) {
                 this.autoElasticCpu = autoElasticCpu;
@@ -594,7 +587,7 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The remaining unallocated computing resources of the virtual warehouse instance.</p>
+             * <p>The unallocated compute resources. The remaining unallocated compute resources for compute groups in the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>32</p>
@@ -605,7 +598,7 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reserved computing resources. The amount of computing resources in all running virtual warehouses in an instance cannot exceed the amount of reserved computing resources in the virtual warehouses.</p>
+             * <p>The reserved compute resources. The total compute resources of all running compute groups in the instance cannot exceed the reserved compute resources of the compute group.</p>
              * 
              * <strong>example:</strong>
              * <p>64</p>
@@ -616,7 +609,10 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TimedElasticCpu.
+             * <p>The total time-based elastic compute resources of the compute group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>64</p>
              */
             public Builder timedElasticCpu(String timedElasticCpu) {
                 this.timedElasticCpu = timedElasticCpu;
@@ -624,7 +620,7 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of virtual warehouses.</p>
+             * <p>The warehouse list.</p>
              */
             public Builder warehouseList(java.util.List<WarehouseList> warehouseList) {
                 this.warehouseList = warehouseList;

@@ -119,7 +119,10 @@ public class GetExecuteStatementEnabledResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>Indicates whether SQL execution through OpenAPI is allowed (<code>true</code>) or not (<code>false</code>).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -127,7 +130,15 @@ public class GetExecuteStatementEnabledResponseBody extends TeaModel {
         }
 
         /**
-         * errorCode.
+         * <ul>
+         * <li><p>The error code that is returned if the request fails (when <code>success</code> is <code>false</code>).</p>
+         * </li>
+         * <li><p>This parameter is empty if the request is successful (when <code>success</code> is <code>true</code>).</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -135,7 +146,15 @@ public class GetExecuteStatementEnabledResponseBody extends TeaModel {
         }
 
         /**
-         * errorMessage.
+         * <ul>
+         * <li><p>The error message that is returned if the request fails (when <code>success</code> is <code>false</code>).</p>
+         * </li>
+         * <li><p>This parameter is empty if the request is successful (when <code>success</code> is <code>true</code>).</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -143,7 +162,10 @@ public class GetExecuteStatementEnabledResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +173,7 @@ public class GetExecuteStatementEnabledResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2C2ECDC1-FBAD-14A5-AA4A-96BC787FBDBC</p>
@@ -162,7 +184,10 @@ public class GetExecuteStatementEnabledResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

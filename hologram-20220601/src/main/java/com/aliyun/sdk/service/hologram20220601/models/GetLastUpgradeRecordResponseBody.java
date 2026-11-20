@@ -67,7 +67,7 @@ public class GetLastUpgradeRecordResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -170,7 +170,10 @@ public class GetLastUpgradeRecordResponseBody extends TeaModel {
             } 
 
             /**
-             * fromVersion.
+             * <p>The initial version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>r3.2.11</p>
              */
             public Builder fromVersion(String fromVersion) {
                 this.fromVersion = fromVersion;
@@ -178,7 +181,10 @@ public class GetLastUpgradeRecordResponseBody extends TeaModel {
             }
 
             /**
-             * startReadonlyTime.
+             * <p>The start time of the read-only state. The format is YYYY-MM-DD HH:mm:ss.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-09-24 17:29:57</p>
              */
             public Builder startReadonlyTime(String startReadonlyTime) {
                 this.startReadonlyTime = startReadonlyTime;
@@ -186,7 +192,10 @@ public class GetLastUpgradeRecordResponseBody extends TeaModel {
             }
 
             /**
-             * stopReadonlyTime.
+             * <p>The end time of the read-only state. The format is YYYY-MM-DD HH:mm:ss.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-09-24 18:23:22</p>
              */
             public Builder stopReadonlyTime(String stopReadonlyTime) {
                 this.stopReadonlyTime = stopReadonlyTime;
@@ -194,7 +203,10 @@ public class GetLastUpgradeRecordResponseBody extends TeaModel {
             }
 
             /**
-             * toVersion.
+             * <p>The target version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>r4.0.2</p>
              */
             public Builder toVersion(String toVersion) {
                 this.toVersion = toVersion;

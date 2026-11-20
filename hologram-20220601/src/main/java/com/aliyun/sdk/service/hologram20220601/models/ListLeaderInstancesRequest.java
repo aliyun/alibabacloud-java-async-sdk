@@ -73,7 +73,10 @@ public class ListLeaderInstancesRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * <p>The instance ID. This parameter is in the request path and is required when you call the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hgprecn-cn-zxu3001jn00d</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -82,7 +85,10 @@ public class ListLeaderInstancesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

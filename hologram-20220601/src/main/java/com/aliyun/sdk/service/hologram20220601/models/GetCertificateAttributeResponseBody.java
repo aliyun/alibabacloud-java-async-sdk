@@ -119,7 +119,7 @@ public class GetCertificateAttributeResponseBody extends TeaModel {
         } 
 
         /**
-         * CertificateAttributeDto.
+         * <p>The certificate attributes.</p>
          */
         public Builder certificateAttributeDto(CertificateAttributeDto certificateAttributeDto) {
             this.certificateAttributeDto = certificateAttributeDto;
@@ -127,7 +127,10 @@ public class GetCertificateAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -135,7 +138,10 @@ public class GetCertificateAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -143,7 +149,10 @@ public class GetCertificateAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +160,14 @@ public class GetCertificateAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the operation is successful. Valid values:</p>
+         * <ul>
+         * <li>true: Successful.</li>
+         * <li>false: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -159,7 +175,10 @@ public class GetCertificateAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>819A7F0F-2951-540F-BD94-6A41ECF0281F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -238,7 +257,14 @@ public class GetCertificateAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * enableSSL.
+             * <p>Specifies whether SSL is enabled. Valid values:</p>
+             * <ul>
+             * <li>true: Enabled.</li>
+             * <li>false: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableSSL(Boolean enableSSL) {
                 this.enableSSL = enableSSL;
@@ -246,7 +272,10 @@ public class GetCertificateAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * expirationTime.
+             * <p>The expiration timestamp of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1790583135000</p>
              */
             public Builder expirationTime(Long expirationTime) {
                 this.expirationTime = expirationTime;
@@ -254,7 +283,10 @@ public class GetCertificateAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The certificate status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>effective</p>
              */
             public Builder status(String status) {
                 this.status = status;

@@ -67,7 +67,10 @@ public class CreateWarehouseScheduleTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The creation result. true indicates success, and false indicates failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -75,7 +78,7 @@ public class CreateWarehouseScheduleTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>D3AE84AB-0873-5FC7-A4C4-8CF869D2FA70</p>

@@ -73,7 +73,10 @@ public class DescribeTagsRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -82,7 +85,10 @@ public class DescribeTagsRequest extends Request {
         }
 
         /**
-         * tagsOnly.
+         * <p>Specifies whether to display tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder tagsOnly(Boolean tagsOnly) {
             this.putQueryParameter("tagsOnly", tagsOnly);

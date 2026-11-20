@@ -119,7 +119,7 @@ public class GetScheduledBackupConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,7 +127,10 @@ public class GetScheduledBackupConfigResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -135,7 +138,10 @@ public class GetScheduledBackupConfigResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -143,7 +149,10 @@ public class GetScheduledBackupConfigResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -162,7 +171,10 @@ public class GetScheduledBackupConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -241,7 +253,10 @@ public class GetScheduledBackupConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * Enabled.
+             * <p>Indicates whether the configuration is effective. Valid values: - <strong>true</strong>: Effective. - <strong>false</strong>: Not effective.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Long enabled) {
                 this.enabled = enabled;
@@ -249,7 +264,10 @@ public class GetScheduledBackupConfigResponseBody extends TeaModel {
             }
 
             /**
-             * TaskParameter.
+             * <p>The task parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;schedule&quot;:&quot;0 10 * * 1,2&quot;,&quot;instance_id&quot;:&quot;hgprecn-cn-lbj3dfgog004&quot;,&quot;week&quot;:&quot;1,2&quot;,&quot;hour&quot;:10,&quot;data_keep_quantity&quot;:3,&quot;type&quot;:&quot;periodical&quot;,&quot;enabled&quot;:true}</p>
              */
             public Builder taskParameter(String taskParameter) {
                 this.taskParameter = taskParameter;
@@ -257,7 +275,10 @@ public class GetScheduledBackupConfigResponseBody extends TeaModel {
             }
 
             /**
-             * TaskType.
+             * <p>The task type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>backup</p>
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;

@@ -59,7 +59,10 @@ public class DisableExecuteStatementRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * <p><strong>The ID of the Hologres instance.</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>hgpostcn-cn-xxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);

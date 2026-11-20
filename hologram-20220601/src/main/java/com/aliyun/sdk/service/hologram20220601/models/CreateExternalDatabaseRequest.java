@@ -129,7 +129,10 @@ public class CreateExternalDatabaseRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hgprecn-cn-i7m2vxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -138,7 +141,10 @@ public class CreateExternalDatabaseRequest extends Request {
         }
 
         /**
-         * comment.
+         * <p>The comment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>for log stat</p>
          */
         public Builder comment(String comment) {
             this.putBodyParameter("comment", comment);
@@ -147,7 +153,10 @@ public class CreateExternalDatabaseRequest extends Request {
         }
 
         /**
-         * databaseName.
+         * <p>The database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_db</p>
          */
         public Builder databaseName(String databaseName) {
             this.putBodyParameter("databaseName", databaseName);
@@ -156,7 +165,10 @@ public class CreateExternalDatabaseRequest extends Request {
         }
 
         /**
-         * defaultUserMapping.
+         * <p>Specifies whether to use user mapping.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder defaultUserMapping(String defaultUserMapping) {
             this.putBodyParameter("defaultUserMapping", defaultUserMapping);
@@ -165,7 +177,7 @@ public class CreateExternalDatabaseRequest extends Request {
         }
 
         /**
-         * externalConfig.
+         * <p>The configuration parameters. For more information, see <a href="https://www.alibabacloud.com/help/en/hologres/developer-reference/create-external-database">CREATE EXTERNAL DATABASE</a>.</p>
          */
         public Builder externalConfig(java.util.List<ExternalConfig> externalConfig) {
             this.putBodyParameter("externalConfig", externalConfig);
@@ -174,7 +186,10 @@ public class CreateExternalDatabaseRequest extends Request {
         }
 
         /**
-         * metastoreType.
+         * <p>The metastore type, such as MaxCompute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>maxcompute</p>
          */
         public Builder metastoreType(String metastoreType) {
             this.putBodyParameter("metastoreType", metastoreType);
@@ -242,7 +257,10 @@ public class CreateExternalDatabaseRequest extends Request {
             } 
 
             /**
-             * key.
+             * <p>The configuration field name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mc_project</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -250,7 +268,10 @@ public class CreateExternalDatabaseRequest extends Request {
             }
 
             /**
-             * value.
+             * <p>The configuration field value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>log_sum</p>
              */
             public Builder value(String value) {
                 this.value = value;

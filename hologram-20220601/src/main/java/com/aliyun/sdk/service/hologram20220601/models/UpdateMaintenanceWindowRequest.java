@@ -90,7 +90,7 @@ public class UpdateMaintenanceWindowRequest extends Request {
          * <p><code>instanceId=xxx</code></p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>hgpostcn-cn-7mz2vmu30003</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -99,7 +99,10 @@ public class UpdateMaintenanceWindowRequest extends Request {
         }
 
         /**
-         * endTime.
+         * <p>The end time in the HH:mm format (24-hour clock).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>02:00</p>
          */
         public Builder endTime(String endTime) {
             this.putBodyParameter("endTime", endTime);
@@ -108,7 +111,10 @@ public class UpdateMaintenanceWindowRequest extends Request {
         }
 
         /**
-         * startTime.
+         * <p>The start time in the HH:mm format (24-hour clock).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00:00</p>
          */
         public Builder startTime(String startTime) {
             this.putBodyParameter("startTime", startTime);
