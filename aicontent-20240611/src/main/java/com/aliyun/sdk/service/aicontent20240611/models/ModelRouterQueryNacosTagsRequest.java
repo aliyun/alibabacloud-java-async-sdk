@@ -171,7 +171,10 @@ public class ModelRouterQueryNacosTagsRequest extends Request {
         } 
 
         /**
-         * configType.
+         * <p>Specifies the Nacos configuration type to retrieve.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>providers</p>
          */
         public Builder configType(String configType) {
             this.putQueryParameter("configType", configType);
@@ -180,7 +183,7 @@ public class ModelRouterQueryNacosTagsRequest extends Request {
         }
 
         /**
-         * <p>The field by which to group the results.</p>
+         * <p>The grouping field.</p>
          * 
          * <strong>example:</strong>
          * <p>resourceId</p>
@@ -204,7 +207,7 @@ public class ModelRouterQueryNacosTagsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return the total count of results.</p>
+         * <p>Specifies whether to return the total count.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -216,7 +219,7 @@ public class ModelRouterQueryNacosTagsRequest extends Request {
         }
 
         /**
-         * <p>The token from a previous response to retrieve the next page of results.</p>
+         * <p>The pagination token. This parameter is empty if there is no next page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -228,7 +231,7 @@ public class ModelRouterQueryNacosTagsRequest extends Request {
         }
 
         /**
-         * <p>The field by which to sort the results.</p>
+         * <p>The sort field.</p>
          * 
          * <strong>example:</strong>
          * <p>resourceId</p>
@@ -240,7 +243,7 @@ public class ModelRouterQueryNacosTagsRequest extends Request {
         }
 
         /**
-         * <p>The sort order.</p>
+         * <p>The sort direction.</p>
          * 
          * <strong>example:</strong>
          * <p>DESC</p>
@@ -264,7 +267,7 @@ public class ModelRouterQueryNacosTagsRequest extends Request {
         }
 
         /**
-         * <p>The number of results to return per page.</p>
+         * <p>The number of items per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

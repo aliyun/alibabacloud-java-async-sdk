@@ -115,7 +115,7 @@ public class ModelRouterSaveFlowConfigRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of requests per minute (RPM).</p>
+         * <p>The requests per minute (RPM) limit.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -127,7 +127,7 @@ public class ModelRouterSaveFlowConfigRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable smooth flow control.</p>
+         * <p>Specifies whether smooth rate limiting is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -139,7 +139,7 @@ public class ModelRouterSaveFlowConfigRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of tokens per minute (TPM).</p>
+         * <p>The tokens per minute (TPM) limit.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>

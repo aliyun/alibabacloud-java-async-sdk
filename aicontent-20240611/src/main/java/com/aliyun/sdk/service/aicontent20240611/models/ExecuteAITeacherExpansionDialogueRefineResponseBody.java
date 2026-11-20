@@ -119,10 +119,10 @@ public class ExecuteAITeacherExpansionDialogueRefineResponseBody extends TeaMode
         } 
 
         /**
-         * <p>The object that contains the refinement result.</p>
+         * <p>The data object.</p>
          * 
          * <strong>example:</strong>
-         * <p>[]</p>
+         * <p>{&quot;result&quot;:&quot;Yes, I\&quot;ll be right there.&quot;}</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -130,7 +130,7 @@ public class ExecuteAITeacherExpansionDialogueRefineResponseBody extends TeaMode
         }
 
         /**
-         * <p>The error code. Returned only when the request fails.</p>
+         * <p>The fault message encoding.</p>
          * 
          * <strong>example:</strong>
          * <p>UNKNOWN_ERROR</p>
@@ -141,10 +141,10 @@ public class ExecuteAITeacherExpansionDialogueRefineResponseBody extends TeaMode
         }
 
         /**
-         * <p>The error message. Returned only when the request fails.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>未知错误</p>
+         * <p>Unknown error</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -174,7 +174,7 @@ public class ExecuteAITeacherExpansionDialogueRefineResponseBody extends TeaMode
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -230,7 +230,7 @@ public class ExecuteAITeacherExpansionDialogueRefineResponseBody extends TeaMode
             } 
 
             /**
-             * <p>The refinement result.</p>
+             * <p>The polishing result.</p>
              * 
              * <strong>example:</strong>
              * <p>Yes, I\&quot;ll be right there.</p>

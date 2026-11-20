@@ -119,7 +119,10 @@ public class ClientUpdateCmd extends TeaModel {
         } 
 
         /**
-         * address.
+         * <p>The company address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hangzhou</p>
          */
         public Builder address(String address) {
             this.address = address;
@@ -127,7 +130,10 @@ public class ClientUpdateCmd extends TeaModel {
         }
 
         /**
-         * allowedModels.
+         * <p>The list of allowed model IDs, separated by commas. An empty value indicates all models.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1,2,3</p>
          */
         public Builder allowedModels(String allowedModels) {
             this.allowedModels = allowedModels;
@@ -135,7 +141,10 @@ public class ClientUpdateCmd extends TeaModel {
         }
 
         /**
-         * contact.
+         * <p>The contact information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13800138000</p>
          */
         public Builder contact(String contact) {
             this.contact = contact;
@@ -143,7 +152,10 @@ public class ClientUpdateCmd extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The customer name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>My customer</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -151,7 +163,10 @@ public class ClientUpdateCmd extends TeaModel {
         }
 
         /**
-         * remark.
+         * <p>The remarks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Remark</p>
          */
         public Builder remark(String remark) {
             this.remark = remark;
@@ -159,7 +174,10 @@ public class ClientUpdateCmd extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.status = status;

@@ -67,7 +67,10 @@ public class BatchFailedItemDTO extends TeaModel {
         } 
 
         /**
-         * reason.
+         * <p>The reason for failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Missing member node</p>
          */
         public Builder reason(String reason) {
             this.reason = reason;
@@ -75,7 +78,10 @@ public class BatchFailedItemDTO extends TeaModel {
         }
 
         /**
-         * userId.
+         * <p>The user ID of the failed member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder userId(Long userId) {
             this.userId = userId;

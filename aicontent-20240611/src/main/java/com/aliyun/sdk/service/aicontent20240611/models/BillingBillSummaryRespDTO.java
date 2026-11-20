@@ -67,7 +67,7 @@ public class BillingBillSummaryRespDTO extends TeaModel {
         } 
 
         /**
-         * points.
+         * <p>The list of cost trend data points.</p>
          */
         public Builder points(java.util.List<BillingBillSummaryPointDTO> points) {
             this.points = points;
@@ -75,7 +75,10 @@ public class BillingBillSummaryRespDTO extends TeaModel {
         }
 
         /**
-         * totalAmount.
+         * <p>The total cost within the time range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123.45</p>
          */
         public Builder totalAmount(Float totalAmount) {
             this.totalAmount = totalAmount;

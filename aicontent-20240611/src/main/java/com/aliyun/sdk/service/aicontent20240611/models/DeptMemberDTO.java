@@ -197,7 +197,10 @@ public class DeptMemberDTO extends TeaModel {
         } 
 
         /**
-         * allowedModels.
+         * <p>The comma-separated list of authorized model IDs. This field is valid only when include_authorization is specified. An empty value indicates that the models are inherited or all models are authorized.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1,2</p>
          */
         public Builder allowedModels(String allowedModels) {
             this.allowedModels = allowedModels;
@@ -205,7 +208,10 @@ public class DeptMemberDTO extends TeaModel {
         }
 
         /**
-         * authConfig.
+         * <p>The authorization configuration. Valid values: inherit: Inherited from the department. custom: Customized. This field is valid only when include_authorization is specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>inherit</p>
          */
         public Builder authConfig(String authConfig) {
             this.authConfig = authConfig;
@@ -213,7 +219,10 @@ public class DeptMemberDTO extends TeaModel {
         }
 
         /**
-         * gmtCreate.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-01-01T00:00:00Z</p>
          */
         public Builder gmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
@@ -221,7 +230,10 @@ public class DeptMemberDTO extends TeaModel {
         }
 
         /**
-         * id.
+         * <p>The member user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -229,7 +241,10 @@ public class DeptMemberDTO extends TeaModel {
         }
 
         /**
-         * keyCount.
+         * <p>The number of active keys that belong to the member. This field is valid only when include_authorization is specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder keyCount(Integer keyCount) {
             this.keyCount = keyCount;
@@ -237,7 +252,10 @@ public class DeptMemberDTO extends TeaModel {
         }
 
         /**
-         * loginName.
+         * <p>The logon name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zhangsan</p>
          */
         public Builder loginName(String loginName) {
             this.loginName = loginName;
@@ -245,7 +263,10 @@ public class DeptMemberDTO extends TeaModel {
         }
 
         /**
-         * monthlyBalance.
+         * <p>The monthly balance. This field is valid only when include_balance is specified. The value is 0 if the feature is not activated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.00</p>
          */
         public Builder monthlyBalance(Double monthlyBalance) {
             this.monthlyBalance = monthlyBalance;
@@ -253,7 +274,10 @@ public class DeptMemberDTO extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Zhang San</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -261,7 +285,10 @@ public class DeptMemberDTO extends TeaModel {
         }
 
         /**
-         * permanentBalance.
+         * <p>The permanent balance. This field is valid only when include_balance is specified. The value is 0 if the feature is not activated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20.00</p>
          */
         public Builder permanentBalance(Double permanentBalance) {
             this.permanentBalance = permanentBalance;
@@ -269,7 +296,10 @@ public class DeptMemberDTO extends TeaModel {
         }
 
         /**
-         * phone.
+         * <p>The mobile phone number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>138****0000</p>
          */
         public Builder phone(String phone) {
             this.phone = phone;
@@ -277,7 +307,10 @@ public class DeptMemberDTO extends TeaModel {
         }
 
         /**
-         * roleCode.
+         * <p>The role code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>member</p>
          */
         public Builder roleCode(String roleCode) {
             this.roleCode = roleCode;
@@ -285,7 +318,10 @@ public class DeptMemberDTO extends TeaModel {
         }
 
         /**
-         * roleName.
+         * <p>The role name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Member</p>
          */
         public Builder roleName(String roleName) {
             this.roleName = roleName;

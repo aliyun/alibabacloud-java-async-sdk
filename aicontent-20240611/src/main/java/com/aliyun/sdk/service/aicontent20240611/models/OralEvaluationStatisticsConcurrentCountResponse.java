@@ -82,7 +82,7 @@ public class OralEvaluationStatisticsConcurrentCountResponse extends Response {
         } 
 
         /**
-         * <p>Statistical data for the project.</p>
+         * <p>The project statistics data.</p>
          * <p>This parameter is required.</p>
          */
         @Override
@@ -166,8 +166,11 @@ public class OralEvaluationStatisticsConcurrentCountResponse extends Response {
             } 
 
             /**
-             * <p>The count of the item.</p>
+             * <p>The statistics item count.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -175,7 +178,7 @@ public class OralEvaluationStatisticsConcurrentCountResponse extends Response {
             }
 
             /**
-             * <p>The name of the statistical item.</p>
+             * <p>The statistics item name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -247,7 +250,7 @@ public class OralEvaluationStatisticsConcurrentCountResponse extends Response {
             } 
 
             /**
-             * <p>A list of data nodes.</p>
+             * <p>The data list.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -255,7 +258,7 @@ public class OralEvaluationStatisticsConcurrentCountResponse extends Response {
             }
 
             /**
-             * <p>The app key.</p>
+             * <p>appkey</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -327,7 +330,7 @@ public class OralEvaluationStatisticsConcurrentCountResponse extends Response {
             } 
 
             /**
-             * <p>A list of application data.</p>
+             * <p>The data list.</p>
              */
             public Builder applicationData(java.util.List<ApplicationData> applicationData) {
                 this.applicationData = applicationData;

@@ -67,7 +67,10 @@ public class BillingBillSummaryPointDTO extends TeaModel {
         } 
 
         /**
-         * timestamp.
+         * <p>The timestamp in UNIX seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1700000000</p>
          */
         public Builder timestamp(Long timestamp) {
             this.timestamp = timestamp;
@@ -75,7 +78,10 @@ public class BillingBillSummaryPointDTO extends TeaModel {
         }
 
         /**
-         * totalAmount.
+         * <p>The total cost at that point in time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.23</p>
          */
         public Builder totalAmount(Float totalAmount) {
             this.totalAmount = totalAmount;

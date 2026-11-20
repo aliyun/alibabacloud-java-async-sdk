@@ -54,7 +54,10 @@ public class ApiKeyCreateCmd extends TeaModel {
         } 
 
         /**
-         * clientId.
+         * <p>The customer ID. A value of null indicates the default customer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder clientId(Long clientId) {
             this.clientId = clientId;

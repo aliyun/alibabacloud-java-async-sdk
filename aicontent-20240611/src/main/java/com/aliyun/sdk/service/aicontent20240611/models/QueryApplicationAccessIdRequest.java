@@ -59,7 +59,7 @@ public class QueryApplicationAccessIdRequest extends Request {
         } 
 
         /**
-         * <p>The application access ID (appkey).</p>
+         * <p>The application access identifier (appkey).</p>
          * 
          * <strong>example:</strong>
          * <p>1234567890</p>

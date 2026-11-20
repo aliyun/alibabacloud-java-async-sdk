@@ -119,10 +119,10 @@ public class GetAITeacherSyncDialogueSuggestionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The object that contains the result of the request.</p>
+         * <p>The data object.</p>
          * 
          * <strong>example:</strong>
-         * <p>[]</p>
+         * <p>{&quot;chineseResult&quot;:&quot;谢谢莉莉.你喜欢吃肉吗，莉莉？&quot;,&quot;englishResult&quot;:&quot;Thanks, Lily. Do you like meat, Lily?&quot;}</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -130,7 +130,7 @@ public class GetAITeacherSyncDialogueSuggestionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned when the request fails.</p>
+         * <p>The fault message encoding.</p>
          * 
          * <strong>example:</strong>
          * <p>UNKNOWN_ERROR</p>
@@ -141,10 +141,10 @@ public class GetAITeacherSyncDialogueSuggestionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned when the request fails.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>未知错误</p>
+         * <p>Unknown error</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -163,7 +163,7 @@ public class GetAITeacherSyncDialogueSuggestionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A unique identifier for the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
@@ -174,7 +174,7 @@ public class GetAITeacherSyncDialogueSuggestionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -243,7 +243,7 @@ public class GetAITeacherSyncDialogueSuggestionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The assistant\&quot;s suggestion in Chinese.</p>
+             * <p>The Chinese prompt from the assistant.</p>
              * 
              * <strong>example:</strong>
              * <p>谢谢莉莉.你喜欢吃肉吗，莉莉？</p>
@@ -254,7 +254,7 @@ public class GetAITeacherSyncDialogueSuggestionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The assistant\&quot;s suggestion in English.</p>
+             * <p>The English prompt from the assistant.</p>
              * 
              * <strong>example:</strong>
              * <p>Thanks, Lily. Do you like meat, Lily?</p>

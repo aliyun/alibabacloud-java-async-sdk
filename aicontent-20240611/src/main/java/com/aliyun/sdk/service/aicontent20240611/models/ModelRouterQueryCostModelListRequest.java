@@ -47,6 +47,10 @@ public class ModelRouterQueryCostModelListRequest extends Request {
     private String memberUserIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("modelIds")
+    private String modelIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("modelTypes")
     private String modelTypes;
 
@@ -72,6 +76,7 @@ public class ModelRouterQueryCostModelListRequest extends Request {
         this.granularity = builder.granularity;
         this.maxResults = builder.maxResults;
         this.memberUserIds = builder.memberUserIds;
+        this.modelIds = builder.modelIds;
         this.modelTypes = builder.modelTypes;
         this.nextToken = builder.nextToken;
         this.search = builder.search;
@@ -141,6 +146,13 @@ public class ModelRouterQueryCostModelListRequest extends Request {
     }
 
     /**
+     * @return modelIds
+     */
+    public String getModelIds() {
+        return this.modelIds;
+    }
+
+    /**
      * @return modelTypes
      */
     public String getModelTypes() {
@@ -176,6 +188,7 @@ public class ModelRouterQueryCostModelListRequest extends Request {
         private String granularity; 
         private Integer maxResults; 
         private String memberUserIds; 
+        private String modelIds; 
         private String modelTypes; 
         private String nextToken; 
         private String search; 
@@ -194,6 +207,7 @@ public class ModelRouterQueryCostModelListRequest extends Request {
             this.granularity = request.granularity;
             this.maxResults = request.maxResults;
             this.memberUserIds = request.memberUserIds;
+            this.modelIds = request.modelIds;
             this.modelTypes = request.modelTypes;
             this.nextToken = request.nextToken;
             this.search = request.search;
@@ -201,7 +215,7 @@ public class ModelRouterQueryCostModelListRequest extends Request {
         } 
 
         /**
-         * <p>Optional. Filters results by API Key ID. This parameter is linked to the department and requires clientId to be specified first.</p>
+         * <p>The API key ID used for filtering. This parameter is optional and associated with the department. You must specify clientId first.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -213,7 +227,7 @@ public class ModelRouterQueryCostModelListRequest extends Request {
         }
 
         /**
-         * <p>Filters results by department ID.</p>
+         * <p>The department ID used for filtering.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -225,7 +239,7 @@ public class ModelRouterQueryCostModelListRequest extends Request {
         }
 
         /**
-         * <p>The list of department IDs, separated by commas. Supports querying data for multiple departments. This parameter is mutually exclusive with clientId.</p>
+         * <p>The department IDs. Separate multiple IDs with commas to query data for multiple departments. This parameter is mutually exclusive with clientId.</p>
          * 
          * <strong>example:</strong>
          * <p>1,2,3</p>
@@ -237,7 +251,7 @@ public class ModelRouterQueryCostModelListRequest extends Request {
         }
 
         /**
-         * <p>The end time, in UNIX timestamp (seconds).</p>
+         * <p>The end time, specified as a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -250,7 +264,7 @@ public class ModelRouterQueryCostModelListRequest extends Request {
         }
 
         /**
-         * <p>Automatically aggregated. No input required. Granularity: hourly/daily. Default value: hourly.</p>
+         * <p>The time granularity for automatic aggregation. You do not need to pass this parameter. Valid values: hourly and daily. Default value: hourly.</p>
          * 
          * <strong>example:</strong>
          * <p>hourly</p>
@@ -262,7 +276,7 @@ public class ModelRouterQueryCostModelListRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of results to return.</p>
+         * <p>The maximum number of results.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -274,7 +288,7 @@ public class ModelRouterQueryCostModelListRequest extends Request {
         }
 
         /**
-         * <p>Optional. Filters results by members (member IDs, separated by commas). If not specified, the department and all its members are included. If an empty value is passed, only the department is included without members.</p>
+         * <p>The member IDs used for filtering. Separate multiple IDs with commas. This parameter is optional. If you do not specify this parameter, the department and all its members are included. If you pass an empty value, only the department is included, excluding its members.</p>
          * 
          * <strong>example:</strong>
          * <p>30001,30002</p>
@@ -286,7 +300,19 @@ public class ModelRouterQueryCostModelListRequest extends Request {
         }
 
         /**
-         * <p>The model types, separated by commas.</p>
+         * <p>The model IDs used for filtering. Separate multiple positive integer IDs with commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123,456</p>
+         */
+        public Builder modelIds(String modelIds) {
+            this.putQueryParameter("modelIds", modelIds);
+            this.modelIds = modelIds;
+            return this;
+        }
+
+        /**
+         * <p>The model types. Separate multiple values with commas.</p>
          * 
          * <strong>example:</strong>
          * <p>LLM,VL</p>
@@ -310,7 +336,7 @@ public class ModelRouterQueryCostModelListRequest extends Request {
         }
 
         /**
-         * <p>Fuzzy search by model name or code.</p>
+         * <p>The keyword for fuzzy search by model name or code.</p>
          * 
          * <strong>example:</strong>
          * <p>qwen</p>
@@ -322,7 +348,7 @@ public class ModelRouterQueryCostModelListRequest extends Request {
         }
 
         /**
-         * <p>The start time, in UNIX timestamp (seconds).</p>
+         * <p>The start time, specified as a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

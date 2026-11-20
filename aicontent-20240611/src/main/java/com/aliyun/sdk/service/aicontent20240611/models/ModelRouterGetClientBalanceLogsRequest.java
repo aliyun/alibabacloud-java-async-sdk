@@ -141,7 +141,7 @@ public class ModelRouterGetClientBalanceLogsRequest extends Request {
         }
 
         /**
-         * <p>The change type filter. Valid values: auto_deduct, deduct, recharge.</p>
+         * <p>The change type filter. Valid values: auto_deduct, deduct, and recharge.</p>
          * 
          * <strong>example:</strong>
          * <p>recharge</p>
@@ -153,7 +153,7 @@ public class ModelRouterGetClientBalanceLogsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return.</p>
+         * <p>The maximum number of items to return.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -165,7 +165,7 @@ public class ModelRouterGetClientBalanceLogsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token for the next request.</p>
+         * <p>The pagination cursor for the next request.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -189,7 +189,7 @@ public class ModelRouterGetClientBalanceLogsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of items per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

@@ -80,7 +80,10 @@ public class BillingBillTierDTO extends TeaModel {
         } 
 
         /**
-         * dimValues.
+         * <p>The dimension key-value mapping, where the key is the dimension column name and the value is the display value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;context_tier&quot;: &quot;0-32k&quot;}</p>
          */
         public Builder dimValues(String dimValues) {
             this.dimValues = dimValues;
@@ -88,7 +91,10 @@ public class BillingBillTierDTO extends TeaModel {
         }
 
         /**
-         * payableAmount.
+         * <p>The cost of the bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.05</p>
          */
         public Builder payableAmount(Float payableAmount) {
             this.payableAmount = payableAmount;
@@ -96,7 +102,10 @@ public class BillingBillTierDTO extends TeaModel {
         }
 
         /**
-         * values.
+         * <p>The usage value mapping, where the key is the metric name and the value is the numerical value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;input_tokens&quot;: 1000, &quot;output_tokens&quot;: 500}</p>
          */
         public Builder values(String values) {
             this.values = values;

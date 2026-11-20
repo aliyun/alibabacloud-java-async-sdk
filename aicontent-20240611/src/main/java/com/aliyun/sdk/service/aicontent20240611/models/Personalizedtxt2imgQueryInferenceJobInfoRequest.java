@@ -60,7 +60,7 @@ public class Personalizedtxt2imgQueryInferenceJobInfoRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the inference job.</p>
+         * <p>The ID of the inference task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

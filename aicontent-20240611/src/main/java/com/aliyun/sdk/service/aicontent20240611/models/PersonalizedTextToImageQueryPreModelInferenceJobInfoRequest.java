@@ -60,7 +60,7 @@ public class PersonalizedTextToImageQueryPreModelInferenceJobInfoRequest extends
         } 
 
         /**
-         * <p>The inference job ID.</p>
+         * <p>The inference task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

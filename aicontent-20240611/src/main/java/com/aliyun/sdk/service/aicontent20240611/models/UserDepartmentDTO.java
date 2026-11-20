@@ -93,7 +93,10 @@ public class UserDepartmentDTO extends TeaModel {
         } 
 
         /**
-         * clientId.
+         * <p>The department ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder clientId(Long clientId) {
             this.clientId = clientId;
@@ -101,7 +104,10 @@ public class UserDepartmentDTO extends TeaModel {
         }
 
         /**
-         * clientName.
+         * <p>The department name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>R&amp;D Department</p>
          */
         public Builder clientName(String clientName) {
             this.clientName = clientName;
@@ -109,7 +115,10 @@ public class UserDepartmentDTO extends TeaModel {
         }
 
         /**
-         * roleCode.
+         * <p>The role code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>member</p>
          */
         public Builder roleCode(String roleCode) {
             this.roleCode = roleCode;
@@ -117,7 +126,10 @@ public class UserDepartmentDTO extends TeaModel {
         }
 
         /**
-         * roleName.
+         * <p>The role name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Member</p>
          */
         public Builder roleName(String roleName) {
             this.roleName = roleName;

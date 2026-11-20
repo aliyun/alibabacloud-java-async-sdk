@@ -119,10 +119,10 @@ public class ModelRouterQueryClientListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A wrapper object for the paged response data.</p>
+         * <p>The data object.</p>
          * 
          * <strong>example:</strong>
-         * <p>[]</p>
+         * <p>{&quot;page&quot;:1,&quot;pageSize&quot;:10}</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -130,7 +130,7 @@ public class ModelRouterQueryClientListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code.</p>
+         * <p>The fault message encoding.</p>
          * 
          * <strong>example:</strong>
          * <p>UNKNOWN_ERROR</p>
@@ -144,7 +144,7 @@ public class ModelRouterQueryClientListResponseBody extends TeaModel {
          * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>未知错误</p>
+         * <p>Unknown error</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -174,7 +174,7 @@ public class ModelRouterQueryClientListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -295,7 +295,7 @@ public class ModelRouterQueryClientListResponseBody extends TeaModel {
             } 
 
             /**
-             * list.
+             * <p>The list of items.</p>
              */
             public Builder list(java.util.List<ClientDTO> list) {
                 this.list = list;
@@ -303,7 +303,10 @@ public class ModelRouterQueryClientListResponseBody extends TeaModel {
             }
 
             /**
-             * maxResults.
+             * <p>maxResults</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder maxResults(String maxResults) {
                 this.maxResults = maxResults;
@@ -311,7 +314,10 @@ public class ModelRouterQueryClientListResponseBody extends TeaModel {
             }
 
             /**
-             * nextToken.
+             * <p>nextToken</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -319,7 +325,10 @@ public class ModelRouterQueryClientListResponseBody extends TeaModel {
             }
 
             /**
-             * page.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder page(Integer page) {
                 this.page = page;
@@ -327,7 +336,10 @@ public class ModelRouterQueryClientListResponseBody extends TeaModel {
             }
 
             /**
-             * pageSize.
+             * <p>The number of records per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -335,7 +347,10 @@ public class ModelRouterQueryClientListResponseBody extends TeaModel {
             }
 
             /**
-             * total.
+             * <p>The total number of records that meet the query conditions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder total(Integer total) {
                 this.total = total;

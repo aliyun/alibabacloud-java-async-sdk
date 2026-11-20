@@ -210,7 +210,7 @@ public class MemberApiKeyDTO extends TeaModel {
         } 
 
         /**
-         * client.
+         * <p>The parent department information.</p>
          */
         public Builder client(ClientDTO client) {
             this.client = client;
@@ -218,7 +218,10 @@ public class MemberApiKeyDTO extends TeaModel {
         }
 
         /**
-         * clientId.
+         * <p>The ID of the parent department. Member keys are mapped to their parent departments.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>438</p>
          */
         public Builder clientId(Long clientId) {
             this.clientId = clientId;
@@ -226,7 +229,10 @@ public class MemberApiKeyDTO extends TeaModel {
         }
 
         /**
-         * deleteTag.
+         * <p>The deletion tag. A value of 0 indicates that the key is enabled, and a non-zero value indicates that the key is disabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder deleteTag(Integer deleteTag) {
             this.deleteTag = deleteTag;
@@ -234,7 +240,10 @@ public class MemberApiKeyDTO extends TeaModel {
         }
 
         /**
-         * expireAt.
+         * <p>The expiration time. A null value indicates that the key never expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-12-31T00:00:00Z</p>
          */
         public Builder expireAt(String expireAt) {
             this.expireAt = expireAt;
@@ -242,7 +251,10 @@ public class MemberApiKeyDTO extends TeaModel {
         }
 
         /**
-         * gmtCreate.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-08-03T18:41:40+08:00</p>
          */
         public Builder gmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
@@ -250,7 +262,10 @@ public class MemberApiKeyDTO extends TeaModel {
         }
 
         /**
-         * gmtModified.
+         * <p>The update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-08-03T18:41:40+08:00</p>
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
@@ -258,7 +273,10 @@ public class MemberApiKeyDTO extends TeaModel {
         }
 
         /**
-         * id.
+         * <p>The API key ID. This ID can be used to query the bound group by API key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>502</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -266,7 +284,7 @@ public class MemberApiKeyDTO extends TeaModel {
         }
 
         /**
-         * key.
+         * <p>The full key. This field is not returned in the member list and is always empty.</p>
          */
         public Builder key(String key) {
             this.key = key;
@@ -274,7 +292,10 @@ public class MemberApiKeyDTO extends TeaModel {
         }
 
         /**
-         * keyPreview.
+         * <p>The masked preview of the API key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sk-us****9876</p>
          */
         public Builder keyPreview(String keyPreview) {
             this.keyPreview = keyPreview;
@@ -282,7 +303,10 @@ public class MemberApiKeyDTO extends TeaModel {
         }
 
         /**
-         * memberUserId.
+         * <p>The ID of the department member to whom the key belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>304</p>
          */
         public Builder memberUserId(Long memberUserId) {
             this.memberUserId = memberUserId;
@@ -290,7 +314,10 @@ public class MemberApiKeyDTO extends TeaModel {
         }
 
         /**
-         * memberUserName.
+         * <p>The member name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Zhang San</p>
          */
         public Builder memberUserName(String memberUserName) {
             this.memberUserName = memberUserName;
@@ -298,7 +325,10 @@ public class MemberApiKeyDTO extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The API key name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Zhang San\&quot;s key</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -306,7 +336,10 @@ public class MemberApiKeyDTO extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The status. Valid values: active: Enabled. disabled: Disabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         public Builder status(String status) {
             this.status = status;

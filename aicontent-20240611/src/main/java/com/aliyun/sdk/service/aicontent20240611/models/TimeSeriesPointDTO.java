@@ -80,7 +80,10 @@ public class TimeSeriesPointDTO extends TeaModel {
         } 
 
         /**
-         * label.
+         * <p>The label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>series1</p>
          */
         public Builder label(String label) {
             this.label = label;
@@ -88,7 +91,10 @@ public class TimeSeriesPointDTO extends TeaModel {
         }
 
         /**
-         * timestamp.
+         * <p>The timestamp (RFC3339).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-01-01T00:00:00Z</p>
          */
         public Builder timestamp(String timestamp) {
             this.timestamp = timestamp;
@@ -96,7 +102,10 @@ public class TimeSeriesPointDTO extends TeaModel {
         }
 
         /**
-         * value.
+         * <p>The value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>42.76</p>
          */
         public Builder value(Object value) {
             this.value = value;

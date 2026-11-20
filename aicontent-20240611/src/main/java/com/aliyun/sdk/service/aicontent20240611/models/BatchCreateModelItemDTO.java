@@ -161,7 +161,10 @@ public class BatchCreateModelItemDTO extends TeaModel {
         } 
 
         /**
-         * description.
+         * <p>The model description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Qwen Max</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -169,7 +172,10 @@ public class BatchCreateModelItemDTO extends TeaModel {
         }
 
         /**
-         * extensions.
+         * <p>The extension configuration parameters in JSON string format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder extensions(String extensions) {
             this.extensions = extensions;
@@ -177,7 +183,10 @@ public class BatchCreateModelItemDTO extends TeaModel {
         }
 
         /**
-         * inOut.
+         * <p>The supported input and output data types, separated by commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
          */
         public Builder inOut(String inOut) {
             this.inOut = inOut;
@@ -185,7 +194,10 @@ public class BatchCreateModelItemDTO extends TeaModel {
         }
 
         /**
-         * maxInputLength.
+         * <p>The maximum input length in tokens.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>128000</p>
          */
         public Builder maxInputLength(String maxInputLength) {
             this.maxInputLength = maxInputLength;
@@ -193,7 +205,10 @@ public class BatchCreateModelItemDTO extends TeaModel {
         }
 
         /**
-         * maxOutputLength.
+         * <p>The maximum output length in tokens.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8192</p>
          */
         public Builder maxOutputLength(String maxOutputLength) {
             this.maxOutputLength = maxOutputLength;
@@ -201,6 +216,7 @@ public class BatchCreateModelItemDTO extends TeaModel {
         }
 
         /**
+         * <p>The model identifier. This parameter is required and corresponds to the model ID on the vendor side. If the identifier is duplicated, the backend automatically increments the version by using v1 or v2.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -212,6 +228,7 @@ public class BatchCreateModelItemDTO extends TeaModel {
         }
 
         /**
+         * <p>The model type. This parameter is required. Valid values: Chat, Embedding, Rerank, Image, Audio, and Video.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -223,6 +240,7 @@ public class BatchCreateModelItemDTO extends TeaModel {
         }
 
         /**
+         * <p>The model name. This parameter is required. If the identifier is duplicated, add -v1 or -v2 to distinguish the models.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -234,7 +252,10 @@ public class BatchCreateModelItemDTO extends TeaModel {
         }
 
         /**
-         * tags.
+         * <p>The tags, separated by commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>chat,NLP</p>
          */
         public Builder tags(String tags) {
             this.tags = tags;

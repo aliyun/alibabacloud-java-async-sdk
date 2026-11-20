@@ -106,7 +106,10 @@ public class ApiKeyListQry extends TeaModel {
         } 
 
         /**
-         * clientId.
+         * <p>The client ID filter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder clientId(Long clientId) {
             this.clientId = clientId;
@@ -114,7 +117,7 @@ public class ApiKeyListQry extends TeaModel {
         }
 
         /**
-         * keyword.
+         * <p>The search keyword.</p>
          */
         public Builder keyword(String keyword) {
             this.keyword = keyword;
@@ -122,7 +125,10 @@ public class ApiKeyListQry extends TeaModel {
         }
 
         /**
-         * page.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Integer page) {
             this.page = page;
@@ -130,7 +136,10 @@ public class ApiKeyListQry extends TeaModel {
         }
 
         /**
-         * pageSize.
+         * <p>The number of items per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -138,7 +147,10 @@ public class ApiKeyListQry extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The status filter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.status = status;

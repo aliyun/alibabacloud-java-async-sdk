@@ -199,7 +199,7 @@ public class ModelRouterQueryModelListRequest extends Request {
         } 
 
         /**
-         * <p>The field to use for grouping the results.</p>
+         * <p>The field by which to group the results.</p>
          * 
          * <strong>example:</strong>
          * <p>resourceId</p>
@@ -211,7 +211,7 @@ public class ModelRouterQueryModelListRequest extends Request {
         }
 
         /**
-         * <p>The keyword for a fuzzy search on model information.</p>
+         * <p>The search keyword.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -235,7 +235,10 @@ public class ModelRouterQueryModelListRequest extends Request {
         }
 
         /**
-         * modelType.
+         * <p>The model type filter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Chat</p>
          */
         public Builder modelType(String modelType) {
             this.putQueryParameter("modelType", modelType);
@@ -244,7 +247,7 @@ public class ModelRouterQueryModelListRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to include the total count of matching models in the response.</p>
+         * <p>Specifies whether to include the total count of items.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -256,7 +259,7 @@ public class ModelRouterQueryModelListRequest extends Request {
         }
 
         /**
-         * <p>The pagination token for retrieving the next page of results. If this parameter is not specified, the first page is retrieved. To retrieve a subsequent page, set this to the <code>nextToken</code> value from the previous response.</p>
+         * <p>The pagination token.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -268,7 +271,7 @@ public class ModelRouterQueryModelListRequest extends Request {
         }
 
         /**
-         * <p>The field to use for sorting the results.</p>
+         * <p>The field by which to sort the results.</p>
          * 
          * <strong>example:</strong>
          * <p>resourceId</p>
@@ -280,7 +283,7 @@ public class ModelRouterQueryModelListRequest extends Request {
         }
 
         /**
-         * <p>The sort order. Valid values include <code>ASC</code> for ascending order and <code>DESC</code> for descending order.</p>
+         * <p>The sort direction.</p>
          * 
          * <strong>example:</strong>
          * <p>DESC</p>
@@ -292,7 +295,7 @@ public class ModelRouterQueryModelListRequest extends Request {
         }
 
         /**
-         * <p>The page number to retrieve. Pages are numbered starting from 1.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -304,7 +307,7 @@ public class ModelRouterQueryModelListRequest extends Request {
         }
 
         /**
-         * <p>The number of models to return per page.</p>
+         * <p>The number of items per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -316,7 +319,7 @@ public class ModelRouterQueryModelListRequest extends Request {
         }
 
         /**
-         * <p>The model status to use as a filter.</p>
+         * <p>The status filter.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

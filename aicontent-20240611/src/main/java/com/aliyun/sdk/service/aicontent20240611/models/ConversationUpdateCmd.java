@@ -93,7 +93,10 @@ public class ConversationUpdateCmd extends TeaModel {
         } 
 
         /**
-         * chatData.
+         * <p>The conversation data in JSON format, containing message records for each model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;messages&quot;:[{&quot;role&quot;:&quot;user&quot;,&quot;content&quot;:&quot;Hello&quot;}]}</p>
          */
         public Builder chatData(String chatData) {
             this.chatData = chatData;
@@ -101,7 +104,10 @@ public class ConversationUpdateCmd extends TeaModel {
         }
 
         /**
-         * messageCount.
+         * <p>The number of messages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder messageCount(Integer messageCount) {
             this.messageCount = messageCount;
@@ -109,7 +115,10 @@ public class ConversationUpdateCmd extends TeaModel {
         }
 
         /**
-         * modelIds.
+         * <p>The list of model IDs as a JSON array string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[1,2,3]</p>
          */
         public Builder modelIds(String modelIds) {
             this.modelIds = modelIds;
@@ -117,7 +126,10 @@ public class ConversationUpdateCmd extends TeaModel {
         }
 
         /**
-         * title.
+         * <p>The conversation title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>My conversation</p>
          */
         public Builder title(String title) {
             this.title = title;

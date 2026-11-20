@@ -340,7 +340,10 @@ public class RequestLogDTO extends TeaModel {
         } 
 
         /**
-         * apiKeyId.
+         * <p>API Key ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder apiKeyId(Long apiKeyId) {
             this.apiKeyId = apiKeyId;
@@ -348,7 +351,10 @@ public class RequestLogDTO extends TeaModel {
         }
 
         /**
-         * clientId.
+         * <p>The client ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder clientId(Long clientId) {
             this.clientId = clientId;
@@ -356,7 +362,10 @@ public class RequestLogDTO extends TeaModel {
         }
 
         /**
-         * clientUuid.
+         * <p>The unique identifier of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mt_xxxxxMYTX9</p>
          */
         public Builder clientUuid(String clientUuid) {
             this.clientUuid = clientUuid;
@@ -364,7 +373,10 @@ public class RequestLogDTO extends TeaModel {
         }
 
         /**
-         * completionTokens.
+         * <p>The output tokens.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder completionTokens(Integer completionTokens) {
             this.completionTokens = completionTokens;
@@ -372,7 +384,10 @@ public class RequestLogDTO extends TeaModel {
         }
 
         /**
-         * deleteTag.
+         * <p>The deletion tag. A value of 0 indicates enabled, and a non-zero value indicates disabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder deleteTag(Integer deleteTag) {
             this.deleteTag = deleteTag;
@@ -380,7 +395,10 @@ public class RequestLogDTO extends TeaModel {
         }
 
         /**
-         * gmtCreate.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-01-01T00:00:00Z</p>
          */
         public Builder gmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
@@ -388,7 +406,10 @@ public class RequestLogDTO extends TeaModel {
         }
 
         /**
-         * gmtModified.
+         * <p>The update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-01-01T00:00:00Z</p>
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
@@ -396,7 +417,10 @@ public class RequestLogDTO extends TeaModel {
         }
 
         /**
-         * id.
+         * <p>ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -404,7 +428,10 @@ public class RequestLogDTO extends TeaModel {
         }
 
         /**
-         * modelCode.
+         * <p>The model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen3-max</p>
          */
         public Builder modelCode(String modelCode) {
             this.modelCode = modelCode;
@@ -412,7 +439,10 @@ public class RequestLogDTO extends TeaModel {
         }
 
         /**
-         * modelId.
+         * <p>The model ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder modelId(Long modelId) {
             this.modelId = modelId;
@@ -420,7 +450,10 @@ public class RequestLogDTO extends TeaModel {
         }
 
         /**
-         * modelName.
+         * <p>The model name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Qwen</p>
          */
         public Builder modelName(String modelName) {
             this.modelName = modelName;
@@ -428,7 +461,10 @@ public class RequestLogDTO extends TeaModel {
         }
 
         /**
-         * modelType.
+         * <p>The model type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Chat</p>
          */
         public Builder modelType(String modelType) {
             this.modelType = modelType;
@@ -436,7 +472,10 @@ public class RequestLogDTO extends TeaModel {
         }
 
         /**
-         * promptTokens.
+         * <p>The input tokens.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder promptTokens(Integer promptTokens) {
             this.promptTokens = promptTokens;
@@ -444,7 +483,10 @@ public class RequestLogDTO extends TeaModel {
         }
 
         /**
-         * requestBody.
+         * <p>The request body.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder requestBody(String requestBody) {
             this.requestBody = requestBody;
@@ -452,7 +494,10 @@ public class RequestLogDTO extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>req-xxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -460,7 +505,10 @@ public class RequestLogDTO extends TeaModel {
         }
 
         /**
-         * requestTime.
+         * <p>The request time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-01-01T00:00:00Z</p>
          */
         public Builder requestTime(String requestTime) {
             this.requestTime = requestTime;
@@ -468,7 +516,10 @@ public class RequestLogDTO extends TeaModel {
         }
 
         /**
-         * responseBody.
+         * <p>The response body.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder responseBody(String responseBody) {
             this.responseBody = responseBody;
@@ -476,7 +527,10 @@ public class RequestLogDTO extends TeaModel {
         }
 
         /**
-         * responseTimeMs.
+         * <p>The response time in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder responseTimeMs(Integer responseTimeMs) {
             this.responseTimeMs = responseTimeMs;
@@ -484,7 +538,10 @@ public class RequestLogDTO extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -492,7 +549,10 @@ public class RequestLogDTO extends TeaModel {
         }
 
         /**
-         * statusCode.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder statusCode(Integer statusCode) {
             this.statusCode = statusCode;
@@ -500,7 +560,10 @@ public class RequestLogDTO extends TeaModel {
         }
 
         /**
-         * symbol.
+         * <p>The tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen</p>
          */
         public Builder symbol(String symbol) {
             this.symbol = symbol;
@@ -508,7 +571,10 @@ public class RequestLogDTO extends TeaModel {
         }
 
         /**
-         * totalTokens.
+         * <p>The total tokens.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>150</p>
          */
         public Builder totalTokens(Integer totalTokens) {
             this.totalTokens = totalTokens;
@@ -516,7 +582,10 @@ public class RequestLogDTO extends TeaModel {
         }
 
         /**
-         * usage.
+         * <p>The usage statistics.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;prompt_tokens&quot;:100,&quot;completion_tokens&quot;:50,&quot;total_tokens&quot;:150}</p>
          */
         public Builder usage(UsageInfoDTO usage) {
             this.usage = usage;

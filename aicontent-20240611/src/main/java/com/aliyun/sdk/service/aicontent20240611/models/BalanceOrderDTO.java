@@ -223,7 +223,10 @@ public class BalanceOrderDTO extends TeaModel {
         } 
 
         /**
-         * amount.
+         * <p>The change amount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.00</p>
          */
         public Builder amount(Double amount) {
             this.amount = amount;
@@ -231,7 +234,10 @@ public class BalanceOrderDTO extends TeaModel {
         }
 
         /**
-         * balanceAfter.
+         * <p>The pool balance after the change.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>600.00</p>
          */
         public Builder balanceAfter(Double balanceAfter) {
             this.balanceAfter = balanceAfter;
@@ -239,7 +245,10 @@ public class BalanceOrderDTO extends TeaModel {
         }
 
         /**
-         * balanceBefore.
+         * <p>The pool balance before the change.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500.00</p>
          */
         public Builder balanceBefore(Double balanceBefore) {
             this.balanceBefore = balanceBefore;
@@ -247,7 +256,10 @@ public class BalanceOrderDTO extends TeaModel {
         }
 
         /**
-         * balanceType.
+         * <p>The balance type (permanent: Permanent / monthly: Monthly).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>permanent</p>
          */
         public Builder balanceType(String balanceType) {
             this.balanceType = balanceType;
@@ -255,7 +267,10 @@ public class BalanceOrderDTO extends TeaModel {
         }
 
         /**
-         * createTime.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-07-15T10:30:00+08:00</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -263,7 +278,10 @@ public class BalanceOrderDTO extends TeaModel {
         }
 
         /**
-         * direction.
+         * <p>The direction (in: Income / out: Expense).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>in</p>
          */
         public Builder direction(String direction) {
             this.direction = direction;
@@ -271,7 +289,10 @@ public class BalanceOrderDTO extends TeaModel {
         }
 
         /**
-         * modelCode.
+         * <p>The associated model code (available for deduction types).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen-max</p>
          */
         public Builder modelCode(String modelCode) {
             this.modelCode = modelCode;
@@ -279,7 +300,10 @@ public class BalanceOrderDTO extends TeaModel {
         }
 
         /**
-         * operatorId.
+         * <p>The operator ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder operatorId(String operatorId) {
             this.operatorId = operatorId;
@@ -287,7 +311,10 @@ public class BalanceOrderDTO extends TeaModel {
         }
 
         /**
-         * orderId.
+         * <p>The unique identifier of the change record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ord_20240715_abc123</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -295,7 +322,10 @@ public class BalanceOrderDTO extends TeaModel {
         }
 
         /**
-         * orderType.
+         * <p>The change type (recharge: Recharge / periodic_recharge: Periodic recharge / deduct: Deduction / manual_deduct: Manual deduction / transfer_out: Transfer out / transfer_in: Transfer in / return_out: Refund out / return_in: Refund in / write_off: Write-off / monthly_expire: Monthly expiration / deficit_writeoff: Deficit write-off).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>recharge</p>
          */
         public Builder orderType(String orderType) {
             this.orderType = orderType;
@@ -303,7 +333,10 @@ public class BalanceOrderDTO extends TeaModel {
         }
 
         /**
-         * remark.
+         * <p>The remark.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Manual recharge by administrator</p>
          */
         public Builder remark(String remark) {
             this.remark = remark;
@@ -311,7 +344,10 @@ public class BalanceOrderDTO extends TeaModel {
         }
 
         /**
-         * source.
+         * <p>The source identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>console</p>
          */
         public Builder source(String source) {
             this.source = source;
@@ -319,7 +355,10 @@ public class BalanceOrderDTO extends TeaModel {
         }
 
         /**
-         * totalAfter.
+         * <p>The total balance after the change (permanent + monthly).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1600.00</p>
          */
         public Builder totalAfter(Double totalAfter) {
             this.totalAfter = totalAfter;
@@ -327,7 +366,10 @@ public class BalanceOrderDTO extends TeaModel {
         }
 
         /**
-         * totalBefore.
+         * <p>The total balance before the change (permanent + monthly).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1500.00</p>
          */
         public Builder totalBefore(Double totalBefore) {
             this.totalBefore = totalBefore;

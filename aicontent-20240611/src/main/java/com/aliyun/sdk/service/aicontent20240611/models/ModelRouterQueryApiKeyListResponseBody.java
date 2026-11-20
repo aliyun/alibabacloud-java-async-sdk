@@ -133,9 +133,6 @@ public class ModelRouterQueryApiKeyListResponseBody extends TeaModel {
 
         /**
          * <p>The data object.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>[]</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -143,7 +140,7 @@ public class ModelRouterQueryApiKeyListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message code.</p>
+         * <p>The fault message encoding.</p>
          * 
          * <strong>example:</strong>
          * <p>UNKNOWN_ERROR</p>
@@ -198,7 +195,7 @@ public class ModelRouterQueryApiKeyListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -319,7 +316,7 @@ public class ModelRouterQueryApiKeyListResponseBody extends TeaModel {
             } 
 
             /**
-             * list.
+             * <p>The elements.</p>
              */
             public Builder list(java.util.List<ApiKeyDTO> list) {
                 this.list = list;
@@ -327,7 +324,10 @@ public class ModelRouterQueryApiKeyListResponseBody extends TeaModel {
             }
 
             /**
-             * maxResult.
+             * <p>The page size. Default value: 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder maxResult(String maxResult) {
                 this.maxResult = maxResult;
@@ -335,7 +335,10 @@ public class ModelRouterQueryApiKeyListResponseBody extends TeaModel {
             }
 
             /**
-             * nextToken.
+             * <p>nextToken</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -343,7 +346,10 @@ public class ModelRouterQueryApiKeyListResponseBody extends TeaModel {
             }
 
             /**
-             * page.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder page(Integer page) {
                 this.page = page;
@@ -351,7 +357,10 @@ public class ModelRouterQueryApiKeyListResponseBody extends TeaModel {
             }
 
             /**
-             * pageSize.
+             * <p>The number of items per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -359,7 +368,10 @@ public class ModelRouterQueryApiKeyListResponseBody extends TeaModel {
             }
 
             /**
-             * total.
+             * <p>The total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder total(Integer total) {
                 this.total = total;

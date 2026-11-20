@@ -119,7 +119,7 @@ public class Personalizedtxt2imgQueryInferenceJobInfoResponseBody extends TeaMod
         } 
 
         /**
-         * <p>The object that contains the query results.</p>
+         * <p>The data object.</p>
          * 
          * <strong>example:</strong>
          * <p>[]</p>
@@ -130,7 +130,7 @@ public class Personalizedtxt2imgQueryInferenceJobInfoResponseBody extends TeaMod
         }
 
         /**
-         * <p>The error code returned if the request fails.</p>
+         * <p>The fault message encoding.</p>
          * 
          * <strong>example:</strong>
          * <p>UNKNOWN_ERROR</p>
@@ -141,10 +141,10 @@ public class Personalizedtxt2imgQueryInferenceJobInfoResponseBody extends TeaMod
         }
 
         /**
-         * <p>The error message returned if the request fails.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>未知错误</p>
+         * <p>Unknown error</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -174,7 +174,7 @@ public class Personalizedtxt2imgQueryInferenceJobInfoResponseBody extends TeaMod
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -308,7 +308,7 @@ public class Personalizedtxt2imgQueryInferenceJobInfoResponseBody extends TeaMod
             } 
 
             /**
-             * <p>The time when the inference job was created.</p>
+             * <p>The creation time of the model inference task.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-12-25T12:00:00</p>
@@ -319,7 +319,7 @@ public class Personalizedtxt2imgQueryInferenceJobInfoResponseBody extends TeaMod
             }
 
             /**
-             * <p>The ID of the inference job.</p>
+             * <p>The ID of the model inference task.</p>
              * 
              * <strong>example:</strong>
              * <p>3220</p>
@@ -330,7 +330,7 @@ public class Personalizedtxt2imgQueryInferenceJobInfoResponseBody extends TeaMod
             }
 
             /**
-             * <p>The status of the inference job.</p>
+             * <p>The status of the model inference task.</p>
              * 
              * <strong>example:</strong>
              * <p>FINISHED</p>
@@ -341,7 +341,7 @@ public class Personalizedtxt2imgQueryInferenceJobInfoResponseBody extends TeaMod
             }
 
             /**
-             * <p>The progress of the inference job.</p>
+             * <p>The progress of the model inference task.</p>
              * 
              * <strong>example:</strong>
              * <p>0.5</p>
@@ -363,7 +363,7 @@ public class Personalizedtxt2imgQueryInferenceJobInfoResponseBody extends TeaMod
             }
 
             /**
-             * <p>The ID of the prompt.</p>
+             * <p>promptId</p>
              * 
              * <strong>example:</strong>
              * <p>promptId-xxxx-xxxx-xxxx</p>
@@ -374,7 +374,7 @@ public class Personalizedtxt2imgQueryInferenceJobInfoResponseBody extends TeaMod
             }
 
             /**
-             * <p>A list of URLs for the generated images.</p>
+             * <p>The list of task results for the model inference node.</p>
              * 
              * <strong>example:</strong>
              * <p>0000.png</p>

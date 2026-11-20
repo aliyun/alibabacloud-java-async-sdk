@@ -119,7 +119,7 @@ public class ObservationChartsDTO extends TeaModel {
         } 
 
         /**
-         * callVolume.
+         * <p>The call volume time series.</p>
          */
         public Builder callVolume(java.util.List<TimeSeriesPointDTO> callVolume) {
             this.callVolume = callVolume;
@@ -127,7 +127,7 @@ public class ObservationChartsDTO extends TeaModel {
         }
 
         /**
-         * concurrency.
+         * <p>The number of concurrent connections.</p>
          */
         public Builder concurrency(java.util.List<TimeSeriesPointDTO> concurrency) {
             this.concurrency = concurrency;
@@ -135,7 +135,7 @@ public class ObservationChartsDTO extends TeaModel {
         }
 
         /**
-         * qpm.
+         * <p>The QPM time series.</p>
          */
         public Builder qpm(java.util.List<TimeSeriesPointDTO> qpm) {
             this.qpm = qpm;
@@ -143,7 +143,7 @@ public class ObservationChartsDTO extends TeaModel {
         }
 
         /**
-         * responseTime.
+         * <p>The response time time series.</p>
          */
         public Builder responseTime(java.util.List<TimeSeriesPointDTO> responseTime) {
             this.responseTime = responseTime;
@@ -151,7 +151,7 @@ public class ObservationChartsDTO extends TeaModel {
         }
 
         /**
-         * successRate.
+         * <p>The success rate time series.</p>
          */
         public Builder successRate(java.util.List<SuccessRate> successRate) {
             this.successRate = successRate;
@@ -159,7 +159,7 @@ public class ObservationChartsDTO extends TeaModel {
         }
 
         /**
-         * tpm.
+         * <p>The TPM time series.</p>
          */
         public Builder tpm(java.util.List<TimeSeriesPointDTO> tpm) {
             this.tpm = tpm;
@@ -238,7 +238,10 @@ public class ObservationChartsDTO extends TeaModel {
             } 
 
             /**
-             * label.
+             * <p>The label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>series1</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -246,7 +249,10 @@ public class ObservationChartsDTO extends TeaModel {
             }
 
             /**
-             * timestamp.
+             * <p>The timestamp (RFC3339).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-01T00:00:00Z</p>
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;
@@ -254,7 +260,10 @@ public class ObservationChartsDTO extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>62.37</p>
              */
             public Builder value(Object value) {
                 this.value = value;

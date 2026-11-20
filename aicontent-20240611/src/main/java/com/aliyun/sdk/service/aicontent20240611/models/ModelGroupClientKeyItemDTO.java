@@ -80,7 +80,10 @@ public class ModelGroupClientKeyItemDTO extends TeaModel {
         } 
 
         /**
-         * id.
+         * <p>The numeric ID of the API key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>501</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -88,7 +91,10 @@ public class ModelGroupClientKeyItemDTO extends TeaModel {
         }
 
         /**
-         * keyPreview.
+         * <p>The masked preview of the API key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sk-ab****yz</p>
          */
         public Builder keyPreview(String keyPreview) {
             this.keyPreview = keyPreview;
@@ -96,7 +102,10 @@ public class ModelGroupClientKeyItemDTO extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The authorization name (derived from the API key name).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Default key</p>
          */
         public Builder name(String name) {
             this.name = name;

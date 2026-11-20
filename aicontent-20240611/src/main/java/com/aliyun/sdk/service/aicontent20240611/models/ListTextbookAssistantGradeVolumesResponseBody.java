@@ -119,7 +119,7 @@ public class ListTextbookAssistantGradeVolumesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response data.</p>
+         * <p>The response data object.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -141,7 +141,7 @@ public class ListTextbookAssistantGradeVolumesResponseBody extends TeaModel {
          * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>未知错误</p>
+         * <p>Unknown error</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -160,7 +160,7 @@ public class ListTextbookAssistantGradeVolumesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>F3B1AAF2-3041-5AA7-A352-BD5F998FA465</p>
@@ -171,7 +171,7 @@ public class ListTextbookAssistantGradeVolumesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -240,7 +240,7 @@ public class ListTextbookAssistantGradeVolumesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The grade level. Valid values: 1 to 9.</p>
+             * <p>The grade. Valid values: 1 to 9, corresponding to the grade level.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -251,7 +251,7 @@ public class ListTextbookAssistantGradeVolumesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The volume. Valid values: <code>0</code> (single volume), <code>1</code> (Volume 1), and <code>2</code> (Volume 2).</p>
+             * <p>The volume. Valid values: 0: full volume, 1: first semester, 2: second semester.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -321,7 +321,7 @@ public class ListTextbookAssistantGradeVolumesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The grade and volume information.</p>
+             * <p>The grade and volume data.</p>
              */
             public Builder gradeVolumes(java.util.List<GradeVolumes> gradeVolumes) {
                 this.gradeVolumes = gradeVolumes;
@@ -329,10 +329,10 @@ public class ListTextbookAssistantGradeVolumesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the textbook.</p>
+             * <p>The textbook version.</p>
              * 
              * <strong>example:</strong>
-             * <p>人教版</p>
+             * <p>PEP edition</p>
              */
             public Builder textbookVersion(String textbookVersion) {
                 this.textbookVersion = textbookVersion;

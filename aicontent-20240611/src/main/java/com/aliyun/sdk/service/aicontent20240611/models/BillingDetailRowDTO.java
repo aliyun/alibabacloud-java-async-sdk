@@ -353,7 +353,7 @@ public class BillingDetailRowDTO extends TeaModel {
         } 
 
         /**
-         * <p>The actual payment amount (after discount), rounded to 8 decimal places.</p>
+         * <p>The actual amount paid after discounts, rounded to eight decimal places.</p>
          * 
          * <strong>example:</strong>
          * <p>0.00012800</p>
@@ -375,10 +375,10 @@ public class BillingDetailRowDTO extends TeaModel {
         }
 
         /**
-         * <p>The API key name.</p>
+         * <p>The name of the API key.</p>
          * 
          * <strong>example:</strong>
-         * <p>Default Key</p>
+         * <p>Default key</p>
          */
         public Builder apiKeyName(String apiKeyName) {
             this.apiKeyName = apiKeyName;
@@ -386,7 +386,7 @@ public class BillingDetailRowDTO extends TeaModel {
         }
 
         /**
-         * <p>The number of cache creation tokens (explicit cache writes).</p>
+         * <p>The number of cache creation tokens for explicit cache writes.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -397,7 +397,7 @@ public class BillingDetailRowDTO extends TeaModel {
         }
 
         /**
-         * <p>The number of tokens that hit the cache.</p>
+         * <p>The number of cache hit tokens.</p>
          * 
          * <strong>example:</strong>
          * <p>256</p>
@@ -408,7 +408,7 @@ public class BillingDetailRowDTO extends TeaModel {
         }
 
         /**
-         * <p>The department ID. A value of 0 indicates that no department is associated.</p>
+         * <p>The department ID. A value of 0 indicates that the request does not belong to any department.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -430,7 +430,7 @@ public class BillingDetailRowDTO extends TeaModel {
         }
 
         /**
-         * <p>The discount coefficient. A value of 1.0 indicates no discount.</p>
+         * <p>The discount factor. A value of 1.0 indicates no discount.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0</p>
@@ -452,7 +452,7 @@ public class BillingDetailRowDTO extends TeaModel {
         }
 
         /**
-         * <p>The member user ID for a member row. The value is 0 for a department row.</p>
+         * <p>The user ID of the member. For department rows, the value is 0.</p>
          * 
          * <strong>example:</strong>
          * <p>30001</p>
@@ -463,10 +463,10 @@ public class BillingDetailRowDTO extends TeaModel {
         }
 
         /**
-         * <p>The member name for a member row. The value is empty for a department row.</p>
+         * <p>The name of the member. For department rows, the value is empty.</p>
          * 
          * <strong>example:</strong>
-         * <p>John</p>
+         * <p>John Doe</p>
          */
         public Builder memberUserName(String memberUserName) {
             this.memberUserName = memberUserName;
@@ -474,7 +474,7 @@ public class BillingDetailRowDTO extends TeaModel {
         }
 
         /**
-         * <p>The JSON of other metering field mapping, such as video duration and image count. Fields with a value of 0 are not included in the output.</p>
+         * <p>The JSON containing other metering field mappings, such as video duration and number of images. Fields with a value of 0 are not returned.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -518,7 +518,7 @@ public class BillingDetailRowDTO extends TeaModel {
         }
 
         /**
-         * <p>The model symbol (provider identifier).</p>
+         * <p>The model symbol, which is the vendor identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>qwen</p>
@@ -573,7 +573,7 @@ public class BillingDetailRowDTO extends TeaModel {
         }
 
         /**
-         * <p>The unique request ID.</p>
+         * <p>The unique identifier of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>chatcmpl-abc123def456</p>
@@ -606,7 +606,7 @@ public class BillingDetailRowDTO extends TeaModel {
         }
 
         /**
-         * <p>The raw JSON of the usage details.</p>
+         * <p>The raw JSON of usage details.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;input_tokens&quot;: 1024, &quot;output_tokens&quot;: 512}</p>

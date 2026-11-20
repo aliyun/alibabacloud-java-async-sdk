@@ -89,7 +89,7 @@ public class ExecuteAITeacherSyncDialogueTranslateRequest extends Request {
         } 
 
         /**
-         * <p>An array of dialogue task objects.</p>
+         * <p>The collection of conversation content for dialogue tasks.</p>
          * <p>This parameter is required.</p>
          */
         public Builder dialogueTasks(java.util.List<DialogueTasks> dialogueTasks) {
@@ -99,7 +99,7 @@ public class ExecuteAITeacherSyncDialogueTranslateRequest extends Request {
         }
 
         /**
-         * <p>An array of dialogue record objects.</p>
+         * <p>The collection of conversation records.</p>
          */
         public Builder records(java.util.List<Records> records) {
             this.putBodyParameter("records", records);
@@ -209,7 +209,7 @@ public class ExecuteAITeacherSyncDialogueTranslateRequest extends Request {
             } 
 
             /**
-             * <p>The content of the assistant\&quot;s message.</p>
+             * <p>The AI conversation content.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -221,10 +221,10 @@ public class ExecuteAITeacherSyncDialogueTranslateRequest extends Request {
             }
 
             /**
-             * <p>The translated content of the assistant\&quot;s message.</p>
+             * <p>The translation of the AI conversation content.</p>
              * 
              * <strong>example:</strong>
-             * <p>为什么有些人认为遛狗是份好差事?</p>
+             * <p>Why do some people think walking dogs is a good job?</p>
              */
             public Builder assistantTranslate(String assistantTranslate) {
                 this.assistantTranslate = assistantTranslate;
@@ -232,7 +232,7 @@ public class ExecuteAITeacherSyncDialogueTranslateRequest extends Request {
             }
 
             /**
-             * <p>The sequence number of the task.</p>
+             * <p>The sort order.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -244,7 +244,7 @@ public class ExecuteAITeacherSyncDialogueTranslateRequest extends Request {
             }
 
             /**
-             * <p>The content of the user\&quot;s message.</p>
+             * <p>The user conversation content.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -357,7 +357,7 @@ public class ExecuteAITeacherSyncDialogueTranslateRequest extends Request {
             } 
 
             /**
-             * <p>The content of the message.</p>
+             * <p>The conversation content.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -369,10 +369,14 @@ public class ExecuteAITeacherSyncDialogueTranslateRequest extends Request {
             }
 
             /**
-             * <p>Indicates whether the message is off-topic. This parameter is used for flow control.</p>
+             * <p>Specifies whether the content is off topic for flow control purposes. Valid values:</p>
+             * <ul>
+             * <li>true: Off topic.</li>
+             * <li>false: On topic.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
-             * <p>跑题：true, 不跑题：false</p>
+             * <p>true</p>
              */
             public Builder isOffTopicControl(Boolean isOffTopicControl) {
                 this.isOffTopicControl = isOffTopicControl;
@@ -380,10 +384,14 @@ public class ExecuteAITeacherSyncDialogueTranslateRequest extends Request {
             }
 
             /**
-             * <p>Indicates whether the message is on-topic.</p>
+             * <p>Specifies whether the content is on topic. Valid values:</p>
+             * <ul>
+             * <li>true: On topic.</li>
+             * <li>false: Off topic.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
-             * <p>扣题：true, 不扣题：false</p>
+             * <p>true</p>
              */
             public Builder isOnTopic(Boolean isOnTopic) {
                 this.isOnTopic = isOnTopic;
@@ -391,7 +399,7 @@ public class ExecuteAITeacherSyncDialogueTranslateRequest extends Request {
             }
 
             /**
-             * <p>The sequence number of the message.</p>
+             * <p>The sort order.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -403,11 +411,11 @@ public class ExecuteAITeacherSyncDialogueTranslateRequest extends Request {
             }
 
             /**
-             * <p>The message author\&quot;s role.</p>
+             * <p>The role.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>AI：assistant；用户：user</p>
+             * <p>AI: assistant; User: user</p>
              */
             public Builder role(String role) {
                 this.role = role;

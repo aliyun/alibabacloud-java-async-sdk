@@ -119,7 +119,7 @@ public class CreateAccessWarrantResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned data object.</p>
+         * <p>The data object.</p>
          * 
          * <strong>example:</strong>
          * <p>[]</p>
@@ -130,7 +130,7 @@ public class CreateAccessWarrantResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned if the request fails.</p>
+         * <p>The fault message code.</p>
          * 
          * <strong>example:</strong>
          * <p>UNKNOWN_ERROR</p>
@@ -141,10 +141,10 @@ public class CreateAccessWarrantResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned if the request fails.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>未知错误</p>
+         * <p>Unknown error</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -163,7 +163,7 @@ public class CreateAccessWarrantResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
@@ -174,7 +174,7 @@ public class CreateAccessWarrantResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -306,7 +306,7 @@ public class CreateAccessWarrantResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The access warrant ID.</p>
+             * <p>The access token.</p>
              * 
              * <strong>example:</strong>
              * <p>ex2xxxxxxxx</p>
@@ -317,7 +317,7 @@ public class CreateAccessWarrantResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The merchant\&quot;s application ID.</p>
+             * <p>The application access ID (AppKey).</p>
              * 
              * <strong>example:</strong>
              * <p>1234567890</p>
@@ -328,7 +328,7 @@ public class CreateAccessWarrantResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time of the access warrant.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>1672531200</p>
@@ -339,7 +339,7 @@ public class CreateAccessWarrantResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration time of the access warrant.</p>
+             * <p>The expiration time of the token.</p>
              * 
              * <strong>example:</strong>
              * <p>1672531200</p>
@@ -350,7 +350,7 @@ public class CreateAccessWarrantResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The merchant\&quot;s user ID.</p>
+             * <p>The user ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1234567890</p>

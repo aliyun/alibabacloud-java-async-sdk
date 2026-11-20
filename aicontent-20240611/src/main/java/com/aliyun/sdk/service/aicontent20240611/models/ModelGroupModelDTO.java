@@ -119,7 +119,10 @@ public class ModelGroupModelDTO extends TeaModel {
         } 
 
         /**
-         * id.
+         * <p>The numeric ID of the model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>101</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -127,7 +130,10 @@ public class ModelGroupModelDTO extends TeaModel {
         }
 
         /**
-         * modelCode.
+         * <p>The model identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen-max</p>
          */
         public Builder modelCode(String modelCode) {
             this.modelCode = modelCode;
@@ -135,7 +141,10 @@ public class ModelGroupModelDTO extends TeaModel {
         }
 
         /**
-         * modelType.
+         * <p>The model type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Chat</p>
          */
         public Builder modelType(String modelType) {
             this.modelType = modelType;
@@ -143,7 +152,10 @@ public class ModelGroupModelDTO extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The name of the model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Qwen-Max</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -151,7 +163,10 @@ public class ModelGroupModelDTO extends TeaModel {
         }
 
         /**
-         * platform.
+         * <p>The platform to which the model belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen</p>
          */
         public Builder platform(String platform) {
             this.platform = platform;
@@ -159,7 +174,10 @@ public class ModelGroupModelDTO extends TeaModel {
         }
 
         /**
-         * version.
+         * <p>The model version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v0</p>
          */
         public Builder version(String version) {
             this.version = version;

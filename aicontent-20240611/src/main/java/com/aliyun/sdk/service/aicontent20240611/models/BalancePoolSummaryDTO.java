@@ -80,7 +80,10 @@ public class BalancePoolSummaryDTO extends TeaModel {
         } 
 
         /**
-         * allocated.
+         * <p>The balance allocated to users equals the sum of the sub-wallet balances of all members in the department.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40.00</p>
          */
         public Builder allocated(Double allocated) {
             this.allocated = allocated;
@@ -88,7 +91,10 @@ public class BalancePoolSummaryDTO extends TeaModel {
         }
 
         /**
-         * available.
+         * <p>The available department balance equals the sub-wallet balance of the department.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60.00</p>
          */
         public Builder available(Double available) {
             this.available = available;
@@ -96,7 +102,10 @@ public class BalancePoolSummaryDTO extends TeaModel {
         }
 
         /**
-         * total.
+         * <p>The total amount equals the available department balance plus the balance allocated to users.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.00</p>
          */
         public Builder total(Double total) {
             this.total = total;

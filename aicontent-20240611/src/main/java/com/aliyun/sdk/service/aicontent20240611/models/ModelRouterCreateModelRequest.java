@@ -237,10 +237,10 @@ public class ModelRouterCreateModelRequest extends Request {
         }
 
         /**
-         * <p>The model description.</p>
+         * <p>The description of the model.</p>
          * 
          * <strong>example:</strong>
-         * <p>通义千问大模型</p>
+         * <p>Qwen large language model</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -297,7 +297,7 @@ public class ModelRouterCreateModelRequest extends Request {
         }
 
         /**
-         * <p>The model ID.</p>
+         * <p>The ID of the model.</p>
          * 
          * <strong>example:</strong>
          * <p>qwen-turbo</p>
@@ -309,7 +309,7 @@ public class ModelRouterCreateModelRequest extends Request {
         }
 
         /**
-         * <p>The model type.</p>
+         * <p>The type of the model.</p>
          * 
          * <strong>example:</strong>
          * <p>Chat</p>
@@ -321,10 +321,10 @@ public class ModelRouterCreateModelRequest extends Request {
         }
 
         /**
-         * <p>The model name.</p>
+         * <p>The name of the model.</p>
          * 
          * <strong>example:</strong>
-         * <p>通义千问</p>
+         * <p>Qwen</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);

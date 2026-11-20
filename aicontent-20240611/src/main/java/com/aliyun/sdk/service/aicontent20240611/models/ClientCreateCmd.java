@@ -106,7 +106,10 @@ public class ClientCreateCmd extends TeaModel {
         } 
 
         /**
-         * address.
+         * <p>The company address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hangzhou</p>
          */
         public Builder address(String address) {
             this.address = address;
@@ -114,7 +117,10 @@ public class ClientCreateCmd extends TeaModel {
         }
 
         /**
-         * allowedModels.
+         * <p>The list of allowed model IDs, separated by commas. An empty value indicates all models.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1,2,3</p>
          */
         public Builder allowedModels(String allowedModels) {
             this.allowedModels = allowedModels;
@@ -122,7 +128,10 @@ public class ClientCreateCmd extends TeaModel {
         }
 
         /**
-         * contact.
+         * <p>The contact information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13800138000</p>
          */
         public Builder contact(String contact) {
             this.contact = contact;
@@ -130,7 +139,10 @@ public class ClientCreateCmd extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The customer name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>My customer</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -138,7 +150,10 @@ public class ClientCreateCmd extends TeaModel {
         }
 
         /**
-         * remark.
+         * <p>The remarks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Remark</p>
          */
         public Builder remark(String remark) {
             this.remark = remark;

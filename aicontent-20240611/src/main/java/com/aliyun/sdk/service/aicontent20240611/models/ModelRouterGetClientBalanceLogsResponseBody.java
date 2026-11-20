@@ -153,7 +153,7 @@ public class ModelRouterGetClientBalanceLogsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The fault code.</p>
+         * <p>The error message code.</p>
          * 
          * <strong>example:</strong>
          * <p>UNKNOWN_ERROR</p>
@@ -186,7 +186,7 @@ public class ModelRouterGetClientBalanceLogsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of entries to return.</p>
+         * <p>The maximum number of items to return.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -219,7 +219,7 @@ public class ModelRouterGetClientBalanceLogsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -333,7 +333,7 @@ public class ModelRouterGetClientBalanceLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries per page.</p>
+             * <p>The number of items per page.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -344,7 +344,7 @@ public class ModelRouterGetClientBalanceLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries.</p>
+             * <p>The total number of items.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

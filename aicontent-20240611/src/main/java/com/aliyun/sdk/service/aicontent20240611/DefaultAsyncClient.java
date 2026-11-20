@@ -2015,7 +2015,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the bound groups and models by API key.</p>
+     * <p>Queries the groups and models bound to an API key.</p>
      * 
      * @param request the request parameters of ModelRouterQueryModelGroupsByApiKey  ModelRouterQueryModelGroupsByApiKeyRequest
      * @return ModelRouterQueryModelGroupsByApiKeyResponse

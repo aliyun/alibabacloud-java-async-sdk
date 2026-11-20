@@ -158,7 +158,7 @@ public class ApiKeyDecryptedDTO extends TeaModel {
         } 
 
         /**
-         * client.
+         * <p>The associated client information.</p>
          */
         public Builder client(ClientDTO client) {
             this.client = client;
@@ -166,7 +166,10 @@ public class ApiKeyDecryptedDTO extends TeaModel {
         }
 
         /**
-         * clientId.
+         * <p>The client ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder clientId(Long clientId) {
             this.clientId = clientId;
@@ -174,7 +177,10 @@ public class ApiKeyDecryptedDTO extends TeaModel {
         }
 
         /**
-         * deleteTag.
+         * <p>The deletion tag. A value of 0 indicates enabled, and a non-zero value indicates disabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder deleteTag(Integer deleteTag) {
             this.deleteTag = deleteTag;
@@ -182,7 +188,10 @@ public class ApiKeyDecryptedDTO extends TeaModel {
         }
 
         /**
-         * gmtCreate.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-01-01T00:00:00Z</p>
          */
         public Builder gmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
@@ -190,7 +199,10 @@ public class ApiKeyDecryptedDTO extends TeaModel {
         }
 
         /**
-         * gmtModified.
+         * <p>The update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-01-01T00:00:00Z</p>
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
@@ -198,7 +210,10 @@ public class ApiKeyDecryptedDTO extends TeaModel {
         }
 
         /**
-         * id.
+         * <p>ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -206,7 +221,10 @@ public class ApiKeyDecryptedDTO extends TeaModel {
         }
 
         /**
-         * key.
+         * <p>The full key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sk-xxxxxxxxxxxxxxxxxxx</p>
          */
         public Builder key(String key) {
             this.key = key;
@@ -214,7 +232,10 @@ public class ApiKeyDecryptedDTO extends TeaModel {
         }
 
         /**
-         * keyPreview.
+         * <p>The key preview.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sk-xxx****xxx</p>
          */
         public Builder keyPreview(String keyPreview) {
             this.keyPreview = keyPreview;
@@ -222,7 +243,10 @@ public class ApiKeyDecryptedDTO extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The key name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyApiKey</p>
          */
         public Builder name(String name) {
             this.name = name;

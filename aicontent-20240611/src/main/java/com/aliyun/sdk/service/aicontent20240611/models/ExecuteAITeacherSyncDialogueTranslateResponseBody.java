@@ -122,7 +122,7 @@ public class ExecuteAITeacherSyncDialogueTranslateResponseBody extends TeaModel 
          * <p>The data object.</p>
          * 
          * <strong>example:</strong>
-         * <p>[]</p>
+         * <p>{&quot;result&quot;:&quot;That\&quot;s great, thank you for coming, Lily. Do you like eating meat?&quot;}</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -130,7 +130,7 @@ public class ExecuteAITeacherSyncDialogueTranslateResponseBody extends TeaModel 
         }
 
         /**
-         * <p>The error code.</p>
+         * <p>The fault message encoding.</p>
          * 
          * <strong>example:</strong>
          * <p>UNKNOWN_ERROR</p>
@@ -144,7 +144,7 @@ public class ExecuteAITeacherSyncDialogueTranslateResponseBody extends TeaModel 
          * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>未知错误</p>
+         * <p>Unknown error</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -174,7 +174,7 @@ public class ExecuteAITeacherSyncDialogueTranslateResponseBody extends TeaModel 
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -233,7 +233,7 @@ public class ExecuteAITeacherSyncDialogueTranslateResponseBody extends TeaModel 
              * <p>The translation result.</p>
              * 
              * <strong>example:</strong>
-             * <p>太好了，谢谢你过来，莉莉。你喜欢吃肉吗？</p>
+             * <p>That\&quot;s great, thank you for coming, Lily. Do you like eating meat?</p>
              */
             public Builder result(String result) {
                 this.result = result;

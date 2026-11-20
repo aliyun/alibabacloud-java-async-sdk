@@ -119,7 +119,10 @@ public class UserListItemDTO extends TeaModel {
         } 
 
         /**
-         * departments.
+         * <p>The list of departments and roles to which the user belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder departments(java.util.List<UserDepartmentDTO> departments) {
             this.departments = departments;
@@ -127,7 +130,10 @@ public class UserListItemDTO extends TeaModel {
         }
 
         /**
-         * gmtCreate.
+         * <p>The creation time in the yyyy-MM-dd HH:mm:ss format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-07-01 10:00:00</p>
          */
         public Builder gmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
@@ -135,7 +141,10 @@ public class UserListItemDTO extends TeaModel {
         }
 
         /**
-         * id.
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -143,7 +152,10 @@ public class UserListItemDTO extends TeaModel {
         }
 
         /**
-         * loginName.
+         * <p>The logon name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zhangsan</p>
          */
         public Builder loginName(String loginName) {
             this.loginName = loginName;
@@ -151,7 +163,10 @@ public class UserListItemDTO extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Zhang San</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -159,7 +174,10 @@ public class UserListItemDTO extends TeaModel {
         }
 
         /**
-         * phone.
+         * <p>The phone number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13800000000</p>
          */
         public Builder phone(String phone) {
             this.phone = phone;

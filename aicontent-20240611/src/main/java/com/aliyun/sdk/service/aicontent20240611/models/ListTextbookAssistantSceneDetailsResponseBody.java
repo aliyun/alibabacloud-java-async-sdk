@@ -127,7 +127,7 @@ public class ListTextbookAssistantSceneDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned if the request fails.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>UNKNOWN_ERROR</p>
@@ -138,10 +138,10 @@ public class ListTextbookAssistantSceneDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned if the request fails.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>未知错误</p>
+         * <p>Unknown error</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -160,7 +160,7 @@ public class ListTextbookAssistantSceneDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
@@ -171,11 +171,11 @@ public class ListTextbookAssistantSceneDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call succeeded.</p>
+         * <p>Indicates whether the API call is successful. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: The call succeeded.</p>
+         * <li><p><strong>true</strong>: Successful.</p>
          * </li>
-         * <li><p><strong>false</strong>: The call failed.</p>
+         * <li><p><strong>false</strong>: Failed.</p>
          * </li>
          * </ul>
          * 
@@ -325,7 +325,7 @@ public class ListTextbookAssistantSceneDetailsResponseBody extends TeaModel {
              * <p>The translation of the role introduction.</p>
              * 
              * <strong>example:</strong>
-             * <p>Carl，一个好奇的男孩</p>
+             * <p>Carl, a curious boy</p>
              */
             public Builder introductionTranslate(String introductionTranslate) {
                 this.introductionTranslate = introductionTranslate;
@@ -333,7 +333,7 @@ public class ListTextbookAssistantSceneDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The role guidance text.</p>
+             * <p>The role prompt text.</p>
              * 
              * <strong>example:</strong>
              * <p>Hi Noah, who is that in the photo?</p>
@@ -344,10 +344,10 @@ public class ListTextbookAssistantSceneDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The translation of the role guidance text.</p>
+             * <p>The translation of the role prompt text.</p>
              * 
              * <strong>example:</strong>
-             * <p>嗨 Noah，照片里的人是谁？</p>
+             * <p>Hi Noah, who is the person in the photo?</p>
              */
             public Builder promotingTranslate(String promotingTranslate) {
                 this.promotingTranslate = promotingTranslate;
@@ -377,7 +377,7 @@ public class ListTextbookAssistantSceneDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The role type:</p>
+             * <p>The role type. A value of 0 indicates the AI questioner, and a value of 1 indicates the responder.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -461,7 +461,7 @@ public class ListTextbookAssistantSceneDetailsResponseBody extends TeaModel {
              * <p>The translation of the scene task description.</p>
              * 
              * <strong>example:</strong>
-             * <p>说这是你爸爸的兄弟。</p>
+             * <p>Say this is your father\&quot;s brother</p>
              */
             public Builder sceneTaskTranslate(String sceneTaskTranslate) {
                 this.sceneTaskTranslate = sceneTaskTranslate;
@@ -541,10 +541,10 @@ public class ListTextbookAssistantSceneDetailsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The sentence analysis.</p>
+             * <p>The sentence analysis and explanation.</p>
              * 
              * <strong>example:</strong>
-             * <p>Is + this + your + 家庭成员?</p>
+             * <p>Is + this + your + family member?</p>
              */
             public Builder sentenceAnalysis(String sentenceAnalysis) {
                 this.sentenceAnalysis = sentenceAnalysis;
@@ -646,7 +646,7 @@ public class ListTextbookAssistantSceneDetailsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>A list of image URLs related to the theme.</p>
+             * <p>The images related to the current theme.</p>
              */
             public Builder themeImageList(java.util.List<String> themeImageList) {
                 this.themeImageList = themeImageList;
@@ -657,7 +657,7 @@ public class ListTextbookAssistantSceneDetailsResponseBody extends TeaModel {
              * <p>The theme name.</p>
              * 
              * <strong>example:</strong>
-             * <p>家庭生活</p>
+             * <p>Family life</p>
              */
             public Builder themeName(String themeName) {
                 this.themeName = themeName;
@@ -748,7 +748,7 @@ public class ListTextbookAssistantSceneDetailsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>A list of image URLs related to the topic.</p>
+             * <p>The images related to the current topic.</p>
              */
             public Builder topicImageList(java.util.List<String> topicImageList) {
                 this.topicImageList = topicImageList;
@@ -759,7 +759,7 @@ public class ListTextbookAssistantSceneDetailsResponseBody extends TeaModel {
              * <p>The topic name.</p>
              * 
              * <strong>example:</strong>
-             * <p>介绍家人</p>
+             * <p>Introducing family members</p>
              */
             public Builder topicName(String topicName) {
                 this.topicName = topicName;
@@ -767,7 +767,7 @@ public class ListTextbookAssistantSceneDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The translation of the topic name.</p>
+             * <p>The translation of the topic content.</p>
              * 
              * <strong>example:</strong>
              * <p>Introducing family members</p>
@@ -853,7 +853,7 @@ public class ListTextbookAssistantSceneDetailsResponseBody extends TeaModel {
              * <p>The word definition.</p>
              * 
              * <strong>example:</strong>
-             * <p>家；家庭</p>
+             * <p>Home; family</p>
              */
             public Builder wordAnalysis(String wordAnalysis) {
                 this.wordAnalysis = wordAnalysis;
@@ -1059,7 +1059,7 @@ public class ListTextbookAssistantSceneDetailsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>A list of roles in the scene.</p>
+             * <p>The list of roles.</p>
              */
             public Builder roleList(java.util.List<RoleList> roleList) {
                 this.roleList = roleList;
@@ -1089,7 +1089,7 @@ public class ListTextbookAssistantSceneDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A list of image URLs related to the current scene.</p>
+             * <p>The images related to the current scene.</p>
              */
             public Builder sceneImageList(java.util.List<String> sceneImageList) {
                 this.sceneImageList = sceneImageList;
@@ -1097,7 +1097,7 @@ public class ListTextbookAssistantSceneDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scene task list.</p>
+             * <p>The list of scene tasks.</p>
              */
             public Builder sceneTaskList(java.util.List<SceneTaskList> sceneTaskList) {
                 this.sceneTaskList = sceneTaskList;
@@ -1105,7 +1105,7 @@ public class ListTextbookAssistantSceneDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The translation of the scene description.</p>
+             * sceneTranslate.
              */
             public Builder sceneTranslate(String sceneTranslate) {
                 this.sceneTranslate = sceneTranslate;
@@ -1113,7 +1113,7 @@ public class ListTextbookAssistantSceneDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sentence list.</p>
+             * <p>The list of sentences.</p>
              */
             public Builder sentenceList(java.util.List<SentenceList> sentenceList) {
                 this.sentenceList = sentenceList;
@@ -1121,7 +1121,7 @@ public class ListTextbookAssistantSceneDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The practice target.</p>
+             * <p>The practice objective.</p>
              * 
              * <strong>example:</strong>
              * <p>&quot;&quot;</p>
@@ -1132,7 +1132,7 @@ public class ListTextbookAssistantSceneDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The theme details.</p>
+             * <p>The theme information.</p>
              */
             public Builder theme(Theme theme) {
                 this.theme = theme;
@@ -1140,7 +1140,7 @@ public class ListTextbookAssistantSceneDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The topic details.</p>
+             * <p>The topic information.</p>
              */
             public Builder topic(Topic topic) {
                 this.topic = topic;
@@ -1148,7 +1148,7 @@ public class ListTextbookAssistantSceneDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The word list.</p>
+             * <p>The list of words.</p>
              */
             public Builder wordList(java.util.List<WordList> wordList) {
                 this.wordList = wordList;

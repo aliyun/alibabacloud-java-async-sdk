@@ -80,7 +80,10 @@ public class ModelGroupUserDTO extends TeaModel {
         } 
 
         /**
-         * apiKeys.
+         * <p>The list of API key summaries for the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder apiKeys(java.util.List<ModelGroupClientKeyItemDTO> apiKeys) {
             this.apiKeys = apiKeys;
@@ -88,7 +91,10 @@ public class ModelGroupUserDTO extends TeaModel {
         }
 
         /**
-         * userId.
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001</p>
          */
         public Builder userId(Long userId) {
             this.userId = userId;
@@ -96,7 +102,10 @@ public class ModelGroupUserDTO extends TeaModel {
         }
 
         /**
-         * userName.
+         * <p>The username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Zhang San</p>
          */
         public Builder userName(String userName) {
             this.userName = userName;

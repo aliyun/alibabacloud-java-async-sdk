@@ -119,7 +119,10 @@ public class OrgInitResultDTO extends TeaModel {
         } 
 
         /**
-         * apiKey.
+         * <p>The returned plaintext API key, which is visible only once during initialization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sk-xxxxxxxxxxxxxx</p>
          */
         public Builder apiKey(String apiKey) {
             this.apiKey = apiKey;
@@ -127,7 +130,10 @@ public class OrgInitResultDTO extends TeaModel {
         }
 
         /**
-         * clientId.
+         * <p>The customer ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder clientId(Long clientId) {
             this.clientId = clientId;
@@ -135,7 +141,10 @@ public class OrgInitResultDTO extends TeaModel {
         }
 
         /**
-         * clientUuid.
+         * <p>The customer unique identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>st-xxxx</p>
          */
         public Builder clientUuid(String clientUuid) {
             this.clientUuid = clientUuid;
@@ -143,7 +152,10 @@ public class OrgInitResultDTO extends TeaModel {
         }
 
         /**
-         * isNew.
+         * <p>Indicates whether it is newly created. A value of false indicates that it already exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isNew(Boolean isNew) {
             this.isNew = isNew;
@@ -151,7 +163,10 @@ public class OrgInitResultDTO extends TeaModel {
         }
 
         /**
-         * orgId.
+         * <p>The enterprise ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder orgId(Long orgId) {
             this.orgId = orgId;
@@ -159,7 +174,10 @@ public class OrgInitResultDTO extends TeaModel {
         }
 
         /**
-         * userId.
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder userId(Long userId) {
             this.userId = userId;

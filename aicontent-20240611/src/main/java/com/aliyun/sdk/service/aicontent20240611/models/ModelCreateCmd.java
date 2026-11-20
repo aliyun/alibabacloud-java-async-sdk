@@ -171,7 +171,10 @@ public class ModelCreateCmd extends TeaModel {
         } 
 
         /**
-         * apiKey.
+         * <p>API Key</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sk-xxxx</p>
          */
         public Builder apiKey(String apiKey) {
             this.apiKey = apiKey;
@@ -179,7 +182,10 @@ public class ModelCreateCmd extends TeaModel {
         }
 
         /**
-         * baseUrl.
+         * <p>Base URL</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://dashscope.aliyuncs.com">https://dashscope.aliyuncs.com</a></p>
          */
         public Builder baseUrl(String baseUrl) {
             this.baseUrl = baseUrl;
@@ -187,7 +193,10 @@ public class ModelCreateCmd extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The model description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Qwen large language model</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -195,7 +204,10 @@ public class ModelCreateCmd extends TeaModel {
         }
 
         /**
-         * maxInputLength.
+         * <p>The maximum input length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8192</p>
          */
         public Builder maxInputLength(String maxInputLength) {
             this.maxInputLength = maxInputLength;
@@ -203,7 +215,10 @@ public class ModelCreateCmd extends TeaModel {
         }
 
         /**
-         * maxOutputLength.
+         * <p>The maximum output length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2048</p>
          */
         public Builder maxOutputLength(String maxOutputLength) {
             this.maxOutputLength = maxOutputLength;
@@ -211,7 +226,10 @@ public class ModelCreateCmd extends TeaModel {
         }
 
         /**
-         * modelId.
+         * <p>The model ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen-turbo</p>
          */
         public Builder modelId(String modelId) {
             this.modelId = modelId;
@@ -219,7 +237,10 @@ public class ModelCreateCmd extends TeaModel {
         }
 
         /**
-         * modelType.
+         * <p>The model type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Chat</p>
          */
         public Builder modelType(String modelType) {
             this.modelType = modelType;
@@ -227,7 +248,10 @@ public class ModelCreateCmd extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The model name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Qwen</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -235,7 +259,10 @@ public class ModelCreateCmd extends TeaModel {
         }
 
         /**
-         * symbol.
+         * <p>The vendor symbol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alibaba</p>
          */
         public Builder symbol(String symbol) {
             this.symbol = symbol;
@@ -243,7 +270,10 @@ public class ModelCreateCmd extends TeaModel {
         }
 
         /**
-         * tags.
+         * <p>The tags, separated by commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>chat,NLP</p>
          */
         public Builder tags(String tags) {
             this.tags = tags;

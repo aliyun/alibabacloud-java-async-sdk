@@ -67,7 +67,10 @@ public class BatchOpResultDTO extends TeaModel {
         } 
 
         /**
-         * failed.
+         * <p>The list of failed items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder failed(java.util.List<BatchFailedItemDTO> failed) {
             this.failed = failed;
@@ -75,7 +78,10 @@ public class BatchOpResultDTO extends TeaModel {
         }
 
         /**
-         * succeeded.
+         * <p>The list of successful member user IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder succeeded(java.util.List<Long> succeeded) {
             this.succeeded = succeeded;

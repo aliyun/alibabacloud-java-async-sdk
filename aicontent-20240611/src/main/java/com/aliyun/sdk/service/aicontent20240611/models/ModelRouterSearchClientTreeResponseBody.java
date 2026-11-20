@@ -230,7 +230,7 @@ public class ModelRouterSearchClientTreeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The collection of matched department IDs.</p>
+             * <p>The IDs of the matched departments.</p>
              * 
              * <strong>example:</strong>
              * <p>[]</p>

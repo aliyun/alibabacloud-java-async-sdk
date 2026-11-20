@@ -261,7 +261,7 @@ public class ExecuteAITeacherChineseCompositionTutoringWorkflowRunRequest extend
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxxxxxxx</p>
+         * <p>demo_user</p>
          */
         public Builder userId(String userId) {
             this.putBodyParameter("userId", userId);

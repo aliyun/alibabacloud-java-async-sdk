@@ -59,7 +59,7 @@ public class ModelRouterSearchClientTreeRequest extends Request {
         } 
 
         /**
-         * <p>The search keyword, which can be a department name, username, or phone number.</p>
+         * <p>The search keyword, such as a department name, username, or phone number.</p>
          * 
          * <strong>example:</strong>
          * <p>R&amp;D Department</p>

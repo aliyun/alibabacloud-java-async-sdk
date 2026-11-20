@@ -223,7 +223,10 @@ public class BillOrderEntryDTO extends TeaModel {
         } 
 
         /**
-         * amount.
+         * <p>The change amount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.00</p>
          */
         public Builder amount(Double amount) {
             this.amount = amount;
@@ -231,7 +234,10 @@ public class BillOrderEntryDTO extends TeaModel {
         }
 
         /**
-         * balanceAfter.
+         * <p>The balance after the change.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.00</p>
          */
         public Builder balanceAfter(Double balanceAfter) {
             this.balanceAfter = balanceAfter;
@@ -239,7 +245,10 @@ public class BillOrderEntryDTO extends TeaModel {
         }
 
         /**
-         * balanceBefore.
+         * <p>The balance before the change.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.00</p>
          */
         public Builder balanceBefore(Double balanceBefore) {
             this.balanceBefore = balanceBefore;
@@ -247,7 +256,10 @@ public class BillOrderEntryDTO extends TeaModel {
         }
 
         /**
-         * balanceType.
+         * <p>The balance type: permanent/monthly.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>permanent</p>
          */
         public Builder balanceType(String balanceType) {
             this.balanceType = balanceType;
@@ -255,7 +267,10 @@ public class BillOrderEntryDTO extends TeaModel {
         }
 
         /**
-         * createTime.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-01-01T00:00:00Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -263,7 +278,10 @@ public class BillOrderEntryDTO extends TeaModel {
         }
 
         /**
-         * direction.
+         * <p>The change direction: in/out.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>in</p>
          */
         public Builder direction(String direction) {
             this.direction = direction;
@@ -271,7 +289,10 @@ public class BillOrderEntryDTO extends TeaModel {
         }
 
         /**
-         * modelCode.
+         * <p>The model code (available when gateway billing deduction is applied).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen-max</p>
          */
         public Builder modelCode(String modelCode) {
             this.modelCode = modelCode;
@@ -279,7 +300,10 @@ public class BillOrderEntryDTO extends TeaModel {
         }
 
         /**
-         * operatorId.
+         * <p>The operator ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder operatorId(String operatorId) {
             this.operatorId = operatorId;
@@ -287,7 +311,10 @@ public class BillOrderEntryDTO extends TeaModel {
         }
 
         /**
-         * orderId.
+         * <p>The change record ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ord_xxxxxxxx</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -295,7 +322,10 @@ public class BillOrderEntryDTO extends TeaModel {
         }
 
         /**
-         * orderType.
+         * <p>The change type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>recharge</p>
          */
         public Builder orderType(String orderType) {
             this.orderType = orderType;
@@ -303,7 +333,10 @@ public class BillOrderEntryDTO extends TeaModel {
         }
 
         /**
-         * remark.
+         * <p>The remark.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Top-up</p>
          */
         public Builder remark(String remark) {
             this.remark = remark;
@@ -311,7 +344,10 @@ public class BillOrderEntryDTO extends TeaModel {
         }
 
         /**
-         * source.
+         * <p>The source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>console</p>
          */
         public Builder source(String source) {
             this.source = source;
@@ -319,7 +355,10 @@ public class BillOrderEntryDTO extends TeaModel {
         }
 
         /**
-         * totalAfter.
+         * <p>The total balance after the change.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.00</p>
          */
         public Builder totalAfter(Double totalAfter) {
             this.totalAfter = totalAfter;
@@ -327,7 +366,10 @@ public class BillOrderEntryDTO extends TeaModel {
         }
 
         /**
-         * totalBefore.
+         * <p>The total balance before the change.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.00</p>
          */
         public Builder totalBefore(Double totalBefore) {
             this.totalBefore = totalBefore;

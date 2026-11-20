@@ -119,10 +119,10 @@ public class ExecuteAITeacherExpansionDialogueResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response data.</p>
+         * <p>The data object.</p>
          * 
          * <strong>example:</strong>
-         * <p>[]</p>
+         * <p>{&quot;isFinish&quot;:true,&quot;questionIndex&quot;:2}</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -130,7 +130,7 @@ public class ExecuteAITeacherExpansionDialogueResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned if the request fails.</p>
+         * <p>The fault message encoding.</p>
          * 
          * <strong>example:</strong>
          * <p>UNKNOWN_ERROR</p>
@@ -141,10 +141,10 @@ public class ExecuteAITeacherExpansionDialogueResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned if the request fails.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>未知错误</p>
+         * <p>Unknown error</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -163,7 +163,7 @@ public class ExecuteAITeacherExpansionDialogueResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A unique identifier for the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
@@ -174,7 +174,7 @@ public class ExecuteAITeacherExpansionDialogueResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -295,7 +295,7 @@ public class ExecuteAITeacherExpansionDialogueResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The AI teacher\&quot;s response in Chinese.</p>
+             * <p>The Chinese reply from the AI teacher.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -306,7 +306,7 @@ public class ExecuteAITeacherExpansionDialogueResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The AI teacher\&quot;s response in English.</p>
+             * <p>The English reply from the AI teacher.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -317,7 +317,7 @@ public class ExecuteAITeacherExpansionDialogueResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the dialogue is finished.</p>
+             * <p>Indicates whether the conversation is completed.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -350,7 +350,7 @@ public class ExecuteAITeacherExpansionDialogueResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The index of the current question.</p>
+             * <p>The number of the current question being answered.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>

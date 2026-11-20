@@ -119,7 +119,7 @@ public class ModelRouterQueryNacosTagsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>An array of tags.</p>
+         * <p>The data object.</p>
          * 
          * <strong>example:</strong>
          * <p>[]</p>
@@ -130,7 +130,7 @@ public class ModelRouterQueryNacosTagsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code.</p>
+         * <p>The fault message encoding.</p>
          * 
          * <strong>example:</strong>
          * <p>UNKNOWN_ERROR</p>
@@ -144,7 +144,7 @@ public class ModelRouterQueryNacosTagsResponseBody extends TeaModel {
          * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>未知错误</p>
+         * <p>Unknown error</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -174,7 +174,7 @@ public class ModelRouterQueryNacosTagsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -269,7 +269,10 @@ public class ModelRouterQueryNacosTagsResponseBody extends TeaModel {
             } 
 
             /**
-             * label.
+             * <p>The display name of the model type. This parameter is returned when configType is set to model-types.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Text generation</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -277,7 +280,10 @@ public class ModelRouterQueryNacosTagsResponseBody extends TeaModel {
             }
 
             /**
-             * tag.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TXT_GEN</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -285,7 +291,10 @@ public class ModelRouterQueryNacosTagsResponseBody extends TeaModel {
             }
 
             /**
-             * tagName.
+             * <p>The tag name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Text generation</p>
              */
             public Builder tagName(String tagName) {
                 this.tagName = tagName;
@@ -293,7 +302,10 @@ public class ModelRouterQueryNacosTagsResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The model type value. This parameter is returned when configType is set to model-types.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NLP</p>
              */
             public Builder value(String value) {
                 this.value = value;

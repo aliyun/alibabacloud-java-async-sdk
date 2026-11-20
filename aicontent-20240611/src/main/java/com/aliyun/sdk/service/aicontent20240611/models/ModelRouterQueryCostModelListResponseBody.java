@@ -156,7 +156,7 @@ public class ModelRouterQueryCostModelListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The fault code.</p>
+         * <p>The fault message encoding.</p>
          * 
          * <strong>example:</strong>
          * <p>UNKNOWN_ERROR</p>
@@ -189,7 +189,7 @@ public class ModelRouterQueryCostModelListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of results to return.</p>
+         * <p>The maximum number of results.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -222,7 +222,7 @@ public class ModelRouterQueryCostModelListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

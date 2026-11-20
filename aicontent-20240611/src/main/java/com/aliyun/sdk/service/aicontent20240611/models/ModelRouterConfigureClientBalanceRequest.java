@@ -113,12 +113,7 @@ public class ModelRouterConfigureClientBalanceRequest extends Request {
         }
 
         /**
-         * <p>The balance type. Valid values:</p>
-         * <ul>
-         * <li>amount: monetary amount.</li>
-         * <li>tokens: token count.</li>
-         * </ul>
-         * <p>This parameter is required when you enable balance throttling for the first time. Once set, it cannot be modified.</p>
+         * <p>The balance type. Valid values: amount (balance amount) and tokens (number of tokens). This parameter is required when you enable balance throttling for the first time and cannot be modified once it is set.</p>
          * 
          * <strong>example:</strong>
          * <p>amount</p>
@@ -130,7 +125,7 @@ public class ModelRouterConfigureClientBalanceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable balance-based throttling. Once enabled, balance throttling cannot be disabled.</p>
+         * <p>Specifies whether to enable balance throttling. Once enabled, balance throttling cannot be disabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -142,7 +137,7 @@ public class ModelRouterConfigureClientBalanceRequest extends Request {
         }
 
         /**
-         * <p>The initial balance. This parameter takes effect only when balance throttling is enabled for the first time.</p>
+         * <p>The initial balance. This parameter takes effect only when you enable balance throttling for the first time.</p>
          * 
          * <strong>example:</strong>
          * <p>100.00</p>

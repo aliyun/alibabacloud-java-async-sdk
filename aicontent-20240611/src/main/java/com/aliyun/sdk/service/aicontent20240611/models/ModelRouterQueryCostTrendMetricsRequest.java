@@ -47,6 +47,10 @@ public class ModelRouterQueryCostTrendMetricsRequest extends Request {
     private String memberUserIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("modelIds")
+    private String modelIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("modelTypes")
     private String modelTypes;
 
@@ -68,6 +72,7 @@ public class ModelRouterQueryCostTrendMetricsRequest extends Request {
         this.granularity = builder.granularity;
         this.maxResults = builder.maxResults;
         this.memberUserIds = builder.memberUserIds;
+        this.modelIds = builder.modelIds;
         this.modelTypes = builder.modelTypes;
         this.nextToken = builder.nextToken;
         this.startTime = builder.startTime;
@@ -136,6 +141,13 @@ public class ModelRouterQueryCostTrendMetricsRequest extends Request {
     }
 
     /**
+     * @return modelIds
+     */
+    public String getModelIds() {
+        return this.modelIds;
+    }
+
+    /**
      * @return modelTypes
      */
     public String getModelTypes() {
@@ -164,6 +176,7 @@ public class ModelRouterQueryCostTrendMetricsRequest extends Request {
         private String granularity; 
         private Integer maxResults; 
         private String memberUserIds; 
+        private String modelIds; 
         private String modelTypes; 
         private String nextToken; 
         private Long startTime; 
@@ -181,6 +194,7 @@ public class ModelRouterQueryCostTrendMetricsRequest extends Request {
             this.granularity = request.granularity;
             this.maxResults = request.maxResults;
             this.memberUserIds = request.memberUserIds;
+            this.modelIds = request.modelIds;
             this.modelTypes = request.modelTypes;
             this.nextToken = request.nextToken;
             this.startTime = request.startTime;
@@ -273,6 +287,15 @@ public class ModelRouterQueryCostTrendMetricsRequest extends Request {
         public Builder memberUserIds(String memberUserIds) {
             this.putQueryParameter("memberUserIds", memberUserIds);
             this.memberUserIds = memberUserIds;
+            return this;
+        }
+
+        /**
+         * modelIds.
+         */
+        public Builder modelIds(String modelIds) {
+            this.putQueryParameter("modelIds", modelIds);
+            this.modelIds = modelIds;
             return this;
         }
 

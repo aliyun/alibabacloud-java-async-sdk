@@ -119,7 +119,10 @@ public class UsageInfoDTO extends TeaModel {
         } 
 
         /**
-         * completionTokens.
+         * <p>The output tokens.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder completionTokens(Integer completionTokens) {
             this.completionTokens = completionTokens;
@@ -127,7 +130,10 @@ public class UsageInfoDTO extends TeaModel {
         }
 
         /**
-         * imageCount.
+         * <p>The number of images.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder imageCount(Integer imageCount) {
             this.imageCount = imageCount;
@@ -135,7 +141,10 @@ public class UsageInfoDTO extends TeaModel {
         }
 
         /**
-         * promptTokens.
+         * <p>The input tokens.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder promptTokens(Integer promptTokens) {
             this.promptTokens = promptTokens;
@@ -143,7 +152,10 @@ public class UsageInfoDTO extends TeaModel {
         }
 
         /**
-         * totalTokens.
+         * <p>The total tokens.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>150</p>
          */
         public Builder totalTokens(Integer totalTokens) {
             this.totalTokens = totalTokens;
@@ -151,7 +163,10 @@ public class UsageInfoDTO extends TeaModel {
         }
 
         /**
-         * videoCount.
+         * <p>The number of videos.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder videoCount(Integer videoCount) {
             this.videoCount = videoCount;
@@ -159,7 +174,10 @@ public class UsageInfoDTO extends TeaModel {
         }
 
         /**
-         * videoDuration.
+         * <p>The video duration in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder videoDuration(Integer videoDuration) {
             this.videoDuration = videoDuration;

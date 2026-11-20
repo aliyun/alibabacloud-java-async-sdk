@@ -119,10 +119,10 @@ public class ExecuteAITeacherExpansionDialogueTranslateResponseBody extends TeaM
         } 
 
         /**
-         * <p>The returned data.</p>
+         * <p>The data object.</p>
          * 
          * <strong>example:</strong>
-         * <p>[]</p>
+         * <p>{&quot;result&quot;:&quot;That\&quot;s great. Thank you for coming, Lily. Do you like eating meat?&quot;}</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -130,7 +130,7 @@ public class ExecuteAITeacherExpansionDialogueTranslateResponseBody extends TeaM
         }
 
         /**
-         * <p>The error code returned when the request fails.</p>
+         * <p>The fault message encoding.</p>
          * 
          * <strong>example:</strong>
          * <p>UNKNOWN_ERROR</p>
@@ -141,10 +141,10 @@ public class ExecuteAITeacherExpansionDialogueTranslateResponseBody extends TeaM
         }
 
         /**
-         * <p>The error message returned when the request fails.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>未知错误</p>
+         * <p>Unknown error</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -163,7 +163,7 @@ public class ExecuteAITeacherExpansionDialogueTranslateResponseBody extends TeaM
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
@@ -174,7 +174,7 @@ public class ExecuteAITeacherExpansionDialogueTranslateResponseBody extends TeaM
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -233,7 +233,7 @@ public class ExecuteAITeacherExpansionDialogueTranslateResponseBody extends TeaM
              * <p>The translation result.</p>
              * 
              * <strong>example:</strong>
-             * <p>太好了，谢谢你过来，莉莉。你喜欢吃肉吗？</p>
+             * <p>That\&quot;s great. Thank you for coming, Lily. Do you like eating meat?</p>
              */
             public Builder result(String result) {
                 this.result = result;

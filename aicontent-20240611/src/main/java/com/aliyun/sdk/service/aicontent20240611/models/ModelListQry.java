@@ -93,7 +93,7 @@ public class ModelListQry extends TeaModel {
         } 
 
         /**
-         * keyword.
+         * <p>The search keyword.</p>
          */
         public Builder keyword(String keyword) {
             this.keyword = keyword;
@@ -101,7 +101,10 @@ public class ModelListQry extends TeaModel {
         }
 
         /**
-         * page.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Integer page) {
             this.page = page;
@@ -109,7 +112,10 @@ public class ModelListQry extends TeaModel {
         }
 
         /**
-         * pageSize.
+         * <p>The number of items per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -117,7 +123,10 @@ public class ModelListQry extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The status filter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.status = status;

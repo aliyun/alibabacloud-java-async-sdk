@@ -80,7 +80,10 @@ public class BatchModelErrorDTO extends TeaModel {
         } 
 
         /**
-         * errorMsg.
+         * <p>The failure cause.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The model type cannot be empty</p>
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -88,7 +91,10 @@ public class BatchModelErrorDTO extends TeaModel {
         }
 
         /**
-         * modelId.
+         * <p>The model ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen-max</p>
          */
         public Builder modelId(String modelId) {
             this.modelId = modelId;
@@ -96,7 +102,10 @@ public class BatchModelErrorDTO extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The model name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen-max</p>
          */
         public Builder name(String name) {
             this.name = name;

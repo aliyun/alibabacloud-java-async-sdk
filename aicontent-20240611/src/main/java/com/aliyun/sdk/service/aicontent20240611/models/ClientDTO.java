@@ -262,7 +262,10 @@ public class ClientDTO extends TeaModel {
         } 
 
         /**
-         * address.
+         * <p>The company address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hangzhou</p>
          */
         public Builder address(String address) {
             this.address = address;
@@ -270,7 +273,10 @@ public class ClientDTO extends TeaModel {
         }
 
         /**
-         * allowedModelGroupConfig.
+         * <p>The authorization management configuration in the format of {&quot;model_ids&quot;:[...],&quot;group_ids&quot;:[...]}. An empty value indicates that group authorization is not used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;model_ids&quot;:[1,2],&quot;group_ids&quot;:[&quot;mg_xxx&quot;]}</p>
          */
         public Builder allowedModelGroupConfig(String allowedModelGroupConfig) {
             this.allowedModelGroupConfig = allowedModelGroupConfig;
@@ -278,7 +284,10 @@ public class ClientDTO extends TeaModel {
         }
 
         /**
-         * allowedModels.
+         * <p>The list of allowed model IDs, separated by commas. An empty value indicates all models.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1,2,3</p>
          */
         public Builder allowedModels(String allowedModels) {
             this.allowedModels = allowedModels;
@@ -286,7 +295,10 @@ public class ClientDTO extends TeaModel {
         }
 
         /**
-         * clientUuid.
+         * <p>The customer UUID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>st-xxxx</p>
          */
         public Builder clientUuid(String clientUuid) {
             this.clientUuid = clientUuid;
@@ -294,7 +306,10 @@ public class ClientDTO extends TeaModel {
         }
 
         /**
-         * contact.
+         * <p>The contact information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13800138000</p>
          */
         public Builder contact(String contact) {
             this.contact = contact;
@@ -302,7 +317,10 @@ public class ClientDTO extends TeaModel {
         }
 
         /**
-         * deleteTag.
+         * <p>The status. A value of 0 indicates enabled, and a non-zero value indicates disabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder deleteTag(Integer deleteTag) {
             this.deleteTag = deleteTag;
@@ -310,7 +328,10 @@ public class ClientDTO extends TeaModel {
         }
 
         /**
-         * discount.
+         * <p>The discount factor. A value of 1.0 indicates no discount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         public Builder discount(Double discount) {
             this.discount = discount;
@@ -318,7 +339,10 @@ public class ClientDTO extends TeaModel {
         }
 
         /**
-         * gmtCreate.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-01-01T00:00:00Z</p>
          */
         public Builder gmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
@@ -326,7 +350,10 @@ public class ClientDTO extends TeaModel {
         }
 
         /**
-         * gmtModified.
+         * <p>The update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-01-01T00:00:00Z</p>
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
@@ -334,7 +361,10 @@ public class ClientDTO extends TeaModel {
         }
 
         /**
-         * id.
+         * <p>ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -342,7 +372,10 @@ public class ClientDTO extends TeaModel {
         }
 
         /**
-         * level.
+         * <p>The hierarchy level. Valid values: 1 to 5.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder level(Integer level) {
             this.level = level;
@@ -350,7 +383,10 @@ public class ClientDTO extends TeaModel {
         }
 
         /**
-         * main.
+         * <p>The account type. A value of 0 indicates a main account, and a value of 1 indicates a regular account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder main(Integer main) {
             this.main = main;
@@ -358,7 +394,10 @@ public class ClientDTO extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The customer name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>My customer</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -366,7 +405,10 @@ public class ClientDTO extends TeaModel {
         }
 
         /**
-         * nodeType.
+         * <p>The node type. Valid values: department: Department. user: User node, which is a leaf in the department tree.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>department</p>
          */
         public Builder nodeType(String nodeType) {
             this.nodeType = nodeType;
@@ -374,7 +416,10 @@ public class ClientDTO extends TeaModel {
         }
 
         /**
-         * parentId.
+         * <p>The parent department ID. An empty value indicates the top level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder parentId(Long parentId) {
             this.parentId = parentId;
@@ -382,7 +427,10 @@ public class ClientDTO extends TeaModel {
         }
 
         /**
-         * remark.
+         * <p>The remarks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Remarks</p>
          */
         public Builder remark(String remark) {
             this.remark = remark;
@@ -390,7 +438,10 @@ public class ClientDTO extends TeaModel {
         }
 
         /**
-         * userId.
+         * <p>The user ID. This field has a value only when the node type is user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001</p>
          */
         public Builder userId(Long userId) {
             this.userId = userId;

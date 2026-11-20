@@ -87,7 +87,10 @@ public class ModelRouterStopMemberSubscriptionRequest extends Request {
         } 
 
         /**
-         * clientId.
+         * <p>The department ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder clientId(Long clientId) {
             this.putPathParameter("clientId", clientId);
@@ -96,7 +99,10 @@ public class ModelRouterStopMemberSubscriptionRequest extends Request {
         }
 
         /**
-         * id.
+         * <p>The member identifier, which is the member ID within the organization and not an Alibaba Cloud account ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder id(Long id) {
             this.putPathParameter("id", id);
@@ -105,7 +111,10 @@ public class ModelRouterStopMemberSubscriptionRequest extends Request {
         }
 
         /**
-         * balanceType.
+         * <p>The balance type. Valid values: permanent, monthly.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>monthly</p>
          */
         public Builder balanceType(String balanceType) {
             this.putBodyParameter("balanceType", balanceType);

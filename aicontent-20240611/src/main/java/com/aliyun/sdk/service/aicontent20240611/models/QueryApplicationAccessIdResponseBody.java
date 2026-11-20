@@ -130,7 +130,7 @@ public class QueryApplicationAccessIdResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code.</p>
+         * <p>The fault message encoding.</p>
          * 
          * <strong>example:</strong>
          * <p>UNKNOWN_ERROR</p>
@@ -144,7 +144,7 @@ public class QueryApplicationAccessIdResponseBody extends TeaModel {
          * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>未知错误</p>
+         * <p>Unknown error</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -174,7 +174,7 @@ public class QueryApplicationAccessIdResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -243,7 +243,7 @@ public class QueryApplicationAccessIdResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The application access ID (appkey).</p>
+             * <p>The application access identifier (appkey).</p>
              * 
              * <strong>example:</strong>
              * <p>1234567890</p>
@@ -254,7 +254,7 @@ public class QueryApplicationAccessIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The application access secret. This parameter is returned only for requests from the Alibaba Cloud console.</p>
+             * <p>The application secret. This parameter is returned only for console requests.</p>
              * 
              * <strong>example:</strong>
              * <p>MyAppSecret</p>

@@ -122,7 +122,7 @@ public class ExecuteAITeacherSyncDialogueResponseBody extends TeaModel {
          * <p>The data object.</p>
          * 
          * <strong>example:</strong>
-         * <p>[]</p>
+         * <p>{&quot;englishResult&quot;:&quot;Thanks, Lily. Do you like meat, Lily?&quot;,&quot;questionIndex&quot;:2}</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -130,7 +130,7 @@ public class ExecuteAITeacherSyncDialogueResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code.</p>
+         * <p>The fault error message encoding.</p>
          * 
          * <strong>example:</strong>
          * <p>UNKNOWN_ERROR</p>
@@ -144,7 +144,7 @@ public class ExecuteAITeacherSyncDialogueResponseBody extends TeaModel {
          * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>未知错误</p>
+         * <p>Unknown error</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -174,7 +174,7 @@ public class ExecuteAITeacherSyncDialogueResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -269,7 +269,7 @@ public class ExecuteAITeacherSyncDialogueResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The English response from the AI teacher.</p>
+             * <p>The English reply from the AI teacher.</p>
              * 
              * <strong>example:</strong>
              * <p>Thanks, Lily. Do you like meat, Lily?</p>
@@ -280,7 +280,7 @@ public class ExecuteAITeacherSyncDialogueResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the dialogue is finished.</p>
+             * <p>Indicates whether the conversation is completed.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -291,7 +291,7 @@ public class ExecuteAITeacherSyncDialogueResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the user\&quot;s response is on topic.</p>
+             * <p>Indicates whether the response is on topic.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -302,7 +302,7 @@ public class ExecuteAITeacherSyncDialogueResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The index of the current question.</p>
+             * <p>The index of the current question being answered.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>

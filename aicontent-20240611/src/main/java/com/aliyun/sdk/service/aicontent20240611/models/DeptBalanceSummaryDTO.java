@@ -67,7 +67,10 @@ public class DeptBalanceSummaryDTO extends TeaModel {
         } 
 
         /**
-         * monthly.
+         * <p>The monthly balance pool overview.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder monthly(BalancePoolSummaryDTO monthly) {
             this.monthly = monthly;
@@ -75,7 +78,10 @@ public class DeptBalanceSummaryDTO extends TeaModel {
         }
 
         /**
-         * permanent.
+         * <p>The permanent balance pool overview.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder permanent(BalancePoolSummaryDTO permanent) {
             this.permanent = permanent;

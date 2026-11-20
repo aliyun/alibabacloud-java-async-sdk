@@ -132,7 +132,10 @@ public class ModelGroupDTO extends TeaModel {
         } 
 
         /**
-         * gmtCreate.
+         * <p>The time when the group was created. Format: yyyy-MM-dd HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-01-01 00:00:00</p>
          */
         public Builder gmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
@@ -140,7 +143,10 @@ public class ModelGroupDTO extends TeaModel {
         }
 
         /**
-         * gmtModified.
+         * <p>The time when the group was updated. Format: yyyy-MM-dd HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-01-01 00:00:00</p>
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
@@ -148,7 +154,10 @@ public class ModelGroupDTO extends TeaModel {
         }
 
         /**
-         * groupId.
+         * <p>The unique identifier of the group. It starts with the mg_ prefix and remains unchanged after creation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mg_a1b2c3d4e5f6g7h8i9j0</p>
          */
         public Builder groupId(String groupId) {
             this.groupId = groupId;
@@ -156,7 +165,10 @@ public class ModelGroupDTO extends TeaModel {
         }
 
         /**
-         * modelCount.
+         * <p>The number of models currently included in the group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder modelCount(Integer modelCount) {
             this.modelCount = modelCount;
@@ -164,7 +176,10 @@ public class ModelGroupDTO extends TeaModel {
         }
 
         /**
-         * modelList.
+         * <p>The array of all member model IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[101, 102, 103]</p>
          */
         public Builder modelList(java.util.List<Long> modelList) {
             this.modelList = modelList;
@@ -172,7 +187,10 @@ public class ModelGroupDTO extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The name of the group. If a system group is unnamed, the default platform name is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Professional Edition plan</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -180,7 +198,14 @@ public class ModelGroupDTO extends TeaModel {
         }
 
         /**
-         * type.
+         * <p>The type of the group. Valid values:</p>
+         * <ul>
+         * <li>system: The group is automatically created by the system and cannot be edited or deleted.</li>
+         * <li>manual: The group is manually created.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>manual</p>
          */
         public Builder type(String type) {
             this.type = type;
