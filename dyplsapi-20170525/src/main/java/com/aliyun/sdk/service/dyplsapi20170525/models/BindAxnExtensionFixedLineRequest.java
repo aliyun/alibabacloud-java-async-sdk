@@ -305,10 +305,14 @@ public class BindAxnExtensionFixedLineRequest extends Request {
         } 
 
         /**
+         * <p>Caller-side ringtone code. This parameter is required for AXB scenarios. Must contain codes for 3 scenarios. Enter the codes in the order of &quot;B-&gt;X, A-&gt;X, other numbers-&gt;X&quot;, separated by commas.</p>
+         * <blockquote>
+         * <p>&quot;1,2,3&quot; indicates that the ringtone code for B-&gt;X is 1, for A-&gt;X is 2, and for other numbers-&gt;X is 3.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>10001,10002,10003</p>
+         * <p>1,2,3</p>
          */
         public Builder anucode(String anucode) {
             this.putQueryParameter("Anucode", anucode);
@@ -317,10 +321,13 @@ public class BindAxnExtensionFixedLineRequest extends Request {
         }
 
         /**
-         * <p>被叫侧放音编码  被叫放音编码必须包含2个场景的编码。按照“A被叫,其他号码被叫”的顺序填写编码，编码之间以逗号分隔。  比如：“1,2”表示A号码为被叫侧接听时的放音编号为1，其他号码为被叫侧接听时的放音编号为2</p>
+         * <p>Called-side ringtone code after connection. Must contain codes for 2 scenarios. Enter the codes in the order of &quot;A as called party, B as called party&quot;, separated by commas.</p>
+         * <blockquote>
+         * <p>&quot;1,2&quot; indicates that the ringtone code when A is the called party is 1, and the ringtone code when B is the called party is 2.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>10001,10002</p>
+         * <p>1,2</p>
          */
         public Builder anucodecalled(String anucodecalled) {
             this.putQueryParameter("Anucodecalled", anucodecalled);
@@ -329,11 +336,11 @@ public class BindAxnExtensionFixedLineRequest extends Request {
         }
 
         /**
-         * <p>号池ID。</p>
+         * <p>Number pool ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>alitest</p>
+         * <p>FC10000016848****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -342,10 +349,10 @@ public class BindAxnExtensionFixedLineRequest extends Request {
         }
 
         /**
-         * <p>去掉“0” 例如：北京（10）；在平台分配X号码模式中，平台从号码池中分配该地区的X号码，避免产生呼叫长途费</p>
+         * <p>Area code. Supports specifying the home location of the X number (specified city -&gt; provincial capital -&gt; nationwide routing). If no home location is specified, a number is randomly assigned nationwide.</p>
          * 
          * <strong>example:</strong>
-         * <p>10</p>
+         * <p>0571</p>
          */
         public Builder areacode(String areacode) {
             this.putQueryParameter("Areacode", areacode);
@@ -354,7 +361,13 @@ public class BindAxnExtensionFixedLineRequest extends Request {
         }
 
         /**
-         * <p>绑定类型，值如下： mode101：客户携带X号码 mode102：平台分配X号码</p>
+         * <p>Binding type. Valid values:</p>
+         * <ul>
+         * <li><p>mode101: Customer specifies the X number.</p>
+         * </li>
+         * <li><p>mode102: Platform assigns the X number.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -367,7 +380,13 @@ public class BindAxnExtensionFixedLineRequest extends Request {
         }
 
         /**
-         * <p>单位：秒，必须为数字 0：不会自动解绑 非0：自动解绑周期</p>
+         * <p>Expiration time. Unit: seconds. Valid values:</p>
+         * <ul>
+         * <li><p>0: Never expires.</p>
+         * </li>
+         * <li><p>Other values: When other values are specified, such as 60, the binding is valid for 60 seconds after the X number is successfully assigned. After 60 seconds, the binding is automatically released.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -380,7 +399,7 @@ public class BindAxnExtensionFixedLineRequest extends Request {
         }
 
         /**
-         * <p>额外字段</p>
+         * <p>Extension parameters.</p>
          */
         public Builder extraaxx(Extraaxx extraaxx) {
             String extraaxxShrink = shrink(extraaxx, "Extraaxx", "json");
@@ -390,11 +409,11 @@ public class BindAxnExtensionFixedLineRequest extends Request {
         }
 
         /**
-         * <p>消息请求唯一标识</p>
+         * <p>Unique identifier of the message request.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>12345dkwkd99d</p>
+         * <p>123*******</p>
          */
         public Builder orderId(String orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -412,10 +431,10 @@ public class BindAxnExtensionFixedLineRequest extends Request {
         }
 
         /**
-         * <p>接入商自有字段，最大250字符长度</p>
+         * <p>External business extension field. This parameter is returned in call record receipt messages. Must not exceed 100 characters.</p>
          * 
          * <strong>example:</strong>
-         * <p>12444</p>
+         * <p>19394</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -442,11 +461,11 @@ public class BindAxnExtensionFixedLineRequest extends Request {
         }
 
         /**
-         * <p>格式为yyyyMMddHHmmss。时间采用北京时间，24小时制。</p>
+         * <p>Binding time. Format: yyyyMMddHHmmss. Uses Beijing time, 24-hour clock.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>20250421141723</p>
+         * <p>20161114143116</p>
          */
         public Builder subts(String subts) {
             this.putQueryParameter("Subts", subts);
@@ -455,10 +474,13 @@ public class BindAxnExtensionFixedLineRequest extends Request {
         }
 
         /**
-         * <p>接通后主叫侧放音编码  接通后主叫侧放音编码必须包含2个场景的编码。按照“A被叫,其他号码被叫”的顺序填写编码，编码之间以逗号分隔。  比如：“1,2”表示A号码为被叫时主叫侧的放音编号为1，其他号码为被叫时主叫侧的放音编号为2</p>
+         * <p>Caller-side ringtone code after connection. Must contain codes for 2 scenarios. Enter the codes in the order of &quot;A as called party, B as called party&quot;, separated by commas.</p>
+         * <blockquote>
+         * <p>&quot;1,2&quot; indicates that the caller-side ringtone code when A is the called party is 1, and the caller-side ringtone code when B is the called party is 2.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>10001,10002</p>
+         * <p>1,2</p>
          */
         public Builder tAnucodeConnect(String tAnucodeConnect) {
             this.putQueryParameter("TAnucodeConnect", tAnucodeConnect);
@@ -467,11 +489,15 @@ public class BindAxnExtensionFixedLineRequest extends Request {
         }
 
         /**
-         * <p>A号码</p>
+         * <p>The A number for the fixed-line AXN extension number.</p>
+         * <blockquote>
+         * <p>The A number can be set to a mobile number or a fixed-line number. Fixed-line numbers must include the area code, and no hyphen is needed between the area code and the number.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>15500001111放音编码必须包含3个场景的编码。按照“B-&gt;X,A-&gt;X,其他号码-&gt;X”的顺序填写编码，编码之间以逗号分隔。  AXN分机号业务的放音编码,B-&gt;X和其他号码-&gt;X的编码一致  比如：“1,2,3”表示B-&gt;X放音编号为1，A-&gt;X放音编号为2， 其他号码-&gt;X放音编号为3</p>
+         * <p>Mobile: 182<strong><strong>2371
+         * Fixed line: 0571</strong></strong>**36</p>
          */
         public Builder telA(String telA) {
             this.putQueryParameter("TelA", telA);
@@ -480,10 +506,10 @@ public class BindAxnExtensionFixedLineRequest extends Request {
         }
 
         /**
-         * <p>X号码；平台分配号码模式下，该参数可不带，系统忽略该参数</p>
+         * <p>The X number for the fixed-line AXN extension number. The X number is a privacy number that you have <a href="https://dyplsnext.console.aliyun.com/numberbuy">purchased</a> in the console.</p>
          * 
          * <strong>example:</strong>
-         * <p>0571409312</p>
+         * <p>0571******23</p>
          */
         public Builder telX(String telX) {
             this.putQueryParameter("TelX", telX);
@@ -492,7 +518,7 @@ public class BindAxnExtensionFixedLineRequest extends Request {
         }
 
         /**
-         * <p>分机号；平台分配号码模式下，该参数可不带，系统忽略该参数</p>
+         * <p>Extension number. This parameter is required when the BindType parameter is set to mode101.</p>
          * 
          * <strong>example:</strong>
          * <p>1009</p>
@@ -504,11 +530,11 @@ public class BindAxnExtensionFixedLineRequest extends Request {
         }
 
         /**
-         * <p>格式yyyyMMddHHmmssSSS，时间采用北京时间，24小时制，精确至毫秒</p>
+         * <p>Business timestamp. Format: yyyyMMddHHmmssSSS. Uses Beijing time, 24-hour clock, accurate to milliseconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>20250421141723098</p>
+         * <p>20161114143116123</p>
          */
         public Builder ts(String ts) {
             this.putQueryParameter("Ts", ts);
@@ -576,7 +602,15 @@ public class BindAxnExtensionFixedLineRequest extends Request {
             } 
 
             /**
-             * <p>A通过X呼叫，即A主叫X，仅下列值有效。默认是0。 0：不能外呼 1：接续最近的B号码</p>
+             * <p>Callback control. When A calls through X, that is, A dials X as the caller. Valid values:</p>
+             * <ul>
+             * <li><p>0 (default): Cannot make outbound calls.</p>
+             * </li>
+             * <li><p>1: Connect to the most recent N number.</p>
+             * </li>
+             * <li><p>2: Call back the fixed number TelB.</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -587,10 +621,19 @@ public class BindAxnExtensionFixedLineRequest extends Request {
             }
 
             /**
-             * <p>录音控制，仅下列值有效。默认是0（不开通录音功能）。 0：不录音 1：录音</p>
+             * <p>Recording control. Valid values:</p>
+             * <ul>
+             * <li><p>0 (default): No recording.</p>
+             * </li>
+             * <li><p>1: Recording.</p>
+             * </li>
+             * </ul>
+             * <blockquote>
+             * <p>After you enable the call recording feature, you can play and download audio files in the call records. Recording files are billed at CNY 0.010/minute.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
-             * <p>1</p>
+             * <p>0</p>
              */
             public Builder callrecording(String callrecording) {
                 this.callrecording = callrecording;

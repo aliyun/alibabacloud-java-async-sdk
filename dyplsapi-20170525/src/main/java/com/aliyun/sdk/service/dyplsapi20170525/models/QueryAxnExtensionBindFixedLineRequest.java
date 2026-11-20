@@ -175,11 +175,11 @@ public class QueryAxnExtensionBindFixedLineRequest extends Request {
         } 
 
         /**
-         * <p>号池ID</p>
+         * <p>The ID of the number pool.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>alitest</p>
+         * <p>FC10000016848****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -188,11 +188,11 @@ public class QueryAxnExtensionBindFixedLineRequest extends Request {
         }
 
         /**
-         * <p>消息请求唯一标识。</p>
+         * <p>The unique identifier of the message request.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>12345dkwkd99d</p>
+         * <p>123*******</p>
          */
         public Builder orderId(String orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -210,7 +210,13 @@ public class QueryAxnExtensionBindFixedLineRequest extends Request {
         }
 
         /**
-         * <p>查询类型。取值： 0：根据绑定ID查询。1：根据X和A/B号码查询</p>
+         * <p>The query type. Valid values:</p>
+         * <ul>
+         * <li><p>0: query by binding ID.</p>
+         * </li>
+         * <li><p>1: query by X and A/B numbers.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -241,7 +247,7 @@ public class QueryAxnExtensionBindFixedLineRequest extends Request {
         }
 
         /**
-         * <p>绑定ID。QueryType参数为0时必传。</p>
+         * <p>The binding ID. This parameter is required when QueryType is set to 0.</p>
          * 
          * <strong>example:</strong>
          * <p>A203**************</p>
@@ -253,10 +259,10 @@ public class QueryAxnExtensionBindFixedLineRequest extends Request {
         }
 
         /**
-         * <p>A号码。QueryType参数为1时必传。</p>
+         * <p>The number A. This parameter is required when QueryType is set to 1.</p>
          * 
          * <strong>example:</strong>
-         * <p>15500001111</p>
+         * <p>155****1111</p>
          */
         public Builder telA(String telA) {
             this.putQueryParameter("TelA", telA);
@@ -265,11 +271,11 @@ public class QueryAxnExtensionBindFixedLineRequest extends Request {
         }
 
         /**
-         * <p>格式yyyyMMddHHmmssSSS，时间采用北京时间，24小时制，精确至毫秒</p>
+         * <p>The business timestamp. Format: yyyyMMddHHmmssSSS. The time is in UTC+8, in 24-hour format, accurate to milliseconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>20250421141723098</p>
+         * <p>20161114143116123</p>
          */
         public Builder ts(String ts) {
             this.putQueryParameter("Ts", ts);

@@ -111,7 +111,7 @@ public class QueryPhoneNoAByTrackNoResponseBody extends TeaModel {
          * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
-         * <p>OK</p>
+         * <p>请求成功</p>
          */
         public Builder message(String message) {
             this.message = message;

@@ -329,7 +329,15 @@ public class UpdateSubs700Request extends Request {
         } 
 
         /**
-         * AsrModelId.
+         * <p>The ASR model ID. Valid values:</p>
+         * <ul>
+         * <li>General-telephone-Mandarin Chinese model ID: 7ee372834d2f4cc7ac0d0ab2d0ae1aac.</li>
+         * <li>General-telephone-Cantonese model ID: 9b4afe3d224e4fa3bf963697113e2f77.</li>
+         * <li>General-telephone-regional accent model ID: 3655a6cb94764145a1f9a38a3c3b3b4b.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>7ee372834d2f4cc7ac0d0ab2d0ae1aac</p>
          */
         public Builder asrModelId(String asrModelId) {
             this.putQueryParameter("AsrModelId", asrModelId);
@@ -338,7 +346,28 @@ public class UpdateSubs700Request extends Request {
         }
 
         /**
-         * Audio.
+         * <p>Optional. The audio playback code.</p>
+         * <ul>
+         * <li>AXB mode:
+         * ACallX_Apre: The audio playback code for the voice prompt played to Number A before the call is connected when Number A calls Number X.
+         * ACallX_Ain: The audio playback code for the voice prompt played to Number A after the call is connected when Number A calls Number X.
+         * ACallX_Bin: The audio playback code for the voice prompt played to Number B after the call is connected when Number A calls Number X.
+         * BCallX_Bpre: The audio playback code for the voice prompt played to Number B before the call is connected when Number B calls Number X.
+         * BCallX_Ain: The audio playback code for the voice prompt played to Number A after the call is connected when Number B calls Number X.
+         * BCallX_Bin: The audio playback code for the voice prompt played to Number B after the call is connected when Number B calls Number X.</li>
+         * <li>GXB mode:
+         * GCallX_Gpre: The audio playback code for the voice prompt played to the caller before the call is connected when a number in Group G calls Number X.
+         * GCallX_Gin: The audio playback code for the voice prompt played to the caller after the call is connected when a number in Group G calls Number X.
+         * GCallX_Bin: The audio playback code for the voice prompt played to Number B after the call is connected when a number in Group G calls Number X.
+         * BCallX_Bpre: The audio playback code for the voice prompt played to Number B before the call is connected when Number B calls Number X.
+         * BCallX_Gin: The audio playback code for the voice prompt played to the callee after the call is connected when Number B calls Number X.
+         * BCallX_Bin: The audio playback code for the voice prompt played to Number B after the call is connected when Number B calls Number X.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         * &quot;ACallX_Apre&quot;:&quot;185&quot;
+         * }</p>
          */
         public Builder audio(String audio) {
             this.putQueryParameter("Audio", audio);
@@ -347,7 +376,10 @@ public class UpdateSubs700Request extends Request {
         }
 
         /**
-         * CallRestrict.
+         * <p>The new single-call restriction logic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CONTROL_AX_DISABLE</p>
          */
         public Builder callRestrict(String callRestrict) {
             this.putQueryParameter("CallRestrict", callRestrict);
@@ -356,7 +388,10 @@ public class UpdateSubs700Request extends Request {
         }
 
         /**
-         * DefaultA.
+         * <p>The default Number A for the GXB private number. Note: The callback mode can be set at the number pool level. When the callback mode is set to the default mode, this field takes effect. When Number B calls Number X, the call is forwarded to this Number A by default. If Number A is not set, the call cannot be connected. To update Number A, call the number binding modification API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>138****0000</p>
          */
         public Builder defaultA(String defaultA) {
             this.putQueryParameter("DefaultA", defaultA);
@@ -365,7 +400,10 @@ public class UpdateSubs700Request extends Request {
         }
 
         /**
-         * Expiration.
+         * <p>The new expiration time of the binding relationship.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-09-05 12:00:00</p>
          */
         public Builder expiration(String expiration) {
             this.putQueryParameter("Expiration", expiration);
@@ -374,7 +412,10 @@ public class UpdateSubs700Request extends Request {
         }
 
         /**
-         * GroupId.
+         * <p>The new group ID in the binding relationship.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sample value</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -383,7 +424,10 @@ public class UpdateSubs700Request extends Request {
         }
 
         /**
-         * IndustrialId.
+         * <p>Optional. The Industrial Internet identification code, which has a one-to-one mapping with the OrderId. The code supports characters such as periods (.) and forward slashes (/) to separate code domains. The code must not contain non-printable characters, such as spaces and line breaks. This field is required when the business user generates the Industrial Internet identification code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>700.100.1/12345678</p>
          */
         public Builder industrialId(String industrialId) {
             this.putQueryParameter("IndustrialId", industrialId);
@@ -392,7 +436,14 @@ public class UpdateSubs700Request extends Request {
         }
 
         /**
-         * NeedAsr.
+         * <p>Specifies whether to enable the ASR feature. Valid values:</p>
+         * <ul>
+         * <li>false: Disables the feature. This is the default value.</li>
+         * <li>true: Enables the feature.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder needAsr(Boolean needAsr) {
             this.putQueryParameter("NeedAsr", needAsr);
@@ -401,7 +452,10 @@ public class UpdateSubs700Request extends Request {
         }
 
         /**
-         * NeedRecord.
+         * <p>The new media selection in the binding relationship.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder needRecord(Boolean needRecord) {
             this.putQueryParameter("NeedRecord", needRecord);
@@ -410,6 +464,19 @@ public class UpdateSubs700Request extends Request {
         }
 
         /**
+         * <p>The operation type. Valid values:</p>
+         * <ul>
+         * <li>updateNoA: Updates Number A.</li>
+         * <li>updateNoB: Updates Number B.</li>
+         * <li>updateExpire: Updates the validity period of the binding relationship.</li>
+         * <li>updateGroup: Updates the Number G group.</li>
+         * <li>updateNoDefaultA: Updates the default callback Number A in GXB mode.</li>
+         * <li>updateCallRestrict: Sets the single-call restriction.</li>
+         * <li>updateOutId: Updates the OutId field.</li>
+         * <li>updateIsRecordingEnabled: Updates the recording status in the binding.</li>
+         * <li>updateAsr: Updates the ASR status in the binding.</li>
+         * <li>updateAudio: Updates the ringtone configuration in the binding.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -422,7 +489,10 @@ public class UpdateSubs700Request extends Request {
         }
 
         /**
-         * OrderId.
+         * <p>The order ID. This parameter is required in practice. Encrypt the order ID for reporting to the regulatory platform.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345678</p>
          */
         public Builder orderId(String orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -431,7 +501,10 @@ public class UpdateSubs700Request extends Request {
         }
 
         /**
-         * OutId.
+         * <p>The external business extension field. This parameter is returned in the call record receipt message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abcdef</p>
          */
         public Builder outId(String outId) {
             this.putQueryParameter("OutId", outId);
@@ -449,6 +522,7 @@ public class UpdateSubs700Request extends Request {
         }
 
         /**
+         * <p>The key of the number pool.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -479,6 +553,7 @@ public class UpdateSubs700Request extends Request {
         }
 
         /**
+         * <p>The ID of the binding relationship, which uniquely identifies the number binding relationship.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -491,7 +566,10 @@ public class UpdateSubs700Request extends Request {
         }
 
         /**
-         * TelA.
+         * <p>The new Number A in the binding relationship.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>138****0000</p>
          */
         public Builder telA(String telA) {
             this.putQueryParameter("TelA", telA);
@@ -500,7 +578,10 @@ public class UpdateSubs700Request extends Request {
         }
 
         /**
-         * TelB.
+         * <p>The new Number B in the binding relationship.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>136****0000</p>
          */
         public Builder telB(String telB) {
             this.putQueryParameter("TelB", telB);
@@ -509,6 +590,7 @@ public class UpdateSubs700Request extends Request {
         }
 
         /**
+         * <p>The intermediate Number X. If the business user does not specify Number X, the application platform assigns a number from the number pool as Number X.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

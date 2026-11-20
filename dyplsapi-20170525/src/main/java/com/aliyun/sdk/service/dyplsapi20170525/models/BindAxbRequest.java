@@ -376,7 +376,7 @@ public class BindAxbRequest extends Request {
          * <p>The maximum ringing duration for each number in sequential ringing. Unit: seconds. The value ranges from 5 to 20.</p>
          * 
          * <strong>example:</strong>
-         * <p>10</p>
+         * <p>10秒</p>
          */
         public Builder callTimeout(Integer callTimeout) {
             this.putQueryParameter("CallTimeout", callTimeout);
@@ -421,7 +421,7 @@ public class BindAxbRequest extends Request {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>hangzhou</p>
+         * <p>北京</p>
          */
         public Builder expectCity(String expectCity) {
             this.putQueryParameter("ExpectCity", expectCity);
@@ -453,7 +453,7 @@ public class BindAxbRequest extends Request {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>true</p>
+         * <p>false</p>
          */
         public Builder isRecordingEnabled(Boolean isRecordingEnabled) {
             this.putQueryParameter("IsRecordingEnabled", isRecordingEnabled);
@@ -515,7 +515,7 @@ public class BindAxbRequest extends Request {
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>139****0000</p>
+         * <p>136****0000</p>
          */
         public Builder phoneNoB(String phoneNoB) {
             this.putQueryParameter("PhoneNoB", phoneNoB);
@@ -529,7 +529,7 @@ public class BindAxbRequest extends Request {
          * <p>If you do not specify this parameter, a random phone number is selected from the phone number pool based on the value of the ExpectCity parameter and is used as phone number X.</p>
          * 
          * <strong>example:</strong>
-         * <p>139****0000</p>
+         * <p>171****1893</p>
          */
         public Builder phoneNoX(String phoneNoX) {
             this.putQueryParameter("PhoneNoX", phoneNoX);
@@ -542,7 +542,7 @@ public class BindAxbRequest extends Request {
          * <p>Log on to the <a href="https://dypls.console.aliyun.com/dypls.htm#/account">Phone Number Protection console</a> and view the key of the phone number pool on the <strong>Number Pool Management</strong> page.</p>
          * 
          * <strong>example:</strong>
-         * <p>FC5526*****</p>
+         * <p>FC10000016848****</p>
          */
         public Builder poolKey(String poolKey) {
             this.putQueryParameter("PoolKey", poolKey);
@@ -580,7 +580,10 @@ public class BindAxbRequest extends Request {
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;AXBRing_B&quot;:&quot;1000<strong><strong>1&quot;,&quot;AXBRing_A&quot;:&quot;1000</strong></strong>1&quot;}</p>
+         * <p>{
+         *       &quot;AXBRing_B&quot;: &quot;1000<strong><strong>1&quot;,
+         *       &quot;AXBRing_A&quot;: &quot;1000</strong></strong>1&quot;
+         * }</p>
          */
         public Builder ringConfig(String ringConfig) {
             this.putQueryParameter("RingConfig", ringConfig);

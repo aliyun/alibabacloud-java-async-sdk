@@ -148,7 +148,7 @@ public class QueryRecordFileDownloadUrlRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>abcedf1234</p>
+         * <p>416*********bd50</p>
          */
         public Builder callId(String callId) {
             this.putQueryParameter("CallId", callId);
@@ -184,7 +184,7 @@ public class QueryRecordFileDownloadUrlRequest extends Request {
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>FC123456</p>
+         * <p>FC10000012345****</p>
          */
         public Builder poolKey(String poolKey) {
             this.putQueryParameter("PoolKey", poolKey);

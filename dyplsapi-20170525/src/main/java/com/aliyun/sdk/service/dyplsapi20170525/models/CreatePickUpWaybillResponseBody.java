@@ -93,7 +93,7 @@ public class CreatePickUpWaybillResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned data.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -112,7 +112,7 @@ public class CreatePickUpWaybillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The status code description.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -244,7 +244,7 @@ public class CreatePickUpWaybillResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The code of the courier company.</p>
+             * <p>The express delivery company code.</p>
              * 
              * <strong>example:</strong>
              * <p>YTO</p>
@@ -258,7 +258,7 @@ public class CreatePickUpWaybillResponseBody extends TeaModel {
              * <p>The error code.</p>
              * 
              * <strong>example:</strong>
-             * <p>200</p>
+             * <p>None</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -269,7 +269,7 @@ public class CreatePickUpWaybillResponseBody extends TeaModel {
              * <p>The error message.</p>
              * 
              * <strong>example:</strong>
-             * <p>none</p>
+             * <p>None</p>
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -288,7 +288,7 @@ public class CreatePickUpWaybillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The order ID.</p>
+             * <p>The waybill number.</p>
              * 
              * <strong>example:</strong>
              * <p>77312345629****</p>
@@ -299,7 +299,7 @@ public class CreatePickUpWaybillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the request was successful.</p>
+             * <p>Indicates whether the API call is successful.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>

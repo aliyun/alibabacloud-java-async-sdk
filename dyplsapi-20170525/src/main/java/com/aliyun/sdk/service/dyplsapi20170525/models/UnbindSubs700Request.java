@@ -160,7 +160,10 @@ public class UnbindSubs700Request extends Request {
         } 
 
         /**
-         * IndustrialId.
+         * <p>Optional. The Industrial Internet identification code, which has a one-to-one mapping with the OrderID. The code supports characters such as periods (.) and forward slashes (/) to separate code domains. The code must not contain non-printable characters, such as spaces or line feeds. This field is required when the service consumer generates the Industrial Internet identification code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>700.100.1/12345678</p>
          */
         public Builder industrialId(String industrialId) {
             this.putQueryParameter("IndustrialId", industrialId);
@@ -169,7 +172,10 @@ public class UnbindSubs700Request extends Request {
         }
 
         /**
-         * OrderId.
+         * <p>The order ID. This parameter is required in practice. Encrypt the order ID for reporting to the regulatory platform.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345678</p>
          */
         public Builder orderId(String orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -187,6 +193,8 @@ public class UnbindSubs700Request extends Request {
         }
 
         /**
+         * <p>The number pool key.</p>
+         * <p>To obtain the <strong>number pool key</strong>, go to the <a href="https://dyplsnext.console.aliyun.com/number-pool">Number pool management</a> page in the Phone Number Privacy Protection console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -217,6 +225,7 @@ public class UnbindSubs700Request extends Request {
         }
 
         /**
+         * <p>The number binding ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -229,6 +238,7 @@ public class UnbindSubs700Request extends Request {
         }
 
         /**
+         * <p>The intermediate number X. If the service consumer does not specify number X, the application platform assigns a number from the number pool as number X.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -146,7 +146,7 @@ public class CreatePickUpWaybillPreQueryRequest extends Request {
         } 
 
         /**
-         * <p>The consignee information.</p>
+         * <p>The recipient information.</p>
          * <p>This parameter is required.</p>
          */
         public Builder consigneeInfo(ConsigneeInfo consigneeInfo) {
@@ -157,7 +157,8 @@ public class CreatePickUpWaybillPreQueryRequest extends Request {
         }
 
         /**
-         * <p>The content type of the HTTP request. This parameter is optional. If you specify this parameter, enter application/json;chatset=UTF-8.</p>
+         * <p>The HTTP request content type.
+         * Optional. If specified, set it to application/json;chatset=UTF-8.</p>
          * 
          * <strong>example:</strong>
          * <p>application/json;chatset=UTF-8</p>
@@ -169,7 +170,7 @@ public class CreatePickUpWaybillPreQueryRequest extends Request {
         }
 
         /**
-         * <p>The code of the courier company. If no courier company is specified, the system allocates a courier company.</p>
+         * <p>The courier company code. If not specified, the system automatically assigns a courier company.</p>
          * 
          * <strong>example:</strong>
          * <p>YTO</p>
@@ -181,7 +182,7 @@ public class CreatePickUpWaybillPreQueryRequest extends Request {
         }
 
         /**
-         * <p>The identifier of the external channel source. It cannot contain underscores.</p>
+         * <p>The external channel source identifier. The value cannot contain underscores. The value is agreed upon with the system during integration.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -194,7 +195,7 @@ public class CreatePickUpWaybillPreQueryRequest extends Request {
         }
 
         /**
-         * <p>The order number of the access system.</p>
+         * <p>The order number in the caller\&quot;s system.</p>
          * 
          * <strong>example:</strong>
          * <p>787DFHHDS989****</p>
@@ -206,9 +207,9 @@ public class CreatePickUpWaybillPreQueryRequest extends Request {
         }
 
         /**
-         * <p>The estimated weight. Unit: gram.</p>
+         * <p>The estimated weight, in grams.</p>
          * <blockquote>
-         * <p> If you need to query the estimated price, this parameter is required.</p>
+         * <p>If you want to query the estimated price, this parameter is required.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -330,10 +331,10 @@ public class CreatePickUpWaybillPreQueryRequest extends Request {
             } 
 
             /**
-             * <p>The detailed address of the consignee.</p>
+             * <p>The detailed address of the recipient.</p>
              * 
              * <strong>example:</strong>
-             * <p>XX community</p>
+             * <p>XX Community, No. XX</p>
              */
             public Builder addressDetail(String addressDetail) {
                 this.addressDetail = addressDetail;
@@ -341,10 +342,10 @@ public class CreatePickUpWaybillPreQueryRequest extends Request {
             }
 
             /**
-             * <p>The district where the consignee is located.</p>
+             * <p>The district where the recipient is located.</p>
              * 
              * <strong>example:</strong>
-             * <p>chang,an</p>
+             * <p>Chang\&quot;an District</p>
              */
             public Builder areaName(String areaName) {
                 this.areaName = areaName;
@@ -352,10 +353,10 @@ public class CreatePickUpWaybillPreQueryRequest extends Request {
             }
 
             /**
-             * <p>The city where the consignee is located.</p>
+             * <p>The city where the recipient is located.</p>
              * 
              * <strong>example:</strong>
-             * <p>Xi,an</p>
+             * <p>Xi\&quot;an</p>
              */
             public Builder cityName(String cityName) {
                 this.cityName = cityName;
@@ -363,10 +364,10 @@ public class CreatePickUpWaybillPreQueryRequest extends Request {
             }
 
             /**
-             * <p>The province where the consignee is located.</p>
+             * <p>The province where the recipient is located.</p>
              * 
              * <strong>example:</strong>
-             * <p>Shanxi</p>
+             * <p>Shaanxi Province</p>
              */
             public Builder provinceName(String provinceName) {
                 this.provinceName = provinceName;
@@ -374,7 +375,7 @@ public class CreatePickUpWaybillPreQueryRequest extends Request {
             }
 
             /**
-             * <p>The street where the consignee is located.</p>
+             * <p>The street where the recipient is located.</p>
              * 
              * <strong>example:</strong>
              * <p>XX Street</p>
@@ -459,7 +460,7 @@ public class CreatePickUpWaybillPreQueryRequest extends Request {
             } 
 
             /**
-             * <p>The address of the consignee.</p>
+             * <p>The address information of the recipient.</p>
              */
             public Builder addressInfo(AddressInfo addressInfo) {
                 this.addressInfo = addressInfo;
@@ -467,7 +468,7 @@ public class CreatePickUpWaybillPreQueryRequest extends Request {
             }
 
             /**
-             * <p>The mobile phone number of the consignee.</p>
+             * <p>The mobile phone number of the recipient.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -479,11 +480,11 @@ public class CreatePickUpWaybillPreQueryRequest extends Request {
             }
 
             /**
-             * <p>The name of the consignee.</p>
+             * <p>The name of the recipient.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>Li</p>
+             * <p>Li XX</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -592,7 +593,7 @@ public class CreatePickUpWaybillPreQueryRequest extends Request {
              * <p>The detailed address of the sender.</p>
              * 
              * <strong>example:</strong>
-             * <p>XX community</p>
+             * <p>XX Community, No. XX</p>
              */
             public Builder addressDetail(String addressDetail) {
                 this.addressDetail = addressDetail;
@@ -603,7 +604,7 @@ public class CreatePickUpWaybillPreQueryRequest extends Request {
              * <p>The district where the sender is located.</p>
              * 
              * <strong>example:</strong>
-             * <p>xihu</p>
+             * <p>Xihu District</p>
              */
             public Builder areaName(String areaName) {
                 this.areaName = areaName;
@@ -614,7 +615,7 @@ public class CreatePickUpWaybillPreQueryRequest extends Request {
              * <p>The city where the sender is located.</p>
              * 
              * <strong>example:</strong>
-             * <p>hangzhou</p>
+             * <p>Hangzhou</p>
              */
             public Builder cityName(String cityName) {
                 this.cityName = cityName;
@@ -625,7 +626,7 @@ public class CreatePickUpWaybillPreQueryRequest extends Request {
              * <p>The province where the sender is located.</p>
              * 
              * <strong>example:</strong>
-             * <p>zhejiang</p>
+             * <p>Zhejiang Province</p>
              */
             public Builder provinceName(String provinceName) {
                 this.provinceName = provinceName;
@@ -718,7 +719,7 @@ public class CreatePickUpWaybillPreQueryRequest extends Request {
             } 
 
             /**
-             * <p>The address of the sender.</p>
+             * <p>The address information of the sender.</p>
              */
             public Builder addressInfo(SenderInfoAddressInfo addressInfo) {
                 this.addressInfo = addressInfo;
@@ -742,7 +743,7 @@ public class CreatePickUpWaybillPreQueryRequest extends Request {
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>Wang</p>
+             * <p>Wang XX</p>
              */
             public Builder name(String name) {
                 this.name = name;

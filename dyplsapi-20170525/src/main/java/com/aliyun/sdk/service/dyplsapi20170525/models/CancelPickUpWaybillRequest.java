@@ -135,7 +135,7 @@ public class CancelPickUpWaybillRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;action&quot;:&quot;UPDATE_DESC&quot;,&quot;value&quot;:&quot;The courier is unable to pick up the package.&quot;}</p>
+         * <p>不想退货了</p>
          */
         public Builder cancelDesc(String cancelDesc) {
             this.putQueryParameter("CancelDesc", cancelDesc);

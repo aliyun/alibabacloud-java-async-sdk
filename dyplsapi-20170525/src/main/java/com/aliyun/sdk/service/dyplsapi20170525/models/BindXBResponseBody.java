@@ -106,7 +106,10 @@ public class BindXBResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details of the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -114,7 +117,11 @@ public class BindXBResponseBody extends TeaModel {
         }
 
         /**
-         * <p>返回状态码 0000表示成功 其他表示失败</p>
+         * <p>The response status code. Valid values:</p>
+         * <ul>
+         * <li>0000: Success.</li>
+         * </ul>
+         * <p>Other values indicate failure.</p>
          * 
          * <strong>example:</strong>
          * <p>0000</p>
@@ -125,7 +132,10 @@ public class BindXBResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The work number binding result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;AuthId&quot;:&quot;4353453456&quot;,&quot;TelX&quot;:&quot;18640577897&quot;}</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -133,10 +143,10 @@ public class BindXBResponseBody extends TeaModel {
         }
 
         /**
-         * <p>返回信息</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
-         * <p>成功</p>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -144,7 +154,13 @@ public class BindXBResponseBody extends TeaModel {
         }
 
         /**
-         * <p>返回是否成功 true  表示成功 false表示失败</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><p>true: Successful.</p>
+         * </li>
+         * <li><p>false: Failed.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -213,7 +229,7 @@ public class BindXBResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>工作号关系绑定的唯一标识</p>
+             * <p>The unique identifier of the work number binding.</p>
              * 
              * <strong>example:</strong>
              * <p>4353453456</p>
@@ -224,7 +240,7 @@ public class BindXBResponseBody extends TeaModel {
             }
 
             /**
-             * <p>X号码</p>
+             * <p>The work number X.</p>
              * 
              * <strong>example:</strong>
              * <p>18640577897</p>

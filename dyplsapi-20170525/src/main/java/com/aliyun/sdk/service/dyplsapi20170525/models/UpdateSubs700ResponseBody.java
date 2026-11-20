@@ -119,7 +119,10 @@ public class UpdateSubs700ResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details of the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -127,7 +130,14 @@ public class UpdateSubs700ResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The status code of the API request. Valid values:</p>
+         * <ul>
+         * <li>OK: The request is successful.</li>
+         * <li>Other error codes: For more information, see <a href="https://help.aliyun.com/document_detail/59892.html">API error codes</a>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -135,7 +145,10 @@ public class UpdateSubs700ResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The default response format. This field does not contain an actual value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder data(java.util.Map<String, ?> data) {
             this.data = data;
@@ -143,7 +156,10 @@ public class UpdateSubs700ResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +167,10 @@ public class UpdateSubs700ResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9297B722-A016-43FB-B51A-E54050******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +178,14 @@ public class UpdateSubs700ResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call is successful.</li>
+         * <li>false: The call fails.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

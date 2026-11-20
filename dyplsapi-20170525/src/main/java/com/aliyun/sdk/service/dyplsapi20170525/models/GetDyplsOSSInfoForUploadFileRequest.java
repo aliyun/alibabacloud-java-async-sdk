@@ -102,6 +102,7 @@ public class GetDyplsOSSInfoForUploadFileRequest extends Request {
         } 
 
         /**
+         * <p>The business type. Default Value: phone_card.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

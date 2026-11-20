@@ -117,7 +117,7 @@ public class DeleteSecretAPhoneNoToCustRequest extends Request {
         } 
 
         /**
-         * <p>A号码组ID</p>
+         * <p>A-number group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,7 +139,7 @@ public class DeleteSecretAPhoneNoToCustRequest extends Request {
         }
 
         /**
-         * <p>A号码</p>
+         * <p>A-number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

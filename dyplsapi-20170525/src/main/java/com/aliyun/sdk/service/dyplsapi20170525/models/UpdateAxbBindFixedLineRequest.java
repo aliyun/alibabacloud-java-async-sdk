@@ -274,7 +274,10 @@ public class UpdateAxbBindFixedLineRequest extends Request {
         } 
 
         /**
-         * <p>主叫侧放音编码</p>
+         * <p>The caller-side audio playback code. This parameter is required for the AXB privacy number service for landlines. The audio playback code must include codes for three scenarios. Specify the codes in the order of &quot;B-&gt;X, A-&gt;X, and other numbers-&gt;X&quot;, and separate the codes with commas.</p>
+         * <blockquote>
+         * <p>&quot;1,2,3&quot; indicates that the audio playback code for B-&gt;X is 1, the code for A-&gt;X is 2, and the code for other numbers-&gt;X is 3.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>1,2,3</p>
@@ -286,7 +289,10 @@ public class UpdateAxbBindFixedLineRequest extends Request {
         }
 
         /**
-         * <p>被叫侧放音编码</p>
+         * <p>The callee-side audio playback code after the call is connected. The callee-side audio playback code must include codes for two scenarios. Specify the codes in the order of &quot;A as the callee and B as the callee&quot;, and separate the codes with commas.</p>
+         * <blockquote>
+         * <p>&quot;1,2&quot; indicates that the audio playback code when Number A answers as the callee is 1, and the code when Number B answers as the callee is 2.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>1,2</p>
@@ -298,11 +304,11 @@ public class UpdateAxbBindFixedLineRequest extends Request {
         }
 
         /**
-         * <p>号池ID。</p>
+         * <p>The ID of the number pool.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ALPT_1234</p>
+         * <p>FC10000016848****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -311,7 +317,13 @@ public class UpdateAxbBindFixedLineRequest extends Request {
         }
 
         /**
-         * <p>过期时间,单位：秒，必须为数字 0：不会自动解绑 非0：自动解绑周期</p>
+         * <p>The expiration time. Unit: seconds. Valid values:</p>
+         * <ul>
+         * <li><p>0: The binding never expires.</p>
+         * </li>
+         * <li><p>Other values: If you specify another value, such as 60, the binding is valid for 60 seconds after Number X is allocated. After 60 seconds, the binding is automatically unbound.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -323,7 +335,7 @@ public class UpdateAxbBindFixedLineRequest extends Request {
         }
 
         /**
-         * <p>扩展参数</p>
+         * <p>The extension parameters.</p>
          */
         public Builder extra(Extra extra) {
             String extraShrink = shrink(extra, "Extra", "json");
@@ -333,11 +345,11 @@ public class UpdateAxbBindFixedLineRequest extends Request {
         }
 
         /**
-         * <p>消息请求唯一标识。</p>
+         * <p>The unique identifier of the message request.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>1234567890</p>
+         * <p>123*******</p>
          */
         public Builder orderId(String orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -355,10 +367,10 @@ public class UpdateAxbBindFixedLineRequest extends Request {
         }
 
         /**
-         * <p>接入商自有字段，最大250字符长度</p>
+         * <p>The external business extension field. This parameter is returned in the call record receipt message. The value cannot exceed 100 characters in length.</p>
          * 
          * <strong>example:</strong>
-         * <p>remark</p>
+         * <p>19394</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -385,11 +397,11 @@ public class UpdateAxbBindFixedLineRequest extends Request {
         }
 
         /**
-         * <p>绑定id</p>
+         * <p>The binding ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>A100X558X0000400023</p>
+         * <p>A100***************</p>
          */
         public Builder subId(String subId) {
             this.putQueryParameter("SubId", subId);
@@ -398,11 +410,11 @@ public class UpdateAxbBindFixedLineRequest extends Request {
         }
 
         /**
-         * <p>格式为yyyyMMddHHmmss。时间采用北京时间，24小时制。</p>
+         * <p>The binding time. The format is yyyyMMddHHmmss. The time is in UTC+8 and uses the 24-hour format.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>20150920190126</p>
+         * <p>20161114143116</p>
          */
         public Builder subts(String subts) {
             this.putQueryParameter("Subts", subts);
@@ -411,7 +423,10 @@ public class UpdateAxbBindFixedLineRequest extends Request {
         }
 
         /**
-         * <p>接通后主叫侧的放音编码</p>
+         * <p>The caller-side audio playback code after the call is connected. The caller-side audio playback code after connection must include codes for two scenarios. Specify the codes in the order of &quot;A as the callee and B as the callee&quot;, and separate the codes with commas.</p>
+         * <blockquote>
+         * <p>&quot;1,2&quot; indicates that the caller-side audio playback code when Number A is the callee is 1, and the caller-side audio playback code when Number B is the callee is 2.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>1,2</p>
@@ -423,10 +438,17 @@ public class UpdateAxbBindFixedLineRequest extends Request {
         }
 
         /**
-         * <p>真实号码，telA,telB不允许同时更新</p>
+         * <p>Sets Number A in the binding relationship.</p>
+         * <blockquote>
+         * <ul>
+         * <li>Number A can be set to a mobile phone number or a landline number. If it is a landline number, you must add the area code. No hyphen is required between the area code and the number.</li>
+         * <li>You cannot update TelA and TelB at the same time.</li>
+         * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>13900000000</p>
+         * <p>Mobile phone number: 182<strong><strong>2371
+         * Landline number: 0571</strong></strong>**36</p>
          */
         public Builder telA(String telA) {
             this.putQueryParameter("TelA", telA);
@@ -435,10 +457,17 @@ public class UpdateAxbBindFixedLineRequest extends Request {
         }
 
         /**
-         * <p>对端号码，telA,telB不允许同时更新</p>
+         * <p>Sets Number B in the binding relationship.</p>
+         * <blockquote>
+         * <ul>
+         * <li>Number B can be set to a mobile phone number or a landline number. If it is a landline number, you must add the area code. No hyphen is required between the area code and the number.</li>
+         * <li>You cannot update TelA and TelB at the same time.</li>
+         * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>13005711234</p>
+         * <p>Mobile phone number: 182<strong><strong>2371
+         * Landline number: 0571</strong></strong>**36</p>
          */
         public Builder telB(String telB) {
             this.putQueryParameter("TelB", telB);
@@ -447,11 +476,11 @@ public class UpdateAxbBindFixedLineRequest extends Request {
         }
 
         /**
-         * <p>业务时间戳，格式yyyyMMddHHmmssSSS，时间采用北京时间，24小时制，精确至毫秒</p>
+         * <p>The business timestamp. The format is yyyyMMddHHmmssSSS. The time is in UTC+8 and uses the 24-hour format. The precision is accurate to milliseconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>20161114143116001</p>
+         * <p>20161114143116123</p>
          */
         public Builder ts(String ts) {
             this.putQueryParameter("Ts", ts);
@@ -506,7 +535,13 @@ public class UpdateAxbBindFixedLineRequest extends Request {
             } 
 
             /**
-             * <p>录音控制， 0：不录音 1：录音</p>
+             * <p>The call recording control. Valid values:</p>
+             * <ul>
+             * <li><p>0 (default): Call recording is disabled.</p>
+             * </li>
+             * <li><p>1: Call recording is enabled.</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>0</p>

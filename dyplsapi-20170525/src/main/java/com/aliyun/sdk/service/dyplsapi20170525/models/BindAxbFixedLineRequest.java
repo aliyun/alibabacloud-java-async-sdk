@@ -306,7 +306,10 @@ public class BindAxbFixedLineRequest extends Request {
         } 
 
         /**
-         * <p>主叫侧放音编码，AXB业务时必须设置。  放音编码必须包含3个场景的编码。按照“B-&gt;X,A-&gt;X,其他号码-&gt;X”的顺序填写编码，编码之间以逗号分隔。  比如：“1,2,3”表示B-&gt;X放音编号为1，A-&gt;X放音编号为2， 其他号码-&gt;X放音编号为3</p>
+         * <p>The caller-side announcement code. This parameter is required for the fixed-line AXB privacy number service. The code must include announcements for three scenarios. Specify the codes in the order of &quot;B-&gt;X, A-&gt;X, other numbers-&gt;X&quot;, separated by commas.</p>
+         * <blockquote>
+         * <p>For example, &quot;1,2,3&quot; indicates that the announcement code for B-&gt;X is 1, the announcement code for A-&gt;X is 2, and the announcement code for other numbers-&gt;X is 3.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -319,10 +322,13 @@ public class BindAxbFixedLineRequest extends Request {
         }
 
         /**
-         * <p>接通后被叫侧放音编码,接通后被叫侧放音编码  被叫放音编码必须包含2个场景的编码。按照“A被叫,B被叫”的顺序填写编码，编码之间以逗号分隔。  比如：“1,2”表示A号码为被叫侧接听时的放音编号为1，B号码为被叫侧接听时的放音编号为2。</p>
+         * <p>The callee-side announcement code after the call is connected. The code must include announcements for two scenarios. Specify the codes in the order of &quot;A as callee, B as callee&quot;, separated by commas.</p>
+         * <blockquote>
+         * <p>For example, &quot;1,2&quot; indicates that the announcement code when Number A answers as the callee is 1, and the announcement code when Number B answers as the callee is 2.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>1,2</p>
          */
         public Builder anucodecalled(String anucodecalled) {
             this.putQueryParameter("Anucodecalled", anucodecalled);
@@ -331,11 +337,11 @@ public class BindAxbFixedLineRequest extends Request {
         }
 
         /**
-         * <p>号池ID。</p>
+         * <p>The ID of the number pool.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ALPT_1234</p>
+         * <p>FC10000016848****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -344,10 +350,10 @@ public class BindAxbFixedLineRequest extends Request {
         }
 
         /**
-         * <p>区号,去掉“0” 例如：北京（10）；在平台分配X号码模式中，平台从号码池中分配该地区的X号码，避免产生呼叫长途费。</p>
+         * <p>The area code. You can specify the location of Number X (specified city -&gt; provincial capital -&gt; national routing). If you do not specify a location, a number is randomly assigned nationwide.</p>
          * 
          * <strong>example:</strong>
-         * <p>10</p>
+         * <p>0571</p>
          */
         public Builder areacode(String areacode) {
             this.putQueryParameter("Areacode", areacode);
@@ -356,11 +362,17 @@ public class BindAxbFixedLineRequest extends Request {
         }
 
         /**
-         * <p>绑定类型，值如下： mode101：客户携带X号码 mode102：平台分配X号码</p>
+         * <p>The binding type. Valid values:</p>
+         * <ul>
+         * <li><p>mode101: The customer specifies Number X.</p>
+         * </li>
+         * <li><p>mode102: The platform allocates Number X.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>mode101</p>
          */
         public Builder bindType(String bindType) {
             this.putQueryParameter("BindType", bindType);
@@ -369,11 +381,17 @@ public class BindAxbFixedLineRequest extends Request {
         }
 
         /**
-         * <p>过期时间,单位：秒，必须为数字 0：不会自动解绑 非0：自动解绑周期</p>
+         * <p>The expiration time. Unit: seconds. Valid values:</p>
+         * <ul>
+         * <li><p>0: The binding never expires.</p>
+         * </li>
+         * <li><p>Other values: If you specify another value, such as 60, the binding is valid for 60 seconds after Number X is successfully allocated. After 60 seconds, the binding is automatically unbound.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>10</p>
+         * <p>60</p>
          */
         public Builder expiration(String expiration) {
             this.putQueryParameter("Expiration", expiration);
@@ -382,7 +400,7 @@ public class BindAxbFixedLineRequest extends Request {
         }
 
         /**
-         * <p>扩展参数</p>
+         * <p>The extended parameters.</p>
          */
         public Builder extra(Extra extra) {
             String extraShrink = shrink(extra, "Extra", "json");
@@ -392,11 +410,11 @@ public class BindAxbFixedLineRequest extends Request {
         }
 
         /**
-         * <p>消息请求唯一标识。</p>
+         * <p>The unique identifier of the message request.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>15433678436</p>
+         * <p>123*******</p>
          */
         public Builder orderId(String orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -414,10 +432,10 @@ public class BindAxbFixedLineRequest extends Request {
         }
 
         /**
-         * <p>接入商自有字段，最大250字符长度</p>
+         * <p>The external business extension field. This parameter is returned in the call record receipt message. The value cannot exceed 100 characters in length.</p>
          * 
          * <strong>example:</strong>
-         * <p>remark</p>
+         * <p>19394</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -444,7 +462,7 @@ public class BindAxbFixedLineRequest extends Request {
         }
 
         /**
-         * <p>绑定时间，格式为yyyyMMddHHmmss。时间采用北京时间，24小时制。</p>
+         * <p>The binding time. The format is yyyyMMddHHmmss. The time is in UTC+8 and uses the 24-hour clock.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -457,10 +475,13 @@ public class BindAxbFixedLineRequest extends Request {
         }
 
         /**
-         * <p>接通后主叫侧的放音编码,接通后主叫侧放音编码  接通后主叫侧放音编码必须包含2个场景的编码。按照“A被叫,B被叫”的顺序填写编码，编码之间以逗号分隔。  比如：“1,2”表示A号码为被叫时主叫侧的放音编号为1，B号码为被叫时主叫侧的放音编号为2。</p>
+         * <p>The caller-side announcement code after the call is connected. The code must include announcements for two scenarios. Specify the codes in the order of &quot;A as callee, B as callee&quot;, separated by commas.</p>
+         * <blockquote>
+         * <p>For example, &quot;1,2&quot; indicates that the caller-side announcement code when Number A is the callee is 1, and the caller-side announcement code when Number B is the callee is 2.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p>1,2</p>
          */
         public Builder tAnucodeConnect(String tAnucodeConnect) {
             this.putQueryParameter("TAnucodeConnect", tAnucodeConnect);
@@ -469,11 +490,18 @@ public class BindAxbFixedLineRequest extends Request {
         }
 
         /**
-         * <p>真实号码</p>
+         * <p>Number A of the fixed-line AXB privacy number.</p>
+         * <blockquote>
+         * <ul>
+         * <li>Number A can be a mobile phone number or a fixed-line number. For a fixed-line number, add the area code. No hyphen is required between the area code and the fixed-line number. </li>
+         * <li>If your business requires modifying a bound number, you can call the <a href="https://api.aliyun.com/document/Dyplsapi/2017-05-25/UpdateAxbBindFixedLine">UpdateAxbBindFixedLine</a> operation.</li>
+         * </ul>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>18456713271</p>
+         * <p>Mobile phone number: 182<strong><strong>2371
+         * Fixed-line number: 0571</strong></strong>**36</p>
          */
         public Builder telA(String telA) {
             this.putQueryParameter("TelA", telA);
@@ -482,11 +510,18 @@ public class BindAxbFixedLineRequest extends Request {
         }
 
         /**
-         * <p>对端号码</p>
+         * <p>Number B of the fixed-line AXB privacy number.</p>
+         * <blockquote>
+         * <ul>
+         * <li>Number B can be a mobile phone number or a fixed-line number. For a fixed-line number, add the area code. No hyphen is required between the area code and the fixed-line number.</li>
+         * <li>If your business requires modifying a bound number, you can call the <a href="https://api.aliyun.com/document/Dyplsapi/2017-05-25/UpdateAxbBindFixedLine">UpdateAxbBindFixedLine</a> operation.</li>
+         * </ul>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>18971362645</p>
+         * <p>Mobile phone number: 182<strong><strong>2371
+         * Fixed-line number: 0571</strong></strong>**36</p>
          */
         public Builder telB(String telB) {
             this.putQueryParameter("TelB", telB);
@@ -495,10 +530,13 @@ public class BindAxbFixedLineRequest extends Request {
         }
 
         /**
-         * <p>X号码； 平台分配号码模式下，该参数可不带，系统忽略该参数  格式为yyyyMMddHHmmss。时间采用北京时间，24小时制。</p>
+         * <p>Number X of the fixed-line AXB privacy number. Number X is a privacy number that you have <a href="https://dyplsnext.console.aliyun.com/numberbuy">purchased</a> in the console.</p>
+         * <blockquote>
+         * <p>This parameter is required when the customer specifies Number X (that is, the BindType parameter is set to mode101).</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>19767562345</p>
+         * <p>0571******23</p>
          */
         public Builder telX(String telX) {
             this.putQueryParameter("TelX", telX);
@@ -507,11 +545,11 @@ public class BindAxbFixedLineRequest extends Request {
         }
 
         /**
-         * <p>业务时间戳，格式yyyyMMddHHmmssSSS，时间采用北京时间，24小时制，精确至毫秒</p>
+         * <p>The business timestamp. The format is yyyyMMddHHmmssSSS. The time is in UTC+8 and uses the 24-hour clock, accurate to milliseconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>20161114143116001</p>
+         * <p>20161114143116123</p>
          */
         public Builder ts(String ts) {
             this.putQueryParameter("Ts", ts);
@@ -566,10 +604,19 @@ public class BindAxbFixedLineRequest extends Request {
             } 
 
             /**
-             * <p>录音控制，默认是0（不开通录音功能）。 0：不录音 1：录音</p>
+             * <p>The call recording control. Valid values:</p>
+             * <ul>
+             * <li><p>0 (default): Do not record the call.</p>
+             * </li>
+             * <li><p>1: Record the call.</p>
+             * <blockquote>
+             * <p>After you enable call recording, you can play and download voice files in the call records. Recording files are billed at CNY 0.010 per minute.</p>
+             * </blockquote>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
-             * <p>示例值示例值</p>
+             * <p>0</p>
              */
             public Builder callrecording(String callrecording) {
                 this.callrecording = callrecording;

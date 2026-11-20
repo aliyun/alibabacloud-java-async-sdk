@@ -175,7 +175,7 @@ public class BindXBRequest extends Request {
         } 
 
         /**
-         * <p>客户uid</p>
+         * <p>The customer UID. This parameter is automatically obtained by the system and is not required.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -189,7 +189,7 @@ public class BindXBRequest extends Request {
         }
 
         /**
-         * <p>号码池key</p>
+         * <p>The number pool key.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -211,7 +211,7 @@ public class BindXBRequest extends Request {
         }
 
         /**
-         * <p>请求去重ID, reqId最大长度为20位,接入方需要保持原子性</p>
+         * <p>The request deduplication ID. The maximum length is 20 characters. Ensure the atomicity of the request ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -242,7 +242,7 @@ public class BindXBRequest extends Request {
         }
 
         /**
-         * <p>员工真实号码</p>
+         * <p>The actual phone number of the employee.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -255,7 +255,7 @@ public class BindXBRequest extends Request {
         }
 
         /**
-         * <p>X号码</p>
+         * <p>The work number X.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -268,7 +268,7 @@ public class BindXBRequest extends Request {
         }
 
         /**
-         * <p>客户自定义参数回调带回</p>
+         * <p>The custom data to be returned in the callback.</p>
          * 
          * <strong>example:</strong>
          * <p>000</p>

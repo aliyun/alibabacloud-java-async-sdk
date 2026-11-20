@@ -303,7 +303,7 @@ public class BindAxgRequest extends Request {
          * <p>The ID of the ASR model.</p>
          * 
          * <strong>example:</strong>
-         * <p>980abddb908f48e8b987cb2cd303****</p>
+         * <p>9b4afe3d224e4fa3bf963697113e2f77</p>
          */
         public Builder ASRModelId(String ASRModelId) {
             this.putQueryParameter("ASRModelId", ASRModelId);
@@ -319,7 +319,7 @@ public class BindAxgRequest extends Request {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>False</p>
+         * <p>false</p>
          */
         public Builder ASRStatus(Boolean ASRStatus) {
             this.putQueryParameter("ASRStatus", ASRStatus);
@@ -366,7 +366,7 @@ public class BindAxgRequest extends Request {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>hangzhou</p>
+         * <p>北京</p>
          */
         public Builder expectCity(String expectCity) {
             this.putQueryParameter("ExpectCity", expectCity);
@@ -402,7 +402,7 @@ public class BindAxgRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>1234</p>
+         * <p>200001234****</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -473,7 +473,7 @@ public class BindAxgRequest extends Request {
          * <p>Phone number B can be set to a mobile phone number or a landline phone number. The landline phone number must be added with an area code, and no hyphen is required between the area code and the landline phone number.</p>
          * 
          * <strong>example:</strong>
-         * <p>139****0000</p>
+         * <p>138****0000</p>
          */
         public Builder phoneNoB(String phoneNoB) {
             this.putQueryParameter("PhoneNoB", phoneNoB);
@@ -488,7 +488,7 @@ public class BindAxgRequest extends Request {
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>139****0000</p>
+         * <p>139****1111</p>
          */
         public Builder phoneNoX(String phoneNoX) {
             this.putQueryParameter("PhoneNoX", phoneNoX);
@@ -500,7 +500,7 @@ public class BindAxgRequest extends Request {
          * <p>The key of the phone number pool. Log on to the <a href="https://dypls.console.aliyun.com/dypls.htm#/account">Phone Number Protection console</a> and view the key of the phone number pool on the <strong>Number Pool Management</strong> page.</p>
          * 
          * <strong>example:</strong>
-         * <p>FC123456</p>
+         * <p>FC10000012345****</p>
          */
         public Builder poolKey(String poolKey) {
             this.putQueryParameter("PoolKey", poolKey);
@@ -539,7 +539,7 @@ public class BindAxgRequest extends Request {
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;AXGRing_AB&quot;:&quot;100000001&quot;,&quot;AXGRing_A&quot;:&quot;100000002&quot;,&quot;AXGRing_G&quot;:&quot;100000003&quot;}</p>
+         * <p>{&quot;AXGRing_AB&quot;:&quot;1000<strong><strong>1&quot;,&quot;AXGRing_A&quot;:&quot;1000</strong></strong>2&quot;,&quot;AXGRing_G&quot;:&quot;1000****3&quot;}</p>
          */
         public Builder ringConfig(String ringConfig) {
             this.putQueryParameter("RingConfig", ringConfig);

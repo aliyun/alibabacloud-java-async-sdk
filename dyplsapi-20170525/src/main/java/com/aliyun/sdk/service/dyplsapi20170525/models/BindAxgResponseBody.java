@@ -215,7 +215,7 @@ public class BindAxgResponseBody extends TeaModel {
              * </blockquote>
              * 
              * <strong>example:</strong>
-             * <p>139****0000</p>
+             * <p>130</p>
              */
             public Builder extension(String extension) {
                 this.extension = extension;
@@ -226,7 +226,7 @@ public class BindAxgResponseBody extends TeaModel {
              * <p>The private number, that is, phone number X.</p>
              * 
              * <strong>example:</strong>
-             * <p>139****0000</p>
+             * <p>139****1111</p>
              */
             public Builder secretNo(String secretNo) {
                 this.secretNo = secretNo;

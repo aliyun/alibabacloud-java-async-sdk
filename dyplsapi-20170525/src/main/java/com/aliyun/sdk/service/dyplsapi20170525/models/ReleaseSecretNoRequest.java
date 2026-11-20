@@ -130,7 +130,7 @@ public class ReleaseSecretNoRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>FC123456</p>
+         * <p>FC10000012345****</p>
          */
         public Builder poolKey(String poolKey) {
             this.putQueryParameter("PoolKey", poolKey);
@@ -164,7 +164,7 @@ public class ReleaseSecretNoRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>130</p>
+         * <p>139****0000</p>
          */
         public Builder secretNo(String secretNo) {
             this.putQueryParameter("SecretNo", secretNo);

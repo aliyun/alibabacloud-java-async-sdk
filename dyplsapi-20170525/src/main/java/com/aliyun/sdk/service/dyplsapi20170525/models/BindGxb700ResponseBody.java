@@ -119,7 +119,10 @@ public class BindGxb700ResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The access denied details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -127,7 +130,12 @@ public class BindGxb700ResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The response code. Valid values:
+         * OK: The request was successful.
+         * Other values indicate failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -135,7 +143,7 @@ public class BindGxb700ResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -143,7 +151,10 @@ public class BindGxb700ResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +162,10 @@ public class BindGxb700ResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9297B722-A016-43FB-B51A-E54050******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +173,12 @@ public class BindGxb700ResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the operation was successful. Valid values:
+         * true: Successful.
+         * false: Failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -225,7 +244,10 @@ public class BindGxb700ResponseBody extends TeaModel {
             } 
 
             /**
-             * SecretNo.
+             * <p>The purchased 700 private number, which is the X number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>700********0001</p>
              */
             public Builder secretNo(String secretNo) {
                 this.secretNo = secretNo;
@@ -233,7 +255,10 @@ public class BindGxb700ResponseBody extends TeaModel {
             }
 
             /**
-             * SubsId.
+             * <p>The number binding ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123*******</p>
              */
             public Builder subsId(Long subsId) {
                 this.subsId = subsId;

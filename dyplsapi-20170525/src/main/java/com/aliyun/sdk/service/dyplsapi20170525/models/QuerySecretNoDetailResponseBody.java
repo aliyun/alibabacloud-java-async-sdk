@@ -93,10 +93,10 @@ public class QuerySecretNoDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code.</p>
+         * <p>The request status code.</p>
          * <ul>
-         * <li>The value OK indicates that the request was successful.</li>
-         * <li>Other status codes indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/109196.html">Error codes</a>.</li>
+         * <li>OK indicates that the request was successful.</li>
+         * <li>For other error codes, see <a href="https://help.aliyun.com/document_detail/109196.html">Error codes</a>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -108,7 +108,7 @@ public class QuerySecretNoDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The description of the status code.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -130,7 +130,7 @@ public class QuerySecretNoDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The attributes of the phone number.</p>
+         * <p>The number properties.</p>
          */
         public Builder secretNoInfoDTO(SecretNoInfoDTO secretNoInfoDTO) {
             this.secretNoInfoDTO = secretNoInfoDTO;
@@ -248,10 +248,10 @@ public class QuerySecretNoDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The verification status of the phone number. Valid values:</p>
+             * <p>The number verification status. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: The phone number is not verified.</li>
-             * <li><strong>1</strong>: The phone number is verified.</li>
+             * <li><strong>0</strong>: Unverified.</li>
+             * <li><strong>1</strong>: Verified.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -266,7 +266,7 @@ public class QuerySecretNoDetailResponseBody extends TeaModel {
              * <p>The city.</p>
              * 
              * <strong>example:</strong>
-             * <p>chengdu</p>
+             * <p>Xi\&quot;an</p>
              */
             public Builder city(String city) {
                 this.city = city;
@@ -277,7 +277,7 @@ public class QuerySecretNoDetailResponseBody extends TeaModel {
              * <p>The province.</p>
              * 
              * <strong>example:</strong>
-             * <p>sichuan</p>
+             * <p>Shaanxi</p>
              */
             public Builder province(String province) {
                 this.province = province;
@@ -285,7 +285,7 @@ public class QuerySecretNoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the phone number was purchased.</p>
+             * <p>The purchase time of the number, in the format of YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-12-03 15:19:27</p>
@@ -296,12 +296,12 @@ public class QuerySecretNoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the phone number. Valid values:</p>
+             * <p>The number status. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: The phone number is not bound to other phone numbers.</li>
-             * <li><strong>1</strong>: The phone number is bound to other phone numbers.</li>
-             * <li><strong>2</strong>: The phone number is locked.</li>
-             * <li><strong>3</strong>: The phone number is frozen.</li>
+             * <li><strong>0</strong>: Unbound.</li>
+             * <li><strong>1</strong>: Bound.</li>
+             * <li><strong>2</strong>: Locked.</li>
+             * <li><strong>3</strong>: Frozen.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -313,7 +313,7 @@ public class QuerySecretNoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The carrier to which the phone number belongs. Valid values:</p>
+             * <p>The carrier. Valid values:</p>
              * <ul>
              * <li><strong>1</strong>: China Mobile</li>
              * <li><strong>2</strong>: China Unicom</li>

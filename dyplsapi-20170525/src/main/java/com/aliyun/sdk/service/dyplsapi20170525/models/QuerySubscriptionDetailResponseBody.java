@@ -93,10 +93,10 @@ public class QuerySubscriptionDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code.</p>
+         * <p>The request status code.</p>
          * <ul>
-         * <li>The value OK indicates that the request was successful.</li>
-         * <li>Other status codes indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/109196.html">Error codes</a>.</li>
+         * <li>OK indicates that the request was successful.</li>
+         * <li>For other error codes, see <a href="https://help.aliyun.com/document_detail/109196.html">Error codes</a>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -108,7 +108,7 @@ public class QuerySubscriptionDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The description of the status code.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -130,7 +130,7 @@ public class QuerySubscriptionDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information returned after the QuerySubscriptionDetail operation was called.</p>
+         * <p>The data structure returned when the API call is successful.</p>
          */
         public Builder secretBindDetailDTO(SecretBindDetailDTO secretBindDetailDTO) {
             this.secretBindDetailDTO = secretBindDetailDTO;
@@ -339,10 +339,18 @@ public class QuerySubscriptionDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the ASR model.</p>
+             * <p>The ASR model ID. Valid values:</p>
+             * <ul>
+             * <li><p>General-Telephone-Mandarin Chinese model ID: 7ee372834d2f4cc7ac0d0ab2d0ae1aac</p>
+             * </li>
+             * <li><p>General-Telephone-Cantonese Chinese model ID: 9b4afe3d224e4fa3bf963697113e2f77</p>
+             * </li>
+             * <li><p>General-Telephone-Regional Accent model ID: 3655a6cb94764145a1f9a38a3c3b3b4b</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
-             * <p>123456</p>
+             * <p>7ee372834d2f4cc7ac0d0ab2d0ae1aac</p>
              */
             public Builder ASRModelId(String ASRModelId) {
                 this.ASRModelId = ASRModelId;
@@ -350,10 +358,10 @@ public class QuerySubscriptionDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether automatic speech recognition (ASR) is enabled. Valid values:</p>
+             * <p>The Automatic Speech Recognition (ASR) status. Valid values:</p>
              * <ul>
-             * <li><strong>false</strong>: ASR is disabled.</li>
-             * <li><strong>true</strong>: ASR is enabled.</li>
+             * <li><strong>false</strong>: Disabled.</li>
+             * <li><strong>true</strong>: Enabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -365,10 +373,10 @@ public class QuerySubscriptionDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of one-way call restrictions. No value is returned for this parameter if one-way call restrictions are not set. Valid values:</p>
+             * <p>The one-way call restriction status. This parameter is not returned if no one-way call restriction is configured. Valid values:</p>
              * <ul>
-             * <li><strong>CONTROL_AX_DISABLE</strong>: Phone number A cannot be used to call phone number X.</li>
-             * <li><strong>CONTROL_BX_DISABLE</strong>: Phone number B cannot be used to call phone number X.</li>
+             * <li><strong>CONTROL_AX_DISABLE</strong>: Phone number A cannot call phone number X.</li>
+             * <li><strong>CONTROL_BX_DISABLE</strong>: Phone number B cannot call phone number X.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -380,7 +388,7 @@ public class QuerySubscriptionDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration time of the binding.</p>
+             * <p>The expiration time of the binding relationship, in the format of YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2019-09-05 12:00:00</p>
@@ -391,7 +399,7 @@ public class QuerySubscriptionDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The extension in the AXG extension binding.</p>
+             * <p>The extension number in the AXG extension binding.</p>
              * 
              * <strong>example:</strong>
              * <p>130</p>
@@ -402,7 +410,7 @@ public class QuerySubscriptionDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time of the binding.</p>
+             * <p>The time when the binding relationship was created.</p>
              * 
              * <strong>example:</strong>
              * <p>2019-03-05 12:00:00</p>
@@ -413,10 +421,10 @@ public class QuerySubscriptionDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of number group G in the binding.</p>
+             * <p>The ID of the number group G (GID) in the binding relationship.</p>
              * 
              * <strong>example:</strong>
-             * <p>2000000130001</p>
+             * <p>200001234****</p>
              */
             public Builder groupId(Long groupId) {
                 this.groupId = groupId;
@@ -424,10 +432,10 @@ public class QuerySubscriptionDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether all calls made by the bound phone numbers are recorded. Valid values:</p>
+             * <p>Indicates whether all calls generated by this binding relationship are recorded. Valid values:</p>
              * <ul>
-             * <li><strong>false</strong></li>
-             * <li><strong>true</strong></li>
+             * <li><strong>false</strong>: Calls are not recorded.</li>
+             * <li><strong>true</strong>: Calls are recorded.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -439,10 +447,10 @@ public class QuerySubscriptionDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Phone number A in the binding.</p>
+             * <p>The phone number A in the binding relationship.</p>
              * 
              * <strong>example:</strong>
-             * <p>13900001111</p>
+             * <p>139****0000</p>
              */
             public Builder phoneNoA(String phoneNoA) {
                 this.phoneNoA = phoneNoA;
@@ -450,10 +458,10 @@ public class QuerySubscriptionDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Phone number B in the binding.</p>
+             * <p>The phone number B in the binding relationship.</p>
              * 
              * <strong>example:</strong>
-             * <p>13900002222</p>
+             * <p>138****0000</p>
              */
             public Builder phoneNoB(String phoneNoB) {
                 this.phoneNoB = phoneNoB;
@@ -461,10 +469,10 @@ public class QuerySubscriptionDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The private number in the binding, that is, phone number X.</p>
+             * <p>The private number in the binding relationship, which is the X number.</p>
              * 
              * <strong>example:</strong>
-             * <p>13900001234</p>
+             * <p>139****1111</p>
              */
             public Builder phoneNoX(String phoneNoX) {
                 this.phoneNoX = phoneNoX;
@@ -472,10 +480,10 @@ public class QuerySubscriptionDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The binding status. Valid values:</p>
+             * <p>The status of the binding relationship. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: The binding expired.</li>
-             * <li><strong>1</strong>: The binding is in effect.</li>
+             * <li><strong>0</strong>: Expired.</li>
+             * <li><strong>1</strong>: Active.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -487,7 +495,7 @@ public class QuerySubscriptionDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The binding ID.</p>
+             * <p>The binding relationship ID.</p>
              * 
              * <strong>example:</strong>
              * <p>100000076879****</p>

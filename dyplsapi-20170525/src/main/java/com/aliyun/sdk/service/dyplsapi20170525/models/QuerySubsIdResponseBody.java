@@ -129,7 +129,7 @@ public class QuerySubsIdResponseBody extends TeaModel {
          * <p>The binding ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>11111111****</p>
+         * <p>1000******,1000******,1000******</p>
          */
         public Builder subsId(String subsId) {
             this.subsId = subsId;

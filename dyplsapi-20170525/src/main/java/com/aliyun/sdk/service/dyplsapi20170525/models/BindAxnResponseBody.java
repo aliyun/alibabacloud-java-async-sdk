@@ -93,10 +93,10 @@ public class BindAxnResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code.</p>
+         * <p>The status code of the request.</p>
          * <ul>
-         * <li>The value OK indicates that the request was successful.</li>
-         * <li>Other values indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/109196.html">Error codes</a>.</li>
+         * <li>A value of OK indicates that the request is successful.</li>
+         * <li>For other error codes, see <a href="https://help.aliyun.com/document_detail/109196.html">Error codes</a>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -108,7 +108,7 @@ public class BindAxnResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The description of the status code.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -130,7 +130,7 @@ public class BindAxnResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information returned after the phone numbers were bound.</p>
+         * <p>The struct returned after the number is successfully bound.</p>
          */
         public Builder secretBindDTO(SecretBindDTO secretBindDTO) {
             this.secretBindDTO = secretBindDTO;
@@ -209,9 +209,9 @@ public class BindAxnResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The extension of the phone number.</p>
+             * <p>The extension number.</p>
              * <blockquote>
-             * <p> The BindAxn operation does not involve an extension. Ignore this parameter.</p>
+             * <p>The BindAxn operation does not involve extension numbers. Ignore this parameter.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -223,10 +223,10 @@ public class BindAxnResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The private number, that is, phone number X.</p>
+             * <p>The privacy number, which is Number X.</p>
              * 
              * <strong>example:</strong>
-             * <p>139****0000</p>
+             * <p>139****1111</p>
              */
             public Builder secretNo(String secretNo) {
                 this.secretNo = secretNo;
@@ -234,7 +234,7 @@ public class BindAxnResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The binding ID.</p>
+             * <p>The ID of the binding relationship.</p>
              * 
              * <strong>example:</strong>
              * <p>1***************3</p>

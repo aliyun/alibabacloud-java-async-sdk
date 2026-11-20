@@ -329,7 +329,15 @@ public class BindAxb700Request extends Request {
         } 
 
         /**
-         * AsrModelId.
+         * <p>Optional. The ASR model ID. Valid values:</p>
+         * <ul>
+         * <li>General-Phone-Mandarin model ID: 7ee372834d2f4cc7ac0d0ab2d0ae1aac</li>
+         * <li>General-Phone-Cantonese model ID: 9b4afe3d224e4fa3bf963697113e2f77</li>
+         * <li>General-Phone-Regional Accent model ID: 3655a6cb94764145a1f9a38a3c3b3b4b.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>7ee372834d2f4cc7ac0d0ab2d0ae1aac</p>
          */
         public Builder asrModelId(String asrModelId) {
             this.putQueryParameter("AsrModelId", asrModelId);
@@ -338,7 +346,20 @@ public class BindAxb700Request extends Request {
         }
 
         /**
-         * Audio.
+         * <p>The audio prompt encoding.</p>
+         * <ul>
+         * <li>ACallX_Apre: The audio prompt encoding played to A before the call is connected when A calls X.</li>
+         * <li>ACallX_Ain: The audio prompt encoding played to A after the call is connected when A calls X.</li>
+         * <li>ACallX_Bin: The audio prompt encoding played to B after the call is connected when A calls X.</li>
+         * <li>BCallX_Bpre: The audio prompt encoding played to B before the call is connected when B calls X.</li>
+         * <li>BCallX_Ain: The audio prompt encoding played to A after the call is connected when B calls X.</li>
+         * <li>BCallX_Bin: The audio prompt encoding played to B after the call is connected when B calls X.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         * &quot;ACallX_Apre&quot;:&quot;185&quot;
+         * }</p>
          */
         public Builder audio(String audio) {
             this.putQueryParameter("Audio", audio);
@@ -347,7 +368,16 @@ public class BindAxb700Request extends Request {
         }
 
         /**
-         * CallRestrict.
+         * <p>The one-way call restriction logic. Valid values:</p>
+         * <ul>
+         * <li><p>CONTROL_AX_DISABLE: Number A cannot call number X.</p>
+         * </li>
+         * <li><p>CONTROL_BX_DISABLE: Number B cannot call number X.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CONTROL_AX_DISABLE</p>
          */
         public Builder callRestrict(String callRestrict) {
             this.putQueryParameter("CallRestrict", callRestrict);
@@ -356,7 +386,10 @@ public class BindAxb700Request extends Request {
         }
 
         /**
-         * CallTimeout.
+         * <p>The sequential ringing duration. Unit: seconds. Valid values: 5 to 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder callTimeout(Long callTimeout) {
             this.putQueryParameter("CallTimeout", callTimeout);
@@ -365,7 +398,27 @@ public class BindAxb700Request extends Request {
         }
 
         /**
-         * DtmfConfig.
+         * <p>Optional. The DTMF key configuration for 700AXB number binding. The following items can be configured:</p>
+         * <ul>
+         * <li>endCallIvrPhoneNo: The audio playback target, A or B.</li>
+         * <li>waitingDtmfTime: The maximum wait time after the first audio file is played. Maximum value: 30 seconds.</li>
+         * <li>maxLoop dtmf: The maximum number of times the first audio file is replayed when a key press does not match. Maximum value: 5.</li>
+         * <li>step1File: The name of the first audio file.</li>
+         * <li>step2File: The name of the second audio file.</li>
+         * <li>validKey: The valid key values, such as 1,2. Only two valid key values can be configured, separated by commas (,).</li>
+         * <li>waitingEndCall: The carrier hang-up wait time. Maximum value: 10 seconds.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;endCallIvrPhoneNo&quot;:&quot;A&quot;,
+         *     &quot;waitingDtmfTime&quot;:10,
+         *     &quot;maxLoop&quot;:3,
+         *     &quot;step1File&quot;:&quot;62ab72f8-4750-4234-859e-e8d678c0cad3-flow_tts_test_1.wav&quot;,
+         *     &quot;step2File&quot;:&quot;62ab72f8-4750-4234-859e-e8d678c0cad3-flow_tts_test_2.wav&quot;,
+         *     &quot;validKey&quot;:&quot;1,2&quot;,
+         *     &quot;waitingEndCall&quot;:2
+         * }</p>
          */
         public Builder dtmfConfig(String dtmfConfig) {
             this.putQueryParameter("DtmfConfig", dtmfConfig);
@@ -374,6 +427,14 @@ public class BindAxb700Request extends Request {
         }
 
         /**
+         * <p>The expiration time of the number binding.</p>
+         * <blockquote>
+         * <ul>
+         * <li>The expiration time must be at least 1 minute later than the current binding time, accurate to the second.</li>
+         * <li>You can manually unbind the number at any time before the binding expires.</li>
+         * <li>If you unbind a number that is in an active call, the current call is not affected.</li>
+         * </ul>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -386,7 +447,17 @@ public class BindAxb700Request extends Request {
         }
 
         /**
-         * IndustrialId.
+         * <p>The industrial Internet identifier code, which has a one-to-one mapping with OrderId.</p>
+         * <p>The code supports characters such as &quot;.&quot; and &quot;/&quot; as domain separators. The code must not contain non-printable characters such as spaces or line breaks.</p>
+         * <p>This field is required when the caller generates the industrial Internet identifier code independently.</p>
+         * <blockquote>
+         * <ul>
+         * <li>Either OrderId or IndustrialId is required depending on the business scenario.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>700.100.1/12345678</p>
          */
         public Builder industrialId(String industrialId) {
             this.putQueryParameter("IndustrialId", industrialId);
@@ -395,7 +466,16 @@ public class BindAxb700Request extends Request {
         }
 
         /**
-         * NeedAsr.
+         * <p>Specifies whether to enable the ASR service. Valid values:</p>
+         * <ul>
+         * <li><p>false: Disable (default).</p>
+         * </li>
+         * <li><p>true: Enable.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder needAsr(Boolean needAsr) {
             this.putQueryParameter("NeedAsr", needAsr);
@@ -404,7 +484,16 @@ public class BindAxb700Request extends Request {
         }
 
         /**
-         * NeedRecord.
+         * <p>Specifies whether call recording files are required for all calls made through this number binding. Valid values:</p>
+         * <ul>
+         * <li><p>true: Enable recording.</p>
+         * </li>
+         * <li><p>false: Disable recording (default).</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder needRecord(Boolean needRecord) {
             this.putQueryParameter("NeedRecord", needRecord);
@@ -413,7 +502,23 @@ public class BindAxb700Request extends Request {
         }
 
         /**
-         * OrderId.
+         * <p>The business order code.</p>
+         * <ul>
+         * <li><p>This code has a one-to-one mapping with the actual business order and must be unique.</p>
+         * </li>
+         * <li><p>The code supports characters such as &quot;.&quot; and &quot;/&quot; as domain separators. The code must not contain non-printable characters such as spaces or line breaks.</p>
+         * </li>
+         * <li><p>This field is required when the caller submits a business order code and the platform generates an industrial Internet identifier code.</p>
+         * <blockquote>
+         * <ul>
+         * <li>Either OrderId or IndustrialId is required depending on the business scenario.</li>
+         * </ul>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>12345678</p>
          */
         public Builder orderId(String orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -422,7 +527,10 @@ public class BindAxb700Request extends Request {
         }
 
         /**
-         * OutId.
+         * <p>The external business extension field. This parameter is returned in the call record receipt message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abcdef</p>
          */
         public Builder outId(String outId) {
             this.putQueryParameter("OutId", outId);
@@ -431,7 +539,10 @@ public class BindAxb700Request extends Request {
         }
 
         /**
-         * OutOrderId.
+         * <p>The external business ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abcdefgh</p>
          */
         public Builder outOrderId(String outOrderId) {
             this.putQueryParameter("OutOrderId", outOrderId);
@@ -449,6 +560,7 @@ public class BindAxb700Request extends Request {
         }
 
         /**
+         * <p>The key of the China 700 number pool.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -461,7 +573,10 @@ public class BindAxb700Request extends Request {
         }
 
         /**
-         * RecType.
+         * <p>The recording file format. Valid values: mp3 and wav.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mp3</p>
          */
         public Builder recType(String recType) {
             this.putQueryParameter("RecType", recType);
@@ -488,6 +603,7 @@ public class BindAxb700Request extends Request {
         }
 
         /**
+         * <p>The phone number of user A.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -500,6 +616,7 @@ public class BindAxb700Request extends Request {
         }
 
         /**
+         * <p>The phone number of user B.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -512,7 +629,16 @@ public class BindAxb700Request extends Request {
         }
 
         /**
-         * TelX.
+         * <p>Optional. The intermediate number X.</p>
+         * <blockquote>
+         * <ul>
+         * <li>If the caller does not specify an X number,</li>
+         * <li>the platform assigns a number from the number pool as the X number.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>700********0000</p>
          */
         public Builder telX(String telX) {
             this.putQueryParameter("TelX", telX);

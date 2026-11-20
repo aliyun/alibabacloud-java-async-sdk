@@ -196,10 +196,7 @@ public class QuerySecretNoRemainResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The quantity of remaining phone numbers available for online purchase for the city.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>120</p>
+             * Amount.
              */
             public Builder amount(Long amount) {
                 this.amount = amount;
@@ -207,10 +204,7 @@ public class QuerySecretNoRemainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The home location of the phone numbers.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Wuhan</p>
+             * City.
              */
             public Builder city(String city) {
                 this.city = city;
@@ -358,7 +352,7 @@ public class QuerySecretNoRemainResponseBody extends TeaModel {
              * <p>The home location of the phone numbers.</p>
              * 
              * <strong>example:</strong>
-             * <p>hangzhou</p>
+             * <p>杭州</p>
              */
             public Builder city(String city) {
                 this.city = city;
@@ -366,7 +360,7 @@ public class QuerySecretNoRemainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about remaining phone numbers available for online purchase.</p>
+             * RemainDTOList.
              */
             public Builder remainDTOList(RemainDTOList remainDTOList) {
                 this.remainDTOList = remainDTOList;

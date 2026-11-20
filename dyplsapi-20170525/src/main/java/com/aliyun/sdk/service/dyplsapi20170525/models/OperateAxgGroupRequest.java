@@ -159,7 +159,7 @@ public class OperateAxgGroupRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>1234</p>
+         * <p>200001234****</p>
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -220,7 +220,7 @@ public class OperateAxgGroupRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>FC123456</p>
+         * <p>FC10000012345****</p>
          */
         public Builder poolKey(String poolKey) {
             this.putQueryParameter("PoolKey", poolKey);

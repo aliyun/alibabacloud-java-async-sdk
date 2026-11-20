@@ -172,7 +172,7 @@ public class BuySecretNoRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>hangzhou</p>
+         * <p>杭州</p>
          */
         public Builder city(String city) {
             this.putQueryParameter("City", city);

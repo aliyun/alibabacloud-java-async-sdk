@@ -119,7 +119,10 @@ public class ConfigXResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details of the access denied error.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -127,7 +130,16 @@ public class ConfigXResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The returned status code. Valid values:</p>
+         * <ul>
+         * <li><p>0000: Success.</p>
+         * </li>
+         * <li><p>Other values: Failure.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0000</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -135,7 +147,10 @@ public class ConfigXResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The configuration result of the work number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Code&quot;:&quot;0000&quot;,&quot;Message&quot;:&quot;Success&quot;,&quot;Success&quot;:true}</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -143,7 +158,10 @@ public class ConfigXResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +169,10 @@ public class ConfigXResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4A2568E1-7D83-5491-8DEF-600D8AFF97E7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +180,16 @@ public class ConfigXResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><p>true: Success.</p>
+         * </li>
+         * <li><p>false: Failure.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +268,7 @@ public class ConfigXResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>返回状态码 0000表示成功 其他表示失败</p>
+             * <p>The returned status code. A value of 0000 indicates success. Other values indicate failure.</p>
              * 
              * <strong>example:</strong>
              * <p>0000</p>
@@ -249,10 +279,10 @@ public class ConfigXResponseBody extends TeaModel {
             }
 
             /**
-             * <p>返回信息</p>
+             * <p>The returned message.</p>
              * 
              * <strong>example:</strong>
-             * <p>成功</p>
+             * <p>Success</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -260,7 +290,7 @@ public class ConfigXResponseBody extends TeaModel {
             }
 
             /**
-             * <p>返回是否成功 true  表示成功 false表示失败</p>
+             * <p>Indicates whether the request is successful. A value of true indicates success. A value of false indicates failure.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>

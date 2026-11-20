@@ -106,7 +106,10 @@ public class GetXDefaultConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -114,7 +117,13 @@ public class GetXDefaultConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>返回状态码 0000表示成功 其他表示失败</p>
+         * <p>The response status code. Valid values:</p>
+         * <ul>
+         * <li><p>0000: Success.</p>
+         * </li>
+         * <li><p>Other values: Failure.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>0000</p>
@@ -125,7 +134,10 @@ public class GetXDefaultConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The default configurations of the work number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;CallAbility&quot;:&quot;0&quot;,&quot;GNFlag&quot;:&quot;00&quot;,&quot;SmsAbility&quot;:&quot;0&quot;,&quot;SmsSignMode&quot;:&quot;0&quot;}</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -133,10 +145,10 @@ public class GetXDefaultConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>返回信息</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
-         * <p>成功</p>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -144,7 +156,13 @@ public class GetXDefaultConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>返回是否成功 true  表示成功 false表示失败</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><p>true: The request is successful.</p>
+         * </li>
+         * <li><p>false: The request fails.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -278,7 +296,7 @@ public class GetXDefaultConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>呼叫方向 1:员工B呼叫客户A 2:客户A呼叫员工B</p>
+             * <p>The call direction. Valid values: 1: Employee B calls Customer A. 2: Customer A calls Employee B.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -289,7 +307,7 @@ public class GetXDefaultConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>通话状态 1:通话振铃 2:接通前 3:接通后 4:通话结束 5:已接通6:未接通</p>
+             * <p>The call status. Valid values: 1: ringing. 2: before connection. 3: after connection. 4: call ended. 5: connected. 6: not connected.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -300,7 +318,7 @@ public class GetXDefaultConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>接收方向 1:主叫 2:被叫</p>
+             * <p>The receive direction. Valid values: 1: caller. 2: callee.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -311,7 +329,7 @@ public class GetXDefaultConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>规则ID</p>
+             * <p>The rule ID.</p>
              * 
              * <strong>example:</strong>
              * <p>345</p>
@@ -322,10 +340,10 @@ public class GetXDefaultConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>规则名称</p>
+             * <p>The rule name.</p>
              * 
              * <strong>example:</strong>
-             * <p>企业名片-短信规则</p>
+             * <p>Enterprise business card - SMS rule</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -333,7 +351,7 @@ public class GetXDefaultConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>规则类型： 1：企业名片-短信 2：企业名片-闪信 3：企业名片-视频 4：企业名片-音频</p>
+             * <p>The rule type. Valid values: 1: enterprise business card - SMS. 2: enterprise business card - flash SMS. 3: enterprise business card - video. 4: enterprise business card - audio.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -344,7 +362,7 @@ public class GetXDefaultConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>模板ID</p>
+             * <p>The template ID.</p>
              * 
              * <strong>example:</strong>
              * <p>12345</p>
@@ -427,10 +445,10 @@ public class GetXDefaultConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>顺振提示音放音编号，格式如callNoPlayCode</p>
+             * <p>The play code for the sequential ringing prompt tone. The format is the same as callNoPlayCode.</p>
              * 
              * <strong>example:</strong>
-             * <p>示例值</p>
+             * <p>Sample value</p>
              */
             public Builder sequenceCallNoPlayCode(String sequenceCallNoPlayCode) {
                 this.sequenceCallNoPlayCode = sequenceCallNoPlayCode;
@@ -438,10 +456,10 @@ public class GetXDefaultConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>顺振被叫号码</p>
+             * <p>The callee number for sequential ringing.</p>
              * 
              * <strong>example:</strong>
-             * <p>示例值示例值示例值</p>
+             * <p>Sample value sample value sample value</p>
              */
             public Builder sequenceCalledNo(String sequenceCalledNo) {
                 this.sequenceCalledNo = sequenceCalledNo;
@@ -449,10 +467,10 @@ public class GetXDefaultConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>接通后主被叫放音编号，格式如calledPlayCode</p>
+             * <p>The play code for the caller and callee after the call is connected. The format is the same as calledPlayCode.</p>
              * 
              * <strong>example:</strong>
-             * <p>示例值示例值示例值</p>
+             * <p>Sample value sample value sample value</p>
              */
             public Builder sequenceCalledPlayCode(String sequenceCalledPlayCode) {
                 this.sequenceCalledPlayCode = sequenceCalledPlayCode;
@@ -597,7 +615,7 @@ public class GetXDefaultConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>开/关呼叫能力状态： ‘0’：禁用； ‘1’：开启；</p>
+             * <p>The status of the call capability. Valid values: 0: disabled. 1: enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -608,7 +626,7 @@ public class GetXDefaultConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>是否透传来显为真实主叫： 00-非透传：互相拨打时都显示工作号; 10-透传：A客户为主叫时,B员工的来显为客户A号码;B员工为主叫时,A客户的来显为工作号; 默认为 00</p>
+             * <p>Specifies whether to pass through the caller ID to display the real caller. Valid values: 00: non-passthrough. The work number is displayed when calls are made to each other. 10: passthrough. When Customer A is the caller, the caller ID displayed to Employee B is the number of Customer A. When Employee B is the caller, the caller ID displayed to Customer A is the work number. Default value: 00.</p>
              * 
              * <strong>example:</strong>
              * <p>00</p>
@@ -619,7 +637,7 @@ public class GetXDefaultConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>企业名片规则控制参数</p>
+             * <p>The enterprise business card rule control parameters.</p>
              */
             public Builder reachJson(java.util.List<ReachJson> reachJson) {
                 this.reachJson = reachJson;
@@ -627,7 +645,7 @@ public class GetXDefaultConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>顺振控制参数</p>
+             * <p>The sequential ringing control parameters.</p>
              */
             public Builder sequenceCall(java.util.List<SequenceCall> sequenceCall) {
                 this.sequenceCall = sequenceCall;
@@ -635,7 +653,7 @@ public class GetXDefaultConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>顺振结束时间 格式：HH:mm:ss 18:00:00</p>
+             * <p>The end time of sequential ringing. Format: HH:mm:ss, such as 18:00:00.</p>
              * 
              * <strong>example:</strong>
              * <p>09:00:00</p>
@@ -646,7 +664,7 @@ public class GetXDefaultConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>顺振开启时间 格式：HH:mm:ss 09:00:00</p>
+             * <p>The start time of sequential ringing. Format: HH:mm:ss, such as 09:00:00.</p>
              * 
              * <strong>example:</strong>
              * <p>09:00:00</p>
@@ -657,7 +675,7 @@ public class GetXDefaultConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>开/关短信功能状态： ‘0’：禁用； ‘1’：开启；</p>
+             * <p>The status of the SMS feature. Valid values: 0: disabled. 1: enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -668,7 +686,7 @@ public class GetXDefaultConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>是否透传来显为真实主叫： 00-非透传：互相拨打时都显示工作号; 10-透传：A客户为主叫时,B员工的来显为客户A号码;B员工为主叫时,A客户的来显为工作号; 默认为 00</p>
+             * <p>Specifies whether to pass through the caller ID to display the real caller. Valid values: 00: non-passthrough. The work number is displayed when calls are made to each other. 10: passthrough. When Customer A is the caller, the caller ID displayed to Employee B is the number of Customer A. When Employee B is the caller, the caller ID displayed to Customer A is the work number. Default value: 00.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>

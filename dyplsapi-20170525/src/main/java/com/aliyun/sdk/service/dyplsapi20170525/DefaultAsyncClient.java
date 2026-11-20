@@ -63,8 +63,14 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#qps"></a>QPS limits</h3>
-     * <p>You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <ul>
+     * <li>This operation is not a batch operation. You can add only one pair of <strong>point-to-point blacklist</strong> numbers or one <strong>number pool blacklist</strong> number at a time.</li>
+     * <li>To delete a blacklist entry, call the <a href="https://www.alibabacloud.com/help/en/pnp/developer-reference/api-dyplsapi-2017-05-25-deletesecretblacklist">DeleteSecretBlacklist</a> operation.</li>
+     * </ul>
+     * <h3>Quantity limit</h3>
+     * <p>The maximum number of blacklist entries per number pool is 2,000,000. If this limit is exceeded, API calls to add blacklist numbers will fail, which may affect your business. If you have special requirements, contact your Alibaba Cloud account manager.</p>
+     * <h3>QPS limit</h3>
+     * <p>The single-user QPS limit for this operation is 100 calls per second. If this limit is exceeded, API calls will be throttled, which may affect your business. Call this operation appropriately.</p>
      * 
      * @param request the request parameters of AddSecretBlacklist  AddSecretBlacklistRequest
      * @return AddSecretBlacklistResponse
@@ -125,6 +131,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before invoking this operation, make sure that you have purchased a private number in the console.
+     * You can use this operation to attach numbers for a 700AXB private number, or attach A and B numbers for a 700AXB private number on the Number Management page in the console.
+     * Before attaching numbers for a 700AXB private number, determine the A role and B role in your business scenario. For example, in a ride-hailing scenario, A is the passenger and B is the driver.
+     * The 700AXB private number is mainly used for privacy protection in one-to-one scenarios. You attach number A and number B through the Phone Number Protection service. When A calls X, the call is forwarded to B. When B calls X, the call is forwarded to A. A single X number can be reused by up to 200 binding pairs, such as A1XB1, A2XB2, A3XB3, and so on. As long as the phone numbers of A and B users are unique, a single X number can be bound to 200 groups of phone numbers simultaneously, and calls can also be made simultaneously.
+     * QPS limit
+     * The single-user QPS limit for this operation is 5,000 calls per second. Exceeding this limit will cause throttling, which may affect your business. Invoke this operation appropriately.</p>
+     * 
      * @param request the request parameters of BindAxb700  BindAxb700Request
      * @return BindAxb700Response
      */
@@ -143,6 +157,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Before you invoke this operation, make sure that you have purchased a privacy number in the console. You can use this operation to bind numbers to a fixed-line AXB intermediate number. Currently, you cannot bind Number A and Number B to a fixed-line AXB intermediate number on the Number Management page in the console.</li>
+     * <li>Before binding numbers, we recommend that you clarify the roles of User A and User B in your business scenario. For example, in common scenarios such as ride-hailing, User A is the passenger and User B is the driver.</li>
+     * <li>Fixed-line AXB intermediate numbers are mainly used for privacy protection in one-to-one scenarios. Number A and Number B are bound through the Phone Number Protection service. When User A calls Number X, the call is forwarded to User B. When User B calls Number X, the call is forwarded to User A. A single fixed-line Number X can be reused for N binding relationships, such as A1-X-B1, A2-X-B2, and A3-X-B3. As long as the mobile phone numbers of Users A and B are not duplicated, a single fixed-line Number X can be bound to N pairs of mobile phone numbers simultaneously, and calls can be made concurrently.</li>
+     * <li>The number of times a number can be reused varies based on the number you purchased. You can confirm the specific reuse limit with your technical support when purchasing the number.</li>
+     * </ul>
+     * 
      * @param request the request parameters of BindAxbFixedLine  BindAxbFixedLineRequest
      * @return BindAxbFixedLineResponse
      */
@@ -185,9 +207,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <blockquote>
-     * <p> An AXN private number is a dedicated private number assigned to phone number A. When an N-side number is used to call phone number X, the call is forwarded to phone number A.</p>
-     * </blockquote>
+     * <ul>
+     * <li>Before calling this operation, make sure that you have <a href="https://dyplsnext.console.aliyun.com/numberbuy">purchased a privacy number</a> in the console.</li>
+     * <li>You can use this operation to bind numbers to an AXN privacy number, or bind Number A and Number B to an AXN privacy number on the <a href="https://dyplsnext.console.aliyun.com/number/list?spm=a2c4g.11186623.0.0.64e649bbTzmb6j&resType=1&billId=FC100000165392498">Number Management</a> page in the console.</li>
+     * <li>Before binding numbers to an AXN privacy number, clarify the role of User A in your business scenario. For example, in a used car information publishing scenario, User A represents the contact information of the landlord or agent.</li>
+     * </ul>
+     * <h3>QPS limits</h3>
+     * <p>The QPS limit per user is 5,000 calls per second. If this limit is exceeded, API calls are throttled, which may affect your services. Call the API at a reasonable frequency.</p>
      * 
      * @param request the request parameters of BindAxn  BindAxnRequest
      * @return BindAxnResponse
@@ -208,9 +234,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before you add an AXN extension binding, confirm phone number A and phone number N in the business scenario. Phone number A belongs to a customer, and phone number X is the private number assigned to the customer. When any other phone number is used to call phone number X and the extension, the call is transferred to phone number A. When phone number A is used to call phone number X, the call is transferred to the default phone number B that is specified during the phone number binding.</p>
-     * <h3><a href="#qps"></a>QPS limits</h3>
-     * <p>You can call this operation up to 5,000 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <ul>
+     * <li>Before calling this operation, make sure that you have <a href="https://dyplsnext.console.aliyun.com/numberbuy">purchased privacy numbers</a> in the console.</li>
+     * <li>You can use this operation to bind numbers to an AXN extension number. You can also bind numbers A and B to an AXN extension number on the <a href="https://dyplsnext.console.aliyun.com/number/list?spm=a2c4g.11186623.0.0.64e649bbTzmb6j&resType=1&billId=FC100000165392498">Number Management</a> page in the console.</li>
+     * <li>Before binding numbers for an AXN extension number, we recommend that you clarify the roles of A and N in your business scenario. For example, if number A is a customer, number X is the privacy number assigned to the customer. Calls from any other number to number X plus the extension number are forwarded to number A. When A calls X, the call is forwarded to the default number B specified during binding.</li>
+     * </ul>
+     * <h3>QPS limits</h3>
+     * <p>The queries per second (QPS) limit for a single user is 5,000 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</p>
      * 
      * @param request the request parameters of BindAxnExtension  BindAxnExtensionRequest
      * @return BindAxnExtensionResponse
@@ -230,6 +260,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Before calling this API, make sure that you have <a href="https://dyplsnext.console.aliyun.com/numberbuy">purchased privacy numbers</a> in the console.</li>
+     * <li>You can use this API to bind numbers for the fixed-line AXN extension number. Binding numbers for the fixed-line AXN extension number through the console is not supported.</li>
+     * <li>Before binding numbers, we recommend that you first clarify the A role and N role in your business scenario. For example, if the A number represents the customer, the X number is the privacy number assigned to the customer. Any other number calling the X number plus the extension number will be forwarded to the A number. When A calls X, the call will be forwarded to the default B number specified during binding.</li>
+     * </ul>
+     * 
      * @param request the request parameters of BindAxnExtensionFixedLine  BindAxnExtensionFixedLineRequest
      * @return BindAxnExtensionFixedLineResponse
      */
@@ -248,6 +285,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Before you call this operation, make sure that you have purchased a privacy number in the console. You can use this operation to bind a number to a fixed-line AXN privacy number. The console does not support binding for fixed-line AXN privacy numbers.</li>
+     * <li>Before binding a number, we recommend that you clarify the role of User A in your business scenario. For example, in a used car listing scenario, User A represents the contact information of the property owner or broker.</li>
+     * </ul>
+     * 
      * @param request the request parameters of BindAxnFixedLine  BindAxnFixedLineRequest
      * @return BindAxnFixedLineResponse
      */
@@ -266,6 +309,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Before you bind AXG Numbers, you must purchase X Numbers, create a G Number Group, and add Numbers to the group. To create a G Number Group, see <a href="https://help.aliyun.com/zh/pnp/user-guide/manage-phone-number-pools#section-9bb-xrg-c78">Set up G Number Group</a> or call the <a href="https://help.aliyun.com/zh/pnp/developer-reference/api-dyplsapi-2017-05-25-createaxggroup">CreateAxgGroup</a> API.</li>
+     * <li>Before binding AXG Numbers, define Role A and Role G for your business scenario. For example, on a recruitment platform, Role A can represent job applicants and Role G can represent the hiring team.</li>
+     * <li>When you call this API for Batch Binding of AXG Numbers, a single failed request does not affect others in the batch. The API returns a status code for each binding request.</li>
+     * </ul>
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit for this API is 5,000 per user. Exceeding this limit results in throttling. Plan your API calls accordingly to avoid impacting your business.</p>
+     * 
      * @param request the request parameters of BindBatchAxg  BindBatchAxgRequest
      * @return BindBatchAxgResponse
      */
@@ -284,6 +336,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that you have purchased a private number in the console.
+     * You can use this operation to bind numbers to a 700GXB private number, or bind numbers on the Number Management page in the console.
+     * Before binding numbers for a 700GXB private number, clarify the G role and B role in your business scenario. For example, on a recruitment platform, B is the job applicant and G is the recruitment team.
+     * QPS limit
+     * The single-user QPS limit for this operation is 5,000 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation appropriately.</p>
+     * 
      * @param request the request parameters of BindGxb700  BindGxb700Request
      * @return BindGxb700Response
      */
@@ -410,6 +469,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before invoking this API, you need to first call <a href="https://help.aliyun.com/document_detail/2880885.html">GetDyplsOSSInfoForUploadFile</a> to upload the individual\&quot;s photo information to OSS. For the detailed operation flow, see <a href="https://help.aliyun.com/document_detail/2880077.html">Submit Individual Real-name Information for Number A via API</a>.</p>
+     * <h3>queries per second (QPS) limit</h3>
+     * <p>The QPS limit for this API is 50 queries per second per user. If this limit is exceeded, Rate Limiting will be applied to your API Call, which may Impact your business. Please invoke the API appropriately.</p>
+     * 
      * @param request the request parameters of CreateFixedNoAReport  CreateFixedNoAReportRequest
      * @return CreateFixedNoAReportResponse
      */
@@ -428,6 +492,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before invoking this API, you must first call <a href="https://help.aliyun.com/document_detail/2880885.html">GetDyplsOSSInfoForUploadFile</a> to upload the individual\&quot;s photo information to OSS. For the detailed operation flow, see <a href="https://help.aliyun.com/document_detail/2880077.html">Submit Individual Real-name Information of an A-number Mobile Phone Number via API</a>.</p>
+     * <h3>QPS Limit</h3>
+     * <p>The queries per second (QPS) limit for this API is 50 requests per second per user. If this limit is exceeded, API calls will be subject to Rate Limiting, which may Impact your business. Please invoke the API appropriately.</p>
+     * 
      * @param request the request parameters of CreatePhoneNoAReport  CreatePhoneNoAReportRequest
      * @return CreatePhoneNoAReportResponse
      */
@@ -447,8 +516,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#qps"></a>QPS limits</h3>
-     * <p>You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <h3>QPS limits</h3>
+     * <p>The queries per second (QPS) limit for a single user is 200 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call the API at a reasonable frequency.</p>
      * 
      * @param request the request parameters of CreatePickUpWaybill  CreatePickUpWaybillRequest
      * @return CreatePickUpWaybillResponse
@@ -469,8 +538,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#qps"></a>QPS limits</h3>
-     * <p>You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <h3>QPS limit</h3>
+     * <p>The single-user QPS limit for this operation is 100 calls per second. Exceeding this limit will trigger throttling, which may affect your business. Call this operation appropriately.</p>
      * 
      * @param request the request parameters of CreatePickUpWaybillPreQuery  CreatePickUpWaybillPreQueryRequest
      * @return CreatePickUpWaybillPreQueryResponse
@@ -484,6 +553,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreatePickUpWaybillPreQueryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateSecretTransferRecord  CreateSecretTransferRecordRequest
+     * @return CreateSecretTransferRecordResponse
+     */
+    @Override
+    public CompletableFuture<CreateSecretTransferRecordResponse> createSecretTransferRecord(CreateSecretTransferRecordRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateSecretTransferRecord").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateSecretTransferRecordResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateSecretTransferRecordResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -508,6 +595,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>After unbinding a fixed-line AXB privacy number from an existing binding, your business continuity may be affected. Proceed with caution.</li>
+     * <li>Before releasing a number, you must unbind the number first.</li>
+     * <li>Unbinding a fixed-line AXB privacy number is supported only through this API. Unbinding through the console is currently not supported.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DeleteAxbBindFixedLine  DeleteAxbBindFixedLineRequest
      * @return DeleteAxbBindFixedLineResponse
      */
@@ -526,6 +620,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Deleted G groups cannot be recovered. Proceed with caution.</li>
+     * <li>Before calling this operation, verify the G group to be deleted and the Number Pool it belongs to.</li>
+     * <li>You cannot delete a G group that has active bindings. Before you delete the group, you must unbind the associated AXG privacy number. To do this, log on to the Phone Number Privacy Protection <a href="https://dyplsnext.console.aliyun.com/number/list">Console</a>, go to the <strong>Number Management</strong> page, filter by <strong>AXG privacy number</strong>, and click <strong>Details</strong> &gt; Unbind. Alternatively, you can call the <a href="https://help.aliyun.com/zh/pnp/developer-reference/api-dyplsapi-2017-05-25-unbindsubscription">UnbindSubscription</a> API to unbind the number.</li>
+     * <li>When you delete a G group, all phone numbers in the group are also deleted.</li>
+     * </ul>
+     * <h3>QPS limit</h3>
+     * <p>The single-user QPS limit for this API is 5,000 requests per second. API calls that exceed this limit are subject to throttling. Plan your API calls accordingly to prevent disruptions to your business.</p>
+     * 
      * @param request the request parameters of DeleteAxgGroup  DeleteAxgGroupRequest
      * @return DeleteAxgGroupResponse
      */
@@ -544,6 +648,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>After you unbind an existing fixed-line AXN private number binding relationship, your service continuity may be affected. Proceed with caution.</li>
+     * <li>Before releasing a number, unbind the number binding relationship.</li>
+     * <li>Unbinding a fixed-line AXN private number binding relationship is supported only through this API operation. The console does not support this operation.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DeleteAxnBindFixedLine  DeleteAxnBindFixedLineRequest
      * @return DeleteAxnBindFixedLineResponse
      */
@@ -580,6 +691,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>This API can only delete A-number filing records whose filing status is either &quot;Reviewed and Passed&quot; or &quot;Review Failed.&quot; It does not support deleting A-number filing records with a filing status of &quot;Under Review.&quot;</li>
+     * <li>After deleting an A-number filing record, the carrier will immediately impose call restrictions or deactivate the number, which may impact your business continuity. Proceed with caution.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DeleteSecretAPhoneNoToCust  DeleteSecretAPhoneNoToCustRequest
      * @return DeleteSecretAPhoneNoToCustResponse
      */
@@ -599,8 +716,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#qps"></a>QPS limits</h3>
-     * <p>You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <ul>
+     * <li>This operation is not a batch operation. It supports deleting only one pair of point-to-point blacklist numbers or one number pool blacklist number at a time.</li>
+     * <li>To add a blacklist, call the <a href="https://www.alibabacloud.com/help/en/pnp/developer-reference/api-dyplsapi-2017-05-25-addsecretblacklist">AddSecretBlacklist</a> operation.</li>
+     * </ul>
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit for a single user is 100 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</p>
      * 
      * @param request the request parameters of DeleteSecretBlacklist  DeleteSecretBlacklistRequest
      * @return DeleteSecretBlacklistResponse
@@ -620,6 +741,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>When uploading personal filing photos for an A-number mobile phone number, you must upload a clear frontal portrait photo with the face unobscured, and optionally select to upload photos of both sides of your ID card. Uploading these photos helps reviewers understand your personal identity information. Supported formats are PNG, JPG, and JPEG. The image size must not exceed 2 MB.</li>
+     * <li>For the specific operation flow when submitting personal real-name filing for an A-number mobile phone number through the API, see <a href="https://help.aliyun.com/document_detail/2880077.html">Submit Personal Real-Name Information for an A-Number Mobile Phone Number via API</a>.</li>
+     * </ul>
+     * 
      * @param request the request parameters of GetDyplsOSSInfoForUploadFile  GetDyplsOSSInfoForUploadFileRequest
      * @return GetDyplsOSSInfoForUploadFileResponse
      */
@@ -918,6 +1045,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you invoke this API to query the reporting status of an A number, you must first submit the real-name information for the mobile or landline A number by calling the <a href="https://help.aliyun.com/document_detail/2880908.html">CreatePhoneNoAReport</a> or <a href="https://help.aliyun.com/document_detail/2881429.html">CreateFixedNoAReport</a> API. For detailed instructions, see <a href="https://help.aliyun.com/document_detail/2880077.html">Submit real-name information for an A number via API</a>.</p>
+     * 
      * @param request the request parameters of QuerySecretAPhoneNoToCust  QuerySecretAPhoneNoToCustRequest
      * @return QuerySecretAPhoneNoToCustResponse
      */
@@ -937,8 +1067,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#qps"></a>QPS limits</h3>
-     * <p>You can call this operation up to 1,000 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. We recommend that you take note of the limit when you call this operation.</p>
+     * <ul>
+     * <li>You can query information about a private number (X number), including the purchase time, carrier, province, city, and status.</li>
+     * <li>Before you call this operation, make sure that you have the private number (X number) that you want to query.</li>
+     * </ul>
+     * <h3>QPS limit</h3>
+     * <p>The single-user QPS limit for this operation is 1,000 calls per second. If the limit is exceeded, the API call is throttled. Call this operation properly.</p>
      * 
      * @param request the request parameters of QuerySecretNoDetail  QuerySecretNoDetailRequest
      * @return QuerySecretNoDetailResponse
@@ -973,6 +1107,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<QuerySecretNoRemainResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QuerySecretTransferDetails  QuerySecretTransferDetailsRequest
+     * @return QuerySecretTransferDetailsResponse
+     */
+    @Override
+    public CompletableFuture<QuerySecretTransferDetailsResponse> querySecretTransferDetails(QuerySecretTransferDetailsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("QuerySecretTransferDetails").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QuerySecretTransferDetailsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QuerySecretTransferDetailsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1019,10 +1171,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#qps"></a>QPS limits</h3>
-     * <p>You can call this operation up to 5,000 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
-     * <h3><a href="#poolkeyproducttype"></a>Limits on PoolKey and ProductType</h3>
-     * <p>You must specify either PoolKey or ProductType. If both parameters are not specified, an error is reported when you call the QuerySubscriptionDetail operation. We recommend that you specify the ProductType parameter for the original key accounts of Alibaba Cloud and the PoolKey parameter for Alibaba Cloud users.</p>
+     * <p>Before you call this operation, make sure that you have the private number (X number) to query and that the number has a binding relationship.</p>
+     * <h3>QPS limit</h3>
+     * <p>The queries per second (QPS) limit for a single user is 1,000. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</p>
+     * <h3>PoolKey and ProductType limit</h3>
+     * <p>Specify at least one of the PoolKey and ProductType parameters. If neither parameter is specified, an error is returned.
+     * Former Alibaba Dayu users should specify the ProductType parameter, and Alibaba Cloud users should specify the PoolKey parameter.</p>
      * 
      * @param request the request parameters of QuerySubscriptionDetail  QuerySubscriptionDetailRequest
      * @return QuerySubscriptionDetailResponse
@@ -1164,6 +1318,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>When you update an AXB privacy number for landlines, you cannot modify Number A and Number B at the same time. For example, if the original binding relationship is A1 and B1, you can change it to A1 and B2, or A2 and B1.</p>
+     * 
      * @param request the request parameters of UpdateAxbBindFixedLine  UpdateAxbBindFixedLineRequest
      * @return UpdateAxbBindFixedLineResponse
      */

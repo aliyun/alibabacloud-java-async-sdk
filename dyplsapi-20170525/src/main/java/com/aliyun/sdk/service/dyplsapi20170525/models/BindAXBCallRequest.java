@@ -190,7 +190,7 @@ public class BindAXBCallRequest extends Request {
         } 
 
         /**
-         * <p>authId绑定关系BX唯一id</p>
+         * <p>The unique ID of the BX binding relationship.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -203,7 +203,7 @@ public class BindAXBCallRequest extends Request {
         }
 
         /**
-         * <p>客户uid</p>
+         * <p>The customer UID. This parameter is automatically obtained by the system and does not need to be specified.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -217,7 +217,7 @@ public class BindAXBCallRequest extends Request {
         }
 
         /**
-         * <p>号码池key</p>
+         * <p>The key of the number pool.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -230,7 +230,7 @@ public class BindAXBCallRequest extends Request {
         }
 
         /**
-         * <p>绑定关系过期失效时间： 取值必须大于0； 单位：秒，ct_time + expiration = 自动解绑时间</p>
+         * <p>The expiration time of the binding relationship. The value must be greater than 0. Unit: seconds. The automatic unbinding time is calculated by adding the binding time and the expiration time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -252,7 +252,7 @@ public class BindAXBCallRequest extends Request {
         }
 
         /**
-         * <p>请求去重ID, reqId最大长度为20位,接入方需要保持原子性</p>
+         * <p>The request deduplication ID. The maximum length is 20 characters. Ensure the atomicity of the request ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -283,7 +283,7 @@ public class BindAXBCallRequest extends Request {
         }
 
         /**
-         * <p>客户A号码</p>
+         * <p>The phone number of customer A.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -296,7 +296,7 @@ public class BindAXBCallRequest extends Request {
         }
 
         /**
-         * <p>客户自定义参数回调带回</p>
+         * <p>The custom callback parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>000</p>

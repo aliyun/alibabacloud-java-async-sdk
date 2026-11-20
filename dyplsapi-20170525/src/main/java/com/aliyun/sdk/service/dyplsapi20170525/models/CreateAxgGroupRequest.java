@@ -150,7 +150,7 @@ public class CreateAxgGroupRequest extends Request {
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>Aliyun</p>
+         * <p>测试分组</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -184,7 +184,7 @@ public class CreateAxgGroupRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>FC123456</p>
+         * <p>FC10000012345****</p>
          */
         public Builder poolKey(String poolKey) {
             this.putQueryParameter("PoolKey", poolKey);
@@ -196,7 +196,7 @@ public class CreateAxgGroupRequest extends Request {
          * <p>The remarks of number group G. The value must be 0 to 256 characters in length.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>测试用分组</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);

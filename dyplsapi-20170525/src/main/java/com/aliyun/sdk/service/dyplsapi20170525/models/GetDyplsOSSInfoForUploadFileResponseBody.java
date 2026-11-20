@@ -119,7 +119,10 @@ public class GetDyplsOSSInfoForUploadFileResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>Details of denied access.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -127,7 +130,14 @@ public class GetDyplsOSSInfoForUploadFileResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>Request status code. Valid values:  </p>
+         * <ul>
+         * <li>OK: indicates that the request succeeded.  </li>
+         * <li>For other error codes, see <a href="https://help.aliyun.com/document_detail/109196.html">Error Code List</a>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -135,7 +145,7 @@ public class GetDyplsOSSInfoForUploadFileResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -143,7 +153,10 @@ public class GetDyplsOSSInfoForUploadFileResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Description of the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +164,10 @@ public class GetDyplsOSSInfoForUploadFileResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E2FD3B2F-5028-16E3-9F83-2F76F99B3873</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +175,16 @@ public class GetDyplsOSSInfoForUploadFileResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request succeeded. Valid values:  </p>
+         * <ul>
+         * <li><p>true: indicates success.  </p>
+         * </li>
+         * <li><p>false: indicates failure.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -277,7 +302,10 @@ public class GetDyplsOSSInfoForUploadFileResponseBody extends TeaModel {
             } 
 
             /**
-             * AccessKeyId.
+             * <p>AccessKey ID used for signing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>YOUR_ACCESS_KEY_ID</p>
              */
             public Builder accessKeyId(String accessKeyId) {
                 this.accessKeyId = accessKeyId;
@@ -285,7 +313,10 @@ public class GetDyplsOSSInfoForUploadFileResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * <p>Expiration Time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1744613007</p>
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -293,7 +324,10 @@ public class GetDyplsOSSInfoForUploadFileResponseBody extends TeaModel {
             }
 
             /**
-             * Host.
+             * <p>Host address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://alicom-**********-cn-zhangjiakou.aliyuncs.com">https://alicom-**********-cn-zhangjiakou.aliyuncs.com</a></p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -301,7 +335,10 @@ public class GetDyplsOSSInfoForUploadFileResponseBody extends TeaModel {
             }
 
             /**
-             * Policy.
+             * <p>Signing policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IjoiMjAyN*****9udGV</p>
              */
             public Builder policy(String policy) {
                 this.policy = policy;
@@ -309,7 +346,10 @@ public class GetDyplsOSSInfoForUploadFileResponseBody extends TeaModel {
             }
 
             /**
-             * Signature.
+             * <p>Signature computed from the <strong>AccessKey secret</strong> and <strong>policy</strong>. When invoking the OSS API, OSS authenticates this signature to confirm the validity of the POST request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BXwW**********aoZH</p>
              */
             public Builder signature(String signature) {
                 this.signature = signature;
@@ -317,7 +357,10 @@ public class GetDyplsOSSInfoForUploadFileResponseBody extends TeaModel {
             }
 
             /**
-             * StartPath.
+             * <p>Policy path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder startPath(String startPath) {
                 this.startPath = startPath;

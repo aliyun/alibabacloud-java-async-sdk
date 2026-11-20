@@ -262,7 +262,7 @@ public class CreateFixedNoAReportRequest extends Request {
         } 
 
         /**
-         * <p>所属a号码组id</p>
+         * <p>ID of the group to which Number A belongs. On the <a href="https://dyplsnext.console.aliyun.com/qualification">Qualification Management</a> Page, go to the A-number whitelist section of the relevant qualification and click View Details.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -275,7 +275,7 @@ public class CreateFixedNoAReportRequest extends Request {
         }
 
         /**
-         * <p>姓名</p>
+         * <p>Name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -288,7 +288,10 @@ public class CreateFixedNoAReportRequest extends Request {
         }
 
         /**
-         * <p>经办人/法人电话</p>
+         * <p>Phone number of the legal representative or agent.  </p>
+         * <blockquote>
+         * <p>If this qualification includes a Mobile X number, this field is Required; otherwise, the Review will Fail.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>130*****8888</p>
@@ -300,7 +303,13 @@ public class CreateFixedNoAReportRequest extends Request {
         }
 
         /**
-         * <p>固话客户类型 1:法人,2:经办人</p>
+         * <p>Fixed-line customer type. Valid values:</p>
+         * <ul>
+         * <li><p>1: Legal representative.</p>
+         * </li>
+         * <li><p>2: Agent.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -313,7 +322,7 @@ public class CreateFixedNoAReportRequest extends Request {
         }
 
         /**
-         * <p>证件号码</p>
+         * <p>Certificate number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -326,7 +335,7 @@ public class CreateFixedNoAReportRequest extends Request {
         }
 
         /**
-         * <p>证件类型 填写1表示身份证</p>
+         * <p>Certificate type. Enter 1 for ID card.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -339,7 +348,7 @@ public class CreateFixedNoAReportRequest extends Request {
         }
 
         /**
-         * <p>固话申请时服务大厅工单号</p>
+         * <p>Ticket number from the offline service hall when applying for a fixed-line number.</p>
          * 
          * <strong>example:</strong>
          * <p>45***12</p>
@@ -351,7 +360,7 @@ public class CreateFixedNoAReportRequest extends Request {
         }
 
         /**
-         * <p>a号码(固话)</p>
+         * <p>Number A (fixed-line number).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -364,7 +373,7 @@ public class CreateFixedNoAReportRequest extends Request {
         }
 
         /**
-         * <p>正面人像照片 OSS 路径地址</p>
+         * <p>OSS path of the front-facing portrait photo.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -377,7 +386,7 @@ public class CreateFixedNoAReportRequest extends Request {
         }
 
         /**
-         * <p>身份证反面照片oss路径地址</p>
+         * <p>OSS path of the photo of the back (portrait side) of the ID card.</p>
          * 
          * <strong>example:</strong>
          * <p>123456/test1719383196032.jpg</p>
@@ -389,7 +398,7 @@ public class CreateFixedNoAReportRequest extends Request {
         }
 
         /**
-         * <p>身份证正面照片oss路径地址</p>
+         * <p>OSS path of the photo of the front (national emblem side) of the ID card.</p>
          * 
          * <strong>example:</strong>
          * <p>123456/test1719383196031.jpg</p>
@@ -410,7 +419,7 @@ public class CreateFixedNoAReportRequest extends Request {
         }
 
         /**
-         * <p>备注（客户自己的业务备注，可编辑）</p>
+         * <p>Remarks (user-defined business notes).</p>
          * 
          * <strong>example:</strong>
          * <p>***报备</p>

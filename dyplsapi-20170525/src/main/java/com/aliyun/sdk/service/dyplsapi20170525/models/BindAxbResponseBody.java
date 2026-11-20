@@ -122,7 +122,7 @@ public class BindAxbResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>9297B722-A016-43FB-B51A-E54050D9369D</p>
+         * <p>9297B722-A016-43FB-B51A-E54050******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -226,7 +226,7 @@ public class BindAxbResponseBody extends TeaModel {
              * <p>The private number, that is, phone number X.</p>
              * 
              * <strong>example:</strong>
-             * <p>139****0000</p>
+             * <p>171****1893</p>
              */
             public Builder secretNo(String secretNo) {
                 this.secretNo = secretNo;
@@ -237,7 +237,7 @@ public class BindAxbResponseBody extends TeaModel {
              * <p>The binding ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>1**************3</p>
+             * <p>100017838816****</p>
              */
             public Builder subsId(String subsId) {
                 this.subsId = subsId;

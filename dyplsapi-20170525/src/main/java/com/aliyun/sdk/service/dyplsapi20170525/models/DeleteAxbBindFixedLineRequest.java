@@ -147,11 +147,11 @@ public class DeleteAxbBindFixedLineRequest extends Request {
         } 
 
         /**
-         * <p>号池ID。</p>
+         * <p>Number pool ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ALPT_1234</p>
+         * <p>FC10000016848****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -160,11 +160,11 @@ public class DeleteAxbBindFixedLineRequest extends Request {
         }
 
         /**
-         * <p>消息请求唯一标识。</p>
+         * <p>Unique identifier of the message request.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p>123*******</p>
          */
         public Builder orderId(String orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -200,11 +200,11 @@ public class DeleteAxbBindFixedLineRequest extends Request {
         }
 
         /**
-         * <p>绑定id</p>
+         * <p>Binding ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>A93IOELD93</p>
+         * <p>A93I******</p>
          */
         public Builder subId(String subId) {
             this.putQueryParameter("SubId", subId);
@@ -213,11 +213,11 @@ public class DeleteAxbBindFixedLineRequest extends Request {
         }
 
         /**
-         * <p>业务时间戳，格式yyyyMMddHHmmssSSS，时间采用北京时间，24小时制，精确至毫秒</p>
+         * <p>Business timestamp. Format: yyyyMMddHHmmssSSS. The time uses Beijing time in 24-hour clock format, accurate to milliseconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>20161114143116001</p>
+         * <p>20161114143116123</p>
          */
         public Builder ts(String ts) {
             this.putQueryParameter("Ts", ts);

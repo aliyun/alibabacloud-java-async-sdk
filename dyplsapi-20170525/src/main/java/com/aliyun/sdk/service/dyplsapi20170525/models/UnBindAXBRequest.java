@@ -146,7 +146,7 @@ public class UnBindAXBRequest extends Request {
         } 
 
         /**
-         * <p>bindId绑定关系AXB唯一id</p>
+         * <p>The unique ID of the AXB binding relationship.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,7 +159,7 @@ public class UnBindAXBRequest extends Request {
         }
 
         /**
-         * <p>客户uid</p>
+         * <p>The customer UID. This parameter is automatically obtained by the system and does not need to be specified.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -173,7 +173,7 @@ public class UnBindAXBRequest extends Request {
         }
 
         /**
-         * <p>号码池key</p>
+         * <p>The number pool key.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -195,7 +195,7 @@ public class UnBindAXBRequest extends Request {
         }
 
         /**
-         * <p>请求去重ID, reqId最大长度为20位,接入方需要保持原子性</p>
+         * <p>The request deduplication ID. The maximum length is 20 characters. Ensure the atomicity of the request ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

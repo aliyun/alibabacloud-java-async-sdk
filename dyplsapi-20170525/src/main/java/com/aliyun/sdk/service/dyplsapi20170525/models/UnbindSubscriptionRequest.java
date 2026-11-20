@@ -160,7 +160,7 @@ public class UnbindSubscriptionRequest extends Request {
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>FC123456</p>
+         * <p>FC10000012345****</p>
          */
         public Builder poolKey(String poolKey) {
             this.putQueryParameter("PoolKey", poolKey);
@@ -211,7 +211,7 @@ public class UnbindSubscriptionRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>1390000****</p>
+         * <p>139****1111</p>
          */
         public Builder secretNo(String secretNo) {
             this.putQueryParameter("SecretNo", secretNo);

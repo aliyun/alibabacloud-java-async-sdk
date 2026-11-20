@@ -106,7 +106,10 @@ public class QuerySoundRecordResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details of the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -114,7 +117,11 @@ public class QuerySoundRecordResponseBody extends TeaModel {
         }
 
         /**
-         * <p>返回状态码 0000表示成功 其他表示失败</p>
+         * <p>The response status code. Valid values:</p>
+         * <ul>
+         * <li>0000: Success.</li>
+         * </ul>
+         * <p>Other values indicate failure.</p>
          * 
          * <strong>example:</strong>
          * <p>0000</p>
@@ -125,7 +132,10 @@ public class QuerySoundRecordResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The call recording query results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;FileUrl&quot;:&quot;<a href="http://www.oss.com/temepl/a.mp3%22%7D">http://www.oss.com/temepl/a.mp3&quot;}</a></p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -133,10 +143,10 @@ public class QuerySoundRecordResponseBody extends TeaModel {
         }
 
         /**
-         * <p>返回信息</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
-         * <p>成功</p>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -144,7 +154,13 @@ public class QuerySoundRecordResponseBody extends TeaModel {
         }
 
         /**
-         * <p>返回是否成功 true  表示成功 false表示失败</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><p>true: The request is successful. </p>
+         * </li>
+         * <li><p>false: The request failed.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -200,7 +216,7 @@ public class QuerySoundRecordResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>通话录音url路径，最大长度1000，有效期1小时</p>
+             * <p>The URL of the call recording. The maximum length is 1,000 characters. The URL is valid for 1 hour.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://www.oss.com/temepl/a.mp3">http://www.oss.com/temepl/a.mp3</a></p>

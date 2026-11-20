@@ -230,7 +230,13 @@ public class ConfigXRequest extends Request {
         } 
 
         /**
-         * <p>开/关呼叫能力状态‘0’：禁用‘1’：开启</p>
+         * <p>Specifies whether to enable the call capability. Valid values:</p>
+         * <ul>
+         * <li><p>0: Disable.</p>
+         * </li>
+         * <li><p>1: Enable.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -242,7 +248,7 @@ public class ConfigXRequest extends Request {
         }
 
         /**
-         * <p>客户uid</p>
+         * <p>The customer UID.</p>
          * 
          * <strong>example:</strong>
          * <p>1898871967585852</p>
@@ -254,7 +260,7 @@ public class ConfigXRequest extends Request {
         }
 
         /**
-         * <p>号码池key</p>
+         * <p>The key of the number pool.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -267,7 +273,14 @@ public class ConfigXRequest extends Request {
         }
 
         /**
-         * <p>是否透传来显为真实主叫：00-非透传：互相拨打时都显示工作号;10-透传：A客户为主叫时,B员工的来显为客户A号码;B员工为主叫时,A客户的来显为工作号;默认为 00</p>
+         * <p>Specifies whether to pass through the caller ID to display the actual caller. Valid values:</p>
+         * <ul>
+         * <li><p>00: No pass-through. The work number is displayed when either party calls the other.</p>
+         * </li>
+         * <li><p>10: Pass-through. When Customer A is the caller, the caller ID displayed to Employee B is the number of Customer A. When Employee B is the caller, the caller ID displayed to Customer A is the work number.</p>
+         * </li>
+         * </ul>
+         * <p>Default value: 00.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -288,7 +301,7 @@ public class ConfigXRequest extends Request {
         }
 
         /**
-         * <p>请求去重ID, reqId最大长度为20位,接入方需要保持原子性</p>
+         * <p>The request deduplication ID. The maximum length of reqId is 20 characters. The caller must ensure atomicity.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -319,7 +332,7 @@ public class ConfigXRequest extends Request {
         }
 
         /**
-         * <p>顺振控制参数</p>
+         * <p>The sequential ringing control parameters.</p>
          */
         public Builder sequenceCalls(java.util.List<SequenceCalls> sequenceCalls) {
             String sequenceCallsShrink = shrink(sequenceCalls, "SequenceCalls", "json");
@@ -329,7 +342,15 @@ public class ConfigXRequest extends Request {
         }
 
         /**
-         * <p>顺振模式：0-不顺振（默认）1-有条件顺振，先接续calledNo指定被叫，如果该被叫未能接通，再顺振sequenceCalls号码列表2-无条件顺振，不接续calledNo指定被叫，直接顺振sequenceCalls号码列表</p>
+         * <p>The sequential ringing mode. Valid values:</p>
+         * <ul>
+         * <li><p>0: No sequential ringing. This is the default value.</p>
+         * </li>
+         * <li><p>1: Conditional sequential ringing. The system first connects to the callee specified by calledNo. If the callee cannot be connected, the system sequentially rings the numbers in the sequenceCalls list.</p>
+         * </li>
+         * <li><p>2: Unconditional sequential ringing. The system does not connect to the callee specified by calledNo and directly sequentially rings the numbers in the sequenceCalls list.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -341,7 +362,13 @@ public class ConfigXRequest extends Request {
         }
 
         /**
-         * <p>开/关短信功能状态‘0’：禁用；‘1’：开启；</p>
+         * <p>Specifies whether to enable the SMS feature. Valid values:</p>
+         * <ul>
+         * <li><p>0: Disable.</p>
+         * </li>
+         * <li><p>1: Enable.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -353,7 +380,14 @@ public class ConfigXRequest extends Request {
         }
 
         /**
-         * <p>是否透传来显为真实用户0：不透传; 1：透传默认：0不透传</p>
+         * <p>Specifies whether to pass through the SMS signature to display the actual user. Valid values:</p>
+         * <ul>
+         * <li><p>0: No pass-through.</p>
+         * </li>
+         * <li><p>1: Pass-through.</p>
+         * </li>
+         * </ul>
+         * <p>Default value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -365,7 +399,7 @@ public class ConfigXRequest extends Request {
         }
 
         /**
-         * <p>X号码</p>
+         * <p>The X number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -450,7 +484,7 @@ public class ConfigXRequest extends Request {
             } 
 
             /**
-             * <p>顺振提示音放音编号，格式如callNoPlayCode</p>
+             * <p>The playback code for the sequential ringing prompt tone. The format is the same as callNoPlayCode.</p>
              * 
              * <strong>example:</strong>
              * <p>01</p>
@@ -461,7 +495,7 @@ public class ConfigXRequest extends Request {
             }
 
             /**
-             * <p>顺振被叫号码</p>
+             * <p>The callee number for sequential ringing.</p>
              * 
              * <strong>example:</strong>
              * <p>18*******33</p>
@@ -472,7 +506,7 @@ public class ConfigXRequest extends Request {
             }
 
             /**
-             * <p>接通后主被叫放音编号，格式如calledPlayCode</p>
+             * <p>The playback code for the caller and callee after the call is connected. The format is the same as calledPlayCode.</p>
              * 
              * <strong>example:</strong>
              * <p>02</p>

@@ -129,7 +129,7 @@ public class QuerySubsIdRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>1390000****</p>
+         * <p>139****1111</p>
          */
         public Builder phoneNoX(String phoneNoX) {
             this.putQueryParameter("PhoneNoX", phoneNoX);
@@ -142,7 +142,7 @@ public class QuerySubsIdRequest extends Request {
          * <p>Log on to the <a href="https://dyplsnext.console.aliyun.com/overview">Phone Number Protection console</a> and view the key of the phone number pool on the Number Pool Management page.</p>
          * 
          * <strong>example:</strong>
-         * <p>FC123456</p>
+         * <p>FC10000012345****</p>
          */
         public Builder poolKey(String poolKey) {
             this.putQueryParameter("PoolKey", poolKey);
