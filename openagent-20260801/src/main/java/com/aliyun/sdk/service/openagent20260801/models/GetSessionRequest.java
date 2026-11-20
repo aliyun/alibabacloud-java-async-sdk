@@ -60,7 +60,7 @@ public class GetSessionRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the session.</p>
+         * <p>The ID of the session to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -130,7 +130,7 @@ public class CancelRunRequest extends Request {
         }
 
         /**
-         * <p>The idempotency key of the request. Use the same value and the same business parameters when retrying the same cancellation request.</p>
+         * <p>The idempotency key for the request. Use the same value and the same business parameters when you retry the same cancellation request.</p>
          * 
          * <strong>example:</strong>
          * <p>cancel-example-001</p>
@@ -145,7 +145,7 @@ public class CancelRunRequest extends Request {
          * <p>The reason for the cancellation. The value must be 1 to 1,024 characters in length.</p>
          * 
          * <strong>example:</strong>
-         * <p>The user manually canceled this task</p>
+         * <p>The user manually canceled the task</p>
          */
         public Builder reason(String reason) {
             this.putBodyParameter("reason", reason);

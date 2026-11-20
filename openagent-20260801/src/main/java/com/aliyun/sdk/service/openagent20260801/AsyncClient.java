@@ -48,7 +48,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the read-only mode switch for the current account. The read-only mode is enabled by default if it is not configured.</p>
+     * <p>Queries the read-only mode switch for the current account. The read-only mode is enabled by default if not configured.</p>
      * 
      * @param request the request parameters of GetReadonlyMode  GetReadonlyModeRequest
      * @return GetReadonlyModeResponse
@@ -66,7 +66,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the title, status, pinning information, and the ID and status of the most recent run of a specified session.</p>
+     * <p>Queries the title, status, pinned status, and the ID and status of the latest run of a specified session.</p>
      * 
      * @param request the request parameters of GetSession  GetSessionRequest
      * @return GetSessionResponse
@@ -75,7 +75,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paging query on the message timeline of a specified session. Use the returned nextToken to retrieve the next page.</p>
+     * <p>Performs a paged query on the message timeline of a specified session. Use the returned nextToken for paging.</p>
      * 
      * @param request the request parameters of ListMessages  ListMessagesRequest
      * @return ListMessagesResponse
@@ -84,7 +84,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Uses paging to query the list of sessions accessible to the current identity used to invoke. Use the returned nextToken to retrieve the next page.</p>
+     * <p>Performs a paging query for the list of sessions accessible to the current invoke identity. Use the returned nextToken to retrieve the next page.</p>
      * 
      * @param request the request parameters of ListSessions  ListSessionsRequest
      * @return ListSessionsResponse
@@ -93,7 +93,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Sends a message to a specified session, submits interrupt handling results, or reconnects to a specified run. Returns the run progress and results through a Server-Sent Events (SSE) event stream.</p>
+     * <p>Sends a message to a specified session, submits interrupt processing results, or reconnects to a specified run. Returns the run progress and results through a Server-Sent Events (SSE) event stream.</p>
      * 
      * @param request the request parameters of SendMessage  SendMessageRequest
      * @return SendMessageResponse

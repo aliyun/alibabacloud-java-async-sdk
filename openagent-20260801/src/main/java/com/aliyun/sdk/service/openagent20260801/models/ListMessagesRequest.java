@@ -102,7 +102,7 @@ public class ListMessagesRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the session for which to query the message history.</p>
+         * <p>The ID of the session whose message history is to be queried.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -127,7 +127,7 @@ public class ListMessagesRequest extends Request {
         }
 
         /**
-         * <p>The pagination token. Do not specify this parameter for the first request. For subsequent requests, use the value returned from the previous page.</p>
+         * <p>The pagination token. Do not pass this parameter in the first request. For subsequent requests, use the value returned from the previous page.</p>
          * 
          * <strong>example:</strong>
          * <p>example-next-token</p>

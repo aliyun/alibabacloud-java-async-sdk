@@ -88,7 +88,7 @@ public class ListMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID, which is used to locate and troubleshoot issues.</p>
+         * <p>The ID of the request. You can use the ID to locate and troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>00000000-0000-4000-8000-000000000001</p>
@@ -182,7 +182,7 @@ public class ListMessagesResponseBody extends TeaModel {
              * <p>The description of the operation pending approval.</p>
              * 
              * <strong>example:</strong>
-             * <p>Execute changes on the sample resource</p>
+             * <p>Perform changes on the sample resource</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -309,7 +309,7 @@ public class ListMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The associated approval ID.</p>
+             * <p>The ID of the associated approval ticket.</p>
              * 
              * <strong>example:</strong>
              * <p>approval_example_001</p>
@@ -331,7 +331,7 @@ public class ListMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the approval can be canceled.</p>
+             * <p>Indicates whether the approval can be canceled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -501,7 +501,7 @@ public class ListMessagesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The supplementary business data for the interrupt.</p>
+             * <p>The supplementary business data of the interrupt.</p>
              */
             public Builder data(InterruptsData data) {
                 this.data = data;
@@ -520,7 +520,7 @@ public class ListMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The interrupt ID.</p>
+             * <p>The ID of the interrupt.</p>
              * 
              * <strong>example:</strong>
              * <p>interrupt_example_001</p>
@@ -534,7 +534,7 @@ public class ListMessagesResponseBody extends TeaModel {
              * <p>The interrupt prompt displayed to the user.</p>
              * 
              * <strong>example:</strong>
-             * <p>Specify the target region</p>
+             * <p>Provide the target region</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -553,7 +553,7 @@ public class ListMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reason for the interrupt. Valid values: <code>tool_call</code> (tool invocation requires processing), <code>input_required</code> (user input is required), <code>confirmation</code> (confirmation is required), and <code>out_of_band_approval</code> (waiting for out-of-band approval).</p>
+             * <p>The reason for the interrupt. Valid values: <code>tool_call</code> (the tool invocation needs to be processed), <code>input_required</code> (user input is required), <code>confirmation</code> (confirmation is required), and <code>out_of_band_approval</code> (waiting for out-of-band approval).</p>
              * 
              * <strong>example:</strong>
              * <p>input_required</p>
@@ -747,7 +747,7 @@ public class ListMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The processing result for the corresponding interrupt, which must comply with the responseSchema of the interrupt.</p>
+             * <p>The processing result for the corresponding interrupt. The result must comply with the responseSchema of the interrupt.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;region&quot;:&quot;cn-hangzhou&quot;}</p>
@@ -758,7 +758,7 @@ public class ListMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The response method for the current interrupt. Valid values: <code>resolved</code> (the answer, confirmation, or tool result required by the interrupt has been submitted, including the <code>payload</code>) and <code>cancelled</code> (the interrupt has been canceled, excluding the <code>payload</code>).</p>
+             * <p>The response method for the interrupt. Valid values: <code>resolved</code> (the answer, confirmation, or tool result required by the interrupt has been submitted, including the <code>payload</code>) and <code>cancelled</code> (the interrupt has been canceled, excluding the <code>payload</code>).</p>
              * 
              * <strong>example:</strong>
              * <p>resolved</p>
@@ -854,7 +854,7 @@ public class ListMessagesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the interrupt processing was completed, in RFC 3339 format.</p>
+             * <p>The time when the interrupt processing is completed, in RFC 3339 format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-01-01T00:01:00Z</p>
@@ -873,7 +873,7 @@ public class ListMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the original run that was resumed.</p>
+             * <p>The ID of the original run that is resumed.</p>
              * 
              * <strong>example:</strong>
              * <p>run_example_001</p>
@@ -1093,7 +1093,7 @@ public class ListMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tool invocation ID.</p>
+             * <p>The ID of the tool invocation.</p>
              * 
              * <strong>example:</strong>
              * <p>tool_call_example_001</p>
@@ -1326,7 +1326,7 @@ public class ListMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The message content. The structure is determined by the message type.</p>
+             * <p>The content of the message. The structure is determined by the message type.</p>
              * 
              * <strong>example:</strong>
              * <p>Query the status of the sample resource</p>
@@ -1348,7 +1348,7 @@ public class ListMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error description when tool execution fails.</p>
+             * <p>The error description when the tool execution fails.</p>
              * 
              * <strong>example:</strong>
              * <p>Sample tool execution failure</p>
@@ -1359,7 +1359,7 @@ public class ListMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The message ID.</p>
+             * <p>The ID of the message.</p>
              * 
              * <strong>example:</strong>
              * <p>message_example_001</p>
@@ -1370,7 +1370,7 @@ public class ListMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The result information of historical interrupts.</p>
+             * <p>The result information of the historical interrupt.</p>
              */
             public Builder interruptOutcome(InterruptOutcome interruptOutcome) {
                 this.interruptOutcome = interruptOutcome;
@@ -1623,7 +1623,7 @@ public class ListMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The message records returned in a timeline.</p>
+             * <p>The message records returned in the timeline.</p>
              */
             public Builder timeline(java.util.List<Timeline> timeline) {
                 this.timeline = timeline;

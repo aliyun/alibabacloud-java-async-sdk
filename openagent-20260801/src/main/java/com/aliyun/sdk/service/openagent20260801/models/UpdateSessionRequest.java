@@ -115,7 +115,7 @@ public class UpdateSessionRequest extends Request {
         }
 
         /**
-         * <p>The idempotency key for the request. Use the same value when you retry the same update request.</p>
+         * <p>The idempotency key for the request. Use the same value when retrying the same update request.</p>
          * 
          * <strong>example:</strong>
          * <p>update-session-example-001</p>
@@ -127,7 +127,7 @@ public class UpdateSessionRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to pin the session. If you do not specify this parameter, the pinned status remains unchanged.</p>
+         * <p>Specifies whether to pin the session. If this field is not specified, the pinned status remains unchanged.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -139,7 +139,7 @@ public class UpdateSessionRequest extends Request {
         }
 
         /**
-         * <p>The new title of the session. If you do not need to update the title, do not specify this parameter.</p>
+         * <p>The new title of the session. Leave this field empty if no update is required.</p>
          * 
          * <strong>example:</strong>
          * <p>Updated inspection session</p>
