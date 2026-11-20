@@ -93,7 +93,7 @@ public class UpdateQuotaResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code. The value is 200 if the request is successful.</p>
+         * <p>The response code. A value of 200 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class UpdateQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message. The value is success if the request is successful.</p>
+         * <p>The response message. A value of success indicates a successful request.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>

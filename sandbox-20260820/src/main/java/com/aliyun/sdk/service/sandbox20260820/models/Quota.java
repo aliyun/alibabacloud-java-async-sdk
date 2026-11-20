@@ -20,11 +20,23 @@ public class Quota extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("cpuCores")
     private Integer cpuCores;
 
+    @com.aliyun.core.annotation.NameInMap("createSessionWithSnapshotConcurrency")
+    private Integer createSessionWithSnapshotConcurrency;
+
+    @com.aliyun.core.annotation.NameInMap("createSnapshotConcurrency")
+    private Integer createSnapshotConcurrency;
+
     @com.aliyun.core.annotation.NameInMap("instanceCount")
     private Integer instanceCount;
 
     @com.aliyun.core.annotation.NameInMap("memoryGB")
     private Integer memoryGB;
+
+    @com.aliyun.core.annotation.NameInMap("pauseConcurrency")
+    private Integer pauseConcurrency;
+
+    @com.aliyun.core.annotation.NameInMap("resumeConcurrency")
+    private Integer resumeConcurrency;
 
     @com.aliyun.core.annotation.NameInMap("scalingCpuCoresPerMinute")
     private Long scalingCpuCoresPerMinute;
@@ -34,8 +46,12 @@ public class Quota extends TeaModel {
 
     private Quota(Builder builder) {
         this.cpuCores = builder.cpuCores;
+        this.createSessionWithSnapshotConcurrency = builder.createSessionWithSnapshotConcurrency;
+        this.createSnapshotConcurrency = builder.createSnapshotConcurrency;
         this.instanceCount = builder.instanceCount;
         this.memoryGB = builder.memoryGB;
+        this.pauseConcurrency = builder.pauseConcurrency;
+        this.resumeConcurrency = builder.resumeConcurrency;
         this.scalingCpuCoresPerMinute = builder.scalingCpuCoresPerMinute;
         this.tagValue = builder.tagValue;
     }
@@ -60,6 +76,20 @@ public class Quota extends TeaModel {
     }
 
     /**
+     * @return createSessionWithSnapshotConcurrency
+     */
+    public Integer getCreateSessionWithSnapshotConcurrency() {
+        return this.createSessionWithSnapshotConcurrency;
+    }
+
+    /**
+     * @return createSnapshotConcurrency
+     */
+    public Integer getCreateSnapshotConcurrency() {
+        return this.createSnapshotConcurrency;
+    }
+
+    /**
      * @return instanceCount
      */
     public Integer getInstanceCount() {
@@ -71,6 +101,20 @@ public class Quota extends TeaModel {
      */
     public Integer getMemoryGB() {
         return this.memoryGB;
+    }
+
+    /**
+     * @return pauseConcurrency
+     */
+    public Integer getPauseConcurrency() {
+        return this.pauseConcurrency;
+    }
+
+    /**
+     * @return resumeConcurrency
+     */
+    public Integer getResumeConcurrency() {
+        return this.resumeConcurrency;
     }
 
     /**
@@ -89,8 +133,12 @@ public class Quota extends TeaModel {
 
     public static final class Builder {
         private Integer cpuCores; 
+        private Integer createSessionWithSnapshotConcurrency; 
+        private Integer createSnapshotConcurrency; 
         private Integer instanceCount; 
         private Integer memoryGB; 
+        private Integer pauseConcurrency; 
+        private Integer resumeConcurrency; 
         private Long scalingCpuCoresPerMinute; 
         private String tagValue; 
 
@@ -99,8 +147,12 @@ public class Quota extends TeaModel {
 
         private Builder(Quota model) {
             this.cpuCores = model.cpuCores;
+            this.createSessionWithSnapshotConcurrency = model.createSessionWithSnapshotConcurrency;
+            this.createSnapshotConcurrency = model.createSnapshotConcurrency;
             this.instanceCount = model.instanceCount;
             this.memoryGB = model.memoryGB;
+            this.pauseConcurrency = model.pauseConcurrency;
+            this.resumeConcurrency = model.resumeConcurrency;
             this.scalingCpuCoresPerMinute = model.scalingCpuCoresPerMinute;
             this.tagValue = model.tagValue;
         } 
@@ -117,7 +169,29 @@ public class Quota extends TeaModel {
         }
 
         /**
-         * <p>The quota for the number of active instances.</p>
+         * <p>The concurrent quota for creating sandboxes from snapshots in a team. This indicates the maximum number of requests for creating sandboxes from snapshots that can be executed at the same time. Omit or pass null to retain the original configuration during updates. A positive integer sets an exclusive quota. 0 prohibits creating sandboxes from snapshots. -1 clears the exclusive quota and restores the remaining quota of the shared account. During queries, this field is omitted if not configured, an explicit 0 is retained, and -1 is not returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        public Builder createSessionWithSnapshotConcurrency(Integer createSessionWithSnapshotConcurrency) {
+            this.createSessionWithSnapshotConcurrency = createSessionWithSnapshotConcurrency;
+            return this;
+        }
+
+        /**
+         * <p>The concurrent quota for creating snapshots in a team. This indicates the maximum number of snapshot creation requests that can be executed at the same time. Omit or pass null to retain the original configuration during updates. A positive integer sets an exclusive quota. 0 prohibits creating snapshots. -1 clears the exclusive quota and restores the remaining quota of the shared account. During queries, this field is omitted if not configured, an explicit 0 is retained, and -1 is not returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        public Builder createSnapshotConcurrency(Integer createSnapshotConcurrency) {
+            this.createSnapshotConcurrency = createSnapshotConcurrency;
+            return this;
+        }
+
+        /**
+         * <p>The quota for the number of running instances.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -139,7 +213,29 @@ public class Quota extends TeaModel {
         }
 
         /**
-         * <p>The team CPU creation rate in cores per minute. To retain the original configuration during an update, omit this parameter or set it to null. A positive integer sets an exclusive rate. A value of 0 prevents adding new CPU capacity. A value of -1 clears the exclusive rate and restores the remaining shared account rate. When queried, this parameter is omitted if it is not configured, an explicit 0 is retained, and -1 is not returned.</p>
+         * <p>The concurrent quota for sandbox hibernation in a team. This indicates the maximum number of sandbox hibernation requests that can be executed at the same time. Omit or pass null to retain the original configuration during updates. A positive integer sets an exclusive quota. 0 prohibits sandbox hibernation. -1 clears the exclusive quota and restores the remaining quota of the shared account. During queries, this field is omitted if not configured, an explicit 0 is retained, and -1 is not returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        public Builder pauseConcurrency(Integer pauseConcurrency) {
+            this.pauseConcurrency = pauseConcurrency;
+            return this;
+        }
+
+        /**
+         * <p>The concurrent quota for resuming sandboxes in a team. This indicates the maximum number of sandbox resumption requests that can be executed at the same time. Omit or pass null to retain the original configuration during updates. A positive integer sets an exclusive quota. 0 prohibits resuming sandboxes. -1 clears the exclusive quota and restores the remaining quota of the shared account. During queries, this field is omitted if not configured, an explicit 0 is retained, and -1 is not returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        public Builder resumeConcurrency(Integer resumeConcurrency) {
+            this.resumeConcurrency = resumeConcurrency;
+            return this;
+        }
+
+        /**
+         * <p>The Team CPU creation rate, in cores per minute. Omit or pass null to retain the original configuration during updates. A positive integer sets an exclusive rate. 0 prohibits adding new CPU capacity. -1 clears the exclusive rate and restores the remaining rate of the shared account. During queries, this field is omitted if not configured, an explicit 0 is retained, and -1 is not returned.</p>
          * 
          * <strong>example:</strong>
          * <p>120</p>
@@ -150,7 +246,7 @@ public class Quota extends TeaModel {
         }
 
         /**
-         * <p>The quota tag value, which is set to the team ID. Quotas are independently calculated based on this dimension.</p>
+         * <p>The quota tag value. This value is the team ID, and quotas are calculated independently based on this dimension.</p>
          * 
          * <strong>example:</strong>
          * <p>7696f4cf-****</p>
