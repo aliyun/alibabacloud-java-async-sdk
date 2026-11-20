@@ -421,6 +421,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListPipelinesResponse> listPipelines(ListPipelinesRequest request);
 
     /**
+     * @param request the request parameters of ListTagResources  ListTagResourcesRequest
+     * @return ListTagResourcesResponse
+     */
+    CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
+
+    /**
      * @param request the request parameters of PausePipeline  PausePipelineRequest
      * @return PausePipelineResponse
      */
@@ -461,10 +467,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SearchContextResponse> searchContext(SearchContextRequest request);
 
     /**
+     * @param request the request parameters of TagResources  TagResourcesRequest
+     * @return TagResourcesResponse
+     */
+    CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
+
+    /**
      * @param request the request parameters of TerminatePipeline  TerminatePipelineRequest
      * @return TerminatePipelineResponse
      */
     CompletableFuture<TerminatePipelineResponse> terminatePipeline(TerminatePipelineRequest request);
+
+    /**
+     * @param request the request parameters of UntagResources  UntagResourcesRequest
+     * @return UntagResourcesResponse
+     */
+    CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
 
     /**
      * @param request the request parameters of UpdateAgentSpace  UpdateAgentSpaceRequest

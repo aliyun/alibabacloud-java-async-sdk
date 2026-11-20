@@ -23,9 +23,13 @@ public class RunStrategies extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("continuous")
     private ContinuousStrategy continuous;
 
+    @com.aliyun.core.annotation.NameInMap("selectedData")
+    private SelectedDataStrategy selectedData;
+
     private RunStrategies(Builder builder) {
         this.backfill = builder.backfill;
         this.continuous = builder.continuous;
+        this.selectedData = builder.selectedData;
     }
 
     public static Builder builder() {
@@ -54,9 +58,17 @@ public class RunStrategies extends TeaModel {
         return this.continuous;
     }
 
+    /**
+     * @return selectedData
+     */
+    public SelectedDataStrategy getSelectedData() {
+        return this.selectedData;
+    }
+
     public static final class Builder {
         private BackfillStrategy backfill; 
         private ContinuousStrategy continuous; 
+        private SelectedDataStrategy selectedData; 
 
         private Builder() {
         } 
@@ -64,6 +76,7 @@ public class RunStrategies extends TeaModel {
         private Builder(RunStrategies model) {
             this.backfill = model.backfill;
             this.continuous = model.continuous;
+            this.selectedData = model.selectedData;
         } 
 
         /**
@@ -85,6 +98,17 @@ public class RunStrategies extends TeaModel {
          */
         public Builder continuous(ContinuousStrategy continuous) {
             this.continuous = continuous;
+            return this;
+        }
+
+        /**
+         * <p>The selection of specified objects for evaluation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;startTime&quot;:1794542191,&quot;endTime&quot;:1795146991,&quot;evalIds&quot;:[&quot;2646a9380bba3c86371f55a0226322941794983634&quot;]}</p>
+         */
+        public Builder selectedData(SelectedDataStrategy selectedData) {
+            this.selectedData = selectedData;
             return this;
         }
 

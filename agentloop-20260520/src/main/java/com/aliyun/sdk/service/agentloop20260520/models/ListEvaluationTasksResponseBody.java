@@ -117,7 +117,7 @@ public class ListEvaluationTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page used in this request.</p>
+         * <p>The number of entries per page used for this request.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -128,7 +128,7 @@ public class ListEvaluationTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token for the next page. An empty value indicates that no more pages are available.</p>
+         * <p>The pagination token for the next page. An empty value indicates that there is no next page.</p>
          * 
          * <strong>example:</strong>
          * <p>eyJsYXN0SWQiOjEwMSwib2Zmc2V0IjoyMH0=</p>
@@ -150,7 +150,7 @@ public class ListEvaluationTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of records. The total count is calculated only on the first page. This value may be empty on subsequent pages.</p>
+         * <p>The total number of records. The backend queries the total count only on the first page, so this field may be empty on subsequent pages.</p>
          * 
          * <strong>example:</strong>
          * <p>126</p>
@@ -360,7 +360,7 @@ public class ListEvaluationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time, in seconds-level UNIX timestamp.</p>
+             * <p>The creation time, represented as a UNIX timestamp in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1782816000</p>
@@ -382,10 +382,10 @@ public class ListEvaluationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the evaluation task.</p>
+             * <p>The evaluation task description.</p>
              * 
              * <strong>example:</strong>
-             * <p>Evaluate the task completion of the online Agent trace</p>
+             * <p>Evaluate the completion rate of online agent trace tasks</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -393,7 +393,7 @@ public class ListEvaluationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The evaluator configuration summary, in JSON string format.</p>
+             * <p>The evaluator configuration summary, as a JSON string.</p>
              * 
              * <strong>example:</strong>
              * <p>[{&quot;evaluatorRef&quot;:&quot;Builtin.agent_task_completion&quot;}]</p>
@@ -404,7 +404,7 @@ public class ListEvaluationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The structured run strategy configuration, including the parsed backfill strategy and continuous evaluation strategy.</p>
+             * <p>The structured configuration of the run strategy, including the parsed backfill strategy and continuous evaluation strategy.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;backfill&quot;:{&quot;enabled&quot;:true,&quot;startTime&quot;:1782816000000,&quot;endTime&quot;:1782902400000},&quot;continuous&quot;:{&quot;enabled&quot;:true,&quot;intervalUnit&quot;:&quot;HOUR&quot;,&quot;intervalValue&quot;:1,&quot;dataDelayMinutes&quot;:5}}</p>
@@ -426,7 +426,7 @@ public class ListEvaluationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The key-value pairs of task tags. This parameter is empty if no tags are set.</p>
+             * <p>The key-value pairs of task tags. Empty if not set.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;serviceId&quot;:&quot;checkout-service&quot;,&quot;env&quot;:&quot;prod&quot;}</p>
@@ -470,7 +470,7 @@ public class ListEvaluationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last update time, in seconds-level UNIX timestamp.</p>
+             * <p>The last update time, represented as a UNIX timestamp in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1782816600</p>
