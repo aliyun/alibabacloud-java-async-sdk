@@ -101,7 +101,10 @@ public class DescribeInstanceIpWhitelistRequest extends Request {
         } 
 
         /**
-         * BranchName.
+         * <p>The name of the branch to be operated on. If this parameter is not specified, the operation is performed on the original instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ra-branch-123456789012abcd</p>
          */
         public Builder branchName(String branchName) {
             this.putQueryParameter("BranchName", branchName);
@@ -110,7 +113,7 @@ public class DescribeInstanceIpWhitelistRequest extends Request {
         }
 
         /**
-         * <p>The group name.</p>
+         * <p>The name of the group.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -134,7 +137,7 @@ public class DescribeInstanceIpWhitelistRequest extends Request {
         }
 
         /**
-         * <p>The region.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>

@@ -126,7 +126,10 @@ public class ModifyInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * SSLExpiredTime.
+         * <p>The expiration time of the custom SSL certificate. The time is in the yyyy-MM-dd HH:mm:ss format and displayed in the UTC+8 time zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2027-12-31 23:59:59</p>
          */
         public Builder SSLExpiredTime(String SSLExpiredTime) {
             this.SSLExpiredTime = SSLExpiredTime;

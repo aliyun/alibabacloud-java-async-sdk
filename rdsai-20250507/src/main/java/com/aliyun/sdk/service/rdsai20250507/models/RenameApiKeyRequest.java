@@ -130,7 +130,7 @@ public class RenameApiKeyRequest extends Request {
         }
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The instance name.</p>
          * 
          * <strong>example:</strong>
          * <p>rds_copilot***_public_cn-*********6</p>
@@ -142,7 +142,7 @@ public class RenameApiKeyRequest extends Request {
         }
 
         /**
-         * <p>The API key name.</p>
+         * <p>The name of the API key.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,7 +155,10 @@ public class RenameApiKeyRequest extends Request {
         }
 
         /**
-         * RoleArn.
+         * <p>The ARN of the RAM role associated with the API key. The account to which the role belongs must be the same as the account of the caller.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::1234567890123456:role/example-role</p>
          */
         public Builder roleArn(String roleArn) {
             this.putQueryParameter("RoleArn", roleArn);
@@ -164,7 +167,10 @@ public class RenameApiKeyRequest extends Request {
         }
 
         /**
-         * RoleName.
+         * <p>The name of the RAM role associated with the API key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-role</p>
          */
         public Builder roleName(String roleName) {
             this.putQueryParameter("RoleName", roleName);

@@ -42,6 +42,10 @@ public class ModifyAppInstanceRequest extends Request {
     private String instanceName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MigrationMode")
+    private String migrationMode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -53,6 +57,7 @@ public class ModifyAppInstanceRequest extends Request {
         this.DBInstanceName = builder.DBInstanceName;
         this.instanceClass = builder.instanceClass;
         this.instanceName = builder.instanceName;
+        this.migrationMode = builder.migrationMode;
         this.regionId = builder.regionId;
     }
 
@@ -112,6 +117,13 @@ public class ModifyAppInstanceRequest extends Request {
     }
 
     /**
+     * @return migrationMode
+     */
+    public String getMigrationMode() {
+        return this.migrationMode;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -125,6 +137,7 @@ public class ModifyAppInstanceRequest extends Request {
         private String DBInstanceName; 
         private String instanceClass; 
         private String instanceName; 
+        private String migrationMode; 
         private String regionId; 
 
         private Builder() {
@@ -139,11 +152,15 @@ public class ModifyAppInstanceRequest extends Request {
             this.DBInstanceName = request.DBInstanceName;
             this.instanceClass = request.instanceClass;
             this.instanceName = request.instanceName;
+            this.migrationMode = request.migrationMode;
             this.regionId = request.regionId;
         } 
 
         /**
-         * <p>The reserved parameter.</p>
+         * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Reserved parameter</p>
          */
         public Builder branchName(String branchName) {
             this.putQueryParameter("BranchName", branchName);
@@ -152,7 +169,7 @@ public class ModifyAppInstanceRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure idempotence.</p>
+         * <p>The client token used to ensure idempotence.</p>
          * 
          * <strong>example:</strong>
          * <p>ETnLKlblzczshOTUbOCz****</p>
@@ -174,7 +191,11 @@ public class ModifyAppInstanceRequest extends Request {
         }
 
         /**
-         * DBInstanceName.
+         * <p>The instance ID of the ApsaraDB RDS for PostgreSQL database connected to the AI application.</p>
+         * <p><notice>Only <strong>newly purchased empty ApsaraDB RDS for PostgreSQL instances</strong> are supported. The major engine version must be <strong>17</strong>, and the minor engine version must be <strong>20250630 or later</strong>.</notice></p>
+         * 
+         * <strong>example:</strong>
+         * <p>pgm-2ze49qv594vi****</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
@@ -203,6 +224,18 @@ public class ModifyAppInstanceRequest extends Request {
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
             this.instanceName = instanceName;
+            return this;
+        }
+
+        /**
+         * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Reserved parameter</p>
+         */
+        public Builder migrationMode(String migrationMode) {
+            this.putQueryParameter("MigrationMode", migrationMode);
+            this.migrationMode = migrationMode;
             return this;
         }
 

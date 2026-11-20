@@ -130,7 +130,7 @@ public class GetSkillRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to obtain a temporary download URL for the specified version. Default value: false.</p>
+         * <p>Specifies whether to obtain the temporary download URL of the specified version. Default value: false.</p>
          */
         public Builder download(Boolean download) {
             this.putQueryParameter("Download", download);
@@ -139,7 +139,7 @@ public class GetSkillRequest extends Request {
         }
 
         /**
-         * <p>The supported language. Valid values:</p>
+         * <p>The supported languages. Valid values:</p>
          * <ul>
          * <li>zh-CN: Simplified Chinese</li>
          * <li>zh-TW: Traditional Chinese</li>
@@ -157,7 +157,7 @@ public class GetSkillRequest extends Request {
         }
 
         /**
-         * <p>The file path within the package, such as SKILL.md. The body is in File.text, and the full Markdown is in SkillMarkdown.</p>
+         * <p>The file path in the package, such as SKILL.md. For the body text, see File.text. For the complete Markdown content, see SkillMarkdown.</p>
          * 
          * <strong>example:</strong>
          * <p>SKILL.md</p>
@@ -182,7 +182,7 @@ public class GetSkillRequest extends Request {
         }
 
         /**
-         * <p>The version UUID (Versions[].Id), not a version number such as 1.0.0. If omitted, the currently active version is read.</p>
+         * <p>The version UUID (Versions[].Id), which is not a version number such as 1.0.0. If this parameter is omitted, the current active version is read.</p>
          * 
          * <strong>example:</strong>
          * <p>00000000-0000-4000-8000-000000000002</p>

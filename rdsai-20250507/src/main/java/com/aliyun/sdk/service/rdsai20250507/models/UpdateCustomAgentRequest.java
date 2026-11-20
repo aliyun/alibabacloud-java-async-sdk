@@ -158,7 +158,7 @@ public class UpdateCustomAgentRequest extends Request {
          * <p>The name of the custom agent.</p>
          * 
          * <strong>example:</strong>
-         * <p>Query instance list agent</p>
+         * <p>Instance list query agent</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

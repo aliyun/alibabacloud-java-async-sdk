@@ -240,7 +240,7 @@ public class ListCustomAgentToolsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The read/write type of the tool.</p>
+             * <p>The tool read/write type.</p>
              * 
              * <strong>example:</strong>
              * <p>get</p>

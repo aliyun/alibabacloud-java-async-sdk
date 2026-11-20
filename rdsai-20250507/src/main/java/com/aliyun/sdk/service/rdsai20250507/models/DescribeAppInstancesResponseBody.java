@@ -127,7 +127,7 @@ public class DescribeAppInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A reserved parameter. You can ignore it.</p>
+         * <p>A reserved parameter. You can ignore this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -171,7 +171,7 @@ public class DescribeAppInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -241,6 +241,9 @@ public class DescribeAppInstancesResponseBody extends TeaModel {
 
             /**
              * <p>The component status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>enable</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -249,6 +252,9 @@ public class DescribeAppInstancesResponseBody extends TeaModel {
 
             /**
              * <p>The component type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>supabase</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -563,7 +569,7 @@ public class DescribeAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The internal endpoint of the AI application.</p>
+             * <p>The internal network connection endpoint of the AI application.</p>
              * 
              * <strong>example:</strong>
              * <p>172.16.XXX.XXX:8000</p>

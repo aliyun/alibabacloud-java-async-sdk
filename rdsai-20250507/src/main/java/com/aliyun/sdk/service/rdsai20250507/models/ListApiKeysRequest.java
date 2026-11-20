@@ -87,7 +87,7 @@ public class ListApiKeysRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The name of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>rds_copilot***_public_cn-*********6</p>
@@ -111,7 +111,7 @@ public class ListApiKeysRequest extends Request {
         }
 
         /**
-         * <p>The number of records per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

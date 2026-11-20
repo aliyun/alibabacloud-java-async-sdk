@@ -159,7 +159,7 @@ public class ModifySandboxTemplateRequest extends Request {
         } 
 
         /**
-         * <p>The number of CPUs for sandboxes created from this template. Valid values: 1 to 4.</p>
+         * <p>The number of CPUs for sandboxes created by using this template. Valid values: 1 to 4.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -171,7 +171,7 @@ public class ModifySandboxTemplateRequest extends Request {
         }
 
         /**
-         * <p>The memory size of sandboxes created from this template. Unit: Gi. Valid values: 1Gi to 8Gi.</p>
+         * <p>The memory size for sandboxes created by using this template. Unit: GiB. Valid values: 1 to 8.</p>
          * 
          * <strong>example:</strong>
          * <p>1Gi</p>
@@ -183,7 +183,10 @@ public class ModifySandboxTemplateRequest extends Request {
         }
 
         /**
-         * Image.
+         * <p>The container image used for the sandbox template. Format: <code>[registry/]&lt;repo&gt;[:tag][@sha256:digest]</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registry.example.com/example/sandbox:1.0</p>
          */
         public Builder image(String image) {
             this.putQueryParameter("Image", image);
@@ -229,7 +232,7 @@ public class ModifySandboxTemplateRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>The custom tags of the sandbox template. The key is the tag name, and the value is the tag value. You cannot use the system-reserved tag createdBy or the system-reserved tag hidden.</p>
          */
         public Builder tags(java.util.Map<String, String> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -239,7 +242,7 @@ public class ModifySandboxTemplateRequest extends Request {
         }
 
         /**
-         * <p>The sandbox template ID.</p>
+         * <p>The ID of the sandbox template.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

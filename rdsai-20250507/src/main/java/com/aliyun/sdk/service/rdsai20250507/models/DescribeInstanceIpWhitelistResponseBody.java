@@ -106,7 +106,10 @@ public class DescribeInstanceIpWhitelistResponseBody extends TeaModel {
         } 
 
         /**
-         * BranchName.
+         * <p>The name of the branch specified for this operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ra-branch-123456789012abcd</p>
          */
         public Builder branchName(String branchName) {
             this.branchName = branchName;
@@ -114,7 +117,7 @@ public class DescribeInstanceIpWhitelistResponseBody extends TeaModel {
         }
 
         /**
-         * DbIpWhiteListGroups.
+         * <p>The list of IP address whitelist groups for the PostgreSQL database instance associated with the branch.</p>
          */
         public Builder dbIpWhiteListGroups(java.util.List<DbIpWhiteListGroups> dbIpWhiteListGroups) {
             this.dbIpWhiteListGroups = dbIpWhiteListGroups;
@@ -133,7 +136,7 @@ public class DescribeInstanceIpWhitelistResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The IP whitelist groups.</p>
+         * <p>The list of IP address whitelist groups.</p>
          */
         public Builder ipWhiteListGroups(java.util.List<IpWhiteListGroups> ipWhiteListGroups) {
             this.ipWhiteListGroups = ipWhiteListGroups;
@@ -210,7 +213,10 @@ public class DescribeInstanceIpWhitelistResponseBody extends TeaModel {
             } 
 
             /**
-             * GroupName.
+             * <p>The name of the IP address whitelist group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -218,7 +224,10 @@ public class DescribeInstanceIpWhitelistResponseBody extends TeaModel {
             }
 
             /**
-             * IpWhitelist.
+             * <p>The list of addresses in the IP address whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.0.2.0/24</p>
              */
             public Builder ipWhitelist(String ipWhitelist) {
                 this.ipWhitelist = ipWhitelist;
@@ -285,7 +294,7 @@ public class DescribeInstanceIpWhitelistResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The group name.</p>
+             * <p>The name of the group.</p>
              * 
              * <strong>example:</strong>
              * <p>default</p>

@@ -142,7 +142,7 @@ public class ChatMessagesRequest extends Request {
         }
 
         /**
-         * <p>The event output type. Valid values: inline and separate. Default value: inline. When set to inline, tool invocation events, sub-node events, and document events are included in the answer field of the event = message response. When set to separate, tool invocation events, sub-node events, and document events each have their own event.</p>
+         * <p>The event output type. Valid values: inline and separate. Default value: inline. When set to inline, tool calling invoke events, child node events, and document events are unified into the answer field of the event = message. When set to separate, tool calling invoke events, child node events, and document events have their own respective events.</p>
          * 
          * <strong>example:</strong>
          * <p>inline</p>
@@ -154,7 +154,7 @@ public class ChatMessagesRequest extends Request {
         }
 
         /**
-         * Files.
+         * <p>The list of attachments included in the current conversation round. References uploaded files by using UploadFileId.</p>
          */
         public Builder files(java.util.List<Files> files) {
             String filesShrink = shrink(files, "Files", "json");
@@ -164,7 +164,7 @@ public class ChatMessagesRequest extends Request {
         }
 
         /**
-         * <p>The task inputs.</p>
+         * <p>The task input.</p>
          */
         public Builder inputs(Inputs inputs) {
             String inputsShrink = shrink(inputs, "Inputs", "json");
@@ -189,7 +189,7 @@ public class ChatMessagesRequest extends Request {
          * <p>The query content.</p>
          * 
          * <strong>example:</strong>
-         * <p>Check the disk usage of instance rm-bp14as9914vd3**** and whether storage expansion is needed</p>
+         * <p>Instance rm-bp14as9914vd3**** disk usage, and whether capacity expansion is required</p>
          */
         public Builder query(String query) {
             this.putQueryParameter("Query", query);
@@ -220,10 +220,14 @@ public class ChatMessagesRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("UploadFileId")
         private String uploadFileId;
 
+        @com.aliyun.core.annotation.NameInMap("Url")
+        private String url;
+
         private Files(Builder builder) {
             this.transferMethod = builder.transferMethod;
             this.type = builder.type;
             this.uploadFileId = builder.uploadFileId;
+            this.url = builder.url;
         }
 
         public static Builder builder() {
@@ -255,10 +259,18 @@ public class ChatMessagesRequest extends Request {
             return this.uploadFileId;
         }
 
+        /**
+         * @return url
+         */
+        public String getUrl() {
+            return this.url;
+        }
+
         public static final class Builder {
             private String transferMethod; 
             private String type; 
             private String uploadFileId; 
+            private String url; 
 
             private Builder() {
             } 
@@ -267,10 +279,14 @@ public class ChatMessagesRequest extends Request {
                 this.transferMethod = model.transferMethod;
                 this.type = model.type;
                 this.uploadFileId = model.uploadFileId;
+                this.url = model.url;
             } 
 
             /**
-             * TransferMethod.
+             * <p>The file transfer method. Set this parameter to local_file when referencing an uploaded file, and provide the UploadFileId at the same time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>local_file</p>
              */
             public Builder transferMethod(String transferMethod) {
                 this.transferMethod = transferMethod;
@@ -278,7 +294,10 @@ public class ChatMessagesRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The attachment type. A value of image indicates an image. The actual supported types are determined by the file upload configuration of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>image</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -286,10 +305,24 @@ public class ChatMessagesRequest extends Request {
             }
 
             /**
-             * UploadFileId.
+             * <p>The identifier of the uploaded file. The ContextDB management agent can use the UploadFileId returned by the current workspace knowledge base.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00000000-0000-4000-8000-000000000001</p>
              */
             public Builder uploadFileId(String uploadFileId) {
                 this.uploadFileId = uploadFileId;
+                return this;
+            }
+
+            /**
+             * <p>The image URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://other-general-huadong1.oss-cn-hangzhou.aliyuncs.com/uploadWidget/BirthCertification_0.jpeg">https://other-general-huadong1.oss-cn-hangzhou.aliyuncs.com/uploadWidget/BirthCertification_0.jpeg</a></p>
+             */
+            public Builder url(String url) {
+                this.url = url;
                 return this;
             }
 
@@ -468,7 +501,7 @@ public class ChatMessagesRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable deep thinking mode.</p>
+             * <p>Specifies whether to enable the deep thinking mode.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -512,7 +545,7 @@ public class ChatMessagesRequest extends Request {
             }
 
             /**
-             * <p>The tool approval call ID for resuming execution. Pass this parameter after all decisions in the current approval round are completed in the console to continue the interrupted ChatMessage Loop. Do not pass this parameter for regular conversations.</p>
+             * <p>The tool approval call ID for resuming execution. Pass this parameter after the console completes all decisions for the current approval round to continue the interrupted ChatMessage loop. Do not pass this parameter for regular conversations.</p>
              * 
              * <strong>example:</strong>
              * <p>call-example</p>
@@ -545,7 +578,7 @@ public class ChatMessagesRequest extends Request {
             }
 
             /**
-             * <p>The tool approval mode for the current conversation. Valid values: read_only (read-only, write tools are rejected), manual (write tools require manual approval), and auto (the approval sub-agent automatically determines the action. If the result is needs_human, the request is escalated to manual approval). When this parameter is passed, the approval mode of the current conversation is updated.</p>
+             * <p>The tool approval mode for the current conversation. Valid values: read_only (read-only, rejects write tools), manual (write tools require manual approval), and auto (automatically determined by the approval sub-agent; escalated to manual approval when needs_human is returned). Passing this parameter updates the approval mode for the current conversation.</p>
              * 
              * <strong>example:</strong>
              * <p>manual</p>

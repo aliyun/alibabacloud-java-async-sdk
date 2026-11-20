@@ -296,7 +296,7 @@ public class ListContextDatabaseMembersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the member was created.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-05-28T17:59:55Z</p>
@@ -329,7 +329,7 @@ public class ListContextDatabaseMembersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The suffix of the API key.</p>
+             * <p>The display suffix of the API key.</p>
              * 
              * <strong>example:</strong>
              * <p>33631c</p>
@@ -362,7 +362,7 @@ public class ListContextDatabaseMembersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the key was last used. This field is populated after the key has been authenticated and used. This field is empty for keys that have not been used.</p>
+             * <p>The time when the key was last used. This field is populated after the key is used for authentication and is empty for unused keys.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-07-15T08:30:00Z</p>
@@ -517,7 +517,7 @@ public class ListContextDatabaseMembersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the member was created.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-05-28T17:59:55Z</p>

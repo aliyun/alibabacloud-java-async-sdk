@@ -143,7 +143,7 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The position from which the current read operation starts. An empty value indicates that the read operation starts from the beginning.</p>
+         * <p>The position from which the read operation starts. An empty value indicates that the read operation starts from the beginning.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAc3HCuYhJi/wvpk4xOr0VLYz/NvD85HpgBeRBCusEIeVQ0dHZH9jr+NP3X9Jx0iSoql55b9nd4PIDm252/a0f+U=</p>
@@ -195,7 +195,7 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of data entries that meet the current request conditions.</p>
+         * <p>The total number of entries that meet the request conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -368,7 +368,10 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * CreatedBy.
+             * <p>The source that created the sandbox template. Valid values: user (created by a user) and system (created by the system).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user</p>
              */
             public Builder createdBy(String createdBy) {
                 this.createdBy = createdBy;
@@ -409,7 +412,7 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the sandbox created by using this template can access resources in the VPC where Supabase is deployed.</p>
+             * <p>Indicates whether the sandbox created by using this template can access resources in the VPC where Supabase resides.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -420,7 +423,10 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Image.
+             * <p>The container image used by the sandbox template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>registry.example.com/example/sandbox:1.0</p>
              */
             public Builder image(String image) {
                 this.image = image;
@@ -439,7 +445,10 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Replicas.
+             * <p>The number of replicas for the sandbox template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder replicas(Long replicas) {
                 this.replicas = replicas;
@@ -447,7 +456,7 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The custom tags of the sandbox template. A key represents a tag name, and a value represents a tag value.</p>
              */
             public Builder tags(java.util.Map<String, String> tags) {
                 this.tags = tags;
@@ -455,7 +464,7 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the sandbox template. Specify this ID when you use the template to create a sandbox.</p>
+             * <p>The ID of the sandbox template. Specify this ID when creating a sandbox by using this template.</p>
              * 
              * <strong>example:</strong>
              * <p>code-interpreter-asdxxxx</p>

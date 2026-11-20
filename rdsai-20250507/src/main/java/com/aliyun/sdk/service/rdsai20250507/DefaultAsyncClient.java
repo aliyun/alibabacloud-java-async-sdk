@@ -156,7 +156,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <p><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></p>
      * 
      * @param request the request parameters of CreateApiKey  CreateApiKeyRequest
@@ -396,7 +396,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <p>RDS Supabase</p>
      * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
@@ -724,7 +724,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h3>Supported engines</h3>
      * <p>RDS PostgreSQL</p>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * @param request the request parameters of DescribeAppInstances  DescribeAppInstancesRequest
@@ -836,7 +836,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engine</h3>
+     * <h3>Supported engines</h3>
      * <p>RDS PostgreSQL</p>
      * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
@@ -880,8 +880,8 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h3>Supported engines</h3>
      * <p>ApsaraDB RDS for PostgreSQL</p>
-     * <h3>Related documentation</h3>
-     * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
+     * <h3>Related feature documentation</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2938735.html">ApsaraDB RDS Supabase</a></p>
      * 
      * @param request the request parameters of DescribeInstanceSSL  DescribeInstanceSSLRequest
      * @return DescribeInstanceSSLResponse
@@ -1039,9 +1039,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Applicable engines</h3>
      * <p>RDS Supabase</p>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * @param request the request parameters of DescribeSandboxTemplates  DescribeSandboxTemplatesRequest
@@ -1527,7 +1527,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Applicable engines</h3>
      * <p><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></p>
      * 
      * @param request the request parameters of ListApiKeys  ListApiKeysRequest
@@ -1570,7 +1570,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Lists all members in a specified workspace. Each member includes a list of API keys (plaintext values are not returned).</p>
+     * <p>Lists all members in a specified workspace, along with a list of API keys for each member. Plaintext keys are not returned.</p>
      * 
      * @param request the request parameters of ListContextDatabaseMembers  ListContextDatabaseMembersRequest
      * @return ListContextDatabaseMembersResponse
@@ -1923,9 +1923,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
-     * <p>RDS PostgreSQL</p>
-     * <h3>Related documentation</h3>
+     * <h3>Supported engines</h3>
+     * <p>ApsaraDB RDS for PostgreSQL</p>
+     * <h3>Related feature documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * @param request the request parameters of ModifyAppInstance  ModifyAppInstanceRequest
@@ -1947,10 +1947,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Applicable engine</h3>
      * <p>ApsaraDB RDS for PostgreSQL</p>
      * <h3>Related documentation</h3>
-     * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
+     * <p><a href="https://help.aliyun.com/document_detail/2938735.html">ApsaraDB RDS for Supabase</a></p>
      * 
      * @param request the request parameters of ModifyInstanceAuthConfig  ModifyInstanceAuthConfigRequest
      * @return ModifyInstanceAuthConfigResponse
@@ -2031,7 +2031,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Supported engine</h3>
      * <p>RDS PostgreSQL</p>
      * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
@@ -2056,11 +2056,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <h3>Supported engines</h3>
-     * <p>RDS PostgreSQL</p>
+     * <p>ApsaraDB RDS for PostgreSQL</p>
      * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * <blockquote>
-     * <p>Currently, only Object Storage Service (OSS) is supported.</p>
+     * <p>Only Object Storage Service (OSS) is supported.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ModifyInstanceStorageConfig  ModifyInstanceStorageConfigRequest
@@ -2082,8 +2082,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
-     * <p>RDS PostgreSQL</p>
+     * <h3>Supported engines</h3>
+     * <p>ApsaraDB RDS for PostgreSQL</p>
      * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
@@ -2124,7 +2124,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <p>RDS Supabase</p>
      * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
@@ -2209,7 +2209,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Applicable engines</h3>
      * <p><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></p>
      * 
      * @param request the request parameters of RenameApiKey  RenameApiKeyRequest
@@ -2436,9 +2436,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
-     * <p>RDS PostgreSQL</p>
-     * <h3>Related feature documentation</h3>
+     * <h3>Supported engines</h3>
+     * <p>ApsaraDB RDS for PostgreSQL</p>
+     * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * @param request the request parameters of StopInstance  StopInstanceRequest

@@ -29,11 +29,15 @@ public class ModifyAppInstanceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("TargetInstanceName")
+    private String targetInstanceName;
+
     private ModifyAppInstanceResponseBody(Builder builder) {
         this.branchName = builder.branchName;
         this.components = builder.components;
         this.instanceName = builder.instanceName;
         this.requestId = builder.requestId;
+        this.targetInstanceName = builder.targetInstanceName;
     }
 
     public static Builder builder() {
@@ -76,11 +80,19 @@ public class ModifyAppInstanceResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return targetInstanceName
+     */
+    public String getTargetInstanceName() {
+        return this.targetInstanceName;
+    }
+
     public static final class Builder {
         private String branchName; 
         private java.util.List<Components> components; 
         private String instanceName; 
         private String requestId; 
+        private String targetInstanceName; 
 
         private Builder() {
         } 
@@ -90,10 +102,11 @@ public class ModifyAppInstanceResponseBody extends TeaModel {
             this.components = model.components;
             this.instanceName = model.instanceName;
             this.requestId = model.requestId;
+            this.targetInstanceName = model.targetInstanceName;
         } 
 
         /**
-         * <p>The reserved parameter.</p>
+         * <p>A reserved parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>Reserved parameter</p>
@@ -130,6 +143,17 @@ public class ModifyAppInstanceResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Reserved parameter</p>
+         */
+        public Builder targetInstanceName(String targetInstanceName) {
+            this.targetInstanceName = targetInstanceName;
             return this;
         }
 

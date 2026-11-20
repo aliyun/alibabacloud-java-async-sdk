@@ -80,7 +80,7 @@ public class RenameApiKeyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response message.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -102,7 +102,7 @@ public class RenameApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request result.</p>
+         * <p>The result of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

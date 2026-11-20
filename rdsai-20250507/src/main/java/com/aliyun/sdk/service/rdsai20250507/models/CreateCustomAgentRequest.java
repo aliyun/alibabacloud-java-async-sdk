@@ -128,7 +128,7 @@ public class CreateCustomAgentRequest extends Request {
         }
 
         /**
-         * <p>The name of the custom agent.</p>
+         * <p>The name of the dedicated agent.</p>
          * 
          * <strong>example:</strong>
          * <p>Instance List Query Agent</p>
@@ -154,7 +154,7 @@ public class CreateCustomAgentRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>I am your custom agent for querying the instance list</p>
+         * <p>I am your dedicated agent for querying instance lists</p>
          */
         public Builder systemPrompt(String systemPrompt) {
             this.putQueryParameter("SystemPrompt", systemPrompt);

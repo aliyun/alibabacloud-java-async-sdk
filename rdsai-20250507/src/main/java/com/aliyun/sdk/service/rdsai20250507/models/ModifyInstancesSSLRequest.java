@@ -131,7 +131,7 @@ public class ModifyInstancesSSLRequest extends Request {
         } 
 
         /**
-         * <p>The certificate type. Currently, only <strong>custom</strong> is supported, which indicates a custom certificate.</p>
+         * <p>The certificate type. Only <strong>custom</strong> is supported, which indicates that a custom certificate is used.</p>
          * <blockquote>
          * <p>This parameter is required when <strong>SSLEnabled</strong> is set to <strong>1</strong>.</p>
          * </blockquote>
@@ -146,7 +146,7 @@ public class ModifyInstancesSSLRequest extends Request {
         }
 
         /**
-         * <p>The list of instance IDs of AI applications. A maximum of 10 instance IDs can be specified.</p>
+         * <p>The IDs of the ApsaraDB RDS AI application instances. You can specify up to 10 instance IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -175,10 +175,10 @@ public class ModifyInstancesSSLRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable or disable SSL. Valid values:</p>
+         * <p>Specifies whether to enable SSL. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: Enable.</li>
-         * <li><strong>0</strong>: Disable.</li>
+         * <li><strong>1</strong>: Enabled.</li>
+         * <li><strong>0</strong>: Disabled.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -192,7 +192,7 @@ public class ModifyInstancesSSLRequest extends Request {
         }
 
         /**
-         * <p>The custom certificate content.</p>
+         * <p>The content of the custom certificate.</p>
          * <blockquote>
          * <p>This parameter is required when <strong>CAType</strong> is set to <strong>custom</strong>.</p>
          * </blockquote>

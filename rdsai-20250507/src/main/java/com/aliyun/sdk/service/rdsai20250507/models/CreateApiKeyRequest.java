@@ -222,9 +222,9 @@ public class CreateApiKeyRequest extends Request {
         /**
          * <p>The quota limit type. Valid values:</p>
          * <ul>
-         * <li>ratio: Percentage-based.</li>
-         * <li>fixed: Fixed value.</li>
-         * <li>auto: Automatic allocation.</li>
+         * <li>ratio: percentage.</li>
+         * <li>fixed: fixed value.</li>
+         * <li>auto: automatic allocation.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -249,7 +249,10 @@ public class CreateApiKeyRequest extends Request {
         }
 
         /**
-         * RoleArn.
+         * <p>The ARN of the RAM role bound to the API key. The account to which the role belongs must be the same as the caller account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::1234567890123456:role/example-role</p>
          */
         public Builder roleArn(String roleArn) {
             this.putQueryParameter("RoleArn", roleArn);
@@ -258,7 +261,10 @@ public class CreateApiKeyRequest extends Request {
         }
 
         /**
-         * RoleName.
+         * <p>The name of the RAM role bound to the API key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-role</p>
          */
         public Builder roleName(String roleName) {
             this.putQueryParameter("RoleName", roleName);

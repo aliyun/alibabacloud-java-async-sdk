@@ -80,7 +80,10 @@ public class StopInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * BranchName.
+         * <p>The name of the branch specified for this operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ra-branch-123456789012abcd</p>
          */
         public Builder branchName(String branchName) {
             this.branchName = branchName;
