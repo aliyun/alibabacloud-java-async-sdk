@@ -173,7 +173,7 @@ public class UpdateOncallScheduleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the chatbot for shift reminders.</p>
+         * <p>The ID of the shift reminder chatbot.</p>
          * 
          * <strong>example:</strong>
          * <p>testId</p>
@@ -352,7 +352,7 @@ public class UpdateOncallScheduleRequest extends Request {
             } 
 
             /**
-             * <p>The days of the week when the rotation takes effect.</p>
+             * <p>The days of the week when the rotation is active.</p>
              * <p>This parameter is required.</p>
              */
             public Builder activeDays(java.util.List<Integer> activeDays) {
@@ -361,7 +361,7 @@ public class UpdateOncallScheduleRequest extends Request {
             }
 
             /**
-             * <p>The contact IDs.</p>
+             * <p>The contact ID.</p>
              * <p>This parameter is required.</p>
              */
             public Builder contacts(java.util.List<String> contacts) {
@@ -406,7 +406,7 @@ public class UpdateOncallScheduleRequest extends Request {
             }
 
             /**
-             * <p>The length of the shift cycle. Used in conjunction with shiftRecurrenceFrequency. For example, a value of 3 indicates that the on-call contact rotates every 3 days.</p>
+             * <p>The length of the shift recurrence cycle. Used in conjunction with shiftRecurrenceFrequency. For example, rotate to the next on-call contact every 3 days.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -417,7 +417,7 @@ public class UpdateOncallScheduleRequest extends Request {
             }
 
             /**
-             * <p>The unit of the shift cycle. Used in conjunction with shiftLength. For example, a value of week indicates that the on-call contact rotates every week.</p>
+             * <p>The unit of the shift recurrence cycle. Used in conjunction with shiftRecurrenceFrequency. For example, rotate to the next on-call contact every week.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -441,7 +441,7 @@ public class UpdateOncallScheduleRequest extends Request {
             }
 
             /**
-             * <p>The name of the time zone. The IANA Time Zone Database standard is used. Example: Asia/Shanghai.</p>
+             * <p>The name of the time zone based on the IANA Time Zone Database standard. Example: Asia/Shanghai.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

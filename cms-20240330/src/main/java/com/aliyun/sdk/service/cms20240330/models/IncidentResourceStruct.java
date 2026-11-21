@@ -135,7 +135,7 @@ public class IncidentResourceStruct extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Production environment web server.</p>
+         * <p>Production web server</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -143,7 +143,7 @@ public class IncidentResourceStruct extends TeaModel {
         }
 
         /**
-         * <p>The event ID.</p>
+         * <p>The incident ID.</p>
          * 
          * <strong>example:</strong>
          * <p>incident-001</p>
@@ -154,7 +154,7 @@ public class IncidentResourceStruct extends TeaModel {
         }
 
         /**
-         * <p>The unique ID of the resource in the event.</p>
+         * <p>The unique ID of the resource in the incident.</p>
          * 
          * <strong>example:</strong>
          * <p>res-001</p>
@@ -165,7 +165,7 @@ public class IncidentResourceStruct extends TeaModel {
         }
 
         /**
-         * <p>The details object for the event resource.</p>
+         * <p>The incident resource details object.</p>
          */
         public Builder resource(IncidentResourceDetail resource) {
             this.resource = resource;
@@ -198,7 +198,7 @@ public class IncidentResourceStruct extends TeaModel {
          * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>user-12345</p>
+         * <p>123456</p>
          */
         public Builder userId(Long userId) {
             this.userId = userId;

@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Hook</p>
  */
 public class Hook extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("debug")
+    private Boolean debug;
+
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
@@ -28,6 +31,9 @@ public class Hook extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("execution")
     private Execution execution;
+
+    @com.aliyun.core.annotation.NameInMap("invisible")
+    private Boolean invisible;
 
     @com.aliyun.core.annotation.NameInMap("match")
     private java.util.List<String> match;
@@ -42,10 +48,12 @@ public class Hook extends TeaModel {
     private String scope;
 
     private Hook(Builder builder) {
+        this.debug = builder.debug;
         this.description = builder.description;
         this.enable = builder.enable;
         this.event = builder.event;
         this.execution = builder.execution;
+        this.invisible = builder.invisible;
         this.match = builder.match;
         this.name = builder.name;
         this.schemaVersion = builder.schemaVersion;
@@ -62,6 +70,13 @@ public class Hook extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return debug
+     */
+    public Boolean getDebug() {
+        return this.debug;
     }
 
     /**
@@ -93,6 +108,13 @@ public class Hook extends TeaModel {
     }
 
     /**
+     * @return invisible
+     */
+    public Boolean getInvisible() {
+        return this.invisible;
+    }
+
+    /**
      * @return match
      */
     public java.util.List<String> getMatch() {
@@ -121,10 +143,12 @@ public class Hook extends TeaModel {
     }
 
     public static final class Builder {
+        private Boolean debug; 
         private String description; 
         private Boolean enable; 
         private String event; 
         private Execution execution; 
+        private Boolean invisible; 
         private java.util.List<String> match; 
         private String name; 
         private String schemaVersion; 
@@ -134,15 +158,28 @@ public class Hook extends TeaModel {
         } 
 
         private Builder(Hook model) {
+            this.debug = model.debug;
             this.description = model.description;
             this.enable = model.enable;
             this.event = model.event;
             this.execution = model.execution;
+            this.invisible = model.invisible;
             this.match = model.match;
             this.name = model.name;
             this.schemaVersion = model.schemaVersion;
             this.scope = model.scope;
         } 
+
+        /**
+         * <p>Specifies whether to enable debug mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder debug(Boolean debug) {
+            this.debug = debug;
+            return this;
+        }
 
         /**
          * <p>The description.</p>
@@ -156,7 +193,7 @@ public class Hook extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether the Hook is enabled. The Hook is executed only when this parameter is set to true. If not configured, the Hook is disabled.</p>
+         * <p>Specifies whether the Hook is enabled. It is executed only when this parameter is set to true. If not configured, the Hook is disabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -167,7 +204,7 @@ public class Hook extends TeaModel {
         }
 
         /**
-         * <p>The event processed by the Hook. Each Hook processes only one event.</p>
+         * <p>The event. Each Hook processes only one event.</p>
          * 
          * <strong>example:</strong>
          * <p>ToolStart</p>
@@ -178,7 +215,7 @@ public class Hook extends TeaModel {
         }
 
         /**
-         * <p>The execution configuration that specifies the synchronous execution, total timeout, number of retries, and invalid return value handling policy for the Hook.</p>
+         * <p>The execution configuration. Configures the synchronous execution, total timeout, number of retries, and invalid return value handling policy for the Hook.</p>
          */
         public Builder execution(Execution execution) {
             this.execution = execution;
@@ -186,7 +223,18 @@ public class Hook extends TeaModel {
         }
 
         /**
-         * <p>The list of tool names. Only ToolStart and ToolEnd events perform exact matching based on the actual tool name. Tool names such as Read, Write, Bash, and Edit are supported, but wildcards are not supported. An empty array does not restrict tools. This field is ignored for other events.</p>
+         * <p>Specifies whether to hide Hook invocation events. When set to true, Hook invocation events are not sent to the frontend, regardless of whether debug mode is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder invisible(Boolean invisible) {
+            this.invisible = invisible;
+            return this;
+        }
+
+        /**
+         * <p>The list of tool names. Only ToolStart and ToolEnd perform an exact match based on the actual tool name. Tool names such as Read, Write, Bash, and Edit are supported. Wildcards are not supported. An empty array does not restrict tools. This field is ignored for other events.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;Read&quot;,&quot;Write&quot;,&quot;Bash&quot;,&quot;Edit&quot;]</p>
@@ -197,7 +245,7 @@ public class Hook extends TeaModel {
         }
 
         /**
-         * <p>The Hook name. Only digits, letters, underscores, and hyphens are allowed. The name cannot be empty. Hooks with the same name are still executed independently in the order of the list.</p>
+         * <p>The Hook name. Only digits, letters, underscores, and hyphens are allowed, and it cannot be empty. Hooks with the same name are executed independently in the order of the list.</p>
          * 
          * <strong>example:</strong>
          * <p>command-guard</p>
@@ -219,7 +267,7 @@ public class Hook extends TeaModel {
         }
 
         /**
-         * <p>The effective scope. Valid values: all, chat, and mission. A value of all indicates that the scope includes Chat and Mission. A value of chat or mission indicates that the scope applies only to the corresponding scenario.</p>
+         * <p>The effective scope. A value of all indicates Chat and Mission. A value of chat or mission indicates that the Hook takes effect only in the corresponding scenario.</p>
          * 
          * <strong>example:</strong>
          * <p>all</p>
@@ -329,7 +377,7 @@ public class Hook extends TeaModel {
             } 
 
             /**
-             * <p>The handling policy for invalid return values. If the handler return value remains invalid after retries, it is processed as allow or reject.</p>
+             * <p>The invalid return value handling policy. If the handler return value is still invalid after retries, it is processed as allow or reject.</p>
              * 
              * <strong>example:</strong>
              * <p>allow</p>
@@ -340,7 +388,7 @@ public class Hook extends TeaModel {
             }
 
             /**
-             * <p>The execution instruction. The prompt type indicates a prompt, the bash type indicates a Bash script, the python3 type indicates a Python 3 script, and the hint type indicates contextual text directly appended. A non-empty UTF-8 text must be provided for all four types.</p>
+             * <p>The execution instruction. For the prompt type, it is a prompt. For the bash type, it is a Bash script. For the python3 type, it is a Python 3 script. For the hint type, it is contextual text directly appended. Non-empty UTF-8 text must be provided for all four types.</p>
              * 
              * <strong>example:</strong>
              * <p>检查当前工具调用是否安全。</p>
@@ -351,7 +399,7 @@ public class Hook extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of additional attempts after a failure. Valid values: 0 to 3.</p>
+             * <p>The maximum number of retries. Specifies the number of additional attempts after a failure. Valid values: 0 to 3.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -362,7 +410,7 @@ public class Hook extends TeaModel {
             }
 
             /**
-             * <p>The timeout period in seconds. Valid values: 1 to 30. All attempts and waits for the Hook share this timeout period.</p>
+             * <p>The timeout period in seconds. Valid values: 1 to 30. All attempts and waits for this Hook share this timeout period.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -373,7 +421,7 @@ public class Hook extends TeaModel {
             }
 
             /**
-             * <p>The handler type. Valid values: prompt, bash, python3, and hint.</p>
+             * <p>The handler type. Only prompt, bash, python3, and hint are supported.</p>
              * 
              * <strong>example:</strong>
              * <p>prompt</p>

@@ -124,7 +124,7 @@ public class UpdateContactGroupRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the contacts.</p>
+         * <p>The contact IDs.</p>
          */
         public Builder contacts(java.util.List<String> contacts) {
             this.putBodyParameter("contacts", contacts);

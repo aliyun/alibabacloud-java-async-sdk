@@ -104,7 +104,7 @@ public class GetServiceRecordRequest extends Request {
         } 
 
         /**
-         * <p>The workspace name.</p>
+         * <p>The name of the workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,8 +139,8 @@ public class GetServiceRecordRequest extends Request {
         }
 
         /**
-         * <p>The type of the linked entry. Currently supported values:
-         * logCorrelation: indicates application log association.</p>
+         * <p>The type of the association entry. Valid values:
+         * logCorrelation: application log association.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

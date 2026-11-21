@@ -104,7 +104,7 @@ public class DeleteServiceRecordRequest extends Request {
         } 
 
         /**
-         * <p>The workspace name.</p>
+         * <p>The name of the workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,8 +139,10 @@ public class DeleteServiceRecordRequest extends Request {
         }
 
         /**
-         * <p>The type of the association entry. Valid values:
-         * logCorrelation: application log association</p>
+         * <p>The type of the association entry. Valid values:</p>
+         * <ul>
+         * <li>logCorrelation: application log association</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

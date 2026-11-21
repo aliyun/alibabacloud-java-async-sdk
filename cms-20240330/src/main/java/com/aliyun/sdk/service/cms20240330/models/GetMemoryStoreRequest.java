@@ -75,7 +75,7 @@ public class GetMemoryStoreRequest extends Request {
         } 
 
         /**
-         * <p>The workspace name.</p>
+         * <p>The name of the workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class GetMemoryStoreRequest extends Request {
         }
 
         /**
-         * <p>The memory store name.</p>
+         * <p>The name of the memory store.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

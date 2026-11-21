@@ -138,7 +138,7 @@ public class GetAddonCodeTemplateRequest extends Request {
         }
 
         /**
-         * <p>The locale. Default value: zh. Valid values: zh, en.</p>
+         * <p>The locale. Default value: zh. Valid values: zh and en.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>

@@ -93,7 +93,7 @@ public class PreviewNotifyTemplateResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The rendering result object, which contains two mappings: success for successfully rendered items and failed for items that failed to render.</p>
+         * <p>The rendering result object. This object includes two mappings: success for successfully rendered items and failed for failed rendering items.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -123,7 +123,11 @@ public class PreviewNotifyTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful. Valid values: true and false.</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true: Successful.</li>
+         * <li>false: Failed.</li>
+         * </ul>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -190,6 +194,9 @@ public class PreviewNotifyTemplateResponseBody extends TeaModel {
 
             /**
              * <p>The mapping of failed rendering results. The key is the template identifier, and the value is the cause of the failure, such as a template syntax error or a reference to an undefined variable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;subject&quot;:&quot;Template syntax error&quot;}</p>
              */
             public Builder failed(java.util.Map<String, ?> failed) {
                 this.failed = failed;
@@ -198,6 +205,9 @@ public class PreviewNotifyTemplateResponseBody extends TeaModel {
 
             /**
              * <p>The mapping of successful rendering results. The key is the template identifier, which corresponds to templates[].key in the request, and the value is the rendered string content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;subject&quot;:&quot;Alert notification&quot;}</p>
              */
             public Builder success(java.util.Map<String, ?> success) {
                 this.success = success;

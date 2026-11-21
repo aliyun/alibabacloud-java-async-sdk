@@ -144,6 +144,9 @@ public class CreateDatasetRequest extends Request {
         /**
          * <p>The table schema.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;message&quot;:{&quot;type&quot;:&quot;text&quot;,&quot;chn&quot;:true}}</p>
          */
         public Builder schema(java.util.Map<String, IndexKey> schema) {
             this.putBodyParameter("schema", schema);

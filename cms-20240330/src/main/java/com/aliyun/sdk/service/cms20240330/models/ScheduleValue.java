@@ -20,20 +20,20 @@ public class ScheduleValue extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("contactId")
     private String contactId;
 
-    @com.aliyun.core.annotation.NameInMap("contactName")
-    private String contactName;
-
     @com.aliyun.core.annotation.NameInMap("end")
     private String end;
 
     @com.aliyun.core.annotation.NameInMap("start")
     private String start;
 
+    @com.aliyun.core.annotation.NameInMap("contactName")
+    private String contactName;
+
     private ScheduleValue(Builder builder) {
         this.contactId = builder.contactId;
-        this.contactName = builder.contactName;
         this.end = builder.end;
         this.start = builder.start;
+        this.contactName = builder.contactName;
     }
 
     public static Builder builder() {
@@ -56,13 +56,6 @@ public class ScheduleValue extends TeaModel {
     }
 
     /**
-     * @return contactName
-     */
-    public String getContactName() {
-        return this.contactName;
-    }
-
-    /**
      * @return end
      */
     public String getEnd() {
@@ -76,20 +69,27 @@ public class ScheduleValue extends TeaModel {
         return this.start;
     }
 
+    /**
+     * @return contactName
+     */
+    public String getContactName() {
+        return this.contactName;
+    }
+
     public static final class Builder {
         private String contactId; 
-        private String contactName; 
         private String end; 
         private String start; 
+        private String contactName; 
 
         private Builder() {
         } 
 
         private Builder(ScheduleValue model) {
             this.contactId = model.contactId;
-            this.contactName = model.contactName;
             this.end = model.end;
             this.start = model.start;
+            this.contactName = model.contactName;
         } 
 
         /**
@@ -100,17 +100,6 @@ public class ScheduleValue extends TeaModel {
          */
         public Builder contactId(String contactId) {
             this.contactId = contactId;
-            return this;
-        }
-
-        /**
-         * <p>The name of the on-call contact.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testName</p>
-         */
-        public Builder contactName(String contactName) {
-            this.contactName = contactName;
             return this;
         }
 
@@ -133,6 +122,17 @@ public class ScheduleValue extends TeaModel {
          */
         public Builder start(String start) {
             this.start = start;
+            return this;
+        }
+
+        /**
+         * <p>The name of the on-call contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testName</p>
+         */
+        public Builder contactName(String contactName) {
+            this.contactName = contactName;
             return this;
         }
 

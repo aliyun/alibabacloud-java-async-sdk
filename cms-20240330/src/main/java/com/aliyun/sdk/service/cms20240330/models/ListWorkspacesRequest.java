@@ -163,7 +163,7 @@ public class ListWorkspacesRequest extends Request {
          * <p>The pagination token.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxxxxxxxx</p>
+         * <p>aAaAAAA1aAAA1a1a1AaaAAa1A11aaaa1AA-aAA1Aaaa1aaAaAaaAaAaa1AAAaa1A</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -206,7 +206,7 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * <p>The workspace name. Fuzzy match is supported.</p>
+         * <p>The name of the workspace. Fuzzy match is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>workspace-test-001</p>

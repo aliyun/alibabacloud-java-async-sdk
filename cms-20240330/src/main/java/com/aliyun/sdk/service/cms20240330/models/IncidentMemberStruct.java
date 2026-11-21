@@ -158,7 +158,7 @@ public class IncidentMemberStruct extends TeaModel {
         } 
 
         /**
-         * <p>The structure of the confirmation information.</p>
+         * <p>The acknowledgment information struct.</p>
          */
         public Builder acknowledge(Acknowledge acknowledge) {
             this.acknowledge = acknowledge;
@@ -166,7 +166,7 @@ public class IncidentMemberStruct extends TeaModel {
         }
 
         /**
-         * <p>The ID of the contact.</p>
+         * <p>The contact ID.</p>
          * 
          * <strong>example:</strong>
          * <p>user-12345</p>
@@ -177,7 +177,7 @@ public class IncidentMemberStruct extends TeaModel {
         }
 
         /**
-         * <p>A list of contacts.</p>
+         * <p>The contact list.</p>
          */
         public Builder contacts(java.util.List<Contacts> contacts) {
             this.contacts = contacts;
@@ -185,7 +185,7 @@ public class IncidentMemberStruct extends TeaModel {
         }
 
         /**
-         * <p>Information about the escalation stage.</p>
+         * <p>The escalation stage information.</p>
          */
         public Builder escalation(Escalation escalation) {
             this.escalation = escalation;
@@ -193,7 +193,7 @@ public class IncidentMemberStruct extends TeaModel {
         }
 
         /**
-         * <p>The ID of the event.</p>
+         * <p>The incident ID.</p>
          * 
          * <strong>example:</strong>
          * <p>incident-001</p>
@@ -204,7 +204,7 @@ public class IncidentMemberStruct extends TeaModel {
         }
 
         /**
-         * <p>The ID of the event member.</p>
+         * <p>The incident member ID.</p>
          * 
          * <strong>example:</strong>
          * <p>member-001</p>
@@ -226,7 +226,7 @@ public class IncidentMemberStruct extends TeaModel {
          * <p>The time.</p>
          * 
          * <strong>example:</strong>
-         * <p>2025-10-08 10:18:58</p>
+         * <p>1794984221885</p>
          */
         public Builder time(Long time) {
             this.time = time;
@@ -303,7 +303,7 @@ public class IncidentMemberStruct extends TeaModel {
             } 
 
             /**
-             * <p>The confirmation level.</p>
+             * <p>The acknowledgment level.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -395,7 +395,7 @@ public class IncidentMemberStruct extends TeaModel {
             }
 
             /**
-             * <p>The masked ID of the contact.</p>
+             * <p>The contact ID (masked).</p>
              * 
              * <strong>example:</strong>
              * <p>user-12345</p>
@@ -507,7 +507,7 @@ public class IncidentMemberStruct extends TeaModel {
              * <p>The description.</p>
              * 
              * <strong>example:</strong>
-             * <p>Notify the operations team.</p>
+             * <p>Notify the O&amp;M team</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -515,7 +515,7 @@ public class IncidentMemberStruct extends TeaModel {
             }
 
             /**
-             * <p>The ID of the event escalation.</p>
+             * <p>The incident escalation ID.</p>
              * 
              * <strong>example:</strong>
              * <p>escalation-001</p>
@@ -529,7 +529,7 @@ public class IncidentMemberStruct extends TeaModel {
              * <p>The name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Phase one.</p>
+             * <p>Stage 1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -537,7 +537,7 @@ public class IncidentMemberStruct extends TeaModel {
             }
 
             /**
-             * <p>The index of the escalation stage.</p>
+             * <p>The escalation stage index.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -551,7 +551,7 @@ public class IncidentMemberStruct extends TeaModel {
              * <p>The title.</p>
              * 
              * <strong>example:</strong>
-             * <p>Alert escalated to the operations team.</p>
+             * <p>Alert escalated to the O&amp;M team</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -618,7 +618,7 @@ public class IncidentMemberStruct extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the contact.</p>
+             * <p>The contact ID.</p>
              * 
              * <strong>example:</strong>
              * <p>group-001</p>
@@ -632,7 +632,7 @@ public class IncidentMemberStruct extends TeaModel {
              * <p>The name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Night shift duty team.</p>
+             * <p>Night on-call group</p>
              */
             public Builder name(String name) {
                 this.name = name;

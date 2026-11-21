@@ -369,7 +369,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         } 
 
         /**
-         * <p>The action type.</p>
+         * <p>The operation type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -414,10 +414,10 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         }
 
         /**
-         * <p>The business source. Valid values include managed_service_for_prometheus, umodel, application_insights, cloud_monitoring, and sls. Optional. Pass as needed for CREATE, UPDATE, and PATCH actions.</p>
+         * <p>The business source (optional). Examples include managed_service_for_prometheus, umodel, application_insights, cloud_monitoring, and sls. Pass as needed for CREATE, UPDATE, and PATCH.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值</p>
+         * <p>Sample value</p>
          */
         public Builder bizSource(String bizSource) {
             this.bizSource = bizSource;
@@ -425,7 +425,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         }
 
         /**
-         * <p>The aggregated condition configuration.</p>
+         * <p>The condition aggregation configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;type&quot;:&quot;PROMETHEUS_SIMPLE_CONDITION&quot;,&quot;durationSecs&quot;:0,&quot;severity&quot;:&quot;CRITICAL&quot;}</p>
@@ -439,7 +439,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
          * <p>The content template.</p>
          * 
          * <strong>example:</strong>
-         * <p>实例 {{instance}} CPU 使用率超过 {{threshold}}%</p>
+         * <p>Instance {{instance}} CPU usage exceeds {{threshold}}%</p>
          */
         public Builder contentTemplate(String contentTemplate) {
             this.contentTemplate = contentTemplate;
@@ -447,7 +447,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         }
 
         /**
-         * <p>The aggregated datasource configuration.</p>
+         * <p>The data source aggregation configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;type&quot;:&quot;PROMETHEUS&quot;,&quot;instanceId&quot;:&quot;prom-cn-hangzhou-xxxxx&quot;}</p>
@@ -469,7 +469,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         }
 
         /**
-         * <p>The alert drill evaluation time in Unix milliseconds. Required by the backend when drillMode is ONE_SHOT. The time cannot be later than the current time and cannot be more than 90 days in the past.</p>
+         * <p>The alert drill time, in Unix milliseconds. Required by the backend when drillMode is ONE_SHOT. It cannot be later than the current time or earlier than 90 days ago.</p>
          * 
          * <strong>example:</strong>
          * <p>1783728000000</p>
@@ -480,7 +480,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         }
 
         /**
-         * <p>The alert drill mode. Required by the backend when the action is DRILL_ALERT. Valid values: ONE_SHOT: specifies a single point in time to simulate a complete lifecycle consisting of three events (OCCURRED, PERSISTENT, and RECOVERED). TIME_TRAVEL: specifies a time range to simulate the lifecycle round by round based on the rule scheduling interval (OCCURRED, PERSISTENT, ..., RECOVERED).</p>
+         * <p>The alert drill mode. Required by the backend when action is DRILL_ALERT. ONE_SHOT specifies a single time point to simulate a complete lifecycle (three events: OCCURRED, PERSISTENT, and RECOVERED). TIME_TRAVEL specifies a time period to simulate round by round according to the rule scheduling interval (OCCURRED, PERSISTENT, ..., RECOVERED).</p>
          * 
          * <strong>example:</strong>
          * <p>ONE_SHOT</p>
@@ -491,7 +491,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         }
 
         /**
-         * <p>The alert drill time range in Unix milliseconds. Required by the backend when drillMode is TIME_TRAVEL. The endTime must be later than the startTime and cannot be later than the current time. The span between endTime and startTime cannot exceed 1 hour; otherwise, the backend returns a 400 error. The simulation runs round by round based on the rule scheduling interval, with a maximum of 500 rounds; otherwise, the backend returns a 400 error.</p>
+         * <p>The alert drill time range, in Unix milliseconds. Required by the backend when drillMode is TIME_TRAVEL. The endTime must be later than the startTime and cannot be later than the current time. The span between endTime and startTime cannot exceed 1 hour (the backend returns 400 if exceeded). Simulates round by round according to the rule scheduling interval, with a maximum of 500 rounds (the backend returns 400 if exceeded).</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;startTime&quot;:1783728000000,&quot;endTime&quot;:1783731600000}</p>
@@ -524,7 +524,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         }
 
         /**
-         * <p>The aggregated notification configuration.</p>
+         * <p>The notification aggregation configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;type&quot;:&quot;DIRECT_NOTIFY&quot;,&quot;channels&quot;:[{&quot;type&quot;:&quot;GROUP&quot;,&quot;identifiers&quot;:[&quot;<contact-group-id>&quot;]}]}</p>
@@ -546,7 +546,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> The ID of the monitored object instance. For new integrations, use observeResourceConfig.resources instead. This field is retained only for compatibility with legacy SDKs.</p>
+         * <p><strong>[Deprecated]</strong> The monitored object instance ID. Use observeResourceConfig.resources for new integrations. Retained only for compatibility with legacy SDKs.</p>
          * 
          * <strong>example:</strong>
          * <p>example-id-001</p>
@@ -557,7 +557,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> The resource type of the monitored object. For new integrations, use observeResourceConfig.entityType instead. This field is retained only for compatibility with legacy SDKs.</p>
+         * <p><strong>[Deprecated]</strong> The monitored object resource type. Use observeResourceConfig.entityType for new integrations. Retained only for compatibility with legacy SDKs.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -568,7 +568,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         }
 
         /**
-         * <p>The aggregated query configuration.</p>
+         * <p>The query aggregation configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;type&quot;:&quot;PROMETHEUS_SINGLE_QUERY&quot;,&quot;expr&quot;:&quot;up &gt; 0&quot;}</p>
@@ -579,7 +579,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         }
 
         /**
-         * <p>The root cause analysis (RCA) configuration. Optional. Pass as needed for CREATE, UPDATE, and PATCH actions.</p>
+         * <p>The root cause analysis (RCA) configuration (optional). Pass as needed for CREATE, UPDATE, and PATCH.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;enabled&quot;:false}</p>
@@ -590,7 +590,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         }
 
         /**
-         * <p>The region ID. This aligns with V1 AlertRule.regionId. If not provided, the gateway callerRegionId is used.</p>
+         * <p>The region ID. Aligned with V1 AlertRule.regionId. The gateway callerRegionId is used if not provided.</p>
          * 
          * <strong>example:</strong>
          * <p>example-id-001</p>
@@ -601,7 +601,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         }
 
         /**
-         * <p>The aggregated schedule configuration.</p>
+         * <p>The scheduling aggregation configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;type&quot;:&quot;FIXED&quot;,&quot;intervalSecs&quot;:60}</p>
@@ -612,7 +612,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         }
 
         /**
-         * <p>The UUID of the rule. Required for UPDATE and PATCH actions.</p>
+         * <p>The rule UUID. Required for UPDATE and PATCH.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx-xxx-xxx</p>
@@ -623,7 +623,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         }
 
         /**
-         * <p>The list of UUIDs of the rules to be deleted in a BATCH_DELETE action.</p>
+         * <p>The list of rule UUIDs to be deleted (BATCH_DELETE).</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;cms_v2_81d01768-fee9-459f-af49-ab2704f1db2b&quot;]</p>
@@ -634,7 +634,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         }
 
         /**
-         * <p>The workspace ID. Required for CREATE, UPDATE, PATCH, DELETE, ENABLE, DISABLE, BATCH_DELETE, BATCH_ENABLE, and BATCH_DISABLE actions. It identifies the CloudMonitor workspace to which the rule belongs.</p>
+         * <p>The workspace (for CREATE, UPDATE, and other actions).</p>
          * 
          * <strong>example:</strong>
          * <p>workspace-test</p>
@@ -703,7 +703,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
             } 
 
             /**
-             * <p>The drill end time in Unix milliseconds. It must be later than the start time, and the span between the start time and end time cannot exceed 1 hour.</p>
+             * <p>The drill end time, in Unix milliseconds. Must be later than the start time, and the span from the start time cannot exceed 1 hour.</p>
              * 
              * <strong>example:</strong>
              * <p>1783731600000</p>
@@ -714,7 +714,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
             }
 
             /**
-             * <p>The drill start time in Unix milliseconds.</p>
+             * <p>The drill start time, in Unix milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1783728000000</p>

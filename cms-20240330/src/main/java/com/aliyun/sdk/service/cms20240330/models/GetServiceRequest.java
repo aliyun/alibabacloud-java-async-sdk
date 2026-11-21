@@ -89,7 +89,7 @@ public class GetServiceRequest extends Request {
         } 
 
         /**
-         * <p>The workspace name.</p>
+         * <p>The name of the workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class GetServiceRequest extends Request {
         }
 
         /**
-         * <p>The service ID.</p>
+         * <p>The ID of the service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

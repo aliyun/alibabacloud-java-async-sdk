@@ -75,7 +75,7 @@ public class DeleteMemoryStoreRequest extends Request {
         } 
 
         /**
-         * <p>The name of the Workspace.</p>
+         * <p>The name of the workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class DeleteMemoryStoreRequest extends Request {
         }
 
         /**
-         * <p>The name of the Memory Store.</p>
+         * <p>The name of the memory store.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

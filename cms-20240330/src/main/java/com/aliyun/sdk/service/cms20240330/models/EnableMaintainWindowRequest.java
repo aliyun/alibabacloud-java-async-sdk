@@ -97,7 +97,7 @@ public class EnableMaintainWindowRequest extends Request {
         }
 
         /**
-         * <p>The silence policy ID. If this parameter is not specified when the silence policy is created, the system automatically generates an ID. You can call ListMaintainWindows to query silence policy IDs.</p>
+         * <p>The ID of the silence policy. If you do not specify this parameter when creating a silence policy, the system generates the ID. You can query the ID by calling the ListMaintainWindows operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,7 +110,7 @@ public class EnableMaintainWindowRequest extends Request {
         }
 
         /**
-         * <p>The workspace name. This parameter is required by the backend and is used to isolate silence policy resources across different business spaces.</p>
+         * <p>The name of the workspace. This parameter is required by the backend and is used to isolate silence policy resources across different business workspaces.</p>
          * 
          * <strong>example:</strong>
          * <p>default-cms-xxxx-cn-hangzhou</p>

@@ -227,7 +227,7 @@ public class GetAddonSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The target value for the condition.</p>
+             * <p>The target value.</p>
              * 
              * <strong>example:</strong>
              * <p>Custom</p>
@@ -399,7 +399,7 @@ public class GetAddonSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The related data collection.</p>
+             * <p>The related data set.</p>
              */
             public Builder related(java.util.List<String> related) {
                 this.related = related;
@@ -893,7 +893,7 @@ public class GetAddonSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The input prompt.</p>
+             * <p>The placeholder text.</p>
              * 
              * <strong>example:</strong>
              * <p>Please enter the metrics collection interval</p>

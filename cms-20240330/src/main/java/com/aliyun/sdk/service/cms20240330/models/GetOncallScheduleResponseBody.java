@@ -165,7 +165,7 @@ public class GetOncallScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of shifts.</p>
+         * <p>The list of rotations.</p>
          */
         public Builder rotations(java.util.List<Rotations> rotations) {
             this.rotations = rotations;
@@ -352,7 +352,7 @@ public class GetOncallScheduleResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The days of the week when the shift is active.</p>
+             * <p>The days of the week when the rotation is active.</p>
              */
             public Builder activeDays(java.util.List<Integer> activeDays) {
                 this.activeDays = activeDays;
@@ -360,7 +360,7 @@ public class GetOncallScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IDs of the contacts.</p>
+             * <p>The contact IDs.</p>
              */
             public Builder contacts(java.util.List<String> contacts) {
                 this.contacts = contacts;
@@ -368,7 +368,7 @@ public class GetOncallScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the shift. Format: HH:mm.</p>
+             * <p>The end time of the rotation. Format: HH:mm.</p>
              * 
              * <strong>example:</strong>
              * <p>24:00</p>
@@ -379,7 +379,7 @@ public class GetOncallScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the shift.</p>
+             * <p>The name of the rotation.</p>
              * 
              * <strong>example:</strong>
              * <p>testName</p>
@@ -390,7 +390,7 @@ public class GetOncallScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the shift. Format: HH:mm.</p>
+             * <p>The start time of the rotation. Format: HH:mm.</p>
              * 
              * <strong>example:</strong>
              * <p>00:00</p>
@@ -401,7 +401,7 @@ public class GetOncallScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The length of the shift recurrence cycle. Used in conjunction with the shift recurrence frequency. For example, rotate to the next on-call contact every 3 days.</p>
+             * <p>The length of the shift recurrence. Used in conjunction with shiftRecurrenceFrequency. For example, rotate to the next on-call contact every 3 days.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -412,7 +412,7 @@ public class GetOncallScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unit of the shift recurrence frequency. Used in conjunction with shiftRecurrenceFrequency. For example, rotate to the next on-call contact every 1 week.</p>
+             * <p>The unit of the shift recurrence frequency. Used in conjunction with shiftRecurrenceFrequency. For example, rotate to the next on-call contact every week.</p>
              * 
              * <strong>example:</strong>
              * <p>WEEKLY</p>
@@ -423,7 +423,7 @@ public class GetOncallScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start date of the shift. Format: yyyy-MM-dd.</p>
+             * <p>The start date of the rotation. Format: yyyy-MM-dd.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-10-10</p>
@@ -434,7 +434,7 @@ public class GetOncallScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the time zone. Uses the IANA Time Zone Database standard, such as Asia/Shanghai.</p>
+             * <p>The name of the time zone. The IANA Time Zone Database standard is used, for example, Asia/Shanghai.</p>
              * 
              * <strong>example:</strong>
              * <p>Asia/Shanghai</p>

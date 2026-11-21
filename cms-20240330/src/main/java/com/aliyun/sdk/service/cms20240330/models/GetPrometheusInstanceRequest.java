@@ -101,7 +101,7 @@ public class GetPrometheusInstanceRequest extends Request {
         }
 
         /**
-         * <p>The language. Default value: zh. Valid values: zh and en.</p>
+         * <p>The locale. Default value: zh. Valid values: zh, en.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>

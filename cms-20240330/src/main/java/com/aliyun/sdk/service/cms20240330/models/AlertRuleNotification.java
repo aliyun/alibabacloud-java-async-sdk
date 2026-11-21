@@ -218,7 +218,7 @@ public class AlertRuleNotification extends TeaModel {
         }
 
         /**
-         * <p>The list of custom webhook Notification Recipient IDs.</p>
+         * <p>The list of custom webhook notification recipient IDs.</p>
          */
         public Builder customWebhooks(java.util.List<String> customWebhooks) {
             this.customWebhooks = customWebhooks;
@@ -226,7 +226,7 @@ public class AlertRuleNotification extends TeaModel {
         }
 
         /**
-         * <p>The list of DingTalk Cool App webhook Notification Recipient IDs.</p>
+         * <p>The list of DingTalk cool app webhook notification recipient IDs.</p>
          */
         public Builder dingCoolAppWebhooks(java.util.List<String> dingCoolAppWebhooks) {
             this.dingCoolAppWebhooks = dingCoolAppWebhooks;
@@ -234,7 +234,7 @@ public class AlertRuleNotification extends TeaModel {
         }
 
         /**
-         * <p>The list of DingTalk webhook Notification Recipient IDs.</p>
+         * <p>The list of DingTalk webhook notification recipient IDs.</p>
          */
         public Builder dingWebhooks(java.util.List<String> dingWebhooks) {
             this.dingWebhooks = dingWebhooks;
@@ -242,7 +242,7 @@ public class AlertRuleNotification extends TeaModel {
         }
 
         /**
-         * <p>The list of Lark webhook Notification Recipient IDs.</p>
+         * <p>The list of Lark webhook notification recipient IDs.</p>
          */
         public Builder fsWebhooks(java.util.List<String> fsWebhooks) {
             this.fsWebhooks = fsWebhooks;
@@ -258,7 +258,7 @@ public class AlertRuleNotification extends TeaModel {
         }
 
         /**
-         * <p>The notification time window. Notifications are sent only within this time window.</p>
+         * <p>The notification time period during which notifications are sent.</p>
          */
         public Builder notifyTime(AlertRuleTimeSpan notifyTime) {
             this.notifyTime = notifyTime;
@@ -266,7 +266,10 @@ public class AlertRuleNotification extends TeaModel {
         }
 
         /**
-         * <p>The Qwen (Qwencloud) Notification Recipient configuration. Both the outer key and inner key are custom identity values. The inner Boolean value specifies whether the Notification Recipient is enabled.</p>
+         * <p>The Qwen notification recipient configuration. The outer and inner keys are custom identifiers, and the inner Boolean value specifies whether to enable the notification recipient.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;teamA&quot;:{&quot;oncall&quot;:true}}</p>
          */
         public Builder qwencloudContacts(java.util.Map<String, java.util.Map<String, ?>> qwencloudContacts) {
             this.qwencloudContacts = qwencloudContacts;
@@ -274,7 +277,7 @@ public class AlertRuleNotification extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether to send recovery notifications. Each severity level in severityNotifications can independently override this setting.</p>
+         * <p>Specifies whether to send a recovery notification. This setting can be independently overridden for each severity level in severityNotifications.</p>
          */
         public Builder sendOk(Boolean sendOk) {
             this.sendOk = sendOk;
@@ -282,7 +285,10 @@ public class AlertRuleNotification extends TeaModel {
         }
 
         /**
-         * <p>The Notification Recipients and channels configured by severity level. This parameter is mutually exclusive with the top-level contacts, groups, and similar parameters. The key is the severity level: CRITICAL, ERROR, WARNING, or INFO.</p>
+         * <p>The notification recipients and channels configured by severity level, which are mutually exclusive with top-level contacts and groups. The key is the severity level: CRITICAL, ERROR, WARNING, or INFO.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;CRITICAL&quot;:{&quot;sendRecoverNotification&quot;:true}}</p>
          */
         public Builder severityNotifications(java.util.Map<String, SeverityNotifyConfig> severityNotifications) {
             this.severityNotifications = severityNotifications;
@@ -290,7 +296,7 @@ public class AlertRuleNotification extends TeaModel {
         }
 
         /**
-         * <p>The notification mute duration. Unit: seconds.</p>
+         * <p>The notification mute period, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>86400</p>
@@ -301,7 +307,7 @@ public class AlertRuleNotification extends TeaModel {
         }
 
         /**
-         * <p>The list of Slack webhook Notification Recipient IDs.</p>
+         * <p>The list of Slack webhook notification recipient IDs.</p>
          */
         public Builder slackWebhooks(java.util.List<String> slackWebhooks) {
             this.slackWebhooks = slackWebhooks;
@@ -309,7 +315,7 @@ public class AlertRuleNotification extends TeaModel {
         }
 
         /**
-         * <p>The list of WeChat webhook Notification Recipient IDs.</p>
+         * <p>The list of WeChat webhook notification recipient IDs.</p>
          */
         public Builder wxWebhooks(java.util.List<String> wxWebhooks) {
             this.wxWebhooks = wxWebhooks;

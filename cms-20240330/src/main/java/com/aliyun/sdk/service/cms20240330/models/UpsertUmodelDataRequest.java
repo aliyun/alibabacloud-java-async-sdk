@@ -31,6 +31,10 @@ public class UpsertUmodelDataRequest extends Request {
     private java.util.List<?> elements;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("dryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("method")
     private String method;
 
@@ -39,6 +43,7 @@ public class UpsertUmodelDataRequest extends Request {
         this.workspace = builder.workspace;
         this.regionId = builder.regionId;
         this.elements = builder.elements;
+        this.dryRun = builder.dryRun;
         this.method = builder.method;
     }
 
@@ -77,6 +82,13 @@ public class UpsertUmodelDataRequest extends Request {
     }
 
     /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    /**
      * @return method
      */
     public String getMethod() {
@@ -87,6 +99,7 @@ public class UpsertUmodelDataRequest extends Request {
         private String workspace; 
         private String regionId; 
         private java.util.List<?> elements; 
+        private Boolean dryRun; 
         private String method; 
 
         private Builder() {
@@ -98,6 +111,7 @@ public class UpsertUmodelDataRequest extends Request {
             this.workspace = request.workspace;
             this.regionId = request.regionId;
             this.elements = request.elements;
+            this.dryRun = request.dryRun;
             this.method = request.method;
         } 
 
@@ -124,11 +138,25 @@ public class UpsertUmodelDataRequest extends Request {
         }
 
         /**
-         * <p>The content of the element.</p>
+         * <p>The content of the elements.</p>
          */
         public Builder elements(java.util.List<?> elements) {
             this.putBodyParameter("elements", elements);
             this.elements = elements;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to perform a dry run for this request. Valid values:</p>
+         * <ul>
+         * <li>true: sends a check request without performing actual changes.</li>
+         * <li>false: sends a normal request.
+         * Default value: false.</li>
+         * </ul>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("dryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 

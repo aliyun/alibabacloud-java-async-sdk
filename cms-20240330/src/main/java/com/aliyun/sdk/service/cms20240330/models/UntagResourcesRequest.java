@@ -126,10 +126,11 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to unbind all labels from the specified resource. Valid values:</p>
+         * <p>Specifies whether to unbind all tags from the specified resource. Valid values:</p>
          * <ul>
-         * <li>false (default): No.</li>
-         * <li>true: Yes.</li>
+         * <li>true: Unbinds all tags.</li>
+         * <li>false: Does not unbind all tags.
+         * Default value: false.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -166,8 +167,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The label key.</p>
-         * <p>You can unbind up to 20 label keys at a time.</p>
+         * <p>The tag keys. You can unbind up to 20 tag keys.</p>
          */
         public Builder tagKey(java.util.List<String> tagKey) {
             String tagKeyShrink = shrink(tagKey, "tagKey", "json");

@@ -190,7 +190,7 @@ public class CreatePrometheusViewRequest extends Request {
         } 
 
         /**
-         * <p>Not yet enabled.</p>
+         * <p>Not enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -211,7 +211,7 @@ public class CreatePrometheusViewRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether authentication-free read is supported.</p>
+         * <p>Specifies whether password-free read is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -223,7 +223,7 @@ public class CreatePrometheusViewRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether authToken is supported.</p>
+         * <p>Specifies whether AuthToken is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -245,7 +245,7 @@ public class CreatePrometheusViewRequest extends Request {
         }
 
         /**
-         * <p>The Prometheus view name.</p>
+         * <p>The name of the Prometheus view.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -270,10 +270,10 @@ public class CreatePrometheusViewRequest extends Request {
         }
 
         /**
-         * <p>Not yet enabled.</p>
+         * <p>Not enabled.</p>
          * 
          * <strong>example:</strong>
-         * <p>null</p>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("status", status);
@@ -282,7 +282,7 @@ public class CreatePrometheusViewRequest extends Request {
         }
 
         /**
-         * <p>The operation to perform.</p>
+         * <p>The tags.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putBodyParameter("tags", tags);
@@ -291,10 +291,9 @@ public class CreatePrometheusViewRequest extends Request {
         }
 
         /**
-         * <p>Valid values:</p>
          * <ul>
-         * <li>V1: Legacy version.</li>
-         * <li>V2: New version.</li>
+         * <li>V1: legacy version</li>
+         * <li>V2: new version</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

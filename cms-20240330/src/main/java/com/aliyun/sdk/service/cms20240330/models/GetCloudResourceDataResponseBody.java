@@ -93,7 +93,7 @@ public class GetCloudResourceDataResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The total number of returned data records.</p>
+         * <p>The total count of returned data items.</p>
          */
         public Builder data(java.util.List<java.util.List<String>> data) {
             this.data = data;
@@ -354,7 +354,7 @@ public class GetCloudResourceDataResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information during the execution process.</p>
+             * <p>The information generated during execution.</p>
              * 
              * <strong>example:</strong>
              * <p>{}</p>

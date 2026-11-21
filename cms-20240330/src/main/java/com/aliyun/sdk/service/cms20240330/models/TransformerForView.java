@@ -198,7 +198,7 @@ public class TransformerForView extends TeaModel {
         } 
 
         /**
-         * <p>The transform actions.</p>
+         * <p>The transform operations.</p>
          */
         public Builder actions(java.util.List<TransformAction> actions) {
             this.actions = actions;
@@ -247,7 +247,7 @@ public class TransformerForView extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether to exit after a match is processed.</p>
+         * <p>Indicates whether to exit after match processing.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

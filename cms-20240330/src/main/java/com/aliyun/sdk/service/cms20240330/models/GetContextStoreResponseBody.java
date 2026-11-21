@@ -184,7 +184,7 @@ public class GetContextStoreResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The configuration of the context store.</p>
+         * <p>The configuration information.</p>
          */
         public Builder config(Config config) {
             this.config = config;
@@ -192,7 +192,7 @@ public class GetContextStoreResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The context store name.</p>
+         * <p>The name of the context store.</p>
          * 
          * <strong>example:</strong>
          * <p>test-context-store</p>
@@ -203,7 +203,7 @@ public class GetContextStoreResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The type of the context store.</p>
+         * <p>The context type.</p>
          * 
          * <strong>example:</strong>
          * <p>memory</p>
@@ -214,7 +214,7 @@ public class GetContextStoreResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The creation time of the context store. This value is a Unix timestamp in seconds.</p>
+         * <p>The creation time.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -226,7 +226,7 @@ public class GetContextStoreResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Information about the associated dataset.</p>
+         * <p>The dataset information.</p>
          */
         public Builder dataset(Dataset dataset) {
             this.dataset = dataset;
@@ -234,7 +234,7 @@ public class GetContextStoreResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The description of the context store.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -267,7 +267,7 @@ public class GetContextStoreResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the context store.</p>
+         * <p>The status.</p>
          * 
          * <strong>example:</strong>
          * <p>active</p>
@@ -278,7 +278,7 @@ public class GetContextStoreResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The last update time of the context store. This value is a Unix timestamp in seconds.</p>
+         * <p>The update time.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -359,7 +359,7 @@ public class GetContextStoreResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the Log Service logstore.</p>
+             * <p>The name of the Simple Log Service Logstore.</p>
              * 
              * <strong>example:</strong>
              * <p>sls-test-logstore</p>
@@ -370,7 +370,7 @@ public class GetContextStoreResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the Log Service project.</p>
+             * <p>The name of the Simple Log Service project.</p>
              * 
              * <strong>example:</strong>
              * <p>sls-test-project</p>
@@ -453,7 +453,7 @@ public class GetContextStoreResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the Log Service logstore.</p>
+             * <p>The name of the Simple Log Service Logstore.</p>
              * 
              * <strong>example:</strong>
              * <p>sls-test-logstore</p>
@@ -464,7 +464,7 @@ public class GetContextStoreResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the Log Service project.</p>
+             * <p>The name of the Simple Log Service project.</p>
              * 
              * <strong>example:</strong>
              * <p>sls-test-project</p>
@@ -475,7 +475,7 @@ public class GetContextStoreResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the configuration takes effect. This value is a Unix timestamp in milliseconds.</p>
+             * <p>The effective start time.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
              * 
              * <strong>example:</strong>
@@ -567,7 +567,7 @@ public class GetContextStoreResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The metadata fields.</p>
+             * <p>The metadata field.</p>
              */
             public Builder metadataField(java.util.Map<String, String> metadataField) {
                 this.metadataField = metadataField;

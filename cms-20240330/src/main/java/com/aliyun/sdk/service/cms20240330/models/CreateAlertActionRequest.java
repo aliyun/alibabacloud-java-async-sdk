@@ -224,7 +224,7 @@ public class CreateAlertActionRequest extends Request {
         }
 
         /**
-         * <p>The unique identifier of the alert action integration.</p>
+         * <p>The unique identifier of the action integration.</p>
          * 
          * <strong>example:</strong>
          * <p>testId</p>
@@ -236,7 +236,7 @@ public class CreateAlertActionRequest extends Request {
         }
 
         /**
-         * <p>The name of the alert action integration.</p>
+         * <p>The name of the action integration.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -249,7 +249,7 @@ public class CreateAlertActionRequest extends Request {
         }
 
         /**
-         * <p>The event bus parameters.</p>
+         * <p>The event bus.</p>
          */
         public Builder ebParam(EbParam ebParam) {
             this.putBodyParameter("ebParam", ebParam);
@@ -312,7 +312,7 @@ public class CreateAlertActionRequest extends Request {
         }
 
         /**
-         * <p>The alert action integration type.</p>
+         * <p>The action integration type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -441,7 +441,7 @@ public class CreateAlertActionRequest extends Request {
             }
 
             /**
-             * <p>The region.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-heyuan</p>
@@ -957,7 +957,7 @@ public class CreateAlertActionRequest extends Request {
             }
 
             /**
-             * <p>The integration webhook for PagerDuty. Both V1 and V2 are supported.</p>
+             * <p>The integration webhook for PagerDuty. V1 and V2 are supported.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://events.pagerduty.com/v2/enqueue">https://events.pagerduty.com/v2/enqueue</a></p>
@@ -1169,7 +1169,7 @@ public class CreateAlertActionRequest extends Request {
             }
 
             /**
-             * <p>The request headers.</p>
+             * <p>The request header information.</p>
              */
             public Builder headers(java.util.Map<String, String> headers) {
                 this.headers = headers;
@@ -1188,7 +1188,7 @@ public class CreateAlertActionRequest extends Request {
             }
 
             /**
-             * <p>The alert callback URL.</p>
+             * <p>The URL for the alert callback.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://www.test.com">http://www.test.com</a></p>

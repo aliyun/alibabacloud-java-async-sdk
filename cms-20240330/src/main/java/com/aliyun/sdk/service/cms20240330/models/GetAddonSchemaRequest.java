@@ -152,7 +152,7 @@ public class GetAddonSchemaRequest extends Request {
         }
 
         /**
-         * <p>The language environment. Default value: zh. Valid values: zh, en.</p>
+         * <p>The language. Default value: zh. Valid values: zh, en.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -176,7 +176,7 @@ public class GetAddonSchemaRequest extends Request {
         }
 
         /**
-         * <p>The environment type. Valid values: CS (container), ECS.</p>
+         * <p>The environment type. Valid values: CS, ECS.</p>
          * 
          * <strong>example:</strong>
          * <p>CS</p>
@@ -188,7 +188,7 @@ public class GetAddonSchemaRequest extends Request {
         }
 
         /**
-         * <p>The component version.</p>
+         * <p>The add-on version.</p>
          * 
          * <strong>example:</strong>
          * <p>0.1.1</p>

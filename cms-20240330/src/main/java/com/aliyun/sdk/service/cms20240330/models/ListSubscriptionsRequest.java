@@ -237,7 +237,7 @@ public class ListSubscriptionsRequest extends Request {
         }
 
         /**
-         * <p>The UUID of the AI agent. This parameter is used to filter subscriptions for a specified AI agent.</p>
+         * <p>The UUID of the AI agent. This parameter is used to filter subscriptions of a specific AI agent.</p>
          * 
          * <strong>example:</strong>
          * <p>agent-rca-001</p>
@@ -251,8 +251,8 @@ public class ListSubscriptionsRequest extends Request {
         /**
          * <p>The sort order of the returned versions. Valid values:</p>
          * <ul>
-         * <li>asc: Ascending order. </li>
-         * <li>desc: Descending order.</li>
+         * <li>asc: ascending order </li>
+         * <li>desc: descending order</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -301,7 +301,7 @@ public class ListSubscriptionsRequest extends Request {
         }
 
         /**
-         * <p>The UUID of the notification policy. This parameter is used to filter subscriptions that are bound to a specified notification policy. The value is a 32-character string.</p>
+         * <p>The UUID of the notification policy. This parameter is used to filter subscriptions that are bound to a specific notification policy. The value is a 32-character string.</p>
          * 
          * <strong>example:</strong>
          * <p>1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d</p>
@@ -349,7 +349,11 @@ public class ListSubscriptionsRequest extends Request {
         }
 
         /**
-         * <p>The type of the subscription. Valid values: NORMAL (standard subscription) and AI_AGENT (AI agent subscription).</p>
+         * <p>The type of the subscription. Valid values:</p>
+         * <ul>
+         * <li>NORMAL: standard subscription</li>
+         * <li>AI_AGENT: AI agent subscription</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>NORMAL</p>
@@ -361,7 +365,7 @@ public class ListSubscriptionsRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> This is an internal reserved parameter. Do not use it.</p>
+         * <p><strong>[Deprecated]</strong> This is an internal reserved parameter. Do not use this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

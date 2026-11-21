@@ -199,6 +199,9 @@ public class CreateAlertWebhookRequest extends Request {
 
         /**
          * <p>The HTTP request headers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;X-Total-Count&quot;:&quot;0&quot;}</p>
          */
         public Builder headers(java.util.Map<String, String> headers) {
             this.putBodyParameter("headers", headers);

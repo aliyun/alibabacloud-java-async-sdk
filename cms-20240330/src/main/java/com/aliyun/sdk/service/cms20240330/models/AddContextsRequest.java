@@ -499,7 +499,7 @@ public class AddContextsRequest extends Request {
             }
 
             /**
-             * <p>The mutability.</p>
+             * <p>The immutable attribute.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>

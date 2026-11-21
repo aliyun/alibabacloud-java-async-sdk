@@ -132,7 +132,40 @@ public class MergeOncallSchedule extends TeaModel {
         } 
 
         /**
-         * <p>The extension details.</p>
+         * <p>The extended details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;oncallScheduleId&quot;: &quot;testId&quot;,
+         *   &quot;oncallScheduleName&quot;: &quot;testName&quot;,
+         *   &quot;rotations&quot;: [
+         *     {
+         *       &quot;activeDays&quot;: [
+         *         1
+         *       ],
+         *       &quot;contacts&quot;: [
+         *         &quot;testId&quot;
+         *       ],
+         *       &quot;rotationEndTime&quot;: &quot;24:00&quot;,
+         *       &quot;rotationName&quot;: &quot;testName&quot;,
+         *       &quot;rotationStartTime&quot;: &quot;00:00&quot;,
+         *       &quot;shiftRecurrenceFrequency&quot;: &quot;WEEKLY&quot;,
+         *       &quot;startDate&quot;: &quot;2024-01-01&quot;,
+         *       &quot;timeZone&quot;: &quot;Asia/Shanghai&quot;,
+         *       &quot;shiftLength&quot;: 3
+         *     }
+         *   ],
+         *   &quot;shiftRobotId&quot;: &quot;testId&quot;,
+         *   &quot;substitudes&quot;: [
+         *     {
+         *       &quot;startTime&quot;: &quot;2024-10-10 09:00&quot;,
+         *       &quot;endTime&quot;: &quot;2024-10-15 18:00&quot;,
+         *       &quot;replacedContactId&quot;: &quot;testId&quot;,
+         *       &quot;contactId&quot;: &quot;testId&quot;
+         *     }
+         *   ],
+         *   &quot;workspace&quot;: &quot;default-cms-5884500827389836-cn-hangzhou&quot;
+         * }</p>
          */
         public Builder detail(java.util.Map<String, ?> detail) {
             this.detail = detail;
@@ -151,7 +184,7 @@ public class MergeOncallSchedule extends TeaModel {
         }
 
         /**
-         * <p>The last modified time.</p>
+         * <p>The last modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>1700000000</p>
@@ -165,7 +198,7 @@ public class MergeOncallSchedule extends TeaModel {
          * <p>The unique identifier.</p>
          * 
          * <strong>example:</strong>
-         * <p>SampleValue</p>
+         * <p>Sample value</p>
          */
         public Builder identifier(String identifier) {
             this.identifier = identifier;
@@ -173,10 +206,10 @@ public class MergeOncallSchedule extends TeaModel {
         }
 
         /**
-         * <p>The schedule name.</p>
+         * <p>The name of the schedule.</p>
          * 
          * <strong>example:</strong>
-         * <p>SampleName</p>
+         * <p>Sample name</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -187,7 +220,7 @@ public class MergeOncallSchedule extends TeaModel {
          * <p>The source.</p>
          * 
          * <strong>example:</strong>
-         * <p>SampleValue</p>
+         * <p>Sample value</p>
          */
         public Builder source(String source) {
             this.source = source;
@@ -198,7 +231,7 @@ public class MergeOncallSchedule extends TeaModel {
          * <p>The workspace.</p>
          * 
          * <strong>example:</strong>
-         * <p>SampleValue</p>
+         * <p>Sample value</p>
          */
         public Builder workspace(String workspace) {
             this.workspace = workspace;

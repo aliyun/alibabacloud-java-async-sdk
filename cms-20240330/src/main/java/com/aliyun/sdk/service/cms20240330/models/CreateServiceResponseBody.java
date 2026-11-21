@@ -80,7 +80,7 @@ public class CreateServiceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ARMS application ID compatible with legacy versions.</p>
+         * <p>The ARMS application ID for backward compatibility.</p>
          * 
          * <strong>example:</strong>
          * <p>cwzxvuc6uo@d60088ad4797d26</p>

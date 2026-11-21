@@ -225,7 +225,7 @@ public class CreateDataPipelineRequest extends Request {
         }
 
         /**
-         * <p>The output destination.</p>
+         * <p>The output destinations.</p>
          */
         public Builder sinks(java.util.List<Sinks> sinks) {
             this.putBodyParameter("sinks", sinks);
@@ -516,7 +516,7 @@ public class CreateDataPipelineRequest extends Request {
             } 
 
             /**
-             * <p>The length of the prefix to retain.</p>
+             * <p>The length of the retained prefix.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -527,7 +527,7 @@ public class CreateDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The length of the suffix to retain.</p>
+             * <p>The length of the retained suffix.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -538,7 +538,7 @@ public class CreateDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The sensitive keyword.</p>
+             * <p>The sensitive keywords.</p>
              */
             public Builder keys(java.util.List<String> keys) {
                 this.keys = keys;
@@ -549,9 +549,7 @@ public class CreateDataPipelineRequest extends Request {
              * <p>The mask character.</p>
              * 
              * <strong>example:</strong>
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <h1></h1>
              */
             public Builder maskChar(String maskChar) {
                 this.maskChar = maskChar;
@@ -559,7 +557,7 @@ public class CreateDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The data masking mode.</p>
+             * <p>The masking mode.</p>
              * 
              * <strong>example:</strong>
              * <p>keyword</p>
@@ -570,7 +568,7 @@ public class CreateDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The built-in sensitive type.</p>
+             * <p>The built-in sensitive data types.</p>
              */
             public Builder types(java.util.List<String> types) {
                 this.types = types;
@@ -873,7 +871,7 @@ public class CreateDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The metric name.</p>
+             * <p>The metric names.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;http_requests_total&quot;]</p>
@@ -1384,6 +1382,9 @@ public class CreateDataPipelineRequest extends Request {
 
             /**
              * <p>The extension parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;vendor&quot;:&quot;example&quot;}</p>
              */
             public Builder parameters(java.util.Map<String, ?> parameters) {
                 this.parameters = parameters;
@@ -1897,7 +1898,7 @@ public class CreateDataPipelineRequest extends Request {
             } 
 
             /**
-             * <p>The length of the prefix to retain.</p>
+             * <p>The length of the retained prefix.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -1908,7 +1909,7 @@ public class CreateDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The length of the suffix to retain.</p>
+             * <p>The length of the retained suffix.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -1919,7 +1920,7 @@ public class CreateDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The sensitive keyword.</p>
+             * <p>The sensitive keywords.</p>
              */
             public Builder keys(java.util.List<String> keys) {
                 this.keys = keys;
@@ -1930,9 +1931,7 @@ public class CreateDataPipelineRequest extends Request {
              * <p>The mask character.</p>
              * 
              * <strong>example:</strong>
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <h1></h1>
              */
             public Builder maskChar(String maskChar) {
                 this.maskChar = maskChar;
@@ -1940,7 +1939,7 @@ public class CreateDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The data masking mode.</p>
+             * <p>The masking mode.</p>
              * 
              * <strong>example:</strong>
              * <p>keyword</p>
@@ -1951,7 +1950,7 @@ public class CreateDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The built-in sensitive type.</p>
+             * <p>The built-in sensitive data types.</p>
              */
             public Builder types(java.util.List<String> types) {
                 this.types = types;
@@ -2254,7 +2253,7 @@ public class CreateDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The metric name.</p>
+             * <p>The metric names.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;http_requests_total&quot;]</p>
@@ -2765,6 +2764,9 @@ public class CreateDataPipelineRequest extends Request {
 
             /**
              * <p>The extension parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;vendor&quot;:&quot;example&quot;}</p>
              */
             public Builder parameters(java.util.Map<String, ?> parameters) {
                 this.parameters = parameters;

@@ -253,7 +253,7 @@ public class UpdateDataPipelineRequest extends Request {
         }
 
         /**
-         * <p>The output destinations.</p>
+         * <p>The output destination.</p>
          */
         public Builder sinks(java.util.List<Sinks> sinks) {
             this.putBodyParameter("sinks", sinks);
@@ -544,7 +544,7 @@ public class UpdateDataPipelineRequest extends Request {
             } 
 
             /**
-             * <p>The length of the retained prefix.</p>
+             * <p>The length of the prefix to retain.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -555,7 +555,7 @@ public class UpdateDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The length of the retained suffix.</p>
+             * <p>The length of the suffix to retain.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -577,9 +577,7 @@ public class UpdateDataPipelineRequest extends Request {
              * <p>The mask character.</p>
              * 
              * <strong>example:</strong>
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <h1></h1>
              */
             public Builder maskChar(String maskChar) {
                 this.maskChar = maskChar;
@@ -713,7 +711,7 @@ public class UpdateDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The name of the field or dimension.</p>
+             * <p>The field or dimension name.</p>
              * 
              * <strong>example:</strong>
              * <p>name</p>
@@ -1070,7 +1068,7 @@ public class UpdateDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The metric name scope.</p>
+             * <p>The scope of metric names.</p>
              */
             public Builder metricName(MetricName metricName) {
                 this.metricName = metricName;
@@ -1078,7 +1076,7 @@ public class UpdateDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The service name scope.</p>
+             * <p>The scope of service names.</p>
              */
             public Builder serviceName(ServiceName serviceName) {
                 this.serviceName = serviceName;
@@ -1132,7 +1130,7 @@ public class UpdateDataPipelineRequest extends Request {
             } 
 
             /**
-             * <p>The service name list.</p>
+             * <p>The list of service names.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;checkout-*&quot;,&quot;order-service&quot;]</p>
@@ -1412,6 +1410,9 @@ public class UpdateDataPipelineRequest extends Request {
 
             /**
              * <p>The extended parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;vendor&quot;:&quot;example&quot;}</p>
              */
             public Builder parameters(java.util.Map<String, ?> parameters) {
                 this.parameters = parameters;
@@ -1544,7 +1545,7 @@ public class UpdateDataPipelineRequest extends Request {
             } 
 
             /**
-             * <p>The processor configuration.</p>
+             * <p>The configuration of the processor.</p>
              */
             public Builder config(Config config) {
                 this.config = config;
@@ -1552,7 +1553,7 @@ public class UpdateDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The processor name.</p>
+             * <p>The name of the processor.</p>
              * 
              * <strong>example:</strong>
              * <p>drop-health-check</p>
@@ -1563,7 +1564,7 @@ public class UpdateDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The processor type.</p>
+             * <p>The type of the processor.</p>
              * 
              * <strong>example:</strong>
              * <p>filter</p>
@@ -1633,7 +1634,7 @@ public class UpdateDataPipelineRequest extends Request {
             } 
 
             /**
-             * <p>The name of the output.</p>
+             * <p>The output name.</p>
              * 
              * <strong>example:</strong>
              * <p>checkout_route</p>
@@ -1925,7 +1926,7 @@ public class UpdateDataPipelineRequest extends Request {
             } 
 
             /**
-             * <p>The length of the retained prefix.</p>
+             * <p>The length of the prefix to retain.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -1936,7 +1937,7 @@ public class UpdateDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The length of the retained suffix.</p>
+             * <p>The length of the suffix to retain.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -1958,9 +1959,7 @@ public class UpdateDataPipelineRequest extends Request {
              * <p>The mask character.</p>
              * 
              * <strong>example:</strong>
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <h1></h1>
              */
             public Builder maskChar(String maskChar) {
                 this.maskChar = maskChar;
@@ -2094,7 +2093,7 @@ public class UpdateDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The name of the field or dimension.</p>
+             * <p>The field or dimension name.</p>
              * 
              * <strong>example:</strong>
              * <p>serviceName</p>
@@ -2451,7 +2450,7 @@ public class UpdateDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The metric name scope.</p>
+             * <p>The scope of metric names.</p>
              */
             public Builder metricName(ScopeMetricName metricName) {
                 this.metricName = metricName;
@@ -2459,7 +2458,7 @@ public class UpdateDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The service name scope.</p>
+             * <p>The scope of service names.</p>
              */
             public Builder serviceName(ScopeServiceName serviceName) {
                 this.serviceName = serviceName;
@@ -2513,7 +2512,7 @@ public class UpdateDataPipelineRequest extends Request {
             } 
 
             /**
-             * <p>The service name list.</p>
+             * <p>The list of service names.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;checkout-*&quot;,&quot;order-service&quot;]</p>
@@ -2793,6 +2792,9 @@ public class UpdateDataPipelineRequest extends Request {
 
             /**
              * <p>The extended parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;vendor&quot;:&quot;example&quot;}</p>
              */
             public Builder parameters(java.util.Map<String, ?> parameters) {
                 this.parameters = parameters;
@@ -2925,7 +2927,7 @@ public class UpdateDataPipelineRequest extends Request {
             } 
 
             /**
-             * <p>The processor configuration.</p>
+             * <p>The configuration of the processor.</p>
              */
             public Builder config(ProcessorsConfig config) {
                 this.config = config;
@@ -2933,7 +2935,7 @@ public class UpdateDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The processor name.</p>
+             * <p>The name of the processor.</p>
              * 
              * <strong>example:</strong>
              * <p>drop-health-check</p>
@@ -2944,7 +2946,7 @@ public class UpdateDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The processor type.</p>
+             * <p>The type of the processor.</p>
              * 
              * <strong>example:</strong>
              * <p>filter</p>
@@ -3053,7 +3055,7 @@ public class UpdateDataPipelineRequest extends Request {
             } 
 
             /**
-             * <p>The dataset list.</p>
+             * <p>The list of datasets.</p>
              */
             public Builder datasets(java.util.List<String> datasets) {
                 this.datasets = datasets;
@@ -3072,7 +3074,7 @@ public class UpdateDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The output destination name.</p>
+             * <p>The name of the output destination.</p>
              * 
              * <strong>example:</strong>
              * <p>error-archive</p>
@@ -3094,7 +3096,7 @@ public class UpdateDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The output destination type.</p>
+             * <p>The type of the output destination.</p>
              * 
              * <strong>example:</strong>
              * <p>logstore</p>
@@ -3269,7 +3271,7 @@ public class UpdateDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The start position.</p>
+             * <p>The start point for reading.</p>
              * 
              * <strong>example:</strong>
              * <p>latest</p>
@@ -3280,7 +3282,7 @@ public class UpdateDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The backfill time range.</p>
+             * <p>The time range for backfilling.</p>
              */
             public Builder timeRange(TimeRange timeRange) {
                 this.timeRange = timeRange;
@@ -3355,7 +3357,7 @@ public class UpdateDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The data source type.</p>
+             * <p>The type of the data source.</p>
              * 
              * <strong>example:</strong>
              * <p>traces-default</p>

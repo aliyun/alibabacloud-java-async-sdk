@@ -93,7 +93,7 @@ public class EffectTimeRange extends TeaModel {
         } 
 
         /**
-         * <p>The values 0 to 6 indicate Sunday to Saturday.</p>
+         * <p>The day of the week, where 0 to 6 indicate Sunday to Saturday.</p>
          */
         public Builder dayInWeek(java.util.List<Integer> dayInWeek) {
             this.dayInWeek = dayInWeek;

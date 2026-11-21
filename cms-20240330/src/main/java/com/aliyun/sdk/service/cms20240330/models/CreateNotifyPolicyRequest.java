@@ -97,7 +97,7 @@ public class CreateNotifyPolicyRequest extends Request {
         }
 
         /**
-         * <p>The request body, which contains the complete NotifyPolicyConfig configuration object for the notification policy.</p>
+         * <p>The request body, which is the complete configuration object NotifyPolicyConfig for the notification policy.</p>
          */
         public Builder body(NotifyPolicyConfig body) {
             this.putBodyParameter("body", body);
@@ -106,7 +106,7 @@ public class CreateNotifyPolicyRequest extends Request {
         }
 
         /**
-         * <p>The workspace ID, which isolates notification policy resources across different business workspaces.</p>
+         * <p>The workspace ID, which is used to isolate notification policy resources for different business workspaces.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

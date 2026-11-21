@@ -197,7 +197,7 @@ public class NotifyPolicy extends TeaModel {
         } 
 
         /**
-         * <p>The creation time. The value is a UNIX timestamp string in milliseconds.</p>
+         * <p>The creation time, which is a UNIX timestamp string in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1710000000000</p>
@@ -208,10 +208,10 @@ public class NotifyPolicy extends TeaModel {
         }
 
         /**
-         * <p>The policy description.</p>
+         * <p>The description of the policy.</p>
          * 
          * <strong>example:</strong>
-         * <p>生产环境告警通知策略</p>
+         * <p>Production environment alert notification policy</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -219,7 +219,7 @@ public class NotifyPolicy extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the policy is enabled. This is a read-only field controlled by the Enable or Disable operation.</p>
+         * <p>Indicates whether the policy is enabled. This field is read-only and is controlled by the Enable or Disable API operations.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -233,7 +233,7 @@ public class NotifyPolicy extends TeaModel {
          * <p>The policy name.</p>
          * 
          * <strong>example:</strong>
-         * <p>生产环境告警通知策略</p>
+         * <p>Production environment alert notification policy</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -241,7 +241,7 @@ public class NotifyPolicy extends TeaModel {
         }
 
         /**
-         * <p>The notification policy sub-entity details.</p>
+         * <p>The details of the notification policy sub-entity.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -252,7 +252,7 @@ public class NotifyPolicy extends TeaModel {
         }
 
         /**
-         * <p>The response plan sub-entity details.</p>
+         * <p>The details of the response plan sub-entity.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -263,7 +263,7 @@ public class NotifyPolicy extends TeaModel {
         }
 
         /**
-         * <p>The subscription sub-entity details.</p>
+         * <p>The details of the subscription sub-entity.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -274,7 +274,7 @@ public class NotifyPolicy extends TeaModel {
         }
 
         /**
-         * <p>The update time. The value is a UNIX timestamp string in milliseconds.</p>
+         * <p>The update time, which is a UNIX timestamp string in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1710000000000</p>
@@ -285,7 +285,7 @@ public class NotifyPolicy extends TeaModel {
         }
 
         /**
-         * <p>The Alibaba Cloud account UID.</p>
+         * <p>The UID of the Alibaba Cloud account.</p>
          * 
          * <strong>example:</strong>
          * <p>1234567890123456</p>
@@ -307,7 +307,7 @@ public class NotifyPolicy extends TeaModel {
         }
 
         /**
-         * <p>The optimistic locking version number.</p>
+         * <p>The optimistic lock version number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

@@ -414,6 +414,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>请通过目标地域的服务访问端点或 SDK 地域配置指定请求地域。服务端从请求上下文读取地域，不通过本接口请求体中的 RegionId 指定。投递功能的地域支持范围由服务端地域配置控制。</p>
+     * 
      * @param request the request parameters of CreateDeliveryTask  CreateDeliveryTaskRequest
      * @return CreateDeliveryTaskResponse
      */
@@ -472,8 +475,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Creates a silence policy in a specified workspace. A silence policy filters events by using filterSetting. When the policy is enabled and the current time hits the configured effective period, the hit events do not trigger subscribe notifications, direct notifications, or global subscribe notifications, but the events are still stored normally.
-     * When you create a silence policy, maintainWindowName and filterSetting are required, and filterSetting must contain at least one condition. You can leave the effective period unconfigured, in which case the policy does not hit any events. If you configure effective, you must also configure at least one of startTime, endTime, or effectTimeRange. Otherwise, validation failed. If the policy name already exists in the same workspace, InvalidParameterValue is returned. After the policy is created, the silence policy ID is returned.</p>
+     * <p>Creates a silence policy in a specified workspace. A silence policy filters events by using filterSetting. When the policy is enabled and the current time hits the configured effective period rules, the hit events do not trigger subscribe notifications, direct notifications, or global subscribe notifications, but the events are still stored normally.
+     * When you create a silence policy, maintainWindowName and filterSetting are required, and filterSetting must contain at least one condition. You can choose not to configure any effective period. In this case, the policy does not hit any events. If you configure effective, you must also configure at least one of startTime, endTime, or effectTimeRange. Otherwise, the validation failed. If the policy name already exists in the same workspace, InvalidParameterValue is returned. After the policy is created, the silence policy ID is returned.</p>
      * 
      * @param request the request parameters of CreateMaintainWindow  CreateMaintainWindowRequest
      * @return CreateMaintainWindowResponse
@@ -512,7 +515,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Creates a notification policy in a specified workspace. In the request body NotifyPolicyConfig, notifyStrategy is required, while subscription and responsePlan are optional. Upon successful creation, the generated policy UUID and complete policy details are returned. If a duplicate policy name exists in the same workspace, ConflictName is returned.</p>
+     * <p>Creates a notification policy in a specified workspace. In the NotifyPolicyConfig request body, notifyStrategy is required, while subscription and responsePlan are optional. Upon successful creation, the generated policy UUID and complete policy details are returned. If a duplicate Policy Name exists in the same workspace, ConflictName is returned.</p>
      * 
      * @param request the request parameters of CreateNotifyPolicy  CreateNotifyPolicyRequest
      * @return CreateNotifyPolicyResponse
@@ -691,9 +694,9 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <ul>
      * <li>heapdump: Triggers a JVM heap dump.</li>
      * <li>LiveDebug Probe: Dynamically instruments target methods (logs, snapshots, metrics, spans, etc.).</li>
-     * <li>LiveDebug Command: One-time proactive inspection (OGNL, decompilation, thread or memory information, etc.).</li>
-     * <li>LiveDebug Code Replace: Hot code replacement.
-     * After the task is created, a taskId is returned. You can subsequently manage the task by using GetServiceTask, ListServiceTask, or DeleteServiceTask. After a LiveDebug task is created, the configuration is synchronized to ConfigServer.</li>
+     * <li>LiveDebug Command: Performs one-time proactive inspections (OGNL, decompilation, thread/memory information, etc.).</li>
+     * <li>LiveDebug Code Replace: Hot-swaps code.
+     * After the task is created, a taskId is returned. You can use GetServiceTask, ListServiceTask, or DeleteServiceTask to manage the task. After a LiveDebug task is created, the configuration is synchronized to ConfigServer.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateServiceTask  CreateServiceTaskRequest
@@ -771,6 +774,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>请先通过 ListIntegrationPolicies 查询已存在的接入策略，取得 <code>policyId</code>；再使用 ListAddonReleases 查询该策略下的组件接入记录，取得 <code>addonReleaseName</code>，最后调用本接口删除对应记录。尚无接入策略时，可先使用 CreateIntegrationPolicy 创建。</p>
+     * 
      * @param request the request parameters of DeleteAddonRelease  DeleteAddonReleaseRequest
      * @return DeleteAddonReleaseResponse
      */
@@ -1117,7 +1123,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Deletes a specified silence policy. After the deletion succeeds, the service refreshes the runtime cache through asynchronous messages. Therefore, events may still be processed based on the deleted policy for a short period of time. If the specified silence policy does not exist, a ResourceNotFound error is returned.</p>
+     * <p>Deletes a specified silence policy. After the deletion succeeds, the service refreshes the runtime cache through asynchronous messages. Therefore, events may still be processed according to the pre-deletion policy for a short period. If the specified silence policy does not exist, ResourceNotFound is returned.</p>
      * 
      * @param request the request parameters of DeleteMaintainWindow  DeleteMaintainWindowRequest
      * @return DeleteMaintainWindowResponse
@@ -1192,7 +1198,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Deletes a notification policy by specifying the workspace and uuid. Returns success to indicate the deletion result and the uuid of the deleted policy.</p>
+     * <p>Deletes a notification policy by specifying the workspace and UUID. Returns a success flag to indicate the deletion result and the UUID of the deleted policy.</p>
      * 
      * @param request the request parameters of DeleteNotifyPolicy  DeleteNotifyPolicyRequest
      * @return DeleteNotifyPolicyResponse
@@ -1330,7 +1336,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Deletes a created service association entry.</p>
+     * <p>Deletes an existing service association entry.</p>
      * 
      * @param request the request parameters of DeleteServiceRecord  DeleteServiceRecordRequest
      * @return DeleteServiceRecordResponse
@@ -1351,9 +1357,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Deletes a specified service task by taskId.
-     * heapdump: Simultaneously deletes the corresponding heap dump record.
-     * LiveDebug: After deleting the task record, synchronously updates the live_debug aggregation configuration on ConfigServer.</p>
+     * <p>Deletes a specified service task by task ID.
+     * heapdump: also deletes the corresponding heap dump record.
+     * LiveDebug: synchronously updates the live_debug aggregation configuration on ConfigServer after the task record is deleted.</p>
      * 
      * @param request the request parameters of DeleteServiceTask  DeleteServiceTaskRequest
      * @return DeleteServiceTaskResponse
@@ -1431,7 +1437,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Deletes Umodel data from a specified workspace.</p>
+     * <p>Deletes Umodel data in a specified workspace.</p>
      * 
      * @param request the request parameters of DeleteUmodelData  DeleteUmodelDataRequest
      * @return DeleteUmodelDataResponse
@@ -1470,7 +1476,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of CloudMonitor monitoring metrics metadata.</p>
+     * <p>Queries the details of monitoring metrics metadata in CloudMonitor.</p>
      * 
      * @param request the request parameters of DescribeMetricMetaList  DescribeMetricMetaListRequest
      * @return DescribeMetricMetaListResponse
@@ -1509,7 +1515,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Pauses a specified silence policy. After the policy is paused, the service refreshes the runtime cache by using asynchronous messages. After the refresh is complete, the policy no longer participates in event silence evaluation. Events may still be processed based on the pre-pause state for a short period of time. If the specified silence policy does not exist, a ResourceNotFound error is returned.</p>
+     * <p>Pauses a specified silence policy. After the pause succeeds, the service refreshes the runtime cache through asynchronous messages. After the refresh is complete, the policy no longer participates in event silencing evaluation, but events may still be processed based on the pre-pause state for a short period. If the specified silence policy does not exist, ResourceNotFound is returned.</p>
      * 
      * @param request the request parameters of DisableMaintainWindow  DisableMaintainWindowRequest
      * @return DisableMaintainWindowResponse
@@ -1530,7 +1536,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Disables a notification policy by specifying the workspace and uuid (path parameter). Returns success and the policy uuid.</p>
+     * <p>Disables a notification policy by specifying the workspace and UUID path parameters. Returns the success status and the UUID of the policy.</p>
      * 
      * @param request the request parameters of DisableNotifyPolicy  DisableNotifyPolicyRequest
      * @return DisableNotifyPolicyResponse
@@ -1569,7 +1575,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Enables a specified silence policy. After the policy is enabled, the service refreshes the runtime cache through asynchronous messages. After the refresh is complete, events that match the filter conditions of the policy and fall within the effective period do not trigger notifications. Events may still be processed based on the pre-enablement state for a short period. If the specified silence policy does not exist, a ResourceNotFound error is returned.</p>
+     * <p>Enables a specified silence policy. After the policy is enabled, the service refreshes the runtime cache through asynchronous messages. After the refresh is complete, events that hit the filter conditions of the policy and fall within the effective period do not trigger notifications. However, events may still be processed based on the pre-enablement state for a short period. If the specified silence policy does not exist, ResourceNotFound is returned.</p>
      * 
      * @param request the request parameters of EnableMaintainWindow  EnableMaintainWindowRequest
      * @return EnableMaintainWindowResponse
@@ -1590,7 +1596,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Enables a notification policy by specifying the workspace and uuid path parameters. Returns success and the policy uuid.</p>
+     * <p>Enables a notification policy by specifying the workspace and UUID as path parameters. Returns the success status and the UUID of the policy.</p>
      * 
      * @param request the request parameters of EnableNotifyPolicy  EnableNotifyPolicyRequest
      * @return EnableNotifyPolicyResponse
@@ -1622,6 +1628,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<EnableSubscriptionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves or creates a shared Prometheus instance for a workspace. If the instance does not exist, it is created. If it already exists, the existing instance is returned. Currently, only shareScope=Workspace is supported. A workspace corresponds to only one shared instance in the requested region, and the instance name is generated by the server. The caller identity is the user. If the workspace does not exist, a 404 error is returned.</p>
+     * 
+     * @param request the request parameters of EnsureSharedPrometheusInstance  EnsureSharedPrometheusInstanceRequest
+     * @return EnsureSharedPrometheusInstanceResponse
+     */
+    @Override
+    public CompletableFuture<EnsureSharedPrometheusInstanceResponse> ensureSharedPrometheusInstance(EnsureSharedPrometheusInstanceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("EnsureSharedPrometheusInstance").setMethod(HttpMethod.POST).setPathRegex("/shared-prometheus-instances").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EnsureSharedPrometheusInstanceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EnsureSharedPrometheusInstanceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1668,7 +1695,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example of modifying alert template <code>123456</code> of version <code>1</code>. The alert level is changed to <code>Critical</code>, the statistical method to <code>Average</code>, the threshold comparison operator to <code>GreaterThanOrEqualToThreshold</code>, the threshold to <code>90</code>, and the number of retries to <code>3</code>. The response indicates that the alert template was modified successfully.</p>
+     * <p>This topic provides an example of modifying the alert template <code>123456</code> of version <code>1</code>. The alert level is changed to <code>Critical</code>, the statistical method to <code>Average</code>, the threshold comparison operator to <code>GreaterThanOrEqualToThreshold</code>, the threshold to <code>90</code>, and the number of retries to <code>3</code>. The response indicates that the alert template was successfully modified.</p>
      * 
      * @param request the request parameters of GetAddonCodeTemplate  GetAddonCodeTemplateRequest
      * @return GetAddonCodeTemplateResponse
@@ -1802,10 +1829,10 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>This operation queries all entities under a specific cloud service within a specified time range.</li>
-     * <li>The <code>from</code> and <code>to</code> parameters specify the time range for the query, represented by timestamps in seconds.</li>
-     * <li>The <code>spl</code> parameter supports filtering or selecting required entities and their properties by using entityStore query statements.</li>
-     * <li>If only specific fields are required, you can use the <code>project</code> clause in <code>spl</code> to filter them.</li>
+     * <li>This operation queries all entities of a specific cloud service within a specified time range.</li>
+     * <li>The from and to parameters specify the time range for the query, represented by timestamps in seconds.</li>
+     * <li>The spl parameter supports filtering or selecting required entities and their properties by using entityStore query statements.</li>
+     * <li>If you need only specific fields, you can use the project clause in spl to filter them.</li>
      * <li>The response contains the specific property values of each entity and the corresponding list of property names for easy parsing and processing.</li>
      * </ul>
      * 
@@ -1828,7 +1855,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The product and service request parameters cannot be specified in the same request.</p>
+     * <p>You cannot specify both the product and service parameters at the same time.</p>
      * 
      * @param request the request parameters of GetCmsService  GetCmsServiceRequest
      * @return GetCmsServiceResponse
@@ -1905,6 +1932,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>调用前请先通过 ListWorkspaces 查询已有工作空间，或通过 PutWorkspace 创建工作空间。 在该工作空间中通过 ListDatasets 查询数据集，或通过 CreateDataset 创建数据集后，使用实际的 workspace 和 datasetName 查询。
+     * 调用前请先通过 ListWorkspaces 查询已有工作空间，或通过 PutWorkspace 创建工作空间。 在该工作空间中通过 ListDatasets 查询数据集，或通过 CreateDataset 创建数据集后，使用实际的 workspace 和 datasetName 查询。</p>
+     * 
      * @param request the request parameters of GetDataset  GetDatasetRequest
      * @return GetDatasetResponse
      */
@@ -1999,7 +2030,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation is not available in the API Explorer.</p>
+     * <p>Retrieves the integration based on the specified ID.</p>
      * 
      * @param request the request parameters of GetIntegrationVersionForCS  GetIntegrationVersionForCSRequest
      * @return GetIntegrationVersionForCSResponse
@@ -2095,9 +2126,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Typically used together with the QueryMetricMeta operation for querying metrics and the QueryMetricList/QueryMetricLast operation for querying monitoring data.</p>
+     * <p>Typically used in conjunction with the QueryMetricMeta operation to query metrics and the QueryMetricList or QueryMetricLast operation to query monitoring data.</p>
      * <h2>Request type</h2>
-     * <p>POST|GET.</p>
+     * <p>POST|GET</p>
      * 
      * @param request the request parameters of GetMemoryStore  GetMemoryStoreRequest
      * @return GetMemoryStoreResponse
@@ -2118,7 +2149,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries a specified notification policy by workspace and UUID. If the UUID does not exist, a ResourceNotFound error is returned.</p>
+     * <p>Queries a specified notification policy by using the workspace ID and UUID. If the UUID does not exist, a ResourceNotFound error is returned.</p>
      * 
      * @param request the request parameters of GetNotifyPolicy  GetNotifyPolicyRequest
      * @return GetNotifyPolicyResponse
@@ -2178,7 +2209,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the details of a Managed Service for Prometheus instance.</p>
+     * <p>Retrieves the details of a Prometheus instance.</p>
      * 
      * @param request the request parameters of GetPrometheusInstance  GetPrometheusInstanceRequest
      * @return GetPrometheusInstanceResponse
@@ -2274,7 +2305,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves a service-linked entry.</p>
+     * <p>Retrieves service association entries.</p>
      * 
      * @param request the request parameters of GetServiceRecord  GetServiceRecordRequest
      * @return GetServiceRecordResponse
@@ -2295,7 +2326,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of a single service task based on the task ID. The response content varies based on the task type. For heapdump, the heap dump task information is returned. For LiveDebug, the task records and fields such as taskConfig (extraInfo) are returned.</p>
+     * <p>Queries the details of a single service task based on the task ID. The response content varies depending on the task type. For heapdump, the response returns heap dump task information. For LiveDebug, the response returns task records and fields such as taskConfig (extraInfo).</p>
      * 
      * @param request the request parameters of GetServiceTask  GetServiceTaskRequest
      * @return GetServiceTaskResponse
@@ -2490,7 +2521,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Uses paging to retrieve the list of alert history records for the CloudMonitor 2.0 monitoring service. You can filter the records by multiple dimensions such as alert rule, alert status, alert level, alert object, workspace, time range, label, notification recipient, observed object type, and data source type. You can also use the structured filter parameter to implement more flexible combined queries.</p>
+     * <p>Performs a paged query by paging to retrieve the monitoring alert history records in CloudMonitor 2.0. You can filter the records by multiple dimensions such as alert rule, alert status, alert level, alert object, workspace, time range, label, notification recipient, observed object type, and data source type. You can also use the structured filter parameter to implement more flexible combined queries.</p>
      * 
      * @param request the request parameters of ListAlertHistories  ListAlertHistoriesRequest
      * @return ListAlertHistoriesResponse
@@ -2529,7 +2560,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the alert robots under the current account. Alert robots act as webhook endpoints for alert notifications and support types such as DingTalk, DingTalk Cool App, Lark, Slack, and WeChat. You can filter the results by robot ID, name, type, and workspace.</p>
+     * <p>This operation queries the list of alert robots under the current account. Alert robots act as webhook receivers for alert notifications and support types such as DingTalk, DingTalk Cool App, Lark, Slack, and WeChat. You can filter the results by robot ID, name, type, and workspace.</p>
      * 
      * @param request the request parameters of ListAlertRobots  ListAlertRobotsRequest
      * @return ListAlertRobotsResponse
@@ -2586,7 +2617,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example of how to create an alert contact group named <code>ECS_Group</code>.</p>
+     * <p>This topic provides an example of creating an alert contact group named <code>ECS_Group</code>.</p>
      * 
      * @param request the request parameters of ListContactGroups  ListContactGroupsRequest
      * @return ListContactGroupsResponse
@@ -2607,7 +2638,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example of creating an alert contact group named <code>ECS_Group</code>.</p>
+     * <p>This topic provides an example of creating the alert contact group <code>ECS_Group</code>.</p>
      * 
      * @param request the request parameters of ListContacts  ListContactsRequest
      * @return ListContactsResponse
@@ -2627,6 +2658,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>调用前请先通过 ListWorkspaces 查询已有工作空间，或通过 PutWorkspace 创建工作空间。 再通过 ListContextStores 查询上下文库，或通过 CreateContextStore 创建上下文库，使用实际的 workspace 和 contextStoreName 查询其 API Key。</p>
+     * 
      * @param request the request parameters of ListContextStoreAPIKeys  ListContextStoreAPIKeysRequest
      * @return ListContextStoreAPIKeysResponse
      */
@@ -2645,6 +2679,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>调用前请先通过 ListWorkspaces 查询已有工作空间，或通过 PutWorkspace 创建工作空间。</p>
+     * 
      * @param request the request parameters of ListContextStores  ListContextStoresRequest
      * @return ListContextStoresResponse
      */
@@ -2859,8 +2896,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>During the effective period of the policy, no notifications are sent for alerts triggered in the application group.</p>
-     * <p>This topic provides an example of creating a policy named <code>PauseNotify</code> to pause alert notifications for the application group <code>7301****</code>. Alerts for this application group are paused from <code>1622949300000</code> to <code>1623208500000</code> (UTC+8 <code>2021-06-06 11:15:00</code> to <code>2021-06-09 11:15:00</code>).</p>
+     * <p>During the effective period of the policy, no notifications are sent for any alerts that occur in the application group. This topic provides an example of creating a pause alert notification policy named <code>PauseNotify</code> for the application group <code>7301****</code>. The application group will pause alerts from <code>1622949300000</code> to <code>1623208500000</code> (UTC+8 <code>2021-06-06 11:15:00</code> to <code>2021-06-09 11:15:00</code>).</p>
      * 
      * @param request the request parameters of ListIntegrationPolicyStorageRequirements  ListIntegrationPolicyStorageRequirementsRequest
      * @return ListIntegrationPolicyStorageRequirementsResponse
@@ -2881,8 +2917,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries a paginated list of silence policies in a specified workspace. You can filter results by policy name (fuzzy match), policy ID (exact match), or enabled status. You can also sort results by creation time, update time, or enabled status. An empty list is returned when no matching items exist. The list items do not include workspaceFilterSetting.
-     * When the number of returned items reaches maxResults, the response may contain a non-empty nextToken. A non-empty nextToken only indicates that more results may be available and does not guarantee that the next page contains data. An empty nextToken indicates the end of paging.</p>
+     * <p>Performs a paged query for the list of silence policies in a specified workspace. Supports fuzzy matching by policy name, exact matching by policy ID, and filtering by enabled status. Also supports sorting by creation time, update time, or enabled status. Returns an empty list normally if no matching item is found. List items do not include workspaceFilterSetting.
+     * When the number of returned items reaches maxResults, the response may contain a non-empty nextToken. A non-empty nextToken only indicates that you can continue to query, but does not guarantee that the next page contains data. An empty nextToken indicates the end of paging.</p>
      * 
      * @param request the request parameters of ListMaintainWindows  ListMaintainWindowsRequest
      * @return ListMaintainWindowsResponse
@@ -2921,7 +2957,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of notification policies in a specified workspace by using paging. Supports fuzzy filtering by name. Returns a list of NotifyPolicySummary lightweight views.</p>
+     * <p>Queries notification policies in a specified workspace by using paging and supports fuzzy filtering by name. The response contains a list of NotifyPolicySummary lightweight views.</p>
      * 
      * @param request the request parameters of ListNotifyPolicies  ListNotifyPoliciesRequest
      * @return ListNotifyPoliciesResponse
@@ -3080,7 +3116,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries a paginated list of service-linked entries.</p>
+     * <p>Retrieves a paginated list of service association entries.</p>
      * 
      * @param request the request parameters of ListServiceRecords  ListServiceRecordsRequest
      * @return ListServiceRecordsResponse
@@ -3103,10 +3139,10 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <p>Lists service tasks under an application by task type.</p>
      * <ul>
-     * <li>type=heapdump: Returns the list of heap dump tasks.</li>
-     * <li>type=pprof: Returns the list of pprof dumps (requires searchCondition).</li>
-     * <li>type=live_debug_*: Returns the list of corresponding LiveDebug tasks.
-     * Supports nextToken/maxResults pagination and searchCondition filtering.</li>
+     * <li>type=heapdump: returns a list of heap dump tasks.</li>
+     * <li>type=pprof: returns a list of pprof dumps (requires searchCondition).</li>
+     * <li>type=live_debug_*: returns a list of corresponding LiveDebug tasks.
+     * Supports pagination with nextToken and maxResults, and filtering with searchCondition.</li>
      * </ul>
      * 
      * @param request the request parameters of ListServiceTask  ListServiceTaskRequest
@@ -3275,7 +3311,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Renders template content in Go template syntax with the provided context data and returns the rendering results for each template. It supports previewing multiple templates, such as title and content, simultaneously to enable real-time preview in frontend template editors.</p>
+     * <p>Renders the provided Go template content with the specified context data and returns the rendering results for each template. Supports previewing multiple templates simultaneously, such as title and content, to enable real-time preview in frontend template editors.</p>
      * 
      * @param request the request parameters of PreviewNotifyTemplate  PreviewNotifyTemplateRequest
      * @return PreviewNotifyTemplateResponse
@@ -3371,9 +3407,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example of setting a threshold alert rule for the <code>cpu_total</code> metric of the <code>i-uf6j91r34rnwawoo****</code> instance in the <code>acs_ecs_dashboard</code> namespace of Elastic Compute Service. The alert contact group for the alert rule is <code>ECS_Group</code>, the alert rule name is <code>test123</code>, the alert rule ID is <code>a151cd6023eacee2f0978e03863cc1697c89508****</code>, the statistical method for the Critical level is <code>Average</code>, the comparison operator for the Critical level is <code>GreaterThanOrEqualToThreshold</code>, the threshold for the Critical level is <code>90</code>, and the number of alert retries for the Critical level is <code>3</code>.</p>
+     * <p>This topic provides an example on how to configure the Settings for a threshold-based alert rule for the <code>cpu_total</code> metric of the <code>i-uf6j91r34rnwawoo****</code> instance in the <code>acs_ecs_dashboard</code> namespace of Elastic Computing Service (ECS) server. The alert contact group for the alert rule is <code>ECS_Group</code>, the alert rule name is <code>test123</code>, the alert rule ID is <code>a151cd6023eacee2f0978e03863cc1697c89508****</code>, the statistical method for the Critical level is <code>Average</code>, the comparison operator for the Critical level is <code>GreaterThanOrEqualToThreshold</code>, the threshold for the Critical level is <code>90</code>, and the number of alert retry attempts for the Critical level is <code>3</code>.</p>
      * <blockquote>
-     * <p>On August 15, 2024, Statistics validation was added. The statistical value can only be the Statistics corresponding to the metric. For more information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">cloud service monitoring metrics</a>.</p>
+     * <p>On August 15, 2024, Statistics validation is increased. The statistical value can only be the Statistics corresponding to the metric. For more information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Alibaba Cloud service monitoring metrics</a>.</p>
      * </blockquote>
      * 
      * @param request the request parameters of SearchMemories  SearchMemoriesRequest
@@ -3630,7 +3666,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <p>Only Alibaba Cloud accounts that have activated Network Analysis and Monitoring can create one-time detection tasks.
-     * This topic provides an example of how to create a one-time detection task. The detection task is named <code>task1</code>, the detection address is <code>http://www.aliyun.com</code>, the detection type is <code>HTTP</code>, and the number of detection points is <code>1</code>.</p>
+     * This topic provides an example on how to create a one-time detection task. The task is named <code>task1</code>, the detection address is <code>http://www.aliyun.com</code>, the detection type is <code>HTTP</code>, and the number of detection points is <code>1</code>.</p>
      * 
      * @param request the request parameters of UpdateContextStore  UpdateContextStoreRequest
      * @return UpdateContextStoreResponse
@@ -3651,7 +3687,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Updates the specified data pipeline with a full candidate configuration.</p>
+     * <p>Modifies the specified data pipeline by using a complete candidate configuration.</p>
      * 
      * @param request the request parameters of UpdateDataPipeline  UpdateDataPipelineRequest
      * @return UpdateDataPipelineResponse
@@ -3726,8 +3762,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Updates the configuration of a specified silence policy. If maintainWindowName is left empty, the original name is retained. The description, filterSetting, effective, effectTimeRange, startTime, and endTime fields are updated based on the values in the request body. If these fields are not provided, they are set to empty. Before submitting changes, call GetMaintainWindow to retrieve the current configuration.
-     * This operation does not modify the enabled status of the policy. To enable or pause a policy, call EnableMaintainWindow or DisableMaintainWindow. Time configuration validation is the same as that for CreateMaintainWindow. If a policy name already exists in the same workspace, the InvalidParameterValue error code is returned. If the specified silence policy does not exist, the ResourceNotFound error code is returned.</p>
+     * <p>Updates the configuration of a specified silence policy. If maintainWindowName is empty, the original name is retained. The description, filterSetting, effective, effectTimeRange, startTime, and endTime fields are updated based on the values in the request body. If these fields are not provided, they are set to empty. Call GetMaintainWindow to obtain the current configuration before you submit modifications.
+     * This operation does not modify the enabled status of the policy. To enable or pause the policy, call EnableMaintainWindow or DisableMaintainWindow. The time configuration validation is the same as that of CreateMaintainWindow. If the policy name is duplicated within the same workspace, InvalidParameterValue is returned. If the specified silence policy does not exist, ResourceNotFound is returned.</p>
      * 
      * @param request the request parameters of UpdateMaintainWindow  UpdateMaintainWindowRequest
      * @return UpdateMaintainWindowResponse
@@ -3784,7 +3820,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Updates a notification policy by workspace and body (containing uuid and version). The version field is an optimistic lock version number that must match the current record on the backend. Otherwise, OptimisticLockFailed is returned. After a successful update, the latest policy details are returned.</p>
+     * <p>Updates a notification policy by using the workspace and the request body that includes the UUID and version. The version is an optimistic lock version number and must match the current record in the backend. Otherwise, an OptimisticLockFailed error is returned. After the update succeeds, the latest policy details are returned.</p>
      * 
      * @param request the request parameters of UpdateNotifyPolicy  UpdateNotifyPolicyRequest
      * @return UpdateNotifyPolicyResponse
@@ -3862,7 +3898,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Updates the information of a Managed Service for Prometheus instance.</p>
+     * <p>Updates the information of a Prometheus instance.</p>
      * 
      * @param request the request parameters of UpdatePrometheusInstance  UpdatePrometheusInstanceRequest
      * @return UpdatePrometheusInstanceResponse
@@ -3940,7 +3976,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Updates an existing service-linked entry.</p>
+     * <p>Updates an existing service association entry.</p>
      * 
      * @param request the request parameters of UpdateServiceRecord  UpdateServiceRecordRequest
      * @return UpdateServiceRecordResponse
@@ -4036,7 +4072,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Views the on-call calendar and returns the on-call schedule for a specified on-call schedule within a specified date range. The response is grouped by shift name, where each key is a shift name and the value is a list of on-call shifts. Each shift includes the on-call contact and the start and end times.</p>
+     * <p>Retrieves the on-call calendar. Returns the on-call arrangements for a specified on-call schedule within the queried date range. The response is grouped by shift name, where each key is a shift name and the value is a list of on-call periods for that shift. Each period includes the on-call contact and the start and end times.</p>
      * 
      * @param request the request parameters of ViewOncallSchedule  ViewOncallScheduleRequest
      * @return ViewOncallScheduleResponse

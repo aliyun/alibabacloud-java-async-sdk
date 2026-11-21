@@ -145,10 +145,10 @@ public class IncidentEscalationStruct extends TeaModel {
         } 
 
         /**
-         * <p>The time when the event escalation was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
-         * <p>2025-03-11T08:21:58Z</p>
+         * <p>1794984055029</p>
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
@@ -159,7 +159,7 @@ public class IncidentEscalationStruct extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>When an alert is not acknowledged, notify the operations team, on-duty manager, and CTO sequentially.</p>
+         * <p>Notify the O&amp;M team, on-call manager, and CTO sequentially when an alert is not responded to</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -167,7 +167,7 @@ public class IncidentEscalationStruct extends TeaModel {
         }
 
         /**
-         * <p>The ID of the event escalation.</p>
+         * <p>The incident escalation ID.</p>
          * 
          * <strong>example:</strong>
          * <p>52631388567</p>
@@ -178,10 +178,10 @@ public class IncidentEscalationStruct extends TeaModel {
         }
 
         /**
-         * <p>The time when the event escalation was last modified.</p>
+         * <p>The modification time.</p>
          * 
          * <strong>example:</strong>
-         * <p>2025-03-11T08:21:58Z</p>
+         * <p>1794984055029</p>
          */
         public Builder modifyTime(Long modifyTime) {
             this.modifyTime = modifyTime;
@@ -192,7 +192,7 @@ public class IncidentEscalationStruct extends TeaModel {
          * <p>The name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Production Environment Alert Escalation Policy.</p>
+         * <p>Production environment alert escalation policy</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -211,7 +211,7 @@ public class IncidentEscalationStruct extends TeaModel {
         }
 
         /**
-         * <p>The stages.</p>
+         * <p>The stage.</p>
          */
         public Builder stage(java.util.List<IncidentEscalationStageStruct> stage) {
             this.stage = stage;

@@ -23,6 +23,10 @@ public class UpsertUmodelCommonSchemaRefRequest extends Request {
     private String workspace;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("dryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("group")
     @com.aliyun.core.annotation.Validation(required = true)
     private String group;
@@ -35,6 +39,7 @@ public class UpsertUmodelCommonSchemaRefRequest extends Request {
     private UpsertUmodelCommonSchemaRefRequest(Builder builder) {
         super(builder);
         this.workspace = builder.workspace;
+        this.dryRun = builder.dryRun;
         this.group = builder.group;
         this.version = builder.version;
     }
@@ -60,6 +65,13 @@ public class UpsertUmodelCommonSchemaRefRequest extends Request {
     }
 
     /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    /**
      * @return group
      */
     public String getGroup() {
@@ -75,6 +87,7 @@ public class UpsertUmodelCommonSchemaRefRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpsertUmodelCommonSchemaRefRequest, Builder> {
         private String workspace; 
+        private Boolean dryRun; 
         private String group; 
         private String version; 
 
@@ -85,6 +98,7 @@ public class UpsertUmodelCommonSchemaRefRequest extends Request {
         private Builder(UpsertUmodelCommonSchemaRefRequest request) {
             super(request);
             this.workspace = request.workspace;
+            this.dryRun = request.dryRun;
             this.group = request.group;
             this.version = request.version;
         } 
@@ -99,6 +113,20 @@ public class UpsertUmodelCommonSchemaRefRequest extends Request {
         public Builder workspace(String workspace) {
             this.putPathParameter("workspace", workspace);
             this.workspace = workspace;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to perform a dry run for this request. Valid values:</p>
+         * <ul>
+         * <li>true: Sends a check request without performing actual changes.</li>
+         * <li>false: Sends a normal request.
+         * Default value: false.</li>
+         * </ul>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("dryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 

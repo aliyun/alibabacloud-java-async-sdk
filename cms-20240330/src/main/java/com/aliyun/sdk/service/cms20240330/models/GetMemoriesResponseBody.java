@@ -501,7 +501,7 @@ public class GetMemoriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The role of the message initiator.</p>
+             * <p>The role that initiated the message.</p>
              * 
              * <strong>example:</strong>
              * <p>user</p>

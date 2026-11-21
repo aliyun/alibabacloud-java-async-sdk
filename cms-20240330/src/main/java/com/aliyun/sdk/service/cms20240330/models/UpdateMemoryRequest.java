@@ -118,7 +118,7 @@ public class UpdateMemoryRequest extends Request {
         } 
 
         /**
-         * <p>The name of the Workspace.</p>
+         * <p>The name of the workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,7 +131,7 @@ public class UpdateMemoryRequest extends Request {
         }
 
         /**
-         * <p>The name of the Memory Store.</p>
+         * <p>The name of the memory store.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,7 +144,7 @@ public class UpdateMemoryRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Memory.</p>
+         * <p>The memory ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,7 +157,7 @@ public class UpdateMemoryRequest extends Request {
         }
 
         /**
-         * <p>The metadata of the Memory.</p>
+         * <p>The metadata.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;sessionId&quot;:&quot;test_session_001&quot;}</p>
@@ -169,7 +169,7 @@ public class UpdateMemoryRequest extends Request {
         }
 
         /**
-         * <p>The new text for the Memory.</p>
+         * <p>The updated text content of the memory.</p>
          * 
          * <strong>example:</strong>
          * <p>Likes to play tennis on weekends</p>

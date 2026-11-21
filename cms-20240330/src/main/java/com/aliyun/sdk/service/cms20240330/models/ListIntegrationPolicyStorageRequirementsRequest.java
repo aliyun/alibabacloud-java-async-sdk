@@ -102,7 +102,7 @@ public class ListIntegrationPolicyStorageRequirementsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the Integration Center policy.</p>
+         * <p>The ID of the integration center policy.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -127,7 +127,7 @@ public class ListIntegrationPolicyStorageRequirementsRequest extends Request {
         }
 
         /**
-         * <p>The name of the add-on release.</p>
+         * <p>The name of the AddonRelease.</p>
          * 
          * <strong>example:</strong>
          * <p>kafka-17201012937917</p>

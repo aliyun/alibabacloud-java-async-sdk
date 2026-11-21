@@ -103,7 +103,7 @@ public class ListIntegrationPolicyCollectorsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the Integration Center policy.</p>
+         * <p>The ID of the Access Center policy.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,7 +128,7 @@ public class ListIntegrationPolicyCollectorsRequest extends Request {
         }
 
         /**
-         * <p>The collector type.</p>
+         * <p>The type of the collector.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

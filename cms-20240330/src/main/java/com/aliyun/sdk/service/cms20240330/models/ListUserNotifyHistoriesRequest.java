@@ -407,7 +407,7 @@ public class ListUserNotifyHistoriesRequest extends Request {
         }
 
         /**
-         * <p>The notification batch ID. Used to filter the notification history for notifications sent in the same batch.</p>
+         * <p>The notification batch ID. Used to filter the notification history for the same delivery batch.</p>
          * 
          * <strong>example:</strong>
          * <p>3fa85f64-5717-4562-b3fc-2c963f66afa7</p>
@@ -433,26 +433,26 @@ public class ListUserNotifyHistoriesRequest extends Request {
         /**
          * <p>The notification channel. Valid values:</p>
          * <ul>
-         * <li>ALI_YUNGE_SMS: text message</li>
-         * <li>ALI_YUNGE_CALL: phone call</li>
-         * <li>ALI_YUNGE_MAIL: email</li>
-         * <li>ALI_YUNGE_ALIUID: internal message</li>
-         * <li>DING: DingTalk</li>
-         * <li>DING_COOL_APP: DingTalk cool app</li>
-         * <li>FEISHU: Lark</li>
-         * <li>WEIXIN: WeCom</li>
-         * <li>SLACK: Slack</li>
-         * <li>TEAMS: Teams</li>
-         * <li>PAGERDUTY: PagerDuty</li>
-         * <li>WEBHOOK: custom webhook</li>
-         * <li>ALIYUN_SLS: Simple Log Service</li>
-         * <li>ALIYUN_FC: Function Compute</li>
-         * <li>ALIYUN_FC3: Function Compute 3.0</li>
-         * <li>ALIYUN_MNS: Message Service</li>
-         * <li>ALIYUN_OOS: CloudOps Orchestration Service</li>
-         * <li>ALIYUN_ESS: elastic scaling</li>
-         * <li>ALIYUN_EB: event bus</li>
-         * <li>ALIYUN_OPENAPI: OpenAPI</li>
+         * <li>ALI_YUNGE_SMS: Text message.</li>
+         * <li>ALI_YUNGE_CALL: Voice call.</li>
+         * <li>ALI_YUNGE_MAIL: Email.</li>
+         * <li>ALI_YUNGE_ALIUID: Internal message.</li>
+         * <li>DING: DingTalk.</li>
+         * <li>DING_COOL_APP: DingTalk Cool App.</li>
+         * <li>FEISHU: Lark.</li>
+         * <li>WEIXIN: WeCom.</li>
+         * <li>SLACK: Slack.</li>
+         * <li>TEAMS: Teams.</li>
+         * <li>PAGERDUTY: PagerDuty.</li>
+         * <li>WEBHOOK: Custom webhook.</li>
+         * <li>ALIYUN_SLS: Simple Log Service.</li>
+         * <li>ALIYUN_FC: Function Compute.</li>
+         * <li>ALIYUN_FC3: Function Compute 3.0.</li>
+         * <li>ALIYUN_MNS: Message Service.</li>
+         * <li>ALIYUN_OOS: CloudOps Orchestration Service.</li>
+         * <li>ALIYUN_ESS: Elastic scaling.</li>
+         * <li>ALIYUN_EB: Event bus.</li>
+         * <li>ALIYUN_OPENAPI: OpenAPI.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -467,8 +467,8 @@ public class ListUserNotifyHistoriesRequest extends Request {
         /**
          * <p>The channel category. Valid values:</p>
          * <ul>
-         * <li>WEBHOOK: webhook channels, such as DingTalk, Lark, WeCom, Slack, Teams, and custom webhooks.</li>
-         * <li>YUNGE: communication channels, such as text messages, phone calls, and emails.</li>
+         * <li>WEBHOOK: Webhook channels, such as DingTalk, Lark, WeCom, Slack, Teams, and custom webhooks.</li>
+         * <li>YUNGE: Yunge communication channels, such as text messages, voice calls, and emails.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -517,10 +517,10 @@ public class ListUserNotifyHistoriesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to include notification records that have no actual delivery channel. Valid values:</p>
+         * <p>Specifies whether to include notification records without an actual delivery channel. Valid values:</p>
          * <ul>
-         * <li>true: includes the records.</li>
-         * <li>false: excludes the records and returns only records that were actually sent through a channel.
+         * <li>true: Includes the records.</li>
+         * <li>false: Excludes the records and returns only records with an actual delivery channel.
          * Default value: true.</li>
          * </ul>
          */
@@ -533,8 +533,8 @@ public class ListUserNotifyHistoriesRequest extends Request {
         /**
          * <p>Specifies whether to sort the results in descending order of time. Valid values:</p>
          * <ul>
-         * <li>true: descending order, with the latest records first.</li>
-         * <li>false: ascending order.
+         * <li>true: Sorts the results in descending order, with the latest records first.</li>
+         * <li>false: Sorts the results in ascending order.
          * Default value: true.</li>
          * </ul>
          */
@@ -545,7 +545,7 @@ public class ListUserNotifyHistoriesRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return per page. Default value: 20.</p>
+         * <p>The maximum number of records to return per page. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -617,7 +617,7 @@ public class ListUserNotifyHistoriesRequest extends Request {
         }
 
         /**
-         * <p>The alert rule ID. Used to filter the notification history triggered by a specified alert rule. Exact match is used.</p>
+         * <p>The alert rule ID. Used to filter the notification history triggered by a specified alert rule with exact match.</p>
          * 
          * <strong>example:</strong>
          * <p>3fa85f64-5717-4562-b3fc-2c963f66afa6</p>
@@ -643,9 +643,9 @@ public class ListUserNotifyHistoriesRequest extends Request {
         /**
          * <p>The notification delivery type. Valid values:</p>
          * <ul>
-         * <li>SUBSCRIBE: subscription notifications</li>
-         * <li>DIRECT: direct event notifications</li>
-         * <li>ITSM: ticket or action notifications</li>
+         * <li>SUBSCRIBE: Subscription notification.</li>
+         * <li>DIRECT: Direct event notification.</li>
+         * <li>ITSM: Ticket or action notification.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -660,10 +660,10 @@ public class ListUserNotifyHistoriesRequest extends Request {
         /**
          * <p>The alert severity. Valid values:</p>
          * <ul>
-         * <li>CRITICAL: critical</li>
-         * <li>ERROR: error</li>
-         * <li>WARNING: warning</li>
-         * <li>INFO: info</li>
+         * <li>CRITICAL: Critical.</li>
+         * <li>ERROR: Error.</li>
+         * <li>WARNING: Warning.</li>
+         * <li>INFO: Info.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -702,8 +702,8 @@ public class ListUserNotifyHistoriesRequest extends Request {
         /**
          * <p>Specifies whether to filter by delivery result. Valid values:</p>
          * <ul>
-         * <li>true: returns only successfully delivered records.</li>
-         * <li>false: returns only failed delivery records.
+         * <li>true: Returns only successfully delivered records.</li>
+         * <li>false: Returns only failed delivery records.
          * If you do not specify this parameter, the results are not filtered by delivery result.</li>
          * </ul>
          */
@@ -726,7 +726,7 @@ public class ListUserNotifyHistoriesRequest extends Request {
         }
 
         /**
-         * <p>The workspace identifier.</p>
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

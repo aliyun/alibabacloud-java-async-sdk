@@ -75,7 +75,7 @@ public class ListOncallContactsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>8FDE2569-626B-5176-9844-28877A*****</p>

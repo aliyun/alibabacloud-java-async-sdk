@@ -358,7 +358,7 @@ public class CreateDataPipelineResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The length of the prefix to retain.</p>
+             * <p>The length of the retained prefix.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -369,7 +369,7 @@ public class CreateDataPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The length of the suffix to retain.</p>
+             * <p>The length of the retained suffix.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -380,7 +380,7 @@ public class CreateDataPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sensitive keyword.</p>
+             * <p>The sensitive keywords.</p>
              */
             public Builder keys(java.util.List<String> keys) {
                 this.keys = keys;
@@ -391,9 +391,7 @@ public class CreateDataPipelineResponseBody extends TeaModel {
              * <p>The mask character.</p>
              * 
              * <strong>example:</strong>
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <h1></h1>
              */
             public Builder maskChar(String maskChar) {
                 this.maskChar = maskChar;
@@ -401,7 +399,7 @@ public class CreateDataPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data masking mode.</p>
+             * <p>The masking mode.</p>
              * 
              * <strong>example:</strong>
              * <p>keyword</p>
@@ -412,7 +410,7 @@ public class CreateDataPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The built-in sensitive type.</p>
+             * <p>The built-in sensitive data types.</p>
              */
             public Builder types(java.util.List<String> types) {
                 this.types = types;
@@ -715,7 +713,7 @@ public class CreateDataPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The metric name.</p>
+             * <p>The metric names.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;http_requests_total&quot;]</p>
@@ -1226,6 +1224,9 @@ public class CreateDataPipelineResponseBody extends TeaModel {
 
             /**
              * <p>The extension parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;vendor&quot;:&quot;example&quot;}</p>
              */
             public Builder parameters(java.util.Map<String, ?> parameters) {
                 this.parameters = parameters;
@@ -1739,7 +1740,7 @@ public class CreateDataPipelineResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The length of the prefix to retain.</p>
+             * <p>The length of the retained prefix.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -1750,7 +1751,7 @@ public class CreateDataPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The length of the suffix to retain.</p>
+             * <p>The length of the retained suffix.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -1761,7 +1762,7 @@ public class CreateDataPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sensitive keyword.</p>
+             * <p>The sensitive keywords.</p>
              */
             public Builder keys(java.util.List<String> keys) {
                 this.keys = keys;
@@ -1772,9 +1773,7 @@ public class CreateDataPipelineResponseBody extends TeaModel {
              * <p>The mask character.</p>
              * 
              * <strong>example:</strong>
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <h1></h1>
              */
             public Builder maskChar(String maskChar) {
                 this.maskChar = maskChar;
@@ -1782,7 +1781,7 @@ public class CreateDataPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data masking mode.</p>
+             * <p>The masking mode.</p>
              * 
              * <strong>example:</strong>
              * <p>keyword</p>
@@ -1793,7 +1792,7 @@ public class CreateDataPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The built-in sensitive type.</p>
+             * <p>The built-in sensitive data types.</p>
              */
             public Builder types(java.util.List<String> types) {
                 this.types = types;
@@ -2096,7 +2095,7 @@ public class CreateDataPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The metric name.</p>
+             * <p>The metric names.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;http_requests_total&quot;]</p>
@@ -2607,6 +2606,9 @@ public class CreateDataPipelineResponseBody extends TeaModel {
 
             /**
              * <p>The extension parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;vendor&quot;:&quot;example&quot;}</p>
              */
             public Builder parameters(java.util.Map<String, ?> parameters) {
                 this.parameters = parameters;
@@ -3393,7 +3395,7 @@ public class CreateDataPipelineResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time. The time is in UTC and follows the ISO 8601 format. Example: 2026-08-10T05:00:00Z.</p>
+             * <p>The creation time in UTC, following the ISO 8601 format. Example: 2026-08-10T05:00:00Z.</p>
              * <p>This parameter is required.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
              * 
@@ -3471,7 +3473,7 @@ public class CreateDataPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The output destination.</p>
+             * <p>The output destinations.</p>
              * <p>This parameter is required.</p>
              */
             public Builder sinks(java.util.List<Sinks> sinks) {
@@ -3512,7 +3514,7 @@ public class CreateDataPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time. The time is in UTC and follows the ISO 8601 format. Example: 2026-08-10T05:10:00Z.</p>
+             * <p>The update time in UTC, following the ISO 8601 format. Example: 2026-08-10T05:10:00Z.</p>
              * <p>This parameter is required.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
              * 

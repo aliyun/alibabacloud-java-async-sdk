@@ -99,7 +99,7 @@ public class SearchMemoriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The return values.</p>
+         * <p>The returned results.</p>
          */
         public Builder results(java.util.List<Results> results) {
             this.results = results;
@@ -433,7 +433,7 @@ public class SearchMemoriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The hash value of the memory.</p>
+             * <p>The memory hash value.</p>
              * 
              * <strong>example:</strong>
              * <p>d791bf27236c5532056a13279baad3517042bb8d5b1bdb02e7871fa632debffe</p>

@@ -124,7 +124,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
          * <p>The pagination token.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxxxxxxxx</p>
+         * <p>A1111AAAA1A1AaaA1Aa1aaAaa1AAaaAAa1AaAaaa1aA1Aa1aaaa1aaa-AAaaa1aa</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -132,7 +132,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>264C3E89-XXXX-XXXX-XXXX-CE9C2196C7DC</p>
@@ -143,7 +143,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total count.</p>
+         * <p>The total number of results.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -427,7 +427,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time.</p>
+             * <p>The last modification time.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
              * 
              * <strong>example:</strong>

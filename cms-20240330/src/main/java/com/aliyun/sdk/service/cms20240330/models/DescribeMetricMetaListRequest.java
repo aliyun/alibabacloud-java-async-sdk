@@ -230,14 +230,14 @@ public class DescribeMetricMetaListRequest extends Request {
         }
 
         /**
-         * <p>Filters resources by label. The following labels are available:</p>
+         * <p>Filters resources by label. Existing labels are described as follows:</p>
          * <ul>
-         * <li>metricCategory: the metric category description.</li>
+         * <li>metricCategory: the category description of the metric.</li>
          * <li>alertEnable: specifies whether alerting is required.</li>
          * <li>alertUnit: the recommended alert unit.</li>
          * <li>unitFactor: the unit conversion factor.</li>
          * <li>minAlertPeriod: the minimum alert period.</li>
-         * <li>productCategory: the product type category.</li>
+         * <li>productCategory: the cloud service category.</li>
          * </ul>
          */
         public Builder labels(java.util.List<Labels> labels) {
@@ -248,11 +248,7 @@ public class DescribeMetricMetaListRequest extends Request {
         }
 
         /**
-         * <p>The metadata source. Valid values:</p>
-         * <ul>
-         * <li>CMS: CloudMonitor Basic monitoring metrics.</li>
-         * <li>PROM_BASIC: Prometheus CloudMonitor Basic monitoring metrics.</li>
-         * </ul>
+         * <p>The source of metadata. Valid values: CMS for CloudMonitor Basic monitoring metrics, and PROM_BASIC for basic monitoring metrics of Managed Service for Prometheus.</p>
          * 
          * <strong>example:</strong>
          * <p>CMS</p>
@@ -264,7 +260,7 @@ public class DescribeMetricMetaListRequest extends Request {
         }
 
         /**
-         * <p>The metric name.</p>
+         * <p>The name of the metric.</p>
          * 
          * <strong>example:</strong>
          * <p>CPUUtilization</p>
@@ -276,7 +272,7 @@ public class DescribeMetricMetaListRequest extends Request {
         }
 
         /**
-         * <p>The namespace, which is used to distinguish between services.</p>
+         * <p>The namespace used to distinguish cloud services.</p>
          * 
          * <strong>example:</strong>
          * <p>acs_ecs_dashboard</p>
@@ -371,7 +367,7 @@ public class DescribeMetricMetaListRequest extends Request {
             } 
 
             /**
-             * <p>The label name.</p>
+             * <p>The name of the label.</p>
              * 
              * <strong>example:</strong>
              * <p>productCategory</p>
@@ -382,7 +378,7 @@ public class DescribeMetricMetaListRequest extends Request {
             }
 
             /**
-             * <p>The label value.</p>
+             * <p>The value of the label.</p>
              * 
              * <strong>example:</strong>
              * <p>ecs</p>

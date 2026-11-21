@@ -173,7 +173,7 @@ public class UpdateContextRequest extends Request {
         }
 
         /**
-         * <p>The name of the context store.</p>
+         * <p>The context store name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -199,7 +199,7 @@ public class UpdateContextRequest extends Request {
         }
 
         /**
-         * <p>The updated long-term memory text.</p>
+         * <p>The long-term memory text to update.</p>
          * 
          * <strong>example:</strong>
          * <p>Users prefer to first view the SLS error logs, index configuration, and the most recent Agent execution trace.</p>
@@ -239,7 +239,7 @@ public class UpdateContextRequest extends Request {
         }
 
         /**
-         * <p>The updated payload.</p>
+         * <p>The payload to update.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -263,7 +263,7 @@ public class UpdateContextRequest extends Request {
         }
 
         /**
-         * <p>The trigger condition.</p>
+         * <p>The cause.</p>
          * 
          * <strong>example:</strong>
          * <p>Identify and troubleshoot SLs issues</p>

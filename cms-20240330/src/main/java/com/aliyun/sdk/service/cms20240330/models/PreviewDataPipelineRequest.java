@@ -283,7 +283,7 @@ public class PreviewDataPipelineRequest extends Request {
         }
 
         /**
-         * <p>The end time for the preview. The value is a UNIX timestamp in seconds.</p>
+         * <p>The end time for the preview, specified as a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1784566800</p>
@@ -601,9 +601,7 @@ public class PreviewDataPipelineRequest extends Request {
              * <p>The mask character.</p>
              * 
              * <strong>example:</strong>
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <h1></h1>
              */
             public Builder maskChar(String maskChar) {
                 this.maskChar = maskChar;
@@ -622,7 +620,7 @@ public class PreviewDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The built-in sensitive data types.</p>
+             * <p>The built-in sensitive types.</p>
              */
             public Builder types(java.util.List<String> types) {
                 this.types = types;
@@ -1436,6 +1434,9 @@ public class PreviewDataPipelineRequest extends Request {
 
             /**
              * <p>The extended parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;vendor&quot;:&quot;example&quot;}</p>
              */
             public Builder parameters(java.util.Map<String, ?> parameters) {
                 this.parameters = parameters;
@@ -1982,9 +1983,7 @@ public class PreviewDataPipelineRequest extends Request {
              * <p>The mask character.</p>
              * 
              * <strong>example:</strong>
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <h1></h1>
              */
             public Builder maskChar(String maskChar) {
                 this.maskChar = maskChar;
@@ -2003,7 +2002,7 @@ public class PreviewDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The built-in sensitive data types.</p>
+             * <p>The built-in sensitive types.</p>
              */
             public Builder types(java.util.List<String> types) {
                 this.types = types;
@@ -2817,6 +2816,9 @@ public class PreviewDataPipelineRequest extends Request {
 
             /**
              * <p>The extended parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;vendor&quot;:&quot;example&quot;}</p>
              */
             public Builder parameters(java.util.Map<String, ?> parameters) {
                 this.parameters = parameters;
@@ -3077,7 +3079,7 @@ public class PreviewDataPipelineRequest extends Request {
             } 
 
             /**
-             * <p>The list of datasets.</p>
+             * <p>The dataset list.</p>
              */
             public Builder datasets(java.util.List<String> datasets) {
                 this.datasets = datasets;
@@ -3096,7 +3098,7 @@ public class PreviewDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The name of the output destination.</p>
+             * <p>The output destination name.</p>
              * 
              * <strong>example:</strong>
              * <p>error-archive</p>
@@ -3118,7 +3120,7 @@ public class PreviewDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The type of the output destination.</p>
+             * <p>The output destination type.</p>
              * 
              * <strong>example:</strong>
              * <p>logstore</p>
@@ -3379,7 +3381,7 @@ public class PreviewDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The type of the data source.</p>
+             * <p>The data source type.</p>
              * 
              * <strong>example:</strong>
              * <p>traces-default</p>

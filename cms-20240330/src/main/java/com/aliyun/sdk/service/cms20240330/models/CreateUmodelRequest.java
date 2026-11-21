@@ -26,10 +26,15 @@ public class CreateUmodelRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("dryRun")
+    private Boolean dryRun;
+
     private CreateUmodelRequest(Builder builder) {
         super(builder);
         this.workspace = builder.workspace;
         this.description = builder.description;
+        this.dryRun = builder.dryRun;
     }
 
     public static Builder builder() {
@@ -59,9 +64,17 @@ public class CreateUmodelRequest extends Request {
         return this.description;
     }
 
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
     public static final class Builder extends Request.Builder<CreateUmodelRequest, Builder> {
         private String workspace; 
         private String description; 
+        private Boolean dryRun; 
 
         private Builder() {
             super();
@@ -71,6 +84,7 @@ public class CreateUmodelRequest extends Request {
             super(request);
             this.workspace = request.workspace;
             this.description = request.description;
+            this.dryRun = request.dryRun;
         } 
 
         /**
@@ -95,6 +109,20 @@ public class CreateUmodelRequest extends Request {
         public Builder description(String description) {
             this.putBodyParameter("description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to perform a dry run on the request. Valid values:</p>
+         * <ul>
+         * <li>true: performs a dry run. The system checks the request but does not make actual changes.</li>
+         * <li>false: sends a normal request.
+         * Default value: false.</li>
+         * </ul>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("dryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 

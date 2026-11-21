@@ -165,7 +165,7 @@ public class NotifyRouteForSubscription extends TeaModel {
             }
 
             /**
-             * <p>The list of enabled subchannels.</p>
+             * <p>The list of enabled sub-channels.</p>
              */
             public Builder enabledSubChannels(java.util.List<String> enabledSubChannels) {
                 this.enabledSubChannels = enabledSubChannels;
@@ -266,7 +266,7 @@ public class NotifyRouteForSubscription extends TeaModel {
             } 
 
             /**
-             * <p>The effective days of the week (0 = Sunday, 1 = Monday, ..., 6 = Saturday).</p>
+             * <p>The valid days of the week. Valid values: 0 to 6, where 0 indicates Sunday and 6 indicates Saturday.</p>
              */
             public Builder dayInWeek(java.util.List<Integer> dayInWeek) {
                 this.dayInWeek = dayInWeek;
@@ -274,7 +274,7 @@ public class NotifyRouteForSubscription extends TeaModel {
             }
 
             /**
-             * <p>The end time of the day, in minutes from 0:00.</p>
+             * <p>The end time of the day in minutes, calculated from 00:00.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -285,7 +285,7 @@ public class NotifyRouteForSubscription extends TeaModel {
             }
 
             /**
-             * <p>The start time of the day, in minutes from 0:00.</p>
+             * <p>The start time of the day in minutes, calculated from 00:00.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

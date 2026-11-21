@@ -239,7 +239,7 @@ public class CreateServiceRequest extends Request {
          * <p>The service description. This parameter is valid only when serviceType is set to RUM.</p>
          * 
          * <strong>example:</strong>
-         * <p>Mag test application</p>
+         * <p>mag test application</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -251,7 +251,7 @@ public class CreateServiceRequest extends Request {
          * <p>The display name. This parameter is valid only when serviceType is set to RUM.</p>
          * 
          * <strong>example:</strong>
-         * <p>Mag test application</p>
+         * <p>mag test application</p>
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("displayName", displayName);
@@ -322,7 +322,7 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * <p>The tags.</p>
+         * <p>The tag array.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putBodyParameter("tags", tags);

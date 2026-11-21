@@ -138,7 +138,7 @@ public class ListContactGroupsRequest extends Request {
         }
 
         /**
-         * <p>The contact group IDs.</p>
+         * <p>The IDs of the contact groups.</p>
          */
         public Builder contactGroupIds(java.util.List<String> contactGroupIds) {
             String contactGroupIdsShrink = shrink(contactGroupIds, "contactGroupIds", "json");
@@ -148,7 +148,7 @@ public class ListContactGroupsRequest extends Request {
         }
 
         /**
-         * <p>The contact name.</p>
+         * <p>The name of the contact.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -184,7 +184,7 @@ public class ListContactGroupsRequest extends Request {
         }
 
         /**
-         * <p>The workspace name.</p>
+         * <p>The name of the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>default-cms-xxxxxx-cn-beijing</p>

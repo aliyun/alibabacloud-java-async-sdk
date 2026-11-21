@@ -358,7 +358,7 @@ public class GetDataPipelineResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The prefix retention length.</p>
+             * <p>The length of the prefix to retain.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -369,7 +369,7 @@ public class GetDataPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The suffix retention length.</p>
+             * <p>The length of the suffix to retain.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -391,9 +391,7 @@ public class GetDataPipelineResponseBody extends TeaModel {
              * <p>The mask character.</p>
              * 
              * <strong>example:</strong>
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <h1></h1>
              */
             public Builder maskChar(String maskChar) {
                 this.maskChar = maskChar;
@@ -412,7 +410,7 @@ public class GetDataPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The built-in sensitive types.</p>
+             * <p>The built-in sensitive data type.</p>
              */
             public Builder types(java.util.List<String> types) {
                 this.types = types;
@@ -946,7 +944,7 @@ public class GetDataPipelineResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The service name list.</p>
+             * <p>The list of service names.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;checkout-*&quot;,&quot;order-service&quot;]</p>
@@ -1226,6 +1224,9 @@ public class GetDataPipelineResponseBody extends TeaModel {
 
             /**
              * <p>The extended parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;vendor&quot;:&quot;example&quot;}</p>
              */
             public Builder parameters(java.util.Map<String, ?> parameters) {
                 this.parameters = parameters;
@@ -1249,7 +1250,7 @@ public class GetDataPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The pipeline processing scope.</p>
+             * <p>The effective scope of pipeline processing.</p>
              */
             public Builder scope(Scope scope) {
                 this.scope = scope;
@@ -1739,7 +1740,7 @@ public class GetDataPipelineResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The prefix retention length.</p>
+             * <p>The length of the prefix to retain.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -1750,7 +1751,7 @@ public class GetDataPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The suffix retention length.</p>
+             * <p>The length of the suffix to retain.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -1772,9 +1773,7 @@ public class GetDataPipelineResponseBody extends TeaModel {
              * <p>The mask character.</p>
              * 
              * <strong>example:</strong>
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <h1></h1>
              */
             public Builder maskChar(String maskChar) {
                 this.maskChar = maskChar;
@@ -1793,7 +1792,7 @@ public class GetDataPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The built-in sensitive types.</p>
+             * <p>The built-in sensitive data type.</p>
              */
             public Builder types(java.util.List<String> types) {
                 this.types = types;
@@ -1900,7 +1899,7 @@ public class GetDataPipelineResponseBody extends TeaModel {
              * <p>The reference data type.</p>
              * 
              * <strong>example:</strong>
-             * <p>explorer_link</p>
+             * <p>field</p>
              */
             public Builder kind(String kind) {
                 this.kind = kind;
@@ -2327,7 +2326,7 @@ public class GetDataPipelineResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The service name list.</p>
+             * <p>The list of service names.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;checkout-*&quot;,&quot;order-service&quot;]</p>
@@ -2607,6 +2606,9 @@ public class GetDataPipelineResponseBody extends TeaModel {
 
             /**
              * <p>The extended parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;vendor&quot;:&quot;example&quot;}</p>
              */
             public Builder parameters(java.util.Map<String, ?> parameters) {
                 this.parameters = parameters;
@@ -2886,7 +2888,7 @@ public class GetDataPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the data sink.</p>
+             * <p>The name of the output destination.</p>
              * 
              * <strong>example:</strong>
              * <p>error-archive</p>
@@ -2908,7 +2910,7 @@ public class GetDataPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the data sink.</p>
+             * <p>The type of the output destination.</p>
              * 
              * <strong>example:</strong>
              * <p>logstore</p>
@@ -3083,7 +3085,7 @@ public class GetDataPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The starting point for reading.</p>
+             * <p>The read start point.</p>
              * 
              * <strong>example:</strong>
              * <p>latest</p>
@@ -3169,7 +3171,7 @@ public class GetDataPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the data source.</p>
+             * <p>The data source type.</p>
              * 
              * <strong>example:</strong>
              * <p>traces-default</p>
@@ -3393,7 +3395,7 @@ public class GetDataPipelineResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time in ISO 8601 format in UTC, such as 2026-08-10T05:00:00Z.</p>
+             * <p>The creation time in UTC, following the ISO 8601 format, such as 2026-08-10T05:00:00Z.</p>
              * <p>This parameter is required.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
              * 
@@ -3471,7 +3473,7 @@ public class GetDataPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data sinks.</p>
+             * <p>The output destinations.</p>
              * <p>This parameter is required.</p>
              */
             public Builder sinks(java.util.List<Sinks> sinks) {
@@ -3512,7 +3514,7 @@ public class GetDataPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time in ISO 8601 format in UTC, such as 2026-08-10T05:10:00Z.</p>
+             * <p>The update time in UTC, following the ISO 8601 format, such as 2026-08-10T05:10:00Z.</p>
              * <p>This parameter is required.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
              * 

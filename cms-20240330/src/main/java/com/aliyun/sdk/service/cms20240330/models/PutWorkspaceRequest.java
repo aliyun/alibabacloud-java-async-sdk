@@ -22,6 +22,10 @@ public class PutWorkspaceRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true, maxLength = 56, minLength = 1)
     private String workspaceName;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("description")
     @com.aliyun.core.annotation.Validation(maxLength = 256)
@@ -48,6 +52,7 @@ public class PutWorkspaceRequest extends Request {
     private PutWorkspaceRequest(Builder builder) {
         super(builder);
         this.workspaceName = builder.workspaceName;
+        this.dryRun = builder.dryRun;
         this.description = builder.description;
         this.displayName = builder.displayName;
         this.resourceGroupId = builder.resourceGroupId;
@@ -73,6 +78,13 @@ public class PutWorkspaceRequest extends Request {
      */
     public String getWorkspaceName() {
         return this.workspaceName;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -112,6 +124,7 @@ public class PutWorkspaceRequest extends Request {
 
     public static final class Builder extends Request.Builder<PutWorkspaceRequest, Builder> {
         private String workspaceName; 
+        private Boolean dryRun; 
         private String description; 
         private String displayName; 
         private String resourceGroupId; 
@@ -125,6 +138,7 @@ public class PutWorkspaceRequest extends Request {
         private Builder(PutWorkspaceRequest request) {
             super(request);
             this.workspaceName = request.workspaceName;
+            this.dryRun = request.dryRun;
             this.description = request.description;
             this.displayName = request.displayName;
             this.resourceGroupId = request.resourceGroupId;
@@ -133,7 +147,7 @@ public class PutWorkspaceRequest extends Request {
         } 
 
         /**
-         * <p>The workspace name.</p>
+         * <p>The name of the workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,7 +160,16 @@ public class PutWorkspaceRequest extends Request {
         }
 
         /**
-         * <p>The workspace description.</p>
+         * <p>Specifies whether to perform a dry run of the request. Valid values: true: sends a check request without making actual changes. false (default): sends a normal request.</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * <p>The description of the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>workspace test</p>
@@ -170,7 +193,7 @@ public class PutWorkspaceRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-ae******ey</p>
@@ -182,7 +205,7 @@ public class PutWorkspaceRequest extends Request {
         }
 
         /**
-         * <p>The Simple Log Service project name.</p>
+         * <p>The name of the Simple Log Service project.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

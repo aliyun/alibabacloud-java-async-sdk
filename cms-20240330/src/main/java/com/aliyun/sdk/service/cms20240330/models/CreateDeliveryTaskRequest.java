@@ -187,7 +187,7 @@ public class CreateDeliveryTaskRequest extends Request {
         }
 
         /**
-         * <p>The additional labels attached to all delivered metrics. The key is the label name, and the value is the label value.</p>
+         * <p>The additional labels attached to all delivered metrics. The key is the label name and the value is the label value.</p>
          */
         public Builder externalLabels(java.util.Map<String, String> externalLabels) {
             this.putBodyParameter("externalLabels", externalLabels);
@@ -196,7 +196,7 @@ public class CreateDeliveryTaskRequest extends Request {
         }
 
         /**
-         * <p>The metric filtering conditions. This parameter is used together with labelFiltersType. The key is the metric label name, and the value is the match value.</p>
+         * <p>The metric filtering conditions used in conjunction with labelFiltersType. The key is the metric label name and the value is the match value.</p>
          */
         public Builder labelFilters(java.util.Map<String, String> labelFilters) {
             this.putBodyParameter("labelFilters", labelFilters);
@@ -239,7 +239,7 @@ public class CreateDeliveryTaskRequest extends Request {
         }
 
         /**
-         * <p>The tags of the resource.</p>
+         * <p>The resource tags.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putBodyParameter("tags", tags);

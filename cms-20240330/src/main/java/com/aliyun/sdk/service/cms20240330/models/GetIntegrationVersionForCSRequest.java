@@ -98,7 +98,7 @@ public class GetIntegrationVersionForCSRequest extends Request {
         }
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,7 +111,7 @@ public class GetIntegrationVersionForCSRequest extends Request {
         }
 
         /**
-         * <p>The type of the cluster. Valid values: acs.ack.cluster and acs.asi.cluster.</p>
+         * <p>The cluster type. Valid values: acs.ack.cluster and acs.asi.cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

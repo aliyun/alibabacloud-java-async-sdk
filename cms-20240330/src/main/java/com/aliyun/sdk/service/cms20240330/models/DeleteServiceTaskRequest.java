@@ -103,7 +103,7 @@ public class DeleteServiceTaskRequest extends Request {
         } 
 
         /**
-         * <p>The workspace name. Example: default-cms-<uid>-<region>.</p>
+         * <p>The name of the workspace. Example: default-cms-<uid>-<region>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class DeleteServiceTaskRequest extends Request {
         }
 
         /**
-         * <p>The application or service ID (pid).</p>
+         * <p>The application or service ID (PID).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +129,7 @@ public class DeleteServiceTaskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the task to delete. This is the taskId returned by the creation operation.</p>
+         * <p>The ID of the task to be deleted. The value is the task ID returned by the create operation.</p>
          * 
          * <strong>example:</strong>
          * <p>a1b2c3d4-e5f6-7890-abcd-ef1234567890</p>
@@ -141,14 +141,7 @@ public class DeleteServiceTaskRequest extends Request {
         }
 
         /**
-         * <p>The task type. This parameter is required. Valid values:</p>
-         * <ul>
-         * <li>heapdump: heap dump.</li>
-         * <li>LiveDebug Probe: live_debug_log_probe, live_debug_snapshot_probe, live_debug_metric_probe, live_debug_span_probe, live_debug_span_tag_probe.</li>
-         * <li>LiveDebug Command: live_debug_inspect_object, live_debug_search_type, live_debug_search_method, live_debug_decompile, live_debug_get_thread_info, live_debug_get_runtime_info, live_debug_get_memory_info, live_debug_evaluate_expression, live_debug_modify_logger_level.</li>
-         * <li>LiveDebug code hot replacement: live_debug_code_replace.</li>
-         * </ul>
-         * <p>The value must be the same as the type specified during task creation.</p>
+         * <p>The task type. This parameter is required. Valid values: heapdump (heap dump); LiveDebug Probe: live_debug_log_probe, live_debug_snapshot_probe, live_debug_metric_probe, live_debug_span_probe, and live_debug_span_tag_probe; LiveDebug Command: live_debug_inspect_object, live_debug_search_type, live_debug_search_method, live_debug_decompile, live_debug_get_thread_info, live_debug_get_runtime_info, live_debug_get_memory_info, live_debug_evaluate_expression, and live_debug_modify_logger_level; LiveDebug code hot replacement: live_debug_code_replace. The value must be the same as the type specified when the task was created.</p>
          * 
          * <strong>example:</strong>
          * <p>live_debug_log_probe</p>

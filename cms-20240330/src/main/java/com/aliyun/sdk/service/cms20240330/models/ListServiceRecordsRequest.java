@@ -153,7 +153,7 @@ public class ListServiceRecordsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return. Maximum value: 200.</p>
+         * <p>The maximum number of results to return. Maximum value: 200.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -168,7 +168,7 @@ public class ListServiceRecordsRequest extends Request {
          * <p>The pagination token.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxxx</p>
+         * <p>2-ba4d-4b9f-aa24-dcb067a30f1c</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -177,8 +177,7 @@ public class ListServiceRecordsRequest extends Request {
         }
 
         /**
-         * <p>The type of the linked entry. Currently supported:
-         * logCorrelation, which indicates application log association.</p>
+         * <p>The type of the association entry. Valid values: logCorrelation: application log association.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,7 +190,7 @@ public class ListServiceRecordsRequest extends Request {
         }
 
         /**
-         * <p>The filter information for service-linked entries.</p>
+         * <p>The filter information for service association entries.</p>
          * 
          * <strong>example:</strong>
          * <p>{

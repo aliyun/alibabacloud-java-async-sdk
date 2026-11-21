@@ -154,7 +154,7 @@ public class CreateContextStoreRequest extends Request {
         }
 
         /**
-         * <p>The name of the context store.</p>
+         * <p>The name of the context library.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

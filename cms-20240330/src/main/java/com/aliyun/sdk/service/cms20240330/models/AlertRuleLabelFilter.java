@@ -68,6 +68,9 @@ public class AlertRuleLabelFilter extends TeaModel {
 
         /**
          * <p>The label filter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;regionId&quot;:&quot;cn-shanghai&quot;}</p>
          */
         public Builder labels(java.util.Map<String, String> labels) {
             this.labels = labels;
@@ -75,7 +78,7 @@ public class AlertRuleLabelFilter extends TeaModel {
         }
 
         /**
-         * <p>The relational operator between multiple labels.</p>
+         * <p>The relational operator for multiple labels.</p>
          * 
          * <strong>example:</strong>
          * <p>AND</p>

@@ -167,7 +167,7 @@ public class UpdateContactRequest extends Request {
         }
 
         /**
-         * <p>The ID of the contact.</p>
+         * <p>The contact ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -192,7 +192,10 @@ public class UpdateContactRequest extends Request {
         }
 
         /**
-         * <p>The mapping of IM user IDs. Multiple instant messaging tools are supported.</p>
+         * <p>The mapping of instant messaging (IM) user IDs. Multiple IM tools are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;dingtalk&quot;:&quot;abc123&quot;,&quot;wechat&quot;:&quot;def456&quot;}</p>
          */
         public Builder imUserIds(java.util.Map<String, String> imUserIds) {
             this.putBodyParameter("imUserIds", imUserIds);
@@ -225,7 +228,7 @@ public class UpdateContactRequest extends Request {
         }
 
         /**
-         * <p>The mobile phone number of the contact. Currently, only Chinese mobile phone numbers are supported.</p>
+         * <p>The mobile phone number of the contact. Currently, only mobile phone numbers in China are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>150123456789</p>
@@ -237,7 +240,7 @@ public class UpdateContactRequest extends Request {
         }
 
         /**
-         * <p>号码国家码，可带前导 +，如 86、+86。传入后 phone 必须是纯数字，服务端按 <phoneCode>-<phone> 拼号发送，因此 phone 内不能再带 +、00 或区号。不传时按手机号码原样发送。</p>
+         * <p>The country code of the mobile phone number, which is typically +86 for China.</p>
          * 
          * <strong>example:</strong>
          * <p>+86</p>

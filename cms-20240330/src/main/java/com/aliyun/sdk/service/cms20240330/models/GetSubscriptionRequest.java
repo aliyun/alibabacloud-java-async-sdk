@@ -97,7 +97,7 @@ public class GetSubscriptionRequest extends Request {
         }
 
         /**
-         * <p>The subscription ID.</p>
+         * <p>The ID of the subscription.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

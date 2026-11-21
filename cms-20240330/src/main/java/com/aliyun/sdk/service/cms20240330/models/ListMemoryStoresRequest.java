@@ -142,7 +142,7 @@ public class ListMemoryStoresRequest extends Request {
          * <p>The pagination token.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxxxxxxx</p>
+         * <p>H8low6kptuLKf7Sttrso6EOE0-JV__****Low6kpt0lk3XsTt_SOYeoE0c7Vb-le</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);

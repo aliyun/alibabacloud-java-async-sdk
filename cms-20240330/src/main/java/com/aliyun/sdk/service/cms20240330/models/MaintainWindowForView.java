@@ -241,7 +241,7 @@ public class MaintainWindowForView extends TeaModel {
         }
 
         /**
-         * <p>The crontab expression.</p>
+         * <p>The Crontab expression.</p>
          * 
          * <strong>example:</strong>
          * <ul>

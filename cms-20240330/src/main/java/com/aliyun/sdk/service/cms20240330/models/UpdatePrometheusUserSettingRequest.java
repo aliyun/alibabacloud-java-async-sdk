@@ -75,7 +75,7 @@ public class UpdatePrometheusUserSettingRequest extends Request {
         } 
 
         /**
-         * <p>The key of the user setting.</p>
+         * <p>The user configuration key.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class UpdatePrometheusUserSettingRequest extends Request {
         }
 
         /**
-         * <p>The value of the user setting.</p>
+         * <p>The user configuration setting value.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

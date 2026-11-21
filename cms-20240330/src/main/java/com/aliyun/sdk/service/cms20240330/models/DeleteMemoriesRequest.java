@@ -131,7 +131,7 @@ public class DeleteMemoriesRequest extends Request {
         } 
 
         /**
-         * <p>The name of the workspace.</p>
+         * <p>The workspace name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -241,7 +241,7 @@ public class GetMemoryStoreResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The extraction strategies. Valid values: Episodic, Summary, and Fact.</p>
+         * <p>The supported extraction strategies: Episodic, Summary, and Fact.</p>
          */
         public Builder extractionStrategies(java.util.List<String> extractionStrategies) {
             this.extractionStrategies = extractionStrategies;
@@ -249,7 +249,7 @@ public class GetMemoryStoreResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The memory store name.</p>
+         * <p>The name of the memory store.</p>
          * 
          * <strong>example:</strong>
          * <p>test-memory-store</p>
@@ -290,7 +290,7 @@ public class GetMemoryStoreResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The retention period of short-term memory.</p>
+         * <p>The retention period for short-term memory.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -312,7 +312,7 @@ public class GetMemoryStoreResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The configuration used when sourceType is set to Trace.</p>
+         * <p>The configuration when the sourceType is Trace.</p>
          */
         public Builder traceSourceConfig(TraceSourceConfig traceSourceConfig) {
             this.traceSourceConfig = traceSourceConfig;
@@ -332,7 +332,7 @@ public class GetMemoryStoreResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The workspace name.</p>
+         * <p>The name of the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>default-cms-xxxxxx-cn-beijing</p>
@@ -401,7 +401,7 @@ public class GetMemoryStoreResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The Simple Log Service Logstore name.</p>
+             * <p>The name of the Simple Log Service Logstore.</p>
              * 
              * <strong>example:</strong>
              * <p>memory-store</p>
@@ -412,7 +412,7 @@ public class GetMemoryStoreResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Simple Log Service project name.</p>
+             * <p>The name of the Simple Log Service project.</p>
              * 
              * <strong>example:</strong>
              * <p>wk_cms_data_warehouse</p>
@@ -495,7 +495,7 @@ public class GetMemoryStoreResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Specifies whether to include LLM output in memory extraction.</p>
+             * <p>Specifies whether to include the LLM output in memory extraction.</p>
              */
             public Builder includeOutput(Boolean includeOutput) {
                 this.includeOutput = includeOutput;
@@ -514,7 +514,7 @@ public class GetMemoryStoreResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The workspace where the trace resides.</p>
+             * <p>The workspace where the trace is located.</p>
              * 
              * <strong>example:</strong>
              * <p>test-workspace</p>

@@ -67,7 +67,7 @@ public class GetIntegrationVersionForCSResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The version of the Integration Center.</p>
+         * <p>The integration center version.</p>
          * 
          * <strong>example:</strong>
          * <p>V1</p>
@@ -78,7 +78,7 @@ public class GetIntegrationVersionForCSResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>CD9BCF34-EA09-5643-BC11-AF41C8DFAE5A</p>

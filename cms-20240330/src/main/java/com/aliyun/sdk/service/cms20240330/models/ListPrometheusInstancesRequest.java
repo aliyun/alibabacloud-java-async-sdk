@@ -213,10 +213,10 @@ public class ListPrometheusInstancesRequest extends Request {
         }
 
         /**
-         * <p>The query token.</p>
+         * <p>The next token.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxxxxxxxx</p>
+         * <p>11a111111111a1111a1111aaaa1a1aa1aa11aa111aa11a1111a1a111aa1a111111111a11a1aa1111a111aa11a11aa1a1</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -237,7 +237,7 @@ public class ListPrometheusInstancesRequest extends Request {
         }
 
         /**
-         * <p>The name of the instance. Partial matching is supported.</p>
+         * <p>The name of the instance. Partial match is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -249,7 +249,7 @@ public class ListPrometheusInstancesRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aek2bhocin5e2na</p>

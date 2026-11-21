@@ -170,7 +170,7 @@ public class GetAlertActionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The event provider.</p>
+             * <p>The event source.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -391,7 +391,7 @@ public class GetAlertActionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the function.</p>
+             * <p>The function name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -518,7 +518,7 @@ public class GetAlertActionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service name in Function Compute.</p>
+             * <p>The service name of Function Compute.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -601,7 +601,7 @@ public class GetAlertActionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The resource type of Simple Message Queue (formerly MNS).</p>
+             * <p>The Simple Message Queue (formerly MNS) (MSMQ) resource type.</p>
              * 
              * <strong>example:</strong>
              * <p>queue</p>
@@ -612,7 +612,7 @@ public class GetAlertActionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the resource.</p>
+             * <p>The resource name.</p>
              * <ul>
              * <li>If the resource type is queue, the resource name is the queue name.</li>
              * <li>If the resource type is topic, the resource name is the topic name.</li>
@@ -708,7 +708,7 @@ public class GetAlertActionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The PagerDuty integration webhook. Both V1 and V2 are supported.</p>
+             * <p>The integration webhook of PagerDuty. Both V1 and V2 are supported.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://events.pagerduty.com/v2/enqueue">https://events.pagerduty.com/v2/enqueue</a></p>
@@ -921,6 +921,9 @@ public class GetAlertActionResponseBody extends TeaModel {
 
             /**
              * <p>The request header information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;X-Total-Count&quot;:&quot;0&quot;}</p>
              */
             public Builder headers(java.util.Map<String, String> headers) {
                 this.headers = headers;
@@ -939,7 +942,7 @@ public class GetAlertActionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The alert callback URL.</p>
+             * <p>The URL of the alert callback.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://www.test.com">http://www.test.com</a></p>
@@ -1148,7 +1151,7 @@ public class GetAlertActionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The event bus parameters.</p>
+             * <p>The EventBridge parameters.</p>
              */
             public Builder ebParam(EbParam ebParam) {
                 this.ebParam = ebParam;
@@ -1180,7 +1183,7 @@ public class GetAlertActionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Simple Message Queue (formerly MNS) parameters.</p>
+             * <p>The Simple Message Queue (formerly MNS) (MSMQ) parameters.</p>
              */
             public Builder mnsParam(MnsParam mnsParam) {
                 this.mnsParam = mnsParam;
@@ -1204,7 +1207,7 @@ public class GetAlertActionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the alert action integration.</p>
+             * <p>The alert action integration type.</p>
              * 
              * <strong>example:</strong>
              * <p>FC</p>

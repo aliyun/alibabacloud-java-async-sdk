@@ -151,10 +151,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The token for the next query.</p>
+         * <p>The token that is used to start the next query.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxxxxxxxx</p>
+         * <p>2-ba4d-4b9f-aa24-dcb067a30f1c</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -186,8 +186,8 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The labels. Used as filter conditions for the query.</p>
-         * <p>You can specify up to 20 labels.</p>
+         * <p>The tags. The filter conditions for the query.</p>
+         * <p>You can specify up to 20 tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             String tagShrink = shrink(tag, "tag", "json");

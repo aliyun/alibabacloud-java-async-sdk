@@ -223,7 +223,7 @@ public class UpdateAlertActionRequest extends Request {
         }
 
         /**
-         * <p>The unique identifier of the action integration.</p>
+         * <p>The unique identifier of the alert action integration.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -236,7 +236,7 @@ public class UpdateAlertActionRequest extends Request {
         }
 
         /**
-         * <p>The name of the action integration.</p>
+         * <p>The name of the alert action integration.</p>
          * 
          * <strong>example:</strong>
          * <p>testName</p>
@@ -284,7 +284,7 @@ public class UpdateAlertActionRequest extends Request {
         }
 
         /**
-         * <p>The Simple Message Queue (formerly MNS) parameters.</p>
+         * <p>The Simple Message Queue (formerly MNS) (MSMQ) parameters.</p>
          */
         public Builder mnsParam(MnsParam mnsParam) {
             this.putBodyParameter("mnsParam", mnsParam);
@@ -311,7 +311,7 @@ public class UpdateAlertActionRequest extends Request {
         }
 
         /**
-         * <p>The type of the action integration.</p>
+         * <p>The alert action integration type.</p>
          * 
          * <strong>example:</strong>
          * <p>FC</p>
@@ -765,7 +765,7 @@ public class UpdateAlertActionRequest extends Request {
             }
 
             /**
-             * <p>The service name in Function Compute.</p>
+             * <p>The service name of Function Compute.</p>
              * 
              * <strong>example:</strong>
              * <p>testService</p>
@@ -848,7 +848,7 @@ public class UpdateAlertActionRequest extends Request {
             } 
 
             /**
-             * <p>The resource type of Simple Message Queue (formerly MNS).</p>
+             * <p>The resource type of Simple Message Queue (formerly MNS) (MSMQ).</p>
              * 
              * <strong>example:</strong>
              * <p>queue</p>
@@ -859,7 +859,7 @@ public class UpdateAlertActionRequest extends Request {
             }
 
             /**
-             * <p>The name of the resource.</p>
+             * <p>The resource name.</p>
              * <ul>
              * <li>If the resource type is queue, the resource name is the queue name.</li>
              * <li>If the resource type is topic, the resource name is the topic name.</li>
@@ -944,7 +944,7 @@ public class UpdateAlertActionRequest extends Request {
             } 
 
             /**
-             * <p>The integration key of PagerDuty.</p>
+             * <p>The integration key for PagerDuty.</p>
              * 
              * <strong>example:</strong>
              * <p>fwe4rwr543t543t43t43t43</p>
@@ -955,7 +955,7 @@ public class UpdateAlertActionRequest extends Request {
             }
 
             /**
-             * <p>The integration webhook URL of PagerDuty. V1 and V2 are supported.</p>
+             * <p>The integration webhook URL for PagerDuty. Both V1 and V2 are supported.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://events.pagerduty.com/v2/enqueue">https://events.pagerduty.com/v2/enqueue</a></p>
@@ -1038,7 +1038,7 @@ public class UpdateAlertActionRequest extends Request {
             } 
 
             /**
-             * <p>The name of the Logstore.</p>
+             * <p>The name of the Simple Log Service Logstore.</p>
              * 
              * <strong>example:</strong>
              * <p>testLogstore</p>
@@ -1049,7 +1049,7 @@ public class UpdateAlertActionRequest extends Request {
             }
 
             /**
-             * <p>The name of the project.</p>
+             * <p>The name of the Simple Log Service project.</p>
              * 
              * <strong>example:</strong>
              * <p>testProject</p>
@@ -1168,6 +1168,9 @@ public class UpdateAlertActionRequest extends Request {
 
             /**
              * <p>The request headers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;X-Total-Count&quot;:&quot;0&quot;}</p>
              */
             public Builder headers(java.util.Map<String, String> headers) {
                 this.headers = headers;

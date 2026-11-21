@@ -98,7 +98,7 @@ public class GetNotifyPolicyRequest extends Request {
         }
 
         /**
-         * <p>The unique identifier of the notification policy, returned by the create operation.</p>
+         * <p>The unique identifier of the notification policy, which is returned by the create operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,7 +111,7 @@ public class GetNotifyPolicyRequest extends Request {
         }
 
         /**
-         * <p>The workspace ID. Used to isolate notification policy resources across different business spaces. Example: <code>default-cms-xxxx-ap-southeast-1</code>.</p>
+         * <p>The workspace ID, which is used to isolate notification policy resources for different business workspaces. Example: <code>default-cms-xxxx-cn-hangzhou</code>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

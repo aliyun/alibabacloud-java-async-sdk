@@ -102,6 +102,9 @@ public class PreviewDataPipelineResponseBody extends TeaModel {
 
         /**
          * <p>The aggregation diagnostics.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;emittedPoints&quot;:2,&quot;displayTruncated&quot;:false}</p>
          */
         public Builder diagnostics(java.util.Map<String, ?> diagnostics) {
             this.diagnostics = diagnostics;
@@ -191,7 +194,7 @@ public class PreviewDataPipelineResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the field.</p>
+             * <p>The field name.</p>
              * 
              * <strong>example:</strong>
              * <p>trace_id</p>
@@ -202,7 +205,7 @@ public class PreviewDataPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the field.</p>
+             * <p>The field type.</p>
              * 
              * <strong>example:</strong>
              * <p>string</p>
@@ -314,7 +317,7 @@ public class PreviewDataPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the dataset.</p>
+             * <p>The dataset name.</p>
              * 
              * <strong>example:</strong>
              * <p>error_spans</p>
@@ -325,7 +328,7 @@ public class PreviewDataPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of samples.</p>
+             * <p>The sample count.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

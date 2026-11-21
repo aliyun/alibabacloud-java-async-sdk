@@ -310,7 +310,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The operation to be performed.</p>
+             * <p>The operation performed.</p>
              * 
              * <strong>example:</strong>
              * <p>add</p>
@@ -431,7 +431,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operation to be performed.</p>
+             * <p>The operation performed.</p>
              * 
              * <strong>example:</strong>
              * <p>add</p>
@@ -512,7 +512,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The key of the IP field.</p>
+             * <p>The key of the IP address field.</p>
              * 
              * <strong>example:</strong>
              * <p>test-key</p>
@@ -595,7 +595,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The operation to be performed.</p>
+             * <p>The operation performed.</p>
              * 
              * <strong>example:</strong>
              * <p>add</p>
@@ -697,7 +697,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The operation to be performed.</p>
+             * <p>The operation performed.</p>
              * 
              * <strong>example:</strong>
              * <p>add</p>
@@ -909,7 +909,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP matching rule.</p>
+             * <p>The IP address matching rule.</p>
              */
             public Builder ipMatchRule(IpMatchRule ipMatchRule) {
                 this.ipMatchRule = ipMatchRule;
@@ -917,7 +917,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags.</p>
+             * <p>The labels.</p>
              */
             public Builder labels(java.util.List<Labels> labels) {
                 this.labels = labels;
@@ -1092,7 +1092,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
              * <p>The description.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxxxxx</p>
+             * <p>Access policy for production environment resources</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1570,7 +1570,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the bound resources.</p>
+             * <p>The bound resource information.</p>
              */
             public Builder bindResource(BindResource bindResource) {
                 this.bindResource = bindResource;
@@ -1616,7 +1616,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The rule name.</p>
+             * <p>The policy name.</p>
              * 
              * <strong>example:</strong>
              * <p>ControlPolicy4DetailVportInfo</p>

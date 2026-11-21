@@ -67,7 +67,7 @@ public class GetMemoryHistoryResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3B311FD9-A60B-55E0-A896-A0C73*********</p>
@@ -78,7 +78,7 @@ public class GetMemoryHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Return value.</p>
+         * <p>The results.</p>
          */
         public Builder results(java.util.List<Results> results) {
             this.results = results;
@@ -144,7 +144,7 @@ public class GetMemoryHistoryResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Message content.</p>
+             * <p>The message content.</p>
              * 
              * <strong>example:</strong>
              * <p>My name is Zhang San and I live in Hangzhou.</p>
@@ -155,7 +155,7 @@ public class GetMemoryHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Message sender role.</p>
+             * <p>The role of the message sender.</p>
              * 
              * <strong>example:</strong>
              * <p>user</p>
@@ -329,7 +329,7 @@ public class GetMemoryHistoryResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Creation time.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>1764556182850</p>
@@ -340,7 +340,7 @@ public class GetMemoryHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Event type.</p>
+             * <p>The event type.</p>
              * 
              * <strong>example:</strong>
              * <p>ADD</p>
@@ -351,7 +351,7 @@ public class GetMemoryHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Memory ID.</p>
+             * <p>The memory ID.</p>
              * 
              * <strong>example:</strong>
              * <p>b25d6ad7-306f-4040-9890-4dddd2505a2e</p>
@@ -362,7 +362,7 @@ public class GetMemoryHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Original message.</p>
+             * <p>The original message.</p>
              */
             public Builder input(java.util.List<Input> input) {
                 this.input = input;
@@ -370,7 +370,7 @@ public class GetMemoryHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Memory ID.</p>
+             * <p>The memory ID.</p>
              * 
              * <strong>example:</strong>
              * <p>019cacf6-7b39-7f61-8314-548f07ca449a</p>
@@ -381,7 +381,7 @@ public class GetMemoryHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Metadata.</p>
+             * <p>The metadata.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;sessionId&quot;:&quot;test_session_001&quot;}</p>
@@ -392,7 +392,7 @@ public class GetMemoryHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>New memory.</p>
+             * <p>The new memory.</p>
              * 
              * <strong>example:</strong>
              * <p>I really like Python.</p>
@@ -403,7 +403,7 @@ public class GetMemoryHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Old memory.</p>
+             * <p>The old memory.</p>
              * 
              * <strong>example:</strong>
              * <p>I really don\&quot;t like Python at all.</p>
@@ -414,7 +414,7 @@ public class GetMemoryHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Update time.</p>
+             * <p>The update time.</p>
              * 
              * <strong>example:</strong>
              * <p>1771036123785</p>
@@ -425,7 +425,7 @@ public class GetMemoryHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>User ID.</p>
+             * <p>The user ID.</p>
              * 
              * <strong>example:</strong>
              * <p>test_session_001</p>

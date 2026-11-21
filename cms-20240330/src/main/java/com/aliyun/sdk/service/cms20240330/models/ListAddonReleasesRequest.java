@@ -154,6 +154,9 @@ public class ListAddonReleasesRequest extends Request {
 
         /**
          * <p>The next token for pagination.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);

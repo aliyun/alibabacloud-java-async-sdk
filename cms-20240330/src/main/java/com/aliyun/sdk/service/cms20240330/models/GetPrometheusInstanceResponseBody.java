@@ -67,7 +67,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the Prometheus instance.</p>
+         * <p>The Prometheus instance details.</p>
          */
         public Builder prometheusInstance(PrometheusInstance prometheusInstance) {
             this.prometheusInstance = prometheusInstance;
@@ -75,7 +75,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The unique request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>264C3E89-XXXX-XXXX-XXXX-CE9C2196C7DC</p>
@@ -745,12 +745,8 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The permission type. Valid values:</p>
-             * <ul>
-             * <li>readWrite</li>
-             * <li>readOnly</li>
-             * <li>httpReadOnly</li>
-             * </ul>
+             * <p>The access type. Valid values:
+             * readWrite, readOnly, httpReadOnly</p>
              * 
              * <strong>example:</strong>
              * <p>readOnly</p>
@@ -761,7 +757,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of days for automatic archiving after storage expires. A value of 0 indicates no archiving, and a value of 3650 indicates permanent retention.</p>
+             * <p>The number of days to automatically archive and retain data after the storage expires. A value of 0 indicates that data is not archived, and a value of 3650 indicates permanent retention.</p>
              * 
              * <strong>example:</strong>
              * <p>90</p>
@@ -823,7 +819,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance creation time in UTC+0, in the format of yyyy-MM-ddTHH:mmZ.</p>
+             * <p>The time when the instance was created. The time is displayed in UTC+0 in the yyyy-MM-ddTHH:mmZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-08-10T02:07:53Z</p>
@@ -834,7 +830,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether authentication-free read is enabled.</p>
+             * <p>Specifies whether authentication-free read is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -845,7 +841,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether authentication-free write is enabled.</p>
+             * <p>Specifies whether authentication-free write is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -856,7 +852,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the authentication token is enabled.</p>
+             * <p>Specifies whether the authentication token is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -868,6 +864,9 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
 
             /**
              * <p>The extended information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;key&quot;:&quot;value&quot;}</p>
              */
             public Builder extraInfo(java.util.Map<String, String> extraInfo) {
                 this.extraInfo = extraInfo;
@@ -875,7 +874,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The dashboard directory URL.</p>
+             * <p>The URL of the visualization dashboard directory.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://gnew.console.aliyun.com/dashboards/f/c49a80d2a551d4a20a8c4b996b0be4e52/xxxxxxx">https://gnew.console.aliyun.com/dashboards/f/c49a80d2a551d4a20a8c4b996b0be4e52/xxxxxxx</a></p>
@@ -897,7 +896,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the associated managed Grafana instance.</p>
+             * <p>The name of the bound managed Grafana instance.</p>
              * 
              * <strong>example:</strong>
              * <p>Shared Edition</p>
@@ -908,7 +907,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The HTTP public endpoint.</p>
+             * <p>The public HTTP endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://workspace-default-cms-xxxxxxx">http://workspace-default-cms-xxxxxxx</a></p>
@@ -919,7 +918,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The HTTP internal endpoint.</p>
+             * <p>The internal HTTP endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://workspace-default-cms-xxxxxxx">http://workspace-default-cms-xxxxxxx</a></p>
@@ -930,7 +929,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The HTTP private endpoint.</p>
+             * <p>The HTTP private network endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://workspace-default-cms-xxxxxxx">http://workspace-default-cms-xxxxxxx</a></p>
@@ -952,11 +951,9 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing method. Valid values:</p>
-             * <ul>
-             * <li>POSTPAY: pay-as-you-go by metric reporting volume.</li>
-             * <li>POSTPAY_GB: pay-as-you-go by metric write volume.</li>
-             * </ul>
+             * <p>The billing method. Valid values:
+             * POSTPAY: Pay-as-you-go based on the number of reported metrics.
+             * POSTPAY_GB: Pay-as-you-go based on the volume of written metrics.</p>
              * 
              * <strong>example:</strong>
              * <p>POSTPAY</p>
@@ -967,7 +964,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the instance billing method was modified, in UTC format.</p>
+             * <p>The time when the billing method of the instance was updated. The time is in UTC format.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-08-10T02:07:53Z</p>
@@ -978,7 +975,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The product to which the Prometheus instance belongs (arms or cms).</p>
+             * <p>The product to which the Prometheus instance belongs, such as ARMS or CMS.</p>
              * 
              * <strong>example:</strong>
              * <p>cms</p>
@@ -1011,7 +1008,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The PushGateway public endpoint.</p>
+             * <p>The public PushGateway endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://workspace-default-cms-xxxxxxx">http://workspace-default-cms-xxxxxxx</a></p>
@@ -1022,7 +1019,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The PushGateway internal endpoint.</p>
+             * <p>The internal PushGateway endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://workspace-default-cms-xxxxxxx">http://workspace-default-cms-xxxxxxx</a></p>
@@ -1033,7 +1030,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The PushGateway private endpoint.</p>
+             * <p>The PushGateway private network endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://workspace-default-cms-xxxxxxx">http://workspace-default-cms-xxxxxxx</a></p>
@@ -1066,7 +1063,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The RemoteRead internal endpoint.</p>
+             * <p>The internal RemoteRead endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://workspace-default-cms-1xxxxxxxxxx">https://workspace-default-cms-1xxxxxxxxxx</a></p>
@@ -1099,7 +1096,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The RemoteWrite internal endpoint.</p>
+             * <p>The internal RemoteWrite endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://workspace-default-cms-xxxxxxxxxx">https://workspace-default-cms-xxxxxxxxxx</a></p>
@@ -1132,7 +1129,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The fixed value: PrometheusInstance.</p>
+             * <p>The resource type. Fixed value: PrometheusInstance.</p>
              * 
              * <strong>example:</strong>
              * <p>Prometheus</p>

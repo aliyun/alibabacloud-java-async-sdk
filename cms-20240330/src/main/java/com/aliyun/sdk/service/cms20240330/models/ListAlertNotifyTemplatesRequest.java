@@ -198,7 +198,7 @@ public class ListAlertNotifyTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The template locale.</p>
+         * <p>The template language.</p>
          * 
          * <strong>example:</strong>
          * <p>GO</p>

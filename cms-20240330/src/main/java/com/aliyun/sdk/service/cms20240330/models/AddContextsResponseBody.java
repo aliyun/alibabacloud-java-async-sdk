@@ -78,7 +78,7 @@ public class AddContextsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The return values.</p>
+         * <p>The results.</p>
          */
         public Builder results(java.util.List<Results> results) {
             this.results = results;

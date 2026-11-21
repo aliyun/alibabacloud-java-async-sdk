@@ -136,7 +136,7 @@ public class ListContactGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique request ID.</p>
+         * <p>The unique ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>8FDE2569-626B-5176-9844-28877A*****</p>
@@ -253,7 +253,7 @@ public class ListContactGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The contact IDs.</p>
+             * <p>The IDs of the contacts.</p>
              */
             public Builder contactIds(java.util.List<String> contactIds) {
                 this.contactIds = contactIds;
@@ -261,7 +261,7 @@ public class ListContactGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The contact name.</p>
+             * <p>The name of the contact.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>

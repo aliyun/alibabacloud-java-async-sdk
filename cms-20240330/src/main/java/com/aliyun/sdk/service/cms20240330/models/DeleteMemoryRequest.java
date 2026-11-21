@@ -116,7 +116,7 @@ public class DeleteMemoryRequest extends Request {
         }
 
         /**
-         * <p>The ID of the memory.</p>
+         * <p>The memory ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

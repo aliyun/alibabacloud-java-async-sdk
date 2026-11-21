@@ -125,6 +125,9 @@ public class ListPrometheusVirtualInstancesRequest extends Request {
 
         /**
          * <p>The maximum number of instances to return per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -146,6 +149,9 @@ public class ListPrometheusVirtualInstancesRequest extends Request {
 
         /**
          * <p>The next token for the paging query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a1b2c3d4e5f60718293a4b5c6d7e****8f9a0b1c2d3e4f508f9a0b1c2d3e4f508f9a0b1c2d3e4f50</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -155,6 +161,9 @@ public class ListPrometheusVirtualInstancesRequest extends Request {
 
         /**
          * <p>The tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890123456</p>
          */
         public Builder tenantId(String tenantId) {
             this.putQueryParameter("tenantId", tenantId);

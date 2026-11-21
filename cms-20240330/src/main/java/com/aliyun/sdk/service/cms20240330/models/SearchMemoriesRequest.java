@@ -229,7 +229,7 @@ public class SearchMemoriesRequest extends Request {
         } 
 
         /**
-         * <p>The name of the workspace.</p>
+         * <p>The workspace name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -242,7 +242,7 @@ public class SearchMemoriesRequest extends Request {
         }
 
         /**
-         * <p>The name of the memory store.</p>
+         * <p>The memory store name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -300,7 +300,7 @@ public class SearchMemoriesRequest extends Request {
         }
 
         /**
-         * <p>The reranking option.</p>
+         * <p>Specifies whether to rerank.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -312,7 +312,7 @@ public class SearchMemoriesRequest extends Request {
         }
 
         /**
-         * <p>The retrieval option.</p>
+         * <p>The retrieval options.</p>
          * 
          * <strong>example:</strong>
          * <p>reranker,llm_rank</p>

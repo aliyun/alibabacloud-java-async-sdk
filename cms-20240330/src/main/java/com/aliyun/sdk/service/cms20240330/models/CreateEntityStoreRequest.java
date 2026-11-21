@@ -22,9 +22,14 @@ public class CreateEntityStoreRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceName;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("dryRun")
+    private Boolean dryRun;
+
     private CreateEntityStoreRequest(Builder builder) {
         super(builder);
         this.workspaceName = builder.workspaceName;
+        this.dryRun = builder.dryRun;
     }
 
     public static Builder builder() {
@@ -47,8 +52,16 @@ public class CreateEntityStoreRequest extends Request {
         return this.workspaceName;
     }
 
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
     public static final class Builder extends Request.Builder<CreateEntityStoreRequest, Builder> {
         private String workspaceName; 
+        private Boolean dryRun; 
 
         private Builder() {
             super();
@@ -57,6 +70,7 @@ public class CreateEntityStoreRequest extends Request {
         private Builder(CreateEntityStoreRequest request) {
             super(request);
             this.workspaceName = request.workspaceName;
+            this.dryRun = request.dryRun;
         } 
 
         /**
@@ -69,6 +83,15 @@ public class CreateEntityStoreRequest extends Request {
         public Builder workspaceName(String workspaceName) {
             this.putPathParameter("workspaceName", workspaceName);
             this.workspaceName = workspaceName;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to perform a dry run. Valid values: true: performs a dry run without making actual changes. false: sends a normal request. Default value: false.</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("dryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 

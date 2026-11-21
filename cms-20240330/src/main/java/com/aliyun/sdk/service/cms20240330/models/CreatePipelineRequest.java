@@ -197,7 +197,7 @@ public class CreatePipelineRequest extends Request {
         }
 
         /**
-         * <p>The data sink.</p>
+         * <p>The destination.</p>
          */
         public Builder sink(Sink sink) {
             this.putBodyParameter("sink", sink);
@@ -560,6 +560,9 @@ public class CreatePipelineRequest extends Request {
 
             /**
              * <p>The parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;output&quot;:&quot;ID,key_0,key_2,key_3,key_4&quot;,&quot;workspace&quot;:&quot;workspace-test-dataset&quot;,&quot;field&quot;:&quot;key_0&quot;,&quot;global&quot;:true,&quot;dataset&quot;:&quot;dataset_1&quot;}</p>
              */
             public Builder parameters(java.util.Map<String, ?> parameters) {
                 this.parameters = parameters;
@@ -780,7 +783,7 @@ public class CreatePipelineRequest extends Request {
             }
 
             /**
-             * <p>The data sink type.</p>
+             * <p>The destination type.</p>
              * 
              * <strong>example:</strong>
              * <p>dataset</p>
@@ -863,7 +866,7 @@ public class CreatePipelineRequest extends Request {
             } 
 
             /**
-             * <p>The name of the Simple Log Service Logstore.</p>
+             * <p>The name of the Logstore.</p>
              * 
              * <strong>example:</strong>
              * <p>test-logstore</p>
@@ -874,7 +877,7 @@ public class CreatePipelineRequest extends Request {
             }
 
             /**
-             * <p>The name of the Simple Log Service project.</p>
+             * <p>The name of the project.</p>
              * 
              * <strong>example:</strong>
              * <p>test-project</p>
@@ -955,7 +958,7 @@ public class CreatePipelineRequest extends Request {
             } 
 
             /**
-             * <p>The Simple Log Service Logstore information.</p>
+             * <p>The Logstore information.</p>
              */
             public Builder logstore(Logstore logstore) {
                 this.logstore = logstore;

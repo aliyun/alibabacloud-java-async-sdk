@@ -167,7 +167,7 @@ public class UpdatePipelineRequest extends Request {
         }
 
         /**
-         * <p>The pipeline description.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>test pipeline</p>
@@ -197,7 +197,7 @@ public class UpdatePipelineRequest extends Request {
         }
 
         /**
-         * <p>The data sink configuration.</p>
+         * <p>The sink.</p>
          */
         public Builder sink(Sink sink) {
             this.putBodyParameter("sink", sink);
@@ -206,7 +206,7 @@ public class UpdatePipelineRequest extends Request {
         }
 
         /**
-         * <p>The data source configuration.</p>
+         * <p>The data source.</p>
          */
         public Builder source(Source source) {
             this.putBodyParameter("source", source);
@@ -366,7 +366,7 @@ public class UpdatePipelineRequest extends Request {
             }
 
             /**
-             * <p>The execution interval.</p>
+             * <p>The time interval.</p>
              * 
              * <strong>example:</strong>
              * <p>86400</p>
@@ -460,7 +460,7 @@ public class UpdatePipelineRequest extends Request {
             }
 
             /**
-             * <p>The one-time execution configuration.</p>
+             * <p>The configuration for a single execution.</p>
              */
             public Builder runOnce(RunOnce runOnce) {
                 this.runOnce = runOnce;
@@ -468,7 +468,7 @@ public class UpdatePipelineRequest extends Request {
             }
 
             /**
-             * <p>The scheduled execution configuration.</p>
+             * <p>The configuration for scheduled execution.</p>
              */
             public Builder scheduled(Scheduled scheduled) {
                 this.scheduled = scheduled;
@@ -559,7 +559,10 @@ public class UpdatePipelineRequest extends Request {
             }
 
             /**
-             * <p>The node parameters.</p>
+             * <p>The parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;output&quot;:&quot;ID,key_0,key_2,key_3,key_4&quot;,&quot;workspace&quot;:&quot;workspace-test-dataset&quot;,&quot;field&quot;:&quot;key_0&quot;,&quot;global&quot;:true,&quot;dataset&quot;:&quot;dataset_1&quot;}</p>
              */
             public Builder parameters(java.util.Map<String, ?> parameters) {
                 this.parameters = parameters;
@@ -624,7 +627,7 @@ public class UpdatePipelineRequest extends Request {
             } 
 
             /**
-             * <p>The pipeline nodes.</p>
+             * <p>The nodes.</p>
              */
             public Builder nodes(java.util.List<Nodes> nodes) {
                 this.nodes = nodes;
@@ -691,7 +694,7 @@ public class UpdatePipelineRequest extends Request {
             } 
 
             /**
-             * <p>The dataset name.</p>
+             * <p>The dataset.</p>
              * 
              * <strong>example:</strong>
              * <p>dataset_1</p>
@@ -772,7 +775,7 @@ public class UpdatePipelineRequest extends Request {
             } 
 
             /**
-             * <p>The destination dataset configuration.</p>
+             * <p>The dataset.</p>
              */
             public Builder dataset(Dataset dataset) {
                 this.dataset = dataset;
@@ -850,7 +853,7 @@ public class UpdatePipelineRequest extends Request {
             } 
 
             /**
-             * <p>The Logstore name.</p>
+             * <p>The Simple Log Service Logstore name.</p>
              * 
              * <strong>example:</strong>
              * <p>test-logstore</p>
@@ -861,7 +864,7 @@ public class UpdatePipelineRequest extends Request {
             }
 
             /**
-             * <p>The filter query.</p>
+             * <p>The filter statement.</p>
              * 
              * <strong>example:</strong>
              * <p>status:500 and method:GET</p>
@@ -931,7 +934,7 @@ public class UpdatePipelineRequest extends Request {
             } 
 
             /**
-             * <p>The Log Service Logstore configuration.</p>
+             * <p>The Simple Log Service Logstore information.</p>
              */
             public Builder logstore(Logstore logstore) {
                 this.logstore = logstore;
@@ -939,7 +942,7 @@ public class UpdatePipelineRequest extends Request {
             }
 
             /**
-             * <p>The source type.</p>
+             * <p>The data source type.</p>
              * 
              * <strong>example:</strong>
              * <p>logstore</p>

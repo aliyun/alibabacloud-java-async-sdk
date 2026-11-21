@@ -88,7 +88,7 @@ public class DeleteContextStoreRequest extends Request {
         }
 
         /**
-         * <p>The context store name.</p>
+         * <p>The name of the context store.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

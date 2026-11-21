@@ -138,7 +138,7 @@ public class ListAddonsRequest extends Request {
         }
 
         /**
-         * <p>The language environment. Valid values: zh and en. Default value: zh.</p>
+         * <p>The locale. Valid values: zh and en. Default value: zh.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>

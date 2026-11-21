@@ -176,7 +176,7 @@ public class CreateOncallScheduleRequest extends Request {
         }
 
         /**
-         * <p>The list of rotations.</p>
+         * <p>The list of shifts.</p>
          */
         public Builder rotations(java.util.List<Rotations> rotations) {
             this.putBodyParameter("rotations", rotations);
@@ -206,7 +206,7 @@ public class CreateOncallScheduleRequest extends Request {
         }
 
         /**
-         * <p>The workspace name.</p>
+         * <p>The name of the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>default-cms-5884500827389836-cn-hangzhou</p>
@@ -376,7 +376,7 @@ public class CreateOncallScheduleRequest extends Request {
             } 
 
             /**
-             * <p>The days of the week when the rotation takes effect.</p>
+             * <p>The days of the week when the shift is active.</p>
              * <p>This parameter is required.</p>
              */
             public Builder activeDays(java.util.List<Integer> activeDays) {
@@ -394,7 +394,7 @@ public class CreateOncallScheduleRequest extends Request {
             }
 
             /**
-             * <p>The end time of the rotation. Format: HH:mm.</p>
+             * <p>The end time of the shift. Format: HH:mm.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -406,7 +406,7 @@ public class CreateOncallScheduleRequest extends Request {
             }
 
             /**
-             * <p>The name of the rotation.</p>
+             * <p>The name of the shift.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -418,7 +418,7 @@ public class CreateOncallScheduleRequest extends Request {
             }
 
             /**
-             * <p>The start time of the rotation. Format: HH:mm.</p>
+             * <p>The start time of the shift. Format: HH:mm.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -430,7 +430,7 @@ public class CreateOncallScheduleRequest extends Request {
             }
 
             /**
-             * <p>The length of the shift recurrence cycle. Used in conjunction with shiftRecurrenceFrequency. For example, rotate to the next on-call person every 3 days.</p>
+             * <p>The length of the shift rotation cycle. Used in conjunction with shiftRecurrenceFrequency. For example, rotate to the next on-call person every 3 days.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -441,7 +441,7 @@ public class CreateOncallScheduleRequest extends Request {
             }
 
             /**
-             * <p>The unit of the shift recurrence cycle. Used in conjunction with shiftRecurrenceFrequency. For example, rotate to the next on-call person every week.</p>
+             * <p>The unit of the shift rotation cycle. Used in conjunction with shiftLength. For example, rotate to the next on-call person every week.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -453,7 +453,7 @@ public class CreateOncallScheduleRequest extends Request {
             }
 
             /**
-             * <p>The start date of the rotation. Format: yyyy-MM-dd.</p>
+             * <p>The start date of the shift. Format: yyyy-MM-dd.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -465,7 +465,7 @@ public class CreateOncallScheduleRequest extends Request {
             }
 
             /**
-             * <p>The time zone name. Uses the <strong>IANA Time Zone Database</strong> standard. Example: <code>Asia/Shanghai</code>.</p>
+             * <p>The name of the time zone. The <strong>IANA Time Zone Database</strong> standard is used. Example: <code>Asia/Shanghai</code>.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -562,7 +562,7 @@ public class CreateOncallScheduleRequest extends Request {
             } 
 
             /**
-             * <p>The contact ID of the substitute.</p>
+             * <p>The ID of the contact who acts as the substitute.</p>
              * 
              * <strong>example:</strong>
              * <p>testId</p>
@@ -584,7 +584,7 @@ public class CreateOncallScheduleRequest extends Request {
             }
 
             /**
-             * <p>The contact ID of the replaced contact.</p>
+             * <p>The ID of the contact who is being replaced.</p>
              * 
              * <strong>example:</strong>
              * <p>testId</p>

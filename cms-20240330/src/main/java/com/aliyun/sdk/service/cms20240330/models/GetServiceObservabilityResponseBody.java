@@ -178,6 +178,9 @@ public class GetServiceObservabilityResponseBody extends TeaModel {
 
         /**
          * <p>The quota configurations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;arms_agent_hour&quot;:&quot;48&quot;}</p>
          */
         public Builder quotas(java.util.Map<String, String> quotas) {
             this.quotas = quotas;
@@ -208,6 +211,9 @@ public class GetServiceObservabilityResponseBody extends TeaModel {
 
         /**
          * <p>The system configurations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;trace_aggregate&quot;:&quot;enable&quot;}</p>
          */
         public Builder settings(java.util.Map<String, String> settings) {
             this.settings = settings;

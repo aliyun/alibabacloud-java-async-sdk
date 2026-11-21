@@ -96,7 +96,7 @@ public class GetCmsServiceRequest extends Request {
         }
 
         /**
-         * <p>prometheus: Checks the activation status of the Prometheus service. The service is billed by reported data volume or written data volume.</p>
+         * <p>prometheus: the activation status of the Prometheus service (billed based on the amount of reported or written data).</p>
          * 
          * <strong>example:</strong>
          * <p>prometheus</p>
@@ -108,7 +108,8 @@ public class GetCmsServiceRequest extends Request {
         }
 
         /**
-         * <p>prometheus: Checks whether the Prometheus product that is billed by reported data volume is activated.prometheusgb: Checks whether the Prometheus product that is billed by written data volume is activated.</p>
+         * <p>prometheus: indicates whether the Prometheus product billed based on the amount of reported data is activated.
+         * prometheusgb: indicates whether the Prometheus product billed based on the amount of written data is activated.</p>
          * 
          * <strong>example:</strong>
          * <p>prometheus</p>

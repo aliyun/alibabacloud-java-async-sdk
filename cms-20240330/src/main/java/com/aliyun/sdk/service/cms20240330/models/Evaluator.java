@@ -120,6 +120,9 @@ public class Evaluator extends TeaModel {
 
         /**
          * <p>The evaluator configuration parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;size&quot;:7}</p>
          */
         public Builder config(java.util.Map<String, ?> config) {
             this.config = config;
@@ -127,7 +130,7 @@ public class Evaluator extends TeaModel {
         }
 
         /**
-         * <p>The evaluation filter conditions.</p>
+         * <p>The evaluation filters.</p>
          */
         public Builder filters(java.util.Map<String, String> filters) {
             this.filters = filters;
@@ -168,7 +171,7 @@ public class Evaluator extends TeaModel {
         }
 
         /**
-         * <p>The evaluation variable mapping.</p>
+         * <p>The evaluation variable mappings.</p>
          */
         public Builder variableMapping(java.util.Map<String, String> variableMapping) {
             this.variableMapping = variableMapping;

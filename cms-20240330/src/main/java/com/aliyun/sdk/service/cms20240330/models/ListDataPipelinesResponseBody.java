@@ -1298,6 +1298,9 @@ public class ListDataPipelinesResponseBody extends TeaModel {
 
             /**
              * <p>The extended parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;vendor&quot;:&quot;example&quot;}</p>
              */
             public Builder parameters(java.util.Map<String, ?> parameters) {
                 this.parameters = parameters;
@@ -2679,6 +2682,9 @@ public class ListDataPipelinesResponseBody extends TeaModel {
 
             /**
              * <p>The extended parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;vendor&quot;:&quot;example&quot;}</p>
              */
             public Builder parameters(java.util.Map<String, ?> parameters) {
                 this.parameters = parameters;

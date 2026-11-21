@@ -352,6 +352,9 @@ public class ListAddonsResponseBody extends TeaModel {
 
             /**
              * <p>The probes required for integration dependencies.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;metric-agent&quot;:true}</p>
              */
             public Builder features(java.util.Map<String, Boolean> features) {
                 this.features = features;
@@ -517,7 +520,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The icon URL.</p>
+             * <p>The URL of the icon.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://xxxxxxx">http://xxxxxxx</a></p>
@@ -685,7 +688,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to install by default.</p>
+             * <p>Specifies whether the add-on is installed by default.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -715,7 +718,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to initiate a pod restart guide immediately after the plug-in installation is completed during integration.</p>
+             * <p>Specifies whether to trigger the pod restart process immediately after the plug-in is installed during integration.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -726,7 +729,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The supported protocol types for configuration.</p>
+             * <p>The supported protocol types in the configuration.</p>
              */
             public Builder protocols(java.util.List<Protocols> protocols) {
                 this.protocols = protocols;
@@ -909,7 +912,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether it is enabled.</p>
+             * <p>Specifies whether the integration policy type is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -950,7 +953,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The integration center policy type.</p>
+             * <p>The Integration Center policy type.</p>
              * 
              * <strong>example:</strong>
              * <p>CS</p>
@@ -1187,7 +1190,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of tags for the integration component.</p>
+             * <p>The list of categories for the integration component.</p>
              */
             public Builder categories(java.util.List<String> categories) {
                 this.categories = categories;
@@ -1222,7 +1225,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The icon URL.</p>
+             * <p>The URL of the icon.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://xxxxxxx">http://xxxxxxx</a></p>
@@ -1252,7 +1255,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time of the latest release. The time is in ISO 8601 format and includes the UTC identifier or time zone offset.</p>
+             * <p>The time of the latest release. The time follows the ISO 8601 standard and includes a UTC identifier or time zone offset.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-09-03T03:15:56Z</p>
@@ -1274,7 +1277,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the component can be installed only once.</p>
+             * <p>Specifies whether the add-on can be installed only once.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1299,9 +1302,7 @@ public class ListAddonsResponseBody extends TeaModel {
              * <p>The component version.</p>
              * 
              * <strong>example:</strong>
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <p>1.2.32</p>
              */
             public Builder version(String version) {
                 this.version = version;

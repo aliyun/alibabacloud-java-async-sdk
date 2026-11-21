@@ -122,7 +122,7 @@ public class NotifyStrategyConfig extends TeaModel {
          * <p>The description of the notification policy.</p>
          * 
          * <strong>example:</strong>
-         * <p>生产环境告警通知策略</p>
+         * <p>Production environment alert notification policy</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -130,7 +130,7 @@ public class NotifyStrategyConfig extends TeaModel {
         }
 
         /**
-         * <p>The noise reduction settings.</p>
+         * <p>The grouping and merging settings.</p>
          * <p>This parameter is required.</p>
          */
         public Builder groupingSetting(GroupingSetting groupingSetting) {
@@ -174,10 +174,14 @@ public class NotifyStrategyConfig extends TeaModel {
      * <p>NotifyStrategyConfig</p>
      */
     public static class CustomTemplateEntries extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("targetType")
+        private String targetType;
+
         @com.aliyun.core.annotation.NameInMap("templateUuid")
         private String templateUuid;
 
         private CustomTemplateEntries(Builder builder) {
+            this.targetType = builder.targetType;
             this.templateUuid = builder.templateUuid;
         }
 
@@ -190,6 +194,13 @@ public class NotifyStrategyConfig extends TeaModel {
         }
 
         /**
+         * @return targetType
+         */
+        public String getTargetType() {
+            return this.targetType;
+        }
+
+        /**
          * @return templateUuid
          */
         public String getTemplateUuid() {
@@ -197,14 +208,27 @@ public class NotifyStrategyConfig extends TeaModel {
         }
 
         public static final class Builder {
+            private String targetType; 
             private String templateUuid; 
 
             private Builder() {
             } 
 
             private Builder(CustomTemplateEntries model) {
+                this.targetType = model.targetType;
                 this.templateUuid = model.templateUuid;
             } 
+
+            /**
+             * <p>This parameter is optional. You can configure at most one template for each notification type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SMS</p>
+             */
+            public Builder targetType(String targetType) {
+                this.targetType = targetType;
+                return this;
+            }
 
             /**
              * <p>The UUID of the notification template.</p>
@@ -303,7 +327,7 @@ public class NotifyStrategyConfig extends TeaModel {
             } 
 
             /**
-             * <p>The event fields by which events are grouped. Events in the same group are merged into a single notification. An empty array indicates no grouping.</p>
+             * <p>The event fields used for grouping and merging. Events in the same group are merged into a single notification. An empty array indicates no grouping.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;alertname&quot;]</p>
@@ -314,7 +338,7 @@ public class NotifyStrategyConfig extends TeaModel {
             }
 
             /**
-             * <p>This parameter does not take effect for this operation. You do not need to set this parameter.</p>
+             * <p>This parameter does not take effect for this API operation and does not need to be configured.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -325,7 +349,7 @@ public class NotifyStrategyConfig extends TeaModel {
             }
 
             /**
-             * <p>This parameter does not take effect for this operation. You do not need to set this parameter.</p>
+             * <p>This parameter does not take effect for this API operation and does not need to be configured.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -336,7 +360,7 @@ public class NotifyStrategyConfig extends TeaModel {
             }
 
             /**
-             * <p>This parameter does not take effect for this operation. You do not need to set this parameter.</p>
+             * <p>This parameter does not take effect for this API operation and does not need to be configured.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -421,11 +445,11 @@ public class NotifyStrategyConfig extends TeaModel {
             } 
 
             /**
-             * <p>The channel type. Valid values: DING, WEIXIN, FEISHU, SLACK, TEAMS, WEBHOOK, CONTACT, GROUP, DUTY, and DING_COOL_APP. Lowercase values are not supported. For email, text message, or phone call notifications, use CONTACT with enabledSubChannels.</p>
+             * <p>The type of the channel. Valid values: DING, WEIXIN, FEISHU, SLACK, TEAMS, WEBHOOK, CONTACT, GROUP, DUTY, and DING_COOL_APP. The values must be in uppercase. Lowercase values are not supported. For email, text message, and voice call, use CONTACT and configure enabledSubChannels.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>WEBHOOK</p>
+             * <p>DING</p>
              */
             public Builder channelType(String channelType) {
                 this.channelType = channelType;
@@ -433,7 +457,7 @@ public class NotifyStrategyConfig extends TeaModel {
             }
 
             /**
-             * <p>Required only for CONTACT, GROUP, or DUTY. The sub-channel types in uppercase. Valid values: EMAIL, SMS, VOICE, DING, WEIXIN, FEISHU, and WEBHOOK.</p>
+             * <p>This parameter is required only when the channel type is CONTACT, GROUP, or DUTY. Valid values for sub-channels: EMAIL, SMS, VOICE, DING, WEIXIN, FEISHU, and WEBHOOK. The values must be in uppercase.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;EMAIL&quot;,&quot;SMS&quot;]</p>
@@ -444,7 +468,7 @@ public class NotifyStrategyConfig extends TeaModel {
             }
 
             /**
-             * <p>The list of receiver identifiers. At least one receiver is required. Specify a webhook UUID for WEBHOOK, a robot UUID for chatbots, or a contact ID for CONTACT.</p>
+             * <p>The list of recipient identifiers. At least one identifier is required. For WEBHOOK, specify the webhook UUID. For a chatbot, specify the chatbot UUID. For CONTACT, specify the contact ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -541,7 +565,7 @@ public class NotifyStrategyConfig extends TeaModel {
             } 
 
             /**
-             * <p>The effective days. Valid values: 0 to 6 (0 = Sunday, 6 = Saturday). The value 7 is not supported.</p>
+             * <p>The effective days of the week. Valid values: 0 to 6. A value of 0 indicates Sunday, and 6 indicates Saturday. The value 7 is not supported.</p>
              * 
              * <strong>example:</strong>
              * <p>[0,1,2,3,4,5,6]</p>
@@ -694,10 +718,10 @@ public class NotifyStrategyConfig extends TeaModel {
             }
 
             /**
-             * <p>The digital employee name. Required when enableRca is set to true.</p>
+             * <p>The name of the digital employee. This parameter is required when enableRca is set to true.</p>
              * 
              * <strong>example:</strong>
-             * <p>数字员工名</p>
+             * <p>Digital employee name</p>
              */
             public Builder digitalEmployeeName(String digitalEmployeeName) {
                 this.digitalEmployeeName = digitalEmployeeName;
@@ -713,7 +737,7 @@ public class NotifyStrategyConfig extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to enable Root Cause Analysis (RCA).</p>
+             * <p>Specifies whether to enable root cause analysis (RCA).</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -724,7 +748,7 @@ public class NotifyStrategyConfig extends TeaModel {
             }
 
             /**
-             * <p>The route-level event filter conditions.</p>
+             * <p>The route-level event filtering conditions.</p>
              * 
              * <strong>example:</strong>
              * <p>{}</p>

@@ -160,7 +160,7 @@ public class CreateMemoryStoreRequest extends Request {
         } 
 
         /**
-         * <p>The name of the workspace.</p>
+         * <p>The workspace name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -229,7 +229,7 @@ public class CreateMemoryStoreRequest extends Request {
         }
 
         /**
-         * <p>The source of the memory.</p>
+         * <p>The memory source.</p>
          * 
          * <strong>example:</strong>
          * <p>None/Trace</p>
@@ -241,7 +241,7 @@ public class CreateMemoryStoreRequest extends Request {
         }
 
         /**
-         * <p>The configuration when the sourceType is Trace.</p>
+         * <p>The configuration when the sourceType is set to Trace.</p>
          */
         public Builder traceSourceConfig(TraceSourceConfig traceSourceConfig) {
             this.putBodyParameter("traceSourceConfig", traceSourceConfig);

@@ -31,6 +31,10 @@ public class DeleteUmodelDataRequest extends Request {
     private String domain;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("dryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("kind")
     private String kind;
 
@@ -43,6 +47,7 @@ public class DeleteUmodelDataRequest extends Request {
         this.workspace = builder.workspace;
         this.regionId = builder.regionId;
         this.domain = builder.domain;
+        this.dryRun = builder.dryRun;
         this.kind = builder.kind;
         this.name = builder.name;
     }
@@ -82,6 +87,13 @@ public class DeleteUmodelDataRequest extends Request {
     }
 
     /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    /**
      * @return kind
      */
     public String getKind() {
@@ -99,6 +111,7 @@ public class DeleteUmodelDataRequest extends Request {
         private String workspace; 
         private String regionId; 
         private String domain; 
+        private Boolean dryRun; 
         private String kind; 
         private String name; 
 
@@ -111,6 +124,7 @@ public class DeleteUmodelDataRequest extends Request {
             this.workspace = request.workspace;
             this.regionId = request.regionId;
             this.domain = request.domain;
+            this.dryRun = request.dryRun;
             this.kind = request.kind;
             this.name = request.name;
         } 
@@ -138,7 +152,7 @@ public class DeleteUmodelDataRequest extends Request {
         }
 
         /**
-         * <p>The name of the Umodel data to delete. Omit this parameter to delete all Umodel data.</p>
+         * <p>The name of the specific Umodel data. If you do not specify this parameter, all Umodel data is included.</p>
          * 
          * <strong>example:</strong>
          * <p>apm</p>
@@ -150,7 +164,21 @@ public class DeleteUmodelDataRequest extends Request {
         }
 
         /**
-         * <p>The kind of the Umodel data. If unspecified, data of all kinds is deleted.</p>
+         * <p>Specifies whether to perform a dry run of the request. Valid values:</p>
+         * <ul>
+         * <li>true: sends a check request and does not perform actual changes.</li>
+         * <li>false: sends a normal request.
+         * Default value: false.</li>
+         * </ul>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("dryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * <p>The kind of the specific Umodel data. If you do not specify this parameter, all kinds are included.</p>
          * 
          * <strong>example:</strong>
          * <p>metric_set</p>
@@ -162,7 +190,7 @@ public class DeleteUmodelDataRequest extends Request {
         }
 
         /**
-         * <p>The name of the Umodel data. If unspecified, data with any name is deleted.</p>
+         * <p>The name of the specific Umodel data. If you do not specify this parameter, all Umodel data is included.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

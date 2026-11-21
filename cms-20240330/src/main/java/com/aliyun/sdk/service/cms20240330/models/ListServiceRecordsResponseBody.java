@@ -106,7 +106,7 @@ public class ListServiceRecordsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The maximum number of entries returned.</p>
+         * <p>The maximum number of results returned.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -128,7 +128,7 @@ public class ListServiceRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of operation records.</p>
+         * <p>The list of ticket operation records.</p>
          */
         public Builder records(java.util.List<Records> records) {
             this.records = records;
@@ -255,7 +255,7 @@ public class ListServiceRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The entry content in JSON string format. The format varies depending on the recordType.</p>
+             * <p>The content of the entry in JSON string format. The format varies based on the recordType.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -272,8 +272,7 @@ public class ListServiceRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the linked entry. Currently supported:
-             * logCorrelation, which indicates application log association.</p>
+             * <p>The type of the association entry. Valid values: logCorrelation: application log association.</p>
              * 
              * <strong>example:</strong>
              * <p>logCorrelation</p>

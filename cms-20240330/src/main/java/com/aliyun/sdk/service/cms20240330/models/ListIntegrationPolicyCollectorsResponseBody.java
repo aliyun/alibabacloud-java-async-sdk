@@ -196,7 +196,7 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time of the first transition.</p>
+             * <p>The time of the first transition, in ISO 8601 format, including the UTC identifier or time zone offset.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-08-27T13:59:23+08:00</p>
@@ -207,7 +207,7 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time of the last transition.</p>
+             * <p>The time of the last transition, in ISO 8601 format, including the UTC identifier or time zone offset.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-08-27T13:59:23+08:00</p>
@@ -218,7 +218,7 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details.</p>
+             * <p>The condition details.</p>
              * 
              * <strong>example:</strong>
              * <p>success</p>
@@ -240,7 +240,7 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The phase status.</p>
+             * <p>The conditions.</p>
              * 
              * <strong>example:</strong>
              * <p>True</p>
@@ -251,7 +251,7 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The phase type.</p>
+             * <p>The type of the condition.</p>
              * 
              * <strong>example:</strong>
              * <p>Ready</p>
@@ -321,7 +321,7 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The security group ID.</p>
+             * <p>The ID of the security group.</p>
              * 
              * <strong>example:</strong>
              * <p>sg-xxxxx</p>
@@ -332,7 +332,7 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The vSwitch ID.</p>
+             * <p>The ID of the vSwitch.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-xxxxxx</p>
@@ -532,7 +532,7 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The host IP address.</p>
+             * <p>The IP address of the host.</p>
              * 
              * <strong>example:</strong>
              * <p>10.10.10.10</p>
@@ -554,7 +554,7 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the component is a managed component.</p>
+             * <p>Indicates whether the component is managed.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -573,7 +573,7 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details.</p>
+             * <p>The condition details.</p>
              * 
              * <strong>example:</strong>
              * <p>ok</p>
@@ -584,7 +584,7 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The workload name.</p>
+             * <p>The name of the workload.</p>
              * 
              * <strong>example:</strong>
              * <p>exporter-xxx</p>
@@ -595,7 +595,7 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The workload namespace.</p>
+             * <p>The namespace of the workload.</p>
              * 
              * <strong>example:</strong>
              * <p>prod-db</p>
@@ -606,7 +606,7 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The kind of the parent reference.</p>
+             * <p>The kind of the owner reference.</p>
              * 
              * <strong>example:</strong>
              * <p>Deployment</p>
@@ -617,7 +617,7 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the parent reference.</p>
+             * <p>The name of the owner reference.</p>
              * 
              * <strong>example:</strong>
              * <p>exporter</p>
@@ -628,7 +628,7 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time.</p>
+             * <p>The start time, in ISO 8601 format, including the UTC identifier or time zone offset.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-08-27T13:59:23+08:00</p>
@@ -650,7 +650,7 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The workload version.</p>
+             * <p>The version of the workload.</p>
              * 
              * <strong>example:</strong>
              * <p>v2.4.4</p>
@@ -819,7 +819,7 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The collector name.</p>
+             * <p>The name of the collector.</p>
              * 
              * <strong>example:</strong>
              * <p>collector-kkxx</p>
@@ -830,7 +830,7 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The collector type.</p>
+             * <p>The type of the collector.</p>
              * 
              * <strong>example:</strong>
              * <p>Exporter</p>
@@ -841,7 +841,7 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The phase status.</p>
+             * <p>The conditions.</p>
              */
             public Builder conditions(java.util.List<Conditions> conditions) {
                 this.conditions = conditions;
@@ -849,7 +849,7 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the component is a managed component.</p>
+             * <p>Indicates whether the component is managed.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -871,10 +871,10 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The collector status.</p>
+             * <p>The state of the collector.</p>
              * 
              * <strong>example:</strong>
-             * <p>xx</p>
+             * <p>active</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -882,7 +882,7 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The component version.</p>
+             * <p>The version of the component.</p>
              * 
              * <strong>example:</strong>
              * <p>2.6.2</p>

@@ -147,7 +147,7 @@ public class ListContactsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>56</p>
@@ -374,7 +374,10 @@ public class ListContactsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mapping of IM user IDs. Multiple instant messaging tools are supported.</p>
+             * <p>The mapping of instant messaging (IM) user IDs. Multiple IM tools are supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;dingtalk&quot;:&quot;abc123&quot;,&quot;wechat&quot;:&quot;def456&quot;}</p>
              */
             public Builder imUserIds(java.util.Map<String, String> imUserIds) {
                 this.imUserIds = imUserIds;
@@ -404,7 +407,7 @@ public class ListContactsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mobile phone number of the alert contact.</p>
+             * <p>The phone number of the alert contact.</p>
              * 
              * <strong>example:</strong>
              * <p>130123456789</p>
@@ -415,7 +418,7 @@ public class ListContactsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the mobile phone number is verified.</p>
+             * <p>Indicates whether the phone number is verified.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>

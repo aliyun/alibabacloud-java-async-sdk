@@ -104,10 +104,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token for the next query.</p>
+         * <p>The token that is used to start the next query.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxxxxxxxx</p>
+         * <p>2-ba4d-4b9f-aa24-dcb067a30f1c</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -126,7 +126,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The label list.</p>
+         * <p>The list of tagged resources.</p>
          */
         public Builder tagResources(java.util.List<TagResources> tagResources) {
             this.tagResources = tagResources;
@@ -240,7 +240,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The label key.</p>
+             * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
              * <p>env</p>
@@ -251,7 +251,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The label value.</p>
+             * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>

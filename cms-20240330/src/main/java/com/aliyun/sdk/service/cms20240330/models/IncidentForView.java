@@ -353,10 +353,10 @@ public class IncidentForView extends TeaModel {
         } 
 
         /**
-         * <p>The expiration time of the notification block.</p>
+         * <p>The expiration time for suppressing notifications.</p>
          * 
          * <strong>example:</strong>
-         * <p>-1 indicates that notifications are not blocked</p>
+         * <p>-1</p>
          */
         public Builder blockingExpireTimestamp(Long blockingExpireTimestamp) {
             this.blockingExpireTimestamp = blockingExpireTimestamp;
@@ -367,7 +367,7 @@ public class IncidentForView extends TeaModel {
          * <p>The detailed content of the incident.</p>
          * 
          * <strong>example:</strong>
-         * <p>&quot;{&quot;description&quot;:&quot;High CPU usage on the ECS instance&quot;,&quot;impact&quot;:&quot;Payment service delay&quot;}&quot;</p>
+         * <p>&quot;{&quot;description&quot;:&quot;High CPU usage on the ECS instance&quot;,&quot;impact&quot;:&quot;Payment service latency&quot;}&quot;</p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -383,7 +383,7 @@ public class IncidentForView extends TeaModel {
         }
 
         /**
-         * <p>The group identifier.</p>
+         * <p>The identifier of the group.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;group-123456&quot;</p>
@@ -395,6 +395,9 @@ public class IncidentForView extends TeaModel {
 
         /**
          * <p>The grouping key-value pairs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;resourceId&quot;:&quot;i-bp123456&quot;,&quot;severity&quot;:&quot;Critical&quot;}</p>
          */
         public Builder groupingKeys(java.util.Map<String, String> groupingKeys) {
             this.groupingKeys = groupingKeys;
@@ -435,7 +438,7 @@ public class IncidentForView extends TeaModel {
         }
 
         /**
-         * <p>The operator information.</p>
+         * <p>The information about the operator.</p>
          */
         public Builder operator(ContactForIncidentView operator) {
             this.operator = operator;
@@ -541,7 +544,10 @@ public class IncidentForView extends TeaModel {
         }
 
         /**
-         * <p>The array of tags.</p>
+         * <p>The tag array.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;key&quot;:&quot;value&quot;}</p>
          */
         public Builder tags(java.util.Map<String, String> tags) {
             this.tags = tags;
@@ -549,7 +555,7 @@ public class IncidentForView extends TeaModel {
         }
 
         /**
-         * <p>The timestamp when the incident was created.</p>
+         * <p>The creation timestamp of the incident.</p>
          * 
          * <strong>example:</strong>
          * <p>1743876000000</p>

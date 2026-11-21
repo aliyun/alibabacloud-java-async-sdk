@@ -178,6 +178,9 @@ public class TransformAction extends TeaModel {
 
         /**
          * <p>The mapping configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;warning&quot;:&quot;WARNING&quot;}</p>
          */
         public Builder mapping(java.util.Map<String, String> mapping) {
             this.mapping = mapping;
@@ -229,7 +232,7 @@ public class TransformAction extends TeaModel {
         }
 
         /**
-         * <p>The configured value.</p>
+         * <p>The set value.</p>
          * 
          * <strong>example:</strong>
          * <p>value1</p>

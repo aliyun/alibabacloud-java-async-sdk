@@ -115,7 +115,7 @@ public class UpdateDatasetRequest extends Request {
         }
 
         /**
-         * <p>The new description for the dataset.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>test dataset</p>

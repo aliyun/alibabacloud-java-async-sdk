@@ -67,7 +67,7 @@ public class GetServiceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>264C3E89-BE6E-5F82-A484-CE9C2196C7DC</p>
@@ -144,7 +144,7 @@ public class GetServiceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tag key.</p>
+             * <p>The key of the tag.</p>
              * 
              * <strong>example:</strong>
              * <p>env</p>
@@ -155,7 +155,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value.</p>
+             * <p>The value of the tag.</p>
              * 
              * <strong>example:</strong>
              * <p>prod</p>
@@ -412,7 +412,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ARMS application ID for backward compatibility.</p>
+             * <p>The legacy ARMS application ID for backward compatibility.</p>
              * 
              * <strong>example:</strong>
              * <p>by6rjzro2j@0fe8dfa799e5906</p>
@@ -434,7 +434,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource group ID.</p>
+             * <p>The ID of the resource group.</p>
              * 
              * <strong>example:</strong>
              * <p>rg-aekxxzuad5zzzz</p>
@@ -445,7 +445,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service ID.</p>
+             * <p>The ID of the service.</p>
              * 
              * <strong>example:</strong>
              * <p>cwzxvuc6uo@4bc6b15ad81f166174ffb</p>
@@ -467,7 +467,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service status. This parameter is valid only when serviceType is set to RUM.</p>
+             * <p>The status of the service. This parameter is valid only when serviceType is set to RUM.</p>
              * 
              * <strong>example:</strong>
              * <p>Running</p>
@@ -478,7 +478,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service type.</p>
+             * <p>The type of the service.</p>
              * 
              * <strong>example:</strong>
              * <p>TRACE</p>
@@ -489,7 +489,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags.</p>
+             * <p>The array of tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -497,7 +497,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The workspace name.</p>
+             * <p>The name of the workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>default-cms-1106439496876715-cn-hangzhou</p>

@@ -162,7 +162,7 @@ public class ListAlertWebhooksRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -174,7 +174,7 @@ public class ListAlertWebhooksRequest extends Request {
         }
 
         /**
-         * <p>The unique ID of the webhook.</p>
+         * <p>The unique identifiers of the webhooks.</p>
          */
         public Builder webhookIds(java.util.List<String> webhookIds) {
             String webhookIdsShrink = shrink(webhookIds, "webhookIds", "json");
@@ -184,7 +184,7 @@ public class ListAlertWebhooksRequest extends Request {
         }
 
         /**
-         * <p>The workspace name.</p>
+         * <p>The name of the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>default-cms-0000000000000000-cn-hangzhou</p>

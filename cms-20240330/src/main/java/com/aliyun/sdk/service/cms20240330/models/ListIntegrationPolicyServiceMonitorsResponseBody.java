@@ -253,7 +253,7 @@ public class ListIntegrationPolicyServiceMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sampling path.</p>
+             * <p>The collection path.</p>
              * 
              * <strong>example:</strong>
              * <p>/metrics</p>
@@ -449,7 +449,7 @@ public class ListIntegrationPolicyServiceMonitorsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The addon name.</p>
+             * <p>The name of the add-on.</p>
              * 
              * <strong>example:</strong>
              * <p>cloud-acs-ecs</p>
@@ -460,7 +460,7 @@ public class ListIntegrationPolicyServiceMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The addon release name.</p>
+             * <p>The name of the add-on release.</p>
              * 
              * <strong>example:</strong>
              * <p>release-1234567</p>
@@ -471,7 +471,7 @@ public class ListIntegrationPolicyServiceMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The addon version.</p>
+             * <p>The version of the add-on.</p>
              * 
              * <strong>example:</strong>
              * <p>0.0.1</p>
@@ -482,7 +482,7 @@ public class ListIntegrationPolicyServiceMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configuration YAML.</p>
+             * <p>The YAML configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>apiVersion: xxxxx</p>
@@ -493,7 +493,7 @@ public class ListIntegrationPolicyServiceMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The enabling status.</p>
+             * <p>The enabled status.</p>
              * 
              * <strong>example:</strong>
              * <p>run</p>
@@ -507,7 +507,7 @@ public class ListIntegrationPolicyServiceMonitorsResponseBody extends TeaModel {
              * <p>The encrypted YAML.</p>
              * 
              * <strong>example:</strong>
-             * <p>YXBpVmVyc2lvbjogeHh4eHgK</p>
+             * <p>true</p>
              */
             public Builder encryptYaml(Boolean encryptYaml) {
                 this.encryptYaml = encryptYaml;
@@ -534,7 +534,7 @@ public class ListIntegrationPolicyServiceMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ServiceMonitor name.</p>
+             * <p>The name of the ServiceMonitor.</p>
              * 
              * <strong>example:</strong>
              * <p>62a526c5-f6ca-4cfb-b5a4-b76974cffe51</p>
@@ -545,7 +545,7 @@ public class ListIntegrationPolicyServiceMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The namespace.</p>
+             * <p>The name of the project workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>arms-prom</p>

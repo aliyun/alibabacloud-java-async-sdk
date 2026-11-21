@@ -30,6 +30,10 @@ public class CreatePrometheusInstanceRequest extends Request {
     private String authFreeWritePolicy;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("dryrun")
+    private Boolean dryrun;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("enableAuthFreeRead")
     private Boolean enableAuthFreeRead;
 
@@ -75,6 +79,7 @@ public class CreatePrometheusInstanceRequest extends Request {
         this.archiveDuration = builder.archiveDuration;
         this.authFreeReadPolicy = builder.authFreeReadPolicy;
         this.authFreeWritePolicy = builder.authFreeWritePolicy;
+        this.dryrun = builder.dryrun;
         this.enableAuthFreeRead = builder.enableAuthFreeRead;
         this.enableAuthFreeWrite = builder.enableAuthFreeWrite;
         this.enableAuthToken = builder.enableAuthToken;
@@ -119,6 +124,13 @@ public class CreatePrometheusInstanceRequest extends Request {
      */
     public String getAuthFreeWritePolicy() {
         return this.authFreeWritePolicy;
+    }
+
+    /**
+     * @return dryrun
+     */
+    public Boolean getDryrun() {
+        return this.dryrun;
     }
 
     /**
@@ -195,6 +207,7 @@ public class CreatePrometheusInstanceRequest extends Request {
         private Integer archiveDuration; 
         private String authFreeReadPolicy; 
         private String authFreeWritePolicy; 
+        private Boolean dryrun; 
         private Boolean enableAuthFreeRead; 
         private Boolean enableAuthFreeWrite; 
         private Boolean enableAuthToken; 
@@ -215,6 +228,7 @@ public class CreatePrometheusInstanceRequest extends Request {
             this.archiveDuration = request.archiveDuration;
             this.authFreeReadPolicy = request.authFreeReadPolicy;
             this.authFreeWritePolicy = request.authFreeWritePolicy;
+            this.dryrun = request.dryrun;
             this.enableAuthFreeRead = request.enableAuthFreeRead;
             this.enableAuthFreeWrite = request.enableAuthFreeWrite;
             this.enableAuthToken = request.enableAuthToken;
@@ -228,7 +242,7 @@ public class CreatePrometheusInstanceRequest extends Request {
         } 
 
         /**
-         * <p>The number of days to automatically archive data after the storage period expires. A value of 0 indicates that data is not archived. Valid values:</p>
+         * <p>The number of days to automatically archive data after the storage period expires. A value of 0 indicates that data is not archived. Valid values for the archive duration:</p>
          * <ul>
          * <li>V1: 60 to 365 days.</li>
          * <li>V2: 60 to 3650 days. A value of 3650 indicates permanent retention.</li>
@@ -244,7 +258,7 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * <p>The authentication-free read policy, which supports IP address ranges and VPC IDs.</p>
+         * <p>The authentication-free read policy. IP address ranges and VPC IDs are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -286,7 +300,20 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable authentication-free read access. Supported only in V2.</p>
+         * <p>Specifies whether to perform a dry run only. Valid values:</p>
+         * <ul>
+         * <li>true: performs a dry run without creating the instance. The system checks whether required parameters are specified, the request format is valid, and service limits are met. If the request fails the check, an error is returned. If the request passes the check, the DryRunOperation error code is returned.</li>
+         * <li>false: sends a normal request and creates the instance directly after the request passes the check. This is the default value.</li>
+         * </ul>
+         */
+        public Builder dryrun(Boolean dryrun) {
+            this.putBodyParameter("dryrun", dryrun);
+            this.dryrun = dryrun;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to enable authentication-free read access. This feature is supported only in V2.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -298,7 +325,7 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable authentication-free write access. Supported only in V2.</p>
+         * <p>Specifies whether to enable authentication-free write access. This feature is supported only in V2.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -310,7 +337,7 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the authorization token. Supported only in V1.</p>
+         * <p>Specifies whether to enable the authorization token. This feature is supported only in V1.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -322,11 +349,11 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * <p>The Billable methods. Valid values:</p>
+         * <p>Billable methods. Valid values:</p>
          * <ul>
-         * <li>POSTPAY: pay-as-you-go by reported metric volume.</li>
-         * <li>POSTPAY_GB: pay-as-you-go by ingested data volume.
-         * Note: An empty value uses the default Billable methods configured for the user. If no default is configured, the system defaults to billing by reported metric volume.</li>
+         * <li>POSTPAY: pay-as-you-go based on the volume of reported metrics.</li>
+         * <li>POSTPAY_GB: pay-as-you-go based on the volume of written metrics.
+         * Note: If this parameter is left empty, the default billing method configured for the user is used. If no default billing method is configured, the system uses the pay-as-you-go billing method based on the volume of reported metrics by default.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -376,10 +403,10 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * <p>The storage duration in days. Valid values:</p>
+         * <p>The storage duration in days.</p>
          * <ul>
-         * <li>Pay-by-ingested-data: 90 and 180.</li>
-         * <li>Pay-by-reported-metrics: 15, 30, 60, 90, and 180.</li>
+         * <li>By written data volume: 90 and 180.</li>
+         * <li>By reported metric volume: 15, 30, 60, 90, and 180.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -392,7 +419,7 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * <p>The tag values.</p>
+         * <p>The tags.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putBodyParameter("tags", tags);
