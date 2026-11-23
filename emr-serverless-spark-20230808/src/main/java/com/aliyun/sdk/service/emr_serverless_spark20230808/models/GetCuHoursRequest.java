@@ -131,7 +131,7 @@ public class GetCuHoursRequest extends Request {
         }
 
         /**
-         * <p>The end time of the query time range.</p>
+         * <p>The end time of the query range.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,7 +144,7 @@ public class GetCuHoursRequest extends Request {
         }
 
         /**
-         * <p>The start time of the query time range.</p>
+         * <p>The start time of the query range.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

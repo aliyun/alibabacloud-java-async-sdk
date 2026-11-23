@@ -274,6 +274,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateSecretValue  CreateSecretValueRequest
+     * @return CreateSecretValueResponse
+     */
+    @Override
+    public CompletableFuture<CreateSecretValueResponse> createSecretValue(CreateSecretValueRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateSecretValue").setMethod(HttpMethod.POST).setPathRegex("/api/v1/workspaces/{workspaceId}/secret").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateSecretValueResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateSecretValueResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateSessionCluster  CreateSessionClusterRequest
      * @return CreateSessionClusterResponse
      */
@@ -430,6 +448,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteRayClusterResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteSecretValue  DeleteSecretValueRequest
+     * @return DeleteSecretValueResponse
+     */
+    @Override
+    public CompletableFuture<DeleteSecretValueResponse> deleteSecretValue(DeleteSecretValueRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteSecretValue").setMethod(HttpMethod.DELETE).setPathRegex("/api/v1/workspaces/{workspaceId}/secret/{secretId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteSecretValueResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteSecretValueResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1150,6 +1186,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListReleaseVersionsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListSecretValue  ListSecretValueRequest
+     * @return ListSecretValueResponse
+     */
+    @Override
+    public CompletableFuture<ListSecretValueResponse> listSecretValue(ListSecretValueRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListSecretValue").setMethod(HttpMethod.GET).setPathRegex("/api/v1/workspaces/{workspaceId}/secret").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListSecretValueResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListSecretValueResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

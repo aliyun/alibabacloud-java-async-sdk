@@ -263,7 +263,7 @@ public class UpdateRayClusterRequest extends Request {
         }
 
         /**
-         * <p>The Ray DPI engine version.</p>
+         * <p>The database engine version of the Ray DPI engine.</p>
          * 
          * <strong>example:</strong>
          * <p>ray-1.0.0 (Ray 2.47.1, Python 3.12)</p>
@@ -275,7 +275,7 @@ public class UpdateRayClusterRequest extends Request {
         }
 
         /**
-         * enableMetricsUpload.
+         * <p>Specifies whether to upload metrics.</p>
          */
         public Builder enableMetricsUpload(Boolean enableMetricsUpload) {
             this.putBodyParameter("enableMetricsUpload", enableMetricsUpload);
@@ -296,7 +296,7 @@ public class UpdateRayClusterRequest extends Request {
         }
 
         /**
-         * <p>The head node information for the Ray cluster.</p>
+         * <p>The head node information of the Ray cluster.</p>
          */
         public Builder headSpec(HeadSpec headSpec) {
             this.putBodyParameter("headSpec", headSpec);
@@ -317,7 +317,7 @@ public class UpdateRayClusterRequest extends Request {
         }
 
         /**
-         * <p>The network connection name.</p>
+         * <p>The name of the network connectivity.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc</p>
@@ -329,7 +329,10 @@ public class UpdateRayClusterRequest extends Request {
         }
 
         /**
-         * slsLogStore.
+         * <p>The SLS Logstore used to upload metrics.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myLogStore</p>
          */
         public Builder slsLogStore(String slsLogStore) {
             this.putBodyParameter("slsLogStore", slsLogStore);
@@ -338,7 +341,10 @@ public class UpdateRayClusterRequest extends Request {
         }
 
         /**
-         * slsProject.
+         * <p>The Simple Log Service (SLS) project used to upload metrics.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myproject</p>
          */
         public Builder slsProject(String slsProject) {
             this.putBodyParameter("slsProject", slsProject);
@@ -347,7 +353,7 @@ public class UpdateRayClusterRequest extends Request {
         }
 
         /**
-         * <p>The list of managed directory IDs to mount.</p>
+         * <p>The IDs of the managed directories to mount.</p>
          */
         public Builder volumeIds(java.util.List<String> volumeIds) {
             this.putBodyParameter("volumeIds", volumeIds);
@@ -356,7 +362,7 @@ public class UpdateRayClusterRequest extends Request {
         }
 
         /**
-         * <p>The worker node information for the Ray cluster. A maximum of 50 worker groups are supported.</p>
+         * <p>The worker node information of the Ray cluster. A maximum of 50 worker groups are supported.</p>
          */
         public Builder workerSpec(java.util.List<WorkerSpec> workerSpec) {
             this.putBodyParameter("workerSpec", workerSpec);
@@ -448,7 +454,7 @@ public class UpdateRayClusterRequest extends Request {
             }
 
             /**
-             * <p>The Redis address.</p>
+             * <p>The Redis endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p>10.4.5.6:6379</p>
@@ -670,7 +676,7 @@ public class UpdateRayClusterRequest extends Request {
             }
 
             /**
-             * <p>The Ray DPI engine version.</p>
+             * <p>The database engine version of the Ray DPI engine.</p>
              * 
              * <strong>example:</strong>
              * <p>ray-1.2.0 (Ray 2.55.1, Python 3.12)</p>
@@ -719,7 +725,10 @@ public class UpdateRayClusterRequest extends Request {
             }
 
             /**
-             * gpuDriverVersion.
+             * <p>The GPU driver version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>550</p>
              */
             public Builder gpuDriverVersion(String gpuDriverVersion) {
                 this.gpuDriverVersion = gpuDriverVersion;
@@ -749,7 +758,7 @@ public class UpdateRayClusterRequest extends Request {
             }
 
             /**
-             * <p>The memory size. Unit: GiB.</p>
+             * <p>The memory size. Unit: Gi.</p>
              * 
              * <strong>example:</strong>
              * <p>8Gi</p>
@@ -760,7 +769,7 @@ public class UpdateRayClusterRequest extends Request {
             }
 
             /**
-             * <p>The queue name.</p>
+             * <p>The name of the queue.</p>
              * 
              * <strong>example:</strong>
              * <p>root_queue</p>
@@ -995,7 +1004,7 @@ public class UpdateRayClusterRequest extends Request {
             }
 
             /**
-             * <p>The DPI engine version.</p>
+             * <p>The database engine version of the DPI engine.</p>
              * 
              * <strong>example:</strong>
              * <p>ray-1.2.0 (Ray 2.55.1, Python 3.12)</p>
@@ -1017,7 +1026,10 @@ public class UpdateRayClusterRequest extends Request {
             }
 
             /**
-             * gpuDriverVersion.
+             * <p>The GPU driver version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>550</p>
              */
             public Builder gpuDriverVersion(String gpuDriverVersion) {
                 this.gpuDriverVersion = gpuDriverVersion;
@@ -1036,7 +1048,7 @@ public class UpdateRayClusterRequest extends Request {
             }
 
             /**
-             * <p>The worker group name.</p>
+             * <p>The name of the worker group.</p>
              * 
              * <strong>example:</strong>
              * <p>WorkerGroup1</p>
@@ -1058,7 +1070,7 @@ public class UpdateRayClusterRequest extends Request {
             }
 
             /**
-             * <p>The memory size. Unit: GiB.</p>
+             * <p>The memory size. Unit: Gi.</p>
              * 
              * <strong>example:</strong>
              * <p>8Gi</p>
@@ -1080,7 +1092,7 @@ public class UpdateRayClusterRequest extends Request {
             }
 
             /**
-             * <p>The queue name.</p>
+             * <p>The name of the queue.</p>
              * 
              * <strong>example:</strong>
              * <p>root_queue</p>

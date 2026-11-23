@@ -187,7 +187,7 @@ public class EditWorkspaceQueueRequest extends Request {
         }
 
         /**
-         * instanceId.
+         * <p>The ID of the subscription GPU quota instance.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("instanceId", instanceId);
@@ -360,7 +360,7 @@ public class EditWorkspaceQueueRequest extends Request {
              * <p>The maximum number of CUs.</p>
              * 
              * <strong>example:</strong>
-             * <p>0.5</p>
+             * <p>2</p>
              */
             public Builder maxCu(Long maxCu) {
                 this.maxCu = maxCu;

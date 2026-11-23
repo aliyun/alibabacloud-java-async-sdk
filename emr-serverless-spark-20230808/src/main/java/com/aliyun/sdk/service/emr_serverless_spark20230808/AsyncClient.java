@@ -98,6 +98,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateRayClusterResponse> createRayCluster(CreateRayClusterRequest request);
 
     /**
+     * @param request the request parameters of CreateSecretValue  CreateSecretValueRequest
+     * @return CreateSecretValueResponse
+     */
+    CompletableFuture<CreateSecretValueResponse> createSecretValue(CreateSecretValueRequest request);
+
+    /**
      * @param request the request parameters of CreateSessionCluster  CreateSessionClusterRequest
      * @return CreateSessionClusterResponse
      */
@@ -150,6 +156,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteRayClusterResponse
      */
     CompletableFuture<DeleteRayClusterResponse> deleteRayCluster(DeleteRayClusterRequest request);
+
+    /**
+     * @param request the request parameters of DeleteSecretValue  DeleteSecretValueRequest
+     * @return DeleteSecretValueResponse
+     */
+    CompletableFuture<DeleteSecretValueResponse> deleteSecretValue(DeleteSecretValueRequest request);
 
     /**
      * @param request the request parameters of DeleteWorkspaceQueue  DeleteWorkspaceQueueRequest
@@ -390,6 +402,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListReleaseVersionsResponse
      */
     CompletableFuture<ListReleaseVersionsResponse> listReleaseVersions(ListReleaseVersionsRequest request);
+
+    /**
+     * @param request the request parameters of ListSecretValue  ListSecretValueRequest
+     * @return ListSecretValueResponse
+     */
+    CompletableFuture<ListSecretValueResponse> listSecretValue(ListSecretValueRequest request);
 
     /**
      * @param request the request parameters of ListSessionClusters  ListSessionClustersRequest
