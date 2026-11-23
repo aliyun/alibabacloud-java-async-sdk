@@ -282,6 +282,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateCustomAgentResponse> createCustomAgent(CreateCustomAgentRequest request);
 
     /**
+     * @param request the request parameters of CreateCustomAgentDebugToken  CreateCustomAgentDebugTokenRequest
+     * @return CreateCustomAgentDebugTokenResponse
+     */
+    CompletableFuture<CreateCustomAgentDebugTokenResponse> createCustomAgentDebugToken(CreateCustomAgentDebugTokenRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Writes messages, summaries, or session fork events in batches. Each batch supports 1 to 100 events and returns the write result for each event in the same order as the request. A successful request does not indicate that every event is written successfully or that memory extraction is complete. The session title and metadata are set only when the session is created for the first time. Subsequent writes do not update existing session information.</p>
      * 
