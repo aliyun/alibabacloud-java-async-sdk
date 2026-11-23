@@ -67,7 +67,10 @@ public class GetStsTokenResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CCF92035-6231-5ABB-930E-1E003C32****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class GetStsTokenResponseBody extends TeaModel {
         }
 
         /**
-         * StsTokenModel.
+         * <p>The token details.</p>
          */
         public Builder stsTokenModel(StsTokenModel stsTokenModel) {
             this.stsTokenModel = stsTokenModel;
@@ -167,7 +170,10 @@ public class GetStsTokenResponseBody extends TeaModel {
             } 
 
             /**
-             * AliUid.
+             * <p>The tenant ID (Alibaba Cloud account UID).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>105552640689****</p>
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
@@ -175,7 +181,10 @@ public class GetStsTokenResponseBody extends TeaModel {
             }
 
             /**
-             * SessionId.
+             * <p>The session ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>be4be09e-cd00-4b4c-add7-11b4d8****</p>
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;
@@ -183,7 +192,10 @@ public class GetStsTokenResponseBody extends TeaModel {
             }
 
             /**
-             * StsToken.
+             * <p>The temporary identity credential.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sts****</p>
              */
             public Builder stsToken(String stsToken) {
                 this.stsToken = stsToken;
@@ -191,7 +203,10 @@ public class GetStsTokenResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * <p>The tenant ID (Alibaba Cloud account UID).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>105552640689****</p>
              */
             public Builder tenantId(Long tenantId) {
                 this.tenantId = tenantId;

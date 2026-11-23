@@ -67,7 +67,7 @@ public class GetAuthCodeResponseBody extends TeaModel {
         } 
 
         /**
-         * AuthModel.
+         * <p>The authorization code information.</p>
          */
         public Builder authModel(AuthModel authModel) {
             this.authModel = authModel;
@@ -75,7 +75,10 @@ public class GetAuthCodeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +157,10 @@ public class GetAuthCodeResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthCode.
+             * <p>The authorization code. The authorization code is valid for 3 minutes and can be used only once regardless of whether the verification succeeds or fails. If multiple authorization codes are generated for a user, only the last generated one is valid.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acv2ZEq2TNSqOlX+DvyetHGRT08iPhbWg/os1W4HojpBxkMQZkAnbKSfz/wNvS0E149IQZ5TogvBUE8ghCSVV+QBnv48Y+sn4z9fY5ywZA1peI5s4TplQI0TADBhPZXEIzMOdmbNsDGGlGcKOAq8ixd1Epzdu9XfvRzdLOO6o3zQwTZxXsjOgGBW8JTcgCP9W9iYiIjHIdZ2VCAnmMzuyVkyED8gymEevH10QoclyH/O3s8Yq6VF34gMXihDQeiI8PyiAZrW0JWXSWpdy3n4yGtAqMAgv46FzTA+XJ6C********</p>
              */
             public Builder authCode(String authCode) {
                 this.authCode = authCode;
@@ -162,7 +168,10 @@ public class GetAuthCodeResponseBody extends TeaModel {
             }
 
             /**
-             * EndUserId.
+             * <p>The username of the Wuying convenience account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alice</p>
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -170,7 +179,10 @@ public class GetAuthCodeResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * <p>The expiration time of the authorization code. The time is displayed in UTC and follows the ISO 8601 standard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-01-23T12:33:18Z</p>
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;

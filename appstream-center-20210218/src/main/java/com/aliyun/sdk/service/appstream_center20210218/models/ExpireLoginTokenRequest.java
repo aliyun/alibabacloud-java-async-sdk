@@ -104,6 +104,7 @@ public class ExpireLoginTokenRequest extends Request {
         } 
 
         /**
+         * <p>The logon username.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,6 +117,7 @@ public class ExpireLoginTokenRequest extends Request {
         }
 
         /**
+         * <p>The logon token.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,7 +130,10 @@ public class ExpireLoginTokenRequest extends Request {
         }
 
         /**
-         * OfficeSiteId.
+         * <p>The ID of the workspace. This parameter is required if you log on through a workspace, and can be left empty if you log on through an organization ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing+dir-172301****</p>
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putBodyParameter("OfficeSiteId", officeSiteId);
@@ -137,6 +142,7 @@ public class ExpireLoginTokenRequest extends Request {
         }
 
         /**
+         * <p>The ID of the logon session.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

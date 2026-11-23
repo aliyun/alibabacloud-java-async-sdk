@@ -87,7 +87,13 @@ public class GetStsTokenRequest extends Request {
         } 
 
         /**
-         * EndUserId.
+         * <p>The Wuying username.</p>
+         * <blockquote>
+         * <p>Either the Wuying username or the external ID is required.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Alex</p>
          */
         public Builder endUserId(String endUserId) {
             this.putBodyParameter("EndUserId", endUserId);
@@ -96,7 +102,10 @@ public class GetStsTokenRequest extends Request {
         }
 
         /**
-         * Expiration.
+         * <p>The expiration time in seconds. The maximum validity period is two days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>600</p>
          */
         public Builder expiration(Long expiration) {
             this.putBodyParameter("Expiration", expiration);
@@ -105,7 +114,10 @@ public class GetStsTokenRequest extends Request {
         }
 
         /**
-         * ExternalId.
+         * <p>The external user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alex</p>
          */
         public Builder externalId(String externalId) {
             this.putBodyParameter("ExternalId", externalId);

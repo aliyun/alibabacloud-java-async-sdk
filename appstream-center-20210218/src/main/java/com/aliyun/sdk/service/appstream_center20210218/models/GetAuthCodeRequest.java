@@ -157,7 +157,10 @@ public class GetAuthCodeRequest extends Request {
         } 
 
         /**
-         * AccountType.
+         * <p>The account type. Valid values: ad (enterprise AD account) and simple (convenience account).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>simple</p>
          */
         public Builder accountType(String accountType) {
             this.putBodyParameter("AccountType", accountType);
@@ -166,7 +169,10 @@ public class GetAuthCodeRequest extends Request {
         }
 
         /**
-         * AdDomain.
+         * <p>The Active Directory domain name. This parameter is required when the account type is ad.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ad.example.com</p>
          */
         public Builder adDomain(String adDomain) {
             this.putBodyParameter("AdDomain", adDomain);
@@ -175,7 +181,10 @@ public class GetAuthCodeRequest extends Request {
         }
 
         /**
-         * AdPassword.
+         * <p>The password of the enterprise AD account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Qa****7!Z9</p>
          */
         public Builder adPassword(String adPassword) {
             this.putBodyParameter("AdPassword", adPassword);
@@ -184,7 +193,10 @@ public class GetAuthCodeRequest extends Request {
         }
 
         /**
-         * AutoCreateUser.
+         * <p>Specifies whether to synchronously create an EndUserId based on ExternalUserId. This parameter takes effect only when EndUserId is left empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoCreateUser(Boolean autoCreateUser) {
             this.putBodyParameter("AutoCreateUser", autoCreateUser);
@@ -193,7 +205,10 @@ public class GetAuthCodeRequest extends Request {
         }
 
         /**
-         * EndUserId.
+         * <p>The username of the Wuying convenience account. The username must be unique within an Alibaba Cloud account. This parameter and ExternalUserId cannot be left empty at the same time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
          */
         public Builder endUserId(String endUserId) {
             this.putBodyParameter("EndUserId", endUserId);
@@ -202,7 +217,10 @@ public class GetAuthCodeRequest extends Request {
         }
 
         /**
-         * ExternalUserId.
+         * <p>The external user ID. This ID is customized by the caller and must be unique within an Alibaba Cloud account. This parameter and ExternalUserId cannot be left empty at the same time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
          */
         public Builder externalUserId(String externalUserId) {
             this.putBodyParameter("ExternalUserId", externalUserId);
@@ -211,7 +229,31 @@ public class GetAuthCodeRequest extends Request {
         }
 
         /**
-         * Policy.
+         * <p>The access policy that restricts the access permissions of the authorization code. If this parameter is left empty, no restrictions are applied.</p>
+         * <p>Syntax:</p>
+         * <pre><code class="language-json">{
+         *       &quot;Version&quot;: &quot;1&quot;,
+         *       &quot;Resource&quot;: {
+         *             &quot;Type&quot;: &quot;&lt;resource type&gt;&quot;,
+         *             &quot;Id&quot;: &quot;&lt;resource ID&gt;&quot;
+         *       }
+         * }
+         * </code></pre>
+         * <p>Valid values for <resource type>:</p>
+         * <ul>
+         * <li>AppInstanceGroup: app instance group. You can call the ListAppInstanceGroup operation to obtain the ID.</li>
+         * <li>AppInstance: app instance. This is a dedicated field.</li>
+         * <li>App: application. You can call the ListAppInstanceGroup operation to obtain the ID.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;Version&quot;: &quot;1&quot;,
+         *       &quot;Resource&quot;: {
+         *             &quot;Type&quot;: &quot;AppInstanceGroup&quot;,
+         *             &quot;Id&quot;: &quot;aig-9ciijz60n4xsv****&quot;
+         *       }
+         * }</p>
          */
         public Builder policy(String policy) {
             this.putBodyParameter("Policy", policy);
@@ -220,7 +262,10 @@ public class GetAuthCodeRequest extends Request {
         }
 
         /**
-         * TokenType.
+         * <p>The token type. Valid values: LoginToken (logon token) and StsToken (temporary identity credential).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>StsToken</p>
          */
         public Builder tokenType(String tokenType) {
             this.putQueryParameter("TokenType", tokenType);
