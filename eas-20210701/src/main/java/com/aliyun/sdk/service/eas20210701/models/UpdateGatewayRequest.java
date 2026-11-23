@@ -40,6 +40,10 @@ public class UpdateGatewayRequest extends Request {
     private Boolean enableSSLRedirection;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IdleTimeout")
+    private Integer idleTimeout;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("InstanceType")
     private String instanceType;
 
@@ -54,6 +58,10 @@ public class UpdateGatewayRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Replicas")
     private Integer replicas;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RequestTimeout")
+    private Integer requestTimeout;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("VSwitchIds")
@@ -74,10 +82,12 @@ public class UpdateGatewayRequest extends Request {
         this.enableInternet = builder.enableInternet;
         this.enableIntranet = builder.enableIntranet;
         this.enableSSLRedirection = builder.enableSSLRedirection;
+        this.idleTimeout = builder.idleTimeout;
         this.instanceType = builder.instanceType;
         this.isDefault = builder.isDefault;
         this.name = builder.name;
         this.replicas = builder.replicas;
+        this.requestTimeout = builder.requestTimeout;
         this.vSwitchIds = builder.vSwitchIds;
         this.vpcId = builder.vpcId;
         this.workspaceId = builder.workspaceId;
@@ -132,6 +142,13 @@ public class UpdateGatewayRequest extends Request {
     }
 
     /**
+     * @return idleTimeout
+     */
+    public Integer getIdleTimeout() {
+        return this.idleTimeout;
+    }
+
+    /**
      * @return instanceType
      */
     public String getInstanceType() {
@@ -157,6 +174,13 @@ public class UpdateGatewayRequest extends Request {
      */
     public Integer getReplicas() {
         return this.replicas;
+    }
+
+    /**
+     * @return requestTimeout
+     */
+    public Integer getRequestTimeout() {
+        return this.requestTimeout;
     }
 
     /**
@@ -186,10 +210,12 @@ public class UpdateGatewayRequest extends Request {
         private Boolean enableInternet; 
         private Boolean enableIntranet; 
         private Boolean enableSSLRedirection; 
+        private Integer idleTimeout; 
         private String instanceType; 
         private Boolean isDefault; 
         private String name; 
         private Integer replicas; 
+        private Integer requestTimeout; 
         private java.util.List<String> vSwitchIds; 
         private String vpcId; 
         private String workspaceId; 
@@ -205,10 +231,12 @@ public class UpdateGatewayRequest extends Request {
             this.enableInternet = request.enableInternet;
             this.enableIntranet = request.enableIntranet;
             this.enableSSLRedirection = request.enableSSLRedirection;
+            this.idleTimeout = request.idleTimeout;
             this.instanceType = request.instanceType;
             this.isDefault = request.isDefault;
             this.name = request.name;
             this.replicas = request.replicas;
+            this.requestTimeout = request.requestTimeout;
             this.vSwitchIds = request.vSwitchIds;
             this.vpcId = request.vpcId;
             this.workspaceId = request.workspaceId;
@@ -277,6 +305,18 @@ public class UpdateGatewayRequest extends Request {
         }
 
         /**
+         * <p>The idle connection timeout period. Unit: seconds. Default value: 600. Valid values: 1 to 3600.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>600</p>
+         */
+        public Builder idleTimeout(Integer idleTimeout) {
+            this.putBodyParameter("IdleTimeout", idleTimeout);
+            this.idleTimeout = idleTimeout;
+            return this;
+        }
+
+        /**
          * <p>The instance type used by the private gateway. Valid values:</p>
          * <ul>
          * <li>2c4g</li>
@@ -331,7 +371,19 @@ public class UpdateGatewayRequest extends Request {
         }
 
         /**
-         * <p>The list of vSwitches. This parameter is only applicable to application dedicated gateways.</p>
+         * <p>The request timeout period. Unit: seconds. Default value: 600. Valid values: 1 to 3600.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>600</p>
+         */
+        public Builder requestTimeout(Integer requestTimeout) {
+            this.putBodyParameter("RequestTimeout", requestTimeout);
+            this.requestTimeout = requestTimeout;
+            return this;
+        }
+
+        /**
+         * <p>The list of vSwitches. This parameter applies only to dedicated gateways for applications.</p>
          */
         public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
             this.putBodyParameter("VSwitchIds", vSwitchIds);
@@ -340,7 +392,7 @@ public class UpdateGatewayRequest extends Request {
         }
 
         /**
-         * <p>The ID of the VPC to which the gateway belongs. This parameter is only applicable to application dedicated gateways.</p>
+         * <p>The ID of the VPC to which the gateway belongs. This parameter applies only to dedicated gateways for applications.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1jkde2******3mew</p>

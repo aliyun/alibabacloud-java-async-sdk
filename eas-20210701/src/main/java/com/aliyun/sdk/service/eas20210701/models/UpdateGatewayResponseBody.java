@@ -91,7 +91,7 @@ public class UpdateGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>Gateway is updated</p>

@@ -32,6 +32,9 @@ public class DescribeGatewayResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("GatewayName")
     private String gatewayName;
 
+    @com.aliyun.core.annotation.NameInMap("IdleTimeout")
+    private String idleTimeout;
+
     @com.aliyun.core.annotation.NameInMap("InstanceType")
     private String instanceType;
 
@@ -62,6 +65,9 @@ public class DescribeGatewayResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("RequestTimeout")
+    private String requestTimeout;
+
     @com.aliyun.core.annotation.NameInMap("SSLRedirectionEnabled")
     private Boolean SSLRedirectionEnabled;
 
@@ -80,6 +86,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
         this.externalClusterId = builder.externalClusterId;
         this.gatewayId = builder.gatewayId;
         this.gatewayName = builder.gatewayName;
+        this.idleTimeout = builder.idleTimeout;
         this.instanceType = builder.instanceType;
         this.internetDomain = builder.internetDomain;
         this.internetEnabled = builder.internetEnabled;
@@ -90,6 +97,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
         this.labels = builder.labels;
         this.replicas = builder.replicas;
         this.requestId = builder.requestId;
+        this.requestTimeout = builder.requestTimeout;
         this.SSLRedirectionEnabled = builder.SSLRedirectionEnabled;
         this.status = builder.status;
         this.updateTime = builder.updateTime;
@@ -141,6 +149,13 @@ public class DescribeGatewayResponseBody extends TeaModel {
      */
     public String getGatewayName() {
         return this.gatewayName;
+    }
+
+    /**
+     * @return idleTimeout
+     */
+    public String getIdleTimeout() {
+        return this.idleTimeout;
     }
 
     /**
@@ -214,6 +229,13 @@ public class DescribeGatewayResponseBody extends TeaModel {
     }
 
     /**
+     * @return requestTimeout
+     */
+    public String getRequestTimeout() {
+        return this.requestTimeout;
+    }
+
+    /**
      * @return SSLRedirectionEnabled
      */
     public Boolean getSSLRedirectionEnabled() {
@@ -247,6 +269,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
         private String externalClusterId; 
         private String gatewayId; 
         private String gatewayName; 
+        private String idleTimeout; 
         private String instanceType; 
         private String internetDomain; 
         private Boolean internetEnabled; 
@@ -257,6 +280,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
         private java.util.List<Labels> labels; 
         private Integer replicas; 
         private String requestId; 
+        private String requestTimeout; 
         private Boolean SSLRedirectionEnabled; 
         private String status; 
         private String updateTime; 
@@ -271,6 +295,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
             this.externalClusterId = model.externalClusterId;
             this.gatewayId = model.gatewayId;
             this.gatewayName = model.gatewayName;
+            this.idleTimeout = model.idleTimeout;
             this.instanceType = model.instanceType;
             this.internetDomain = model.internetDomain;
             this.internetEnabled = model.internetEnabled;
@@ -281,6 +306,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
             this.labels = model.labels;
             this.replicas = model.replicas;
             this.requestId = model.requestId;
+            this.requestTimeout = model.requestTimeout;
             this.SSLRedirectionEnabled = model.SSLRedirectionEnabled;
             this.status = model.status;
             this.updateTime = model.updateTime;
@@ -343,6 +369,17 @@ public class DescribeGatewayResponseBody extends TeaModel {
         }
 
         /**
+         * <p>The idle connection timeout. Default value: 600. Valid values: 1 to 3600. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>600</p>
+         */
+        public Builder idleTimeout(String idleTimeout) {
+            this.idleTimeout = idleTimeout;
+            return this;
+        }
+
+        /**
          * <p>The instance type used by the private gateway.</p>
          * 
          * <strong>example:</strong>
@@ -365,7 +402,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether public network access is enabled.</p>
+         * <p>Specifies whether public network access is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -376,7 +413,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of public network access.</p>
+         * <p>The status of enabling or disabling public network access.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -398,7 +435,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether internal network access is enabled. A value of true indicates that internal network access is enabled. A value of false indicates that internal network access is disabled.</p>
+         * <p>Specifies whether internal network access is enabled. A value of true indicates that internal network access is enabled. A value of false indicates that internal network access is disabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -409,7 +446,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the private gateway is the default private gateway.</p>
+         * <p>Specifies whether the private gateway is the default private gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -450,7 +487,19 @@ public class DescribeGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether HTTP redirection to HTTPS is enabled.</p>
+         * <p>The request timeout. Unit: seconds.</p>
+         * <p>Default value: 600. Valid values: 1 to 3600.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>600</p>
+         */
+        public Builder requestTimeout(String requestTimeout) {
+            this.requestTimeout = requestTimeout;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether HTTP to HTTPS redirection is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
