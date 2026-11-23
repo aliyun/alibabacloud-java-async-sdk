@@ -921,6 +921,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetModelGroupResponse> getModelGroup(GetModelGroupRequest request);
 
     /**
+     * @param request the request parameters of GetModelTokenRateLimit  GetModelTokenRateLimitRequest
+     * @return GetModelTokenRateLimitResponse
+     */
+    CompletableFuture<GetModelTokenRateLimitResponse> getModelTokenRateLimit(GetModelTokenRateLimitRequest request);
+
+    /**
      * @param request the request parameters of GetPluginAttachment  GetPluginAttachmentRequest
      * @return GetPluginAttachmentResponse
      */
@@ -1217,7 +1223,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Reads historical events delivered by the dedicated Professional AI gateway of the current user to the user\&quot;s SLS. Standard user log delivery and corresponding indexes must be enabled. The query time range is a left-closed and right-open interval, with a span of no more than 31 days and cannot include future time. Uses maxResults and nextToken for cursor-based pagination. The results are not an online connection directory, and missing logs do not indicate that no calls occurred.</p>
+     * <p>Retrieves the historical events delivered by the dedicated Professional AI gateway of the current user to Simple Log Service (SLS). Standard user log delivery and the corresponding indexes must be enabled. The query time range is a left-closed and right-open interval. The time span cannot exceed 31 days and cannot include future time. Uses maxResults and nextToken for cursor-based pagination. The results do not represent an online connection directory, and missing logs do not indicate that no calls occurred.</p>
      * 
      * @param request the request parameters of ListGatewayWebsocketEvents  ListGatewayWebsocketEventsRequest
      * @return ListGatewayWebsocketEventsResponse
@@ -1848,7 +1854,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Only sources of the <strong>Container Service</strong> type are allowed to update the configurations of listening Ingresses.</p>
+     * <p>Only sources of the <strong>container service</strong> type are allowed to update the configurations of Ingress listeners.</p>
      * 
      * @param request the request parameters of UpdateMcpServer  UpdateMcpServerRequest
      * @return UpdateMcpServerResponse
@@ -1872,6 +1878,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateModelGroupResponse
      */
     CompletableFuture<UpdateModelGroupResponse> updateModelGroup(UpdateModelGroupRequest request);
+
+    /**
+     * @param request the request parameters of UpdateModelTokenRateLimit  UpdateModelTokenRateLimitRequest
+     * @return UpdateModelTokenRateLimitResponse
+     */
+    CompletableFuture<UpdateModelTokenRateLimitResponse> updateModelTokenRateLimit(UpdateModelTokenRateLimitRequest request);
 
     /**
      * @param request the request parameters of UpdateNetworkAccess  UpdateNetworkAccessRequest

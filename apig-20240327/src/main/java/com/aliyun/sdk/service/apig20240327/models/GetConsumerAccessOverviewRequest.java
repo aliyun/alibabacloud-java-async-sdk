@@ -27,10 +27,15 @@ public class GetConsumerAccessOverviewRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String gatewayId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("includeModelTpm")
+    private Boolean includeModelTpm;
+
     private GetConsumerAccessOverviewRequest(Builder builder) {
         super(builder);
         this.consumerId = builder.consumerId;
         this.gatewayId = builder.gatewayId;
+        this.includeModelTpm = builder.includeModelTpm;
     }
 
     public static Builder builder() {
@@ -60,9 +65,17 @@ public class GetConsumerAccessOverviewRequest extends Request {
         return this.gatewayId;
     }
 
+    /**
+     * @return includeModelTpm
+     */
+    public Boolean getIncludeModelTpm() {
+        return this.includeModelTpm;
+    }
+
     public static final class Builder extends Request.Builder<GetConsumerAccessOverviewRequest, Builder> {
         private String consumerId; 
         private String gatewayId; 
+        private Boolean includeModelTpm; 
 
         private Builder() {
             super();
@@ -72,10 +85,11 @@ public class GetConsumerAccessOverviewRequest extends Request {
             super(request);
             this.consumerId = request.consumerId;
             this.gatewayId = request.gatewayId;
+            this.includeModelTpm = request.includeModelTpm;
         } 
 
         /**
-         * <p>The consumer ID, which is the identifier returned by the API operation for creating or querying consumers.</p>
+         * <p>The consumer ID, which is the identifier returned by the consumer creation or query API operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -97,6 +111,18 @@ public class GetConsumerAccessOverviewRequest extends Request {
         public Builder gatewayId(String gatewayId) {
             this.putQueryParameter("gatewayId", gatewayId);
             this.gatewayId = gatewayId;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to also query the model TPM limits. Default value: false. If set to true, modelTpmLimits is returned for dedicated instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        public Builder includeModelTpm(Boolean includeModelTpm) {
+            this.putQueryParameter("includeModelTpm", includeModelTpm);
+            this.includeModelTpm = includeModelTpm;
             return this;
         }
 

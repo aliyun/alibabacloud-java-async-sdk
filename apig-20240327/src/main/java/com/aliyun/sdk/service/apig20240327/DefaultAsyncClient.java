@@ -2430,6 +2430,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetModelTokenRateLimit  GetModelTokenRateLimitRequest
+     * @return GetModelTokenRateLimitResponse
+     */
+    @Override
+    public CompletableFuture<GetModelTokenRateLimitResponse> getModelTokenRateLimit(GetModelTokenRateLimitRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetModelTokenRateLimit").setMethod(HttpMethod.GET).setPathRegex("/v1/gateways/{gatewayId}/model-tpm/{modelId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetModelTokenRateLimitResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetModelTokenRateLimitResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetPluginAttachment  GetPluginAttachmentRequest
      * @return GetPluginAttachmentResponse
      */
@@ -3286,7 +3304,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Reads historical events delivered by the dedicated Professional AI gateway of the current user to the user\&quot;s SLS. Standard user log delivery and corresponding indexes must be enabled. The query time range is a left-closed and right-open interval, with a span of no more than 31 days and cannot include future time. Uses maxResults and nextToken for cursor-based pagination. The results are not an online connection directory, and missing logs do not indicate that no calls occurred.</p>
+     * <p>Retrieves the historical events delivered by the dedicated Professional AI gateway of the current user to Simple Log Service (SLS). Standard user log delivery and the corresponding indexes must be enabled. The query time range is a left-closed and right-open interval. The time span cannot exceed 31 days and cannot include future time. Uses maxResults and nextToken for cursor-based pagination. The results do not represent an online connection directory, and missing logs do not indicate that no calls occurred.</p>
      * 
      * @param request the request parameters of ListGatewayWebsocketEvents  ListGatewayWebsocketEventsRequest
      * @return ListGatewayWebsocketEventsResponse
@@ -4961,7 +4979,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Only sources of the <strong>Container Service</strong> type are allowed to update the configurations of listening Ingresses.</p>
+     * <p>Only sources of the <strong>container service</strong> type are allowed to update the configurations of Ingress listeners.</p>
      * 
      * @param request the request parameters of UpdateMcpServer  UpdateMcpServerRequest
      * @return UpdateMcpServerResponse
@@ -5029,6 +5047,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateModelGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateModelTokenRateLimit  UpdateModelTokenRateLimitRequest
+     * @return UpdateModelTokenRateLimitResponse
+     */
+    @Override
+    public CompletableFuture<UpdateModelTokenRateLimitResponse> updateModelTokenRateLimit(UpdateModelTokenRateLimitRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateModelTokenRateLimit").setMethod(HttpMethod.PUT).setPathRegex("/v1/gateways/{gatewayId}/model-tpm/{modelId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateModelTokenRateLimitResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateModelTokenRateLimitResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
