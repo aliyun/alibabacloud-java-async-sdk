@@ -19,7 +19,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CreateEduProblemSolveRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("query")
-    @com.aliyun.core.annotation.Validation(required = true)
     private CreateEduProblemSolveRequestQuery query;
 
     @com.aliyun.core.annotation.Body
@@ -74,7 +73,7 @@ public class CreateEduProblemSolveRequest extends Request {
         } 
 
         /**
-         * <p>This parameter is required.</p>
+         * <p><strong>The question image container.</strong></p>
          */
         public Builder query(CreateEduProblemSolveRequestQuery query) {
             String queryShrink = shrink(query, "query", "json");
@@ -84,7 +83,10 @@ public class CreateEduProblemSolveRequest extends Request {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>019F593F-D6EE-5F44-819A-6CDA127D1637</p>
          */
         public Builder requestId(String requestId) {
             this.putBodyParameter("requestId", requestId);
@@ -166,7 +168,10 @@ public class CreateEduProblemSolveRequest extends Request {
             } 
 
             /**
-             * base64.
+             * <p><strong>The Base64-encoded image</strong>. If both this parameter and the URL are provided, this parameter takes precedence.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>iVBORw0KGgoAAAANSUhEUgAAAAUA...</p>
              */
             public Builder base64(String base64) {
                 this.base64 = base64;
@@ -174,7 +179,11 @@ public class CreateEduProblemSolveRequest extends Request {
             }
 
             /**
+             * <p><strong>The image format</strong>: jpg, jpeg, or png. The value must match the actual file format.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>jpg</p>
              */
             public Builder format(String format) {
                 this.format = format;
@@ -182,7 +191,10 @@ public class CreateEduProblemSolveRequest extends Request {
             }
 
             /**
-             * url.
+             * <p>The URL of a single question image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://your-cdn.example.com/question.jpg">https://your-cdn.example.com/question.jpg</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -236,7 +248,7 @@ public class CreateEduProblemSolveRequest extends Request {
             } 
 
             /**
-             * image.
+             * <p><strong>The image information.</strong></p>
              */
             public Builder image(Image image) {
                 this.image = image;

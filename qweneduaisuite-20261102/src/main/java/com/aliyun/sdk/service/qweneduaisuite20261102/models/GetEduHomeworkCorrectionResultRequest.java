@@ -59,7 +59,10 @@ public class GetEduHomeworkCorrectionResultRequest extends Request {
         } 
 
         /**
-         * taskId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b18eabc4-5d84-40b0-ae20-e0eb2f585781</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("taskId", taskId);

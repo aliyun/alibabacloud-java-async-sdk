@@ -93,7 +93,10 @@ public class ActivateQwenEduApiResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The API status or POP error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class ActivateQwenEduApiResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The activation result. This parameter is null when an error occurs.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class ActivateQwenEduApiResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The request error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,10 @@ public class ActivateQwenEduApiResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The POP request ID. This parameter is not returned when signature or identity verification fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5C5E3F0A-2B0E-4F7B-9C55-0E1A6A0E2F11</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -183,7 +192,10 @@ public class ActivateQwenEduApiResponseBody extends TeaModel {
             } 
 
             /**
-             * failMessage.
+             * <p>The failure description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Service activation failed. Try again later</p>
              */
             public Builder failMessage(String failMessage) {
                 this.failMessage = failMessage;
@@ -191,7 +203,15 @@ public class ActivateQwenEduApiResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The activation status. Valid values:</p>
+             * <ul>
+             * <li>ACTIVE: Activated.</li>
+             * <li>ACTIVATING: Activating.</li>
+             * <li>FAILED: Activation failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ACTIVE</p>
              */
             public Builder status(String status) {
                 this.status = status;

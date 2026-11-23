@@ -93,7 +93,10 @@ public class CreateEduHomeworkCorrectSubmitResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The API status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class CreateEduHomeworkCorrectSubmitResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The import command.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class CreateEduHomeworkCorrectSubmitResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The request error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,10 @@ public class CreateEduHomeworkCorrectSubmitResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID on the caller side.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>req-20261116-0001</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -183,7 +192,10 @@ public class CreateEduHomeworkCorrectSubmitResponseBody extends TeaModel {
             } 
 
             /**
-             * x.
+             * <p>The X-axis coordinate value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120</p>
              */
             public Builder x(Long x) {
                 this.x = x;
@@ -191,7 +203,10 @@ public class CreateEduHomeworkCorrectSubmitResponseBody extends TeaModel {
             }
 
             /**
-             * y.
+             * <p>The Y-axis coordinate value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>980</p>
              */
             public Builder y(Long y) {
                 this.y = y;
@@ -258,7 +273,10 @@ public class CreateEduHomeworkCorrectSubmitResponseBody extends TeaModel {
             } 
 
             /**
-             * x.
+             * <p>The X-axis coordinate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120</p>
              */
             public Builder x(Long x) {
                 this.x = x;
@@ -266,7 +284,10 @@ public class CreateEduHomeworkCorrectSubmitResponseBody extends TeaModel {
             }
 
             /**
-             * y.
+             * <p>The Y-axis coordinate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>980</p>
              */
             public Builder y(Long y) {
                 this.y = y;
@@ -372,7 +393,7 @@ public class CreateEduHomeworkCorrectSubmitResponseBody extends TeaModel {
             } 
 
             /**
-             * answerPoints.
+             * <p>The coordinate group of the user\&quot;s answering area. It generally contains four vertex coordinates arranged in the order of top-left, top-right, bottom-right, and bottom-left, formatted as <code>[{&quot;x&quot;: ..., &quot;y&quot;: ...}, ...]</code>.</p>
              */
             public Builder answerPoints(java.util.List<AnswerPoints> answerPoints) {
                 this.answerPoints = answerPoints;
@@ -380,7 +401,7 @@ public class CreateEduHomeworkCorrectSubmitResponseBody extends TeaModel {
             }
 
             /**
-             * checkPoint.
+             * <p>The coordinates of the grading mark point, formatted as <code>{ &quot;x&quot;: ..., &quot;y&quot;: ... }</code>.</p>
              */
             public Builder checkPoint(CheckPoint checkPoint) {
                 this.checkPoint = checkPoint;
@@ -388,7 +409,10 @@ public class CreateEduHomeworkCorrectSubmitResponseBody extends TeaModel {
             }
 
             /**
-             * checkResult.
+             * <p>The grading conclusion, such as <code>correct</code>, <code>wrong</code>, or <code>partial</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>correct</p>
              */
             public Builder checkResult(String checkResult) {
                 this.checkResult = checkResult;
@@ -396,7 +420,10 @@ public class CreateEduHomeworkCorrectSubmitResponseBody extends TeaModel {
             }
 
             /**
-             * standardAnswer.
+             * <p>The ground truth.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder standardAnswer(String standardAnswer) {
                 this.standardAnswer = standardAnswer;
@@ -404,7 +431,10 @@ public class CreateEduHomeworkCorrectSubmitResponseBody extends TeaModel {
             }
 
             /**
-             * userAnswer.
+             * <p>The student\&quot;s answer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder userAnswer(String userAnswer) {
                 this.userAnswer = userAnswer;
@@ -471,7 +501,10 @@ public class CreateEduHomeworkCorrectSubmitResponseBody extends TeaModel {
             } 
 
             /**
-             * x.
+             * <p>The X-axis coordinate value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120</p>
              */
             public Builder x(Long x) {
                 this.x = x;
@@ -479,7 +512,10 @@ public class CreateEduHomeworkCorrectSubmitResponseBody extends TeaModel {
             }
 
             /**
-             * y.
+             * <p>The Y-axis coordinate value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>980</p>
              */
             public Builder y(Long y) {
                 this.y = y;
@@ -611,7 +647,7 @@ public class CreateEduHomeworkCorrectSubmitResponseBody extends TeaModel {
             } 
 
             /**
-             * answerResults.
+             * <p>The array of answering and grading results for the question.</p>
              */
             public Builder answerResults(java.util.List<AnswerResults> answerResults) {
                 this.answerResults = answerResults;
@@ -619,7 +655,14 @@ public class CreateEduHomeworkCorrectSubmitResponseBody extends TeaModel {
             }
 
             /**
-             * finish.
+             * <p>Specifies whether the task is completed:</p>
+             * <ul>
+             * <li><strong>true</strong>: The task is completed.</li>
+             * <li><strong>false</strong>: The task is not completed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder finish(Boolean finish) {
                 this.finish = finish;
@@ -627,7 +670,10 @@ public class CreateEduHomeworkCorrectSubmitResponseBody extends TeaModel {
             }
 
             /**
-             * questionContent.
+             * <p>The text content of the question.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1 + 1 = ?</p>
              */
             public Builder questionContent(String questionContent) {
                 this.questionContent = questionContent;
@@ -635,7 +681,10 @@ public class CreateEduHomeworkCorrectSubmitResponseBody extends TeaModel {
             }
 
             /**
-             * questionId.
+             * <p>The question ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>q-001</p>
              */
             public Builder questionId(String questionId) {
                 this.questionId = questionId;
@@ -643,7 +692,10 @@ public class CreateEduHomeworkCorrectSubmitResponseBody extends TeaModel {
             }
 
             /**
-             * questionPoints.
+             * <p>The coordinate group of the question area. It generally contains four vertex coordinates arranged in the order of top-left, top-right, bottom-right, and bottom-left.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Formatted as <code>[[{&quot;x&quot;: 0, &quot;y&quot;: 0}, ...]]</code></p>
              */
             public Builder questionPoints(java.util.List<java.util.List<QuestionPoints>> questionPoints) {
                 this.questionPoints = questionPoints;
@@ -651,7 +703,10 @@ public class CreateEduHomeworkCorrectSubmitResponseBody extends TeaModel {
             }
 
             /**
-             * questionType.
+             * <p>The question type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>choice</p>
              */
             public Builder questionType(String questionType) {
                 this.questionType = questionType;
@@ -659,7 +714,10 @@ public class CreateEduHomeworkCorrectSubmitResponseBody extends TeaModel {
             }
 
             /**
-             * solution.
+             * <p>The question analysis and solution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The question analysis and solution</p>
              */
             public Builder solution(String solution) {
                 this.solution = solution;
@@ -765,7 +823,10 @@ public class CreateEduHomeworkCorrectSubmitResponseBody extends TeaModel {
             } 
 
             /**
-             * angle.
+             * <p>The clockwise rotation angle of the image, in degrees.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder angle(Long angle) {
                 this.angle = angle;
@@ -773,7 +834,10 @@ public class CreateEduHomeworkCorrectSubmitResponseBody extends TeaModel {
             }
 
             /**
-             * dewarpUrl.
+             * <p>The URL of the corrected image. If <code>dewarp</code> is set to <code>false</code>, the URL of the original image is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.com/dewarp.jpg">https://example.com/dewarp.jpg</a></p>
              */
             public Builder dewarpUrl(String dewarpUrl) {
                 this.dewarpUrl = dewarpUrl;
@@ -781,7 +845,7 @@ public class CreateEduHomeworkCorrectSubmitResponseBody extends TeaModel {
             }
 
             /**
-             * questionResults.
+             * <p>The array of question recognition and grading results.</p>
              */
             public Builder questionResults(java.util.List<QuestionResults> questionResults) {
                 this.questionResults = questionResults;
@@ -789,7 +853,10 @@ public class CreateEduHomeworkCorrectSubmitResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The task status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Examples: submitted, processing, finished, or failed</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -797,7 +864,10 @@ public class CreateEduHomeworkCorrectSubmitResponseBody extends TeaModel {
             }
 
             /**
-             * taskId.
+             * <p>The unique identifier of the task. You must include this ID in subsequent queries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>task-20261116-abc123</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

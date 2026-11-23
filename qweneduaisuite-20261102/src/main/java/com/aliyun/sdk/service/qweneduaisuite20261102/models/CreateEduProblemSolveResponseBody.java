@@ -17,15 +17,39 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateEduProblemSolveResponseBody</p>
  */
 public class CreateEduProblemSolveResponseBody extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("data")
-    private Data data;
+    @com.aliyun.core.annotation.NameInMap("code")
+    private String code;
 
-    @com.aliyun.core.annotation.NameInMap("event")
-    private String event;
+    @com.aliyun.core.annotation.NameInMap("finished")
+    private Boolean finished;
+
+    @com.aliyun.core.annotation.NameInMap("items")
+    private java.util.List<Items> items;
+
+    @com.aliyun.core.annotation.NameInMap("message")
+    private String message;
+
+    @com.aliyun.core.annotation.NameInMap("requestId")
+    private String requestId;
+
+    @com.aliyun.core.annotation.NameInMap("resultType")
+    private String resultType;
+
+    @com.aliyun.core.annotation.NameInMap("retryable")
+    private Boolean retryable;
+
+    @com.aliyun.core.annotation.NameInMap("usage")
+    private Usage usage;
 
     private CreateEduProblemSolveResponseBody(Builder builder) {
-        this.data = builder.data;
-        this.event = builder.event;
+        this.code = builder.code;
+        this.finished = builder.finished;
+        this.items = builder.items;
+        this.message = builder.message;
+        this.requestId = builder.requestId;
+        this.resultType = builder.resultType;
+        this.retryable = builder.retryable;
+        this.usage = builder.usage;
     }
 
     public static Builder builder() {
@@ -41,44 +65,162 @@ public class CreateEduProblemSolveResponseBody extends TeaModel {
     }
 
     /**
-     * @return data
+     * @return code
      */
-    public Data getData() {
-        return this.data;
+    public String getCode() {
+        return this.code;
     }
 
     /**
-     * @return event
+     * @return finished
      */
-    public String getEvent() {
-        return this.event;
+    public Boolean getFinished() {
+        return this.finished;
+    }
+
+    /**
+     * @return items
+     */
+    public java.util.List<Items> getItems() {
+        return this.items;
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
+     * @return resultType
+     */
+    public String getResultType() {
+        return this.resultType;
+    }
+
+    /**
+     * @return retryable
+     */
+    public Boolean getRetryable() {
+        return this.retryable;
+    }
+
+    /**
+     * @return usage
+     */
+    public Usage getUsage() {
+        return this.usage;
     }
 
     public static final class Builder {
-        private Data data; 
-        private String event; 
+        private String code; 
+        private Boolean finished; 
+        private java.util.List<Items> items; 
+        private String message; 
+        private String requestId; 
+        private String resultType; 
+        private Boolean retryable; 
+        private Usage usage; 
 
         private Builder() {
         } 
 
         private Builder(CreateEduProblemSolveResponseBody model) {
-            this.data = model.data;
-            this.event = model.event;
+            this.code = model.code;
+            this.finished = model.finished;
+            this.items = model.items;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.resultType = model.resultType;
+            this.retryable = model.retryable;
+            this.usage = model.usage;
         } 
 
         /**
-         * data.
+         * <p>The API data identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>change_batch</p>
          */
-        public Builder data(Data data) {
-            this.data = data;
+        public Builder code(String code) {
+            this.code = code;
             return this;
         }
 
         /**
-         * event.
+         * <p>Specifies whether this is the final full snapshot. The value is fixed to true in the complete event.</p>
          */
-        public Builder event(String event) {
-            this.event = event;
+        public Builder finished(Boolean finished) {
+            this.finished = finished;
+            return this;
+        }
+
+        /**
+         * <p>The current list of complete question results.</p>
+         */
+        public Builder items(java.util.List<Items> items) {
+            this.items = items;
+            return this;
+        }
+
+        /**
+         * <p>The actual response message of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
+         */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
+
+        /**
+         * <p>Echo request ID echoed from echo request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>098E23F7-A74C-5584-87A1-39734D5B83CE</p>
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * <p>The type of the question resolution result. Valid values:</p>
+         * <ul>
+         * <li>single: Single question.</li>
+         * <li>multiple: Multiple questions.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>single</p>
+         */
+        public Builder resultType(String resultType) {
+            this.resultType = resultType;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether the error is retryable. Default value: true.</p>
+         */
+        public Builder retryable(Boolean retryable) {
+            this.retryable = retryable;
+            return this;
+        }
+
+        /**
+         * <p>The token usage. Only the complete event carries the final value. The message event does not return this field.</p>
+         */
+        public Builder usage(Usage usage) {
+            this.usage = usage;
             return this;
         }
 
@@ -141,7 +283,10 @@ public class CreateEduProblemSolveResponseBody extends TeaModel {
             } 
 
             /**
-             * content.
+             * <p>The current thinking content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8ci7nsj9WPYXvQb9MJfA</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -149,7 +294,14 @@ public class CreateEduProblemSolveResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The thinking status. Valid values:</p>
+             * <ul>
+             * <li>processing: Processing.</li>
+             * <li>complete: Complete.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -255,7 +407,10 @@ public class CreateEduProblemSolveResponseBody extends TeaModel {
             } 
 
             /**
-             * content.
+             * <p>The complete Markdown content of the question resolution, including the deduction process and the final result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -263,7 +418,10 @@ public class CreateEduProblemSolveResponseBody extends TeaModel {
             }
 
             /**
-             * imageUrl.
+             * <p>The URL of the unique image for the current question. The URL may be time-sensitive. If the question is not associated with an image resource and no request URL is available for fallback, an empty string is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://xxx.jpg">https://xxx.jpg</a></p>
              */
             public Builder imageUrl(String imageUrl) {
                 this.imageUrl = imageUrl;
@@ -271,7 +429,10 @@ public class CreateEduProblemSolveResponseBody extends TeaModel {
             }
 
             /**
-             * questionId.
+             * <p>The question identifier. The value is the question title, such as Question 1. The server does not return a separate title field. If the downstream service does not provide a question title, which is always the case for single-question scenarios, titles such as Question 1 and Question 2 are generated in the order of the questions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50a10e43a33e36179e355556d319ebd5</p>
              */
             public Builder questionId(String questionId) {
                 this.questionId = questionId;
@@ -279,7 +440,14 @@ public class CreateEduProblemSolveResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The current question status. Valid values:</p>
+             * <ul>
+             * <li>processing: Processing.</li>
+             * <li>complete: Complete.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -287,7 +455,7 @@ public class CreateEduProblemSolveResponseBody extends TeaModel {
             }
 
             /**
-             * thinking.
+             * <p>The thinking process. This field is returned only when result_type is single, and is not returned for multiple questions.</p>
              */
             public Builder thinking(Thinking thinking) {
                 this.thinking = thinking;
@@ -354,7 +522,10 @@ public class CreateEduProblemSolveResponseBody extends TeaModel {
             } 
 
             /**
-             * completionTokens.
+             * <p>The number of output tokens.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder completionTokens(Integer completionTokens) {
                 this.completionTokens = completionTokens;
@@ -362,7 +533,10 @@ public class CreateEduProblemSolveResponseBody extends TeaModel {
             }
 
             /**
-             * promptTokens.
+             * <p>The number of input tokens.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder promptTokens(Integer promptTokens) {
                 this.promptTokens = promptTokens;
@@ -371,207 +545,6 @@ public class CreateEduProblemSolveResponseBody extends TeaModel {
 
             public Usage build() {
                 return new Usage(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link CreateEduProblemSolveResponseBody} extends {@link TeaModel}
-     *
-     * <p>CreateEduProblemSolveResponseBody</p>
-     */
-    public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("code")
-        private String code;
-
-        @com.aliyun.core.annotation.NameInMap("finished")
-        private Boolean finished;
-
-        @com.aliyun.core.annotation.NameInMap("items")
-        private java.util.List<Items> items;
-
-        @com.aliyun.core.annotation.NameInMap("message")
-        private String message;
-
-        @com.aliyun.core.annotation.NameInMap("requestId")
-        private String requestId;
-
-        @com.aliyun.core.annotation.NameInMap("resultType")
-        private String resultType;
-
-        @com.aliyun.core.annotation.NameInMap("retryable")
-        private Boolean retryable;
-
-        @com.aliyun.core.annotation.NameInMap("usage")
-        private Usage usage;
-
-        private Data(Builder builder) {
-            this.code = builder.code;
-            this.finished = builder.finished;
-            this.items = builder.items;
-            this.message = builder.message;
-            this.requestId = builder.requestId;
-            this.resultType = builder.resultType;
-            this.retryable = builder.retryable;
-            this.usage = builder.usage;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Data create() {
-            return builder().build();
-        }
-
-        /**
-         * @return code
-         */
-        public String getCode() {
-            return this.code;
-        }
-
-        /**
-         * @return finished
-         */
-        public Boolean getFinished() {
-            return this.finished;
-        }
-
-        /**
-         * @return items
-         */
-        public java.util.List<Items> getItems() {
-            return this.items;
-        }
-
-        /**
-         * @return message
-         */
-        public String getMessage() {
-            return this.message;
-        }
-
-        /**
-         * @return requestId
-         */
-        public String getRequestId() {
-            return this.requestId;
-        }
-
-        /**
-         * @return resultType
-         */
-        public String getResultType() {
-            return this.resultType;
-        }
-
-        /**
-         * @return retryable
-         */
-        public Boolean getRetryable() {
-            return this.retryable;
-        }
-
-        /**
-         * @return usage
-         */
-        public Usage getUsage() {
-            return this.usage;
-        }
-
-        public static final class Builder {
-            private String code; 
-            private Boolean finished; 
-            private java.util.List<Items> items; 
-            private String message; 
-            private String requestId; 
-            private String resultType; 
-            private Boolean retryable; 
-            private Usage usage; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.code = model.code;
-                this.finished = model.finished;
-                this.items = model.items;
-                this.message = model.message;
-                this.requestId = model.requestId;
-                this.resultType = model.resultType;
-                this.retryable = model.retryable;
-                this.usage = model.usage;
-            } 
-
-            /**
-             * code.
-             */
-            public Builder code(String code) {
-                this.code = code;
-                return this;
-            }
-
-            /**
-             * finished.
-             */
-            public Builder finished(Boolean finished) {
-                this.finished = finished;
-                return this;
-            }
-
-            /**
-             * items.
-             */
-            public Builder items(java.util.List<Items> items) {
-                this.items = items;
-                return this;
-            }
-
-            /**
-             * message.
-             */
-            public Builder message(String message) {
-                this.message = message;
-                return this;
-            }
-
-            /**
-             * requestId.
-             */
-            public Builder requestId(String requestId) {
-                this.requestId = requestId;
-                return this;
-            }
-
-            /**
-             * resultType.
-             */
-            public Builder resultType(String resultType) {
-                this.resultType = resultType;
-                return this;
-            }
-
-            /**
-             * retryable.
-             */
-            public Builder retryable(Boolean retryable) {
-                this.retryable = retryable;
-                return this;
-            }
-
-            /**
-             * usage.
-             */
-            public Builder usage(Usage usage) {
-                this.usage = usage;
-                return this;
-            }
-
-            public Data build() {
-                return new Data(this);
             } 
 
         } 

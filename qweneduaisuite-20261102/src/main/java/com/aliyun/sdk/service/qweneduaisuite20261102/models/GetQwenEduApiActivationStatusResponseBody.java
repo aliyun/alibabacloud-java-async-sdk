@@ -93,7 +93,10 @@ public class GetQwenEduApiActivationStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The API status or POP error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class GetQwenEduApiActivationStatusResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The activation result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class GetQwenEduApiActivationStatusResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The request error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,10 @@ public class GetQwenEduApiActivationStatusResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The <strong>POP request ID</strong>. This field is not returned if signature verification or identity authentication fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5C5E3F0A-2B0E-4F7B-9C55-0E1A6A0E2F11</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -196,7 +205,10 @@ public class GetQwenEduApiActivationStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * failCode.
+             * <p>The <strong>failure code</strong>. For more information, see 3.4.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACTIVATION_FAILED</p>
              */
             public Builder failCode(String failCode) {
                 this.failCode = failCode;
@@ -204,7 +216,10 @@ public class GetQwenEduApiActivationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * failMessage.
+             * <p>The <strong>failure description</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Service activation failed. Try again later</p>
              */
             public Builder failMessage(String failMessage) {
                 this.failMessage = failMessage;
@@ -212,7 +227,15 @@ public class GetQwenEduApiActivationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The activation status. Valid values:</p>
+             * <ul>
+             * <li>ACTIVE: Activated.</li>
+             * <li>ACTIVATING: Activating.</li>
+             * <li>FAILED: Activation failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ACTIVE</p>
              */
             public Builder status(String status) {
                 this.status = status;
