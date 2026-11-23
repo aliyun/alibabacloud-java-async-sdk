@@ -63,7 +63,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Creates a session and returns the session information. Use the returned sessionId for subsequent operations such as sending messages, querying records, and updating the session.</p>
+     * <p>Creates a session and returns the session information. Use the returned sessionId when sending messages, querying records, and updating the session.</p>
      * 
      * @param request the request parameters of CreateSession  CreateSessionRequest
      * @return CreateSessionResponse
@@ -147,7 +147,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the title, status, pinned status, and the ID and status of the latest run of a specified session.</p>
+     * <p>Queries the title, status, and pinned status of a specified session, as well as the ID and status of its last run.</p>
      * 
      * @param request the request parameters of GetSession  GetSessionRequest
      * @return GetSessionResponse
@@ -189,7 +189,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paging query for the list of sessions accessible to the current invoke identity. Use the returned nextToken to retrieve the next page.</p>
+     * <p>Performs a paging query for the list of sessions accessible to the current identity used to invoke. Use the returned nextToken to retrieve the next page.</p>
      * 
      * @param request the request parameters of ListSessions  ListSessionsRequest
      * @return ListSessionsResponse
@@ -262,7 +262,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Updates the title or pinned status of a specified session. Specify at least one of the title and pinned fields. Unspecified fields remain unchanged.</p>
+     * <p>Updates the title or pinned status of a specified session. You must specify at least one of the title and pinned parameters. Fields that are not specified remain unchanged.</p>
      * 
      * @param request the request parameters of UpdateSession  UpdateSessionRequest
      * @return UpdateSessionResponse

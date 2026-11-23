@@ -99,7 +99,7 @@ public class GetSessionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -143,6 +143,9 @@ public class GetSessionResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("title")
         private String title;
 
+        @com.aliyun.core.annotation.NameInMap("uiEnabled")
+        private Boolean uiEnabled;
+
         @com.aliyun.core.annotation.NameInMap("updatedAt")
         private String updatedAt;
 
@@ -154,6 +157,7 @@ public class GetSessionResponseBody extends TeaModel {
             this.sessionId = builder.sessionId;
             this.status = builder.status;
             this.title = builder.title;
+            this.uiEnabled = builder.uiEnabled;
             this.updatedAt = builder.updatedAt;
         }
 
@@ -215,6 +219,13 @@ public class GetSessionResponseBody extends TeaModel {
         }
 
         /**
+         * @return uiEnabled
+         */
+        public Boolean getUiEnabled() {
+            return this.uiEnabled;
+        }
+
+        /**
          * @return updatedAt
          */
         public String getUpdatedAt() {
@@ -229,6 +240,7 @@ public class GetSessionResponseBody extends TeaModel {
             private String sessionId; 
             private String status; 
             private String title; 
+            private Boolean uiEnabled; 
             private String updatedAt; 
 
             private Builder() {
@@ -242,6 +254,7 @@ public class GetSessionResponseBody extends TeaModel {
                 this.sessionId = model.sessionId;
                 this.status = model.status;
                 this.title = model.title;
+                this.uiEnabled = model.uiEnabled;
                 this.updatedAt = model.updatedAt;
             } 
 
@@ -257,7 +270,7 @@ public class GetSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the latest run.</p>
+             * <p>The ID of the last run.</p>
              * 
              * <strong>example:</strong>
              * <p>run_example_001</p>
@@ -268,7 +281,7 @@ public class GetSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the latest run. Valid values: <code>PENDING</code> (Pending), <code>RUNNING</code> (Running), <code>WAITING_USER</code> (Waiting for interrupt handling), <code>COMPLETED</code> (Completed), <code>FAILED</code> (Failed), <code>CANCELLED</code> (Cancelled), and <code>REJECTED</code> (Rejected).</p>
+             * <p>The status of the last run. Valid values: <code>PENDING</code> (pending), <code>RUNNING</code> (running), <code>WAITING_USER</code> (waiting for interrupt handling), <code>COMPLETED</code> (completed), <code>FAILED</code> (failed), <code>CANCELLED</code> (cancelled), and <code>REJECTED</code> (rejected).</p>
              * 
              * <strong>example:</strong>
              * <p>COMPLETED</p>
@@ -301,7 +314,7 @@ public class GetSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the session. Valid values: <code>IDLE</code> (Idle), <code>ACTIVE</code> (Running), <code>WAITING_USER_INPUT</code> (Waiting for user input), <code>WAITING_APPROVAL</code> (Waiting for user confirmation), <code>WAITING_OUT_OF_BAND_APPROVAL</code> (Waiting for out-of-band approval), and <code>CLOSED</code> (Closed).</p>
+             * <p>The session status. Valid values: <code>IDLE</code> (idle), <code>ACTIVE</code> (running), <code>WAITING_USER_INPUT</code> (waiting for user input), <code>WAITING_APPROVAL</code> (waiting for user confirmation), <code>WAITING_OUT_OF_BAND_APPROVAL</code> (waiting for out-of-band approval), and <code>CLOSED</code> (closed).</p>
              * 
              * <strong>example:</strong>
              * <p>IDLE</p>
@@ -319,6 +332,17 @@ public class GetSessionResponseBody extends TeaModel {
              */
             public Builder title(String title) {
                 this.title = title;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether session UI enhancement is enabled. Valid values: true (enabled) and false (disabled). This feature is supported only for common sessions. If this field is not returned, the feature is considered disabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder uiEnabled(Boolean uiEnabled) {
+                this.uiEnabled = uiEnabled;
                 return this;
             }
 

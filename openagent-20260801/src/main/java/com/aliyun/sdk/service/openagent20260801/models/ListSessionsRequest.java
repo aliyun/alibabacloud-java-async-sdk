@@ -73,7 +73,7 @@ public class ListSessionsRequest extends Request {
         } 
 
         /**
-         * <p>The maximum number of sessions to return per page. The value must be a positive integer.</p>
+         * <p>The maximum number of sessions to return per page. Specify a positive integer.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -85,7 +85,7 @@ public class ListSessionsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token. Do not specify this parameter for the first request. For subsequent requests, pass the nextToken returned in the previous response. Do not parse or construct this token.</p>
+         * <p>The pagination token. Do not specify this parameter for the first request. For subsequent requests, pass the nextToken returned in the previous response. Do not parse or construct the token.</p>
          * 
          * <strong>example:</strong>
          * <p>example-next-token</p>

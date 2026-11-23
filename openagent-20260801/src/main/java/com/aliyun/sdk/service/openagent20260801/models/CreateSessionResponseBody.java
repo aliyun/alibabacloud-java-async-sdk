@@ -80,7 +80,7 @@ public class CreateSessionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The session information of the created session.</p>
+         * <p>The created session information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -134,6 +134,9 @@ public class CreateSessionResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("uiEnabled")
+        private Boolean uiEnabled;
+
         @com.aliyun.core.annotation.NameInMap("updatedAt")
         private String updatedAt;
 
@@ -142,6 +145,7 @@ public class CreateSessionResponseBody extends TeaModel {
             this.pinned = builder.pinned;
             this.sessionId = builder.sessionId;
             this.status = builder.status;
+            this.uiEnabled = builder.uiEnabled;
             this.updatedAt = builder.updatedAt;
         }
 
@@ -182,6 +186,13 @@ public class CreateSessionResponseBody extends TeaModel {
         }
 
         /**
+         * @return uiEnabled
+         */
+        public Boolean getUiEnabled() {
+            return this.uiEnabled;
+        }
+
+        /**
          * @return updatedAt
          */
         public String getUpdatedAt() {
@@ -193,6 +204,7 @@ public class CreateSessionResponseBody extends TeaModel {
             private Boolean pinned; 
             private String sessionId; 
             private String status; 
+            private Boolean uiEnabled; 
             private String updatedAt; 
 
             private Builder() {
@@ -203,6 +215,7 @@ public class CreateSessionResponseBody extends TeaModel {
                 this.pinned = model.pinned;
                 this.sessionId = model.sessionId;
                 this.status = model.status;
+                this.uiEnabled = model.uiEnabled;
                 this.updatedAt = model.updatedAt;
             } 
 
@@ -240,13 +253,24 @@ public class CreateSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The session status. The value is fixed to <code>IDLE</code> upon successful creation.</p>
+             * <p>The session status. The value is fixed to <code>IDLE</code> when the session is successfully created.</p>
              * 
              * <strong>example:</strong>
              * <p>IDLE</p>
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether session UI enhancement is enabled. A value of true indicates that it is enabled, and a value of false indicates that it is disabled. Only common sessions support this feature. If this field is not returned, it is considered disabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder uiEnabled(Boolean uiEnabled) {
+                this.uiEnabled = uiEnabled;
                 return this;
             }
 

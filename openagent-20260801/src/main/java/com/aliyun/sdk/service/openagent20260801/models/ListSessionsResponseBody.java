@@ -99,7 +99,7 @@ public class ListSessionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. true indicates success.</p>
+         * <p>Indicates whether the request is successful. A value of true indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -143,6 +143,9 @@ public class ListSessionsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("title")
         private String title;
 
+        @com.aliyun.core.annotation.NameInMap("uiEnabled")
+        private Boolean uiEnabled;
+
         @com.aliyun.core.annotation.NameInMap("updatedAt")
         private String updatedAt;
 
@@ -154,6 +157,7 @@ public class ListSessionsResponseBody extends TeaModel {
             this.sessionId = builder.sessionId;
             this.status = builder.status;
             this.title = builder.title;
+            this.uiEnabled = builder.uiEnabled;
             this.updatedAt = builder.updatedAt;
         }
 
@@ -215,6 +219,13 @@ public class ListSessionsResponseBody extends TeaModel {
         }
 
         /**
+         * @return uiEnabled
+         */
+        public Boolean getUiEnabled() {
+            return this.uiEnabled;
+        }
+
+        /**
          * @return updatedAt
          */
         public String getUpdatedAt() {
@@ -229,6 +240,7 @@ public class ListSessionsResponseBody extends TeaModel {
             private String sessionId; 
             private String status; 
             private String title; 
+            private Boolean uiEnabled; 
             private String updatedAt; 
 
             private Builder() {
@@ -242,6 +254,7 @@ public class ListSessionsResponseBody extends TeaModel {
                 this.sessionId = model.sessionId;
                 this.status = model.status;
                 this.title = model.title;
+                this.uiEnabled = model.uiEnabled;
                 this.updatedAt = model.updatedAt;
             } 
 
@@ -268,7 +281,7 @@ public class ListSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the most recent run. Valid values: <code>PENDING</code> (pending), <code>RUNNING</code> (running), <code>WAITING_USER</code> (waiting for user intervention), <code>COMPLETED</code> (completed), <code>FAILED</code> (failed), <code>CANCELLED</code> (cancelled), and <code>REJECTED</code> (rejected).</p>
+             * <p>The status of the most recent run. Valid values: <code>PENDING</code> (pending), <code>RUNNING</code> (running), <code>WAITING_USER</code> (waiting for interrupt handling), <code>COMPLETED</code> (completed), <code>FAILED</code> (failed), <code>CANCELLED</code> (cancelled), and <code>REJECTED</code> (rejected).</p>
              * 
              * <strong>example:</strong>
              * <p>COMPLETED</p>
@@ -319,6 +332,17 @@ public class ListSessionsResponseBody extends TeaModel {
              */
             public Builder title(String title) {
                 this.title = title;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether session UI enhancement is enabled. A value of true indicates that the feature is enabled, and a value of false indicates that the feature is disabled. This feature is supported only for regular sessions. If this field is not returned, the feature is considered disabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder uiEnabled(Boolean uiEnabled) {
+                this.uiEnabled = uiEnabled;
                 return this;
             }
 

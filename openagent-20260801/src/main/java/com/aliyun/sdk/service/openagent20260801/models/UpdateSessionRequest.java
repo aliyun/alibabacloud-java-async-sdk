@@ -34,12 +34,17 @@ public class UpdateSessionRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("title")
     private String title;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("uiEnabled")
+    private Boolean uiEnabled;
+
     private UpdateSessionRequest(Builder builder) {
         super(builder);
         this.sessionId = builder.sessionId;
         this.xOpenAgentIdempotencyKey = builder.xOpenAgentIdempotencyKey;
         this.pinned = builder.pinned;
         this.title = builder.title;
+        this.uiEnabled = builder.uiEnabled;
     }
 
     public static Builder builder() {
@@ -83,11 +88,19 @@ public class UpdateSessionRequest extends Request {
         return this.title;
     }
 
+    /**
+     * @return uiEnabled
+     */
+    public Boolean getUiEnabled() {
+        return this.uiEnabled;
+    }
+
     public static final class Builder extends Request.Builder<UpdateSessionRequest, Builder> {
         private String sessionId; 
         private String xOpenAgentIdempotencyKey; 
         private Boolean pinned; 
         private String title; 
+        private Boolean uiEnabled; 
 
         private Builder() {
             super();
@@ -99,10 +112,11 @@ public class UpdateSessionRequest extends Request {
             this.xOpenAgentIdempotencyKey = request.xOpenAgentIdempotencyKey;
             this.pinned = request.pinned;
             this.title = request.title;
+            this.uiEnabled = request.uiEnabled;
         } 
 
         /**
-         * <p>The ID of the session to update.</p>
+         * <p>The ID of the session to be updated.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -127,7 +141,7 @@ public class UpdateSessionRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to pin the session. If this field is not specified, the pinned status remains unchanged.</p>
+         * <p>Specifies whether to pin the session. If this parameter is not specified, the pinned status remains unchanged.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -139,7 +153,7 @@ public class UpdateSessionRequest extends Request {
         }
 
         /**
-         * <p>The new title of the session. Leave this field empty if no update is required.</p>
+         * <p>The updated session title. You can leave this parameter empty if no update is required.</p>
          * 
          * <strong>example:</strong>
          * <p>Updated inspection session</p>
@@ -147,6 +161,15 @@ public class UpdateSessionRequest extends Request {
         public Builder title(String title) {
             this.putBodyParameter("title", title);
             this.title = title;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to enable session UI enhancement. This feature is supported only for common sessions.</p>
+         */
+        public Builder uiEnabled(Boolean uiEnabled) {
+            this.putBodyParameter("uiEnabled", uiEnabled);
+            this.uiEnabled = uiEnabled;
             return this;
         }
 

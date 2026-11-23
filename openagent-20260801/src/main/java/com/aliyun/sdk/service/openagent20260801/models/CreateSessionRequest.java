@@ -25,10 +25,15 @@ public class CreateSessionRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("title")
     private String title;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("uiEnabled")
+    private Boolean uiEnabled;
+
     private CreateSessionRequest(Builder builder) {
         super(builder);
         this.xOpenAgentIdempotencyKey = builder.xOpenAgentIdempotencyKey;
         this.title = builder.title;
+        this.uiEnabled = builder.uiEnabled;
     }
 
     public static Builder builder() {
@@ -58,9 +63,17 @@ public class CreateSessionRequest extends Request {
         return this.title;
     }
 
+    /**
+     * @return uiEnabled
+     */
+    public Boolean getUiEnabled() {
+        return this.uiEnabled;
+    }
+
     public static final class Builder extends Request.Builder<CreateSessionRequest, Builder> {
         private String xOpenAgentIdempotencyKey; 
         private String title; 
+        private Boolean uiEnabled; 
 
         private Builder() {
             super();
@@ -70,10 +83,11 @@ public class CreateSessionRequest extends Request {
             super(request);
             this.xOpenAgentIdempotencyKey = request.xOpenAgentIdempotencyKey;
             this.title = request.title;
+            this.uiEnabled = request.uiEnabled;
         } 
 
         /**
-         * <p>The request idempotency key. Use the same value and the same business parameters when retrying the same request.</p>
+         * <p>The idempotency key of the request. Use the same value and the same business parameters when you retry the request.</p>
          * 
          * <strong>example:</strong>
          * <p>create-session-example-001</p>
@@ -93,6 +107,15 @@ public class CreateSessionRequest extends Request {
         public Builder title(String title) {
             this.putBodyParameter("title", title);
             this.title = title;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to enable session UI enhancement. Only common sessions support this feature.</p>
+         */
+        public Builder uiEnabled(Boolean uiEnabled) {
+            this.putBodyParameter("uiEnabled", uiEnabled);
+            this.uiEnabled = uiEnabled;
             return this;
         }
 
