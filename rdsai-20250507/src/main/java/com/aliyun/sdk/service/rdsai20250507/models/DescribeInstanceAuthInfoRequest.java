@@ -87,7 +87,7 @@ public class DescribeInstanceAuthInfoRequest extends Request {
         } 
 
         /**
-         * <p>Reserved parameter.</p>
+         * <p>A reserved parameter.</p>
          */
         public Builder branchName(String branchName) {
             this.putQueryParameter("BranchName", branchName);
@@ -96,7 +96,7 @@ public class DescribeInstanceAuthInfoRequest extends Request {
         }
 
         /**
-         * <p>The instance ID of the AI application.</p>
+         * <p>The ID of the AI application instance.</p>
          * 
          * <strong>example:</strong>
          * <p>ra-supabase-8moov5lxba****</p>
