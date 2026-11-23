@@ -67,7 +67,10 @@ public class DescribeResourceStatisticByRegionResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class DescribeResourceStatisticByRegionResponseBody extends TeaModel {
         }
 
         /**
-         * Statistic.
+         * <p>The statistics information.</p>
          */
         public Builder statistic(Statistic statistic) {
             this.statistic = statistic;
@@ -206,7 +209,10 @@ public class DescribeResourceStatisticByRegionResponseBody extends TeaModel {
             } 
 
             /**
-             * AssignedEndUserCount.
+             * <p>The number of assigned users in the current region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder assignedEndUserCount(Long assignedEndUserCount) {
                 this.assignedEndUserCount = assignedEndUserCount;
@@ -214,7 +220,10 @@ public class DescribeResourceStatisticByRegionResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectedEndUserCount.
+             * <p>The number of connected users in the current region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder connectedEndUserCount(Long connectedEndUserCount) {
                 this.connectedEndUserCount = connectedEndUserCount;
@@ -222,7 +231,10 @@ public class DescribeResourceStatisticByRegionResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopCount.
+             * <p>The number of cloud desktops in the current region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder desktopCount(Long desktopCount) {
                 this.desktopCount = desktopCount;
@@ -230,7 +242,10 @@ public class DescribeResourceStatisticByRegionResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopGroupCount.
+             * <p>The number of shared cloud desktops in the current region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder desktopGroupCount(Long desktopGroupCount) {
                 this.desktopGroupCount = desktopGroupCount;
@@ -238,7 +253,10 @@ public class DescribeResourceStatisticByRegionResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkPackageCount.
+             * <p>The number of network packages in the current region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder networkPackageCount(Long networkPackageCount) {
                 this.networkPackageCount = networkPackageCount;
@@ -246,7 +264,10 @@ public class DescribeResourceStatisticByRegionResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyGroupCount.
+             * <p>The number of policy groups in the current region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder policyGroupCount(Long policyGroupCount) {
                 this.policyGroupCount = policyGroupCount;
@@ -254,7 +275,10 @@ public class DescribeResourceStatisticByRegionResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID. You can call the <a href="https://next.api.aliyun.com/document/ecd/2020-09-30/DescribeRegions">DescribeRegions</a> operation to query the regions supported by WUYING Workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shenzhen</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -308,7 +332,7 @@ public class DescribeResourceStatisticByRegionResponseBody extends TeaModel {
             } 
 
             /**
-             * RegionStatistics.
+             * <p>The statistics by region.</p>
              */
             public Builder regionStatistics(java.util.List<RegionStatistics> regionStatistics) {
                 this.regionStatistics = regionStatistics;

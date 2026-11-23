@@ -106,9 +106,7 @@ public class DescribeVulDesktopsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of entries per page in a paged query.</p>
-         * <p>Maximum value: 100.</p>
-         * <p>Default value: 10.</p>
+         * <p>The number of entries per page for a paged query. Maximum value: 100. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -119,7 +117,7 @@ public class DescribeVulDesktopsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token for the next query. An empty value indicates that no more results exist.</p>
+         * <p>The token for the next query. An empty NextToken indicates that no more results are available.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kRxd1mKkNnHlUy14zdjl/I</p>
@@ -141,7 +139,7 @@ public class DescribeVulDesktopsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total count.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -152,7 +150,7 @@ public class DescribeVulDesktopsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of cloud desktops affected by the vulnerability.</p>
+         * <p>The list of details about cloud desktops affected by the vulnerability.</p>
          */
         public Builder vulDesktops(java.util.List<VulDesktops> vulDesktops) {
             this.vulDesktops = vulDesktops;
@@ -283,7 +281,7 @@ public class DescribeVulDesktopsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The CVE ID of the vulnerability.</p>
+             * <p>The vulnerability ID.</p>
              * 
              * <strong>example:</strong>
              * <p>CVE-2026-62690</p>
@@ -294,7 +292,7 @@ public class DescribeVulDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The vulnerability level.</p>
+             * <p>The severity level of the vulnerability.</p>
              * 
              * <strong>example:</strong>
              * <p>low</p>
@@ -305,10 +303,10 @@ public class DescribeVulDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The vulnerability name.</p>
+             * <p>The name of the vulnerability.</p>
              * 
              * <strong>example:</strong>
-             * <p>Windows Push Notification Elevation of Privilege Vulnerability</p>
+             * <p>Windows Push Notifications Elevation of Privilege Vulnerability</p>
              */
             public Builder cveTitle(String cveTitle) {
                 this.cveTitle = cveTitle;
@@ -316,7 +314,7 @@ public class DescribeVulDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The CVE URL.</p>
+             * <p>The CVE link.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://avd.aliyun.com/detail/CVE-2026-62690">https://avd.aliyun.com/detail/CVE-2026-62690</a></p>
@@ -338,7 +336,7 @@ public class DescribeVulDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reference URL for the vulnerability details.</p>
+             * <p>The reference link for the vulnerability details.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62690">https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62690</a></p>
@@ -349,7 +347,7 @@ public class DescribeVulDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The release time. The time is in the ISO 8601 standard in UTC: yyyy-MM-ddTHH:mm:ssZ.</p>
+             * <p>The release time. The time is in the ISO 8601 standard UTC format: yyyy-MM-ddTHH:mm:ssZ.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-11 07:00:00</p>
@@ -469,7 +467,7 @@ public class DescribeVulDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The failure reason.</p>
+             * <p>The reason for the failure.</p>
              * 
              * <strong>example:</strong>
              * <p>Update failed</p>
@@ -491,7 +489,7 @@ public class DescribeVulDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the fix task ended, in milliseconds.</p>
+             * <p>The timestamp when the fix task ended. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-05 13:57:31</p>
@@ -728,7 +726,7 @@ public class DescribeVulDesktopsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The configuration task ID.</p>
+             * <p>The ID of the configuration task.</p>
              * 
              * <strong>example:</strong>
              * <p>ccg-0bbay4w7bwbxd****</p>
@@ -761,7 +759,7 @@ public class DescribeVulDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The vulnerability details.</p>
+             * <p>The list of vulnerability details.</p>
              */
             public Builder cves(java.util.List<Cves> cves) {
                 this.cves = cves;
@@ -802,7 +800,7 @@ public class DescribeVulDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the vulnerability was first detected. Format: yyyy-MM-dd HH:mm:ss.</p>
+             * <p>The time when the vulnerability was first detected. The time is in the yyyy-MM-dd HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-05 00:00:00</p>
@@ -813,7 +811,7 @@ public class DescribeVulDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The fix records of the cloud desktop.</p>
+             * <p>The list of fix details for the cloud desktop.</p>
              */
             public Builder fixRecords(java.util.List<FixRecords> fixRecords) {
                 this.fixRecords = fixRecords;
@@ -821,7 +819,7 @@ public class DescribeVulDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The patch IDs.</p>
+             * <p>The list of patch IDs.</p>
              */
             public Builder patchIds(java.util.List<String> patchIds) {
                 this.patchIds = patchIds;
@@ -829,7 +827,7 @@ public class DescribeVulDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by WUYING Workspace.</p>
+             * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions supported by WUYING Workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-shenzhen</p>
@@ -840,7 +838,7 @@ public class DescribeVulDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The enterprise resource group ID.</p>
+             * <p>The ID of the enterprise resource group.</p>
              * 
              * <strong>example:</strong>
              * <p>rg-acfm2tswogr****</p>
@@ -862,7 +860,7 @@ public class DescribeVulDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The patch level.</p>
+             * <p>The severity level of the patch.</p>
              * 
              * <strong>example:</strong>
              * <p>high</p>

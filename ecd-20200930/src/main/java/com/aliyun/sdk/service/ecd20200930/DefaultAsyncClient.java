@@ -3329,7 +3329,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>该接口为中心化接口，只可通过上海或新加坡地域的服务进行调用。</li>
+     * <li>This API operation is a centralized operation and can only be called by using the endpoints in the China (Shanghai) or Singapore region.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeResourceStatisticByRegion  DescribeResourceStatisticByRegionRequest
@@ -3628,8 +3628,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>This operation uses a centralized endpoint in the Shanghai region. Calls from other regions are not supported.</li>
-     * <li>The cloud desktop status information returned by this operation has a 1 to 3 second delay from the actual values.</li>
+     * <li>This API operation uses a centralized domain name. The endpoint is in the China (Shanghai) region. Calls from other regions are not supported.</li>
+     * <li>The cloud desktop status information returned by this API operation has a delay of 1 to 3 seconds compared to the actual values.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeVulDesktops  DescribeVulDesktopsRequest
@@ -3651,7 +3651,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>After security protection is enabled, the system automatically scans cloud desktops for system vulnerabilities on a periodic basis (once a day).</p>
+     * <p>After security protection is enabled, the system automatically scans cloud desktops for system vulnerability at each epoch (once a day).</p>
      * 
      * @param request the request parameters of DescribeVulnerability  DescribeVulnerabilityRequest
      * @return DescribeVulnerabilityResponse

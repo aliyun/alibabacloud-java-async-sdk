@@ -87,7 +87,10 @@ public class DescribeResourceStatisticByRegionRequest extends Request {
         } 
 
         /**
-         * IncludeGroupDesktops.
+         * <p>Specifies whether the statistics include the number of shared cloud desktops.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder includeGroupDesktops(Boolean includeGroupDesktops) {
             this.putQueryParameter("IncludeGroupDesktops", includeGroupDesktops);
@@ -96,7 +99,10 @@ public class DescribeResourceStatisticByRegionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the service region. Valid values: China (Shanghai) and Singapore.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -105,7 +111,10 @@ public class DescribeResourceStatisticByRegionRequest extends Request {
         }
 
         /**
-         * SearchRegionId.
+         * <p>The ID of the region to search. This parameter is used to filter cloud desktops in the specified region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder searchRegionId(String searchRegionId) {
             this.putQueryParameter("SearchRegionId", searchRegionId);
