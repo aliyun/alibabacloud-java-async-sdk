@@ -249,7 +249,7 @@ public class CheckClickhouseToRDSRequest extends Request {
         } 
 
         /**
-         * <p>The password of the account that is used to log on to the database in the ApsaraDB for ClickHouse cluster.</p>
+         * <p>The password of the database account for the ApsaraDB for ClickHouse cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -262,7 +262,7 @@ public class CheckClickhouseToRDSRequest extends Request {
         }
 
         /**
-         * <p>The account that is used to log on to the database in the ApsaraDB for ClickHouse cluster.</p>
+         * <p>The database account of the ApsaraDB for ClickHouse cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -287,7 +287,7 @@ public class CheckClickhouseToRDSRequest extends Request {
         }
 
         /**
-         * <p>The ID of the ApsaraDB for ClickHouse cluster.</p>
+         * <p>The ID of the ApsaraDB for ClickHouse Community-compatible Edition cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -318,7 +318,7 @@ public class CheckClickhouseToRDSRequest extends Request {
         }
 
         /**
-         * <p>The ID of the ApsaraDB RDS for MySQL instance.</p>
+         * <p>The instance ID of the ApsaraDB RDS database.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -331,7 +331,7 @@ public class CheckClickhouseToRDSRequest extends Request {
         }
 
         /**
-         * <p>The password of the account that is used to log on to the database in the ApsaraDB RDS for MySQL instance.</p>
+         * <p>The password of the database account for the ApsaraDB RDS instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -344,7 +344,7 @@ public class CheckClickhouseToRDSRequest extends Request {
         }
 
         /**
-         * <p>The port number of the ApsaraDB RDS for MySQL instance.</p>
+         * <p>The port number of the ApsaraDB RDS instance.</p>
          * 
          * <strong>example:</strong>
          * <p>3306</p>
@@ -356,7 +356,7 @@ public class CheckClickhouseToRDSRequest extends Request {
         }
 
         /**
-         * <p>The account that is used to log on to the database in the ApsaraDB RDS for MySQL instance.</p>
+         * <p>The database account of the ApsaraDB RDS instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -369,7 +369,7 @@ public class CheckClickhouseToRDSRequest extends Request {
         }
 
         /**
-         * <p>The ID of the VPC in which the ApsaraDB RDS for MySQL instance is deployed.</p>
+         * <p>The VPC ID of the ApsaraDB RDS instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -382,7 +382,7 @@ public class CheckClickhouseToRDSRequest extends Request {
         }
 
         /**
-         * <p>The internal endpoint of the ApsaraDB RDS for MySQL instance.</p>
+         * <p>The internal endpoint of the ApsaraDB RDS instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

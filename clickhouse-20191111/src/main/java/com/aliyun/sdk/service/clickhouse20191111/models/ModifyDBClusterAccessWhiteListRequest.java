@@ -173,7 +173,7 @@ public class ModifyDBClusterAccessWhiteListRequest extends Request {
         } 
 
         /**
-         * <p>The attribute of the IP address whitelist. By default, this parameter is <strong>empty</strong>.</p>
+         * <p>The attribute of the whitelist group. Default value: <strong>empty</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>NULL</p>
@@ -185,9 +185,9 @@ public class ModifyDBClusterAccessWhiteListRequest extends Request {
         }
 
         /**
-         * <p>The name of the IP address whitelist that you want to modify.</p>
+         * <p>The name of the whitelist group to be modified.</p>
          * <blockquote>
-         * <p> If you do not specify this parameter, the default IP address whitelist is modified.</p>
+         * <p>If you do not specify this parameter, the whitelist in the default group is modified.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -213,14 +213,14 @@ public class ModifyDBClusterAccessWhiteListRequest extends Request {
         }
 
         /**
-         * <p>The method that is used to modify the IP address whitelist. Valid values:</p>
+         * <p>The modification mode. Valid values:</p>
          * <ul>
-         * <li><strong>Cover</strong>: overwrites the original IP address whitelist.</li>
-         * <li><strong>Append</strong>: appends the specified IP addresses to the original IP address whitelist.</li>
-         * <li><strong>Delete</strong>: deletes the original IP address whitelist.</li>
+         * <li><strong>Cover</strong>: overwrites the original whitelist.</li>
+         * <li><strong>Append</strong>: appends the specified IP addresses to the original whitelist.</li>
+         * <li><strong>Delete</strong>: deletes the original whitelist.</li>
          * </ul>
          * <blockquote>
-         * <p> If you do not specify this parameter, the default value of Cover is used.</p>
+         * <p>If you do not specify this parameter, the Cover mode is used by default.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -269,18 +269,16 @@ public class ModifyDBClusterAccessWhiteListRequest extends Request {
         }
 
         /**
-         * <p>The IP addresses in the IP address whitelist. You can specify IP addresses in the following formats:</p>
+         * <p>The IP whitelist. Two formats are supported:</p>
          * <ul>
-         * <li>IP address. For example, you can set SecurityIps to 192.168.0.1. This allows you to use this IP address to access your ApsaraDB for ClickHouse cluster.</li>
-         * <li>CIDR block. For example, you can set SecurityIps to 192.168.0.0/24. This allows you to use the IP addresses from 192.168.0.1 to 192.168.0.255 to access your ApsaraDB for ClickHouse cluster.</li>
+         * <li>IP address: For example, 192.168.0.1 allows this IP address to access the ApsaraDB for ClickHouse cluster.</li>
+         * <li>CIDR block: For example, 192.168.0.0/24 allows IP addresses from 192.168.0.1 to 192.168.0.255 to access the ApsaraDB for ClickHouse cluster.<blockquote>
+         * <ul>
+         * <li>Do not enter 0.0.0.0.</li>
          * </ul>
-         * <blockquote>
          * </blockquote>
-         * <ul>
-         * <li><p>Do not set SecurityIps to 0.0.0.0.</p>
          * </li>
-         * <li><p>If you set SecurityIps to 127.0.0.1, all IP addresses are blocked from accessing your ApsaraDB for ClickHouse cluster.</p>
-         * </li>
+         * <li>Set the value to 127.0.0.1 to deny access from all IP addresses.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

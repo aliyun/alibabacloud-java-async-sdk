@@ -173,9 +173,9 @@ public class DescribeDBClusterPerformanceRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</p>
+         * <p>The end time of the query. Format: yyyy-MM-ddTHH:mmZ (UTC time).</p>
          * <blockquote>
-         * <p> The end time must be later than the start time. The interval cannot be more than 32 days.</p>
+         * <p>The end time must be later than the start time, and the time interval between the start time and the end time cannot exceed 32 days.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -189,52 +189,45 @@ public class DescribeDBClusterPerformanceRequest extends Request {
         }
 
         /**
-         * <p>The performance metrics that you want to query. Separate multiple performance metrics with commas (,). You can query up to five performance metrics at a time. You can query the following performance metrics:</p>
+         * <p>The names of the performance metrics to query. Separate multiple values with commas (,). You can query up to 5 performance metrics at a time. The following performance metrics are supported:</p>
          * <blockquote>
-         * <p> The <strong>Key</strong> parameter is required.</p>
+         * <p><strong>Key</strong> is required.</p>
          * </blockquote>
          * <ul>
-         * <li><p><strong>CPU</strong>:</p>
-         * <ul>
-         * <li><strong>CPU_USAGE</strong>: the CPU utilization</li>
+         * <li><strong>CPU</strong>:<ul>
+         * <li><strong>CPU_USAGE</strong>: CPU utilization.</li>
          * </ul>
          * </li>
-         * <li><p><strong>Memory</strong>:</p>
-         * <ul>
-         * <li><strong>MEM_USAGE</strong>: the memory usage</li>
-         * <li><strong>MEM_USAGE_SIZE</strong>: the used memory. Unit: MB</li>
+         * <li><strong>Memory</strong>:<ul>
+         * <li><strong>MEM_USAGE</strong>: Memory utilization.</li>
+         * <li><strong>MEM_USAGE_SIZE</strong>: Memory usage (unit: MB).</li>
          * </ul>
          * </li>
-         * <li><p><strong>Disk</strong>:</p>
-         * <ul>
-         * <li><strong>DISK_USAGE</strong>: the disk usage</li>
-         * <li><strong>DISK_USAGE_SIZE</strong>: the size of the used disks. Unit: MB</li>
-         * <li><strong>IOPS</strong>: the disk Input/Output Operations per Second (IOPS)</li>
+         * <li><strong>Disk</strong>:<ul>
+         * <li><strong>DISK_USAGE</strong>: Disk utilization. </li>
+         * <li><strong>DISK_USAGE_SIZE</strong>: Disk usage (unit: MB).</li>
+         * <li><strong>IOPS</strong>: Disk IOPS.</li>
          * </ul>
          * </li>
-         * <li><p><strong>Connection</strong>:</p>
-         * <ul>
-         * <li><strong>CONN_USAGE</strong>: the database connection usage</li>
-         * <li><strong>CONN_USAGE_COUNT</strong>: the number of database connections used</li>
+         * <li><strong>Connections</strong>:<ul>
+         * <li><strong>CONN_USAGE</strong>: Database connection utilization.</li>
+         * <li><strong>CONN_USAGE_COUNT</strong>: Number of database connections in use.</li>
          * </ul>
          * </li>
-         * <li><p><strong>Write</strong>:</p>
-         * <ul>
-         * <li><strong>TPS</strong>: the number of rows written per second</li>
-         * <li><strong>INSERT_SIZE</strong>: the amount of data written per second. Unit: MB</li>
+         * <li><strong>Writes</strong>: <ul>
+         * <li><strong>TPS</strong>: Number of rows written per second.</li>
+         * <li><strong>INSERT_SIZE</strong>: Size of data written per second (unit: MB).</li>
          * </ul>
          * </li>
-         * <li><p><strong>Query</strong>:</p>
-         * <ul>
-         * <li><strong>QPS</strong>: the queries per second</li>
-         * <li><strong>AVG_SEEK</strong>: the average number of random seek calls</li>
+         * <li><strong>Queries</strong>: <ul>
+         * <li><strong>QPS</strong>: Queries per second (QPS).</li>
+         * <li><strong>AVG_SEEK</strong>: Number of random SEEK calls.</li>
          * </ul>
          * </li>
-         * <li><p><strong>WAIT</strong>:</p>
-         * <ul>
-         * <li><strong>ZK_WAIT</strong>: the average ZooKeeper wait time. Unit: ms</li>
-         * <li><strong>IO_WAIT</strong>: the average I/O wait time. Unit: ms</li>
-         * <li><strong>CPU_WAIT</strong>: the average CPU wait time. Unit: ms</li>
+         * <li><strong>WAIT</strong>: <ul>
+         * <li><strong>ZK_WAIT</strong>: Average wait time for ZooKeeper (unit: ms).</li>
+         * <li><strong>IO_WAIT</strong>: Average wait time for IO_WAIT (unit: ms).</li>
+         * <li><strong>CPU_WAIT</strong>: Average wait time for CPU_WAIT (unit: ms).</li>
          * </ul>
          * </li>
          * </ul>
@@ -285,7 +278,7 @@ public class DescribeDBClusterPerformanceRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time must be in Coordinated Universal Time (UTC).</p>
+         * <p>The start time of the query. Format: yyyy-MM-ddTHH:mmZ (UTC time).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -88,6 +88,7 @@ public class DescribeEventMetaInfoRequest extends Request {
         } 
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -109,7 +110,10 @@ public class DescribeEventMetaInfoRequest extends Request {
         }
 
         /**
-         * SourceCode.
+         * <p>The codes of O\&amp;M event types. Separate multiple codes with commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Event.EventCode</p>
          */
         public Builder sourceCode(String sourceCode) {
             this.putQueryParameter("SourceCode", sourceCode);

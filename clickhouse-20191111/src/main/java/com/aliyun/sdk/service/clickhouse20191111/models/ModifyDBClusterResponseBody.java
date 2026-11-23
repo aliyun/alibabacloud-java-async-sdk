@@ -67,7 +67,7 @@ public class ModifyDBClusterResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The clusters.</p>
+         * <p>The cluster.</p>
          */
         public Builder DBCluster(DBCluster DBCluster) {
             this.DBCluster = DBCluster;

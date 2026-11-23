@@ -231,7 +231,7 @@ public class DescribeProcessListRequest extends Request {
         } 
 
         /**
-         * <p>The cluster ID. You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query information about all the clusters that are deployed in a specific region. The information includes the cluster IDs.</p>
+         * <p>The cluster ID. You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query all clusters in the specified region, including their cluster IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -256,7 +256,7 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * <p>The account that is used to log on to the database.</p>
+         * <p>The database account.</p>
          * 
          * <strong>example:</strong>
          * <p>user</p>
@@ -268,7 +268,7 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * <p>The keyword that is used to query.</p>
+         * <p>The query keyword.</p>
          * 
          * <strong>example:</strong>
          * <p>join</p>
@@ -280,12 +280,12 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * <p>Sorting by the specified column name. Valid values:</p>
+         * <p>The column by which to sort the results. Valid values:</p>
          * <ul>
-         * <li>elapsed: the cumulative execution time</li>
-         * <li>written_rows: the number of written rows</li>
-         * <li>read_rows: the number of read rows</li>
-         * <li>memory_usage: the memory usage</li>
+         * <li>elapsed: cumulative execution time</li>
+         * <li>written_rows: number of written rows</li>
+         * <li>read_rows: number of read rows</li>
+         * <li>memory_usage: memory usage</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -316,7 +316,7 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * <p>The page number. Valid values: integers greater than 0 and less than or equal to the maximum value of the Integer data type. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -328,9 +328,9 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return per page. Default value: 30. Valid values:</p>
+         * <p>The number of entries per page. Valid values:</p>
          * <ul>
-         * <li><strong>30</strong></li>
+         * <li><strong>30</strong> (default)</li>
          * <li><strong>50</strong></li>
          * <li><strong>100</strong></li>
          * </ul>
@@ -345,7 +345,7 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * <p>The minimum query duration. The minimum value is <strong>1000</strong>, and the default value is <strong>1000</strong>. Unit: milliseconds. Queries that last longer than this duration are returned in response parameters.</p>
+         * <p>The minimum query duration. Minimum value: <strong>1000</strong>. Default value: <strong>1000</strong>. Unit: milliseconds. The response returns queries whose duration exceeds this value.</p>
          * 
          * <strong>example:</strong>
          * <p>500</p>
@@ -357,7 +357,7 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

@@ -67,7 +67,10 @@ public class ModifyActiveOperationTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * Ids.
+         * <p>The IDs of the O&amp;M events. Separate multiple IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>188****,188****,188****</p>
          */
         public Builder ids(String ids) {
             this.ids = ids;
@@ -75,7 +78,10 @@ public class ModifyActiveOperationTasksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>617242AA-04D8-5AF0-8C0C-6E53DDA8C3C3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -185,7 +185,14 @@ public class ModifyActiveOperationMaintainConfRequest extends Request {
         } 
 
         /**
-         * CycleTime.
+         * <p>The cycle time. </p>
+         * <ul>
+         * <li>If CycleType is set to Month, the value is one or more numbers from 1 to 28 that indicate the days of the month, separated by commas (,).</li>
+         * <li>If CycleType is set to Week, the value is one or more numbers from 1 to 7 that indicate the days of the week, separated by commas (,).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder cycleTime(String cycleTime) {
             this.putQueryParameter("CycleTime", cycleTime);
@@ -194,7 +201,14 @@ public class ModifyActiveOperationMaintainConfRequest extends Request {
         }
 
         /**
-         * CycleType.
+         * <p>The cycle type. Valid values:</p>
+         * <ul>
+         * <li>Month: Monthly.</li>
+         * <li>Week: Weekly.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Week</p>
          */
         public Builder cycleType(String cycleType) {
             this.putQueryParameter("CycleType", cycleType);
@@ -203,7 +217,10 @@ public class ModifyActiveOperationMaintainConfRequest extends Request {
         }
 
         /**
-         * MaintainEndTime.
+         * <p>The end time of the maintenance window. Format: HH:mmZ-HH:mmZ (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20:00Z</p>
          */
         public Builder maintainEndTime(String maintainEndTime) {
             this.putQueryParameter("MaintainEndTime", maintainEndTime);
@@ -212,7 +229,10 @@ public class ModifyActiveOperationMaintainConfRequest extends Request {
         }
 
         /**
-         * MaintainStartTime.
+         * <p>The start time of the task. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>07:00Z</p>
          */
         public Builder maintainStartTime(String maintainStartTime) {
             this.putQueryParameter("MaintainStartTime", maintainStartTime);
@@ -266,7 +286,14 @@ public class ModifyActiveOperationMaintainConfRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>Specifies whether the configuration takes effect. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Yes.</li>
+         * <li><strong>2</strong>: No.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

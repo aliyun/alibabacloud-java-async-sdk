@@ -292,7 +292,7 @@ public class ModifyRDSToClickhouseDbRequest extends Request {
         } 
 
         /**
-         * <p>The password of the account that is used to log on to the database in the ApsaraDB for ClickHouse cluster.</p>
+         * <p>The password of the database account for the ApsaraDB for ClickHouse cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -305,7 +305,7 @@ public class ModifyRDSToClickhouseDbRequest extends Request {
         }
 
         /**
-         * <p>The account that is used to log on to the database in the ApsaraDB for ClickHouse cluster.</p>
+         * <p>The database account of the ApsaraDB for ClickHouse cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -373,7 +373,7 @@ public class ModifyRDSToClickhouseDbRequest extends Request {
         }
 
         /**
-         * <p>The ID of the ApsaraDB RDS for MySQL instance.</p>
+         * <p>The instance ID of the ApsaraDB RDS for MySQL database.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -386,7 +386,7 @@ public class ModifyRDSToClickhouseDbRequest extends Request {
         }
 
         /**
-         * <p>The password of the account that is used to log on to the database in the ApsaraDB RDS for MySQL instance.</p>
+         * <p>The password of the database account for the ApsaraDB RDS for MySQL instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -411,7 +411,7 @@ public class ModifyRDSToClickhouseDbRequest extends Request {
         }
 
         /**
-         * <p>The database in the ApsaraDB RDS for MySQL instance.</p>
+         * <p>The databases in the ApsaraDB RDS for MySQL instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -424,7 +424,7 @@ public class ModifyRDSToClickhouseDbRequest extends Request {
         }
 
         /**
-         * <p>The table in the ApsaraDB RDS for MySQL instance.</p>
+         * <p>The tables in the ApsaraDB RDS for MySQL instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -437,7 +437,7 @@ public class ModifyRDSToClickhouseDbRequest extends Request {
         }
 
         /**
-         * <p>The account that is used to log on to the database in the ApsaraDB RDS for MySQL instance.</p>
+         * <p>The database account of the ApsaraDB RDS for MySQL instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -450,7 +450,7 @@ public class ModifyRDSToClickhouseDbRequest extends Request {
         }
 
         /**
-         * <p>The ID of the virtual private cloud (VPC) to which the ApsaraDB RDS for MySQL instance belongs.</p>
+         * <p>The VPC ID of the ApsaraDB RDS for MySQL instance.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1v9dtwmqqjhwwg****</p>
@@ -482,8 +482,8 @@ public class ModifyRDSToClickhouseDbRequest extends Request {
         /**
          * <p>Specifies whether to ignore databases that do not support synchronization. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: Ignore.</li>
+         * <li><strong>false</strong>: Do not ignore.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

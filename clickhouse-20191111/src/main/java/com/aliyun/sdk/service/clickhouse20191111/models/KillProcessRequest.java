@@ -157,9 +157,9 @@ public class KillProcessRequest extends Request {
         }
 
         /**
-         * <p>The query statement or query statements that you want to stop executing. If you want to stop executing multiple query statements, separate the statements with commas (,).</p>
+         * <p>The query statements to stop. Separate multiple statements with commas (,).</p>
          * <blockquote>
-         * <p> If you do not set this parameter, all query statements are stopped by default.</p>
+         * <p>If this parameter is not specified, all query statements are stopped by default.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -190,7 +190,7 @@ public class KillProcessRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

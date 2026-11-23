@@ -144,7 +144,7 @@ public class DescribeAccountAuthorityRequest extends Request {
         } 
 
         /**
-         * <p>The name of the database account.</p>
+         * <p>The database account.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -187,7 +187,7 @@ public class DescribeAccountAuthorityRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

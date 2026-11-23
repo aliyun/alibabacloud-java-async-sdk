@@ -204,7 +204,7 @@ public class CheckScaleOutBalancedRequest extends Request {
         }
 
         /**
-         * <p>The number of pages to return.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -216,9 +216,9 @@ public class CheckScaleOutBalancedRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return per page. Default value: 30. Valid values:</p>
+         * <p>The number of entries per page. Valid values:</p>
          * <ul>
-         * <li><strong>30</strong></li>
+         * <li><strong>30</strong> (default)</li>
          * <li><strong>50</strong></li>
          * <li><strong>100</strong></li>
          * </ul>
@@ -233,7 +233,7 @@ public class CheckScaleOutBalancedRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -264,7 +264,16 @@ public class CheckScaleOutBalancedRequest extends Request {
         }
 
         /**
-         * ScalingType.
+         * <p>The upgrade/downgrade type. Valid values:</p>
+         * <ul>
+         * <li>ScaleOut: horizontal scaling</li>
+         * <li>ScaleIn: horizontal scale-in</li>
+         * <li>MultiAzUpgrade: upgrade to multi-zone deployment</li>
+         * <li>DiskDownGrade: decrease the quota for disks</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ScaleOut</p>
          */
         public Builder scalingType(String scalingType) {
             this.putQueryParameter("ScalingType", scalingType);

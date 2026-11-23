@@ -80,7 +80,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If not all results are returned in one query, you can pass in the NextToken value returned for the query to perform the next query.</p>
+         * <p>The token used to return more results. If not all results are returned in the current query, you can pass the NextToken value returned in the previous response to continue the query.</p>
          * 
          * <strong>example:</strong>
          * <p>212db86sca4384811e0b5e8707ec21345</p>
@@ -102,7 +102,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The tags that are added to clusters.</p>
+         * <p>The information about the queried clusters and tags.</p>
          */
         public Builder tagResources(java.util.List<TagResources> tagResources) {
             this.tagResources = tagResources;
@@ -194,7 +194,8 @@ public class ListTagResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The cluster ID.</p>
+             * <p>&lt;props=&quot;china&quot;&gt;The ID of the Community-Compatible Edition cluster.</p>
+             * <p>&lt;props=&quot;intl&quot;&gt;The cluster ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cc-bp1t9lbb7a4z7****</p>
@@ -205,10 +206,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the resource. Only <strong>CLUSTER</strong> is returned.</p>
+             * <p>The resource type. Valid value: <strong>DBCLUSTER</strong>.</p>
              * 
              * <strong>example:</strong>
-             * <p>CLUSTER</p>
+             * <p>DBCLUSTER</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -216,7 +217,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The key of the tag that is added to the resource.</p>
+             * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
              * <p>testkey1</p>
@@ -227,7 +228,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the tag that is added to the resource.</p>
+             * <p>The tag value corresponding to the tag key.</p>
              * 
              * <strong>example:</strong>
              * <p>testvalue1</p>

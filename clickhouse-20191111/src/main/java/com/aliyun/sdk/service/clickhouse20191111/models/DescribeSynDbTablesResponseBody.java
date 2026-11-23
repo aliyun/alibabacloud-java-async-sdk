@@ -78,7 +78,7 @@ public class DescribeSynDbTablesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The queried tables.</p>
+         * <p>The tables.</p>
          */
         public Builder tables(java.util.List<String> tables) {
             this.tables = tables;

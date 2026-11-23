@@ -94,7 +94,7 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The network type of the cluster. Only VPC is supported.</p>
+         * <p>The network type. Only VPC is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>VPC</p>
@@ -105,10 +105,10 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether Server Load Balancer (SLB) is activated in the VPC. Valid values:</p>
+         * <p>Indicates whether SLB is enabled in the VPC. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: Enabled.</li>
+         * <li>false: Disabled.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -121,7 +121,7 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The network information about the cluster.</p>
+         * NetInfoItems.
          */
         public Builder netInfoItems(NetInfoItems netInfoItems) {
             this.netInfoItems = netInfoItems;
@@ -289,10 +289,7 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The endpoint that is used to connect to the database.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cc-bp1554t789i8e****.clickhouse.ads.aliyuncs.com</p>
+             * ConnectionString.
              */
             public Builder connectionString(String connectionString) {
                 this.connectionString = connectionString;
@@ -300,10 +297,7 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The HTTP port number.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>8123</p>
+             * HttpPort.
              */
             public Builder httpPort(String httpPort) {
                 this.httpPort = httpPort;
@@ -311,10 +305,7 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The HTTPS port number.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>8443</p>
+             * HttpsPort.
              */
             public Builder httpsPort(String httpsPort) {
                 this.httpsPort = httpsPort;
@@ -322,10 +313,7 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>10.255.234.251</p>
+             * IPAddress.
              */
             public Builder IPAddress(String IPAddress) {
                 this.IPAddress = IPAddress;
@@ -333,10 +321,7 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The port number that is used in Java Database Connectivity (JDBC).</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3306</p>
+             * JdbcPort.
              */
             public Builder jdbcPort(String jdbcPort) {
                 this.jdbcPort = jdbcPort;
@@ -344,10 +329,7 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The port of the MySQL instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>9004</p>
+             * MySQLPort.
              */
             public Builder mySQLPort(String mySQLPort) {
                 this.mySQLPort = mySQLPort;
@@ -355,14 +337,7 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network type of the endpoint. Valid values:</p>
-             * <ul>
-             * <li>Public: public endpoint</li>
-             * <li>VPC: VPC</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>VPC</p>
+             * NetType.
              */
             public Builder netType(String netType) {
                 this.netType = netType;
@@ -370,13 +345,7 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The vSwitch ID.</p>
-             * <blockquote>
-             * <p> If the value of the NetType parameter is set to Public, an empty string is returned.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>vsw-bp1gzt31twhlo0sa5****</p>
+             * VSwitchId.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -384,13 +353,7 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The virtual private cloud (VPC) ID.</p>
-             * <blockquote>
-             * <p> If the value of the NetType parameter is set to Public, an empty string is returned.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>vpc-bp175iuvg8nxqraf2****</p>
+             * VpcId.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

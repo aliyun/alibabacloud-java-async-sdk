@@ -180,7 +180,7 @@ public class DescribeSynDbTablesRequest extends Request {
         }
 
         /**
-         * <p>The name of the ApsaraDB RDS for MySQL instance.</p>
+         * <p>The name of the ApsaraDB RDS for MySQL database.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

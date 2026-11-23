@@ -271,7 +271,14 @@ public class DescribeActiveOperationTasksRequest extends Request {
         } 
 
         /**
-         * AllowCancel.
+         * <p>Specifies whether the task can be canceled. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: not allowed.</li>
+         * <li><strong>1</strong>: allowed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder allowCancel(Integer allowCancel) {
             this.putQueryParameter("AllowCancel", allowCancel);
@@ -280,7 +287,14 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * AllowChange.
+         * <p>Specifies whether the execution time can be modified. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: not allowed.</li>
+         * <li><strong>1</strong>: allowed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder allowChange(Integer allowChange) {
             this.putQueryParameter("AllowChange", allowChange);
@@ -289,7 +303,15 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * ChangeLevel.
+         * <p>The task level. Valid values:</p>
+         * <ul>
+         * <li><strong>all</strong> (default): all levels.</li>
+         * <li><strong>S0</strong>: exception fix tasks.</li>
+         * <li><strong>S1</strong>: system O&amp;M tasks.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         public Builder changeLevel(String changeLevel) {
             this.putQueryParameter("ChangeLevel", changeLevel);
@@ -298,7 +320,10 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * DbType.
+         * <p>The database type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>clickhouse</p>
          */
         public Builder dbType(String dbType) {
             this.putQueryParameter("DbType", dbType);
@@ -307,7 +332,10 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * InsName.
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-bp191w*******</p>
          */
         public Builder insName(String insName) {
             this.putQueryParameter("InsName", insName);
@@ -334,7 +362,10 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -343,7 +374,15 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values:</p>
+         * <ul>
+         * <li><strong>30</strong> (default)</li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -352,7 +391,10 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * ProductId.
+         * <p>The product ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>clickhouse</p>
          */
         public Builder productId(String productId) {
             this.putQueryParameter("ProductId", productId);
@@ -361,7 +403,10 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * Region.
+         * <p>The region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -397,7 +442,18 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The task status, which is used to filter returned tasks. Valid values:</p>
+         * <ul>
+         * <li><strong>-1</strong>: all tasks.</li>
+         * <li><strong>3</strong>: pending tasks.</li>
+         * <li><strong>4</strong>: in-progress tasks.</li>
+         * <li><strong>5</strong>: successfully completed tasks.</li>
+         * <li><strong>6</strong>: failed tasks.</li>
+         * <li><strong>7</strong>: canceled tasks.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
@@ -406,7 +462,14 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * TaskType.
+         * <p>The task type. Valid values:</p>
+         * <ul>
+         * <li><strong>rds_apsaradb_upgrade</strong>: minor version update.</li>
+         * <li><strong>all</strong>: all task types.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

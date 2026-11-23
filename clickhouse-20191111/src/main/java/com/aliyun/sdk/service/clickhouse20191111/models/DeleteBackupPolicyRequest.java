@@ -115,7 +115,10 @@ public class DeleteBackupPolicyRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request. The token must be a string that contains a maximum of 64 ASCII characters and cannot contain non-ASCII characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCz****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -124,7 +127,13 @@ public class DeleteBackupPolicyRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * <p>The cluster ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query all clusters in the specified region, including their cluster IDs.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-bp1t9lbb7a4z7****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -133,7 +142,10 @@ public class DeleteBackupPolicyRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries to return on each page. Valid values: <strong>1 to 100</strong>. Default value: <strong>30</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -142,7 +154,10 @@ public class DeleteBackupPolicyRequest extends Request {
         }
 
         /**
-         * Product.
+         * <p>The product name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>clickhouse</p>
          */
         public Builder product(String product) {
             this.putQueryParameter("Product", product);

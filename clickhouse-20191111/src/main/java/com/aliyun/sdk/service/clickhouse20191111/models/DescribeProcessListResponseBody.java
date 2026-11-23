@@ -67,7 +67,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The queries.</p>
+         * <p>The process list.</p>
          */
         public Builder processList(ProcessList processList) {
             this.processList = processList;
@@ -196,10 +196,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The IP address of the client that initiates the query.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>::ffff:10.1.XX.XX</p>
+             * InitialAddress.
              */
             public Builder initialAddress(String initialAddress) {
                 this.initialAddress = initialAddress;
@@ -207,10 +204,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The query ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2dd144fd-4230-4249-b15c-e63f964fbb5a</p>
+             * InitialQueryId.
              */
             public Builder initialQueryId(String initialQueryId) {
                 this.initialQueryId = initialQueryId;
@@ -218,10 +212,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The database account.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * InitialUser.
              */
             public Builder initialUser(String initialUser) {
                 this.initialUser = initialUser;
@@ -229,10 +220,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The SQL statement that is executed in the query.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>select * from test order by score limit 1;</p>
+             * Query.
              */
             public Builder query(String query) {
                 this.query = query;
@@ -240,10 +228,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution duration of the query. Unit: milliseconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2000</p>
+             * QueryDurationMs.
              */
             public Builder queryDurationMs(String queryDurationMs) {
                 this.queryDurationMs = queryDurationMs;
@@ -251,10 +236,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The beginning of the time range to query. The value is in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in Coordinated Universal Time (UTC).</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2021-02-02T09:14:48Z</p>
+             * QueryStartTime.
              */
             public Builder queryStartTime(String queryStartTime) {
                 this.queryStartTime = queryStartTime;
@@ -388,10 +370,10 @@ public class DescribeProcessListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The size of the data that was scanned. Unit: bytes.</p>
+             * <p>The size of the scanned data. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
-             * <p>9141300000</p>
+             * <p>1048576</p>
              */
             public Builder bytesRead(Integer bytesRead) {
                 this.bytesRead = bytesRead;
@@ -399,7 +381,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The average response time.</p>
+             * <p>The average response time. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>4156</p>
@@ -410,7 +392,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of scanned rows.</p>
+             * <p>The number of scanned data rows.</p>
              * 
              * <strong>example:</strong>
              * <p>1000000</p>
@@ -480,10 +462,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The column name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>InitialUser</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -491,10 +470,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The column type.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>String</p>
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -654,7 +630,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The details of the query.</p>
+             * Data.
              */
             public Builder data(Data data) {
                 this.data = data;
@@ -662,7 +638,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of rows returned for the query.</p>
+             * <p>The number of data rows returned by the query.</p>
              * 
              * <strong>example:</strong>
              * <p>1145700</p>
@@ -673,7 +649,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries returned per page.</p>
+             * <p>The page size.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -684,7 +660,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The statistics of the results.</p>
+             * <p>The statistics information of the query results.</p>
              */
             public Builder statistics(Statistics statistics) {
                 this.statistics = statistics;
@@ -692,7 +668,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Details of the columns.</p>
+             * TableSchema.
              */
             public Builder tableSchema(TableSchema tableSchema) {
                 this.tableSchema = tableSchema;

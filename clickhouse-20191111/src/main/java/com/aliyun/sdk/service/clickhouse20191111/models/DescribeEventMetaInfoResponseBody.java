@@ -80,7 +80,7 @@ public class DescribeEventMetaInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * Items.
+         * <p>The metadata of O\&amp;M tasks.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -88,7 +88,10 @@ public class DescribeEventMetaInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>94F92113-FF63-5E57-8401-6FE123AD11DD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class DescribeEventMetaInfoResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -162,7 +168,10 @@ public class DescribeEventMetaInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The code of the O\&amp;M task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -170,7 +179,10 @@ public class DescribeEventMetaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * SourceCode.
+             * <p>The type of the O\&amp;M task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Task.TaskStatus</p>
              */
             public Builder sourceCode(String sourceCode) {
                 this.sourceCode = sourceCode;

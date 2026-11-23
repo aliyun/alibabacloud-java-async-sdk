@@ -144,7 +144,7 @@ public class ModifyMinorVersionGreadeTypeRequest extends Request {
         }
 
         /**
-         * <p>The update type. If you set the parameter to <strong>false</strong>, you perform the manual update.</p>
+         * <p>The update type. A value of <strong>false</strong> indicates a manual update.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

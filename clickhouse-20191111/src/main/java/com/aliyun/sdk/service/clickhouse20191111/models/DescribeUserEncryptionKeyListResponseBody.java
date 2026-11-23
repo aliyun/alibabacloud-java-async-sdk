@@ -67,7 +67,7 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
         } 
 
         /**
-         * KmsKeys.
+         * <p>The list of KMS keys.</p>
          */
         public Builder kmsKeys(java.util.List<KmsKeys> kmsKeys) {
             this.kmsKeys = kmsKeys;
@@ -75,7 +75,10 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D0CEC6AC-7760-409A-A0D5-E6CD8660E9CC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -128,7 +131,10 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
             } 
 
             /**
-             * KeyId.
+             * <p>The key ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0275bd3f-fdbb-4d8c-846b-71b211******</p>
              */
             public Builder keyId(String keyId) {
                 this.keyId = keyId;

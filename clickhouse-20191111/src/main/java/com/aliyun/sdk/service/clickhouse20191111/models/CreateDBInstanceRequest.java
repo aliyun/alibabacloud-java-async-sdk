@@ -492,7 +492,7 @@ public class CreateDBInstanceRequest extends Request {
         /**
          * <p>Specifies whether to enable auto-renewal.</p>
          * <blockquote>
-         * <p> This parameter is valid only if the value of PayType is set to Prepaid.</p>
+         * <p>This parameter takes effect only when PayType is set to Prepaid.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -505,9 +505,9 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the backup set. You can call the <a href="https://help.aliyun.com/document_detail/360339.html">DescribeBackups</a> operation to query the backup sets.</p>
+         * <p>The ID of the backup set. You can call the <a href="https://help.aliyun.com/document_detail/360339.html">DescribeBackups</a> operation to query the backup set ID.</p>
          * <blockquote>
-         * <p> If you want to restore the data of an ApsaraDB for ClickHouse cluster, this parameter is required.</p>
+         * <p>This parameter is required when you restore data for an ApsaraDB for ClickHouse cluster.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -520,7 +520,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. The value is a string and can be up to 64 ASCII characters in length.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. The token must be a string and can contain up to 64 ASCII characters.</p>
          * 
          * <strong>example:</strong>
          * <p>AB</p>
@@ -532,10 +532,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The edition of the cluster. Valid values:</p>
+         * <p>The replica configuration. Valid values:</p>
          * <ul>
-         * <li><strong>Basic</strong>: Single-replica Edition</li>
-         * <li><strong>HighAvailability</strong>: Double-replica Edition</li>
+         * <li><strong>Basic</strong>: Single-replica edition.</li>
+         * <li><strong>HighAvailability</strong>: Master-replica cluster.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -549,24 +549,50 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The specifications of the cluster.</p>
+         * <p>The cluster specifications.
+         * &lt;props=&quot;china&quot;&gt;</p>
          * <ul>
-         * <li><p>Valid values for a Single-replica Edition cluster:</p>
-         * <ul>
-         * <li><strong>S8</strong>: 8 cores and 32 GB of memory</li>
-         * <li><strong>S16</strong>: 16 cores and 64 GB of memory</li>
-         * <li><strong>S32</strong>: 32 cores and 128 GB of memory</li>
-         * <li><strong>S64</strong>: 64 cores and 256 GB of memory</li>
-         * <li><strong>S104</strong>: 104 cores and 384 GB of memory</li>
+         * <li>Single-replica edition. Valid values:<ul>
+         * <li><strong>LS20</strong>: Large storage, 20 cores, 88 GB.</li>
+         * <li><strong>LS40</strong>: Large storage, 40 cores, 176 GB.</li>
+         * <li><strong>LS80</strong>: Large storage, 80 cores, 352 GB.</li>
+         * <li><strong>S8</strong>: Standard, 8 cores, 32 GB.</li>
+         * <li><strong>S16</strong>: Standard, 16 cores, 64 GB.</li>
+         * <li><strong>S32</strong>: Standard, 32 cores, 128 GB.</li>
+         * <li><strong>S64</strong>: Standard, 64 cores, 256 GB.</li>
+         * <li><strong>S80</strong>: Standard, 80 cores, 384 GB.</li>
+         * <li><strong>S104</strong>: Standard, 104 cores, 384 GB.</li>
          * </ul>
          * </li>
-         * <li><p>Valid values for a Double-replica Edition cluster:</p>
+         * <li>Master-replica cluster. Valid values:<ul>
+         * <li><strong>LC20</strong>: Large storage, 20 cores, 88 GB.</li>
+         * <li><strong>LC40</strong>: Large storage, 40 cores, 176 GB.</li>
+         * <li><strong>LC80</strong>: Large storage, 80 cores, 352 GB.</li>
+         * <li><strong>C8</strong>: Standard, 8 cores, 32 GB.</li>
+         * <li><strong>C16</strong>: Standard, 16 cores, 64 GB.</li>
+         * <li><strong>C32</strong>: Standard, 32 cores, 128 GB.</li>
+         * <li><strong>C64</strong>: Standard, 64 cores, 256 GB.</li>
+         * <li><strong>C80</strong>: Standard, 80 cores, 384 GB.</li>
+         * <li><strong>C104</strong>: Standard, 104 cores, 384 GB.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * <p>&lt;props=&quot;intl&quot;&gt;</p>
          * <ul>
-         * <li><strong>C8</strong>: 8 cores and 32 GB of memory</li>
-         * <li><strong>C16</strong>: 16 cores and 64 GB of memory</li>
-         * <li><strong>C32</strong>: 32 cores and 128 GB of memory</li>
-         * <li><strong>C64</strong>: 64 cores and 256 GB of memory</li>
-         * <li><strong>C104</strong>: 104 cores and 384 GB of memory</li>
+         * <li>Single-replica edition. Valid values:    <ul>
+         * <li><strong>S8</strong>: 8 cores, 32 GB.</li>
+         * <li><strong>S16</strong>: 16 cores, 64 GB.    </li>
+         * <li><strong>S32</strong>: 32 cores, 128 GB.</li>
+         * <li><strong>S64</strong>: 64 cores, 256 GB.</li>
+         * <li><strong>S104</strong>: 104 cores, 384 GB.</li>
+         * </ul>
+         * </li>
+         * <li>Master-replica cluster. Valid values:<ul>
+         * <li><strong>C8</strong>: 8 cores, 32 GB.</li>
+         * <li><strong>C16</strong>: 16 cores, 64 GB.</li>
+         * <li><strong>C32</strong>: 32 cores, 128 GB.</li>
+         * <li><strong>C64</strong>: 64 cores, 256 GB.</li>
+         * <li><strong>C104</strong>: 104 cores, 384 GB.</li>
          * </ul>
          * </li>
          * </ul>
@@ -594,7 +620,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The network type of the cluster. Only Virtual Private Cloud (VPC) is supported.</p>
+         * <p>The network type. Only VPC is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -609,13 +635,15 @@ public class CreateDBInstanceRequest extends Request {
         /**
          * <p>The kernel version. Valid values:</p>
          * <ul>
-         * <li><strong>21.8.10.19</strong></li>
-         * <li><strong>22.8.5.29</strong></li>
+         * <li><p><strong>21.8.10.19</strong></p>
+         * </li>
+         * <li><p><strong>22.8.5.29</strong></p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>21.8.10.19</p>
+         * <p>22.8.5.29</p>
          */
         public Builder DBClusterVersion(String DBClusterVersion) {
             this.putQueryParameter("DBClusterVersion", DBClusterVersion);
@@ -626,8 +654,8 @@ public class CreateDBInstanceRequest extends Request {
         /**
          * <p>The number of nodes.</p>
          * <ul>
-         * <li>Valid values when the cluster is of Single-replica Edition: 1 to 48.</li>
-         * <li>Valid values when the cluster is of Double-replica Edition: 1 to 24.</li>
+         * <li>Single-replica edition: 1 to 48.</li>
+         * <li>Master-replica cluster: 1 to 24.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -641,9 +669,9 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The storage capacity of a single node. Valid values: 100 to 32000. Unit: GB.</p>
+         * <p>The storage space per node. Valid values: 100 to 32000. Unit: GB.</p>
          * <blockquote>
-         * <p> This value is a multiple of 100.</p>
+         * <p>The step size is 100 GB.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -657,12 +685,13 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The storage type of the cluster. Valid values:</p>
+         * <p>The storage type. Valid values:
+         * &lt;props=&quot;china&quot;&gt;- <strong>CloudESSD_PL0</strong>: PL0 ESSD.</p>
          * <ul>
-         * <li><strong>CloudESSD</strong>: The cluster uses an enhanced SSD (ESSD) of performance level 1 (PL1).</li>
-         * <li><strong>CloudESSD_PL2</strong>: The cluster uses an ESSD of PL2.</li>
-         * <li><strong>CloudESSD_PL3</strong>: The cluster uses an ESSD of PL3.</li>
-         * <li><strong>CloudEfficiency</strong>: The cluster uses an ultra disk.</li>
+         * <li><strong>CloudESSD</strong>: PL1 ESSD.</li>
+         * <li><strong>CloudESSD_PL2</strong>: PL2 ESSD.</li>
+         * <li><strong>CloudESSD_PL3</strong>: PL3 ESSD.</li>
+         * <li><strong>CloudEfficiency</strong>: Ultra disk.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -676,10 +705,9 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>You must specify this parameter when EncryptionType is set to CloudDisk.</p>
-         * <p>The ID of the key that is used to encrypt data on disks. You can obtain the ID of the key from the Key Management Service (KMS) console. You can also create a key.</p>
+         * <p>The ID of the key used for cloud disk encryption. This parameter is required when EncryptionType is set to CloudDisk. You can view the key ID in the Key Management Service (KMS) console or create a new key.</p>
          * <blockquote>
-         * <p> If EncryptionType is empty, you do not need to specify this parameter.</p>
+         * <p>If EncryptionType is left empty, you do not need to specify this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -692,9 +720,9 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The encryption type. Set the value to <strong>CloudDisk</strong>, which indicates that only disk encryption is supported.</p>
+         * <p>The encryption type. Only cloud disk encryption is supported. Set the value to <strong>CloudDisk</strong>.</p>
          * <blockquote>
-         * <p> If this parameter is not specified, data is not encrypted.</p>
+         * <p>If you do not specify this parameter, encryption is disabled.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -725,10 +753,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The billing method of the cluster. Valid values:</p>
+         * <p>The billing method. Valid values:</p>
          * <ul>
-         * <li><strong>Postpaid</strong>: The cluster uses the pay-as-you-go billing method.</li>
-         * <li><strong>Prepaid</strong>: The cluster uses the subscription billing method.</li>
+         * <li><strong>Postpaid</strong>: Pay-as-you-go.</li>
+         * <li><strong>Prepaid</strong>: Subscription.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -742,13 +770,13 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The unit of the subscription duration for the cluster. Valid values:</p>
+         * <p>The subscription period of the subscription cluster. Valid values:</p>
          * <blockquote>
-         * <p> This parameter is required only when PayType is set to Prepaid.</p>
+         * <p>Notice: This parameter takes effect and is required only when PayType is set to Prepaid.</notice>				</p>
          * </blockquote>
          * <ul>
-         * <li><strong>Year</strong></li>
-         * <li><strong>Month</strong></li>
+         * <li><strong>Year</strong>: Yearly.</li>
+         * <li><strong>Month</strong>: Monthly.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -761,7 +789,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -804,9 +832,9 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the source cluster. You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query backup set IDs.</p>
+         * <p>The ID of the source cluster. You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query the source cluster ID.</p>
          * <blockquote>
-         * <p> If you want to restore the data of an ApsaraDB for ClickHouse cluster, this parameter is required.</p>
+         * <p>This parameter is required when you restore data for an ApsaraDB for ClickHouse cluster.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -819,7 +847,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>The tag information.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -828,13 +856,13 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The subscription duration of the subscription cluster.</p>
+         * <p>The subscription duration of the subscription cluster. The unit is specified by the Period parameter. If Period is set to Year, the unit is year. If Period is set to Month, the unit is month.</p>
          * <blockquote>
-         * <p> This parameter is required only when PayType is set to Prepaid.</p>
+         * <p>Notice: This parameter takes effect and is required only when PayType is set to Prepaid.</notice></p>
          * </blockquote>
          * <ul>
-         * <li>Valid values when Period is set to Year: 1 to 3 (integer)</li>
-         * <li>Valid values when Period is set to Month: 1 to 9 (integer)</li>
+         * <li>If Period is set to Year, valid values are 1 to 3.</li>
+         * <li>If Period is set to Month, valid values are 1 to 9.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -860,7 +888,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The vSwitch in the secondary zone for the VPC.</p>
+         * <p>The secondary vSwitch.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-bp1gzt31twhlo0sa5****</p>
@@ -872,7 +900,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The vSwitch in secondary zone 2 for the VPC.</p>
+         * <p>The secondary vSwitch 2.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-bp1gzt31twhlo0sa5****</p>
@@ -897,7 +925,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The secondary zone 2 of the instance.</p>
+         * <p>Secondary zone 2.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-j</p>
@@ -909,7 +937,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The zone ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent zone list.</p>
+         * <p>The zone ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the zone ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-h</p>
@@ -992,7 +1020,10 @@ public class CreateDBInstanceRequest extends Request {
             } 
 
             /**
-             * key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user123</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1000,7 +1031,10 @@ public class CreateDBInstanceRequest extends Request {
             }
 
             /**
-             * value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Sample string</p>
              */
             public Builder value(String value) {
                 this.value = value;

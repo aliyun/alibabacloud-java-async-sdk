@@ -280,9 +280,9 @@ public class CreateAccountAndAuthorityRequest extends Request {
         /**
          * <p>The database account.</p>
          * <ul>
-         * <li>The name must be unique within the cluster.</li>
+         * <li>The name must be unique.</li>
          * <li>The name can contain lowercase letters, digits, and underscores (_).</li>
-         * <li>The name must start with a lowercase letter and end with a lowercase letter or digit.</li>
+         * <li>The name must start with a lowercase letter and end with a lowercase letter or a digit.</li>
          * <li>The name must be 2 to 64 characters in length.</li>
          * </ul>
          * <p>This parameter is required.</p>
@@ -297,16 +297,15 @@ public class CreateAccountAndAuthorityRequest extends Request {
         }
 
         /**
-         * <p>The password of your database account.</p>
+         * <p>The password of the database account.</p>
          * <blockquote>
+         * <ul>
+         * <li>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
+         * </ul>
          * </blockquote>
          * <ul>
-         * <li><p>The password contains at least three types of the following characters: uppercase letters, lowercase letters, digits, and special characters.</p>
-         * </li>
-         * <li><p>The password can contain the following special characters: ! @ # $ % ^ &amp; * ( ) _ + - =</p>
-         * </li>
-         * <li><p>The password must be 8 to 32 characters in length.</p>
-         * </li>
+         * <li>Special characters include !@#$%^&amp;*()_+-=.</li>
+         * <li>The password must be 8 to 32 characters in length.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -320,7 +319,7 @@ public class CreateAccountAndAuthorityRequest extends Request {
         }
 
         /**
-         * <p>The databases to which you want to grant permissions. Separate databases with commas (,).</p>
+         * <p>The list of databases to be authorized. Separate multiple databases with commas (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -333,7 +332,7 @@ public class CreateAccountAndAuthorityRequest extends Request {
         }
 
         /**
-         * <p>The dictionaries to which you want to grant permissions. Separate dictionaries with commas (,).</p>
+         * <p>The list of dictionaries to be authorized. Separate multiple dictionaries with commas (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -359,10 +358,10 @@ public class CreateAccountAndAuthorityRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to grant the DDL permissions to the database account. Valid values:</p>
+         * <p>Specifies whether to grant Data Definition Language (DDL) permissions to the database account. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: allows DDL operations.</li>
+         * <li><strong>false</strong>: prohibits DDL operations.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -376,10 +375,10 @@ public class CreateAccountAndAuthorityRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to grant DML permissions to the database account. Valid values:</p>
+         * <p>Specifies whether to grant Data Manipulation Language (DML) permissions to the database account. Valid values:</p>
          * <ul>
-         * <li><strong>all</strong></li>
-         * <li><strong>readOnly,modify</strong></li>
+         * <li><strong>all</strong>: read, write, and settings permissions.</li>
+         * <li><strong>readOnly,modify</strong>: read and settings permissions.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -411,7 +410,7 @@ public class CreateAccountAndAuthorityRequest extends Request {
         }
 
         /**
-         * <p>The region ID You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -441,7 +440,7 @@ public class CreateAccountAndAuthorityRequest extends Request {
         }
 
         /**
-         * <p>All databases. Separate databases with commas (,).</p>
+         * <p>The list of all databases. Separate multiple databases with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>db1,db2</p>
@@ -453,7 +452,7 @@ public class CreateAccountAndAuthorityRequest extends Request {
         }
 
         /**
-         * <p>All dictionaries. Separate dictionaries with commas (,).</p>
+         * <p>The list of all dictionaries. Separate multiple dictionaries with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>dt1,dt2</p>

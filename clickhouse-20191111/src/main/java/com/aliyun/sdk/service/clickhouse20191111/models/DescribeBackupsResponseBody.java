@@ -106,7 +106,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The backup sets.</p>
+         * <p>The list of backup sets.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -125,7 +125,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page. Valid values: Valid values:</p>
+         * <p>The number of entries per page. Valid values:</p>
          * <ul>
          * <li><strong>30</strong> (default)</li>
          * <li><strong>50</strong></li>
@@ -152,7 +152,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -338,7 +338,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The end time of the backup task. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time is displayed in UTC.</p>
+             * <p>The end time of the backup. Format: yyyy-MM-ddTHH:mmZ (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2021-11-22T18:28:41Z</p>
@@ -349,7 +349,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The backup task ID.</p>
+             * <p>The ID of the backup task.</p>
              * 
              * <strong>example:</strong>
              * <p>117403****</p>
@@ -360,7 +360,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The backup method. Valid values: Only <strong>Physical</strong> is returned. This value indicates that a physical backup was performed.</p>
+             * <p>The backup method. The only valid value is <strong>Physical</strong>, which indicates physical backup.</p>
              * 
              * <strong>example:</strong>
              * <p>Physical</p>
@@ -371,7 +371,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupScheduleType.
+             * <p>The backup schedule type. Valid values: manual (manual backup) and scheduled (automatic backup).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>manual</p>
              */
             public Builder backupScheduleType(String backupScheduleType) {
                 this.backupScheduleType = backupScheduleType;
@@ -381,12 +384,12 @@ public class DescribeBackupsResponseBody extends TeaModel {
             /**
              * <p>The number of nodes in the cluster.</p>
              * <ul>
-             * <li>If the cluster is of Single-replica Edition, the value ranges from 1 to 48.</li>
-             * <li>If the cluster is of Double-replica Edition, the value ranges from 1 to 24.</li>
+             * <li>Single-replica edition: 1 to 48.</li>
+             * <li>Master-replica edition: 1 to 24.</li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;shard_count&quot;:4}</p>
+             * <p>{&quot;shard_count&quot;: 4}</p>
              */
             public Builder backupSetInfo(String backupSetInfo) {
                 this.backupSetInfo = backupSetInfo;
@@ -394,7 +397,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the backup set. Unit: MB.</p>
+             * <p>The backup size. Unit: MB.</p>
              * 
              * <strong>example:</strong>
              * <p>131072</p>
@@ -405,7 +408,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the backup task. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time is displayed in UTC.</p>
+             * <p>The start time of the backup. Format: yyyy-MM-ddTHH:mmZ (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2021-11-22T18:28:22Z</p>
@@ -418,8 +421,8 @@ public class DescribeBackupsResponseBody extends TeaModel {
             /**
              * <p>The backup status. Valid values:</p>
              * <ul>
-             * <li><strong>Success</strong></li>
-             * <li><strong>Failure</strong></li>
+             * <li><strong>Success</strong>: The backup is completed.</li>
+             * <li><strong>Failure</strong>: The backup failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -433,8 +436,8 @@ public class DescribeBackupsResponseBody extends TeaModel {
             /**
              * <p>The backup type. Valid values:</p>
              * <ul>
-             * <li><strong>FullBackup</strong></li>
-             * <li><strong>IncrementalBackup</strong></li>
+             * <li><strong>FullBackup</strong>: full backup</li>
+             * <li><strong>IncrementalBackup</strong>: incremental backup</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -457,7 +460,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the backup set expired. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time is displayed in UTC.</p>
+             * <p>The expiration time of the backup set. Format: yyyy-MM-ddTHH:mmZ (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2022-07-22T18:28:41Z</p>

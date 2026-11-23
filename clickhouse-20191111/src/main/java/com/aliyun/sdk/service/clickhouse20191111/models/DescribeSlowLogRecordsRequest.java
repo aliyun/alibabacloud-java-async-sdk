@@ -205,7 +205,7 @@ public class DescribeSlowLogRecordsRequest extends Request {
         } 
 
         /**
-         * <p>The cluster ID. You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query information about all the clusters that are deployed in a specific region. The information includes the cluster IDs.</p>
+         * <p>The cluster ID. You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query all clusters in the specified region, including cluster IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -218,9 +218,9 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-dd hh:mm:ss format. The time must be in UTC.</p>
+         * <p>The end time of the query. Format: yyyy-MM-dd hh:mm:ss (UTC).</p>
          * <blockquote>
-         * <p> The end time must be later than the start time. The specified time range that can be specified must be less than seven days.</p>
+         * <p>The end time must be later than the start time, and the interval between the start time and the end time must be less than 7 days.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -252,7 +252,7 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page 1. Default value: <strong>1</strong>.</p>
+         * <p>The page number. The value must be a positive integer. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -264,9 +264,9 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return per page. Default value: 30. Valid values:</p>
+         * <p>The number of entries per page. Valid values:</p>
          * <ul>
-         * <li><strong>30</strong></li>
+         * <li><strong>30</strong> (default)</li>
          * <li><strong>50</strong></li>
          * <li><strong>100</strong></li>
          * </ul>
@@ -281,7 +281,7 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * <p>The minimum query duration. Minimum value: <strong>1000</strong>. Default value: <strong>1000</strong>. Unit: milliseconds. Queries that last longer than the specified duration are returned in response parameters.</p>
+         * <p>The minimum query duration. Minimum value: <strong>1000</strong>. Default value: <strong>1000</strong>. Unit: milliseconds. The response includes queries that exceed this duration.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -293,7 +293,7 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -323,7 +323,7 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-dd hh:mm:ss format. The time must be in Coordinated Universal Time (UTC).</p>
+         * <p>The start time of the query. Format: yyyy-MM-dd hh:mm:ss (UTC).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

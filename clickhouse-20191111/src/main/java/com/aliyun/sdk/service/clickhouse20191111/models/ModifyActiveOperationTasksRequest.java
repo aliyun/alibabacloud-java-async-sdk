@@ -159,6 +159,7 @@ public class ModifyActiveOperationTasksRequest extends Request {
         } 
 
         /**
+         * <p>The IDs of the O&amp;M tasks. Separate multiple IDs with commas (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,7 +172,14 @@ public class ModifyActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * ImmediateStart.
+         * <p>Specifies whether to immediately execute the O&amp;M tasks. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Executes the tasks immediately.</li>
+         * <li><strong>0</strong>: Executes the tasks at the specified time.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder immediateStart(Integer immediateStart) {
             this.putQueryParameter("ImmediateStart", immediateStart);
@@ -225,6 +233,7 @@ public class ModifyActiveOperationTasksRequest extends Request {
         }
 
         /**
+         * <p>The time when the backend initiates the switchover operation. The time is in UTC and follows the YYYY-MM-DDTHH:mm:ssZ format.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

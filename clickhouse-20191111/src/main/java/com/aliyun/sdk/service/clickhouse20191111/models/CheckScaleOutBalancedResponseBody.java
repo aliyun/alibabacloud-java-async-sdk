@@ -134,8 +134,8 @@ public class CheckScaleOutBalancedResponseBody extends TeaModel {
         /**
          * <p>The check result. Valid values:</p>
          * <ul>
-         * <li><strong>400</strong>: The cluster failed the check.</li>
-         * <li><strong>200</strong>: The cluster passed the check.</li>
+         * <li><strong>400</strong>: The check failed.</li>
+         * <li><strong>200</strong>: The check succeeded.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -147,7 +147,7 @@ public class CheckScaleOutBalancedResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of returned pages.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -158,7 +158,7 @@ public class CheckScaleOutBalancedResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page. Valid values:</p>
+         * <p>The number of entries per page. Valid values:</p>
          * <ul>
          * <li><strong>30</strong> (default)</li>
          * <li><strong>50</strong></li>
@@ -185,7 +185,7 @@ public class CheckScaleOutBalancedResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error information returned for a check failure.</p>
+         * TableDetails.
          */
         public Builder tableDetails(TableDetails tableDetails) {
             this.tableDetails = tableDetails;
@@ -193,7 +193,7 @@ public class CheckScaleOutBalancedResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The amount of time that is required for the migration and scale-out. Unit: minutes.</p>
+         * <p>The time required for migration and scaling. Unit: minutes.</p>
          * 
          * <strong>example:</strong>
          * <p>21</p>
@@ -204,7 +204,7 @@ public class CheckScaleOutBalancedResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries that are returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -299,10 +299,7 @@ public class CheckScaleOutBalancedResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The cluster. The value is fixed as <strong>default</strong>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>default</p>
+             * Cluster.
              */
             public Builder cluster(String cluster) {
                 this.cluster = cluster;
@@ -310,10 +307,7 @@ public class CheckScaleOutBalancedResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The database name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>db_name</p>
+             * Database.
              */
             public Builder database(String database) {
                 this.database = database;
@@ -321,14 +315,7 @@ public class CheckScaleOutBalancedResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error details. Valid values:</p>
-             * <ul>
-             * <li><strong>1</strong>: The unique distributed table is missing.</li>
-             * <li><strong>2</strong>: More than one distributed table exists for the local table.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * Detail.
              */
             public Builder detail(Integer detail) {
                 this.detail = detail;
@@ -336,10 +323,7 @@ public class CheckScaleOutBalancedResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the local table.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * TableName.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;

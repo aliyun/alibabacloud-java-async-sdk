@@ -172,6 +172,7 @@ public class CancelRestartInstanceRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID. You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query all clusters in the specified region, including their cluster IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -202,7 +203,7 @@ public class CancelRestartInstanceRequest extends Request {
         }
 
         /**
-         * <p>The number of pages.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -214,9 +215,9 @@ public class CancelRestartInstanceRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return per page. Default value: 30. Valid values:</p>
+         * <p>The number of entries per page. Valid values:</p>
          * <ul>
-         * <li>30</li>
+         * <li>30 (default)</li>
          * <li>50</li>
          * <li>100</li>
          * </ul>
@@ -231,7 +232,10 @@ public class CancelRestartInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query region IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -258,7 +262,10 @@ public class CancelRestartInstanceRequest extends Request {
         }
 
         /**
-         * RestartTime.
+         * <p>The scheduled restart time. Format: yyyy-MM-ddTHH:mmZ (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-03-22T00:00:50Z</p>
          */
         public Builder restartTime(String restartTime) {
             this.putQueryParameter("RestartTime", restartTime);

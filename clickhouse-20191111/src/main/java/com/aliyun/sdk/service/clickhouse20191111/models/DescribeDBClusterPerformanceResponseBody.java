@@ -117,7 +117,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The end of the time range to query. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time is displayed in Coordinated Universal Time (UTC).</p>
+         * <p>The end time of the query. Format: yyyy-MM-ddTHH:mmZ (UTC time).</p>
          * 
          * <strong>example:</strong>
          * <p>2021-11-27T16:38Z</p>
@@ -128,7 +128,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The values of the queried performance metrics of the cluster.</p>
+         * <p>The list of cluster performance metric values.</p>
          */
         public Builder performances(java.util.List<Performances> performances) {
             this.performances = performances;
@@ -147,7 +147,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The beginning of the time range to query. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time is displayed in UTC.</p>
+         * <p>The start time of the query. Format: yyyy-MM-ddTHH:mmZ (UTC time).</p>
          * 
          * <strong>example:</strong>
          * <p>2021-11-27T16:37Z</p>
@@ -203,7 +203,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The values of a metric.</p>
+             * <p>The performance value.</p>
              */
             public Builder point(java.util.List<String> point) {
                 this.point = point;
@@ -270,7 +270,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the list of performance metric values.</p>
+             * <p>The name of the performance data list.</p>
              * 
              * <strong>example:</strong>
              * <p>cc-bp125e3uu94wo1s0k16****</p>
@@ -281,7 +281,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The values of the performance parameter. Each value of the performance parameter is collected at a point in time.</p>
+             * <p>The performance metric values. Each value corresponds to a collection time point.</p>
              */
             public Builder values(java.util.List<Values> values) {
                 this.values = values;
@@ -374,7 +374,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the performance metric.</p>
+             * <p>The name of the performance metrics.</p>
              * 
              * <strong>example:</strong>
              * <p>MEM_USAGE</p>
@@ -385,7 +385,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the performance metric value.</p>
+             * <p>The name of the performance value.</p>
              * 
              * <strong>example:</strong>
              * <p>mem_usage</p>
@@ -396,7 +396,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The queried performance pamaters.</p>
+             * <p>The collection of performance metrics.</p>
              */
             public Builder series(java.util.List<Series> series) {
                 this.series = series;
@@ -404,7 +404,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unit of the performance metric.</p>
+             * <p>The data unit.</p>
              * 
              * <strong>example:</strong>
              * <p>%</p>

@@ -175,6 +175,7 @@ public class DescribeSlowLogTrendRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID. You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query all clusters in the specified region, including their cluster IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -187,6 +188,10 @@ public class DescribeSlowLogTrendRequest extends Request {
         }
 
         /**
+         * <p>The end time of the query. Format: yyyy-MM-dd hh:mm:ss (UTC).</p>
+         * <blockquote>
+         * <p>The end time must be later than the start time, and the interval between the start time and the end time must be less than 7 days.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -217,7 +222,7 @@ public class DescribeSlowLogTrendRequest extends Request {
         }
 
         /**
-         * <p>The execution duration of slow SQL queries. Minimum value: <strong>1000</strong>. Default value: <strong>1000</strong>. Unit: milliseconds. Slow SQL queries that last longer than the specified duration are returned in response parameters.</p>
+         * <p>The execution duration of slow SQL statements. Minimum value: <strong>1000</strong>. Default value: <strong>1000</strong>. Unit: milliseconds. The response returns slow SQL statements whose execution duration exceeds this value.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -229,7 +234,10 @@ public class DescribeSlowLogTrendRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -256,6 +264,7 @@ public class DescribeSlowLogTrendRequest extends Request {
         }
 
         /**
+         * <p>The start time of the query. Format: yyyy-MM-dd hh:mm:ss (UTC).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

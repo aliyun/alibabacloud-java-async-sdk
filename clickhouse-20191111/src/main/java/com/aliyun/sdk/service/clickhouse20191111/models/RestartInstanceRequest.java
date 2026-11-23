@@ -173,7 +173,7 @@ public class RestartInstanceRequest extends Request {
         } 
 
         /**
-         * <p>The cluster ID. You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query information about all the clusters that are deployed in a specific region. The information includes the cluster IDs.</p>
+         * <p>The cluster ID. You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query all clusters in the specified region, including cluster IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -204,7 +204,7 @@ public class RestartInstanceRequest extends Request {
         }
 
         /**
-         * <p>The number of pages to return.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -216,9 +216,9 @@ public class RestartInstanceRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return per page. Default value: 30. Valid values:</p>
+         * <p>The number of entries per page. Valid values:</p>
          * <ul>
-         * <li>30</li>
+         * <li>30 (default)</li>
          * <li>50</li>
          * <li>100</li>
          * </ul>
@@ -233,7 +233,7 @@ public class RestartInstanceRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -264,9 +264,9 @@ public class RestartInstanceRequest extends Request {
         }
 
         /**
-         * <p>The scheduled restart time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time must be in Coordinated Universal Time (UTC).</p>
+         * <p>The scheduled restart time. Format: yyyy-MM-ddTHH:mmZ (UTC).</p>
          * <blockquote>
-         * <p> If this parameter is left empty or the time specified by this parameter is earlier than the current time, the cluster is immediately restarted.</p>
+         * <p>If this parameter is left empty or set to a time earlier than the current time, the cluster restarts immediately.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

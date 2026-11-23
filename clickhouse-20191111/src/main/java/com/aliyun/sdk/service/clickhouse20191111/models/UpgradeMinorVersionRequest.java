@@ -208,13 +208,15 @@ public class UpgradeMinorVersionRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to update the minor engine version of the ApsaraDB for ClickHouse cluster immediately. Valid values:</p>
+         * <p>Specifies whether to upgrade the minor engine version immediately. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: updates the minor engine version of the ApsaraDB for ClickHouse cluster immediately.</li>
-         * <li><strong>false</strong>: updates the minor engine version of the ApsaraDB for ClickHouse cluster at the specified time or within the specified maintenance window.</li>
+         * <li><p><strong>true</strong>: Upgrades the minor engine version immediately.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Upgrades the minor engine version at a specified time or during the maintenance window.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> If you want to update the minor engine version of the ApsaraDB for ClickHouse cluster at the specified time, <strong>UpgradeTime</strong> is required.</p>
+         * <p>If you specify a time to upgrade the minor engine version, <strong>UpgradeTime</strong> is required.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -228,9 +230,9 @@ public class UpgradeMinorVersionRequest extends Request {
         }
 
         /**
-         * <p>The update time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time must be in Coordinated Universal Time (UTC).</p>
+         * <p>The specified upgrade time. Format: yyyy-MM-ddTHH:mmZ (UTC time).</p>
          * <blockquote>
-         * <p> If you do not set this parameter, the minor engine version of an ApsaraDB for ClickHouse cluster is updated within the specified maintenance window.</p>
+         * <p>If this parameter is left empty, the ApsaraDB for ClickHouse cluster performs a minor kernel version upgrade during the maintenance window.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -243,9 +245,9 @@ public class UpgradeMinorVersionRequest extends Request {
         }
 
         /**
-         * <p>The minor engine version to which you want to update.</p>
+         * <p>The target minor engine version.</p>
          * <blockquote>
-         * <p> By default, UpgradeVersion is not set and the minor engine version of the ApsaraDB for ClickHouse cluster is updated to the latest version.</p>
+         * <p>By default, this parameter is left empty, and the minor engine version is upgraded to the latest version.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

@@ -105,8 +105,8 @@ public class ModifyRDSToClickhouseDbResponseBody extends TeaModel {
 
         /**
          * <ul>
-         * <li>If the value <strong>1</strong> is returned for the <strong>Status</strong> parameter, the system does not return the ErrorMsg parameter.</li>
-         * <li>If the value <strong>0</strong> is returned for the <strong>Status</strong> parameter, the ErrorMsg parameter returns the cause for the modification failure.</li>
+         * <li>This parameter is not returned when <strong>Status</strong> is <strong>1</strong>.</li>
+         * <li>When <strong>Status</strong> is <strong>0</strong>, this parameter indicates the cause of the modification failure.</li>
          * </ul>
          * 
          * <strong>example:</strong>

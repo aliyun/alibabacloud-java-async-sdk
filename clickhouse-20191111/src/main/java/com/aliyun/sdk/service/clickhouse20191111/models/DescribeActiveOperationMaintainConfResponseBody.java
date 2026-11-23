@@ -80,7 +80,7 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
         } 
 
         /**
-         * Config.
+         * <p>The proactive maintenance configuration.</p>
          */
         public Builder config(Config config) {
             this.config = config;
@@ -88,7 +88,14 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
         }
 
         /**
-         * HasConfig.
+         * <p>Indicates whether proactive maintenance is configured. Valid values:</p>
+         * <ul>
+         * <li>1: Configured.</li>
+         * <li>0: Not configured.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder hasConfig(Integer hasConfig) {
             this.hasConfig = hasConfig;
@@ -96,7 +103,10 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9A23C87D-87DF-4DA0-A50E-CB13F4F7923D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -227,7 +237,10 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
             } 
 
             /**
-             * CreatedTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-03-18T06:51:11+08:00</p>
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -235,7 +248,14 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
             }
 
             /**
-             * CycleTime.
+             * <p>The cycle time.</p>
+             * <ul>
+             * <li>If CycleType is set to Month, the return value is a number from 1 to 28, which indicates the day of the month. Multiple values are separated by commas (,).</li>
+             * <li>If CycleType is set to Week, the return value is a number from 1 to 7, which indicates the day of the week. Multiple values are separated by commas (,).</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder cycleTime(String cycleTime) {
                 this.cycleTime = cycleTime;
@@ -243,7 +263,14 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
             }
 
             /**
-             * CycleType.
+             * <p>The cycle type. Valid values:</p>
+             * <ul>
+             * <li>Month: Monthly.</li>
+             * <li>Week: Weekly.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Week</p>
              */
             public Builder cycleType(String cycleType) {
                 this.cycleType = cycleType;
@@ -251,7 +278,10 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
             }
 
             /**
-             * MaintainEndTime.
+             * <p>The end time of the maintenance window.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22:00Z</p>
              */
             public Builder maintainEndTime(String maintainEndTime) {
                 this.maintainEndTime = maintainEndTime;
@@ -259,7 +289,10 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
             }
 
             /**
-             * MaintainStartTime.
+             * <p>The start time of the maintenance window.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18:00Z</p>
              */
             public Builder maintainStartTime(String maintainStartTime) {
                 this.maintainStartTime = maintainStartTime;
@@ -267,7 +300,10 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-27T07:12:53Z</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -275,7 +311,14 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Indicates whether the configuration takes effect. Valid values:</p>
+             * <ul>
+             * <li>1: Yes.</li>
+             * <li>2: No.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;

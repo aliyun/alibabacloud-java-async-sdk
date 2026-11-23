@@ -67,10 +67,10 @@ public class CheckModifyConfigNeedRestartResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether the cluster was restarted after you modified the configuration parameters. Valid values:</p>
+         * <p>Indicates whether a restart is required after the configuration parameters are modified. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The cluster was restarted.</li>
-         * <li><strong>false</strong>: The cluster was not restarted.</li>
+         * <li><strong>true</strong>: A restart is required.</li>
+         * <li><strong>false</strong>: No restart is required.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -82,7 +82,7 @@ public class CheckModifyConfigNeedRestartResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>06798FEE-BEF2-5FAF-A30D-728973BBE97C</p>

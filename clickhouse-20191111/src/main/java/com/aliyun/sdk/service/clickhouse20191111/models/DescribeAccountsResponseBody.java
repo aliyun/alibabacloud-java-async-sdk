@@ -106,7 +106,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The database accounts.</p>
+         * Accounts.
          */
         public Builder accounts(Accounts accounts) {
             this.accounts = accounts;
@@ -147,7 +147,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -255,10 +255,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the database account.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * AccountDescription.
              */
             public Builder accountDescription(String accountDescription) {
                 this.accountDescription = accountDescription;
@@ -266,10 +263,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the database account.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * AccountName.
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -277,19 +271,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the database account. Valid values:</p>
-             * <ul>
-             * <li><strong>Creating</strong></li>
-             * <li><strong>Available</strong></li>
-             * <li><strong>AuthorityModifying</strong></li>
-             * <li><strong>Deleting</strong></li>
-             * </ul>
-             * <blockquote>
-             * <p> Only XML-configured database accounts can be in the <strong>AuthorityModifying</strong> state.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>Creating</p>
+             * AccountStatus.
              */
             public Builder accountStatus(String accountStatus) {
                 this.accountStatus = accountStatus;
@@ -297,14 +279,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the database account. Valid values:</p>
-             * <ul>
-             * <li><strong>Super</strong>: privileged account</li>
-             * <li><strong>Normal</strong>: standard account</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Super</p>
+             * AccountType.
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;
@@ -312,10 +287,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configuration mode of the database account.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>SQL</p>
+             * ConfigType.
              */
             public Builder configType(String configType) {
                 this.configType = configType;

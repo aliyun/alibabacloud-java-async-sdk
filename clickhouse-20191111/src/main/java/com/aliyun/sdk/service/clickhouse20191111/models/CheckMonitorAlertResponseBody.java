@@ -80,7 +80,7 @@ public class CheckMonitorAlertResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The parameters that are used to configure the monitoring and alerting feature.</p>
+         * <p>The monitoring and alerting parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>{   &quot;monitor&quot;:{     &quot;key1&quot;:&quot;value1&quot;,     &quot;key2&quot;:&quot;value2&quot;   },   &quot;alert&quot;:{     &quot;key1&quot;:&quot;value1&quot;,     &quot;key2&quot;:&quot;value2&quot;   } }</p>
@@ -104,8 +104,8 @@ public class CheckMonitorAlertResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the monitoring and alerting feature is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>enable</strong>: The monitoring and alerting feature is enabled.</li>
-         * <li><strong>disable</strong>: The monitoring and alerting feature is disabled.</li>
+         * <li><strong>enable</strong>: Enabled.</li>
+         * <li><strong>disable</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>

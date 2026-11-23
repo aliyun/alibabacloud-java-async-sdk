@@ -67,7 +67,10 @@ public class DescribeDBClusterStatusSetResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DE309AA1-BD83-5E1F-9945-8A4D336E0829</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class DescribeDBClusterStatusSetResponseBody extends TeaModel {
         }
 
         /**
-         * StatusSet.
+         * <p>The instance status set.</p>
          */
         public Builder statusSet(java.util.List<String> statusSet) {
             this.statusSet = statusSet;

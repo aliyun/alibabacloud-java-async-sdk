@@ -190,7 +190,7 @@ public class DescribeBackupsRequest extends Request {
         } 
 
         /**
-         * <p>The backup task ID.</p>
+         * <p>The ID of the backup task.</p>
          * 
          * <strong>example:</strong>
          * <p>117403****</p>
@@ -215,7 +215,7 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</p>
+         * <p>The end time of the query. Format: yyyy-MM-ddTHH:mmZ (UTC).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -293,7 +293,7 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</p>
+         * <p>The start time of the query. Format: yyyy-MM-ddTHH:mmZ (UTC).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

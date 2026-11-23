@@ -67,10 +67,10 @@ public class CheckServiceLinkedRoleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether a service-linked role is created for ApsaraDB for ClickHouse.</p>
+         * <p>Indicates whether a service-linked role exists.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxx</p>
+         * <p>true</p>
          */
         public Builder hasServiceLinkedRole(Boolean hasServiceLinkedRole) {
             this.hasServiceLinkedRole = hasServiceLinkedRole;
@@ -78,10 +78,10 @@ public class CheckServiceLinkedRoleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The unique request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>66428721-xxxx-xxxx-xxxx-3BD1B67837E0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

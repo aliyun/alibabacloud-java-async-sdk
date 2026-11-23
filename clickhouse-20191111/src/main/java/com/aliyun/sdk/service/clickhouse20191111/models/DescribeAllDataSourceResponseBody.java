@@ -93,7 +93,7 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the columns.</p>
+         * Columns.
          */
         public Builder columns(Columns columns) {
             this.columns = columns;
@@ -112,7 +112,7 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the databases.</p>
+         * Schemas.
          */
         public Builder schemas(Schemas schemas) {
             this.schemas = schemas;
@@ -120,7 +120,7 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the tables.</p>
+         * Tables.
          */
         public Builder tables(Tables tables) {
             this.tables = tables;
@@ -251,14 +251,7 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the column is an auto-increment column. Valid values:</p>
-             * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * AutoIncrementColumn.
              */
             public Builder autoIncrementColumn(Boolean autoIncrementColumn) {
                 this.autoIncrementColumn = autoIncrementColumn;
@@ -266,10 +259,7 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The column name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>name</p>
+             * ColumnName.
              */
             public Builder columnName(String columnName) {
                 this.columnName = columnName;
@@ -277,10 +267,7 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cluster ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cc-bp108z124a8o7****</p>
+             * DBClusterId.
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -288,14 +275,7 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the column is the primary key of the table. Valid values:</p>
-             * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * PrimaryKey.
              */
             public Builder primaryKey(Boolean primaryKey) {
                 this.primaryKey = primaryKey;
@@ -303,10 +283,7 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The database name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>database</p>
+             * SchemaName.
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -314,10 +291,7 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The table name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>table</p>
+             * TableName.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -325,10 +299,7 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the column.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>String</p>
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -449,10 +420,7 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The cluster ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cc-bp108z124a8o7****</p>
+             * DBClusterId.
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -460,10 +428,7 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The database name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>database</p>
+             * SchemaName.
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -597,10 +562,7 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The cluster ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cc-bp108z124a8o7****</p>
+             * DBClusterId.
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -608,10 +570,7 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The database name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>database</p>
+             * SchemaName.
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -619,10 +578,7 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The table name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>table</p>
+             * TableName.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;

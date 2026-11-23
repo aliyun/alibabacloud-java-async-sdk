@@ -80,7 +80,7 @@ public class DescribeConfigVersionDifferenceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The values of the configuration parameters after the values of the configuration parameters are changed.</p>
+         * <p>The configuration parameters after the changes.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;<?xml version="1.0"?>
@@ -111,7 +111,7 @@ public class DescribeConfigVersionDifferenceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The values of the configuration parameters before the values of the configuration parameters are changed.</p>
+         * <p>The configuration parameters before the changes.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;<?xml version="1.0"?>

@@ -131,7 +131,7 @@ public class DeleteAccountRequest extends Request {
         } 
 
         /**
-         * <p>The name of the database account.</p>
+         * <p>The database account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

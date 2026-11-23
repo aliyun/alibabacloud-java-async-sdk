@@ -131,10 +131,10 @@ public class ModifyDBClusterDescriptionRequest extends Request {
         } 
 
         /**
-         * <p>The cluster name. When you set the cluster name, take note of the following rules:</p>
+         * <p>The cluster name. The naming rules are as follows:</p>
          * <ul>
-         * <li>The cluster name cannot start with http:// or https://.</li>
-         * <li>The cluster name must be 2 to 256 characters in length.</li>
+         * <li>It cannot start with http:// or https://.</li>
+         * <li>It must be 2 to 256 characters in length.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

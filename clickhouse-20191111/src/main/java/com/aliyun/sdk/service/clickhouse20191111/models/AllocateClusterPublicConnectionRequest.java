@@ -130,7 +130,7 @@ public class AllocateClusterPublicConnectionRequest extends Request {
         } 
 
         /**
-         * <p>The prefix of the endpoint that is used to connect to the database. Set the value to the cluster ID.</p>
+         * <p>The prefix of the endpoint used to connect to the database. The value is fixed as the cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cc-bp108z124a8o7****</p>

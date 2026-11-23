@@ -158,7 +158,10 @@ public class DescribeAutoRenewAttributeRequest extends Request {
         } 
 
         /**
-         * DBClusterIds.
+         * <p>The cluster IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-uf6g4417bo*****</p>
          */
         public Builder DBClusterIds(String DBClusterIds) {
             this.putQueryParameter("DBClusterIds", DBClusterIds);
@@ -185,7 +188,10 @@ public class DescribeAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -194,7 +200,10 @@ public class DescribeAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -203,6 +212,7 @@ public class DescribeAutoRenewAttributeRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

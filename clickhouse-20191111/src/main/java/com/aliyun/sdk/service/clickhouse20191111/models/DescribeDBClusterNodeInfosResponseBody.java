@@ -119,7 +119,7 @@ public class DescribeDBClusterNodeInfosResponseBody extends TeaModel {
         } 
 
         /**
-         * NodeInfos.
+         * <p>The ApsaraDB for ClickHouse node information.</p>
          */
         public Builder nodeInfos(java.util.List<NodeInfos> nodeInfos) {
             this.nodeInfos = nodeInfos;
@@ -127,7 +127,10 @@ public class DescribeDBClusterNodeInfosResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -135,7 +138,15 @@ public class DescribeDBClusterNodeInfosResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values:</p>
+         * <ul>
+         * <li><strong>30</strong> (default)</li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -143,7 +154,10 @@ public class DescribeDBClusterNodeInfosResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>746CD303-0B82-5E8D-886D-93A9FAF3A876</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +165,10 @@ public class DescribeDBClusterNodeInfosResponseBody extends TeaModel {
         }
 
         /**
-         * TotalNodeCount.
+         * <p>The total number of nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalNodeCount(Integer totalNodeCount) {
             this.totalNodeCount = totalNodeCount;
@@ -159,7 +176,7 @@ public class DescribeDBClusterNodeInfosResponseBody extends TeaModel {
         }
 
         /**
-         * ZkNodeInfos.
+         * <p>The ZooKeeper node information.</p>
          */
         public Builder zkNodeInfos(java.util.List<ZkNodeInfos> zkNodeInfos) {
             this.zkNodeInfos = zkNodeInfos;
@@ -264,7 +281,10 @@ public class DescribeDBClusterNodeInfosResponseBody extends TeaModel {
             } 
 
             /**
-             * FailoverTesting.
+             * <p>Indicates whether a disaster recovery drill is in progress.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder failoverTesting(Boolean failoverTesting) {
                 this.failoverTesting = failoverTesting;
@@ -272,7 +292,10 @@ public class DescribeDBClusterNodeInfosResponseBody extends TeaModel {
             }
 
             /**
-             * NodeIp.
+             * <p>The node IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.168.0.1</p>
              */
             public Builder nodeIp(String nodeIp) {
                 this.nodeIp = nodeIp;
@@ -280,7 +303,10 @@ public class DescribeDBClusterNodeInfosResponseBody extends TeaModel {
             }
 
             /**
-             * NodeName.
+             * <p>The node name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ck-bp108z124a8****</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -288,7 +314,10 @@ public class DescribeDBClusterNodeInfosResponseBody extends TeaModel {
             }
 
             /**
-             * ReplicaId.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder replicaId(String replicaId) {
                 this.replicaId = replicaId;
@@ -296,7 +325,10 @@ public class DescribeDBClusterNodeInfosResponseBody extends TeaModel {
             }
 
             /**
-             * ShardId.
+             * <p>The shard ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder shardId(String shardId) {
                 this.shardId = shardId;
@@ -376,7 +408,10 @@ public class DescribeDBClusterNodeInfosResponseBody extends TeaModel {
             } 
 
             /**
-             * FailoverTesting.
+             * <p>Indicates whether a disaster recovery drill is in progress.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder failoverTesting(Boolean failoverTesting) {
                 this.failoverTesting = failoverTesting;
@@ -384,7 +419,10 @@ public class DescribeDBClusterNodeInfosResponseBody extends TeaModel {
             }
 
             /**
-             * NodeName.
+             * <p>The node name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ck-bp108z124a8****</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -392,7 +430,10 @@ public class DescribeDBClusterNodeInfosResponseBody extends TeaModel {
             }
 
             /**
-             * ReplicaId.
+             * <p>The ZooKeeper node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder replicaId(String replicaId) {
                 this.replicaId = replicaId;

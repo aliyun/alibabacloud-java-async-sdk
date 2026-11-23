@@ -130,6 +130,7 @@ public class CancelActiveOperationTasksRequest extends Request {
         } 
 
         /**
+         * <p>The IDs of the O&amp;M tasks. Separate multiple IDs with commas (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

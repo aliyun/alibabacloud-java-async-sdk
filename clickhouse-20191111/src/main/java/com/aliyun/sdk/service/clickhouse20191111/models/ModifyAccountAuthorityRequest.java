@@ -233,7 +233,7 @@ public class ModifyAccountAuthorityRequest extends Request {
         } 
 
         /**
-         * <p>The name of the database account.</p>
+         * <p>The database account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -246,7 +246,7 @@ public class ModifyAccountAuthorityRequest extends Request {
         }
 
         /**
-         * <p>The databases to which you want to grant permissions. Separate databases with commas (,).</p>
+         * <p>The databases to which you want to grant permissions. Separate multiple databases with commas (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -259,7 +259,7 @@ public class ModifyAccountAuthorityRequest extends Request {
         }
 
         /**
-         * <p>The dictionaries to which you want to grant permissions. Separate dictionaries with commas (,).</p>
+         * <p>The dictionaries to which you want to grant permissions. Separate multiple dictionaries with commas (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -285,10 +285,10 @@ public class ModifyAccountAuthorityRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to grant DDL permissions to the database account. Valid values:</p>
+         * <p>Specifies whether to grant Data Definition Language (DDL) permissions to the database account. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: grants DDL permissions to the database account.</li>
-         * <li><strong>false</strong>: does not grant DDL permissions to the database account.</li>
+         * <li><strong>true</strong>: allows DDL operations.</li>
+         * <li><strong>false</strong>: prohibits DDL operations.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -302,10 +302,10 @@ public class ModifyAccountAuthorityRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to grant DML permissions to the database account. Valid values:</p>
+         * <p>Specifies whether to grant Data Manipulation Language (DML) permissions to the database account. Valid values:</p>
          * <ul>
-         * <li><strong>all</strong></li>
-         * <li><strong>readonly,modify</strong></li>
+         * <li><strong>all</strong>: read, write, and settings permissions.</li>
+         * <li><strong>readonly,modify</strong>: read and settings permissions.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -337,7 +337,7 @@ public class ModifyAccountAuthorityRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query region IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -367,7 +367,7 @@ public class ModifyAccountAuthorityRequest extends Request {
         }
 
         /**
-         * <p>All databases. Separate databases with commas (,).</p>
+         * <p>The list of all databases. Separate multiple databases with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>db1,db2</p>
@@ -379,7 +379,7 @@ public class ModifyAccountAuthorityRequest extends Request {
         }
 
         /**
-         * <p>All dictionaries. Separate dictionaries with commas (,).</p>
+         * <p>The list of all dictionaries. Separate multiple dictionaries with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>dt1,dt2</p>

@@ -54,7 +54,10 @@ public class ElectZookeeperLeaderResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7D3ECB0E-98CA-5E08-A9CA-F70C5A1E9BDF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

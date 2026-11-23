@@ -75,7 +75,7 @@ public class CheckModifyConfigNeedRestartRequest extends Request {
         } 
 
         /**
-         * <p>The configuration parameters whose settings are modified.</p>
+         * <p>The configuration parameters to be modified.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -108,7 +108,7 @@ public class CheckModifyConfigNeedRestartRequest extends Request {
         }
 
         /**
-         * <p>The cluster ID. You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query information about all the clusters that are deployed in a specific region. The information includes the cluster IDs.</p>
+         * <p>The ID of the cluster. You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query all clusters in a specified region and obtain the cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -81,8 +81,8 @@ public class CheckClickhouseToRDSResponseBody extends TeaModel {
 
         /**
          * <ul>
-         * <li>When the value <strong>true</strong> is returned for the <strong>Status</strong> parameter, the system does not return the ErrorCode parameter.</li>
-         * <li>When the value <strong>false</strong> is returned for the <strong>Status</strong> parameter, the system returns for the ErrorCode parameter the reason why the ApsaraDB for ClickHouse cluster cannot be connected to the ApsaraDB RDS for MySQL instance.</li>
+         * <li>This parameter is not returned when <strong>Status</strong> is <strong>true</strong>.</li>
+         * <li>When <strong>Status</strong> is <strong>false</strong>, this parameter indicates the cause of the connection failure.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -105,10 +105,10 @@ public class CheckClickhouseToRDSResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the ApsaraDB for ClickHouse cluster can be connected to the ApsaraDB RDS for MySQL instance.</p>
+         * <p>Indicates whether the connection is successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The ApsaraDB for ClickHouse cluster can be connected to the ApsaraDB RDS for MySQL instance.</li>
-         * <li><strong>false</strong>: The ApsaraDB for ClickHouse cluster cannot be connected to the ApsaraDB RDS for MySQL instance.</li>
+         * <li><strong>true</strong>: The connection is successful.</li>
+         * <li><strong>false</strong>: The connection fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>

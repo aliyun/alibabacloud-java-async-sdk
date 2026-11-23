@@ -64,7 +64,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You can call this operation only for ApsaraDB for ClickHouse clusters that were created after December 1, 2021.</p>
+     * <p>This operation is supported only for Community-compatible clusters created after December 1, 2021.</p>
      * </blockquote>
      * 
      * @param request the request parameters of CheckModifyConfigNeedRestart  CheckModifyConfigNeedRestartRequest
@@ -73,6 +73,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CheckModifyConfigNeedRestartResponse> checkModifyConfigNeedRestart(CheckModifyConfigNeedRestartRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>This operation is applicable only to Community-compatible clusters of version 20.8 or later that were created after December 1, 2021.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of CheckMonitorAlert  CheckMonitorAlertRequest
      * @return CheckMonitorAlertResponse
      */
@@ -97,6 +102,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAccountResponse> createAccount(CreateAccountRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This operation is applicable only to version 21.8 and earlier. For versions later than 21.8, you must use a privileged account to execute SQL statements to modify the permissions of a standard user.</p>
+     * 
      * @param request the request parameters of CreateAccountAndAuthority  CreateAccountAndAuthorityRequest
      * @return CreateAccountAndAuthorityResponse
      */
@@ -105,7 +113,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> This operation is available only for the ApsaraDB for ClickHouse clusters of versions 20.3, 20.8, and 21.8.</p>
+     * <p>ApsaraDB for ClickHouse clusters running version 20.3, 20.8, or 21.8 support data backup.</p>
      * </blockquote>
      * 
      * @param request the request parameters of CreateBackupPolicy  CreateBackupPolicyRequest
@@ -115,7 +123,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you are familiar with the billing methods and <a href="https://help.aliyun.com/document_detail/167450.html">pricing</a> of ApsaraDB for ClickHouse.</p>
+     * <p>Make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/167450.html">pricing</a> of ApsaraDB for ClickHouse before you call this operation.</p>
      * 
      * @param request the request parameters of CreateDBInstance  CreateDBInstanceRequest
      * @return CreateDBInstanceResponse
@@ -130,7 +138,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Only an ApsaraDB for ClickHouse cluster of V20.8 or later supports tiered storage of hot data and cold data. If your data is in an ApsaraDB for ClickHouse cluster of a version earlier than V20.8 and you want to use tiered storage of hot data and cold data to store the data, you can migrate the data to an ApsaraDB for ClickHouse cluster of V20.8 or later and use tiered storage of hot data and cold data. For more information about how to migrate data between ApsaraDB for ClickHouse clusters, see <a href="https://help.aliyun.com/document_detail/276926.html">Migrate data between ApsaraDB for ClickHouse clusters</a>.</p>
+     * <p>Only Community-compatible clusters of version 20.8 and later support the tiered storage of hot and cold data feature. For unsupported earlier versions, you can first perform data migration to a cluster of version 20.8 or later before configuring tiered storage of hot and cold data. For more information about how to perform data migration, see <a href="https://help.aliyun.com/document_detail/276926.html">Data migration between ApsaraDB for ClickHouse database instances</a>.</p>
      * 
      * @param request the request parameters of CreateOSSStorage  CreateOSSStorageRequest
      * @return CreateOSSStorageResponse
@@ -140,7 +148,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> For an ApsaraDB for ClickHouse cluster of V20.8 or later that was created before December 1, 2021, you must manually enable the MySQL port. For an ApsaraDB for ClickHouse cluster of V20.8 or later that was created after December 1, 2021, the MySQL port is automatically enabled.</p>
+     * <p>For Community-compatible Edition clusters of version 20.8 and later that were created before December 1, 2021, you must manually enable the MySQL port. For clusters created on or after this date, the MySQL port is automatically enabled.</p>
      * </blockquote>
      * 
      * @param request the request parameters of CreatePortsForClickHouse  CreatePortsForClickHouseRequest
@@ -151,7 +159,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> This operation is only applicable to ApsaraDB for ClickHouse clusters.</p>
+     * <p>This operation is applicable only to ApsaraDB for ClickHouse Community-Compatible Edition clusters.</p>
      * </blockquote>
      * 
      * @param request the request parameters of CreateRDSToClickhouseDb  CreateRDSToClickhouseDbRequest
@@ -161,8 +169,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Description</h2>
-     * <p>An ApsaraDB for ClickHouse cluster is dependent on an SLB instance at the network layer. You can bind a domain name to the IP address of an ApsaraDB for ClickHouse node to provide external connectivity service and provide failover capabilities. The SLB instance forwards requests to the nodes in the ApsaraDB for ClickHouse cluster and balances the request traffic among the nodes. The SLB instance checks the availability of backend nodes. If the SLB instance detects that a node is unavailable by checking the health status of all nodes, the SLB instance automatically isolates the unavailable node. This ensures that the request traffic is balanced among available nodes.</p>
+     * <h2>Usage notes</h2>
+     * <p>SLB is a network-layer dependency. It provides external connection services by binding the IP addresses of ClickHouse nodes to a domain name and supports failover. It evenly forwards cluster requests to internal nodes for multi-node traffic distribution and performs health checks on backend nodes. If a node becomes unavailable, SLB checks the node health status and automatically isolates abnormal nodes to ensure that request traffic is distributed only to available nodes.</p>
      * 
      * @param request the request parameters of CreateSLB  CreateSLBRequest
      * @return CreateSLBResponse
@@ -171,9 +179,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <blockquote>
-     * <p> This operation is applicable only to ApsaraDB for ClickHouse clusters of V20.8 or later that were created after December 1, 2021,</p>
-     * </blockquote>
+     * <p>This operation is applicable only to Community-compatible clusters of version 20.8 or later that were created after December 1, 2021.</p>
      * 
      * @param request the request parameters of CreateSQLAccount  CreateSQLAccountRequest
      * @return CreateSQLAccountResponse
@@ -189,7 +195,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> After you delete a database account, you cannot use the account to log on to the ApsaraDB for ClickHouse cluster. Exercise caution when performing this operation.</p>
+     * <p>After you delete a specified database account, you cannot use the account to connect to ApsaraDB for ClickHouse. Proceed with caution.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DeleteAccount  DeleteAccountRequest
@@ -198,6 +204,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteAccountResponse> deleteAccount(DeleteAccountRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Only ApsaraDB for ClickHouse clusters of version 21.8 or later support the data backup feature.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of DeleteBackupPolicy  DeleteBackupPolicyRequest
      * @return DeleteBackupPolicyResponse
      */
@@ -205,7 +216,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p><em>Warning</em>* After an ApsaraDB for ClickHouse cluster is deleted, all data in the cluster is deleted and cannot be recovered. Exercise caution when performing this operation.</p>
+     * <blockquote>
+     * <p>Warning: After the cluster is deleted, all data in the cluster is deleted and cannot be recovered. Proceed with caution.</p>
+     * </blockquote>
      * 
      * @param request the request parameters of DeleteDBCluster  DeleteDBClusterRequest
      * @return DeleteDBClusterResponse
@@ -214,8 +227,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Description</h2>
-     * <p>After an SLB instance is released, simple load balancing is performed on inbound traffic based on the domain name. The health status of all nodes is no longer checked. As a result, unavailable nodes may fail to be detected, and normal requests may be routed to the unavailable nodes. This causes the failures of some read and write requests.</p>
+     * <h2>Usage notes</h2>
+     * <p>After the SLB instance is released, simple load balancing is performed directly based on domain names, and the node health check at the request routing layer is no longer available. This may cause normal requests to be routed to unavailable nodes, resulting in read and write failures for some requests.</p>
      * 
      * @param request the request parameters of DeleteSLB  DeleteSLBRequest
      * @return DeleteSLBResponse
@@ -229,6 +242,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteSyndbResponse> deleteSyndb(DeleteSyndbRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This operation applies only to version 21.8 and earlier. To modify the permissions of a standard user in versions later than 21.8, use a privileged account to execute SQL statements.</p>
+     * 
      * @param request the request parameters of DescribeAccountAuthority  DescribeAccountAuthorityRequest
      * @return DescribeAccountAuthorityResponse
      */
@@ -273,7 +289,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> This operation is available only for the ApsaraDB for ClickHouse clusters of versions 20.3, 20.8, and 21.8.</p>
+     * <p>ApsaraDB for ClickHouse clusters of versions 20.3, 20.8, and 21.8 support data backup.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeBackupPolicy  DescribeBackupPolicyRequest
@@ -284,7 +300,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> This operation is available only for ApsaraDB for ClickHouse clusters of version 21.8 and later.</p>
+     * <p>Only ApsaraDB for ClickHouse clusters of version 21.8 and later support the data backup feature.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeBackups  DescribeBackupsRequest
@@ -301,7 +317,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You can call this operation only for ApsaraDB for ClickHouse clusters that were created after December 1, 2021.</p>
+     * <p>This operation is supported only by Community-compatible Edition clusters created after December 1, 2021.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeConfigHistory  DescribeConfigHistoryRequest
@@ -312,7 +328,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You can call this operation only for ApsaraDB for ClickHouse clusters that were created after December 1, 2021.</p>
+     * <p>This operation is supported only for Community-compatible Edition clusters created after December 1, 2021.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeConfigVersionDifference  DescribeConfigVersionDifferenceRequest
@@ -341,7 +357,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You can call this operation only for ApsaraDB for ClickHouse clusters that were created after December 1, 2021.</p>
+     * <p>This operation is supported only for Community-Compatible Edition clusters created after December 1, 2021.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeDBClusterConfigInXML  DescribeDBClusterConfigInXMLRequest
@@ -363,9 +379,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can query the performance data of a specified cluster over a specific time range based on the performance metrics. The data is collected every 30 seconds.</p>
+     * <p>Queries the performance monitoring data of a specified cluster within a specific time range based on performance metrics. The collection granularity is 30 seconds.</p>
      * <blockquote>
-     * <p> You can call this operation only for ApsaraDB for ClickHouse clusters that were created before December 1, 2021.</p>
+     * <p>This operation is supported only for ApsaraDB for ClickHouse Community-compatible Edition clusters that were created before December 1, 2021.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeDBClusterPerformance  DescribeDBClusterPerformanceRequest
@@ -454,7 +470,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You can call this operation to query information about only data migration from an ApsaraDB for ClickHouse cluster of an earlier version to an ApsaraDB for ClickHouse cluster of a later version.</p>
+     * <p>This operation can only query data migration information from a lower version to a higher version between ApsaraDB for ClickHouse clusters.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeTransferHistory  DescribeTransferHistoryRequest
@@ -487,6 +503,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This operation is applicable only to version 21.8 and earlier. To modify the permissions of a standard user in versions later than 21.8, use a privileged account to execute SQL statements.</p>
+     * 
      * @param request the request parameters of ModifyAccountAuthority  ModifyAccountAuthorityRequest
      * @return ModifyAccountAuthorityResponse
      */
@@ -519,7 +538,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> This operation is available only for the ApsaraDB for ClickHouse clusters of versions 20.3, 20.8, and 21.8.</p>
+     * <p>ApsaraDB for ClickHouse clusters running version 20.3, 20.8, or 21.8 support data backup.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ModifyBackupPolicy  ModifyBackupPolicyRequest
@@ -548,7 +567,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You can call this operation only for ApsaraDB for ClickHouse clusters that were created after December 1, 2021.</p>
+     * <p>This operation is supported only for Community-compatible Edition clusters created after December 1, 2021.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ModifyDBClusterConfigInXML  ModifyDBClusterConfigInXMLRequest
@@ -569,6 +588,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyDBClusterMaintainTimeResponse> modifyDBClusterMaintainTime(ModifyDBClusterMaintainTimeRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Notice: This API operation is applicable only to clusters whose kernel version is 20.8 or earlier.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of ModifyDBConfig  ModifyDBConfigRequest
      * @return ModifyDBConfigResponse
      */
@@ -583,7 +607,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> This operation is applicable only to ApsaraDB for ClickHouse clusters.</p>
+     * <p>This operation is applicable only to ApsaraDB for ClickHouse Community-Compatible Edition clusters.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ModifyRDSToClickhouseDb  ModifyRDSToClickhouseDbRequest
@@ -623,11 +647,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Prerequisites</h2>
+     * <h2>Before you begin</h2>
      * <ul>
-     * <li>The IP address of the source ApsaraDB for ClickHouse cluster is added to the IP address whitelist of the destination ApsaraDB for ClickHouse cluster.</li>
-     * <li>The IP address of the destination ApsaraDB for ClickHouse cluster is added to the IP address whitelist of the source ApsaraDB for ClickHouse cluster.<blockquote>
-     * <p> You can execute the <code>select * from system.clusters;</code> statement to query the IP address of an ApsaraDB for ClickHouse cluster.</p>
+     * <li>Add the IP address of the source cluster to the whitelist of the destination cluster.</li>
+     * <li>Add the IP address of the destination cluster to the whitelist of the source cluster.<blockquote>
+     * <p>You can run the <code>select * from system.clusters;</code> statement to view the IP addresses of an ApsaraDB for ClickHouse cluster.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -646,7 +670,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You can call this operation only for ApsaraDB for ClickHouse clusters that were purchased after December 1, 2021.</p>
+     * <p>Only Community-compatible Edition clusters purchased after December 1, 2021 support minor engine version upgrades.</p>
      * </blockquote>
      * 
      * @param request the request parameters of UpgradeMinorVersion  UpgradeMinorVersionRequest

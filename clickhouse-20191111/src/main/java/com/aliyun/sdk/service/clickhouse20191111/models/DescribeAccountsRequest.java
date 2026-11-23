@@ -160,11 +160,11 @@ public class DescribeAccountsRequest extends Request {
         /**
          * <p>The name of the database account.</p>
          * <blockquote>
-         * <p> If you do not specify this parameter, the information about all database accounts in the ApsaraDB for ClickHouse cluster is queried by default.</p>
+         * <p>If you do not specify this parameter, the system queries the information of all database accounts by default.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>testAccount</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -204,7 +204,7 @@ public class DescribeAccountsRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from 1. Default value: <strong>1</strong>.</p>
+         * <p>The page number. The value must be greater than 0 and less than or equal to the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

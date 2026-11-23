@@ -67,7 +67,10 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7D3ECB0E-98CA-5E08-A9CA-F70C5A1E9BDF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
         }
 
         /**
-         * SlowLogTrend.
+         * <p>The result set of slow SQL statements.</p>
          */
         public Builder slowLogTrend(SlowLogTrend slowLogTrend) {
             this.slowLogTrend = slowLogTrend;
@@ -346,7 +349,10 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
             } 
 
             /**
-             * BytesRead.
+             * <p>The amount of data read. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>697899</p>
              */
             public Builder bytesRead(Integer bytesRead) {
                 this.bytesRead = bytesRead;
@@ -354,7 +360,10 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
             }
 
             /**
-             * ElapsedTime.
+             * <p>The elapsed time for reading SQL statements. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.001703578</p>
              */
             public Builder elapsedTime(Float elapsedTime) {
                 this.elapsedTime = elapsedTime;
@@ -362,7 +371,10 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
             }
 
             /**
-             * RowsRead.
+             * <p>The number of rows read.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>14721</p>
              */
             public Builder rowsRead(Integer rowsRead) {
                 this.rowsRead = rowsRead;
@@ -605,7 +617,10 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Rows.
+             * <p>The number of rows in the returned result set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder rows(String rows) {
                 this.rows = rows;
@@ -613,7 +628,10 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
             }
 
             /**
-             * RowsBeforeLimitAtLeast.
+             * <p>The page size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder rowsBeforeLimitAtLeast(String rowsBeforeLimitAtLeast) {
                 this.rowsBeforeLimitAtLeast = rowsBeforeLimitAtLeast;
@@ -621,7 +639,7 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Statistics.
+             * <p>The statistics information of the query results.</p>
              */
             public Builder statistics(Statistics statistics) {
                 this.statistics = statistics;

@@ -276,7 +276,7 @@ public class TransferVersionRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the source ApsaraDB for ClickHouse cluster.</p>
+         * <p>The ID of the source cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -289,7 +289,7 @@ public class TransferVersionRequest extends Request {
         }
 
         /**
-         * <p>The time window during which write operations are stopped.</p>
+         * <p>The write suspension window.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-02-08T00:00:00+08:00,2025-02-12T00:00:00+08:00</p>
@@ -348,7 +348,7 @@ public class TransferVersionRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -379,7 +379,7 @@ public class TransferVersionRequest extends Request {
         }
 
         /**
-         * <p>The database account that is used to log on to the database in the source ApsaraDB for ClickHouse cluster.</p>
+         * <p>The source account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -392,7 +392,7 @@ public class TransferVersionRequest extends Request {
         }
 
         /**
-         * <p>The name of the self-managed ClickHouse cluster. You can execute the <code>SELECT * FROM system.clusters</code> statement to query the cluster name.</p>
+         * <p>The cluster name of the self-managed ClickHouse cluster. You can execute the <code>SELECT * FROM system.clusters</code> statement to obtain the cluster name.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -404,7 +404,7 @@ public class TransferVersionRequest extends Request {
         }
 
         /**
-         * <p>The password that corresponds to the database account for logging on to the database in the source ApsaraDB for ClickHouse cluster.</p>
+         * <p>The password of the source account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -417,7 +417,7 @@ public class TransferVersionRequest extends Request {
         }
 
         /**
-         * <p>The endpoint and TCP port of the self-managed ClickHouse cluster.</p>
+         * <p>The address and TCP port information of the self-managed ClickHouse cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.0.4:9000,192.168.0.5:9000,192.168.0.6:9000</p>
@@ -429,7 +429,7 @@ public class TransferVersionRequest extends Request {
         }
 
         /**
-         * <p>The database account that is used to log on to the database in the destination ApsaraDB for ClickHouse cluster.</p>
+         * <p>The destination account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -442,7 +442,7 @@ public class TransferVersionRequest extends Request {
         }
 
         /**
-         * <p>The ID of the destination ApsaraDB for ClickHouse cluster.</p>
+         * <p>The ID of the destination cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -455,7 +455,7 @@ public class TransferVersionRequest extends Request {
         }
 
         /**
-         * <p>The password that corresponds to the database account for logging on to the database in the destination ApsaraDB for ClickHouse cluster.</p>
+         * <p>The password of the destination account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

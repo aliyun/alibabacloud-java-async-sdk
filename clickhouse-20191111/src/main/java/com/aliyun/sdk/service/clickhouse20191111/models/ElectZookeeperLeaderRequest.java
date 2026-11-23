@@ -186,6 +186,7 @@ public class ElectZookeeperLeaderRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -198,7 +199,10 @@ public class ElectZookeeperLeaderRequest extends Request {
         }
 
         /**
-         * DisableWrite.
+         * <p>Specifies whether to disable write operations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder disableWrite(Boolean disableWrite) {
             this.putQueryParameter("DisableWrite", disableWrite);
@@ -207,7 +211,10 @@ public class ElectZookeeperLeaderRequest extends Request {
         }
 
         /**
-         * ElectTime.
+         * <p>The time when the primary switchover is performed. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-12-12T07:28:00Z</p>
          */
         public Builder electTime(String electTime) {
             this.putQueryParameter("ElectTime", electTime);
@@ -234,7 +241,10 @@ public class ElectZookeeperLeaderRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -243,7 +253,15 @@ public class ElectZookeeperLeaderRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values:</p>
+         * <ul>
+         * <li><strong>30</strong> (default)</li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -252,7 +270,10 @@ public class ElectZookeeperLeaderRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -119,7 +119,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The retention period for the backup data. By default, the backup data is retained for seven days. Valid values: 7 to 730. Unit: day.</p>
+         * <p>The backup retention period. Default value: 7 days. Valid values: 7 to 730. Unit: days.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -130,7 +130,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The size of the backup data. Unit: MB.</p>
+         * <p>The backup size. Unit: MB.</p>
          * 
          * <strong>example:</strong>
          * <p>123124</p>
@@ -141,15 +141,15 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The day of a week when the system regularly backs up data. Valid values:</p>
+         * <p>The backup cycle. Valid values:</p>
          * <ul>
-         * <li><strong>Monday</strong></li>
-         * <li><strong>Tuesday</strong></li>
-         * <li><strong>Wednesday</strong></li>
-         * <li><strong>Thursday</strong></li>
-         * <li><strong>Friday</strong></li>
-         * <li><strong>Saturday</strong></li>
-         * <li><strong>Sunday</strong></li>
+         * <li><strong>Monday</strong>: Monday.</li>
+         * <li><strong>Tuesday</strong>: Tuesday.</li>
+         * <li><strong>Wednesday</strong>: Wednesday.</li>
+         * <li><strong>Thursday</strong>: Thursday.</li>
+         * <li><strong>Friday</strong>: Friday.</li>
+         * <li><strong>Saturday</strong>: Saturday.</li>
+         * <li><strong>Sunday</strong>: Sunday.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -161,7 +161,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The backup window. The time is displayed in Coordinated Universal Time (UTC).</p>
+         * <p>The backup time in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>15:00Z-16:00Z</p>
@@ -183,10 +183,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the backup feature is enabled. Valid values:</p>
+         * <p>Indicates whether the backup service is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: Enabled.</li>
+         * <li><strong>false</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>

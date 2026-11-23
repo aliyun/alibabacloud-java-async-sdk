@@ -179,9 +179,9 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the region ID.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -195,6 +195,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
+         * <p>The resource ID.</p>
          * <p>This parameter is required.</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
@@ -222,11 +223,11 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The type of the resource. Set the value to <strong>CLUSTER</strong>.</p>
+         * <p>The resource type. Valid value: <strong>DBCLUSTER</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>CLUSTER</p>
+         * <p>DBCLUSTER</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -235,6 +236,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
+         * <p>The list of tags.</p>
          * <p>This parameter is required.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
@@ -303,7 +305,7 @@ public class TagResourcesRequest extends Request {
             } 
 
             /**
-             * <p>The key of the tag to add to the resource. You can add N tag keys. N is an integer. Valid values of N: <strong>1 to 20</strong>.</p>
+             * <p>The tag key. You can add N tag keys. N is an integer and ranges from <strong>1 to 20</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>testkey1</p>
@@ -314,7 +316,7 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * <p>The value of the tag to add to the resource. You can add N tag values. N is an integer. Valid values of N: <strong>1 to 20</strong>.</p>
+             * <p>The tag value that corresponds to the tag key. You can add N tag values. N is an integer and ranges from <strong>1 to 20</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>testvalue1</p>

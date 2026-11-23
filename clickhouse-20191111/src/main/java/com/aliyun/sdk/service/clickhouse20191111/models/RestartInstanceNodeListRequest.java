@@ -186,6 +186,7 @@ public class RestartInstanceNodeListRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -198,7 +199,7 @@ public class RestartInstanceNodeListRequest extends Request {
         }
 
         /**
-         * NodeList.
+         * <p>The list of nodes to restart.</p>
          */
         public Builder nodeList(java.util.List<String> nodeList) {
             String nodeListShrink = shrink(nodeList, "NodeList", "json");
@@ -226,7 +227,10 @@ public class RestartInstanceNodeListRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -235,7 +239,15 @@ public class RestartInstanceNodeListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values:</p>
+         * <ul>
+         * <li><strong>30</strong> (default)</li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -244,7 +256,10 @@ public class RestartInstanceNodeListRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -271,7 +286,13 @@ public class RestartInstanceNodeListRequest extends Request {
         }
 
         /**
-         * RestartTime.
+         * <p>The scheduled restart time. Format: yyyy-MM-ddTHH:mmZ (UTC).</p>
+         * <blockquote>
+         * <p>If this parameter is left empty or set to a time earlier than the current time, the cluster is restarted immediately.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-03-22T00:00:50Z</p>
          */
         public Builder restartTime(String restartTime) {
             this.putQueryParameter("RestartTime", restartTime);

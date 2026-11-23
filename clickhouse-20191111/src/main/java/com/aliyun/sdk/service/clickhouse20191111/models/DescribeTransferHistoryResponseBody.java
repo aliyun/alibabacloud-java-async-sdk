@@ -67,7 +67,7 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The migration information.</p>
+         * HistoryDetails.
          */
         public Builder historyDetails(HistoryDetails historyDetails) {
             this.historyDetails = historyDetails;
@@ -300,10 +300,7 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The amount of data that is migrated per minute.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>10240</p>
+             * BytesPerMinute.
              */
             public Builder bytesPerMinute(Long bytesPerMinute) {
                 this.bytesPerMinute = bytesPerMinute;
@@ -311,10 +308,7 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time window during which write operations are stopped.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2025-02-08T00:00:00+08:00,2025-02-12T00:00:00+08:00</p>
+             * DisableWriteWindows.
              */
             public Builder disableWriteWindows(String disableWriteWindows) {
                 this.disableWriteWindows = disableWriteWindows;
@@ -322,10 +316,7 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of parts that are migrated per minute.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1.24</p>
+             * PartsPerMinute.
              */
             public Builder partsPerMinute(Double partsPerMinute) {
                 this.partsPerMinute = partsPerMinute;
@@ -333,10 +324,7 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The progress of the data migration.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>100%</p>
+             * Progress.
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -344,10 +332,7 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The control version of the source cluster.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>v1</p>
+             * SourceControlVersion.
              */
             public Builder sourceControlVersion(String sourceControlVersion) {
                 this.sourceControlVersion = sourceControlVersion;
@@ -355,10 +340,7 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the source cluster.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cc-bp108z124a8o7****</p>
+             * SourceDBCluster.
              */
             public Builder sourceDBCluster(String sourceDBCluster) {
                 this.sourceDBCluster = sourceDBCluster;
@@ -366,14 +348,7 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the data migration task. Valid values:</p>
-             * <ul>
-             * <li><strong>Finished</strong>: The data migration task is complete.</li>
-             * <li><strong>Processing</strong>: The data migration task is in progress.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Finished</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -381,10 +356,7 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The running subtask.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>SubJob</p>
+             * SubJob.
              */
             public Builder subJob(String subJob) {
                 this.subJob = subJob;
@@ -400,10 +372,7 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The subtask status.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>running</p>
+             * SubJobStatus.
              */
             public Builder subJobStatus(String subJobStatus) {
                 this.subJobStatus = subJobStatus;
@@ -411,10 +380,7 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The control version of the destination cluster.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>v2</p>
+             * TargetControlVersion.
              */
             public Builder targetControlVersion(String targetControlVersion) {
                 this.targetControlVersion = targetControlVersion;
@@ -422,10 +388,7 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the destination cluster.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cc-bp13zkh9uw523****</p>
+             * TargetDBCluster.
              */
             public Builder targetDBCluster(String targetDBCluster) {
                 this.targetDBCluster = targetDBCluster;
@@ -433,10 +396,7 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The amount of data that is not migrated.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>102400</p>
+             * UnsyncedBytes.
              */
             public Builder unsyncedBytes(Long unsyncedBytes) {
                 this.unsyncedBytes = unsyncedBytes;
@@ -444,10 +404,7 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of parts that are not migrated.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1000</p>
+             * UnsyncedParts.
              */
             public Builder unsyncedParts(Long unsyncedParts) {
                 this.unsyncedParts = unsyncedParts;

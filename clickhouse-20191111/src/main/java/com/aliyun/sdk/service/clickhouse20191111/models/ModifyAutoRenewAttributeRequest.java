@@ -173,6 +173,7 @@ public class ModifyAutoRenewAttributeRequest extends Request {
         } 
 
         /**
+         * <p>The cluster IDs. Separate multiple cluster IDs with commas (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -185,7 +186,19 @@ public class ModifyAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * Duration.
+         * <p>The renewal duration. Default value: <strong>1</strong>.</p>
+         * <ul>
+         * <li><p>If PeriodUnit is set to <strong>Month</strong>, valid values are 1 to 11.</p>
+         * </li>
+         * <li><p>If PeriodUnit is set to <strong>Year</strong>, valid values are 1, 2, 3, and 5.</p>
+         * <blockquote>
+         * <p>A longer subscription duration offers a greater discount. For example, a 1-year subscription is more cost-effective than a 10-month or 11-month subscription.</p>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder duration(String duration) {
             this.putQueryParameter("Duration", duration);
@@ -212,7 +225,10 @@ public class ModifyAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * PeriodUnit.
+         * <p>The unit of the renewal duration, which is the unit of the Duration parameter. Valid values: Month and Year.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Year</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -221,6 +237,7 @@ public class ModifyAutoRenewAttributeRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -233,7 +250,18 @@ public class ModifyAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * RenewalStatus.
+         * <p>The renewal status. Valid values:</p>
+         * <ul>
+         * <li><p><strong>AutoRenewal</strong>: Auto-renewal.</p>
+         * </li>
+         * <li><p><strong>Normal</strong>: Manual renewal.</p>
+         * </li>
+         * <li><p><strong>NotRenewal</strong>: No renewal upon expiration.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AutoRenewal</p>
          */
         public Builder renewalStatus(String renewalStatus) {
             this.putQueryParameter("RenewalStatus", renewalStatus);

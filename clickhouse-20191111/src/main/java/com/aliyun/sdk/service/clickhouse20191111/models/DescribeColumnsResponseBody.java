@@ -67,7 +67,7 @@ public class DescribeColumnsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Details of the columns.</p>
+         * Items.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -209,14 +209,7 @@ public class DescribeColumnsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the column is an auto-increment column. Valid values:</p>
-             * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * AutoIncrementColumn.
              */
             public Builder autoIncrementColumn(Boolean autoIncrementColumn) {
                 this.autoIncrementColumn = autoIncrementColumn;
@@ -224,10 +217,7 @@ public class DescribeColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The column name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>name</p>
+             * ColumnName.
              */
             public Builder columnName(String columnName) {
                 this.columnName = columnName;
@@ -235,10 +225,7 @@ public class DescribeColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cluster ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cc-2zeux3ua25242****</p>
+             * DBClusterId.
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -246,14 +233,7 @@ public class DescribeColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the column is the primary key of the table. Valid values:</p>
-             * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * PrimaryKey.
              */
             public Builder primaryKey(Boolean primaryKey) {
                 this.primaryKey = primaryKey;
@@ -261,10 +241,7 @@ public class DescribeColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The database name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>database</p>
+             * SchemaName.
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -272,10 +249,7 @@ public class DescribeColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The table name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>table</p>
+             * TableName.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -283,10 +257,7 @@ public class DescribeColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The column type.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>String</p>
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;

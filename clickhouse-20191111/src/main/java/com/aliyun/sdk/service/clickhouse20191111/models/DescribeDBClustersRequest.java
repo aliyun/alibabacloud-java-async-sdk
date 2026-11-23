@@ -66,6 +66,10 @@ public class DescribeDBClustersRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List<Tag> tag;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcIds")
+    private String vpcIds;
+
     private DescribeDBClustersRequest(Builder builder) {
         super(builder);
         this.DBClusterDescription = builder.DBClusterDescription;
@@ -80,6 +84,7 @@ public class DescribeDBClustersRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.tag = builder.tag;
+        this.vpcIds = builder.vpcIds;
     }
 
     public static Builder builder() {
@@ -179,6 +184,13 @@ public class DescribeDBClustersRequest extends Request {
         return this.tag;
     }
 
+    /**
+     * @return vpcIds
+     */
+    public String getVpcIds() {
+        return this.vpcIds;
+    }
+
     public static final class Builder extends Request.Builder<DescribeDBClustersRequest, Builder> {
         private String DBClusterDescription; 
         private String DBClusterIds; 
@@ -192,6 +204,7 @@ public class DescribeDBClustersRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private java.util.List<Tag> tag; 
+        private String vpcIds; 
 
         private Builder() {
             super();
@@ -211,6 +224,7 @@ public class DescribeDBClustersRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.tag = request.tag;
+            this.vpcIds = request.vpcIds;
         } 
 
         /**
@@ -226,9 +240,9 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The cluster IDs.</p>
          * <blockquote>
-         * <p> If you do not specify this parameter, the information about all clusters is queried.</p>
+         * <p>If you do not specify this parameter, the information about all clusters is queried by default.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -241,13 +255,13 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * <p>The state of the cluster. Valid values:</p>
+         * <p>The status of the cluster. Valid values:</p>
          * <ul>
-         * <li><strong>Preparing</strong>: The cluster is being prepared.</li>
-         * <li><strong>Creating</strong>: The cluster is being created.</li>
-         * <li><strong>Running</strong>: The cluster is running.</li>
-         * <li><strong>Deleting</strong>: The cluster is being deleted.</li>
-         * <li><strong>SCALING_OUT</strong>: The storage capacity of the cluster is being expanded.</li>
+         * <li><strong>Preparing</strong>: preparing</li>
+         * <li><strong>Creating</strong>: creating</li>
+         * <li><strong>Running</strong>: running</li>
+         * <li><strong>Deleting</strong>: deleting</li>
+         * <li><strong>SCALING_OUT</strong>: scaling out</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -290,7 +304,7 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return per page. Valid values:</p>
+         * <p>The number of entries per page. Valid values:</p>
          * <ul>
          * <li><strong>30</strong> (default)</li>
          * <li><strong>50</strong></li>
@@ -307,7 +321,7 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -355,6 +369,18 @@ public class DescribeDBClustersRequest extends Request {
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
+            return this;
+        }
+
+        /**
+         * <p>The VPC IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-2ze4ee9z******,vpc-2ze4ee9z5l******</p>
+         */
+        public Builder vpcIds(String vpcIds) {
+            this.putQueryParameter("VpcIds", vpcIds);
+            this.vpcIds = vpcIds;
             return this;
         }
 
@@ -418,7 +444,7 @@ public class DescribeDBClustersRequest extends Request {
             } 
 
             /**
-             * <p>The tag name.</p>
+             * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
              * <p>department</p>
