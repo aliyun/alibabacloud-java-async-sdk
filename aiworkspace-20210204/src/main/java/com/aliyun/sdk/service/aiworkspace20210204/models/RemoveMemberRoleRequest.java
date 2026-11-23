@@ -90,7 +90,7 @@ public class RemoveMemberRoleRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the workspace. To get this ID, call the <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> operation.</p>
+         * <p>The workspace ID. You can obtain the ID by calling <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -103,7 +103,7 @@ public class RemoveMemberRoleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the member. To get this ID, see <a href="https://help.aliyun.com/document_detail/449135.html">ListMembers</a>.</p>
+         * <p>The member ID. For more information about how to obtain the member ID, see <a href="https://help.aliyun.com/document_detail/449135.html">ListMembers</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,28 +116,20 @@ public class RemoveMemberRoleRequest extends Request {
         }
 
         /**
-         * <p>The role to remove. Both official roles and custom roles are supported:</p>
+         * <p>The role to delete. Both official and custom roles are supported:</p>
          * <ul>
-         * <li><p>Official roles: Valid values include the following. See <a href="https://help.aliyun.com/document_detail/2840449.html">Appendix: Roles and permissions</a> for more information about the permissions of each role.</p>
-         * <ul>
-         * <li><p>PAI.AlgoDeveloper: Algorithm developer.</p>
-         * </li>
-         * <li><p>PAI.AlgoOperator: Algorithm operator.</p>
-         * </li>
-         * <li><p>PAI.LabelManager: Label manager.</p>
-         * </li>
-         * <li><p>PAI.MaxComputeDeveloper: MaxCompute developer.</p>
-         * </li>
-         * <li><p>PAI.WorkspaceAdmin: Administrator.</p>
-         * </li>
-         * <li><p>PAI.WorkspaceGuest: Guest.</p>
-         * </li>
-         * <li><p>PAI.WorkspaceOwner: Owner.</p>
-         * </li>
+         * <li>Official roles: Valid values:<ul>
+         * <li>PAI.AlgoDeveloper: algorithm developer</li>
+         * <li>PAI.AlgoOperator: algorithm O&amp;M</li>
+         * <li>PAI.LabelManager: labeling administrator</li>
+         * <li>PAI.MaxComputeDeveloper: MaxCompute developer</li>
+         * <li>PAI.WorkspaceAdmin: administrator</li>
+         * <li>PAI.WorkspaceGuest: guest</li>
+         * <li>PAI.WorkspaceOwner: owner
+         * For more information about the permissions of each role, see <a href="https://help.aliyun.com/document_detail/2840449.html">Appendix: Roles and permissions</a>.</li>
          * </ul>
          * </li>
-         * <li><p>Custom roles: Specify the role ID. The ID must start with <code>role-</code>, for example, <code>role-sw******2tij</code>.</p>
-         * </li>
+         * <li>Custom roles: Specify the role ID. The ID must start with role-, such as role-sw******2tij.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

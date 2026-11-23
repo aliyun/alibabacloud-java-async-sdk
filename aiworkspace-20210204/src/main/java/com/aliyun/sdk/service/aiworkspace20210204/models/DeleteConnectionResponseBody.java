@@ -54,7 +54,7 @@ public class DeleteConnectionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The unique ID of the request.</p>
+         * <p>The unique request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5A14FA81-DD4E-******-6343FE44B941</p>

@@ -103,7 +103,7 @@ public class UpdateWorkspaceRoleRequest extends Request {
         } 
 
         /**
-         * <p>The workspace ID. Call the <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> operation to obtain this ID.</p>
+         * <p>The workspace ID. You can obtain the workspace ID by calling the <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +129,7 @@ public class UpdateWorkspaceRoleRequest extends Request {
         }
 
         /**
-         * <p>The permission settings for the role.</p>
+         * <p>The permission configuration of the role.</p>
          */
         public Builder modulePermissions(java.util.List<ModulePermissions> modulePermissions) {
             this.putBodyParameter("ModulePermissions", modulePermissions);
@@ -138,7 +138,7 @@ public class UpdateWorkspaceRoleRequest extends Request {
         }
 
         /**
-         * <p>The name of the custom role. The name must be unique within the workspace. It can be up to 64 characters long and can contain letters, digits, underscores (_), and hyphens (-).</p>
+         * <p>The name of the custom role. The name must be unique within the same workspace. The name can contain letters, digits, underscores (_), and hyphens (-), and can be up to 64 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>dev-test</p>

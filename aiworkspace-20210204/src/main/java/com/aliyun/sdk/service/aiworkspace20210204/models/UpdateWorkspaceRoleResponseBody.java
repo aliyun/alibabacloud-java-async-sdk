@@ -67,7 +67,7 @@ public class UpdateWorkspaceRoleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The task ID.</p>
+         * <p>The ID of the task corresponding to the request.</p>
          * 
          * <strong>example:</strong>
          * <p>UpdateWorkspaceCustomRole-role-<em><strong>abc</strong></em>****</p>

@@ -75,7 +75,7 @@ public class DeleteMembersRequest extends Request {
         } 
 
         /**
-         * <p>The workspace ID. For more information about how to obtain a workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
+         * <p>The workspace ID. For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class DeleteMembersRequest extends Request {
         }
 
         /**
-         * <p>A list of member IDs. Separate multiple member IDs with commas (,). For more information about how to obtain member IDs, see <a href="https://help.aliyun.com/document_detail/449135.html">ListMembers</a>.</p>
+         * <p>The list of member IDs. Separate multiple member IDs with commas (,). For information about how to obtain member IDs, see <a href="https://help.aliyun.com/document_detail/449135.html">ListMembers</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

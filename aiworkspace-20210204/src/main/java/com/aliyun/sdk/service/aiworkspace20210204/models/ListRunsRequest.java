@@ -282,7 +282,7 @@ public class ListRunsRequest extends Request {
          * <p>The labels of the task for exact matching. Supported formats:</p>
          * <ul>
          * <li>Single-label query: &quot;is_evaluation:true&quot;</li>
-         * <li>Multi-label scenario (not recommended for common scenarios due to potential performance issues): &quot;is_evaluation:true,LLM_evaluation:true&quot;. Use commas (,) to separate multiple labels, which means all specified label key-value pairs must be matched at the same time.</li>
+         * <li>Multi-label query (not recommended unless necessary due to potential performance issues): &quot;is_evaluation:true,LLM_evaluation:true&quot;. Separate multiple label key-value pairs with commas (,). All specified label key-value pairs must be matched at the same time.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -319,7 +319,7 @@ public class ListRunsRequest extends Request {
         }
 
         /**
-         * <p>Specifies the sorting of the specified field during a paged query. This parameter is used together with SortBy for paging. Valid values:</p>
+         * <p>The sorting order of the specified field for a paging query. This parameter is used together with SortBy. Valid values:</p>
          * <ul>
          * <li>ASC: ascending order.</li>
          * <li>DESC (default): descending order.</li>
@@ -335,7 +335,7 @@ public class ListRunsRequest extends Request {
         }
 
         /**
-         * <p>The list of strings that specify the sort order. Supported fields for sorting include GmtCreateTime and Name. The sort orders include DESC and ASC. Default value: ASC. You can specify multiple fields and separate them with commas (,).</p>
+         * <p>The list of strings that specify the sorting methods. Supported fields for sorting include GmtCreateTime and Name. Valid sorting methods are DESC and ASC. Default value: ASC. You can specify multiple fields and separate them with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>GmtCreateTime DESC,Name ASC</p>
@@ -371,7 +371,7 @@ public class ListRunsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token. The value starts from 0. Default value: 0.</p>
+         * <p>The pagination token. The token starts from 0. Default value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -425,8 +425,8 @@ public class ListRunsRequest extends Request {
         /**
          * <p>Specifies whether to display detailed information, including Metrics, Params, and Labels. Valid values:</p>
          * <ul>
-         * <li>true: Displays detailed information.</li>
-         * <li>false (default): Does not display detailed information.</li>
+         * <li>true: displays detailed information.</li>
+         * <li>false (default): does not display detailed information.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -439,7 +439,10 @@ public class ListRunsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the workspace to which the experiment belongs. For more information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>. If you do not specify the workspace ID, the system returns the runs in the default workspace.</p>
+         * <p>The ID of the workspace to which the experiment belongs. For more information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
+         * <blockquote>
+         * <p>If you do not specify the workspace ID, the system returns the list of runs in the default workspace.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>228**</p>

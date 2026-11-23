@@ -78,7 +78,7 @@ public class UpdateWorkspaceResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>An array of IDs for the resources that were updated.</p>
+         * <p>The collection of resource IDs updated in this request.</p>
          * 
          * <strong>example:</strong>
          * <p>Resource-dks******jkf</p>

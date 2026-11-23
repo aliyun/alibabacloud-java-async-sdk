@@ -80,7 +80,10 @@ public class LineageRelation extends TeaModel {
         } 
 
         /**
-         * <p>The unique qualified name of the destination data lineage entity.</p>
+         * <p>The unique qualified name of the destination lineage entity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>maxcompute-table.demo_project.training_output</p>
          */
         public Builder destEntityQualifiedName(String destEntityQualifiedName) {
             this.destEntityQualifiedName = destEntityQualifiedName;
@@ -88,7 +91,10 @@ public class LineageRelation extends TeaModel {
         }
 
         /**
-         * <p>The globally unique identifier of the data lineage relationship.</p>
+         * <p>The globally unique identifier of the lineage relationship.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0f94c587-e926-48c8-9efe-bf9f8d9aa5c2</p>
          */
         public Builder relationshipGuid(String relationshipGuid) {
             this.relationshipGuid = relationshipGuid;
@@ -96,7 +102,10 @@ public class LineageRelation extends TeaModel {
         }
 
         /**
-         * <p>The unique qualified name of the source data lineage entity.</p>
+         * <p>The unique qualified name of the source lineage entity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>maxcompute-table.demo_project.training_data</p>
          */
         public Builder srcEntityQualifiedName(String srcEntityQualifiedName) {
             this.srcEntityQualifiedName = srcEntityQualifiedName;

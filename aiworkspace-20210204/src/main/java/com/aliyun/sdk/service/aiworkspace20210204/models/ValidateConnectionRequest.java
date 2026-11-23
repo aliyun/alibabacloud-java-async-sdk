@@ -130,7 +130,7 @@ public class ValidateConnectionRequest extends Request {
         } 
 
         /**
-         * <p>The configuration of the connection, specified as key-value pairs. The configuration keys vary by connection type. For more information, see the supplementary information about the request parameters of the CreateConnection operation.</p>
+         * <p>The configuration information of the connection. The information is configured in key-value pairs. The keys in the configuration vary based on the connection type. For more information, see the supplementary description of request parameters for the CreateConnection operation.</p>
          */
         public Builder configs(java.util.Map<String, String> configs) {
             this.putBodyParameter("Configs", configs);
@@ -139,7 +139,7 @@ public class ValidateConnectionRequest extends Request {
         }
 
         /**
-         * <p>The connection ID. For more information about how to obtain the connection ID, see <a href="url">ListConnections</a>.</p>
+         * <p>The connection ID. For more information about how to obtain the connection ID, see <a href="~~ListConnections~~">ListConnections</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>conn-x2wz5zvvbyf2420fi9</p>
@@ -151,16 +151,12 @@ public class ValidateConnectionRequest extends Request {
         }
 
         /**
-         * <p>The connection type. Only connection types that support public network access are available. Valid values:</p>
+         * <p>The type of the connection. You can specify a connection type that supports public network access. Valid values:</p>
          * <ul>
-         * <li><p>DashScopeConnection: a service connection for Alibaba Cloud Model Studio.</p>
-         * </li>
-         * <li><p>DeepSeekConnection: a service connection for DeepSeek.</p>
-         * </li>
-         * <li><p>FunctionAIMCPConnection: a connection for Function AI MCP.</p>
-         * </li>
-         * <li><p>CustomMCPConnection: a custom MCP connection.</p>
-         * </li>
+         * <li>DashScopeConnection: The Model Studio connection.</li>
+         * <li>DeepSeekConnection: The DeepSeek connection.</li>
+         * <li>FunctionAIMCPConnection: The Function AI MCP connection.</li>
+         * <li>CustomMCPConnection: The custom MCP connection.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -173,7 +169,7 @@ public class ValidateConnectionRequest extends Request {
         }
 
         /**
-         * <p>The key-value pairs to encrypt, such as a database logon password or a model connection key.</p>
+         * <p>The key-value configurations that require encryption, such as the database logon password and the key for the model connection.</p>
          */
         public Builder secrets(java.util.Map<String, String> secrets) {
             this.putBodyParameter("Secrets", secrets);
@@ -182,9 +178,9 @@ public class ValidateConnectionRequest extends Request {
         }
 
         /**
-         * <p>The validation type. Set the value to:</p>
+         * <p>The validation type. Valid values:</p>
          * <ul>
-         * <li>Connectivity: a connectivity test</li>
+         * <li>Connectivity: The connectivity test.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -197,7 +193,7 @@ public class ValidateConnectionRequest extends Request {
         }
 
         /**
-         * <p>The workspace ID. For more information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
+         * <p>The workspace ID. You can obtain the workspace ID by calling the <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -80,7 +80,7 @@ public class DeleteDatasetFileMetasResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A list of file metadata records that failed to be deleted.</p>
+         * <p>The list of file metadata records that failed to be deleted.</p>
          */
         public Builder failedDetails(java.util.List<DatasetFileMetaResponse> failedDetails) {
             this.failedDetails = failedDetails;
@@ -99,7 +99,7 @@ public class DeleteDatasetFileMetasResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the batch deletion. A value of \<code>true\\</code> indicates that all metadata records were deleted. If the value is \<code>false\\</code>, check the \<code>FailedDetails\\</code> parameter for more information.</p>
+         * <p>The status of the metadata deletion result for the current batch. A value of true indicates that all deletions succeeded. If the value is false, check FailedDetails.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

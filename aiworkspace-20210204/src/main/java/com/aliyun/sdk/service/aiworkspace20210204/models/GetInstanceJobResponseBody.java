@@ -132,7 +132,7 @@ public class GetInstanceJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The creation time in UTC, in ISO 8601 format.</p>
+         * <p>The creation time. The time is in UTC and follows the ISO 8601 standard.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-21T17:12:35.232Z</p>
@@ -143,7 +143,7 @@ public class GetInstanceJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The instance ID. For example, if a job creates a custom role, this parameter returns the corresponding role ID.</p>
+         * <p>Instance ID of the task instance. For example, in a task that creates a custom role, this is instance ID of the generated role.</p>
          * 
          * <strong>example:</strong>
          * <p><em><strong><strong>12qb3</strong></strong></em></p>
@@ -154,7 +154,7 @@ public class GetInstanceJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The job ID.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>CreateWorkspaceCustomRole-role-<em><strong>abc</strong></em>****</p>
@@ -165,7 +165,7 @@ public class GetInstanceJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A message providing details about the job.</p>
+         * <p>The detailed description of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>workspace-example</p>
@@ -187,18 +187,13 @@ public class GetInstanceJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the job. Valid values:</p>
+         * <p>The task status. Valid values:</p>
          * <ul>
-         * <li><p>Creating: The job is being created.</p>
-         * </li>
-         * <li><p>Updating: The job is being updated.</p>
-         * </li>
-         * <li><p>Deleting: The job is being deleted.</p>
-         * </li>
-         * <li><p>Successful: The job completed successfully (a final state).</p>
-         * </li>
-         * <li><p>Failed: The job failed (a final state).</p>
-         * </li>
+         * <li>Creating: The task is being created.</li>
+         * <li>Updating: The task is being updated.</li>
+         * <li>Deleting: The task is being deleted.</li>
+         * <li>Successful: The task succeeded. This is a desired state.</li>
+         * <li>Failed: The task failed. This is a desired state.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -210,14 +205,11 @@ public class GetInstanceJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The job type. Valid values:</p>
+         * <p>The task type. Valid values:</p>
          * <ul>
-         * <li><p>CreateWorkspaceCustomRole</p>
-         * </li>
-         * <li><p>UpdateWorkspaceCustomRole</p>
-         * </li>
-         * <li><p>DeleteWorkspaceCustomRole</p>
-         * </li>
+         * <li>CreateWorkspaceCustomRole</li>
+         * <li>UpdateWorkspaceCustomRole</li>
+         * <li>DeleteWorkspaceCustomRole</li>
          * </ul>
          * 
          * <strong>example:</strong>

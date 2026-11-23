@@ -60,7 +60,7 @@ public class GetInstanceJobRequest extends Request {
         } 
 
         /**
-         * <p>The job ID.</p>
+         * <p>The ID of the task corresponding to the request.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

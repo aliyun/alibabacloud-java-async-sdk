@@ -110,6 +110,9 @@ public class Relationship extends TeaModel {
 
         /**
          * <p>The globally unique identifier of the lineage relationship.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0f94c587-e926-48c8-9efe-bf9f8d9aa5c2</p>
          */
         public Builder relationshipGuid(String relationshipGuid) {
             this.relationshipGuid = relationshipGuid;

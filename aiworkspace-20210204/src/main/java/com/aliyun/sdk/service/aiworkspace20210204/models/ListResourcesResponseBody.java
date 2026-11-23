@@ -1062,7 +1062,7 @@ public class ListResourcesResponseBody extends TeaModel {
              * <p>The resource specifications.</p>
              * 
              * <strong>example:</strong>
-             * <p>对于MaxCompute {&quot;Endpoint&quot;: &quot;odps.alibaba-inc.com&quot;, &quot;Project&quot;: &quot;mignshi&quot;}</p>
+             * <p>{&quot;Endpoint&quot;:&quot;odps.alibaba-inc.com&quot;,&quot;Project&quot;:&quot;mignshi&quot;}</p>
              */
             public Builder spec(java.util.Map<String, ?> spec) {
                 this.spec = spec;

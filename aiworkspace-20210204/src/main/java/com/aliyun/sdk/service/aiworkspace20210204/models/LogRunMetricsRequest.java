@@ -74,7 +74,7 @@ public class LogRunMetricsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the run.</p>
+         * <p>The run ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

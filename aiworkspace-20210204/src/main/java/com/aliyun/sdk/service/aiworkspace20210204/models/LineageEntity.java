@@ -94,6 +94,9 @@ public class LineageEntity extends TeaModel {
 
         /**
          * <p>Attributes</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Bucket&quot;:&quot;example-bucket&quot;,&quot;Path&quot;:&quot;training/data/&quot;,&quot;ResourceType&quot;:&quot;dataset&quot;,&quot;ResourceUse&quot;:&quot;train&quot;,&quot;RegionId&quot;:&quot;cn-hangzhou&quot;}</p>
          */
         public Builder attributes(java.util.Map<String, ?> attributes) {
             this.attributes = attributes;
@@ -102,6 +105,9 @@ public class LineageEntity extends TeaModel {
 
         /**
          * <p>The type of the data lineage entity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss-file</p>
          */
         public Builder entityType(String entityType) {
             this.entityType = entityType;
@@ -110,6 +116,9 @@ public class LineageEntity extends TeaModel {
 
         /**
          * <p>The name of the data lineage entity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>training-dataset</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -118,6 +127,9 @@ public class LineageEntity extends TeaModel {
 
         /**
          * <p>The unique qualified name of the data lineage entity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>maxcompute-table.demo_project.training_data</p>
          */
         public Builder qualifiedName(String qualifiedName) {
             this.qualifiedName = qualifiedName;

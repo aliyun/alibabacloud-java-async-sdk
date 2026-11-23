@@ -74,7 +74,7 @@ public class GetWorkspaceRoleRequest extends Request {
         } 
 
         /**
-         * <p>The workspace ID. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> operation.</p>
+         * <p>The workspace ID. You can call the <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> operation to obtain the workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,7 +87,7 @@ public class GetWorkspaceRoleRequest extends Request {
         }
 
         /**
-         * <p>The custom role ID.</p>
+         * <p>The ID of the custom role.</p>
          * 
          * <strong>example:</strong>
          * <p>role-sw******2tij</p>

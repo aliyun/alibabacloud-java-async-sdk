@@ -132,7 +132,7 @@ public class DatasetJobConfig extends TeaModel {
         } 
 
         /**
-         * <p>The content of the dataset job configuration, in JSON format.</p>
+         * <p>The content of the dataset job configuration in JSON format.</p>
          * 
          * <strong>example:</strong>
          * <p>{ &quot;apiKey&quot;:&quot;sk-xxxxxxxxxxxxxxxxxxxxx&quot; }</p>
@@ -154,7 +154,7 @@ public class DatasetJobConfig extends TeaModel {
         }
 
         /**
-         * <p>The creation time of the dataset job configuration.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-01-14T01:37:37Z</p>
@@ -165,7 +165,7 @@ public class DatasetJobConfig extends TeaModel {
         }
 
         /**
-         * <p>The unique ID for the dataset job configuration.</p>
+         * <p>The ID of the dataset job configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>dscfg-xxxxxxxxxxxx</p>
@@ -176,7 +176,10 @@ public class DatasetJobConfig extends TeaModel {
         }
 
         /**
-         * DatasetVersion.
+         * <p>The name of the dataset version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder datasetVersion(String datasetVersion) {
             this.datasetVersion = datasetVersion;
@@ -184,7 +187,7 @@ public class DatasetJobConfig extends TeaModel {
         }
 
         /**
-         * <p>The last modification time of the dataset job configuration.</p>
+         * <p>The modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-11T02:18:54Z</p>

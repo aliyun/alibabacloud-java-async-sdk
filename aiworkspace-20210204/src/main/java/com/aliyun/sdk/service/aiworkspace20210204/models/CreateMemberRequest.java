@@ -75,7 +75,7 @@ public class CreateMemberRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the workspace. For more information, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
+         * <p>The workspace ID. For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -168,7 +168,7 @@ public class CreateMemberRequest extends Request {
             }
 
             /**
-             * <p>The member IDs. Use commas (,) to separate multiple IDs. For more information, see <a href="https://help.aliyun.com/document_detail/449135.html">ListMembers</a>.</p>
+             * <p>The list of member IDs. Separate multiple member IDs with commas (,). For information about how to obtain a member ID, see <a href="https://help.aliyun.com/document_detail/449135.html">ListMembers</a>.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

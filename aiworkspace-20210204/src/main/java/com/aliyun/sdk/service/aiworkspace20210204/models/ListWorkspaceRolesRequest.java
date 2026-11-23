@@ -186,7 +186,7 @@ public class ListWorkspaceRolesRequest extends Request {
         } 
 
         /**
-         * <p>The workspace ID. Call the <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> operation to get it.</p>
+         * <p>The workspace ID. You can call the <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> operation to obtain the workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -199,12 +199,10 @@ public class ListWorkspaceRolesRequest extends Request {
         }
 
         /**
-         * <p>The sort order for the specified sort field. Valid values:</p>
+         * <p>The sorting order for the specified sorting field in paging. Valid values:</p>
          * <ul>
-         * <li><p><code>ASC</code> (default): Ascending order.</p>
-         * </li>
-         * <li><p><code>DESC</code>: Descending order.</p>
-         * </li>
+         * <li>ASC: Ascending order. Default value.</li>
+         * <li>DESC: Descending order.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -217,7 +215,7 @@ public class ListWorkspaceRolesRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from 1. The default value is 1.</p>
+         * <p>The page number. Pages start from 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -229,7 +227,7 @@ public class ListWorkspaceRolesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. The default value is 20.</p>
+         * <p>The number of entries per page. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -241,7 +239,7 @@ public class ListWorkspaceRolesRequest extends Request {
         }
 
         /**
-         * <p>A comma-separated list of role IDs.</p>
+         * <p>The list of role IDs. Separate multiple IDs with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>role-dhg*******</p>
@@ -265,9 +263,9 @@ public class ListWorkspaceRolesRequest extends Request {
         }
 
         /**
-         * <p>The role type.</p>
+         * <p>The role type. Valid values:</p>
          * <ul>
-         * <li><code>custom</code>: A custom role.</li>
+         * <li>custom: custom role.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -280,12 +278,10 @@ public class ListWorkspaceRolesRequest extends Request {
         }
 
         /**
-         * <p>The sort field for paginated queries. Valid values:</p>
+         * <p>The sorting field for paging. Valid values:</p>
          * <ul>
-         * <li><p><code>GmtCreateTime</code> (default): Sorts by creation time.</p>
-         * </li>
-         * <li><p><code>GmtModifiedTime</code>: Sorts by modification time.</p>
-         * </li>
+         * <li>GmtCreateTime: Sort by creation time. Default value.</li>
+         * <li>GmtModifiedTime: Sort by modification time.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -298,19 +294,7 @@ public class ListWorkspaceRolesRequest extends Request {
         }
 
         /**
-         * <p>The status. Valid values:</p>
-         * <ul>
-         * <li><p><code>Creating</code></p>
-         * </li>
-         * <li><p><code>Updating</code></p>
-         * </li>
-         * <li><p><code>Deleting</code></p>
-         * </li>
-         * <li><p><code>Succeeded</code>: A terminal state.</p>
-         * </li>
-         * <li><p><code>Failed</code>: A terminal state.</p>
-         * </li>
-         * </ul>
+         * <p><strong>[Deprecated]</strong> The status.</p>
          * 
          * <strong>example:</strong>
          * <p>Succeeded</p>
@@ -322,7 +306,7 @@ public class ListWorkspaceRolesRequest extends Request {
         }
 
         /**
-         * <p>A comma-separated list of fields to return. Currently, only <code>ModulePermissions</code> is supported, which returns the permission configuration of the role.</p>
+         * <p>The comma-separated list of fields to return. Currently, only ModulePermissions is supported, which indicates whether to return the permission configurations of the role.</p>
          * 
          * <strong>example:</strong>
          * <p>ModulePermissions</p>

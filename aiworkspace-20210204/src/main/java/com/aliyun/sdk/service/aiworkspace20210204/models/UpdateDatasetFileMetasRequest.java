@@ -117,7 +117,7 @@ public class UpdateDatasetFileMetasRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the dataset. For more information, see <a href="https://help.aliyun.com/document_detail/457222.html">ListDatasets</a>.</p>
+         * <p>The dataset ID. For more information about how to obtain the dataset ID, see <a href="https://help.aliyun.com/document_detail/457222.html">ListDatasets</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +130,7 @@ public class UpdateDatasetFileMetasRequest extends Request {
         }
 
         /**
-         * <p>A list of dataset file metadata to update.</p>
+         * <p>The list of dataset file metadata to be updated.</p>
          * <p>This parameter is required.</p>
          */
         public Builder datasetFileMetas(java.util.List<DatasetFileMetaConentUpdate> datasetFileMetas) {
@@ -152,7 +152,7 @@ public class UpdateDatasetFileMetasRequest extends Request {
         }
 
         /**
-         * <p>The ID of the tagging job for updating metadata tags.</p>
+         * <p>The ID of the tagging task associated with updating the tags in the dataset file metadata.</p>
          * 
          * <strong>example:</strong>
          * <p>dsjob-hv0b1****u8taig3y</p>
@@ -164,7 +164,7 @@ public class UpdateDatasetFileMetasRequest extends Request {
         }
 
         /**
-         * <p>The ID of the workspace that contains the dataset. For more information, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
+         * <p>The ID of the workspace to which the dataset belongs. For more information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>796**</p>

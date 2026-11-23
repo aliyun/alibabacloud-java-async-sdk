@@ -158,7 +158,7 @@ public class UpdateWorkspaceResourceRequest extends Request {
         } 
 
         /**
-         * <p>The workspace ID. For information about how to obtain a workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
+         * <p>The workspace ID. For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -183,7 +183,7 @@ public class UpdateWorkspaceResourceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to set the resource as the default resource for the workspace. Currently, only <code>true</code> is a valid value.</p>
+         * <p>Specifies whether the resource is the default resource. Currently, you can set this parameter only to true. The value false is not supported.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -195,7 +195,7 @@ public class UpdateWorkspaceResourceRequest extends Request {
         }
 
         /**
-         * <p>An array of tags. The update affects only resources that have all of the specified tags.</p>
+         * <p>The collection of resource tags. If multiple tags are specified, only resources that have all the specified tags are returned.</p>
          */
         public Builder labels(java.util.List<Labels> labels) {
             this.putBodyParameter("Labels", labels);
@@ -204,7 +204,7 @@ public class UpdateWorkspaceResourceRequest extends Request {
         }
 
         /**
-         * <p><strong>This parameter is deprecated. Use <code>ResourceType</code> instead.</strong></p>
+         * <p><strong>[Deprecated]</strong> This field is deprecated and will be taken offline. Use the ResourceType field instead.</p>
          * 
          * <strong>example:</strong>
          * <p>MaxCompute</p>
@@ -216,8 +216,7 @@ public class UpdateWorkspaceResourceRequest extends Request {
         }
 
         /**
-         * <p>An array of resource IDs.</p>
-         * <p>You cannot leave both <code>GroupName</code> and <code>ResourceIds</code> empty. If you specify both parameters, the group name must be the same for all specified resource IDs.</p>
+         * <p>The collection of resource IDs. GroupName and ResourceIds cannot be both empty, but they can be both specified. If both are specified, the GroupName of each resource ID in the collection must be the same.</p>
          */
         public Builder resourceIds(java.util.List<String> resourceIds) {
             this.putBodyParameter("ResourceIds", resourceIds);
@@ -226,24 +225,16 @@ public class UpdateWorkspaceResourceRequest extends Request {
         }
 
         /**
-         * <p>The resource type. Valid values are:</p>
+         * <p>The list of resource types. Valid values:</p>
          * <ul>
-         * <li><p>MaxCompute: MaxCompute resources.</p>
-         * </li>
-         * <li><p>ECS: General-purpose computing resources.</p>
-         * </li>
-         * <li><p>Lingjun: Lingjun intelligent computing resources.</p>
-         * </li>
-         * <li><p>ACS: ACS computing resources.</p>
-         * </li>
-         * <li><p>Flink: Flink resources.</p>
-         * </li>
-         * <li><p>SelfManagedAckPro: Resources for self-managed ACK Pro clusters.</p>
-         * </li>
-         * <li><p>SelfManagedAckLingjun: Resources for self-managed ACK Lingjun clusters.</p>
-         * </li>
-         * <li><p>SelfManagedASI: Resources for self-managed clusters on third-party clouds.</p>
-         * </li>
+         * <li>MaxCompute: MaxCompute big data compute EPS resources</li>
+         * <li>ECS: general-purpose compute resources</li>
+         * <li>Lingjun: Lingjun AI computing resources</li>
+         * <li>ACS: ACS compute resources</li>
+         * <li>FLINK: Flink resources</li>
+         * <li>SelfManagedAckPro: ACK Pro unified management cluster resources</li>
+         * <li>SelfManagedAckLingjun: ACK Lingjun unified management cluster resources</li>
+         * <li>SelfManagedASI: ASI unified management cluster resources (third-party cloud)</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -329,7 +320,7 @@ public class UpdateWorkspaceResourceRequest extends Request {
             } 
 
             /**
-             * <p>The key of the tag.</p>
+             * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
              * <p>system.******</p>
@@ -340,7 +331,7 @@ public class UpdateWorkspaceResourceRequest extends Request {
             }
 
             /**
-             * <p>The value of the tag.</p>
+             * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
              * <p>True</p>

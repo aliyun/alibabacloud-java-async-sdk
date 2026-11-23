@@ -107,7 +107,10 @@ public class RunMetric extends TeaModel {
         }
 
         /**
-         * <p>The step count at which the metric is generated.</p>
+         * <p>The step at which the metric is generated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder step(Long step) {
             this.step = step;
@@ -115,7 +118,10 @@ public class RunMetric extends TeaModel {
         }
 
         /**
-         * <p>The timestamp at which the metric is generated.</p>
+         * <p>The timestamp when the metric is generated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1793248584453</p>
          */
         public Builder timestamp(Long timestamp) {
             this.timestamp = timestamp;
@@ -125,6 +131,9 @@ public class RunMetric extends TeaModel {
         /**
          * <p>The metric value.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.25</p>
          */
         public Builder value(Float value) {
             this.value = value;

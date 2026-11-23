@@ -121,6 +121,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>为自定义镜像添加标签。
+     * 前置条件：仅支持为自定义镜像添加标签。请先调用 AddImage 将自定义镜像添加到工作空间，再使用其返回的 ImageId 调用本接口；传入官方镜像会返回错误码 201200010（Can\&quot;t update official images）。</p>
+     * 
      * @param request the request parameters of AddImageLabels  AddImageLabelsRequest
      * @return AddImageLabelsResponse
      */
@@ -366,7 +370,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
+     * <h2>Request description.</h2>
      * 
      * @param request the request parameters of CreateImageBuild  CreateImageBuildRequest
      * @return CreateImageBuildResponse
@@ -894,9 +898,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>When calling this operation, note the following:</p>
+     * <p>When you call this operation, note the following items:</p>
      * <ul>
-     * <li>Tag keys and values are non-empty strings and cannot exceed 128 characters in length.</li>
+     * <li>Tag keys and values must be non-empty strings and cannot exceed 128 characters in length.</li>
      * <li>Tag keys cannot start with aliyun, acs, http://, or https://.</li>
      * </ul>
      * 
@@ -1245,6 +1249,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>查询异步任务（InstanceJobId）的执行状态和结果。
+     * InstanceJobId 由 CreateWorkspaceRole、UpdateWorkspaceRole 等异步接口在响应字段 InstanceJobId 中返回，对应的任务类型见响应字段 Type。</p>
+     * 
      * @param request the request parameters of GetInstanceJob  GetInstanceJobRequest
      * @return GetInstanceJobResponse
      */
@@ -1932,6 +1940,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>将镜像的可见性从 PRIVATE 改为 PUBLIC。</p>
+     * <ul>
+     * <li>仅支持对可见性为 PRIVATE 的镜像调用；已是 PUBLIC 的镜像无需再次发布，直接调用会返回 400 错误。</li>
+     * <li>若当前工作空间没有 PRIVATE 镜像，请先调用 AddImage 添加自定义镜像（Accessibility 设为 PRIVATE），再使用其返回的 ImageId 调用本接口。</li>
+     * </ul>
+     * 
      * @param request the request parameters of PublishImage  PublishImageRequest
      * @return PublishImageResponse
      */
@@ -1950,6 +1965,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>删除镜像。</p>
+     * <ul>
+     * <li>仅支持删除用户自建（自定义）镜像，传入官方镜像会返回错误码 201200013。</li>
+     * <li>若账号下尚无自建镜像，需先调用 AddImage 创建自定义镜像，再使用其返回的 ImageId 调用本接口。</li>
+     * </ul>
+     * 
      * @param request the request parameters of RemoveImage  RemoveImageRequest
      * @return RemoveImageResponse
      */
@@ -2296,7 +2318,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Request description.</h2>
+     * <h2>Request description</h2>
      * 
      * @param request the request parameters of UpdatePrompt  UpdatePromptRequest
      * @return UpdatePromptResponse

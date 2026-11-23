@@ -90,7 +90,7 @@ public class AddMemberRoleRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the workspace. To obtain this ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
+         * <p>The workspace ID. For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -103,7 +103,7 @@ public class AddMemberRoleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the member. To obtain this ID, see <a href="https://help.aliyun.com/document_detail/449135.html">ListMembers</a>.</p>
+         * <p>The member ID. For information about how to obtain the member ID, see <a href="https://help.aliyun.com/document_detail/449135.html">ListMembers</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,27 +116,20 @@ public class AddMemberRoleRequest extends Request {
         }
 
         /**
-         * <p>The role to assign. You can specify a built-in role or a custom role.</p>
+         * <p>The role to be added. Both built-in and custom roles are supported:</p>
          * <ul>
-         * <li><p>Built-in role: You can specify one of the following built-in roles. For the permissions of each role, see <a href="https://help.aliyun.com/document_detail/2840449.html">Appendix: Roles and permissions</a>.</p>
+         * <li><p>Built-in roles: The following built-in roles are supported. For the permissions of each role, see <a href="https://help.aliyun.com/document_detail/2840449.html">Appendix: Roles and permissions</a>.</p>
          * <ul>
-         * <li><p><code>PAI.AlgoDeveloper</code>: Algorithm developer.</p>
-         * </li>
-         * <li><p><code>PAI.AlgoOperator</code>: Algorithm operator.</p>
-         * </li>
-         * <li><p><code>PAI.LabelManager</code>: Labeling administrator.</p>
-         * </li>
-         * <li><p><code>PAI.MaxComputeDeveloper</code>: MaxCompute developer.</p>
-         * </li>
-         * <li><p><code>PAI.WorkspaceAdmin</code>: Administrator.</p>
-         * </li>
-         * <li><p><code>PAI.WorkspaceGuest</code>: Guest.</p>
-         * </li>
-         * <li><p><code>PAI.WorkspaceOwner</code>: Owner.</p>
-         * </li>
+         * <li>PAI.AlgoDeveloper: Algorithm developer.</li>
+         * <li>PAI.AlgoOperator: Algorithm O&amp;M.</li>
+         * <li>PAI.LabelManager: Labeling administrator.</li>
+         * <li>PAI.MaxComputeDeveloper: MaxCompute developer.</li>
+         * <li>PAI.WorkspaceAdmin: Administrator.</li>
+         * <li>PAI.WorkspaceGuest: Guest.</li>
+         * <li>PAI.WorkspaceOwner: Owner.</li>
          * </ul>
          * </li>
-         * <li><p>Custom role: Specify the ID of the custom role. The ID must be prefixed with <code>role-</code>. Example: <code>role-sw******2tij</code>.</p>
+         * <li><p>Custom roles: Enter the role ID. The ID must start with role-, such as role-sw******2tij.</p>
          * </li>
          * </ul>
          * <p>This parameter is required.</p>

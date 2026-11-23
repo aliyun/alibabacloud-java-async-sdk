@@ -93,7 +93,7 @@ public class ListRunsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The pagination token. Leave this parameter empty when you query the first page. The response returns the token for the next page. A value of 0 indicates that all entries are returned. You can obtain the token for the next page from the <strong>NextPageToken</strong> field in the response.</p>
+         * <p>The pagination token. Leave this parameter empty when you query the first page. The token for the next page is returned in the query results. If the returned token is 0, all results are returned. You can obtain the token for the next page from the <strong>NextPageToken</strong> field in the query results.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -112,7 +112,7 @@ public class ListRunsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries that meet the current request conditions. This parameter is optional and is not returned by default.</p>
+         * <p>The total number of entries that meet the specified request conditions. This parameter is optional and is not returned by default.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -123,7 +123,7 @@ public class ListRunsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>ADF6D849-*****-7E7030F0CE53</p>

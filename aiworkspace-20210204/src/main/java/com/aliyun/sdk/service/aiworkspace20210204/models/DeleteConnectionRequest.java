@@ -60,7 +60,7 @@ public class DeleteConnectionRequest extends Request {
         } 
 
         /**
-         * <p>The connection ID. For more information, see <a href="url">ListConnections</a>.</p>
+         * <p>The connection ID. For more information about how to obtain the connection ID, see <a href="~~ListConnections~~">ListConnections</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

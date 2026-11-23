@@ -145,7 +145,7 @@ public class GetWorkspaceRoleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The Alibaba Cloud account UID of the creator.</p>
+         * <p>The UID of the Alibaba Cloud account of the creator.</p>
          * 
          * <strong>example:</strong>
          * <p>2680******4103</p>
@@ -156,7 +156,7 @@ public class GetWorkspaceRoleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the role was created. It is specified in UTC and formatted in ISO 8601.</p>
+         * <p>The creation time in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-11T08:58:35.438Z</p>
@@ -167,7 +167,7 @@ public class GetWorkspaceRoleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the role was last modified. It is specified in UTC and formatted in ISO 8601.</p>
+         * <p>The modification time in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-03-27T02:26:33.872Z</p>
@@ -178,7 +178,7 @@ public class GetWorkspaceRoleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The permission configuration of the role.</p>
+         * <p>The permission configurations of the role.</p>
          */
         public Builder modulePermissions(java.util.List<ModulePermissions> modulePermissions) {
             this.modulePermissions = modulePermissions;
@@ -197,7 +197,7 @@ public class GetWorkspaceRoleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The role ID.</p>
+         * <p>The ID of the role.</p>
          * 
          * <strong>example:</strong>
          * <p>role-dhg*******</p>
@@ -208,7 +208,7 @@ public class GetWorkspaceRoleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The role name.</p>
+         * <p>The name of the role.</p>
          * 
          * <strong>example:</strong>
          * <p>dev-test</p>
@@ -221,16 +221,11 @@ public class GetWorkspaceRoleResponseBody extends TeaModel {
         /**
          * <p>The task status. Valid values:</p>
          * <ul>
-         * <li><p><code>Creating</code>: The role is being created.</p>
-         * </li>
-         * <li><p><code>Updating</code>: The role is being updated.</p>
-         * </li>
-         * <li><p><code>Deleting</code>: The role is being deleted.</p>
-         * </li>
-         * <li><p><code>Succeeded</code>: The task succeeded.</p>
-         * </li>
-         * <li><p><code>Failed</code>: The task failed.</p>
-         * </li>
+         * <li>Creating: creating</li>
+         * <li>Updating: updating</li>
+         * <li>Deleting: deleting</li>
+         * <li>Successful: succeeded (final state)</li>
+         * <li>Failed: failed (final state)</li>
          * </ul>
          * 
          * <strong>example:</strong>
