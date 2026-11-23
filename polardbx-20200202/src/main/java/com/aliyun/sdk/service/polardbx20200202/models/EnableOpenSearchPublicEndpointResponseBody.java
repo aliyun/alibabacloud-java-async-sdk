@@ -125,10 +125,10 @@ public class EnableOpenSearchPublicEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The additional information returned by the operation. &quot;success&quot; is returned if the operation is successful. Otherwise, the corresponding error code is returned.</p>
+         * <p>The additional information returned by the API operation. If the request is successful, success is returned. If an error occurs, the corresponding error code is returned.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -136,7 +136,7 @@ public class EnableOpenSearchPublicEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The public endpoint port.</p>
+         * <p>The port of the public endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>3306</p>
@@ -284,7 +284,7 @@ public class EnableOpenSearchPublicEndpointResponseBody extends TeaModel {
              * <p>The authentication action.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>polardbx:EnableOpenSearchPublicEndpoint</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -295,7 +295,7 @@ public class EnableOpenSearchPublicEndpointResponseBody extends TeaModel {
              * <p>The display name of the authentication principal.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>Sample RAM user</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -303,7 +303,7 @@ public class EnableOpenSearchPublicEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description is the same as above.</p>
+             * <p>The description is as described above.</p>
              * 
              * <strong>example:</strong>
              * <p>111</p>

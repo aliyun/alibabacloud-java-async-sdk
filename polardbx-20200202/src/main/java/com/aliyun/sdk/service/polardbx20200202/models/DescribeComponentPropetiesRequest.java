@@ -130,7 +130,7 @@ public class DescribeComponentPropetiesRequest extends Request {
         }
 
         /**
-         * <p>The region where the instance resides. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196841.html">DescribeRegions</a> operation to query the regions supported by PolarDB-X, including region IDs.</p>
+         * <p>The region where the instance resides. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196841.html">DescribeRegions</a> operation to query the regions supported by PolarDB-X, including the region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

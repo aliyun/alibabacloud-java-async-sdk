@@ -142,7 +142,7 @@ public class AllocateContextDBPublicConnectionRequest extends Request {
         }
 
         /**
-         * <p>The type of the target node. Valid values: service and dashboard.</p>
+         * <p>The target node type. Valid values: service and dashboard.</p>
          * 
          * <strong>example:</strong>
          * <p>service</p>
@@ -154,7 +154,7 @@ public class AllocateContextDBPublicConnectionRequest extends Request {
         }
 
         /**
-         * <p>The port.</p>
+         * <p>The port number.</p>
          * 
          * <strong>example:</strong>
          * <p>3306</p>
@@ -166,7 +166,7 @@ public class AllocateContextDBPublicConnectionRequest extends Request {
         }
 
         /**
-         * <p>The region in which the instance resides.</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

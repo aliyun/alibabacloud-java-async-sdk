@@ -80,7 +80,7 @@ public class DescribeContext0InfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the access denial.</p>
+         * <p>The access denial details.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -233,7 +233,7 @@ public class DescribeContext0InfoResponseBody extends TeaModel {
              * <p>The authentication action.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>polardbx:DescribeContext0Info</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -244,7 +244,7 @@ public class DescribeContext0InfoResponseBody extends TeaModel {
              * <p>The display name of the authentication principal.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>Sample RAM user</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -285,7 +285,7 @@ public class DescribeContext0InfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The no-permission type.</p>
+             * <p>The type of the access denial.</p>
              * 
              * <strong>example:</strong>
              * <p>ImplicitDeny</p>
@@ -296,7 +296,7 @@ public class DescribeContext0InfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The policy type.</p>
+             * <p>The type of the policy.</p>
              * 
              * <strong>example:</strong>
              * <p>PRIORITY</p>
@@ -442,7 +442,7 @@ public class DescribeContext0InfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The target node type. Valid values: service, dashboard.</p>
+             * <p>The type of the target node: service or dashboard.</p>
              * 
              * <strong>example:</strong>
              * <p>service</p>
@@ -453,7 +453,7 @@ public class DescribeContext0InfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The port.</p>
+             * <p>The port number.</p>
              * 
              * <strong>example:</strong>
              * <p>3306</p>
@@ -464,7 +464,7 @@ public class DescribeContext0InfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The endpoint type.</p>
+             * <p>The type of the endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p>VPC</p>
@@ -497,7 +497,7 @@ public class DescribeContext0InfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The VPC instance ID.</p>
+             * <p>The VPC-connected instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>pxc-spsil01pww4hfzjayd-cn-20251013180429</p>
@@ -643,7 +643,7 @@ public class DescribeContext0InfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The target node type. Valid values: service, dashboard.</p>
+             * <p>The type of the target node: service or dashboard.</p>
              * 
              * <strong>example:</strong>
              * <p>service</p>
@@ -654,7 +654,7 @@ public class DescribeContext0InfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The port.</p>
+             * <p>The port number.</p>
              * 
              * <strong>example:</strong>
              * <p>3306</p>
@@ -667,8 +667,8 @@ public class DescribeContext0InfoResponseBody extends TeaModel {
             /**
              * <p>The instance type. Valid values:</p>
              * <ul>
-             * <li><strong>ReadWrite</strong>: primary instance</li>
-             * <li><strong>ReadOnly</strong>: read-only instance</li>
+             * <li><strong>ReadWrite</strong>: primary instance.</li>
+             * <li><strong>ReadOnly</strong>: read-only instance.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -702,7 +702,7 @@ public class DescribeContext0InfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The VPC instance ID.</p>
+             * <p>The VPC-connected instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-8vbdw66evguopfcfvieoi</p>
@@ -863,7 +863,7 @@ public class DescribeContext0InfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The instance class.</p>
+             * <p>The instance type.</p>
              * 
              * <strong>example:</strong>
              * <p>pg.x2.13large.2c</p>
@@ -915,7 +915,7 @@ public class DescribeContext0InfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The target node type. Valid values: service, dashboard.</p>
+             * <p>The type of the target node: service or dashboard.</p>
              * 
              * <strong>example:</strong>
              * <p>service</p>
@@ -928,13 +928,13 @@ public class DescribeContext0InfoResponseBody extends TeaModel {
             /**
              * <p>The node status. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: running</li>
-             * <li><strong>1</strong>: creating</li>
-             * <li><strong>2</strong>: abnormal</li>
-             * <li><strong>3</strong>: expired</li>
-             * <li><strong>4</strong>: releasing</li>
-             * <li><strong>5</strong>: released</li>
-             * <li><strong>6</strong>: locked</li>
+             * <li><strong>0</strong>: running.</li>
+             * <li><strong>1</strong>: creating.</li>
+             * <li><strong>2</strong>: abnormal.</li>
+             * <li><strong>3</strong>: expired.</li>
+             * <li><strong>4</strong>: releasing.</li>
+             * <li><strong>5</strong>: released.</li>
+             * <li><strong>6</strong>: locked.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1196,7 +1196,7 @@ public class DescribeContext0InfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The instance class.</p>
+             * <p>The instance type.</p>
              * 
              * <strong>example:</strong>
              * <p>mysql.x2.large.2c</p>
@@ -1248,7 +1248,7 @@ public class DescribeContext0InfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The full tag of the minor version currently confirmed for the service. This parameter is empty when the version is unknown.</p>
+             * <p>The full tag of the currently confirmed minor version of the service. This parameter is empty if the version is unknown.</p>
              * 
              * <strong>example:</strong>
              * <p>polardb-2.6.0_release_contextdb-20261023</p>

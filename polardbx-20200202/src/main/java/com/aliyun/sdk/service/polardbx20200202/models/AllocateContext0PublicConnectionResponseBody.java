@@ -230,10 +230,10 @@ public class AllocateContext0PublicConnectionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The action that is evaluated.</p>
+             * <p>The authorization action.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>polardbx:AllocateContext0PublicConnection</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -241,10 +241,10 @@ public class AllocateContext0PublicConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The identity used for authentication in the request.</p>
+             * <p>The identity identifier used for authentication in the request.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>Sample RAM user</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -263,7 +263,7 @@ public class AllocateContext0PublicConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The action that is evaluated.</p>
+             * <p>The authorization action.</p>
              * 
              * <strong>example:</strong>
              * <p>222</p>
@@ -482,7 +482,7 @@ public class AllocateContext0PublicConnectionResponseBody extends TeaModel {
              * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>pxsp-xxxxxxxxxx</p>
+             * <p>123456</p>
              */
             public Builder DBInstanceId(Integer DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -490,7 +490,7 @@ public class AllocateContext0PublicConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance name.</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>pxc-hzjasd****</p>
@@ -512,7 +512,7 @@ public class AllocateContext0PublicConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The target node type. Valid values: service and dashboard.</p>
+             * <p>The target node type. Valid values: service, dashboard.</p>
              * 
              * <strong>example:</strong>
              * <p>service</p>
@@ -545,7 +545,7 @@ public class AllocateContext0PublicConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address of the Anti-DDoS Pro or Anti-DDoS Premium instance protected by the policy.</p>
+             * <p>The IP address of the Anti-DDoS instance protected by the policy.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://anchashi.aliyun-inc.coM">https://anchashi.aliyun-inc.coM</a></p>

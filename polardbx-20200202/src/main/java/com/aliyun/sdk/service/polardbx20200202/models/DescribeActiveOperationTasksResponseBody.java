@@ -139,7 +139,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxx</p>
+         * <p>9B2F3840-5C98-475C-B269-2D5C3A31797C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -541,10 +541,10 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the event can be canceled. Valid values:</p>
+             * <p>Indicates whether cancellation is allowed. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: No.</li>
-             * <li><strong>1</strong>: Yes.</li>
+             * <li><strong>0</strong>: no</li>
+             * <li><strong>1</strong>: yes</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -556,10 +556,10 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the time can be modified. Valid values:</p>
+             * <p>Indicates whether modification is allowed. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: No.</li>
-             * <li><strong>1</strong>: Yes.</li>
+             * <li><strong>0</strong>: no</li>
+             * <li><strong>1</strong>: yes</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -604,7 +604,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time. The time is displayed in UTC in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+             * <p>The creation time. The time is in UTC and follows the YYYY-MM-DDTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-06-15T16:00:00Z</p>
@@ -725,7 +725,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The modification time. The time is displayed in UTC in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+             * <p>The modification time. The time is in UTC and follows the YYYY-MM-DDTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-06-15T16:00:00Z</p>
@@ -769,7 +769,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time. The time is displayed in UTC in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+             * <p>The start time. The time is in UTC and follows the YYYY-MM-DDTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-06-15T16:00:00Z</p>
@@ -782,7 +782,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             /**
              * <p>The status. Valid values:</p>
              * <ul>
-             * <li><strong>3</strong>: pending </li>
+             * <li><strong>3</strong>: pending</li>
              * <li><strong>4</strong>: running</li>
              * </ul>
              * 
@@ -803,7 +803,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The switchover time. The time is displayed in UTC in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+             * <p>The switchover time. The time is in UTC and follows the YYYY-MM-DDTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-06-15T16:00:00Z</p>

@@ -75,7 +75,7 @@ public class DescribeMem0InfoRequest extends Request {
         } 
 
         /**
-         * <p>Instance Name</p>
+         * <p>The name of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class DescribeMem0InfoRequest extends Request {
         }
 
         /**
-         * <p>Region</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

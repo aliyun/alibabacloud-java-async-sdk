@@ -103,7 +103,7 @@ public class ReleaseContext0PublicConnectionRequest extends Request {
         } 
 
         /**
-         * <p>The public network connection string to release. If this parameter is not specified, the Mem0 public address is subject to automatic release.</p>
+         * <p>The public connection string to release. This parameter is optional. If you do not specify this parameter, the Mem0 public endpoint is automatically released.</p>
          * 
          * <strong>example:</strong>
          * <p>pxc-hzjasdyuoo.polarx.rds.aliyuncs.com</p>
@@ -128,11 +128,7 @@ public class ReleaseContext0PublicConnectionRequest extends Request {
         }
 
         /**
-         * <p>The target node type. Valid values:</p>
-         * <ul>
-         * <li>service</li>
-         * <li>dashboard</li>
-         * </ul>
+         * <p>The type of the target node. Valid values: service, dashboard.</p>
          * 
          * <strong>example:</strong>
          * <p>dn</p>

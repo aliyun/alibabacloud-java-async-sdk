@@ -102,7 +102,10 @@ public class DeleteSubCNInstanceRequest extends Request {
         }
 
         /**
-         * InstanceClusterName.
+         * <p>The name of the instance cluster. You can call the DescribeDBInstanceTopology operation to query the name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example_cluster</p>
          */
         public Builder instanceClusterName(String instanceClusterName) {
             this.putQueryParameter("InstanceClusterName", instanceClusterName);
@@ -111,7 +114,7 @@ public class DeleteSubCNInstanceRequest extends Request {
         }
 
         /**
-         * <p>The region where the instance resides.</p>
+         * <p>The region ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

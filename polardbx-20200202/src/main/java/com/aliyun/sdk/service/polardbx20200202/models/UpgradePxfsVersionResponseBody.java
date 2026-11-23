@@ -80,7 +80,7 @@ public class UpgradePxfsVersionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the access denial.</p>
+         * <p>The details of the unauthorized access.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -96,7 +96,7 @@ public class UpgradePxfsVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -233,7 +233,7 @@ public class UpgradePxfsVersionResponseBody extends TeaModel {
              * <p>The authorization action.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>polardbx:UpgradePxfsVersion</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -241,10 +241,10 @@ public class UpgradePxfsVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The identity used for authorization in the request.</p>
+             * <p>The identity used for authentication in the request.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>Sample RAM user</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -252,7 +252,7 @@ public class UpgradePxfsVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The owner ID of the authorization principal.</p>
+             * <p>The owner ID of the authenticated principal.</p>
              * 
              * <strong>example:</strong>
              * <p>111</p>
@@ -263,7 +263,7 @@ public class UpgradePxfsVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The authorization principal type.</p>
+             * <p>The type of the authenticated principal.</p>
              * 
              * <strong>example:</strong>
              * <p>222</p>
@@ -285,7 +285,7 @@ public class UpgradePxfsVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of missing permission.</p>
+             * <p>The type of the access denial.</p>
              * 
              * <strong>example:</strong>
              * <p>ImplicitDeny</p>
@@ -296,7 +296,7 @@ public class UpgradePxfsVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The policy type.</p>
+             * <p>The type of the policy.</p>
              * 
              * <strong>example:</strong>
              * <p>PRIORITY</p>
@@ -425,7 +425,7 @@ public class UpgradePxfsVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task ID.</p>
+             * <p>The ID of the task.</p>
              * 
              * <strong>example:</strong>
              * <p>123456789</p>

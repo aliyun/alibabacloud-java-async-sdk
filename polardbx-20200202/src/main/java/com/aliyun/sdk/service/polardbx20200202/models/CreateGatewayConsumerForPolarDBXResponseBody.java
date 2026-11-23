@@ -80,7 +80,7 @@ public class CreateGatewayConsumerForPolarDBXResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The instance name.</p>
+         * <p>The name of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>pxc-**************</p>
@@ -102,7 +102,7 @@ public class CreateGatewayConsumerForPolarDBXResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The backend task ID.</p>
+         * <p>The ID of the backend task.</p>
          * 
          * <strong>example:</strong>
          * <p>422922413</p>

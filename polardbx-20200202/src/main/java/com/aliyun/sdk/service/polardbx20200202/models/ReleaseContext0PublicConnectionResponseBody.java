@@ -80,7 +80,7 @@ public class ReleaseContext0PublicConnectionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the access denial.</p>
+         * <p>The detailed reasons for the access denial.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -230,10 +230,10 @@ public class ReleaseContext0PublicConnectionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description is as above.</p>
+             * <p>The description as mentioned above.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>polardbx:ReleaseContext0PublicConnection</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -244,7 +244,7 @@ public class ReleaseContext0PublicConnectionResponseBody extends TeaModel {
              * <p>The identity used for authentication in the request.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>Sample RAM user</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -252,7 +252,7 @@ public class ReleaseContext0PublicConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description is as above.</p>
+             * <p>The description as mentioned above.</p>
              * 
              * <strong>example:</strong>
              * <p>111</p>
@@ -263,7 +263,7 @@ public class ReleaseContext0PublicConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description is as above.</p>
+             * <p>The description as mentioned above.</p>
              * 
              * <strong>example:</strong>
              * <p>222</p>
@@ -444,7 +444,7 @@ public class ReleaseContext0PublicConnectionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The context service instance name.</p>
+             * <p>The name of the context service instance.</p>
              * 
              * <strong>example:</strong>
              * <p>context0-example</p>
@@ -458,7 +458,7 @@ public class ReleaseContext0PublicConnectionResponseBody extends TeaModel {
              * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>pxsp-xxxxxxxxxx</p>
+             * <p>123456</p>
              */
             public Builder DBInstanceId(Integer DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -488,7 +488,7 @@ public class ReleaseContext0PublicConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The query node type. Valid values:</p>
+             * <p>The type of the queried node. Valid values:</p>
              * <ul>
              * <li>service</li>
              * <li>dashboard</li>
@@ -514,7 +514,7 @@ public class ReleaseContext0PublicConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The previous port value.</p>
+             * <p>The previous port number.</p>
              * 
              * <strong>example:</strong>
              * <p>8080</p>

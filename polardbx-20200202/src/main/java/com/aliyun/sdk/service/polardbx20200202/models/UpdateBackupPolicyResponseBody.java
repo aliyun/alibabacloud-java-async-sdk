@@ -93,7 +93,7 @@ public class UpdateBackupPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The backup policy details.</p>
+         * <p>The returned policy details.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +101,7 @@ public class UpdateBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message. &quot;success&quot; is returned if the request is successful. Otherwise, the corresponding error code is returned.</p>
+         * <p>The returned message. If the call is successful, success is returned. If the call fails, the corresponding error code is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -426,7 +426,19 @@ public class UpdateBackupPolicyResponseBody extends TeaModel {
             } 
 
             /**
-             * BackupPeriod.
+             * <p>The backup cycle. Specify at least two days. The value is a 7-digit string, where each digit from left to right represents whether backups are enabled for Monday through Sunday. A value of 0 indicates that backups are disabled, and a value of 1 indicates that backups are enabled:</p>
+             * <ul>
+             * <li>First digit: Monday</li>
+             * <li>Second digit: Tuesday</li>
+             * <li>Third digit: Wednesday</li>
+             * <li>Fourth digit: Thursday</li>
+             * <li>Fifth digit: Friday</li>
+             * <li>Sixth digit: Saturday</li>
+             * <li>Seventh digit: Sunday</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1001000</p>
              */
             public Builder backupPeriod(String backupPeriod) {
                 this.backupPeriod = backupPeriod;
@@ -434,7 +446,10 @@ public class UpdateBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * BackupPlanBegin.
+             * <p>The time when the daily backup starts, in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>03:00Z</p>
              */
             public Builder backupPlanBegin(String backupPlanBegin) {
                 this.backupPlanBegin = backupPlanBegin;
@@ -442,7 +457,10 @@ public class UpdateBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * BackupSetRetention.
+             * <p>The retention period of the backup set, in days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder backupSetRetention(Integer backupSetRetention) {
                 this.backupSetRetention = backupSetRetention;
@@ -450,7 +468,10 @@ public class UpdateBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * BackupType.
+             * <p>The backup type. A value of 0 indicates a quick backup.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder backupType(String backupType) {
                 this.backupType = backupType;
@@ -458,7 +479,14 @@ public class UpdateBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * BackupWay.
+             * <p>The backup method. Valid values:</p>
+             * <ul>
+             * <li><strong>P</strong>: physical backup</li>
+             * <li><strong>L</strong>: logical backup</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>P</p>
              */
             public Builder backupWay(String backupWay) {
                 this.backupWay = backupWay;
@@ -466,7 +494,10 @@ public class UpdateBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * ColdDataBackupInterval.
+             * <p>The interval at which cold data is backed up, in days. Valid values: 1 to 59.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder coldDataBackupInterval(Integer coldDataBackupInterval) {
                 this.coldDataBackupInterval = coldDataBackupInterval;
@@ -474,7 +505,10 @@ public class UpdateBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * ColdDataBackupRetention.
+             * <p>The retention period of cold data backups, in days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder coldDataBackupRetention(Integer coldDataBackupRetention) {
                 this.coldDataBackupRetention = coldDataBackupRetention;
@@ -482,7 +516,10 @@ public class UpdateBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * CrossRegionDataBackupRetention.
+             * <p>The retention period of cross-region data backups, in days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder crossRegionDataBackupRetention(Integer crossRegionDataBackupRetention) {
                 this.crossRegionDataBackupRetention = crossRegionDataBackupRetention;
@@ -490,7 +527,10 @@ public class UpdateBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * CrossRegionFilterValue.
+             * <p>The number of days selected for cross-region backups.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3,7,1,5,6,2,4</p>
              */
             public Builder crossRegionFilterValue(String crossRegionFilterValue) {
                 this.crossRegionFilterValue = crossRegionFilterValue;
@@ -498,7 +538,10 @@ public class UpdateBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * CrossRegionLogBackupRetention.
+             * <p>The retention period of cross-region log backups, in days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder crossRegionLogBackupRetention(Integer crossRegionLogBackupRetention) {
                 this.crossRegionLogBackupRetention = crossRegionLogBackupRetention;
@@ -506,7 +549,10 @@ public class UpdateBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceName.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxc-hzjasdyuoo</p>
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;
@@ -514,7 +560,10 @@ public class UpdateBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * DestCrossRegion.
+             * <p>The destination region for cross-region backups.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder destCrossRegion(String destCrossRegion) {
                 this.destCrossRegion = destCrossRegion;
@@ -522,7 +571,10 @@ public class UpdateBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * ForceCleanOnHighSpaceUsage.
+             * <p>Specifies whether to forcibly clear binary logs when the storage usage of the instance is excessively high. A value of 1 indicates yes, and a value of 0 indicates no.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder forceCleanOnHighSpaceUsage(Integer forceCleanOnHighSpaceUsage) {
                 this.forceCleanOnHighSpaceUsage = forceCleanOnHighSpaceUsage;
@@ -530,7 +582,7 @@ public class UpdateBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * IsCrossRegionDataBackupEnabled.
+             * <p>Specifies whether to enable cross-region data backups. Default value: false.</p>
              */
             public Builder isCrossRegionDataBackupEnabled(Boolean isCrossRegionDataBackupEnabled) {
                 this.isCrossRegionDataBackupEnabled = isCrossRegionDataBackupEnabled;
@@ -538,7 +590,7 @@ public class UpdateBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * IsCrossRegionLogBackupEnabled.
+             * <p>Specifies whether to enable cross-region log backups. Default value: false.</p>
              */
             public Builder isCrossRegionLogBackupEnabled(Boolean isCrossRegionLogBackupEnabled) {
                 this.isCrossRegionLogBackupEnabled = isCrossRegionLogBackupEnabled;
@@ -546,7 +598,10 @@ public class UpdateBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * IsEnabled.
+             * <p>Specifies whether to enable backups. The fixed value is 1, which indicates that backups are enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder isEnabled(Integer isEnabled) {
                 this.isEnabled = isEnabled;
@@ -554,7 +609,10 @@ public class UpdateBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * LocalLogRetention.
+             * <p>The local retention period of log backups, in hours. Valid values: 0 to 168. A value of 0 indicates that log backups are not retained. Default value: 7.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder localLogRetention(Integer localLogRetention) {
                 this.localLogRetention = localLogRetention;
@@ -562,7 +620,10 @@ public class UpdateBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * LocalLogRetentionNumber.
+             * <p>The number of local binary logs to retain. Valid values: 6 to 100. Default value: 60.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder localLogRetentionNumber(Integer localLogRetentionNumber) {
                 this.localLogRetentionNumber = localLogRetentionNumber;
@@ -570,7 +631,10 @@ public class UpdateBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * LogLocalRetentionSpace.
+             * <p>The maximum space usage for binary logs. The parameter value ranges from 0 to 50. This is a loop space. Default value: 30.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder logLocalRetentionSpace(Integer logLocalRetentionSpace) {
                 this.logLocalRetentionSpace = logLocalRetentionSpace;
@@ -578,7 +642,10 @@ public class UpdateBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * RemoveLogRetention.
+             * <p>The remote retention period of log backups, in days. Valid values: 7 to 730. Default value: 7.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder removeLogRetention(Integer removeLogRetention) {
                 this.removeLogRetention = removeLogRetention;

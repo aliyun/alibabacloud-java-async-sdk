@@ -159,7 +159,7 @@ public class CreateRplInspectionTaskRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the ApsaraDB RDS instance to which the migration object belongs in the target instance. &gt; You can invoke the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBInstances</a> operation to query the details of all ApsaraDB RDS instances in the specified region, including instance IDs.</p>
+         * <p>The ID of the ApsaraDB RDS instance to which the migrated objects belong in the destination instance. You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBInstances</a> operation to query the details of all ApsaraDB RDS instances in the destination region, including instance IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>transfer_test3</p>
@@ -171,10 +171,10 @@ public class CreateRplInspectionTaskRequest extends Request {
         }
 
         /**
-         * <p>The password of the privileged user for the destination ApsaraDB RDS instance. &gt; * The password must be 8 to 32 characters in length. * The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. * Special characters include ! @ # $ &amp; % ^ * ( ) _ + - =</p>
+         * <p>The password of the privileged account for the destination ApsaraDB RDS instance. * It must be 8 to 32 characters in length. * It must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. * Special characters include !@#$&amp;%^*()_+-=</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>DemoPass1!</p>
          */
         public Builder dstPassword(String dstPassword) {
             this.putQueryParameter("DstPassword", dstPassword);
@@ -183,7 +183,7 @@ public class CreateRplInspectionTaskRequest extends Request {
         }
 
         /**
-         * <p>The destination task ID.</p>
+         * <p>The ID of the destination task.</p>
          * 
          * <strong>example:</strong>
          * <p>pxc-zkrc1****l54rc</p>
@@ -195,7 +195,7 @@ public class CreateRplInspectionTaskRequest extends Request {
         }
 
         /**
-         * <p>The username used to connect to the target instance.</p>
+         * <p>The username used to connect to the destination instance.</p>
          * 
          * <strong>example:</strong>
          * <p>bbt_item</p>
@@ -207,7 +207,7 @@ public class CreateRplInspectionTaskRequest extends Request {
         }
 
         /**
-         * <p>The region ID. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196841.html">DescribeRegions</a> operation to query the regions supported by PolarDB-X, including region IDs.</p>
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196841.html">DescribeRegions</a> operation to query the regions supported by PolarDB-X, including region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -220,7 +220,7 @@ public class CreateRplInspectionTaskRequest extends Request {
         }
 
         /**
-         * <p>The switchover task ID.</p>
+         * <p>The ID of the switchover task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -233,10 +233,10 @@ public class CreateRplInspectionTaskRequest extends Request {
         }
 
         /**
-         * <p>The password of the source ApsaraDB RDS instance. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBInstances</a> operation to query the details of all instances in the specified region, including the password.</p>
+         * <p>The password of the user for the source ApsaraDB RDS instance.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>DemoPass1@</p>
          */
         public Builder srcPassword(String srcPassword) {
             this.putQueryParameter("SrcPassword", srcPassword);

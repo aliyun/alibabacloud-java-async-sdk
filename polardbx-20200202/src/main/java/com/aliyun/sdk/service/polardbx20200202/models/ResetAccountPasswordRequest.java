@@ -185,7 +185,7 @@ public class ResetAccountPasswordRequest extends Request {
         }
 
         /**
-         * <p>The name of the cryptographic officer (CO) account.</p>
+         * <p>The security administrator account.</p>
          * 
          * <strong>example:</strong>
          * <p>account_sec</p>
@@ -197,7 +197,7 @@ public class ResetAccountPasswordRequest extends Request {
         }
 
         /**
-         * <p>The password of the cryptographic officer (CO) account.</p>
+         * <p>The password of the security administrator account.</p>
          * 
          * <strong>example:</strong>
          * <hr>

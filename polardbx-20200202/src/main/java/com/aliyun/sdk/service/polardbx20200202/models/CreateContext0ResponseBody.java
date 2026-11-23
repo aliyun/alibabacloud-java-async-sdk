@@ -80,7 +80,7 @@ public class CreateContext0ResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The access denial details.</p>
+         * <p>The details of the access denial.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -233,7 +233,7 @@ public class CreateContext0ResponseBody extends TeaModel {
              * <p>The authentication action.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>polardbx:CreateContext0</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -241,10 +241,10 @@ public class CreateContext0ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the authentication principal.</p>
+             * <p>The display name of the authentication principal.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>Sample RAM user</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -263,7 +263,7 @@ public class CreateContext0ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The authentication principal type.</p>
+             * <p>The type of the authentication principal.</p>
              * 
              * <strong>example:</strong>
              * <p>222</p>
@@ -464,7 +464,7 @@ public class CreateContext0ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The dashboard instance name of the context service.</p>
+             * <p>The dashboard replica set name of the context service.</p>
              * 
              * <strong>example:</strong>
              * <p>pxt-*********-d</p>
@@ -475,7 +475,7 @@ public class CreateContext0ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the PolarDB-X Search instance.</p>
+             * <p>The name of the PolarDBX Search instance.</p>
              * 
              * <strong>example:</strong>
              * <p>pxs-*********</p>
@@ -486,7 +486,7 @@ public class CreateContext0ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service instance name of the context service.</p>
+             * <p>The service replica set name of the context service.</p>
              * 
              * <strong>example:</strong>
              * <p>pxt-*********-s</p>

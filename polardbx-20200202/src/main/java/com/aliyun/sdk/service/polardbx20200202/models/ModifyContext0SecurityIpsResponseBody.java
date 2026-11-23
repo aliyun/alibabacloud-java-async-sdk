@@ -230,10 +230,10 @@ public class ModifyContext0SecurityIpsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The authentication action.</p>
+             * <p>The authorization action.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>polardbx:ModifyContext0SecurityIps</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -241,10 +241,10 @@ public class ModifyContext0SecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the authentication principal.</p>
+             * <p>The display name of the authenticated principal.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>Example RAM user</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -252,7 +252,7 @@ public class ModifyContext0SecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The owner ID of the authentication principal.</p>
+             * <p>The owner ID of the authenticated principal.</p>
              * 
              * <strong>example:</strong>
              * <p>111</p>
@@ -263,7 +263,7 @@ public class ModifyContext0SecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of identity used for authentication in the request. Valid values:</p>
+             * <p>The type of the identity used for authentication in the request. Valid values:</p>
              * <ul>
              * <li>SubUser: RAM user.</li>
              * <li>AssumedRoleUser: RAM role.</li>
@@ -424,7 +424,7 @@ public class ModifyContext0SecurityIpsResponseBody extends TeaModel {
              * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>pxsp-xxxxxxxxxx</p>
+             * <p>123456</p>
              */
             public Builder DBInstanceId(Integer DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -446,7 +446,7 @@ public class ModifyContext0SecurityIpsResponseBody extends TeaModel {
              * <p>The ID of the task.</p>
              * 
              * <strong>example:</strong>
-             * <hr>
+             * <p>2209883</p>
              */
             public Builder taskId(Integer taskId) {
                 this.taskId = taskId;
@@ -454,7 +454,7 @@ public class ModifyContext0SecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of task IDs in the task group.</p>
+             * <p>The IDs of the tasks in the task group.</p>
              */
             public Builder taskIds(java.util.List<Integer> taskIds) {
                 this.taskIds = taskIds;

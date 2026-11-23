@@ -93,7 +93,7 @@ public class DescribeEvaluateAndImportTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned result.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +101,7 @@ public class DescribeEvaluateAndImportTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message. This parameter is empty when the request succeeds. When the request fails, an exception message is returned, such as an error code.</p>
+         * <p>The message returned by the request. This parameter is empty if the request is successful. If the request fails, an error message such as an error code is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -112,7 +112,7 @@ public class DescribeEvaluateAndImportTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>73559800-****-11ec-bd40-99cfcff3fe1e</p>
@@ -123,7 +123,7 @@ public class DescribeEvaluateAndImportTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -440,7 +440,7 @@ public class DescribeEvaluateAndImportTaskResponseBody extends TeaModel {
              * <p>The summary information.</p>
              * 
              * <strong>example:</strong>
-             * <p>&quot;{\&quot;structureImportResult\&quot;:{\&quot;status\&quot;:\&quot;finish\&quot;,\&quot;finishedNum\&quot;:382,\&quot;totalNum\&quot;:382,\&quot;percentage\&quot;:100},\&quot;switchTips\&quot;:\&quot;Forward switchover is allowed only when the forward synchronization latency is low\&quot;,\&quot;autoTableSuggestionSwitch\&quot;:false,\&quot;structureAlterationMap\&quot;:{},\&quot;acceptFilterMap\&quot;:{\&quot;fr_import\&quot;:[\&quot;dy_dr_new\&quot;],\&quot;e3plus_drp_prod_new\&quot;:[],\&quot;qbtong_prod\&quot;:[],\&quot;e3plus_account_prod\&quot;:[],\&quot;e3plus_drp_prod\&quot;:[]},\&quot;structChunkMap\&quot;:{},\&quot;count\&quot;:1,\&quot;requestId\&quot;:\&quot;9380D025-C9B1-51D6-A4B9-733C4879CC4A\&quot;}&quot;,</p>
+             * <p>&quot;{\&quot;structureImportResult\&quot;:{\&quot;status\&quot;:\&quot;finish\&quot;,\&quot;finishedNum\&quot;:382,\&quot;totalNum\&quot;:382,\&quot;percentage\&quot;:100},\&quot;switchTips\&quot;:\&quot;Forward switchover is allowed only when the forward synchronization latency is low.\&quot;,\&quot;autoTableSuggestionSwitch\&quot;:false,\&quot;structureAlterationMap\&quot;:{},\&quot;acceptFilterMap\&quot;:{\&quot;fr_import\&quot;:[\&quot;dy_dr_new\&quot;],\&quot;e3plus_drp_prod_new\&quot;:[],\&quot;qbtong_prod\&quot;:[],\&quot;e3plus_account_prod\&quot;:[],\&quot;e3plus_drp_prod\&quot;:[]},\&quot;structChunkMap\&quot;:{},\&quot;count\&quot;:1,\&quot;requestId\&quot;:\&quot;9380D025-C9B1-51D6-A4B9-733C4879CC4A\&quot;}&quot;,</p>
              */
             public Builder context(String context) {
                 this.context = context;
@@ -459,7 +459,7 @@ public class DescribeEvaluateAndImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the import task is successful.</p>
+             * <p>Indicates whether the import task is deleted.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -473,7 +473,7 @@ public class DescribeEvaluateAndImportTaskResponseBody extends TeaModel {
              * <p>The timestamp when the task was created.</p>
              * 
              * <strong>example:</strong>
-             * <p>2025-06-08T15:00Z</p>
+             * <p>1749394800000</p>
              */
             public Builder gmtCreated(Long gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -481,7 +481,7 @@ public class DescribeEvaluateAndImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The modification time in timestamp format.</p>
+             * <p>The timestamp when the task was last modified.</p>
              * 
              * <strong>example:</strong>
              * <p>1605080537000</p>
@@ -492,7 +492,7 @@ public class DescribeEvaluateAndImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task ID.</p>
+             * <p>The ID of the task.</p>
              * 
              * <strong>example:</strong>
              * <p>76251</p>
@@ -514,7 +514,7 @@ public class DescribeEvaluateAndImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the slink destination database.</p>
+             * <p>The name of the destination database.</p>
              * 
              * <strong>example:</strong>
              * <p>fr_import</p>
@@ -525,7 +525,7 @@ public class DescribeEvaluateAndImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance ID of the destination.</p>
+             * <p>The destination instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>pxc-hzrehc60jz5zye</p>
@@ -536,7 +536,7 @@ public class DescribeEvaluateAndImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The username for the data connection of the destination.</p>
+             * <p>The username for the destination data connection.</p>
              * 
              * <strong>example:</strong>
              * <p>dts_dtdba</p>
@@ -547,7 +547,7 @@ public class DescribeEvaluateAndImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the slink source database.</p>
+             * <p>The name of the source database.</p>
              * 
              * <strong>example:</strong>
              * <p>fr_import</p>
@@ -558,7 +558,7 @@ public class DescribeEvaluateAndImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance ID of the source.</p>
+             * <p>The source instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>drdshbga69378w4p</p>
@@ -569,7 +569,7 @@ public class DescribeEvaluateAndImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource type of the source.</p>
+             * <p>The source resource type.</p>
              * 
              * <strong>example:</strong>
              * <p>POLARX1</p>
@@ -580,7 +580,7 @@ public class DescribeEvaluateAndImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The username for the data connection of the source.</p>
+             * <p>The username for the source data connection.</p>
              * 
              * <strong>example:</strong>
              * <p>dtdba</p>
@@ -591,7 +591,7 @@ public class DescribeEvaluateAndImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The stage of the synchronization.</p>
+             * <p>The current stage of the synchronization.</p>
              * 
              * <strong>example:</strong>
              * <p>DATA_IMPORT_RUNNING</p>
@@ -624,7 +624,7 @@ public class DescribeEvaluateAndImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The slink task ID.</p>
+             * <p>The ID of the slink task.</p>
              * 
              * <strong>example:</strong>
              * <p>etx-szr2rr6i*****</p>

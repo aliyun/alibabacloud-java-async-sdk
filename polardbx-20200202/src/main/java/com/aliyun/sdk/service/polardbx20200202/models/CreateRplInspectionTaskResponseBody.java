@@ -101,7 +101,7 @@ public class CreateRplInspectionTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message of the task. &gt; This parameter is returned only when the task status is <strong>stop</strong>.</p>
+         * <p>The error message of the task. This parameter is returned only when the task status is <strong>stop</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -112,7 +112,7 @@ public class CreateRplInspectionTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>9B2F3840-5C98-475C-B269-2D5C3A31797C</p>
@@ -179,7 +179,7 @@ public class CreateRplInspectionTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The slink task ID.</p>
+             * <p>The ID of the Slink task.</p>
              * 
              * <strong>example:</strong>
              * <p>etx-szr2rr6i*****</p>

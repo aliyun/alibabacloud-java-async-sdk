@@ -131,7 +131,7 @@ public class AllocateMem0PublicConnectionRequest extends Request {
         }
 
         /**
-         * <p>The port.</p>
+         * <p>The port number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,7 +144,7 @@ public class AllocateMem0PublicConnectionRequest extends Request {
         }
 
         /**
-         * <p>The region where the instance resides.</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

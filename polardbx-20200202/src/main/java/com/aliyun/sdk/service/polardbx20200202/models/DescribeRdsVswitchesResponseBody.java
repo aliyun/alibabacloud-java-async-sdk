@@ -67,7 +67,7 @@ public class DescribeRdsVswitchesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The data struct.</p>
+         * <p>The data structure.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -257,7 +257,7 @@ public class DescribeRdsVswitchesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the database.</p>
+             * <p>The database description.</p>
              * 
              * <strong>example:</strong>
              * <p>describe</p>
@@ -271,7 +271,7 @@ public class DescribeRdsVswitchesResponseBody extends TeaModel {
              * <p>The node ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>babac91eff704edf9bdccfaa6ba4efce</p>
+             * <p>123456</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -290,10 +290,10 @@ public class DescribeRdsVswitchesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the VPC is the default VPC. Valid values:</p>
+             * <p>Specifies whether the VPC is the default VPC. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: The VPC is the default VPC.</li>
-             * <li><strong>false</strong>: The VPC is not the default VPC.</li>
+             * <li>true: The VPC is the default VPC.</li>
+             * <li>false: The VPC is not the default VPC.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -327,7 +327,7 @@ public class DescribeRdsVswitchesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>vpc id。</p>
+             * <p>The VPC ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-uf6lis7xmm****t9wrxb5</p>
@@ -384,7 +384,7 @@ public class DescribeRdsVswitchesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The vSwitch list.</p>
+             * <p>The list of vSwitches.</p>
              */
             public Builder vswitchList(java.util.List<VswitchList> vswitchList) {
                 this.vswitchList = vswitchList;

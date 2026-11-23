@@ -341,7 +341,7 @@ public class UpdateBackupPolicyRequest extends Request {
         } 
 
         /**
-         * <p>The backup cycle. You must specify at least 2 days. The value is a 7-digit number. From left to right, each digit represents whether backup is enabled from Monday to Sunday. A value of 0 indicates that backup is disabled, and a value of 1 indicates that backup is enabled:</p>
+         * <p>The backup cycle. Specify at least two days. The value is a 7-digit string, where each digit from left to right represents whether backups are enabled for Monday through Sunday. A value of 0 indicates that backups are disabled, and a value of 1 indicates that backups are enabled:</p>
          * <ul>
          * <li>First digit: Monday</li>
          * <li>Second digit: Tuesday</li>
@@ -362,7 +362,7 @@ public class UpdateBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The daily backup start time in UTC.</p>
+         * <p>The time when the daily backup starts, in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>03:00Z</p>
@@ -374,7 +374,7 @@ public class UpdateBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The retention period of backup sets. Unit: days.</p>
+         * <p>The retention period of the backup set, in days.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -386,7 +386,7 @@ public class UpdateBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The backup type. Currently, only &quot;0&quot; is supported, which indicates fast backup.</p>
+         * <p>The backup type. Currently, only 0 is supported, which indicates a quick backup.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -400,8 +400,8 @@ public class UpdateBackupPolicyRequest extends Request {
         /**
          * <p>The backup method. Valid values:</p>
          * <ul>
-         * <li><strong>P</strong>: physical backup.</li>
-         * <li><strong>L</strong>: logical backup.</li>
+         * <li><strong>P</strong>: physical backup</li>
+         * <li><strong>L</strong>: logical backup</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -414,7 +414,7 @@ public class UpdateBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The interval of cold data backups. Unit: days. Valid values: 1 to 59.</p>
+         * <p>The interval at which cold data is backed up, in days. Valid values: 1 to 59.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -426,7 +426,7 @@ public class UpdateBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The retention period of cold data backups. Unit: days. Valid values: 30 to 730.</p>
+         * <p>The retention period of cold data backups, in days. Valid values: 30 to 730.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -438,7 +438,7 @@ public class UpdateBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The retention period of cross-region data backups. Unit: days.</p>
+         * <p>The retention period of cross-region data backups, in days.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -450,7 +450,10 @@ public class UpdateBackupPolicyRequest extends Request {
         }
 
         /**
-         * CrossRegionFilterValue.
+         * <p>The number of days selected for cross-region backups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3,7,1,5,6,2,4</p>
          */
         public Builder crossRegionFilterValue(String crossRegionFilterValue) {
             this.putQueryParameter("CrossRegionFilterValue", crossRegionFilterValue);
@@ -459,7 +462,7 @@ public class UpdateBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The retention period of cross-region log backups. Unit: days.</p>
+         * <p>The retention period of cross-region log backups, in days.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -484,7 +487,7 @@ public class UpdateBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The destination region for cross-region backup.</p>
+         * <p>The destination region for cross-region backups.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -496,10 +499,10 @@ public class UpdateBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to forcibly clean up binary logs when the total space usage of the instance exceeds 80% or the remaining space is less than 50 GB. The cleanup starts from the earliest logs until the total space usage drops below 80% and the remaining space exceeds 50 GB. Valid values:</p>
+         * <p>Specifies whether to forcibly clear binary logs when the total storage usage of the instance exceeds 80% or the remaining storage is less than 50 GB. The system clears the earliest binary logs until the total storage usage drops below 80% and the remaining storage is greater than 50 GB. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: Yes.</li>
-         * <li><strong>0</strong>: No.</li>
+         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: no</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -512,7 +515,7 @@ public class UpdateBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable cross-region data backup. Default value: false.</p>
+         * <p>Specifies whether to enable cross-region data backups. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -524,7 +527,7 @@ public class UpdateBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable cross-region log backup. Default value: false.</p>
+         * <p>Specifies whether to enable cross-region log backups. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -536,7 +539,7 @@ public class UpdateBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable backup. The value is fixed to 1, which indicates that backup is enabled.</p>
+         * <p>Specifies whether to enable backups. The fixed value is 1, which indicates that backups are enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -548,7 +551,7 @@ public class UpdateBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The number of hours that log backups are retained locally. Valid values: 0 to 168 (7 × 24 hours). A value of 0 indicates that log backups are not retained locally. Default value: 7.</p>
+         * <p>The local retention period of log backups, in hours. Valid values: 0 to 168. A value of 0 indicates that log backups are not retained. Default value: 7.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -560,7 +563,7 @@ public class UpdateBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The number of local binary logs to retain. Default value: 60. Valid values: 6 to 100.</p>
+         * <p>The number of local binary logs to retain. Valid values: 6 to 100. Default value: 60.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -572,7 +575,7 @@ public class UpdateBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The maximum binary log space usage in percentage. Valid values: 0 to 50. This parameter specifies a loop space. Default value: 30.</p>
+         * <p>The maximum space usage for binary logs. The parameter value ranges from 0 to 50. This is a loop space. Default value: 30.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -597,7 +600,7 @@ public class UpdateBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The number of days that log backups are retained remotely. Valid values: 7 to 730. Unit: days. Default value: 7.</p>
+         * <p>The remote retention period of log backups, in days. Valid values: 7 to 730. Default value: 7.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>

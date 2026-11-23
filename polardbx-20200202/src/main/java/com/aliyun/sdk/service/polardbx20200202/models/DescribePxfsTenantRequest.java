@@ -116,7 +116,7 @@ public class DescribePxfsTenantRequest extends Request {
         }
 
         /**
-         * <p>The tenant ID.</p>
+         * <p>The ID of the tenant.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

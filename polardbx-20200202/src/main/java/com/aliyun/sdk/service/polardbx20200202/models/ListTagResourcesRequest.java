@@ -142,7 +142,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The resource IDs. You can specify up to 50 subkeys.</p>
+         * <p>The IDs of the resources. You can specify up to 50 resource IDs.</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -151,7 +151,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The resource type. Set this parameter to PolarDBXInstance.</p>
+         * <p>The resource type. Set the value to PolarDBXInstance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,7 +164,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The list of labels. You can specify up to 20 subkeys.</p>
+         * <p>The list of tags. You can specify up to 20 tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -232,7 +232,7 @@ public class ListTagResourcesRequest extends Request {
             } 
 
             /**
-             * <p>The key of the label.</p>
+             * <p>The key of the tag.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -243,7 +243,7 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * <p>The value of the label.</p>
+             * <p>The value of the tag.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>

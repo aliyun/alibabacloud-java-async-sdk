@@ -118,7 +118,7 @@ public class ModifyPxfsSecurityIpsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the PolarDB-X instance.</p>
+         * <p>The PolarDB-X instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

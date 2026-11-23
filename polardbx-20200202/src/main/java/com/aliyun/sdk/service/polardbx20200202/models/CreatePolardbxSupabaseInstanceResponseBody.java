@@ -80,7 +80,7 @@ public class CreatePolardbxSupabaseInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The access denied details.</p>
+         * <p>The access denial details.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -233,7 +233,7 @@ public class CreatePolardbxSupabaseInstanceResponseBody extends TeaModel {
              * <p>The authentication action.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>polardbx:CreatePolardbxSupabaseInstance</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -244,7 +244,7 @@ public class CreatePolardbxSupabaseInstanceResponseBody extends TeaModel {
              * <p>The display name of the authentication principal.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>Sample RAM user</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -274,7 +274,7 @@ public class CreatePolardbxSupabaseInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The encoded diagnostic message.</p>
+             * <p>The diagnostic message.</p>
              * 
              * <strong>example:</strong>
              * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
@@ -285,7 +285,7 @@ public class CreatePolardbxSupabaseInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The no permission type.</p>
+             * <p>The access denial type.</p>
              * 
              * <strong>example:</strong>
              * <p>ImplicitDeny</p>
@@ -392,7 +392,7 @@ public class CreatePolardbxSupabaseInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The endpoint.</p>
+             * <p>The connection endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p>test2.polarx.huhehaote.rds.aliyuncs.com</p>

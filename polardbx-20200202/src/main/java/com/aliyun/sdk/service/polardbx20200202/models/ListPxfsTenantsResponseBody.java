@@ -80,7 +80,7 @@ public class ListPxfsTenantsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The access denial details.</p>
+         * <p>The details of the access denial.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -88,7 +88,7 @@ public class ListPxfsTenantsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data struct.</p>
+         * <p>The data structure.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -233,7 +233,7 @@ public class ListPxfsTenantsResponseBody extends TeaModel {
              * <p>The authentication action.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>polardbx:ListPxfsTenants</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -244,7 +244,7 @@ public class ListPxfsTenantsResponseBody extends TeaModel {
              * <p>The display name of the authentication principal.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>Sample RAM user</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -252,7 +252,7 @@ public class ListPxfsTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the owner of the authentication principal.</p>
+             * <p>The owner ID of the authentication principal.</p>
              * 
              * <strong>example:</strong>
              * <p>111</p>
@@ -285,7 +285,7 @@ public class ListPxfsTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the access denial.</p>
+             * <p>The type of the permission denial.</p>
              * 
              * <strong>example:</strong>
              * <p>ImplicitDeny</p>
@@ -483,7 +483,7 @@ public class ListPxfsTenantsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of bytes saved for the tenant after data deduplication.</p>
+             * <p>The number of bytes saved by data deduplication for the tenant.</p>
              * 
              * <strong>example:</strong>
              * <p>268435456</p>
@@ -527,7 +527,7 @@ public class ListPxfsTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The capacity quota.</p>
+             * <p>The storage capacity quota.</p>
              * 
              * <strong>example:</strong>
              * <p>107374182400</p>
@@ -549,7 +549,7 @@ public class ListPxfsTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The request rate limit.</p>
+             * <p>The maximum request rate.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -560,7 +560,7 @@ public class ListPxfsTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The write bandwidth limit.</p>
+             * <p>The maximum write bandwidth.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>

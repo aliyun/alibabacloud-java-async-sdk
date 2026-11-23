@@ -80,7 +80,7 @@ public class DescribePxfsInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details about the access denial.</p>
+         * <p>The details of the access denial.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -88,7 +88,7 @@ public class DescribePxfsInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response data.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -230,10 +230,10 @@ public class DescribePxfsInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The authorization action. Same as described above.</p>
+             * <p>Same as above.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>polardbx:DescribePxfsInfo</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -241,10 +241,10 @@ public class DescribePxfsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the authentication principal.</p>
+             * <p>The name of the authentication principal.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>Sample RAM user</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -263,7 +263,7 @@ public class DescribePxfsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The authorization action. Same as described above.</p>
+             * <p>Same as above.</p>
              * 
              * <strong>example:</strong>
              * <p>222</p>
@@ -274,7 +274,7 @@ public class DescribePxfsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The encoded diagnostic message.</p>
+             * <p>The diagnostic information.</p>
              * 
              * <strong>example:</strong>
              * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
@@ -285,7 +285,7 @@ public class DescribePxfsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of missing permission.</p>
+             * <p>The type of the permission denial.</p>
              * 
              * <strong>example:</strong>
              * <p>ImplicitDeny</p>
@@ -468,7 +468,7 @@ public class DescribePxfsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The endpoint.</p>
+             * <p>The access endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p>agent-files.example.com</p>
@@ -479,7 +479,7 @@ public class DescribePxfsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The port number.</p>
+             * <p>The port.</p>
              * 
              * <strong>example:</strong>
              * <p>12049</p>
@@ -501,7 +501,7 @@ public class DescribePxfsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether TLS is enabled.</p>
+             * <p>Specifies whether TLS is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -534,7 +534,7 @@ public class DescribePxfsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The virtual private cloud (VPC) ID.</p>
+             * <p>The VPC ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-xxxxxxxx</p>
@@ -784,7 +784,7 @@ public class DescribePxfsInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The node specification.</p>
+             * <p>The node specifications.</p>
              * 
              * <strong>example:</strong>
              * <p>polarx.pxfs.x4.xlarge</p>
@@ -795,7 +795,7 @@ public class DescribePxfsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of connection addresses.</p>
+             * <p>The list of endpoints.</p>
              */
             public Builder connAddrs(java.util.List<ConnAddrs> connAddrs) {
                 this.connAddrs = connAddrs;
@@ -880,7 +880,7 @@ public class DescribePxfsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage size.</p>
+             * <p>The storage capacity.</p>
              * 
              * <strong>example:</strong>
              * <p>500</p>
@@ -902,7 +902,7 @@ public class DescribePxfsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The virtual private cloud (VPC) ID.</p>
+             * <p>The VPC ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-xxxxxxxx</p>

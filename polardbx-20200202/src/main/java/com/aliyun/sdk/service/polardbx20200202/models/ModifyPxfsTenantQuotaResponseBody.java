@@ -233,7 +233,7 @@ public class ModifyPxfsTenantQuotaResponseBody extends TeaModel {
              * <p>The name of the API operation.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>polardbx:ModifyPxfsTenantQuota</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -241,10 +241,10 @@ public class ModifyPxfsTenantQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the authentication principal.</p>
+             * <p>The display name of the authenticated principal.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>Sample RAM user</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -252,7 +252,7 @@ public class ModifyPxfsTenantQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The owner ID of the authentication principal.</p>
+             * <p>The owner ID of the authenticated principal.</p>
              * 
              * <strong>example:</strong>
              * <p>111</p>
@@ -279,7 +279,7 @@ public class ModifyPxfsTenantQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The encoded diagnostic message.</p>
+             * <p>The diagnostic message.</p>
              * 
              * <strong>example:</strong>
              * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
@@ -290,7 +290,7 @@ public class ModifyPxfsTenantQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of access denial.</p>
+             * <p>The type of the permission denial.</p>
              * 
              * <strong>example:</strong>
              * <p>ImplicitDeny</p>
@@ -510,7 +510,7 @@ public class ModifyPxfsTenantQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The current number of logical files for the tenant.</p>
+             * <p>The current number of logical files of the tenant.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>
@@ -532,7 +532,7 @@ public class ModifyPxfsTenantQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The capacity quota.</p>
+             * <p>The storage capacity quota.</p>
              * 
              * <strong>example:</strong>
              * <p>107374182400</p>
@@ -554,7 +554,7 @@ public class ModifyPxfsTenantQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The request rate limit.</p>
+             * <p>The maximum request rate.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>
@@ -565,7 +565,7 @@ public class ModifyPxfsTenantQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The write bandwidth limit.</p>
+             * <p>The maximum write bandwidth.</p>
              * 
              * <strong>example:</strong>
              * <p>104857600</p>

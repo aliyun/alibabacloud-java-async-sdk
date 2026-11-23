@@ -230,10 +230,10 @@ public class DescribeOpenSearchInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The authorization action.</p>
+             * <p>The authentication action.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>polardbx:DescribeOpenSearchInfo</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -241,10 +241,10 @@ public class DescribeOpenSearchInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The identity used for authorization in the request.</p>
+             * <p>The identity used for authentication in the request.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>Sample RAM user</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -252,7 +252,7 @@ public class DescribeOpenSearchInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the owner of the authorization principal.</p>
+             * <p>The owner ID of the authentication principal.</p>
              * 
              * <strong>example:</strong>
              * <p>111</p>
@@ -263,7 +263,7 @@ public class DescribeOpenSearchInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the authorization principal.</p>
+             * <p>The type of the authentication principal.</p>
              * 
              * <strong>example:</strong>
              * <p>222</p>
@@ -285,7 +285,7 @@ public class DescribeOpenSearchInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of access denial.</p>
+             * <p>The type of the missing permission.</p>
              * 
              * <strong>example:</strong>
              * <p>ImplicitDeny</p>
@@ -656,7 +656,7 @@ public class DescribeOpenSearchInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last task update time in UNIX timestamp format.</p>
+             * <p>The last task update time in timestamp format.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-09-02T16:01:51Z</p>
@@ -926,7 +926,7 @@ public class DescribeOpenSearchInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the coordinator node is enabled.</p>
+             * <p>Specifies whether the coordinator node is enabled.</p>
              */
             public Builder coordinatorNodeEnabled(Boolean coordinatorNodeEnabled) {
                 this.coordinatorNodeEnabled = coordinatorNodeEnabled;
@@ -980,8 +980,8 @@ public class DescribeOpenSearchInfoResponseBody extends TeaModel {
             /**
              * <p>The master node type. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: single-node master</li>
-             * <li><strong>2</strong>: cluster-edition master</li>
+             * <li><strong>0</strong>: The master node is a single node.</li>
+             * <li><strong>2</strong>: The master node is of the Cluster Edition.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1004,7 +1004,7 @@ public class DescribeOpenSearchInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the dedicated master node is enabled.</p>
+             * <p>Specifies whether the dedicated master node is enabled.</p>
              */
             public Builder masterNodeEnabled(Boolean masterNodeEnabled) {
                 this.masterNodeEnabled = masterNodeEnabled;

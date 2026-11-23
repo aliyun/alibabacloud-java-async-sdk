@@ -377,7 +377,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The record time. The time is in the YYYY-MM-DDTHH:mm:ssZ format in UTC.</p>
+             * <p>The record time. The time must be in UTC and in the YYYY-MM-DDTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-10-15T06:39:49Z</p>
@@ -388,7 +388,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The event time. The time is in the YYYY-MM-DDTHH:mm:ssZ format in UTC.</p>
+             * <p>The event time. The time must be in UTC and in the YYYY-MM-DDTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-10-15T06:35:00Z</p>

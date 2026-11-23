@@ -101,7 +101,7 @@ public class DescribeBackupSetListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message. &quot;success&quot; is returned if the request is successful. Otherwise, an error code is returned.</p>
+         * <p>The returned message. If the request is successful, success is returned. If the request fails, an error code is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -112,7 +112,7 @@ public class DescribeBackupSetListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>1A6D328C-84B8-40DC-BF49-6C73984D7494</p>
@@ -123,7 +123,7 @@ public class DescribeBackupSetListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -259,8 +259,8 @@ public class DescribeBackupSetListResponseBody extends TeaModel {
             /**
              * <p>The backup mode. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: automatic backup.</li>
-             * <li><strong>1</strong>: manual backup.</li>
+             * <li><strong>0</strong>: automatic backup</li>
+             * <li><strong>1</strong>: manual backup</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -272,7 +272,7 @@ public class DescribeBackupSetListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The backup set ID.</p>
+             * <p>The ID of the backup set.</p>
              * 
              * <strong>example:</strong>
              * <p>111</p>
@@ -296,8 +296,8 @@ public class DescribeBackupSetListResponseBody extends TeaModel {
             /**
              * <p>The backup type. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: fast backup.</li>
-             * <li><strong>1</strong>: consistent backup.</li>
+             * <li><strong>0</strong>: quick backup</li>
+             * <li><strong>1</strong>: consistent backup</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -309,7 +309,7 @@ public class DescribeBackupSetListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The backup start time.</p>
+             * <p>The start time of the backup.</p>
              * 
              * <strong>example:</strong>
              * <p>1635706960956</p>
@@ -320,7 +320,7 @@ public class DescribeBackupSetListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The backup end time.</p>
+             * <p>The end time of the backup.</p>
              * 
              * <strong>example:</strong>
              * <p>1635706960956</p>
@@ -333,9 +333,9 @@ public class DescribeBackupSetListResponseBody extends TeaModel {
             /**
              * <p>The status of the backup set. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: Backing up.</li>
-             * <li><strong>1</strong>: Backup succeeded.</li>
-             * <li><strong>2</strong>: Backup failed.</li>
+             * <li><strong>0</strong>: The backup is in progress.</li>
+             * <li><strong>1</strong>: The backup was successful.</li>
+             * <li><strong>2</strong>: The backup failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>

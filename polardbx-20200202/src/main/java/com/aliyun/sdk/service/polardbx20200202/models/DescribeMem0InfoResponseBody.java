@@ -88,7 +88,7 @@ public class DescribeMem0InfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Response data</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -96,7 +96,7 @@ public class DescribeMem0InfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>C457B28E-9CAB-4B77-B5C6-5D71B7870B6E</p>
@@ -397,7 +397,7 @@ public class DescribeMem0InfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Connection address</p>
+             * <p>The endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p>pxc-spsil01pww4hfz.polarx.singapore.rds.aliyuncs.com</p>
@@ -408,7 +408,7 @@ public class DescribeMem0InfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Port</p>
+             * <p>The port.</p>
              * 
              * <strong>example:</strong>
              * <p>3306</p>
@@ -419,7 +419,7 @@ public class DescribeMem0InfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Connection address type</p>
+             * <p>The endpoint type.</p>
              * 
              * <strong>example:</strong>
              * <p>VPC</p>
@@ -441,7 +441,7 @@ public class DescribeMem0InfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>vSwitch ID</p>
+             * <p>The vSwitch ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-t4ny14pr37spmjsbv5dc2</p>
@@ -452,7 +452,7 @@ public class DescribeMem0InfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>VPC instance ID</p>
+             * <p>The VPC instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>pxc-spsil01pww4hfzjayd-cn-20251013180429</p>
@@ -639,7 +639,7 @@ public class DescribeMem0InfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Instance specifications</p>
+             * <p>The instance type.</p>
              * 
              * <strong>example:</strong>
              * <p>mysql.x2.large.2c</p>
@@ -650,7 +650,7 @@ public class DescribeMem0InfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Connection address list</p>
+             * <p>The list of endpoints.</p>
              */
             public Builder connAddrs(java.util.List<ConnAddrs> connAddrs) {
                 this.connAddrs = connAddrs;
@@ -669,7 +669,7 @@ public class DescribeMem0InfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Instance ID</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>pxc-spsil01pww4hfz-mem</p>
@@ -680,7 +680,7 @@ public class DescribeMem0InfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of nodes</p>
+             * <p>The number of nodes.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -691,7 +691,7 @@ public class DescribeMem0InfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Region ID</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ap-southeast-1</p>
@@ -702,7 +702,7 @@ public class DescribeMem0InfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Instance status</p>
+             * <p>The instance status.</p>
              * 
              * <strong>example:</strong>
              * <p>Running</p>
@@ -713,7 +713,7 @@ public class DescribeMem0InfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Storage type</p>
+             * <p>The storage type.</p>
              * 
              * <strong>example:</strong>
              * <p>local_ssd</p>
@@ -735,7 +735,7 @@ public class DescribeMem0InfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>vSwitch ID</p>
+             * <p>The vSwitch ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-t4ny14pr37spmjsbv5dc2</p>
@@ -746,7 +746,7 @@ public class DescribeMem0InfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Zone ID</p>
+             * <p>The zone ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ap-southeast-1a</p>
@@ -803,7 +803,7 @@ public class DescribeMem0InfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Instance information</p>
+             * <p>The instance information.</p>
              */
             public Builder instance(Instance instance) {
                 this.instance = instance;

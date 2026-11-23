@@ -80,7 +80,7 @@ public class ModifyOpenSearchClassResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the access denial.</p>
+         * <p>The access denial details.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -230,10 +230,10 @@ public class ModifyOpenSearchClassResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The authorization action.</p>
+             * <p>The authentication action.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>polardbx:ModifyOpenSearchClass</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -241,10 +241,10 @@ public class ModifyOpenSearchClassResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the authorization principal.</p>
+             * <p>The display name of the authentication principal.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>Sample RAM user</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -252,7 +252,7 @@ public class ModifyOpenSearchClassResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The owner ID of the authorization principal.</p>
+             * <p>The owner ID of the authentication principal.</p>
              * 
              * <strong>example:</strong>
              * <p>111</p>
@@ -263,11 +263,11 @@ public class ModifyOpenSearchClassResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of identity used for authorization in the request. Valid values:</p>
+             * <p>The type of identity used for authentication in the request. Valid values:</p>
              * <ul>
-             * <li>SubUser: RAM user.</li>
-             * <li>AssumedRoleUser: RAM role.</li>
-             * <li>Federated: SSO federated identity.</li>
+             * <li>SubUser: RAM user</li>
+             * <li>AssumedRoleUser: RAM role</li>
+             * <li>Federated: SSO federated identity</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -279,7 +279,7 @@ public class ModifyOpenSearchClassResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The encoded full diagnostic message.</p>
+             * <p>The encoded complete diagnostic message.</p>
              * 
              * <strong>example:</strong>
              * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
@@ -290,7 +290,7 @@ public class ModifyOpenSearchClassResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The no permission type.</p>
+             * <p>The permission denial type.</p>
              * 
              * <strong>example:</strong>
              * <p>ImplicitDeny</p>

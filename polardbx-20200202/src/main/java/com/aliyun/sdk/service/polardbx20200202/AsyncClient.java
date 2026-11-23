@@ -33,7 +33,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation confirms that no active connections exist before a rollback task to ensure operational security.</p>
+     * <p>This operation confirms that no active connections exist before rolling back a task to ensure operational security.</p>
      * 
      * @param request the request parameters of AllocateContext0PublicConnection  AllocateContext0PublicConnectionRequest
      * @return AllocateContext0PublicConnectionResponse
@@ -42,7 +42,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation is used to confirm that no active connections exist before a rollback task, ensuring operation safety.</p>
+     * <p>This operation verifies that no active connections exist before a rollback task to ensure operational security.</p>
      * 
      * @param request the request parameters of AllocateContextDBPublicConnection  AllocateContextDBPublicConnectionRequest
      * @return AllocateContextDBPublicConnectionResponse
@@ -57,7 +57,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation checks for active connections before a rollback task to ensure operational security.</p>
+     * <p>This operation verifies that no active connections exist before rolling back a task to ensure operational security.</p>
      * 
      * @param request the request parameters of AllocateMem0PublicConnection  AllocateMem0PublicConnectionRequest
      * @return AllocateMem0PublicConnectionResponse
@@ -66,7 +66,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Enables public network connection for the agent file service.</p>
+     * <p>Enables a public network connection for the Agent file service.</p>
      * 
      * @param request the request parameters of AllocatePxfsPublicConnection  AllocatePxfsPublicConnectionRequest
      * @return AllocatePxfsPublicConnectionResponse
@@ -194,7 +194,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The CreateDataImportTask operation creates a data import task that supports importing SQL or CSV files stored in OSS, ECS, or directly uploaded into a target database instance. By specifying the instance ID, database name, engine type, data source (such as an OSS path), and import type, the system performs data write operations asynchronously or synchronously. This operation is applicable to scenarios such as data migration, initialization, and data backfill. A task ID is returned for subsequent status queries and management.</p>
+     * <p>The CreateDataImportTask operation creates a data import task. It supports importing SQL or CSV files stored in OSS or ECS, or directly passed files, into a destination database instance. By specifying the instance ID, database name, engine type, data source such as the OSS path, and import type, the system asynchronously or synchronously performs data write operations. This operation is applicable to scenarios such as data migration, initialization, and data backfilling. It returns a task ID for subsequent status query and management.</p>
      * 
      * @param request the request parameters of CreateDataImportTask  CreateDataImportTaskRequest
      * @return CreateDataImportTaskResponse
@@ -317,7 +317,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>During the data synchronization phase, proactively initiates a diagnostic task for the replication task to check for issues such as latency, replication interruption, or data inconsistency.</p>
+     * <p>Initiates a diagnostic task for the replication link during the data synchronization phase to check for anomalies such as latency, interruption, and data inconsistency.</p>
      * 
      * @param request the request parameters of CreateRplInspectionTask  CreateRplInspectionTaskRequest
      * @return CreateRplInspectionTaskResponse
@@ -389,7 +389,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Deletes the custom endpoint of a specified database instance and disables access through the domain name.</p>
+     * <p>Deletes the custom endpoint of a specified database instance and closes the access entry for the domain name.</p>
      * 
      * @param request the request parameters of DeleteContext0  DeleteContext0Request
      * @return DeleteContext0Response
@@ -452,7 +452,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Deletes a custom endpoint of a specified database instance and disables access through the domain name.</p>
+     * <p>Deletes the custom endpoint of a specified database instance and disables access to the domain name.</p>
      * 
      * @param request the request parameters of DeleteOpenSearch  DeleteOpenSearchRequest
      * @return DeleteOpenSearchResponse
@@ -472,8 +472,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <ul>
      * <li>Binary log files are retained for 15 days by default.</li>
-     * <li>The returned log list contains all logs whose log record end time is after the query start time and whose log record start time is before the query end time.</li>
-     * <li>If DownloadLink is not NULL, you can use the URL to download the backup file. The URL is valid for 2 days after it is generated. Download the file before the URL expires.</li>
+     * <li>The returned log list includes all log records whose log record end time is later than the query start time and whose log record start time is earlier than the query end time.</li>
+     * <li>If the DownloadLink parameter is not NULL, you can use this URL to download the backup file. The URL is valid for two days after it is generated. Download the file before it expires.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteOpenSearchWhitelistGroup  DeleteOpenSearchWhitelistGroupRequest
@@ -501,7 +501,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Deletes an Agent file service tenant identity.</p>
+     * <p>Deletes the tenant identity for the Agent file service.</p>
      * 
      * @param request the request parameters of DeletePxfsUser  DeletePxfsUserRequest
      * @return DeletePxfsUserResponse
@@ -510,7 +510,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Deletes a custom endpoint of a specified database instance and disables access through the domain name.</p>
+     * <p>Deletes the custom endpoint of a specified database instance and disables access to the domain name.</p>
      * 
      * @param request the request parameters of DeletePxfuse  DeletePxfuseRequest
      * @return DeletePxfuseResponse
@@ -603,7 +603,7 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <ul>
      * <li>Binary log files are retained for 15 days by default.</li>
      * <li>The returned log list includes all log records whose end time is later than the query start time and whose start time is earlier than the query end time.</li>
-     * <li>If the value of DownloadLink is not NULL, you can use this URL to download the backup file. The URL is valid for two days after it is generated. Download the file before it expires.</li>
+     * <li>If DownloadLink is not NULL, you can download the backup file by using this URL. The URL is valid for two days after it is generated. Download the file before it expires.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeBinaryLogList  DescribeBinaryLogListRequest
@@ -634,8 +634,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <ul>
      * <li>Binary log files are retained for 15 days by default.</li>
-     * <li>The returned log list includes all log records whose end time is after the query start time and whose start time is before the query end time.</li>
-     * <li>If DownloadLink is not NULL, you can download the backup file by using this URL. The URL is valid for 2 days after it is generated. Download the file before it expires.</li>
+     * <li>The returned log list includes all log records whose end time is later than the query start time and whose start time is earlier than the query end time.</li>
+     * <li>If DownloadLink is not NULL, you can download the backup file by using this URL. The URL is valid for two days after it is generated. Download the file before it expires.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeCdcVersionList  DescribeCdcVersionListRequest
@@ -671,8 +671,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <ul>
      * <li>Binary log files are retained for 15 days by default.</li>
-     * <li>The returned log list includes all logs whose log record end time is after the query start time and whose log record start time is before the query end time.</li>
-     * <li>If DownloadLink is not NULL, you can download the backup file from this URL. The URL is valid for 2 days after it is generated. Download the file before the URL expires.</li>
+     * <li>The returned log list includes all log records whose end time is later than the query start time and whose start time is earlier than the query end time.</li>
+     * <li>If DownloadLink is not NULL, you can download the backup file by using this URL. The URL is valid for 2 days after it is generated. Download the file before it expires.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeColumnarVersionList  DescribeColumnarVersionListRequest
@@ -690,7 +690,7 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>PolarDB-X 2.0 SQL audit and analysis feature is free of charge, but Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
+     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
      * </ul>
      * </blockquote>
      * 
@@ -703,7 +703,7 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge, but Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
+     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
      * </ul>
      * </blockquote>
      * 
@@ -716,7 +716,7 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
+     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data processing, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
      * </ul>
      * </blockquote>
      * 
@@ -755,7 +755,7 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
+     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data delivery. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
      * </ul>
      * </blockquote>
      * 
@@ -766,7 +766,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation retrieves the list of custom endpoints configured by the user, which facilitates the management and viewing of private connection or VPC endpoint service settings.</p>
+     * <p>Retrieves the list of custom endpoints configured by users to facilitate the management and viewing of private connections or VPC endpoint service settings.</p>
      * 
      * @param request the request parameters of DescribeCustomEndpointList  DescribeCustomEndpointListRequest
      * @return DescribeCustomEndpointListResponse
@@ -775,7 +775,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation retrieves the list of custom endpoints configured by the user to facilitate the management and viewing of private connections or VPC endpoint service settings.</p>
+     * <p>This operation retrieves the list of custom endpoints configured by users to facilitate the management and viewing of private connections or VPC endpoint service settings.</p>
      * 
      * @param request the request parameters of DescribeDBInstanceAttribute  DescribeDBInstanceAttributeRequest
      * @return DescribeDBInstanceAttributeResponse
@@ -790,7 +790,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of custom endpoints configured by a user, which helps manage and view private connection or VPC endpoint service settings.</p>
+     * <p>Retrieves a list of custom endpoints configured by the user to facilitate the management and viewing of private connections or VPC endpoint services.</p>
      * 
      * @param request the request parameters of DescribeDBInstanceEndpoint  DescribeDBInstanceEndpointRequest
      * @return DescribeDBInstanceEndpointResponse
@@ -837,8 +837,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <p>Note: </p>
      * <ul>
-     * <li>The <strong>endpoint</strong> differs from other API operations. For Chinese mainland regions and Singapore, use <strong>polardbx.aliyuncs.com</strong>. For other regions, use <strong>polardbx.{region id}.aliyunc.com</strong>.</li>
-     * <li>When debugging this API operation, if you receive a service unavailable error, verify that the <strong>endpoint</strong> is correct. You can switch the <strong>service address</strong> to <strong>Dubai</strong> or <strong>India</strong> and change the <strong>endpoint</strong> to <strong>polardbx.aliyuncs.com</strong>.</li>
+     * <li>The <strong>endpoint</strong> for this operation is different from other operations. Use <strong>polardbx.aliyuncs.com</strong> for the Chinese mainland and Singapore regions, and use <strong>polardbx.{region id}.aliyunc.com</strong> for other regions.</li>
+     * <li>If a &quot;service unavailable&quot; error occurs when debugging this API operation, check whether the <strong>endpoint</strong> is correct. You can switch the <strong>service address</strong> to <strong>Dubai</strong> or <strong>India</strong> to change the <strong>endpoint</strong> to <strong>polardbx.aliyuncs.com</strong>.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeDBNodePerformance  DescribeDBNodePerformanceRequest
@@ -878,7 +878,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The CreateDataImportTask operation creates a data import task. You can use this operation to import SQL or CSV files stored in OSS or ECS, or directly provided, into a destination database instance. By specifying the instance ID, database name, engine type, data source (such as an OSS path), and import type, the system performs data write operations asynchronously or synchronously. This operation is applicable to scenarios such as data migration, initialization, and data backfill. A task ID is returned for subsequent status queries and management.</p>
+     * <p>The CreateDataImportTask operation creates a data import task. It supports importing SQL or CSV files stored in OSS, on ECS instances, or directly passed in the request into a target database instance. By specifying the instance ID, database name, engine type, data source (such as the OSS path), and import type, the system asynchronously or synchronously writes data. This operation is suitable for scenarios such as data migration, initialization, and data backfilling. It returns a task ID for subsequent status query and management.</p>
      * 
      * @param request the request parameters of DescribeEvaluateAndImportTasks  DescribeEvaluateAndImportTasksRequest
      * @return DescribeEvaluateAndImportTasksResponse
@@ -901,7 +901,7 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Log Service charges fees for storage space, read traffic, the number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
+     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
      * </ul>
      * </blockquote>
      * 
@@ -940,7 +940,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>During the data synchronization phase, proactively initiates a diagnostic task for the replication task to check for exceptions such as latency, replication interruption, or data inconsistency.</p>
+     * <p>During the data synchronization phase, initiates a diagnostic task for the replication task to check for anomalies such as latency, interruptions, and data inconsistency.</p>
      * 
      * @param request the request parameters of DescribeOpenSearchConnectionInfo  DescribeOpenSearchConnectionInfoRequest
      * @return DescribeOpenSearchConnectionInfoResponse
@@ -962,7 +962,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of custom endpoints that you have configured. This operation helps you manage and view the settings of private connections or VPC endpoint services.</p>
+     * <p>Retrieves a list of custom endpoints configured by the user to facilitate the management and viewing of private connection or VPC endpoint service settings.</p>
      * 
      * @param request the request parameters of DescribeOpenSearchInstances  DescribeOpenSearchInstancesRequest
      * @return DescribeOpenSearchInstancesResponse
@@ -971,7 +971,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the list of virtual private clouds (VPCs) available under your account for an instance, so that you can select an appropriate network environment when creating or managing database instances.</p>
+     * <p>This operation retrieves the list of virtual private clouds (VPCs) available under your account for instances, allowing you to select an appropriate network environment when creating or managing database instances.</p>
      * 
      * @param request the request parameters of DescribeOpenSearchNodes  DescribeOpenSearchNodesRequest
      * @return DescribeOpenSearchNodesResponse
@@ -991,8 +991,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <ul>
      * <li>Binary log files are retained for 15 days by default.</li>
-     * <li>The returned log list contains all log records whose log record end time is later than the query start time and whose log record start time is earlier than the query end time.</li>
-     * <li>If DownloadLink is not NULL, you can use this URL to download the backup file. This URL is valid for 2 days after it is generated. Download the file before the URL expires.</li>
+     * <li>The returned log list includes all log records whose end time is later than the query start time and whose start time is earlier than the query end time.</li>
+     * <li>If DownloadLink is not NULL, you can use this URL to download the backup file. The URL is valid for two days after it is generated. Download the file before it expires.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeOpenSearchTopology  DescribeOpenSearchTopologyRequest
@@ -1004,8 +1004,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <ul>
      * <li>Binary log files are retained for 15 days by default.</li>
-     * <li>The returned log list includes all logs whose log record end time is after the query start time and whose log record start time is before the query end time.</li>
-     * <li>If DownloadLink is not NULL, you can use the URL to download the backup file. The URL is valid for 2 days after it is generated. Download the file before the URL expires.</li>
+     * <li>The returned log list includes all log records whose end time is later than the query start time and whose start time is earlier than the query end time.</li>
+     * <li>If DownloadLink is not NULL, you can download the backup file by using this URL. The URL is valid for two days after it is generated. Download the file before it expires.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeOpenSearchWhitelists  DescribeOpenSearchWhitelistsRequest
@@ -1039,7 +1039,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the access token for the Agent file service.</p>
+     * <p>Queries the access token for the agent file service.</p>
      * 
      * @param request the request parameters of DescribePxfsAccessTokens  DescribePxfsAccessTokensRequest
      * @return DescribePxfsAccessTokensResponse
@@ -1048,7 +1048,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the information about an Agent file service instance.</p>
+     * <p>Queries the information of an Agent file service instance.</p>
      * 
      * @param request the request parameters of DescribePxfsInfo  DescribePxfsInfoRequest
      * @return DescribePxfsInfoResponse
@@ -1057,7 +1057,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the whitelist for the Agent file service.</p>
+     * <p>Queries the whitelist for the agent file service.</p>
      * 
      * @param request the request parameters of DescribePxfsSecurityIps  DescribePxfsSecurityIpsRequest
      * @return DescribePxfsSecurityIpsResponse
@@ -1110,7 +1110,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of virtual private clouds (VPCs) available under your account. You can use this operation to select an appropriate network environment when creating or managing database instances.</p>
+     * <p>Retrieves the list of virtual private clouds (VPCs) available in your account for instances, so that you can select an appropriate network environment when creating or managing database instances.</p>
      * 
      * @param request the request parameters of DescribeRdsVpcs  DescribeRdsVpcsRequest
      * @return DescribeRdsVpcsResponse
@@ -1119,7 +1119,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of available virtual private clouds (VPCs) under your account for an instance, so that you can select an appropriate network environment when creating or managing database instances.</p>
+     * <p>Retrieves the list of virtual private clouds (VPCs) available in your account to help you select an appropriate network environment when you create or manage database instances.</p>
      * 
      * @param request the request parameters of DescribeRdsVswitches  DescribeRdsVswitchesRequest
      * @return DescribeRdsVswitchesResponse
@@ -1134,7 +1134,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>During the data synchronization phase, proactively initiates a diagnostic task for the replication task to check for exceptions such as latency, interruption, or data inconsistency.</p>
+     * <p>During the data synchronization phase, proactively initiates a diagnostic task for the replication task to check for anomalies such as latency, interruption, and data inconsistency.</p>
      * 
      * @param request the request parameters of DescribeRplInspectionTask  DescribeRplInspectionTaskRequest
      * @return DescribeRplInspectionTaskResponse
@@ -1178,7 +1178,7 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data delivery. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
+     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
      * </ul>
      * </blockquote>
      * 
@@ -1201,7 +1201,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The CreateDataImportTask operation creates a data import task. This operation supports importing SQL or CSV files stored in OSS or ECS, or directly provided, into a destination database instance. By specifying the instance ID, database name, engine type, data source (such as an OSS path), and import type, the system performs data write operations asynchronously or synchronously. This operation is applicable to scenarios such as data migration, initialization, and data backfill. A task ID is returned for subsequent status queries and management.</p>
+     * <p>The CreateDataImportTask operation creates a data import task. It supports importing SQL or CSV files stored in OSS, on ECS instances, or directly passed in the request into a target database instance. By specifying the instance ID, database name, engine type, data source (such as the OSS path), and import type, the system asynchronously or synchronously performs data write operations. This operation is applicable to scenarios such as data migration, initialization, and data backfilling. It returns a task ID for subsequent status query and management.</p>
      * 
      * @param request the request parameters of DescribeStructureImportTaskInfo  DescribeStructureImportTaskInfoRequest
      * @return DescribeStructureImportTaskInfoResponse
@@ -1212,8 +1212,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <ul>
      * <li>Binary log files are retained for 15 days by default.</li>
-     * <li>The returned log list includes all log records whose end time is after the query start time and whose start time is before the query end time.</li>
-     * <li>If DownloadLink is not NULL, you can use this URL to download the backup file. This URL is valid for 2 days after it is generated. Download the file before it expires.</li>
+     * <li>The returned log list includes all logs whose log record end time is after the query start time and whose log record start time is before the query end time.</li>
+     * <li>If DownloadLink is not NULL, you can use this URL to download the backup file. The URL is valid for 2 days after it is generated. Download the file before it expires.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeSupabaseApiKey  DescribeSupabaseApiKeyRequest
@@ -1243,8 +1243,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <ul>
      * <li>Binary log files are retained for 15 days by default.</li>
-     * <li>The returned log list includes all log records whose record end time is after the query start time and whose record start time is before the query end time.</li>
-     * <li>If DownloadLink is not NULL, you can use this URL to download the backup file. The URL is valid for two days after it is generated. Download the file before it expires.</li>
+     * <li>The returned log list includes all log records whose log record end time is after the query start time and whose log record start time is before the query end time.</li>
+     * <li>If DownloadLink is not NULL, you can download the backup file by using this URL. The URL is valid for 2 days after it is generated. Download the file before it expires.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeSupabaseIpWhitelist  DescribeSupabaseIpWhitelistRequest
@@ -1332,7 +1332,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Deletes the custom endpoint of a specified database instance and disables access through the domain name.</p>
+     * <p>Deletes the custom endpoint of a specified database instance and disables access to the domain name.</p>
      * 
      * @param request the request parameters of ExecuteMetaQuery  ExecuteMetaQueryRequest
      * @return ExecuteMetaQueryResponse
@@ -1341,7 +1341,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of PXFS tenants under a specified PolarDB-X instance and returns the tenant quota, throttling, and usage information.</p>
+     * <p>Queries the PXFS tenants of a specified PolarDB-X instance and returns the quota, throttling, and usage information of the tenants.</p>
      * 
      * @param request the request parameters of ListPxfsTenants  ListPxfsTenantsRequest
      * @return ListPxfsTenantsResponse
@@ -1539,7 +1539,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Modifies the whitelist of the Agent file service.</p>
+     * <p>Modifies the whitelist for the Agent file service.</p>
      * 
      * @param request the request parameters of ModifyPxfsSecurityIps  ModifyPxfsSecurityIpsRequest
      * @return ModifyPxfsSecurityIpsResponse
@@ -1548,7 +1548,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Adjusts the capacity quota, file count quota, request rate limit, and write bandwidth limit for a specified PXFS tenant. Parameters that are not passed remain unchanged.</p>
+     * <p>Adjusts the storage capacity quota, file count quota, maximum request rate, and maximum write bandwidth of a specified PXFS tenant. Parameters that are not passed remain unchanged.</p>
      * 
      * @param request the request parameters of ModifyPxfsTenantQuota  ModifyPxfsTenantQuotaRequest
      * @return ModifyPxfsTenantQuotaResponse
@@ -1628,7 +1628,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation is used to confirm that no active connections exist before a rollback task, ensuring operation safety.</p>
+     * <p>This API operation confirms that no active connections exist before a rollback task to ensure operational security.</p>
      * 
      * @param request the request parameters of ReleaseContext0PublicConnection  ReleaseContext0PublicConnectionRequest
      * @return ReleaseContext0PublicConnectionResponse
@@ -1652,7 +1652,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation is used to verify that no active connections exist before a rollback task to ensure operational safety.</p>
+     * <p>This operation verifies that no active connections exist before a rollback task to ensure operational security.</p>
      * 
      * @param request the request parameters of ReleaseMem0PublicConnection  ReleaseMem0PublicConnectionRequest
      * @return ReleaseMem0PublicConnectionResponse

@@ -134,7 +134,7 @@ public class ModifyColumnarClassResponseBody extends TeaModel {
              * <p>The task ID.</p>
              * 
              * <strong>example:</strong>
-             * <hr>
+             * <p>2209883</p>
              */
             public Builder taskId(Integer taskId) {
                 this.taskId = taskId;

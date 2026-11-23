@@ -107,7 +107,7 @@ public class ModifySupabaseDashboardPasswordRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>DemoPass1@</p>
          */
         public Builder newPassword(String newPassword) {
             this.putQueryParameter("NewPassword", newPassword);

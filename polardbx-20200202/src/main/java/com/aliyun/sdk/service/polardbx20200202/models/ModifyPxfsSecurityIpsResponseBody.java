@@ -80,7 +80,7 @@ public class ModifyPxfsSecurityIpsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the access denial.</p>
+         * <p>The details of the access denied error.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -230,10 +230,10 @@ public class ModifyPxfsSecurityIpsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The authorization action.</p>
+             * <p>The authentication action.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>polardbx:ModifyPxfsSecurityIps</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -241,10 +241,10 @@ public class ModifyPxfsSecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The identity used for authentication in the request.</p>
+             * <p>The identity identifier used for authentication in the request.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>Sample RAM user</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -252,7 +252,7 @@ public class ModifyPxfsSecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The owner ID of the authorization principal.</p>
+             * <p>The owner ID of the authentication principal.</p>
              * 
              * <strong>example:</strong>
              * <p>111</p>
@@ -263,7 +263,7 @@ public class ModifyPxfsSecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description is the same as above.</p>
+             * <p>Same as above.</p>
              * 
              * <strong>example:</strong>
              * <p>222</p>

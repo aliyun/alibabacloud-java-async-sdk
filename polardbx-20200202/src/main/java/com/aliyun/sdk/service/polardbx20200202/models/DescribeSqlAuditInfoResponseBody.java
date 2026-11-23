@@ -67,7 +67,7 @@ public class DescribeSqlAuditInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned result set.</p>
+         * <p>The result set.</p>
          */
         public Builder data(Data data) {
             this.data = data;

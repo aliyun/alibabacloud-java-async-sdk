@@ -88,7 +88,7 @@ public class DescribeOpenSearchNodesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data struct.</p>
+         * <p>The data structure.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -233,7 +233,7 @@ public class DescribeOpenSearchNodesResponseBody extends TeaModel {
              * <p>The authentication action.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>polardbx:DescribeOpenSearchNodes</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -241,10 +241,10 @@ public class DescribeOpenSearchNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The identity used for authentication in the request.</p>
+             * <p>The identity identifier used for authentication in the request.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>Sample RAM user</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -263,7 +263,7 @@ public class DescribeOpenSearchNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the authentication principal.</p>
+             * <p>The description as above.</p>
              * 
              * <strong>example:</strong>
              * <p>222</p>
@@ -274,7 +274,7 @@ public class DescribeOpenSearchNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The encoded diagnostic message.</p>
+             * <p>The diagnostic message.</p>
              * 
              * <strong>example:</strong>
              * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
@@ -285,7 +285,7 @@ public class DescribeOpenSearchNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the permission denial.</p>
+             * <p>The no-permission type.</p>
              * 
              * <strong>example:</strong>
              * <p>ImplicitDeny</p>
@@ -520,7 +520,7 @@ public class DescribeOpenSearchNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The CPU usage (%).</p>
+             * <p>The CPU utilization (%).</p>
              * 
              * <strong>example:</strong>
              * <p>35.6</p>
@@ -542,7 +542,7 @@ public class DescribeOpenSearchNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The disk space usage of the node.</p>
+             * <p>The disk space utilization of the node.</p>
              * 
              * <strong>example:</strong>
              * <p>42.5</p>
@@ -553,7 +553,7 @@ public class DescribeOpenSearchNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of unresolved baseline check items.</p>
+             * <p>The total number of unresolved baseline checks.</p>
              * 
              * <strong>example:</strong>
              * <p>GREEN</p>
@@ -564,7 +564,7 @@ public class DescribeOpenSearchNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The JVM heap memory usage of the node.</p>
+             * <p>The JVM heap memory utilization of the node.</p>
              * 
              * <strong>example:</strong>
              * <p>38.2</p>
@@ -586,7 +586,7 @@ public class DescribeOpenSearchNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the host on which the node instance runs. You can log on to the host and run the <code>hostname</code> command to view the hostname.</p>
+             * <p>The name of the host where the node instance runs. You can log on to the host and run the <code>hostname</code> command to view the hostname.</p>
              * 
              * <strong>example:</strong>
              * <p>hb2h-ali-oceanbase-public-online-013</p>
@@ -608,7 +608,7 @@ public class DescribeOpenSearchNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The amount of memory used.</p>
+             * <p>The amount of used memory.</p>
              * 
              * <strong>example:</strong>
              * <p>16</p>
@@ -619,11 +619,11 @@ public class DescribeOpenSearchNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node type to query. Valid values:</p>
+             * <p>The type of node to query. Valid values:</p>
              * <ul>
-             * <li>all: queries both dn and gms nodes.</li>
-             * <li>gms: queries only gms nodes.</li>
-             * <li>dn: queries only dn nodes.</li>
+             * <li>all: Queries both dn and gms nodes.</li>
+             * <li>gms: Queries only gms nodes.</li>
+             * <li>dn: Queries only dn nodes.</li>
              * </ul>
              * 
              * <strong>example:</strong>

@@ -222,8 +222,8 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             /**
              * <p>Specifies whether the parameter is dynamic. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: no.</li>
-             * <li><strong>1</strong>: yes.</li>
+             * <li><strong>0</strong>: no</li>
+             * <li><strong>1</strong>: yes</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -270,8 +270,8 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             /**
              * <p>Specifies whether the parameter can be modified. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: The parameter cannot be modified.</li>
-             * <li><strong>1</strong>: The parameter can be modified.</li>
+             * <li><strong>0</strong>: cannot be modified</li>
+             * <li><strong>1</strong>: can be modified</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -283,7 +283,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the parameter can be modified by the user.</p>
+             * <p>Specifies whether the parameter can be modified by users.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -412,7 +412,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of parameters.</p>
+             * <p>The parameter list.</p>
              */
             public Builder parameters(java.util.List<Parameters> parameters) {
                 this.parameters = parameters;

@@ -119,9 +119,9 @@ public class DescribePolarxDataNodesRequest extends Request {
         /**
          * <p>The type of nodes to query. Valid values:</p>
          * <ul>
-         * <li>all: queries both dn and gms nodes.</li>
-         * <li>gms: queries only gms nodes.</li>
-         * <li>dn: queries only dn nodes.</li>
+         * <li>all: Queries both dn and gms nodes.</li>
+         * <li>gms: Queries only gms nodes.</li>
+         * <li>dn: Queries only dn nodes.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -134,7 +134,7 @@ public class DescribePolarxDataNodesRequest extends Request {
         }
 
         /**
-         * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the integer data type. Default value: <strong>1</strong>.</p>
+         * <p>The page number. The value must be an integer greater than 0 and less than or equal to the maximum value of the INTEGER data type. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -158,7 +158,7 @@ public class DescribePolarxDataNodesRequest extends Request {
         }
 
         /**
-         * <p>The region in which the instance resides.</p>
+         * <p>The region ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,7 +171,7 @@ public class DescribePolarxDataNodesRequest extends Request {
         }
 
         /**
-         * <p>The keyword for filtering results.</p>
+         * <p>The keyword.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-bp1c5w4fx****2274</p>

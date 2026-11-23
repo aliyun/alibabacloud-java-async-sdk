@@ -80,7 +80,7 @@ public class ModifySupabaseDashboardPasswordResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the access denial.</p>
+         * <p>The access denied details.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -233,7 +233,7 @@ public class ModifySupabaseDashboardPasswordResponseBody extends TeaModel {
              * <p>The authentication action.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>polardbx:ModifySupabaseDashboardPassword</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -241,10 +241,10 @@ public class ModifySupabaseDashboardPasswordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the authentication principal.</p>
+             * <p>The name of the authentication principal.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>Example RAM user</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -263,7 +263,7 @@ public class ModifySupabaseDashboardPasswordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the authentication principal.</p>
+             * <p>The authentication principal type.</p>
              * 
              * <strong>example:</strong>
              * <p>222</p>
@@ -274,7 +274,7 @@ public class ModifySupabaseDashboardPasswordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The diagnostic information.</p>
+             * <p>The diagnostic message.</p>
              * 
              * <strong>example:</strong>
              * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
@@ -285,7 +285,7 @@ public class ModifySupabaseDashboardPasswordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the permission denial.</p>
+             * <p>The no permission type.</p>
              * 
              * <strong>example:</strong>
              * <p>ImplicitDeny</p>

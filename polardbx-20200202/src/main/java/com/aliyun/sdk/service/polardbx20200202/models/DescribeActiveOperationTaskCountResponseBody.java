@@ -80,7 +80,7 @@ public class DescribeActiveOperationTaskCountResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether a pop-up window is required. Valid values:</p>
+         * <p>Specifies whether a pop-up window is required. Valid values:</p>
          * <ul>
          * <li>1: Required.</li>
          * <li>0: Not required.</li>

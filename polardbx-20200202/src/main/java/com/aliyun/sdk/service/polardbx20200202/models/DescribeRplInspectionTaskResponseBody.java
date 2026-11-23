@@ -123,7 +123,7 @@ public class DescribeRplInspectionTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -260,7 +260,7 @@ public class DescribeRplInspectionTaskResponseBody extends TeaModel {
              * <p>The timestamp when the task was created.</p>
              * 
              * <strong>example:</strong>
-             * <p>2025-09-25T02:36:20.000+0000</p>
+             * <p>1758597921000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -290,7 +290,7 @@ public class DescribeRplInspectionTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>slinktaskid。</p>
+             * <p>The Slink task ID.</p>
              * 
              * <strong>example:</strong>
              * <p>etx-hzrez23btmb6aq</p>
@@ -323,10 +323,10 @@ public class DescribeRplInspectionTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the task was last updated.</p>
+             * <p>The timestamp of the last task update.</p>
              * 
              * <strong>example:</strong>
-             * <p>2025-09-23T03:25:21.000+0000</p>
+             * <p>1758767780000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -401,7 +401,7 @@ public class DescribeRplInspectionTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The slink status.</p>
+             * <p>The Slink status.</p>
              * 
              * <strong>example:</strong>
              * <p>PRE_CHECK</p>

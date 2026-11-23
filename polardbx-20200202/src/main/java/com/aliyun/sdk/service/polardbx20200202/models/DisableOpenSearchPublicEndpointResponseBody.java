@@ -80,7 +80,7 @@ public class DisableOpenSearchPublicEndpointResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the access denial.</p>
+         * <p>The detailed reason for the access denial.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -236,7 +236,7 @@ public class DisableOpenSearchPublicEndpointResponseBody extends TeaModel {
              * <p>The authentication action.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>polardbx:DisableOpenSearchPublicEndpoint</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -244,10 +244,10 @@ public class DisableOpenSearchPublicEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the authentication principal.</p>
+             * <p>The display name of the principal.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>Sample RAM user</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -255,7 +255,7 @@ public class DisableOpenSearchPublicEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The owner ID of the authentication principal.</p>
+             * <p>The ID of the principal owner.</p>
              * 
              * <strong>example:</strong>
              * <p>111</p>
@@ -266,7 +266,7 @@ public class DisableOpenSearchPublicEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the authentication principal.</p>
+             * <p>The type of the authenticated principal.</p>
              * 
              * <strong>example:</strong>
              * <p>222</p>

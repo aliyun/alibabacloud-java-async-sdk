@@ -80,7 +80,7 @@ public class DescribePxfuseSecurityIpsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details about the access denial.</p>
+         * <p>The details of the access denial.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -88,7 +88,7 @@ public class DescribePxfuseSecurityIpsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The instance details.</p>
+         * <p>The list of instance details.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -230,10 +230,10 @@ public class DescribePxfuseSecurityIpsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description is the same as above.</p>
+             * <p>The description as mentioned above.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>polardbx:DescribePxfuseSecurityIps</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -241,10 +241,10 @@ public class DescribePxfuseSecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the authentication principal.</p>
+             * <p>The name of the authentication principal.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>Sample RAM user</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -274,7 +274,7 @@ public class DescribePxfuseSecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The encoded diagnostic message.</p>
+             * <p>The diagnostic information.</p>
              * 
              * <strong>example:</strong>
              * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
@@ -285,7 +285,7 @@ public class DescribePxfuseSecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the no-permission error.</p>
+             * <p>The no-permission type.</p>
              * 
              * <strong>example:</strong>
              * <p>ImplicitDeny</p>
@@ -401,11 +401,11 @@ public class DescribePxfuseSecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether an IP address that is already used for a DNAT entry can also be used for an SNAT entry. Valid values:</p>
+             * <p>Specifies whether an IP address that is already used in a DNAT entry can also be used in an SNAT entry. Valid values:</p>
              * <ul>
-             * <li><p><strong>true</strong>: Destination IP address can also be used for an SNAT entry.</p>
+             * <li><p><strong>true</strong>: Destination IP address can also be used in an SNAT entry.</p>
              * </li>
-             * <li><p><strong>false</strong>: Destination IP address cannot be used for an SNAT entry.</p>
+             * <li><p><strong>false</strong>: Destination IP address cannot be used in an SNAT entry.</p>
              * </li>
              * </ul>
              * 
@@ -488,7 +488,7 @@ public class DescribePxfuseSecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The groups corresponding to the consumed service.</p>
+             * <p>The groups corresponding to the consumed services.</p>
              */
             public Builder groups(java.util.List<Groups> groups) {
                 this.groups = groups;

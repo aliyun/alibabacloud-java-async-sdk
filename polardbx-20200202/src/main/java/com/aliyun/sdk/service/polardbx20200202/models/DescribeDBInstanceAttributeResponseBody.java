@@ -611,7 +611,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the Search engine instance.</p>
+             * <p>The name of the search engine instance.</p>
              * 
              * <strong>example:</strong>
              * <p>pxs-***</p>
@@ -622,7 +622,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the Search engine.</p>
+             * <p>The status of the search engine.</p>
              * 
              * <strong>example:</strong>
              * <p>Running</p>
@@ -1602,7 +1602,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of CN nodes.</p>
+             * <p>The number of compute nodes (CNs).</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -1616,7 +1616,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * <p>The name of the column store engine instance.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxxx</p>
+             * <p>pxc-examplecolumnar</p>
              */
             public Builder columnarInstanceName(String columnarInstanceName) {
                 this.columnarInstanceName = columnarInstanceName;
@@ -1632,7 +1632,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The commodity type of the instance. The value is fixed to drds_polarxpost_public_cn.</p>
+             * <p>The commodity type of the instance. The value is fixed as drds_polarxpost_public_cn.</p>
              * 
              * <strong>example:</strong>
              * <p>drds_polarxpost_public_cn</p>
@@ -1729,7 +1729,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The database type. The value is fixed to polarx.</p>
+             * <p>The database type. The value is fixed as polarx.</p>
              * 
              * <strong>example:</strong>
              * <p>polarx</p>
@@ -1762,7 +1762,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the specifications of the DN nodes in the instance are different. Valid values:</p>
+             * <p>Indicates whether the specifications of the data nodes (DNs) in the instance are different. Valid values:</p>
              * <ul>
              * <li>true: The specifications are different.</li>
              * <li>false: The specifications are the same.</li>
@@ -1805,7 +1805,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of DN nodes.</p>
+             * <p>The number of data nodes (DNs).</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -1827,7 +1827,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The database type. The value is fixed to polarx.</p>
+             * <p>The database type. The value is fixed as polarx.</p>
              * 
              * <strong>example:</strong>
              * <p>polarx</p>
@@ -1838,7 +1838,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The DPI engine version. Default value: 2.0.</p>
+             * <p>The database DPI engine version. Default value: 2.0.</p>
              * 
              * <strong>example:</strong>
              * <p>2.0 | 3.0</p>
@@ -1849,7 +1849,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration time. The format is yyyy-MM-ddTHH:mm:ss.sss+0000 (UTC).</p>
+             * <p>The expiration time. The format is yyyy-MM-ddTHH:mm:ss.sss+0000 (UTC time).</p>
              * 
              * <strong>example:</strong>
              * <p>2022-08-31T16:00:00.000+0000</p>
@@ -1862,8 +1862,8 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             /**
              * <p>Indicates whether the instance has expired. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: expired</li>
-             * <li><strong>false</strong>: normal</li>
+             * <li><strong>true</strong>: The instance has expired.</li>
+             * <li><strong>false</strong>: The instance is running normally.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1875,7 +1875,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the GDN instance.</p>
+             * <p>The name of the global database network (GDN) instance.</p>
              * 
              * <strong>example:</strong>
              * <p>gdn-zkrkuykqglbizdhm</p>
@@ -1886,7 +1886,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The GDN member list.</p>
+             * <p>The list of GDN members.</p>
              */
             public Builder gdnMemberList(java.util.List<GdnMemberList> gdnMemberList) {
                 this.gdnMemberList = gdnMemberList;
@@ -1916,7 +1916,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance DPI engine version. This is an internal parameter.</p>
+             * <p>The DPI engine version of the instance. This is an internal parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>18</p>
@@ -1927,7 +1927,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance versions.</p>
+             * <p>The instance version.</p>
              * <p>This parameter is required.</p>
              */
             public Builder LTSVersions(java.util.List<String> LTSVersions) {
@@ -1936,7 +1936,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The latest Milvus version supported by the current instance.</p>
+             * <p>The latest kernel version supported by the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>polarx-kernel_5.4.11-16301083_xcluster-20210805</p>
@@ -1949,12 +1949,12 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             /**
              * <p>The lock mode of the instance. Valid values:</p>
              * <ul>
-             * <li><strong>Unlock</strong>: normal</li>
-             * <li><strong>ManualLock</strong>: manually locked</li>
-             * <li><strong>LockByExpiration</strong>: automatically locked due to expiration</li>
-             * <li><strong>LockByRestoration</strong>: automatically locked before rollback</li>
-             * <li><strong>LockByDiskQuota</strong>: automatically locked due to full disk space</li>
-             * <li><strong>LockReadInstanceByDiskQuota</strong>: automatically locked due to full disk space of the read-only instance</li>
+             * <li><strong>Unlock</strong>: The instance is running normally.</li>
+             * <li><strong>ManualLock</strong>: The instance is manually locked.</li>
+             * <li><strong>LockByExpiration</strong>: The instance is automatically locked upon expiration.</li>
+             * <li><strong>LockByRestoration</strong>: The instance is automatically locked before a rollback.</li>
+             * <li><strong>LockByDiskQuota</strong>: The instance is automatically locked when the storage space is exhausted.</li>
+             * <li><strong>LockReadInstanceByDiskQuota</strong>: The read-only instance is automatically locked when the storage space is exhausted.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1988,7 +1988,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The current Milvus version.</p>
+             * <p>The current kernel version.</p>
              * 
              * <strong>example:</strong>
              * <p>polarx-kernel_5.4.11-16301083_xcluster-20210805</p>
@@ -1999,7 +1999,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network type of the instance. Only VPC is supported, which indicates a virtual private cloud.</p>
+             * <p>The network type of the instance. Only VPC is supported, which indicates a virtual private cloud (VPC).</p>
              * 
              * <strong>example:</strong>
              * <p>VPC</p>
@@ -2106,10 +2106,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             /**
              * <p>The status of the three-role mode. Valid values:</p>
              * <ul>
-             * <li><strong>disabled</strong>: disabled</li>
-             * <li><strong>enabled</strong>: enabled</li>
-             * <li><strong>processing</strong>: processing</li>
-             * <li><strong>unknown</strong>: unknown, which may be caused by the inability to connect to the instance</li>
+             * <li><strong>disabled</strong>: The feature is disabled.</li>
+             * <li><strong>enabled</strong>: The feature is enabled.</li>
+             * <li><strong>processing</strong>: The feature is being configured.</li>
+             * <li><strong>unknown</strong>: The status is unknown, which may be caused by a connection failure to the instance.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2121,7 +2121,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether an associated Search instance that is not deleted exists, including instances that are being created or deleted.</p>
+             * <p>Indicates whether the search engine is activated.</p>
              */
             public Builder searchEnabled(Boolean searchEnabled) {
                 this.searchEnabled = searchEnabled;
@@ -2129,7 +2129,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique Search instance associated with the current primary instance. This parameter is empty if the feature is not enabled.</p>
+             * <p>Indicates whether the search engine is activated.</p>
              */
             public Builder searchInstance(SearchInstance searchInstance) {
                 this.searchInstance = searchInstance;
@@ -2163,8 +2163,11 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>exclusive: Exclusive.
-             * general: General.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>exclusive: Exclusive.</li>
+             * <li>general: General.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>exclusive | general</p>
@@ -2197,7 +2200,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The used storage capacity, in bytes.</p>
+             * <p>The amount of storage used, in bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>17042505728</p>

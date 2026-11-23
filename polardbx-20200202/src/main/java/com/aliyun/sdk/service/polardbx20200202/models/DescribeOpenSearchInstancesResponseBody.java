@@ -233,7 +233,7 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
              * <p>The authentication action.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>polardbx:DescribeOpenSearchInstances</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -244,7 +244,7 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
              * <p>The display name of the authentication principal.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>Sample RAM user</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -274,7 +274,7 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The encoded diagnostic message.</p>
+             * <p>The diagnostic message.</p>
              * 
              * <strong>example:</strong>
              * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
@@ -285,7 +285,7 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the permission denial.</p>
+             * <p>The access denial type.</p>
              * 
              * <strong>example:</strong>
              * <p>ImplicitDeny</p>
@@ -592,7 +592,7 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The DPI engine version. Default value: 2.0.</p>
+             * <p>The database engine version of the DPI engine. Default value: 2.0.</p>
              * 
              * <strong>example:</strong>
              * <p>8.0</p>
@@ -614,7 +614,7 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The memory size. Unit: GB.</p>
+             * <p>The configured memory size, in GB.</p>
              * 
              * <strong>example:</strong>
              * <p>16</p>
@@ -652,10 +652,10 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the instance specifications.</p>
+             * <p>The display name of the instance type.</p>
              * 
              * <strong>example:</strong>
-             * <p>8 cores 32 GB</p>
+             * <p>8 vCPUs, 32 GB</p>
              */
             public Builder specDisplay(String specDisplay) {
                 this.specDisplay = specDisplay;
@@ -674,7 +674,7 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage size of a single data node. Unit: GB.</p>
+             * <p>The storage space of a single data node, in GB.</p>
              * 
              * <strong>example:</strong>
              * <p>500</p>
@@ -804,7 +804,7 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of entries per page for a paging query. Maximum value: 100. Default value: If you do not specify a value or the value is less than 10, the default value is 10. If the value is greater than 100, the default value is 100.</p>
+             * <p>The number of entries per page for paging in a paged query. Maximum value: 100. Default value: 10 if no Settings are specified or the Settings value is less than 10. If the Settings value is greater than 100, the default value is 100.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>

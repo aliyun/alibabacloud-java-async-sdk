@@ -80,7 +80,7 @@ public class DescribePxfsAccessTokensResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The detailed reason why access was denied.</p>
+         * <p>The detailed reasons for the access denial.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -230,10 +230,10 @@ public class DescribePxfsAccessTokensResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The authorization action.</p>
+             * <p>The authentication action.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>polardbx:DescribePxfsAccessTokens</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -241,10 +241,10 @@ public class DescribePxfsAccessTokensResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The identity used for authorization in the request.</p>
+             * <p>The identity identifier used for authentication in the request.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>Sample RAM user</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -252,7 +252,7 @@ public class DescribePxfsAccessTokensResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The owner ID of the authorization principal.</p>
+             * <p>The owner ID of the authentication principal.</p>
              * 
              * <strong>example:</strong>
              * <p>111</p>
@@ -263,7 +263,7 @@ public class DescribePxfsAccessTokensResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the authorization principal.</p>
+             * <p>The type of the authentication principal.</p>
              * 
              * <strong>example:</strong>
              * <p>222</p>
@@ -274,7 +274,7 @@ public class DescribePxfsAccessTokensResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The diagnostic information.</p>
+             * <p>The diagnostic message.</p>
              * 
              * <strong>example:</strong>
              * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>

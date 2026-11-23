@@ -80,7 +80,7 @@ public class ModifyContextDBSecurityIpsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the access denial.</p>
+         * <p>The access denial details.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -88,7 +88,7 @@ public class ModifyContextDBSecurityIpsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data struct.</p>
+         * <p>The data structure.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -233,7 +233,7 @@ public class ModifyContextDBSecurityIpsResponseBody extends TeaModel {
              * <p>The authentication action.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>polardbx:ModifyContextDBSecurityIps</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -241,10 +241,10 @@ public class ModifyContextDBSecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the authentication principal.</p>
+             * <p>The name of the authentication principal.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>Sample RAM user</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -252,7 +252,7 @@ public class ModifyContextDBSecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account to which the authentication principal belongs.</p>
+             * <p>The Alibaba Cloud account ID of the authentication principal.</p>
              * 
              * <strong>example:</strong>
              * <p>111</p>
@@ -263,7 +263,7 @@ public class ModifyContextDBSecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The identity type used for authentication in the request. Valid values:</p>
+             * <p>The type of identity used for authentication in the request. Valid values:</p>
              * <ul>
              * <li>SubUser: RAM user.</li>
              * <li>AssumedRoleUser: RAM role.</li>
@@ -279,7 +279,7 @@ public class ModifyContextDBSecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The diagnostic information.</p>
+             * <p>The diagnostic message.</p>
              * 
              * <strong>example:</strong>
              * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
@@ -290,7 +290,7 @@ public class ModifyContextDBSecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the permission denial.</p>
+             * <p>The no permission type.</p>
              * 
              * <strong>example:</strong>
              * <p>ImplicitDeny</p>
@@ -410,7 +410,7 @@ public class ModifyContextDBSecurityIpsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The context service instance name.</p>
+             * <p>The name of the context service instance.</p>
              * 
              * <strong>example:</strong>
              * <p>pxt-*********</p>
@@ -424,7 +424,7 @@ public class ModifyContextDBSecurityIpsResponseBody extends TeaModel {
              * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>pxc-xxxxxxxxxx</p>
+             * <p>123456</p>
              */
             public Builder DBInstanceId(Integer DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -446,7 +446,7 @@ public class ModifyContextDBSecurityIpsResponseBody extends TeaModel {
              * <p>The task ID.</p>
              * 
              * <strong>example:</strong>
-             * <hr>
+             * <p>2209883</p>
              */
             public Builder taskId(Integer taskId) {
                 this.taskId = taskId;

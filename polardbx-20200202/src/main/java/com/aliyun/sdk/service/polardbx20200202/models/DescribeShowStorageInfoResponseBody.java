@@ -80,7 +80,7 @@ public class DescribeShowStorageInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The return code of the request. &gt; This parameter is empty when the request is successful. When the request fails, exception information such as error codes is returned.</p>
+         * <p>The return code of the request. This parameter is empty if the request is successful. If the request fails, an error message such as an error code is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -259,7 +259,7 @@ public class DescribeShowStorageInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The specification type (specification code) of the instance.</p>
+             * <p>The instance type (specification code).</p>
              * 
              * <strong>example:</strong>
              * <p>polar.mysql.x4.large</p>
@@ -305,9 +305,9 @@ public class DescribeShowStorageInfoResponseBody extends TeaModel {
             /**
              * <p>The role type of the instance. Valid values:</p>
              * <ul>
-             * <li>MASTER: primary instance.</li>
-             * <li>READONLY: read-only instance.</li>
-             * <li>STANDBY: standby instance (high-availability scenario).</li>
+             * <li>MASTER: primary instance</li>
+             * <li>READONLY: read-only instance</li>
+             * <li>STANDBY: secondary instance in high-availability scenarios</li>
              * </ul>
              * 
              * <strong>example:</strong>

@@ -131,7 +131,7 @@ public class ModifyMem0SecurityIpsRequest extends Request {
         }
 
         /**
-         * <p>The name of the whitelist group of the instance.</p>
+         * <p>The name of the whitelist group for the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -143,11 +143,11 @@ public class ModifyMem0SecurityIpsRequest extends Request {
         }
 
         /**
-         * <p>The modification mode of the whitelist. Valid values:</p>
+         * <p>The modification mode for the whitelist. Valid values:</p>
          * <ul>
          * <li>0: overwrites the whitelist group.</li>
-         * <li>1: adds a whitelist group.</li>
-         * <li>2: deletes a whitelist group.</li>
+         * <li>1: adds IP addresses to the whitelist group.</li>
+         * <li>2: removes IP addresses from the whitelist group.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -173,7 +173,7 @@ public class ModifyMem0SecurityIpsRequest extends Request {
         }
 
         /**
-         * <p>The IP addresses in the whitelist group. Separate multiple IP addresses with commas (,).</p>
+         * <p>The list of IP addresses in the whitelist group. Separate multiple IP addresses with commas (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -393,7 +393,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of original parameters.</p>
+             * <p>The original parameter list.</p>
              */
             public Builder configParameters(java.util.List<ConfigParameters> configParameters) {
                 this.configParameters = configParameters;
@@ -434,7 +434,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of running parameter details.</p>
+             * <p>The list of running parameters.</p>
              */
             public Builder runningParameters(java.util.List<RunningParameters> runningParameters) {
                 this.runningParameters = runningParameters;

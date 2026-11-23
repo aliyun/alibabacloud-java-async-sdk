@@ -80,7 +80,7 @@ public class ReleasePxfsPublicConnectionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the access denial.</p>
+         * <p>The detailed cause of the access denial.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -233,7 +233,7 @@ public class ReleasePxfsPublicConnectionResponseBody extends TeaModel {
              * <p>The authentication action.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>polardbx:ReleasePxfsPublicConnection</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -244,7 +244,7 @@ public class ReleasePxfsPublicConnectionResponseBody extends TeaModel {
              * <p>The identity used for authentication in the request.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>Sample RAM user</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -274,7 +274,7 @@ public class ReleasePxfsPublicConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The diagnostic information.</p>
+             * <p>The diagnostic message.</p>
              * 
              * <strong>example:</strong>
              * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
@@ -379,7 +379,7 @@ public class ReleasePxfsPublicConnectionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The instance ID of the PolarDB-X instance.</p>
+             * <p>The PolarDB-X instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>pxc-xxxxxxxx</p>
@@ -390,7 +390,7 @@ public class ReleasePxfsPublicConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance ID of the Agent file service.</p>
+             * <p>The Agent file service instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>pxfs-xxxxxxxx</p>

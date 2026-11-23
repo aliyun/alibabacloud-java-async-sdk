@@ -131,7 +131,7 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The key list.</p>
+             * <p>The list of keys.</p>
              */
             public Builder keyIds(java.util.List<String> keyIds) {
                 this.keyIds = keyIds;

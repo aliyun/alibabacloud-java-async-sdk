@@ -163,7 +163,7 @@ public class ModifyPxfsTenantQuotaRequest extends Request {
         }
 
         /**
-         * <p>The capacity quota.</p>
+         * <p>The storage capacity quota.</p>
          * 
          * <strong>example:</strong>
          * <p>107374182400</p>
@@ -187,7 +187,7 @@ public class ModifyPxfsTenantQuotaRequest extends Request {
         }
 
         /**
-         * <p>The request rate limit.</p>
+         * <p>The maximum request rate.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -199,7 +199,7 @@ public class ModifyPxfsTenantQuotaRequest extends Request {
         }
 
         /**
-         * <p>The write bandwidth limit.</p>
+         * <p>The maximum write bandwidth.</p>
          * 
          * <strong>example:</strong>
          * <p>104857600</p>

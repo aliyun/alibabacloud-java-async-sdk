@@ -230,10 +230,10 @@ public class CreateContextDBResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>As described above.</p>
+             * <p>The description as above.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>polardbx:CreateContextDB</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -244,7 +244,7 @@ public class CreateContextDBResponseBody extends TeaModel {
              * <p>The display name of the authentication principal.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>Sample RAM user</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -464,7 +464,7 @@ public class CreateContextDBResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the context service dashboard instance.</p>
+             * <p>The name of the context service dashboard replica set.</p>
              * 
              * <strong>example:</strong>
              * <p>pxt-*********-d</p>
@@ -486,7 +486,7 @@ public class CreateContextDBResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the context service service instance.</p>
+             * <p>The name of the context service replica set.</p>
              * 
              * <strong>example:</strong>
              * <p>pxt-*********-s</p>

@@ -93,7 +93,7 @@ public class ModifyOpenSearchAccessProtocolResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the access denial.</p>
+         * <p>The details of the access denied error.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -101,7 +101,7 @@ public class ModifyOpenSearchAccessProtocolResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message. &quot;success&quot; is returned for a successful request. An error code is returned for a failed request.</p>
+         * <p>The response message. If the request is successful, success is returned. If an error occurs, the corresponding error code is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -114,11 +114,11 @@ public class ModifyOpenSearchAccessProtocolResponseBody extends TeaModel {
         /**
          * <p>The backend protocol. Valid values:</p>
          * <ul>
-         * <li><p><strong>HTTP</strong> (default): supports association with HTTPS, HTTP, and QUIC listeners.</p>
+         * <li><p><strong>HTTP</strong> (default): Supports association with HTTPS, HTTP, and QUIC listeners.</p>
          * </li>
-         * <li><p><strong>HTTPS</strong>: supports association with HTTPS listeners.</p>
+         * <li><p><strong>HTTPS</strong>: Supports association with HTTPS listeners.</p>
          * </li>
-         * <li><p><strong>gRPC</strong>: supports association with HTTPS and QUIC listeners.</p>
+         * <li><p><strong>gRPC</strong>: Supports association with HTTPS and QUIC listeners.</p>
          * </li>
          * </ul>
          * <blockquote>
@@ -271,7 +271,7 @@ public class ModifyOpenSearchAccessProtocolResponseBody extends TeaModel {
              * <p>The authentication action.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>polardbx:ModifyOpenSearchAccessProtocol</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -282,7 +282,7 @@ public class ModifyOpenSearchAccessProtocolResponseBody extends TeaModel {
              * <p>The display name of the authentication principal.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>Sample RAM user</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -301,7 +301,7 @@ public class ModifyOpenSearchAccessProtocolResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The identity type used for authentication in the request. Valid values:</p>
+             * <p>The type of identity used for authentication in the request. Valid values:</p>
              * <ul>
              * <li>SubUser: RAM user</li>
              * <li>AssumedRoleUser: RAM role</li>
@@ -328,7 +328,7 @@ public class ModifyOpenSearchAccessProtocolResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the permission denial.</p>
+             * <p>The permission denial type.</p>
              * 
              * <strong>example:</strong>
              * <p>ImplicitDeny</p>

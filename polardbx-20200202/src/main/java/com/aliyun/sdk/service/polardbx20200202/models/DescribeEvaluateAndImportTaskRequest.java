@@ -87,7 +87,7 @@ public class DescribeEvaluateAndImportTaskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the link task.</p>
+         * <p>The ID of the slink task.</p>
          * 
          * <strong>example:</strong>
          * <p>etx-szr2rr6i*****</p>

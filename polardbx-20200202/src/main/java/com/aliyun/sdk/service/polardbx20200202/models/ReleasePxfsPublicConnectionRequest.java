@@ -75,7 +75,7 @@ public class ReleasePxfsPublicConnectionRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID of the PolarDB-X instance.</p>
+         * <p>The PolarDB-X instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

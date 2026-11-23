@@ -80,7 +80,7 @@ public class DescribeOpenSearchTopologyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the access denial.</p>
+         * <p>The access denial details.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -88,7 +88,7 @@ public class DescribeOpenSearchTopologyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data struct.</p>
+         * <p>The data structure.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -233,7 +233,7 @@ public class DescribeOpenSearchTopologyResponseBody extends TeaModel {
              * <p>The authentication action.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>polardbx:DescribeOpenSearchTopology</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -241,10 +241,10 @@ public class DescribeOpenSearchTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the authentication principal.</p>
+             * <p>The name of the authentication principal.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>Sample RAM user</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -252,7 +252,7 @@ public class DescribeOpenSearchTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The owner ID of the authentication principal.</p>
+             * <p>The OwnerId of the authentication principal.</p>
              * 
              * <strong>example:</strong>
              * <p>111</p>
@@ -263,7 +263,7 @@ public class DescribeOpenSearchTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The authentication principal type.</p>
+             * <p>The description as above.</p>
              * 
              * <strong>example:</strong>
              * <p>222</p>
@@ -274,7 +274,7 @@ public class DescribeOpenSearchTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The encoded diagnostic message.</p>
+             * <p>The diagnostic information.</p>
              * 
              * <strong>example:</strong>
              * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
@@ -458,7 +458,7 @@ public class DescribeOpenSearchTopologyResponseBody extends TeaModel {
              * <p>The total number of CPU cores in the cluster.</p>
              * 
              * <strong>example:</strong>
-             * <p>0.25</p>
+             * <p>4</p>
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -466,7 +466,7 @@ public class DescribeOpenSearchTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Origin Domain Name that you configured in the DCDN console, including IPv4 addresses, IPv6 addresses, common domain names, and OSS domain names.</p>
+             * <p>The origin domain name that you configured in the DCDN console, including IPv4 addresses, IPv6 addresses, regular domain names, and OSS domain names.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://secnet-defense-vastip.oss-cn-hangzhou.aliyuncs.com">https://secnet-defense-vastip.oss-cn-hangzhou.aliyuncs.com</a></p>
@@ -485,7 +485,7 @@ public class DescribeOpenSearchTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The memory size.</p>
+             * <p>The configured memory size.</p>
              * 
              * <strong>example:</strong>
              * <p>32</p>
@@ -507,7 +507,7 @@ public class DescribeOpenSearchTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The role of a node in the three-node RDS cluster. Valid values:</p>
+             * <p>The role of a node in the three-node RDS architecture. Valid values:</p>
              * <ul>
              * <li><strong>leader</strong>: primary node</li>
              * <li><strong>follower</strong>: secondary node</li>
@@ -525,13 +525,13 @@ public class DescribeOpenSearchTopologyResponseBody extends TeaModel {
             /**
              * <p>The node status. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: Running</li>
-             * <li><strong>1</strong>: Creating</li>
-             * <li><strong>2</strong>: Abnormal</li>
-             * <li><strong>3</strong>: Expired</li>
-             * <li><strong>4</strong>: Releasing</li>
-             * <li><strong>5</strong>: Released</li>
-             * <li><strong>6</strong>: Locked</li>
+             * <li><strong>0</strong>: running</li>
+             * <li><strong>1</strong>: creating</li>
+             * <li><strong>2</strong>: abnormal</li>
+             * <li><strong>3</strong>: expired</li>
+             * <li><strong>4</strong>: releasing</li>
+             * <li><strong>5</strong>: released</li>
+             * <li><strong>6</strong>: locked</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -617,7 +617,7 @@ public class DescribeOpenSearchTopologyResponseBody extends TeaModel {
             /**
              * <p>The number of secondary nodes in the primary zone.</p>
              * <blockquote>
-             * <p>The <strong>ReplicaCount</strong> and <strong>SlaveReplicaCount</strong> parameters apply only to cloud-native instances. If the instance uses the cluster architecture, these parameters indicate the number of secondary nodes of a <strong>single shard</strong> in the primary and secondary zones.</p>
+             * <p>The <strong>ReplicaCount</strong> and <strong>SlaveReplicaCount</strong> parameters apply only to cloud-native instances. If the instance uses a cluster architecture, these parameters indicate the number of secondary nodes in the primary and secondary zones for a <strong>single shard</strong>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -629,7 +629,7 @@ public class DescribeOpenSearchTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total storage capacity of the node. Unit: GB.</p>
+             * <p>The total storage capacity of the node, in GB.</p>
              * 
              * <strong>example:</strong>
              * <p>500</p>
@@ -718,7 +718,7 @@ public class DescribeOpenSearchTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configuration of the automatic storage scaling feature for the instance.</p>
+             * <p>The configuration information of the Automatic storage scaling feature for instance storage.</p>
              */
             public Builder storage(Storage storage) {
                 this.storage = storage;

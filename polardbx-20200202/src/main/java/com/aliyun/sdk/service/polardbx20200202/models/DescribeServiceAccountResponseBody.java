@@ -106,7 +106,7 @@ public class DescribeServiceAccountResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the access denial.</p>
+         * <p>The details of the access denied error.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -122,10 +122,10 @@ public class DescribeServiceAccountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message. &quot;success&quot; is returned if the request was successful. Otherwise, an error code is returned.</p>
+         * <p>The message returned. If the request is successful, \&quot;success\&quot; is returned. If the request fails, the corresponding error code is returned.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -144,7 +144,7 @@ public class DescribeServiceAccountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -255,7 +255,7 @@ public class DescribeServiceAccountResponseBody extends TeaModel {
              * <p>The authentication action.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>polardbx:DescribeServiceAccount</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -263,7 +263,7 @@ public class DescribeServiceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The authentication principal type.</p>
+             * <p>The type of the authenticated principal.</p>
              * 
              * <strong>example:</strong>
              * <p>222</p>
@@ -274,7 +274,7 @@ public class DescribeServiceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The diagnostic information.</p>
+             * <p>The diagnostic message.</p>
              * 
              * <strong>example:</strong>
              * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
@@ -285,7 +285,7 @@ public class DescribeServiceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the permission denial.</p>
+             * <p>The type of the access denial.</p>
              * 
              * <strong>example:</strong>
              * <p>ImplicitDeny</p>
@@ -296,7 +296,7 @@ public class DescribeServiceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The policy type.</p>
+             * <p>The type of the policy.</p>
              * 
              * <strong>example:</strong>
              * <p>PRIORITY</p>
@@ -392,7 +392,7 @@ public class DescribeServiceAccountResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The account name.</p>
+             * <p>The name of the account.</p>
              * 
              * <strong>example:</strong>
              * <p>polardbx_meta_ro</p>
@@ -414,7 +414,7 @@ public class DescribeServiceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service account type.</p>
+             * <p>The type of the service account.</p>
              * 
              * <strong>example:</strong>
              * <p>METADATA_READONLY</p>
@@ -425,7 +425,7 @@ public class DescribeServiceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the backup set. Valid values:</p>
+             * <p>The status of the backup set:</p>
              * <ul>
              * <li><strong>0</strong>: Backing up.</li>
              * <li><strong>1</strong>: Backup succeeded.</li>

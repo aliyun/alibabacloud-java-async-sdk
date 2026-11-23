@@ -233,7 +233,7 @@ public class DeleteOpenSearchResponseBody extends TeaModel {
              * <p>The authentication action.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>polardbx:DeleteOpenSearch</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -244,7 +244,7 @@ public class DeleteOpenSearchResponseBody extends TeaModel {
              * <p>The display name of the authentication principal.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>Sample RAM user</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -285,7 +285,7 @@ public class DeleteOpenSearchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the permission denial.</p>
+             * <p>The no-permission type.</p>
              * 
              * <strong>example:</strong>
              * <p>ImplicitDeny</p>
@@ -366,7 +366,7 @@ public class DeleteOpenSearchResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The instance name.</p>
+             * <p>The name of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>pxc-*********</p>

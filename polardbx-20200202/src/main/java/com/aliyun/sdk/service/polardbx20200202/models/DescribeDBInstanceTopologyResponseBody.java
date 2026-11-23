@@ -222,7 +222,7 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the node is enabled. In the compute layer, only the nodes in the primary zone are enabled. After a primary/secondary switchover is performed on the instance, the secondary nodes in the compute layer are switched to primary nodes. All nodes in the storage layer are enabled.</p>
+             * <p>Indicates whether the node is enabled. In the compute layer, only nodes in the primary zone are enabled. After a primary/secondary switchover is performed on the instance, the secondary node in the compute layer is switched to the primary node. All nodes in the storage layer are enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -233,7 +233,7 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The zone to which the node belongs. If the node is an ApsaraDB RDS node, the zones of multiple child nodes are separated by semicolons (;).</p>
+             * <p>The zone to which the node belongs. If the node is an ApsaraDB RDS node, the zones of multiple child nodes are separated by semicolons.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou-a</p>
@@ -244,7 +244,7 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node attribute. Valid values:</p>
+             * <p>The node type. Valid values:</p>
              * <ul>
              * <li><strong>polarx_cn</strong>: Compute node.</li>
              * <li><strong>polarx_store</strong>: Data node.</li>
@@ -293,7 +293,7 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region to which the node belongs. If the node is an ApsaraDB RDS node, the regions of multiple child nodes are separated by semicolons (;).</p>
+             * <p>The region to which the node belongs. If the node is an ApsaraDB RDS node, the regions of multiple child nodes are separated by semicolons.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -378,7 +378,7 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The zone to which a specific node in the three-node ApsaraDB RDS deployment belongs.</p>
+             * <p>The zone to which a specific node among the three ApsaraDB RDS nodes belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou-a</p>
@@ -389,7 +389,7 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The role of a specific node in the three-node ApsaraDB RDS deployment. Valid values:</p>
+             * <p>The role of a specific node among the three ApsaraDB RDS nodes. Valid values:</p>
              * <ul>
              * <li><strong>leader</strong>: Primary node.</li>
              * <li><strong>follower</strong>: Secondary node.</li>
@@ -933,7 +933,7 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the node is enabled. In the compute layer, only the nodes in the primary zone are enabled. After a primary/secondary switchover is performed on the instance, the secondary nodes in the compute layer are switched to primary nodes. All nodes in the storage layer are enabled.</p>
+             * <p>Indicates whether the node is enabled. In the compute layer, only nodes in the primary zone are enabled. After a primary/secondary switchover is performed on the instance, the secondary node in the compute layer is switched to the primary node. All nodes in the storage layer are enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -944,7 +944,7 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The zone to which the node belongs. If the node is an ApsaraDB RDS node, the zones of multiple child nodes are separated by semicolons (;).</p>
+             * <p>The zone to which the node belongs. If the node is an ApsaraDB RDS node, the zones of multiple child nodes are separated by semicolons.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou-a</p>
@@ -955,7 +955,7 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of data information for the three-node ApsaraDB RDS deployment.</p>
+             * <p>The list of information about the three ApsaraDB RDS nodes.</p>
              */
             public Builder azoneRoleList(java.util.List<AzoneRoleList> azoneRoleList) {
                 this.azoneRoleList = azoneRoleList;
@@ -963,7 +963,7 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node attribute. Valid values:</p>
+             * <p>The node type. Valid values:</p>
              * <ul>
              * <li><strong>polarx_cn</strong>: Compute node.</li>
              * <li><strong>polarx_store</strong>: Data node.</li>
@@ -1075,7 +1075,7 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The DPI engine version. Valid values:</p>
+             * <p>The database engine version. Valid values:</p>
              * <ul>
              * <li><strong>mysql</strong></li>
              * <li><strong>polarx_cdc</strong></li>
@@ -1091,7 +1091,7 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The DPI engine version. Default value: 2.0.</p>
+             * <p>The database engine version. Default value: 2.0.</p>
              * 
              * <strong>example:</strong>
              * <p>5.7</p>
@@ -1113,7 +1113,7 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The lock status. Valid values:</p>
+             * <p>Indicates whether the node is locked. Valid values:</p>
              * <ul>
              * <li><strong>0</strong>: Unlocked.</li>
              * <li><strong>1</strong>: Locked.</li>
@@ -1229,7 +1229,7 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region to which the node belongs. If the node is an ApsaraDB RDS node, the regions of multiple child nodes are separated by semicolons (;).</p>
+             * <p>The region to which the node belongs. If the node is an ApsaraDB RDS node, the regions of multiple child nodes are separated by semicolons.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -1637,7 +1637,7 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The DPI engine version. Default value: 2.0.</p>
+             * <p>The database engine version. Default value: 2.0.</p>
              * 
              * <strong>example:</strong>
              * <p>2.0</p>

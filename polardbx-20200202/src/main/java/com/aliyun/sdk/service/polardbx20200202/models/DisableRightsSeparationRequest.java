@@ -135,7 +135,7 @@ public class DisableRightsSeparationRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>DemoPass1@</p>
          */
         public Builder dbaAccountPassword(String dbaAccountPassword) {
             this.putQueryParameter("DbaAccountPassword", dbaAccountPassword);

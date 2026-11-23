@@ -101,7 +101,7 @@ public class UpgradeColumnarVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message.</p>
+         * <p>The message returned for the request.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -192,7 +192,7 @@ public class UpgradeColumnarVersionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The instance ID.</p>
+             * <p>The ID of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>rm-uf68f345****88zf8</p>
@@ -203,10 +203,10 @@ public class UpgradeColumnarVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The target task ID.</p>
+             * <p>The ID of the target task.</p>
              * 
              * <strong>example:</strong>
-             * <p>1861190497624654848</p>
+             * <p>2209883</p>
              */
             public Builder taskId(Integer taskId) {
                 this.taskId = taskId;
@@ -273,7 +273,7 @@ public class UpgradeColumnarVersionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The target version number.</p>
+             * <p>The target minor version.</p>
              * 
              * <strong>example:</strong>
              * <p>polardb-2.4.0_5.4.19-20250116_xcluster5.4.20-20241213</p>

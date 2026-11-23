@@ -88,7 +88,7 @@ public class CreatePxfuseRequest extends Request {
         }
 
         /**
-         * <p>The region where the instance resides.</p>
+         * <p>The region ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

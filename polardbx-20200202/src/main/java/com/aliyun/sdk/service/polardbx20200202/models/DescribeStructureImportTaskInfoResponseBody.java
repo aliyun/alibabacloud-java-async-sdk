@@ -93,7 +93,7 @@ public class DescribeStructureImportTaskInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The result set.</p>
+         * <p>The returned result set.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +101,7 @@ public class DescribeStructureImportTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message. This parameter is empty when the request succeeds. When the request fails, an exception message is returned, such as an error code.</p>
+         * <p>The returned message. This parameter is empty when the request is successful. If the request fails, an error message such as an error code is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -123,7 +123,7 @@ public class DescribeStructureImportTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -255,7 +255,7 @@ public class DescribeStructureImportTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the table that encountered an exception.</p>
+             * <p>The name of the table with exceptions.</p>
              * 
              * <strong>example:</strong>
              * <p>hash_realtime_new.wm_in_job_et</p>
@@ -277,7 +277,7 @@ public class DescribeStructureImportTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The current progress in percentage.</p>
+             * <p>The current progress (percentage).</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -369,7 +369,7 @@ public class DescribeStructureImportTaskInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The slink status.</p>
+             * <p>The Slink status.</p>
              * 
              * <strong>example:</strong>
              * <p>STRUCTURE_IMPORT</p>
@@ -380,7 +380,7 @@ public class DescribeStructureImportTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The import result of the schema import task.</p>
+             * <p>The import result of the structure import task.</p>
              */
             public Builder structureImportResult(StructureImportResult structureImportResult) {
                 this.structureImportResult = structureImportResult;

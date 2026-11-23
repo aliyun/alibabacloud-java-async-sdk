@@ -334,8 +334,8 @@ public class CreateOpenSearchRequest extends Request {
         /**
          * <p>Specifies whether to enable auto-renewal. Default value: true. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: enables auto-renewal</li>
-         * <li><strong>false</strong>: disables auto-renewal</li>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong>: No.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -348,7 +348,7 @@ public class CreateOpenSearchRequest extends Request {
         }
 
         /**
-         * <p>The idempotency token. Make sure that the value is unique for each creation request.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. Keep the value unique for each request.</p>
          * 
          * <strong>example:</strong>
          * <p>FEA5DC20-6D8A-5979-97AA-FC57546ADC20</p>
@@ -372,7 +372,7 @@ public class CreateOpenSearchRequest extends Request {
         }
 
         /**
-         * <p>The code for the node specifications of the PolarDBX Search data node. The active node specifications vary by region and sales configuration. Use a PolarDBX Search node specifications code that is available for purchase in the current region.</p>
+         * <p>The node specification code of the PolarDB-X Search data node. Available specifications vary by region and sales configuration. Use a PolarDB-X Search node specification code that is available for purchase in the current region.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -385,7 +385,7 @@ public class CreateOpenSearchRequest extends Request {
         }
 
         /**
-         * <p>The database engine version of PolarDBX Search. The current fixed DPI engine version is 3.0. If this parameter is not specified, 3.0 is used.</p>
+         * <p>The PolarDB-X Search engine version. The value is fixed to 3.0. If you do not specify this parameter, 3.0 is used.</p>
          * 
          * <strong>example:</strong>
          * <p>3.0</p>
@@ -397,7 +397,7 @@ public class CreateOpenSearchRequest extends Request {
         }
 
         /**
-         * <p>A compatible parameter. This parameter does not take effect. Specify the node specifications of the PolarDBX Search data node by using DBNodeClass.</p>
+         * <p>A compatible parameter. This parameter does not take effect. Specify the node specification of the PolarDB-X Search data node by using DBNodeClass.</p>
          * 
          * <strong>example:</strong>
          * <p>opensearch.sn2ne.large.1</p>
@@ -409,7 +409,7 @@ public class CreateOpenSearchRequest extends Request {
         }
 
         /**
-         * <p>The number of PolarDBX Search data nodes. The value must be a positive integer and an integer multiple of the number of selected zones.</p>
+         * <p>The number of PolarDB-X Search data nodes. The value must be a positive integer and an integer multiple of the number of selected zones.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -424,8 +424,8 @@ public class CreateOpenSearchRequest extends Request {
         /**
          * <p>The billing method of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>PREPAY</strong>: subscription</li>
-         * <li><strong>POSTPAY</strong>: pay-as-you-go</li>
+         * <li><strong>PREPAY</strong>: Subscription.</li>
+         * <li><strong>POSTPAY</strong>: Pay-as-you-go.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -439,7 +439,7 @@ public class CreateOpenSearchRequest extends Request {
         }
 
         /**
-         * <p>The billing cycle. For subscription instances, only Year and Month are supported. For pay-as-you-go instances, the default value is Hour.</p>
+         * <p>The billing cycle. For subscription instances, valid values are Year and Month. For pay-as-you-go instances, the default value is Hour.</p>
          * 
          * <strong>example:</strong>
          * <p>Month</p>
@@ -451,7 +451,7 @@ public class CreateOpenSearchRequest extends Request {
         }
 
         /**
-         * <p>The region ID.</p>
+         * <p>The region ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -464,7 +464,7 @@ public class CreateOpenSearchRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID. This parameter can be left empty and is not currently supported.</p>
+         * <p>The resource group ID. This parameter can be left empty. Resource groups are not currently supported.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-xxxxx</p>
@@ -476,7 +476,7 @@ public class CreateOpenSearchRequest extends Request {
         }
 
         /**
-         * <p>The storage space per node, in GB. The value must be a positive integer.</p>
+         * <p>The storage space per node. Unit: GB. The value must be a positive integer.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -500,9 +500,9 @@ public class CreateOpenSearchRequest extends Request {
         }
 
         /**
-         * <p>The active topology type. Valid values:</p>
+         * <p>The topology type. Valid values:</p>
          * <ul>
-         * <li><strong>1azone</strong>: single-zone.</li>
+         * <li><strong>1azone</strong>: Single zone.</li>
          * <li><strong>3azones</strong>: Three-zone deployment.</li>
          * </ul>
          * 
@@ -516,9 +516,9 @@ public class CreateOpenSearchRequest extends Request {
         }
 
         /**
-         * <p>The subscription duration. You can specify a duration in months or years for subscription instances.</p>
+         * <p>Specifies the subscription duration in months or years.</p>
          * <blockquote>
-         * <p>When Period is set to Year, valid values for this parameter are 1, 2, and 3.</p>
+         * <p>If Period is set to Year, valid values for this parameter are 1, 2, and 3.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -557,7 +557,7 @@ public class CreateOpenSearchRequest extends Request {
         }
 
         /**
-         * <p>The secondary zone. This parameter is required when TopologyType is set to 3azones, and the value must be different from other zones.</p>
+         * <p>The secondary zone. This parameter is required when TopologyType is set to 3azones, and it cannot be the same as other zones.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-i</p>
@@ -569,7 +569,7 @@ public class CreateOpenSearchRequest extends Request {
         }
 
         /**
-         * <p>The third zone for Three-zone deployment. This parameter is required when TopologyType is set to 3azones, and the value must be different from other active zones.</p>
+         * <p>The third zone. This parameter is required when TopologyType is set to 3azones, and it cannot be the same as other zones.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-j</p>
@@ -581,7 +581,7 @@ public class CreateOpenSearchRequest extends Request {
         }
 
         /**
-         * <p>The zone of the instance.</p>
+         * <p>The zone ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

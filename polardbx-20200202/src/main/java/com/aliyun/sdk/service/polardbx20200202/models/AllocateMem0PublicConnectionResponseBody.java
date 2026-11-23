@@ -212,7 +212,7 @@ public class AllocateMem0PublicConnectionResponseBody extends TeaModel {
              * <p>Same as above.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>polardbx:AllocateMem0PublicConnection</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -220,10 +220,10 @@ public class AllocateMem0PublicConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The identity used for authentication in the request.</p>
+             * <p>The identity identifier used for authentication in the request.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>Sample RAM user</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;

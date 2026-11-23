@@ -387,10 +387,10 @@ public class CreateGdnStandbyMemberRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to enable auto-renewal. Default value: true.</p>
+         * <p>Specifies whether to enable auto-renewal. Default value: true. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Enabled.</li>
-         * <li><strong>false</strong>: Disabled.</li>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -415,7 +415,7 @@ public class CreateGdnStandbyMemberRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. Make sure that the value is different for each request.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. Make sure that the token is unique for each request.</p>
          * 
          * <strong>example:</strong>
          * <p>FEA5DC20-6D8A-5979-97AA-FC57546ADC20</p>
@@ -440,7 +440,7 @@ public class CreateGdnStandbyMemberRequest extends Request {
         }
 
         /**
-         * <p>The compute node specifications. This parameter is required for Enterprise Edition instances and is not required for Standard Edition instances.</p>
+         * <p>The compute node specifications. This parameter is required when you create an Enterprise Edition instance and is not required when you create a Standard Edition instance.</p>
          * <p>Enterprise Edition with local disks:</p>
          * <ul>
          * <li><strong>polarx.x4.medium.2e</strong>: 2 cores, 8 GB (general-purpose)</li>
@@ -496,7 +496,7 @@ public class CreateGdnStandbyMemberRequest extends Request {
         }
 
         /**
-         * <p>The description of the instance.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>go-to-the-docks-for-french-fries</p>
@@ -508,7 +508,7 @@ public class CreateGdnStandbyMemberRequest extends Request {
         }
 
         /**
-         * <p>The storage node specifications. This parameter is required for Enterprise Edition instances and is not required for Standard Edition instances.</p>
+         * <p>The storage node specifications. This parameter is required when you create an Enterprise Edition instance and is not required when you create a Standard Edition instance.</p>
          * <p>Enterprise Edition with local disks:</p>
          * <ul>
          * <li><strong>mysql.n2.medium.25</strong>: 2 cores, 4 GB (general-purpose)</li>
@@ -560,7 +560,7 @@ public class CreateGdnStandbyMemberRequest extends Request {
         }
 
         /**
-         * <p>The MySQL DPI engine version. Valid values: 5.7 and 8.0.</p>
+         * <p>The MySQL DPI engine version. Valid values: 5.7 or 8.0</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -585,7 +585,7 @@ public class CreateGdnStandbyMemberRequest extends Request {
         }
 
         /**
-         * <p>The billing method of the instance.</p>
+         * <p>The billing method of the instance. Valid values:</p>
          * <ul>
          * <li><strong>PREPAY</strong>: subscription</li>
          * <li><strong>POSTPAY</strong>: pay-as-you-go</li>
@@ -602,12 +602,7 @@ public class CreateGdnStandbyMemberRequest extends Request {
         }
 
         /**
-         * <p>The unit of the subscription duration. Valid values:</p>
-         * <ul>
-         * <li>Year</li>
-         * <li>Month</li>
-         * </ul>
-         * <p>For pay-as-you-go instances, the default value is Hour.</p>
+         * <p>The billing cycle. Valid values for the subscription billing method are Year and Month. The default value for the pay-as-you-go billing method is Hour.</p>
          * 
          * <strong>example:</strong>
          * <p>Month</p>
@@ -631,7 +626,7 @@ public class CreateGdnStandbyMemberRequest extends Request {
         }
 
         /**
-         * <p>The region in which the instance resides.</p>
+         * <p>The region where the instance resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -644,7 +639,7 @@ public class CreateGdnStandbyMemberRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID. This parameter can be left empty. This parameter is not supported.</p>
+         * <p>The resource group ID. This parameter can be left empty. Resource groups are not supported.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -670,8 +665,8 @@ public class CreateGdnStandbyMemberRequest extends Request {
         /**
          * <p>The edition of the instance. Valid values:</p>
          * <ul>
-         * <li>enterprise: Enterprise Edition.</li>
-         * <li>standard: Standard Edition.</li>
+         * <li><strong>enterprise</strong>: Enterprise Edition</li>
+         * <li><strong>standard</strong>: Standard Edition</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -684,7 +679,7 @@ public class CreateGdnStandbyMemberRequest extends Request {
         }
 
         /**
-         * <p>The region in which the source instance resides.</p>
+         * <p>The region where the source instance resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -709,7 +704,7 @@ public class CreateGdnStandbyMemberRequest extends Request {
         }
 
         /**
-         * <p>The zone for Three-zone deployment.</p>
+         * <p>The third active zone in a Three-zone deployment.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shenzhen-e</p>
@@ -723,8 +718,8 @@ public class CreateGdnStandbyMemberRequest extends Request {
         /**
          * <p>The topology type. Valid values:</p>
          * <ul>
-         * <li><strong>3azones</strong>: three-zone deployment.</li>
-         * <li><strong>1azone</strong>: single-zone deployment.</li>
+         * <li><strong>3azones</strong>: three-zone deployment</li>
+         * <li><strong>1azone</strong>: single-zone deployment</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -738,9 +733,9 @@ public class CreateGdnStandbyMemberRequest extends Request {
         }
 
         /**
-         * <p>The subscription duration. Unit: months or years.</p>
+         * <p>The subscription duration. You can specify a duration in months or years.</p>
          * <blockquote>
-         * <p>If Period is set to Year, valid values of this parameter are 1, 2, and 3.</p>
+         * <p>If Period is set to Year, valid values are 1, 2, and 3.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -753,7 +748,7 @@ public class CreateGdnStandbyMemberRequest extends Request {
         }
 
         /**
-         * <p>VPC ID。</p>
+         * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-*****</p>

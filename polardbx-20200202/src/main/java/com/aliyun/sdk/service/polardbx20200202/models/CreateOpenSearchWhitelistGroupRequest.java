@@ -171,7 +171,7 @@ public class CreateOpenSearchWhitelistGroupRequest extends Request {
         }
 
         /**
-         * <p>The description of the group.</p>
+         * <p>The description of the whitelist group.</p>
          * 
          * <strong>example:</strong>
          * <p>MAIN</p>

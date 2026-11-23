@@ -118,7 +118,7 @@ public class ResetOpenSearchPasswordRequest extends Request {
         }
 
         /**
-         * <p>The new password. The password must be 6 to 32 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters (!@#$&amp;%^*()_+-=).</p>
+         * <p>The new password. The password must be 6 to 32 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters (!@#$&amp;%^*()_+-=).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

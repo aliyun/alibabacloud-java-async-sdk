@@ -199,7 +199,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * <p>The description or remark of the database.</p>
+         * <p>The description or remarks of the database.</p>
          * 
          * <strong>example:</strong>
          * <p>app-test</p>

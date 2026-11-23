@@ -80,7 +80,7 @@ public class CreatePxfuseResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the access denial.</p>
+         * <p>The access denial details.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -88,7 +88,7 @@ public class CreatePxfuseResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the returned policy.</p>
+         * <p>The returned policy details.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -233,7 +233,7 @@ public class CreatePxfuseResponseBody extends TeaModel {
              * <p>The authentication action.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>polardbx:CreatePxfuse</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -244,7 +244,7 @@ public class CreatePxfuseResponseBody extends TeaModel {
              * <p>The display name of the authentication principal.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>Example RAM user</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -285,7 +285,7 @@ public class CreatePxfuseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of access denial.</p>
+             * <p>The type of the missing permission.</p>
              * 
              * <strong>example:</strong>
              * <p>ImplicitDeny</p>
@@ -392,7 +392,7 @@ public class CreatePxfuseResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the resource already exists.</p>
+             * <p>Indicates whether the instance already exists.</p>
              * 
              * <strong>example:</strong>
              * <p>False</p>

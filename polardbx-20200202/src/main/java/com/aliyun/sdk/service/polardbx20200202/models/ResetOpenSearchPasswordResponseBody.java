@@ -80,7 +80,7 @@ public class ResetOpenSearchPasswordResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the access denial.</p>
+         * <p>The detailed reasons for access denial.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -274,7 +274,7 @@ public class ResetOpenSearchPasswordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The encoded diagnostic message.</p>
+             * <p>The diagnostic message.</p>
              * 
              * <strong>example:</strong>
              * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
@@ -366,10 +366,10 @@ public class ResetOpenSearchPasswordResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The additional information returned by the operation. &quot;success&quot; is returned if the operation is successful. Otherwise, the corresponding error code is returned.</p>
+             * <p>The additional information returned by the API operation. If the request is successful, success is returned. If the request fails, the corresponding error code is returned.</p>
              * 
              * <strong>example:</strong>
-             * <p>【环境：huanghe】\nhuanghe 503_UC_OUTBOUND告警超过阈值！\n\n详情请查看: <a href="https://grafana-cn-lbj34sreu03.grafana.aliyuncs.com/d/_rOiq2lNk/asm-status-code-monitor?var-datasource=DataSource-HUANGHE%5C%5Cn">https://grafana-cn-lbj34sreu03.grafana.aliyuncs.com/d/_rOiq2lNk/asm-status-code-monitor?var-datasource=DataSource-HUANGHE\\n</a></p>
+             * <p>[Environment: huanghe]\nhuanghe 503_UC_OUTBOUND alert exceeds the threshold!\n\nFor details, see: <a href="https://grafana-cn-lbj34sreu03.grafana.aliyuncs.com/d/_rOiq2lNk/asm-status-code-monitor?var-datasource=DataSource-HUANGHE%5C%5Cn">https://grafana-cn-lbj34sreu03.grafana.aliyuncs.com/d/_rOiq2lNk/asm-status-code-monitor?var-datasource=DataSource-HUANGHE\\n</a></p>
              */
             public Builder message(String message) {
                 this.message = message;

@@ -87,7 +87,7 @@ public class DescribeRdsVswitchesRequest extends Request {
         } 
 
         /**
-         * <p>The region in which the instance resides.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -99,7 +99,7 @@ public class DescribeRdsVswitchesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the VPC in which the access endpoint resides.</p>
+         * <p>The ID of the VPC where the access endpoint resides.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1ndou****twoedlmru0</p>

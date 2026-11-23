@@ -188,7 +188,7 @@ public class MigrateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The zone ID of the primary zone for a multi-zone instance. <strong>This parameter is required if you want to create a multi-zone instance.</strong></p>
+         * <p>The zone ID of the primary zone for a multi-zone instance. <strong>This parameter is required to create a multi-zone instance.</strong></p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -214,9 +214,9 @@ public class MigrateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The secondary zone ID.</p>
+         * <p>The zone ID of the secondary zone.</p>
          * <blockquote>
-         * <p>This parameter cannot be the same as the ZoneId property.</p>
+         * <p>This parameter cannot have the same value as the ZoneId property.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -229,7 +229,7 @@ public class MigrateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The switch mode. Valid values:</p>
+         * <p>The switchover mode. Valid values:</p>
          * <ul>
          * <li>0: Immediate switchover.</li>
          * <li>1: Switchover within the O&amp;M window.</li>
@@ -245,7 +245,7 @@ public class MigrateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The third active zone.</p>
+         * <p>The tertiary zone for a Three-zone deployment. The zone must be active.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing-h</p>
@@ -274,7 +274,7 @@ public class MigrateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the VPC where the access endpoint resides.</p>
+         * <p>The ID of the VPC where the access endpoint is located.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-****</p>

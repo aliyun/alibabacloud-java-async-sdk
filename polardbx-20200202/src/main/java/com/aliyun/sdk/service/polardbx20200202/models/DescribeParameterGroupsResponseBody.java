@@ -67,7 +67,7 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The instance details.</p>
+         * <p>The list of instance details.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -274,7 +274,7 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether a forced restart of CN is required.</p>
+             * <p>Specifies whether a forcible restart is required for CN.</p>
              */
             public Builder cnForceRestart(Boolean cnForceRestart) {
                 this.cnForceRestart = cnForceRestart;
@@ -304,7 +304,7 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The database engine version.</p>
+             * <p>The database version.</p>
              * 
              * <strong>example:</strong>
              * <p>5.7</p>
@@ -315,7 +315,7 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether a forced restart of DN is required.</p>
+             * <p>Specifies whether a forcible restart is required for DN.</p>
              */
             public Builder dnForceRestart(Boolean dnForceRestart) {
                 this.dnForceRestart = dnForceRestart;
@@ -345,7 +345,7 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The modification time, in timestamp format.</p>
+             * <p>The modification time in timestamp format.</p>
              * 
              * <strong>example:</strong>
              * <p>1605079985000</p>
@@ -358,7 +358,7 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
             /**
              * <p>The parameter template ID.</p>
              * <blockquote>
-             * <p>You can call the <a href="https://help.aliyun.com/document_detail/207178.html">DescribeParameterGroups</a> operation to query the details of all parameter templates in the specified region, including the parameter template ID.</p>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/207178.html">DescribeParameterGroups</a> operation to query the details of all parameter templates in the target region, including the parameter template IDs.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -370,7 +370,7 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parameter template name.</p>
+             * <p>The name of the parameter template.</p>
              * 
              * <strong>example:</strong>
              * <p>dstest_api_new</p>
@@ -381,7 +381,7 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parameter templatetype.</p>
+             * <p>The parameter template type.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -466,7 +466,7 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The parameter template name.</p>
+             * <p>The name of the parameter template.</p>
              */
             public Builder parameterGroups(java.util.List<ParameterGroups> parameterGroups) {
                 this.parameterGroups = parameterGroups;

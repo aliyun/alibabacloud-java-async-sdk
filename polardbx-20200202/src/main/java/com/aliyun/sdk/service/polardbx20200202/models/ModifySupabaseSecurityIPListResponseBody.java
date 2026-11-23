@@ -80,7 +80,7 @@ public class ModifySupabaseSecurityIPListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the access denied error.</p>
+         * <p>The details of the access denial.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -233,7 +233,7 @@ public class ModifySupabaseSecurityIPListResponseBody extends TeaModel {
              * <p>The authentication action.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>polardbx:ModifySupabaseSecurityIPList</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -244,7 +244,7 @@ public class ModifySupabaseSecurityIPListResponseBody extends TeaModel {
              * <p>The display name of the authentication principal.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>Sample RAM user</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -274,7 +274,7 @@ public class ModifySupabaseSecurityIPListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The diagnostic message.</p>
+             * <p>The encoded diagnostic message.</p>
              * 
              * <strong>example:</strong>
              * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
@@ -285,7 +285,7 @@ public class ModifySupabaseSecurityIPListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the no permission error.</p>
+             * <p>The type of the permission denial.</p>
              * 
              * <strong>example:</strong>
              * <p>ImplicitDeny</p>
@@ -401,7 +401,7 @@ public class ModifySupabaseSecurityIPListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP whitelist.</p>
+             * <p>The IP addresses in the whitelist.</p>
              * 
              * <strong>example:</strong>
              * <p>100.104.187.192/26,100.104.225.192/26,100.104.145.64/26</p>

@@ -103,7 +103,7 @@ public class DescribeBackupSetRequest extends Request {
         } 
 
         /**
-         * <p>The backup set ID.</p>
+         * <p>The ID of the backup set.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

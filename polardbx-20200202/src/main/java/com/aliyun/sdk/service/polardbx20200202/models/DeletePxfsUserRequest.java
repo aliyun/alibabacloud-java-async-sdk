@@ -118,7 +118,7 @@ public class DeletePxfsUserRequest extends Request {
         }
 
         /**
-         * <p>The identity name.</p>
+         * <p>The name of the identity.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,7 +144,7 @@ public class DeletePxfsUserRequest extends Request {
         }
 
         /**
-         * <p>The tenant ID.</p>
+         * <p>The ID of the tenant.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

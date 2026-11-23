@@ -101,7 +101,7 @@ public class DescribeAccountListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message. &quot;success&quot; is returned if the request is successful. Otherwise, the corresponding error code is returned.</p>
+         * <p>The message returned. If the request is successful, success is returned. If an error occurs, the corresponding error code is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -112,7 +112,7 @@ public class DescribeAccountListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>9B2F3840-5C98-475C-B269-2D5C3A31797C</p>
@@ -123,7 +123,7 @@ public class DescribeAccountListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -290,10 +290,10 @@ public class DescribeAccountListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the account.</p>
+             * <p>The type of the account. Valid values:</p>
              * <ul>
-             * <li>Before three-role mode is enabled: 0 indicates a standard account, and 1 indicates a privileged user account.</li>
-             * <li>After three-role mode is enabled: 0 indicates a standard account, 2 indicates a system administrator account, 3 indicates a security administrator account, and 4 indicates an audit administrator account.</li>
+             * <li>Before the three-role mode is enabled: 0 indicates a standard account, and 1 indicates a privileged account.</li>
+             * <li>After the three-role mode is enabled: 0 indicates a standard account, 2 indicates a system administrator account, 3 indicates a security administrator account, and 4 indicates an audit administrator account.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -316,7 +316,7 @@ public class DescribeAccountListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The database to which the account is granted permissions.</p>
+             * <p>The database on which the account is granted permissions.</p>
              * 
              * <strong>example:</strong>
              * <p>testdb</p>

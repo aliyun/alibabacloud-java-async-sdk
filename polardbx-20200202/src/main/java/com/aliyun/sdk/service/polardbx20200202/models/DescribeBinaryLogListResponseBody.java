@@ -114,7 +114,7 @@ public class DescribeBinaryLogListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The current page number.</p>
+         * <p>The page number of the returned page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -423,8 +423,8 @@ public class DescribeBinaryLogListResponseBody extends TeaModel {
             /**
              * <p>The cleanup status. Valid values:</p>
              * <ul>
-             * <li>0: Not deleted. </li>
-             * <li>1: Deleted.</li>
+             * <li>0: not deleted</li>
+             * <li>1: deleted</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -449,9 +449,9 @@ public class DescribeBinaryLogListResponseBody extends TeaModel {
             /**
              * <p>The backup status. Valid values:</p>
              * <ul>
-             * <li>0: Not backed up. </li>
-             * <li>1: Being backed up. </li>
-             * <li>2: Backed up.</li>
+             * <li>0: not backed up</li>
+             * <li>1: being backed up</li>
+             * <li>2: backed up</li>
              * </ul>
              * 
              * <strong>example:</strong>

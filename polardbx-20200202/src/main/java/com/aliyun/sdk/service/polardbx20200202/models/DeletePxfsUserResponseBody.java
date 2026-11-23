@@ -96,7 +96,7 @@ public class DeletePxfsUserResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -230,10 +230,10 @@ public class DeletePxfsUserResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The authorization action.</p>
+             * <p>The authentication action.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>polardbx:DeletePxfsUser</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -241,10 +241,10 @@ public class DeletePxfsUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the authorization principal.</p>
+             * <p>The display name of the authentication principal.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>Sample RAM user</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -252,7 +252,7 @@ public class DeletePxfsUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description is the same as above.</p>
+             * <p>Same as above.</p>
              * 
              * <strong>example:</strong>
              * <p>111</p>
@@ -263,7 +263,7 @@ public class DeletePxfsUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the authorization principal.</p>
+             * <p>The type of the authentication principal.</p>
              * 
              * <strong>example:</strong>
              * <p>222</p>
@@ -274,7 +274,7 @@ public class DeletePxfsUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The encoded diagnostic message.</p>
+             * <p>The diagnostic information.</p>
              * 
              * <strong>example:</strong>
              * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
@@ -285,7 +285,7 @@ public class DeletePxfsUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the no-permission error.</p>
+             * <p>The no-permission type.</p>
              * 
              * <strong>example:</strong>
              * <p>ImplicitDeny</p>
@@ -390,7 +390,7 @@ public class DeletePxfsUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The identity name.</p>
+             * <p>The name of the identity.</p>
              * 
              * <strong>example:</strong>
              * <p>agent-runtime</p>
@@ -401,7 +401,7 @@ public class DeletePxfsUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tenant ID.</p>
+             * <p>The ID of the tenant.</p>
              * 
              * <strong>example:</strong>
              * <p>tenant-001</p>

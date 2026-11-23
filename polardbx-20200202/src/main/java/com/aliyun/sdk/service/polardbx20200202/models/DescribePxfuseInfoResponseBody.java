@@ -80,7 +80,7 @@ public class DescribePxfuseInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the access denial.</p>
+         * <p>The access denial details.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -233,7 +233,7 @@ public class DescribePxfuseInfoResponseBody extends TeaModel {
              * <p>The authentication action.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>polardbx:DescribePxfuseInfo</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -244,7 +244,7 @@ public class DescribePxfuseInfoResponseBody extends TeaModel {
              * <p>The identity used for authentication in the request.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>Sample RAM user</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -263,7 +263,7 @@ public class DescribePxfuseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The authentication principal type.</p>
+             * <p>The type of the authentication principal.</p>
              * 
              * <strong>example:</strong>
              * <p>222</p>
@@ -274,7 +274,7 @@ public class DescribePxfuseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The diagnostic information.</p>
+             * <p>The diagnostic message.</p>
              * 
              * <strong>example:</strong>
              * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
@@ -285,7 +285,7 @@ public class DescribePxfuseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of missing permission.</p>
+             * <p>The no permission type.</p>
              * 
              * <strong>example:</strong>
              * <p>ImplicitDeny</p>
@@ -440,7 +440,7 @@ public class DescribePxfuseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The endpoint type.</p>
+             * <p>The type of the endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p>VPC</p>

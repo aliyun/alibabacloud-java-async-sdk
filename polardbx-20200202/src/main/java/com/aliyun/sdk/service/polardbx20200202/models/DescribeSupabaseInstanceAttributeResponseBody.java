@@ -80,7 +80,7 @@ public class DescribeSupabaseInstanceAttributeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the access denial.</p>
+         * <p>The access denied details.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -241,7 +241,7 @@ public class DescribeSupabaseInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the authentication principal.</p>
+             * <p>The name of the authentication principal.</p>
              * 
              * <strong>example:</strong>
              * <p>xxx</p>
@@ -274,7 +274,7 @@ public class DescribeSupabaseInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The encoded diagnostic message.</p>
+             * <p>The diagnostic message.</p>
              * 
              * <strong>example:</strong>
              * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
@@ -285,7 +285,7 @@ public class DescribeSupabaseInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the permission denial.</p>
+             * <p>The no permission type.</p>
              * 
              * <strong>example:</strong>
              * <p>ImplicitDeny</p>
@@ -521,7 +521,7 @@ public class DescribeSupabaseInstanceAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The class code.</p>
+             * <p>The specification code.</p>
              * 
              * <strong>example:</strong>
              * <p>polarx.supabase.x2.small</p>
@@ -845,7 +845,7 @@ public class DescribeSupabaseInstanceAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of endpoints.</p>
+             * <p>The endpoints.</p>
              */
             public Builder connAddrs(java.util.List<ConnAddrs> connAddrs) {
                 this.connAddrs = connAddrs;
@@ -875,7 +875,7 @@ public class DescribeSupabaseInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The database engine version.</p>
+             * <p>The DPI engine version.</p>
              * 
              * <strong>example:</strong>
              * <p>2.0</p>
@@ -908,7 +908,7 @@ public class DescribeSupabaseInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The minor engine version.</p>
+             * <p>The minor version.</p>
              * 
              * <strong>example:</strong>
              * <p>polardb-2.6.0_xcluster8.4.21-20260716_pxbaas-20260915</p>
@@ -941,7 +941,7 @@ public class DescribeSupabaseInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of nodes.</p>
+             * <p>The nodes.</p>
              */
             public Builder nodes(java.util.List<Nodes> nodes) {
                 this.nodes = nodes;
@@ -982,7 +982,7 @@ public class DescribeSupabaseInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Supabase class code.</p>
+             * <p>The Supabase specification code.</p>
              * 
              * <strong>example:</strong>
              * <p>polarx.supabase.x4.xlarge</p>

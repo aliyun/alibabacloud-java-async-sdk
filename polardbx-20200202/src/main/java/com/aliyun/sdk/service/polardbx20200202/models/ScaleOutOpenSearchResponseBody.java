@@ -80,7 +80,7 @@ public class ScaleOutOpenSearchResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the access denial.</p>
+         * <p>The access denial details.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -236,7 +236,7 @@ public class ScaleOutOpenSearchResponseBody extends TeaModel {
              * <p>The authentication action.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>polardbx:ScaleOutOpenSearch</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -247,7 +247,7 @@ public class ScaleOutOpenSearchResponseBody extends TeaModel {
              * <p>The display name of the authentication principal.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>Sample RAM user</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -288,7 +288,7 @@ public class ScaleOutOpenSearchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the denied permission.</p>
+             * <p>The type of the permission denial.</p>
              * 
              * <strong>example:</strong>
              * <p>ImplicitDeny</p>

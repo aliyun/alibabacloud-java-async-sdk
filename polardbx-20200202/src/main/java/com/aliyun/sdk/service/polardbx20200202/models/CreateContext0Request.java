@@ -103,7 +103,7 @@ public class CreateContext0Request extends Request {
         }
 
         /**
-         * <p>The name of the PolarDB-X Search instance.</p>
+         * <p>The name of the PolarDBX Search instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

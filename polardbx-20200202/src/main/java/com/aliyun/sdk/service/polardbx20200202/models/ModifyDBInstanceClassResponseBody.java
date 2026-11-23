@@ -80,7 +80,7 @@ public class ModifyDBInstanceClassResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The order ID. An order is generated when you upgrade or downgrade an instance, or change the instance specifications.</p>
+         * <p>The order ID. An order is generated when you upgrade or downgrade an instance or change the instance specifications.</p>
          * 
          * <strong>example:</strong>
          * <p>20211103105558</p>

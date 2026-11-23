@@ -233,7 +233,7 @@ public class CreateOpenSearchResponseBody extends TeaModel {
              * <p>The authentication action.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>polardbx:CreateOpenSearch</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -241,10 +241,10 @@ public class CreateOpenSearchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the security principal.</p>
+             * <p>The name of the authenticated principal.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>Sample RAM user</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -252,7 +252,7 @@ public class CreateOpenSearchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Alibaba Cloud account ID of the security principal.</p>
+             * <p>The ID of the Alibaba Cloud account to which the authenticated principal belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>111</p>
@@ -263,7 +263,7 @@ public class CreateOpenSearchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Same as above.</p>
+             * <p>The type of the authenticated principal.</p>
              * 
              * <strong>example:</strong>
              * <p>222</p>

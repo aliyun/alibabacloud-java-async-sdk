@@ -230,10 +230,10 @@ public class ModifyPxfuseSecurityIpsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the operation.</p>
+             * <p>The name of the API operation.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>polardbx:ModifyPxfuseSecurityIps</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -241,10 +241,10 @@ public class ModifyPxfuseSecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the authenticated principal.</p>
+             * <p>The display name of the authentication principal.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>Sample RAM user</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -252,7 +252,7 @@ public class ModifyPxfuseSecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The owner ID of the authenticated principal.</p>
+             * <p>The owner ID of the authentication principal.</p>
              * 
              * <strong>example:</strong>
              * <p>111</p>
@@ -263,7 +263,7 @@ public class ModifyPxfuseSecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the identity used for authentication in the request. Valid values:</p>
+             * <p>The type of identity used for authentication in the request. Valid values:</p>
              * <ul>
              * <li>SubUser: RAM user.</li>
              * <li>AssumedRoleUser: RAM role.</li>
@@ -279,7 +279,7 @@ public class ModifyPxfuseSecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The diagnostic information.</p>
+             * <p>The diagnostic message.</p>
              * 
              * <strong>example:</strong>
              * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
@@ -290,7 +290,7 @@ public class ModifyPxfuseSecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the permission denial.</p>
+             * <p>The type of access denial.</p>
              * 
              * <strong>example:</strong>
              * <p>ImplicitDeny</p>
@@ -361,7 +361,7 @@ public class ModifyPxfuseSecurityIpsResponseBody extends TeaModel {
              * <p>The task ID.</p>
              * 
              * <strong>example:</strong>
-             * <hr>
+             * <p>2209883</p>
              */
             public Builder taskId(Integer taskId) {
                 this.taskId = taskId;

@@ -80,7 +80,7 @@ public class AllocatePxfsPublicConnectionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The access denial details.</p>
+         * <p>The details of the access denial.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -230,10 +230,10 @@ public class AllocatePxfsPublicConnectionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Same as above.</p>
+             * <p>The description is the same as above.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>polardbx:AllocatePxfsPublicConnection</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -244,7 +244,7 @@ public class AllocatePxfsPublicConnectionResponseBody extends TeaModel {
              * <p>The identity used for authentication in the request.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>Sample RAM user</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -252,7 +252,7 @@ public class AllocatePxfsPublicConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Same as above.</p>
+             * <p>The description is the same as above.</p>
              * 
              * <strong>example:</strong>
              * <p>111</p>
@@ -296,7 +296,7 @@ public class AllocatePxfsPublicConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The policy type.</p>
+             * <p>The type of the policy.</p>
              * 
              * <strong>example:</strong>
              * <p>PRIORITY</p>

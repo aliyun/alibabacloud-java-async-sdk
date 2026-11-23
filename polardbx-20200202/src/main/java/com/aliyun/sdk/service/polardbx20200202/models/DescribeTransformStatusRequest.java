@@ -99,7 +99,7 @@ public class DescribeTransformStatusRequest extends Request {
         }
 
         /**
-         * <p>The check report.</p>
+         * <p>The validation report.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

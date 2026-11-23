@@ -143,7 +143,7 @@ public class DescribeRplInspectionTaskRequest extends Request {
         }
 
         /**
-         * <p>The number of records per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -155,7 +155,7 @@ public class DescribeRplInspectionTaskRequest extends Request {
         }
 
         /**
-         * <p>The region where the instance resides.</p>
+         * <p>The region ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -168,7 +168,7 @@ public class DescribeRplInspectionTaskRequest extends Request {
         }
 
         /**
-         * <p>The switchover task ID.</p>
+         * <p>The ID of the switchover task.</p>
          * 
          * <strong>example:</strong>
          * <p>etx-szr2rr6i*****</p>
@@ -192,7 +192,7 @@ public class DescribeRplInspectionTaskRequest extends Request {
         }
 
         /**
-         * <p>The number of records per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>

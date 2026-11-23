@@ -233,7 +233,7 @@ public class DescribePxfsSecurityIpsResponseBody extends TeaModel {
              * <p>The authentication action.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>polardbx:DescribePxfsSecurityIps</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -244,7 +244,7 @@ public class DescribePxfsSecurityIpsResponseBody extends TeaModel {
              * <p>The identity used for authentication in the request.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>Sample RAM user</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -263,7 +263,7 @@ public class DescribePxfsSecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description is as described above.</p>
+             * <p>Same as above.</p>
              * 
              * <strong>example:</strong>
              * <p>222</p>
@@ -274,7 +274,7 @@ public class DescribePxfsSecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The diagnostic message.</p>
+             * <p>The diagnostic information.</p>
              * 
              * <strong>example:</strong>
              * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
@@ -401,7 +401,7 @@ public class DescribePxfsSecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP addresses.</p>
+             * <p>The list of IP addresses.</p>
              * 
              * <strong>example:</strong>
              * <p>192.168.1.0/24,10.0.0.1</p>
@@ -482,7 +482,7 @@ public class DescribePxfsSecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The whitelist groups.</p>
+             * <p>The list of whitelist groups.</p>
              */
             public Builder groups(java.util.List<Groups> groups) {
                 this.groups = groups;

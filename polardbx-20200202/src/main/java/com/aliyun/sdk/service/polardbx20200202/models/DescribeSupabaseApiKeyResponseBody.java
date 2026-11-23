@@ -233,7 +233,7 @@ public class DescribeSupabaseApiKeyResponseBody extends TeaModel {
              * <p>The authentication action.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>polardbx:DescribeSupabaseApiKey</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -241,10 +241,10 @@ public class DescribeSupabaseApiKeyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The authentication principal name.</p>
+             * <p>The name of the authentication principal.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>Sample RAM user</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -285,7 +285,7 @@ public class DescribeSupabaseApiKeyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The no permission type.</p>
+             * <p>The access denied type.</p>
              * 
              * <strong>example:</strong>
              * <p>ImplicitDeny</p>

@@ -101,7 +101,7 @@ public class DescribeDBInstanceEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page for a paged query. Maximum value: 100. Default value: If the value is not specified or is less than 10, the default value is 10. If the value is greater than 100, the default value is 100.</p>
+         * <p>The number of entries to return on each page in a paged query. Maximum value: 100. Default value: 10. If you do not specify a value in Settings or the specified value is less than 10, the default value 10 is used for paging. If the specified value is greater than 100, the default value 100 is used.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -112,7 +112,7 @@ public class DescribeDBInstanceEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token for the next query.</p>
+         * <p>The token used to start the next query.</p>
          * 
          * <strong>example:</strong>
          * <p>xxdds</p>
@@ -398,7 +398,7 @@ public class DescribeDBInstanceEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance specification type (specification code).</p>
+             * <p>The instance type (instance type code).</p>
              * 
              * <strong>example:</strong>
              * <p>mdb.shard.4x.large.d</p>
@@ -412,7 +412,7 @@ public class DescribeDBInstanceEndpointResponseBody extends TeaModel {
              * <p>The ID of the endpoint group to which the endpoint belongs.</p>
              * 
              * <strong>example:</strong>
-             * <p>epg-bp14wgzai7flglwdtkxfa</p>
+             * <p>123456</p>
              */
             public Builder endpointGroupId(Long endpointGroupId) {
                 this.endpointGroupId = endpointGroupId;
@@ -420,7 +420,7 @@ public class DescribeDBInstanceEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The logical node ID.</p>
+             * <p>The ID of the logical node.</p>
              * 
              * <strong>example:</strong>
              * <p>2899</p>
@@ -431,7 +431,7 @@ public class DescribeDBInstanceEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether this is the default vSwitch.</p>
+             * <p>Indicates whether the vSwitch is the default vSwitch.</p>
              * 
              * <strong>example:</strong>
              * <p>True</p>
@@ -442,11 +442,7 @@ public class DescribeDBInstanceEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The payload type. Valid values:</p>
-             * <ul>
-             * <li>agentTurn: agent conversation.</li>
-             * <li>systemEvent: system event.</li>
-             * </ul>
+             * <p>The payload type. Valid values: <code>agentTurn</code> (agent conversation) and <code>systemEvent</code> (system event).</p>
              * 
              * <strong>example:</strong>
              * <p>instance</p>
@@ -457,11 +453,11 @@ public class DescribeDBInstanceEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network type of the endpoint. Valid values:</p>
+             * <p>The network type of the connection string. Valid values:</p>
              * <ul>
-             * <li><strong>Public</strong>: public endpoint.</li>
-             * <li><strong>Private</strong>: private endpoint.</li>
-             * <li><strong>Inner</strong>: private endpoint (classic network).</li>
+             * <li><strong>Public</strong>: public network address.</li>
+             * <li><strong>Private</strong>: private network address.</li>
+             * <li><strong>Inner</strong>: private network address (classic network).</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -473,11 +469,7 @@ public class DescribeDBInstanceEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The read/write type. Valid values:</p>
-             * <ul>
-             * <li>ReadWrite: row store read/write.</li>
-             * <li>ColumnarRead: column store read-only.</li>
-             * </ul>
+             * <p>The read/write type. Valid values: ReadWrite (row store read/write) and ColumnarRead (column store read-only).</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -525,7 +517,7 @@ public class DescribeDBInstanceEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the endpoint is visible to the user.</p>
+             * <p>Indicates whether the endpoint is visible to users.</p>
              */
             public Builder userVisible(Boolean userVisible) {
                 this.userVisible = userVisible;
@@ -544,7 +536,7 @@ public class DescribeDBInstanceEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address of the Anti-DDoS Pro or Anti-DDoS Premium instance protected by the policy.</p>
+             * <p>The IP address of the Anti-DDoS instance protected by the policy.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://100.100.100.200/latest/meta-data">http://100.100.100.200/latest/meta-data</a></p>
@@ -555,7 +547,7 @@ public class DescribeDBInstanceEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the VPC in which the endpoint resides.</p>
+             * <p>The ID of the VPC where the endpoint resides.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-bp1s9j8s4h4uqejp9k2z3</p>
@@ -569,7 +561,7 @@ public class DescribeDBInstanceEndpointResponseBody extends TeaModel {
              * <p>The VIP port, such as 80, 8080, or 443.</p>
              * 
              * <strong>example:</strong>
-             * <p>vport</p>
+             * <p>80</p>
              */
             public Builder vport(Long vport) {
                 this.vport = vport;
@@ -699,7 +691,7 @@ public class DescribeDBInstanceEndpointResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the node is enabled. For the compute layer, only the primary zone node is enabled. After a primary/secondary switchover, the standby compute node becomes the primary node. All storage layer nodes are enabled.</p>
+             * <p>Indicates whether the node is enabled. In the compute layer, only nodes in the primary zone are enabled. After a primary/secondary switchover is performed on the instance, the secondary node in the compute layer is switched to the primary node. All nodes in the storage layer are enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>False</p>
@@ -710,7 +702,7 @@ public class DescribeDBInstanceEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance specification type (specification code).</p>
+             * <p>The instance type (instance type code).</p>
              * 
              * <strong>example:</strong>
              * <p>dds.cs.mid</p>
@@ -732,7 +724,7 @@ public class DescribeDBInstanceEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The port number.</p>
+             * <p>The connection port number.</p>
              * 
              * <strong>example:</strong>
              * <p>3306</p>
@@ -746,7 +738,7 @@ public class DescribeDBInstanceEndpointResponseBody extends TeaModel {
              * <p>The replica ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>节点id</p>
+             * <p>123456</p>
              */
             public Builder replicaId(Long replicaId) {
                 this.replicaId = replicaId;
@@ -756,10 +748,10 @@ public class DescribeDBInstanceEndpointResponseBody extends TeaModel {
             /**
              * <p>The weight of the destination route.</p>
              * <ul>
-             * <li>For VPN gateway instances that support the dual-tunnel mode for IPsec-VPN connections, the weight of the destination route is <strong>100</strong> by default and has no practical significance.</li>
-             * <li>For VPN gateway instances that support the single-tunnel mode for IPsec-VPN connections, the weight represents the priority of the destination route:<ul>
-             * <li><strong>100</strong>: high priority. If multiple destination routes have the same destination CIDR block, the IPsec-VPN connection associated with this route serves as the active link.</li>
-             * <li><strong>0</strong>: low priority. If multiple destination routes have the same destination CIDR block, the IPsec-VPN connection associated with this route serves as the standby link.</li>
+             * <li>For VPN gateway instances that support the dual-tunnel mode for IPsec-VPN connections, the default weight of the destination route is <strong>100</strong>, which has no actual significance.</li>
+             * <li>For VPN gateway instances that support the single-tunnel mode for IPsec-VPN connections, the weight of the destination route indicates the priority of the destination route:<ul>
+             * <li><strong>100</strong>: high priority. If multiple destination routes have the same destination CIDR block, the IPsec-VPN connection associated with this destination route serves as the primary link.</li>
+             * <li><strong>0</strong>: low priority. If multiple destination routes have the same destination CIDR block, the IPsec-VPN connection associated with this destination route serves as the secondary link.</li>
              * </ul>
              * </li>
              * </ul>
@@ -894,7 +886,7 @@ public class DescribeDBInstanceEndpointResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The internal connection type. The value is fixed as 1, which indicates the classic network.</p>
+             * <p>The internal connection method. Fixed value: 1, which indicates the classic network.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;

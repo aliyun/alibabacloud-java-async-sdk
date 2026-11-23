@@ -67,7 +67,7 @@ public class DescribeComponentPropetiesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The export parameters of exception events.</p>
+         * <p>The export parameters of the exception event.</p>
          */
         public Builder properties(java.util.List<Properties> properties) {
             this.properties = properties;
@@ -173,7 +173,7 @@ public class DescribeComponentPropetiesResponseBody extends TeaModel {
              * <p>The name.</p>
              * 
              * <strong>example:</strong>
-             * <p>4C32G</p>
+             * <p>4 vCPUs and 32 GB</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -181,8 +181,8 @@ public class DescribeComponentPropetiesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display order of the commodity module property.</p>
-             * <p>The returned content varies depending on the commodity module.</p>
+             * <p>The display order of the commodity module properties.</p>
+             * <p>The returned content varies based on the commodity module.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

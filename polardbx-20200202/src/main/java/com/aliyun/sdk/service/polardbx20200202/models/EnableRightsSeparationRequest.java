@@ -163,7 +163,7 @@ public class EnableRightsSeparationRequest extends Request {
         } 
 
         /**
-         * <p>The description of the audit account.</p>
+         * <p>The description of the auditor account.</p>
          * 
          * <strong>example:</strong>
          * <p>test123</p>
@@ -175,7 +175,7 @@ public class EnableRightsSeparationRequest extends Request {
         }
 
         /**
-         * <p>The name of the audit account.</p>
+         * <p>The name of the auditor account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -188,11 +188,11 @@ public class EnableRightsSeparationRequest extends Request {
         }
 
         /**
-         * <p>The password of the audit account.</p>
+         * <p>The password of the auditor account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>DemoPass1@</p>
          */
         public Builder auditAccountPassword(String auditAccountPassword) {
             this.putQueryParameter("AuditAccountPassword", auditAccountPassword);
@@ -239,7 +239,7 @@ public class EnableRightsSeparationRequest extends Request {
         }
 
         /**
-         * <p>The name of the security administrator account.</p>
+         * <p>The security administrator account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -252,11 +252,11 @@ public class EnableRightsSeparationRequest extends Request {
         }
 
         /**
-         * <p>The password of the security administrator account.</p>
+         * <p>The password of the security administrator.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>DemoPass1@</p>
          */
         public Builder securityAccountPassword(String securityAccountPassword) {
             this.putQueryParameter("SecurityAccountPassword", securityAccountPassword);

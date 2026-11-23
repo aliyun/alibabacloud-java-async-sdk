@@ -281,7 +281,7 @@ public class DescribeColdDataBasicInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data size of cold storage.</p>
+             * <p>The data size in cold storage.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -292,7 +292,7 @@ public class DescribeColdDataBasicInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data redundancy type of cold storage. LRS indicates locally redundant storage.</p>
+             * <p>The data redundancy type for cold storage. LRS indicates locally redundant storage.</p>
              * 
              * <strong>example:</strong>
              * <p>LRS</p>

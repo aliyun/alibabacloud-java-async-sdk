@@ -157,7 +157,7 @@ public class ExecuteMetaQueryRequest extends Request {
         }
 
         /**
-         * <p>The SQL statement to execute.</p>
+         * <p>The SQL statement to be executed.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

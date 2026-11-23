@@ -80,7 +80,7 @@ public class DescribeOpenSearchConnectionInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the access denial.</p>
+         * <p>The access denied details.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -88,7 +88,7 @@ public class DescribeOpenSearchConnectionInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data struct.</p>
+         * <p>The data structure.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -233,7 +233,7 @@ public class DescribeOpenSearchConnectionInfoResponseBody extends TeaModel {
              * <p>The authentication action.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>polardbx:DescribeOpenSearchConnectionInfo</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -241,10 +241,10 @@ public class DescribeOpenSearchConnectionInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the authentication principal.</p>
+             * <p>The display name of the authenticated principal.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>Sample RAM user</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -252,7 +252,7 @@ public class DescribeOpenSearchConnectionInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The owner ID of the authentication principal.</p>
+             * <p>The owner ID of the authenticated principal.</p>
              * 
              * <strong>example:</strong>
              * <p>111</p>
@@ -263,7 +263,7 @@ public class DescribeOpenSearchConnectionInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description is the same as above.</p>
+             * <p>The description is as above.</p>
              * 
              * <strong>example:</strong>
              * <p>222</p>
@@ -392,7 +392,7 @@ public class DescribeOpenSearchConnectionInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Specifies whether static frame check is enabled. Default value: false.</p>
+             * <p>Specifies whether still frame checking is enabled. Default value: false.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -425,7 +425,7 @@ public class DescribeOpenSearchConnectionInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL.</p>
+             * <p>The article URL.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://static.yipigai.cn/timuocr/tmp_c29e30497575a40193a24a7a83654e30e21b951cc6856cdb.jpg">https://static.yipigai.cn/timuocr/tmp_c29e30497575a40193a24a7a83654e30e21b951cc6856cdb.jpg</a></p>
@@ -536,7 +536,7 @@ public class DescribeOpenSearchConnectionInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The hostname. Retrieves data under the specified host.</p>
+             * <p>The hostname.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://secnet-defense-vastip.oss-cn-hangzhou.aliyuncs.com">https://secnet-defense-vastip.oss-cn-hangzhou.aliyuncs.com</a></p>
@@ -558,7 +558,7 @@ public class DescribeOpenSearchConnectionInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL.</p>
+             * <p>The article URL.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://static.yipigai.cn/timuocr/tmp_c29e30497575a40193a24a7a83654e30e21b951cc6856cdb.jpg">https://static.yipigai.cn/timuocr/tmp_c29e30497575a40193a24a7a83654e30e21b951cc6856cdb.jpg</a></p>
@@ -641,7 +641,7 @@ public class DescribeOpenSearchConnectionInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Specifies whether to enable the echo feature. This parameter is required. Valid values: true/false.</p>
+             * <p>Specifies whether additional features are enabled. This parameter is required. Valid values: true and false.</p>
              * 
              * <strong>example:</strong>
              * <p>True</p>
@@ -746,7 +746,7 @@ public class DescribeOpenSearchConnectionInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Specifies whether to enable dead-letter message delivery.</p>
+             * <p>Specifies whether dead-letter message delivery is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>True</p>
@@ -890,7 +890,7 @@ public class DescribeOpenSearchConnectionInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The internal endpoint of the OpenSearch Dashboard.</p>
+             * <p>The internal endpoint of OpenSearch Dashboard.</p>
              */
             public Builder dashboardEndpoint(DashboardEndpoint dashboardEndpoint) {
                 this.dashboardEndpoint = dashboardEndpoint;
@@ -898,7 +898,7 @@ public class DescribeOpenSearchConnectionInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public network access endpoint of the OpenSearch Dashboard.</p>
+             * <p>The public network access endpoint of OpenSearch Dashboard.</p>
              */
             public Builder dashboardPublicEndpoint(DashboardPublicEndpoint dashboardPublicEndpoint) {
                 this.dashboardPublicEndpoint = dashboardPublicEndpoint;
@@ -906,7 +906,7 @@ public class DescribeOpenSearchConnectionInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The default account name of OpenSearch.</p>
+             * <p>The default username for OpenSearch.</p>
              * 
              * <strong>example:</strong>
              * <p>elastic</p>
@@ -925,14 +925,14 @@ public class DescribeOpenSearchConnectionInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The protocol of the monitoring task. Valid values:</p>
+             * <p>The protocol of the probe task. Valid values:</p>
              * <ul>
-             * <li><strong>ICMP</strong>.</li>
-             * <li><strong>TCP</strong>.</li>
-             * <li><strong>HTTP</strong>.</li>
+             * <li><strong>ICMP</strong></li>
+             * <li><strong>TCP</strong></li>
+             * <li><strong>HTTP</strong></li>
              * </ul>
              * <blockquote>
-             * <p>Private network monitoring supports only the ICMP and TCP protocols.</p>
+             * <p>Internal network probing supports only the ICMP and TCP protocols.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

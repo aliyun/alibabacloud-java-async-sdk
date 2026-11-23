@@ -85,7 +85,7 @@ public class DescribeDBInstanceSSLRequest extends Request {
         }
 
         /**
-         * <p>The region ID.</p>
+         * <p>The ID of the region where the instance resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

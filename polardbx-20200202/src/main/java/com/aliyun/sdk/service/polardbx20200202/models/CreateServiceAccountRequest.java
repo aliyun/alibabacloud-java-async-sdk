@@ -103,7 +103,7 @@ public class CreateServiceAccountRequest extends Request {
         }
 
         /**
-         * <p>The region in which the instance resides.</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class CreateServiceAccountRequest extends Request {
         }
 
         /**
-         * <p>The type of the service account.</p>
+         * <p>The service account type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -439,7 +439,7 @@ public class DescribeArchiveTableListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of tables in the PAUSE state.</p>
+             * <p>The number of tables whose archiving is paused.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -450,7 +450,7 @@ public class DescribeArchiveTableListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of tables being archived.</p>
+             * <p>The number of tables currently being archived.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>

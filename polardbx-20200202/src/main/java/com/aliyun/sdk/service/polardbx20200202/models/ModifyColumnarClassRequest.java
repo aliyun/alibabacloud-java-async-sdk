@@ -118,7 +118,7 @@ public class ModifyColumnarClassRequest extends Request {
         } 
 
         /**
-         * <p>The column store specifications.</p>
+         * <p>The column store specification.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -134,7 +134,7 @@ public class ModifyColumnarClassRequest extends Request {
          * <p>The number of column store nodes.</p>
          * 
          * <strong>example:</strong>
-         * <p>**</p>
+         * <p>2</p>
          */
         public Builder columnarNodeCount(String columnarNodeCount) {
             this.putQueryParameter("ColumnarNodeCount", columnarNodeCount);
@@ -156,7 +156,7 @@ public class ModifyColumnarClassRequest extends Request {
         }
 
         /**
-         * <p>The region in which the instance resides. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196841.html">DescribeRegions</a> operation to query the regions supported by PolarDB-X, including region IDs.</p>
+         * <p>The region where the instance resides. You can call the <a href="https://help.aliyun.com/document_detail/196841.html">DescribeRegions</a> operation to view the regions supported by PolarDB-X, including region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

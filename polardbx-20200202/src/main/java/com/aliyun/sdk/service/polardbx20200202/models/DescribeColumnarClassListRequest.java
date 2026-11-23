@@ -114,7 +114,7 @@ public class DescribeColumnarClassListRequest extends Request {
         }
 
         /**
-         * <p>The region in which the instance resides.</p>
+         * <p>The region where the instance is located.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

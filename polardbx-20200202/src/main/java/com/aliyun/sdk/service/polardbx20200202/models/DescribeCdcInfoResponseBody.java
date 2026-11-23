@@ -103,7 +103,7 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The HTTP status code of the request.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -126,7 +126,7 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -283,7 +283,7 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance specifications.</p>
+             * <p>The instance type.</p>
              * 
              * <strong>example:</strong>
              * <p>polarx.x4.large.2e.cdc</p>
@@ -297,7 +297,7 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
              * <p>The node ID.</p>
              * 
              * <strong>example:</strong>
-             * <hr>
+             * <p>pxc-c-jf0pivh2dt</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -305,7 +305,7 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node name.</p>
+             * <p>The name of the node.</p>
              * 
              * <strong>example:</strong>
              * <p>pxc-c-***</p>
@@ -473,10 +473,10 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance type remarks.</p>
+             * <p>The comment on the instance type.</p>
              * 
              * <strong>example:</strong>
-             * <hr>
+             * <p>Sample instance type comment</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -484,7 +484,7 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The multi-stream group name.</p>
+             * <p>The name of the multi-stream group.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -506,7 +506,7 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance name.</p>
+             * <p>The name of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>pxc-***</p>
@@ -517,7 +517,7 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node array.</p>
+             * <p>The array of nodes.</p>
              */
             public Builder physicalNodes(java.util.List<PhysicalNodes> physicalNodes) {
                 this.physicalNodes = physicalNodes;
@@ -676,7 +676,7 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of days that binlogs are retained.</p>
+             * <p>The number of days for which binlogs are retained.</p>
              * 
              * <strong>example:</strong>
              * <p>15</p>
@@ -711,7 +711,7 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The checksum switch.</p>
+             * <p>Indicates whether the checksum feature is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>ON</p>
@@ -733,7 +733,7 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance list.</p>
+             * <p>The list of instances.</p>
              */
             public Builder instanceTopologyList(java.util.List<InstanceTopologyList> instanceTopologyList) {
                 this.instanceTopologyList = instanceTopologyList;
@@ -745,7 +745,7 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>3014767486</p>
+             * <p>123456</p>
              */
             public Builder serverId(Integer serverId) {
                 this.serverId = serverId;
@@ -753,7 +753,7 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether multi-stream CDC is supported.</p>
+             * <p>Indicates whether multiple CDC streams are supported.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>

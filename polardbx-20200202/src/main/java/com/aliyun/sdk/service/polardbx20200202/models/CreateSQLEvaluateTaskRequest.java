@@ -243,7 +243,7 @@ public class CreateSQLEvaluateTaskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance on which the target SQL statement is executed. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBInstances</a> operation to query the details of the target SQL statement, including the instance ID.</p>
+         * <p>The ID of the instance that executes the target SQL statement. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBInstances</a> operation to query the details of the target SQL statement, including the instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>transfer_for_st</p>
@@ -255,10 +255,10 @@ public class CreateSQLEvaluateTaskRequest extends Request {
         }
 
         /**
-         * <p>The password of the target SQL statement. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBInstances</a> operation to query the details of the target SQL statement, including the password.</p>
+         * <p>The password of the target SQL statement.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>DemoPass1@</p>
          */
         public Builder dstPassword(String dstPassword) {
             this.putQueryParameter("DstPassword", dstPassword);
@@ -279,7 +279,7 @@ public class CreateSQLEvaluateTaskRequest extends Request {
         }
 
         /**
-         * <p>The username of the destination instance.</p>
+         * <p>The destination username.</p>
          * 
          * <strong>example:</strong>
          * <p>drds_test</p>
@@ -291,7 +291,7 @@ public class CreateSQLEvaluateTaskRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the instance. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196841.html">DescribeRegions</a> operation to query the regions supported by PolarDB-X, including region IDs.</p>
+         * <p>The region ID of the instance. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196841.html">DescribeRegions</a> operation to query the details of regions supported by PolarDB-X, including region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -316,7 +316,7 @@ public class CreateSQLEvaluateTaskRequest extends Request {
         }
 
         /**
-         * <p>The task ID for executing the target SQL statement. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeCloudCenterInstances</a> operation to query the IDs of target SQL statements supported by PolarDB-X.</p>
+         * <p>The ID of the task that executes the target SQL statement. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeCloudCenterInstances</a> operation to query the IDs of target SQL statements supported by PolarDB-X.</p>
          * 
          * <strong>example:</strong>
          * <p>etx-szr2rr6i*****</p>
@@ -328,7 +328,11 @@ public class CreateSQLEvaluateTaskRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the source ApsaraDB RDS instance. Valid values: <strong>enable</strong>: enables the source ApsaraDB RDS instance. <strong>disabled</strong>: disables the source ApsaraDB RDS instance.</p>
+         * <p>Specifies whether the source ApsaraDB RDS instance is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>enable</strong>: The source ApsaraDB RDS instance is enabled.</li>
+         * <li><strong>disabled</strong>: The source ApsaraDB RDS instance is disabled.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>transfer_test3</p>
@@ -340,10 +344,10 @@ public class CreateSQLEvaluateTaskRequest extends Request {
         }
 
         /**
-         * <p>The port number of the source instance. Valid values: 3200 to 3999. &gt; This parameter is available and required only when <strong>DBEndpointInstanceType</strong> is set to <strong>polardb-o</strong>.</p>
+         * <p>The source port number. Valid values: 3200 to 3999. &gt; This parameter is available and required only when <strong>dbendpointinstancetype</strong> is set to <strong>polardb-o</strong>.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>3306</p>
          */
         public Builder srcPassword(String srcPassword) {
             this.putQueryParameter("SrcPassword", srcPassword);
@@ -364,7 +368,7 @@ public class CreateSQLEvaluateTaskRequest extends Request {
         }
 
         /**
-         * <p>The type of the source instance. Valid values: RDS_MYSQL, POLARX1, POLARX2_STANDARD, POLARX2_ENTERPRISE, and POLARDB_M.</p>
+         * <p>The source instance type. Valid values: RDS_MYSQL, POLARX1, POLARX2_STANDARD, POLARX2_ENTERPRISE, and POLARDB_M.</p>
          * 
          * <strong>example:</strong>
          * <p>POLARX2</p>
@@ -376,7 +380,7 @@ public class CreateSQLEvaluateTaskRequest extends Request {
         }
 
         /**
-         * <p>The username of the source instance.</p>
+         * <p>The source username.</p>
          * 
          * <strong>example:</strong>
          * <p>drds_test</p>

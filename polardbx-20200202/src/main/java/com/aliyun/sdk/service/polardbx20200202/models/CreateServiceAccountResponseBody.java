@@ -122,10 +122,10 @@ public class CreateServiceAccountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The additional information returned. If the request is successful, <strong>success</strong> is returned. If the request fails, the corresponding error code is returned.</p>
+         * <p>The additional information returned by the API. success is returned for a successful request, and an error code is returned for a failed request.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -255,7 +255,7 @@ public class CreateServiceAccountResponseBody extends TeaModel {
              * <p>The authentication action.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>polardbx:CreateServiceAccount</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -263,7 +263,7 @@ public class CreateServiceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The authentication principal type.</p>
+             * <p>The type of the authenticated principal.</p>
              * 
              * <strong>example:</strong>
              * <p>222</p>
@@ -429,7 +429,7 @@ public class CreateServiceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the account already exists.</p>
+             * <p>Indicates whether it already exists.</p>
              * 
              * <strong>example:</strong>
              * <p>False</p>
@@ -451,10 +451,10 @@ public class CreateServiceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the service account.</p>
+             * <p>The service account type.</p>
              * 
              * <strong>example:</strong>
-             * <p>服务账号类型</p>
+             * <p>Service account type</p>
              */
             public Builder serviceAccountType(String serviceAccountType) {
                 this.serviceAccountType = serviceAccountType;

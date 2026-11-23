@@ -67,7 +67,7 @@ public class ReleaseMem0PublicConnectionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details about the access denial.</p>
+         * <p>The detailed reason for access denial.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -75,7 +75,7 @@ public class ReleaseMem0PublicConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>173CA69A-3513-591D-8A09-C1EA37CBE2D9</p>
@@ -212,7 +212,7 @@ public class ReleaseMem0PublicConnectionResponseBody extends TeaModel {
              * <p>Same as above.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>polardbx:ReleaseMem0PublicConnection</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -223,7 +223,7 @@ public class ReleaseMem0PublicConnectionResponseBody extends TeaModel {
              * <p>The identity used for authentication in the request.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>Sample RAM user</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -264,7 +264,7 @@ public class ReleaseMem0PublicConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of missing permission.</p>
+             * <p>NoPermissionType</p>
              * 
              * <strong>example:</strong>
              * <p>ImplicitDeny</p>
@@ -275,7 +275,7 @@ public class ReleaseMem0PublicConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The policy type.</p>
+             * <p>PolicyType</p>
              * 
              * <strong>example:</strong>
              * <p>PRIORITY</p>

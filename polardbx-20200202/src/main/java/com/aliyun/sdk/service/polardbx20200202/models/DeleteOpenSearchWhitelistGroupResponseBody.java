@@ -233,7 +233,7 @@ public class DeleteOpenSearchWhitelistGroupResponseBody extends TeaModel {
              * <p>The authentication action.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>polardbx:DeleteOpenSearchWhitelistGroup</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -244,7 +244,7 @@ public class DeleteOpenSearchWhitelistGroupResponseBody extends TeaModel {
              * <p>The display name of the authentication principal.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>Sample RAM user</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -274,7 +274,7 @@ public class DeleteOpenSearchWhitelistGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The diagnostic information.</p>
+             * <p>The diagnostic message.</p>
              * 
              * <strong>example:</strong>
              * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
@@ -353,7 +353,7 @@ public class DeleteOpenSearchWhitelistGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The response message. &quot;success&quot; is returned if the request is successful. Otherwise, the corresponding error code is returned.</p>
+             * <p>The returned message. If the request is successful, success is returned. If the request fails, the corresponding error code is returned.</p>
              * 
              * <strong>example:</strong>
              * <p>get app list success</p>

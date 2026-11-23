@@ -201,7 +201,7 @@ public class CreateDataImportTaskRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBInstances</a> operation to query the details of all instances in the target region, including instance IDs.</p>
+         * <p>The instance ID. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBInstances</a> operation to query the details of all instances in the destination region, including instance IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>pxc-********</p>
@@ -213,7 +213,7 @@ public class CreateDataImportTaskRequest extends Request {
         }
 
         /**
-         * <p>The execution status of the target SQL import. Valid values: * <strong>importing</strong>: importing. * <strong>success</strong>: import succeeded. * <strong>fail</strong>: import failed.</p>
+         * <p>The execution environment for importing the destination SQL. Valid values: <strong>importing</strong>: Importing. <strong>success</strong>: Import succeeded. <strong>fail</strong>: Import failed.</p>
          * 
          * <strong>example:</strong>
          * <p>transfer_test3</p>
@@ -225,10 +225,10 @@ public class CreateDataImportTaskRequest extends Request {
         }
 
         /**
-         * <p>The password of the privileged account for the target ApsaraDB RDS instance. &gt; * You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBInstances</a> operation to query the privileged account information of the target instance, including the password. * This parameter takes effect only when DstPassword is set to true.</p>
+         * <p>The password of the privileged account of the destination ApsaraDB RDS instance. This parameter takes effect only when [unk]dstpassword=true[unk].</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>DemoPass1@</p>
          */
         public Builder dstPassword(String dstPassword) {
             this.putQueryParameter("DstPassword", dstPassword);
@@ -249,7 +249,7 @@ public class CreateDataImportTaskRequest extends Request {
         }
 
         /**
-         * <p>The username of the target instance.</p>
+         * <p>The destination username.</p>
          * 
          * <strong>example:</strong>
          * <p>bbt_cms_prod</p>
@@ -261,7 +261,7 @@ public class CreateDataImportTaskRequest extends Request {
         }
 
         /**
-         * <p>The region where the instance resides. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196841.html">DescribeRegions</a> operation to query the regions supported by PolarDB-X, including region IDs.</p>
+         * <p>The region where the instance resides. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196841.html">DescribeRegions</a> operation to query the details of regions supported by PolarDB-X, including region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -287,7 +287,7 @@ public class CreateDataImportTaskRequest extends Request {
         }
 
         /**
-         * <p>The database information of the migration source when the source database is ApsaraDB RDS for MySQL. &gt; The source database must be consistent with the target database.</p>
+         * <p>The database information of the migration source when the source database is ApsaraDB RDS for MySQL. &gt; The source database must be consistent with the destination database.</p>
          * 
          * <strong>example:</strong>
          * <p>transfer_for_st</p>
@@ -299,10 +299,10 @@ public class CreateDataImportTaskRequest extends Request {
         }
 
         /**
-         * <p>The read/write mode for executing the import task on the source instance. Valid values: * <strong>rw</strong>: read/write. * <strong>ro</strong>: read-only.</p>
+         * <p>The read/write mode for executing the import task on the source end. Valid values: <strong>rw</strong>: Read and write. <strong>ro</strong>: Read-only.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>rw</p>
          */
         public Builder srcPassword(String srcPassword) {
             this.putQueryParameter("SrcPassword", srcPassword);
@@ -311,7 +311,7 @@ public class CreateDataImportTaskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the source ApsaraDB RDS instance. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDrivingAccess</a> operation to query the details of all source ApsaraDB RDS instances in the target region, including instance IDs.</p>
+         * <p>The source ApsaraDB RDS instance ID. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDrivingAccess</a> operation to query the details of all source ApsaraDB RDS instances in the destination region, including instance IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>pxc-shrnv****kh87z</p>
@@ -323,7 +323,7 @@ public class CreateDataImportTaskRequest extends Request {
         }
 
         /**
-         * <p>The username of the source instance.</p>
+         * <p>The source username.</p>
          * 
          * <strong>example:</strong>
          * <p>drds_test</p>
