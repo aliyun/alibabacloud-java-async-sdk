@@ -22,6 +22,10 @@ public class MosCheckInRequest extends Request {
     private String activityId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CheckinPoint")
+    private String checkinPoint;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ExtParam")
     private String extParam;
 
@@ -32,6 +36,7 @@ public class MosCheckInRequest extends Request {
     private MosCheckInRequest(Builder builder) {
         super(builder);
         this.activityId = builder.activityId;
+        this.checkinPoint = builder.checkinPoint;
         this.extParam = builder.extParam;
         this.qrCode = builder.qrCode;
     }
@@ -57,6 +62,13 @@ public class MosCheckInRequest extends Request {
     }
 
     /**
+     * @return checkinPoint
+     */
+    public String getCheckinPoint() {
+        return this.checkinPoint;
+    }
+
+    /**
      * @return extParam
      */
     public String getExtParam() {
@@ -72,6 +84,7 @@ public class MosCheckInRequest extends Request {
 
     public static final class Builder extends Request.Builder<MosCheckInRequest, Builder> {
         private String activityId; 
+        private String checkinPoint; 
         private String extParam; 
         private String qrCode; 
 
@@ -82,6 +95,7 @@ public class MosCheckInRequest extends Request {
         private Builder(MosCheckInRequest request) {
             super(request);
             this.activityId = request.activityId;
+            this.checkinPoint = request.checkinPoint;
             this.extParam = request.extParam;
             this.qrCode = request.qrCode;
         } 
@@ -92,6 +106,15 @@ public class MosCheckInRequest extends Request {
         public Builder activityId(String activityId) {
             this.putBodyParameter("ActivityId", activityId);
             this.activityId = activityId;
+            return this;
+        }
+
+        /**
+         * CheckinPoint.
+         */
+        public Builder checkinPoint(String checkinPoint) {
+            this.putBodyParameter("CheckinPoint", checkinPoint);
+            this.checkinPoint = checkinPoint;
             return this;
         }
 

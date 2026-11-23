@@ -68,6 +68,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<MosCheckInResponse> mosCheckIn(MosCheckInRequest request);
 
     /**
+     * @param request the request parameters of MosQueryRegistrationInfo  MosQueryRegistrationInfoRequest
+     * @return MosQueryRegistrationInfoResponse
+     */
+    CompletableFuture<MosQueryRegistrationInfoResponse> mosQueryRegistrationInfo(MosQueryRegistrationInfoRequest request);
+
+    /**
      * @param request the request parameters of QueryAllActivityInfo  QueryAllActivityInfoRequest
      * @return QueryAllActivityInfoResponse
      */
@@ -138,5 +144,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateTicketRecordByticketCodePopResponse
      */
     CompletableFuture<UpdateTicketRecordByticketCodePopResponse> updateTicketRecordByticketCodePop(UpdateTicketRecordByticketCodePopRequest request);
+
+    /**
+     * @param request the request parameters of VerifyActivityAdmission  VerifyActivityAdmissionRequest
+     * @return VerifyActivityAdmissionResponse
+     */
+    CompletableFuture<VerifyActivityAdmissionResponse> verifyActivityAdmission(VerifyActivityAdmissionRequest request);
 
 }
