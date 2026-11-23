@@ -75,7 +75,7 @@ public class QueryDeviceInfoRequest extends Request {
         } 
 
         /**
-         * <p>AppKey information.</p>
+         * <p>The AppKey information.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class QueryDeviceInfoRequest extends Request {
         }
 
         /**
-         * <p>The unique identity of the device in the push system. Query only one at a time.</p>
+         * <p>The unique identifier of the device in the push system. Only one device can be queried at a time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

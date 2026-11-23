@@ -1,0 +1,17 @@
+- PublishError: e0e0027a-6685-4c80-8b0e-802e20571cc2 java-async-tea github:
+
+[message] Command failed: git push origin master
+remote: You must verify your email address.
+remote: See https://github.com/settings/emails.
+致命错误：无法访问 'https://github.com/aliyun/alibabacloud-java-async-sdk.git/'：The requested URL returned error: 403
+
+
+[stdout] 
+
+[stderr] remote: You must verify your email address.
+remote: See https://github.com/settings/emails.
+致命错误：无法访问 'https://github.com/aliyun/alibabacloud-java-async-sdk.git/'：The requested URL returned error: 403
+
+
+-----------------
+

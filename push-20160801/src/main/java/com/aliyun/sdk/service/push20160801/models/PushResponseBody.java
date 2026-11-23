@@ -67,7 +67,7 @@ public class PushResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The message ID that identifies a push notification.</p>
+         * <p>The message ID that identifies a push task.</p>
          * 
          * <strong>example:</strong>
          * <p>501029</p>
