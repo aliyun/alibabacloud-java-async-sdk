@@ -170,7 +170,7 @@ public class CreateDomainRequest extends Request {
          * </li>
          * </ul>
          * <blockquote>
-         * <p>If the value is <strong>share</strong>, or the value is <strong>hybrid_cloud_cname</strong> and public cloud disaster recovery is enabled, you must invoke the <a href="https://help.aliyun.com/document_detail/2985193.html">DescribeVerifyContent</a> and <a href="https://help.aliyun.com/document_detail/2985192.html">VerifyDomainOwner</a> operations to authenticate the domain name ownership first. If the website config is added to a region in the Chinese mainland, it must also have an ICP filing.</p>
+         * <p>If the value is <strong>share</strong>, or the value is <strong>hybrid_cloud_cname</strong> and public cloud disaster recovery is enabled, you must first invoke the <a href="https://help.aliyun.com/document_detail/2985193.html">DescribeVerifyContent</a> and <a href="https://help.aliyun.com/document_detail/2985192.html">VerifyDomainOwner</a> operations to authenticate the domain name ownership. If the website config is added to a region in the Chinese mainland, it must also have an ICP filing.</p>
          * <p>If the value is <strong>hybrid_cloud_cname</strong> and public cloud disaster recovery is disabled, you do not need to authenticate the domain name ownership and can directly invoke this operation.</p>
          * </blockquote>
          * 
@@ -184,7 +184,7 @@ public class CreateDomainRequest extends Request {
         }
 
         /**
-         * <p>The domain name to query.</p>
+         * <p>The name of the domain name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -266,7 +266,7 @@ public class CreateDomainRequest extends Request {
         }
 
         /**
-         * <p>The list of tags, which can contain up to 20 items.</p>
+         * <p>The list of tags. A maximum of 20 tags are supported.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -568,7 +568,7 @@ public class CreateDomainRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the certificate to add. This parameter is used only when <strong>HttpsPorts</strong> is not empty, which indicates that the domain name uses HTTPS.</p>
+             * <p>The ID of the certificate to be added. This parameter is used only when <strong>HttpsPorts</strong> is not empty, which indicates that the domain name uses the HTTPS protocol.</p>
              * 
              * <strong>example:</strong>
              * <p>123</p>
@@ -579,7 +579,7 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * <p>The type of cipher suite to add. This parameter is used only when <strong>HttpsPorts</strong> is not empty, which indicates that the domain name uses HTTPS. Valid values:</p>
+             * <p>The type of cipher suite to be added. This parameter is used only when <strong>HttpsPorts</strong> is not empty, which indicates that the domain name uses the HTTPS protocol. Valid values:</p>
              * <ul>
              * <li><p><strong>1</strong>: adds all cipher suites.</p>
              * </li>
@@ -598,7 +598,7 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * <p>The custom cipher suites to add.</p>
+             * <p>The custom cipher suites to be added.</p>
              */
             public Builder customCiphers(java.util.List<String> customCiphers) {
                 this.customCiphers = customCiphers;
@@ -614,7 +614,7 @@ public class CreateDomainRequest extends Request {
              * </li>
              * </ul>
              * <blockquote>
-             * <p>This parameter is used only when HttpsPorts is not empty, which indicates that the domain name uses HTTPS. When TLSVersion is set to tlsv1.3, this parameter must be set to true.</p>
+             * <p>This parameter is used only when HttpsPorts is not empty, which indicates that the domain name uses the HTTPS protocol. When TLSVersion is set to tlsv1.3, this value must be set to true.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -643,11 +643,11 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable force redirect to HTTPS. This parameter is used only when HttpsPorts is not empty, which indicates that the domain name uses HTTPS, and HttpPorts is empty, which indicates that the domain name does not use HTTP. Valid values:</p>
+             * <p>Specifies whether to enable forced HTTPS redirection. This parameter is used only when HttpsPorts is not empty, which indicates that the domain name uses the HTTPS protocol, and HttpPorts is empty, which indicates that the domain name does not use the HTTP protocol. Valid values:</p>
              * <ul>
-             * <li><p><strong>true</strong>: enables force redirect to HTTPS.</p>
+             * <li><p><strong>true</strong>: enables forced HTTPS redirection.</p>
              * </li>
-             * <li><p><strong>false</strong>: disables force redirect to HTTPS.</p>
+             * <li><p><strong>false</strong>: disables forced HTTPS redirection.</p>
              * </li>
              * </ul>
              * 
@@ -662,9 +662,9 @@ public class CreateDomainRequest extends Request {
             /**
              * <p>Specifies whether HTTP Strict Transport Security (HSTS) includes subdomains. Valid values:</p>
              * <ul>
-             * <li><p><strong>true</strong>: enabled.</p>
+             * <li><p><strong>true</strong>: includes subdomains.</p>
              * </li>
-             * <li><p><strong>false</strong>: disabled.</p>
+             * <li><p><strong>false</strong>: does not include subdomains.</p>
              * </li>
              * </ul>
              * 
@@ -688,10 +688,10 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable HSTS preload. Default value: disabled. Valid values:</p>
+             * <p>Specifies whether to enable HSTS preload. Default value: false. Valid values:</p>
              * <ul>
-             * <li>true: enabled.</li>
-             * <li>false: disabled.</li>
+             * <li>true: enables HSTS preload.</li>
+             * <li>false: disables HSTS preload.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -703,7 +703,7 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable HTTP/2. This parameter is used only when <strong>HttpsPorts</strong> is not empty, which indicates that the domain name uses HTTPS. Valid values:</p>
+             * <p>Specifies whether to enable HTTP/2. This parameter is used only when <strong>HttpsPorts</strong> is not empty, which indicates that the domain name uses the HTTPS protocol. Valid values:</p>
              * <ul>
              * <li><p><strong>true</strong>: enables HTTP/2.</p>
              * </li>
@@ -720,7 +720,7 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * <p>The listening ports for HTTP.</p>
+             * <p>The listening ports for the HTTP protocol.</p>
              */
             public Builder httpPorts(java.util.List<Integer> httpPorts) {
                 this.httpPorts = httpPorts;
@@ -728,7 +728,7 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * <p>The listening ports for HTTPS.</p>
+             * <p>The listening ports for the HTTPS protocol.</p>
              */
             public Builder httpsPorts(java.util.List<Integer> httpsPorts) {
                 this.httpsPorts = httpsPorts;
@@ -753,7 +753,7 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * <p>The type of protection resource to use. Valid values:</p>
+             * <p>The type of protection resource to be used. Valid values:</p>
              * <ul>
              * <li><p><strong>share</strong> (default): uses a shared cluster.</p>
              * </li>
@@ -787,7 +787,7 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * <p>The ID of the SM2 certificate to add. This parameter is used only when SM2Enabled is set to true.</p>
+             * <p>The ID of the SM2 certificate to be added. This parameter is used only when SM2Enabled is set to true.</p>
              * 
              * <strong>example:</strong>
              * <p>123-cn-hangzhou</p>
@@ -809,7 +809,7 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * <p>The TLS version to add. This parameter is used only when <strong>HttpsPorts</strong> is not empty, which indicates that the domain name uses HTTPS. Valid values:</p>
+             * <p>The TLS version to be added. This parameter is used only when <strong>HttpsPorts</strong> is not empty, which indicates that the domain name uses the HTTPS protocol. Valid values:</p>
              * <ul>
              * <li><strong>tlsv1</strong>: supports TLS 1.0 and later versions. This value provides the highest compatibility but lower security.</li>
              * <li><strong>tlsv1.1</strong>: supports TLS 1.1 and later versions. This value provides good compatibility and security.</li>
@@ -826,7 +826,7 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * <p>The method for WAF to obtain the actual IP address of the client. Valid values:</p>
+             * <p>The method used by WAF to obtain the actual IP address of the client. Valid values:</p>
              * <ul>
              * <li><p><strong>0</strong> (default): The client access traffic is not forwarded by other Layer 7 proxies before it reaches WAF.</p>
              * </li>
@@ -834,7 +834,7 @@ public class CreateDomainRequest extends Request {
              * </li>
              * <li><p><strong>2</strong>: WAF reads the value of a custom field that you specified in the request header as the client IP address.</p>
              * </li>
-             * <li><p><strong>3</strong>: WAF reads the Client IP field in the Proxy Protocol header as the client IP address.</p>
+             * <li><p><strong>3</strong>: WAF reads the Client IP address in the Proxy Protocol header as the client IP address.</p>
              * </li>
              * </ul>
              * 
@@ -856,6 +856,87 @@ public class CreateDomainRequest extends Request {
 
             public Listen build() {
                 return new Listen(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateDomainRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDomainRequest</p>
+     */
+    public static class BackendConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Backend")
+        private String backend;
+
+        @com.aliyun.core.annotation.NameInMap("Weight")
+        private Integer weight;
+
+        private BackendConfig(Builder builder) {
+            this.backend = builder.backend;
+            this.weight = builder.weight;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BackendConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return backend
+         */
+        public String getBackend() {
+            return this.backend;
+        }
+
+        /**
+         * @return weight
+         */
+        public Integer getWeight() {
+            return this.weight;
+        }
+
+        public static final class Builder {
+            private String backend; 
+            private Integer weight; 
+
+            private Builder() {
+            } 
+
+            private Builder(BackendConfig model) {
+                this.backend = model.backend;
+                this.weight = model.weight;
+            } 
+
+            /**
+             * <p>The origin server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1.XX.XX</p>
+             */
+            public Builder backend(String backend) {
+                this.backend = backend;
+                return this;
+            }
+
+            /**
+             * <p>The weight.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder weight(Integer weight) {
+                this.weight = weight;
+                return this;
+            }
+
+            public BackendConfig build() {
+                return new BackendConfig(this);
             } 
 
         } 
@@ -951,9 +1032,9 @@ public class CreateDomainRequest extends Request {
             /**
              * <p>The protocol of the listening port. Valid values:</p>
              * <ul>
-             * <li><p><strong>http</strong>: The protocol of the listening port is HTTP.</p>
+             * <li><p><strong>http</strong>: the HTTP protocol.</p>
              * </li>
-             * <li><p><strong>https</strong>: The protocol of the listening port is HTTPS.</p>
+             * <li><p><strong>https</strong>: the HTTPS protocol.</p>
              * </li>
              * </ul>
              * 
@@ -1025,7 +1106,7 @@ public class CreateDomainRequest extends Request {
             } 
 
             /**
-             * <p>The specified custom request header field.</p>
+             * <p>The custom request header field.</p>
              * 
              * <strong>example:</strong>
              * <p>aaa</p>
@@ -1060,6 +1141,9 @@ public class CreateDomainRequest extends Request {
      * <p>CreateDomainRequest</p>
      */
     public static class Redirect extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BackendConfig")
+        private java.util.List<BackendConfig> backendConfig;
+
         @com.aliyun.core.annotation.NameInMap("BackendPorts")
         private java.util.List<BackendPorts> backendPorts;
 
@@ -1145,6 +1229,7 @@ public class CreateDomainRequest extends Request {
         private Boolean xffProto;
 
         private Redirect(Builder builder) {
+            this.backendConfig = builder.backendConfig;
             this.backendPorts = builder.backendPorts;
             this.backends = builder.backends;
             this.backupBackends = builder.backupBackends;
@@ -1179,6 +1264,13 @@ public class CreateDomainRequest extends Request {
 
         public static Redirect create() {
             return builder().build();
+        }
+
+        /**
+         * @return backendConfig
+         */
+        public java.util.List<BackendConfig> getBackendConfig() {
+            return this.backendConfig;
         }
 
         /**
@@ -1364,6 +1456,7 @@ public class CreateDomainRequest extends Request {
         }
 
         public static final class Builder {
+            private java.util.List<BackendConfig> backendConfig; 
             private java.util.List<BackendPorts> backendPorts; 
             private java.util.List<String> backends; 
             private java.util.List<String> backupBackends; 
@@ -1395,6 +1488,7 @@ public class CreateDomainRequest extends Request {
             } 
 
             private Builder(Redirect model) {
+                this.backendConfig = model.backendConfig;
                 this.backendPorts = model.backendPorts;
                 this.backends = model.backends;
                 this.backupBackends = model.backupBackends;
@@ -1422,6 +1516,14 @@ public class CreateDomainRequest extends Request {
                 this.xTrueIp = model.xTrueIp;
                 this.xffProto = model.xffProto;
             } 
+
+            /**
+             * <p>The custom back-to-origin configuration.</p>
+             */
+            public Builder backendConfig(java.util.List<BackendConfig> backendConfig) {
+                this.backendConfig = backendConfig;
+                return this;
+            }
 
             /**
              * <p>The custom port configuration.</p>
@@ -1478,11 +1580,11 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable force back-to-origin over HTTP. This parameter is used only when <strong>HttpsPorts</strong> is not empty, which indicates that the domain name uses HTTPS. Valid values:</p>
+             * <p>Specifies whether to enable forced HTTP back-to-origin. This parameter is used only when <strong>HttpsPorts</strong> is not empty, which indicates that the domain name uses the HTTPS protocol. Valid values:</p>
              * <ul>
-             * <li><p><strong>true</strong>: enables force back-to-origin over HTTP.</p>
+             * <li><p><strong>true</strong>: enables forced HTTP back-to-origin.</p>
              * </li>
-             * <li><p><strong>false</strong>: disables force back-to-origin over HTTP.</p>
+             * <li><p><strong>false</strong>: disables forced HTTP back-to-origin.</p>
              * </li>
              * </ul>
              * 
@@ -1542,7 +1644,7 @@ public class CreateDomainRequest extends Request {
             /**
              * <p>The number of requests that reuse a persistent connection. Valid values: 60 to 1000. Default value: 1000.</p>
              * <blockquote>
-             * <p>The maximum number of requests that can be served over a single persistent connection after persistent connections are enabled.</p>
+             * <p>The number of requests that can reuse a persistent connection after persistent connections are enabled.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1588,7 +1690,7 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * <p>The maximum size of the request body. Valid values: 2 to 10. Default value: 2. Unit: GB.</p>
+             * <p>The maximum request body size. Valid values: 2 to 10. Default value: 2. Unit: GB.</p>
              * <blockquote>
              * <p>This parameter is supported only by the Ultimate Edition.</p>
              * </blockquote>
@@ -1602,10 +1704,10 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether the feature to preserve the client source IP address is enabled. Valid values:</p>
+             * <p>Specifies whether to enable the feature of preserving the client source IP address. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: The feature is enabled. After this feature is enabled, backend services can view the original IP address of the client.</li>
-             * <li><strong>false</strong>: The feature is disabled.</li>
+             * <li><strong>true</strong>: enables the feature. After this feature is enabled, backend services can view the original IP address of the client.</li>
+             * <li><strong>false</strong>: disables the feature.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1690,7 +1792,7 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable back-to-origin Server Name Indication (SNI). This parameter is used only when <strong>HttpsPorts</strong> is not empty, which indicates that the domain name uses HTTPS. Valid values:</p>
+             * <p>Specifies whether to enable back-to-origin Server Name Indication (SNI). This parameter is used only when <strong>HttpsPorts</strong> is not empty, which indicates that the domain name uses the HTTPS protocol. Valid values:</p>
              * <ul>
              * <li><p><strong>true</strong>: enables back-to-origin SNI.</p>
              * </li>
@@ -1708,7 +1810,7 @@ public class CreateDomainRequest extends Request {
 
             /**
              * <p>The value of the custom SNI extension field. If you do not specify this parameter, the value of the <strong>Host</strong> field in the request header is used as the value of the SNI extension field by default.
-             * In most cases, you do not need to customize the SNI unless your business has special configuration requirements and you want WAF to use an SNI that is different from the actual request Host in back-to-origin requests.</p>
+             * In most cases, you do not need to customize SNI unless your service has special configuration requirements and you want WAF to use an SNI that is different from the actual request Host in back-to-origin requests.</p>
              * <blockquote>
              * <p>This parameter is required only when <strong>SniEnabled</strong> is set to <strong>true</strong>, which indicates that back-to-origin SNI is enabled.</p>
              * </blockquote>
@@ -1722,11 +1824,11 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to allow WAF to overwrite the WL-Proxy-Client-IP header. Valid values:</p>
+             * <p>Specifies whether to allow WAF to overwrite WL-Proxy-Client-IP. Valid values:</p>
              * <ul>
-             * <li><p><strong>true</strong> (default): allows WAF to overwrite the header.</p>
+             * <li><p><strong>true</strong> (default): allows WAF to overwrite WL-Proxy-Client-IP.</p>
              * </li>
-             * <li><p><strong>false</strong>: does not allow WAF to overwrite the header.</p>
+             * <li><p><strong>false</strong>: does not allow WAF to overwrite WL-Proxy-Client-IP.</p>
              * </li>
              * </ul>
              * 
@@ -1739,11 +1841,11 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to allow WAF to overwrite the Web-Server-Type header. Valid values:</p>
+             * <p>Specifies whether to allow WAF to overwrite Web-Server-Type. Valid values:</p>
              * <ul>
-             * <li><p><strong>true</strong> (default): allows WAF to overwrite the header.</p>
+             * <li><p><strong>true</strong> (default): allows WAF to overwrite Web-Server-Type.</p>
              * </li>
-             * <li><p><strong>false</strong>: does not allow WAF to overwrite the header.</p>
+             * <li><p><strong>false</strong>: does not allow WAF to overwrite Web-Server-Type.</p>
              * </li>
              * </ul>
              * 
@@ -1769,11 +1871,11 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to allow WAF to overwrite the X-Client-IP header. Valid values:</p>
+             * <p>Specifies whether to allow WAF to overwrite X-Client-IP. Valid values:</p>
              * <ul>
-             * <li><p><strong>true</strong> (default): allows WAF to overwrite the header.</p>
+             * <li><p><strong>true</strong> (default): allows WAF to overwrite X-Client-IP.</p>
              * </li>
-             * <li><p><strong>false</strong>: does not allow WAF to overwrite the header.</p>
+             * <li><p><strong>false</strong>: does not allow WAF to overwrite X-Client-IP.</p>
              * </li>
              * </ul>
              * 
@@ -1786,11 +1888,11 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to allow WAF to overwrite the X-True-IP header. Valid values:</p>
+             * <p>Specifies whether to allow WAF to overwrite X-True-IP. Valid values:</p>
              * <ul>
-             * <li><p><strong>true</strong> (default): allows WAF to overwrite the header.</p>
+             * <li><p><strong>true</strong> (default): allows WAF to overwrite X-True-IP.</p>
              * </li>
-             * <li><p><strong>false</strong>: does not allow WAF to overwrite the header.</p>
+             * <li><p><strong>false</strong>: does not allow WAF to overwrite X-True-IP.</p>
              * </li>
              * </ul>
              * 
@@ -1803,7 +1905,7 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to pass the WAF protocol in the X-Forwarded-Proto header. Valid values:</p>
+             * <p>Specifies whether to pass the WAF protocol by using X-Forwarded-Proto. Valid values:</p>
              * <ul>
              * <li><p><strong>true</strong> (default): passes the WAF protocol.</p>
              * </li>

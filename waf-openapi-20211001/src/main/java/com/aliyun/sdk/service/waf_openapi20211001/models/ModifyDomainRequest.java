@@ -151,7 +151,7 @@ public class ModifyDomainRequest extends Request {
          * <ul>
          * <li><p><strong>share</strong>: CNAME access. This is the default value.</p>
          * </li>
-         * <li><p><strong>hybrid_cloud_cname</strong>: hybrid cloud CNAME access.</p>
+         * <li><p><strong>hybrid_cloud_cname</strong>: Hybrid Cloud CNAME access.</p>
          * </li>
          * </ul>
          * 
@@ -165,7 +165,7 @@ public class ModifyDomainRequest extends Request {
         }
 
         /**
-         * <p>The domain name to manage.</p>
+         * <p>The domain name.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
@@ -205,7 +205,7 @@ public class ModifyDomainRequest extends Request {
         }
 
         /**
-         * <p>The listener settings.</p>
+         * <p>The listener configurations.</p>
          * <p>This parameter is required.</p>
          */
         public Builder listen(Listen listen) {
@@ -216,7 +216,7 @@ public class ModifyDomainRequest extends Request {
         }
 
         /**
-         * <p>The forwarding settings.</p>
+         * <p>The forwarding configurations.</p>
          * <p>This parameter is required.</p>
          */
         public Builder redirect(Redirect redirect) {
@@ -539,7 +539,7 @@ public class ModifyDomainRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the certificate to add.</p>
+             * <p>The ID of the certificate to be added.</p>
              * 
              * <strong>example:</strong>
              * <p>123</p>
@@ -550,7 +550,7 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * <p>The type of cipher suite to add. This parameter takes effect only when <strong>HttpsPorts</strong> is not empty, which indicates that the domain name uses HTTPS. Valid values:</p>
+             * <p>The type of cipher suite to be added. This parameter takes effect only when <strong>HttpsPorts</strong> is not empty, which indicates that the domain name uses HTTPS. Valid values:</p>
              * <ul>
              * <li><p><strong>1</strong>: adds all cipher suites.</p>
              * </li>
@@ -569,7 +569,7 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * <p>The custom cipher suites to add. This parameter takes effect only when <strong>CipherSuite</strong> is set to <strong>99</strong>.</p>
+             * <p>The custom cipher suites to be added. This parameter takes effect only when <strong>CipherSuite</strong> is set to <strong>99</strong>.</p>
              */
             public Builder customCiphers(java.util.List<String> customCiphers) {
                 this.customCiphers = customCiphers;
@@ -659,7 +659,7 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable HSTS preload. Default value: false. Valid values:</p>
+             * <p>Specifies whether to enable HSTS preload. By default, this feature is disabled. Valid values:</p>
              * <ul>
              * <li>true: enables HSTS preload.</li>
              * <li>false: disables HSTS preload.</li>
@@ -724,7 +724,7 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * <p>The type of protection resource to use. Valid values:</p>
+             * <p>The type of protection resource to be used. Valid values:</p>
              * <ul>
              * <li><p><strong>share</strong>: uses a shared cluster. This is the default value.</p>
              * </li>
@@ -741,11 +741,11 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to allow access only from SM2 clients. This parameter takes effect only when SM2Enabled is set to true. Valid values:</p>
+             * <p>Specifies whether to allow access only from clients that support SM2. This parameter takes effect only when SM2Enabled is set to true. Valid values:</p>
              * <ul>
-             * <li><p>true: allows access only from SM2 clients.</p>
+             * <li><p>true: allows access only from clients that support SM2.</p>
              * </li>
-             * <li><p>false: allows access from both SM2 and non-SM2 clients.</p>
+             * <li><p>false: allows access from clients that support SM2 and clients that do not support SM2.</p>
              * </li>
              * </ul>
              * 
@@ -758,7 +758,7 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * <p>The ID of the SM2 certificate to add. This parameter takes effect only when SM2Enabled is set to true.</p>
+             * <p>The ID of the SM2 certificate to be added. This parameter takes effect only when SM2Enabled is set to true.</p>
              * 
              * <strong>example:</strong>
              * <p>123-cn-hangzhou</p>
@@ -780,7 +780,7 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * <p>The TLS version to add. This parameter takes effect only when <strong>HttpsPorts</strong> is not empty, which indicates that the domain name uses HTTPS. Valid values:</p>
+             * <p>The TLS version. This parameter takes effect only when <strong>HttpsPorts</strong> is not empty, which indicates that the domain name uses HTTPS. Valid values:</p>
              * <ul>
              * <li><strong>tlsv1</strong>: supports TLS 1.0 and later. This version provides the highest compatibility but lower security.</li>
              * <li><strong>tlsv1.1</strong>: supports TLS 1.1 and later. This version provides good compatibility and security.</li>
@@ -797,7 +797,7 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * <p>The method that WAF uses to obtain the actual IP address of the client.</p>
+             * <p>The method for WAF to obtain the actual IP address of the client.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -810,7 +810,7 @@ public class ModifyDomainRequest extends Request {
             /**
              * <p>The list of custom fields used to obtain the client IP address. Specify the fields in the [<strong>&quot;header1&quot;,&quot;header2&quot;,...</strong>] format.</p>
              * <blockquote>
-             * <p>You need to set this parameter only when <strong>XffHeaderMode</strong> is set to 2, which indicates that WAF reads the value of a custom field that you specified in the request header as the client IP address.</p>
+             * <p>You must specify this parameter only when <strong>XffHeaderMode</strong> is set to 2, which indicates that WAF reads the value of a custom field that you specify in the request header as the client IP address.</p>
              * </blockquote>
              */
             public Builder xffHeaders(java.util.List<String> xffHeaders) {
@@ -820,6 +820,87 @@ public class ModifyDomainRequest extends Request {
 
             public Listen build() {
                 return new Listen(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ModifyDomainRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyDomainRequest</p>
+     */
+    public static class BackendConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Backend")
+        private String backend;
+
+        @com.aliyun.core.annotation.NameInMap("Weight")
+        private Integer weight;
+
+        private BackendConfig(Builder builder) {
+            this.backend = builder.backend;
+            this.weight = builder.weight;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BackendConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return backend
+         */
+        public String getBackend() {
+            return this.backend;
+        }
+
+        /**
+         * @return weight
+         */
+        public Integer getWeight() {
+            return this.weight;
+        }
+
+        public static final class Builder {
+            private String backend; 
+            private Integer weight; 
+
+            private Builder() {
+            } 
+
+            private Builder(BackendConfig model) {
+                this.backend = model.backend;
+                this.weight = model.weight;
+            } 
+
+            /**
+             * <p>The origin server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1.XX.XX</p>
+             */
+            public Builder backend(String backend) {
+                this.backend = backend;
+                return this;
+            }
+
+            /**
+             * <p>The weight.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder weight(Integer weight) {
+                this.weight = weight;
+                return this;
+            }
+
+            public BackendConfig build() {
+                return new BackendConfig(this);
             } 
 
         } 
@@ -915,9 +996,9 @@ public class ModifyDomainRequest extends Request {
             /**
              * <p>The protocol of the listening port. Valid values:</p>
              * <ul>
-             * <li><p><strong>http</strong>: the protocol of the listening port is HTTP.</p>
+             * <li><p><strong>http</strong>: HTTP.</p>
              * </li>
-             * <li><p><strong>https</strong>: the protocol of the listening port is HTTPS.</p>
+             * <li><p><strong>https</strong>: HTTPS.</p>
              * </li>
              * </ul>
              * 
@@ -989,7 +1070,7 @@ public class ModifyDomainRequest extends Request {
             } 
 
             /**
-             * <p>The specified custom request header field.</p>
+             * <p>The custom request header field.</p>
              * 
              * <strong>example:</strong>
              * <p>aaa</p>
@@ -1000,7 +1081,7 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * <p>The value set for the specified custom request header field.</p>
+             * <p>The value of the custom request header field.</p>
              * 
              * <strong>example:</strong>
              * <p>bbb</p>
@@ -1024,6 +1105,9 @@ public class ModifyDomainRequest extends Request {
      * <p>ModifyDomainRequest</p>
      */
     public static class Redirect extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BackendConfig")
+        private java.util.List<BackendConfig> backendConfig;
+
         @com.aliyun.core.annotation.NameInMap("BackendPorts")
         private java.util.List<BackendPorts> backendPorts;
 
@@ -1109,6 +1193,7 @@ public class ModifyDomainRequest extends Request {
         private Boolean xffProto;
 
         private Redirect(Builder builder) {
+            this.backendConfig = builder.backendConfig;
             this.backendPorts = builder.backendPorts;
             this.backends = builder.backends;
             this.backupBackends = builder.backupBackends;
@@ -1143,6 +1228,13 @@ public class ModifyDomainRequest extends Request {
 
         public static Redirect create() {
             return builder().build();
+        }
+
+        /**
+         * @return backendConfig
+         */
+        public java.util.List<BackendConfig> getBackendConfig() {
+            return this.backendConfig;
         }
 
         /**
@@ -1328,6 +1420,7 @@ public class ModifyDomainRequest extends Request {
         }
 
         public static final class Builder {
+            private java.util.List<BackendConfig> backendConfig; 
             private java.util.List<BackendPorts> backendPorts; 
             private java.util.List<String> backends; 
             private java.util.List<String> backupBackends; 
@@ -1359,6 +1452,7 @@ public class ModifyDomainRequest extends Request {
             } 
 
             private Builder(Redirect model) {
+                this.backendConfig = model.backendConfig;
                 this.backendPorts = model.backendPorts;
                 this.backends = model.backends;
                 this.backupBackends = model.backupBackends;
@@ -1388,6 +1482,14 @@ public class ModifyDomainRequest extends Request {
             } 
 
             /**
+             * <p>The custom back-to-origin configurations.</p>
+             */
+            public Builder backendConfig(java.util.List<BackendConfig> backendConfig) {
+                this.backendConfig = backendConfig;
+                return this;
+            }
+
+            /**
              * <p>The custom port configurations.</p>
              */
             public Builder backendPorts(java.util.List<BackendPorts> backendPorts) {
@@ -1396,11 +1498,11 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * <p>The IP addresses of the origin servers or the back-to-origin domain names for the domain name. You can specify either origin server IP addresses or back-to-origin domain names. If the back-to-origin address is a domain name, only IPv4 is supported. IPv6 is not supported.</p>
+             * <p>The IP addresses of the origin servers or the domain names to which requests are forwarded for the domain name. You can specify either IP addresses or domain names. If you specify domain names, only IPv4 addresses are supported. IPv6 addresses are not supported.</p>
              * <ul>
-             * <li><p>To specify origin server IP addresses, use the [<strong>&quot;ip1&quot;,&quot;ip2&quot;,...</strong>] format. You can add up to 20 IP addresses.</p>
+             * <li><p>To specify IP addresses of origin servers, use the [<strong>&quot;ip1&quot;,&quot;ip2&quot;,...</strong>] format. You can add up to 20 IP addresses.</p>
              * </li>
-             * <li><p>To specify back-to-origin domain names, use the [<strong>&quot;domain&quot;</strong>] format. You can add up to 20 domain names.</p>
+             * <li><p>To specify domain names, use the [<strong>&quot;domain&quot;</strong>] format. You can add up to 20 domain names.</p>
              * </li>
              * </ul>
              */
@@ -1410,7 +1512,7 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * <p>The IP addresses of the secondary origin servers or the secondary back-to-origin domain names for the domain name.</p>
+             * <p>The IP addresses of the secondary origin servers or the secondary domain names to which requests are forwarded for the domain name.</p>
              */
             public Builder backupBackends(java.util.List<String> backupBackends) {
                 this.backupBackends = backupBackends;
@@ -1418,11 +1520,11 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable public cloud disaster recovery. Valid values:</p>
+             * <p>Specifies whether to enable disaster recovery on Alibaba Cloud. Valid values:</p>
              * <ul>
-             * <li><p><strong>true</strong>: enables public cloud disaster recovery.</p>
+             * <li><p><strong>true</strong>: enables disaster recovery on Alibaba Cloud.</p>
              * </li>
-             * <li><p><strong>false</strong>: disables public cloud disaster recovery. This is the default value.</p>
+             * <li><p><strong>false</strong>: disables disaster recovery on Alibaba Cloud. This is the default value.</p>
              * </li>
              * </ul>
              * 
@@ -1448,11 +1550,11 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable force back-to-origin over HTTP. This parameter takes effect only when <strong>HttpsPorts</strong> is not empty, which indicates that the domain name uses HTTPS. Valid values:</p>
+             * <p>Specifies whether to enable force redirect to HTTP for back-to-origin requests. This parameter takes effect only when <strong>HttpsPorts</strong> is not empty, which indicates that the domain name uses HTTPS. Valid values:</p>
              * <ul>
-             * <li><p><strong>true</strong>: enables force back-to-origin over HTTP.</p>
+             * <li><p><strong>true</strong>: enables force redirect to HTTP for back-to-origin requests.</p>
              * </li>
-             * <li><p><strong>false</strong>: disables force back-to-origin over HTTP.</p>
+             * <li><p><strong>false</strong>: disables force redirect to HTTP for back-to-origin requests.</p>
              * </li>
              * </ul>
              * 
@@ -1465,11 +1567,11 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable HTTP/2 back-to-origin. Valid values:</p>
+             * <p>Specifies whether to enable HTTP/2 for back-to-origin requests. Valid values:</p>
              * <ul>
-             * <li><p><strong>true</strong>: enables HTTP/2 back-to-origin.</p>
+             * <li><p><strong>true</strong>: enables HTTP/2 for back-to-origin requests.</p>
              * </li>
-             * <li><p><strong>false</strong>: disables HTTP/2 back-to-origin.</p>
+             * <li><p><strong>false</strong>: disables HTTP/2 for back-to-origin requests.</p>
              * </li>
              * </ul>
              * 
@@ -1482,7 +1584,7 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * <p>The maximum number of concurrent HTTP/2 back-to-origin connections. Valid values: 1 to 512. Default value: 2. Unit: connections.</p>
+             * <p>The maximum number of concurrent HTTP/2 back-to-origin connections. Valid values: 1 to 512. Default value: 2.</p>
              * 
              * <strong>example:</strong>
              * <p>128</p>
@@ -1510,9 +1612,9 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * <p>The number of requests that reuse a persistent connection. Valid values: 60 to 1000. Default value: 1000. Unit: requests.</p>
+             * <p>The number of requests that can be reused over a persistent connection. Valid values: 60 to 1000. Default value: 1000.</p>
              * <blockquote>
-             * <p>This parameter specifies the number of requests that can reuse a persistent connection after persistent connections are enabled.</p>
+             * <p>This parameter specifies the number of requests that can be multiplexed over a persistent connection after persistent connections are enabled.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1524,7 +1626,7 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * <p>The timeout period for idle persistent connections. Valid values: 1 to 60. Default value: 15. Unit: seconds.</p>
+             * <p>The timeout period for an idle persistent connection. Valid values: 1 to 60. Default value: 15. Unit: seconds.</p>
              * <blockquote>
              * <p>This parameter specifies the duration after which an idle persistent connection is released.</p>
              * </blockquote>
@@ -1560,7 +1662,7 @@ public class ModifyDomainRequest extends Request {
             /**
              * <p>The maximum size of the request body. Valid values: 2 to 10. Default value: 2. Unit: GB.</p>
              * <blockquote>
-             * <p>This parameter is supported only by the Ultimate Edition.</p>
+             * <p>This parameter is supported only by WAF Ultimate Edition.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1603,7 +1705,7 @@ public class ModifyDomainRequest extends Request {
 
             /**
              * <p>The traffic marking fields and values for the domain name, which are used to mark the traffic processed by WAF.</p>
-             * <p>By specifying custom request header fields and their corresponding values, WAF automatically adds the specified custom field values to the request headers as traffic marks when the access traffic of the domain name passes through WAF. This facilitates the collection of relevant information by backend services.</p>
+             * <p>By specifying custom request header fields and their values, WAF automatically adds the specified custom field values to the request headers as traffic marks when the access traffic of the domain name passes through WAF. This facilitates the collection of related information by backend services.</p>
              */
             public Builder requestHeaders(java.util.List<RequestHeaders> requestHeaders) {
                 this.requestHeaders = requestHeaders;
@@ -1628,11 +1730,11 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * <p>The hybrid cloud forwarding rules. The value is a string transformed from a JSON array. Each element in the JSON array is a struct that contains the following fields:</p>
+             * <p>The forwarding rules for Hybrid Cloud WAF. The value is a string transformed from a JSON array. Each element in the JSON array is a struct that contains the following fields:</p>
              * <ul>
-             * <li><p><strong>rs</strong>: Array | The list of back-to-origin IP addresses or back-to-origin CNAMEs.</p>
+             * <li><p><strong>rs</strong>: Array | The list of back-to-origin IP addresses or CNAME records.</p>
              * </li>
-             * <li><p><strong>backupRs</strong>: Array | The list of secondary back-to-origin IP addresses or back-to-origin CNAMEs. This field is required. An empty array [] indicates that no secondary back-to-origin addresses are set.</p>
+             * <li><p><strong>backupRs</strong>: Array | The list of secondary back-to-origin IP addresses or CNAME records. This field is required. An empty array [] indicates that no secondary back-to-origin addresses are configured.</p>
              * </li>
              * <li><p><strong>location</strong>: String | The name of the protection node.</p>
              * </li>
@@ -1662,11 +1764,11 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable back-to-origin Server Name Indication (SNI). This parameter takes effect only when <strong>HttpsPorts</strong> is not empty, which indicates that the domain name uses HTTPS. Valid values:</p>
+             * <p>Specifies whether to enable Server Name Indication (SNI) for back-to-origin requests. This parameter takes effect only when <strong>HttpsPorts</strong> is not empty, which indicates that the domain name uses HTTPS. Valid values:</p>
              * <ul>
-             * <li><p><strong>true</strong>: enables back-to-origin SNI.</p>
+             * <li><p><strong>true</strong>: enables SNI for back-to-origin requests.</p>
              * </li>
-             * <li><p><strong>false</strong>: disables back-to-origin SNI. This is the default value.</p>
+             * <li><p><strong>false</strong>: disables SNI for back-to-origin requests. This is the default value.</p>
              * </li>
              * </ul>
              * 
@@ -1679,10 +1781,10 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * <p>The value of the custom SNI extension field. If you do not set this parameter, the value of the <strong>Host</strong> field in the request header is used as the value of the SNI extension field by default.
-             * In most cases, you do not need to customize the SNI unless your service has special configuration requirements and you want WAF to use an SNI that is different from the actual request Host in the back-to-origin request.</p>
+             * <p>The value of the custom SNI extension field. If you do not specify this parameter, the value of the <strong>Host</strong> field in the request header is used as the value of the SNI extension field by default.
+             * In most cases, you do not need to customize the SNI. You can customize the SNI only when your service has special configuration requirements and you want WAF to use an SNI that is different from the actual request Host in back-to-origin requests.</p>
              * <blockquote>
-             * <p>You need to set this parameter only when <strong>SniEnabled</strong> is set to true, which indicates that a custom back-to-origin SNI is used.</p>
+             * <p>You must specify this parameter only when <strong>SniEnabled</strong> is set to true, which indicates that a custom SNI is used for back-to-origin requests.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1775,11 +1877,11 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to pass the WAF protocol in the X-Forwarded-Proto header. Valid values:</p>
+             * <p>Specifies whether to pass the protocol used by WAF in the X-Forwarded-Proto header. Valid values:</p>
              * <ul>
-             * <li><p><strong>true</strong>: passes the WAF protocol. This is the default value.</p>
+             * <li><p><strong>true</strong>: passes the protocol used by WAF. This is the default value.</p>
              * </li>
-             * <li><p><strong>false</strong>: does not pass the WAF protocol.</p>
+             * <li><p><strong>false</strong>: does not pass the protocol used by WAF.</p>
              * </li>
              * </ul>
              * 

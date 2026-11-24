@@ -168,7 +168,7 @@ public class CreateDomainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the added domain.</p>
+             * <p>The added domain name.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
