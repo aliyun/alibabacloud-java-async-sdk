@@ -101,7 +101,7 @@ public class CreateOssUploadResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The <strong>OSS presigned GET URL</strong>, which is valid for 24 hours and uses the public endpoint. If signature generation fails, null is returned, which does not affect direct upload with the credentials.</p>
+         * <p>The <strong>OSS pre-signed GET URL</strong>, which is valid for 24 hours and uses the public endpoint. If the signature generation fails, null is returned, which does not affect direct upload using the credentials.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://yike-shared-pre-2.oss-cn-shanghai.aliyuncs.com/yike-v1/ge2tqn-o5zv6m/2026/11/18/13/upload/media/hkyo9v003.mp4?Expires=1795095160&OSSAccessKeyId=STS.Nxxxxxxxxxxxxxxxxxxxxxxxx&Signature=xxxxxxxxxxx%3D">https://yike-shared-pre-2.oss-cn-shanghai.aliyuncs.com/yike-v1/ge2tqn-o5zv6m/2026/11/18/13/upload/media/hkyo9v003.mp4?Expires=1795095160&amp;OSSAccessKeyId=STS.Nxxxxxxxxxxxxxxxxxxxxxxxx&amp;Signature=xxxxxxxxxxx%3D</a></p>
@@ -339,7 +339,7 @@ public class CreateOssUploadResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration time of the credentials. The time is in UTC and follows the ISO 8601 standard. The actual return value prevails.</p>
+             * <p>The expiration time of the credential in UTC and ISO 8601 format. The actual return value prevails.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-11-20T01:32:40Z</p>
@@ -350,7 +350,7 @@ public class CreateOssUploadResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The PostObject policy, which is Base64-encoded. This field is returned when POST_POLICY is used.</p>
+             * <p>The PostObject policy, which is Base64-encoded. This is returned when POST_POLICY is used.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -363,7 +363,7 @@ public class CreateOssUploadResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The AccessKey ID used for signing. This field is returned when POST_POLICY is used.</p>
+             * <p>The AccessKey ID used for the signature. This is returned when POST_POLICY is used.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -376,7 +376,7 @@ public class CreateOssUploadResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The destination endpoint for POST requests. This field is returned when POST_POLICY is used.</p>
+             * <p>The target endpoint for the POST request. This is returned when POST_POLICY is used.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -411,7 +411,7 @@ public class CreateOssUploadResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The PostObject signature. This field is returned when POST_POLICY is used.</p>
+             * <p>The PostObject signature. This is returned when POST_POLICY is used.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -424,7 +424,7 @@ public class CreateOssUploadResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The presigned PUT URL. This field is returned when PRESIGNED_URL is used.</p>
+             * <p>The pre-signed PUT URL. This is returned when PRESIGNED_URL is used.</p>
              * 
              * <strong>example:</strong>
              * <ul>

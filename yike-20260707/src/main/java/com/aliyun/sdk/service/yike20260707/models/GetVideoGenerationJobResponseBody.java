@@ -78,7 +78,7 @@ public class GetVideoGenerationJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The video generation job.</p>
+         * <p>The video generation task.</p>
          */
         public Builder videoGenerationJob(VideoGenerationJob videoGenerationJob) {
             this.videoGenerationJob = videoGenerationJob;
@@ -311,7 +311,7 @@ public class GetVideoGenerationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The video duration, in seconds.</p>
+             * <p>The video duration. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -322,7 +322,7 @@ public class GetVideoGenerationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message. The value is a string. This parameter is returned only when the job status is Failed.</p>
+             * <p>The error message. The value is a string and is returned when the task status is Failed.</p>
              * 
              * <strong>example:</strong>
              * <p>Input file not found.</p>
@@ -333,10 +333,10 @@ public class GetVideoGenerationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The job input.</p>
+             * <p>The task input.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;Prompt&quot;:&quot;Image 1 is on the basketball court, performing a slam dunk with Image 2&quot;,&quot;Medias&quot;:[{&quot;Type&quot;:&quot;image&quot;,&quot;Url&quot;:&quot;<a href="https://xxx/xxx.jpg%22%7D,%7B%22Type%22:%22image%22,%22Url%22:%22https://xxx/xxx.jpg%22%7D%5D%7D">https://xxx/xxx.jpg&quot;},{&quot;Type&quot;:&quot;image&quot;,&quot;Url&quot;:&quot;https://xxx/xxx.jpg&quot;}]}</a></p>
+             * <p>{&quot;Prompt&quot;:&quot;Image 1 is on the basketball court, performing a slam dunk using Image 2&quot;,&quot;Medias&quot;:[{&quot;Type&quot;:&quot;image&quot;,&quot;Url&quot;:&quot;<a href="https://xxx/xxx.jpg%22%7D,%7B%22Type%22:%22image%22,%22Url%22:%22https://xxx/xxx.jpg%22%7D%5D%7D">https://xxx/xxx.jpg&quot;},{&quot;Type&quot;:&quot;image&quot;,&quot;Url&quot;:&quot;https://xxx/xxx.jpg&quot;}]}</a></p>
              */
             public Builder input(String input) {
                 this.input = input;
@@ -347,7 +347,7 @@ public class GetVideoGenerationJobResponseBody extends TeaModel {
              * <p>The job ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>fdc7f121056249c2b64e04bba27bcc8c</p>
+             * <p>ag_68ca759b4903b255*******</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -355,7 +355,7 @@ public class GetVideoGenerationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The job feature configurations. This parameter does not require configuration at this time.</p>
+             * <p>The task feature configuration. Currently, no configuration is required.</p>
              * 
              * <strong>example:</strong>
              * <p>{}</p>
@@ -399,8 +399,8 @@ public class GetVideoGenerationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The generation result. The value is a JSON string that contains the following fields:</p>
-             * <p>Medias: the list of media information (Media objects). Fields of a Media object:
+             * <p>The generation result. The value is a JSON string that contains the following fields:
+             * Medias: the list of media information (Media objects). The Media object includes the following fields:
              * MediaId: String. The media asset ID.
              * OutputUrl: String. The media URL, including the authentication string.</p>
              * 
@@ -435,13 +435,13 @@ public class GetVideoGenerationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The job status. Valid values:</p>
+             * <p>The task status. Valid values:</p>
              * <ul>
-             * <li>Created: The job is created.</li>
-             * <li>Queuing: The job is queued.</li>
-             * <li>Executing: The job is executing.</li>
-             * <li>Finished: The job succeeded.</li>
-             * <li>Failed: The job failed.</li>
+             * <li>Created: The task is created.</li>
+             * <li>Queuing: The task is queuing.</li>
+             * <li>Executing: The task is executing.</li>
+             * <li>Finished: The task ran successfully.</li>
+             * <li>Failed: The task failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>

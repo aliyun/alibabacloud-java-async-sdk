@@ -231,7 +231,7 @@ public class ListMediaFoldersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the folder is the default folder. Each project has exactly one default folder.</p>
+             * <p>Indicates whether the folder is the default folder. Each project has one and only one default folder.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>

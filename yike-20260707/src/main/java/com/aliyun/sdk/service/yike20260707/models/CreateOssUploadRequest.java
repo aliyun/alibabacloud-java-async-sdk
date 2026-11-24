@@ -163,7 +163,7 @@ public class CreateOssUploadRequest extends Request {
         }
 
         /**
-         * <p>The file name extension, such as mp4, wav, or png. Do not include the dot. If this parameter is not specified, <code>MissingParameter</code> is returned.</p>
+         * <p>The file name extension, such as mp4, wav, or png. Do not include the dot. If this parameter is missing, <code>MissingParameter</code> is returned.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -188,7 +188,7 @@ public class CreateOssUploadRequest extends Request {
         }
 
         /**
-         * <p>The explicitly specified destination bucket.</p>
+         * <p>The explicitly specified target bucket.</p>
          * 
          * <strong>example:</strong>
          * <p>test-bucket</p>

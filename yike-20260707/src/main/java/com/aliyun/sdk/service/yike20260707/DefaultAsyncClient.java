@@ -168,9 +168,9 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>This API operation generates temporary OSS upload credentials so that clients can directly upload files to a specified OSS bucket.</li>
+     * <li>This API operation generates a temporary OSS upload credential so that the client can directly upload files to a specified OSS bucket.</li>
      * <li>The <code>FileExt</code> parameter is required and specifies the file name extension of the file to be uploaded, such as mp4 or wav. Do not include the dot.</li>
-     * <li>The <code>FileType</code> parameter is optional and defaults to <code>Media</code>. It affects the path segment in the returned <code>ObjectKey</code>.</li>
+     * <li>The <code>FileType</code> parameter is optional. The default value is <code>Media</code>. This parameter affects the path segment in the returned <code>ObjectKey</code>.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateOssUpload  CreateOssUploadRequest
@@ -215,7 +215,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>This operation supports two modes: creating a new media asset and overwriting an existing media asset.</li>
+     * <li>This operation supports two modes: creating a new media asset and overwriting an existing one.</li>
      * <li>When creating a new media asset, the <code>FileInfo</code> and <code>MediaMetaData</code> parameters are required.</li>
      * <li>When overwriting an existing media asset, you must set <code>Overwrite</code> to true and provide <code>MediaId</code>.</li>
      * <li>You can specify the credential type by using <code>CredentialType</code>. The default value is STS_TOKEN.</li>
@@ -360,6 +360,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GenerateYikeLoginTokenResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetAIAppJob  GetAIAppJobRequest
+     * @return GetAIAppJobResponse
+     */
+    @Override
+    public CompletableFuture<GetAIAppJobResponse> getAIAppJob(GetAIAppJobRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetAIAppJob").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAIAppJobResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAIAppJobResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -765,7 +783,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>This operation retrieves a list of all media folders in a specified project (<code>ProductionId</code>). Pagination is supported by using the <code>PageNo</code> and <code>PageSize</code> parameters.</li>
+     * <li>This operation retrieves all media folders in a specified project (<code>ProductionId</code>). Pagination is supported by using the <code>PageNo</code> and <code>PageSize</code> parameters.</li>
      * <li>If <code>ProductionId</code> is not provided, the default project of the current account is used.</li>
      * </ul>
      * 
@@ -863,6 +881,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<SearchMediaResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SubmitAIAppJob  SubmitAIAppJobRequest
+     * @return SubmitAIAppJobResponse
+     */
+    @Override
+    public CompletableFuture<SubmitAIAppJobResponse> submitAIAppJob(SubmitAIAppJobRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SubmitAIAppJob").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SubmitAIAppJobResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SubmitAIAppJobResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

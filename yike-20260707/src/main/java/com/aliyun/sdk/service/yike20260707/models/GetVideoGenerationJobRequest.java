@@ -96,10 +96,10 @@ public class GetVideoGenerationJobRequest extends Request {
         }
 
         /**
-         * <p>The client token.</p>
+         * <p>The idempotency parameter.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxx</p>
+         * <p>818**811</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -111,7 +111,7 @@ public class GetVideoGenerationJobRequest extends Request {
          * <p>The job ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>68ca759e798b40b4903b255*******</p>
+         * <p>ag_68ca759b4903b255*******</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);

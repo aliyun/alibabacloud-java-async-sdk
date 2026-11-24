@@ -76,9 +76,9 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>This API operation generates temporary OSS upload credentials so that clients can directly upload files to a specified OSS bucket.</li>
+     * <li>This API operation generates a temporary OSS upload credential so that the client can directly upload files to a specified OSS bucket.</li>
      * <li>The <code>FileExt</code> parameter is required and specifies the file name extension of the file to be uploaded, such as mp4 or wav. Do not include the dot.</li>
-     * <li>The <code>FileType</code> parameter is optional and defaults to <code>Media</code>. It affects the path segment in the returned <code>ObjectKey</code>.</li>
+     * <li>The <code>FileType</code> parameter is optional. The default value is <code>Media</code>. This parameter affects the path segment in the returned <code>ObjectKey</code>.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateOssUpload  CreateOssUploadRequest
@@ -99,7 +99,7 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>This operation supports two modes: creating a new media asset and overwriting an existing media asset.</li>
+     * <li>This operation supports two modes: creating a new media asset and overwriting an existing one.</li>
      * <li>When creating a new media asset, the <code>FileInfo</code> and <code>MediaMetaData</code> parameters are required.</li>
      * <li>When overwriting an existing media asset, you must set <code>Overwrite</code> to true and provide <code>MediaId</code>.</li>
      * <li>You can specify the credential type by using <code>CredentialType</code>. The default value is STS_TOKEN.</li>
@@ -164,6 +164,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GenerateYikeLoginTokenResponse
      */
     CompletableFuture<GenerateYikeLoginTokenResponse> generateYikeLoginToken(GenerateYikeLoginTokenRequest request);
+
+    /**
+     * @param request the request parameters of GetAIAppJob  GetAIAppJobRequest
+     * @return GetAIAppJobResponse
+     */
+    CompletableFuture<GetAIAppJobResponse> getAIAppJob(GetAIAppJobRequest request);
 
     /**
      * @param request the request parameters of GetAgentJob  GetAgentJobRequest
@@ -325,7 +331,7 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>This operation retrieves a list of all media folders in a specified project (<code>ProductionId</code>). Pagination is supported by using the <code>PageNo</code> and <code>PageSize</code> parameters.</li>
+     * <li>This operation retrieves all media folders in a specified project (<code>ProductionId</code>). Pagination is supported by using the <code>PageNo</code> and <code>PageSize</code> parameters.</li>
      * <li>If <code>ProductionId</code> is not provided, the default project of the current account is used.</li>
      * </ul>
      * 
@@ -367,6 +373,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SearchMediaResponse
      */
     CompletableFuture<SearchMediaResponse> searchMedia(SearchMediaRequest request);
+
+    /**
+     * @param request the request parameters of SubmitAIAppJob  SubmitAIAppJobRequest
+     * @return SubmitAIAppJobResponse
+     */
+    CompletableFuture<SubmitAIAppJobResponse> submitAIAppJob(SubmitAIAppJobRequest request);
 
     /**
      * @param request the request parameters of SubmitAgentJob  SubmitAgentJobRequest

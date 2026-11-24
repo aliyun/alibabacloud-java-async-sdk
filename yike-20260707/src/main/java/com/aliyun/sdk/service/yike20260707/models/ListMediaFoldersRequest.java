@@ -134,7 +134,7 @@ public class ListMediaFoldersRequest extends Request {
         }
 
         /**
-         * <p>The project ID. If this parameter is not specified, the default project of the current account is used. The value is in the <code>pd_{uid}</code> format.</p>
+         * <p>The project ID. If this parameter is not specified, the default project of the current account is used. The value format is <code>pd_{uid}</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>pd_1585***</p>
