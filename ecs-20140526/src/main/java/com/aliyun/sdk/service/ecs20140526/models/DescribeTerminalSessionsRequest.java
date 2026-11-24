@@ -207,7 +207,7 @@ public class DescribeTerminalSessionsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return on each page in a paged query.</p>
+         * <p>The maximum number of entries to return per page in a paging query.</p>
          * <p>Maximum value: 100.</p>
          * <p>Default value: 10.</p>
          * 
@@ -221,7 +221,7 @@ public class DescribeTerminalSessionsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token. Set the value to the NextToken value returned from the previous API call.</p>
+         * <p>The query token. Set the value to the NextToken value returned by the previous API call.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAdDWBF2****</p>

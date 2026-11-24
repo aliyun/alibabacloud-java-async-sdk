@@ -232,7 +232,7 @@ public class ListPluginStatusRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return per page in a paging query.</p>
+         * <p>The maximum number of entries per page for a paging query.</p>
          * <p>Maximum value: 50.</p>
          * <p>Default value: 10.</p>
          * 
@@ -248,7 +248,7 @@ public class ListPluginStatusRequest extends Request {
         /**
          * <p>The plugin name. All characters are supported. The name can be up to 255 characters in length.</p>
          * <ul>
-         * <li><p>If you do not specify this parameter, the status of installed plugins on the instance is queried.</p>
+         * <li><p>If you do not specify this parameter, the status of all installed plugins on the instance is queried.</p>
          * <blockquote>
          * <p>If you do not specify this parameter, you can specify only one instance ID.</p>
          * </blockquote>
@@ -267,7 +267,7 @@ public class ListPluginStatusRequest extends Request {
         }
 
         /**
-         * <p>The pagination token. Set the value to the NextToken value returned in the previous call.</p>
+         * <p>The pagination token. Set the value to the NextToken value returned from the previous API call.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAdDWBF2</p>
@@ -298,7 +298,7 @@ public class ListPluginStatusRequest extends Request {
 
         /**
          * <blockquote>
-         * <p>This parameter will be deprecated soon. We recommend that you use NextToken and MaxResults to perform paging query operations.</p>
+         * <p>This parameter will be deprecated soon. We recommend that you use NextToken and MaxResults for paging.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -312,7 +312,7 @@ public class ListPluginStatusRequest extends Request {
 
         /**
          * <blockquote>
-         * <p>This parameter will be deprecated soon. We recommend that you use NextToken and MaxResults to perform paging query operations.</p>
+         * <p>This parameter will be deprecated soon. We recommend that you use NextToken and MaxResults for paging.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

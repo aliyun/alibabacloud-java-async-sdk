@@ -109,7 +109,7 @@ public class AssignIpv6AddressesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the elastic network interface (ENI).</p>
+         * <p>The ID of the Elastic network interface controller (NIC).</p>
          * 
          * <strong>example:</strong>
          * <p>eni-bp1iqejowblx6h8j****</p>

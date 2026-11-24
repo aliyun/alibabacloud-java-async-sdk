@@ -125,7 +125,7 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page when the automatic snapshot policies are displayed in paging mode.</p>
+         * <p>The number of entries per page when the returned automatic snapshot policy list is displayed in a paging manner.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -147,7 +147,7 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of automatic snapshot policies.</p>
+         * <p>The total number of automatic snapshot policy records.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

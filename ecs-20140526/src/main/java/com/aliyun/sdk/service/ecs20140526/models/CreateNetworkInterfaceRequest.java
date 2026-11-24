@@ -602,7 +602,7 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * <p>The network connection tracking configuration collection.</p>
+         * <p>The network connectivity tracking configurations.</p>
          * <p>Before you use this parameter, read <a href="https://help.aliyun.com/document_detail/2865958.html">Connection timeout management</a>.</p>
          */
         public Builder connectionTrackingConfiguration(ConnectionTrackingConfiguration connectionTrackingConfiguration) {
@@ -614,9 +614,9 @@ public class CreateNetworkInterfaceRequest extends Request {
         /**
          * <p>Specifies whether to retain the ENI when the instance is released. Valid values:</p>
          * <ul>
-         * <li><p>true: The ENI is not retained.</p>
+         * <li><p>true: does not retain the ENI.</p>
          * </li>
-         * <li><p>false: The ENI is retained.</p>
+         * <li><p>false: retains the ENI.</p>
          * </li>
          * </ul>
          * 
@@ -643,7 +643,7 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the primary IPv6 address for the Elastic Network Interface (ENI).</p>
+         * <p>Specifies whether the primary IPv6 address is enabled for the Elastic Network Interface (ENI).</p>
          */
         public Builder enablePrimaryIPv6(Boolean enablePrimaryIPv6) {
             this.putQueryParameter("EnablePrimaryIPv6", enablePrimaryIPv6);
@@ -682,7 +682,7 @@ public class CreateNetworkInterfaceRequest extends Request {
         /**
          * <p>One or more IPv4 prefixes that are allocated to the Elastic Network Interface (ENI). Valid values of N: 1 to 10.</p>
          * <blockquote>
-         * <p>If you need to configure IPv4 prefixes for the Elastic Network Interface (ENI), you must specify either <code>Ipv4Prefix.N</code> or <code>Ipv4PrefixCount</code>, but you cannot specify both parameters.</p>
+         * <p>If you want to configure IPv4 prefixes for the Elastic Network Interface (ENI), you must specify either the Ipv4Prefix.N parameter or the Ipv4PrefixCount parameter, but you cannot specify both parameters.</p>
          * </blockquote>
          */
         public Builder ipv4Prefix(java.util.List<String> ipv4Prefix) {
@@ -694,7 +694,7 @@ public class CreateNetworkInterfaceRequest extends Request {
         /**
          * <p>The number of IPv4 prefixes that are allocated to the Elastic Network Interface (ENI). Valid values: 1 to 10.</p>
          * <blockquote>
-         * <p>If you need to configure IPv4 prefixes for the Elastic Network Interface (ENI), you must specify either <code>Ipv4Prefix.N</code> or <code>Ipv4PrefixCount</code>, but you cannot specify both parameters.</p>
+         * <p>If you want to configure IPv4 prefixes for the Elastic Network Interface (ENI), you must specify either the Ipv4Prefix.N parameter or the Ipv4PrefixCount parameter, but you cannot specify both parameters.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -707,10 +707,10 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * <p>One or more IPv6 addresses that are allocated to the Elastic Network Interface (ENI). You can configure up to 10 IPv6 addresses. Valid values of N: 1 to 10.</p>
+         * <p>One or more IPv6 addresses that are allocated to the Elastic Network Interface (ENI). You can specify up to 10 IPv6 addresses. Valid values of N: 1 to 10.</p>
          * <p>Example: Ipv6Address.1=2001:db8:1234:1a00::\<em>\</em>\<em>\</em></p>
          * <blockquote>
-         * <p>If you need to configure IPv6 addresses for the Elastic Network Interface (ENI), you must specify either <code>Ipv6Addresses.N</code> or <code>Ipv6AddressCount</code>, but you cannot specify both parameters.</p>
+         * <p>If you want to configure IPv6 addresses for the Elastic Network Interface (ENI), you must specify either the Ipv6Addresses.N parameter or the Ipv6AddressCount parameter, but you cannot specify both parameters.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -725,7 +725,7 @@ public class CreateNetworkInterfaceRequest extends Request {
         /**
          * <p>The number of IPv6 addresses that are randomly generated for the Elastic Network Interface (ENI). Valid values: 1 to 10.</p>
          * <blockquote>
-         * <p>If you need to configure IPv6 addresses for the Elastic Network Interface (ENI), you must specify either <code>Ipv6Addresses.N</code> or <code>Ipv6AddressCount</code>, but you cannot specify both parameters.</p>
+         * <p>If you want to configure IPv6 addresses for the Elastic Network Interface (ENI), you must specify either the Ipv6Addresses.N parameter or the Ipv6AddressCount parameter, but you cannot specify both parameters.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -740,7 +740,7 @@ public class CreateNetworkInterfaceRequest extends Request {
         /**
          * <p>One or more IPv6 prefixes that are allocated to the Elastic Network Interface (ENI). Valid values of N: 1 to 10.</p>
          * <blockquote>
-         * <p>If you need to configure IPv6 prefixes for the Elastic Network Interface (ENI), you must specify either <code>Ipv6Prefix.N</code> or <code>Ipv6PrefixCount</code>, but you cannot specify both parameters.</p>
+         * <p>If you want to configure IPv6 prefixes for the Elastic Network Interface (ENI), you must specify either the Ipv6Prefix.N parameter or the Ipv6PrefixCount parameter, but you cannot specify both parameters.</p>
          * </blockquote>
          */
         public Builder ipv6Prefix(java.util.List<String> ipv6Prefix) {
@@ -752,7 +752,7 @@ public class CreateNetworkInterfaceRequest extends Request {
         /**
          * <p>The number of IPv6 prefixes that are allocated to the Elastic Network Interface (ENI). Valid values: 1 to 10.</p>
          * <blockquote>
-         * <p>If you need to configure IPv6 prefixes for the Elastic Network Interface (ENI), you must specify either <code>Ipv6Prefix.N</code> or <code>Ipv6PrefixCount</code>, but you cannot specify both parameters.</p>
+         * <p>If you want to configure IPv6 prefixes for the Elastic Network Interface (ENI), you must specify either the Ipv6Prefix.N parameter or the Ipv6PrefixCount parameter, but you cannot specify both parameters.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -765,7 +765,7 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * <p>The name of the Elastic Network Interface (ENI). The name must be 2 to 128 characters in length and can contain characters in the letter categorization of Unicode (including English and Chinese characters) and ASCII digits (0 to 9). It can also contain colons (:), underscores (_), periods (.), and hyphens (-).</p>
+         * <p>The name of the Elastic Network Interface (ENI). The name must be 2 to 128 characters in length and can contain Unicode letters (including English and Chinese characters), ASCII digits (0-9), colons (:), underscores (_), periods (.), and hyphens (-).</p>
          * <p>Default value: empty.</p>
          * 
          * <strong>example:</strong>
@@ -778,7 +778,7 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * <p>The communication parameter collection of the Elastic Network Interface (ENI).</p>
+         * <p>The communication parameters of the Elastic Network Interface (ENI).</p>
          */
         public Builder networkInterfaceTrafficConfig(NetworkInterfaceTrafficConfig networkInterfaceTrafficConfig) {
             this.putQueryParameter("NetworkInterfaceTrafficConfig", networkInterfaceTrafficConfig);
@@ -826,7 +826,7 @@ public class CreateNetworkInterfaceRequest extends Request {
 
         /**
          * <p>The primary private IP address of the Elastic Network Interface (ENI).</p>
-         * <p>The specified IP address must be an idle IP address in the CIDR block of the vSwitch. If you do not specify this parameter, an idle IP address in the vSwitch is randomly allocated by default.</p>
+         * <p>The specified IP address must be an idle IP address in the CIDR block of the vSwitch. If you do not specify this parameter, by default, an idle IP address in the vSwitch is randomly allocated.</p>
          * 
          * <strong>example:</strong>
          * <p><code>172.17.**.**</code></p>
@@ -840,7 +840,7 @@ public class CreateNetworkInterfaceRequest extends Request {
         /**
          * <p>One or more secondary private IP addresses that are selected from the idle IP addresses in the CIDR block of the vSwitch to which the Elastic Network Interface (ENI) belongs. Valid values of N: 0 to 10.</p>
          * <blockquote>
-         * <p>When you allocate secondary private IP addresses, you cannot specify both the <code>PrivateIpAddress.N</code> parameter and the <code>SecondaryPrivateIpAddressCount</code> parameter.</p>
+         * <p>When you allocate secondary private IP addresses, you cannot specify both the PrivateIpAddress.N parameter and the SecondaryPrivateIpAddressCount parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -854,8 +854,8 @@ public class CreateNetworkInterfaceRequest extends Request {
 
         /**
          * <p>The number of queues for the Elastic Network Interface (ENI). Valid values: 1 to 2048.</p>
-         * <p>When you attach the Elastic Network Interface (ENI) to an instance, this value must be less than the maximum number of queues per network interface controller (NIC) supported by the instance type. You can call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the <code>MaximumQueueNumberPerEni</code> value for the instance type.</p>
-         * <p>Default value: empty. When you attach the Elastic Network Interface (ENI), the default number of queues for the instance type is used. You can call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the <code>SecondaryEniQueueNumber</code> value for the instance type.</p>
+         * <p>When you attach the Elastic Network Interface (ENI), this value must be less than the maximum number of queues per network interface controller (NIC) supported by the instance type. You can invoke the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the MaximumQueueNumberPerEni field for the maximum number of queues per network interface controller (NIC) supported by the instance type.</p>
+         * <p>Default value: empty. When you attach the Elastic Network Interface (ENI), the default number of queues for the Elastic Network Interface (ENI) supported by the instance type is used. You can invoke the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the SecondaryEniQueueNumber field for the default number of queues for the Elastic Network Interface (ENI) supported by the instance type.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -868,9 +868,9 @@ public class CreateNetworkInterfaceRequest extends Request {
 
         /**
          * <p>The number of queues for the RDMA ENI.</p>
-         * <p>If you want to attach multiple RDMA ENIs to an instance, we recommend that you manually specify the <code>QueuePairNumber</code> value for each ENI based on the maximum <code>QueuePairNumber</code> value supported by the instance type and the number of ENIs that you plan to use. Make sure that the total number of queue pairs for all ENIs does not exceed the maximum value allowed for the instance type. You can call the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> operation to query the maximum value for the instance type.</p>
+         * <p>If you want to attach multiple RDMA ENIs to an instance, we recommend that you manually specify the QueuePairNumber for each ENI based on the upper limit of QueuePairNumber for RDMA ENIs supported by the instance type and the number of ENIs that you plan to use. Make sure that the total number of QueuePairNumber for all ENIs does not exceed the maximum value allowed by the instance type. You can call the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> operation to view the upper limit of the instance type.</p>
          * <blockquote>
-         * <p>Notice: If you do not specify <code>QueuePairNumber</code> for an RDMA ENI, the maximum <code>QueuePairNumber</code> value supported by the instance type for all RDMA ENIs is used by default. Therefore, after you attach an RDMA ENI for which <code>QueuePairNumber</code> is not specified, you cannot attach more RDMA ENIs. This limit does not apply to standard ENIs.</notice></p>
+         * <p>Notice: If you do not specify QueuePairNumber for an RDMA ENI, the upper limit of QueuePairNumber for all RDMA ENIs supported by the instance type is used by default. Therefore, after you attach an RDMA ENI for which QueuePairNumber is not specified, you cannot attach more RDMA ENIs. This limit does not apply to standard ENIs.</notice></p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -883,7 +883,7 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where you want to create the Elastic Network Interface (ENI). You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The ID of the region where you want to create the Elastic Network Interface (ENI). You can invoke the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -948,7 +948,7 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * <p>Specifies the number of private IP addresses for automatic creation by ECS. Valid values: 1 to 49.</p>
+         * <p>The number of private IP addresses for automatic creation by ECS. Valid values: 1 to 49.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -960,9 +960,9 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the security group to which you want to add the Elastic Network Interface (ENI). The security group and the Elastic Network Interface (ENI) must belong to the same virtual private cloud (VPC).</p>
+         * <p>The ID of the security group to which you want to add the Elastic Network Interface (ENI). The security group and the Elastic Network Interface (ENI) must belong to the same VPC.</p>
          * <blockquote>
-         * <p>When you call this operation, you must specify either <code>SecurityGroupId</code> or <code>SecurityGroupIds.N</code>, but you cannot specify both.</p>
+         * <p>When you invoke this operation, you must specify either SecurityGroupId or SecurityGroupIds.N, but you cannot specify both.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -975,9 +975,9 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * <p>The IDs of one or more security groups to which you want to add the Elastic Network Interface (ENI). The security groups and the Elastic Network Interface (ENI) must belong to the same VPC. The valid values of N depend on the quota for security groups to which an Elastic Network Interface (ENI) can be added. For more information, see <a href="https://help.aliyun.com/document_detail/25412.html">Limits</a>.</p>
+         * <p>The IDs of one or more security groups to which you want to add the Elastic Network Interface (ENI). The security groups and the Elastic Network Interface (ENI) must belong to the same VPC. The valid values of N depend on the quota of security groups to which an Elastic Network Interface (ENI) can be added. For more information, see <a href="https://help.aliyun.com/document_detail/25412.html">Limits</a>.</p>
          * <blockquote>
-         * <p>When you call this operation, you must specify either <code>SecurityGroupId</code> or <code>SecurityGroupIds.N</code>, but you cannot specify both.</p>
+         * <p>When you invoke this operation, you must specify either SecurityGroupId or SecurityGroupIds.N, but you cannot specify both.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1145,7 +1145,7 @@ public class CreateNetworkInterfaceRequest extends Request {
             } 
 
             /**
-             * <p>The timeout period for closed TCP connections and TCP connections in the TIME_WAIT state. Unit: seconds. Valid values: integers from 3 to 15.</p>
+             * <p>The timeout period for TCP connections in the TIME_WAIT and CLOSED states. Unit: seconds. Valid values: integers from 3 to 15.</p>
              * <p>Default value: 3.</p>
              * <blockquote>
              * <p>If your ECS instance is used together with an NLB or CLB instance, the default timeout period for connections in the TIME_WAIT state is 15 seconds.</p>
@@ -1485,7 +1485,7 @@ public class CreateNetworkInterfaceRequest extends Request {
              * </blockquote>
              * <p>When you use this parameter, take note of the following items:</p>
              * <ul>
-             * <li><p>This parameter applies only to seventh-generation and later ECS instance families.</p>
+             * <li><p>This parameter applies only to ECS instance families of Generation 7 and later.</p>
              * </li>
              * <li><p>This parameter applies only to Linux images.</p>
              * </li>
@@ -1513,7 +1513,7 @@ public class CreateNetworkInterfaceRequest extends Request {
              * </blockquote>
              * <p>When you use this parameter, take note of the following items:</p>
              * <ul>
-             * <li><p>This parameter applies only to seventh-generation and later ECS instance families.</p>
+             * <li><p>This parameter applies only to ECS instance families of Generation 7 and later.</p>
              * </li>
              * <li><p>This parameter applies only to Linux images.</p>
              * </li>
@@ -1589,7 +1589,7 @@ public class CreateNetworkInterfaceRequest extends Request {
             } 
 
             /**
-             * <p>The tag key of the Elastic Network Interface (ENI). Valid values of N: 1 to 20. If this parameter is specified, it cannot be an empty string. The tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag key of the Elastic Network Interface (ENI). Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>TestKey</p>
@@ -1600,7 +1600,7 @@ public class CreateNetworkInterfaceRequest extends Request {
             }
 
             /**
-             * <p>The tag value of the Elastic Network Interface (ENI). Valid values of N: 1 to 20. If this parameter is specified, it can be an empty string. The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag value of the Elastic Network Interface (ENI). Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>TestValue</p>

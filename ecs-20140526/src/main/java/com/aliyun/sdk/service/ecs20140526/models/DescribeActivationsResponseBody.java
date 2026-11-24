@@ -127,7 +127,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The query token returned by the current call.</p>
+         * <p>The pagination token returned by the current call.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAdDWBF2****</p>
@@ -149,7 +149,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Settings for the number of entries returned per page in a paged query. This parameter is used for paging.</p>
+         * <p>The number of entries returned per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -171,9 +171,9 @@ public class DescribeActivationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of record entries that meet the conditional query.</p>
+         * <p>The total number of records that meet the query conditions.</p>
          * <blockquote>
-         * <p>If you use the MaxResults and NextToken parameters for a paged query (paging), the returned TotalCount value is meaningless.</p>
+         * <p>When you use the MaxResults and NextToken parameters for pagination, the returned TotalCount value is meaningless.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -243,7 +243,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tag key of the managed instance activation code.</p>
+             * <p>The tag key of the activation code for the managed instance.</p>
              * 
              * <strong>example:</strong>
              * <p>owner</p>
@@ -254,7 +254,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value of the managed instance activation code.</p>
+             * <p>The tag value of the activation code for the managed instance.</p>
              * 
              * <strong>example:</strong>
              * <p>zhangsan</p>
@@ -564,7 +564,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag information of the managed instance activation code.</p>
+             * <p>The tag information of the activation code for the managed instance.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;

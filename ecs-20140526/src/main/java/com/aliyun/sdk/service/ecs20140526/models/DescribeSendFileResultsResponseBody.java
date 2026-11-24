@@ -127,7 +127,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The query token returned by the current call.</p>
+         * <p>The pagination token returned by the current call.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAdDWBF2</p>
@@ -171,9 +171,9 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of scripts.</p>
+         * <p>The total number of files.</p>
          * <blockquote>
-         * <p>If you use the MaxResults and NextToken parameters to perform a paged query, the returned TotalCount value is meaningless.</p>
+         * <p>If you use the MaxResults and NextToken parameters for paging in a paged query, the returned TotalCount value is meaningless.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

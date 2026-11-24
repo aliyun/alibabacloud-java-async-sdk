@@ -80,7 +80,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The token used to start the next query.</p>
+         * <p>The token for the next query.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>

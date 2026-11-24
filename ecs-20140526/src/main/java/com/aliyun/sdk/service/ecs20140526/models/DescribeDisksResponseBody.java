@@ -139,7 +139,7 @@ public class DescribeDisksResponseBody extends TeaModel {
 
         /**
          * <blockquote>
-         * <p>This parameter will be deprecated soon. Use the <code>NextToken</code> and <code>MaxResults</code> parameters for paged queries.</p>
+         * <p>This parameter will be deprecated soon. Use the <code>NextToken</code> and <code>MaxResults</code> parameters for pagination.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -152,7 +152,7 @@ public class DescribeDisksResponseBody extends TeaModel {
 
         /**
          * <blockquote>
-         * <p>This parameter will be deprecated soon. Use the <code>NextToken</code> and <code>MaxResults</code> parameters for paged queries.</p>
+         * <p>This parameter will be deprecated soon. Use the <code>NextToken</code> and <code>MaxResults</code> parameters for pagination.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -175,9 +175,9 @@ public class DescribeDisksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of queried entries.</p>
          * <blockquote>
-         * <p>When you use the <code>MaxResults</code> and <code>NextToken</code> parameters for paged queries, the returned <code>TotalCount</code> value is invalid.</p>
+         * <p>When you use the <code>MaxResults</code> and <code>NextToken</code> parameters for pagination, the returned value of the <code>TotalCount</code> parameter is invalid.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -972,6 +972,9 @@ public class DescribeDisksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ProvisionedIops")
         private Long provisionedIops;
 
+        @com.aliyun.core.annotation.NameInMap("ReadWriteMode")
+        private String readWriteMode;
+
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
@@ -1056,6 +1059,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             this.portable = builder.portable;
             this.productCode = builder.productCode;
             this.provisionedIops = builder.provisionedIops;
+            this.readWriteMode = builder.readWriteMode;
             this.regionId = builder.regionId;
             this.resourceGroupId = builder.resourceGroupId;
             this.serialNumber = builder.serialNumber;
@@ -1328,6 +1332,13 @@ public class DescribeDisksResponseBody extends TeaModel {
         }
 
         /**
+         * @return readWriteMode
+         */
+        public String getReadWriteMode() {
+            return this.readWriteMode;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
@@ -1475,6 +1486,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             private Boolean portable; 
             private String productCode; 
             private Long provisionedIops; 
+            private String readWriteMode; 
             private String regionId; 
             private String resourceGroupId; 
             private String serialNumber; 
@@ -1531,6 +1543,7 @@ public class DescribeDisksResponseBody extends TeaModel {
                 this.portable = model.portable;
                 this.productCode = model.productCode;
                 this.provisionedIops = model.provisionedIops;
+                this.readWriteMode = model.readWriteMode;
                 this.regionId = model.regionId;
                 this.resourceGroupId = model.resourceGroupId;
                 this.serialNumber = model.serialNumber;
@@ -1826,6 +1839,14 @@ public class DescribeDisksResponseBody extends TeaModel {
              */
             public Builder provisionedIops(Long provisionedIops) {
                 this.provisionedIops = provisionedIops;
+                return this;
+            }
+
+            /**
+             * ReadWriteMode.
+             */
+            public Builder readWriteMode(String readWriteMode) {
+                this.readWriteMode = readWriteMode;
                 return this;
             }
 

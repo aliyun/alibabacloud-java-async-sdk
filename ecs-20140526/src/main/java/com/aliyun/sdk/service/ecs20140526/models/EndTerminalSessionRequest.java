@@ -172,7 +172,7 @@ public class EndTerminalSessionRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the session resides.</p>
+         * <p>The ID of the region where the session is located.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

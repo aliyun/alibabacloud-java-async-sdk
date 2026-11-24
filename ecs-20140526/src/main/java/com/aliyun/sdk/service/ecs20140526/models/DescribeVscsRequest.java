@@ -261,7 +261,7 @@ public class DescribeVscsRequest extends Request {
         }
 
         /**
-         * <p>The query token returned for the current request.</p>
+         * <p>The query token returned by this request.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAdDWBF2</p>
@@ -304,7 +304,7 @@ public class DescribeVscsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the instance belongs. If you use this parameter to filter resources, the resource count cannot exceed 1,000. Note: Filtering by the default resource group is not supported.</p>
+         * <p>The ID of the resource group to which the instance belongs. If you use this parameter to filter resources, the resource count cannot exceed 1,000. Note: You cannot filter resources by the default resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-bp67acfmxazb4p****</p>
@@ -336,14 +336,14 @@ public class DescribeVscsRequest extends Request {
         /**
          * <p>The status of the VSCs to query. If you do not specify this parameter, VSCs in all states are returned. Valid values:</p>
          * <ul>
-         * <li>In_use: The VSC is in use.</li>
-         * <li>Attaching: The VSC is being attached.</li>
-         * <li>Detaching: The VSC is being detached.</li>
-         * <li>AttachFailed: The VSC failed to be attached.</li>
-         * <li>DetachFailed: The VSC failed to be detached.</li>
-         * <li>All: All states.</li>
+         * <li>In_use: In use.</li>
+         * <li>Attaching: Being attached.</li>
+         * <li>Detaching: Being detached.</li>
+         * <li>AttachFailed: Attachment failed.</li>
+         * <li>DetachFailed: Detachment failed.</li>
+         * <li>All: All states.
+         * Default value: All.</li>
          * </ul>
-         * <p>Default value: All.</p>
          * 
          * <strong>example:</strong>
          * <p>Successful</p>
@@ -432,9 +432,7 @@ public class DescribeVscsRequest extends Request {
             } 
 
             /**
-             * <p>The tag key of the command. Valid values of N: 1 to 20. If you specify this parameter, it cannot be an empty string.</p>
-             * <p>If you use a single tag to filter resources, the resource count returned cannot exceed 1,000. If you use multiple tags to filter resources, the resource count of resources to which you attach multiple tags cannot exceed 1,000. If the resource count exceeds 1,000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query the resources.</p>
-             * <p>The tag key can be up to 64 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag key of the command. Valid values of N: 1 to 20. If you specify this parameter, it cannot be an empty string. If you use a single tag to filter resources, the resource count cannot exceed 1,000. If you use multiple tags to filter resources, the resource count of resources that have all the specified tags attached cannot exceed 1,000. If the resource count exceeds 1,000, you must call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query the resources. The tag key can be up to 64 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
              * 
              * <strong>example:</strong>
              * <p>Environment</p>
@@ -445,7 +443,7 @@ public class DescribeVscsRequest extends Request {
             }
 
             /**
-             * <p>The tag value. Valid values of N: 1 to 20. If you specify this parameter, it can be an empty string. The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag value. Valid values of N: 1 to 20. If you specify this parameter, it can be an empty string. The tag value can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
              * 
              * <strong>example:</strong>
              * <p>TestValue</p>

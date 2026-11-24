@@ -172,7 +172,7 @@ public class CreatePlanMaintenanceWindowRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the window. Valid values:</p>
+         * <p>Specifies whether to enable or disable the window. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: Enabled.</li>
          * <li><strong>false</strong>: Disabled.</li>
@@ -214,7 +214,7 @@ public class CreatePlanMaintenanceWindowRequest extends Request {
         }
 
         /**
-         * <p>The region ID. This parameter is required for Alibaba Cloud SDK routing. However, specifying any region ID for this operation yields the same result. The O&amp;M window applies to all ECS instances across the network that meet the resource filtering conditions.</p>
+         * <p>The region ID. This parameter is required for Alibaba Cloud SDK routing. However, setting any region ID for this operation makes no difference. The O&amp;M window takes effect on all ECS instances across the network that meet the resource filtering conditions.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -324,7 +324,7 @@ public class CreatePlanMaintenanceWindowRequest extends Request {
              * <p>The key of the tag to which the window applies.</p>
              * 
              * <strong>example:</strong>
-             * <p>vms_qualification_Mr. Sun ID card_e5590864-1fef-4db2-b2a7-bd2d657fed43.png</p>
+             * <p>vms_qualification_Mr_Sun_ID_card_e5590864-1fef-4db2-b2a7-bd2d657fed43.png</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -427,7 +427,7 @@ public class CreatePlanMaintenanceWindowRequest extends Request {
             }
 
             /**
-             * <p>The type of resources configured for the O&amp;M window.</p>
+             * <p>The resource type configured for the O&amp;M window.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -510,7 +510,7 @@ public class CreatePlanMaintenanceWindowRequest extends Request {
              * <ul>
              * <li>If PeriodUnit is set to Weekly, the format is Monday,22:00. You can replace Monday with Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday.</li>
              * <li>If PeriodUnit is set to Daily, the format is 22:00.</li>
-             * <li>The comma (,) is used as a delimiter. The first part represents the hour, which ranges from 00 to 23. The second part represents the minute. Currently, only 00 is supported.</li>
+             * <li>The comma (,) is used as a separator. The first part represents the hour, with valid values from 00 to 23. The second part represents the minute, and only 00 is supported.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -526,7 +526,7 @@ public class CreatePlanMaintenanceWindowRequest extends Request {
              * <ul>
              * <li>If PeriodUnit is set to Weekly, the format is Monday,22:00. You can replace Monday with Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday.</li>
              * <li>If PeriodUnit is set to Daily, the format is 22:00.</li>
-             * <li>The comma (,) is used as a delimiter. The first part represents the hour, which ranges from 00 to 23. The second part represents the minute. Currently, only 00 is supported.</li>
+             * <li>The comma (,) is used as a separator. The first part represents the hour, with valid values from 00 to 23. The second part represents the minute, and only 00 is supported.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -599,7 +599,7 @@ public class CreatePlanMaintenanceWindowRequest extends Request {
             } 
 
             /**
-             * <p>The type of the recurrence cycle. Valid values: Daily and Weekly.</p>
+             * <p>The type of the cycle. Valid values: Daily and Weekly.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -611,7 +611,7 @@ public class CreatePlanMaintenanceWindowRequest extends Request {
             }
 
             /**
-             * <p>The time ranges of the O&amp;M window recurrence cycle in the UTC time zone.</p>
+             * <p>The time ranges of the recurrence cycle for the O&amp;M window in UTC.</p>
              * <p>This parameter is required.</p>
              */
             public Builder rangeList(java.util.List<RangeList> rangeList) {

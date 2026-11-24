@@ -67,7 +67,7 @@ public class CreateNetworkInterfacePermissionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The collection of information composed of the Elastic network interface controller (NIC) permission list.</p>
+         * <p>The collection of elastic network interface controller (NIC) permissions.</p>
          */
         public Builder networkInterfacePermission(NetworkInterfacePermission networkInterfacePermission) {
             this.networkInterfacePermission = networkInterfacePermission;
@@ -207,7 +207,7 @@ public class CreateNetworkInterfacePermissionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Elastic network interface controller (NIC).</p>
+             * <p>The ID of the Elastic Network Interface (ENI).</p>
              * 
              * <strong>example:</strong>
              * <p>eni-bp14v2sdd3v8htln****</p>
@@ -218,7 +218,7 @@ public class CreateNetworkInterfacePermissionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Elastic network interface controller (NIC) permission.</p>
+             * <p>The ID of the elastic network interface controller (NIC) permission.</p>
              * 
              * <strong>example:</strong>
              * <p>eni-perm-bp1cs4lwn56lfb****</p>
@@ -229,7 +229,7 @@ public class CreateNetworkInterfacePermissionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Elastic network interface controller (NIC) permission.</p>
+             * <p>The elastic network interface controller (NIC) permission.</p>
              * 
              * <strong>example:</strong>
              * <p>InstanceAttach</p>
@@ -240,7 +240,7 @@ public class CreateNetworkInterfacePermissionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the Elastic network interface controller (NIC) permission. Valid values:</p>
+             * <p>The state of the elastic network interface controller (NIC) permission. Valid values:</p>
              * <ul>
              * <li>Pending: The authorization is in progress.</li>
              * <li>Granted: The authorization is granted.</li>

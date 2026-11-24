@@ -97,7 +97,7 @@ public class DescribeDiskEncryptionByDefaultStatusRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/2679950.html">DescribeRegions</a> operation to query the latest list of Alibaba Cloud regions.</p>
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/2679950.html">DescribeRegions</a> operation to query the latest Alibaba Cloud regions.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

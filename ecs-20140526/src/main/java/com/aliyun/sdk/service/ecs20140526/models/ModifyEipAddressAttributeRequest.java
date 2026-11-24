@@ -145,7 +145,11 @@ public class ModifyEipAddressAttributeRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the EIP.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eip-2zeerraiwb7uj6i0d****</p>
          */
         public Builder allocationId(String allocationId) {
             this.putQueryParameter("AllocationId", allocationId);
@@ -154,7 +158,11 @@ public class ModifyEipAddressAttributeRequest extends Request {
         }
 
         /**
+         * <p>The maximum bandwidth of the EIP. Unit: Mbit/s.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder bandwidth(String bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -181,7 +189,10 @@ public class ModifyEipAddressAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the EIP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

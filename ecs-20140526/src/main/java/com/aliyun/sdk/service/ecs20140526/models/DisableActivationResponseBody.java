@@ -259,7 +259,7 @@ public class DisableActivationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the activation code was created. The time follows the ISO 8601 standard in UTC.</p>
+             * <p>The creation time. The time is formatted in ISO 8601 and displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-01-20T06:00:00Z</p>
@@ -325,7 +325,7 @@ public class DisableActivationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP addresses of hosts that are allowed to use the activation code.</p>
+             * <p>The IP addresses of the hosts that are allowed to use the activation code.</p>
              * 
              * <strong>example:</strong>
              * <p>0.0.0.0/0</p>

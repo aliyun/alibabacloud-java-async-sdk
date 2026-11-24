@@ -172,7 +172,7 @@ public class DescribePortRangeListEntriesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the port list.</p>
+         * <p>The port list ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

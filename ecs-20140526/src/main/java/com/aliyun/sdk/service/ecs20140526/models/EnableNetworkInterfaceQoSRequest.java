@@ -338,7 +338,7 @@ public class EnableNetworkInterfaceQoSRequest extends Request {
 
             /**
              * <p>The maximum inbound internal bandwidth limit.</p>
-             * <p>Unit: Kbit/s. Step size: 1000 (1 Mbit/s). Valid values: [50000, +∞).</p>
+             * <p>Unit: Kbit/s. Step: 1000 (1 Mbit/s). Valid values: [50000, +∞).</p>
              * 
              * <strong>example:</strong>
              * <p>50000</p>
@@ -350,7 +350,7 @@ public class EnableNetworkInterfaceQoSRequest extends Request {
 
             /**
              * <p>The maximum outbound internal bandwidth limit.</p>
-             * <p>Unit: Kbit/s. Step size: 1000 (1 Mbit/s). Valid values: [50000, +∞).</p>
+             * <p>Unit: Kbit/s. Step: 1000 (1 Mbit/s). Valid values: [50000, +∞).</p>
              * 
              * <strong>example:</strong>
              * <p>50000</p>
@@ -361,8 +361,8 @@ public class EnableNetworkInterfaceQoSRequest extends Request {
             }
 
             /**
-             * <p>The maximum number of sessions.</p>
-             * <p>Step size: 10000. Valid values: [10000, +∞).</p>
+             * <p>The maximum number of concurrent connections.</p>
+             * <p>Step: 10000. Valid values: [10000, +∞).</p>
              * 
              * <strong>example:</strong>
              * <p>50000</p>
@@ -374,7 +374,7 @@ public class EnableNetworkInterfaceQoSRequest extends Request {
 
             /**
              * <p>The inbound internal packet forwarding rate.</p>
-             * <p>Unit: PPS. Step size: 10000. Valid values: [10000, +∞).</p>
+             * <p>Unit: PPS. Step: 10000. Valid values: [10000, +∞).</p>
              * 
              * <strong>example:</strong>
              * <p>50000</p>
@@ -386,7 +386,7 @@ public class EnableNetworkInterfaceQoSRequest extends Request {
 
             /**
              * <p>The outbound internal packet forwarding rate.</p>
-             * <p>Unit: PPS. Step size: 10000. Valid values: [10000, +∞).</p>
+             * <p>Unit: PPS. Step: 10000. Valid values: [10000, +∞).</p>
              * 
              * <strong>example:</strong>
              * <p>50000</p>

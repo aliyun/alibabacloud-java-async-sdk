@@ -80,7 +80,7 @@ public class CreateLaunchTemplateResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the launch template.</p>
+         * <p>The ID of the instance launch template.</p>
          * 
          * <strong>example:</strong>
          * <p>lt-m5eiaupmvm2op9d****</p>
@@ -91,7 +91,7 @@ public class CreateLaunchTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The version number of the launch template.</p>
+         * <p>The version number of the instance launch template.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

@@ -340,7 +340,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to disable the Cloud Assistant Agent from checking for and performing updates.</p>
+             * <p>Specifies whether to prohibit the Cloud Assistant Agent from checking for and performing updates.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -351,7 +351,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the custom Cloud Assistant Agent upgrade configuration is enabled. If the value is false or empty, the system attempts to upgrade the agent every 30 minutes by default.</p>
+             * <p>Specifies whether custom Agent upgrade configurations are enabled. If the query result is false or empty, the system attempts to upgrade the agent every 30 minutes by default.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -362,7 +362,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time zone of the allowed upgrade time windows.</p>
+             * <p>The time zone for the allowed upgrade time windows.</p>
              * 
              * <strong>example:</strong>
              * <p>Asia/Shanghai</p>
@@ -513,7 +513,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the custom Cloud Assistant Agent upgrade configuration is enabled. If the value is false or empty, the system attempts to upgrade the agent every 30 minutes by default.</p>
+             * <p>Specifies whether custom Agent upgrade configurations are enabled. If the query result is false or empty, the system attempts to upgrade the agent every 30 minutes by default.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -754,7 +754,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size limit of Cloud Assistant log files.</p>
+             * <p>The size limit for Cloud Assistant log files.</p>
              * 
              * <strong>example:</strong>
              * <p>100MB</p>
@@ -776,7 +776,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of consecutive times that the usage of CPU or memory resources exceeds the limit. After reaching this limit, the Cloud Assistant Agent automatically stops.</p>
+             * <p>The maximum number of consecutive times that CPU or memory resources exceed the limit. After reaching this limit, the Cloud Assistant Agent automatically stops.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -835,8 +835,8 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
             /**
              * <p>The switch for the Cloud Assistant session feature. Valid values:</p>
              * <ul>
-             * <li>true: enabled</li>
-             * <li>false: disabled</li>
+             * <li>true: Enabled.</li>
+             * <li>false: Disabled.</li>
              * </ul>
              * <p>Precautions:</p>
              * <ul>
@@ -945,7 +945,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the custom Cloud Assistant Agent upgrade configuration is enabled. If the value is false or empty, the system attempts to upgrade the agent every 30 minutes by default.</p>
+             * <p>Specifies whether custom Agent upgrade configurations are enabled. If the query result is false or empty, the system attempts to upgrade the agent every 30 minutes by default.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>

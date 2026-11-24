@@ -171,7 +171,7 @@ public class ModifyStorageCapacityUnitAttributeRequest extends Request {
         }
 
         /**
-         * <p>The new name of the SCU. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character and cannot start with http:// or https://. It can contain digits, colons (:), underscores (_), or hyphens (-).</p>
+         * <p>The new name of the SCU. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character and cannot start with http:// or https://. It can contain digits, colons (:), underscores (_), and hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>testNewScuName</p>
@@ -201,7 +201,7 @@ public class ModifyStorageCapacityUnitAttributeRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the SCU. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+         * <p>The region ID of the SCU. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -232,7 +232,7 @@ public class ModifyStorageCapacityUnitAttributeRequest extends Request {
         }
 
         /**
-         * <p>SCU ID。</p>
+         * <p>The SCU ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -225,7 +225,7 @@ public class AssignPrivateIpAddressesRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The <strong>ClientToken</strong> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -237,9 +237,9 @@ public class AssignPrivateIpAddressesRequest extends Request {
         }
 
         /**
-         * <p>One or more IPv4 prefixes to specify for the elastic network interfaces (ENIs). Valid values of N: 1 to 10.</p>
+         * <p>The IPv4 prefixes to be allocated to the Elastic Network Interface (ENI). Valid values of N: 1 to 10.</p>
          * <blockquote>
-         * <p>To set IPv4 prefixes for the elastic network interfaces (ENIs), you must set either the Ipv4Prefix.N parameter or the Ipv4PrefixCount parameter, but not both.</p>
+         * <p>If you need to configure IPv4 prefix settings for the Elastic Network Interface (ENI), you must specify the settings for either Ipv4Prefix.N or Ipv4PrefixCount, but you cannot specify both parameters.</p>
          * </blockquote>
          */
         public Builder ipv4Prefix(java.util.List<String> ipv4Prefix) {
@@ -249,9 +249,9 @@ public class AssignPrivateIpAddressesRequest extends Request {
         }
 
         /**
-         * <p>The number of randomly generated IPv4 prefixes to specify for the elastic network interfaces (ENIs). Valid values: 1 to 10.</p>
+         * <p>The number of randomly generated IPv4 prefixes to be allocated to the Elastic Network Interface (ENI). Valid values: 1 to 10.</p>
          * <blockquote>
-         * <p>To set IPv4 prefixes for the elastic network interfaces (ENIs), you must set either the Ipv4Prefix.N parameter or the Ipv4PrefixCount parameter, but not both.</p>
+         * <p>If you need to configure IPv4 prefix settings for the Elastic Network Interface (ENI), you must specify the settings for either Ipv4Prefix.N or Ipv4PrefixCount, but you cannot specify both parameters.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -264,7 +264,7 @@ public class AssignPrivateIpAddressesRequest extends Request {
         }
 
         /**
-         * <p>The elastic network interfaces (ENIs) ID.</p>
+         * <p>The ID of the Elastic Network Interface (ENI).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -295,15 +295,15 @@ public class AssignPrivateIpAddressesRequest extends Request {
         }
 
         /**
-         * <p>One or more secondary private IP addresses selected from the idle private IP addresses of the vSwitch to which the elastic network interfaces (ENIs) belongs. Valid values of N:</p>
+         * <p>The secondary private IP addresses (private IP addresses or private IPs) to be allocated from the available IP addresses of the vSwitch to which the Elastic Network Interface (ENI) belongs. Valid values of N:</p>
          * <ul>
-         * <li>When the elastic network interfaces (ENIs) is in the Available (<code>Available</code>) state: 1 to 32.</li>
-         * <li>When the elastic network interfaces (ENIs) is in the <code>InUse</code> state: subject to the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</li>
+         * <li>If the Elastic Network Interface (ENI) is in the <code>Available</code> state: 1 to 32.</li>
+         * <li>If the Elastic Network Interface (ENI) is in the <code>InUse</code> state: The value is limited by the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</li>
          * </ul>
-         * <p>When you allocate secondary private IP addresses, you cannot specify both <code>PrivateIpAddress.N</code> and <code>SecondaryPrivateIpAddressCount</code>.</p>
+         * <p>When you allocate secondary private IP addresses (private IP addresses or private IPs), you cannot specify both <code>PrivateIpAddress.N</code> and <code>SecondaryPrivateIpAddressCount</code>.</p>
          * 
          * <strong>example:</strong>
-         * <p><code>10.1.**.**</code></p>
+         * <p>[&quot;<code>10.1.**.**</code>&quot;]</p>
          */
         public Builder privateIpAddress(java.util.List<String> privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
@@ -312,7 +312,7 @@ public class AssignPrivateIpAddressesRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the elastic network interfaces (ENIs). You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+         * <p>The region ID of the Elastic Network Interface (ENI). You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -343,7 +343,7 @@ public class AssignPrivateIpAddressesRequest extends Request {
         }
 
         /**
-         * <p>The number of private IP addresses to automatically assign from the idle IP addresses of the vSwitch.</p>
+         * <p>The number of private IP addresses to be automatically assigned from the available IP addresses of the vSwitch.</p>
          * <p>When you assign secondary private IP addresses, you cannot specify both <code>PrivateIpAddress.N</code> and <code>SecondaryPrivateIpAddressCount</code>.</p>
          * 
          * <strong>example:</strong>

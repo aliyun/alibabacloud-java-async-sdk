@@ -127,7 +127,7 @@ public class ListPluginStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token returned in the current call.</p>
+         * <p>The pagination token returned in the current response.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAdDWBF2</p>
@@ -138,7 +138,7 @@ public class ListPluginStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned results.</p>
+         * <p>The page number of the query results.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

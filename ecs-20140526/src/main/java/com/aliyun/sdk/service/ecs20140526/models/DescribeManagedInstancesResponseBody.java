@@ -149,7 +149,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -171,9 +171,9 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of managed instances returned.</p>
+         * <p>The total number of managed instances queried.</p>
          * <blockquote>
-         * <p>When you use the MaxResults and NextToken parameters for paging and paged query, the returned TotalCount value is meaningless.</p>
+         * <p>When you use the MaxResults and NextToken parameters for paging, the returned TotalCount value is meaningless.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -244,7 +244,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
 
             /**
              * <p>The tag key of the managed instance. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
-             * <p>If you use a single tag to filter resources, the resource count returned cannot exceed 1,000. If you use multiple tags to filter resources, the resource count of resources attached to multiple tags cannot exceed 1,000. If the resource count exceeds 1,000, you must call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query the resources.</p>
+             * <p>If you use a single tag to filter resources, the number of returned resources cannot exceed 1,000. If you use multiple tags to filter resources, the number of returned resources that have multiple tags attached cannot exceed 1,000. If the number of resources exceeds 1,000, use the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query the resources.</p>
              * <p>The tag key can be up to 64 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
@@ -533,7 +533,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             /**
              * <p>Indicates whether the managed instance is connected. Valid values:</p>
              * <ul>
-             * <li><p>true: The managed instance is connected. You can manage the managed instance by using Cloud Assistant.</p>
+             * <li><p>true: The managed instance is connected. You can use Cloud Assistant to manage the managed instance.</p>
              * </li>
              * <li><p>false: The managed instance is not connected. The server may be stopped or the Cloud Assistant Agent is not properly installed.</p>
              * </li>
@@ -559,7 +559,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The managed instance ID.</p>
+             * <p>The ID of the managed instance.</p>
              * 
              * <strong>example:</strong>
              * <p>mi-hz018jrc1o0****</p>
@@ -614,7 +614,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the Cloud Assistant task was last executed. The time follows the ISO 8601 standard in the UTC time zone.</p>
+             * <p>The time when the Cloud Assistant task was last executed. The time is in ISO 8601 format and in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-01-20T09:00:40Z</p>
@@ -658,7 +658,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the managed instance was registered. The time follows the ISO 8601 standard in the UTC time zone.</p>
+             * <p>The time when the managed instance was registered. The time is in ISO 8601 format and in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-01-20T08:57:56Z</p>
