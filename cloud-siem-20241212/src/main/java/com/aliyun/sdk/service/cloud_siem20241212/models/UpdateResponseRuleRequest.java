@@ -243,7 +243,7 @@ public class UpdateResponseRuleRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of data records to read in the current request.</p>
+         * <p>The maximum number of data records to return in the current request.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -255,7 +255,7 @@ public class UpdateResponseRuleRequest extends Request {
         }
 
         /**
-         * <p>The token that specifies the position from which to start reading. If this parameter is left empty, the reading starts from the beginning.</p>
+         * <p>The token that indicates the position from which to start reading. An empty value indicates that the reading starts from the beginning.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
@@ -315,7 +315,7 @@ public class UpdateResponseRuleRequest extends Request {
         }
 
         /**
-         * <p>The rule trigger condition configuration.</p>
+         * <p>The trigger condition configuration of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;left&quot;:{&quot;value&quot;:&quot;threat_level&quot;},&quot;operator&quot;:&quot;equals&quot;,&quot;right&quot;:{&quot;value&quot;:&quot;suspicious&quot;}}]</p>
@@ -363,7 +363,7 @@ public class UpdateResponseRuleRequest extends Request {
         }
 
         /**
-         * <p>The remarks of the response rule.</p>
+         * <p>The remarks for the response rule.</p>
          * 
          * <strong>example:</strong>
          * <p>Verified as a low-risk alert and scheduled for regular cleanup</p>

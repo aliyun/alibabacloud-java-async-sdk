@@ -157,7 +157,7 @@ public class CreateCopilotConversationRequest extends Request {
         } 
 
         /**
-         * <p>The language of the response messages. Valid values:</p>
+         * <p>The language of the returned message. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong> (default): Chinese.</li>
          * <li><strong>en</strong>: English.</li>
@@ -197,7 +197,7 @@ public class CreateCopilotConversationRequest extends Request {
         }
 
         /**
-         * <p>The security project ID.</p>
+         * <p>The ID of the security project.</p>
          * 
          * <strong>example:</strong>
          * <p>project-incident-****</p>
@@ -209,10 +209,10 @@ public class CreateCopilotConversationRequest extends Request {
         }
 
         /**
-         * <p>The region where the data management center for threat analysis is located. Select the management center region based on the region where your assets reside. Valid values:</p>
+         * <p>The region of the data management center for threat analysis. Select the region of the management center based on the region where your assets reside. Valid values:</p>
          * <ul>
-         * <li>cn-hangzhou: Assets are located in the Chinese mainland.</li>
-         * <li>ap-southeast-1: Assets are located outside China.</li>
+         * <li>cn-hangzhou: Assets reside in the Chinese mainland.</li>
+         * <li>ap-southeast-1: Assets reside outside the Chinese mainland.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -225,7 +225,7 @@ public class CreateCopilotConversationRequest extends Request {
         }
 
         /**
-         * <p>The thinking mode configuration.</p>
+         * <p>The deep thinking configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>
@@ -237,10 +237,10 @@ public class CreateCopilotConversationRequest extends Request {
         }
 
         /**
-         * <p>The session title.</p>
+         * <p>The title of the session.</p>
          * 
          * <strong>example:</strong>
-         * <p>Security incident investigation</p>
+         * <p>Security event investigation</p>
          */
         public Builder title(String title) {
             this.putBodyParameter("Title", title);

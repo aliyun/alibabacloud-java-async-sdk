@@ -101,11 +101,11 @@ public class CheckUpgradeItemRequest extends Request {
         } 
 
         /**
-         * <p>The language of the response. Valid values:</p>
+         * <p>The language of the response message. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong> (default): Chinese.</li>
          * <li><strong>en</strong>: English.
-         * Note: This parameter is required in practice. If you do not specify this parameter, the API returns a 400 error: &quot;The specified Lang can not be empty.&quot;</li>
+         * Note: This parameter is required. If you do not specify this parameter, the API returns a 400 error: &quot;The specified Lang can not be empty.&quot;</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -118,10 +118,10 @@ public class CheckUpgradeItemRequest extends Request {
         }
 
         /**
-         * <p>The region where the threat analysis data management center resides. Specify the management center region based on the region of your assets. Valid values:</p>
+         * <p>The region where the data management center for threat analysis is located. Select the region of the management center based on the region where your assets are located. Valid values:</p>
          * <ul>
-         * <li>cn-hangzhou: The assets reside in the Chinese mainland.</li>
-         * <li>ap-southeast-1: The assets reside outside China.</li>
+         * <li>cn-hangzhou: The assets are located in the Chinese mainland.</li>
+         * <li>ap-southeast-1: The assets are located outside China.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -134,7 +134,7 @@ public class CheckUpgradeItemRequest extends Request {
         }
 
         /**
-         * <p>The ID of the member to which the administrator switches the view.</p>
+         * <p>The ID of the user whose perspective the administrator switches to.</p>
          * 
          * <strong>example:</strong>
          * <p>113091674488****</p>
@@ -146,7 +146,7 @@ public class CheckUpgradeItemRequest extends Request {
         }
 
         /**
-         * <p>The upgrade item ID.</p>
+         * <p>The ID of the upgrade item.</p>
          * 
          * <strong>example:</strong>
          * <p>dispose_task_upgrade</p>

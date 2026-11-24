@@ -90,7 +90,7 @@ public class CreateAutoDisposeConfigRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether automatic analysis is enabled for the user. Valid values:</p>
+         * <p>Specifies whether the user has enabled automatic analysis. Valid values:</p>
          * <ul>
          * <li>enabled: Enabled.</li>
          * <li>disabled: Disabled.</li>

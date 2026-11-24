@@ -271,7 +271,7 @@ public class CreateCopilotChatRequest extends Request {
         } 
 
         /**
-         * <p>The client session ID.</p>
+         * <p>The client conversation ID.</p>
          * 
          * <strong>example:</strong>
          * <p>54b6c969-4b75-47be-9f43-71f88aeb****</p>
@@ -296,7 +296,7 @@ public class CreateCopilotChatRequest extends Request {
         }
 
         /**
-         * <p>The session ID.</p>
+         * <p>The conversation ID.</p>
          * 
          * <strong>example:</strong>
          * <p>54b6c969-4b75-47be-9f43-71f88aeb****</p>
@@ -308,7 +308,7 @@ public class CreateCopilotChatRequest extends Request {
         }
 
         /**
-         * <p>The session creation configuration.</p>
+         * <p>The conversation creation configuration.</p>
          */
         public Builder createConversation(CreateConversation createConversation) {
             String createConversationShrink = shrink(createConversation, "CreateConversation", "json");
@@ -318,7 +318,7 @@ public class CreateCopilotChatRequest extends Request {
         }
 
         /**
-         * <p>The language of the returned message. Valid values:</p>
+         * <p>The language of the returned messages. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong> (default): Chinese.</li>
          * <li><strong>en</strong>: English.</li>
@@ -381,10 +381,10 @@ public class CreateCopilotChatRequest extends Request {
         }
 
         /**
-         * <p>The region of the data management center for threat analysis. Select the region of the management center based on the region where your assets reside. Valid values:</p>
+         * <p>The region of the data management center for threat analysis. Select the region of the management center based on the region where your assets are located. Valid values:</p>
          * <ul>
-         * <li>cn-hangzhou: Assets reside in the Chinese mainland.</li>
-         * <li>ap-southeast-1: Assets reside outside the Chinese mainland.</li>
+         * <li>cn-hangzhou: Assets are located in the Chinese mainland.</li>
+         * <li>ap-southeast-1: Assets are located in regions outside the Chinese mainland.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -611,7 +611,7 @@ public class CreateCopilotChatRequest extends Request {
             }
 
             /**
-             * <p>The session title.</p>
+             * <p>The conversation title.</p>
              * 
              * <strong>example:</strong>
              * <p>Security event investigation</p>
@@ -681,10 +681,10 @@ public class CreateCopilotChatRequest extends Request {
             } 
 
             /**
-             * <p>The content of the message.</p>
+             * <p>The message content.</p>
              * 
              * <strong>example:</strong>
-             * <p>Investigate the abnormal logon activities in the past hour</p>
+             * <p>Investigate abnormal logon activities in the last hour</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -692,7 +692,7 @@ public class CreateCopilotChatRequest extends Request {
             }
 
             /**
-             * <p>The role of the message.</p>
+             * <p>The message role.</p>
              * 
              * <strong>example:</strong>
              * <p>user</p>

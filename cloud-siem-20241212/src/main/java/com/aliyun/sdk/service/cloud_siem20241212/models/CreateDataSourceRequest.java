@@ -345,7 +345,7 @@ public class CreateDataSourceRequest extends Request {
         }
 
         /**
-         * <p>The data ingestion IDs associated with the data source.</p>
+         * <p>The IDs of the data ingestion tasks associated with the data source.</p>
          */
         public Builder dataSourceReferences(java.util.List<String> dataSourceReferences) {
             String dataSourceReferencesShrink = shrink(dataSourceReferences, "DataSourceReferences", "json");
@@ -488,7 +488,7 @@ public class CreateDataSourceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the user whose perspective the administrator switches to.</p>
+         * <p>The ID of the member whose perspective the administrator switches to.</p>
          * 
          * <strong>example:</strong>
          * <p>173326*******</p>
@@ -637,7 +637,7 @@ public class CreateDataSourceRequest extends Request {
             }
 
             /**
-             * <p>The log storage status. Valid values:</p>
+             * <p>The status of the log storage. Valid values:</p>
              * <ul>
              * <li>normal</li>
              * <li>abnormal</li>

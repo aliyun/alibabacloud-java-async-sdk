@@ -67,7 +67,7 @@ public class UpdateDataSetRecordResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The result of the dataset update.</p>
+         * <p>The dataset update results.</p>
          */
         public Builder dataSetRecordStatistic(DataSetRecordStatistic dataSetRecordStatistic) {
             this.dataSetRecordStatistic = dataSetRecordStatistic;
@@ -75,7 +75,7 @@ public class UpdateDataSetRecordResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>

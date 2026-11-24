@@ -120,7 +120,7 @@ public class ListCopilotMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of conversation messages.</p>
+         * <p>The list of session messages.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -128,7 +128,7 @@ public class ListCopilotMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum amount of data read in this query.</p>
+         * <p>The maximum amount of data read in the current request.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -139,7 +139,7 @@ public class ListCopilotMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token for the next query.</p>
+         * <p>The token for the start of the next query.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
@@ -311,7 +311,7 @@ public class ListCopilotMessagesResponseBody extends TeaModel {
              * <p>The sent content.</p>
              * 
              * <strong>example:</strong>
-             * <p>The correlation analysis of alerts and network logs has been completed</p>
+             * <p>The correlation analysis of alerts and network logs is complete</p>
              */
             public Builder content(String content) {
                 this.content = content;

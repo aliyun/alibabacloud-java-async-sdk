@@ -91,7 +91,7 @@ public class CreateExportTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The export task ID.</p>
+         * <p>The ID of the export task.</p>
          * 
          * <strong>example:</strong>
          * <p>400151</p>
@@ -102,7 +102,7 @@ public class CreateExportTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>6276D891-*****-55B2-87B9-74D413F7****</p>

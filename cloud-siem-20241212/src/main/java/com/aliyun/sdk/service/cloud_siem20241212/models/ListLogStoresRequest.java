@@ -157,7 +157,7 @@ public class ListLogStoresRequest extends Request {
         } 
 
         /**
-         * <p>The language of the response message. Valid values:</p>
+         * <p>The language of the returned message. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong> (default): Chinese.</li>
          * <li><strong>en</strong>: English.
@@ -186,7 +186,7 @@ public class ListLogStoresRequest extends Request {
         }
 
         /**
-         * <p>The log storage region ID. This parameter is required when LogProjectName is provided, and the log storage region must match the log project. You can call the GetDataStorage operation to obtain valid values.</p>
+         * <p>The log storage region ID. This parameter is required when LogProjectName is provided, and the log storage region must be consistent with the log project. You can call the GetDataStorage operation to obtain valid values.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -210,7 +210,7 @@ public class ListLogStoresRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of data entries to return in this request.</p>
+         * <p>The maximum number of entries to return for the current request.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -222,7 +222,7 @@ public class ListLogStoresRequest extends Request {
         }
 
         /**
-         * <p>The token for the next query. You do not need to specify this parameter for the first query or when no subsequent query is required. If a subsequent query is required, set the value to the NextToken value returned by the previous API call.</p>
+         * <p>The token for the next query. If this is the first query or no subsequent query is required, you do not need to specify this parameter. If a subsequent query is required, set this parameter to the NextToken value returned by the previous API call.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
@@ -234,10 +234,10 @@ public class ListLogStoresRequest extends Request {
         }
 
         /**
-         * <p>The region of the data management center for threat analysis. Select the region of the management center based on the region where your assets are located. Valid values:</p>
+         * <p>The region of the data management center for threat analysis. You must select the region of the management center based on the region where your assets are located. Valid values:</p>
          * <ul>
-         * <li>cn-hangzhou: The assets are located in the Chinese mainland.</li>
-         * <li>ap-southeast-1: The assets are located outside the Chinese mainland.</li>
+         * <li>cn-hangzhou: Assets are located in the Chinese mainland.</li>
+         * <li>ap-southeast-1: Assets are located outside China.</li>
          * </ul>
          * 
          * <strong>example:</strong>

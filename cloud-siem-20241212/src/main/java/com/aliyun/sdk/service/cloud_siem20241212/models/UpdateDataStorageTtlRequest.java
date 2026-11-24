@@ -144,12 +144,10 @@ public class UpdateDataStorageTtlRequest extends Request {
         } 
 
         /**
-         * <p>The language of the response. Valid values:</p>
+         * <p>The language of the response message. Valid values:</p>
          * <ul>
-         * <li><p><strong>zh</strong> (default): Chinese.</p>
-         * </li>
-         * <li><p><strong>en</strong>: English.</p>
-         * </li>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -162,7 +160,7 @@ public class UpdateDataStorageTtlRequest extends Request {
         }
 
         /**
-         * <p>The storage duration for cold storage in Simple Log Service. This setting is not yet available.</p>
+         * <p>The cold storage duration in Simple Log Service. This parameter is not available for configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -174,7 +172,7 @@ public class UpdateDataStorageTtlRequest extends Request {
         }
 
         /**
-         * <p>The storage duration for hot storage in Simple Log Service.</p>
+         * <p>The hot storage duration in Simple Log Service.</p>
          * 
          * <strong>example:</strong>
          * <p>180</p>
@@ -186,7 +184,7 @@ public class UpdateDataStorageTtlRequest extends Request {
         }
 
         /**
-         * <p>The name of the Logstore for threat analysis.</p>
+         * <p>The name of the Logstore for Threat Analysis.</p>
          * 
          * <strong>example:</strong>
          * <p>network-activity</p>
@@ -210,12 +208,10 @@ public class UpdateDataStorageTtlRequest extends Request {
         }
 
         /**
-         * <p>The region of the Data Management Center for threat analysis. Select a region based on the location of your assets. Valid values:</p>
+         * <p>The region of the data management center for Threat Analysis. Select the region of the management center based on the region where your assets are located. Valid values:</p>
          * <ul>
-         * <li><p>cn-hangzhou: The Chinese mainland.</p>
-         * </li>
-         * <li><p>ap-southeast-1: Regions outside the Chinese mainland.</p>
-         * </li>
+         * <li>cn-hangzhou: The assets are located in the Chinese mainland.</li>
+         * <li>ap-southeast-1: The assets are located outside the Chinese mainland.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -228,7 +224,7 @@ public class UpdateDataStorageTtlRequest extends Request {
         }
 
         /**
-         * <p>The user ID of the member whose perspective the administrator assumes.</p>
+         * <p>The ID of the user whose perspective the administrator switches to.</p>
          * 
          * <strong>example:</strong>
          * <p>113091674488****</p>

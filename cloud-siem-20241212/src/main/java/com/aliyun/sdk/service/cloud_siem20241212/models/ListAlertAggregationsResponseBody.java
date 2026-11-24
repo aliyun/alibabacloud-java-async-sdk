@@ -132,7 +132,7 @@ public class ListAlertAggregationsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of alert groups returned based on the specified aggregation method, sorted by alert count in descending order.</p>
+         * <p>The list of alert groups returned based on the specified aggregation method, sorted in descending order of the number of alerts.</p>
          */
         public Builder alertAggregations(java.util.List<AlertAggregations> alertAggregations) {
             this.alertAggregations = alertAggregations;
@@ -140,7 +140,7 @@ public class ListAlertAggregationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of entries returned in this request.</p>
+         * <p>The maximum number of entries returned for this request.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -162,7 +162,7 @@ public class ListAlertAggregationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The current page number.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -184,7 +184,7 @@ public class ListAlertAggregationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
@@ -278,7 +278,7 @@ public class ListAlertAggregationsResponseBody extends TeaModel {
              * <p>The default right value displayed for the whitelist rule.</p>
              * 
              * <strong>example:</strong>
-             * <p>Test-Qiantu System AI</p>
+             * <p>10</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -359,7 +359,7 @@ public class ListAlertAggregationsResponseBody extends TeaModel {
              * <p>The right value.</p>
              * 
              * <strong>example:</strong>
-             * <p>123.123.123.123</p>
+             * <p>11</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -590,7 +590,7 @@ public class ListAlertAggregationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of IDs of the member accounts for which the report is generated. Note: You only need to specify this parameter when you generate a multi-account report and want to generate a report for a specified range of accounts.</p>
+             * <p>The list of IDs of member accounts for which the report is generated. Note: This parameter is required only when you generate a multi-account report and want to generate the report for a specified range of accounts.</p>
              */
             public Builder accountIds(java.util.List<String> accountIds) {
                 this.accountIds = accountIds;
@@ -598,7 +598,7 @@ public class ListAlertAggregationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique identifier of the aggregation group. It is concatenated by AggregationType, PrimaryValue, and SecondaryValue with colons (:). If there is no secondary aggregation value, the last segment is empty.</p>
+             * <p>The unique identifier of the aggregation group. It is concatenated by AggregationType, PrimaryValue, and SecondaryValue with colons (:). If no secondary aggregation value exists, the last segment is empty.</p>
              * 
              * <strong>example:</strong>
              * <p>vendor_product:alibaba_cloud:sas</p>
@@ -620,7 +620,7 @@ public class ListAlertAggregationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of consecutive failures. This parameter is optional.</p>
+             * <p>The number of consecutive failures. This field is optional.</p>
              * 
              * <strong>example:</strong>
              * <p>25</p>
@@ -639,7 +639,7 @@ public class ListAlertAggregationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The distribution of alert counts by defense action in the aggregation group. Name is the value of the action field, and Value is the corresponding alert count.</p>
+             * <p>The distribution of the number of alerts in the aggregation group, counted by defense action. Name is the value of the action field, and Value is the corresponding number of alerts.</p>
              */
             public Builder defenseActionCounts(java.util.List<DefenseActionCounts> defenseActionCounts) {
                 this.defenseActionCounts = defenseActionCounts;
@@ -669,7 +669,7 @@ public class ListAlertAggregationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display text of the primary aggregation value. For account aggregation, it returns &quot;Username/Account ID&quot;. If there is no valid username, only the account ID is returned. For event summaries, it returns the event name based on Lang. If the name is missing, the event UUID is returned.</p>
+             * <p>The display text of the primary aggregation value. For account aggregation, &quot;Username/Account ID&quot; is returned. If no valid username exists, only the account ID is returned. For event summaries, the event name is returned based on Lang. If the name is missing, the event UUID is returned.</p>
              * 
              * <strong>example:</strong>
              * <p>Test incident</p>
@@ -704,7 +704,7 @@ public class ListAlertAggregationsResponseBody extends TeaModel {
             /**
              * <p>The collection of event source codes.</p>
              * <blockquote>
-             * <p>Example: [\&quot;MRM\&quot;]</p>
+             * <p>Example: [\\\&quot;MRM\\\&quot;]</p>
              * </blockquote>
              */
             public Builder sourceCodes(java.util.List<String> sourceCodes) {
@@ -713,7 +713,7 @@ public class ListAlertAggregationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The distribution of alert counts by alert status in the aggregation group. Name is the alert status value, and Value is the corresponding alert count.</p>
+             * <p>The distribution of the number of alerts in the aggregation group, counted by alert status. Name is the alert status value, and Value is the corresponding number of alerts.</p>
              */
             public Builder statusCounts(java.util.List<StatusCounts> statusCounts) {
                 this.statusCounts = statusCounts;

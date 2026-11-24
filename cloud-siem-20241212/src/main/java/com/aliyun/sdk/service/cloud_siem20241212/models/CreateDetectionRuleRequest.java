@@ -617,11 +617,11 @@ public class CreateDetectionRuleRequest extends Request {
         /**
          * <p>The threat level of the alert. Valid values:</p>
          * <ul>
-         * <li>5: critical</li>
-         * <li>4: high</li>
-         * <li>3: medium</li>
-         * <li>2: low</li>
-         * <li>1: informational</li>
+         * <li>5: critical.</li>
+         * <li>4: high.</li>
+         * <li>3: medium.</li>
+         * <li>2: low.</li>
+         * <li>1: informational.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -660,10 +660,10 @@ public class CreateDetectionRuleRequest extends Request {
         /**
          * <p>The ID of the alert template for the detection rule. Valid values:</p>
          * <ul>
-         * <li>ALERT_ACTIVITY: other alerts</li>
-         * <li>EDR_ALERT_ACTIVITY: endpoint detection and response (EDR) alerts</li>
-         * <li>FIREWALL_ALERT_ACTIVITY: firewall alerts</li>
-         * <li>WAF_ALERT_ACTIVITY: Web Application Firewall (WAF) alerts</li>
+         * <li>ALERT_ACTIVITY: other alerts.</li>
+         * <li>EDR_ALERT_ACTIVITY: endpoint detection and response (EDR) alerts.</li>
+         * <li>FIREWALL_ALERT_ACTIVITY: firewall alerts.</li>
+         * <li>WAF_ALERT_ACTIVITY: Web Application Firewall (WAF) alerts.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -700,7 +700,7 @@ public class CreateDetectionRuleRequest extends Request {
         }
 
         /**
-         * <p>The list of alert threshold fields, separated by commas.</p>
+         * <p>The list of fields for the alert threshold. Separate multiple fields with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>alert_type,ip</p>
@@ -712,7 +712,7 @@ public class CreateDetectionRuleRequest extends Request {
         }
 
         /**
-         * <p>The length of the alert threshold period.</p>
+         * <p>The period length of the alert threshold.</p>
          * 
          * <strong>example:</strong>
          * <p>5m</p>
@@ -724,7 +724,7 @@ public class CreateDetectionRuleRequest extends Request {
         }
 
         /**
-         * <p>The alerting type.</p>
+         * <p>The alert type.</p>
          * 
          * <strong>example:</strong>
          * <p>WebShell</p>
@@ -736,7 +736,7 @@ public class CreateDetectionRuleRequest extends Request {
         }
 
         /**
-         * <p>The alerting type mapping.</p>
+         * <p>The alert type mapping.</p>
          * 
          * <strong>example:</strong>
          * <p>benign_type_mapping</p>
@@ -775,8 +775,8 @@ public class CreateDetectionRuleRequest extends Request {
         /**
          * <p>The expression type of the detection rule. Valid values:</p>
          * <ul>
-         * <li>sql: SQL</li>
-         * <li>playbook: playbook</li>
+         * <li>sql: SQL.</li>
+         * <li>playbook: playbook.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -851,9 +851,9 @@ public class CreateDetectionRuleRequest extends Request {
         /**
          * <p>The type of the detection rule. Valid values:</p>
          * <ul>
-         * <li>preset: preset detection rule</li>
-         * <li>custom: custom detection rule</li>
-         * <li>custom_template: rule template</li>
+         * <li>preset: preset detection rule.</li>
+         * <li>custom: custom detection rule.</li>
+         * <li>custom_template: rule template.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -899,13 +899,13 @@ public class CreateDetectionRuleRequest extends Request {
         }
 
         /**
-         * <p>The event summaries type. Valid values:</p>
+         * <p>The event aggregation type. Valid values:</p>
          * <ul>
-         * <li>none: no event generated</li>
-         * <li>graph_compute: graph computing (supported by predefined rules)</li>
-         * <li>expert: expert rules</li>
-         * <li>passthrough: alerting pass-through (1-to-1)</li>
-         * <li>window: homogeneous aggregation (window)</li>
+         * <li>none: no event is generated.</li>
+         * <li>graph_compute: graph computing, supported by predefined rules.</li>
+         * <li>expert: expert rules.</li>
+         * <li>passthrough: alert pass-through (one-to-one).</li>
+         * <li>window: homogeneous aggregation (window).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -920,10 +920,10 @@ public class CreateDetectionRuleRequest extends Request {
         /**
          * <p>The language of the response message. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong> (default): Chinese</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
          * </ul>
-         * <p>Note: This parameter is required in actual API calls. If this parameter is not provided, the service returns a 400 error &quot;The specified Lang can not be empty.&quot; Explicitly pass the language code.</p>
+         * <p>Note: This parameter is required in actual API calls. If this parameter is not provided, the service returns a 400 error with the message &quot;The specified Lang can not be empty.&quot; Explicitly pass the language code.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -959,7 +959,7 @@ public class CreateDetectionRuleRequest extends Request {
         }
 
         /**
-         * <p>The custom parameters for the playbook.</p>
+         * <p>The custom parameters of the playbook.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -987,10 +987,10 @@ public class CreateDetectionRuleRequest extends Request {
         }
 
         /**
-         * <p>The region where the data management center for threat analysis is located. Select the region of the management center based on the region where your assets are located. Valid values:</p>
+         * <p>The region of the data management center for Threat Analysis. Select the region of the management center based on the region where your assets are located. Valid values:</p>
          * <ul>
-         * <li>cn-hangzhou: Assets are located in the Chinese mainland.</li>
-         * <li>ap-southeast-1: Assets are located outside the Chinese mainland.</li>
+         * <li>cn-hangzhou: The assets are located in the Chinese mainland.</li>
+         * <li>ap-southeast-1: The assets are located outside the Chinese mainland.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1039,7 +1039,7 @@ public class CreateDetectionRuleRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of retries after a timeout. Valid values: 1 to 100.</p>
+         * <p>The maximum number of retries upon timeout. Valid values: 1 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1051,7 +1051,7 @@ public class CreateDetectionRuleRequest extends Request {
         }
 
         /**
-         * <p>The maximum timeout period in seconds. Valid values: 60 to 1800.</p>
+         * <p>The maximum timeout period. Unit: seconds. Valid values: 60 to 1800.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -1063,10 +1063,10 @@ public class CreateDetectionRuleRequest extends Request {
         }
 
         /**
-         * <p>The schedule type. Valid values:</p>
+         * <p>The scheduling type. Valid values:</p>
          * <ul>
-         * <li>fixed_rate: fixed interval</li>
-         * <li>cron: cron expression</li>
+         * <li>fixed_rate: fixed interval.</li>
+         * <li>cron: cron expression.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1079,7 +1079,7 @@ public class CreateDetectionRuleRequest extends Request {
         }
 
         /**
-         * <p>The length of the schedule window.</p>
+         * <p>The length of the scheduling window.</p>
          * 
          * <strong>example:</strong>
          * <p>5m</p>

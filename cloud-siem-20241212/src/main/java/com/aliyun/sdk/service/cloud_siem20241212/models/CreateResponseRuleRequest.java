@@ -243,7 +243,7 @@ public class CreateResponseRuleRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of data records to return in the current read operation.</p>
+         * <p>The maximum number of data records to return in the current request.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -255,7 +255,7 @@ public class CreateResponseRuleRequest extends Request {
         }
 
         /**
-         * <p>The token that marks the position from which the current read operation starts. If you leave this parameter empty, the read operation starts from the beginning.</p>
+         * <p>The token that marks the position from which to start reading. If this parameter is left empty, the reading starts from the beginning.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>

@@ -227,7 +227,7 @@ public class ExecuteLogQueryRequest extends Request {
         } 
 
         /**
-         * <p>The end time. The value is a UNIX timestamp in milliseconds (ms).</p>
+         * <p>The end time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1733269771123</p>
@@ -239,7 +239,7 @@ public class ExecuteLogQueryRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to pack non-standard fields into the extended field extend_content. Valid values:</p>
+         * <p>Specifies whether to pack non-standard fields into the extend_content field. Valid values:</p>
          * <ul>
          * <li>enabled: Enabled.</li>
          * <li>disabled: Disabled.</li>
@@ -255,10 +255,10 @@ public class ExecuteLogQueryRequest extends Request {
         }
 
         /**
-         * <p>The language of the response messages. Valid values:</p>
+         * <p>The language of the response message. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong> (default): Chinese.</li>
-         * <li><strong>en</strong>: English. This parameter is required. If not specified, the service returns a 400 error. Explicitly set this parameter to zh or en.</li>
+         * <li><strong>en</strong>: English. This parameter is actually required. If it is not provided, the service returns a 400 error. Explicitly specify zh or en.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -271,7 +271,7 @@ public class ExecuteLogQueryRequest extends Request {
         }
 
         /**
-         * <p>The log query condition.</p>
+         * <p>The log query conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;alert_level\&quot;:[\&quot;5\&quot;,\&quot;4\&quot;,\&quot;3\&quot;,\&quot;2\&quot;,\&quot;1\&quot;]}</p>
@@ -309,7 +309,7 @@ public class ExecuteLogQueryRequest extends Request {
         }
 
         /**
-         * <p>The ID of the log storage region. This parameter is required when executing a log query.</p>
+         * <p>The ID of the log storage region. This parameter is actually required when you execute a log query.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -333,7 +333,7 @@ public class ExecuteLogQueryRequest extends Request {
         }
 
         /**
-         * <p>The user ID for data access.</p>
+         * <p>The ID of the user for data ingestion.</p>
          * 
          * <strong>example:</strong>
          * <p>173326*******</p>
@@ -345,7 +345,7 @@ public class ExecuteLogQueryRequest extends Request {
         }
 
         /**
-         * <p>The NormalizationSchemaId to specify if packing is enabled.</p>
+         * <p>The normalization schema ID. This parameter is required if packing is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>WAF_ALERT_ACTIVITY</p>
@@ -357,10 +357,10 @@ public class ExecuteLogQueryRequest extends Request {
         }
 
         /**
-         * <p>The region where the data management center of the threat analysis feature is located. Select the management center region based on the region where your assets reside. Valid values:</p>
+         * <p>The region where the data management center of Threat Analysis is located. Select the region of the management center based on the region where your assets are located. Valid values:</p>
          * <ul>
          * <li>cn-hangzhou: Assets are located in the Chinese mainland.</li>
-         * <li>ap-southeast-1: Assets are located outside China.</li>
+         * <li>ap-southeast-1: Assets are located outside the Chinese mainland.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -373,7 +373,7 @@ public class ExecuteLogQueryRequest extends Request {
         }
 
         /**
-         * <p>The user ID of the member account that the administrator switches to.</p>
+         * <p>The ID of the user whose perspective the administrator switches to.</p>
          * 
          * <strong>example:</strong>
          * <p>173326*******</p>
@@ -385,7 +385,7 @@ public class ExecuteLogQueryRequest extends Request {
         }
 
         /**
-         * <p>The start time. The value is a UNIX timestamp in milliseconds (ms).</p>
+         * <p>The start time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1733269771123</p>

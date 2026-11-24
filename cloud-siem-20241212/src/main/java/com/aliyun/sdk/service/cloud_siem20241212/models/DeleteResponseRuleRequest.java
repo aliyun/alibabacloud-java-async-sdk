@@ -143,7 +143,7 @@ public class DeleteResponseRuleRequest extends Request {
         }
 
         /**
-         * <p>The token that specifies the position to start reading. If this parameter is left empty, the reading starts from the beginning.</p>
+         * <p>The token that specifies the starting position for reading. Leave this parameter empty to start reading from the beginning.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>

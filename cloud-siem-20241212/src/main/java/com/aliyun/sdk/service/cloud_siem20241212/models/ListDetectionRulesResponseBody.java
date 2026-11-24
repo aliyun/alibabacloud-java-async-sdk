@@ -140,7 +140,7 @@ public class ListDetectionRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of data entries to return in this request.</p>
+         * <p>The maximum number of results to return in this request.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -1074,7 +1074,7 @@ public class ListDetectionRulesResponseBody extends TeaModel {
              * <li>ALERT_ACTIVITY: other alerts</li>
              * <li>EDR_ALERT_ACTIVITY: endpoint detection and response alerts</li>
              * <li>FIREWALL_ALERT_ACTIVITY: firewall alerts</li>
-             * <li>WAF_ALERT_ACTIVITY: Web Application Firewall alerts</li>
+             * <li>WAF_ALERT_ACTIVITY: web application firewall alerts</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1142,6 +1142,9 @@ public class ListDetectionRulesResponseBody extends TeaModel {
 
             /**
              * <p>The alerting type mapping.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>进程异常行为</p>
              */
             public Builder alertTypeMapping(String alertTypeMapping) {
                 this.alertTypeMapping = alertTypeMapping;
@@ -1149,10 +1152,10 @@ public class ListDetectionRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time. The format is YYYY-MM-DD HH:mm:ss.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
-             * <p>2023-03-21 13:47:01</p>
+             * <p>1794302020000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -1268,7 +1271,7 @@ public class ListDetectionRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The incident aggregation period configuration.</p>
+             * <p>The event aggregation period configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>5m</p>
@@ -1279,13 +1282,13 @@ public class ListDetectionRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The incident aggregation type. Valid values:</p>
+             * <p>The event aggregation type. Valid values:</p>
              * <ul>
-             * <li>none: no event generated</li>
+             * <li>none: no event generation</li>
              * <li>graph_compute: graph computing (supported by predefined rules)</li>
-             * <li>expert: expert rule</li>
+             * <li>expert: expert rules</li>
              * <li>passthrough: alerting pass-through (one-to-one)</li>
-             * <li>window: similar aggregation (window)</li>
+             * <li>window: similar event aggregation (window)</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1327,7 +1330,7 @@ public class ListDetectionRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user-defined parameters of the playbook.</p>
+             * <p>The custom parameters of the playbook.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -1375,7 +1378,7 @@ public class ListDetectionRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of retries upon timeout. Valid values: 1 to 100.</p>
+             * <p>The maximum number of retries for a timeout. Valid values: 1 to 100.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1423,10 +1426,10 @@ public class ListDetectionRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time. The format is YYYY-MM-DD HH:mm:ss.</p>
+             * <p>The update time.</p>
              * 
              * <strong>example:</strong>
-             * <p>2023-04-16 10:51:00</p>
+             * <p>1794302022000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

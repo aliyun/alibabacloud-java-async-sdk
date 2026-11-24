@@ -404,8 +404,8 @@ public class GetNormalizationRuleResponseBody extends TeaModel {
             /**
              * <p>Specifies whether to pack non-standard fields into the extended field extend_content. Valid values:</p>
              * <ul>
-             * <li>enabled: Enabled.</li>
-             * <li>disabled: Disabled.</li>
+             * <li>enabled: enabled</li>
+             * <li>disabled: disabled</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -417,7 +417,7 @@ public class GetNormalizationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage mode for extended fields. Valid values: flat (ingest as-is), reject (do not ingest), and pack (pack into the extend_content field).</p>
+             * <p>The storage mode for extended fields. Valid values: flat: ingested as-is, reject: not ingested, pack: packed into the extend_content field.</p>
              * 
              * <strong>example:</strong>
              * <p>flat</p>
@@ -428,7 +428,7 @@ public class GetNormalizationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The category ID of the normalization rule.</p>
+             * <p>The ID of the normalization rule category.</p>
              * 
              * <strong>example:</strong>
              * <p>NETWORK_CATEGORY</p>
@@ -439,7 +439,7 @@ public class GetNormalizationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The field source:</p>
+             * <p>The source of the field. Valid values:</p>
              * <ul>
              * <li>&quot;native&quot;: raw logs</li>
              * <li>&quot;normalized&quot;: normalized logs</li>
@@ -564,7 +564,7 @@ public class GetNormalizationRuleResponseBody extends TeaModel {
              * <p>The version of the normalization rule.</p>
              * 
              * <strong>example:</strong>
-             * <p>V1</p>
+             * <p>5</p>
              */
             public Builder normalizationRuleVersion(Integer normalizationRuleVersion) {
                 this.normalizationRuleVersion = normalizationRuleVersion;
@@ -594,10 +594,10 @@ public class GetNormalizationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The field used to sort the rule list. Valid values:</p>
+             * <p>The field by which the rule list is sorted. Valid values:</p>
              * <ul>
-             * <li>GmtModified: sort by modification time</li>
-             * <li>Id: sort by rule ID (default)</li>
+             * <li>GmtModified: sorts by update time</li>
+             * <li>Id: sorts by rule ID (default)</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -609,7 +609,7 @@ public class GetNormalizationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The product ID.</p>
+             * <p>The ID of the product.</p>
              * 
              * <strong>example:</strong>
              * <p>alibaba_cloud_sas</p>

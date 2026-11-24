@@ -67,7 +67,7 @@ public class SetDefaultNormalizationRuleVersionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The normalization rule version.</p>
+         * <p>The version of the normalization rule.</p>
          */
         public Builder normalizationRuleVersion(NormalizationRuleVersion normalizationRuleVersion) {
             this.normalizationRuleVersion = normalizationRuleVersion;
@@ -75,7 +75,7 @@ public class SetDefaultNormalizationRuleVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
@@ -313,7 +313,7 @@ public class SetDefaultNormalizationRuleVersionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the normalization rule version was created. The value is a UNIX timestamp in milliseconds.</p>
+             * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1733269771123</p>
@@ -324,7 +324,7 @@ public class SetDefaultNormalizationRuleVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The normalization rule category ID.</p>
+             * <p>The category ID of the normalization rule.</p>
              * 
              * <strong>example:</strong>
              * <p>NETWORK_CATEGORY</p>
@@ -335,7 +335,7 @@ public class SetDefaultNormalizationRuleVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The normalization rule description.</p>
+             * <p>The description of the normalization rule.</p>
              * 
              * <strong>example:</strong>
              * <p>normalization_rule_Z57np</p>
@@ -346,7 +346,7 @@ public class SetDefaultNormalizationRuleVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The normalization rule expression.</p>
+             * <p>The expression of the normalization rule.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -359,7 +359,7 @@ public class SetDefaultNormalizationRuleVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The normalization rule format.</p>
+             * <p>The format of the normalization rule.</p>
              * 
              * <strong>example:</strong>
              * <p>SPL</p>
@@ -370,7 +370,7 @@ public class SetDefaultNormalizationRuleVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The normalization rule ID.</p>
+             * <p>The ID of the normalization rule.</p>
              * 
              * <strong>example:</strong>
              * <p>nr-z0b2ssjteut85uoh9nzp</p>
@@ -381,7 +381,7 @@ public class SetDefaultNormalizationRuleVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The normalization rule name.</p>
+             * <p>The name of the normalization rule.</p>
              * 
              * <strong>example:</strong>
              * <p>normalization_rule_Z57np</p>
@@ -392,7 +392,7 @@ public class SetDefaultNormalizationRuleVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The normalization rule status.</p>
+             * <p>The status of the normalization rule.</p>
              * 
              * <strong>example:</strong>
              * <p>started</p>
@@ -403,10 +403,10 @@ public class SetDefaultNormalizationRuleVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The normalization rule type. Valid values:</p>
+             * <p>The type of the normalization rule. Valid values:</p>
              * <ul>
-             * <li>predefined: predefined normalization rule.</li>
-             * <li>custom: custom normalization rule.</li>
+             * <li>predefined: predefined normalization rule</li>
+             * <li>custom: custom normalization rule</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -421,7 +421,7 @@ public class SetDefaultNormalizationRuleVersionResponseBody extends TeaModel {
              * <p>The current version of the normalization rule.</p>
              * 
              * <strong>example:</strong>
-             * <p>V1</p>
+             * <p>1</p>
              */
             public Builder normalizationRuleVersion(Integer normalizationRuleVersion) {
                 this.normalizationRuleVersion = normalizationRuleVersion;
@@ -429,7 +429,7 @@ public class SetDefaultNormalizationRuleVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The normalization schema ID.</p>
+             * <p>The ID of the normalization schema.</p>
              * 
              * <strong>example:</strong>
              * <p>HTTP_ACTIVITY</p>
@@ -440,7 +440,7 @@ public class SetDefaultNormalizationRuleVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The normalization security domain ID.</p>
+             * <p>The ID of the normalization security domain.</p>
              * 
              * <strong>example:</strong>
              * <p>NETWORK_AND_WEB_SECURITY</p>
@@ -451,7 +451,7 @@ public class SetDefaultNormalizationRuleVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The product ID.</p>
+             * <p>The ID of the product.</p>
              * 
              * <strong>example:</strong>
              * <p>alibaba_cloud_sas</p>
@@ -462,7 +462,7 @@ public class SetDefaultNormalizationRuleVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the normalization rule version was last updated. The value is a UNIX timestamp in milliseconds.</p>
+             * <p>The update time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1733269771123</p>
@@ -473,7 +473,7 @@ public class SetDefaultNormalizationRuleVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The vendor ID associated with the normalization rule.</p>
+             * <p>The ID of the vendor corresponding to the normalization rule.</p>
              * 
              * <strong>example:</strong>
              * <p>alibaba_cloud</p>

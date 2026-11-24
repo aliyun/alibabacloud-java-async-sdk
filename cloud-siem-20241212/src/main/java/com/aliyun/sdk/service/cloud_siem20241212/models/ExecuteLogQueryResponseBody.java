@@ -68,9 +68,6 @@ public class ExecuteLogQueryResponseBody extends TeaModel {
 
         /**
          * <p>The query result.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>[]。</p>
          */
         public Builder queryResult(java.util.List<?> queryResult) {
             this.queryResult = queryResult;

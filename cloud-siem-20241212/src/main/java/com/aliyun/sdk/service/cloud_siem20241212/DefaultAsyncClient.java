@@ -42,7 +42,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Cancels a specified security operations Agent conversation turn. Before calling this operation, use CreateCopilotConversation to create a session and obtain the ConversationId, then use CreateCopilotChat to initiate a streaming conversation and obtain the TurnId from the response.</p>
+     * <p>Cancels a specified conversation turn of the security operations agent. Before calling this operation, call CreateCopilotConversation to create a conversation and obtain the ConversationId, and then call CreateCopilotChat to initiate a streaming conversation and obtain the TurnId from the response.</p>
      * 
      * @param request the request parameters of CancelCopilotTurn  CancelCopilotTurnRequest
      * @return CancelCopilotTurnResponse
@@ -63,7 +63,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Checks the execution status of a specified upgrade item. You must specify the upgrade item ID (UpgradeItemId) when calling this operation. The response includes the checkpoint status (CheckStatus) and check result (CheckResult) of the upgrade item.</p>
+     * <p>Checks the execution status of a specified upgrade item. When you call this operation, you must specify the upgrade item ID (UpgradeItemId). The response includes the checkpoint status (CheckStatus) and check result (CheckResult) of the upgrade item.</p>
      * 
      * @param request the request parameters of CheckUpgradeItem  CheckUpgradeItemRequest
      * @return CheckUpgradeItemResponse
@@ -84,7 +84,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The request parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * <p>The JsonConfig request parameter is a highly complex JSON configuration. Therefore, we provide a utility class to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * @param request the request parameters of CreateAutoDisposeConfig  CreateAutoDisposeConfigRequest
      * @return CreateAutoDisposeConfigResponse
@@ -105,7 +105,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Sends a message to a security operations agent session and returns the result as an SSE event stream.</p>
+     * <p>Sends a message to a security operations agent conversation and returns the results as a Server-Sent Events (SSE) event stream.</p>
      * 
      * @param request the request parameters of CreateCopilotChat  CreateCopilotChatRequest
      * @return CreateCopilotChatResponse
@@ -136,7 +136,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Creates a security operations Agent session.</p>
+     * <p>Creates a security operations agent session.</p>
      * 
      * @param request the request parameters of CreateCopilotConversation  CreateCopilotConversationRequest
      * @return CreateCopilotConversationResponse
@@ -193,7 +193,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The JSON Configurations input parameter is a complex JSON configuration. A supporting tool is provided to assist with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * <p>The JsonConfig request parameter involves very complex JSON Configurations. We provide a supporting tool class with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * @param request the request parameters of CreateDataSource  CreateDataSourceRequest
      * @return CreateDataSourceResponse
@@ -250,7 +250,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The input parameter JsonConfig is a complex JSON Configurations string. We provide a utility class to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * <p>The JsonConfig request parameter is a highly complex JSON configuration. To help you configure it, we provide a utility class with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * @param request the request parameters of CreateLogStore  CreateLogStoreRequest
      * @return CreateLogStoreResponse
@@ -271,7 +271,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. Refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * <p>The request parameter JsonConfig is a complex JSON configuration. A supporting utility class is provided to assist with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * @param request the request parameters of CreateNormalizationRule  CreateNormalizationRuleRequest
      * @return CreateNormalizationRuleResponse
@@ -292,7 +292,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The input parameter JsonConfig is a complex JSON configuration. To help with specific configuration examples, we provide a supporting utility class. Refer to the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * <p>The input parameter JsonConfig is a complex JSON configuration. We provide a supporting utility class to help with specific configuration examples. For more information, refer to the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * @param request the request parameters of CreateNormalizationSchema  CreateNormalizationSchemaRequest
      * @return CreateNormalizationSchemaResponse
@@ -312,9 +312,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <p>The input parameter JsonConfig is a complex set of JSON Configurations. We provide a utility class with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
-     * 
      * @param request the request parameters of CreateProduct  CreateProductRequest
      * @return CreateProductResponse
      */
@@ -334,7 +331,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The JsonConfig request parameter is a complex JSON configuration. A utility class is provided to assist with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * <p>The JsonConfig request parameter involves complex JSON configurations. A supporting utility class is provided to assist with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * @param request the request parameters of CreateResponseRule  CreateResponseRuleRequest
      * @return CreateResponseRuleResponse
@@ -463,7 +460,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The input parameter JsonConfig is a complex JSON configuration string. We provide a utility class with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * <p>The JsonConfig request parameter is a complex JSON Configurations. We provide a utility class as a supporting tool to help with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * @param request the request parameters of DeleteLogStore  DeleteLogStoreRequest
      * @return DeleteLogStoreResponse
@@ -520,7 +517,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The JsonConfig request parameter is a complex JSON configuration. A utility class is provided to assist with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * <p>The JsonConfig request parameter is a complex JSON configuration. A utility class is provided to help you configure it. For specific configuration examples, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * @param request the request parameters of DeleteNormalizationSchema  DeleteNormalizationSchemaRequest
      * @return DeleteNormalizationSchemaResponse
@@ -559,7 +556,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Notifications are subject to frequency and time limits. Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent at other times.</p>
+     * <p>Notification delivery is subject to frequency and time limits. Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time frame.</p>
      * 
      * @param request the request parameters of DeleteResponseRule  DeleteResponseRuleRequest
      * @return DeleteResponseRuleResponse
@@ -655,7 +652,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The input parameter JsonConfig is a complex JSON configuration. To help you configure it, a utility class is provided. For specific configuration examples, refer to the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * <p>The request parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * @param request the request parameters of ExecuteLogQuery  ExecuteLogQueryRequest
      * @return ExecuteLogQueryResponse
@@ -703,7 +700,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The input parameter JsonConfig is a complex JSON configuration. We provide a utility class to help with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * <p>The JsonConfig request parameter is a highly complex JSON configuration. To help you configure it, we provide a utility class with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * @param request the request parameters of GetAlert  GetAlertRequest
      * @return GetAlertResponse
@@ -829,7 +826,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the log storage region, project, capacity, Logstore, and multi-account delivery settings of the current account. Before you update the multi-account configuration, read Data.DeliverySettings.ConfigurationVersion and TargetProject, and pass them to the write operation as is. The capacity is measured in GB, and the TTL is measured in days. The account UID in DeliverySettings is a string. If the system fails to read the optional delivery settings, the cause is returned in DeliverySettingsError, and other storage information is still returned.</p>
+     * <p>Queries the log storage region, project, capacity, Logstore, and multi-account delivery settings of the current account. Before updating the multi-account configuration, retrieve Data.DeliverySettings.ConfigurationVersion and TargetProject, and pass them to the write API unchanged. Capacity is measured in GB, and TTL is measured in days. Account UIDs in DeliverySettings are strings. If reading optional delivery settings fails, the cause is returned in DeliverySettingsError, and other storage information is still returned.</p>
      * 
      * @param request the request parameters of GetDataStorage  GetDataStorageRequest
      * @return GetDataStorageResponse
@@ -957,7 +954,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The request parameter JsonConfig contains highly complex JSON configurations. To help you configure it, we provide a utility class with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * <p>The request parameter JsonConfig involves highly complex JSON configurations. To help you configure it, we provide a utility class with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * @param request the request parameters of GetNormalizationRule  GetNormalizationRuleRequest
      * @return GetNormalizationRuleResponse
@@ -1060,7 +1057,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The JsonConfig request parameter is a complex JSON configuration. To help you configure it, we provide a utility class with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * <p>The JsonConfig request parameter is a highly complex JSON configuration. To simplify this, we provide a utility class with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * @param request the request parameters of ListAlertAggregations  ListAlertAggregationsRequest
      * @return ListAlertAggregationsResponse
@@ -1125,7 +1122,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the message list of a specified security operations Agent conversation.</p>
+     * <p>Queries the list of messages in a specified security operations agent session.</p>
      * 
      * @param request the request parameters of ListCopilotMessages  ListCopilotMessagesRequest
      * @return ListCopilotMessagesResponse
@@ -1279,8 +1276,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Notifications are subject to frequency and time limits.
-     * Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent at other times.</p>
+     * <p>Notifications are subject to frequency and time limits. Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent at other times.</p>
      * 
      * @param request the request parameters of ListDetectionRules  ListDetectionRulesRequest
      * @return ListDetectionRulesResponse
@@ -1364,7 +1360,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Notification delivery is subject to frequency and time limits. Each user can receive a maximum of two notifications per day between 08:00 and 20:00, and no notifications are sent at other times.</p>
+     * <p>Sending notifications is subject to frequency and time limits. Each user can receive a maximum of two notifications per day between 08:00 and 20:00, and no notifications are sent at other times.</p>
      * 
      * @param request the request parameters of ListLogStores  ListLogStoresRequest
      * @return ListLogStoresResponse
@@ -1765,8 +1761,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Notifications are subject to frequency and time restrictions.
-     * Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</p>
+     * <p>Notifications are subject to frequency and time limits. Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent at other times.</p>
      * 
      * @param request the request parameters of SetDefaultNormalizationRuleVersion  SetDefaultNormalizationRuleVersionRequest
      * @return SetDefaultNormalizationRuleVersionResponse
@@ -1947,7 +1942,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Notifications are subject to frequency and time limits. Each user can receive a maximum of two notifications per day between 08:00 and 20:00.</p>
+     * <p>Notifications are subject to frequency and time limits. Each user can receive up to two notifications per day between 08:00 and 20:00, and no notifications are sent outside this period.</p>
      * 
      * @param request the request parameters of UpdateDataSetRecord  UpdateDataSetRecordRequest
      * @return UpdateDataSetRecordResponse
@@ -2064,7 +2059,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The input parameter JsonConfig is a complex JSON configuration. To help you configure it, a utility class is provided with specific configuration examples. Refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * <p>The JsonConfig request parameter is a complex JSON configuration. To help you configure it, we provide a utility class with specific configuration examples. For more information, refer to the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * @param request the request parameters of UpdateDetectionRule  UpdateDetectionRuleRequest
      * @return UpdateDetectionRuleResponse
@@ -2085,7 +2080,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The input parameter JsonConfig is a complex JSON configuration. To help you configure it, we provide a utility class with specific configuration examples. Refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * <p>The JsonConfig request parameter contains complex JSON configurations. We provide a utility class to help with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * @param request the request parameters of UpdateNormalizationRule  UpdateNormalizationRuleRequest
      * @return UpdateNormalizationRuleResponse
@@ -2145,7 +2140,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The JsonConfig request parameter is a very complex JSON configuration. Therefore, we provide a utility class to help with specific configuration examples. Refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * <p>The JsonConfig request parameter is a complex JSON configuration. We provide a utility class to help you with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * @param request the request parameters of UpdateResponseRule  UpdateResponseRuleRequest
      * @return UpdateResponseRuleResponse
@@ -2205,7 +2200,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The JsonConfig request parameter is a highly complex JSON configuration. To help you configure it, we provide a utility class with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * <p>The input parameter JsonConfig is a complex JSON configuration. We provide a utility class to assist with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * @param request the request parameters of ValidateNormalizationRule  ValidateNormalizationRuleRequest
      * @return ValidateNormalizationRuleResponse

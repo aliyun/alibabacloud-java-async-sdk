@@ -143,11 +143,11 @@ public class CreateLogStoreRequest extends Request {
         } 
 
         /**
-         * <p>The language of the response. Valid values:</p>
+         * <p>The language of the returned message. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong> (default): Chinese.</li>
          * <li><strong>en</strong>: English.
-         * Note: This parameter is required. If this parameter is not specified, the API returns a 400 error. Valid values: zh (Chinese) or en (English).</li>
+         * Note: This parameter is required. If it is not provided, the API returns a 400 error. Valid values: zh (Chinese) or en (English).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -160,7 +160,7 @@ public class CreateLogStoreRequest extends Request {
         }
 
         /**
-         * <p>The Simple Log Service project name.</p>
+         * <p>The name of the Simple Log Service project.</p>
          * 
          * <strong>example:</strong>
          * <p>aliyun-cloudsiem-channel-173326*******-cn-hangzhou</p>
@@ -172,7 +172,7 @@ public class CreateLogStoreRequest extends Request {
         }
 
         /**
-         * <p>The log storage region ID.</p>
+         * <p>The ID of the log storage region.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -184,7 +184,7 @@ public class CreateLogStoreRequest extends Request {
         }
 
         /**
-         * <p>The Simple Log Service LogStore name.</p>
+         * <p>The name of the Simple Log Service Logstore.</p>
          * 
          * <strong>example:</strong>
          * <p>logstoreqykug</p>
@@ -196,7 +196,7 @@ public class CreateLogStoreRequest extends Request {
         }
 
         /**
-         * <p>The user ID for data access.</p>
+         * <p>The ID of the user for data ingestion.</p>
          * 
          * <strong>example:</strong>
          * <p>173326*******</p>
@@ -208,10 +208,10 @@ public class CreateLogStoreRequest extends Request {
         }
 
         /**
-         * <p>The region where the data management center of Cloud Threat Detection and Response (CTDR) is located. Specify the management center based on the region of your assets. Valid values:</p>
+         * <p>The region where the data management center of Threat Analysis is located. You must select the region of the management center based on the region where your assets are located. Valid values:</p>
          * <ul>
-         * <li>cn-hangzhou: Your assets reside in the Chinese mainland.</li>
-         * <li>ap-southeast-1: Your assets reside outside China.</li>
+         * <li>cn-hangzhou: The assets are located in the Chinese mainland.</li>
+         * <li>ap-southeast-1: The assets are located outside the Chinese mainland.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -224,7 +224,7 @@ public class CreateLogStoreRequest extends Request {
         }
 
         /**
-         * <p>The user ID that the administrator switches to when viewing as another member.</p>
+         * <p>The ID of the user whose perspective the administrator switches to.</p>
          * 
          * <strong>example:</strong>
          * <p>173326*******</p>

@@ -29,11 +29,16 @@ public class GetDataStorageRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RoleFor")
     private Long roleFor;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WithAutoKeyDetect")
+    private Boolean withAutoKeyDetect;
+
     private GetDataStorageRequest(Builder builder) {
         super(builder);
         this.lang = builder.lang;
         this.regionId = builder.regionId;
         this.roleFor = builder.roleFor;
+        this.withAutoKeyDetect = builder.withAutoKeyDetect;
     }
 
     public static Builder builder() {
@@ -70,10 +75,18 @@ public class GetDataStorageRequest extends Request {
         return this.roleFor;
     }
 
+    /**
+     * @return withAutoKeyDetect
+     */
+    public Boolean getWithAutoKeyDetect() {
+        return this.withAutoKeyDetect;
+    }
+
     public static final class Builder extends Request.Builder<GetDataStorageRequest, Builder> {
         private String lang; 
         private String regionId; 
         private Long roleFor; 
+        private Boolean withAutoKeyDetect; 
 
         private Builder() {
             super();
@@ -84,15 +97,16 @@ public class GetDataStorageRequest extends Request {
             this.lang = request.lang;
             this.regionId = request.regionId;
             this.roleFor = request.roleFor;
+            this.withAutoKeyDetect = request.withAutoKeyDetect;
         } 
 
         /**
-         * <p>The language of the returned message. Valid values:</p>
+         * <p>The language of the response message. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong> (default): Chinese.</li>
          * <li><strong>en</strong>: English.</li>
          * </ul>
-         * <p>Note: This parameter is required for actual API calls. If you do not specify this parameter, the service returns a 400 error with the message &quot;The specified Lang can not be empty.&quot;. Explicitly specify the language code.</p>
+         * <p>Note: This parameter is required in actual API calls. If it is not provided, the service returns a 400 error with the message &quot;The specified Lang can not be empty.&quot; Explicitly pass the language code.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -104,10 +118,10 @@ public class GetDataStorageRequest extends Request {
         }
 
         /**
-         * <p>The region where the data management center of Threat Analysis is located. Select the region of the management center based on the region where your assets reside. Valid values:</p>
+         * <p>The region where the data management center for threat analysis is located. Select the region of the management center based on the region where your assets are located. Valid values:</p>
          * <ul>
-         * <li>cn-hangzhou: The assets reside in the Chinese mainland.</li>
-         * <li>ap-southeast-1: The assets reside outside the Chinese mainland.</li>
+         * <li>cn-hangzhou: Assets are located in the Chinese mainland.</li>
+         * <li>ap-southeast-1: Assets are located outside the Chinese mainland.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -128,6 +142,15 @@ public class GetDataStorageRequest extends Request {
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);
             this.roleFor = roleFor;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to read the auto-discovered index configuration of each Logstore. This operation requires accessing Simple Log Service (SLS) for each Logstore. Default value: false. Set this parameter to true only on the storage management page.</p>
+         */
+        public Builder withAutoKeyDetect(Boolean withAutoKeyDetect) {
+            this.putBodyParameter("WithAutoKeyDetect", withAutoKeyDetect);
+            this.withAutoKeyDetect = withAutoKeyDetect;
             return this;
         }
 

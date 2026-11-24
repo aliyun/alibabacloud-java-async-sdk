@@ -483,9 +483,9 @@ public class ListDetectionRulesRequest extends Request {
         /**
          * <p>The type of the detection rule. Valid values:</p>
          * <ul>
-         * <li>preset: Preset detection rule.</li>
-         * <li>custom: Custom detection rule.</li>
-         * <li>custom_template: Rule template.</li>
+         * <li>preset: Preset detection rules.</li>
+         * <li>custom: Custom detection rules.</li>
+         * <li>custom_template: Rule templates.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -500,10 +500,10 @@ public class ListDetectionRulesRequest extends Request {
         /**
          * <p>The event summaries type. Valid values:</p>
          * <ul>
-         * <li>none: No event is generated.</li>
+         * <li>none: No events are generated.</li>
          * <li>graph_compute: Graph computing (supported by preset rules).</li>
          * <li>expert: Expert rules.</li>
-         * <li>passthrough: Alerting pass-through (one-to-one).</li>
+         * <li>passthrough: alerting pass-through (one-to-one).</li>
          * <li>window: Similar aggregation (window).</li>
          * </ul>
          * 
@@ -522,7 +522,7 @@ public class ListDetectionRulesRequest extends Request {
          * <li><strong>zh</strong> (default): Chinese.</li>
          * <li><strong>en</strong>: English.</li>
          * </ul>
-         * <p>Note: This parameter is required in actual calls. If it is not provided, the service returns a 400 error &quot;The specified Lang can not be empty.&quot;. Explicitly specify the language code.</p>
+         * <p>Note: This parameter is required in actual API calls. If this parameter is not provided, the service returns a 400 error with the message &quot;The specified Lang can not be empty.&quot; Explicitly pass the language code.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -558,7 +558,7 @@ public class ListDetectionRulesRequest extends Request {
         }
 
         /**
-         * <p>The collection of log schema IDs, which matches any schema by its full ID. If this parameter is not provided, this condition is not applied. If an empty array is explicitly provided, zero records are returned. If both this parameter and LogSchemaId are provided, the intersection is used.</p>
+         * <p>The collection of log schema IDs, which matches any schema by its full ID. If this parameter is not provided, this condition is not applied. If an explicit empty array is provided, zero records are returned. If both this parameter and LogSchemaId are provided, the intersection is used.</p>
          */
         public Builder logSchemaIds(java.util.List<String> logSchemaIds) {
             String logSchemaIdsShrink = shrink(logSchemaIds, "LogSchemaIds", "json");
@@ -568,7 +568,7 @@ public class ListDetectionRulesRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of data entries to return in this request.</p>
+         * <p>The maximum number of results to return in this request.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -592,7 +592,7 @@ public class ListDetectionRulesRequest extends Request {
         }
 
         /**
-         * <p>The sort direction. Valid values:</p>
+         * <p>The sorting direction. Valid values:</p>
          * <ul>
          * <li><strong>asc</strong>: Ascending order. This is the default value.</li>
          * <li><strong>desc</strong>: Descending order.</li>
@@ -648,7 +648,7 @@ public class ListDetectionRulesRequest extends Request {
         }
 
         /**
-         * <p>The region where the data management center of Threat Analysis is located. Select the region of the management center based on the region where your assets are located. Valid values:</p>
+         * <p>The region where the data management center for Threat Analysis is located. Select the region of the management center based on the region where your assets reside. Valid values:</p>
          * <ul>
          * <li>cn-hangzhou: The assets are located in the Chinese mainland.</li>
          * <li>ap-southeast-1: The assets are located outside the Chinese mainland.</li>
@@ -664,7 +664,7 @@ public class ListDetectionRulesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the user whose perspective the administrator switches to.</p>
+         * <p>The ID of the user whose perspective the administrator assumes.</p>
          * 
          * <strong>example:</strong>
          * <p>113091674488****</p>
