@@ -106,7 +106,7 @@ public class ListQuotaApplicationsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The maximum number of records returned in this query.</p>
+         * <p>The maximum number of entries returned for the current query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -117,7 +117,7 @@ public class ListQuotaApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token that marks the position of the returned data. An empty value indicates that all data has been returned.</p>
+         * <p>The pagination token that specifies the position of the returned data. An empty value indicates that all data has been queried.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -218,11 +218,11 @@ public class ListQuotaApplicationsResponseBody extends TeaModel {
             /**
              * <p>The unit of the quota calculation period. Valid values:</p>
              * <ul>
-             * <li>second: seconds.</li>
-             * <li>minute: minutes.</li>
-             * <li>hour: hours.</li>
-             * <li>day: days.</li>
-             * <li>week: weeks.</li>
+             * <li>second: Seconds.</li>
+             * <li>minute: Minutes.</li>
+             * <li>hour: Hours.</li>
+             * <li>day: Days.</li>
+             * <li>week: Weeks.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -549,7 +549,7 @@ public class ListQuotaApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the quota increase application was submitted. The value is in ISO 8601 format, in UTC, and ends with Z.</p>
+             * <p>The time when the quota increase application was submitted. The time follows the ISO 8601 standard and is displayed in UTC, ending with Z.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-01-15T09:13:53Z</p>
@@ -560,7 +560,7 @@ public class ListQuotaApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The approved quota value of the quota increase application.</p>
+             * <p>The approved quota value for the quota increase application.</p>
              * 
              * <strong>example:</strong>
              * <p>101</p>
@@ -571,7 +571,7 @@ public class ListQuotaApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The approval comment for the quota increase application.</p>
+             * <p>The approval comments for the quota increase application.</p>
              * 
              * <strong>example:</strong>
              * <p>Agree</p>
@@ -582,7 +582,7 @@ public class ListQuotaApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The remarks of the quota increase application.</p>
+             * <p>The remarks for the quota increase application.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -593,7 +593,7 @@ public class ListQuotaApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The requested quota value of the quota increase application.</p>
+             * <p>The requested quota value for the quota increase application.</p>
              * 
              * <strong>example:</strong>
              * <p>101</p>
@@ -615,7 +615,7 @@ public class ListQuotaApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The effective period of the quota increase application. The value is in ISO 8601 format, in UTC, and ends with Z.</p>
+             * <p>The effective period of the quota increase application. Format: ISO 8601, UTC time, ending with Z.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-01-15T11:46:25Z</p>
@@ -626,7 +626,7 @@ public class ListQuotaApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration time of the quota increase application. The value is in ISO 8601 format, in UTC, and ends with Z.</p>
+             * <p>The expiration time of the quota increase application. The time follows the ISO 8601 standard and is displayed in UTC, ending with Z.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-01-17T11:46:25Z</p>
@@ -637,7 +637,7 @@ public class ListQuotaApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether a notification is sent for the quota increase application result. Valid values:</p>
+             * <p>Specifies whether to send notifications for the result of the quota increase application. Valid values:</p>
              * <ul>
              * <li>0: No.</li>
              * <li>3: Yes.</li>
@@ -682,7 +682,7 @@ public class ListQuotaApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Alibaba Cloud Resource Name (ARN) of the quota.</p>
+             * <p>The ARN of the quota.</p>
              * 
              * <strong>example:</strong>
              * <p>acs:quotas:<em>:120886317861</em>***:quota/csk/q_i5uzm3</p>
@@ -693,10 +693,10 @@ public class ListQuotaApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The quota category. Valid values:</p>
+             * <p>The quota type. Valid values:</p>
              * <ul>
-             * <li>CommonQuota (default): general quota.</li>
-             * <li>WhiteListLabel: privilege.</li>
+             * <li>CommonQuota (default): General quota.</li>
+             * <li>WhiteListLabel: Privilege.</li>
              * <li>FlowControl: API rate limit.</li>
              * </ul>
              * 

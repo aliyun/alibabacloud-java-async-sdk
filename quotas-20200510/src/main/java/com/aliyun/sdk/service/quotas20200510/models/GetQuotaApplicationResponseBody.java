@@ -363,7 +363,7 @@ public class GetQuotaApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the quota increase application was submitted.</p>
+             * <p>The time when the quota increase application was submitted. Format: ISO 8601, UTC time, ending with Z.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-01-19T09:25:56Z</p>
@@ -385,7 +385,7 @@ public class GetQuotaApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The review comments for the quota increase application.</p>
+             * <p>The approval comments for the quota increase application.</p>
              * 
              * <strong>example:</strong>
              * <p>Agree</p>
@@ -407,11 +407,10 @@ public class GetQuotaApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The quota dimension.</p>
-             * <p>Format: <code>{&quot;regionId&quot;:&quot;region&quot;}</code>.</p>
+             * <p>The quota dimension. Format: <code>{&quot;regionId&quot;:&quot;region&quot;}</code>. Example of a region dimension: <code>{&quot;regionId&quot;:&quot;cn-shanghai&quot;}</code> or <code>{&quot;regionId&quot;:&quot;cn-hangzhou&quot;}</code>.</p>
              * 
              * <strong>example:</strong>
-             * <p>[&quot;cn-shanghai&quot;,&quot;cn-hangzhou&quot;]</p>
+             * <p>{&quot;regionId&quot;:&quot;cn-shanghai&quot;}</p>
              */
             public Builder dimension(java.util.Map<String, ?> dimension) {
                 this.dimension = dimension;
@@ -419,7 +418,7 @@ public class GetQuotaApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The effective period of the quota.</p>
+             * <p>The effective period of the quota. Format: YYYY-MM-DD HH:mm:ss, without a time zone identity.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-01-19 15:30:00</p>
@@ -430,7 +429,7 @@ public class GetQuotaApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the quota expires.</p>
+             * <p>The time when the quota expires. Format: YYYY-MM-DD HH:mm:ss, without a time zone identifier.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-06-29 15:30:00</p>
@@ -443,9 +442,9 @@ public class GetQuotaApplicationResponseBody extends TeaModel {
             /**
              * <p>The notification type. Valid values:</p>
              * <ul>
-             * <li>0: no notification</li>
-             * <li>1: email notification</li>
-             * <li>2: SMS notification</li>
+             * <li>0: No notification.</li>
+             * <li>1: Email notification.</li>
+             * <li>2: SMS notification.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -479,7 +478,7 @@ public class GetQuotaApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ARN of the quota.</p>
+             * <p>The quota ARN.</p>
              * 
              * <strong>example:</strong>
              * <p>acs:quotas:cn-hangzhou:120886317861****:quota/ecs/q_security-groups/</p>
@@ -492,9 +491,9 @@ public class GetQuotaApplicationResponseBody extends TeaModel {
             /**
              * <p>The quota category. Valid values:</p>
              * <ul>
-             * <li>CommonQuota: general quota</li>
-             * <li>FlowControl: API rate limit</li>
-             * <li>WhiteListLabel: privilege</li>
+             * <li>CommonQuota: General quota.</li>
+             * <li>FlowControl: API rate limit.</li>
+             * <li>WhiteListLabel: Privilege.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -552,14 +551,10 @@ public class GetQuotaApplicationResponseBody extends TeaModel {
             /**
              * <p>The approval status of the quota increase application. Valid values:</p>
              * <ul>
-             * <li><p>Disagree: Rejected.</p>
-             * </li>
-             * <li><p>Agree: Approved.</p>
-             * </li>
-             * <li><p>Process: Under review.</p>
-             * </li>
-             * <li><p>Cancel: Closed.</p>
-             * </li>
+             * <li>Disagree: Rejected.</li>
+             * <li>Agree: Approved.</li>
+             * <li>Process: Under review.</li>
+             * <li>Cancel: Closed.</li>
              * </ul>
              * 
              * <strong>example:</strong>

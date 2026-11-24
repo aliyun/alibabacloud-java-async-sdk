@@ -171,7 +171,10 @@ public class ListQuotaUtilizationReportResponseBody extends TeaModel {
         } 
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RAM.PERMISSION.DENIED</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -179,7 +182,10 @@ public class ListQuotaUtilizationReportResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMsg.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>You are not authorized to do this action or the API input parameter is invalid.</p>
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -187,7 +193,10 @@ public class ListQuotaUtilizationReportResponseBody extends TeaModel {
         }
 
         /**
-         * GeneratedAt.
+         * <p>The data generation time or statistical date. For general quotas, the time is in UTC and formatted as yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot;. For API rate quotas, the date is formatted as yyyy-MM-dd.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-10-26T06:24:57Z</p>
          */
         public Builder generatedAt(String generatedAt) {
             this.generatedAt = generatedAt;
@@ -195,7 +204,10 @@ public class ListQuotaUtilizationReportResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The supplementary description of the report status, such as report generation in progress, report generation needs to be started first, or a newer report is available for re-query. Applications should use Status to determine the status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Quota utilization data is available.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -203,7 +215,10 @@ public class ListQuotaUtilizationReportResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token used to query the next page. An empty value indicates that no next page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJvZmZzZXQiOjEwLCJvdHNOZXh0VG9rZW4iOiJDQUVTR3dvWkNoY0tFM1J2ZEdGc1gzVnpZV2RsWDNCbGNtTmxiblFRQVJnQkl1RUJDZ2tCQUFBQUFBQUFXVUFLMHdFRHpnQUFBREZUTXpFek9ETXdNemN6TnpNNE16VXpPVE0xTXpjek5qTXpNekV6TlRNNE16Z3VVek01TXpjek5UTTJOalkyTWpZeE16Y3laRFl5TmpJek16WXhNbVF6TkRNMk16RXpOREprTmpFek9UTTRNemN5WkRZMk16WTJORE16TXpVMk16TXhNemt6TURZMk16RXpNUzVUTmpFMk16YzBOamsyWmpabE56UTNNall4TmprMll5NVRNelkyTWpZMU16a3pPRE0yTmpRek1qSmtNekV6TlRNeU5qRXlaRE0wTXpFek1UWTJNbVEyTWpZME16TXpNVEprTXpNMk16WXlOalV6TkRNMU16VXpNalkwTXpVek1qTTMiLCJ0YXNrSWQiOiI5NzU2ZmJhNy1iYjNhLTQ2MTQtYTk4Ny1mNmQzNWMxOTBmMTEiLCJ1aWQiOiIxODA3Nzg1OTU3NjMxNTg4IiwidXRpbGl6YXRpb25TdGF0dXNlcyI6IiJ9</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -211,7 +226,7 @@ public class ListQuotaUtilizationReportResponseBody extends TeaModel {
         }
 
         /**
-         * Quotas.
+         * <p>The list of quota usage on the current page. An empty list is returned if no matching data exists or no general quota report is available.</p>
          */
         public Builder quotas(java.util.List<Quotas> quotas) {
             this.quotas = quotas;
@@ -219,7 +234,10 @@ public class ListQuotaUtilizationReportResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7ED584FB-ECBF-4A2A-969D-F54D25EFABF9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -227,7 +245,18 @@ public class ListQuotaUtilizationReportResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the query result for the quota utilization report. Valid values:</p>
+         * <ul>
+         * <li><p>AVAILABLE: The data is available for query.</p>
+         * </li>
+         * <li><p>GENERATING: A new report is being generated. If an unexpired historical report exists, the most recent historical report is returned.</p>
+         * </li>
+         * <li><p>UNAVAILABLE: No general quota report is available. You must call StartQuotaUtilizationReport to start report generation first.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AVAILABLE</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -235,7 +264,14 @@ public class ListQuotaUtilizationReportResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call is successful.</li>
+         * <li>false: The call fails.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -243,7 +279,10 @@ public class ListQuotaUtilizationReportResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries that meet all filter conditions in the current report, rather than the number of entries on the current page. The value is 0 if no matching entries exist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -309,7 +348,17 @@ public class ListQuotaUtilizationReportResponseBody extends TeaModel {
             } 
 
             /**
-             * PeriodUnit.
+             * <p>The unit of the quota calculation period. Valid values:</p>
+             * <ul>
+             * <li>second: Seconds.</li>
+             * <li>minute: Minutes.</li>
+             * <li>hour: Hours.</li>
+             * <li>day: Days.</li>
+             * <li>week: Weeks.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>second</p>
              */
             public Builder periodUnit(String periodUnit) {
                 this.periodUnit = periodUnit;
@@ -317,7 +366,10 @@ public class ListQuotaUtilizationReportResponseBody extends TeaModel {
             }
 
             /**
-             * PeriodValue.
+             * <p>The value of the quota calculation period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder periodValue(Integer periodValue) {
                 this.periodValue = periodValue;
@@ -423,7 +475,15 @@ public class ListQuotaUtilizationReportResponseBody extends TeaModel {
             } 
 
             /**
-             * AlgoType.
+             * <p>The type of the throttling algorithm. Valid values:</p>
+             * <ul>
+             * <li>FixedWindow: Fixed window.</li>
+             * <li>TokenBucket: Token bucket.</li>
+             * <li>Concurrency: Concurrency limit.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>FixedWindow</p>
              */
             public Builder algoType(String algoType) {
                 this.algoType = algoType;
@@ -431,7 +491,7 @@ public class ListQuotaUtilizationReportResponseBody extends TeaModel {
             }
 
             /**
-             * Period.
+             * <p>The time period. This parameter is returned only for FixedWindow and is empty for other algorithms.</p>
              */
             public Builder period(Period period) {
                 this.period = period;
@@ -439,7 +499,10 @@ public class ListQuotaUtilizationReportResponseBody extends TeaModel {
             }
 
             /**
-             * RefillInterval.
+             * <p>The time interval between two token refills. This parameter is returned only for TokenBucket and is empty for other algorithms. The time unit must be confirmed with the upstream service and is not declared in the current code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder refillInterval(Integer refillInterval) {
                 this.refillInterval = refillInterval;
@@ -447,7 +510,10 @@ public class ListQuotaUtilizationReportResponseBody extends TeaModel {
             }
 
             /**
-             * TokensPerRefill.
+             * <p>The number of tokens added per refill. This parameter is returned only for TokenBucket and is empty for other algorithms.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder tokensPerRefill(Integer tokensPerRefill) {
                 this.tokensPerRefill = tokensPerRefill;
@@ -455,7 +521,10 @@ public class ListQuotaUtilizationReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalQuota.
+             * <p>The quota value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalQuota(Double totalQuota) {
                 this.totalQuota = totalQuota;
@@ -535,7 +604,12 @@ public class ListQuotaUtilizationReportResponseBody extends TeaModel {
             } 
 
             /**
-             * MetricDimensions.
+             * <p>The CloudMonitor monitoring dimensions.</p>
+             * <p>Format: a collection of key:value pairs. Example:
+             * <code>{&quot;productCode&quot;:&quot;***&quot;,&quot;metricKey&quot;:&quot;***&quot;,&quot;regionId&quot;:&quot;***&quot;,&quot;label&quot;:&quot;***&quot;}</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;regionId&quot;:&quot;cn-hangzhou&quot;}</p>
              */
             public Builder metricDimensions(java.util.Map<String, String> metricDimensions) {
                 this.metricDimensions = metricDimensions;
@@ -543,7 +617,10 @@ public class ListQuotaUtilizationReportResponseBody extends TeaModel {
             }
 
             /**
-             * MetricName.
+             * <p>The <a href="https://cms.console.aliyun.com/metric-meta/acs_ecs_dashboard/ecs">monitored metric</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Usage</p>
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -551,7 +628,10 @@ public class ListQuotaUtilizationReportResponseBody extends TeaModel {
             }
 
             /**
-             * MetricNamespace.
+             * <p>The namespace of the CloudMonitor monitoring data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs_quotas_flowcontrol</p>
              */
             public Builder metricNamespace(String metricNamespace) {
                 this.metricNamespace = metricNamespace;
@@ -800,7 +880,10 @@ public class ListQuotaUtilizationReportResponseBody extends TeaModel {
             } 
 
             /**
-             * Adjustable.
+             * <p>Indicates whether the quota is adjustable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder adjustable(Boolean adjustable) {
                 this.adjustable = adjustable;
@@ -808,7 +891,10 @@ public class ListQuotaUtilizationReportResponseBody extends TeaModel {
             }
 
             /**
-             * Consumable.
+             * <p>Indicates whether the used quota is displayed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder consumable(Boolean consumable) {
                 this.consumable = consumable;
@@ -816,7 +902,10 @@ public class ListQuotaUtilizationReportResponseBody extends TeaModel {
             }
 
             /**
-             * Dimensions.
+             * <p>The quota dimensions. Format: <code>{&quot;regionId&quot;:&quot;region ID&quot;}</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;regionId&quot;:&quot;cn-hangzhou&quot;}</p>
              */
             public Builder dimensions(java.util.Map<String, String> dimensions) {
                 this.dimensions = dimensions;
@@ -824,7 +913,7 @@ public class ListQuotaUtilizationReportResponseBody extends TeaModel {
             }
 
             /**
-             * FlowControlAlgo.
+             * <p>The traffic throttling algorithms.</p>
              */
             public Builder flowControlAlgo(FlowControlAlgo flowControlAlgo) {
                 this.flowControlAlgo = flowControlAlgo;
@@ -832,7 +921,10 @@ public class ListQuotaUtilizationReportResponseBody extends TeaModel {
             }
 
             /**
-             * ProductCode.
+             * <p>The abbreviation of the cloud service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -840,7 +932,10 @@ public class ListQuotaUtilizationReportResponseBody extends TeaModel {
             }
 
             /**
-             * QuotaActionCode.
+             * <p>The quota ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>q_security-groups</p>
              */
             public Builder quotaActionCode(String quotaActionCode) {
                 this.quotaActionCode = quotaActionCode;
@@ -848,7 +943,10 @@ public class ListQuotaUtilizationReportResponseBody extends TeaModel {
             }
 
             /**
-             * QuotaArn.
+             * <p>The quota ARN.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:quotas:cn-hangzhou:120886317861****:quota/ecs/q_security-groups</p>
              */
             public Builder quotaArn(String quotaArn) {
                 this.quotaArn = quotaArn;
@@ -856,7 +954,10 @@ public class ListQuotaUtilizationReportResponseBody extends TeaModel {
             }
 
             /**
-             * QuotaCategory.
+             * <p>The quota type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CommonQuota</p>
              */
             public Builder quotaCategory(String quotaCategory) {
                 this.quotaCategory = quotaCategory;
@@ -864,7 +965,10 @@ public class ListQuotaUtilizationReportResponseBody extends TeaModel {
             }
 
             /**
-             * QuotaDescription.
+             * <p>The quota description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The maximum number of security groups that can be owned by the current account.</p>
              */
             public Builder quotaDescription(String quotaDescription) {
                 this.quotaDescription = quotaDescription;
@@ -872,7 +976,10 @@ public class ListQuotaUtilizationReportResponseBody extends TeaModel {
             }
 
             /**
-             * QuotaName.
+             * <p>The quota name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.g5.2xlarge</p>
              */
             public Builder quotaName(String quotaName) {
                 this.quotaName = quotaName;
@@ -880,7 +987,10 @@ public class ListQuotaUtilizationReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalQuota.
+             * <p>The quota value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder totalQuota(Double totalQuota) {
                 this.totalQuota = totalQuota;
@@ -888,7 +998,10 @@ public class ListQuotaUtilizationReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalUsage.
+             * <p>The quota usage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1009</p>
              */
             public Builder totalUsage(Double totalUsage) {
                 this.totalUsage = totalUsage;
@@ -896,7 +1009,10 @@ public class ListQuotaUtilizationReportResponseBody extends TeaModel {
             }
 
             /**
-             * UnadjustableDetail.
+             * <p>The reason why the quota is not adjustable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>applicationProcess</p>
              */
             public Builder unadjustableDetail(String unadjustableDetail) {
                 this.unadjustableDetail = unadjustableDetail;
@@ -904,7 +1020,10 @@ public class ListQuotaUtilizationReportResponseBody extends TeaModel {
             }
 
             /**
-             * UsageMetric.
+             * <p>The monitoring information of the quota usage in CloudMonitor.</p>
+             * <blockquote>
+             * <p>An empty value indicates that no monitoring data for this quota exists in CloudMonitor.</p>
+             * </blockquote>
              */
             public Builder usageMetric(UsageMetric usageMetric) {
                 this.usageMetric = usageMetric;
@@ -912,7 +1031,10 @@ public class ListQuotaUtilizationReportResponseBody extends TeaModel {
             }
 
             /**
-             * Utilization.
+             * <p>The quota utilization rate, without the percentage sign.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.1</p>
              */
             public Builder utilization(Double utilization) {
                 this.utilization = utilization;
@@ -920,7 +1042,15 @@ public class ListQuotaUtilizationReportResponseBody extends TeaModel {
             }
 
             /**
-             * UtilizationStatus.
+             * <p>The risk level determined by the returned Utilization value. Valid values:</p>
+             * <ul>
+             * <li>NORMAL: Less than 80%.</li>
+             * <li>WARN: Greater than or equal to 80% and less than 95%.</li>
+             * <li>CRITICAL: Greater than or equal to 95%.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>WARN</p>
              */
             public Builder utilizationStatus(String utilizationStatus) {
                 this.utilizationStatus = utilizationStatus;

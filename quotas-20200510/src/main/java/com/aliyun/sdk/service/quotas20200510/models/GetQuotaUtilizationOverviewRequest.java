@@ -59,7 +59,10 @@ public class GetQuotaUtilizationOverviewRequest extends Request {
         } 
 
         /**
-         * QuotaCategory.
+         * <p>CommonQuota, FlowControl</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CommonQuota</p>
          */
         public Builder quotaCategory(String quotaCategory) {
             this.putBodyParameter("QuotaCategory", quotaCategory);

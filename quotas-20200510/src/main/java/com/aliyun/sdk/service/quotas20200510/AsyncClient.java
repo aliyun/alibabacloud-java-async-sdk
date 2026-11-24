@@ -256,4 +256,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<UpdateQuotaAlarmResponse> updateQuotaAlarm(UpdateQuotaAlarmRequest request);
 
+    /**
+     * @param request the request parameters of WithdrawQuotaApplication  WithdrawQuotaApplicationRequest
+     * @return WithdrawQuotaApplicationResponse
+     */
+    CompletableFuture<WithdrawQuotaApplicationResponse> withdrawQuotaApplication(WithdrawQuotaApplicationRequest request);
+
 }

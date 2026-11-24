@@ -120,7 +120,7 @@ public class ListProductQuotasResponseBody extends TeaModel {
          * <p>Indicates whether a token for the next query is available.</p>
          * <ul>
          * <li>If NextToken is empty, it indicates that no subsequent query is available.</li>
-         * <li>If NextToken is returned, the value is the token used to start the next query.</li>
+         * <li>If NextToken has a return value, the value indicates the token for the next query.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -234,7 +234,7 @@ public class ListProductQuotasResponseBody extends TeaModel {
              * <p>The value of the quota calculation period.</p>
              * 
              * <strong>example:</strong>
-             * <p>{}</p>
+             * <p>1</p>
              */
             public Builder periodValue(Integer periodValue) {
                 this.periodValue = periodValue;
@@ -446,6 +446,9 @@ public class ListProductQuotasResponseBody extends TeaModel {
              * <p>The CloudMonitor monitoring dimensions.</p>
              * <p>Format: a collection of <code>key:value</code> pairs. Example:
              * <code>{&quot;productCode&quot;:&quot;***&quot;,&quot;metricKey&quot;:&quot;***&quot;,&quot;regionId&quot;:&quot;***&quot;,&quot;label&quot;:&quot;***&quot;}</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;productCode&quot;:&quot;ecs&quot;}</p>
              */
             public Builder metricDimensions(java.util.Map<String, String> metricDimensions) {
                 this.metricDimensions = metricDimensions;
@@ -453,7 +456,7 @@ public class ListProductQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the CloudMonitor monitoring metric.</p>
+             * <p>The CloudMonitor metric name.</p>
              * 
              * <strong>example:</strong>
              * <p>Usage</p>
@@ -464,7 +467,7 @@ public class ListProductQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The namespace of the CloudMonitor monitoring data.</p>
+             * <p>The CloudMonitor monitoring data namespace.</p>
              * 
              * <strong>example:</strong>
              * <p>acs_quotas_flowcontrol</p>
@@ -831,7 +834,10 @@ public class ListProductQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The range of quota values that can be applied for the current quota item, which serves as a reference for quota applications.</p>
+             * <p>The range of quota values that can be applied for the current quota item. This range is for reference when you apply for a quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[1010,10000]</p>
              */
             public Builder applicableRange(java.util.List<Float> applicableRange) {
                 this.applicableRange = applicableRange;
@@ -935,7 +941,7 @@ public class ListProductQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the quota.</p>
+             * <p>The quota ID.</p>
              * 
              * <strong>example:</strong>
              * <p>q_security-groups</p>
@@ -1020,7 +1026,10 @@ public class ListProductQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The range of quota values supported by the current quota item, which serves as a reference when you configure a quota template.</p>
+             * <p>The range of quota values supported by the current quota item. This range is for reference when you configure a quota template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[1009,10000]</p>
              */
             public Builder supportedRange(java.util.List<Float> supportedRange) {
                 this.supportedRange = supportedRange;

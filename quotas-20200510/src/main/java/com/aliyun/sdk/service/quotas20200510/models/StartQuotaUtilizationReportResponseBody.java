@@ -132,7 +132,10 @@ public class StartQuotaUtilizationReportResponseBody extends TeaModel {
         } 
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RAM.PERMISSION.DENIED</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -140,7 +143,10 @@ public class StartQuotaUtilizationReportResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMsg.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>You are not authorized to do this action or the API input parameter is invalid.</p>
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -148,7 +154,10 @@ public class StartQuotaUtilizationReportResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The description of the request processing result, such as report generation started or the allowed refresh time not reached. Use RefreshSuccess to determine the submission result instead of relying on the prompt text for programmatic evaluation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Quota utilization report generation has started</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -156,7 +165,10 @@ public class StartQuotaUtilizationReportResponseBody extends TeaModel {
         }
 
         /**
-         * NextRefreshTime.
+         * <p>The UTC time when the next refresh can be initiated, in the yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot; format, such as 2026-10-26T08:00:00Z. This parameter is returned when a task is not submitted due to refresh limits. This parameter is empty when a task is successfully submitted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-10-26T08:00:00Z</p>
          */
         public Builder nextRefreshTime(String nextRefreshTime) {
             this.nextRefreshTime = nextRefreshTime;
@@ -164,7 +176,10 @@ public class StartQuotaUtilizationReportResponseBody extends TeaModel {
         }
 
         /**
-         * RefreshSuccess.
+         * <p>Indicates whether the report generation task was successfully submitted. A value of true indicates that the asynchronous task was submitted, but the report is not yet generated. A value of false indicates that the refresh limit period has not ended and no new task was submitted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder refreshSuccess(Boolean refreshSuccess) {
             this.refreshSuccess = refreshSuccess;
@@ -172,7 +187,10 @@ public class StartQuotaUtilizationReportResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7ED584FB-ECBF-4A2A-969D-F54D25EFABF9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +198,14 @@ public class StartQuotaUtilizationReportResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call was successful.</li>
+         * <li>false: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

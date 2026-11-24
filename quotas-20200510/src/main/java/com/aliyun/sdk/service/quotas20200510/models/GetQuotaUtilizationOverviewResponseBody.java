@@ -145,7 +145,10 @@ public class GetQuotaUtilizationOverviewResponseBody extends TeaModel {
         } 
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RAM.PERMISSION.DENIED</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -153,7 +156,10 @@ public class GetQuotaUtilizationOverviewResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMsg.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>You are not authorized to do this action or the API input parameter is invalid.</p>
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -161,7 +167,10 @@ public class GetQuotaUtilizationOverviewResponseBody extends TeaModel {
         }
 
         /**
-         * GeneratedAt.
+         * <p>The data generation time or statistical date. For general quotas, the time is in UTC and formatted as yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot;. For API rate limits, the format is yyyy-MM-dd.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-10-21T07:30:10Z</p>
          */
         public Builder generatedAt(String generatedAt) {
             this.generatedAt = generatedAt;
@@ -169,7 +178,10 @@ public class GetQuotaUtilizationOverviewResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The supplementary description of the report status. Use Status to determine the status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Quota utilization data is available.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -177,7 +189,7 @@ public class GetQuotaUtilizationOverviewResponseBody extends TeaModel {
         }
 
         /**
-         * QuotaOverview.
+         * <p>The quota overview data.</p>
          */
         public Builder quotaOverview(QuotaOverview quotaOverview) {
             this.quotaOverview = quotaOverview;
@@ -185,7 +197,10 @@ public class GetQuotaUtilizationOverviewResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>920D8A47-26BB-49FA-A09F-F98D7DAA55F3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +208,18 @@ public class GetQuotaUtilizationOverviewResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The query result status of the quota utilization report. Valid values:</p>
+         * <ul>
+         * <li><p>AVAILABLE: The data is available.</p>
+         * </li>
+         * <li><p>GENERATING: A new report is being generated. If an unexpired historical report exists, the most recent historical report is returned.</p>
+         * </li>
+         * <li><p>UNAVAILABLE: No general quota report is available. You must call StartQuotaUtilizationReport to start report generation first.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AVAILABLE</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -201,7 +227,14 @@ public class GetQuotaUtilizationOverviewResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call is successful.</li>
+         * <li>false: The call fails.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -280,7 +313,10 @@ public class GetQuotaUtilizationOverviewResponseBody extends TeaModel {
             } 
 
             /**
-             * Adjustable.
+             * <p>The number of adjustable quotas in use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder adjustable(Long adjustable) {
                 this.adjustable = adjustable;
@@ -288,7 +324,10 @@ public class GetQuotaUtilizationOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * AdjustableRatio.
+             * <p>The adjustment rate of quotas in use, without the percentage sign.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder adjustableRatio(Double adjustableRatio) {
                 this.adjustableRatio = adjustableRatio;
@@ -296,7 +335,10 @@ public class GetQuotaUtilizationOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of quotas in use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder total(Long total) {
                 this.total = total;
@@ -376,7 +418,10 @@ public class GetQuotaUtilizationOverviewResponseBody extends TeaModel {
             } 
 
             /**
-             * Adjustable.
+             * <p>The number of adjustable quotas with a utilization rate exceeding 80%.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder adjustable(Long adjustable) {
                 this.adjustable = adjustable;
@@ -384,7 +429,10 @@ public class GetQuotaUtilizationOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * AdjustableRatio.
+             * <p>The adjustment rate of quotas with a utilization rate exceeding 80%, without the percentage sign.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder adjustableRatio(Double adjustableRatio) {
                 this.adjustableRatio = adjustableRatio;
@@ -392,7 +440,10 @@ public class GetQuotaUtilizationOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The number of quotas with a utilization rate exceeding 80%.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder total(Long total) {
                 this.total = total;
@@ -472,7 +523,10 @@ public class GetQuotaUtilizationOverviewResponseBody extends TeaModel {
             } 
 
             /**
-             * Adjustable.
+             * <p>The number of adjustable quotas with a utilization rate exceeding 95%.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder adjustable(Long adjustable) {
                 this.adjustable = adjustable;
@@ -480,7 +534,10 @@ public class GetQuotaUtilizationOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * AdjustableRatio.
+             * <p>The adjustment rate of quotas with a utilization rate exceeding 95%, without the percentage sign.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder adjustableRatio(Double adjustableRatio) {
                 this.adjustableRatio = adjustableRatio;
@@ -488,7 +545,10 @@ public class GetQuotaUtilizationOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The number of quotas with a utilization rate exceeding 95%.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder total(Long total) {
                 this.total = total;
@@ -568,7 +628,7 @@ public class GetQuotaUtilizationOverviewResponseBody extends TeaModel {
             } 
 
             /**
-             * InUse.
+             * <p>The quotas in use.</p>
              */
             public Builder inUse(InUse inUse) {
                 this.inUse = inUse;
@@ -576,7 +636,7 @@ public class GetQuotaUtilizationOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * Over80Percent.
+             * <p>The quotas with a utilization rate exceeding 80%.</p>
              */
             public Builder over80Percent(Over80Percent over80Percent) {
                 this.over80Percent = over80Percent;
@@ -584,7 +644,7 @@ public class GetQuotaUtilizationOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * Over95Percent.
+             * <p>The quotas with a utilization rate exceeding 95%.</p>
              */
             public Builder over95Percent(Over95Percent over95Percent) {
                 this.over95Percent = over95Percent;
