@@ -82,6 +82,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BatchDeleteConsumerAuthorizationRuleResponse> batchDeleteConsumerAuthorizationRule(BatchDeleteConsumerAuthorizationRuleRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Batch requests are processed individually after passing route ownership validation. If some routes fail to be published, other successfully published routes remain valid.</p>
+     * 
+     * @param request the request parameters of BatchDeployHttpApiRoutes  BatchDeployHttpApiRoutesRequest
+     * @return BatchDeployHttpApiRoutesResponse
+     */
+    CompletableFuture<BatchDeployHttpApiRoutesResponse> batchDeployHttpApiRoutes(BatchDeployHttpApiRoutesRequest request);
+
+    /**
      * @param request the request parameters of BatchExportHttpApis  BatchExportHttpApisRequest
      * @return BatchExportHttpApisResponse
      */
@@ -1095,6 +1104,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListBatchExportTasksResponse
      */
     CompletableFuture<ListBatchExportTasksResponse> listBatchExportTasks(ListBatchExportTasksRequest request);
+
+    /**
+     * @param request the request parameters of ListBatchImportTasks  ListBatchImportTasksRequest
+     * @return ListBatchImportTasksResponse
+     */
+    CompletableFuture<ListBatchImportTasksResponse> listBatchImportTasks(ListBatchImportTasksRequest request);
 
     /**
      * @param request the request parameters of ListChatSessions  ListChatSessionsRequest

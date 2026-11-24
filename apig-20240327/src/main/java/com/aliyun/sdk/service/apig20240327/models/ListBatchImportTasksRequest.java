@@ -1,0 +1,262 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.apig20240327.models;
+
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link ListBatchImportTasksRequest} extends {@link RequestModel}
+ *
+ * <p>ListBatchImportTasksRequest</p>
+ */
+public class ListBatchImportTasksRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("endTime")
+    private String endTime;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("gatewayId")
+    private String gatewayId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("maxResults")
+    private Integer maxResults;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("nextToken")
+    private String nextToken;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pageNumber")
+    private Integer pageNumber;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pageSize")
+    private Integer pageSize;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("startTime")
+    private String startTime;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("statuses")
+    private String statuses;
+
+    private ListBatchImportTasksRequest(Builder builder) {
+        super(builder);
+        this.endTime = builder.endTime;
+        this.gatewayId = builder.gatewayId;
+        this.maxResults = builder.maxResults;
+        this.nextToken = builder.nextToken;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
+        this.startTime = builder.startTime;
+        this.statuses = builder.statuses;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static ListBatchImportTasksRequest create() {
+        return builder().build();
+    }
+
+@Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return endTime
+     */
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    /**
+     * @return gatewayId
+     */
+    public String getGatewayId() {
+        return this.gatewayId;
+    }
+
+    /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
+     * @return startTime
+     */
+    public String getStartTime() {
+        return this.startTime;
+    }
+
+    /**
+     * @return statuses
+     */
+    public String getStatuses() {
+        return this.statuses;
+    }
+
+    public static final class Builder extends Request.Builder<ListBatchImportTasksRequest, Builder> {
+        private String endTime; 
+        private String gatewayId; 
+        private Integer maxResults; 
+        private String nextToken; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
+        private String startTime; 
+        private String statuses; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(ListBatchImportTasksRequest request) {
+            super(request);
+            this.endTime = request.endTime;
+            this.gatewayId = request.gatewayId;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.startTime = request.startTime;
+            this.statuses = request.statuses;
+        } 
+
+        /**
+         * <p>The end time of the creation time range. Specify the time in RFC 3339 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-05-26T11:00:00Z</p>
+         */
+        public Builder endTime(String endTime) {
+            this.putQueryParameter("endTime", endTime);
+            this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * <p>The gateway instance ID. If specified, only tasks under this gateway are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-xxx</p>
+         */
+        public Builder gatewayId(String gatewayId) {
+            this.putQueryParameter("gatewayId", gatewayId);
+            this.gatewayId = gatewayId;
+            return this;
+        }
+
+        /**
+         * <p>The maximum number of tasks to return in a single request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.putQueryParameter("maxResults", maxResults);
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * <p>The start mark for the paging query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>token-xxx</p>
+         */
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("nextToken", nextToken);
+            this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("pageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("pageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * <p>The start time of the creation time range. Specify the time in RFC 3339 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-05-26T10:00:00Z</p>
+         */
+        public Builder startTime(String startTime) {
+            this.putQueryParameter("startTime", startTime);
+            this.startTime = startTime;
+            return this;
+        }
+
+        /**
+         * <p>The list of task statuses. Separate multiple statuses with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Pending,Running</p>
+         */
+        public Builder statuses(String statuses) {
+            this.putQueryParameter("statuses", statuses);
+            this.statuses = statuses;
+            return this;
+        }
+
+        @Override
+        public ListBatchImportTasksRequest build() {
+            return new ListBatchImportTasksRequest(this);
+        } 
+
+    } 
+
+}

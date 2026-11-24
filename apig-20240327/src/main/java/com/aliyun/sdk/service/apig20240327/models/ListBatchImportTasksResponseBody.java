@@ -1,0 +1,541 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.apig20240327.models;
+
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link ListBatchImportTasksResponseBody} extends {@link TeaModel}
+ *
+ * <p>ListBatchImportTasksResponseBody</p>
+ */
+public class ListBatchImportTasksResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("code")
+    private String code;
+
+    @com.aliyun.core.annotation.NameInMap("data")
+    private Data data;
+
+    @com.aliyun.core.annotation.NameInMap("maxResults")
+    private Integer maxResults;
+
+    @com.aliyun.core.annotation.NameInMap("message")
+    private String message;
+
+    @com.aliyun.core.annotation.NameInMap("nextToken")
+    private String nextToken;
+
+    @com.aliyun.core.annotation.NameInMap("requestId")
+    private String requestId;
+
+    private ListBatchImportTasksResponseBody(Builder builder) {
+        this.code = builder.code;
+        this.data = builder.data;
+        this.maxResults = builder.maxResults;
+        this.message = builder.message;
+        this.nextToken = builder.nextToken;
+        this.requestId = builder.requestId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static ListBatchImportTasksResponseBody create() {
+        return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return code
+     */
+    public String getCode() {
+        return this.code;
+    }
+
+    /**
+     * @return data
+     */
+    public Data getData() {
+        return this.data;
+    }
+
+    /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public static final class Builder {
+        private String code; 
+        private Data data; 
+        private Integer maxResults; 
+        private String message; 
+        private String nextToken; 
+        private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListBatchImportTasksResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.maxResults = model.maxResults;
+            this.message = model.message;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+        } 
+
+        /**
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
+         */
+        public Builder code(String code) {
+            this.code = code;
+            return this;
+        }
+
+        /**
+         * <p>The response data.</p>
+         */
+        public Builder data(Data data) {
+            this.data = data;
+            return this;
+        }
+
+        /**
+         * <p>The maximum number of records returned in the current request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
+         */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
+
+        /**
+         * <p>The pagination token for the next query. This parameter is empty if no more results are available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>token-xxx</p>
+         */
+        public Builder nextToken(String nextToken) {
+            this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CE534E1D-FCE4-5930-B784-E055EC1AEE6F</p>
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        public ListBatchImportTasksResponseBody build() {
+            return new ListBatchImportTasksResponseBody(this);
+        } 
+
+    } 
+
+    /**
+     * 
+     * {@link ListBatchImportTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListBatchImportTasksResponseBody</p>
+     */
+    public static class Items extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("createTime")
+        private String createTime;
+
+        @com.aliyun.core.annotation.NameInMap("errorMessage")
+        private String errorMessage;
+
+        @com.aliyun.core.annotation.NameInMap("gatewayId")
+        private String gatewayId;
+
+        @com.aliyun.core.annotation.NameInMap("processedCount")
+        private Integer processedCount;
+
+        @com.aliyun.core.annotation.NameInMap("status")
+        private String status;
+
+        @com.aliyun.core.annotation.NameInMap("taskId")
+        private String taskId;
+
+        @com.aliyun.core.annotation.NameInMap("taskType")
+        private String taskType;
+
+        @com.aliyun.core.annotation.NameInMap("totalCount")
+        private Integer totalCount;
+
+        private Items(Builder builder) {
+            this.createTime = builder.createTime;
+            this.errorMessage = builder.errorMessage;
+            this.gatewayId = builder.gatewayId;
+            this.processedCount = builder.processedCount;
+            this.status = builder.status;
+            this.taskId = builder.taskId;
+            this.taskType = builder.taskType;
+            this.totalCount = builder.totalCount;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Items create() {
+            return builder().build();
+        }
+
+        /**
+         * @return createTime
+         */
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        /**
+         * @return errorMessage
+         */
+        public String getErrorMessage() {
+            return this.errorMessage;
+        }
+
+        /**
+         * @return gatewayId
+         */
+        public String getGatewayId() {
+            return this.gatewayId;
+        }
+
+        /**
+         * @return processedCount
+         */
+        public Integer getProcessedCount() {
+            return this.processedCount;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return taskId
+         */
+        public String getTaskId() {
+            return this.taskId;
+        }
+
+        /**
+         * @return taskType
+         */
+        public String getTaskType() {
+            return this.taskType;
+        }
+
+        /**
+         * @return totalCount
+         */
+        public Integer getTotalCount() {
+            return this.totalCount;
+        }
+
+        public static final class Builder {
+            private String createTime; 
+            private String errorMessage; 
+            private String gatewayId; 
+            private Integer processedCount; 
+            private String status; 
+            private String taskId; 
+            private String taskType; 
+            private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.createTime = model.createTime;
+                this.errorMessage = model.errorMessage;
+                this.gatewayId = model.gatewayId;
+                this.processedCount = model.processedCount;
+                this.status = model.status;
+                this.taskId = model.taskId;
+                this.taskType = model.taskType;
+                this.totalCount = model.totalCount;
+            } 
+
+            /**
+             * <p>The time when the task was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-05-26T10:00:00Z</p>
+             */
+            public Builder createTime(String createTime) {
+                this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>some apis failed</p>
+             */
+            public Builder errorMessage(String errorMessage) {
+                this.errorMessage = errorMessage;
+                return this;
+            }
+
+            /**
+             * <p>The gateway instance ID associated with the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-xxx</p>
+             */
+            public Builder gatewayId(String gatewayId) {
+                this.gatewayId = gatewayId;
+                return this;
+            }
+
+            /**
+             * <p>The number of processed items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
+             */
+            public Builder processedCount(Integer processedCount) {
+                this.processedCount = processedCount;
+                return this;
+            }
+
+            /**
+             * <p>The status of the task. Valid values: Pending, Running, Success, PartialSuccess, and Failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>task-xxx</p>
+             */
+            public Builder taskId(String taskId) {
+                this.taskId = taskId;
+                return this;
+            }
+
+            /**
+             * <p>The type of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BatchImport</p>
+             */
+            public Builder taskType(String taskType) {
+                this.taskType = taskType;
+                return this;
+            }
+
+            /**
+             * <p>The total number of tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
+             */
+            public Builder totalCount(Integer totalCount) {
+                this.totalCount = totalCount;
+                return this;
+            }
+
+            public Items build() {
+                return new Items(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListBatchImportTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListBatchImportTasksResponseBody</p>
+     */
+    public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("items")
+        private java.util.List<Items> items;
+
+        @com.aliyun.core.annotation.NameInMap("pageNumber")
+        private Integer pageNumber;
+
+        @com.aliyun.core.annotation.NameInMap("pageSize")
+        private Integer pageSize;
+
+        @com.aliyun.core.annotation.NameInMap("totalSize")
+        private Integer totalSize;
+
+        private Data(Builder builder) {
+            this.items = builder.items;
+            this.pageNumber = builder.pageNumber;
+            this.pageSize = builder.pageSize;
+            this.totalSize = builder.totalSize;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Data create() {
+            return builder().build();
+        }
+
+        /**
+         * @return items
+         */
+        public java.util.List<Items> getItems() {
+            return this.items;
+        }
+
+        /**
+         * @return pageNumber
+         */
+        public Integer getPageNumber() {
+            return this.pageNumber;
+        }
+
+        /**
+         * @return pageSize
+         */
+        public Integer getPageSize() {
+            return this.pageSize;
+        }
+
+        /**
+         * @return totalSize
+         */
+        public Integer getTotalSize() {
+            return this.totalSize;
+        }
+
+        public static final class Builder {
+            private java.util.List<Items> items; 
+            private Integer pageNumber; 
+            private Integer pageSize; 
+            private Integer totalSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.items = model.items;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalSize = model.totalSize;
+            } 
+
+            /**
+             * <p>The list of tasks. Tasks are returned in descending order of creation time, with the latest tasks first.</p>
+             */
+            public Builder items(java.util.List<Items> items) {
+                this.items = items;
+                return this;
+            }
+
+            /**
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder pageNumber(Integer pageNumber) {
+                this.pageNumber = pageNumber;
+                return this;
+            }
+
+            /**
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
+             */
+            public Builder pageSize(Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+            }
+
+            /**
+             * <p>The total number of tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder totalSize(Integer totalSize) {
+                this.totalSize = totalSize;
+                return this;
+            }
+
+            public Data build() {
+                return new Data(this);
+            } 
+
+        } 
+
+    }
+}

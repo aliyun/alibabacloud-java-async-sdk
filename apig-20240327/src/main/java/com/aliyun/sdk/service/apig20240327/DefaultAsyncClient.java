@@ -163,6 +163,27 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Batch requests are processed individually after passing route ownership validation. If some routes fail to be published, other successfully published routes remain valid.</p>
+     * 
+     * @param request the request parameters of BatchDeployHttpApiRoutes  BatchDeployHttpApiRoutesRequest
+     * @return BatchDeployHttpApiRoutesResponse
+     */
+    @Override
+    public CompletableFuture<BatchDeployHttpApiRoutesResponse> batchDeployHttpApiRoutes(BatchDeployHttpApiRoutesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("BatchDeployHttpApiRoutes").setMethod(HttpMethod.POST).setPathRegex("/v1/http-apis/{httpApiId}/routes/batch-deploy").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BatchDeployHttpApiRoutesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<BatchDeployHttpApiRoutesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of BatchExportHttpApis  BatchExportHttpApisRequest
      * @return BatchExportHttpApisResponse
      */
@@ -2944,6 +2965,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListBatchExportTasksResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListBatchImportTasks  ListBatchImportTasksRequest
+     * @return ListBatchImportTasksResponse
+     */
+    @Override
+    public CompletableFuture<ListBatchImportTasksResponse> listBatchImportTasks(ListBatchImportTasksRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListBatchImportTasks").setMethod(HttpMethod.GET).setPathRegex("/v1/http-api-batch-import-tasks").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListBatchImportTasksResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListBatchImportTasksResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
