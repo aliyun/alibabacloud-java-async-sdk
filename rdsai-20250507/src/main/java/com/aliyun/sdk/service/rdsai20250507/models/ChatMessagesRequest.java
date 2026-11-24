@@ -142,7 +142,7 @@ public class ChatMessagesRequest extends Request {
         }
 
         /**
-         * <p>The event output type. Valid values: inline and separate. Default value: inline. When set to inline, tool calling invoke events, child node events, and document events are unified into the answer field of the event = message. When set to separate, tool calling invoke events, child node events, and document events have their own respective events.</p>
+         * <p>The event output mode. Valid values: inline and separate. Default value: inline. When set to inline, tool invoke events, child node events, and document events are unified into the answer field of the event where event = message. When set to separate, tool invoke events, child node events, and document events have their own respective events.</p>
          * 
          * <strong>example:</strong>
          * <p>inline</p>
@@ -189,7 +189,7 @@ public class ChatMessagesRequest extends Request {
          * <p>The query content.</p>
          * 
          * <strong>example:</strong>
-         * <p>Instance rm-bp14as9914vd3**** disk usage, and whether capacity expansion is required</p>
+         * <p>Disk usage of instance rm-bp14as9914vd3****, and whether it needs to be scaled up</p>
          */
         public Builder query(String query) {
             this.putQueryParameter("Query", query);
@@ -283,7 +283,7 @@ public class ChatMessagesRequest extends Request {
             } 
 
             /**
-             * <p>The file transfer method. Set this parameter to local_file when referencing an uploaded file, and provide the UploadFileId at the same time.</p>
+             * <p>The file transfer method. Set this parameter to local_file and provide the UploadFileId when referencing an uploaded file.</p>
              * 
              * <strong>example:</strong>
              * <p>local_file</p>
@@ -305,7 +305,7 @@ public class ChatMessagesRequest extends Request {
             }
 
             /**
-             * <p>The identifier of the uploaded file. The ContextDB management agent can use the UploadFileId returned by the current workspace knowledge base.</p>
+             * <p>The identifier of the uploaded file. The ContextDB management agent can use the UploadFileId returned by the knowledge base of the current workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>00000000-0000-4000-8000-000000000001</p>
@@ -346,6 +346,9 @@ public class ChatMessagesRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("EnableThinking")
         private String enableThinking;
 
+        @com.aliyun.core.annotation.NameInMap("FlowId")
+        private String flowId;
+
         @com.aliyun.core.annotation.NameInMap("Language")
         private String language;
 
@@ -373,6 +376,7 @@ public class ChatMessagesRequest extends Request {
         private Inputs(Builder builder) {
             this.customAgentId = builder.customAgentId;
             this.enableThinking = builder.enableThinking;
+            this.flowId = builder.flowId;
             this.language = builder.language;
             this.modelId = builder.modelId;
             this.regionId = builder.regionId;
@@ -403,6 +407,13 @@ public class ChatMessagesRequest extends Request {
          */
         public String getEnableThinking() {
             return this.enableThinking;
+        }
+
+        /**
+         * @return flowId
+         */
+        public String getFlowId() {
+            return this.flowId;
         }
 
         /**
@@ -464,6 +475,7 @@ public class ChatMessagesRequest extends Request {
         public static final class Builder {
             private String customAgentId; 
             private String enableThinking; 
+            private String flowId; 
             private String language; 
             private String modelId; 
             private String regionId; 
@@ -479,6 +491,7 @@ public class ChatMessagesRequest extends Request {
             private Builder(Inputs model) {
                 this.customAgentId = model.customAgentId;
                 this.enableThinking = model.enableThinking;
+                this.flowId = model.flowId;
                 this.language = model.language;
                 this.modelId = model.modelId;
                 this.regionId = model.regionId;
@@ -490,7 +503,7 @@ public class ChatMessagesRequest extends Request {
             } 
 
             /**
-             * <p>The custom agent ID for the user.</p>
+             * <p>The custom agent ID.</p>
              * 
              * <strong>example:</strong>
              * <p>d1b7d639-f34e-44c7-8231-987da14d****</p>
@@ -508,6 +521,17 @@ public class ChatMessagesRequest extends Request {
              */
             public Builder enableThinking(String enableThinking) {
                 this.enableThinking = enableThinking;
+                return this;
+            }
+
+            /**
+             * <p>The IM flow ID. Used to bind messages to a registered IM channel when a conversation is initiated through an IM channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>flow-xxxxxxxxxx</p>
+             */
+            public Builder flowId(String flowId) {
+                this.flowId = flowId;
                 return this;
             }
 
@@ -545,7 +569,7 @@ public class ChatMessagesRequest extends Request {
             }
 
             /**
-             * <p>The tool approval call ID for resuming execution. Pass this parameter after the console completes all decisions for the current approval round to continue the interrupted ChatMessage loop. Do not pass this parameter for regular conversations.</p>
+             * <p>The tool approval call ID for resuming execution. Pass this parameter after the console completes all decisions for the current approval round to continue the interrupted ChatMessage loop. Do not pass this parameter for normal conversations.</p>
              * 
              * <strong>example:</strong>
              * <p>call-example</p>
@@ -578,7 +602,7 @@ public class ChatMessagesRequest extends Request {
             }
 
             /**
-             * <p>The tool approval mode for the current conversation. Valid values: read_only (read-only, rejects write tools), manual (write tools require manual approval), and auto (automatically determined by the approval sub-agent; escalated to manual approval when needs_human is returned). Passing this parameter updates the approval mode for the current conversation.</p>
+             * <p>Specifies the tool approval mode for the current conversation. Valid values: read_only (read-only, rejects write tools), manual (write tools require manual approval), and auto (automatically determined by the approval sub-agent; escalated to manual approval when needs_human is returned). If specified, updates the approval mode of the current conversation.</p>
              * 
              * <strong>example:</strong>
              * <p>manual</p>

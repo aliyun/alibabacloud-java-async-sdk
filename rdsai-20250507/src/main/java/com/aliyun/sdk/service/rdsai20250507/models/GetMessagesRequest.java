@@ -30,6 +30,10 @@ public class GetMessagesRequest extends Request {
     private String firstId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FlowId")
+    private String flowId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Limit")
     private Long limit;
 
@@ -42,6 +46,7 @@ public class GetMessagesRequest extends Request {
         this.conversationId = builder.conversationId;
         this.eventMode = builder.eventMode;
         this.firstId = builder.firstId;
+        this.flowId = builder.flowId;
         this.limit = builder.limit;
         this.workspaceId = builder.workspaceId;
     }
@@ -81,6 +86,13 @@ public class GetMessagesRequest extends Request {
     }
 
     /**
+     * @return flowId
+     */
+    public String getFlowId() {
+        return this.flowId;
+    }
+
+    /**
      * @return limit
      */
     public Long getLimit() {
@@ -98,6 +110,7 @@ public class GetMessagesRequest extends Request {
         private String conversationId; 
         private String eventMode; 
         private String firstId; 
+        private String flowId; 
         private Long limit; 
         private String workspaceId; 
 
@@ -110,6 +123,7 @@ public class GetMessagesRequest extends Request {
             this.conversationId = request.conversationId;
             this.eventMode = request.eventMode;
             this.firstId = request.firstId;
+            this.flowId = request.flowId;
             this.limit = request.limit;
             this.workspaceId = request.workspaceId;
         } 
@@ -127,7 +141,10 @@ public class GetMessagesRequest extends Request {
         }
 
         /**
-         * EventMode.
+         * <p>The event output type. Valid values: inline and separate. Default value: inline. In inline mode, tool invocation events, child node events, and document events are unified into the answer field of the event where event = message. In separate mode, tool invocation events, child node events, and document events have their own respective events.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>inline</p>
          */
         public Builder eventMode(String eventMode) {
             this.putQueryParameter("EventMode", eventMode);
@@ -148,7 +165,19 @@ public class GetMessagesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page for a paged query. Valid values: 1 to 100. Default value: 100.</p>
+         * <p>The flow instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>flow-90ea18a8254645968325</p>
+         */
+        public Builder flowId(String flowId) {
+            this.putQueryParameter("FlowId", flowId);
+            this.flowId = flowId;
+            return this;
+        }
+
+        /**
+         * <p>The number of rows per page for paging. Valid values: 1 to 100. Default value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

@@ -93,7 +93,7 @@ public class GetMessagesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The query result.</p>
+         * <p>The query results.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -112,7 +112,7 @@ public class GetMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of entries returned.</p>
+         * <p>The maximum number of query results.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -296,7 +296,7 @@ public class GetMessagesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The approval status of the tool calling.</p>
+             * <p>The tool invocation approval status.</p>
              * 
              * <strong>example:</strong>
              * <p>pending</p>
@@ -307,7 +307,7 @@ public class GetMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tool calling ID.</p>
+             * <p>The tool invocation ID.</p>
              * 
              * <strong>example:</strong>
              * <p>call-example</p>
@@ -318,7 +318,7 @@ public class GetMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The session ID.</p>
+             * <p>The conversation ID.</p>
              * 
              * <strong>example:</strong>
              * <p>conversation-example</p>
@@ -329,7 +329,7 @@ public class GetMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the tool calling.</p>
+             * <p>The tool invocation description.</p>
              * 
              * <strong>example:</strong>
              * <p>Search ContextDB records</p>
@@ -362,7 +362,7 @@ public class GetMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parameters of the tool calling.</p>
+             * <p>The tool invocation parameters.</p>
              */
             public Builder toolArguments(java.util.Map<String, ?> toolArguments) {
                 this.toolArguments = toolArguments;
@@ -506,7 +506,7 @@ public class GetMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The upload file ID.</p>
+             * <p>The uploaded file ID.</p>
              * 
              * <strong>example:</strong>
              * <p>file-example</p>
@@ -732,10 +732,10 @@ public class GetMessagesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The answer.</p>
+             * <p>The reply.</p>
              * 
              * <strong>example:</strong>
-             * <p>The disk usage of the instance rm-bp14as9914vd3**** you queried is 23%, and no capacity expansion is needed at this time. If you need to view the detailed configurations or performance monitoring of a specific instance, or perform other operations, let me know your specific requirements!</p>
+             * <p>The instance rm-bp14as9914vd3**** you inquired about has a disk usage of 23%, so no storage expansion is needed at the moment. If you need to view detailed configurations, check performance monitoring, or perform other operations on a specific instance, please let me know your specific requirements.</p>
              */
             public Builder answer(String answer) {
                 this.answer = answer;
@@ -743,7 +743,7 @@ public class GetMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The session ID.</p>
+             * <p>The conversation ID.</p>
              * 
              * <strong>example:</strong>
              * <p>9cbbe885-b240-4803-9d15-6781a3fd****</p>
@@ -754,7 +754,7 @@ public class GetMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time.</p>
+             * <p>The time when the message was created. The value is a UNIX timestamp in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1763986004</p>
@@ -765,7 +765,7 @@ public class GetMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * Events.
+             * <p>The list of events.</p>
              */
             public Builder events(java.util.List<Events> events) {
                 this.events = events;
@@ -838,7 +838,7 @@ public class GetMessagesResponseBody extends TeaModel {
              * <p>The query statement.</p>
              * 
              * <strong>example:</strong>
-             * <p>Disk usage of instance rm-bp14as9914vd3****, is capacity expansion needed</p>
+             * <p>Disk usage of instance rm-bp14as9914vd3**** and whether capacity expansion is required</p>
              */
             public Builder query(String query) {
                 this.query = query;
@@ -846,7 +846,7 @@ public class GetMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The retrieval resources.</p>
+             * <p>The retrieved resources.</p>
              */
             public Builder retrieverResources(java.util.List<?> retrieverResources) {
                 this.retrieverResources = retrieverResources;

@@ -101,7 +101,7 @@ public class GetConversationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether there is a next page.</p>
+         * <p>Indicates whether more pages are available.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -112,7 +112,7 @@ public class GetConversationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page for a paged query. Valid values: 1 to 100. Default value: 100.</p>
+         * <p>The paging Settings for the number of entries per page in a paged query. Valid values: 1 to 100. Default value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -123,7 +123,7 @@ public class GetConversationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
@@ -268,7 +268,7 @@ public class GetConversationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The historical conversation ID.</p>
+             * <p>The ID of the historical conversation.</p>
              * 
              * <strong>example:</strong>
              * <p>60b335ca-124d-4ee1-864b-de554987****</p>
@@ -290,7 +290,10 @@ public class GetConversationsResponseBody extends TeaModel {
             }
 
             /**
-             * IsRunning.
+             * <p>Indicates whether the session is running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isRunning(Boolean isRunning) {
                 this.isRunning = isRunning;
@@ -298,7 +301,7 @@ public class GetConversationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The historical conversation name.</p>
+             * <p>The name of the historical conversation.</p>
              * 
              * <strong>example:</strong>
              * <p>Search for RDS resources</p>
@@ -309,13 +312,7 @@ public class GetConversationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The session status. Valid values:</p>
-             * <ul>
-             * <li>idle: The session is idle.</li>
-             * <li>running: The session is generating a response.</li>
-             * <li>pending_approval: The session is waiting for approval or manual review.</li>
-             * </ul>
-             * <p>If both pending_approval and running conditions are met, pending_approval is returned.</p>
+             * <p>The session status.</p>
              * 
              * <strong>example:</strong>
              * <p>idle</p>
@@ -326,7 +323,10 @@ public class GetConversationsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedAt.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1785919275</p>
              */
             public Builder updatedAt(String updatedAt) {
                 this.updatedAt = updatedAt;

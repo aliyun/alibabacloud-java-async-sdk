@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetConversationsRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FlowId")
+    private String flowId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LastId")
     private String lastId;
 
@@ -39,6 +43,7 @@ public class GetConversationsRequest extends Request {
 
     private GetConversationsRequest(Builder builder) {
         super(builder);
+        this.flowId = builder.flowId;
         this.lastId = builder.lastId;
         this.limit = builder.limit;
         this.pinned = builder.pinned;
@@ -57,6 +62,13 @@ public class GetConversationsRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return flowId
+     */
+    public String getFlowId() {
+        return this.flowId;
     }
 
     /**
@@ -95,6 +107,7 @@ public class GetConversationsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetConversationsRequest, Builder> {
+        private String flowId; 
         private String lastId; 
         private String limit; 
         private String pinned; 
@@ -107,12 +120,25 @@ public class GetConversationsRequest extends Request {
 
         private Builder(GetConversationsRequest request) {
             super(request);
+            this.flowId = request.flowId;
             this.lastId = request.lastId;
             this.limit = request.limit;
             this.pinned = request.pinned;
             this.sortBy = request.sortBy;
             this.workspaceId = request.workspaceId;
         } 
+
+        /**
+         * <p>The ID of the flow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>flow-c5007b4a03a2446cbe9d</p>
+         */
+        public Builder flowId(String flowId) {
+            this.putQueryParameter("FlowId", flowId);
+            this.flowId = flowId;
+            return this;
+        }
 
         /**
          * <p>The ID of the last conversation record.</p>
@@ -127,7 +153,7 @@ public class GetConversationsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page for a paged query. Valid values: 1 to 100.</p>
+         * <p>The paging Settings for the number of entries per page in a paged query. Valid values: 1 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -139,7 +165,7 @@ public class GetConversationsRequest extends Request {
         }
 
         /**
-         * <p>The pinned bookmark flag for the application.</p>
+         * <p>The pin mark for application favorites.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -163,7 +189,7 @@ public class GetConversationsRequest extends Request {
         }
 
         /**
-         * <p>The ContextDB workspace ID.</p>
+         * <p>The ID of the ContextDB workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>00000000-0000-4000-8000-000000000001</p>
