@@ -60,6 +60,7 @@ public class DescribeLicenseRequest extends Request {
         } 
 
         /**
+         * <p>The activation code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

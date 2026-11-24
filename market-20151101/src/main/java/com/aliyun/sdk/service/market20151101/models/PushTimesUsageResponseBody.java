@@ -145,7 +145,10 @@ public class PushTimesUsageResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The authentication error details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -153,7 +156,10 @@ public class PushTimesUsageResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -161,7 +167,7 @@ public class PushTimesUsageResponseBody extends TeaModel {
         }
 
         /**
-         * ForceFatal.
+         * <p>The fatal error.</p>
          */
         public Builder forceFatal(Boolean forceFatal) {
             this.forceFatal = forceFatal;
@@ -169,7 +175,10 @@ public class PushTimesUsageResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStateCode.
+         * <p>The HTTP status code of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStateCode(String httpStateCode) {
             this.httpStateCode = httpStateCode;
@@ -177,7 +186,10 @@ public class PushTimesUsageResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -185,7 +197,10 @@ public class PushTimesUsageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6EF60BEC-0242-43AF-BB20-270359FB54A7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +208,10 @@ public class PushTimesUsageResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The returned result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;
@@ -201,7 +219,10 @@ public class PushTimesUsageResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -93,7 +93,10 @@ public class DescribeProjectMessagesResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00eb4de1-6cff-4f56-833e-7b1e070e398d</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -101,7 +104,7 @@ public class DescribeProjectMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The list of project messages.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -109,7 +112,10 @@ public class DescribeProjectMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -117,7 +123,10 @@ public class DescribeProjectMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of messages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>28</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -222,7 +231,10 @@ public class DescribeProjectMessagesResponseBody extends TeaModel {
             } 
 
             /**
-             * Content.
+             * <p>The content of the message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Dear customer, we have uploaded the solution for you. Please review it and provide your feedback as soon as possible</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -230,7 +242,10 @@ public class DescribeProjectMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The time when the message was created. The value is a UNIX timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1589015560000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -238,7 +253,10 @@ public class DescribeProjectMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * Operator.
+             * <p>The Alibaba Cloud UID of the message sender.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>452611111****</p>
              */
             public Builder operator(Long operator) {
                 this.operator = operator;
@@ -246,7 +264,10 @@ public class DescribeProjectMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorName.
+             * <p>The name of the message sender.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>*** Technology Co., Ltd</p>
              */
             public Builder operatorName(String operatorName) {
                 this.operatorName = operatorName;
@@ -254,7 +275,15 @@ public class DescribeProjectMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorRole.
+             * <p>The role of the operator. Valid values:</p>
+             * <ul>
+             * <li>System: The system.</li>
+             * <li>Custom: The customer.</li>
+             * <li>Provider: The service provider.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Provider</p>
              */
             public Builder operatorRole(String operatorRole) {
                 this.operatorRole = operatorRole;

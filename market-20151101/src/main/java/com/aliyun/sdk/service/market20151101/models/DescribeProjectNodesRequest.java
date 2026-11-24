@@ -60,6 +60,7 @@ public class DescribeProjectNodesRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID of the Alibaba Cloud Marketplace order.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -117,7 +117,10 @@ public class DescribeInstancesRequest extends Request {
         } 
 
         /**
-         * Codes.
+         * <p>The commodity codes. Separate multiple codes with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cmgj000112,cmgj000113</p>
          */
         public Builder codes(String codes) {
             this.putQueryParameter("Codes", codes);
@@ -126,7 +129,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * ExceptCodes.
+         * <p>The commodity codes to exclude. This parameter cannot be specified together with the Codes parameter. Separate multiple codes with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cmgj000114,cmgj000115</p>
          */
         public Builder exceptCodes(String exceptCodes) {
             this.putQueryParameter("ExceptCodes", exceptCodes);
@@ -135,6 +141,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -147,6 +154,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
+         * <p>The page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,7 +167,20 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * <p>The commodity type. Valid values:</p>
+         * <ul>
+         * <li>APP: application</li>
+         * <li>SERVICE: service</li>
+         * <li>MIRROR: image</li>
+         * <li>DOWNLOAD: download</li>
+         * <li>API_SERVICE: API</li>
+         * <li>ROS: resource orchestration</li>
+         * <li>DOCKER: container</li>
+         * <li>IOT: IoT.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);

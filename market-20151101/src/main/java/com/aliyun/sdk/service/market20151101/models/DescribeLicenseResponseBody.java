@@ -67,7 +67,7 @@ public class DescribeLicenseResponseBody extends TeaModel {
         } 
 
         /**
-         * License.
+         * <p>The license object.</p>
          */
         public Builder license(License license) {
             this.license = license;
@@ -75,7 +75,10 @@ public class DescribeLicenseResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6EF60BEC-0242-43AF-BB20-270359FB54A7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -296,7 +299,12 @@ public class DescribeLicenseResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountQuantity.
+             * <p>The account information.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder accountQuantity(Long accountQuantity) {
                 this.accountQuantity = accountQuantity;
@@ -304,7 +312,10 @@ public class DescribeLicenseResponseBody extends TeaModel {
             }
 
             /**
-             * AliUid.
+             * <p>The Alibaba Cloud UID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>190311111111****</p>
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
@@ -312,7 +323,10 @@ public class DescribeLicenseResponseBody extends TeaModel {
             }
 
             /**
-             * Email.
+             * <p>The email address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>id***@**.com</p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -320,7 +334,10 @@ public class DescribeLicenseResponseBody extends TeaModel {
             }
 
             /**
-             * Mobile.
+             * <p>The mobile phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>129****1111</p>
              */
             public Builder mobile(String mobile) {
                 this.mobile = mobile;
@@ -517,7 +534,10 @@ public class DescribeLicenseResponseBody extends TeaModel {
             } 
 
             /**
-             * ActivateTime.
+             * <p>The activation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-05-25 09:00:00</p>
              */
             public Builder activateTime(String activateTime) {
                 this.activateTime = activateTime;
@@ -525,7 +545,10 @@ public class DescribeLicenseResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-05-25 09:00:00</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -533,7 +556,10 @@ public class DescribeLicenseResponseBody extends TeaModel {
             }
 
             /**
-             * ExpiredTime.
+             * <p>The expiration time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-06-25 09:00:00</p>
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -549,7 +575,7 @@ public class DescribeLicenseResponseBody extends TeaModel {
             }
 
             /**
-             * ExtendInfo.
+             * <p>The extended information.</p>
              */
             public Builder extendInfo(ExtendInfo extendInfo) {
                 this.extendInfo = extendInfo;
@@ -557,7 +583,10 @@ public class DescribeLicenseResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The business instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1551111111</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -565,7 +594,12 @@ public class DescribeLicenseResponseBody extends TeaModel {
             }
 
             /**
-             * LicenseCode.
+             * <p>The activation code.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder licenseCode(String licenseCode) {
                 this.licenseCode = licenseCode;
@@ -573,7 +607,14 @@ public class DescribeLicenseResponseBody extends TeaModel {
             }
 
             /**
-             * LicenseStatus.
+             * <p>The license status.</p>
+             * <ul>
+             * <li>ACTIVATED</li>
+             * <li>INACTIVATED</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ACTIVATED</p>
              */
             public Builder licenseStatus(String licenseStatus) {
                 this.licenseStatus = licenseStatus;
@@ -581,7 +622,10 @@ public class DescribeLicenseResponseBody extends TeaModel {
             }
 
             /**
-             * ProductCode.
+             * <p>The product code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cmgj02****</p>
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -589,7 +633,10 @@ public class DescribeLicenseResponseBody extends TeaModel {
             }
 
             /**
-             * ProductName.
+             * <p>The product name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LNMP环境</p>
              */
             public Builder productName(String productName) {
                 this.productName = productName;
@@ -597,7 +644,10 @@ public class DescribeLicenseResponseBody extends TeaModel {
             }
 
             /**
-             * ProductSkuId.
+             * <p>The product SKU ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cmgj02****-prepay</p>
              */
             public Builder productSkuId(String productSkuId) {
                 this.productSkuId = productSkuId;
@@ -605,7 +655,10 @@ public class DescribeLicenseResponseBody extends TeaModel {
             }
 
             /**
-             * SupplierName.
+             * <p>The supplier name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>**科技股份有限公司</p>
              */
             public Builder supplierName(String supplierName) {
                 this.supplierName = supplierName;

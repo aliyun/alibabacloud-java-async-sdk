@@ -80,7 +80,10 @@ public class DescribeProjectInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ee3e1b3b-6c38-4bcf-be40-5a946cfda761</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class DescribeProjectInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The returned result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -96,7 +99,10 @@ public class DescribeProjectInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -357,7 +363,10 @@ public class DescribeProjectInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * CurrentStepNo.
+             * <p>The current step in the process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder currentStepNo(Integer currentStepNo) {
                 this.currentStepNo = currentStepNo;
@@ -365,7 +374,10 @@ public class DescribeProjectInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CustomerAliUid.
+             * <p>The Alibaba Cloud UID of the customer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>27291111****</p>
              */
             public Builder customerAliUid(Long customerAliUid) {
                 this.customerAliUid = customerAliUid;
@@ -373,7 +385,10 @@ public class DescribeProjectInfoResponseBody extends TeaModel {
             }
 
             /**
-             * FinalStepNo.
+             * <p>The sequence number of the last step.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder finalStepNo(Integer finalStepNo) {
                 this.finalStepNo = finalStepNo;
@@ -381,7 +396,15 @@ public class DescribeProjectInfoResponseBody extends TeaModel {
             }
 
             /**
-             * FinishType.
+             * <p>The completion method of the project. Valid values:</p>
+             * <ul>
+             * <li>null: The default value for unfinished projects.</li>
+             * <li>CustomerConfirm: Manually confirmed by the customer.</li>
+             * <li>SystemAutoConfirm: Automatically confirmed by the system due to timeout.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder finishType(String finishType) {
                 this.finishType = finishType;
@@ -389,7 +412,10 @@ public class DescribeProjectInfoResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The creation time of the project. The value is a UNIX timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1588834324000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -397,7 +423,10 @@ public class DescribeProjectInfoResponseBody extends TeaModel {
             }
 
             /**
-             * GmtExpired.
+             * <p>The expiration time of the project. The value is a UNIX timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1620403200000</p>
              */
             public Builder gmtExpired(Long gmtExpired) {
                 this.gmtExpired = gmtExpired;
@@ -405,7 +434,10 @@ public class DescribeProjectInfoResponseBody extends TeaModel {
             }
 
             /**
-             * GmtFinished.
+             * <p>The completion time of the project. The value is a UNIX timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1620403200000</p>
              */
             public Builder gmtFinished(Long gmtFinished) {
                 this.gmtFinished = gmtFinished;
@@ -413,7 +445,10 @@ public class DescribeProjectInfoResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The business instance ID in Cloud Marketplace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4****89</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -421,7 +456,10 @@ public class DescribeProjectInfoResponseBody extends TeaModel {
             }
 
             /**
-             * OrderId.
+             * <p>The order ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2059111111111</p>
              */
             public Builder orderId(Long orderId) {
                 this.orderId = orderId;
@@ -429,7 +467,10 @@ public class DescribeProjectInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ProductCode.
+             * <p>The product code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cmgj***055</p>
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -437,7 +478,10 @@ public class DescribeProjectInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ProductName.
+             * <p>The name of the Cloud Marketplace product.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Gongsibao**** accounting</p>
              */
             public Builder productName(String productName) {
                 this.productName = productName;
@@ -445,7 +489,10 @@ public class DescribeProjectInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ProductSkuCode.
+             * <p>The code of the Cloud Marketplace product SKU.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yuncode****500001</p>
              */
             public Builder productSkuCode(String productSkuCode) {
                 this.productSkuCode = productSkuCode;
@@ -453,7 +500,10 @@ public class DescribeProjectInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ProductSkuName.
+             * <p>The name of the Cloud Marketplace product SKU.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Small*** taxpayer</p>
              */
             public Builder productSkuName(String productSkuName) {
                 this.productSkuName = productSkuName;
@@ -461,7 +511,16 @@ public class DescribeProjectInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectStatus.
+             * <p>The execution status of the project. Valid values:</p>
+             * <ul>
+             * <li>Starting: In progress.</li>
+             * <li>Cancel: Canceled.</li>
+             * <li>Pause: Paused.</li>
+             * <li>Finish: Completed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Starting</p>
              */
             public Builder projectStatus(String projectStatus) {
                 this.projectStatus = projectStatus;
@@ -469,7 +528,10 @@ public class DescribeProjectInfoResponseBody extends TeaModel {
             }
 
             /**
-             * SupplierAliUid.
+             * <p>The UID of the supplier to which the project belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>45121111****</p>
              */
             public Builder supplierAliUid(Long supplierAliUid) {
                 this.supplierAliUid = supplierAliUid;
@@ -477,7 +539,10 @@ public class DescribeProjectInfoResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The ID of the process template to which the project belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>410</p>
              */
             public Builder templateId(Long templateId) {
                 this.templateId = templateId;
@@ -485,7 +550,14 @@ public class DescribeProjectInfoResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateType.
+             * <p>The template type of the project. Valid values:</p>
+             * <ul>
+             * <li>Public: Public template.</li>
+             * <li>Private: Private template.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Public</p>
              */
             public Builder templateType(String templateType) {
                 this.templateType = templateType;

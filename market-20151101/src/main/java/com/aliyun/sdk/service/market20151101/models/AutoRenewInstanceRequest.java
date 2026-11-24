@@ -117,7 +117,15 @@ public class AutoRenewInstanceRequest extends Request {
         } 
 
         /**
-         * AutoRenewCycle.
+         * <p>The cycle unit. This parameter is required when enabling auto-renewal. Valid values:</p>
+         * <ul>
+         * <li>Day: day.</li>
+         * <li>Month: month.</li>
+         * <li>Year: year.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder autoRenewCycle(String autoRenewCycle) {
             this.putBodyParameter("AutoRenewCycle", autoRenewCycle);
@@ -126,7 +134,7 @@ public class AutoRenewInstanceRequest extends Request {
         }
 
         /**
-         * AutoRenewDuration.
+         * <p>The renewal cycle. This parameter is required when enabling auto-renewal.</p>
          */
         public Builder autoRenewDuration(Integer autoRenewDuration) {
             this.putBodyParameter("AutoRenewDuration", autoRenewDuration);
@@ -135,6 +143,7 @@ public class AutoRenewInstanceRequest extends Request {
         }
 
         /**
+         * <p>The Alibaba Cloud Marketplace instance ID. This parameter is required.</p>
          * <p>This parameter is required.</p>
          */
         public Builder orderBizId(Long orderBizId) {
@@ -153,7 +162,16 @@ public class AutoRenewInstanceRequest extends Request {
         }
 
         /**
+         * <p>The operation type. Valid values:</p>
+         * <ul>
+         * <li>open: enables auto-renewal.</li>
+         * <li>close: disables auto-renewal.</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>open</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("Type", type);

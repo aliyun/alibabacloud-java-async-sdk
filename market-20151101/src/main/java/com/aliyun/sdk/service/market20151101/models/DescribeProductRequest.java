@@ -100,6 +100,7 @@ public class DescribeProductRequest extends Request {
         }
 
         /**
+         * <p>The product code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -112,7 +113,10 @@ public class DescribeProductRequest extends Request {
         }
 
         /**
-         * QueryDraft.
+         * <p>Specifies whether to query the product draft. Typically, you do not need to query the product draft. Product drafts are used for queries before a product is officially listed for sale.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder queryDraft(Boolean queryDraft) {
             this.putQueryParameter("QueryDraft", queryDraft);

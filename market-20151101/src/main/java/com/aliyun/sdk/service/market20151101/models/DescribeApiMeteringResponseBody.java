@@ -171,7 +171,10 @@ public class DescribeApiMeteringResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -179,7 +182,10 @@ public class DescribeApiMeteringResponseBody extends TeaModel {
         }
 
         /**
-         * Count.
+         * <p>The total count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder count(Long count) {
             this.count = count;
@@ -198,7 +204,10 @@ public class DescribeApiMeteringResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;Success&quot;</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -206,7 +215,10 @@ public class DescribeApiMeteringResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -214,7 +226,10 @@ public class DescribeApiMeteringResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -222,7 +237,10 @@ public class DescribeApiMeteringResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>62FC432C55A1A63534A6CB34</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -230,7 +248,7 @@ public class DescribeApiMeteringResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The list of return values.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -238,7 +256,10 @@ public class DescribeApiMeteringResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>The result indicator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -246,7 +267,10 @@ public class DescribeApiMeteringResponseBody extends TeaModel {
         }
 
         /**
-         * Version.
+         * <p>The version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         public Builder version(String version) {
             this.version = version;
@@ -377,7 +401,10 @@ public class DescribeApiMeteringResponseBody extends TeaModel {
             } 
 
             /**
-             * AliyunPk.
+             * <p>The Alibaba Cloud PK.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>102277855749****</p>
              */
             public Builder aliyunPk(Long aliyunPk) {
                 this.aliyunPk = aliyunPk;
@@ -385,7 +412,10 @@ public class DescribeApiMeteringResponseBody extends TeaModel {
             }
 
             /**
-             * ProductCode.
+             * <p>The commodity code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cmapi0004****</p>
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -393,7 +423,10 @@ public class DescribeApiMeteringResponseBody extends TeaModel {
             }
 
             /**
-             * ProductName.
+             * <p>The commodity name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ID card real-name authentication - ID card real-name</p>
              */
             public Builder productName(String productName) {
                 this.productName = productName;
@@ -401,7 +434,10 @@ public class DescribeApiMeteringResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCapacity.
+             * <p>The total API capacity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCapacity(Long totalCapacity) {
                 this.totalCapacity = totalCapacity;
@@ -409,7 +445,10 @@ public class DescribeApiMeteringResponseBody extends TeaModel {
             }
 
             /**
-             * TotalQuota.
+             * <p>The remaining quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>98</p>
              */
             public Builder totalQuota(Long totalQuota) {
                 this.totalQuota = totalQuota;
@@ -417,7 +456,10 @@ public class DescribeApiMeteringResponseBody extends TeaModel {
             }
 
             /**
-             * TotalUsage.
+             * <p>The usage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>220</p>
              */
             public Builder totalUsage(Long totalUsage) {
                 this.totalUsage = totalUsage;
@@ -425,7 +467,10 @@ public class DescribeApiMeteringResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * <p>The unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Calls</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;

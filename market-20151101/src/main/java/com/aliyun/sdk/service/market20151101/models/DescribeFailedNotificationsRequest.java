@@ -75,6 +75,7 @@ public class DescribeFailedNotificationsRequest extends Request {
         } 
 
         /**
+         * <p>The current page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class DescribeFailedNotificationsRequest extends Request {
         }
 
         /**
+         * <p>The number of instances per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

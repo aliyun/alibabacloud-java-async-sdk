@@ -60,6 +60,7 @@ public class DescribeProjectInfoRequest extends Request {
         } 
 
         /**
+         * <p>The business instance ID in Cloud Marketplace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

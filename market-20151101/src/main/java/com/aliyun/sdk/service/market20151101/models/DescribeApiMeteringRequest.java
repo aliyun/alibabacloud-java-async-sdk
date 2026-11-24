@@ -88,6 +88,7 @@ public class DescribeApiMeteringRequest extends Request {
         } 
 
         /**
+         * <p>The page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +101,10 @@ public class DescribeApiMeteringRequest extends Request {
         }
 
         /**
-         * productCode.
+         * <p>The commodity code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cmapi0004****</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("productCode", productCode);
@@ -109,7 +113,10 @@ public class DescribeApiMeteringRequest extends Request {
         }
 
         /**
-         * type.
+         * <p>The type. Valid values: 1: package. 2: resource plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder type(Integer type) {
             this.putQueryParameter("type", type);

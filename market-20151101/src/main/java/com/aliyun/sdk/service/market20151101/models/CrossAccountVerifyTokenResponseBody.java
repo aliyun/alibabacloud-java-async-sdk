@@ -106,7 +106,10 @@ public class CrossAccountVerifyTokenResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Status code. A value of 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class CrossAccountVerifyTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +128,7 @@ public class CrossAccountVerifyTokenResponseBody extends TeaModel {
         }
 
         /**
-         * <p>RequestId</p>
+         * <p>Request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>C19D103F-EA2D-50A5-8441-0267CE9FBA56</p>
@@ -133,7 +139,7 @@ public class CrossAccountVerifyTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Response result object.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -141,7 +147,10 @@ public class CrossAccountVerifyTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -233,7 +242,7 @@ public class CrossAccountVerifyTokenResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthRoles.
+             * <p>Authorized roles.</p>
              */
             public Builder authRoles(java.util.List<String> authRoles) {
                 this.authRoles = authRoles;
@@ -241,7 +250,10 @@ public class CrossAccountVerifyTokenResponseBody extends TeaModel {
             }
 
             /**
-             * AuthTime.
+             * <p>Authorization time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1676974108866</p>
              */
             public Builder authTime(Long authTime) {
                 this.authTime = authTime;
@@ -249,7 +261,10 @@ public class CrossAccountVerifyTokenResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>User display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>marketplace_wangxiao_test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -257,7 +272,10 @@ public class CrossAccountVerifyTokenResponseBody extends TeaModel {
             }
 
             /**
-             * Uid.
+             * <p>User Alibaba Cloud UID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1744526877246715</p>
              */
             public Builder uid(String uid) {
                 this.uid = uid;

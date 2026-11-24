@@ -158,7 +158,10 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The product code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -166,7 +169,10 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
         }
 
         /**
-         * Count.
+         * <p>The total count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder count(String count) {
             this.count = count;
@@ -174,7 +180,10 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries per page for a paged query. Maximum value: 50. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -182,7 +191,10 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The query token returned by this call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3v3mzZN1QdVsTPNiT0OkD36LC9I+AJHU9z2oXBmJJOyy4nQl7MIUZUYG6fdbYBk+</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -190,7 +202,10 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -198,7 +213,10 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -206,7 +224,10 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6EF60BEC-0242-43AF-BB20-270359FB54A7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -214,7 +235,7 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The information about the successful flow node.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -222,7 +243,10 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -392,7 +416,10 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
             } 
 
             /**
-             * Agent.
+             * <p>Specifies whether proxy invoicing is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder agent(Boolean agent) {
                 this.agent = agent;
@@ -400,7 +427,10 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
             }
 
             /**
-             * Amount.
+             * <p>The amount. Unit: CNY.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder amount(String amount) {
                 this.amount = amount;
@@ -408,7 +438,10 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
             }
 
             /**
-             * BizTimeStr.
+             * <p>The time when the transaction occurred.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-01-01 00:00:00</p>
              */
             public Builder bizTimeStr(String bizTimeStr) {
                 this.bizTimeStr = bizTimeStr;
@@ -416,7 +449,10 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the invoicing object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9540765</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -424,7 +460,14 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
             }
 
             /**
-             * OrderType.
+             * <p>The type of the order or bill. Valid values:</p>
+             * <ul>
+             * <li>0: Order.</li>
+             * <li>1: Bill.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder orderType(String orderType) {
                 this.orderType = orderType;
@@ -432,7 +475,10 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
             }
 
             /**
-             * OutBizId.
+             * <p>The ID of the order.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024091610072000****</p>
              */
             public Builder outBizId(String outBizId) {
                 this.outBizId = outBizId;
@@ -440,7 +486,10 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
             }
 
             /**
-             * ProductCode.
+             * <p>The commodity code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cmapi00067***</p>
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -448,7 +497,10 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
             }
 
             /**
-             * ProductName.
+             * <p><strong>[Deprecated]</strong> The product name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Image recognition OCR***</p>
              */
             public Builder productName(String productName) {
                 this.productName = productName;
@@ -456,7 +508,10 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
             }
 
             /**
-             * RealAliyunId.
+             * <p>The account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:example@alibaba-inc.com">example@alibaba-inc.com</a></p>
              */
             public Builder realAliyunId(String realAliyunId) {
                 this.realAliyunId = realAliyunId;
@@ -464,7 +519,10 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
             }
 
             /**
-             * RealAliyunPk.
+             * <p>The account to which the order belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>102277855749****</p>
              */
             public Builder realAliyunPk(String realAliyunPk) {
                 this.realAliyunPk = realAliyunPk;
@@ -531,7 +589,10 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The ID of the invoice object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4072040****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -539,7 +600,10 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
             }
 
             /**
-             * InvoiceAmount.
+             * <p>The applied invoicing amount. Unit: CNY.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>99.99</p>
              */
             public Builder invoiceAmount(String invoiceAmount) {
                 this.invoiceAmount = invoiceAmount;
@@ -645,7 +709,10 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
             } 
 
             /**
-             * BankAccount.
+             * <p>The bank account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>000000</p>
              */
             public Builder bankAccount(String bankAccount) {
                 this.bankAccount = bankAccount;
@@ -653,7 +720,10 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
             }
 
             /**
-             * BankName.
+             * <p>The name of the bank.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111111</p>
              */
             public Builder bankName(String bankName) {
                 this.bankName = bankName;
@@ -661,7 +731,10 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
             }
 
             /**
-             * RegAddress.
+             * <p>The registered address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hangzhou ****</p>
              */
             public Builder regAddress(String regAddress) {
                 this.regAddress = regAddress;
@@ -669,7 +742,10 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
             }
 
             /**
-             * RegPhone.
+             * <p>The registered landline number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0571-****</p>
              */
             public Builder regPhone(String regPhone) {
                 this.regPhone = regPhone;
@@ -677,7 +753,10 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
             }
 
             /**
-             * TaxNumber.
+             * <p>The unified social credit code of the enterprise.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>91420100MA49L5****</p>
              */
             public Builder taxNumber(String taxNumber) {
                 this.taxNumber = taxNumber;
@@ -809,7 +888,10 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
             } 
 
             /**
-             * Addressee.
+             * <p>The recipient.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Zhang San</p>
              */
             public Builder addressee(String addressee) {
                 this.addressee = addressee;
@@ -817,7 +899,10 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
             }
 
             /**
-             * AliyunPk.
+             * <p>The Alibaba Cloud user ID of the customer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>174452687724****</p>
              */
             public Builder aliyunPk(String aliyunPk) {
                 this.aliyunPk = aliyunPk;
@@ -825,7 +910,10 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
             }
 
             /**
-             * BizType.
+             * <p><strong>[Deprecated]</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder bizType(String bizType) {
                 this.bizType = bizType;
@@ -833,7 +921,10 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
             }
 
             /**
-             * DeliveryAddress.
+             * <p>The delivery address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hangzhou ****</p>
              */
             public Builder deliveryAddress(String deliveryAddress) {
                 this.deliveryAddress = deliveryAddress;
@@ -841,7 +932,10 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
             }
 
             /**
-             * Emails.
+             * <p>The email address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:demo@example.com">demo@example.com</a></p>
              */
             public Builder emails(String emails) {
                 this.emails = emails;
@@ -849,7 +943,10 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
             }
 
             /**
-             * Phone.
+             * <p>The phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>130********</p>
              */
             public Builder phone(String phone) {
                 this.phone = phone;
@@ -857,7 +954,10 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
             }
 
             /**
-             * PostalCode.
+             * <p>The postal code.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder postalCode(String postalCode) {
                 this.postalCode = postalCode;
@@ -899,6 +999,9 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InvoiceList")
         private java.util.List<InvoiceList> invoiceList;
 
+        @com.aliyun.core.annotation.NameInMap("InvoiceTitleRelation")
+        private String invoiceTitleRelation;
+
         @com.aliyun.core.annotation.NameInMap("MaterialType")
         private String materialType;
 
@@ -937,6 +1040,7 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
             this.id = builder.id;
             this.invoiceId = builder.invoiceId;
             this.invoiceList = builder.invoiceList;
+            this.invoiceTitleRelation = builder.invoiceTitleRelation;
             this.materialType = builder.materialType;
             this.modifiedTime = builder.modifiedTime;
             this.modifiedTimeStr = builder.modifiedTimeStr;
@@ -1004,6 +1108,13 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
          */
         public java.util.List<InvoiceList> getInvoiceList() {
             return this.invoiceList;
+        }
+
+        /**
+         * @return invoiceTitleRelation
+         */
+        public String getInvoiceTitleRelation() {
+            return this.invoiceTitleRelation;
         }
 
         /**
@@ -1084,6 +1195,7 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
             private String id; 
             private String invoiceId; 
             private java.util.List<InvoiceList> invoiceList; 
+            private String invoiceTitleRelation; 
             private String materialType; 
             private String modifiedTime; 
             private String modifiedTimeStr; 
@@ -1106,6 +1218,7 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
                 this.id = model.id;
                 this.invoiceId = model.invoiceId;
                 this.invoiceList = model.invoiceList;
+                this.invoiceTitleRelation = model.invoiceTitleRelation;
                 this.materialType = model.materialType;
                 this.modifiedTime = model.modifiedTime;
                 this.modifiedTimeStr = model.modifiedTimeStr;
@@ -1119,7 +1232,10 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
             } 
 
             /**
-             * AliyunPk.
+             * <p>The Alibaba Cloud user ID of the customer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>102277855749****</p>
              */
             public Builder aliyunPk(String aliyunPk) {
                 this.aliyunPk = aliyunPk;
@@ -1127,7 +1243,10 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
             }
 
             /**
-             * CheckNotice.
+             * <p>The service provider invoice remarks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder checkNotice(String checkNotice) {
                 this.checkNotice = checkNotice;
@@ -1135,7 +1254,10 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTimeStr.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-01-01 00:00:00</p>
              */
             public Builder createTimeStr(String createTimeStr) {
                 this.createTimeStr = createTimeStr;
@@ -1143,7 +1265,7 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
             }
 
             /**
-             * EvaluateList.
+             * <p>The order, bill, or contract number.</p>
              */
             public Builder evaluateList(java.util.List<EvaluateList> evaluateList) {
                 this.evaluateList = evaluateList;
@@ -1151,7 +1273,10 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the invoice application. This corresponds to the InvoiceId parameter when you call the ModifyInvoiceForIsv operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4072040****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -1159,7 +1284,10 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
             }
 
             /**
-             * InvoiceId.
+             * <p>The ID of the invoice object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4072040****</p>
              */
             public Builder invoiceId(String invoiceId) {
                 this.invoiceId = invoiceId;
@@ -1167,7 +1295,7 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
             }
 
             /**
-             * InvoiceList.
+             * <p><strong>[Deprecated]</strong> The invoice sub-collection.</p>
              */
             public Builder invoiceList(java.util.List<InvoiceList> invoiceList) {
                 this.invoiceList = invoiceList;
@@ -1175,7 +1303,25 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
             }
 
             /**
-             * MaterialType.
+             * <p>The relationship between the invoice title and the customer real-name information. Valid values: <code>REAL_NAME_MATCH</code> (The real-name information is consistent), <code>PERSONAL_APPLY_ENTERPRISE_TITLE</code> (An individual applies for an enterprise title), <code>ENTERPRISE_MULTI_TITLE</code> (Multiple titles for an enterprise), <code>MASTER_ACCOUNT_OPERATION</code> (Operated by the main account), and <code>OTHER</code> (Other). If not provided, the value is null.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>REAL_NAME_MATCH</p>
+             */
+            public Builder invoiceTitleRelation(String invoiceTitleRelation) {
+                this.invoiceTitleRelation = invoiceTitleRelation;
+                return this;
+            }
+
+            /**
+             * <p>The invoice issuance type. Valid values:</p>
+             * <ul>
+             * <li>0: Paper.</li>
+             * <li>1: Electronic.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder materialType(String materialType) {
                 this.materialType = materialType;
@@ -1183,7 +1329,10 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * <p>The time when the order status was modified. The time is displayed in GMT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-03-04T09:43:18+08:00</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -1191,7 +1340,10 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTimeStr.
+             * <p>The time when the invoice was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-01-01 00:00:00</p>
              */
             public Builder modifiedTimeStr(String modifiedTimeStr) {
                 this.modifiedTimeStr = modifiedTimeStr;
@@ -1199,7 +1351,10 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
             }
 
             /**
-             * Price.
+             * <p>The total invoice amount. Unit: CNY.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>99.99</p>
              */
             public Builder price(String price) {
                 this.price = price;
@@ -1207,7 +1362,7 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
             }
 
             /**
-             * ReceiptUserInfoDto.
+             * <p>The user information of the invoice applicant.</p>
              */
             public Builder receiptUserInfoDto(ReceiptUserInfoDto receiptUserInfoDto) {
                 this.receiptUserInfoDto = receiptUserInfoDto;
@@ -1215,7 +1370,10 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The invoice status. Valid values: 0: Pending. 1: Invoiced.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1223,7 +1381,10 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>The invoice title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alibaba Cloud Computing Ltd</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -1231,7 +1392,14 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The invoice type. Valid values:</p>
+             * <ul>
+             * <li>2: Digital electronic general invoice.</li>
+             * <li>3: Digital electronic special invoice.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1239,7 +1407,7 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
             }
 
             /**
-             * UserAddressDto.
+             * <p>The address information.</p>
              */
             public Builder userAddressDto(UserAddressDto userAddressDto) {
                 this.userAddressDto = userAddressDto;
@@ -1247,7 +1415,10 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
             }
 
             /**
-             * UserNotice.
+             * <p>The user invoice remarks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder userNotice(String userNotice) {
                 this.userNotice = userNotice;

@@ -301,7 +301,10 @@ public class DescribeProductResponseBody extends TeaModel {
         } 
 
         /**
-         * AuditFailMsg.
+         * <p>The reason for the audit failure. This parameter is returned when QueryDraft is set to true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Feature acceptance failed</p>
          */
         public Builder auditFailMsg(String auditFailMsg) {
             this.auditFailMsg = auditFailMsg;
@@ -309,7 +312,20 @@ public class DescribeProductResponseBody extends TeaModel {
         }
 
         /**
-         * AuditStatus.
+         * <p>The audit status. This parameter is returned when QueryDraft is set to true. Valid values:</p>
+         * <ul>
+         * <li>draft: Not submitted.</li>
+         * <li>security_ing: Under security audit.</li>
+         * <li>security_fail: Security audit failed.</li>
+         * <li>function_ing: Under feature audit.</li>
+         * <li>function_fail: Feature audit failed.</li>
+         * <li>info_ing: Under product information audit.</li>
+         * <li>info_fail: Product information audit failed.</li>
+         * <li>success: Succeeded.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>function_fail</p>
          */
         public Builder auditStatus(String auditStatus) {
             this.auditStatus = auditStatus;
@@ -317,7 +333,10 @@ public class DescribeProductResponseBody extends TeaModel {
         }
 
         /**
-         * AuditTime.
+         * <p>The audit time. This parameter is returned when QueryDraft is set to true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1581609600000</p>
          */
         public Builder auditTime(Long auditTime) {
             this.auditTime = auditTime;
@@ -325,7 +344,10 @@ public class DescribeProductResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The product code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cmjj01**45</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -333,7 +355,10 @@ public class DescribeProductResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The detailed description of the product. HTML is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <div>Installed from the source code based on the Alibaba Cloud (Ubuntu 16.04 64-bit) system. Secure, stable, and efficient!</div>
          */
         public Builder description(String description) {
             this.description = description;
@@ -341,7 +366,10 @@ public class DescribeProductResponseBody extends TeaModel {
         }
 
         /**
-         * FrontCategoryId.
+         * <p>The category ID of the product.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>523617212</p>
          */
         public Builder frontCategoryId(Long frontCategoryId) {
             this.frontCategoryId = frontCategoryId;
@@ -349,7 +377,10 @@ public class DescribeProductResponseBody extends TeaModel {
         }
 
         /**
-         * GmtCreated.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1578931200000</p>
          */
         public Builder gmtCreated(Long gmtCreated) {
             this.gmtCreated = gmtCreated;
@@ -357,7 +388,10 @@ public class DescribeProductResponseBody extends TeaModel {
         }
 
         /**
-         * GmtModified.
+         * <p>The modification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1578931200000</p>
          */
         public Builder gmtModified(Long gmtModified) {
             this.gmtModified = gmtModified;
@@ -365,7 +399,10 @@ public class DescribeProductResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The product name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LNMP Environment (Ubuntu 16.04 Nginx PHP 5.3)</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -373,7 +410,10 @@ public class DescribeProductResponseBody extends TeaModel {
         }
 
         /**
-         * PicUrl.
+         * <p>The URL of the product image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://oss.aliyuncs.com/photogallery/photo/1930532890589852/6245/495d5f19-03e4-4c2e-9c4e-bef9ab6af1e1.png">https://oss.aliyuncs.com/photogallery/photo/1930532890589852/6245/495d5f19-03e4-4c2e-9c4e-bef9ab6af1e1.png</a></p>
          */
         public Builder picUrl(String picUrl) {
             this.picUrl = picUrl;
@@ -397,7 +437,10 @@ public class DescribeProductResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6EF60BEC-0242-43AF-BB20-270359FB54A7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -405,7 +448,10 @@ public class DescribeProductResponseBody extends TeaModel {
         }
 
         /**
-         * Score.
+         * <p>The product score.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5.0</p>
          */
         public Builder score(Float score) {
             this.score = score;
@@ -413,7 +459,7 @@ public class DescribeProductResponseBody extends TeaModel {
         }
 
         /**
-         * ShopInfo.
+         * <p>The shop information.</p>
          */
         public Builder shopInfo(ShopInfo shopInfo) {
             this.shopInfo = shopInfo;
@@ -421,7 +467,10 @@ public class DescribeProductResponseBody extends TeaModel {
         }
 
         /**
-         * ShortDescription.
+         * <p>The short description of the product.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This image is LNMP (Ubuntu 16.04 64-bit + Nginx + MySQL 5.6 + PHP 5.3)</p>
          */
         public Builder shortDescription(String shortDescription) {
             this.shortDescription = shortDescription;
@@ -429,7 +478,10 @@ public class DescribeProductResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p><strong>[Deprecated]</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -437,7 +489,10 @@ public class DescribeProductResponseBody extends TeaModel {
         }
 
         /**
-         * SupplierPk.
+         * <p>The UID of the service provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1526111111****</p>
          */
         public Builder supplierPk(Long supplierPk) {
             this.supplierPk = supplierPk;
@@ -445,7 +500,17 @@ public class DescribeProductResponseBody extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>The product type. Valid values:</p>
+         * <ul>
+         * <li>APP: Application.</li>
+         * <li>DOWNLOAD: Download.</li>
+         * <li>MIRROR: Image.</li>
+         * <li>SERVICE: Service.</li>
+         * <li>API_SERVICE: API service.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MIRROR</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -453,7 +518,10 @@ public class DescribeProductResponseBody extends TeaModel {
         }
 
         /**
-         * UseCount.
+         * <p>The usage count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder useCount(Long useCount) {
             this.useCount = useCount;
@@ -582,7 +650,17 @@ public class DescribeProductResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The product type. Valid values:</p>
+             * <ul>
+             * <li>APP: Application.</li>
+             * <li>DOWNLOAD: Download.</li>
+             * <li>MIRROR: Image.</li>
+             * <li>SERVICE: Service.</li>
+             * <li>API_SERVICE: API service.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>MIRROR</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -816,7 +894,17 @@ public class DescribeProductResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The product type. Valid values:</p>
+             * <ul>
+             * <li>APP: Application.</li>
+             * <li>DOWNLOAD: Download.</li>
+             * <li>MIRROR: Image.</li>
+             * <li>SERVICE: Service.</li>
+             * <li>API_SERVICE: API service.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>MIRROR</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1000,7 +1088,10 @@ public class DescribeProductResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The product name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LNMP Environment (Ubuntu 16.04 Nginx PHP 5.3)</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1163,7 +1254,10 @@ public class DescribeProductResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The product code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cmjj01**45</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -1179,7 +1273,10 @@ public class DescribeProductResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The product name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LNMP Environment (Ubuntu 16.04 Nginx PHP 5.3)</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1308,7 +1405,10 @@ public class DescribeProductResponseBody extends TeaModel {
             } 
 
             /**
-             * Name.
+             * <p>The product name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LNMP Environment (Ubuntu 16.04 Nginx PHP 5.3)</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1510,7 +1610,10 @@ public class DescribeProductResponseBody extends TeaModel {
             }
 
             /**
-             * Code.
+             * <p>The product code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cmjj01**45</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -1542,7 +1645,10 @@ public class DescribeProductResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The product name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LNMP Environment (Ubuntu 16.04 Nginx PHP 5.3)</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1893,7 +1999,10 @@ public class DescribeProductResponseBody extends TeaModel {
             } 
 
             /**
-             * Emails.
+             * <p>The email addresses.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>46**<a href="mailto:41@example.com">41@example.com</a></p>
              */
             public Builder emails(String emails) {
                 this.emails = emails;
@@ -1901,7 +2010,10 @@ public class DescribeProductResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The shop ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -1909,7 +2021,10 @@ public class DescribeProductResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The shop name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>**Science Company</p>
              */
             public Builder name(String name) {
                 this.name = name;

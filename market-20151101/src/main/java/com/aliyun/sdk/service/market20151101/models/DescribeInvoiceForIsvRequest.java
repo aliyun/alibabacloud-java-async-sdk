@@ -185,7 +185,10 @@ public class DescribeInvoiceForIsvRequest extends Request {
         } 
 
         /**
-         * CreateTimeEnd.
+         * <p>The end time. By default, 23:59:59 is appended to the date.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-01-01 00:00:00</p>
          */
         public Builder createTimeEnd(String createTimeEnd) {
             this.putQueryParameter("CreateTimeEnd", createTimeEnd);
@@ -194,7 +197,10 @@ public class DescribeInvoiceForIsvRequest extends Request {
         }
 
         /**
-         * CreateTimeStart.
+         * <p>The start time. By default, 00:00:00 is appended to the date.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-01-31 23:59:59</p>
          */
         public Builder createTimeStart(String createTimeStart) {
             this.putQueryParameter("CreateTimeStart", createTimeStart);
@@ -203,7 +209,10 @@ public class DescribeInvoiceForIsvRequest extends Request {
         }
 
         /**
-         * InvoiceId.
+         * <p>The ID of the invoice application. This corresponds to the Result.Id field in the response of the DescribeInvoiceForIsv operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4072040****</p>
          */
         public Builder invoiceId(Long invoiceId) {
             this.putQueryParameter("InvoiceId", invoiceId);
@@ -212,7 +221,10 @@ public class DescribeInvoiceForIsvRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries per page in a paging query. Maximum value: 50. Default value: 10. (This parameter is not enabled.)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -221,7 +233,10 @@ public class DescribeInvoiceForIsvRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token returned by the current call. This parameter is not enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3v3mzZN1QdVsTPNiT0OkD9v+MeV8LSqSQDSuTTVFCUMMWShmnj/LXRMScqm242bB</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -230,7 +245,10 @@ public class DescribeInvoiceForIsvRequest extends Request {
         }
 
         /**
-         * PageIndex.
+         * <p>The page number. Pages start from 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageIndex(Long pageIndex) {
             this.putQueryParameter("PageIndex", pageIndex);
@@ -239,7 +257,10 @@ public class DescribeInvoiceForIsvRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -248,7 +269,14 @@ public class DescribeInvoiceForIsvRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The current invoice status. Valid values:</p>
+         * <ul>
+         * <li>0: Applying.</li>
+         * <li>1: Completed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder status(Long status) {
             this.putQueryParameter("Status", status);
@@ -257,7 +285,14 @@ public class DescribeInvoiceForIsvRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The invoice type. If this parameter is left empty, all types are queried by default. Valid values:</p>
+         * <ul>
+         * <li>2: Digital electronic ordinary invoice.</li>
+         * <li>3: Digital electronic special invoice.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder type(Long type) {
             this.putQueryParameter("Type", type);
@@ -266,7 +301,10 @@ public class DescribeInvoiceForIsvRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>The Alibaba Cloud user ID of the customer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>174452687724****</p>
          */
         public Builder userId(Long userId) {
             this.putQueryParameter("UserId", userId);

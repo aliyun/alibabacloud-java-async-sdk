@@ -218,7 +218,13 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * Currency.
+         * <p>Currency</p>
+         * <p>CNY: Chinese Yuan
+         * USD: US Dollar
+         * JPY: Japanese Yen</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CNY</p>
          */
         public Builder currency(String currency) {
             this.currency = currency;
@@ -226,7 +232,10 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * Cuxiao.
+         * <p>Indicates whether a promotion is available</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder cuxiao(Boolean cuxiao) {
             this.cuxiao = cuxiao;
@@ -234,7 +243,13 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * Cycle.
+         * <p>Cycle unit</p>
+         * <p>DAY: Day
+         * MONTH: Month
+         * YEAR: Year</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MONTH</p>
          */
         public Builder cycle(String cycle) {
             this.cycle = cycle;
@@ -242,7 +257,10 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * DiscountPrice.
+         * <p>Discount amount (original price minus trade price), in CNY</p>
+         * 
+         * <strong>example:</strong>
+         * <p>178.20</p>
          */
         public Builder discountPrice(Float discountPrice) {
             this.discountPrice = discountPrice;
@@ -250,7 +268,10 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * Duration.
+         * <p>Number of cycles, such as 1, 2, 3...</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder duration(Integer duration) {
             this.duration = duration;
@@ -258,7 +279,10 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * ExpressionCode.
+         * <p>Purchase restriction code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ORDER.NO_REAL_NAME_AUTHENTICATION</p>
          */
         public Builder expressionCode(String expressionCode) {
             this.expressionCode = expressionCode;
@@ -266,7 +290,10 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * ExpressionMessage.
+         * <p>Purchase restriction description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>企业用户才能购买</p>
          */
         public Builder expressionMessage(String expressionMessage) {
             this.expressionMessage = expressionMessage;
@@ -274,7 +301,10 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * InfoTitle.
+         * <p>Promotion name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>新年特惠</p>
          */
         public Builder infoTitle(String infoTitle) {
             this.infoTitle = infoTitle;
@@ -282,7 +312,10 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * OriginalPrice.
+         * <p>Original price, in CNY</p>
+         * 
+         * <strong>example:</strong>
+         * <p>198.00</p>
          */
         public Builder originalPrice(Float originalPrice) {
             this.originalPrice = originalPrice;
@@ -290,7 +323,10 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * ProductCode.
+         * <p>Product code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cmgj01****</p>
          */
         public Builder productCode(String productCode) {
             this.productCode = productCode;
@@ -306,7 +342,10 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * TradePrice.
+         * <p>Trade price (actual price), in CNY</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19.80</p>
          */
         public Builder tradePrice(Float tradePrice) {
             this.tradePrice = tradePrice;

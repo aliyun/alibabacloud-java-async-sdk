@@ -301,7 +301,10 @@ public class DescribeOrderForIsvResponseBody extends TeaModel {
         } 
 
         /**
-         * AccountQuantity.
+         * <p>The number of accounts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder accountQuantity(Long accountQuantity) {
             this.accountQuantity = accountQuantity;
@@ -309,7 +312,10 @@ public class DescribeOrderForIsvResponseBody extends TeaModel {
         }
 
         /**
-         * AliUid.
+         * <p>The unique identifier of the Alibaba Cloud user (aliyunPK).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>190311111111****</p>
          */
         public Builder aliUid(Long aliUid) {
             this.aliUid = aliUid;
@@ -317,7 +323,20 @@ public class DescribeOrderForIsvResponseBody extends TeaModel {
         }
 
         /**
-         * Components.
+         * <p>The order module information. The metric description for the parameters in the example is as follows:</p>
+         * <ul>
+         * <li>package_quantity: the number of usage times (a module specific to API products)</li>
+         * <li>package_version: the version</li>
+         * <li>ord_time: the duration</li>
+         * <li>order_num: the quantity</li>
+         * <li>code: the module code</li>
+         * <li>globarKey: the module key</li>
+         * <li>name: the module name</li>
+         * <li>value: the module value.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;package_version&quot;:{&quot;code&quot;:&quot;package_version&quot;,&quot;globarKey&quot;:&quot;cmgj0<em><em><strong><strong>8_package_version_package_version_yuncode4176</strong></strong></em>1&quot;,&quot;name&quot;:&quot;0.01&quot;,&quot;value&quot;:&quot;yuncode4176</em><strong><strong>1&quot;},&quot;ord_time&quot;:{&quot;code&quot;:&quot;ord_time&quot;,&quot;globarKey&quot;:&quot;cmgj0</strong></strong><strong>8_ord_time_ord_time_1:Month&quot;,&quot;name&quot;:&quot;1 month&quot;,&quot;value&quot;:&quot;1:Month&quot;},&quot;order_num&quot;:{&quot;code&quot;:&quot;order_num&quot;,&quot;globarKey&quot;:&quot;cmgj0</strong>****8_order_num_order_num_1&quot;,&quot;name&quot;:&quot;1&quot;,&quot;value&quot;:&quot;1&quot;}}</p>
          */
         public Builder components(Object components) {
             this.components = components;
@@ -325,7 +344,10 @@ public class DescribeOrderForIsvResponseBody extends TeaModel {
         }
 
         /**
-         * CouponPrice.
+         * <p>The amount of vouchers used, in CNY.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         public Builder couponPrice(Float couponPrice) {
             this.couponPrice = couponPrice;
@@ -333,7 +355,10 @@ public class DescribeOrderForIsvResponseBody extends TeaModel {
         }
 
         /**
-         * CreatedOn.
+         * <p>The time when the order was placed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1531191564000</p>
          */
         public Builder createdOn(Long createdOn) {
             this.createdOn = createdOn;
@@ -349,7 +374,10 @@ public class DescribeOrderForIsvResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>202211111111111</p>
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -357,7 +385,15 @@ public class DescribeOrderForIsvResponseBody extends TeaModel {
         }
 
         /**
-         * OrderStatus.
+         * <p>The order status. Valid values:</p>
+         * <ul>
+         * <li>NORMAL: Normal.</li>
+         * <li>REFUND: Refunded.</li>
+         * <li>DELETE: Voided.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         public Builder orderStatus(String orderStatus) {
             this.orderStatus = orderStatus;
@@ -365,7 +401,18 @@ public class DescribeOrderForIsvResponseBody extends TeaModel {
         }
 
         /**
-         * OrderType.
+         * <p>The order type. Valid values:</p>
+         * <ul>
+         * <li>NEW: New purchase order.</li>
+         * <li>RENEW: Renewal order.</li>
+         * <li>TRIAL: Trial order.</li>
+         * <li>UPGRADE: Upgrade order.</li>
+         * <li>DOWNGRADE: Downgrade order.</li>
+         * <li>PURCHASE: Conversion order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NEW</p>
          */
         public Builder orderType(String orderType) {
             this.orderType = orderType;
@@ -373,7 +420,10 @@ public class DescribeOrderForIsvResponseBody extends TeaModel {
         }
 
         /**
-         * OriginalPrice.
+         * <p>The original price of the order, in CNY.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0</p>
          */
         public Builder originalPrice(Float originalPrice) {
             this.originalPrice = originalPrice;
@@ -381,7 +431,10 @@ public class DescribeOrderForIsvResponseBody extends TeaModel {
         }
 
         /**
-         * PaidOn.
+         * <p>The payment time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1531191675000</p>
          */
         public Builder paidOn(Long paidOn) {
             this.paidOn = paidOn;
@@ -389,7 +442,14 @@ public class DescribeOrderForIsvResponseBody extends TeaModel {
         }
 
         /**
-         * PayStatus.
+         * <p>The payment status. Valid values:</p>
+         * <ul>
+         * <li>PAID: Paid.</li>
+         * <li>UNPAID: Unpaid.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PAID</p>
          */
         public Builder payStatus(String payStatus) {
             this.payStatus = payStatus;
@@ -397,7 +457,10 @@ public class DescribeOrderForIsvResponseBody extends TeaModel {
         }
 
         /**
-         * PaymentPrice.
+         * <p>The actual payment amount, in CNY.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         public Builder paymentPrice(Float paymentPrice) {
             this.paymentPrice = paymentPrice;
@@ -405,7 +468,18 @@ public class DescribeOrderForIsvResponseBody extends TeaModel {
         }
 
         /**
-         * PeriodType.
+         * <p>The time unit for prepaid orders. Valid values:</p>
+         * <ul>
+         * <li>MONTH: one month</li>
+         * <li>SEASON: one quarter</li>
+         * <li>HALFYEAR: half a year</li>
+         * <li>YEAR: one year</li>
+         * <li>TWOYEARS: two years</li>
+         * <li>ONCE: one-time.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MONTH</p>
          */
         public Builder periodType(String periodType) {
             this.periodType = periodType;
@@ -413,7 +487,10 @@ public class DescribeOrderForIsvResponseBody extends TeaModel {
         }
 
         /**
-         * ProductCode.
+         * <p>The commodity code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cmgj02****</p>
          */
         public Builder productCode(String productCode) {
             this.productCode = productCode;
@@ -421,7 +498,10 @@ public class DescribeOrderForIsvResponseBody extends TeaModel {
         }
 
         /**
-         * ProductName.
+         * <p>The name of the subscribed product.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SaaS service product</p>
          */
         public Builder productName(String productName) {
             this.productName = productName;
@@ -429,7 +509,10 @@ public class DescribeOrderForIsvResponseBody extends TeaModel {
         }
 
         /**
-         * ProductSkuCode.
+         * <p>The SKU code of the subscribed product.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cmgj02****-prepay</p>
          */
         public Builder productSkuCode(String productSkuCode) {
             this.productSkuCode = productSkuCode;
@@ -437,7 +520,10 @@ public class DescribeOrderForIsvResponseBody extends TeaModel {
         }
 
         /**
-         * Quantity.
+         * <p>The quantity of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder quantity(Integer quantity) {
             this.quantity = quantity;
@@ -445,7 +531,10 @@ public class DescribeOrderForIsvResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. This ID is used for troubleshooting when an error occurs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6EF60BEC-<strong><strong>-</strong></strong>-****-270359FB54A7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -453,7 +542,10 @@ public class DescribeOrderForIsvResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPrice.
+         * <p>The total receivable amount of the order, in CNY.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         public Builder totalPrice(Float totalPrice) {
             this.totalPrice = totalPrice;

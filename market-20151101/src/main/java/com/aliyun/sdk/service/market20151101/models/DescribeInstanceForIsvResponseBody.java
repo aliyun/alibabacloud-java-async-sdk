@@ -327,7 +327,10 @@ public class DescribeInstanceForIsvResponseBody extends TeaModel {
         } 
 
         /**
-         * ActiveAddress.
+         * <p>The activation URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>https://*****.com</p>
          */
         public Builder activeAddress(String activeAddress) {
             this.activeAddress = activeAddress;
@@ -335,7 +338,14 @@ public class DescribeInstanceForIsvResponseBody extends TeaModel {
         }
 
         /**
-         * AppJson.
+         * <p>The application information. The metric description of the parameters in the example is as follows:</p>
+         * <p>username: the username.
+         * passowrd: the password.
+         * frontEndUrl: the frontend URL.
+         * adminUrl: the administration URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;frontEndUrl&quot;:&quot;https://<em><em><strong>.aliyundoc.com&quot;,&quot;password&quot;:&quot;Sjtv</strong></em>&quot;,&quot;adminUrl&quot;:&quot;https://</em><em><strong>.aliyundoc.com&quot;,&quot;username&quot;:&quot;aliyun</strong></em>&quot;}</p>
          */
         public Builder appJson(String appJson) {
             this.appJson = appJson;
@@ -343,7 +353,12 @@ public class DescribeInstanceForIsvResponseBody extends TeaModel {
         }
 
         /**
-         * AutoRenewal.
+         * <p>The automatic payment information for epoch-based products. A non-empty value indicates that you enable auto-renewal.
+         * autoRenewCycle: Day, Month, or Year.
+         * autoRenewDuration: the renewal epoch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;autoRenewCycle&quot;:&quot;Year&quot;,&quot;autoRenewDuration&quot;:1}</p>
          */
         public Builder autoRenewal(String autoRenewal) {
             this.autoRenewal = autoRenewal;
@@ -351,7 +366,10 @@ public class DescribeInstanceForIsvResponseBody extends TeaModel {
         }
 
         /**
-         * BeganOn.
+         * <p>The time when the instance was activated (timestamp).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1570634021000</p>
          */
         public Builder beganOn(Long beganOn) {
             this.beganOn = beganOn;
@@ -359,7 +377,13 @@ public class DescribeInstanceForIsvResponseBody extends TeaModel {
         }
 
         /**
-         * ComponentJson.
+         * <p>The business module. The metric description of the parameters in the example is as follows:</p>
+         * <ul>
+         * <li>package_version: the version.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;package_version&quot;:&quot;yuncode000111&quot;}</p>
          */
         public Builder componentJson(String componentJson) {
             this.componentJson = componentJson;
@@ -367,7 +391,10 @@ public class DescribeInstanceForIsvResponseBody extends TeaModel {
         }
 
         /**
-         * CreatedOn.
+         * <p>The creation time (timestamp).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1570634018000</p>
          */
         public Builder createdOn(Long createdOn) {
             this.createdOn = createdOn;
@@ -375,7 +402,10 @@ public class DescribeInstanceForIsvResponseBody extends TeaModel {
         }
 
         /**
-         * EndOn.
+         * <p>The expiration time (timestamp).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1602259200000</p>
          */
         public Builder endOn(Long endOn) {
             this.endOn = endOn;
@@ -383,7 +413,10 @@ public class DescribeInstanceForIsvResponseBody extends TeaModel {
         }
 
         /**
-         * ExtendJson.
+         * <p>The extended information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;description&quot;: &quot;If you have any problems, contact us...&quot;}</p>
          */
         public Builder extendJson(String extendJson) {
             this.extendJson = extendJson;
@@ -391,7 +424,14 @@ public class DescribeInstanceForIsvResponseBody extends TeaModel {
         }
 
         /**
-         * HostJson.
+         * <p>The host information. The metric description of the parameters in the example is as follows:</p>
+         * <p>username: the username.
+         * passowrd: the password.
+         * ip: the host IP address.
+         * innerIp: the internal network IP address of the host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;password&quot;:&quot;<em><strong>&quot;,&quot;ip&quot;:&quot;118.31.</strong></em>.41&quot;,&quot;innerIp&quot;:&quot;118.31.<em><strong>.41&quot;,&quot;region&quot;:&quot;&quot;,&quot;username&quot;:&quot;</strong></em>&quot;,&quot;beianInfo&quot;:&quot;&quot;}</p>
          */
         public Builder hostJson(String hostJson) {
             this.hostJson = hostJson;
@@ -399,7 +439,13 @@ public class DescribeInstanceForIsvResponseBody extends TeaModel {
         }
 
         /**
-         * ImageJson.
+         * <p>The image instance information.
+         * imageId: the image ID.
+         * instanceId: the instance ID.
+         * ecsInstanceId: the ECS instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;imageId&quot;:&quot;m-*******&quot;,&quot;instanceId&quot;:********}</p>
          */
         public Builder imageJson(String imageJson) {
             this.imageJson = imageJson;
@@ -407,7 +453,10 @@ public class DescribeInstanceForIsvResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1551111111</p>
          */
         public Builder instanceId(Long instanceId) {
             this.instanceId = instanceId;
@@ -415,7 +464,10 @@ public class DescribeInstanceForIsvResponseBody extends TeaModel {
         }
 
         /**
-         * IsTrial.
+         * <p>Indicates whether the instance is a trial instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isTrial(Boolean isTrial) {
             this.isTrial = isTrial;
@@ -423,7 +475,10 @@ public class DescribeInstanceForIsvResponseBody extends TeaModel {
         }
 
         /**
-         * LicenseCode.
+         * <p>The activation code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxx</p>
          */
         public Builder licenseCode(String licenseCode) {
             this.licenseCode = licenseCode;
@@ -431,7 +486,10 @@ public class DescribeInstanceForIsvResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>204211111111111</p>
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -439,7 +497,10 @@ public class DescribeInstanceForIsvResponseBody extends TeaModel {
         }
 
         /**
-         * ProductCode.
+         * <p>The commodity code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cmgj00**11</p>
          */
         public Builder productCode(String productCode) {
             this.productCode = productCode;
@@ -447,7 +508,10 @@ public class DescribeInstanceForIsvResponseBody extends TeaModel {
         }
 
         /**
-         * ProductName.
+         * <p>The product name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>***Collaborative Office</p>
          */
         public Builder productName(String productName) {
             this.productName = productName;
@@ -455,7 +519,10 @@ public class DescribeInstanceForIsvResponseBody extends TeaModel {
         }
 
         /**
-         * ProductSkuCode.
+         * <p>The SKU code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cmgj00**11-prepay</p>
          */
         public Builder productSkuCode(String productSkuCode) {
             this.productSkuCode = productSkuCode;
@@ -463,7 +530,18 @@ public class DescribeInstanceForIsvResponseBody extends TeaModel {
         }
 
         /**
-         * ProductType.
+         * <p>The product type. Valid values:</p>
+         * <ul>
+         * <li>APP: application.</li>
+         * <li>SERVIC: service.</li>
+         * <li>MIRROR: image.</li>
+         * <li>DOWNLOAD: download.</li>
+         * <li>API_SERVICE: API.</li>
+         * <li>DOCKER: Docker.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>APP</p>
          */
         public Builder productType(String productType) {
             this.productType = productType;
@@ -471,7 +549,7 @@ public class DescribeInstanceForIsvResponseBody extends TeaModel {
         }
 
         /**
-         * RelationalData.
+         * <p>The relational information.</p>
          */
         public Builder relationalData(RelationalData relationalData) {
             this.relationalData = relationalData;
@@ -479,7 +557,10 @@ public class DescribeInstanceForIsvResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6EF60BEC-<strong><strong>-</strong></strong>-****-270359FB54A7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -487,7 +568,33 @@ public class DescribeInstanceForIsvResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The business status. Different values are set based on the product type.</p>
+         * <p>When ProductType is set to MIRROR:</p>
+         * <ul>
+         * <li>PRODUCE: being provisioned.</li>
+         * <li>USING: in use.</li>
+         * <li>UNUSED: not in use.</li>
+         * <li>EXPIRED: expired.</li>
+         * <li>CLOSED: released.</li>
+         * </ul>
+         * <p>When ProductType is set to SERVICE:</p>
+         * <ul>
+         * <li>READYING: not started.</li>
+         * <li>STARTED: in service.</li>
+         * <li>CONFIRM: completed.</li>
+         * <li>EXPIRED: expired.</li>
+         * <li>CLOSED: released.</li>
+         * </ul>
+         * <p>When ProductType is set to APP, DOWNLOAD, API_SERVICE, or DOCKER:</p>
+         * <ul>
+         * <li>OPENING: being activated.</li>
+         * <li>OPENED: activated.</li>
+         * <li>EXPIRED: expired.</li>
+         * <li>CLOSED: released.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OPENED</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -495,7 +602,10 @@ public class DescribeInstanceForIsvResponseBody extends TeaModel {
         }
 
         /**
-         * SupplierName.
+         * <p>The service provider name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>***** Co., Ltd.</p>
          */
         public Builder supplierName(String supplierName) {
             this.supplierName = supplierName;
@@ -548,7 +658,17 @@ public class DescribeInstanceForIsvResponseBody extends TeaModel {
             } 
 
             /**
-             * ServiceStatus.
+             * <p>The service status. Valid values:</p>
+             * <ul>
+             * <li>READYING: not started.</li>
+             * <li>STARTED: in service.</li>
+             * <li>CONFIRM: completed.</li>
+             * <li>EXPIRED: expired.</li>
+             * <li>CLOSED: released.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>STARTED</p>
              */
             public Builder serviceStatus(String serviceStatus) {
                 this.serviceStatus = serviceStatus;

@@ -60,6 +60,7 @@ public class DescribeProjectAttachmentsRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID of the Alibaba Cloud Marketplace business.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

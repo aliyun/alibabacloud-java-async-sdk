@@ -80,7 +80,10 @@ public class FinishCurrentProjectNodeResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ee69a00f-189b-400f-9fd2-af89749fb50f</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,10 @@ public class FinishCurrentProjectNodeResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The response result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;
@@ -96,7 +102,10 @@ public class FinishCurrentProjectNodeResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the operation was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

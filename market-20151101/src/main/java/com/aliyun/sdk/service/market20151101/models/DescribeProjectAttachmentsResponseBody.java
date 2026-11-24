@@ -80,7 +80,10 @@ public class DescribeProjectAttachmentsResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e03a9f78-7b40-4fb3-a015-350913e37e3f</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class DescribeProjectAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The list of project attachments.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -96,7 +99,10 @@ public class DescribeProjectAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -331,7 +337,10 @@ public class DescribeProjectAttachmentsResponseBody extends TeaModel {
             } 
 
             /**
-             * AttachmentToken.
+             * <p>The MD5 hash of the attachment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Mzc4NDAtODQ3MjY4MzI=</p>
              */
             public Builder attachmentToken(String attachmentToken) {
                 this.attachmentToken = attachmentToken;
@@ -339,7 +348,10 @@ public class DescribeProjectAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * AttachmentType.
+             * <p>The type of the attachment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>File</p>
              */
             public Builder attachmentType(String attachmentType) {
                 this.attachmentType = attachmentType;
@@ -347,7 +359,10 @@ public class DescribeProjectAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * Content.
+             * <p>The content text.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -355,7 +370,10 @@ public class DescribeProjectAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * FileLink.
+             * <p>The access URL of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://delivery-center.oss-cn-shanghai.aliyuncs.com/6a8****0e2/e0a***f3.jpg?Expires=1589334682&OSSAccessKeyId=wI2r*********&Signature=JWB39pUxs7RCqrcw58qXPEGu6M0%3D">http://delivery-center.oss-cn-shanghai.aliyuncs.com/6a8****0e2/e0a***f3.jpg?Expires=1589334682&amp;OSSAccessKeyId=wI2r*********&amp;Signature=JWB39pUxs7RCqrcw58qXPEGu6M0%3D</a></p>
              */
             public Builder fileLink(String fileLink) {
                 this.fileLink = fileLink;
@@ -363,7 +381,10 @@ public class DescribeProjectAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * FileLinkGmtExpired.
+             * <p>The expiration time of the file URL (UNIX timestamp).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1589334682404</p>
              */
             public Builder fileLinkGmtExpired(Long fileLinkGmtExpired) {
                 this.fileLinkGmtExpired = fileLinkGmtExpired;
@@ -371,7 +392,10 @@ public class DescribeProjectAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * FileName.
+             * <p>The name of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f8-test-perview.jpeg</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -379,7 +403,10 @@ public class DescribeProjectAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * FileSize.
+             * <p>The size of the file (in bytes).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>109124</p>
              */
             public Builder fileSize(Long fileSize) {
                 this.fileSize = fileSize;
@@ -387,7 +414,10 @@ public class DescribeProjectAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * FileSuffix.
+             * <p>The file name extension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>jpg</p>
              */
             public Builder fileSuffix(String fileSuffix) {
                 this.fileSuffix = fileSuffix;
@@ -395,7 +425,10 @@ public class DescribeProjectAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The time when the attachment was uploaded (UNIX timestamp).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1587968858000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -403,7 +436,10 @@ public class DescribeProjectAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * <p>The ID of the flow node where the attachment was uploaded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8472</p>
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -411,7 +447,10 @@ public class DescribeProjectAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * NodeName.
+             * <p>The name of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Waiting for service activation</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -419,7 +458,10 @@ public class DescribeProjectAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * Operator.
+             * <p>The Alibaba Cloud UID of the operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>45261111****</p>
              */
             public Builder operator(Long operator) {
                 this.operator = operator;
@@ -427,7 +469,10 @@ public class DescribeProjectAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorName.
+             * <p>The name of the operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>** Technology Co., Ltd</p>
              */
             public Builder operatorName(String operatorName) {
                 this.operatorName = operatorName;
@@ -435,7 +480,10 @@ public class DescribeProjectAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorRole.
+             * <p>The role of the operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Provider</p>
              */
             public Builder operatorRole(String operatorRole) {
                 this.operatorRole = operatorRole;
@@ -443,7 +491,10 @@ public class DescribeProjectAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * StepNo.
+             * <p>The sequence number of the flow node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder stepNo(Integer stepNo) {
                 this.stepNo = stepNo;

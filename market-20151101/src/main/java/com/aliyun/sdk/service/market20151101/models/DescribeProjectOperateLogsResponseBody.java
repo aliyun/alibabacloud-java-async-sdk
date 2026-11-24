@@ -80,7 +80,10 @@ public class DescribeProjectOperateLogsResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e6037e86-657f-4194-bb6a-7b26973aec8d</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class DescribeProjectOperateLogsResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The returned result.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -96,7 +99,10 @@ public class DescribeProjectOperateLogsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -201,7 +207,10 @@ public class DescribeProjectOperateLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The description of the operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Entered the service provider assignment step</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -209,7 +218,10 @@ public class DescribeProjectOperateLogsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The operation time (UNIX timestamp).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1587624497000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -217,7 +229,10 @@ public class DescribeProjectOperateLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Operator.
+             * <p>The Alibaba Cloud UID of the operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder operator(Long operator) {
                 this.operator = operator;
@@ -225,7 +240,10 @@ public class DescribeProjectOperateLogsResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorName.
+             * <p>The name of the operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>System</p>
              */
             public Builder operatorName(String operatorName) {
                 this.operatorName = operatorName;
@@ -233,7 +251,15 @@ public class DescribeProjectOperateLogsResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorRole.
+             * <p>The role of the operator. Valid values:</p>
+             * <ul>
+             * <li>System: system.</li>
+             * <li>Custom: customer.</li>
+             * <li>Provider: service provider.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>System</p>
              */
             public Builder operatorRole(String operatorRole) {
                 this.operatorRole = operatorRole;

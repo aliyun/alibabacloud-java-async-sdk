@@ -60,6 +60,7 @@ public class ConfirmNotificationRequest extends Request {
         } 
 
         /**
+         * <p>The notification request ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

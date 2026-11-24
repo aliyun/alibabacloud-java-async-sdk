@@ -59,7 +59,10 @@ public class CrossAccountVerifyTokenRequest extends Request {
         } 
 
         /**
-         * Token.
+         * <p>Token returned upon successful cross-account role authorization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C19D103FEA2D50A584410267CE9FBA56</p>
          */
         public Builder token(String token) {
             this.putBodyParameter("Token", token);

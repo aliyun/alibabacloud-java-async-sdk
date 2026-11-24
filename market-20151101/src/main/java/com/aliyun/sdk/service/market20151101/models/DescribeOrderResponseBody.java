@@ -327,7 +327,10 @@ public class DescribeOrderResponseBody extends TeaModel {
         } 
 
         /**
-         * AccountQuantity.
+         * <p>The number of accounts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder accountQuantity(Long accountQuantity) {
             this.accountQuantity = accountQuantity;
@@ -335,7 +338,10 @@ public class DescribeOrderResponseBody extends TeaModel {
         }
 
         /**
-         * AliUid.
+         * <p>The unique identifier of the Alibaba Cloud user (aliyunPK).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>190311111111****</p>
          */
         public Builder aliUid(Long aliUid) {
             this.aliUid = aliUid;
@@ -343,7 +349,20 @@ public class DescribeOrderResponseBody extends TeaModel {
         }
 
         /**
-         * Components.
+         * <p>The order component information. The metric description for the parameters in the example is as follows:</p>
+         * <ul>
+         * <li>package_quantity: the number of usage times (a component specific to API products)</li>
+         * <li>package_version: the version</li>
+         * <li>ord_time: the duration</li>
+         * <li>order_num: the quantity</li>
+         * <li>code: the component code</li>
+         * <li>globarKey: the component key</li>
+         * <li>name: the component name</li>
+         * <li>value: the component value.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;package_quantity&quot;: { &quot;code&quot;: &quot;package_quantity&quot;, &quot;globarKey&quot;: &quot;cmapi014302_package_quantity_package_quantity_10000&quot;, &quot;name&quot;: &quot;10,000 times&quot;, &quot;value&quot;: &quot;10000&quot; }, &quot;package_version&quot;: { &quot;code&quot;: &quot;package_version&quot;, &quot;globarKey&quot;: &quot;cmapi014302_package_version_package_version_yuncode830200000&quot;, &quot;name&quot;: &quot;0 yuan/10,000 times&quot;, &quot;value&quot;: &quot;yuncode830200000&quot; }, &quot;ord_time&quot;: { &quot;code&quot;: &quot;ord_time&quot;, &quot;globarKey&quot;: &quot;cmapi014302_ord_time_ord_time_6:Month&quot;, &quot;name&quot;: &quot;6 months&quot;, &quot;value&quot;: &quot;6:Month&quot; }, &quot;order_num&quot;: { &quot;code&quot;: &quot;order_num&quot;, &quot;globarKey&quot;: &quot;cmapi014302_order_num_order_num_1&quot;, &quot;name&quot;: &quot;1&quot;, &quot;value&quot;: &quot;1&quot; } }</p>
          */
         public Builder components(java.util.Map<String, ?> components) {
             this.components = components;
@@ -351,7 +370,10 @@ public class DescribeOrderResponseBody extends TeaModel {
         }
 
         /**
-         * CouponPrice.
+         * <p>The amount of vouchers used, in CNY.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         public Builder couponPrice(Float couponPrice) {
             this.couponPrice = couponPrice;
@@ -359,7 +381,10 @@ public class DescribeOrderResponseBody extends TeaModel {
         }
 
         /**
-         * CreatedOn.
+         * <p>The time when the order was placed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1531191564000</p>
          */
         public Builder createdOn(Long createdOn) {
             this.createdOn = createdOn;
@@ -375,7 +400,10 @@ public class DescribeOrderResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>202211111111111</p>
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -383,7 +411,15 @@ public class DescribeOrderResponseBody extends TeaModel {
         }
 
         /**
-         * OrderStatus.
+         * <p>The order status. Valid values:</p>
+         * <ul>
+         * <li>NORMAL: Normal.</li>
+         * <li>REFUND: Refunded.</li>
+         * <li>DELETE: Voided.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         public Builder orderStatus(String orderStatus) {
             this.orderStatus = orderStatus;
@@ -391,7 +427,15 @@ public class DescribeOrderResponseBody extends TeaModel {
         }
 
         /**
-         * OrderType.
+         * <p>The order type. Valid values:</p>
+         * <ul>
+         * <li>NEW: New purchase order.</li>
+         * <li>RENEW: Renewal order.</li>
+         * <li>TRIAL: Trial order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NEW</p>
          */
         public Builder orderType(String orderType) {
             this.orderType = orderType;
@@ -399,7 +443,10 @@ public class DescribeOrderResponseBody extends TeaModel {
         }
 
         /**
-         * OriginalPrice.
+         * <p>The original price of the order, in CNY.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0</p>
          */
         public Builder originalPrice(Float originalPrice) {
             this.originalPrice = originalPrice;
@@ -407,7 +454,10 @@ public class DescribeOrderResponseBody extends TeaModel {
         }
 
         /**
-         * PaidOn.
+         * <p>The payment time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1531191675000</p>
          */
         public Builder paidOn(Long paidOn) {
             this.paidOn = paidOn;
@@ -415,7 +465,14 @@ public class DescribeOrderResponseBody extends TeaModel {
         }
 
         /**
-         * PayStatus.
+         * <p>The payment status. Valid values:</p>
+         * <ul>
+         * <li>PAID: Paid.</li>
+         * <li>UNPAID: Unpaid.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PAID</p>
          */
         public Builder payStatus(String payStatus) {
             this.payStatus = payStatus;
@@ -423,7 +480,10 @@ public class DescribeOrderResponseBody extends TeaModel {
         }
 
         /**
-         * PaymentPrice.
+         * <p>The actual payment amount, in CNY.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         public Builder paymentPrice(Float paymentPrice) {
             this.paymentPrice = paymentPrice;
@@ -431,7 +491,18 @@ public class DescribeOrderResponseBody extends TeaModel {
         }
 
         /**
-         * PeriodType.
+         * <p>The time unit for prepaid orders. Valid values:</p>
+         * <ul>
+         * <li>MONTH: one month</li>
+         * <li>SEASON: one quarter</li>
+         * <li>HALFYEAR: half a year</li>
+         * <li>YEAR: one year</li>
+         * <li>TWOYEARS: two years</li>
+         * <li>ONCE: one-time.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MONTH</p>
          */
         public Builder periodType(String periodType) {
             this.periodType = periodType;
@@ -439,7 +510,10 @@ public class DescribeOrderResponseBody extends TeaModel {
         }
 
         /**
-         * ProductCode.
+         * <p>The commodity code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cmgj02****</p>
          */
         public Builder productCode(String productCode) {
             this.productCode = productCode;
@@ -447,7 +521,10 @@ public class DescribeOrderResponseBody extends TeaModel {
         }
 
         /**
-         * ProductName.
+         * <p>The name of the subscribed product.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SaaS service product</p>
          */
         public Builder productName(String productName) {
             this.productName = productName;
@@ -455,7 +532,10 @@ public class DescribeOrderResponseBody extends TeaModel {
         }
 
         /**
-         * ProductSkuCode.
+         * <p>The specification code of the subscribed product.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cmgj02****-prepay</p>
          */
         public Builder productSkuCode(String productSkuCode) {
             this.productSkuCode = productSkuCode;
@@ -463,7 +543,10 @@ public class DescribeOrderResponseBody extends TeaModel {
         }
 
         /**
-         * Quantity.
+         * <p>The quantity of the subscribed product.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder quantity(Integer quantity) {
             this.quantity = quantity;
@@ -471,7 +554,10 @@ public class DescribeOrderResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6EF60BEC-0242-43AF-BB20-270359FB54A7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -479,7 +565,10 @@ public class DescribeOrderResponseBody extends TeaModel {
         }
 
         /**
-         * SupplierCompanyName.
+         * <p>The company name of the seller.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>** Technology Co., Ltd.</p>
          */
         public Builder supplierCompanyName(String supplierCompanyName) {
             this.supplierCompanyName = supplierCompanyName;
@@ -495,7 +584,10 @@ public class DescribeOrderResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPrice.
+         * <p>The total payable amount of the order, in CNY.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         public Builder totalPrice(Float totalPrice) {
             this.totalPrice = totalPrice;

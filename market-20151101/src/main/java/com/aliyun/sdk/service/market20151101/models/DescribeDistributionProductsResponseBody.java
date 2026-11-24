@@ -106,7 +106,10 @@ public class DescribeDistributionProductsResponseBody extends TeaModel {
         } 
 
         /**
-         * PageNumber.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +117,10 @@ public class DescribeDistributionProductsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of promotional products per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +128,10 @@ public class DescribeDistributionProductsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5BD09171-MB74-18D8-890E-C70C067527BE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,7 @@ public class DescribeDistributionProductsResponseBody extends TeaModel {
         }
 
         /**
-         * Results.
+         * <p>The promotional product information.</p>
          */
         public Builder results(java.util.List<Results> results) {
             this.results = results;
@@ -138,7 +147,10 @@ public class DescribeDistributionProductsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of promotional products that match the search conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -360,7 +372,10 @@ public class DescribeDistributionProductsResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The product code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cmap*****</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -368,7 +383,10 @@ public class DescribeDistributionProductsResponseBody extends TeaModel {
             }
 
             /**
-             * FirstCategoryName.
+             * <p>The first-level category name of the product.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>API Marketplace</p>
              */
             public Builder firstCategoryName(String firstCategoryName) {
                 this.firstCategoryName = firstCategoryName;
@@ -376,7 +394,10 @@ public class DescribeDistributionProductsResponseBody extends TeaModel {
             }
 
             /**
-             * ImageUrl.
+             * <p>The URL of the product main image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>//photogallery.oss-cn-hangzhou.aliyuncs.com/photo/1744526877246715/09605255-87fd-44d1-8143-96ebc8019d46.jpeg</p>
              */
             public Builder imageUrl(String imageUrl) {
                 this.imageUrl = imageUrl;
@@ -384,7 +405,10 @@ public class DescribeDistributionProductsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The product name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Mobile phone number online status query</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -392,7 +416,10 @@ public class DescribeDistributionProductsResponseBody extends TeaModel {
             }
 
             /**
-             * Price.
+             * <p>The price of the default product specification. For example, 100 indicates CNY 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder price(String price) {
                 this.price = price;
@@ -400,7 +427,10 @@ public class DescribeDistributionProductsResponseBody extends TeaModel {
             }
 
             /**
-             * Score.
+             * <p>The user rating of the product.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder score(String score) {
                 this.score = score;
@@ -408,7 +438,10 @@ public class DescribeDistributionProductsResponseBody extends TeaModel {
             }
 
             /**
-             * SecondCategoryName.
+             * <p>The second-level category name of the product.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Life services</p>
              */
             public Builder secondCategoryName(String secondCategoryName) {
                 this.secondCategoryName = secondCategoryName;
@@ -416,7 +449,10 @@ public class DescribeDistributionProductsResponseBody extends TeaModel {
             }
 
             /**
-             * ShortDescription.
+             * <p>The brief description of the product.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Carrier phone number status query] Provides accurate and real-time detection of empty numbers. You can query the online status of phone numbers, and statuses such as normal, empty, in-call, online but unavailable, powered off, call forwarding, suspected power-off, number portability, wrong number, and suspended are returned.</p>
              */
             public Builder shortDescription(String shortDescription) {
                 this.shortDescription = shortDescription;
@@ -424,7 +460,10 @@ public class DescribeDistributionProductsResponseBody extends TeaModel {
             }
 
             /**
-             * SubmissionRadio.
+             * <p>The commission rebate ratio for the product. For example, 30 indicates 30%.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder submissionRadio(String submissionRadio) {
                 this.submissionRadio = submissionRadio;
@@ -432,7 +471,10 @@ public class DescribeDistributionProductsResponseBody extends TeaModel {
             }
 
             /**
-             * SupplierName.
+             * <p>The name of the promotion service provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Shenzhen **** Co., Ltd.</p>
              */
             public Builder supplierName(String supplierName) {
                 this.supplierName = supplierName;
@@ -440,7 +482,10 @@ public class DescribeDistributionProductsResponseBody extends TeaModel {
             }
 
             /**
-             * SupplierUId.
+             * <p>The Alibaba Cloud UID of the promotion service provider (product supplier).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1911534921******</p>
              */
             public Builder supplierUId(String supplierUId) {
                 this.supplierUId = supplierUId;
@@ -448,7 +493,10 @@ public class DescribeDistributionProductsResponseBody extends TeaModel {
             }
 
             /**
-             * TradeCount.
+             * <p>The number of transactions for the product in the last 180 days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>109</p>
              */
             public Builder tradeCount(String tradeCount) {
                 this.tradeCount = tradeCount;
@@ -456,7 +504,34 @@ public class DescribeDistributionProductsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The product type. Valid values:
+             *         APP: application
+             *         SERVICE: service
+             *         CHENGPIN_SITE: ready-made website
+             *         SITE_CUSTOM_SERVICE: custom website
+             *         SITE_PROMOTION_RUN: website promotion and operations
+             *         ENT_APP_SOFT: application software
+             *         CLOUD_SERVICE: cloud service
+             *         EIF: enterprise information
+             *         BASIC_TOOLS: basic tools
+             *         BASIC_SERVICES: basic services
+             *         JIANZHAN_XITONG: website building system
+             *         APP_COUPLES: application companion
+             *         MIRRORS_MARKET: image marketplace
+             *         MIRRORS_MARKET_BASIC_ENVIRONMENT: basic environment
+             *         MIRRORS_MARKET_APPLICATION_SOFTWARE: application software
+             *         MIRROR: image
+             *         DINGDING: DingTalk
+             *         DOWNLOAD: download
+             *         EXTENDED: unknown
+             *         API_SERVICE: API
+             *         ROS: resource orchestration
+             *         DOCKER: container
+             *         LICENSE: license key
+             *         SAAS_WUYING: application software - Wuying application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>API</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -464,7 +539,10 @@ public class DescribeDistributionProductsResponseBody extends TeaModel {
             }
 
             /**
-             * UserCommentCount.
+             * <p>The number of buyer comments for the product.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>55</p>
              */
             public Builder userCommentCount(String userCommentCount) {
                 this.userCommentCount = userCommentCount;

@@ -89,6 +89,7 @@ public class RollbackCurrentProjectNodeRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID of the Alibaba Cloud Marketplace order.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +102,7 @@ public class RollbackCurrentProjectNodeRequest extends Request {
         }
 
         /**
+         * <p>The ID of the current process node.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +115,10 @@ public class RollbackCurrentProjectNodeRequest extends Request {
         }
 
         /**
-         * Remark.
+         * <p>The remarks for the rejection reason.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Dear customer, the shipping address you submitted matches multiple records. Check the address and submit it again.</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);

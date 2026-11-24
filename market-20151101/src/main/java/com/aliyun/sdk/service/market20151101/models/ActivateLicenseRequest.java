@@ -74,7 +74,10 @@ public class ActivateLicenseRequest extends Request {
         } 
 
         /**
-         * Identification.
+         * <p>The identity information for activation. Set this parameter to the Alibaba Cloud account ID (aliyunUid) of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>129****1111</p>
          */
         public Builder identification(String identification) {
             this.putQueryParameter("Identification", identification);
@@ -83,6 +86,7 @@ public class ActivateLicenseRequest extends Request {
         }
 
         /**
+         * <p>The authorization code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

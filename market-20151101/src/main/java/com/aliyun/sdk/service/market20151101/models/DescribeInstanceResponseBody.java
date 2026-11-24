@@ -335,7 +335,16 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * AppJson.
+         * <p>The application information. The metric description of the parameters in the example is as follows:</p>
+         * <ul>
+         * <li>username: the username.</li>
+         * <li>passowrd: the password.</li>
+         * <li>frontEndUrl: the frontend URL.</li>
+         * <li>adminUrl: the management URL.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;frontEndUrl&quot;:&quot;https://<em><em><strong>.aliyundoc.com&quot;,&quot;password&quot;:&quot;Sjtv</strong></em>&quot;,&quot;adminUrl&quot;:&quot;https://</em><em><strong>.aliyundoc.com&quot;,&quot;username&quot;:&quot;aliyun</strong></em>&quot;}</p>
          */
         public Builder appJson(String appJson) {
             this.appJson = appJson;
@@ -351,7 +360,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * BeganOn.
+         * <p>The time when the instance was activated (timestamp).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1570634021000</p>
          */
         public Builder beganOn(Long beganOn) {
             this.beganOn = beganOn;
@@ -359,7 +371,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ComponentJson.
+         * <p>The business module.</p>
+         * <p>The metric description of the parameters in the example is as follows:</p>
+         * <ul>
+         * <li>package_version: the version.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;package_version&quot;:&quot;yuncode000111&quot;}</p>
          */
         public Builder componentJson(String componentJson) {
             this.componentJson = componentJson;
@@ -367,7 +386,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Constraints.
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder constraints(String constraints) {
             this.constraints = constraints;
@@ -375,7 +397,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * CreatedOn.
+         * <p>The creation time (timestamp).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1570634018000</p>
          */
         public Builder createdOn(Long createdOn) {
             this.createdOn = createdOn;
@@ -383,7 +408,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * EndOn.
+         * <p>The expiration time (timestamp).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1602259200000</p>
          */
         public Builder endOn(Long endOn) {
             this.endOn = endOn;
@@ -391,7 +419,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ExtendJson.
+         * <p>The extended information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;description&quot;: &quot;If you have any problems, contact us...&quot;}</p>
          */
         public Builder extendJson(String extendJson) {
             this.extendJson = extendJson;
@@ -399,7 +430,16 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * HostJson.
+         * <p>The host information. The metric description of the parameters in the example is as follows:</p>
+         * <ul>
+         * <li>username: the username.</li>
+         * <li>passowrd: the password.</li>
+         * <li>ip: the host IP address.</li>
+         * <li>innerIp: the internal network IP address of the host.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;password&quot;:&quot;<em><strong>&quot;,&quot;ip&quot;:&quot;118.31.</strong></em>.41&quot;,&quot;innerIp&quot;:&quot;118.31.<em><strong>.41&quot;,&quot;region&quot;:&quot;&quot;,&quot;username&quot;:&quot;</strong></em>&quot;,&quot;beianInfo&quot;:&quot;&quot;}</p>
          */
         public Builder hostJson(String hostJson) {
             this.hostJson = hostJson;
@@ -407,7 +447,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1551111111</p>
          */
         public Builder instanceId(Long instanceId) {
             this.instanceId = instanceId;
@@ -415,7 +458,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * IsTrial.
+         * <p>Indicates whether the instance is a trial instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isTrial(Boolean isTrial) {
             this.isTrial = isTrial;
@@ -439,7 +485,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>204211111111111</p>
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -447,7 +496,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ProductCode.
+         * <p>The commodity code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cmgj00**11</p>
          */
         public Builder productCode(String productCode) {
             this.productCode = productCode;
@@ -455,7 +507,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ProductName.
+         * <p>The product name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>***Collaborative Office</p>
          */
         public Builder productName(String productName) {
             this.productName = productName;
@@ -463,7 +518,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ProductSkuCode.
+         * <p>The SKU code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cmgj00**11-prepay</p>
          */
         public Builder productSkuCode(String productSkuCode) {
             this.productSkuCode = productSkuCode;
@@ -471,7 +529,18 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ProductType.
+         * <p>The product type. Valid values:</p>
+         * <ul>
+         * <li>APP: application.</li>
+         * <li>SERVIC: service.</li>
+         * <li>MIRROR: image.</li>
+         * <li>DOWNLOAD: download.</li>
+         * <li>API_SERVICE: API.</li>
+         * <li>DOCKER: Docker.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>APP</p>
          */
         public Builder productType(String productType) {
             this.productType = productType;
@@ -479,7 +548,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RelationalData.
+         * <p>The relational information.</p>
          */
         public Builder relationalData(RelationalData relationalData) {
             this.relationalData = relationalData;
@@ -487,7 +556,33 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The business status. The value varies based on the product type.</p>
+         * <p>If ProductType is set to MIRROR:</p>
+         * <ul>
+         * <li>PRODUCE: being provisioned.</li>
+         * <li>USING: in use.</li>
+         * <li>UNUSED: not used.</li>
+         * <li>EXPIRED: expired.</li>
+         * <li>CLOSED: released.</li>
+         * </ul>
+         * <p>If ProductType is set to SERVICE:</p>
+         * <ul>
+         * <li>READYING: not started.</li>
+         * <li>STARTED: in service.</li>
+         * <li>CONFIRM: completed.</li>
+         * <li>EXPIRED: expired.</li>
+         * <li>CLOSED: released.</li>
+         * </ul>
+         * <p>If ProductType is set to APP, DOWNLOAD, API_SERVICE, or DOCKER:</p>
+         * <ul>
+         * <li>OPENING: being activated.</li>
+         * <li>OPENED: activated.</li>
+         * <li>EXPIRED: expired.</li>
+         * <li>CLOSED: released.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OPENED</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -495,7 +590,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * SupplierName.
+         * <p>The service provider name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>***** Co., Ltd.</p>
          */
         public Builder supplierName(String supplierName) {
             this.supplierName = supplierName;
@@ -1145,7 +1243,17 @@ public class DescribeInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * ServiceStatus.
+             * <p>The service status. Valid values:</p>
+             * <ul>
+             * <li>READYING: not started.</li>
+             * <li>STARTED: in service.</li>
+             * <li>CONFIRM: completed.</li>
+             * <li>EXPIRED: expired.</li>
+             * <li>CLOSED: released.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>STARTED</p>
              */
             public Builder serviceStatus(String serviceStatus) {
                 this.serviceStatus = serviceStatus;

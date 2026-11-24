@@ -88,7 +88,10 @@ public class CreateOrderResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>202********0117</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -96,7 +99,10 @@ public class CreateOrderResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4ca591b5-bc30-4fa7-aeaa-c4d0ec5d24ed</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

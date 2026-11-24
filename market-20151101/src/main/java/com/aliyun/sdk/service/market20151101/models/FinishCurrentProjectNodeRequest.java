@@ -103,6 +103,7 @@ public class FinishCurrentProjectNodeRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID of the Alibaba Cloud Marketplace order.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,6 +116,7 @@ public class FinishCurrentProjectNodeRequest extends Request {
         }
 
         /**
+         * <p>The ID of the process node.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -127,7 +129,10 @@ public class FinishCurrentProjectNodeRequest extends Request {
         }
 
         /**
-         * Remark.
+         * <p>The remarks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The shipping address has been submitted. Arrange delivery as soon as possible.</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -136,7 +141,10 @@ public class FinishCurrentProjectNodeRequest extends Request {
         }
 
         /**
-         * TemplateForm.
+         * <p>The form content to submit, in JSON format. Example: {&quot;TFD0&quot;:&quot;mr.go&quot;,&quot;TFD1&quot;:&quot;1330010xxxx&quot;,&quot;TFD2&quot;:&quot;Chaoyang District, Wangjing Street, Block x, No. y&quot;}.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;TFD0&quot;: &quot;Mr.Go&quot;,&quot;TFD1&quot;: &quot;1330010xxxx&quot;,&quot;TFD2&quot;: &quot;Wangjing Street, Block X, No. Y, Chaoyang District, Beijing&quot; }</p>
          */
         public Builder templateForm(String templateForm) {
             this.putQueryParameter("TemplateForm", templateForm);

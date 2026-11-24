@@ -88,6 +88,7 @@ public class DescribeInstanceRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +101,10 @@ public class DescribeInstanceRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * <p>The order type. This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NEW</p>
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);

@@ -80,7 +80,10 @@ public class DescribeCurrentNodeInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00eb4de1-6cff-4f56-833e-7b1e070e398d</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class DescribeCurrentNodeInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The process node information returned upon success.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -96,7 +99,10 @@ public class DescribeCurrentNodeInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -344,7 +350,10 @@ public class DescribeCurrentNodeInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * AllowRollbackNode.
+             * <p>Indicates whether rollback to the previous process node is allowed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder allowRollbackNode(Boolean allowRollbackNode) {
                 this.allowRollbackNode = allowRollbackNode;
@@ -352,7 +361,10 @@ public class DescribeCurrentNodeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * AutoFinishNode.
+             * <p>Indicates whether the node is automatically completed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder autoFinishNode(Boolean autoFinishNode) {
                 this.autoFinishNode = autoFinishNode;
@@ -360,7 +372,10 @@ public class DescribeCurrentNodeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * FinalStepNo.
+             * <p>The sequence number of the last node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder finalStepNo(Integer finalStepNo) {
                 this.finalStepNo = finalStepNo;
@@ -368,7 +383,10 @@ public class DescribeCurrentNodeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * GmtExpired.
+             * <p>The timeout of the process node. The value is a UNIX timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1588920725000</p>
              */
             public Builder gmtExpired(Long gmtExpired) {
                 this.gmtExpired = gmtExpired;
@@ -376,7 +394,10 @@ public class DescribeCurrentNodeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * GmtFinished.
+             * <p>The completion time of the process node. The value is a UNIX timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1588920725000</p>
              */
             public Builder gmtFinished(Long gmtFinished) {
                 this.gmtFinished = gmtFinished;
@@ -384,7 +405,10 @@ public class DescribeCurrentNodeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * GmtStart.
+             * <p>The start time of the process node. The value is a UNIX timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1588834325000</p>
              */
             public Builder gmtStart(Long gmtStart) {
                 this.gmtStart = gmtStart;
@@ -392,7 +416,10 @@ public class DescribeCurrentNodeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * NeedAttachment.
+             * <p>Indicates whether uploading an attachment is mandatory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder needAttachment(Boolean needAttachment) {
                 this.needAttachment = needAttachment;
@@ -400,7 +427,10 @@ public class DescribeCurrentNodeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * NextNodeId.
+             * <p>The ID of the next process node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8473</p>
              */
             public Builder nextNodeId(Long nextNodeId) {
                 this.nextNodeId = nextNodeId;
@@ -408,7 +438,10 @@ public class DescribeCurrentNodeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * <p>The ID of the process node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8472</p>
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -416,7 +449,10 @@ public class DescribeCurrentNodeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * NodeName.
+             * <p>The name of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Waiting for service activation</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -424,7 +460,16 @@ public class DescribeCurrentNodeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * NodeStatus.
+             * <p>The execution status of the node. Valid values:</p>
+             * <ul>
+             * <li>NotStart: not started.</li>
+             * <li>Starting: in progress.</li>
+             * <li>Cancel: canceled.</li>
+             * <li>Finish: completed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Starting</p>
              */
             public Builder nodeStatus(String nodeStatus) {
                 this.nodeStatus = nodeStatus;
@@ -432,7 +477,14 @@ public class DescribeCurrentNodeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorRole.
+             * <p>The role of the operator for the process node. Valid values:</p>
+             * <ul>
+             * <li>system: system.</li>
+             * <li>custom: user.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Provider</p>
              */
             public Builder operatorRole(String operatorRole) {
                 this.operatorRole = operatorRole;
@@ -440,7 +492,10 @@ public class DescribeCurrentNodeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ParentNodeId.
+             * <p>The ID of the parent process node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder parentNodeId(Long parentNodeId) {
                 this.parentNodeId = parentNodeId;
@@ -448,7 +503,10 @@ public class DescribeCurrentNodeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * PreviousNodeId.
+             * <p>The ID of the previous process node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8471</p>
              */
             public Builder previousNodeId(Long previousNodeId) {
                 this.previousNodeId = previousNodeId;
@@ -456,7 +514,10 @@ public class DescribeCurrentNodeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * StepNo.
+             * <p>The sequence number of the process node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder stepNo(Integer stepNo) {
                 this.stepNo = stepNo;
@@ -464,7 +525,12 @@ public class DescribeCurrentNodeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateForm.
+             * <p>The form content of the process node in JSON format.
+             * Sample code:
+             * <code>[ { &quot;fieldKey&quot;: &quot;TFD0&quot;, //form key &quot;isRequired&quot;: true, //whether the field is required &quot;maxLength&quot;: 50, //maximum length &quot;placeHolder&quot;: &quot;Name&quot;, //form value description &quot;stepNum&quot;: 0, //sort value (ascending) &quot;title&quot;: &quot;Consignee name&quot;, //form title &quot;type&quot;: &quot;text&quot; //form type }, { &quot;fieldKey&quot;: &quot;TFD1&quot;, &quot;isRequired&quot;: true, &quot;maxLength&quot;: 50, &quot;placeHolder&quot;: &quot;Phone number&quot;, &quot;stepNum&quot;: 1, &quot;title&quot;: &quot;Consignee phone number&quot;, &quot;type&quot;: &quot;text&quot; }, { &quot;fieldKey&quot;: &quot;TFD2&quot;, &quot;isRequired&quot;: true, &quot;maxLength&quot;: 50, &quot;placeHolder&quot;: &quot;Province, city, district, street, and house number&quot;, &quot;stepNum&quot;: 2, &quot;title&quot;: &quot;Detailed shipping address&quot;, &quot;type&quot;: &quot;textarea&quot; } ]</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[ {&quot;fieldKey&quot;: &quot;TFD0&quot;,&quot;isRequired&quot;: true,&quot;maxLength&quot;: 50, &quot;placeHolder&quot;: &quot;Name&quot;,&quot;stepNum&quot;: 0,&quot;title&quot;: &quot;Consignee name&quot;,&quot;type&quot;: &quot;text&quot; },{ &quot;fieldKey&quot;: &quot;TFD1&quot;,&quot;isRequired&quot;: true,&quot;maxLength&quot;: 50,&quot;placeHolder&quot;: &quot;Phone number&quot;,&quot;stepNum&quot;: 1,&quot;title&quot;: &quot;Consignee phone number&quot;,&quot;type&quot;: &quot;text&quot;},{&quot;fieldKey&quot;: &quot;TFD2&quot;,&quot;isRequired&quot;: true,&quot;maxLength&quot;: 50,&quot;placeHolder&quot;: &quot;Province, city, district, street, and house number&quot;,&quot;stepNum&quot;: 2,&quot;title&quot;: &quot;Detailed shipping address&quot;,&quot;type&quot;: &quot;textarea&quot;}]</p>
              */
             public Builder templateForm(String templateForm) {
                 this.templateForm = templateForm;

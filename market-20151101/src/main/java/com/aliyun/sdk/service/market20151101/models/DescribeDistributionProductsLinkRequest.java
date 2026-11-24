@@ -60,6 +60,7 @@ public class DescribeDistributionProductsLinkRequest extends Request {
         } 
 
         /**
+         * <p>The collection of product codes. The collection cannot be empty and can contain up to 50 entries.</p>
          * <p>This parameter is required.</p>
          */
         public Builder codes(java.util.List<String> codes) {

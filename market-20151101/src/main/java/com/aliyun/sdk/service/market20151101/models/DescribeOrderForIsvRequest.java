@@ -60,6 +60,7 @@ public class DescribeOrderForIsvRequest extends Request {
         } 
 
         /**
+         * <p>The order ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

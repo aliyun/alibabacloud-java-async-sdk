@@ -147,7 +147,10 @@ public class PushTimesUsageRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token used to ensure request idempotence. We recommend that you use a UUID. The same <code>ClientToken</code> can be submitted only once within 24 hours. Retries for the same operation must use the same <code>ClientToken</code>, and new operations must use a new <code>ClientToken</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6dff6c70-3484-4a39-b725-164e3ad9b20d</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -156,7 +159,10 @@ public class PushTimesUsageRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The Alibaba Cloud Marketplace instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000001</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -174,7 +180,10 @@ public class PushTimesUsageRequest extends Request {
         }
 
         /**
-         * Times.
+         * <p>The number of uses to deduct. The value must be greater than 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder times(Long times) {
             this.putQueryParameter("Times", times);

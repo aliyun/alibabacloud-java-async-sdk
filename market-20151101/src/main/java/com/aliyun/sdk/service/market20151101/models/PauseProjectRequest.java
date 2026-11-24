@@ -89,6 +89,7 @@ public class PauseProjectRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID of the Alibaba Cloud Marketplace order.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +102,7 @@ public class PauseProjectRequest extends Request {
         }
 
         /**
+         * <p>The ID of the current operation flow node.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +115,10 @@ public class PauseProjectRequest extends Request {
         }
 
         /**
-         * Remark.
+         * <p>The reason for the remark.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Waiting for the warehouse to confirm the inventory. The inventory is displayed as abnormal.</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);

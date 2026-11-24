@@ -74,6 +74,7 @@ public class DescribeProjectMessagesRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID of the Alibaba Cloud Marketplace business.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,10 @@ public class DescribeProjectMessagesRequest extends Request {
         }
 
         /**
-         * PageIndex.
+         * <p>The page number. Each page returns 20 entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageIndex(Integer pageIndex) {
             this.putQueryParameter("PageIndex", pageIndex);

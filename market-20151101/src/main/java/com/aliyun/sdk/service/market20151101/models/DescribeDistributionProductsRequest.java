@@ -89,7 +89,7 @@ public class DescribeDistributionProductsRequest extends Request {
         } 
 
         /**
-         * Filter.
+         * <p>The list of filter conditions.</p>
          */
         public Builder filter(java.util.List<Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -98,6 +98,7 @@ public class DescribeDistributionProductsRequest extends Request {
         }
 
         /**
+         * <p>The current page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +111,7 @@ public class DescribeDistributionProductsRequest extends Request {
         }
 
         /**
+         * <p>The number of promotional products per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -183,6 +185,12 @@ public class DescribeDistributionProductsRequest extends Request {
             } 
 
             /**
+             * <p>The search label category. Valid values:</p>
+             * <ul>
+             * <li>code: the commodity code of the promotional product</li>
+             * <li>name: the name of the promotional product</li>
+             * <li>supplierName: the name of the promotion service provider.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -194,6 +202,12 @@ public class DescribeDistributionProductsRequest extends Request {
             }
 
             /**
+             * <p>The search tag value:</p>
+             * <ul>
+             * <li>code: the product code to search for</li>
+             * <li>name: the product name to search for</li>
+             * <li>supplierName: the supplier name to search for.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

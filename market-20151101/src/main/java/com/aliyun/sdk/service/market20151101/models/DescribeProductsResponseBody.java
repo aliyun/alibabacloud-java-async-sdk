@@ -106,7 +106,10 @@ public class DescribeProductsResponseBody extends TeaModel {
         } 
 
         /**
-         * PageNumber.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +117,10 @@ public class DescribeProductsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of products displayed per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class DescribeProductsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A077D99E-0C4D-421E-A5D4-F533F6657817</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class DescribeProductsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of products that match the search conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
