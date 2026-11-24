@@ -80,7 +80,7 @@ public class ListDeviceGroupsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of device labels.</p>
+         * <p>The list of device tags.</p>
          */
         public Builder deviceGroups(java.util.List<DeviceGroups> deviceGroups) {
             this.deviceGroups = deviceGroups;
@@ -99,7 +99,7 @@ public class ListDeviceGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of device labels.</p>
+         * <p>The total number of device tags.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -247,7 +247,7 @@ public class ListDeviceGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The device label description.</p>
+             * <p>The description of the device tag.</p>
              * 
              * <strong>example:</strong>
              * <p>description</p>
@@ -258,7 +258,7 @@ public class ListDeviceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The device label ID.</p>
+             * <p>The ID of the device tag.</p>
              * 
              * <strong>example:</strong>
              * <p>device-group-5191cf830a5e****</p>
@@ -269,7 +269,7 @@ public class ListDeviceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The rule operator of the dynamic device group.</p>
+             * <p>The operator for the dynamic device group rule.</p>
              * 
              * <strong>example:</strong>
              * <p>AND</p>
@@ -280,7 +280,7 @@ public class ListDeviceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The matching rule of the dynamic device label.</p>
+             * <p>The matching rule for the dynamic device tag.</p>
              */
             public Builder dynamicRule(Rule dynamicRule) {
                 this.dynamicRule = dynamicRule;
@@ -288,10 +288,10 @@ public class ListDeviceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The device label type. Valid values:</p>
+             * <p>The type of the device tag. Valid values:</p>
              * <ul>
-             * <li><strong>static</strong>: A static device label. Members consist of manually added terminal devices.</li>
-             * <li><strong>dynamic</strong>: A dynamic device label. Members are automatically calculated by matching rules when terminal devices report heartbeats.</li>
+             * <li><strong>static</strong>: Static device tag. Members consist of manually added terminal devices.</li>
+             * <li><strong>dynamic</strong>: Dynamic device tag. Members are automatically calculated based on matching rules when terminal devices report heartbeats.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -303,10 +303,10 @@ public class ListDeviceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the device label is a system built-in device label. Valid values:</p>
+             * <p>Specifies whether the device tag is a built-in system device tag. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: A system built-in device label.</li>
-             * <li><strong>false</strong>: A user-defined device label.</li>
+             * <li><strong>true</strong>: Built-in system device tag.</li>
+             * <li><strong>false</strong>: Custom device tag.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -318,7 +318,7 @@ public class ListDeviceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The collection of terminal device IDs associated with the device label.</p>
+             * <p>The IDs of the terminal devices that are associated with the device tag.</p>
              */
             public Builder matchDevTags(java.util.List<String> matchDevTags) {
                 this.matchDevTags = matchDevTags;
@@ -326,7 +326,7 @@ public class ListDeviceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The device label name.</p>
+             * <p>The name of the device tag.</p>
              * 
              * <strong>example:</strong>
              * <p>example</p>

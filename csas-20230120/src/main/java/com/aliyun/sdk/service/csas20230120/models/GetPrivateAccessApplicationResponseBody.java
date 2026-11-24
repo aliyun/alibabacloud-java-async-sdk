@@ -67,7 +67,7 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The internal-facing access application.</p>
+         * <p>The private access application.</p>
          */
         public Builder application(Application application) {
             this.application = application;
@@ -75,7 +75,7 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>3ACC5EDC-2B7D-5032-8C58-D7615D66C1D4</p>
@@ -206,6 +206,12 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("HealthCheckConfig")
+        private HealthCheckConfig healthCheckConfig;
+
+        @com.aliyun.core.annotation.NameInMap("HealthCheckMode")
+        private String healthCheckMode;
+
         @com.aliyun.core.annotation.NameInMap("L7Config")
         private PAL7Config l7Config;
 
@@ -246,6 +252,8 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
             this.connectorIds = builder.connectorIds;
             this.createTime = builder.createTime;
             this.description = builder.description;
+            this.healthCheckConfig = builder.healthCheckConfig;
+            this.healthCheckMode = builder.healthCheckMode;
             this.l7Config = builder.l7Config;
             this.l7ProxyDomainAutomatic = builder.l7ProxyDomainAutomatic;
             this.l7ProxyDomainCustom = builder.l7ProxyDomainCustom;
@@ -330,6 +338,20 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
         }
 
         /**
+         * @return healthCheckConfig
+         */
+        public HealthCheckConfig getHealthCheckConfig() {
+            return this.healthCheckConfig;
+        }
+
+        /**
+         * @return healthCheckMode
+         */
+        public String getHealthCheckMode() {
+            return this.healthCheckMode;
+        }
+
+        /**
          * @return l7Config
          */
         public PAL7Config getL7Config() {
@@ -409,6 +431,8 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
             private java.util.List<String> connectorIds; 
             private String createTime; 
             private String description; 
+            private HealthCheckConfig healthCheckConfig; 
+            private String healthCheckMode; 
             private PAL7Config l7Config; 
             private String l7ProxyDomainAutomatic; 
             private String l7ProxyDomainCustom; 
@@ -433,6 +457,8 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
                 this.connectorIds = model.connectorIds;
                 this.createTime = model.createTime;
                 this.description = model.description;
+                this.healthCheckConfig = model.healthCheckConfig;
+                this.healthCheckMode = model.healthCheckMode;
                 this.l7Config = model.l7Config;
                 this.l7ProxyDomainAutomatic = model.l7ProxyDomainAutomatic;
                 this.l7ProxyDomainCustom = model.l7ProxyDomainCustom;
@@ -446,7 +472,7 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The application address groups. This parameter is required when ConfigMode is set to Precise and cannot be specified when ConfigMode is set to an empty string.</p>
+             * <p>The application address groups. This parameter is required when ConfigMode is set to Precise and cannot be specified when ConfigMode is an empty string.</p>
              */
             public Builder addressGroups(java.util.List<AddressGroup> addressGroups) {
                 this.addressGroups = addressGroups;
@@ -454,7 +480,7 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The addresses of the internal-facing access application.</p>
+             * <p>The addresses of the private access application.</p>
              */
             public Builder addresses(java.util.List<String> addresses) {
                 this.addresses = addresses;
@@ -462,7 +488,7 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the internal-facing access application.</p>
+             * <p>The ID of the private access application.</p>
              * 
              * <strong>example:</strong>
              * <p>pa-application-e12860ef6c48****</p>
@@ -473,10 +499,14 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the application is automatically generated by a cloud application.</p>
+             * <p>Specifies whether the application is automatically created. Valid values:</p>
+             * <ul>
+             * <li>0: Manual creation.</li>
+             * <li>1: Automatic creation.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
-             * <p>false</p>
+             * <p>0</p>
              */
             public Builder autoGenerated(Integer autoGenerated) {
                 this.autoGenerated = autoGenerated;
@@ -486,8 +516,8 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
             /**
              * <p>The browser access mode. Valid values:</p>
              * <ul>
-             * <li><strong>Enabled</strong>: enabled.</li>
-             * <li><strong>Disabled</strong>: disabled.</li>
+             * <li><strong>Enabled</strong>: Enabled.</li>
+             * <li><strong>Disabled</strong>: Disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -501,8 +531,8 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
             /**
              * <p>The configuration mode. Valid values:</p>
              * <ul>
-             * <li>Empty string: default mode.</li>
-             * <li>Precise: precise mode.</li>
+             * <li>Empty string: Default mode.</li>
+             * <li>Precise: Precise mode.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -514,7 +544,7 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The connector IDs.</p>
+             * <p>The IDs of the connectors.</p>
              */
             public Builder connectorIds(java.util.List<String> connectorIds) {
                 this.connectorIds = connectorIds;
@@ -522,7 +552,7 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the internal-facing access application was created.</p>
+             * <p>The time when the private access application was created. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-08-30 16:50:32</p>
@@ -533,10 +563,10 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the internal-facing access application.</p>
+             * <p>The description of the private access application.</p>
              * 
              * <strong>example:</strong>
-             * <p>这是一条内网访问应用</p>
+             * <p>This is a private access application</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -544,7 +574,30 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The browser access mode parameter: application configuration.</p>
+             * <p>The health check configuration. This parameter contains a valid configuration only when the health check mode is set to Continuous.</p>
+             */
+            public Builder healthCheckConfig(HealthCheckConfig healthCheckConfig) {
+                this.healthCheckConfig = healthCheckConfig;
+                return this;
+            }
+
+            /**
+             * <p>The health check mode. Valid values:</p>
+             * <ul>
+             * <li>OnAccess: On-access check.</li>
+             * <li>Continuous: Continuous check.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>OnAccess</p>
+             */
+            public Builder healthCheckMode(String healthCheckMode) {
+                this.healthCheckMode = healthCheckMode;
+                return this;
+            }
+
+            /**
+             * <p>The application configuration for the browser access mode.</p>
              */
             public Builder l7Config(PAL7Config l7Config) {
                 this.l7Config = l7Config;
@@ -552,7 +605,7 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The browser access mode parameter: mapped proxy domain name.</p>
+             * <p>The mapped proxy domain name for the browser access mode.</p>
              * 
              * <strong>example:</strong>
              * <p>app.example.com</p>
@@ -563,7 +616,7 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The browser access mode parameter: custom proxy domain name.</p>
+             * <p>The custom proxy domain name for the browser access mode.</p>
              * 
              * <strong>example:</strong>
              * <p>app.example.com</p>
@@ -574,7 +627,7 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the internal-facing access application.</p>
+             * <p>The name of the private access application.</p>
              * 
              * <strong>example:</strong>
              * <p>private_access_application_name</p>
@@ -585,7 +638,7 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IDs of the internal-facing access policies.</p>
+             * <p>The IDs of the private access policies.</p>
              */
             public Builder policyIds(java.util.List<String> policyIds) {
                 this.policyIds = policyIds;
@@ -593,7 +646,7 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The port ranges of the internal-facing access application. Multiple port ranges cannot be duplicate or overlapping.</p>
+             * <p>The port ranges of the private access application. Multiple port ranges cannot be duplicate or overlap.</p>
              */
             public Builder portRanges(java.util.List<PortRanges> portRanges) {
                 this.portRanges = portRanges;
@@ -601,9 +654,9 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The protocol of the internal-facing access application. Valid values:</p>
+             * <p>The protocol of the private access application. Valid values:</p>
              * <ul>
-             * <li><strong>All</strong>: all protocols.</li>
+             * <li><strong>All</strong>: All protocols.</li>
              * <li><strong>TCP</strong>.</li>
              * <li><strong>UDP</strong>.</li>
              * </ul>
@@ -617,10 +670,10 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the internal-facing access application. Valid values:</p>
+             * <p>The status of the private access application. Valid values:</p>
              * <ul>
-             * <li><strong>Enabled</strong>: enabled.</li>
-             * <li><strong>Disabled</strong>: disabled.</li>
+             * <li><strong>Enabled</strong>: Enabled.</li>
+             * <li><strong>Disabled</strong>: Disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -632,7 +685,7 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IDs of the internal-facing access tags.</p>
+             * <p>The IDs of the private access tags.</p>
              */
             public Builder tagIds(java.util.List<String> tagIds) {
                 this.tagIds = tagIds;

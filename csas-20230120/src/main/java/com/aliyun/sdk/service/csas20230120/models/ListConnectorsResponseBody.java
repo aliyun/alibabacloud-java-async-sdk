@@ -80,7 +80,7 @@ public class ListConnectorsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A list of connectors.</p>
+         * <p>The list of connectors.</p>
          */
         public Builder connectors(java.util.List<Connectors> connectors) {
             this.connectors = connectors;
@@ -88,7 +88,7 @@ public class ListConnectorsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>58D6B23E-E5DA-5418-8F61-51A3B5A30049</p>
@@ -168,7 +168,7 @@ public class ListConnectorsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The private access application ID.</p>
+             * <p>The ID of the internal access application.</p>
              * 
              * <strong>example:</strong>
              * <p>pa-application-e12860ef6c48****</p>
@@ -179,7 +179,7 @@ public class ListConnectorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The private access application name.</p>
+             * <p>The name of the internal access application.</p>
              * 
              * <strong>example:</strong>
              * <p>application_name</p>
@@ -275,7 +275,7 @@ public class ListConnectorsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The connection status between the connector client and connector server.</p>
+             * <p>The connection status between the connector client and the connector server.</p>
              * 
              * <strong>example:</strong>
              * <p>Disconnected</p>
@@ -286,7 +286,7 @@ public class ListConnectorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique device ID of the connector client.</p>
+             * <p>The unique device identifier of the connector client.</p>
              * 
              * <strong>example:</strong>
              * <p>C50A2386-F851-4F11-920B-DF7148DA0C22</p>
@@ -378,7 +378,7 @@ public class ListConnectorsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The end time of the upgrade window.</p>
+             * <p>The end time.</p>
              * 
              * <strong>example:</strong>
              * <p>23:00</p>
@@ -389,7 +389,7 @@ public class ListConnectorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the upgrade window.</p>
+             * <p>The start time.</p>
              * 
              * <strong>example:</strong>
              * <p>20:00</p>
@@ -602,12 +602,10 @@ public class ListConnectorsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether global acceleration is enabled. Valid values:</p>
+             * <p>Specifies whether global acceleration is enabled. Valid values:</p>
              * <ul>
-             * <li><p><strong>Enabled</strong>: Global acceleration is enabled.</p>
-             * </li>
-             * <li><p><strong>Disabled</strong>: Global acceleration is disabled.</p>
-             * </li>
+             * <li><strong>Enabled</strong>: enabled.</li>
+             * <li><strong>Disabled</strong>: disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -619,7 +617,7 @@ public class ListConnectorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A list of associated private access applications.</p>
+             * <p>The internal access applications associated with the connector.</p>
              */
             public Builder applications(java.util.List<Applications> applications) {
                 this.applications = applications;
@@ -649,7 +647,7 @@ public class ListConnectorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A list of deployed connector clients.</p>
+             * <p>The deployed connector clients.</p>
              */
             public Builder connectorClients(java.util.List<ConnectorClients> connectorClients) {
                 this.connectorClients = connectorClients;
@@ -657,7 +655,7 @@ public class ListConnectorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The connector ID.</p>
+             * <p>The unique ID of the connector.</p>
              * 
              * <strong>example:</strong>
              * <p>connector-94db94e06b98****</p>
@@ -668,7 +666,7 @@ public class ListConnectorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time the connector was created.</p>
+             * <p>The time when the connector was created. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-09-27 18:10:25</p>
@@ -679,7 +677,7 @@ public class ListConnectorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The connector name.</p>
+             * <p>The name of the connector.</p>
              * 
              * <strong>example:</strong>
              * <p>connector_name</p>
@@ -703,10 +701,8 @@ public class ListConnectorsResponseBody extends TeaModel {
             /**
              * <p>The connection status of the connector. Valid values:</p>
              * <ul>
-             * <li><p><strong>Online</strong>: The connector is online.</p>
-             * </li>
-             * <li><p><strong>Offline</strong>: The connector is offline.</p>
-             * </li>
+             * <li><strong>Online</strong>: online.</li>
+             * <li><strong>Offline</strong>: offline.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -718,12 +714,10 @@ public class ListConnectorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the connector instance. Valid values:</p>
+             * <p>The instance status of the connector. Valid values:</p>
              * <ul>
-             * <li><p><strong>Enabled</strong>: The connector is enabled.</p>
-             * </li>
-             * <li><p><strong>Disabled</strong>: The connector is disabled.</p>
-             * </li>
+             * <li><strong>Enabled</strong>: enabled.</li>
+             * <li><strong>Disabled</strong>: shutdown.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -735,7 +729,7 @@ public class ListConnectorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The upgrade window for the connector.</p>
+             * <p>The upgrade time of the connector.</p>
              */
             public Builder upgradeTime(UpgradeTime upgradeTime) {
                 this.upgradeTime = upgradeTime;
@@ -743,7 +737,10 @@ public class ListConnectorsResponseBody extends TeaModel {
             }
 
             /**
-             * VipCidr.
+             * <p>The CIDR block of the virtual IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.0.0/24</p>
              */
             public Builder vipCidr(String vipCidr) {
                 this.vipCidr = vipCidr;

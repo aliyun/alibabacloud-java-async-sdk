@@ -105,10 +105,10 @@ public class GetUserDeviceWorkloadTrendRequest extends Request {
         } 
 
         /**
-         * <p>The endpoint device ID. You can obtain this value from the following operations:</p>
+         * <p>The ID of the endpoint device. You can obtain the value by calling the following operations:</p>
          * <ul>
          * <li><a href="~~GetUserDevice~~">GetUserDevice</a>: Queries the details of a user endpoint device.</li>
-         * <li><a href="~~ListUserDevices~~">ListUserDevices</a>: Queries user endpoint devices in batches.</li>
+         * <li><a href="~~ListUserDevices~~">ListUserDevices</a>: Queries multiple user endpoint devices.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -122,7 +122,7 @@ public class GetUserDeviceWorkloadTrendRequest extends Request {
         }
 
         /**
-         * <p>The start time of the query time range. This value is a UNIX timestamp in seconds. The value must be greater than or equal to 0 and less than the value of To.</p>
+         * <p>The start time of the query time range, which is a UNIX timestamp in seconds. Valid values: greater than or equal to 0 and less than the value of To.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -135,7 +135,7 @@ public class GetUserDeviceWorkloadTrendRequest extends Request {
         }
 
         /**
-         * <p>The end time of the query time range. This value is a UNIX timestamp in seconds. The value must be greater than the value of From.</p>
+         * <p>The end time of the query time range, which is a UNIX timestamp in seconds. Valid values: greater than the value of From.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,7 +151,7 @@ public class GetUserDeviceWorkloadTrendRequest extends Request {
          * <p>The workload type. Valid values:</p>
          * <ul>
          * <li><strong>cpu</strong>: CPU usage.</li>
-         * <li><strong>mem</strong>: memory usage.</li>
+         * <li><strong>mem</strong>: Memory usage.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

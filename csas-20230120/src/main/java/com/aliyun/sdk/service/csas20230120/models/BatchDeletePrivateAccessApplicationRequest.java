@@ -59,7 +59,7 @@ public class BatchDeletePrivateAccessApplicationRequest extends Request {
         } 
 
         /**
-         * <p>The IDs of internal-facing access applications. You can specify up to 100 application IDs.</p>
+         * <p>The IDs of the private access applications. You can specify up to 100 private access application IDs.</p>
          */
         public Builder applicationIds(java.util.List<String> applicationIds) {
             this.putBodyParameter("ApplicationIds", applicationIds);

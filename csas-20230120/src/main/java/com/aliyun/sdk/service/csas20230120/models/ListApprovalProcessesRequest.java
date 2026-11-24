@@ -159,7 +159,7 @@ public class ListApprovalProcessesRequest extends Request {
         } 
 
         /**
-         * <p>The page number of the current page when paging is used. Valid values: 1 to 10000.</p>
+         * <p>The page number of the current page in a paging query. Valid values: 1 to 10000.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -172,7 +172,7 @@ public class ListApprovalProcessesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page when paging is used. Valid values: 1 to 500.</p>
+         * <p>The number of entries per page in a paging query. Valid values: 1 to 500.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -185,7 +185,7 @@ public class ListApprovalProcessesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the associated business policy.</p>
+         * <p>The ID of the associated business policy. If you use this parameter, you must also specify PolicyType.</p>
          * 
          * <strong>example:</strong>
          * <p>pid-6d6ad77d5b52****</p>
@@ -197,13 +197,13 @@ public class ListApprovalProcessesRequest extends Request {
         }
 
         /**
-         * <p>The type of the associated policy. Valid values:</p>
+         * <p>The type of the business policy. Valid values:</p>
          * <ul>
          * <li><strong>DomainBlacklist</strong>: domain name blacklist.</li>
          * <li><strong>DomainWhitelist</strong>: domain name whitelist.</li>
-         * <li><strong>SoftwareBlock</strong>: software blocking.</li>
-         * <li><strong>AppUninstall</strong>: agent uninstallation.</li>
-         * <li><strong>DlpSend</strong>: file outgoing.</li>
+         * <li><strong>SoftwareBlock</strong>: software block.</li>
+         * <li><strong>AppUninstall</strong>: endpoint uninstallation.</li>
+         * <li><strong>DlpSend</strong>: file sending.</li>
          * <li><strong>PeripheralBlock</strong>: peripheral control.</li>
          * </ul>
          * 
@@ -217,7 +217,7 @@ public class ListApprovalProcessesRequest extends Request {
         }
 
         /**
-         * <p>The collection of approval process IDs.</p>
+         * <p>The IDs of the approval processes. A maximum of 100 approval process IDs are supported.</p>
          */
         public Builder processIds(java.util.List<String> processIds) {
             this.putQueryParameter("ProcessIds", processIds);
@@ -226,10 +226,10 @@ public class ListApprovalProcessesRequest extends Request {
         }
 
         /**
-         * <p>The template name. The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). Chinese characters are supported.</p>
+         * <p>The name of the approval process. The name must be 1 to 128 characters in length and can contain Chinese characters, letters, digits, periods (.), underscores (_), and hyphens (-). Fuzzy match is supported.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>File sending approval</p>
          */
         public Builder processName(String processName) {
             this.putQueryParameter("ProcessName", processName);
@@ -238,9 +238,9 @@ public class ListApprovalProcessesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the associated approver. You can call the following operation to obtain the ID:</p>
+         * <p>The ID of the approver, which starts with su_. Only approval processes that include this approver in the approval nodes are returned. Value source:</p>
          * <ul>
-         * <li><a href="~~ListUsers~~">ListUsers</a>: lists users.</li>
+         * <li><a href="~~ListUsers~~">ListUsers</a>: Lists users.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -253,10 +253,10 @@ public class ListApprovalProcessesRequest extends Request {
         }
 
         /**
-         * <p>The username of the associated approver.</p>
+         * <p>The username of the approver. Fuzzy match is supported. Only approval processes that include this approver in the approval nodes are returned.</p>
          * 
          * <strong>example:</strong>
-         * <p>王先生</p>
+         * <p>Mr. Wang</p>
          */
         public Builder username(String username) {
             this.putQueryParameter("Username", username);

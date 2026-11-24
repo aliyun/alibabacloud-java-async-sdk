@@ -67,7 +67,7 @@ public class CreateSoftwarelibDistributeTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>B608C6AE-623D-55C4-9454-601B88AE937E</p>
@@ -196,7 +196,7 @@ public class CreateSoftwarelibDistributeTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The task creation time as a second-level UNIX timestamp.</p>
+             * <p>The time when the task was created. The value is a UNIX timestamp in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1782268092</p>
@@ -207,7 +207,7 @@ public class CreateSoftwarelibDistributeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task name.</p>
+             * <p>The name of the task.</p>
              * 
              * <strong>example:</strong>
              * <p>test_task</p>
@@ -218,7 +218,7 @@ public class CreateSoftwarelibDistributeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The software name.</p>
+             * <p>The name of the software.</p>
              * 
              * <strong>example:</strong>
              * <p>test software</p>
@@ -229,12 +229,12 @@ public class CreateSoftwarelibDistributeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task status. Valid values:</p>
+             * <p>The status of the task. Valid values:</p>
              * <ul>
-             * <li><strong>enabled</strong>: enabled.</li>
-             * <li><strong>disabled</strong>: disabled.</li>
+             * <li><strong>enabled</strong>: Enabled.</li>
+             * <li><strong>disabled</strong>: Disabled.</li>
              * </ul>
-             * <p>The initial status of a task after creation is disabled.</p>
+             * <p>After a task is created, its initial status is disabled.</p>
              * 
              * <strong>example:</strong>
              * <p>disabled</p>
@@ -248,8 +248,8 @@ public class CreateSoftwarelibDistributeTaskResponseBody extends TeaModel {
              * <p>The operating system to which the task applies. Valid values:</p>
              * <ul>
              * <li><strong>Windows</strong>: Windows.</li>
-             * <li><strong>Mac(Apple)</strong>: macOS with Apple silicon.</li>
-             * <li><strong>Mac(Intel)</strong>: macOS with Intel processors.</li>
+             * <li><strong>Mac(Apple)</strong>: macOS on Apple silicon.</li>
+             * <li><strong>Mac(Intel)</strong>: macOS on Intel processors.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -261,7 +261,7 @@ public class CreateSoftwarelibDistributeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task ID, which is used to query the task execution result.</p>
+             * <p>The ID of the task. You can use the ID to query the task execution result.</p>
              * 
              * <strong>example:</strong>
              * <p>softwarelib-distribute-task-911dd7898bc2****</p>

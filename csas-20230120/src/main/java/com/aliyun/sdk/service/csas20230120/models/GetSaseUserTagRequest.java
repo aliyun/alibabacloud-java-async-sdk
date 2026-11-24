@@ -59,7 +59,7 @@ public class GetSaseUserTagRequest extends Request {
         } 
 
         /**
-         * <p>The user tag ID. You can obtain this value from the following operations:</p>
+         * <p>The ID of the user tag. Related operations:</p>
          * <ul>
          * <li><a href="~~ListSaseUserTags~~">ListSaseUserTags</a>: Lists user tags.</li>
          * <li><a href="~~CreateSaseUserTag~~">CreateSaseUserTag</a>: Creates a user tag.</li>

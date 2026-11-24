@@ -60,7 +60,11 @@ public class GetUserDeviceRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the endpoint device. Valid values:</p>
+         * <p>The ID of the terminal device. Valid values:</p>
+         * <ul>
+         * <li><a href="~~GetUserDevice~~">GetUserDevice</a>: Queries the details of user terminal devices.</li>
+         * <li><a href="~~ListUserDevices~~">ListUserDevices</a>: Queries multiple user terminal devices.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

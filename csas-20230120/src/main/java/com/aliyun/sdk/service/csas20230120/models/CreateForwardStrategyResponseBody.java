@@ -67,7 +67,7 @@ public class CreateForwardStrategyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The traffic forwarding rule.</p>
+         * <p>The forwarding rule.</p>
          */
         public Builder forwardStrategy(ForwardStrategy forwardStrategy) {
             this.forwardStrategy = forwardStrategy;
@@ -209,7 +209,7 @@ public class CreateForwardStrategyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the traffic forwarding rule.</p>
+             * <p>The description of the forwarding rule.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -220,7 +220,7 @@ public class CreateForwardStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The target instance ID.</p>
+             * <p>The instance ID of the target instance.</p>
              * 
              * <strong>example:</strong>
              * <p>connector-af9b4ee6fd15d82d</p>
@@ -245,7 +245,7 @@ public class CreateForwardStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the traffic forwarding rule.</p>
+             * <p>The ID of the forwarding rule.</p>
              * 
              * <strong>example:</strong>
              * <p>fs-345d6ab82b5a43a3</p>
@@ -278,10 +278,10 @@ public class CreateForwardStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the internal-facing access application. Valid values:</p>
+             * <p>The status of the internal network access application. Valid values:</p>
              * <ul>
-             * <li><strong>Enabled</strong>: enabled.</li>
-             * <li><strong>Disabled</strong>: disabled.</li>
+             * <li><strong>Enabled</strong>: The application is enabled.</li>
+             * <li><strong>Disabled</strong>: The application is disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>

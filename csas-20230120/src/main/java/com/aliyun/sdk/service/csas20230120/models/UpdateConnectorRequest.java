@@ -116,7 +116,7 @@ public class UpdateConnectorRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to enable Global Accelerator. Valid values:</p>
+         * <p>Specifies whether to enable global acceleration. Valid values:</p>
          * <ul>
          * <li><strong>Enabled</strong>: Enabled.</li>
          * <li><strong>Disabled</strong>: Disabled.</li>
@@ -132,7 +132,7 @@ public class UpdateConnectorRequest extends Request {
         }
 
         /**
-         * <p>The Connector ID. You can obtain the value by calling <a href="~~ListConnectors~~">ListConnectors</a>.</p>
+         * <p>The ID of the connector. You can call the <a href="~~ListConnectors~~">ListConnectors</a> operation to query connectors and obtain the value.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -145,7 +145,7 @@ public class UpdateConnectorRequest extends Request {
         }
 
         /**
-         * <p>The Connector name. The name must be 1 to 128 characters in length and can contain Chinese characters, letters, digits, periods (.), underscores (_), and hyphens (-).</p>
+         * <p>The name of the connector. The name must be 1 to 128 characters in length, and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), and hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>connector_name</p>
@@ -157,7 +157,7 @@ public class UpdateConnectorRequest extends Request {
         }
 
         /**
-         * <p>The instance status of the Connector. Valid values:</p>
+         * <p>The instance status of the connector. Valid values:</p>
          * <ul>
          * <li><strong>Enabled</strong>: Enabled.</li>
          * <li><strong>Disabled</strong>: Shutdown.</li>

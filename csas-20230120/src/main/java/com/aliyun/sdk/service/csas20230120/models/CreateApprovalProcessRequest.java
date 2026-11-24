@@ -103,10 +103,10 @@ public class CreateApprovalProcessRequest extends Request {
         } 
 
         /**
-         * <p>The description of the approval flow. The description must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), hyphens (-), and spaces. Chinese characters are supported.</p>
+         * <p>The description of the approval process. The description must be 1 to 128 characters in length, and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), hyphens (-), and spaces.</p>
          * 
          * <strong>example:</strong>
-         * <p>This is an approval flow</p>
+         * <p>Process for approving employees\&quot; temporary access to internal network applications</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -125,11 +125,11 @@ public class CreateApprovalProcessRequest extends Request {
         }
 
         /**
-         * <p>The flow name. The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). Chinese characters are supported.</p>
+         * <p>The name of the process. The name must be 1 to 128 characters in length, and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), and hyphens (-).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>test_process</p>
+         * <p>Internal network access approval process</p>
          */
         public Builder processName(String processName) {
             this.putBodyParameter("ProcessName", processName);
@@ -138,7 +138,7 @@ public class CreateApprovalProcessRequest extends Request {
         }
 
         /**
-         * <p>The list of approval nodes. You can define up to 5 approval nodes.</p>
+         * <p>The list of approval nodes. You can define up to five approval nodes.</p>
          * <p>This parameter is required.</p>
          */
         public Builder processNodes(java.util.List<java.util.List<String>> processNodes) {
@@ -311,7 +311,7 @@ public class CreateApprovalProcessRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the device uninstall approval template.</p>
+             * <p>The ID of the application uninstallation approval template.</p>
              * 
              * <strong>example:</strong>
              * <p>approval-schema-090134f1ebff****</p>
@@ -333,7 +333,7 @@ public class CreateApprovalProcessRequest extends Request {
             }
 
             /**
-             * <p>The ID of the file outbound approval template.</p>
+             * <p>The ID of the outbound file transfer approval template.</p>
              * 
              * <strong>example:</strong>
              * <p>approval-schema-090134f1ebff****</p>
@@ -366,7 +366,10 @@ public class CreateApprovalProcessRequest extends Request {
             }
 
             /**
-             * EndpointHardeningSchemaId.
+             * <p>The ID of the endpoint hardening approval template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>approval-schema-090134f1ebff****</p>
              */
             public Builder endpointHardeningSchemaId(String endpointHardeningSchemaId) {
                 this.endpointHardeningSchemaId = endpointHardeningSchemaId;
@@ -385,7 +388,10 @@ public class CreateApprovalProcessRequest extends Request {
             }
 
             /**
-             * PrivateAccessBlockSchemaId.
+             * <p>The ID of the internal network access control approval template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>approval-schema-090134f1ebff****</p>
              */
             public Builder privateAccessBlockSchemaId(String privateAccessBlockSchemaId) {
                 this.privateAccessBlockSchemaId = privateAccessBlockSchemaId;
@@ -404,7 +410,10 @@ public class CreateApprovalProcessRequest extends Request {
             }
 
             /**
-             * SoftwareHardeningSchemaId.
+             * <p>The ID of the software hardening approval template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>approval-schema-090134f1ebff****</p>
              */
             public Builder softwareHardeningSchemaId(String softwareHardeningSchemaId) {
                 this.softwareHardeningSchemaId = softwareHardeningSchemaId;

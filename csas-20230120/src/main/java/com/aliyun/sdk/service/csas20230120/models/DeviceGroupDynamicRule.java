@@ -80,7 +80,10 @@ public class DeviceGroupDynamicRule extends TeaModel {
         } 
 
         /**
-         * Args.
+         * <p>The list of matching parameters. The meaning of the parameters is determined by both Key and Operator. When Key is set to dev_type and Operator is set to in, specify the operating system types to match.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;windows&quot;]</p>
          */
         public Builder args(Object args) {
             this.args = args;
@@ -88,7 +91,10 @@ public class DeviceGroupDynamicRule extends TeaModel {
         }
 
         /**
-         * Key.
+         * <p>The user endpoint device property key used for dynamic matching. The example value dev_type indicates the operating system type of the endpoint device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dev_type</p>
          */
         public Builder key(String key) {
             this.key = key;
@@ -96,7 +102,10 @@ public class DeviceGroupDynamicRule extends TeaModel {
         }
 
         /**
-         * Operator.
+         * <p>The matching operator applied to the property specified by Key. The example value in indicates that the property value belongs to the list of parameters specified by Args.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>in</p>
          */
         public Builder operator(String operator) {
             this.operator = operator;

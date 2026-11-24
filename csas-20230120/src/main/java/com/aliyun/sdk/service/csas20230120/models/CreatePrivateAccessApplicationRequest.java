@@ -38,6 +38,14 @@ public class CreatePrivateAccessApplicationRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HealthCheckConfig")
+    private HealthCheckConfig healthCheckConfig;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HealthCheckMode")
+    private String healthCheckMode;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("L7Config")
     private PAL7Config l7Config;
 
@@ -83,6 +91,8 @@ public class CreatePrivateAccessApplicationRequest extends Request {
         this.browserAccessStatus = builder.browserAccessStatus;
         this.configMode = builder.configMode;
         this.description = builder.description;
+        this.healthCheckConfig = builder.healthCheckConfig;
+        this.healthCheckMode = builder.healthCheckMode;
         this.l7Config = builder.l7Config;
         this.l7ProxyDomainAutomaticPrefix = builder.l7ProxyDomainAutomaticPrefix;
         this.l7ProxyDomainCustom = builder.l7ProxyDomainCustom;
@@ -140,6 +150,20 @@ public class CreatePrivateAccessApplicationRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return healthCheckConfig
+     */
+    public HealthCheckConfig getHealthCheckConfig() {
+        return this.healthCheckConfig;
+    }
+
+    /**
+     * @return healthCheckMode
+     */
+    public String getHealthCheckMode() {
+        return this.healthCheckMode;
     }
 
     /**
@@ -211,6 +235,8 @@ public class CreatePrivateAccessApplicationRequest extends Request {
         private String browserAccessStatus; 
         private String configMode; 
         private String description; 
+        private HealthCheckConfig healthCheckConfig; 
+        private String healthCheckMode; 
         private PAL7Config l7Config; 
         private String l7ProxyDomainAutomaticPrefix; 
         private String l7ProxyDomainCustom; 
@@ -232,6 +258,8 @@ public class CreatePrivateAccessApplicationRequest extends Request {
             this.browserAccessStatus = request.browserAccessStatus;
             this.configMode = request.configMode;
             this.description = request.description;
+            this.healthCheckConfig = request.healthCheckConfig;
+            this.healthCheckMode = request.healthCheckMode;
             this.l7Config = request.l7Config;
             this.l7ProxyDomainAutomaticPrefix = request.l7ProxyDomainAutomaticPrefix;
             this.l7ProxyDomainCustom = request.l7ProxyDomainCustom;
@@ -244,7 +272,7 @@ public class CreatePrivateAccessApplicationRequest extends Request {
         } 
 
         /**
-         * <p>The application address groups. Required when ConfigMode is set to Precise. Not allowed when ConfigMode is an empty string.</p>
+         * <p>The application address groups. This parameter is required when ConfigMode is set to Precise, and cannot be specified when ConfigMode is an empty string.</p>
          */
         public Builder addressGroups(java.util.List<AddressGroup> addressGroups) {
             this.putBodyParameter("AddressGroups", addressGroups);
@@ -253,7 +281,7 @@ public class CreatePrivateAccessApplicationRequest extends Request {
         }
 
         /**
-         * <p>The collection of internal-facing access application addresses. You can specify up to 1000 addresses.</p>
+         * <p>The collection of private access application addresses. You can enter up to 1,000 private access application addresses.</p>
          */
         public Builder addresses(java.util.List<String> addresses) {
             this.putBodyParameter("Addresses", addresses);
@@ -262,7 +290,7 @@ public class CreatePrivateAccessApplicationRequest extends Request {
         }
 
         /**
-         * <p>The browser access status of the internal-facing access application. After this feature is enabled, you can access internal applications in a clientless manner. Default value: <strong>Disabled</strong>. Valid values:</p>
+         * <p>The browser access status of the private access application. After you enable this feature, you can access private access applications in clientless mode. Default value: <strong>Disabled</strong>. Valid values:</p>
          * <ul>
          * <li><strong>Enabled</strong>: enabled.</li>
          * <li><strong>Disabled</strong>: disabled.</li>
@@ -283,6 +311,9 @@ public class CreatePrivateAccessApplicationRequest extends Request {
          * <li>Empty string: default mode.</li>
          * <li>Precise: precise mode.</li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Precise</p>
          */
         public Builder configMode(String configMode) {
             this.putBodyParameter("ConfigMode", configMode);
@@ -291,10 +322,10 @@ public class CreatePrivateAccessApplicationRequest extends Request {
         }
 
         /**
-         * <p>The description of the internal-facing access application. The description must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), hyphens (-), and spaces. Chinese characters are supported.</p>
+         * <p>The description of the private access application. The description must be 1 to 128 characters in length, and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), hyphens (-), and spaces.</p>
          * 
          * <strong>example:</strong>
-         * <p>This is an internal-facing access application</p>
+         * <p>This is a private access application</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -303,7 +334,34 @@ public class CreatePrivateAccessApplicationRequest extends Request {
         }
 
         /**
-         * <p>The browser access mode parameter: the application configuration.</p>
+         * <p>The health check configuration. This parameter is required when HealthCheckMode is set to Continuous, and cannot be specified when HealthCheckMode is set to OnAccess.</p>
+         */
+        public Builder healthCheckConfig(HealthCheckConfig healthCheckConfig) {
+            String healthCheckConfigShrink = shrink(healthCheckConfig, "HealthCheckConfig", "json");
+            this.putBodyParameter("HealthCheckConfig", healthCheckConfigShrink);
+            this.healthCheckConfig = healthCheckConfig;
+            return this;
+        }
+
+        /**
+         * <p>The health check mode. Valid values:</p>
+         * <ul>
+         * <li>OnAccess: checks upon access without proactive probing.</li>
+         * <li>Continuous: performs continuous checks and proactive probing based on the configurations in HealthCheckConfig.
+         * If this parameter is not specified, the default value is OnAccess. When the application addresses include wildcard domain names or CIDR blocks, or when the number of application addresses exceeds 10, only OnAccess is supported.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OnAccess</p>
+         */
+        public Builder healthCheckMode(String healthCheckMode) {
+            this.putBodyParameter("HealthCheckMode", healthCheckMode);
+            this.healthCheckMode = healthCheckMode;
+            return this;
+        }
+
+        /**
+         * <p>The application configuration in browser access mode.</p>
          */
         public Builder l7Config(PAL7Config l7Config) {
             String l7ConfigShrink = shrink(l7Config, "L7Config", "json");
@@ -313,7 +371,7 @@ public class CreatePrivateAccessApplicationRequest extends Request {
         }
 
         /**
-         * <p>The browser access mode parameter: the prefix of the mapped proxy domain name. The prefix must be 3 to 20 characters in length and can contain lowercase letters, digits, and hyphens (-).</p>
+         * <p>The prefix of the mapped proxy domain name in browser access mode. The prefix must be 3 to 20 characters in length, and can contain lowercase letters, digits, and hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>app-sample</p>
@@ -325,7 +383,7 @@ public class CreatePrivateAccessApplicationRequest extends Request {
         }
 
         /**
-         * <p>The browser access mode parameter: the custom proxy domain name. The value must be a valid domain name.</p>
+         * <p>The custom proxy domain name in browser access mode. The value must be a valid domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>app1.example.com</p>
@@ -337,7 +395,7 @@ public class CreatePrivateAccessApplicationRequest extends Request {
         }
 
         /**
-         * <p>The name of the internal-facing access application. The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). Chinese characters are supported.</p>
+         * <p>The name of the private access application. The name must be 1 to 128 characters in length, and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), and hyphens (-).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -350,7 +408,7 @@ public class CreatePrivateAccessApplicationRequest extends Request {
         }
 
         /**
-         * <p>The collection of port ranges for the internal-facing access application. You can specify up to 65535 port ranges. Port ranges cannot overlap or be duplicated.</p>
+         * <p>The collection of port ranges for the private access application. You can enter up to 65,535 port ranges. Multiple port ranges cannot be duplicate or overlap.</p>
          */
         public Builder portRanges(java.util.List<PortRanges> portRanges) {
             this.putBodyParameter("PortRanges", portRanges);
@@ -359,7 +417,7 @@ public class CreatePrivateAccessApplicationRequest extends Request {
         }
 
         /**
-         * <p>The protocol of the internal-facing access application. Valid values:</p>
+         * <p>The protocol of the private access application. Valid values:</p>
          * <ul>
          * <li><strong>All</strong>: all protocols.</li>
          * <li><strong>TCP</strong></li>
@@ -377,7 +435,7 @@ public class CreatePrivateAccessApplicationRequest extends Request {
         }
 
         /**
-         * <p>The status of the internal-facing access application. Valid values:</p>
+         * <p>The status of the private access application. Valid values:</p>
          * <ul>
          * <li><strong>Enabled</strong>: enabled.</li>
          * <li><strong>Disabled</strong>: disabled.</li>
@@ -394,7 +452,7 @@ public class CreatePrivateAccessApplicationRequest extends Request {
         }
 
         /**
-         * <p>The collection of internal-facing access tag IDs. You can associate up to 6 custom-type internal-facing access tags with each application.</p>
+         * <p>The collection of private access tag IDs. You can associate up to six custom private access tags with a single private access application.</p>
          */
         public Builder tagIds(java.util.List<String> tagIds) {
             this.putBodyParameter("TagIds", tagIds);
@@ -403,7 +461,7 @@ public class CreatePrivateAccessApplicationRequest extends Request {
         }
 
         /**
-         * UnauthorizedAccessConfig.
+         * <p>The configuration for unauthorized application access requests.</p>
          */
         public Builder unauthorizedAccessConfig(PAApplicationUnauthorizedAccessConfig unauthorizedAccessConfig) {
             String unauthorizedAccessConfigShrink = shrink(unauthorizedAccessConfig, "UnauthorizedAccessConfig", "json");

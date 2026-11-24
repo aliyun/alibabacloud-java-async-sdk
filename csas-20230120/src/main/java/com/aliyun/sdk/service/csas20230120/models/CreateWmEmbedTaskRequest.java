@@ -304,7 +304,7 @@ public class CreateWmEmbedTaskRequest extends Request {
         }
 
         /**
-         * <p>The URL for downloading the file to be embedded. The URL must be active for public network access.</p>
+         * <p>The active URL for downloading the file to be embedded. The URL must support public network access.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -317,7 +317,7 @@ public class CreateWmEmbedTaskRequest extends Request {
         }
 
         /**
-         * <p>The name of the file to be embedded. The backend validates the file type based on the file name extension.</p>
+         * <p>The file name of the file to be embedded. The backend determines and verifies the file type based on the file name extension.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -352,7 +352,7 @@ public class CreateWmEmbedTaskRequest extends Request {
         }
 
         /**
-         * <p>The image watermark parameter. A larger value indicates higher robustness but lower visual quality. Default value: 2. Valid values: 0 to 4.</p>
+         * <p>The image watermark parameter that specifies the embedding level. A larger value indicates higher robustness but lower visual quality. Default value: 2. Valid values: 0 to 4.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -364,7 +364,11 @@ public class CreateWmEmbedTaskRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable invisible watermark embedding. Default value: true.</p>
+         * <p>Specifies whether to enable invisible watermark embedding. Default value: true. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong>: No.</li>
+         * </ul>
          */
         public Builder invisibleEnable(Boolean invisibleEnable) {
             this.putBodyParameter("InvisibleEnable", invisibleEnable);
@@ -373,7 +377,7 @@ public class CreateWmEmbedTaskRequest extends Request {
         }
 
         /**
-         * <p>The short video watermark parameter that specifies the video bitrate. By default, the video bitrate is automatically obtained. You can use this parameter to forcibly specify the bitrate used during extraction. Typically, you do not need to set this parameter.</p>
+         * <p>The short video watermark parameter that specifies the video bitrate. By default, the system automatically obtains the video bitrate. You can use this parameter to force the bitrate used during extraction. Typically, you do not need to set this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>3000k</p>
@@ -395,12 +399,11 @@ public class CreateWmEmbedTaskRequest extends Request {
         }
 
         /**
-         * <p>Video watermark parameter. Specifies whether to use the long video watermark SDK. Valid values:</p>
+         * <p>The video watermark parameter that specifies whether to use the long video watermark SDK. Default value: false. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The long video watermark SDK is used.</li>
-         * <li><strong>false</strong>: The long video watermark SDK is not used.</li>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong>: No.</li>
          * </ul>
-         * <p>Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -412,7 +415,7 @@ public class CreateWmEmbedTaskRequest extends Request {
         }
 
         /**
-         * <p>The watermark information in Base64-encoded string format. If this parameter is set, WmInfoUint cannot be set.</p>
+         * <p>The watermark information in Base64-encoded string format. If you set this parameter, you cannot set WmInfoUint.</p>
          * 
          * <strong>example:</strong>
          * <p>aGVsbG8gc2F*****</p>
@@ -424,7 +427,7 @@ public class CreateWmEmbedTaskRequest extends Request {
         }
 
         /**
-         * <p>The bit width of the watermark information capacity. Default value: 32. This parameter must be consistent between embedding and extraction. For example, if the 40-bit SDK is used for embedding, set this parameter to 40 during extraction as well.</p>
+         * <p>The capacity bit width of the watermark information. Default value: 32. This parameter must be consistent during embedding and extraction. For example, if a 40-bit SDK is used for embedding, you must also set this value to 40 for extraction.</p>
          * 
          * <strong>example:</strong>
          * <p>32</p>
@@ -436,7 +439,16 @@ public class CreateWmEmbedTaskRequest extends Request {
         }
 
         /**
-         * <p>The watermark information in decimal number format. If this parameter is set, WmInfoBytesB64 cannot be set.</p>
+         * <p>The watermark information in decimal numeric format. If you set this parameter, you cannot set WmInfoBytesB64.</p>
+         * <p>The valid value range depends on the WmInfoSize parameter:</p>
+         * <ul>
+         * <li><p>When WmInfoSize is 32, the valid values are 1 to 4294967295.</p>
+         * </li>
+         * <li><p>When WmInfoSize is 40, the valid values are 1 to 1099511627775.</p>
+         * </li>
+         * <li><p>When WmInfoSize is 64, the valid values are 1 to 18446744073709551615.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>123***</p>
@@ -450,10 +462,10 @@ public class CreateWmEmbedTaskRequest extends Request {
         /**
          * <p>The watermark type. Valid values:</p>
          * <ul>
-         * <li><strong>PureDocument</strong>: document watermark.</li>
-         * <li><strong>PureImage</strong>: image watermark.</li>
-         * <li><strong>PureAudio</strong>: audio watermark.</li>
-         * <li><strong>PureVideo</strong>: video watermark.</li>
+         * <li><strong>PureDocument</strong>: Document watermark.</li>
+         * <li><strong>PureImage</strong>: Image watermark.</li>
+         * <li><strong>PureAudio</strong>: Audio watermark.</li>
+         * <li><strong>PureVideo</strong>: Video watermark.</li>
          * <li><strong>AigcDocument</strong>: AIGC document watermark.</li>
          * <li><strong>AigcImage</strong>: AIGC image watermark.</li>
          * <li><strong>AigcAudio</strong>: AIGC audio watermark.</li>
@@ -530,7 +542,11 @@ public class CreateWmEmbedTaskRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to enable this feature.</p>
+             * <p>Specifies whether to enable the metadata. Valid values:</p>
+             * <ul>
+             * <li><strong>false</strong>: Disabled.</li>
+             * <li><strong>true</strong>: Enabled.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -541,7 +557,7 @@ public class CreateWmEmbedTaskRequest extends Request {
             }
 
             /**
-             * <p>The metadata in Base64 format. Encode the following string in Base64 format: AIGC={&quot;Label&quot;:&quot;1&quot;,&quot;ContentProducer&quot;:&quot;AXXXX&quot;,&quot;ProduceID&quot;:&quot;BXXXX,&quot;ReservedCode1&quot;:&quot;CXXX&quot;,&quot;ContentPropagator&quot;:&quot;DXXX&quot;,&quot;PropagateID&quot;:&quot;EXXX&quot;,&quot;ReservedCode2&quot;:&quot;FXXXX&quot;}. Note: 1. The &quot;AIGC=&quot; prefix is required. Otherwise, the metadata cannot be added. The prefix differs from that of image metadata. 2. The Base64 encoding must be in standard format with padding.</p>
+             * <p>The Base64-encoded metadata. You must encode a string in the format of AIGC={&quot;Label&quot;:&quot;1&quot;,&quot;ContentProducer&quot;:&quot;AXXXX&quot;,&quot;ProduceID&quot;:&quot;BXXXX&quot;,&quot;ReservedCode1&quot;:&quot;CXXX&quot;,&quot;ContentPropagator&quot;:&quot;DXXX&quot;,&quot;PropagateID&quot;:&quot;EXXX&quot;,&quot;ReservedCode2&quot;:&quot;FXXXX&quot;} into a Base64 string. Note: 1. The &quot;AIGC=&quot; prefix is required. Otherwise, the metadata cannot be added. Note that the prefix is different from that of image metadata. 2. The Base64 string must be in the standard format and include padding.</p>
              * 
              * <strong>example:</strong>
              * <p>QUlHQz17IkxhYmVsIjoiMSIsIkNvbnRlbnRQcm9kdWNlciI6IkFYWFhYIiwiUHJvZHVjZUlEIjoiQlhYWFgsIlJlc2VydmVkQ29kZTEiOiJDWFhYIiwiQ29udGVudFByb3BhZ2F0b3IiOiJEWFhYIiwiUHJvcGFnYXRlSUQiOiJFWFhYIiwiUmVzZXJ2ZWRDb2RlMiI6IkZYWFhYIn0=</p>
@@ -598,7 +614,7 @@ public class CreateWmEmbedTaskRequest extends Request {
             } 
 
             /**
-             * <p>The control parameters for audio metadata.</p>
+             * <p>The audio metadata control parameters.</p>
              */
             public Builder metadataControl(MetadataControl metadataControl) {
                 this.metadataControl = metadataControl;
@@ -731,7 +747,7 @@ public class CreateWmEmbedTaskRequest extends Request {
             } 
 
             /**
-             * <p>The timestamp watermark information bit width. Specifies how much information a single timestamp can contain. A larger value theoretically reduces the number of rows required for extraction, but increases the time modification magnitude. The magnitude range is 2^n, where n is this parameter value.</p>
+             * <p>The bit width of the timestamp watermark information, which specifies how much information a single timestamp can hold. A larger value theoretically requires fewer rows to extract the information, but the time modification magnitude increases. The magnitude range is the nth power of 2, where n is the value of this parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -742,7 +758,7 @@ public class CreateWmEmbedTaskRequest extends Request {
             }
 
             /**
-             * <p>The column to embed the watermark. We recommend that you use a string content column. Counting starts from 1.</p>
+             * <p>The specified embedding column. We recommend that you use a string content column. The count starts from 1.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -753,7 +769,7 @@ public class CreateWmEmbedTaskRequest extends Request {
             }
 
             /**
-             * <p>The zero-width character watermark parameter that specifies the embedding density. Valid values: a floating-point number between 0 and 1. 0 indicates that only the first row is embedded. 1 indicates that all rows are embedded.</p>
+             * <p>The zero-width character watermark parameter that specifies the embedding density. The value is a floating-point number between 0 and 1. A value of 0 indicates that only the first row is embedded. A value of 1 indicates that all rows are embedded.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -764,7 +780,7 @@ public class CreateWmEmbedTaskRequest extends Request {
             }
 
             /**
-             * <p>The modification precision, which indicates the magnitude of modification as a power of 10. For example, 0 indicates a modification precision of 10^0 (the ones place), -1 indicates the first decimal place, and 1 indicates the tens place. If the float data does not have this precision, no modification is made.</p>
+             * <p>The modification precision, which indicates the modification magnitude as the nth power of 10. For example, 0 indicates a modification precision of 10^0, which is the ones place. -1 indicates the first decimal place. 1 indicates the tens place. If the float data does not have this precision part, it is not modified.</p>
              * 
              * <strong>example:</strong>
              * <p>-1</p>
@@ -775,7 +791,7 @@ public class CreateWmEmbedTaskRequest extends Request {
             }
 
             /**
-             * <p>The timestamp watermark parameter that specifies the watermark embedding position. Valid values: Min (minute), Sec (second), and MilSec (millisecond). Select one of the three. The algorithm modifies the data at the selected position.</p>
+             * <p>The timestamp watermark parameter that specifies the watermark embedding position. Valid values: Min (minute), Sec (second), and MilSec (millisecond). You can specify only one of them. The algorithm modifies the data at the specified position.</p>
              * 
              * <strong>example:</strong>
              * <p>Sec</p>
@@ -786,7 +802,13 @@ public class CreateWmEmbedTaskRequest extends Request {
             }
 
             /**
-             * <p>The watermark embedding method.</p>
+             * <p>The watermark embedding method. Valid values:</p>
+             * <ul>
+             * <li><strong>lossless_row_shift_embed</strong>: Lossless data method.</li>
+             * <li><strong>lossy_number_embed</strong>: Lossy data method.</li>
+             * <li><strong>lossy_time_stamp_embed</strong>: Timestamp method.</li>
+             * <li><strong>lossy_zero_width_embed</strong>: Zero-width character method.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>lossy_zero_width_embed</p>
@@ -797,7 +819,7 @@ public class CreateWmEmbedTaskRequest extends Request {
             }
 
             /**
-             * <p>The timestamp watermark parameter that specifies the format string for parsing timestamps in the CSV file. For example, if the timestamp in the CSV file is similar to &quot;2023-10-15 13:20:59:342&quot;, the corresponding format string is &quot;Year-Mon-Day Hour:Min:Sec.MilSec&quot;. The watermark output retains this format after embedding. If the format is incorrect, this method cannot be used. Year, month, day, hour, minute, second, and millisecond in the format string must follow the specified notation. Delimiters must be single non-alphabetic English characters, typically &quot;:&quot;, &quot;/&quot;, &quot;-&quot;, or &quot; &quot; (space). &quot;T&quot; and &quot;Z&quot; are also supported as delimiters. Other time formats are not currently supported.</p>
+             * <p>The timestamp watermark parameter that specifies the format string for parsing timestamps in the CSV file. For example, if the timestamp in the CSV file is similar to &quot;2023-10-15 13:20:59:342&quot;, the corresponding format string is &quot;Year-Mon-Day Hour:Min:Sec.MilSec&quot;. You must enter &quot;Year-Mon-Day Hour:Min:Sec.MilSec&quot; here. After the watermark is embedded, the output still follows this format. If you enter it incorrectly, this method cannot be used. The year, month, day, hour, minute, second, and millisecond in the format string must be written as described above. The connector must be a single non-character English connector, which can generally be &quot;:&quot;, &quot;/&quot;, &quot;-&quot;, or &quot; &quot; (space). &quot;T&quot; and &quot;Z&quot; are also supported as connectors. Other time formats are not supported for parsing.</p>
              * 
              * <strong>example:</strong>
              * <p>Hour:Min:Sec</p>
@@ -855,7 +877,7 @@ public class CreateWmEmbedTaskRequest extends Request {
             } 
 
             /**
-             * <p>The opacity parameter of the background invisible watermark. Valid values: 1 to 13. A larger value indicates less transparency.</p>
+             * <p>The opacity parameter of the invisible background watermark. Valid values: 1 to 13. A larger value indicates lower transparency.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1046,7 +1068,7 @@ public class CreateWmEmbedTaskRequest extends Request {
             }
 
             /**
-             * <p>The font color of the visible watermark text. The format is 0xFFFFFF RGB color format. For example, 0x000000 indicates black.</p>
+             * <p>The color of the visible watermark text. The format is 0xFFFFFF RGB color format. For example, 0x000000 indicates black.</p>
              * 
              * <strong>example:</strong>
              * <p>0x000000</p>
@@ -1057,7 +1079,7 @@ public class CreateWmEmbedTaskRequest extends Request {
             }
 
             /**
-             * <p>The font size of the visible watermark text. A larger value indicates a larger font.</p>
+             * <p>The font size of the visible watermark text. A larger value indicates a larger font size.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -1068,7 +1090,7 @@ public class CreateWmEmbedTaskRequest extends Request {
             }
 
             /**
-             * <p>Takes effect when Mode is set to repeat. Specifies the number of times the visible watermark repeats horizontally.</p>
+             * <p>This parameter takes effect when Mode is set to repeat. The number of times the visible watermark repeats horizontally.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -1079,7 +1101,11 @@ public class CreateWmEmbedTaskRequest extends Request {
             }
 
             /**
-             * <p>The background visible watermark mode. Valid values:</p>
+             * <p>The visible background watermark mode. Valid values:</p>
+             * <ul>
+             * <li><strong>pos</strong>: Embeds a single visible watermark text at a specific position in the background.</li>
+             * <li><strong>repeat</strong>: Tiles and embeds multiple visible watermark texts in the document background.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>pos</p>
@@ -1090,7 +1116,7 @@ public class CreateWmEmbedTaskRequest extends Request {
             }
 
             /**
-             * <p>The opacity parameter of the visible watermark. Valid values: 1 to 255. A larger value indicates less transparency.</p>
+             * <p>The opacity parameter of the visible watermark. Valid values: 1 to 255. A larger value indicates lower transparency.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -1101,7 +1127,7 @@ public class CreateWmEmbedTaskRequest extends Request {
             }
 
             /**
-             * <p>Takes effect when Mode is set to pos. Controls the horizontal position of the visible watermark, with the lower-left corner as the origin. When the value is between 0 and 1, it represents proportional control. When the value is greater than 1, it represents precise pixel position control.</p>
+             * <p>This parameter takes effect when Mode is set to pos. The parameter that controls the horizontal position of the visible watermark, with the lower-left corner as the origin. When the value is between 0 and 1, it controls the position by proportion. When the value is greater than 1, it controls the exact pixel position.</p>
              * 
              * <strong>example:</strong>
              * <p>0.5</p>
@@ -1112,7 +1138,7 @@ public class CreateWmEmbedTaskRequest extends Request {
             }
 
             /**
-             * <p>Takes effect when Mode is set to pos. Controls the vertical position of the visible watermark, with the lower-left corner as the origin. When the value is between 0 and 1, it represents proportional control. When the value is greater than 1, it represents precise pixel position control.</p>
+             * <p>This parameter takes effect when Mode is set to pos. The parameter that controls the vertical position of the visible watermark, with the lower-left corner as the origin. When the value is between 0 and 1, it controls the position by proportion. When the value is greater than 1, it controls the exact pixel position.</p>
              * 
              * <strong>example:</strong>
              * <p>0.5</p>
@@ -1123,7 +1149,7 @@ public class CreateWmEmbedTaskRequest extends Request {
             }
 
             /**
-             * <p>Takes effect when Mode is set to repeat. Specifies the number of times the visible watermark repeats vertically.</p>
+             * <p>This parameter takes effect when Mode is set to repeat. The number of times the visible watermark repeats vertically.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -1134,7 +1160,7 @@ public class CreateWmEmbedTaskRequest extends Request {
             }
 
             /**
-             * <p>The background visible watermark text. The format is a UTF-8 string.</p>
+             * <p>The text of the visible background watermark. The format is a UTF-8 string.</p>
              * 
              * <strong>example:</strong>
              * <p>hello ****</p>
@@ -1230,7 +1256,11 @@ public class CreateWmEmbedTaskRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to add a background invisible watermark. Valid values:</p>
+             * <p>Specifies whether to add an invisible background watermark. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: Yes.</li>
+             * <li><strong>false</strong>: No.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1241,7 +1271,11 @@ public class CreateWmEmbedTaskRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable the background visible watermark. Valid values:</p>
+             * <p>Specifies whether to enable visible background watermarks. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: Yes.</li>
+             * <li><strong>false</strong>: No.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1252,7 +1286,7 @@ public class CreateWmEmbedTaskRequest extends Request {
             }
 
             /**
-             * <p>The background invisible watermark control parameters.</p>
+             * <p>The invisible background watermark control parameters.</p>
              */
             public Builder bgInvisibleControl(BgInvisibleControl bgInvisibleControl) {
                 this.bgInvisibleControl = bgInvisibleControl;
@@ -1260,7 +1294,7 @@ public class CreateWmEmbedTaskRequest extends Request {
             }
 
             /**
-             * <p>The background visible watermark control parameters.</p>
+             * <p>The visible background watermark control parameters.</p>
              */
             public Builder bgVisibleControl(BgVisibleControl bgVisibleControl) {
                 this.bgVisibleControl = bgVisibleControl;
@@ -1348,7 +1382,11 @@ public class CreateWmEmbedTaskRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable component invisible watermark. The component invisible watermark can resist document addition, deletion, modification, save-as (same format), and full-select copy from docx to a new docx document. It cannot resist format conversion attacks. Valid values:</p>
+             * <p>Specifies whether to enable component invisible watermarks. Component invisible watermarks can resist document addition, deletion, modification, saving as another format (without changing the format), and selecting all and copying to a new docx document. They cannot resist format conversion attacks. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: Yes.</li>
+             * <li><strong>false</strong>: No.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1359,7 +1397,11 @@ public class CreateWmEmbedTaskRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable zero-width character invisible watermark. The zero-width character invisible watermark can resist document addition, deletion, modification, save-as (same format), partial text copy-paste, and CopytoTxt attacks. It cannot resist format conversion toPDF attacks. Valid values:</p>
+             * <p>Specifies whether to enable zero-width character invisible watermarks. Zero-width character invisible watermarks can resist document addition, deletion, modification, saving as another format (without changing the format), partial text copy and paste, and CopytoTxt attacks. They cannot resist format conversion to PDF attacks. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: Yes.</li>
+             * <li><strong>false</strong>: No.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1455,7 +1497,7 @@ public class CreateWmEmbedTaskRequest extends Request {
             } 
 
             /**
-             * <p>This parameter takes effect when Mode is set to bottom-left or bottom-right. The bottom margin.</p>
+             * <p>The bottom margin. This parameter takes effect only when Mode is set to bottom-left or bottom-right.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1466,7 +1508,7 @@ public class CreateWmEmbedTaskRequest extends Request {
             }
 
             /**
-             * <p>This parameter takes effect when Mode is set to top-left or bottom-left. The left margin.</p>
+             * <p>The left margin. This parameter takes effect only when Mode is set to top-left or bottom-left.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1477,7 +1519,7 @@ public class CreateWmEmbedTaskRequest extends Request {
             }
 
             /**
-             * <p>This parameter takes effect when Mode is set to top-right or bottom-right. The right margin.</p>
+             * <p>The right margin. This parameter takes effect only when Mode is set to top-right or bottom-right.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1488,7 +1530,7 @@ public class CreateWmEmbedTaskRequest extends Request {
             }
 
             /**
-             * <p>This parameter takes effect when Mode is set to top-left or top-right. The top margin.</p>
+             * <p>The top margin. This parameter takes effect only when Mode is set to top-left or top-right.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1712,7 +1754,7 @@ public class CreateWmEmbedTaskRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable enhanced visible watermarking. After this feature is enabled, the logo is processed so that information embedded in the logo can be extracted.</p>
+             * <p>Specifies whether to enable the enhanced visible watermark. After this feature is enabled, the logo is processed, and the embedded information in the logo can be extracted.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1723,7 +1765,7 @@ public class CreateWmEmbedTaskRequest extends Request {
             }
 
             /**
-             * <p>The logo watermark in Base64 format. The logo file is a PNG image converted to Base64 format.</p>
+             * <p>The Base64-encoded logo watermark. The logo file must be a PNG image encoded in Base64 format.</p>
              * 
              * <strong>example:</strong>
              * <p>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</p>
@@ -1734,7 +1776,7 @@ public class CreateWmEmbedTaskRequest extends Request {
             }
 
             /**
-             * <p>This parameter takes effect when Mode is set to top-left, top-right, bottom-left, or bottom-right. The margin settings.</p>
+             * <p>The margin of the text watermark. This parameter takes effect only when Mode is set to top-left, top-right, bottom-left, or bottom-right.</p>
              */
             public Builder margin(Margin margin) {
                 this.margin = margin;
@@ -1743,6 +1785,14 @@ public class CreateWmEmbedTaskRequest extends Request {
 
             /**
              * <p>The display mode of the logo watermark. Valid values:</p>
+             * <ul>
+             * <li><strong>pos</strong>: Fixed position mode.</li>
+             * <li><strong>repeat</strong>: Tiled mode.</li>
+             * <li><strong>top-left</strong>: Top-left mode.</li>
+             * <li><strong>top-right</strong>: Top-right mode.</li>
+             * <li><strong>bottom-left</strong>: Bottom-left mode.</li>
+             * <li><strong>bottom-right</strong>: Bottom-right mode.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>pos</p>
@@ -1764,7 +1814,7 @@ public class CreateWmEmbedTaskRequest extends Request {
             }
 
             /**
-             * <p>The horizontal anchor point of the logo watermark. Valid values: 0 to 1. When (PosAx, PosAy) is set to (0, 0), the watermark is drawn with the upper-left corner as the anchor point. When the value is 0.5, the watermark is drawn at the center. When (PosAx, PosAy) is set to (1, 1), the watermark is drawn at the lower-right corner.</p>
+             * <p>The horizontal anchor point of the logo watermark. Valid values: 0 to 1. If PosAx and PosAy are both set to 0, the top-left corner of the logo is used as the anchor point. If the value is 0.5, the center of the logo is used as the anchor point. If PosAx and PosAy are both set to 1, the bottom-right corner of the logo is used as the anchor point.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1775,7 +1825,7 @@ public class CreateWmEmbedTaskRequest extends Request {
             }
 
             /**
-             * <p>The vertical anchor point of the logo watermark. Valid values: 0 to 1. When (PosAx, PosAy) is set to (0, 0), the watermark is drawn with the upper-left corner as the anchor point. When the value is 0.5, the watermark is drawn at the center. When (PosAx, PosAy) is set to (1, 1), the watermark is drawn at the lower-right corner.</p>
+             * <p>The vertical anchor point of the logo watermark. Valid values: 0 to 1. If PosAx and PosAy are both set to 0, the top-left corner of the logo is used as the anchor point. If the value is 0.5, the center of the logo is used as the anchor point. If PosAx and PosAy are both set to 1, the bottom-right corner of the logo is used as the anchor point.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1786,7 +1836,7 @@ public class CreateWmEmbedTaskRequest extends Request {
             }
 
             /**
-             * <p>This parameter takes effect when Mode is set to pos. Specifies the horizontal position of the visible watermark in pixels, with the upper-left corner as the origin.</p>
+             * <p>The horizontal position of the visible watermark. This parameter takes effect only when Mode is set to pos. The value is the pixel position with the top-left corner as the origin.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1797,7 +1847,7 @@ public class CreateWmEmbedTaskRequest extends Request {
             }
 
             /**
-             * <p>This parameter takes effect when Mode is set to pos. Specifies the vertical position of the visible watermark in pixels, with the upper-left corner as the origin.</p>
+             * <p>The vertical position of the visible watermark. This parameter takes effect only when Mode is set to pos. The value is the pixel position with the top-left corner as the origin.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1808,7 +1858,7 @@ public class CreateWmEmbedTaskRequest extends Request {
             }
 
             /**
-             * <p>This parameter takes effect when Mode is set to repeat. Specifies the horizontal spacing for tiled visible watermarks.</p>
+             * <p>The horizontal spacing of the tiled visible watermark. This parameter takes effect only when Mode is set to repeat.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -1819,7 +1869,7 @@ public class CreateWmEmbedTaskRequest extends Request {
             }
 
             /**
-             * <p>This parameter takes effect when Mode is set to repeat. Specifies the vertical spacing for tiled visible watermarks.</p>
+             * <p>The vertical spacing of the tiled visible watermark. This parameter takes effect only when Mode is set to repeat.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -1830,7 +1880,11 @@ public class CreateWmEmbedTaskRequest extends Request {
             }
 
             /**
-             * <p>The visibility. Valid values:</p>
+             * <p>Specifies whether the logo watermark is visible. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: Visible.</li>
+             * <li><strong>false</strong>: Invisible.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1900,7 +1954,11 @@ public class CreateWmEmbedTaskRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to enable this feature.</p>
+             * <p>Specifies whether to enable the metadata. Valid values:</p>
+             * <ul>
+             * <li>true: Enabled.</li>
+             * <li>false: Disabled.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1911,7 +1969,7 @@ public class CreateWmEmbedTaskRequest extends Request {
             }
 
             /**
-             * <p>The metadata in Base64 format. Encode the following string in Base64 format: AIGC:{&quot;Label&quot;:&quot;1&quot;,&quot;ContentProducer&quot;:&quot;AXXXX&quot;,&quot;ProduceID&quot;:&quot;BXXXX,&quot;ReservedCode1&quot;:&quot;CXXX&quot;,&quot;ContentPropagator&quot;:&quot;DXXX&quot;,&quot;PropagateID&quot;:&quot;EXXX&quot;,&quot;ReservedCode2&quot;:&quot;FXXXX&quot;}. Note: 1. The &quot;AIGC:&quot; prefix is required. Otherwise, the metadata cannot be added. The format differs from that of audio and video metadata. 2. The Base64 encoding must be in standard format with padding.</p>
+             * <p>The Base64-encoded metadata. You must encode a string in the format of AIGC:{&quot;Label&quot;:&quot;1&quot;,&quot;ContentProducer&quot;:&quot;AXXXX&quot;,&quot;ProduceID&quot;:&quot;BXXXX&quot;,&quot;ReservedCode1&quot;:&quot;CXXX&quot;,&quot;ContentPropagator&quot;:&quot;DXXX&quot;,&quot;PropagateID&quot;:&quot;EXXX&quot;,&quot;ReservedCode2&quot;:&quot;FXXXX&quot;} into a Base64 string. Note: 1. The &quot;AIGC:&quot; prefix is required. Otherwise, the metadata cannot be added. Note that the format is different from that of audio and video. 2. The Base64 string must be in the standard format and include padding.</p>
              * 
              * <strong>example:</strong>
              * <p>QUlHQzp7IkxhYmVsIjoiMSIsIkNvbnRlbnRQcm9kdWNlciI6IkFYWFhYIiwiUHJvZHVjZUlEIjoiQlhYWFgsIlJlc2VydmVkQ29kZTEiOiJDWFhYIiwiQ29udGVudFByb3BhZ2F0b3IiOiJEWFhYIiwiUHJvcGFnYXRlSUQiOiJFWFhYIiwiUmVzZXJ2ZWRDb2RlMiI6IkZYWFhYIn0=</p>
@@ -2007,7 +2065,7 @@ public class CreateWmEmbedTaskRequest extends Request {
             } 
 
             /**
-             * <p>This parameter takes effect when Mode is set to bottom-left or bottom-right. The bottom margin.</p>
+             * <p>The bottom margin. This parameter takes effect only when Mode is set to bottom-left or bottom-right.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -2018,7 +2076,7 @@ public class CreateWmEmbedTaskRequest extends Request {
             }
 
             /**
-             * <p>This parameter takes effect when Mode is set to top-left or bottom-left. The left margin.</p>
+             * <p>The left margin. This parameter takes effect only when Mode is set to top-left or bottom-left.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -2029,7 +2087,7 @@ public class CreateWmEmbedTaskRequest extends Request {
             }
 
             /**
-             * <p>This parameter takes effect when Mode is set to top-right or bottom-right. The right margin.</p>
+             * <p>The right margin. This parameter takes effect only when Mode is set to top-right or bottom-right.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -2040,7 +2098,7 @@ public class CreateWmEmbedTaskRequest extends Request {
             }
 
             /**
-             * <p>This parameter takes effect when Mode is set to top-left or top-right. The top margin.</p>
+             * <p>The top margin. This parameter takes effect only when Mode is set to top-left or top-right.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -2277,7 +2335,7 @@ public class CreateWmEmbedTaskRequest extends Request {
             }
 
             /**
-             * <p>The font color of the text watermark. The format is 0xFFFFFF or #FFFFFF RGB color format. For example, 0x000000 or #000000 indicates black.</p>
+             * <p>The font color of the text watermark. The value must be in the 0xFFFFFF or #FFFFFF RGB color format. For example, 0x000000 or #000000 indicates black.</p>
              * 
              * <strong>example:</strong>
              * <p>#FF0000</p>
@@ -2288,7 +2346,7 @@ public class CreateWmEmbedTaskRequest extends Request {
             }
 
             /**
-             * <p>The font size of the text watermark. A larger value indicates a larger font.</p>
+             * <p>The font size of the text watermark. A larger value indicates a larger font size.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -2299,7 +2357,7 @@ public class CreateWmEmbedTaskRequest extends Request {
             }
 
             /**
-             * <p>This parameter takes effect when Mode is set to top-left, top-right, bottom-left, or bottom-right. The margin settings.</p>
+             * <p>The margin of the text watermark. This parameter takes effect only when Mode is set to top-left, top-right, bottom-left, or bottom-right.</p>
              */
             public Builder margin(TextVisibleControlMargin margin) {
                 this.margin = margin;
@@ -2308,6 +2366,14 @@ public class CreateWmEmbedTaskRequest extends Request {
 
             /**
              * <p>The display mode of the text watermark. Valid values:</p>
+             * <ul>
+             * <li><strong>pos</strong>: Fixed position mode.</li>
+             * <li><strong>repeat</strong>: Tiled mode.</li>
+             * <li><strong>top-left</strong>: Top-left mode.</li>
+             * <li><strong>top-right</strong>: Top-right mode.</li>
+             * <li><strong>bottom-left</strong>: Bottom-left mode.</li>
+             * <li><strong>bottom-right</strong>: Bottom-right mode.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>pos</p>
@@ -2329,8 +2395,7 @@ public class CreateWmEmbedTaskRequest extends Request {
             }
 
             /**
-             * <p>The horizontal anchor point of the text watermark.
-             * Valid values: 0 to 1. When (PosAx, PosAy) is set to (0, 0), the text is drawn with the upper-left corner as the anchor point. When the value is 0.5, the text is drawn at the center point. When (PosAx, PosAy) is set to (1, 1), the text is drawn with the lower-right corner as the anchor point.</p>
+             * <p>The horizontal anchor point of the text watermark. Valid values: 0 to 1. If PosAx and PosAy are both set to 0, the top-left corner of the text is used as the anchor point. If the value is 0.5, the center of the text is used as the anchor point. If PosAx and PosAy are both set to 1, the bottom-right corner of the text is used as the anchor point.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -2341,8 +2406,7 @@ public class CreateWmEmbedTaskRequest extends Request {
             }
 
             /**
-             * <p>The vertical anchor point of the text watermark.
-             * Valid values: 0 to 1. When (PosAx, PosAy) is set to (0, 0), the text is drawn with the upper-left corner as the anchor point. When the value is 0.5, the text is drawn from the center point. When (PosAx, PosAy) is set to (1, 1), the text is drawn with the lower-right corner as the anchor point.</p>
+             * <p>The vertical anchor point of the text watermark. Valid values: 0 to 1. If PosAx and PosAy are both set to 0, the top-left corner of the text is used as the anchor point. If the value is 0.5, the center of the text is used as the anchor point. If PosAx and PosAy are both set to 1, the bottom-right corner of the text is used as the anchor point.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -2353,7 +2417,7 @@ public class CreateWmEmbedTaskRequest extends Request {
             }
 
             /**
-             * <p>This parameter takes effect when Mode is set to pos. Specifies the horizontal position of the text watermark in pixels, with the upper-left corner as the origin.</p>
+             * <p>The horizontal position of the text watermark. This parameter takes effect only when Mode is set to pos. The value is the pixel position with the top-left corner as the origin.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -2364,7 +2428,7 @@ public class CreateWmEmbedTaskRequest extends Request {
             }
 
             /**
-             * <p>This parameter takes effect when Mode is set to pos. Specifies the vertical position of the text watermark in pixels, with the upper-left corner as the origin.</p>
+             * <p>The vertical position of the text watermark. This parameter takes effect only when Mode is set to pos. The value is the pixel position with the top-left corner as the origin.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -2375,7 +2439,7 @@ public class CreateWmEmbedTaskRequest extends Request {
             }
 
             /**
-             * <p>This parameter takes effect when Mode is set to repeat. Specifies the horizontal spacing for tiled text watermarks.</p>
+             * <p>The horizontal spacing of the tiled text watermark. This parameter takes effect only when Mode is set to repeat.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -2386,7 +2450,7 @@ public class CreateWmEmbedTaskRequest extends Request {
             }
 
             /**
-             * <p>This parameter takes effect when Mode is set to repeat. Specifies the vertical spacing for tiled text watermarks.</p>
+             * <p>The vertical spacing of the tiled text watermark. This parameter takes effect only when Mode is set to repeat.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -2397,7 +2461,11 @@ public class CreateWmEmbedTaskRequest extends Request {
             }
 
             /**
-             * <p>The visibility. Valid values:</p>
+             * <p>Specifies whether the text watermark is visible. Valid values:</p>
+             * <ul>
+             * <li>true: Visible.</li>
+             * <li>false: Invisible.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -2408,10 +2476,10 @@ public class CreateWmEmbedTaskRequest extends Request {
             }
 
             /**
-             * <p>The text watermark content. The format is a UTF-8 string.</p>
+             * <p>The text watermark content. The value must be a UTF-8 string.</p>
              * 
              * <strong>example:</strong>
-             * <p>WatermarkText</p>
+             * <p>Watermark text</p>
              */
             public Builder visibleText(String visibleText) {
                 this.visibleText = visibleText;
@@ -2491,7 +2559,7 @@ public class CreateWmEmbedTaskRequest extends Request {
             } 
 
             /**
-             * <p>The control parameters for logo watermarks.</p>
+             * <p>The logo watermark control parameters.</p>
              */
             public Builder logoVisibleControl(LogoVisibleControl logoVisibleControl) {
                 this.logoVisibleControl = logoVisibleControl;
@@ -2499,7 +2567,7 @@ public class CreateWmEmbedTaskRequest extends Request {
             }
 
             /**
-             * <p>The metadata control parameters. This parameter takes effect when WmType is set to PureImage or AigcImage.</p>
+             * <p>The metadata control parameters. This parameter takes effect only when WmType is set to PureImage or AigcImage.</p>
              */
             public Builder metadataControl(ImageControlMetadataControl metadataControl) {
                 this.metadataControl = metadataControl;
@@ -2507,7 +2575,7 @@ public class CreateWmEmbedTaskRequest extends Request {
             }
 
             /**
-             * <p>The control parameters for image text watermarks.</p>
+             * <p>The text watermark control parameters for images.</p>
              */
             public Builder textVisibleControl(TextVisibleControl textVisibleControl) {
                 this.textVisibleControl = textVisibleControl;
@@ -2574,7 +2642,11 @@ public class CreateWmEmbedTaskRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to enable this feature.</p>
+             * <p>Specifies whether to enable the metadata. Valid values:</p>
+             * <ul>
+             * <li><strong>false</strong>: Disabled.</li>
+             * <li><strong>true</strong>: Enabled.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -2585,7 +2657,7 @@ public class CreateWmEmbedTaskRequest extends Request {
             }
 
             /**
-             * <p>The metadata in Base64 format. Encode the following string in Base64 format: AIGC={&quot;Label&quot;:&quot;1&quot;,&quot;ContentProducer&quot;:&quot;AXXXX&quot;,&quot;ProduceID&quot;:&quot;BXXXX,&quot;ReservedCode1&quot;:&quot;CXXX&quot;,&quot;ContentPropagator&quot;:&quot;DXXX&quot;,&quot;PropagateID&quot;:&quot;EXXX&quot;,&quot;ReservedCode2&quot;:&quot;FXXXX&quot;}. Note: 1. The &quot;AIGC=&quot; prefix is required. Otherwise, the metadata cannot be added. The prefix differs from that of image metadata. 2. The Base64 encoding must be in standard format with padding.</p>
+             * <p>The Base64-encoded metadata. You must encode a string in the format of AIGC={&quot;Label&quot;:&quot;1&quot;,&quot;ContentProducer&quot;:&quot;AXXXX&quot;,&quot;ProduceID&quot;:&quot;BXXXX&quot;,&quot;ReservedCode1&quot;:&quot;CXXX&quot;,&quot;ContentPropagator&quot;:&quot;DXXX&quot;,&quot;PropagateID&quot;:&quot;EXXX&quot;,&quot;ReservedCode2&quot;:&quot;FXXXX&quot;} into a Base64 string. Note: 1. The &quot;AIGC=&quot; prefix is required. Otherwise, the metadata cannot be added. Note that the prefix is different from that of image metadata. 2. The Base64 string must be in the standard format and include padding.</p>
              * 
              * <strong>example:</strong>
              * <p>QUlHQz17IkxhYmVsIjoiMSIsIkNvbnRlbnRQcm9kdWNlciI6IkFYWFhYIiwiUHJvZHVjZUlEIjoiQlhYWFgsIlJlc2VydmVkQ29kZTEiOiJDWFhYIiwiQ29udGVudFByb3BhZ2F0b3IiOiJEWFhYIiwiUHJvcGFnYXRlSUQiOiJFWFhYIiwiUmVzZXJ2ZWRDb2RlMiI6IkZYWFhYIn0=</p>
@@ -2655,7 +2727,7 @@ public class CreateWmEmbedTaskRequest extends Request {
             } 
 
             /**
-             * <p>This parameter takes effect when Mode is set to bottom-left or bottom-right. The bottom margin.</p>
+             * <p>The bottom margin. This parameter takes effect only when Mode is set to bottom-left or bottom-right.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -2666,7 +2738,7 @@ public class CreateWmEmbedTaskRequest extends Request {
             }
 
             /**
-             * <p>This parameter takes effect when Mode is set to top-right or bottom-right. The right margin.</p>
+             * <p>The right margin. This parameter takes effect only when Mode is set to top-right or bottom-right.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -2827,7 +2899,7 @@ public class CreateWmEmbedTaskRequest extends Request {
             } 
 
             /**
-             * <p>The font color of the text watermark. The format is 0xFFFFFF or #FFFFFF RGB color format.</p>
+             * <p>The font color of the text watermark. The value must be in the 0xFFFFFF or #FFFFFF RGB color format.</p>
              * 
              * <strong>example:</strong>
              * <p>#FF0000</p>
@@ -2849,7 +2921,7 @@ public class CreateWmEmbedTaskRequest extends Request {
             }
 
             /**
-             * <p>This parameter takes effect when Mode is set to top-left, top-right, bottom-left, or bottom-right. The margin settings.</p>
+             * <p>The margin of the text watermark. This parameter takes effect only when Mode is set to top-left, top-right, bottom-left, or bottom-right.</p>
              */
             public Builder margin(VideoControlTextVisibleControlMargin margin) {
                 this.margin = margin;
@@ -2859,8 +2931,8 @@ public class CreateWmEmbedTaskRequest extends Request {
             /**
              * <p>The display mode of the text watermark. Valid values:</p>
              * <ul>
-             * <li><strong>pos</strong>: fixed position, with the upper-left corner as the origin.</li>
-             * <li><strong>bottom-right</strong>: lower-left mode.</li>
+             * <li><strong>pos</strong>: Fixed position mode, with the top-left corner as the origin.</li>
+             * <li><strong>bottom-right</strong>: Bottom-right mode.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2883,7 +2955,7 @@ public class CreateWmEmbedTaskRequest extends Request {
             }
 
             /**
-             * <p>This parameter takes effect when Mode is set to pos. Specifies the horizontal position of the visible watermark in pixels, with the upper-left corner as the origin.</p>
+             * <p>The horizontal position of the visible watermark. This parameter takes effect only when Mode is set to pos. The value is the pixel position with the top-left corner as the origin.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -2894,7 +2966,7 @@ public class CreateWmEmbedTaskRequest extends Request {
             }
 
             /**
-             * <p>This parameter takes effect when Mode is set to pos. Specifies the vertical position of the visible watermark in pixels, with the upper-left corner as the origin.</p>
+             * <p>The vertical position of the visible watermark. This parameter takes effect only when Mode is set to pos. The value is the pixel position with the top-left corner as the origin.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -2905,7 +2977,11 @@ public class CreateWmEmbedTaskRequest extends Request {
             }
 
             /**
-             * <p>The visibility. Valid values:</p>
+             * <p>Specifies whether the text watermark is visible. Valid values:</p>
+             * <ul>
+             * <li>true: Visible.</li>
+             * <li>false: Invisible.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>True</p>
@@ -2916,10 +2992,10 @@ public class CreateWmEmbedTaskRequest extends Request {
             }
 
             /**
-             * <p>The text watermark content. The format is a UTF-8 string.</p>
+             * <p>The text watermark content. The value must be a UTF-8 string.</p>
              * 
              * <strong>example:</strong>
-             * <p>WatermarkTest</p>
+             * <p>Watermark test</p>
              */
             public Builder visibleText(String visibleText) {
                 this.visibleText = visibleText;
@@ -2994,7 +3070,7 @@ public class CreateWmEmbedTaskRequest extends Request {
             }
 
             /**
-             * <p>The control parameters for video text watermarks.</p>
+             * <p>The text watermark control parameters for videos.</p>
              */
             public Builder textVisibleControl(VideoControlTextVisibleControl textVisibleControl) {
                 this.textVisibleControl = textVisibleControl;

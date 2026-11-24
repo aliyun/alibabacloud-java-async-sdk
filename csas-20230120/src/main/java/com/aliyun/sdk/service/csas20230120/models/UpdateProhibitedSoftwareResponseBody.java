@@ -170,7 +170,7 @@ public class UpdateProhibitedSoftwareResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The bundle ID of the application. This parameter is required only for macOS processes.</p>
+             * <p>The bundle ID of the application. This field is applicable only to macOS processes.</p>
              * 
              * <strong>example:</strong>
              * <p>com.aliyun.security.sase</p>
@@ -181,7 +181,7 @@ public class UpdateProhibitedSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The command line parameters for starting the process.</p>
+             * <p>The command-line arguments used to start the process.</p>
              * 
              * <strong>example:</strong>
              * <p>--start-minimized</p>
@@ -203,7 +203,7 @@ public class UpdateProhibitedSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The process name.</p>
+             * <p>The name of the process.</p>
              * 
              * <strong>example:</strong>
              * <p>kismain.exe</p>
@@ -299,7 +299,7 @@ public class UpdateProhibitedSoftwareResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The bundle ID of the application. This parameter is required only for macOS processes.</p>
+             * <p>The bundle ID of the application. This field is applicable only to macOS processes.</p>
              * 
              * <strong>example:</strong>
              * <p>com.autotest.app</p>
@@ -310,7 +310,7 @@ public class UpdateProhibitedSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The command line parameters for starting the process.</p>
+             * <p>The command-line arguments used to start the process.</p>
              * 
              * <strong>example:</strong>
              * <p>--start-minimized</p>
@@ -332,7 +332,7 @@ public class UpdateProhibitedSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The process name.</p>
+             * <p>The name of the process.</p>
              * 
              * <strong>example:</strong>
              * <p>QQPCTray.exe</p>
@@ -428,7 +428,7 @@ public class UpdateProhibitedSoftwareResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The bundle ID of the application. This parameter is required only for macOS processes.</p>
+             * <p>The bundle ID of the application. This field is applicable only to macOS processes.</p>
              * 
              * <strong>example:</strong>
              * <p>com.aliyun.security.sase</p>
@@ -439,7 +439,7 @@ public class UpdateProhibitedSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The command line parameters for starting the process.</p>
+             * <p>The command-line arguments used to start the process.</p>
              * 
              * <strong>example:</strong>
              * <p>--start-minimized</p>
@@ -461,7 +461,7 @@ public class UpdateProhibitedSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The process name.</p>
+             * <p>The name of the process.</p>
              * 
              * <strong>example:</strong>
              * <p>QQPCTray.exe</p>
@@ -622,7 +622,7 @@ public class UpdateProhibitedSoftwareResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the prohibited software was created, in the yyyy-MM-dd HH:mm:ss format. The time is displayed in UTC+8.</p>
+             * <p>The time when the prohibited software was created. The time is in the yyyy-MM-dd HH:mm:ss format and displayed in the UTC+8 time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-08-17 09:49:03</p>
@@ -671,7 +671,7 @@ public class UpdateProhibitedSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IDs of the software prohibition policies that directly reference this prohibited software.</p>
+             * <p>The IDs of the software prohibition policies that directly reference the prohibited software.</p>
              */
             public Builder policyIds(java.util.List<String> policyIds) {
                 this.policyIds = policyIds;
@@ -690,7 +690,7 @@ public class UpdateProhibitedSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IDs of the prohibited software tags associated with this prohibited software.</p>
+             * <p>The IDs of the prohibited software tags associated with the prohibited software.</p>
              */
             public Builder tagIds(java.util.List<String> tagIds) {
                 this.tagIds = tagIds;

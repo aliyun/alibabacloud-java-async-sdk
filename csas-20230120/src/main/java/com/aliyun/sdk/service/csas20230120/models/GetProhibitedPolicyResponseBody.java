@@ -67,7 +67,7 @@ public class GetProhibitedPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the software prohibition policy.</p>
+         * <p>The details of the prohibited software policy.</p>
          */
         public Builder policy(Policy policy) {
             this.policy = policy;
@@ -144,10 +144,10 @@ public class GetProhibitedPolicyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the prohibited software is a system built-in entry. Valid values:</p>
+             * <p>Indicates whether the prohibited software is a built-in prohibited software. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: A system built-in prohibited software entry shared by all Alibaba Cloud accounts. Modification and deletion are not supported.</li>
-             * <li><strong>false</strong>: A custom prohibited software entry under the current Alibaba Cloud account.</li>
+             * <li><strong>true</strong>: The software is a built-in prohibited software that is shared by all Alibaba Cloud accounts and cannot be modified or deleted.</li>
+             * <li><strong>false</strong>: The software is a custom prohibited software under the current Alibaba Cloud account.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -159,7 +159,7 @@ public class GetProhibitedPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The prohibited software ID.</p>
+             * <p>The ID of the prohibited software.</p>
              * 
              * <strong>example:</strong>
              * <p>swb-050216aafaae****</p>
@@ -515,10 +515,10 @@ public class GetProhibitedPolicyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether end users are allowed to submit a filing request for this policy. Valid values:</p>
+             * <p>Indicates whether terminal users are allowed to submit applications for this policy. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: Filing is allowed. The terminal pop-up window provides a filing entry.</li>
-             * <li><strong>false</strong>: Filing is not allowed.</li>
+             * <li><strong>true</strong>: Applications are allowed. The terminal pop-up window provides an entry for submitting applications.</li>
+             * <li><strong>false</strong>: Applications are not allowed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -530,7 +530,7 @@ public class GetProhibitedPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time of the software prohibition policy, in the yyyy-MM-dd HH:mm:ss format using the UTC+8 time zone.</p>
+             * <p>The time when the prohibited software policy was created. The time is displayed in the yyyy-MM-dd HH:mm:ss format and uses the UTC+8 time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-07-29 11:26:02</p>
@@ -541,7 +541,7 @@ public class GetProhibitedPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the software prohibition policy.</p>
+             * <p>The description of the prohibited software policy.</p>
              * 
              * <strong>example:</strong>
              * <p>completed</p>
@@ -554,8 +554,8 @@ public class GetProhibitedPolicyResponseBody extends TeaModel {
             /**
              * <p>Indicates whether the policy is enabled. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: Enabled. The policy is delivered to terminals and takes effect.</li>
-             * <li><strong>false</strong>: Disabled. The policy configuration is retained but not delivered to terminals.</li>
+             * <li><strong>true</strong>: The policy is enabled, delivered to terminals, and takes effect.</li>
+             * <li><strong>false</strong>: The policy is disabled. The configuration is retained but not delivered to terminals.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -569,8 +569,8 @@ public class GetProhibitedPolicyResponseBody extends TeaModel {
             /**
              * <p>Indicates whether to forcibly terminate running software processes. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: The terminal immediately terminates the running processes of the software when the policy is triggered.</li>
-             * <li><strong>false</strong>: Running processes are not terminated. Only subsequent launches are blocked.</li>
+             * <li><strong>true</strong>: The terminal immediately terminates the running processes of the software when the policy is matched.</li>
+             * <li><strong>false</strong>: The terminal does not terminate running processes but only prevents subsequent startups.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -604,10 +604,10 @@ public class GetProhibitedPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The policy matching target type. Valid values:</p>
+             * <p>The target matching mode of the policy. Valid values:</p>
              * <ul>
-             * <li><strong>UserGroupAll</strong>: Associates with all users.</li>
-             * <li><strong>UserGroupNormal</strong>: Associates with specific user groups.</li>
+             * <li><strong>UserGroupAll</strong>: Applies to all users.</li>
+             * <li><strong>UserGroupNormal</strong>: Applies to specific user groups.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -641,7 +641,7 @@ public class GetProhibitedPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the software prohibition policy.</p>
+             * <p>The name of the prohibited software policy.</p>
              * 
              * <strong>example:</strong>
              * <p>PolicyC</p>
@@ -652,10 +652,10 @@ public class GetProhibitedPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The object type of the controlled target. Valid values:</p>
+             * <p>The managed object type. Valid values:</p>
              * <ul>
-             * <li><strong>App</strong>: Controls by prohibited software. The controlled objects are specified by SoftwareIds.</li>
-             * <li><strong>Tag</strong>: Controls by prohibited software labels. The controlled objects are specified by TagIds. All prohibited software under the labels is controlled.</li>
+             * <li><strong>App</strong>: Managed by prohibited software. The managed objects are specified by SoftwareIds.</li>
+             * <li><strong>Tag</strong>: Managed by prohibited software tag. The managed objects are specified by TagIds, and all prohibited software under the tag is managed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -667,7 +667,7 @@ public class GetProhibitedPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The software prohibition policy ID.</p>
+             * <p>The ID of the prohibited software policy.</p>
              * 
              * <strong>example:</strong>
              * <p>pid-36ee4a5869f3****</p>
@@ -678,11 +678,11 @@ public class GetProhibitedPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The action type. Valid values:</p>
+             * <p>The enforcement action. Valid values:</p>
              * <ul>
-             * <li><strong>Ban</strong>: Blocks the software from running and displays a pop-up notification to the end user.</li>
-             * <li><strong>BanSilent</strong>: Blocks the software from running without notifying the end user (silent blocking).</li>
-             * <li><strong>Warn</strong>: Displays a pop-up notification to the end user without blocking the software from running.</li>
+             * <li><strong>Ban</strong>: Blocks the software from running and displays a pop-up window to notify the terminal user.</li>
+             * <li><strong>BanSilent</strong>: Blocks the software from running silently without notifying the terminal user.</li>
+             * <li><strong>Warn</strong>: Displays a pop-up window to notify the terminal user without blocking the software from running.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -705,10 +705,10 @@ public class GetProhibitedPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Chinese prompt content displayed in the terminal pop-up window.</p>
+             * <p>The Chinese prompt content in the terminal pop-up window.</p>
              * 
              * <strong>example:</strong>
-             * <p>This software has been blocked by the enterprise security policy. To use it, submit an approval request</p>
+             * <p>该软件已被企业安全策略禁止运行，如需使用请提交报备申请</p>
              */
             public Builder promptCh(String promptCh) {
                 this.promptCh = promptCh;
@@ -716,7 +716,7 @@ public class GetProhibitedPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The English prompt content displayed in the terminal pop-up window.</p>
+             * <p>The English prompt content in the terminal pop-up window.</p>
              * 
              * <strong>example:</strong>
              * <p>This software is blocked by your enterprise security policy.</p>
@@ -727,7 +727,7 @@ public class GetProhibitedPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The approval process ID bound to this policy. An empty string is returned if no approval process is bound. In this case, filing requests submitted by end users are approved by the IT administrator as a fallback. Approval processes are bound by using <a href="~~AttachPolicy2ApprovalProcess~~">AttachPolicy2ApprovalProcess</a> and unbound by using <a href="~~DetachPolicy2ApprovalProcess~~">DetachPolicy2ApprovalProcess</a>. You can obtain this value from the following operation:</p>
+             * <p>The ID of the approval process bound to the policy. If no approval process is bound, an empty string is returned, and applications submitted by terminal users are approved by the IT administrator. You can bind an approval process by calling <a href="~~AttachPolicy2ApprovalProcess~~">AttachPolicy2ApprovalProcess</a> and unbind it by calling <a href="~~DetachPolicy2ApprovalProcess~~">DetachPolicy2ApprovalProcess</a>. You can obtain the value from the following operations:</p>
              * <ul>
              * <li><a href="~~ListApprovalProcesses~~">ListApprovalProcesses</a>: Lists approval processes.</li>
              * </ul>
@@ -741,7 +741,7 @@ public class GetProhibitedPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The collection of prohibited software directly controlled by this policy.</p>
+             * <p>The list of prohibited software directly managed by the policy.</p>
              */
             public Builder softwareIds(java.util.List<SoftwareIds> softwareIds) {
                 this.softwareIds = softwareIds;
@@ -749,7 +749,7 @@ public class GetProhibitedPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The collection of prohibited software label IDs controlled by this policy.</p>
+             * <p>The list of prohibited software tag IDs managed by the policy.</p>
              */
             public Builder tagIds(java.util.List<String> tagIds) {
                 this.tagIds = tagIds;
@@ -779,7 +779,7 @@ public class GetProhibitedPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The collection of user group IDs to which this policy applies.</p>
+             * <p>The list of user group IDs to which the policy applies.</p>
              */
             public Builder userGroupIds(java.util.List<String> userGroupIds) {
                 this.userGroupIds = userGroupIds;

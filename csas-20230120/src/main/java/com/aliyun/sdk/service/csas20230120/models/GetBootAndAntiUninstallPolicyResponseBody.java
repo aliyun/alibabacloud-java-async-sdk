@@ -78,7 +78,7 @@ public class GetBootAndAntiUninstallPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The auto-start and anti-uninstall policy.</p>
+         * <p>The auto-start and anti-uninstallation policy.</p>
          */
         public Builder strategy(Strategy strategy) {
             this.strategy = strategy;
@@ -170,7 +170,7 @@ public class GetBootAndAntiUninstallPolicyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The pop-up window content.</p>
+             * <p>The content of the pop-up window.</p>
              * 
              * <strong>example:</strong>
              * <p>After uninstalling, the device can no longer be used for company work, and it will lose access to the company\&quot;s intranet!</p>
@@ -203,7 +203,7 @@ public class GetBootAndAntiUninstallPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The pop-up window title.</p>
+             * <p>The title of the pop-up window.</p>
              * 
              * <strong>example:</strong>
              * <p>Anti-Uninstall Warning</p>
@@ -299,10 +299,10 @@ public class GetBootAndAntiUninstallPolicyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The pop-up window content.</p>
+             * <p>The content of the pop-up window.</p>
              * 
              * <strong>example:</strong>
-             * <p>卸载后该设备无法再用于公司办公，同时该设备将失去进入公司内网权限！</p>
+             * <p>After uninstallation, this device can no longer be used for company work and will lose access to the company intranet!</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -313,7 +313,7 @@ public class GetBootAndAntiUninstallPolicyResponseBody extends TeaModel {
              * <p>The text of the primary button in the pop-up window.</p>
              * 
              * <strong>example:</strong>
-             * <p>去报备</p>
+             * <p>Submit report</p>
              */
             public Builder mainButtonText(String mainButtonText) {
                 this.mainButtonText = mainButtonText;
@@ -324,7 +324,7 @@ public class GetBootAndAntiUninstallPolicyResponseBody extends TeaModel {
              * <p>The text of the secondary button in the pop-up window.</p>
              * 
              * <strong>example:</strong>
-             * <p>我知道了</p>
+             * <p>I understand</p>
              */
             public Builder minorButtonText(String minorButtonText) {
                 this.minorButtonText = minorButtonText;
@@ -332,10 +332,10 @@ public class GetBootAndAntiUninstallPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The pop-up window title.</p>
+             * <p>The title of the pop-up window.</p>
              * 
              * <strong>example:</strong>
-             * <p>防卸载警告</p>
+             * <p>Anti-uninstallation warning</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -600,7 +600,7 @@ public class GetBootAndAntiUninstallPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the policy was created.</p>
+             * <p>The time when the policy was created. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-04-16 10:50:05</p>
@@ -611,7 +611,7 @@ public class GetBootAndAntiUninstallPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the anti-uninstall feature is enabled.</p>
+             * <p>Indicates whether the anti-uninstallation feature is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -633,7 +633,7 @@ public class GetBootAndAntiUninstallPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The policy ID.</p>
+             * <p>The ID of the policy.</p>
              * 
              * <strong>example:</strong>
              * <p>auto-boot-anti-uninstall-6f6cbf5f6605****</p>
@@ -655,7 +655,7 @@ public class GetBootAndAntiUninstallPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the policy was updated.</p>
+             * <p>The time when the policy was updated. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-06-14 10:17:14</p>
@@ -674,7 +674,7 @@ public class GetBootAndAntiUninstallPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of whitelist users.</p>
+             * <p>The list of whitelisted users.</p>
              */
             public Builder whitelistUsers(java.util.List<String> whitelistUsers) {
                 this.whitelistUsers = whitelistUsers;

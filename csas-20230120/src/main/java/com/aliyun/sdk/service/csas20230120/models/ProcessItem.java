@@ -93,7 +93,10 @@ public class ProcessItem extends TeaModel {
         } 
 
         /**
-         * BundleId.
+         * <p>The bundle ID of the application to which the process belongs. The example value com.apple.Terminal is the bundle ID of the macOS Terminal application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>com.apple.Terminal</p>
          */
         public Builder bundleId(String bundleId) {
             this.bundleId = bundleId;
@@ -101,7 +104,15 @@ public class ProcessItem extends TeaModel {
         }
 
         /**
-         * DevType.
+         * <p>The operating system type of the user endpoint device to which the process belongs. Valid values:</p>
+         * <ul>
+         * <li>windows: Windows.</li>
+         * <li>macOS: macOS.</li>
+         * <li>linux: Linux.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>macOS</p>
          */
         public Builder devType(String devType) {
             this.devType = devType;
@@ -109,7 +120,10 @@ public class ProcessItem extends TeaModel {
         }
 
         /**
-         * Directory.
+         * <p>The process directory path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/System/Applications/Utilities/Terminal.app/Contents/MacOS</p>
          */
         public Builder directory(String directory) {
             this.directory = directory;
@@ -117,7 +131,10 @@ public class ProcessItem extends TeaModel {
         }
 
         /**
-         * Process.
+         * <p>The process name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Terminal</p>
          */
         public Builder process(String process) {
             this.process = process;

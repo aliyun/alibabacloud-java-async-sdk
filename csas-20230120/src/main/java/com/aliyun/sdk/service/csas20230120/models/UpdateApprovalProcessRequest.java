@@ -172,7 +172,10 @@ public class UpdateApprovalProcessRequest extends Request {
         } 
 
         /**
-         * ApprovalType.
+         * <p>The approval type. Valid values: 0 (built-in approval), 1 (DingTalk approval), 2 (WeCom approval), and 3 (Lark approval). Default value: 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder approvalType(Integer approvalType) {
             this.putQueryParameter("ApprovalType", approvalType);
@@ -181,10 +184,10 @@ public class UpdateApprovalProcessRequest extends Request {
         }
 
         /**
-         * <p>The description of the approval process. The description must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), hyphens (-), and spaces. Chinese characters are supported.</p>
+         * <p>The description of the approval process. The description must be 1 to 128 characters in length and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), hyphens (-), and spaces.</p>
          * 
          * <strong>example:</strong>
-         * <p>This is a test</p>
+         * <p>Office endpoint software installation and uninstallation approval process</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -193,7 +196,10 @@ public class UpdateApprovalProcessRequest extends Request {
         }
 
         /**
-         * EventLabel.
+         * <p>The event callback identifier. When the approval type is 1 (DingTalk approval) or 3 (Lark approval), this parameter is used to generate the event callback URL for the external platform. You can pass a complete callback URL, and the server retains only the part after the callback path prefix.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://callback.example.com/sase/api/v1/approval/dingtalk/callback/9m4e2mr0ui3e8a21">https://callback.example.com/sase/api/v1/approval/dingtalk/callback/9m4e2mr0ui3e8a21</a>****</p>
          */
         public Builder eventLabel(String eventLabel) {
             this.putQueryParameter("EventLabel", eventLabel);
@@ -202,7 +208,10 @@ public class UpdateApprovalProcessRequest extends Request {
         }
 
         /**
-         * ExternalConfig.
+         * <p>The integration configuration for the external approval platform. This parameter is required when the approval type is 1 (DingTalk approval) or 3 (Lark approval). It includes integration parameters such as appKey and appSecret, and must be passed as a JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;appKey&quot;:&quot;dingn1a2b3c4d5e6f****&quot;,&quot;appSecret&quot;:&quot;f9c8e7d6a5b4c3d2e1f0a9b8c7d6e5f4a3b2c1d0e9f8a7b6c5d4e3f2a1b0****&quot;,&quot;eventVerifyToken&quot;:&quot;7a8b9c0d1e2f3a4b5c6d7e8f9a0b****&quot;,&quot;eventAesKey&quot;:&quot;1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t****&quot;}</p>
          */
         public Builder externalConfig(String externalConfig) {
             this.putQueryParameter("ExternalConfig", externalConfig);
@@ -211,7 +220,7 @@ public class UpdateApprovalProcessRequest extends Request {
         }
 
         /**
-         * MatchSchemaConfigs.
+         * <p>The external approval template configurations. Configure the approval template ID, external approval process ID, and field mappings based on the policy type. This parameter is used only when ApprovalType is set to 1 (DingTalk approval), 2 (WeCom approval), or 3 (Lark approval). If this parameter is not passed, the existing template associations of the approval process are cleared. The approval templates associated with business policies cannot be cleared.</p>
          */
         public Builder matchSchemaConfigs(MatchSchemaConfigs matchSchemaConfigs) {
             String matchSchemaConfigsShrink = shrink(matchSchemaConfigs, "MatchSchemaConfigs", "json");
@@ -244,10 +253,10 @@ public class UpdateApprovalProcessRequest extends Request {
         }
 
         /**
-         * <p>The name of the approval process. The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). Chinese characters are supported.</p>
+         * <p>The name of the approval process. The name must be 1 to 128 characters in length and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), and hyphens (-).</p>
          * 
          * <strong>example:</strong>
-         * <p>Test</p>
+         * <p>Endpoint software installation approval process</p>
          */
         public Builder processName(String processName) {
             this.putBodyParameter("ProcessName", processName);
@@ -337,7 +346,10 @@ public class UpdateApprovalProcessRequest extends Request {
             } 
 
             /**
-             * DisplayField.
+             * <p>The name of the control in the external approval form. This parameter is used to locate the form control when the approval type is 1 (DingTalk approval).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Reason for reporting</p>
              */
             public Builder displayField(String displayField) {
                 this.displayField = displayField;
@@ -345,7 +357,10 @@ public class UpdateApprovalProcessRequest extends Request {
             }
 
             /**
-             * DisplayFieldValue.
+             * <p>The type and identifier of the external approval form control, in the format of Type%%%ControlID. This parameter is used to locate the form control when the approval type is 2 (WeCom approval) or 3 (Lark approval).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Textarea%%%widget-1a2b****</p>
              */
             public Builder displayFieldValue(String displayFieldValue) {
                 this.displayFieldValue = displayFieldValue;
@@ -353,7 +368,10 @@ public class UpdateApprovalProcessRequest extends Request {
             }
 
             /**
-             * SystemField.
+             * <p>The identifier of the system field, such as approvalReason.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>approvalReason</p>
              */
             public Builder systemField(String systemField) {
                 this.systemField = systemField;
@@ -433,7 +451,10 @@ public class UpdateApprovalProcessRequest extends Request {
             } 
 
             /**
-             * ExternalProcessId.
+             * <p>The ID of the external approval process. When the approval type is 1 (DingTalk approval) or 3 (Lark approval), this parameter specifies the process code (processCode) of the external platform.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PROC-1a2b3c4d5e6f****</p>
              */
             public Builder externalProcessId(String externalProcessId) {
                 this.externalProcessId = externalProcessId;
@@ -441,7 +462,7 @@ public class UpdateApprovalProcessRequest extends Request {
             }
 
             /**
-             * FieldMap.
+             * <p>The mapping list between system fields and external approval form controls.</p>
              */
             public Builder fieldMap(java.util.List<FieldMap> fieldMap) {
                 this.fieldMap = fieldMap;
@@ -449,7 +470,10 @@ public class UpdateApprovalProcessRequest extends Request {
             }
 
             /**
-             * SchemaId.
+             * <p>The ID of the approval template. The ID must be consistent with the template ID of the corresponding policy type in MatchSchemas. If this parameter is left empty, the approval template association is not saved for this policy type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>approval-schema-090134f1ebff****</p>
              */
             public Builder schemaId(String schemaId) {
                 this.schemaId = schemaId;
@@ -529,7 +553,10 @@ public class UpdateApprovalProcessRequest extends Request {
             } 
 
             /**
-             * DisplayField.
+             * <p>The name of the control in the external approval form. This parameter is used to locate the form control when the approval type is 1 (DingTalk approval).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Report domain name</p>
              */
             public Builder displayField(String displayField) {
                 this.displayField = displayField;
@@ -537,7 +564,10 @@ public class UpdateApprovalProcessRequest extends Request {
             }
 
             /**
-             * DisplayFieldValue.
+             * <p>The type and identifier of the external approval form control, in the format of Type%%%ControlID. This parameter is used to locate the form control when the approval type is 2 (WeCom approval) or 3 (Lark approval).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Textarea%%%widget-1a2b****</p>
              */
             public Builder displayFieldValue(String displayFieldValue) {
                 this.displayFieldValue = displayFieldValue;
@@ -545,7 +575,10 @@ public class UpdateApprovalProcessRequest extends Request {
             }
 
             /**
-             * SystemField.
+             * <p>The identifier of the system field, such as report_domain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>report_domain</p>
              */
             public Builder systemField(String systemField) {
                 this.systemField = systemField;
@@ -625,7 +658,10 @@ public class UpdateApprovalProcessRequest extends Request {
             } 
 
             /**
-             * ExternalProcessId.
+             * <p>The ID of the external approval process. When the approval type is 1 (DingTalk approval) or 3 (Lark approval), this parameter specifies the process code (processCode) of the external platform.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PROC-1a2b3c4d5e6f****</p>
              */
             public Builder externalProcessId(String externalProcessId) {
                 this.externalProcessId = externalProcessId;
@@ -633,7 +669,7 @@ public class UpdateApprovalProcessRequest extends Request {
             }
 
             /**
-             * FieldMap.
+             * <p>The mapping list between system fields and external approval form controls.</p>
              */
             public Builder fieldMap(java.util.List<DeviceRegistrationSchemaConfigFieldMap> fieldMap) {
                 this.fieldMap = fieldMap;
@@ -641,7 +677,10 @@ public class UpdateApprovalProcessRequest extends Request {
             }
 
             /**
-             * SchemaId.
+             * <p>The ID of the approval template. The ID must be consistent with the template ID of the corresponding policy type in MatchSchemas. If this parameter is left empty, the approval template association is not saved for this policy type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>approval-schema-090134f1ebff****</p>
              */
             public Builder schemaId(String schemaId) {
                 this.schemaId = schemaId;
@@ -721,7 +760,10 @@ public class UpdateApprovalProcessRequest extends Request {
             } 
 
             /**
-             * DisplayField.
+             * <p>The name of the control in the external approval form. This parameter is used to locate the form control when the approval type is 1 (DingTalk approval).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>File name</p>
              */
             public Builder displayField(String displayField) {
                 this.displayField = displayField;
@@ -729,7 +771,10 @@ public class UpdateApprovalProcessRequest extends Request {
             }
 
             /**
-             * DisplayFieldValue.
+             * <p>The type and identifier of the external approval form control, in the format of Type%%%ControlID. This parameter is used to locate the form control when the approval type is 2 (WeCom approval) or 3 (Lark approval).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Textarea%%%widget-1a2b****</p>
              */
             public Builder displayFieldValue(String displayFieldValue) {
                 this.displayFieldValue = displayFieldValue;
@@ -737,7 +782,10 @@ public class UpdateApprovalProcessRequest extends Request {
             }
 
             /**
-             * SystemField.
+             * <p>The identifier of the system field, such as fileName.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fileName</p>
              */
             public Builder systemField(String systemField) {
                 this.systemField = systemField;
@@ -817,7 +865,10 @@ public class UpdateApprovalProcessRequest extends Request {
             } 
 
             /**
-             * ExternalProcessId.
+             * <p>The ID of the external approval process. When the approval type is 1 (DingTalk approval) or 3 (Lark approval), this parameter specifies the process code (processCode) of the external platform.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PROC-1a2b3c4d5e6f****</p>
              */
             public Builder externalProcessId(String externalProcessId) {
                 this.externalProcessId = externalProcessId;
@@ -825,7 +876,7 @@ public class UpdateApprovalProcessRequest extends Request {
             }
 
             /**
-             * FieldMap.
+             * <p>The mapping list between system fields and external approval form controls.</p>
              */
             public Builder fieldMap(java.util.List<DlpSendSchemaConfigFieldMap> fieldMap) {
                 this.fieldMap = fieldMap;
@@ -833,7 +884,10 @@ public class UpdateApprovalProcessRequest extends Request {
             }
 
             /**
-             * SchemaId.
+             * <p>The ID of the approval template. The ID must be consistent with the template ID of the corresponding policy type in MatchSchemas. If this parameter is left empty, the approval template association is not saved for this policy type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>approval-schema-090134f1ebff****</p>
              */
             public Builder schemaId(String schemaId) {
                 this.schemaId = schemaId;
@@ -913,7 +967,10 @@ public class UpdateApprovalProcessRequest extends Request {
             } 
 
             /**
-             * DisplayField.
+             * <p>The name of the control in the external approval form. This parameter is used to locate the form control when the approval type is 1 (DingTalk approval).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Report website access</p>
              */
             public Builder displayField(String displayField) {
                 this.displayField = displayField;
@@ -921,7 +978,10 @@ public class UpdateApprovalProcessRequest extends Request {
             }
 
             /**
-             * DisplayFieldValue.
+             * <p>The type and identifier of the external approval form control, in the format of Type%%%ControlID. This parameter is used to locate the form control when the approval type is 2 (WeCom approval) or 3 (Lark approval).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Textarea%%%widget-1a2b****</p>
              */
             public Builder displayFieldValue(String displayFieldValue) {
                 this.displayFieldValue = displayFieldValue;
@@ -929,7 +989,10 @@ public class UpdateApprovalProcessRequest extends Request {
             }
 
             /**
-             * SystemField.
+             * <p>The identifier of the system field, such as reportDomain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>reportDomain</p>
              */
             public Builder systemField(String systemField) {
                 this.systemField = systemField;
@@ -1009,7 +1072,10 @@ public class UpdateApprovalProcessRequest extends Request {
             } 
 
             /**
-             * ExternalProcessId.
+             * <p>The ID of the external approval process. When the approval type is 1 (DingTalk approval) or 3 (Lark approval), this parameter specifies the process code (processCode) of the external platform.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PROC-1a2b3c4d5e6f****</p>
              */
             public Builder externalProcessId(String externalProcessId) {
                 this.externalProcessId = externalProcessId;
@@ -1017,7 +1083,7 @@ public class UpdateApprovalProcessRequest extends Request {
             }
 
             /**
-             * FieldMap.
+             * <p>The mapping list between system fields and external approval form controls.</p>
              */
             public Builder fieldMap(java.util.List<DomainBlacklistSchemaConfigFieldMap> fieldMap) {
                 this.fieldMap = fieldMap;
@@ -1025,7 +1091,10 @@ public class UpdateApprovalProcessRequest extends Request {
             }
 
             /**
-             * SchemaId.
+             * <p>The ID of the approval template. The ID must be consistent with the template ID of the corresponding policy type in MatchSchemas. If this parameter is left empty, the approval template association is not saved for this policy type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>approval-schema-090134f1ebff****</p>
              */
             public Builder schemaId(String schemaId) {
                 this.schemaId = schemaId;
@@ -1105,7 +1174,10 @@ public class UpdateApprovalProcessRequest extends Request {
             } 
 
             /**
-             * DisplayField.
+             * <p>The name of the control in the external approval form. This parameter is used to locate the form control when the approval type is 1 (DingTalk approval).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Report website access</p>
              */
             public Builder displayField(String displayField) {
                 this.displayField = displayField;
@@ -1113,7 +1185,10 @@ public class UpdateApprovalProcessRequest extends Request {
             }
 
             /**
-             * DisplayFieldValue.
+             * <p>The type and identifier of the external approval form control, in the format of Type%%%ControlID. This parameter is used to locate the form control when the approval type is 2 (WeCom approval) or 3 (Lark approval).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Textarea%%%widget-1a2b****</p>
              */
             public Builder displayFieldValue(String displayFieldValue) {
                 this.displayFieldValue = displayFieldValue;
@@ -1121,7 +1196,10 @@ public class UpdateApprovalProcessRequest extends Request {
             }
 
             /**
-             * SystemField.
+             * <p>The identifier of the system field, such as reportDomain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>reportDomain</p>
              */
             public Builder systemField(String systemField) {
                 this.systemField = systemField;
@@ -1201,7 +1279,10 @@ public class UpdateApprovalProcessRequest extends Request {
             } 
 
             /**
-             * ExternalProcessId.
+             * <p>The ID of the external approval process. When the approval type is 1 (DingTalk approval) or 3 (Lark approval), this parameter specifies the process code (processCode) of the external platform.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PROC-1a2b3c4d5e6f****</p>
              */
             public Builder externalProcessId(String externalProcessId) {
                 this.externalProcessId = externalProcessId;
@@ -1209,7 +1290,7 @@ public class UpdateApprovalProcessRequest extends Request {
             }
 
             /**
-             * FieldMap.
+             * <p>The mapping list between system fields and external approval form controls.</p>
              */
             public Builder fieldMap(java.util.List<DomainWhitelistSchemaConfigFieldMap> fieldMap) {
                 this.fieldMap = fieldMap;
@@ -1217,7 +1298,10 @@ public class UpdateApprovalProcessRequest extends Request {
             }
 
             /**
-             * SchemaId.
+             * <p>The ID of the approval template. The ID must be consistent with the template ID of the corresponding policy type in MatchSchemas. If this parameter is left empty, the approval template association is not saved for this policy type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>approval-schema-090134f1ebff****</p>
              */
             public Builder schemaId(String schemaId) {
                 this.schemaId = schemaId;
@@ -1297,7 +1381,10 @@ public class UpdateApprovalProcessRequest extends Request {
             } 
 
             /**
-             * DisplayField.
+             * <p>The name of the control in the external approval form. This parameter is used to locate the form control when the approval type is 1 (DingTalk approval).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Process name</p>
              */
             public Builder displayField(String displayField) {
                 this.displayField = displayField;
@@ -1305,7 +1392,10 @@ public class UpdateApprovalProcessRequest extends Request {
             }
 
             /**
-             * DisplayFieldValue.
+             * <p>The type and identifier of the external approval form control, in the format of Type%%%ControlID. This parameter is used to locate the form control when the approval type is 2 (WeCom approval) or 3 (Lark approval).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Textarea%%%widget-1a2b****</p>
              */
             public Builder displayFieldValue(String displayFieldValue) {
                 this.displayFieldValue = displayFieldValue;
@@ -1313,7 +1403,10 @@ public class UpdateApprovalProcessRequest extends Request {
             }
 
             /**
-             * SystemField.
+             * <p>The system field identifier, such as processName.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>processName</p>
              */
             public Builder systemField(String systemField) {
                 this.systemField = systemField;
@@ -1393,7 +1486,10 @@ public class UpdateApprovalProcessRequest extends Request {
             } 
 
             /**
-             * ExternalProcessId.
+             * <p>The ID of the external approval process. When the approval type is 1 (DingTalk approval) or 3 (Lark approval), this parameter specifies the process code (processCode) of the external platform.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PROC-1a2b3c4d5e6f****</p>
              */
             public Builder externalProcessId(String externalProcessId) {
                 this.externalProcessId = externalProcessId;
@@ -1401,7 +1497,7 @@ public class UpdateApprovalProcessRequest extends Request {
             }
 
             /**
-             * FieldMap.
+             * <p>The mapping list between system fields and external approval form controls.</p>
              */
             public Builder fieldMap(java.util.List<EndpointHardeningSchemaConfigFieldMap> fieldMap) {
                 this.fieldMap = fieldMap;
@@ -1409,7 +1505,10 @@ public class UpdateApprovalProcessRequest extends Request {
             }
 
             /**
-             * SchemaId.
+             * <p>The ID of the approval template. The ID must be consistent with the template ID of the corresponding policy type in MatchSchemas. If this parameter is left empty, the approval template association is not saved for this policy type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>approval-schema-090134f1ebff****</p>
              */
             public Builder schemaId(String schemaId) {
                 this.schemaId = schemaId;
@@ -1489,7 +1588,10 @@ public class UpdateApprovalProcessRequest extends Request {
             } 
 
             /**
-             * DisplayField.
+             * <p>The name of the control in the external approval form. This parameter is used to locate the form control when the approval type is 1 (DingTalk approval).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Operating system</p>
              */
             public Builder displayField(String displayField) {
                 this.displayField = displayField;
@@ -1497,7 +1599,10 @@ public class UpdateApprovalProcessRequest extends Request {
             }
 
             /**
-             * DisplayFieldValue.
+             * <p>The type and identifier of the external approval form control, in the format of Type%%%ControlID. This parameter is used to locate the form control when the approval type is 2 (WeCom approval) or 3 (Lark approval).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Textarea%%%widget-1a2b****</p>
              */
             public Builder displayFieldValue(String displayFieldValue) {
                 this.displayFieldValue = displayFieldValue;
@@ -1505,7 +1610,10 @@ public class UpdateApprovalProcessRequest extends Request {
             }
 
             /**
-             * SystemField.
+             * <p>The identifier of the system field, such as devType.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>devType</p>
              */
             public Builder systemField(String systemField) {
                 this.systemField = systemField;
@@ -1585,7 +1693,10 @@ public class UpdateApprovalProcessRequest extends Request {
             } 
 
             /**
-             * ExternalProcessId.
+             * <p>The ID of the external approval process. When the approval type is 1 (DingTalk approval) or 3 (Lark approval), this parameter specifies the process code (processCode) of the external platform.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PROC-1a2b3c4d5e6f****</p>
              */
             public Builder externalProcessId(String externalProcessId) {
                 this.externalProcessId = externalProcessId;
@@ -1593,7 +1704,7 @@ public class UpdateApprovalProcessRequest extends Request {
             }
 
             /**
-             * FieldMap.
+             * <p>The mapping list between system fields and external approval form controls.</p>
              */
             public Builder fieldMap(java.util.List<PeripheralBlockSchemaConfigFieldMap> fieldMap) {
                 this.fieldMap = fieldMap;
@@ -1601,7 +1712,10 @@ public class UpdateApprovalProcessRequest extends Request {
             }
 
             /**
-             * SchemaId.
+             * <p>The ID of the approval template. The ID must be consistent with the template ID of the corresponding policy type in MatchSchemas. If this parameter is left empty, the approval template association is not saved for this policy type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>approval-schema-090134f1ebff****</p>
              */
             public Builder schemaId(String schemaId) {
                 this.schemaId = schemaId;
@@ -1681,7 +1795,10 @@ public class UpdateApprovalProcessRequest extends Request {
             } 
 
             /**
-             * DisplayField.
+             * <p>The name of the control in the external approval form. This parameter is used to locate the form control when the approval type is 1 (DingTalk approval).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Reported application</p>
              */
             public Builder displayField(String displayField) {
                 this.displayField = displayField;
@@ -1689,7 +1806,10 @@ public class UpdateApprovalProcessRequest extends Request {
             }
 
             /**
-             * DisplayFieldValue.
+             * <p>The type and identifier of the external approval form control, in the format of Type%%%ControlID. This parameter is used to locate the form control when the approval type is 2 (WeCom approval) or 3 (Lark approval).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Textarea%%%widget-1a2b****</p>
              */
             public Builder displayFieldValue(String displayFieldValue) {
                 this.displayFieldValue = displayFieldValue;
@@ -1697,7 +1817,10 @@ public class UpdateApprovalProcessRequest extends Request {
             }
 
             /**
-             * SystemField.
+             * <p>The system field identifier, such as applicationId.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>applicationId</p>
              */
             public Builder systemField(String systemField) {
                 this.systemField = systemField;
@@ -1777,7 +1900,10 @@ public class UpdateApprovalProcessRequest extends Request {
             } 
 
             /**
-             * ExternalProcessId.
+             * <p>The ID of the external approval process. When the approval type is 1 (DingTalk approval) or 3 (Lark approval), this parameter specifies the process code (processCode) of the external platform.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PROC-1a2b3c4d5e6f****</p>
              */
             public Builder externalProcessId(String externalProcessId) {
                 this.externalProcessId = externalProcessId;
@@ -1785,7 +1911,7 @@ public class UpdateApprovalProcessRequest extends Request {
             }
 
             /**
-             * FieldMap.
+             * <p>The mapping list between system fields and external approval form controls.</p>
              */
             public Builder fieldMap(java.util.List<PrivateAccessBlockSchemaConfigFieldMap> fieldMap) {
                 this.fieldMap = fieldMap;
@@ -1793,7 +1919,10 @@ public class UpdateApprovalProcessRequest extends Request {
             }
 
             /**
-             * SchemaId.
+             * <p>The ID of the approval template. The ID must be consistent with the template ID of the corresponding policy type in MatchSchemas. If this parameter is left empty, the approval template association is not saved for this policy type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>approval-schema-090134f1ebff****</p>
              */
             public Builder schemaId(String schemaId) {
                 this.schemaId = schemaId;
@@ -1873,7 +2002,10 @@ public class UpdateApprovalProcessRequest extends Request {
             } 
 
             /**
-             * DisplayField.
+             * <p>The name of the control in the external approval form. This parameter is used to locate the form control when the approval type is 1 (DingTalk approval).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Report software</p>
              */
             public Builder displayField(String displayField) {
                 this.displayField = displayField;
@@ -1881,7 +2013,10 @@ public class UpdateApprovalProcessRequest extends Request {
             }
 
             /**
-             * DisplayFieldValue.
+             * <p>The type and identifier of the external approval form control, in the format of Type%%%ControlID. This parameter is used to locate the form control when the approval type is 2 (WeCom approval) or 3 (Lark approval).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Textarea%%%widget-1a2b****</p>
              */
             public Builder displayFieldValue(String displayFieldValue) {
                 this.displayFieldValue = displayFieldValue;
@@ -1889,7 +2024,10 @@ public class UpdateApprovalProcessRequest extends Request {
             }
 
             /**
-             * SystemField.
+             * <p>The identifier of the system field, such as softwareName.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>softwareName</p>
              */
             public Builder systemField(String systemField) {
                 this.systemField = systemField;
@@ -1969,7 +2107,10 @@ public class UpdateApprovalProcessRequest extends Request {
             } 
 
             /**
-             * ExternalProcessId.
+             * <p>The ID of the external approval process. When the approval type is 1 (DingTalk approval) or 3 (Lark approval), this parameter specifies the process code (processCode) of the external platform.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PROC-1a2b3c4d5e6f****</p>
              */
             public Builder externalProcessId(String externalProcessId) {
                 this.externalProcessId = externalProcessId;
@@ -1977,7 +2118,7 @@ public class UpdateApprovalProcessRequest extends Request {
             }
 
             /**
-             * FieldMap.
+             * <p>The mapping list between system fields and external approval form controls.</p>
              */
             public Builder fieldMap(java.util.List<SoftwareBlockSchemaConfigFieldMap> fieldMap) {
                 this.fieldMap = fieldMap;
@@ -1985,7 +2126,10 @@ public class UpdateApprovalProcessRequest extends Request {
             }
 
             /**
-             * SchemaId.
+             * <p>The ID of the approval template. The ID must be consistent with the template ID of the corresponding policy type in MatchSchemas. If this parameter is left empty, the approval template association is not saved for this policy type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>approval-schema-090134f1ebff****</p>
              */
             public Builder schemaId(String schemaId) {
                 this.schemaId = schemaId;
@@ -2065,7 +2209,10 @@ public class UpdateApprovalProcessRequest extends Request {
             } 
 
             /**
-             * DisplayField.
+             * <p>The name of the control in the external approval form. This parameter is used to locate the form control when the approval type is 1 (DingTalk approval).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Process name</p>
              */
             public Builder displayField(String displayField) {
                 this.displayField = displayField;
@@ -2073,7 +2220,10 @@ public class UpdateApprovalProcessRequest extends Request {
             }
 
             /**
-             * DisplayFieldValue.
+             * <p>The type and identifier of the external approval form control, in the format of Type%%%ControlID. This parameter is used to locate the form control when the approval type is 2 (WeCom approval) or 3 (Lark approval).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Textarea%%%widget-1a2b****</p>
              */
             public Builder displayFieldValue(String displayFieldValue) {
                 this.displayFieldValue = displayFieldValue;
@@ -2081,7 +2231,10 @@ public class UpdateApprovalProcessRequest extends Request {
             }
 
             /**
-             * SystemField.
+             * <p>The system field identifier, such as processName.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>processName</p>
              */
             public Builder systemField(String systemField) {
                 this.systemField = systemField;
@@ -2161,7 +2314,10 @@ public class UpdateApprovalProcessRequest extends Request {
             } 
 
             /**
-             * ExternalProcessId.
+             * <p>The ID of the external approval process. When the approval type is 1 (DingTalk approval) or 3 (Lark approval), this parameter specifies the process code (processCode) of the external platform.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PROC-1a2b3c4d5e6f****</p>
              */
             public Builder externalProcessId(String externalProcessId) {
                 this.externalProcessId = externalProcessId;
@@ -2169,7 +2325,7 @@ public class UpdateApprovalProcessRequest extends Request {
             }
 
             /**
-             * FieldMap.
+             * <p>The mapping list between system fields and external approval form controls.</p>
              */
             public Builder fieldMap(java.util.List<SoftwareHardeningSchemaConfigFieldMap> fieldMap) {
                 this.fieldMap = fieldMap;
@@ -2177,7 +2333,10 @@ public class UpdateApprovalProcessRequest extends Request {
             }
 
             /**
-             * SchemaId.
+             * <p>The ID of the approval template. The ID must be consistent with the template ID of the corresponding policy type in MatchSchemas. If this parameter is left empty, the approval template association is not saved for this policy type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>approval-schema-090134f1ebff****</p>
              */
             public Builder schemaId(String schemaId) {
                 this.schemaId = schemaId;
@@ -2348,7 +2507,7 @@ public class UpdateApprovalProcessRequest extends Request {
             } 
 
             /**
-             * AppUninstallSchemaConfig.
+             * <p>The approval template configuration for the application uninstallation policy.</p>
              */
             public Builder appUninstallSchemaConfig(AppUninstallSchemaConfig appUninstallSchemaConfig) {
                 this.appUninstallSchemaConfig = appUninstallSchemaConfig;
@@ -2356,7 +2515,7 @@ public class UpdateApprovalProcessRequest extends Request {
             }
 
             /**
-             * DeviceRegistrationSchemaConfig.
+             * <p>The approval template configuration for the device registration policy.</p>
              */
             public Builder deviceRegistrationSchemaConfig(DeviceRegistrationSchemaConfig deviceRegistrationSchemaConfig) {
                 this.deviceRegistrationSchemaConfig = deviceRegistrationSchemaConfig;
@@ -2364,7 +2523,7 @@ public class UpdateApprovalProcessRequest extends Request {
             }
 
             /**
-             * DlpSendSchemaConfig.
+             * <p>The approval template configuration for the file outbound sending policy.</p>
              */
             public Builder dlpSendSchemaConfig(DlpSendSchemaConfig dlpSendSchemaConfig) {
                 this.dlpSendSchemaConfig = dlpSendSchemaConfig;
@@ -2372,7 +2531,7 @@ public class UpdateApprovalProcessRequest extends Request {
             }
 
             /**
-             * DomainBlacklistSchemaConfig.
+             * <p>The approval template configuration for the domain name blacklist policy.</p>
              */
             public Builder domainBlacklistSchemaConfig(DomainBlacklistSchemaConfig domainBlacklistSchemaConfig) {
                 this.domainBlacklistSchemaConfig = domainBlacklistSchemaConfig;
@@ -2380,7 +2539,7 @@ public class UpdateApprovalProcessRequest extends Request {
             }
 
             /**
-             * DomainWhitelistSchemaConfig.
+             * <p>The approval template configuration for the domain name whitelist policy.</p>
              */
             public Builder domainWhitelistSchemaConfig(DomainWhitelistSchemaConfig domainWhitelistSchemaConfig) {
                 this.domainWhitelistSchemaConfig = domainWhitelistSchemaConfig;
@@ -2388,7 +2547,7 @@ public class UpdateApprovalProcessRequest extends Request {
             }
 
             /**
-             * EndpointHardeningSchemaConfig.
+             * <p>The approval template configuration for the endpoint hardening policy.</p>
              */
             public Builder endpointHardeningSchemaConfig(EndpointHardeningSchemaConfig endpointHardeningSchemaConfig) {
                 this.endpointHardeningSchemaConfig = endpointHardeningSchemaConfig;
@@ -2396,7 +2555,7 @@ public class UpdateApprovalProcessRequest extends Request {
             }
 
             /**
-             * PeripheralBlockSchemaConfig.
+             * <p>The approval template configuration for the peripheral control policy.</p>
              */
             public Builder peripheralBlockSchemaConfig(PeripheralBlockSchemaConfig peripheralBlockSchemaConfig) {
                 this.peripheralBlockSchemaConfig = peripheralBlockSchemaConfig;
@@ -2404,7 +2563,7 @@ public class UpdateApprovalProcessRequest extends Request {
             }
 
             /**
-             * PrivateAccessBlockSchemaConfig.
+             * <p>The approval template configuration for the internal network access control policy.</p>
              */
             public Builder privateAccessBlockSchemaConfig(PrivateAccessBlockSchemaConfig privateAccessBlockSchemaConfig) {
                 this.privateAccessBlockSchemaConfig = privateAccessBlockSchemaConfig;
@@ -2412,7 +2571,7 @@ public class UpdateApprovalProcessRequest extends Request {
             }
 
             /**
-             * SoftwareBlockSchemaConfig.
+             * <p>The approval template configuration for the software blocking policy.</p>
              */
             public Builder softwareBlockSchemaConfig(SoftwareBlockSchemaConfig softwareBlockSchemaConfig) {
                 this.softwareBlockSchemaConfig = softwareBlockSchemaConfig;
@@ -2420,7 +2579,7 @@ public class UpdateApprovalProcessRequest extends Request {
             }
 
             /**
-             * SoftwareHardeningSchemaConfig.
+             * <p>The approval template configuration for the software hardening policy.</p>
              */
             public Builder softwareHardeningSchemaConfig(SoftwareHardeningSchemaConfig softwareHardeningSchemaConfig) {
                 this.softwareHardeningSchemaConfig = softwareHardeningSchemaConfig;
@@ -2591,7 +2750,7 @@ public class UpdateApprovalProcessRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the device uninstall approval template.</p>
+             * <p>The ID of the application uninstallation approval template.</p>
              * 
              * <strong>example:</strong>
              * <p>approval-schema-090134f1ebff****</p>
@@ -2613,7 +2772,7 @@ public class UpdateApprovalProcessRequest extends Request {
             }
 
             /**
-             * <p>The ID of the file outgoing approval template.</p>
+             * <p>The ID of the file outbound sending approval template.</p>
              * 
              * <strong>example:</strong>
              * <p>approval-schema-090134f1ebff****</p>
@@ -2646,7 +2805,10 @@ public class UpdateApprovalProcessRequest extends Request {
             }
 
             /**
-             * EndpointHardeningSchemaId.
+             * <p>The ID of the endpoint hardening approval template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>approval-schema-090134f1ebff****</p>
              */
             public Builder endpointHardeningSchemaId(String endpointHardeningSchemaId) {
                 this.endpointHardeningSchemaId = endpointHardeningSchemaId;
@@ -2665,7 +2827,10 @@ public class UpdateApprovalProcessRequest extends Request {
             }
 
             /**
-             * PrivateAccessBlockSchemaId.
+             * <p>The ID of the internal network access control approval template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>approval-schema-090134f1ebff****</p>
              */
             public Builder privateAccessBlockSchemaId(String privateAccessBlockSchemaId) {
                 this.privateAccessBlockSchemaId = privateAccessBlockSchemaId;
@@ -2684,7 +2849,10 @@ public class UpdateApprovalProcessRequest extends Request {
             }
 
             /**
-             * SoftwareHardeningSchemaId.
+             * <p>The ID of the software hardening approval template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>approval-schema-090134f1ebff****</p>
              */
             public Builder softwareHardeningSchemaId(String softwareHardeningSchemaId) {
                 this.softwareHardeningSchemaId = softwareHardeningSchemaId;

@@ -116,7 +116,7 @@ public class ListVirusScanAdditionalListsRequest extends Request {
         } 
 
         /**
-         * AdditionalTypes.
+         * <p>Filters by match dimension. Duplicate values are not allowed. If this parameter is not specified, all match dimensions are returned.</p>
          */
         public Builder additionalTypes(java.util.List<String> additionalTypes) {
             this.putQueryParameter("AdditionalTypes", additionalTypes);
@@ -125,6 +125,11 @@ public class ListVirusScanAdditionalListsRequest extends Request {
         }
 
         /**
+         * <p>The operating system type for which the list takes effect. Valid values:</p>
+         * <ul>
+         * <li><strong>windows</strong>: Windows.</li>
+         * <li><strong>macOS</strong>: macOS.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,7 +142,10 @@ public class ListVirusScanAdditionalListsRequest extends Request {
         }
 
         /**
-         * ListDetail.
+         * <p>The content of the list entry. Exact match is used. This parameter is used to locate a specific list by content. Fuzzy match is not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>.tmp</p>
          */
         public Builder listDetail(String listDetail) {
             this.putQueryParameter("ListDetail", listDetail);
@@ -146,7 +154,7 @@ public class ListVirusScanAdditionalListsRequest extends Request {
         }
 
         /**
-         * ListIds.
+         * <p>Filters by list entry ID. Duplicate values are not allowed. If this parameter is not specified, no filtering by list entry ID is performed.</p>
          */
         public Builder listIds(java.util.List<String> listIds) {
             this.putQueryParameter("ListIds", listIds);
@@ -155,7 +163,14 @@ public class ListVirusScanAdditionalListsRequest extends Request {
         }
 
         /**
-         * ListType.
+         * <p>Filters by list type. If this parameter is not specified, both blacklists and whitelists are returned. Valid values:</p>
+         * <ul>
+         * <li><strong>Blacklist</strong>: Blacklist. Matched files are directly identified as virus files.</li>
+         * <li><strong>Whitelist</strong>: Whitelist. Matched files are excluded from virus detection.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Whitelist</p>
          */
         public Builder listType(String listType) {
             this.putQueryParameter("ListType", listType);

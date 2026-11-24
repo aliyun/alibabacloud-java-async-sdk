@@ -93,7 +93,10 @@ public class ExecutePeriod extends TeaModel {
         } 
 
         /**
-         * EffectDay.
+         * <p>The effective days of the week configuration. Used when ValidType is set to Weekly.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Monday&quot;:true,&quot;Tuesday&quot;:true,&quot;Wednesday&quot;:true,&quot;Thursday&quot;:true,&quot;Friday&quot;:true,&quot;Saturday&quot;:false,&quot;Sunday&quot;:false}</p>
          */
         public Builder effectDay(EffectDay effectDay) {
             this.effectDay = effectDay;
@@ -101,7 +104,10 @@ public class ExecutePeriod extends TeaModel {
         }
 
         /**
-         * EffectTime.
+         * <p>The daily effective time range. Both Start and End use the 24-hour HH:mm format and are interpreted based on the current system time zone of the server. The time range cannot span across days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Start&quot;:&quot;00:00&quot;,&quot;End&quot;:&quot;23:59&quot;}</p>
          */
         public Builder effectTime(EffectTime effectTime) {
             this.effectTime = effectTime;
@@ -109,7 +115,10 @@ public class ExecutePeriod extends TeaModel {
         }
 
         /**
-         * ScheduleEffect.
+         * <p>The frequency and interval configuration for periodic execution. Frequency and Interval together specify the execution cycle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Frequency&quot;:&quot;day&quot;,&quot;Interval&quot;:1}</p>
          */
         public Builder scheduleEffect(ScheduleEffect scheduleEffect) {
             this.scheduleEffect = scheduleEffect;
@@ -117,7 +126,15 @@ public class ExecutePeriod extends TeaModel {
         }
 
         /**
-         * ValidType.
+         * <p>The execution cycle mode. Valid values:</p>
+         * <ul>
+         * <li><strong>Once</strong>: Single execution mode. Used in combination with ExecuteMode=Once.</li>
+         * <li><strong>Interval</strong>: Periodic execution at a specified frequency. Used in combination with ExecuteMode=Schedule.</li>
+         * <li><strong>Weekly</strong>: Weekly execution on selected days. Used in combination with ExecuteMode=Schedule and EffectDay.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Interval</p>
          */
         public Builder validType(String validType) {
             this.validType = validType;
@@ -248,7 +265,10 @@ public class ExecutePeriod extends TeaModel {
             } 
 
             /**
-             * Friday.
+             * <p>Specifies whether the policy takes effect on Friday when ValidType is set to Weekly. A value of true indicates that the policy takes effect, and a value of false indicates that the policy does not take effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder friday(Boolean friday) {
                 this.friday = friday;
@@ -256,7 +276,10 @@ public class ExecutePeriod extends TeaModel {
             }
 
             /**
-             * Monday.
+             * <p>Specifies whether the policy takes effect on Monday when ValidType is set to Weekly. A value of true indicates that the policy takes effect, and a value of false indicates that the policy does not take effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder monday(Boolean monday) {
                 this.monday = monday;
@@ -264,7 +287,10 @@ public class ExecutePeriod extends TeaModel {
             }
 
             /**
-             * Saturday.
+             * <p>Specifies whether the policy takes effect on Saturday when ValidType is set to Weekly. A value of true indicates that the policy takes effect, and a value of false indicates that the policy does not take effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder saturday(Boolean saturday) {
                 this.saturday = saturday;
@@ -272,7 +298,10 @@ public class ExecutePeriod extends TeaModel {
             }
 
             /**
-             * Sunday.
+             * <p>Specifies whether the policy takes effect on Sunday when ValidType is set to Weekly. A value of true indicates that the policy takes effect, and a value of false indicates that the policy does not take effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder sunday(Boolean sunday) {
                 this.sunday = sunday;
@@ -280,7 +309,10 @@ public class ExecutePeriod extends TeaModel {
             }
 
             /**
-             * Thursday.
+             * <p>Specifies whether the policy takes effect on Thursday when ValidType is set to Weekly. A value of true indicates that the policy takes effect, and a value of false indicates that the policy does not take effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder thursday(Boolean thursday) {
                 this.thursday = thursday;
@@ -288,7 +320,10 @@ public class ExecutePeriod extends TeaModel {
             }
 
             /**
-             * Tuesday.
+             * <p>Specifies whether the policy takes effect on Tuesday when ValidType is set to Weekly. A value of true indicates that the policy takes effect, and a value of false indicates that the policy does not take effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder tuesday(Boolean tuesday) {
                 this.tuesday = tuesday;
@@ -296,7 +331,10 @@ public class ExecutePeriod extends TeaModel {
             }
 
             /**
-             * Wednesday.
+             * <p>Specifies whether the policy takes effect on Wednesday when ValidType is set to Weekly. A value of true indicates that the policy takes effect, and a value of false indicates that the policy does not take effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder wednesday(Boolean wednesday) {
                 this.wednesday = wednesday;
@@ -363,7 +401,10 @@ public class ExecutePeriod extends TeaModel {
             } 
 
             /**
-             * End.
+             * <p>The end time of the daily effective time range. It uses the 24-hour HH:mm format and is interpreted based on the current system time zone of the server. It must not be earlier than Start.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23:59</p>
              */
             public Builder end(String end) {
                 this.end = end;
@@ -371,7 +412,10 @@ public class ExecutePeriod extends TeaModel {
             }
 
             /**
-             * Start.
+             * <p>The start time of the daily effective time range. It uses the 24-hour HH:mm format and is interpreted based on the current system time zone of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00:00</p>
              */
             public Builder start(String start) {
                 this.start = start;
@@ -438,7 +482,10 @@ public class ExecutePeriod extends TeaModel {
             } 
 
             /**
-             * Frequency.
+             * <p>The frequency unit for periodic execution. It is used together with Interval to specify the execution cycle. For example, a value of day indicates daily execution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>day</p>
              */
             public Builder frequency(String frequency) {
                 this.frequency = frequency;
@@ -446,7 +493,10 @@ public class ExecutePeriod extends TeaModel {
             }
 
             /**
-             * Interval.
+             * <p>The periodic execution interval. When Frequency is set, valid values are 1 to 10000. The unit is determined by Frequency. For example, if Frequency is set to day and Interval is set to 1, the execution interval is one day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder interval(Long interval) {
                 this.interval = interval;

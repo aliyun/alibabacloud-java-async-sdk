@@ -99,7 +99,7 @@ public class ListDomainItemsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of records that match the specified conditions. This is an optional parameter and may not be returned by default.</p>
+         * <p>The total number of records that match the specified conditions. This is an optional parameter and is not returned by default.</p>
          * 
          * <strong>example:</strong>
          * <p>13</p>
@@ -205,7 +205,7 @@ public class ListDomainItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the entry was last modified.</p>
+             * <p>The time when the entry was last updated.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-01 10:20:30</p>
@@ -216,7 +216,10 @@ public class ListDomainItemsResponseBody extends TeaModel {
             }
 
             /**
-             * ItemId.
+             * <p>The entry ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>499</p>
              */
             public Builder itemId(Long itemId) {
                 this.itemId = itemId;
@@ -224,7 +227,7 @@ public class ListDomainItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The domain name. Wildcard domain names are supported.</p>
+             * <p>The specific domain name. Wildcard domain names are supported.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://www.example.com">www.example.com</a></p>

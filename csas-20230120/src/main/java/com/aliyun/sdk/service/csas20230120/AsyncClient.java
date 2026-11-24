@@ -45,7 +45,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Appends domain name entries in batches to a specified domain name list (<code>ListId</code>). Domain names must be second-level or higher domain names. Wildcard domain names (<code>*.example.com</code>) are supported, but overly broad patterns such as <code>*.com</code> or <code>*.com.cn</code> are prohibited.</p>
+     * <p>Appends domain name entries to a specified domain name list (<code>ListId</code>) in batches. Domain names must be second-level or higher-level domain names. Wildcard domain names such as <code>*.example.com</code> are supported, but overly broad formats such as <code>*.com</code> and <code>*.com.cn</code> are prohibited.</p>
      * 
      * @param request the request parameters of BatchCreateDomainItems  BatchCreateDomainItemsRequest
      * @return BatchCreateDomainItemsResponse
@@ -54,7 +54,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Batch deletes domain name entries from a specified domain name list by entry IDs (<code>ItemIds</code>, obtained from the <code>ItemId</code> field returned by ListDomainItems).</p>
+     * <p>Deletes multiple domain name entries from a specified domain name list based on entry IDs (<code>ItemIds</code>, obtained from the <code>ItemId</code> returned by ListDomainItems).</p>
      * 
      * @param request the request parameters of BatchDeleteDomainItems  BatchDeleteDomainItemsRequest
      * @return BatchDeleteDomainItemsResponse
@@ -63,10 +63,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Applications that are referenced by office network recognition or policies cannot be deleted. References:</p>
+     * <p>Deletion is not allowed when office area identification or policy references exist. References:</p>
      * <ul>
-     * <li><a href="~~ListPrivateAccessApplications~~">ListPrivateAccessApplications</a>: Lists internal-facing access applications in batches.</li>
-     * <li><a href="~~ListPrivateAccessPolices~~">ListPrivateAccessPolices</a>: Lists internal-facing access policies in batches.</li>
+     * <li><a href="~~ListPrivateAccessApplications~~">ListPrivateAccessApplications</a>: Lists private access applications.</li>
+     * <li><a href="~~ListPrivateAccessPolices~~">ListPrivateAccessPolices</a>: Lists private access policies.</li>
      * </ul>
      * 
      * @param request the request parameters of BatchDeletePrivateAccessApplication  BatchDeletePrivateAccessApplicationRequest
@@ -130,7 +130,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Creates a domain name list of a specified type (blacklist or whitelist) under the current tenant and returns the ListId of the new list. A maximum of 100 lists can be created for each list type per tenant.</p>
+     * <p>Creates a domain name list of a specified type (blacklist or whitelist) under the current tenant and returns the ListId of the new list. You can create up to 100 lists of each type per tenant.</p>
      * 
      * @param request the request parameters of CreateDomainMeta  CreateDomainMetaRequest
      * @return CreateDomainMetaResponse
@@ -178,7 +178,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can create up to 500 internal-facing access applications by default.</p>
+     * <p>By default, you can create up to 500 private access applications.</p>
      * 
      * @param request the request parameters of CreatePrivateAccessApplication  CreatePrivateAccessApplicationRequest
      * @return CreatePrivateAccessApplicationResponse
@@ -237,8 +237,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <ul>
      * <li>After a task is created, its initial status is disabled.</li>
-     * <li>MatchMode determines how to specify the matching target parameters: when set to UserGroupNormal, you must pass only UserGroupIds. When set to DeviceGroupNormal, you must pass only DeviceGroupIds. When set to DevTagNormal, you must pass only DevTags. Requests that contain parameters not matching the MatchMode value are rejected.</li>
-     * <li>SupportOs supports only a single operating system value.</li>
+     * <li>MatchMode determines how target parameters are specified. If MatchMode is set to UserGroupNormal, you must specify only UserGroupIds. If MatchMode is set to DeviceGroupNormal, you must specify only DeviceGroupIds. If MatchMode is set to DevTagNormal, you must specify only DevTags. Requests with parameters that do not match the specified MatchMode are rejected.</li>
+     * <li>SupportOs supports only a single operating system.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateSoftwarelibDistributeTask  CreateSoftwarelibDistributeTaskRequest
@@ -306,7 +306,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can create a maximum of 500 user groups by default.</p>
+     * <p>By default, you can create up to 500 user groups.</p>
      * 
      * @param request the request parameters of CreateWmEmbedTask  CreateWmEmbedTaskRequest
      * @return CreateWmEmbedTaskResponse
@@ -509,6 +509,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteVulScanScheduledStrategyResponse> deleteVulScanScheduledStrategy(DeleteVulScanScheduledStrategyRequest request);
 
     /**
+     * @param request the request parameters of DescribeApplicationHealthCheckReports  DescribeApplicationHealthCheckReportsRequest
+     * @return DescribeApplicationHealthCheckReportsResponse
+     */
+    CompletableFuture<DescribeApplicationHealthCheckReportsResponse> describeApplicationHealthCheckReports(DescribeApplicationHealthCheckReportsRequest request);
+
+    /**
      * @deprecated OpenAPI DetachApplication2Connector is deprecated, please use csas::2023-01-20::ModifyForwardStrategy instead.  * @param request  the request parameters of DetachApplication2Connector  DetachApplication2ConnectorRequest
      * @return DetachApplication2ConnectorResponse
      */
@@ -613,7 +619,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Creates a domain name list of a specified type (blacklist/whitelist) under the current tenant and returns the ListId of the new list. You can create up to 100 lists of each type per tenant.</p>
+     * <p>Creates a domain name list of a specified type (blacklist or whitelist) under the current tenant and returns the ListId of the new list. You can create up to 100 lists of each type per tenant.</p>
      * 
      * @param request the request parameters of GetForwardStrategy  GetForwardStrategyRequest
      * @return GetForwardStrategyResponse
@@ -798,6 +804,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListClientUsersResponse> listClientUsers(ListClientUsersRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Filters connectors by name, connection status, instance status, and connector ID, and returns a paginated list of matched connectors along with the total count.</p>
+     * 
      * @param request the request parameters of ListConnectors  ListConnectorsRequest
      * @return ListConnectorsResponse
      */
@@ -823,7 +832,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the Internet access logs of endpoints under the current tenant by using paging. The logs contain full records of Internet access behavior.</p>
+     * <p>Performs a paged query on the Internet access logs of endpoints for the current tenant by using paging, which include full records of the Internet access behavior.</p>
      * 
      * @param request the request parameters of ListDomainAccessLogs  ListDomainAccessLogsRequest
      * @return ListDomainAccessLogsResponse
@@ -832,7 +841,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of domain name entries in a specified domain name list by paging. Use this operation together with ListDomainMetas: first obtain the <code>ListId</code>, and then use this operation to perform paging through the domain names in the list.</p>
+     * <p>Queries domain name entries in a specified domain name list by using paging. Use this operation together with ListDomainMetas: first obtain the <code>ListId</code>, and then use this operation to page through the domain names in the list.</p>
      * 
      * @param request the request parameters of ListDomainItems  ListDomainItemsRequest
      * @return ListDomainItemsResponse
@@ -922,7 +931,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the bandwidth configuration list of available network instances under the current account. You can filter results by network type (<code>NetType</code>) and instance ID list (<code>InstanceIds</code>), and use <code>CurrentPage</code> and <code>PageSize</code> for pagination.</p>
+     * <p>Queries the bandwidth configurations of available network instances within the current account. You can filter the results by network type (NetType) and instance IDs (InstanceIds), and paginate the results by using CurrentPage and PageSize.</p>
      * 
      * @param request the request parameters of ListNetBandwidth  ListNetBandwidthRequest
      * @return ListNetBandwidthResponse
@@ -933,10 +942,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <ul>
      * <li>StartTime and EndTime are UNIX timestamps in seconds. StartTime must be earlier than EndTime. The interval between them cannot exceed 30 days, and StartTime cannot be more than 31 days before the current time.</li>
-     * <li>If OperationStatus is not specified, only successful operation records are returned.</li>
-     * <li>Results are sorted by operation time in descending order.</li>
+     * <li>If OperationStatus is not specified, only records of successful operations are returned.</li>
+     * <li>The returned results are sorted in descending order of operation time.</li>
      * <li>The return values of OperationFunc, OperationPage, and OperationType are localized based on the request language.</li>
-     * <li>The values of filter parameters cannot contain single quotation marks (\&quot;), double quotation marks (&quot;), or backslashes (\\). Otherwise, an InvalidParameter error is returned.</li>
+     * <li>The values of filter parameters cannot contain single quotation marks (\&quot;), double quotation marks (&quot;), or backslashes (\). Otherwise, an InvalidParameter error is returned.</li>
      * </ul>
      * 
      * @param request the request parameters of ListOperationAuditLogs  ListOperationAuditLogsRequest
@@ -1066,9 +1075,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Use CurrentPage and PageSize for pagination. NextToken and MaxResults do not take effect.</li>
+     * <li>Pagination is implemented by using CurrentPage and PageSize. NextToken and MaxResults do not take effect.</li>
      * <li>SoftwareName supports fuzzy match.</li>
-     * <li>The Versions field (software version list) is not returned in the response. To query software versions, call <a href="~~ListSoftwarelibVersion~~">ListSoftwarelibVersion</a>.</li>
+     * <li>The Versions field (software version list) in the response is not returned. For more information about how to view and manage software versions, see <a href="https://www.alibabacloud.com/help/en/sase/user-guide/software-management">Software management</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of ListSoftwarelibSoftware  ListSoftwarelibSoftwareRequest
@@ -1252,6 +1261,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateAntiVirusRealTimeDefenceStrategyResponse> updateAntiVirusRealTimeDefenceStrategy(UpdateAntiVirusRealTimeDefenceStrategyRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Updates the configuration of a specified approval process under the current Alibaba Cloud account. You can modify the name, description, approval nodes, associated approval templates, approval type, and integration configurations with external approval platforms such as DingTalk and Lark. The approval process ID is specified by ProcessId, and other fields are optional. Fields that are not passed retain their original values.</p>
+     * 
      * @param request the request parameters of UpdateApprovalProcess  UpdateApprovalProcessRequest
      * @return UpdateApprovalProcessResponse
      */

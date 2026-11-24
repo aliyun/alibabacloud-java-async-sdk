@@ -75,7 +75,7 @@ public class ListPrivateAccessApplicationL7SwitchesResponseBody extends TeaModel
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ED459CAD-8D3F-51B8-AEA5-CAABC0325022</p>
@@ -178,6 +178,81 @@ public class ListPrivateAccessApplicationL7SwitchesResponseBody extends TeaModel
      *
      * <p>ListPrivateAccessApplicationL7SwitchesResponseBody</p>
      */
+    public static class UrlAccessPaths extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AllowMethods")
+        private java.util.List<String> allowMethods;
+
+        @com.aliyun.core.annotation.NameInMap("Urls")
+        private java.util.List<String> urls;
+
+        private UrlAccessPaths(Builder builder) {
+            this.allowMethods = builder.allowMethods;
+            this.urls = builder.urls;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static UrlAccessPaths create() {
+            return builder().build();
+        }
+
+        /**
+         * @return allowMethods
+         */
+        public java.util.List<String> getAllowMethods() {
+            return this.allowMethods;
+        }
+
+        /**
+         * @return urls
+         */
+        public java.util.List<String> getUrls() {
+            return this.urls;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> allowMethods; 
+            private java.util.List<String> urls; 
+
+            private Builder() {
+            } 
+
+            private Builder(UrlAccessPaths model) {
+                this.allowMethods = model.allowMethods;
+                this.urls = model.urls;
+            } 
+
+            /**
+             * AllowMethods.
+             */
+            public Builder allowMethods(java.util.List<String> allowMethods) {
+                this.allowMethods = allowMethods;
+                return this;
+            }
+
+            /**
+             * Urls.
+             */
+            public Builder urls(java.util.List<String> urls) {
+                this.urls = urls;
+                return this;
+            }
+
+            public UrlAccessPaths build() {
+                return new UrlAccessPaths(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListPrivateAccessApplicationL7SwitchesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPrivateAccessApplicationL7SwitchesResponseBody</p>
+     */
     public static class L7Switches extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApplicationId")
         private String applicationId;
@@ -200,6 +275,9 @@ public class ListPrivateAccessApplicationL7SwitchesResponseBody extends TeaModel
         @com.aliyun.core.annotation.NameInMap("TimeoutSec")
         private Integer timeoutSec;
 
+        @com.aliyun.core.annotation.NameInMap("UrlAccessPaths")
+        private java.util.List<UrlAccessPaths> urlAccessPaths;
+
         @com.aliyun.core.annotation.NameInMap("UserMarkStatus")
         private String userMarkStatus;
 
@@ -214,6 +292,7 @@ public class ListPrivateAccessApplicationL7SwitchesResponseBody extends TeaModel
             this.srcIpMarkStatus = builder.srcIpMarkStatus;
             this.status = builder.status;
             this.timeoutSec = builder.timeoutSec;
+            this.urlAccessPaths = builder.urlAccessPaths;
             this.userMarkStatus = builder.userMarkStatus;
             this.zeroTrustStatus = builder.zeroTrustStatus;
         }
@@ -276,6 +355,13 @@ public class ListPrivateAccessApplicationL7SwitchesResponseBody extends TeaModel
         }
 
         /**
+         * @return urlAccessPaths
+         */
+        public java.util.List<UrlAccessPaths> getUrlAccessPaths() {
+            return this.urlAccessPaths;
+        }
+
+        /**
          * @return userMarkStatus
          */
         public String getUserMarkStatus() {
@@ -297,6 +383,7 @@ public class ListPrivateAccessApplicationL7SwitchesResponseBody extends TeaModel
             private String srcIpMarkStatus; 
             private String status; 
             private Integer timeoutSec; 
+            private java.util.List<UrlAccessPaths> urlAccessPaths; 
             private String userMarkStatus; 
             private String zeroTrustStatus; 
 
@@ -311,6 +398,7 @@ public class ListPrivateAccessApplicationL7SwitchesResponseBody extends TeaModel
                 this.srcIpMarkStatus = model.srcIpMarkStatus;
                 this.status = model.status;
                 this.timeoutSec = model.timeoutSec;
+                this.urlAccessPaths = model.urlAccessPaths;
                 this.userMarkStatus = model.userMarkStatus;
                 this.zeroTrustStatus = model.zeroTrustStatus;
             } 
@@ -327,7 +415,7 @@ public class ListPrivateAccessApplicationL7SwitchesResponseBody extends TeaModel
             }
 
             /**
-             * <p>The device tag mark switch. Valid values:</p>
+             * <p>The device tag marking switch. Valid values:</p>
              * <ul>
              * <li><strong>Enabled</strong>: Enabled.</li>
              * <li><strong>Disabled</strong>: Disabled.</li>
@@ -342,7 +430,7 @@ public class ListPrivateAccessApplicationL7SwitchesResponseBody extends TeaModel
             }
 
             /**
-             * <p>The download audit switch for sensitive applications. Valid values:</p>
+             * <p>The sensitive application download audit switch. Valid values:</p>
              * <ul>
              * <li><strong>Enabled</strong>: Enabled.</li>
              * <li><strong>Disabled</strong>: Disabled.</li>
@@ -357,7 +445,7 @@ public class ListPrivateAccessApplicationL7SwitchesResponseBody extends TeaModel
             }
 
             /**
-             * <p>The port ranges.</p>
+             * <p>The end port.</p>
              */
             public Builder portRanges(java.util.List<PortRanges> portRanges) {
                 this.portRanges = portRanges;
@@ -365,7 +453,7 @@ public class ListPrivateAccessApplicationL7SwitchesResponseBody extends TeaModel
             }
 
             /**
-             * <p>The source IP mark switch. Valid values:</p>
+             * <p>The source IP marking switch. Valid values:</p>
              * <ul>
              * <li><strong>Enabled</strong>: Enabled.</li>
              * <li><strong>Disabled</strong>: Disabled.</li>
@@ -406,7 +494,15 @@ public class ListPrivateAccessApplicationL7SwitchesResponseBody extends TeaModel
             }
 
             /**
-             * <p>The user mark switch. Valid values:</p>
+             * UrlAccessPaths.
+             */
+            public Builder urlAccessPaths(java.util.List<UrlAccessPaths> urlAccessPaths) {
+                this.urlAccessPaths = urlAccessPaths;
+                return this;
+            }
+
+            /**
+             * <p>The user marking switch. Valid values:</p>
              * <ul>
              * <li><strong>Enabled</strong>: Enabled.</li>
              * <li><strong>Disabled</strong>: Disabled.</li>

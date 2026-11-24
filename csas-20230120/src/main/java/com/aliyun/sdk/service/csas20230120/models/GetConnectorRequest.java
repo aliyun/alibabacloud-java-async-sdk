@@ -60,7 +60,7 @@ public class GetConnectorRequest extends Request {
         } 
 
         /**
-         * <p>ConnectorID。</p>
+         * <p>The connector ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

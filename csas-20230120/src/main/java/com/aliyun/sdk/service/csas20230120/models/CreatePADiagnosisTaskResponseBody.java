@@ -225,7 +225,7 @@ public class CreatePADiagnosisTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The user group ID.</p>
+             * <p>The ID of the user group.</p>
              * 
              * <strong>example:</strong>
              * <p>ug-xxxxxxxx</p>
@@ -236,7 +236,7 @@ public class CreatePADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user group name.</p>
+             * <p>The name of the user group.</p>
              * 
              * <strong>example:</strong>
              * <p>IT</p>
@@ -447,7 +447,7 @@ public class CreatePADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The diagnostic task ID.</p>
+             * <p>The ID of the diagnostic task.</p>
              * 
              * <strong>example:</strong>
              * <p>diag-3e0d36d6c15a0502</p>
@@ -460,8 +460,8 @@ public class CreatePADiagnosisTaskResponseBody extends TeaModel {
             /**
              * <p>The diagnosis type. Valid values:</p>
              * <ul>
-             * <li>FullLink: full-link diagnosis.</li>
-             * <li>Application: application diagnosis.</li>
+             * <li>FullLink: End-to-end diagnosis.</li>
+             * <li>Application: Application diagnosis.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -484,7 +484,7 @@ public class CreatePADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The POP point ID. This parameter is required when manual selection is used.</p>
+             * <p>The ID of the PoP. This parameter is required when manual selection is used.</p>
              * 
              * <strong>example:</strong>
              * <p>pop-8ded63ce9d3d317e</p>
@@ -495,10 +495,10 @@ public class CreatePADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The POP point selection mode. Valid values:</p>
+             * <p>The PoP selection mode. Valid values:</p>
              * <ul>
-             * <li><strong>AutoSelect</strong>: automatic selection.</li>
-             * <li><strong>ManualSelect</strong>: manual selection.</li>
+             * <li><strong>AutoSelect</strong>: Automatic selection.</li>
+             * <li><strong>ManualSelect</strong>: Manual selection.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -521,10 +521,10 @@ public class CreatePADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The protocol used by the internal network access application. Valid values:</p>
+             * <p>The application protocol for internal network access. Valid values:</p>
              * <ul>
              * <li><strong>TCP</strong></li>
-             * <li><strong>UDP</strong>.</li>
+             * <li><strong>UDP</strong></li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -536,10 +536,10 @@ public class CreatePADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task running status. Valid values:</p>
+             * <p>The running status of the task. Valid values:</p>
              * <ul>
              * <li><strong>Running</strong>: The task is running.</li>
-             * <li><strong>Finished</strong>: The task is complete.</li>
+             * <li><strong>Finished</strong>: The task is completed.</li>
              * <li><strong>Failed</strong>: The task failed.</li>
              * </ul>
              * 
@@ -552,7 +552,7 @@ public class CreatePADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The extra information for UDP diagnosis.</p>
+             * <p>The additional information for UDP diagnosis.</p>
              */
             public Builder udpExtraConfigs(UdpExtraConfigs udpExtraConfigs) {
                 this.udpExtraConfigs = udpExtraConfigs;

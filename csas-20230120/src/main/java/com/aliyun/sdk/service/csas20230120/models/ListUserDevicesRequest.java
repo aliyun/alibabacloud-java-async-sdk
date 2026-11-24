@@ -59,6 +59,10 @@ public class ListUserDevicesRequest extends Request {
     private java.util.List<String> deviceTypes;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiskEncryptStatuses")
+    private java.util.List<String> diskEncryptStatuses;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DlpStatuses")
     private java.util.List<String> dlpStatuses;
 
@@ -131,6 +135,7 @@ public class ListUserDevicesRequest extends Request {
         this.deviceStatuses = builder.deviceStatuses;
         this.deviceTags = builder.deviceTags;
         this.deviceTypes = builder.deviceTypes;
+        this.diskEncryptStatuses = builder.diskEncryptStatuses;
         this.dlpStatuses = builder.dlpStatuses;
         this.hostname = builder.hostname;
         this.iaStatuses = builder.iaStatuses;
@@ -229,6 +234,13 @@ public class ListUserDevicesRequest extends Request {
      */
     public java.util.List<String> getDeviceTypes() {
         return this.deviceTypes;
+    }
+
+    /**
+     * @return diskEncryptStatuses
+     */
+    public java.util.List<String> getDiskEncryptStatuses() {
+        return this.diskEncryptStatuses;
     }
 
     /**
@@ -347,6 +359,7 @@ public class ListUserDevicesRequest extends Request {
         private java.util.List<String> deviceStatuses; 
         private java.util.List<String> deviceTags; 
         private java.util.List<String> deviceTypes; 
+        private java.util.List<String> diskEncryptStatuses; 
         private java.util.List<String> dlpStatuses; 
         private String hostname; 
         private java.util.List<String> iaStatuses; 
@@ -379,6 +392,7 @@ public class ListUserDevicesRequest extends Request {
             this.deviceStatuses = request.deviceStatuses;
             this.deviceTags = request.deviceTags;
             this.deviceTypes = request.deviceTypes;
+            this.diskEncryptStatuses = request.diskEncryptStatuses;
             this.dlpStatuses = request.dlpStatuses;
             this.hostname = request.hostname;
             this.iaStatuses = request.iaStatuses;
@@ -397,7 +411,7 @@ public class ListUserDevicesRequest extends Request {
         } 
 
         /**
-         * <p>The collection of client statuses.</p>
+         * <p>The client statuses.</p>
          */
         public Builder appStatuses(java.util.List<String> appStatuses) {
             this.putQueryParameter("AppStatuses", appStatuses);
@@ -406,7 +420,7 @@ public class ListUserDevicesRequest extends Request {
         }
 
         /**
-         * <p>The collection of client versions.</p>
+         * <p>The client versions.</p>
          */
         public Builder appVersions(java.util.List<String> appVersions) {
             this.putQueryParameter("AppVersions", appVersions);
@@ -415,7 +429,7 @@ public class ListUserDevicesRequest extends Request {
         }
 
         /**
-         * AutoLoginStatuses.
+         * <p>Filters the results by the automatic logon status of the user terminal devices.</p>
          */
         public Builder autoLoginStatuses(java.util.List<String> autoLoginStatuses) {
             this.putQueryParameter("AutoLoginStatuses", autoLoginStatuses);
@@ -424,7 +438,7 @@ public class ListUserDevicesRequest extends Request {
         }
 
         /**
-         * <p>The page number of the current page in a paging query. Valid values: 1 to 10000.</p>
+         * <p>The page number of the current page for paging in a paged query. Valid values: 1 to 10000.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -437,10 +451,10 @@ public class ListUserDevicesRequest extends Request {
         }
 
         /**
-         * <p>The department to which the user belongs. The value is 1 to 128 characters in length and supports Chinese characters and uppercase and lowercase letters. It can contain digits, periods (.), commas (,), semicolons (;), hyphens (-), underscores (_), forward slashes (/), at signs (@), and spaces.</p>
+         * <p>The department to which the user belongs. The value must be 1 to 128 characters in length, and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), commas (,), semicolons (;), hyphens (-), underscores (_), forward slashes (/), at signs (@), and spaces.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试部</p>
+         * <p>Test Department</p>
          */
         public Builder department(String department) {
             this.putQueryParameter("Department", department);
@@ -449,10 +463,10 @@ public class ListUserDevicesRequest extends Request {
         }
 
         /**
-         * <p>The ownership of the endpoint device. Valid values:</p>
+         * <p>The ownership of the terminal device. Valid values:</p>
          * <ul>
-         * <li><strong>Personal</strong>: personal device.</li>
-         * <li><strong>Company</strong>: company device.</li>
+         * <li><strong>Personal</strong>: Personal device.</li>
+         * <li><strong>Company</strong>: Corporate device.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -477,7 +491,7 @@ public class ListUserDevicesRequest extends Request {
         }
 
         /**
-         * <p>The collection of endpoint device statuses.</p>
+         * <p>The terminal device statuses.</p>
          */
         public Builder deviceStatuses(java.util.List<String> deviceStatuses) {
             this.putQueryParameter("DeviceStatuses", deviceStatuses);
@@ -486,7 +500,7 @@ public class ListUserDevicesRequest extends Request {
         }
 
         /**
-         * <p>The collection of endpoint device IDs.</p>
+         * <p>The terminal device IDs.</p>
          */
         public Builder deviceTags(java.util.List<String> deviceTags) {
             this.putQueryParameter("DeviceTags", deviceTags);
@@ -495,7 +509,7 @@ public class ListUserDevicesRequest extends Request {
         }
 
         /**
-         * <p>The collection of endpoint device operating system types.</p>
+         * <p>The terminal device operating system types.</p>
          */
         public Builder deviceTypes(java.util.List<String> deviceTypes) {
             this.putQueryParameter("DeviceTypes", deviceTypes);
@@ -504,7 +518,16 @@ public class ListUserDevicesRequest extends Request {
         }
 
         /**
-         * <p>The collection of office data protection statuses.</p>
+         * <p>Filters the results by the disk encryption status of the user terminal devices. You can select multiple statuses, which are evaluated with an OR logical operator. If you select Unencrypted, the result includes user terminal devices that have not reported their disk encryption status.</p>
+         */
+        public Builder diskEncryptStatuses(java.util.List<String> diskEncryptStatuses) {
+            this.putQueryParameter("DiskEncryptStatuses", diskEncryptStatuses);
+            this.diskEncryptStatuses = diskEncryptStatuses;
+            return this;
+        }
+
+        /**
+         * <p>The office data protection statuses.</p>
          */
         public Builder dlpStatuses(java.util.List<String> dlpStatuses) {
             this.putQueryParameter("DlpStatuses", dlpStatuses);
@@ -513,7 +536,7 @@ public class ListUserDevicesRequest extends Request {
         }
 
         /**
-         * <p>The name of the endpoint device. The value is 1 to 128 characters in length and supports Chinese characters and uppercase and lowercase letters. It can contain digits, periods (.), commas (,), semicolons (;), hyphens (-), underscores (<em>), forward slashes (/), at signs (@), and spaces. If you enter only an underscore (</em>), endpoint devices whose names contain 4-byte UTF-8 characters are also queried.</p>
+         * <p>The name of the terminal device. The value must be 1 to 128 characters in length, and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), commas (,), semicolons (;), hyphens (-), underscores (<em>), forward slashes (/), at signs (@), and spaces. If you enter only an underscore (</em>), the system also queries all terminal devices whose names contain 4-byte UTF-8 characters.</p>
          * 
          * <strong>example:</strong>
          * <p>win10-64bit</p>
@@ -525,7 +548,7 @@ public class ListUserDevicesRequest extends Request {
         }
 
         /**
-         * <p>The collection of Internet access statuses.</p>
+         * <p>The Internet access statuses.</p>
          */
         public Builder iaStatuses(java.util.List<String> iaStatuses) {
             this.putQueryParameter("IaStatuses", iaStatuses);
@@ -534,7 +557,7 @@ public class ListUserDevicesRequest extends Request {
         }
 
         /**
-         * <p>The internal IP address of the endpoint device.</p>
+         * <p>The internal IP address of the terminal device.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.XX.XX</p>
@@ -546,7 +569,7 @@ public class ListUserDevicesRequest extends Request {
         }
 
         /**
-         * <p>The MAC address of the endpoint device.</p>
+         * <p>The MAC address of the terminal device.</p>
          * 
          * <strong>example:</strong>
          * <p>00:16:XX:XX:7c:46</p>
@@ -558,7 +581,7 @@ public class ListUserDevicesRequest extends Request {
         }
 
         /**
-         * <p>The collection of network access control statuses.</p>
+         * <p>The network access control statuses.</p>
          */
         public Builder nacStatuses(java.util.List<String> nacStatuses) {
             this.putQueryParameter("NacStatuses", nacStatuses);
@@ -567,7 +590,7 @@ public class ListUserDevicesRequest extends Request {
         }
 
         /**
-         * <p>The collection of private access statuses.</p>
+         * <p>The internal network access statuses.</p>
          */
         public Builder paStatuses(java.util.List<String> paStatuses) {
             this.putQueryParameter("PaStatuses", paStatuses);
@@ -576,7 +599,7 @@ public class ListUserDevicesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page in a paging query. Settings: 1 to 500.</p>
+         * <p>The number of entries per page in a paged query. Valid values: 1 to 500.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -589,10 +612,10 @@ public class ListUserDevicesRequest extends Request {
         }
 
         /**
-         * <p>The user ID. You can obtain this value from the following operations:</p>
+         * <p>The user ID. You can obtain the value from the following operations:</p>
          * <ul>
-         * <li><a href="~~GetUserDevice~~">GetUserDevice</a>: Queries the details of a user endpoint device.</li>
-         * <li><a href="~~ListUserDevices~~">ListUserDevices</a>: Lists user endpoint devices.</li>
+         * <li><a href="~~GetUserDevice~~">GetUserDevice</a>: Queries the details of a user terminal device.</li>
+         * <li><a href="~~ListUserDevices~~">ListUserDevices</a>: Lists user terminal devices.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -645,12 +668,12 @@ public class ListUserDevicesRequest extends Request {
         }
 
         /**
-         * <p>The sort parameter. Valid values:</p>
+         * <p>The sorting parameter. Valid values:</p>
          * <ul>
-         * <li><strong>Username</strong>: sorted by Username in ascending order.</li>
-         * <li><strong>AppVersion</strong>: sorted by AppVersion in descending order.</li>
-         * <li><strong>UpdateTime</strong>: sorted by UpdateTime in descending order.</li>
-         * <li><strong>CreateTime</strong>: sorted by CreateTime in descending order.</li>
+         * <li><strong>Username</strong>: Sorts by Username in ascending order.</li>
+         * <li><strong>AppVersion</strong>: Sorts by AppVersion in descending order.</li>
+         * <li><strong>UpdateTime</strong>: Sorts by UpdateTime in descending order.</li>
+         * <li><strong>CreateTime</strong>: Sorts by CreateTime in descending order.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -663,10 +686,10 @@ public class ListUserDevicesRequest extends Request {
         }
 
         /**
-         * <p>The username. The value is 1 to 128 characters in length and supports Chinese characters and uppercase and lowercase letters. It can contain digits, periods (.), underscores (_), hyphens (-), asterisks (*), at signs (@), and spaces.</p>
+         * <p>The username. The value must be 1 to 128 characters in length, and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), hyphens (-), asterisks (*), at signs (@), and spaces.</p>
          * 
          * <strong>example:</strong>
-         * <p>王先生</p>
+         * <p>Mr. Wang</p>
          */
         public Builder username(String username) {
             this.putQueryParameter("Username", username);
@@ -678,7 +701,7 @@ public class ListUserDevicesRequest extends Request {
          * <p>The name of the office area.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试办公区</p>
+         * <p>Test office area</p>
          */
         public Builder workshop(String workshop) {
             this.putQueryParameter("Workshop", workshop);

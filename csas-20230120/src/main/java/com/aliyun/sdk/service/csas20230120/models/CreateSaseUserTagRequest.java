@@ -73,7 +73,7 @@ public class CreateSaseUserTagRequest extends Request {
         } 
 
         /**
-         * <p>The description of the employee tag.</p>
+         * <p>The description of the user tag.</p>
          * 
          * <strong>example:</strong>
          * <p>These are the company\&quot;s employees</p>

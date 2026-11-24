@@ -197,7 +197,7 @@ public class AIUsageLimitPolicy extends TeaModel {
         } 
 
         /**
-         * <p>A brief description of the policy\&quot;s purpose or scope.</p>
+         * Description.
          */
         public Builder description(String description) {
             this.description = description;
@@ -205,7 +205,7 @@ public class AIUsageLimitPolicy extends TeaModel {
         }
 
         /**
-         * <p>The timestamp (in UTC) when the policy was created, formatted as <code>YYYY-MM-DDThh:mm:ssZ</code>. This is a system-generated, read-only property.</p>
+         * GmtCreate.
          */
         public Builder gmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
@@ -213,7 +213,7 @@ public class AIUsageLimitPolicy extends TeaModel {
         }
 
         /**
-         * <p>The timestamp (in UTC) when the policy was last modified, formatted as <code>YYYY-MM-DDThh:mm:ssZ</code>. This is a system-generated, read-only property.</p>
+         * GmtModified.
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
@@ -221,7 +221,7 @@ public class AIUsageLimitPolicy extends TeaModel {
         }
 
         /**
-         * <p>The unique identifier for the usage limit policy. This is a system-generated, read-only value.</p>
+         * LimitPolicyId.
          */
         public Builder limitPolicyId(String limitPolicyId) {
             this.limitPolicyId = limitPolicyId;
@@ -229,7 +229,7 @@ public class AIUsageLimitPolicy extends TeaModel {
         }
 
         /**
-         * <p>The maximum value for the specified <code>MetricType</code> allowed within the <code>ResetPeriod</code>. Once this limit is reached, further requests are throttled or rejected.</p>
+         * LimitValue.
          */
         public Builder limitValue(Long limitValue) {
             this.limitValue = limitValue;
@@ -237,7 +237,7 @@ public class AIUsageLimitPolicy extends TeaModel {
         }
 
         /**
-         * <p>The type of metric the limit applies to, such as the number of API requests, tokens processed, or compute units consumed.</p>
+         * MetricType.
          */
         public Builder metricType(String metricType) {
             this.metricType = metricType;
@@ -245,7 +245,7 @@ public class AIUsageLimitPolicy extends TeaModel {
         }
 
         /**
-         * <p>A user-friendly name for the policy. This helps you identify the policy in a list.</p>
+         * Name.
          */
         public Builder name(String name) {
             this.name = name;
@@ -253,7 +253,7 @@ public class AIUsageLimitPolicy extends TeaModel {
         }
 
         /**
-         * <p>The priority of the policy, used to determine the evaluation order when multiple policies apply to the same request. A lower number indicates a higher priority.</p>
+         * Priority.
          */
         public Builder priority(Integer priority) {
             this.priority = priority;
@@ -261,7 +261,7 @@ public class AIUsageLimitPolicy extends TeaModel {
         }
 
         /**
-         * <p>The time window during which the usage count is accumulated before it resets. For example: <code>Hour</code>, <code>Day</code>, or <code>Month</code>.</p>
+         * ResetPeriod.
          */
         public Builder resetPeriod(String resetPeriod) {
             this.resetPeriod = resetPeriod;
@@ -269,7 +269,7 @@ public class AIUsageLimitPolicy extends TeaModel {
         }
 
         /**
-         * <p>A list of service IDs that this policy applies to. The policy is enforced only for requests made to these services.</p>
+         * ServiceIds.
          */
         public Builder serviceIds(java.util.List<String> serviceIds) {
             this.serviceIds = serviceIds;
@@ -277,7 +277,7 @@ public class AIUsageLimitPolicy extends TeaModel {
         }
 
         /**
-         * <p>The status of the policy. Valid values are <code>Enabled</code> and <code>Disabled</code>. A disabled policy is not enforced.</p>
+         * Status.
          */
         public Builder status(String status) {
             this.status = status;
@@ -285,7 +285,7 @@ public class AIUsageLimitPolicy extends TeaModel {
         }
 
         /**
-         * <p>A list of user group IDs that this policy applies to. The policy is enforced only for users who belong to these groups.</p>
+         * UserGroupIds.
          */
         public Builder userGroupIds(java.util.List<String> userGroupIds) {
             this.userGroupIds = userGroupIds;

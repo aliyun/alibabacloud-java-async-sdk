@@ -39,6 +39,10 @@ public class ListPrivateAccessApplicationsRequest extends Request {
     private Integer currentPage;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckStatus")
+    private String healthCheckStatus;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
@@ -66,6 +70,7 @@ public class ListPrivateAccessApplicationsRequest extends Request {
         this.applicationIds = builder.applicationIds;
         this.connectorId = builder.connectorId;
         this.currentPage = builder.currentPage;
+        this.healthCheckStatus = builder.healthCheckStatus;
         this.name = builder.name;
         this.pageSize = builder.pageSize;
         this.policyId = builder.policyId;
@@ -122,6 +127,13 @@ public class ListPrivateAccessApplicationsRequest extends Request {
     }
 
     /**
+     * @return healthCheckStatus
+     */
+    public String getHealthCheckStatus() {
+        return this.healthCheckStatus;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
@@ -162,6 +174,7 @@ public class ListPrivateAccessApplicationsRequest extends Request {
         private java.util.List<String> applicationIds; 
         private String connectorId; 
         private Integer currentPage; 
+        private String healthCheckStatus; 
         private String name; 
         private Integer pageSize; 
         private String policyId; 
@@ -179,6 +192,7 @@ public class ListPrivateAccessApplicationsRequest extends Request {
             this.applicationIds = request.applicationIds;
             this.connectorId = request.connectorId;
             this.currentPage = request.currentPage;
+            this.healthCheckStatus = request.healthCheckStatus;
             this.name = request.name;
             this.pageSize = request.pageSize;
             this.policyId = request.policyId;
@@ -189,8 +203,8 @@ public class ListPrivateAccessApplicationsRequest extends Request {
         /**
          * <p>The access mode. Valid values:</p>
          * <ul>
-         * <li><strong>app</strong>: application access. Filters applications that support application access.</li>
-         * <li><strong>browser</strong>: browser access. Filters applications that support browser access.</li>
+         * <li><strong>app</strong>: Application access. Filters applications that support application access.</li>
+         * <li><strong>browser</strong>: Browser access. Filters applications that support browser access.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -203,7 +217,7 @@ public class ListPrivateAccessApplicationsRequest extends Request {
         }
 
         /**
-         * <p>The address of the internal-facing access application. The address is 1 to 128 characters in length and supports IPv4 addresses, CIDR blocks, domain names, and wildcard domain names.</p>
+         * <p>The address of the private access application. The address must be 1 to 128 characters in length, and can be an IPv4 address, a CIDR block, a domain name, or a wildcard domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.0.0/16</p>
@@ -215,7 +229,7 @@ public class ListPrivateAccessApplicationsRequest extends Request {
         }
 
         /**
-         * <p>The IDs of internal-facing access applications. You can specify up to 100 application IDs.</p>
+         * <p>The IDs of the private access applications. You can enter up to 100 private access application IDs.</p>
          */
         public Builder applicationIds(java.util.List<String> applicationIds) {
             this.putQueryParameter("ApplicationIds", applicationIds);
@@ -224,7 +238,7 @@ public class ListPrivateAccessApplicationsRequest extends Request {
         }
 
         /**
-         * <p>The connector ID. You can obtain the ID from the <a href="~~ListConnectors~~">ListConnectors</a> operation.</p>
+         * <p>The ID of the connector. You can obtain the value from the following operation: <a href="~~ListConnectors~~">ListConnectors</a>: List connectors.</p>
          * 
          * <strong>example:</strong>
          * <p>connector-94db94e06b98****</p>
@@ -236,7 +250,7 @@ public class ListPrivateAccessApplicationsRequest extends Request {
         }
 
         /**
-         * <p>The page number of the current page displayed in a paged query. Valid values: 1 to 10000.</p>
+         * <p>The page number of the current page in a paged query. Valid values: 1 to 10000.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -249,7 +263,25 @@ public class ListPrivateAccessApplicationsRequest extends Request {
         }
 
         /**
-         * <p>The name of the internal-facing access application. The name is 1 to 128 characters in length, supports Chinese and uppercase and lowercase letters, and can contain digits, periods (.), underscores (_), and hyphens (-).</p>
+         * <p>Filters by health check status. Valid values:</p>
+         * <ul>
+         * <li>normal: The success rate of the last check is greater than or equal to 95%.</li>
+         * <li>partialError: The success rate of the last check is greater than 0 and less than 95%.</li>
+         * <li>error: The success rate of the last check is 0.</li>
+         * <li>uncompleted: No check results are available.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
+         */
+        public Builder healthCheckStatus(String healthCheckStatus) {
+            this.putQueryParameter("HealthCheckStatus", healthCheckStatus);
+            this.healthCheckStatus = healthCheckStatus;
+            return this;
+        }
+
+        /**
+         * <p>The name of the private access application. The name must be 1 to 128 characters in length, and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), and hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>private_access_application_name</p>
@@ -274,10 +306,10 @@ public class ListPrivateAccessApplicationsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the internal-facing access policy. You can obtain the ID from the following operations:</p>
+         * <p>The ID of the private access policy. You can obtain the value from the following operations:</p>
          * <ul>
-         * <li><a href="~~ListPrivateAccessPolices~~">ListPrivateAccessPolices</a>: queries internal-facing access policies in batches.</li>
-         * <li><a href="~~CreatePrivateAccessPolicy~~">CreatePrivateAccessPolicy</a>: creates an internal-facing access policy.</li>
+         * <li><a href="~~ListPrivateAccessPolices~~">ListPrivateAccessPolices</a>: List private access policies.</li>
+         * <li><a href="~~CreatePrivateAccessPolicy~~">CreatePrivateAccessPolicy</a>: Create a private access policy.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -290,10 +322,10 @@ public class ListPrivateAccessApplicationsRequest extends Request {
         }
 
         /**
-         * <p>The status of the internal-facing access application. Valid values:</p>
+         * <p>The status of the private access application. Valid values:</p>
          * <ul>
-         * <li><strong>Enabled</strong>: enabled.</li>
-         * <li><strong>Disabled</strong>: disabled.</li>
+         * <li><strong>Enabled</strong>: Enabled.</li>
+         * <li><strong>Disabled</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -306,10 +338,10 @@ public class ListPrivateAccessApplicationsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the internal-facing access tag. You can obtain the ID from the following operations:</p>
+         * <p>The ID of the private access tag. You can obtain the value from the following operations:</p>
          * <ul>
-         * <li><a href="~~ListPrivateAccessTags~~">ListPrivateAccessTags</a>: queries internal-facing access tags in batches.</li>
-         * <li><a href="~~CreatePrivateAccessTag~~">CreatePrivateAccessTag</a>: creates an internal-facing access tag.</li>
+         * <li><a href="~~ListPrivateAccessTags~~">ListPrivateAccessTags</a>: List private access tags.</li>
+         * <li><a href="~~CreatePrivateAccessTag~~">CreatePrivateAccessTag</a>: Create a private access tag.</li>
          * </ul>
          * 
          * <strong>example:</strong>

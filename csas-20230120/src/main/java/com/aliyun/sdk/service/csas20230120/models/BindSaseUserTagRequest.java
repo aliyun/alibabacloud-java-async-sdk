@@ -73,7 +73,7 @@ public class BindSaseUserTagRequest extends Request {
         } 
 
         /**
-         * <p>The collection of user IDs.</p>
+         * <p>The IDs of the users.</p>
          */
         public Builder saseUserIds(java.util.List<String> saseUserIds) {
             this.putBodyParameter("SaseUserIds", saseUserIds);
@@ -82,7 +82,7 @@ public class BindSaseUserTagRequest extends Request {
         }
 
         /**
-         * <p>The collection of user label IDs.</p>
+         * <p>The IDs of the user tags.</p>
          */
         public Builder tagIds(java.util.List<String> tagIds) {
             this.putBodyParameter("TagIds", tagIds);

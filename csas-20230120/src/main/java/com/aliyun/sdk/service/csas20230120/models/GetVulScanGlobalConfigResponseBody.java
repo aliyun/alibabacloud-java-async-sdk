@@ -80,7 +80,7 @@ public class GetVulScanGlobalConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The maximum download speed for vulnerability patches on a single user terminal device. Unit: bytes per second. A value of 0 indicates no speed limit.</p>
+         * <p>The maximum download rate of vulnerability patches for a single user terminal device. Unit: Byte/s. A value of 0 indicates no rate limit.</p>
          * 
          * <strong>example:</strong>
          * <p>1048576</p>
@@ -91,7 +91,7 @@ public class GetVulScanGlobalConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>3D7EC0AF-DB2A-5D9C-90EC-F090A6BAAEA7</p>
@@ -102,7 +102,7 @@ public class GetVulScanGlobalConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The vulnerability fix configuration for WUYING Workspace. This configuration takes effect only on user terminal devices of the Cloud Desktop type.</p>
+         * <p>The vulnerability fix configuration for WUYING Cloud Desktop. This configuration takes effect only for user terminal devices of the WUYING Cloud Desktop type.</p>
          */
         public Builder wuyingVulFixConfig(WuyingVulFixConfig wuyingVulFixConfig) {
             this.wuyingVulFixConfig = wuyingVulFixConfig;
@@ -168,7 +168,7 @@ public class GetVulScanGlobalConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Specifies whether to prohibit shutdown during the fix process to prevent system exceptions caused by shutting down during patch installation. Valid values:</p>
+             * <p>Specifies whether to prohibit shutdown during the fix process to prevent system exceptions caused by shutdown during patch installation. Valid values:</p>
              * <ul>
              * <li><strong>true</strong>: Shutdown is prohibited.</li>
              * <li><strong>false</strong>: Shutdown is not prohibited.</li>
@@ -183,7 +183,7 @@ public class GetVulScanGlobalConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to create a snapshot for the cloud desktop before the fix, which can be used for rollback if the fix fails. Valid values:</p>
+             * <p>Specifies whether to create a snapshot for the Cloud Desktop before the fix process to allow rollback if the fix fails. Valid values:</p>
              * <ul>
              * <li><strong>true</strong>: A snapshot is created.</li>
              * <li><strong>false</strong>: No snapshot is created.</li>

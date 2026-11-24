@@ -75,7 +75,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of this request.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>C81E0B4B-AAEB-5FDD-B27E-3F5AF7EBD7EF</p>
@@ -157,10 +157,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The display field.</p>
+             * <p>The name of the control in the external approval form.</p>
              * 
              * <strong>example:</strong>
-             * <p>Name</p>
+             * <p>Registration reason</p>
              */
             public Builder displayField(String displayField) {
                 this.displayField = displayField;
@@ -168,7 +168,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayFieldValue.
+             * <p>The identifier of the control in the external approval form. DingTalk approval returns the control label. WeCom and Lark approvals return the value in the &quot;Control type%%%Control ID&quot; format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Textarea%%%widget-1a2b****</p>
              */
             public Builder displayFieldValue(String displayFieldValue) {
                 this.displayFieldValue = displayFieldValue;
@@ -176,10 +179,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The system field.</p>
+             * <p>The system field identifier, such as approvalReason.</p>
              * 
              * <strong>example:</strong>
-             * <p>Name</p>
+             * <p>approvalReason</p>
              */
             public Builder systemField(String systemField) {
                 this.systemField = systemField;
@@ -272,7 +275,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The external process ID.</p>
+             * <p>The ID of the external approval process. If the approval type is 1 (DingTalk approval), this parameter corresponds to the DingTalk process code. If the approval type is 2 (WeCom approval), this parameter corresponds to the template ID. If the approval type is 3 (Lark approval), this parameter corresponds to the approval definition code. If the approval type is 0 (built-in approval), this parameter is empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PROC-1a2b3c4d5e6f****</p>
              */
             public Builder externalProcessId(String externalProcessId) {
                 this.externalProcessId = externalProcessId;
@@ -280,7 +286,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The field mapping table.</p>
+             * <p>The list of mappings between system fields and external approval form controls.</p>
              */
             public Builder fieldMap(java.util.List<FieldMap> fieldMap) {
                 this.fieldMap = fieldMap;
@@ -379,7 +385,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The display field.</p>
+             * <p>The name of the control in the external approval form.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Registered domain name</p>
              */
             public Builder displayField(String displayField) {
                 this.displayField = displayField;
@@ -387,7 +396,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayFieldValue.
+             * <p>The identifier of the control in the external approval form. DingTalk approval returns the control label. WeCom and Lark approvals return the value in the &quot;Control type%%%Control ID&quot; format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Textarea%%%widget-1a2b****</p>
              */
             public Builder displayFieldValue(String displayFieldValue) {
                 this.displayFieldValue = displayFieldValue;
@@ -395,7 +407,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The system field.</p>
+             * <p>The identifier of the system field, such as report_domain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>report_domain</p>
              */
             public Builder systemField(String systemField) {
                 this.systemField = systemField;
@@ -488,7 +503,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The external process ID.</p>
+             * <p>The ID of the external approval process. If the approval type is 1 (DingTalk approval), this parameter corresponds to the DingTalk process code. If the approval type is 2 (WeCom approval), this parameter corresponds to the template ID. If the approval type is 3 (Lark approval), this parameter corresponds to the approval definition code. If the approval type is 0 (built-in approval), this parameter is empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PROC-1a2b3c4d5e6f****</p>
              */
             public Builder externalProcessId(String externalProcessId) {
                 this.externalProcessId = externalProcessId;
@@ -496,7 +514,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The field mapping table.</p>
+             * <p>The list of mappings between system fields and external approval form controls.</p>
              */
             public Builder fieldMap(java.util.List<DeviceRegistrationPoliciesFieldMap> fieldMap) {
                 this.fieldMap = fieldMap;
@@ -595,7 +613,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The display field.</p>
+             * <p>The name of the control in the external approval form.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>File name</p>
              */
             public Builder displayField(String displayField) {
                 this.displayField = displayField;
@@ -603,7 +624,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayFieldValue.
+             * <p>The identifier of the control in the external approval form. DingTalk approval returns the control label. WeCom and Lark approvals return the value in the &quot;Control type%%%Control ID&quot; format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Textarea%%%widget-1a2b****</p>
              */
             public Builder displayFieldValue(String displayFieldValue) {
                 this.displayFieldValue = displayFieldValue;
@@ -611,7 +635,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The system field.</p>
+             * <p>The system field identifier, such as fileName.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fileName</p>
              */
             public Builder systemField(String systemField) {
                 this.systemField = systemField;
@@ -704,7 +731,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The external process ID.</p>
+             * <p>The ID of the external approval process. If the approval type is 1 (DingTalk approval), this parameter corresponds to the DingTalk process code. If the approval type is 2 (WeCom approval), this parameter corresponds to the template ID. If the approval type is 3 (Lark approval), this parameter corresponds to the approval definition code. If the approval type is 0 (built-in approval), this parameter is empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PROC-1a2b3c4d5e6f****</p>
              */
             public Builder externalProcessId(String externalProcessId) {
                 this.externalProcessId = externalProcessId;
@@ -712,7 +742,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The field mapping table.</p>
+             * <p>The list of mappings between system fields and external approval form controls.</p>
              */
             public Builder fieldMap(java.util.List<DlpSendPoliciesFieldMap> fieldMap) {
                 this.fieldMap = fieldMap;
@@ -720,7 +750,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of file outgoing policy IDs.</p>
+             * <p>The list of outbound file transfer policy IDs.</p>
              */
             public Builder policyIds(java.util.List<String> policyIds) {
                 this.policyIds = policyIds;
@@ -811,7 +841,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The display field.</p>
+             * <p>The name of the control in the external approval form.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Reported access website</p>
              */
             public Builder displayField(String displayField) {
                 this.displayField = displayField;
@@ -819,7 +852,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayFieldValue.
+             * <p>The identifier of the control in the external approval form. DingTalk approval returns the control label. WeCom and Lark approvals return the value in the &quot;Control type%%%Control ID&quot; format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Textarea%%%widget-1a2b****</p>
              */
             public Builder displayFieldValue(String displayFieldValue) {
                 this.displayFieldValue = displayFieldValue;
@@ -827,7 +863,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The system field.</p>
+             * <p>The identifier of the system field, such as reportDomain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>reportDomain</p>
              */
             public Builder systemField(String systemField) {
                 this.systemField = systemField;
@@ -920,7 +959,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The external process ID.</p>
+             * <p>The ID of the external approval process. If the approval type is 1 (DingTalk approval), this parameter corresponds to the DingTalk process code. If the approval type is 2 (WeCom approval), this parameter corresponds to the template ID. If the approval type is 3 (Lark approval), this parameter corresponds to the approval definition code. If the approval type is 0 (built-in approval), this parameter is empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PROC-1a2b3c4d5e6f****</p>
              */
             public Builder externalProcessId(String externalProcessId) {
                 this.externalProcessId = externalProcessId;
@@ -928,7 +970,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The field mapping table.</p>
+             * <p>The list of mappings between system fields and external approval form controls.</p>
              */
             public Builder fieldMap(java.util.List<DomainBlacklistPoliciesFieldMap> fieldMap) {
                 this.fieldMap = fieldMap;
@@ -936,7 +978,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of domain blacklist policy IDs.</p>
+             * <p>The list of domain name blacklist policy IDs.</p>
              */
             public Builder policyIds(java.util.List<String> policyIds) {
                 this.policyIds = policyIds;
@@ -1027,7 +1069,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The display field.</p>
+             * <p>The name of the control in the external approval form.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Reported access website</p>
              */
             public Builder displayField(String displayField) {
                 this.displayField = displayField;
@@ -1035,7 +1080,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayFieldValue.
+             * <p>The identifier of the control in the external approval form. DingTalk approval returns the control label. WeCom and Lark approvals return the value in the &quot;Control type%%%Control ID&quot; format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Textarea%%%widget-1a2b****</p>
              */
             public Builder displayFieldValue(String displayFieldValue) {
                 this.displayFieldValue = displayFieldValue;
@@ -1043,7 +1091,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The system field.</p>
+             * <p>The identifier of the system field, such as reportDomain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>reportDomain</p>
              */
             public Builder systemField(String systemField) {
                 this.systemField = systemField;
@@ -1136,7 +1187,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The external process ID.</p>
+             * <p>The ID of the external approval process. If the approval type is 1 (DingTalk approval), this parameter corresponds to the DingTalk process code. If the approval type is 2 (WeCom approval), this parameter corresponds to the template ID. If the approval type is 3 (Lark approval), this parameter corresponds to the approval definition code. If the approval type is 0 (built-in approval), this parameter is empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PROC-1a2b3c4d5e6f****</p>
              */
             public Builder externalProcessId(String externalProcessId) {
                 this.externalProcessId = externalProcessId;
@@ -1144,7 +1198,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The field mapping table.</p>
+             * <p>The list of mappings between system fields and external approval form controls.</p>
              */
             public Builder fieldMap(java.util.List<DomainWhitelistPoliciesFieldMap> fieldMap) {
                 this.fieldMap = fieldMap;
@@ -1152,7 +1206,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of domain whitelist policy IDs.</p>
+             * <p>The list of domain name whitelist policy IDs.</p>
              */
             public Builder policyIds(java.util.List<String> policyIds) {
                 this.policyIds = policyIds;
@@ -1243,7 +1297,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The display field.</p>
+             * <p>The name of the control in the external approval form.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Process name</p>
              */
             public Builder displayField(String displayField) {
                 this.displayField = displayField;
@@ -1251,7 +1308,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayFieldValue.
+             * <p>The identifier of the control in the external approval form. DingTalk approval returns the control label. WeCom and Lark approvals return the value in the &quot;Control type%%%Control ID&quot; format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Textarea%%%widget-1a2b****</p>
              */
             public Builder displayFieldValue(String displayFieldValue) {
                 this.displayFieldValue = displayFieldValue;
@@ -1259,7 +1319,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The system field.</p>
+             * <p>The system field identifier, such as processName.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>processName</p>
              */
             public Builder systemField(String systemField) {
                 this.systemField = systemField;
@@ -1352,7 +1415,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The external process ID.</p>
+             * <p>The ID of the external approval process. If the approval type is 1 (DingTalk approval), this parameter corresponds to the DingTalk process code. If the approval type is 2 (WeCom approval), this parameter corresponds to the template ID. If the approval type is 3 (Lark approval), this parameter corresponds to the approval definition code. If the approval type is 0 (built-in approval), this parameter is empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PROC-1a2b3c4d5e6f****</p>
              */
             public Builder externalProcessId(String externalProcessId) {
                 this.externalProcessId = externalProcessId;
@@ -1360,7 +1426,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The field mapping table.</p>
+             * <p>The list of mappings between system fields and external approval form controls.</p>
              */
             public Builder fieldMap(java.util.List<EndpointHardeningPoliciesFieldMap> fieldMap) {
                 this.fieldMap = fieldMap;
@@ -1368,7 +1434,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The policy ID.</p>
+             * <p>The list of endpoint hardening policy IDs.</p>
              */
             public Builder policyIds(java.util.List<String> policyIds) {
                 this.policyIds = policyIds;
@@ -1376,7 +1442,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The template ID.</p>
+             * <p>The ID of the approval template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>approval-schema-090134f1ebff****</p>
              */
             public Builder schemaId(String schemaId) {
                 this.schemaId = schemaId;
@@ -1456,7 +1525,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The display field.</p>
+             * <p>The name of the control in the external approval form.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Operating system</p>
              */
             public Builder displayField(String displayField) {
                 this.displayField = displayField;
@@ -1464,7 +1536,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayFieldValue.
+             * <p>The identifier of the control in the external approval form. DingTalk approval returns the control label. WeCom and Lark approvals return the value in the &quot;Control type%%%Control ID&quot; format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Textarea%%%widget-1a2b****</p>
              */
             public Builder displayFieldValue(String displayFieldValue) {
                 this.displayFieldValue = displayFieldValue;
@@ -1472,7 +1547,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The system field.</p>
+             * <p>The system field identifier, such as devType.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>devType</p>
              */
             public Builder systemField(String systemField) {
                 this.systemField = systemField;
@@ -1565,7 +1643,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The external process ID.</p>
+             * <p>The ID of the external approval process. If the approval type is 1 (DingTalk approval), this parameter corresponds to the DingTalk process code. If the approval type is 2 (WeCom approval), this parameter corresponds to the template ID. If the approval type is 3 (Lark approval), this parameter corresponds to the approval definition code. If the approval type is 0 (built-in approval), this parameter is empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PROC-1a2b3c4d5e6f****</p>
              */
             public Builder externalProcessId(String externalProcessId) {
                 this.externalProcessId = externalProcessId;
@@ -1573,7 +1654,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The field mapping table.</p>
+             * <p>The list of mappings between system fields and external approval form controls.</p>
              */
             public Builder fieldMap(java.util.List<PeripheralBlockPoliciesFieldMap> fieldMap) {
                 this.fieldMap = fieldMap;
@@ -1672,7 +1753,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The display field.</p>
+             * <p>The name of the control in the external approval form.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Application ID</p>
              */
             public Builder displayField(String displayField) {
                 this.displayField = displayField;
@@ -1680,7 +1764,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayFieldValue.
+             * <p>The identifier of the control in the external approval form. DingTalk approval returns the control label. WeCom and Lark approvals return the value in the &quot;Control type%%%Control ID&quot; format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Textarea%%%widget-1a2b****</p>
              */
             public Builder displayFieldValue(String displayFieldValue) {
                 this.displayFieldValue = displayFieldValue;
@@ -1688,7 +1775,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The system field.</p>
+             * <p>The system field identifier, such as applicationId.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>applicationId</p>
              */
             public Builder systemField(String systemField) {
                 this.systemField = systemField;
@@ -1781,7 +1871,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The external process ID.</p>
+             * <p>The ID of the external approval process. If the approval type is 1 (DingTalk approval), this parameter corresponds to the DingTalk process code. If the approval type is 2 (WeCom approval), this parameter corresponds to the template ID. If the approval type is 3 (Lark approval), this parameter corresponds to the approval definition code. If the approval type is 0 (built-in approval), this parameter is empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PROC-1a2b3c4d5e6f****</p>
              */
             public Builder externalProcessId(String externalProcessId) {
                 this.externalProcessId = externalProcessId;
@@ -1789,7 +1882,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The field mapping table.</p>
+             * <p>The list of mappings between system fields and external approval form controls.</p>
              */
             public Builder fieldMap(java.util.List<PrivateAccessBlockPoliciesFieldMap> fieldMap) {
                 this.fieldMap = fieldMap;
@@ -1797,7 +1890,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The policy ID.</p>
+             * <p>The list of internal network access control policy IDs.</p>
              */
             public Builder policyIds(java.util.List<String> policyIds) {
                 this.policyIds = policyIds;
@@ -1805,7 +1898,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The template ID.</p>
+             * <p>The ID of the approval template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>approval-schema-090134f1ebff****</p>
              */
             public Builder schemaId(String schemaId) {
                 this.schemaId = schemaId;
@@ -1872,7 +1968,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The approver ID.</p>
+             * <p>The ID of the approver.</p>
              * 
              * <strong>example:</strong>
              * <p>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</p>
@@ -1886,7 +1982,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
              * <p>The username of the approver.</p>
              * 
              * <strong>example:</strong>
-             * <p>John</p>
+             * <p>张三</p>
              */
             public Builder username(String username) {
                 this.username = username;
@@ -1966,7 +2062,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The display field.</p>
+             * <p>The name of the control in the external approval form.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Reported software</p>
              */
             public Builder displayField(String displayField) {
                 this.displayField = displayField;
@@ -1974,7 +2073,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayFieldValue.
+             * <p>The identifier of the control in the external approval form. DingTalk approval returns the control label. WeCom and Lark approvals return the value in the &quot;Control type%%%Control ID&quot; format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Textarea%%%widget-1a2b****</p>
              */
             public Builder displayFieldValue(String displayFieldValue) {
                 this.displayFieldValue = displayFieldValue;
@@ -1982,7 +2084,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The system field.</p>
+             * <p>The identifier of the system field, such as softwareName.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>softwareName</p>
              */
             public Builder systemField(String systemField) {
                 this.systemField = systemField;
@@ -2075,7 +2180,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The external process ID.</p>
+             * <p>The ID of the external approval process. If the approval type is 1 (DingTalk approval), this parameter corresponds to the DingTalk process code. If the approval type is 2 (WeCom approval), this parameter corresponds to the template ID. If the approval type is 3 (Lark approval), this parameter corresponds to the approval definition code. If the approval type is 0 (built-in approval), this parameter is empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PROC-1a2b3c4d5e6f****</p>
              */
             public Builder externalProcessId(String externalProcessId) {
                 this.externalProcessId = externalProcessId;
@@ -2083,7 +2191,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The field mapping table.</p>
+             * <p>The list of mappings between system fields and external approval form controls.</p>
              */
             public Builder fieldMap(java.util.List<SoftwareBlockPoliciesFieldMap> fieldMap) {
                 this.fieldMap = fieldMap;
@@ -2182,7 +2290,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The display field.</p>
+             * <p>The name of the control in the external approval form.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Process name</p>
              */
             public Builder displayField(String displayField) {
                 this.displayField = displayField;
@@ -2190,7 +2301,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayFieldValue.
+             * <p>The identifier of the control in the external approval form. DingTalk approval returns the control label. WeCom and Lark approvals return the value in the &quot;Control type%%%Control ID&quot; format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Textarea%%%widget-1a2b****</p>
              */
             public Builder displayFieldValue(String displayFieldValue) {
                 this.displayFieldValue = displayFieldValue;
@@ -2198,7 +2312,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The system field.</p>
+             * <p>The system field identifier, such as processName.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>processName</p>
              */
             public Builder systemField(String systemField) {
                 this.systemField = systemField;
@@ -2291,7 +2408,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The external process ID.</p>
+             * <p>The ID of the external approval process. If the approval type is 1 (DingTalk approval), this parameter corresponds to the DingTalk process code. If the approval type is 2 (WeCom approval), this parameter corresponds to the template ID. If the approval type is 3 (Lark approval), this parameter corresponds to the approval definition code. If the approval type is 0 (built-in approval), this parameter is empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PROC-1a2b3c4d5e6f****</p>
              */
             public Builder externalProcessId(String externalProcessId) {
                 this.externalProcessId = externalProcessId;
@@ -2299,7 +2419,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The field mapping table.</p>
+             * <p>The list of mappings between system fields and external approval form controls.</p>
              */
             public Builder fieldMap(java.util.List<SoftwareHardeningPoliciesFieldMap> fieldMap) {
                 this.fieldMap = fieldMap;
@@ -2307,7 +2427,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The policy ID.</p>
+             * <p>The list of software hardening policy IDs.</p>
              */
             public Builder policyIds(java.util.List<String> policyIds) {
                 this.policyIds = policyIds;
@@ -2315,7 +2435,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The template ID.</p>
+             * <p>The ID of the approval template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>approval-schema-090134f1ebff****</p>
              */
             public Builder schemaId(String schemaId) {
                 this.schemaId = schemaId;
@@ -2590,7 +2713,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of policies associated with endpoint uninstallation.</p>
+             * <p>The list of associated endpoint uninstall policies.</p>
              */
             public Builder appUninstallPolicies(AppUninstallPolicies appUninstallPolicies) {
                 this.appUninstallPolicies = appUninstallPolicies;
@@ -2598,7 +2721,16 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The approval type.</p>
+             * <p>The approval type. Valid values:</p>
+             * <ul>
+             * <li>0: Built-in approval.</li>
+             * <li>1: DingTalk approval.</li>
+             * <li>2: WeCom approval.</li>
+             * <li>3: Lark approval.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder approvalType(Integer approvalType) {
                 this.approvalType = approvalType;
@@ -2606,7 +2738,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time of the approval process.</p>
+             * <p>The time when the approval process was created. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-10-25 10:44:09</p>
@@ -2620,7 +2752,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
              * <p>The description of the approval process.</p>
              * 
              * <strong>example:</strong>
-             * <p>This is an approval process</p>
+             * <p>Approval flow for office network public domain name whitelist reporting.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2636,7 +2768,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of associated policies for file outgoing.</p>
+             * <p>The list of associated outbound file transfer policies.</p>
              */
             public Builder dlpSendPolicies(DlpSendPolicies dlpSendPolicies) {
                 this.dlpSendPolicies = dlpSendPolicies;
@@ -2644,7 +2776,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of policies associated with the domain blacklist.</p>
+             * <p>The list of policies associated with the domain name blacklist.</p>
              */
             public Builder domainBlacklistPolicies(DomainBlacklistPolicies domainBlacklistPolicies) {
                 this.domainBlacklistPolicies = domainBlacklistPolicies;
@@ -2652,7 +2784,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of policies associated with the domain whitelist.</p>
+             * <p>The list of policies associated with the domain name whitelist.</p>
              */
             public Builder domainWhitelistPolicies(DomainWhitelistPolicies domainWhitelistPolicies) {
                 this.domainWhitelistPolicies = domainWhitelistPolicies;
@@ -2660,7 +2792,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The endpoint protection policy.</p>
+             * <p>The list of associated endpoint hardening policies.</p>
              */
             public Builder endpointHardeningPolicies(EndpointHardeningPolicies endpointHardeningPolicies) {
                 this.endpointHardeningPolicies = endpointHardeningPolicies;
@@ -2668,7 +2800,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The label.</p>
+             * <p>The event callback URL. When the approval type is 1 (DingTalk approval) or 3 (Lark approval), this parameter returns the complete event callback URL of the external platform. For other approval types, this parameter is empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://callback.example.com/sase/api/v1/approval/dingtalk/callback/approval-event-1a2b">https://callback.example.com/sase/api/v1/approval/dingtalk/callback/approval-event-1a2b</a>****</p>
              */
             public Builder eventLabel(String eventLabel) {
                 this.eventLabel = eventLabel;
@@ -2676,7 +2811,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The external configuration.</p>
+             * <p>The external approval configuration. When the approval type is 1 (DingTalk approval) or 3 (Lark approval), this parameter includes the integration configuration for the external approval platform, including appKey, appSecret, eventVerifyToken, and eventAesKey. For other approval types, this parameter is empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;appKey&quot;:&quot;dingabc1234****&quot;,&quot;appSecret&quot;:&quot;a1b2c3d4****&quot;,&quot;eventVerifyToken&quot;:&quot;e5f6a7b8****&quot;,&quot;eventAesKey&quot;:&quot;c9d0e1f2****&quot;}</p>
              */
             public Builder externalConfig(String externalConfig) {
                 this.externalConfig = externalConfig;
@@ -2684,7 +2822,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of associated policies for peripheral control.</p>
+             * <p>The list of associated peripheral control policies.</p>
              */
             public Builder peripheralBlockPolicies(PeripheralBlockPolicies peripheralBlockPolicies) {
                 this.peripheralBlockPolicies = peripheralBlockPolicies;
@@ -2692,7 +2830,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The software hardening policy.</p>
+             * <p>The list of policies associated with internal network access control.</p>
              */
             public Builder privateAccessBlockPolicies(PrivateAccessBlockPolicies privateAccessBlockPolicies) {
                 this.privateAccessBlockPolicies = privateAccessBlockPolicies;
@@ -2714,7 +2852,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
              * <p>The name of the approval process.</p>
              * 
              * <strong>example:</strong>
-             * <p>Test</p>
+             * <p>Office network public domain name whitelist approval</p>
              */
             public Builder processName(String processName) {
                 this.processName = processName;
@@ -2738,7 +2876,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The software hardening policy.</p>
+             * <p>The list of associated software hardening policies.</p>
              */
             public Builder softwareHardeningPolicies(SoftwareHardeningPolicies softwareHardeningPolicies) {
                 this.softwareHardeningPolicies = softwareHardeningPolicies;

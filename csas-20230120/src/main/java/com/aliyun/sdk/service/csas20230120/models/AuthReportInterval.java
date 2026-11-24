@@ -67,7 +67,15 @@ public class AuthReportInterval extends TeaModel {
         } 
 
         /**
-         * TimeUnit.
+         * <p>The unit of the effective recovery duration. Valid values:</p>
+         * <ul>
+         * <li><strong>Minute</strong>: Minutes.</li>
+         * <li><strong>Hour</strong>: Hours.</li>
+         * <li><strong>Day</strong>: Days.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Minute</p>
          */
         public Builder timeUnit(String timeUnit) {
             this.timeUnit = timeUnit;
@@ -75,7 +83,10 @@ public class AuthReportInterval extends TeaModel {
         }
 
         /**
-         * Value.
+         * <p>The numeric value of the effective recovery duration. The unit is specified by TimeUnit. A non-zero value must be at least 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder value(Long value) {
             this.value = value;

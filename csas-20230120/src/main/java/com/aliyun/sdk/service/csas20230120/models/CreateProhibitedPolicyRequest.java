@@ -347,10 +347,10 @@ public class CreateProhibitedPolicyRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether end users are allowed to submit a report request for this policy. Valid values:</p>
+         * <p>Specifies whether to allow terminal users to submit an exception request for the policy. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Reporting is allowed. The pop-up window on the endpoint provides a reporting entry.</li>
-         * <li><strong>false</strong>: Reporting is not allowed.</li>
+         * <li><strong>true</strong>: Exception requests are allowed. The terminal pop-up window provides an entry for the request.</li>
+         * <li><strong>false</strong>: Exception requests are not allowed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -363,7 +363,7 @@ public class CreateProhibitedPolicyRequest extends Request {
         }
 
         /**
-         * <p>The description of the software ban policy. The description can be up to 128 characters in length and can be left empty.</p>
+         * <p>The description of the prohibited software policy. The description can be up to 128 characters in length and can be empty.</p>
          * 
          * <strong>example:</strong>
          * <p>project name pass the check</p>
@@ -377,8 +377,8 @@ public class CreateProhibitedPolicyRequest extends Request {
         /**
          * <p>Specifies whether the policy is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Enabled. The policy is delivered to the endpoint and takes effect.</li>
-         * <li><strong>false</strong>: Disabled. The policy configuration is retained but not delivered to the endpoint.</li>
+         * <li><strong>true</strong>: The policy is enabled, delivered to terminals, and takes effect.</li>
+         * <li><strong>false</strong>: The policy is disabled. The configuration is retained but not delivered to terminals.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -392,7 +392,11 @@ public class CreateProhibitedPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to forcefully terminate running software processes. Valid values:</p>
+         * <p>Specifies whether to forcibly terminate running processes of the software. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The terminal immediately terminates the running processes of the software when the policy is matched.</li>
+         * <li><strong>false</strong>: The terminal does not terminate running processes but only prevents subsequent startups.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -404,10 +408,10 @@ public class CreateProhibitedPolicyRequest extends Request {
         }
 
         /**
-         * <p>The Chinese text of the primary button in the pop-up window on the endpoint.</p>
+         * <p>The Chinese text of the primary button in the terminal pop-up window.</p>
          * 
          * <strong>example:</strong>
-         * <p>Submit Filing</p>
+         * <p>Apply for exemption</p>
          */
         public Builder mainButtonTextCh(String mainButtonTextCh) {
             this.putBodyParameter("MainButtonTextCh", mainButtonTextCh);
@@ -416,7 +420,7 @@ public class CreateProhibitedPolicyRequest extends Request {
         }
 
         /**
-         * <p>The English text of the primary button in the pop-up window on the endpoint.</p>
+         * <p>The English text of the primary button in the terminal pop-up window.</p>
          * 
          * <strong>example:</strong>
          * <p>Report</p>
@@ -428,7 +432,11 @@ public class CreateProhibitedPolicyRequest extends Request {
         }
 
         /**
-         * <p>The scope in which the policy takes effect. Valid values:</p>
+         * <p>The effective scope. Valid values:</p>
+         * <ul>
+         * <li><strong>UserGroupAll</strong>: The policy takes effect for all users under the current Alibaba Cloud account. You do not need to specify user groups.</li>
+         * <li><strong>UserGroupNormal</strong>: The policy takes effect only for users in the user groups specified by UserGroupIds.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -441,10 +449,10 @@ public class CreateProhibitedPolicyRequest extends Request {
         }
 
         /**
-         * <p>The Chinese text of the secondary button in the pop-up window on the endpoint.</p>
+         * <p>The Chinese text of the secondary button in the terminal pop-up window.</p>
          * 
          * <strong>example:</strong>
-         * <p>Got It</p>
+         * <p>Got it</p>
          */
         public Builder minorButtonTextCh(String minorButtonTextCh) {
             this.putBodyParameter("MinorButtonTextCh", minorButtonTextCh);
@@ -453,7 +461,7 @@ public class CreateProhibitedPolicyRequest extends Request {
         }
 
         /**
-         * <p>The English text of the secondary button in the pop-up window on the endpoint.</p>
+         * <p>The English text of the secondary button in the terminal pop-up window.</p>
          * 
          * <strong>example:</strong>
          * <p>I know</p>
@@ -465,7 +473,7 @@ public class CreateProhibitedPolicyRequest extends Request {
         }
 
         /**
-         * <p>Policy Name of the software ban policy. Policy Name must be 1 to 128 characters in length and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), and hyphens (-). Spaces are not supported.</p>
+         * <p>Policy Name of the prohibited software policy. Policy Name must be 1 to 128 characters in length and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), and hyphens (-). Spaces are not supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -479,6 +487,10 @@ public class CreateProhibitedPolicyRequest extends Request {
 
         /**
          * <p>The object type. Valid values:</p>
+         * <ul>
+         * <li><strong>App</strong>: controls disable software. The managed objects are specified by SoftwareIds.</li>
+         * <li><strong>Tag</strong>: controls disable software labels. The managed objects are specified by TagIds. All disable software within the labels is managed.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -493,9 +505,9 @@ public class CreateProhibitedPolicyRequest extends Request {
         /**
          * <p>The action to take. Valid values:</p>
          * <ul>
-         * <li><strong>Ban</strong>: Blocks the software from running and displays a pop-up notification to the end user.</li>
-         * <li><strong>BanSilent</strong>: Blocks the software from running without notifying the end user (silent blocking).</li>
-         * <li><strong>Warn</strong>: Displays a pop-up notification to the end user without blocking the software from running.</li>
+         * <li><strong>Ban</strong>: blocks the software from running and displays a pop-up window on the terminal to notify the user.</li>
+         * <li><strong>BanSilent</strong>: blocks the software from running without notifying the user.</li>
+         * <li><strong>Warn</strong>: displays a pop-up window on the terminal to notify the user without blocking the software from running.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -522,7 +534,7 @@ public class CreateProhibitedPolicyRequest extends Request {
         }
 
         /**
-         * <p>The Chinese prompt content displayed in the pop-up window on the endpoint.</p>
+         * <p>The Chinese prompt content in the terminal pop-up window.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -535,7 +547,7 @@ public class CreateProhibitedPolicyRequest extends Request {
         }
 
         /**
-         * <p>The English prompt content displayed in the pop-up window on the endpoint.</p>
+         * <p>The English prompt content in the terminal pop-up window.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -548,7 +560,7 @@ public class CreateProhibitedPolicyRequest extends Request {
         }
 
         /**
-         * <p>The collection of banned software directly controlled by this policy.</p>
+         * <p>The collection of prohibited software directly managed by the policy.</p>
          */
         public Builder softwareIds(java.util.List<SoftwareIds> softwareIds) {
             this.putBodyParameter("SoftwareIds", softwareIds);
@@ -557,7 +569,7 @@ public class CreateProhibitedPolicyRequest extends Request {
         }
 
         /**
-         * <p>The collection of banned software tag IDs controlled by this policy.</p>
+         * <p>The collection of prohibited software tag IDs managed by the policy.</p>
          */
         public Builder tagIds(java.util.List<String> tagIds) {
             this.putBodyParameter("TagIds", tagIds);
@@ -566,10 +578,10 @@ public class CreateProhibitedPolicyRequest extends Request {
         }
 
         /**
-         * <p>The Chinese title of the pop-up window on the endpoint.</p>
+         * <p>The Chinese title of the terminal pop-up window.</p>
          * 
          * <strong>example:</strong>
-         * <p>Software Ban Reminder</p>
+         * <p>Prohibited software reminder</p>
          */
         public Builder titleCh(String titleCh) {
             this.putBodyParameter("TitleCh", titleCh);
@@ -578,7 +590,7 @@ public class CreateProhibitedPolicyRequest extends Request {
         }
 
         /**
-         * <p>The English title of the pop-up window on the endpoint.</p>
+         * <p>The English title of the terminal pop-up window.</p>
          * 
          * <strong>example:</strong>
          * <p>Software Blocked</p>
@@ -667,10 +679,10 @@ public class CreateProhibitedPolicyRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether the blocked software is a built-in blocked software entry. Valid values:</p>
+             * <p>Specifies whether the prohibited software is built-in. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: A built-in blocked software entry that is shared across all Alibaba Cloud accounts. Built-in entries cannot be modified or deleted.</li>
-             * <li><strong>false</strong>: A custom blocked software entry under the current Alibaba Cloud account.</li>
+             * <li><strong>true</strong>: The software is built-in, shared by all Alibaba Cloud accounts, and cannot be modified or deleted.</li>
+             * <li><strong>false</strong>: The software is custom prohibited software under the current Alibaba Cloud account.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -682,10 +694,10 @@ public class CreateProhibitedPolicyRequest extends Request {
             }
 
             /**
-             * <p>The ID of the prohibited software. You can obtain the value from the following operations:</p>
+             * <p>The ID of the prohibited software. You can obtain the value from the following sources:</p>
              * <ul>
-             * <li><a href="~~ListProhibitedSoftware~~">ListProhibitedSoftware</a>: Lists prohibited software.</li>
-             * <li><a href="~~CreateProhibitedSoftware~~">CreateProhibitedSoftware</a>: Creates custom prohibited software.</li>
+             * <li><a href="~~ListProhibitedSoftware~~">ListProhibitedSoftware</a>: queries prohibited software in batches.</li>
+             * <li><a href="~~CreateProhibitedSoftware~~">CreateProhibitedSoftware</a>: creates custom prohibited software.</li>
              * </ul>
              * 
              * <strong>example:</strong>

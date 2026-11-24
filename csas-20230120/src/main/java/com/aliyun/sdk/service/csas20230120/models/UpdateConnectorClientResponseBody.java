@@ -67,7 +67,7 @@ public class UpdateConnectorClientResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>ConnectorClient。</p>
+         * <p>The ConnectorClient.</p>
          */
         public Builder connectorClient(ConnectorClient connectorClient) {
             this.connectorClient = connectorClient;
@@ -75,7 +75,7 @@ public class UpdateConnectorClientResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>58D6B23E-E5DA-5418-8F61-51A3B5A30049</p>
@@ -352,8 +352,8 @@ public class UpdateConnectorClientResponseBody extends TeaModel {
             /**
              * <p>The connection status of the ConnectorClient. Valid values:</p>
              * <ul>
-             * <li><strong>Connected</strong>: connected.</li>
-             * <li><strong>Disconnected</strong>: disconnected.</li>
+             * <li><strong>Connected</strong>: Connected.</li>
+             * <li><strong>Disconnected</strong>: Disconnected.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -365,7 +365,7 @@ public class UpdateConnectorClientResponseBody extends TeaModel {
             }
 
             /**
-             * <p>ConnectorID。</p>
+             * <p>The connector ID.</p>
              * 
              * <strong>example:</strong>
              * <p>connector-94db94e06b98****</p>
@@ -376,7 +376,7 @@ public class UpdateConnectorClientResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the connector was created.</p>
+             * <p>The time when the connector was created. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-05-16 17:18:46</p>
@@ -435,7 +435,7 @@ public class UpdateConnectorClientResponseBody extends TeaModel {
              * <ul>
              * <li><strong>Running</strong>: O&amp;M in progress.</li>
              * <li><strong>Failed</strong>: O&amp;M failed.</li>
-             * <li>(empty string): not in O&amp;M status.</li>
+             * <li><strong>(Empty string)</strong>: Not in an O&amp;M state.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -458,7 +458,7 @@ public class UpdateConnectorClientResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The program runtime. Unit: seconds.</p>
+             * <p>The runtime of the program. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -488,10 +488,10 @@ public class UpdateConnectorClientResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The enabled status of the ConnectorClient, which can be used to force the client offline. Valid values:</p>
+             * <p>The enabled status of the ConnectorClient, which controls whether the client is forced offline. Valid values:</p>
              * <ul>
-             * <li><strong>Enabled</strong>: enabled.</li>
-             * <li><strong>Disabled</strong>: disabled.</li>
+             * <li><strong>Enabled</strong>: Enabled.</li>
+             * <li><strong>Disabled</strong>: Disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -503,10 +503,10 @@ public class UpdateConnectorClientResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version status of the connector. Valid values:</p>
+             * <p>The upgrade status of the connector. Valid values:</p>
              * <ul>
-             * <li><strong>Latest</strong>: the current version is the latest version.</li>
-             * <li><strong>NewVersionAvailable</strong>: a newer version is available for upgrade.</li>
+             * <li><strong>Latest</strong>: The connector is updated to the latest version.</li>
+             * <li><strong>NewVersionAvailable</strong>: A new version is available for upgrade.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -529,7 +529,7 @@ public class UpdateConnectorClientResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version to roll back to.</p>
+             * <p>The version to be rolled back.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0.0</p>

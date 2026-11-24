@@ -145,7 +145,10 @@ public class IdpWeixin2SubConfig extends TeaModel {
         } 
 
         /**
-         * AgentId.
+         * <p>The agent ID of the WeCom application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000002</p>
          */
         public Builder agentId(String agentId) {
             this.agentId = agentId;
@@ -153,7 +156,10 @@ public class IdpWeixin2SubConfig extends TeaModel {
         }
 
         /**
-         * AppSchema.
+         * <p>The schema used to launch the application from the WeCom Android client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wwautha1b2c3****</p>
          */
         public Builder appSchema(String appSchema) {
             this.appSchema = appSchema;
@@ -161,7 +167,10 @@ public class IdpWeixin2SubConfig extends TeaModel {
         }
 
         /**
-         * AppSecret.
+         * <p>The secret of the WeCom application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s1e2c3r4e5****</p>
          */
         public Builder appSecret(String appSecret) {
             this.appSecret = appSecret;
@@ -169,7 +178,10 @@ public class IdpWeixin2SubConfig extends TeaModel {
         }
 
         /**
-         * CorpId.
+         * <p>The WeCom enterprise ID (CorpId).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wwa1b2c3d4****</p>
          */
         public Builder corpId(String corpId) {
             this.corpId = corpId;
@@ -177,7 +189,10 @@ public class IdpWeixin2SubConfig extends TeaModel {
         }
 
         /**
-         * EventAesKey.
+         * <p>The AES encryption key for WeCom event callbacks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a1e2s3k4e5****</p>
          */
         public Builder eventAesKey(String eventAesKey) {
             this.eventAesKey = eventAesKey;
@@ -185,7 +200,10 @@ public class IdpWeixin2SubConfig extends TeaModel {
         }
 
         /**
-         * EventLabel.
+         * <p>The label (callback URL) for WeCom event callbacks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://auth.example.com/callback/wework/a1b2">https://auth.example.com/callback/wework/a1b2</a>****</p>
          */
         public Builder eventLabel(String eventLabel) {
             this.eventLabel = eventLabel;
@@ -193,7 +211,10 @@ public class IdpWeixin2SubConfig extends TeaModel {
         }
 
         /**
-         * EventVerifyToken.
+         * <p>The verification token for WeCom event callbacks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1t2o3k4e5****</p>
          */
         public Builder eventVerifyToken(String eventVerifyToken) {
             this.eventVerifyToken = eventVerifyToken;
@@ -201,7 +222,10 @@ public class IdpWeixin2SubConfig extends TeaModel {
         }
 
         /**
-         * RedirectUri.
+         * <p>The callback URL for WeCom logon authorization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://auth.example.com/callback">https://auth.example.com/callback</a></p>
          */
         public Builder redirectUri(String redirectUri) {
             this.redirectUri = redirectUri;

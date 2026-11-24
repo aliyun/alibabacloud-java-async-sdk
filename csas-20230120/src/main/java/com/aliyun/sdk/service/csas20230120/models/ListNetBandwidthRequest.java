@@ -125,7 +125,7 @@ public class ListNetBandwidthRequest extends Request {
         }
 
         /**
-         * <p>The network type. If this parameter is left empty, both VPC and Connector instances are queried.</p>
+         * <p>The network type. If this parameter is left empty, both VPC and Connector network instances are queried.</p>
          * 
          * <strong>example:</strong>
          * <p>VPC</p>

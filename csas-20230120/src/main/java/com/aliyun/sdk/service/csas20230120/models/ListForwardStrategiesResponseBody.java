@@ -80,7 +80,7 @@ public class ListForwardStrategiesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of forwarding rules.</p>
+         * <p>The forwarding rules.</p>
          */
         public Builder forwardStrategies(java.util.List<ForwardStrategies> forwardStrategies) {
             this.forwardStrategies = forwardStrategies;
@@ -99,7 +99,7 @@ public class ListForwardStrategiesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of policies.</p>
+         * <p>The total number of forwarding rules.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -255,9 +255,9 @@ public class ListForwardStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the access destination. Valid values:</p>
+             * <p>The destination type. Valid values:</p>
              * <ul>
-             * <li><strong>Connector</strong>: connector.</li>
+             * <li><strong>Connector</strong>: Connector.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -283,7 +283,7 @@ public class ListForwardStrategiesResponseBody extends TeaModel {
              * <p>The name of the forwarding rule.</p>
              * 
              * <strong>example:</strong>
-             * <p>白名单加速</p>
+             * <p>Whitelist acceleration</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -302,7 +302,7 @@ public class ListForwardStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the policy. Valid values:</p>
+             * <p>The status of the forwarding rule. Valid values:</p>
              * <ul>
              * <li><strong>Enabled</strong>: Enabled.</li>
              * <li><strong>Disabled</strong>: Disabled.</li>

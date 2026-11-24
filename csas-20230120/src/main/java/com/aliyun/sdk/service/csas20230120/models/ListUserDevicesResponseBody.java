@@ -88,7 +88,7 @@ public class ListUserDevicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>5FEF5CFA-14CC-5DE5-BD1F-AFFE0996E71D</p>
@@ -99,7 +99,7 @@ public class ListUserDevicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of endpoint devices.</p>
+         * <p>The total number of terminal devices.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -269,6 +269,12 @@ public class ListUserDevicesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Disk")
         private String disk;
 
+        @com.aliyun.core.annotation.NameInMap("DiskEncryptStatus")
+        private String diskEncryptStatus;
+
+        @com.aliyun.core.annotation.NameInMap("DiskEncryptStatusReason")
+        private String diskEncryptStatusReason;
+
         @com.aliyun.core.annotation.NameInMap("DlpStatus")
         private String dlpStatus;
 
@@ -373,6 +379,8 @@ public class ListUserDevicesResponseBody extends TeaModel {
             this.deviceType = builder.deviceType;
             this.deviceVersion = builder.deviceVersion;
             this.disk = builder.disk;
+            this.diskEncryptStatus = builder.diskEncryptStatus;
+            this.diskEncryptStatusReason = builder.diskEncryptStatusReason;
             this.dlpStatus = builder.dlpStatus;
             this.edrStatus = builder.edrStatus;
             this.fullDepartment = builder.fullDepartment;
@@ -562,6 +570,20 @@ public class ListUserDevicesResponseBody extends TeaModel {
          */
         public String getDisk() {
             return this.disk;
+        }
+
+        /**
+         * @return diskEncryptStatus
+         */
+        public String getDiskEncryptStatus() {
+            return this.diskEncryptStatus;
+        }
+
+        /**
+         * @return diskEncryptStatusReason
+         */
+        public String getDiskEncryptStatusReason() {
+            return this.diskEncryptStatusReason;
         }
 
         /**
@@ -776,6 +798,8 @@ public class ListUserDevicesResponseBody extends TeaModel {
             private String deviceType; 
             private String deviceVersion; 
             private String disk; 
+            private String diskEncryptStatus; 
+            private String diskEncryptStatusReason; 
             private String dlpStatus; 
             private String edrStatus; 
             private java.util.List<String> fullDepartment; 
@@ -830,6 +854,8 @@ public class ListUserDevicesResponseBody extends TeaModel {
                 this.deviceType = model.deviceType;
                 this.deviceVersion = model.deviceVersion;
                 this.disk = model.disk;
+                this.diskEncryptStatus = model.diskEncryptStatus;
+                this.diskEncryptStatusReason = model.diskEncryptStatusReason;
                 this.dlpStatus = model.dlpStatus;
                 this.edrStatus = model.edrStatus;
                 this.fullDepartment = model.fullDepartment;
@@ -862,8 +888,8 @@ public class ListUserDevicesResponseBody extends TeaModel {
             /**
              * <p>The client status. Valid values:</p>
              * <ul>
-             * <li><strong>Online</strong>: online.</li>
-             * <li><strong>Offline</strong>: offline.</li>
+             * <li><strong>Online</strong>: Online.</li>
+             * <li><strong>Offline</strong>: Offline.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -886,7 +912,7 @@ public class ListUserDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The auto-logon status of the client.</p>
+             * <p>The auto-login status of the client.</p>
              * 
              * <strong>example:</strong>
              * <p>Enabled</p>
@@ -908,7 +934,10 @@ public class ListUserDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * City.
+             * <p>The city to which the public IP address belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hangzhou City</p>
              */
             public Builder city(String city) {
                 this.city = city;
@@ -916,7 +945,7 @@ public class ListUserDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The city name in English.</p>
+             * <p>The city in English.</p>
              * 
              * <strong>example:</strong>
              * <p>Beijing City</p>
@@ -927,7 +956,7 @@ public class ListUserDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The city name in Chinese.</p>
+             * <p>The city in Chinese.</p>
              * 
              * <strong>example:</strong>
              * <p>北京市</p>
@@ -938,7 +967,10 @@ public class ListUserDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * Continent.
+             * <p>The continent to which the public IP address belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Asia</p>
              */
             public Builder continent(String continent) {
                 this.continent = continent;
@@ -946,7 +978,7 @@ public class ListUserDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The continent name in English.</p>
+             * <p>The continent in English.</p>
              * 
              * <strong>example:</strong>
              * <p>Asia</p>
@@ -957,7 +989,7 @@ public class ListUserDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The continent name in Chinese.</p>
+             * <p>The continent in Chinese.</p>
              * 
              * <strong>example:</strong>
              * <p>亚洲</p>
@@ -968,7 +1000,10 @@ public class ListUserDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * Country.
+             * <p>The country to which the public IP address belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China</p>
              */
             public Builder country(String country) {
                 this.country = country;
@@ -976,7 +1011,7 @@ public class ListUserDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The country name in English.</p>
+             * <p>The country in English.</p>
              * 
              * <strong>example:</strong>
              * <p>China</p>
@@ -987,7 +1022,7 @@ public class ListUserDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The country name in Chinese.</p>
+             * <p>The country in Chinese.</p>
              * 
              * <strong>example:</strong>
              * <p>中国</p>
@@ -998,7 +1033,7 @@ public class ListUserDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The registration time of the endpoint device.</p>
+             * <p>The registration time of the endpoint device. Format: YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-07-17 18:46:55</p>
@@ -1012,7 +1047,7 @@ public class ListUserDevicesResponseBody extends TeaModel {
              * <p>The department to which the user belongs.</p>
              * 
              * <strong>example:</strong>
-             * <p>测试部</p>
+             * <p>Test Department</p>
              */
             public Builder department(String department) {
                 this.department = department;
@@ -1020,10 +1055,10 @@ public class ListUserDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ownership of the endpoint device. Valid values:</p>
+             * <p>The ownership of the terminal device. Valid values:</p>
              * <ul>
-             * <li><strong>Personal</strong>: personal device.</li>
-             * <li><strong>Company</strong>: company device.</li>
+             * <li><strong>Personal</strong>: Personal device.</li>
+             * <li><strong>Company</strong>: Corporate device.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1048,12 +1083,12 @@ public class ListUserDevicesResponseBody extends TeaModel {
             /**
              * <p>The status of the endpoint device. Valid values:</p>
              * <ul>
-             * <li><strong>Online</strong>: online.</li>
-             * <li><strong>Offline</strong>: offline.</li>
-             * <li><strong>LongTermOffline</strong>: long-term offline.</li>
-             * <li><strong>Locked</strong>: locked.</li>
-             * <li><strong>Lost</strong>: reported as lost.</li>
-             * <li><strong>Unbound</strong>: unbound.</li>
+             * <li><strong>Online</strong>: Online.</li>
+             * <li><strong>Offline</strong>: Offline.</li>
+             * <li><strong>LongTermOffline</strong>: Long-term offline.</li>
+             * <li><strong>Locked</strong>: Locked.</li>
+             * <li><strong>Lost</strong>: Reported as lost.</li>
+             * <li><strong>Unbound</strong>: Unbound.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1065,7 +1100,7 @@ public class ListUserDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The endpoint device ID.</p>
+             * <p>The ID of the endpoint device.</p>
              * 
              * <strong>example:</strong>
              * <p>36efa42d-2c32-c4dc-e3fc-8541e33a****</p>
@@ -1076,14 +1111,14 @@ public class ListUserDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operating system type of the endpoint device. Valid values:</p>
+             * <p>The terminal device operating system type. Valid values:</p>
              * <ul>
              * <li><strong>Windows</strong>: Windows.</li>
              * <li><strong>macOS</strong>: macOS.</li>
              * <li><strong>Linux</strong>: Linux.</li>
              * <li><strong>Android</strong>: Android.</li>
              * <li><strong>iOS</strong>: iOS.</li>
-             * <li><strong>Windows_Wuying</strong>: WUYING Workspace.</li>
+             * <li><strong>Windows_Wuying</strong>: Wuying cloud desktop.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1117,12 +1152,34 @@ public class ListUserDevicesResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The disk encryption status of the user endpoint device. Valid values: Unsupported (encryption is not supported), Unencrypted (not encrypted), Encrypting (encrypting), Encrypted (encrypted), and EncryptFailed (encryption failed). If the status is not reported, null, or unknown, Unencrypted is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Unsupported</p>
+             */
+            public Builder diskEncryptStatus(String diskEncryptStatus) {
+                this.diskEncryptStatus = diskEncryptStatus;
+                return this;
+            }
+
+            /**
+             * <p>The reason why disk encryption failed or is not supported on the user endpoint device. This reason is returned only when DiskEncryptStatus is Unsupported or EncryptFailed. For other statuses, an empty string is returned. Maximum length: 512 characters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The current operating system version does not support BitLocker.</p>
+             */
+            public Builder diskEncryptStatusReason(String diskEncryptStatusReason) {
+                this.diskEncryptStatusReason = diskEncryptStatusReason;
+                return this;
+            }
+
+            /**
              * <p>The office data protection status. Valid values:</p>
              * <ul>
-             * <li><strong>Enabled</strong>: enabled.</li>
-             * <li><strong>Disabled</strong>: disabled.</li>
-             * <li><strong>Unprovisioned</strong>: not configured.</li>
-             * <li><strong>Unauthorized</strong>: unauthorized.</li>
+             * <li><strong>Enabled</strong>: Enabled.</li>
+             * <li><strong>Disabled</strong>: Disabled.</li>
+             * <li><strong>Unprovisioned</strong>: Unprovisioned.</li>
+             * <li><strong>Unauthorized</strong>: Unauthorized.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1136,8 +1193,8 @@ public class ListUserDevicesResponseBody extends TeaModel {
             /**
              * <p>The anti-intrusion status. Valid values:</p>
              * <ul>
-             * <li><strong>Enabled</strong>: enabled.</li>
-             * <li><strong>Disabled</strong>: disabled.</li>
+             * <li><strong>Enabled</strong>: Enabled.</li>
+             * <li><strong>Disabled</strong>: Disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1170,9 +1227,9 @@ public class ListUserDevicesResponseBody extends TeaModel {
             /**
              * <p>The Internet access status. Valid values:</p>
              * <ul>
-             * <li><strong>Enabled</strong>: enabled.</li>
-             * <li><strong>Disabled</strong>: disabled.</li>
-             * <li><strong>Unprovisioned</strong>: not configured.</li>
+             * <li><strong>Enabled</strong>: Enabled.</li>
+             * <li><strong>Disabled</strong>: Disabled.</li>
+             * <li><strong>Unprovisioned</strong>: Unprovisioned.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1184,7 +1241,7 @@ public class ListUserDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The internal IP address of the endpoint device.</p>
+             * <p>The internal IP address of the terminal device.</p>
              * 
              * <strong>example:</strong>
              * <p>192.168.XX.XX</p>
@@ -1195,7 +1252,7 @@ public class ListUserDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the device is joined to an Active Directory (AD) domain.</p>
+             * <p>Indicates whether the device is joined to an AD domain.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1206,7 +1263,7 @@ public class ListUserDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The MAC address of the endpoint device.</p>
+             * <p>The MAC address of the terminal device.</p>
              * 
              * <strong>example:</strong>
              * <p>00:16:XX:XX:7c:46</p>
@@ -1217,7 +1274,7 @@ public class ListUserDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The collection of matched device group IDs.</p>
+             * <p>The IDs of the matched device groups.</p>
              */
             public Builder matchDeviceGroupIds(java.util.List<String> matchDeviceGroupIds) {
                 this.matchDeviceGroupIds = matchDeviceGroupIds;
@@ -1238,9 +1295,9 @@ public class ListUserDevicesResponseBody extends TeaModel {
             /**
              * <p>The network access control status. Valid values:</p>
              * <ul>
-             * <li><strong>Enabled</strong>: enabled.</li>
-             * <li><strong>Disabled</strong>: disabled.</li>
-             * <li><strong>Unprovisioned</strong>: not configured.</li>
+             * <li><strong>Enabled</strong>: Enabled.</li>
+             * <li><strong>Disabled</strong>: Disabled.</li>
+             * <li><strong>Unprovisioned</strong>: Unprovisioned.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1252,7 +1309,7 @@ public class ListUserDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of network interfaces of the endpoint device.</p>
+             * <p>The list of network interfaces.</p>
              */
             public Builder netInterfaceInfo(java.util.List<NetInterfaceInfo> netInterfaceInfo) {
                 this.netInterfaceInfo = netInterfaceInfo;
@@ -1260,11 +1317,11 @@ public class ListUserDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The private access status. Valid values:</p>
+             * <p>The internal network access status. Valid values:</p>
              * <ul>
-             * <li><strong>Enabled</strong>: enabled.</li>
-             * <li><strong>Disabled</strong>: disabled.</li>
-             * <li><strong>Unprovisioned</strong>: not configured.</li>
+             * <li><strong>Enabled</strong>: Enabled.</li>
+             * <li><strong>Disabled</strong>: Disabled.</li>
+             * <li><strong>Unprovisioned</strong>: Unprovisioned.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1276,7 +1333,10 @@ public class ListUserDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * Province.
+             * <p>The province to which the public IP address belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Zhejiang</p>
              */
             public Builder province(String province) {
                 this.province = province;
@@ -1284,7 +1344,7 @@ public class ListUserDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The province name in English.</p>
+             * <p>The province in English.</p>
              * 
              * <strong>example:</strong>
              * <p>Beijing</p>
@@ -1295,7 +1355,7 @@ public class ListUserDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The province name in Chinese.</p>
+             * <p>The province in Chinese.</p>
              * 
              * <strong>example:</strong>
              * <p>北京市</p>
@@ -1332,7 +1392,7 @@ public class ListUserDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The motherboard serial number.</p>
+             * <p>The serial number of the baseboard.</p>
              * 
              * <strong>example:</strong>
              * <p>PJGGU00WBD****</p>
@@ -1343,7 +1403,7 @@ public class ListUserDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The BIOS system serial number.</p>
+             * <p>The serial number of the BIOS.</p>
              * 
              * <strong>example:</strong>
              * <p>5CG003****</p>
@@ -1354,7 +1414,7 @@ public class ListUserDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The hard disk serial number.</p>
+             * <p>The serial number of the disk drive.</p>
              * 
              * <strong>example:</strong>
              * <p>WD-WXR1A99A****</p>
@@ -1365,7 +1425,7 @@ public class ListUserDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The processor serial number.</p>
+             * <p>The serial number of the processor.</p>
              * 
              * <strong>example:</strong>
              * <p>BFEBFBFF0008****</p>
@@ -1387,7 +1447,7 @@ public class ListUserDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The logon IP address of the endpoint device.</p>
+             * <p>The logon IP address of the terminal device.</p>
              * 
              * <strong>example:</strong>
              * <p>11.49.XX.XX</p>
@@ -1398,7 +1458,7 @@ public class ListUserDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last online time of the endpoint device.</p>
+             * <p>The last online time of the terminal device, in the YYYY-MM-DD HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-08-24 19:04:42</p>
@@ -1412,7 +1472,7 @@ public class ListUserDevicesResponseBody extends TeaModel {
              * <p>The username.</p>
              * 
              * <strong>example:</strong>
-             * <p>王先生</p>
+             * <p>Mr. Wang</p>
              */
             public Builder username(String username) {
                 this.username = username;
@@ -1423,7 +1483,7 @@ public class ListUserDevicesResponseBody extends TeaModel {
              * <p>The name of the office area.</p>
              * 
              * <strong>example:</strong>
-             * <p>测试办公区</p>
+             * <p>Test office area</p>
              */
             public Builder workshop(String workshop) {
                 this.workshop = workshop;

@@ -159,7 +159,7 @@ public class ListUninstallApplicationsRequest extends Request {
         } 
 
         /**
-         * <p>The collection of uninstall application IDs.</p>
+         * <p>The IDs of the uninstallation applications.</p>
          */
         public Builder applicationIds(java.util.List<String> applicationIds) {
             this.putQueryParameter("ApplicationIds", applicationIds);
@@ -168,7 +168,7 @@ public class ListUninstallApplicationsRequest extends Request {
         }
 
         /**
-         * <p>The page number of the current page in a paging query. Valid values: 1 to 10000.</p>
+         * <p>The page number of the current page for paging. Valid values: 1 to 10000.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -181,10 +181,10 @@ public class ListUninstallApplicationsRequest extends Request {
         }
 
         /**
-         * <p>The department to which the user belongs. The value is 1 to 128 characters in length, supports Chinese and uppercase and lowercase letters, and can contain digits, periods (.), commas (,), semicolons (;), hyphens (-), underscores (_), forward slashes (/), at signs (@), and spaces.</p>
+         * <p>The department to which the user belongs. The value must be 1 to 128 characters in length and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), commas (,), semicolons (;), hyphens (-), underscores (_), forward slashes (/), at signs (@), and spaces.</p>
          * 
          * <strong>example:</strong>
-         * <p>Testing Department</p>
+         * <p>Test Department</p>
          */
         public Builder department(String department) {
             this.putQueryParameter("Department", department);
@@ -193,7 +193,7 @@ public class ListUninstallApplicationsRequest extends Request {
         }
 
         /**
-         * <p>The name of the terminal device. The value is 1 to 128 characters in length, supports Chinese and uppercase and lowercase letters, and can contain digits, periods (.), commas (,), semicolons (;), hyphens (-), underscores (<em>), forward slashes (/), at signs (@), and spaces. Entering only an underscore (</em>) additionally queries all terminal devices whose names contain 4-byte UTF-8 characters.</p>
+         * <p>The name of the terminal device. The value must be 1 to 128 characters in length and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), commas (,), semicolons (;), hyphens (-), underscores (<em>), forward slashes (/), at signs (@), and spaces. If you enter only an underscore (</em>), the system also queries all terminal devices whose names contain 4-byte UTF-8 characters.</p>
          * 
          * <strong>example:</strong>
          * <p>win10-64bit</p>
@@ -217,7 +217,7 @@ public class ListUninstallApplicationsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page in a paging query. Valid values: 1 to 500.</p>
+         * <p>The number of entries per page for paging. Valid values: 1 to 500.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -230,7 +230,7 @@ public class ListUninstallApplicationsRequest extends Request {
         }
 
         /**
-         * <p>The collection of uninstall application statuses.</p>
+         * <p>The statuses of the uninstallation applications.</p>
          */
         public Builder statuses(java.util.List<String> statuses) {
             this.putQueryParameter("Statuses", statuses);
@@ -239,7 +239,7 @@ public class ListUninstallApplicationsRequest extends Request {
         }
 
         /**
-         * <p>The username. The value is 1 to 128 characters in length, supports Chinese and uppercase and lowercase letters, and can contain digits, periods (.), underscores (_), hyphens (-), asterisks (*), at signs (@), and spaces.</p>
+         * <p>The username. The value must be 1 to 128 characters in length and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), hyphens (-), asterisks (*), at signs (@), and spaces.</p>
          * 
          * <strong>example:</strong>
          * <p>Mr. Wang</p>

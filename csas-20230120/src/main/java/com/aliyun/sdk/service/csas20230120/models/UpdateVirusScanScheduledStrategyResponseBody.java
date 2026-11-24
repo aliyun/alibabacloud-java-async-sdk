@@ -54,7 +54,7 @@ public class UpdateVirusScanScheduledStrategyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>3D7EC0AF-DB2A-5D9C-90EC-F090A6BAAEA7</p>

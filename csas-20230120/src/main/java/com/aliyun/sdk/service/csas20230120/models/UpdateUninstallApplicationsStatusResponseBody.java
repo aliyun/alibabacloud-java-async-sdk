@@ -67,7 +67,7 @@ public class UpdateUninstallApplicationsStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of uninstall applications.</p>
+         * <p>The list of uninstallation applications.</p>
          */
         public Builder applications(java.util.List<Applications> applications) {
             this.applications = applications;
@@ -75,7 +75,7 @@ public class UpdateUninstallApplicationsStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>9B769522-D50C-5978-8981-52BE800D6099</p>
@@ -287,7 +287,7 @@ public class UpdateUninstallApplicationsStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The uninstall application ID.</p>
+             * <p>The uninstallation application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>uninstall-app-6646831ac314****</p>
@@ -298,7 +298,7 @@ public class UpdateUninstallApplicationsStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the uninstall application was created.</p>
+             * <p>The time when the uninstallation application was created. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-07-17 18:46:55</p>
@@ -312,7 +312,7 @@ public class UpdateUninstallApplicationsStatusResponseBody extends TeaModel {
              * <p>The department to which the user belongs.</p>
              * 
              * <strong>example:</strong>
-             * <p>Testing Department</p>
+             * <p>Test Department</p>
              */
             public Builder department(String department) {
                 this.department = department;
@@ -320,7 +320,7 @@ public class UpdateUninstallApplicationsStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the endpoint device.</p>
+             * <p>The ID of the terminal device.</p>
              * 
              * <strong>example:</strong>
              * <p>36efa42d-2c32-c4dc-e3fc-8541e33a****</p>
@@ -331,7 +331,7 @@ public class UpdateUninstallApplicationsStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operating system type of the endpoint device. Valid values:</p>
+             * <p>The operating system type of the terminal device. Valid values:</p>
              * <ul>
              * <li><strong>Windows</strong>: Windows.</li>
              * <li><strong>macOS</strong>: macOS.</li>
@@ -350,7 +350,7 @@ public class UpdateUninstallApplicationsStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the endpoint device.</p>
+             * <p>The name of the terminal device.</p>
              * 
              * <strong>example:</strong>
              * <p>win10-64bit</p>
@@ -361,10 +361,10 @@ public class UpdateUninstallApplicationsStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the identity provider.</p>
+             * <p>The name of the user identity source.</p>
              * 
              * <strong>example:</strong>
-             * <p>Test Identity Provider</p>
+             * <p>Test Identity Source</p>
              */
             public Builder idpName(String idpName) {
                 this.idpName = idpName;
@@ -372,7 +372,7 @@ public class UpdateUninstallApplicationsStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the uninstallation has been performed.</p>
+             * <p>Specifies whether the uninstallation has been executed.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -383,7 +383,7 @@ public class UpdateUninstallApplicationsStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The MAC address of the endpoint device.</p>
+             * <p>The MAC address of the terminal device.</p>
              * 
              * <strong>example:</strong>
              * <p>00:16:XX:XX:7c:46</p>
@@ -416,7 +416,7 @@ public class UpdateUninstallApplicationsStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the uninstall application. Valid values:</p>
+             * <p>The status of the uninstallation application. Valid values:</p>
              * <ul>
              * <li><strong>Pending</strong>: Pending.</li>
              * <li><strong>Approved</strong>: Approved.</li>

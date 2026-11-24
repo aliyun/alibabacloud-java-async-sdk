@@ -39,6 +39,14 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HealthCheckConfig")
+    private HealthCheckConfig healthCheckConfig;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HealthCheckMode")
+    private String healthCheckMode;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("L7Config")
     private PAL7Config l7Config;
 
@@ -90,6 +98,8 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
         this.applicationId = builder.applicationId;
         this.configMode = builder.configMode;
         this.description = builder.description;
+        this.healthCheckConfig = builder.healthCheckConfig;
+        this.healthCheckMode = builder.healthCheckMode;
         this.l7Config = builder.l7Config;
         this.l7ProxyDomainAutomaticPrefix = builder.l7ProxyDomainAutomaticPrefix;
         this.l7ProxyDomainCustom = builder.l7ProxyDomainCustom;
@@ -149,6 +159,20 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return healthCheckConfig
+     */
+    public HealthCheckConfig getHealthCheckConfig() {
+        return this.healthCheckConfig;
+    }
+
+    /**
+     * @return healthCheckMode
+     */
+    public String getHealthCheckMode() {
+        return this.healthCheckMode;
     }
 
     /**
@@ -234,6 +258,8 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
         private String applicationId; 
         private String configMode; 
         private String description; 
+        private HealthCheckConfig healthCheckConfig; 
+        private String healthCheckMode; 
         private PAL7Config l7Config; 
         private String l7ProxyDomainAutomaticPrefix; 
         private String l7ProxyDomainCustom; 
@@ -257,6 +283,8 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
             this.applicationId = request.applicationId;
             this.configMode = request.configMode;
             this.description = request.description;
+            this.healthCheckConfig = request.healthCheckConfig;
+            this.healthCheckMode = request.healthCheckMode;
             this.l7Config = request.l7Config;
             this.l7ProxyDomainAutomaticPrefix = request.l7ProxyDomainAutomaticPrefix;
             this.l7ProxyDomainCustom = request.l7ProxyDomainCustom;
@@ -271,7 +299,7 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
         } 
 
         /**
-         * <p>The application address groups. This parameter can be specified when ConfigMode is set to Precise. This parameter cannot be specified when ConfigMode is an empty string.</p>
+         * <p>The application address groups. You can specify this parameter when ConfigMode is set to Precise. You cannot specify this parameter when ConfigMode is an empty string.</p>
          */
         public Builder addressGroups(java.util.List<AddressGroup> addressGroups) {
             this.putBodyParameter("AddressGroups", addressGroups);
@@ -280,7 +308,7 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
         }
 
         /**
-         * <p>The addresses of the private access application. You can specify up to 1000 addresses.</p>
+         * <p>The addresses of the private access application. You can specify up to 1,000 addresses.</p>
          */
         public Builder addresses(java.util.List<String> addresses) {
             this.putBodyParameter("Addresses", addresses);
@@ -289,7 +317,7 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
         }
 
         /**
-         * <p>The ID of the private access application. You can obtain the value from:</p>
+         * <p>The ID of the private access application. You can obtain the value from the following operations:</p>
          * <ul>
          * <li><a href="~~ListPrivateAccessApplications~~">ListPrivateAccessApplications</a>: Lists private access applications.</li>
          * <li><a href="~~CreatePrivateAccessApplication~~">CreatePrivateAccessApplication</a>: Creates a private access application.</li>
@@ -308,9 +336,12 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
         /**
          * <p>The configuration mode. Valid values:</p>
          * <ul>
-         * <li>Empty string: default mode.</li>
-         * <li>Precise: precise mode.</li>
+         * <li>Empty string: Default mode.</li>
+         * <li>Precise: Precise mode.</li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Precise</p>
          */
         public Builder configMode(String configMode) {
             this.putBodyParameter("ConfigMode", configMode);
@@ -319,7 +350,7 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
         }
 
         /**
-         * <p>The description of the private access application. The description must be 1 to 128 characters in length and can contain Chinese characters, letters, digits, periods (.), underscores (_), hyphens (-), and spaces.</p>
+         * <p>The description of the private access application. The description must be 1 to 128 characters in length, and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), hyphens (-), and spaces.</p>
          * 
          * <strong>example:</strong>
          * <p>This is a private access application</p>
@@ -331,7 +362,34 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
         }
 
         /**
-         * <p>The browser access mode parameter: the Layer 7 application configuration.</p>
+         * <p>The health check configuration. This parameter takes effect only when HealthCheckMode is set to Continuous. You cannot specify this parameter when HealthCheckMode is set to OnAccess.</p>
+         */
+        public Builder healthCheckConfig(HealthCheckConfig healthCheckConfig) {
+            String healthCheckConfigShrink = shrink(healthCheckConfig, "HealthCheckConfig", "json");
+            this.putBodyParameter("HealthCheckConfig", healthCheckConfigShrink);
+            this.healthCheckConfig = healthCheckConfig;
+            return this;
+        }
+
+        /**
+         * <p>The health check mode. Valid values:</p>
+         * <ul>
+         * <li>OnAccess: Checks health upon access without active probing.</li>
+         * <li>Continuous: Performs continuous health checks and periodically probes based on the configuration in HealthCheckConfig.
+         * If this parameter is not specified, the default value is OnAccess. When the application addresses include wildcard domain names or CIDR blocks, or when the number of application addresses exceeds 10, only OnAccess is supported.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OnAccess</p>
+         */
+        public Builder healthCheckMode(String healthCheckMode) {
+            this.putBodyParameter("HealthCheckMode", healthCheckMode);
+            this.healthCheckMode = healthCheckMode;
+            return this;
+        }
+
+        /**
+         * <p>The Layer 7 application configuration in browser access mode.</p>
          */
         public Builder l7Config(PAL7Config l7Config) {
             String l7ConfigShrink = shrink(l7Config, "L7Config", "json");
@@ -341,7 +399,7 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
         }
 
         /**
-         * <p>The browser access mode parameter: the prefix of the mapped proxy domain name. The prefix must be 3 to 20 characters in length and can contain lowercase letters, digits, and hyphens (-).</p>
+         * <p>The prefix of the mapped proxy domain name in browser access mode. The prefix must be 3 to 20 characters in length, and can contain lowercase letters, digits, and hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>app1-xxx</p>
@@ -353,7 +411,7 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
         }
 
         /**
-         * <p>The browser access mode parameter: the custom proxy domain name.</p>
+         * <p>The custom proxy domain name in browser access mode.</p>
          * 
          * <strong>example:</strong>
          * <p>app1.example.com</p>
@@ -365,7 +423,7 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
         }
 
         /**
-         * <p>The browser access mode parameter: the private proxy domain name.</p>
+         * <p>The private proxy domain name in browser access mode.</p>
          * 
          * <strong>example:</strong>
          * <p>app1.example.com</p>
@@ -379,8 +437,8 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
         /**
          * <p>The modification type of the private access application. Valid values:</p>
          * <ul>
-         * <li><strong>Cover</strong> (default): overwrites the original addresses, port ranges, and tag IDs with the values of the <strong>Addresses</strong>, <strong>PortRanges</strong>, and <strong>TagIds</strong> parameters.</li>
-         * <li><strong>Append</strong>: appends the values of the <strong>Addresses</strong>, <strong>PortRanges</strong>, and <strong>TagIds</strong> parameters to the original addresses, port ranges, and tag IDs.</li>
+         * <li><strong>Cover</strong> (default): Overwrites the original addresses, port ranges, and tag IDs with the values of the <strong>Addresses</strong>, <strong>PortRanges</strong>, and <strong>TagIds</strong> parameters.</li>
+         * <li><strong>Append</strong>: Appends the values of the <strong>Addresses</strong>, <strong>PortRanges</strong>, and <strong>TagIds</strong> parameters to the original addresses, port ranges, and tag IDs.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -393,7 +451,10 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
         }
 
         /**
-         * <p>The application name.</p>
+         * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>private_access_application_name</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -402,7 +463,7 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
         }
 
         /**
-         * <p>The port ranges of the private access application. You can specify up to 65535 port ranges. Multiple port ranges cannot overlap.</p>
+         * <p>The port ranges of the private access application. You can specify up to 65,535 port ranges. Multiple port ranges cannot be duplicate or overlap.</p>
          */
         public Builder portRanges(java.util.List<PortRanges> portRanges) {
             this.putBodyParameter("PortRanges", portRanges);
@@ -413,7 +474,7 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
         /**
          * <p>The protocol of the private access application. Valid values:</p>
          * <ul>
-         * <li><strong>All</strong>: all protocols.</li>
+         * <li><strong>All</strong>: All protocols.</li>
          * <li><strong>TCP</strong></li>
          * <li><strong>UDP</strong></li>
          * </ul>
@@ -430,8 +491,8 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
         /**
          * <p>The status of the private access application. Valid values:</p>
          * <ul>
-         * <li><strong>Enabled</strong>: enabled.</li>
-         * <li><strong>Disabled</strong>: disabled.</li>
+         * <li><strong>Enabled</strong>: Enabled.</li>
+         * <li><strong>Disabled</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -444,7 +505,7 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
         }
 
         /**
-         * <p>The IDs of private access tags. A private access application can be associated with up to 6 custom private access tags.</p>
+         * <p>The IDs of the private access tags. You can associate up to six custom private access tags with a private access application.</p>
          */
         public Builder tagIds(java.util.List<String> tagIds) {
             this.putBodyParameter("TagIds", tagIds);

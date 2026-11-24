@@ -85,7 +85,7 @@ public class CreateDomainMetaRequest extends Request {
         }
 
         /**
-         * <p>The list name. Maximum length: 32 characters.</p>
+         * <p>The name of the list. The name can be up to 32 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>office_domain</p>

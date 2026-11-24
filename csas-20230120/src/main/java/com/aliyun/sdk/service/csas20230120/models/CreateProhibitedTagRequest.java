@@ -74,7 +74,7 @@ public class CreateProhibitedTagRequest extends Request {
         } 
 
         /**
-         * <p>The description of the disabled software tag. The description can be up to 128 characters in length and can contain letters, digits, spaces, periods (.), underscores (_), and hyphens (-). Chinese characters are supported. This parameter can be left empty.</p>
+         * <p>The description of the prohibited software tag. The description can be up to 128 characters in length and can contain Chinese characters, uppercase and lowercase English letters, digits, spaces, periods (.), underscores (_), and hyphens (-). This parameter can be left empty.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -86,7 +86,7 @@ public class CreateProhibitedTagRequest extends Request {
         }
 
         /**
-         * <p>The name of the disabled software tag. Fuzzy match is supported. The name can be up to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). Chinese characters are supported. Spaces are not supported.</p>
+         * <p>The name of the prohibited software tag. Fuzzy match is supported. The name can be up to 128 characters in length and can contain Chinese characters, uppercase and lowercase English letters, digits, periods (.), underscores (_), and hyphens (-). Spaces are not allowed.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -75,7 +75,7 @@ public class CreateWmEmbedTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>BE4FB974-11BC-5453-9BE1-1606A73EACA6</p>
@@ -131,7 +131,7 @@ public class CreateWmEmbedTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The task ID, which is used to query the task execution result.</p>
+             * <p>The ID of the task. You can use the task ID to query the task execution result later.</p>
              * 
              * <strong>example:</strong>
              * <p>job:5GfrJYsoaffmCE7Z5bZtjUefzxfd****</p>

@@ -67,7 +67,7 @@ public class GetConnectorClientResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>ConnectorClient。</p>
+         * <p>The ConnectorClient.</p>
          */
         public Builder connectorClient(ConnectorClient connectorClient) {
             this.connectorClient = connectorClient;
@@ -75,7 +75,7 @@ public class GetConnectorClientResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>58D6B23E-E5DA-5418-8F61-51A3B5A30049</p>
@@ -352,8 +352,8 @@ public class GetConnectorClientResponseBody extends TeaModel {
             /**
              * <p>The connection status of the ConnectorClient. Valid values:</p>
              * <ul>
-             * <li><strong>Connected</strong>: Connected.</li>
-             * <li><strong>Disconnected</strong>: Disconnected.</li>
+             * <li><strong>Connected</strong>: The client is connected.</li>
+             * <li><strong>Disconnected</strong>: The client is disconnected.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -365,7 +365,7 @@ public class GetConnectorClientResponseBody extends TeaModel {
             }
 
             /**
-             * <p>ConnectorID。</p>
+             * <p>The connector ID.</p>
              * 
              * <strong>example:</strong>
              * <p>connector-94db94e06b98****</p>
@@ -376,7 +376,7 @@ public class GetConnectorClientResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The connector client version.</p>
+             * <p>The version of the connector client.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0.0</p>
@@ -387,7 +387,7 @@ public class GetConnectorClientResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time of the ConnectorClient.</p>
+             * <p>The time when the ConnectorClient was created. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-05-16 17:18:46</p>
@@ -398,7 +398,7 @@ public class GetConnectorClientResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique device identifier of the ConnectorClient.</p>
+             * <p>The unique identifier of the ConnectorClient device.</p>
              * 
              * <strong>example:</strong>
              * <p>E86266A0-2859-58EF-8F5B-EDE226FF6EB2</p>
@@ -444,9 +444,9 @@ public class GetConnectorClientResponseBody extends TeaModel {
             /**
              * <p>The O&amp;M status. Valid values:</p>
              * <ul>
-             * <li><strong>Running</strong>: O&amp;M in progress.</li>
+             * <li><strong>Running</strong>: O&amp;M is in progress.</li>
              * <li><strong>Failed</strong>: O&amp;M failed.</li>
-             * <li>(Empty string): Not in O&amp;M status.</li>
+             * <li>(Empty string): Not in an O&amp;M state.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -469,7 +469,7 @@ public class GetConnectorClientResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The program runtime. Unit: seconds.</p>
+             * <p>The runtime of the program. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -499,7 +499,7 @@ public class GetConnectorClientResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The enabled status of the ConnectorClient, which can be used to force the client offline. Valid values:</p>
+             * <p>The enabling status of the ConnectorClient. You can use this parameter to force the client offline. Valid values:</p>
              * <ul>
              * <li><strong>Enabled</strong>: Enabled.</li>
              * <li><strong>Disabled</strong>: Disabled.</li>
@@ -514,9 +514,9 @@ public class GetConnectorClientResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The new version status of the connector. Valid values:</p>
+             * <p>The upgrade status of the connector. Valid values:</p>
              * <ul>
-             * <li><strong>Latest</strong>: The current version is the latest.</li>
+             * <li><strong>Latest</strong>: The connector is of the latest version.</li>
              * <li><strong>NewVersionAvailable</strong>: A newer version is available for upgrade.</li>
              * </ul>
              * 

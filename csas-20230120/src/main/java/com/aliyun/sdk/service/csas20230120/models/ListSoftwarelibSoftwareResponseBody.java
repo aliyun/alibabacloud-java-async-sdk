@@ -106,7 +106,7 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The software list.</p>
+         * <p>The list of software packages.</p>
          */
         public Builder dataList(java.util.List<DataList> dataList) {
             this.dataList = dataList;
@@ -114,7 +114,7 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of entries per page. This parameter is not returned by this operation.</p>
+         * <p>The maximum number of entries returned on each page. This parameter is not returned by the current API operation.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -125,7 +125,7 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token. This parameter is not returned by this operation.</p>
+         * <p>The query token. This parameter is not returned by the current API operation.</p>
          * 
          * <strong>example:</strong>
          * <p>FFM+3L1WZbKngBeLWcDmQrzLuGDDwAw7JA5q2AjvTSJm9WyhQ0MwJoOWpky9ZhgcWfIgtGpZ+4NQX97+EIwsqUNQ==</p>
@@ -136,7 +136,7 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>BE4FB974-11BC-5453-9BE1-1606A73EACA6</p>
@@ -147,7 +147,7 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of software entries that match the query conditions.</p>
+         * <p>The total number of software packages that meet the query conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -359,7 +359,7 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the software version was created.</p>
+             * <p>The time when the software version was created. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-05 18:03:58</p>
@@ -370,7 +370,7 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of times the software has been downloaded from the client.</p>
+             * <p>The number of times the software is downloaded from the client.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -381,7 +381,7 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The MD5 value of the software package.</p>
+             * <p>The MD5 hash value of the software package.</p>
              * 
              * <strong>example:</strong>
              * <p>0b5824cdd509d3ed560e2d20d29a1bcb</p>
@@ -403,7 +403,7 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operating system to which the software package applies. Valid values:</p>
+             * <p>The operating system applicable to the software package. Valid values:</p>
              * <ul>
              * <li><strong>Windows</strong>: Windows.</li>
              * <li><strong>Mac(Apple)</strong>: macOS with Apple silicon.</li>
@@ -419,10 +419,10 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The software publisher type. Valid values:</p>
+             * <p>The type of the software publisher. Valid values:</p>
              * <ul>
-             * <li><strong>local</strong>: locally uploaded.</li>
-             * <li><strong>thirdparty</strong>: third-party link.</li>
+             * <li><strong>local</strong>: Local upload.</li>
+             * <li><strong>thirdparty</strong>: Third-party link.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -434,7 +434,7 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the software to which this version belongs.</p>
+             * <p>The ID of the software to which the version belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>softwarelib-software-1da844a39729****</p>
@@ -478,10 +478,10 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version publish status. Valid values:</p>
+             * <p>The release status of the version. Valid values:</p>
              * <ul>
-             * <li><strong>published</strong>: published.</li>
-             * <li><strong>unpublished</strong>: not published.</li>
+             * <li><strong>published</strong>: Published.</li>
+             * <li><strong>unpublished</strong>: Unpublished.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -504,7 +504,7 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The software version ID.</p>
+             * <p>The ID of the software version.</p>
              * 
              * <strong>example:</strong>
              * <p>softwarelib-version-21ae186e2ac9****</p>
@@ -847,7 +847,7 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The associated built-in software ID.</p>
+             * <p>The ID of the associated built-in software.</p>
              * 
              * <strong>example:</strong>
              * <p>softwarelib-software-1da844a39729****</p>
@@ -858,7 +858,7 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The software BundleId used for verification.</p>
+             * <p>The software bundle ID used for verification.</p>
              * 
              * <strong>example:</strong>
              * <p>test software</p>
@@ -880,7 +880,7 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The software classification ID.</p>
+             * <p>The ID of the software category.</p>
              * 
              * <strong>example:</strong>
              * <p>softwarelib-classify-61b7ccc63cae****</p>
@@ -891,7 +891,7 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the software was created, in seconds-level UNIX timestamp.</p>
+             * <p>The time when the software was created. The value is a UNIX timestamp accurate to seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1781748302</p>
@@ -902,7 +902,7 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The software description.</p>
+             * <p>The description of the software.</p>
              * 
              * <strong>example:</strong>
              * <p>This is a demo software.</p>
@@ -929,7 +929,7 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of times the software has been manually downloaded from the client.</p>
+             * <p>The number of times the software is manually downloaded from the client.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -962,7 +962,7 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The latest software version number for Mac (Apple).</p>
+             * <p>The maximum software version number for macOS with Apple silicon.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0.0</p>
@@ -973,7 +973,7 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The latest software version number for Mac (Intel).</p>
+             * <p>The maximum software version number for macOS with Intel processors.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0.0</p>
@@ -984,14 +984,14 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The policy matching target type. Valid values:</p>
+             * <p>The target type for policy matching. Valid values:</p>
              * <ul>
-             * <li><strong>UserGroupAll</strong>: all users.</li>
-             * <li><strong>UserGroupNormal</strong>: specified user groups.</li>
-             * <li><strong>DevTagNormal</strong>: specified devices.</li>
-             * <li><strong>DeviceGroupNormal</strong>: specified device groups.</li>
-             * <li><strong>DevTagAll</strong>: all devices.</li>
-             * <li><strong>None</strong>: not configured.</li>
+             * <li><strong>UserGroupAll</strong>: All users.</li>
+             * <li><strong>UserGroupNormal</strong>: Specified user groups.</li>
+             * <li><strong>DevTagNormal</strong>: Specified devices.</li>
+             * <li><strong>DeviceGroupNormal</strong>: Specified device groups.</li>
+             * <li><strong>DevTagAll</strong>: All devices.</li>
+             * <li><strong>None</strong>: Not configured.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1014,7 +1014,7 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution account (only supported on Windows).</p>
+             * <p>The execution account. Only Windows is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>admin</p>
@@ -1025,7 +1025,7 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The software ID.</p>
+             * <p>The ID of the software.</p>
              * 
              * <strong>example:</strong>
              * <p>softwarelib-software-1da844a39729****</p>
@@ -1036,7 +1036,7 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The software name.</p>
+             * <p>The name of the software.</p>
              * 
              * <strong>example:</strong>
              * <p>Thunder</p>
@@ -1047,7 +1047,7 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the built-in library source has been deleted.</p>
+             * <p>Indicates whether the source in the built-in library is deleted.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1058,10 +1058,10 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The software source. Valid values:</p>
+             * <p>The source of the software. Valid values:</p>
              * <ul>
-             * <li><strong>custom</strong>: custom software.</li>
-             * <li><strong>builtin</strong>: built-in software library.</li>
+             * <li><strong>custom</strong>: Custom software.</li>
+             * <li><strong>builtin</strong>: Built-in software library.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1081,7 +1081,7 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The software version list. This field is not returned by this operation. Call <a href="~~ListSoftwarelibVersion~~">ListSoftwarelibVersion</a> to query software versions.</p>
+             * <p>The list of software versions. This field is not returned by the current API operation. For more information about how to view and manage software versions, see <a href="https://www.alibabacloud.com/help/en/sase/user-guide/software-management">Software management</a>.</p>
              */
             public Builder versions(java.util.List<Versions> versions) {
                 this.versions = versions;
@@ -1089,7 +1089,7 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The latest software version number for Windows.</p>
+             * <p>The maximum software version number for Windows.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0.0</p>

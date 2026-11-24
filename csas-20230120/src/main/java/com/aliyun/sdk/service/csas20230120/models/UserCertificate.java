@@ -158,7 +158,10 @@ public class UserCertificate extends TeaModel {
         } 
 
         /**
-         * CertId.
+         * <p>The certificate ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cert-aabbccdd</p>
          */
         public Builder certId(String certId) {
             this.certId = certId;
@@ -166,7 +169,12 @@ public class UserCertificate extends TeaModel {
         }
 
         /**
-         * Certificate.
+         * <p>The certificate content in PEM format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE-----
+         * MIID...****
+         * -----END CERTIFICATE-----</p>
          */
         public Builder certificate(String certificate) {
             this.certificate = certificate;
@@ -174,7 +182,10 @@ public class UserCertificate extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The certificate description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Internal network application access certificate</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -182,7 +193,7 @@ public class UserCertificate extends TeaModel {
         }
 
         /**
-         * DnsNames.
+         * <p>The domain names for which the certificate is valid.</p>
          */
         public Builder dnsNames(java.util.List<String> dnsNames) {
             this.dnsNames = dnsNames;
@@ -190,7 +201,10 @@ public class UserCertificate extends TeaModel {
         }
 
         /**
-         * ExpTimeUnix.
+         * <p>The expiration time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1734492686</p>
          */
         public Builder expTimeUnix(Long expTimeUnix) {
             this.expTimeUnix = expTimeUnix;
@@ -198,7 +212,10 @@ public class UserCertificate extends TeaModel {
         }
 
         /**
-         * GmtCreateUnix.
+         * <p>The creation timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1734523812</p>
          */
         public Builder gmtCreateUnix(Long gmtCreateUnix) {
             this.gmtCreateUnix = gmtCreateUnix;
@@ -206,7 +223,10 @@ public class UserCertificate extends TeaModel {
         }
 
         /**
-         * GmtModifiedUnix.
+         * <p>The update timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1734523812</p>
          */
         public Builder gmtModifiedUnix(Long gmtModifiedUnix) {
             this.gmtModifiedUnix = gmtModifiedUnix;
@@ -214,7 +234,10 @@ public class UserCertificate extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The certificate name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Certificate 1</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -222,7 +245,12 @@ public class UserCertificate extends TeaModel {
         }
 
         /**
-         * PrivateKey.
+         * <p>The PEM private key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN PRIVATE KEY-----
+         * MIIE...****
+         * -----END PRIVATE KEY-----</p>
          */
         public Builder privateKey(String privateKey) {
             this.privateKey = privateKey;

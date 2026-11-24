@@ -67,7 +67,7 @@ public class GetDeviceGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The device label details.</p>
+         * <p>The device group details.</p>
          */
         public Builder deviceGroup(DeviceGroup deviceGroup) {
             this.deviceGroup = deviceGroup;
@@ -223,7 +223,7 @@ public class GetDeviceGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The device label description.</p>
+             * <p>The description of the device group.</p>
              * 
              * <strong>example:</strong>
              * <p>Test device group description</p>
@@ -234,7 +234,7 @@ public class GetDeviceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The device label ID.</p>
+             * <p>The ID of the device group.</p>
              * 
              * <strong>example:</strong>
              * <p>device-group-5191cf830a5e****</p>
@@ -245,7 +245,7 @@ public class GetDeviceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The dynamic device group rule operator.</p>
+             * <p>The operator for the dynamic device group rule.</p>
              * 
              * <strong>example:</strong>
              * <p>AND</p>
@@ -256,7 +256,7 @@ public class GetDeviceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The matching rule of the dynamic device label.</p>
+             * <p>The matching rule for the dynamic device group.</p>
              */
             public Builder dynamicRule(Rule dynamicRule) {
                 this.dynamicRule = dynamicRule;
@@ -264,10 +264,10 @@ public class GetDeviceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The device label type. Valid values:</p>
+             * <p>The type of the device group. Valid values:</p>
              * <ul>
-             * <li><strong>static</strong>: Static device label. Members consist of manually added terminal devices.</li>
-             * <li><strong>dynamic</strong>: Dynamic device label.</li>
+             * <li><strong>static</strong>: A static device group. Members are terminal devices that are manually added.</li>
+             * <li><strong>dynamic</strong>: A dynamic device group.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -279,10 +279,10 @@ public class GetDeviceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the device label is a system built-in device label. Valid values:</p>
+             * <p>Indicates whether the device group is a built-in system device group. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: System built-in device label.</li>
-             * <li><strong>false</strong>: User-defined device label.</li>
+             * <li><strong>true</strong>: The device group is a built-in system device group.</li>
+             * <li><strong>false</strong>: The device group is a custom device group.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -294,7 +294,7 @@ public class GetDeviceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The collection of terminal device IDs associated with the device label.</p>
+             * <p>The IDs of the devices associated with the device group.</p>
              */
             public Builder matchDevTags(java.util.List<String> matchDevTags) {
                 this.matchDevTags = matchDevTags;
@@ -302,7 +302,7 @@ public class GetDeviceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The device label name.</p>
+             * <p>The name of the device group.</p>
              * 
              * <strong>example:</strong>
              * <p>autotest_a1b2bfd0</p>

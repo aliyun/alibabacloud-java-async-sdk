@@ -134,10 +134,10 @@ public class CreateForwardStrategyRequest extends Request {
         } 
 
         /**
-         * <p>The description. The description must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), hyphens (-), and spaces. The description can also contain Chinese characters.</p>
+         * <p>The description. The description must be 1 to 128 characters in length and can contain Chinese characters, letters, digits, periods (.), underscores (_), hyphens (-), and spaces.</p>
          * 
          * <strong>example:</strong>
-         * <p>This is an internal access policy</p>
+         * <p>This is an internal network access policy</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -146,7 +146,7 @@ public class CreateForwardStrategyRequest extends Request {
         }
 
         /**
-         * <p>The target instance ID.</p>
+         * <p>The instance ID of the target instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -175,7 +175,7 @@ public class CreateForwardStrategyRequest extends Request {
         }
 
         /**
-         * <p>The name. The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name can also contain Chinese characters.</p>
+         * <p>The name. The name must be 1 to 128 characters in length and can contain Chinese characters, letters, digits, periods (.), underscores (_), and hyphens (-).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -203,8 +203,8 @@ public class CreateForwardStrategyRequest extends Request {
         /**
          * <p>The policy status. Valid values:</p>
          * <ul>
-         * <li><strong>Enabled</strong>: enabled.</li>
-         * <li><strong>Disabled</strong>: disabled.</li>
+         * <li><strong>Enabled</strong>: The policy is enabled.</li>
+         * <li><strong>Disabled</strong>: The policy is disabled.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

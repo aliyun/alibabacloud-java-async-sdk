@@ -104,7 +104,7 @@ public class PAApplicationUnauthorizedAccessConfig extends TeaModel {
         }
 
         /**
-         * <p>The content displayed in the client interception pop-up window.</p>
+         * <p>The content displayed in the client block pop-up window.</p>
          */
         public Builder blockContent(BlockContent blockContent) {
             this.blockContent = blockContent;
@@ -114,8 +114,8 @@ public class PAApplicationUnauthorizedAccessConfig extends TeaModel {
         /**
          * <p>Specifies whether the feature is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Enabled. Users are redirected to an interception page when they access an unauthorized application.</li>
-         * <li><strong>false</strong>: Disabled. An error message is returned by default when users access an unauthorized application.</li>
+         * <li><strong>true</strong>: Enabled. If an application is unauthorized, the user is redirected to the block page.</li>
+         * <li><strong>false</strong>: Disabled. If an application is unauthorized, an error message is returned by default.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -127,7 +127,7 @@ public class PAApplicationUnauthorizedAccessConfig extends TeaModel {
         }
 
         /**
-         * <p>The ID of the approval flow associated with the policy.</p>
+         * <p>The ID of the approval process associated with the policy.</p>
          * 
          * <strong>example:</strong>
          * <p>approval-process-0ee84ac4f9c31bc5</p>
@@ -222,7 +222,7 @@ public class PAApplicationUnauthorizedAccessConfig extends TeaModel {
             } 
 
             /**
-             * <p>The prompt content of the English block page.</p>
+             * <p>The English prompt message on the block page.</p>
              * 
              * <strong>example:</strong>
              * <p>You do not have permission to access this system. If you need to do so, please submit a permission request.</p>
@@ -233,7 +233,7 @@ public class PAApplicationUnauthorizedAccessConfig extends TeaModel {
             }
 
             /**
-             * <p>The background pattern of the English block page.</p>
+             * <p>The English background pattern of the block page.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://img.alicdn.com/xxx.png">https://img.alicdn.com/xxx.png</a></p>
@@ -244,7 +244,7 @@ public class PAApplicationUnauthorizedAccessConfig extends TeaModel {
             }
 
             /**
-             * <p>The title of the English block page.</p>
+             * <p>The English title of the block page.</p>
              * 
              * <strong>example:</strong>
              * <p>No Permission Access</p>
@@ -255,7 +255,7 @@ public class PAApplicationUnauthorizedAccessConfig extends TeaModel {
             }
 
             /**
-             * <p>The text of the English report approval button.</p>
+             * <p>The English text on the approval request button.</p>
              * 
              * <strong>example:</strong>
              * <p>Report</p>
@@ -351,10 +351,10 @@ public class PAApplicationUnauthorizedAccessConfig extends TeaModel {
             } 
 
             /**
-             * <p>The prompt content of the block page.</p>
+             * <p>The prompt message on the block page.</p>
              * 
              * <strong>example:</strong>
-             * <p>您暂无权限访问该系统。如有工作需要，请提交权限申请。</p>
+             * <p>You do not have permission to access this system. If you need access for work purposes, submit an access request</p>
              */
             public Builder browserAlertContent(String browserAlertContent) {
                 this.browserAlertContent = browserAlertContent;
@@ -376,7 +376,7 @@ public class PAApplicationUnauthorizedAccessConfig extends TeaModel {
              * <p>The title of the block page.</p>
              * 
              * <strong>example:</strong>
-             * <p>无权限访问</p>
+             * <p>Access Denied</p>
              */
             public Builder browserAlertTitle(String browserAlertTitle) {
                 this.browserAlertTitle = browserAlertTitle;
@@ -384,10 +384,10 @@ public class PAApplicationUnauthorizedAccessConfig extends TeaModel {
             }
 
             /**
-             * <p>The text of the report approval button.</p>
+             * <p>The text on the approval request button.</p>
              * 
              * <strong>example:</strong>
-             * <p>前往报备</p>
+             * <p>Request Access</p>
              */
             public Builder reportButtonText(String reportButtonText) {
                 this.reportButtonText = reportButtonText;

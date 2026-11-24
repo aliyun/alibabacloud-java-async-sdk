@@ -67,7 +67,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The terminal device.</p>
+         * <p>The endpoint device.</p>
          */
         public Builder device(Device device) {
             this.device = device;
@@ -332,7 +332,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The CPU usage percentage of the process.</p>
+             * <p>The percentage of CPU usage by the process.</p>
              * 
              * <strong>example:</strong>
              * <p>0.05</p>
@@ -343,7 +343,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The process running description.</p>
+             * <p>The description of the running process.</p>
              * 
              * <strong>example:</strong>
              * <p>C:\Program Files\Google\Chrome\Application\chrome.exe</p>
@@ -354,7 +354,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The memory usage of the process, in MB.</p>
+             * <p>The memory usage of the process. Unit: MB.</p>
              * 
              * <strong>example:</strong>
              * <p>233</p>
@@ -365,7 +365,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The process name.</p>
+             * <p>The name of the process.</p>
              * 
              * <strong>example:</strong>
              * <p>chrome.exe</p>
@@ -463,6 +463,12 @@ public class GetUserDeviceResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("DiskAvailable")
         private Integer diskAvailable;
+
+        @com.aliyun.core.annotation.NameInMap("DiskEncryptStatus")
+        private String diskEncryptStatus;
+
+        @com.aliyun.core.annotation.NameInMap("DiskEncryptStatusReason")
+        private String diskEncryptStatusReason;
 
         @com.aliyun.core.annotation.NameInMap("DiskUsed")
         private Integer diskUsed;
@@ -580,6 +586,8 @@ public class GetUserDeviceResponseBody extends TeaModel {
             this.deviceVersion = builder.deviceVersion;
             this.disk = builder.disk;
             this.diskAvailable = builder.diskAvailable;
+            this.diskEncryptStatus = builder.diskEncryptStatus;
+            this.diskEncryptStatusReason = builder.diskEncryptStatusReason;
             this.diskUsed = builder.diskUsed;
             this.dlpStatus = builder.dlpStatus;
             this.edrStatus = builder.edrStatus;
@@ -793,6 +801,20 @@ public class GetUserDeviceResponseBody extends TeaModel {
          */
         public Integer getDiskAvailable() {
             return this.diskAvailable;
+        }
+
+        /**
+         * @return diskEncryptStatus
+         */
+        public String getDiskEncryptStatus() {
+            return this.diskEncryptStatus;
+        }
+
+        /**
+         * @return diskEncryptStatusReason
+         */
+        public String getDiskEncryptStatusReason() {
+            return this.diskEncryptStatusReason;
         }
 
         /**
@@ -1031,6 +1053,8 @@ public class GetUserDeviceResponseBody extends TeaModel {
             private String deviceVersion; 
             private String disk; 
             private Integer diskAvailable; 
+            private String diskEncryptStatus; 
+            private String diskEncryptStatusReason; 
             private Integer diskUsed; 
             private String dlpStatus; 
             private String edrStatus; 
@@ -1091,6 +1115,8 @@ public class GetUserDeviceResponseBody extends TeaModel {
                 this.deviceVersion = model.deviceVersion;
                 this.disk = model.disk;
                 this.diskAvailable = model.diskAvailable;
+                this.diskEncryptStatus = model.diskEncryptStatus;
+                this.diskEncryptStatusReason = model.diskEncryptStatusReason;
                 this.diskUsed = model.diskUsed;
                 this.dlpStatus = model.dlpStatus;
                 this.edrStatus = model.edrStatus;
@@ -1125,6 +1151,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
 
             /**
              * <p>The client status. Valid values:</p>
+             * <ul>
+             * <li><strong>Online</strong>: online</li>
+             * <li><strong>Offline</strong>: offline</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Online</p>
@@ -1146,7 +1176,12 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The auto-logon status of the device. Valid values:</p>
+             * <p>The passwordless login status of the device. Valid values:</p>
+             * <ul>
+             * <li><strong>Enabled</strong>: enabled</li>
+             * <li><strong>Disabled</strong>: disabled</li>
+             * <li><strong>Unprovisioned</strong>: unprovisioned</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Enabled</p>
@@ -1157,7 +1192,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The battery health percentage.</p>
+             * <p>The battery health.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -1168,7 +1203,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The battery remaining charge percentage.</p>
+             * <p>The remaining battery percentage.</p>
              * 
              * <strong>example:</strong>
              * <p>90</p>
@@ -1179,7 +1214,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The CPU model of the terminal device.</p>
+             * <p>The CPU model of the endpoint device.</p>
              * 
              * <strong>example:</strong>
              * <p>Apple M1</p>
@@ -1201,7 +1236,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The city name in English.</p>
+             * <p>The city in English.</p>
              * 
              * <strong>example:</strong>
              * <p>Beijing City</p>
@@ -1212,7 +1247,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The city name in Chinese.</p>
+             * <p>The city in Chinese.</p>
              * 
              * <strong>example:</strong>
              * <p>北京市</p>
@@ -1234,7 +1269,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The continent name in English.</p>
+             * <p>The continent in English.</p>
              * 
              * <strong>example:</strong>
              * <p>Asia</p>
@@ -1245,7 +1280,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The continent name in Chinese.</p>
+             * <p>The continent in Chinese.</p>
              * 
              * <strong>example:</strong>
              * <p>亚洲</p>
@@ -1267,7 +1302,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The country name in English.</p>
+             * <p>The country in English.</p>
              * 
              * <strong>example:</strong>
              * <p>China</p>
@@ -1278,7 +1313,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The country name in Chinese.</p>
+             * <p>The country in Chinese.</p>
              * 
              * <strong>example:</strong>
              * <p>中国</p>
@@ -1289,7 +1324,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The registration time of the terminal device.</p>
+             * <p>The registration time of the endpoint device. The format is YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-05-16 17:18:46</p>
@@ -1303,7 +1338,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
              * <p>The department to which the user belongs.</p>
              * 
              * <strong>example:</strong>
-             * <p>QA Department</p>
+             * <p>Test Department</p>
              */
             public Builder department(String department) {
                 this.department = department;
@@ -1311,7 +1346,11 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ownership of the terminal device. Valid values:</p>
+             * <p>The ownership of the endpoint device. Valid values:</p>
+             * <ul>
+             * <li><strong>Personal</strong>: personal device</li>
+             * <li><strong>Company</strong>: company device</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Company</p>
@@ -1322,7 +1361,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The model of the terminal device.</p>
+             * <p>The model of the endpoint device.</p>
              * 
              * <strong>example:</strong>
              * <p>MacBookPro17,1</p>
@@ -1333,7 +1372,15 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the terminal device. Valid values:</p>
+             * <p>The status of the endpoint device. Valid values:</p>
+             * <ul>
+             * <li><strong>Online</strong>: online</li>
+             * <li><strong>Offline</strong>: offline</li>
+             * <li><strong>LongTermOffline</strong>: long-term offline</li>
+             * <li><strong>Locked</strong>: locked</li>
+             * <li><strong>Lost</strong>: lost</li>
+             * <li><strong>Unbound</strong>: unbound</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Online</p>
@@ -1344,7 +1391,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the terminal device.</p>
+             * <p>The ID of the endpoint device.</p>
              * 
              * <strong>example:</strong>
              * <p>36efa42d-2c32-c4dc-e3fc-8541e33a****</p>
@@ -1355,7 +1402,15 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operating system type of the terminal device. Valid values:</p>
+             * <p>The operating system type of the endpoint device. Valid values:</p>
+             * <ul>
+             * <li><strong>Windows</strong>: Windows</li>
+             * <li><strong>macOS</strong>: macOS</li>
+             * <li><strong>Linux</strong>: Linux</li>
+             * <li><strong>Android</strong>: Android</li>
+             * <li><strong>iOS</strong>: iOS</li>
+             * <li><strong>Windows_Wuying</strong>: WUYING Workspace</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Windows</p>
@@ -1366,7 +1421,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operating system version of the terminal device.</p>
+             * <p>The operating system version of the endpoint device.</p>
              * 
              * <strong>example:</strong>
              * <p>3.5.1</p>
@@ -1377,7 +1432,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The disk model of the terminal device.</p>
+             * <p>The disk model of the endpoint device.</p>
              * 
              * <strong>example:</strong>
              * <p>APPLE SSD AP0512Q Media</p>
@@ -1388,7 +1443,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The available disk space, in GB.</p>
+             * <p>The available disk space. Unit: GB.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -1399,7 +1454,29 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The used disk space, in GB.</p>
+             * <p>The disk encryption status of the user endpoint device. Valid values: Unsupported (encryption not supported), Unencrypted (not encrypted), Encrypting (encrypting), Encrypted (encrypted), and EncryptFailed (encryption failed). If the status is not reported, is null, or is unknown, Unencrypted is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Unsupported</p>
+             */
+            public Builder diskEncryptStatus(String diskEncryptStatus) {
+                this.diskEncryptStatus = diskEncryptStatus;
+                return this;
+            }
+
+            /**
+             * <p>The reason why disk encryption failed or is not supported on the user endpoint device. This reason is returned only when DiskEncryptStatus is Unsupported or EncryptFailed. For other statuses, an empty string is returned. Maximum length: 512 characters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The current operating system version does not support BitLocker</p>
+             */
+            public Builder diskEncryptStatusReason(String diskEncryptStatusReason) {
+                this.diskEncryptStatusReason = diskEncryptStatusReason;
+                return this;
+            }
+
+            /**
+             * <p>The used disk space. Unit: GB.</p>
              * 
              * <strong>example:</strong>
              * <p>103</p>
@@ -1411,6 +1488,12 @@ public class GetUserDeviceResponseBody extends TeaModel {
 
             /**
              * <p>The office data protection status. Valid values:</p>
+             * <ul>
+             * <li><strong>Enabled</strong>: enabled</li>
+             * <li><strong>Disabled</strong>: disabled</li>
+             * <li><strong>Unprovisioned</strong>: unprovisioned</li>
+             * <li><strong>Unauthorized</strong>: unauthorized</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Unauthorized</p>
@@ -1422,6 +1505,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
 
             /**
              * <p>The anti-intrusion status. Valid values:</p>
+             * <ul>
+             * <li><strong>Enabled</strong>: enabled</li>
+             * <li><strong>Disabled</strong>: disabled</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Disabled</p>
@@ -1432,7 +1519,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The historical users of the terminal device.</p>
+             * <p>The collection of historical users of the endpoint device.</p>
              */
             public Builder historyUsers(java.util.List<HistoryUsers> historyUsers) {
                 this.historyUsers = historyUsers;
@@ -1440,7 +1527,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the terminal device.</p>
+             * <p>The name of the endpoint device.</p>
              * 
              * <strong>example:</strong>
              * <p>win10-64bit</p>
@@ -1452,6 +1539,11 @@ public class GetUserDeviceResponseBody extends TeaModel {
 
             /**
              * <p>The Internet access status. Valid values:</p>
+             * <ul>
+             * <li><strong>Enabled</strong>: enabled</li>
+             * <li><strong>Disabled</strong>: disabled</li>
+             * <li><strong>Unprovisioned</strong>: unprovisioned</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Disabled</p>
@@ -1462,7 +1554,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The internal IP address of the terminal device.</p>
+             * <p>The internal IP address of the endpoint device.</p>
              * 
              * <strong>example:</strong>
              * <p>172.16.XX.XX</p>
@@ -1473,7 +1565,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the terminal has joined an AD domain.</p>
+             * <p>Indicates whether the endpoint has joined an Active Directory (AD) domain.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1484,7 +1576,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The MAC address of the terminal device.</p>
+             * <p>The MAC address of the endpoint device.</p>
              * 
              * <strong>example:</strong>
              * <p>48:9e:XX:XX:02:80</p>
@@ -1495,7 +1587,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IDs of matched device groups.</p>
+             * <p>The collection of matched device group IDs.</p>
              */
             public Builder matchDeviceGroupIds(java.util.List<String> matchDeviceGroupIds) {
                 this.matchDeviceGroupIds = matchDeviceGroupIds;
@@ -1515,6 +1607,11 @@ public class GetUserDeviceResponseBody extends TeaModel {
 
             /**
              * <p>The network access control status. Valid values:</p>
+             * <ul>
+             * <li><strong>Enabled</strong>: Enabled.</li>
+             * <li><strong>Disabled</strong>: Disabled.</li>
+             * <li><strong>Unprovisioned</strong>: Unprovisioned.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Unprovisioned</p>
@@ -1533,7 +1630,12 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The private access status. Valid values:</p>
+             * <p>The internal network access status. Valid values:</p>
+             * <ul>
+             * <li><strong>Enabled</strong>: Enabled.</li>
+             * <li><strong>Disabled</strong>: Disabled.</li>
+             * <li><strong>Unprovisioned</strong>: Unprovisioned.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Enabled</p>
@@ -1544,7 +1646,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of processes running on the terminal.</p>
+             * <p>The list of running processes on the terminal device.</p>
              */
             public Builder processes(java.util.List<Processes> processes) {
                 this.processes = processes;
@@ -1563,7 +1665,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The province name in English.</p>
+             * <p>The province in English.</p>
              * 
              * <strong>example:</strong>
              * <p>Beijing</p>
@@ -1574,7 +1676,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The province name in Chinese.</p>
+             * <p>The province in Chinese.</p>
              * 
              * <strong>example:</strong>
              * <p>北京市</p>
@@ -1597,6 +1699,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
 
             /**
              * <p>Indicates whether sharing is enabled for the device. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: Sharing is enabled.</li>
+             * <li><strong>false</strong>: Sharing is disabled.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1607,7 +1713,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The motherboard serial number.</p>
+             * <p>The serial number of the baseboard.</p>
              * 
              * <strong>example:</strong>
              * <p>PJGGU00WBD****</p>
@@ -1618,7 +1724,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The serial number (SN) of the BIOS system.</p>
+             * <p>The serial number of the BIOS.</p>
              * 
              * <strong>example:</strong>
              * <p>5CG003****</p>
@@ -1629,7 +1735,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The hard disk serial number.</p>
+             * <p>The serial number of the disk drive.</p>
              * 
              * <strong>example:</strong>
              * <p>WD-WXR1A99A****</p>
@@ -1640,7 +1746,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The serial number (SN) of the processor.</p>
+             * <p>The serial number of the processor.</p>
              * 
              * <strong>example:</strong>
              * <p>BFEBFBFF0008****</p>
@@ -1651,7 +1757,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The system serial number.</p>
+             * <p>The serial number of the system.</p>
              * 
              * <strong>example:</strong>
              * <p>KVN9C9****</p>
@@ -1684,7 +1790,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last online time of the terminal device.</p>
+             * <p>The last online time of the terminal device. Format: YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-08-24 19:04:42</p>
@@ -1709,7 +1815,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
              * <p>The name of the office area.</p>
              * 
              * <strong>example:</strong>
-             * <p>Test Office Area</p>
+             * <p>Test office area</p>
              */
             public Builder workshop(String workshop) {
                 this.workshop = workshop;

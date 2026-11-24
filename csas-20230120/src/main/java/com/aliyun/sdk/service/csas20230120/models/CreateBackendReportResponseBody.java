@@ -132,7 +132,7 @@ public class CreateBackendReportResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of user-object combinations that failed to be created.</p>
+         * <p>The number of failed combinations.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -143,7 +143,7 @@ public class CreateBackendReportResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The processing results for each user-object combination. If some combinations fail, the operation still returns results for all combinations.</p>
+         * <p>The processing results of each combination of user and report object. If some combinations fail, the operation still returns the results of all combinations.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -151,7 +151,7 @@ public class CreateBackendReportResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of deduplicated filing objects.</p>
+         * <p>The number of deduplicated report objects.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -173,7 +173,7 @@ public class CreateBackendReportResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of user-object combinations that are created.</p>
+         * <p>The number of successfully created combinations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -184,7 +184,7 @@ public class CreateBackendReportResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of deduplicated filing users.</p>
+         * <p>The number of deduplicated target users.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -195,7 +195,7 @@ public class CreateBackendReportResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of expanded user-object combinations.</p>
+         * <p>The total number of combinations of users and report objects after expansion.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -412,7 +412,7 @@ public class CreateBackendReportResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The approval instance ID generated after a successful creation. This parameter is not returned if the creation fails.</p>
+             * <p>The ID of the approval instance generated after the combination is successfully created. This parameter is not returned if the creation fails.</p>
              * 
              * <strong>example:</strong>
              * <p>approval-6b5188a28634****</p>
@@ -423,7 +423,7 @@ public class CreateBackendReportResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error code returned when the current combination fails to be created. This parameter is not returned if the creation succeeds.</p>
+             * <p>The error code returned when the current combination fails to be created. This parameter is not returned if the creation is successful.</p>
              * 
              * <strong>example:</strong>
              * <p>TargetNotFound</p>
@@ -434,7 +434,7 @@ public class CreateBackendReportResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The filing effective status. Enabled is returned when the creation succeeds, which indicates that the filing is valid.</p>
+             * <p>The effective status of the report. If the creation is successful, Enabled is returned, which indicates that the report is valid.</p>
              * 
              * <strong>example:</strong>
              * <p>Enabled</p>
@@ -445,7 +445,7 @@ public class CreateBackendReportResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message returned when the current combination fails to be created. This parameter is not returned if the creation succeeds.</p>
+             * <p>The error message returned when the current combination fails to be created. This parameter is not returned if the creation is successful.</p>
              * 
              * <strong>example:</strong>
              * <p>target user is not found</p>
@@ -456,7 +456,7 @@ public class CreateBackendReportResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The filing object corresponding to the current combination. The fields vary based on the PolicyType value.</p>
+             * <p>The report object corresponding to the current combination. The fields vary based on the policy type.</p>
              * 
              * <strong>example:</strong>
              * <p>[{&quot;ApplicationId&quot;:&quot;pa-application-92b60359213a****&quot;}]</p>
@@ -467,7 +467,7 @@ public class CreateBackendReportResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The filing type. BackendReport is always returned when the creation succeeds, which indicates a backend filing.</p>
+             * <p>The report type. If the creation is successful, BackendReport is returned, which indicates a backend report.</p>
              * 
              * <strong>example:</strong>
              * <p>BackendReport</p>
@@ -478,7 +478,7 @@ public class CreateBackendReportResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The approval status. Approved is returned when the creation succeeds, which indicates that the filing is approved.</p>
+             * <p>The approval status. If the creation is successful, Approved is returned, which indicates that the request is approved.</p>
              * 
              * <strong>example:</strong>
              * <p>Approved</p>
@@ -489,7 +489,7 @@ public class CreateBackendReportResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the current combination is created.</p>
+             * <p>Indicates whether the current combination is successfully created.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -500,7 +500,7 @@ public class CreateBackendReportResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The filing user corresponding to the current combination.</p>
+             * <p>The target user corresponding to the current combination.</p>
              */
             public Builder target(Target target) {
                 this.target = target;

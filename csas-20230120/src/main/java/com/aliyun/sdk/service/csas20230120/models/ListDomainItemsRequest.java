@@ -119,7 +119,7 @@ public class ListDomainItemsRequest extends Request {
         } 
 
         /**
-         * <p>The current page number in paging.</p>
+         * <p>The page number of the current page in a paged query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,7 +144,7 @@ public class ListDomainItemsRequest extends Request {
         }
 
         /**
-         * <p>The list ID. This is a unique business identifier used for policy references and CRUD operations.</p>
+         * <p>The list ID. This is a unique business identifier used for policy references and create, delete, and update operations.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,7 +157,11 @@ public class ListDomainItemsRequest extends Request {
         }
 
         /**
-         * <p>The list type (Blacklist/Whitelist).</p>
+         * <p>The list type (Blacklist/Whitelist). Valid values:</p>
+         * <ul>
+         * <li>la_domain_white_list: domain name whitelist.</li>
+         * <li>la_domain_black_list: domain name blacklist.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,7 +174,7 @@ public class ListDomainItemsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page in paging. Valid values: 1 to 1000.</p>
+         * <p>The number of entries per page in a paged query. Valid values: 1 to 1000.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

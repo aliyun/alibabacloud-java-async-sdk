@@ -78,7 +78,7 @@ public class CreateProhibitedSoftwareResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the disabled software.</p>
+         * <p>The details of the blocked software.</p>
          */
         public Builder software(Software software) {
             this.software = software;
@@ -170,7 +170,7 @@ public class CreateProhibitedSoftwareResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The bundle ID of the application. This parameter is required only for macOS processes.</p>
+             * <p>The bundle ID. This field is applicable only to macOS processes.</p>
              * 
              * <strong>example:</strong>
              * <p>com.aliyun.security.sase</p>
@@ -181,7 +181,7 @@ public class CreateProhibitedSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The command line parameters for starting the process.</p>
+             * <p>The command-line arguments used to start the process.</p>
              * 
              * <strong>example:</strong>
              * <p>--start-minimized</p>
@@ -299,7 +299,7 @@ public class CreateProhibitedSoftwareResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The bundle ID of the application. This parameter is required only for macOS processes.</p>
+             * <p>The bundle ID. This field is applicable only to macOS processes.</p>
              * 
              * <strong>example:</strong>
              * <p>com.aliyun.security.sase</p>
@@ -310,7 +310,7 @@ public class CreateProhibitedSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The command line parameters for starting the process.</p>
+             * <p>The command-line arguments used to start the process.</p>
              * 
              * <strong>example:</strong>
              * <p>--start-minimized</p>
@@ -428,7 +428,7 @@ public class CreateProhibitedSoftwareResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The bundle ID of the application. This parameter is required only for macOS processes.</p>
+             * <p>The bundle ID. This field is applicable only to macOS processes.</p>
              * 
              * <strong>example:</strong>
              * <p>com.aliyun.security.sase</p>
@@ -439,7 +439,7 @@ public class CreateProhibitedSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The command line parameters for starting the process.</p>
+             * <p>The command-line arguments used to start the process.</p>
              * 
              * <strong>example:</strong>
              * <p>--start-minimized</p>
@@ -609,7 +609,7 @@ public class CreateProhibitedSoftwareResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time of the disabled software, in the yyyy-MM-dd HH:mm:ss format. The time is in the UTC+8 time zone.</p>
+             * <p>The time when the blocked software was created. The time is displayed in the yyyy-MM-dd HH:mm:ss format and uses the UTC+8 time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-09-05 10:20:46</p>
@@ -620,7 +620,7 @@ public class CreateProhibitedSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the disabled software.</p>
+             * <p>The description of the blocked software.</p>
              * 
              * <strong>example:</strong>
              * <p>Endpoint group targeting github</p>
@@ -647,7 +647,7 @@ public class CreateProhibitedSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The software name.</p>
+             * <p>The name of the software.</p>
              * 
              * <strong>example:</strong>
              * <p>shell</p>
@@ -658,7 +658,7 @@ public class CreateProhibitedSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the disabled software.</p>
+             * <p>The ID of the blocked software.</p>
              * 
              * <strong>example:</strong>
              * <p>swb-83995ff2ae38****</p>
@@ -669,7 +669,7 @@ public class CreateProhibitedSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IDs of disabled software tags associated with this disabled software.</p>
+             * <p>The IDs of the blocked software tags associated with the blocked software.</p>
              */
             public Builder tagIds(java.util.List<String> tagIds) {
                 this.tagIds = tagIds;

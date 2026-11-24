@@ -67,7 +67,7 @@ public class ListVirusScanAdditionalListsResponseBody extends TeaModel {
         } 
 
         /**
-         * AdditionalLists.
+         * <p>The list of blacklists and whitelists grouped by match dimension. If a match dimension does not contain any list entries, the dimension is not included in the list.</p>
          */
         public Builder additionalLists(java.util.List<AdditionalLists> additionalLists) {
             this.additionalLists = additionalLists;
@@ -75,7 +75,10 @@ public class ListVirusScanAdditionalListsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3D7EC0AF-DB2A-5D9C-90EC-F090A6BAAEA7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +157,10 @@ public class ListVirusScanAdditionalListsResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time of the list entry. The time is in the yyyy-MM-dd HH:mm:ss format and uses the UTC+8 time zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-08-21 10:24:31</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -162,7 +168,10 @@ public class ListVirusScanAdditionalListsResponseBody extends TeaModel {
             }
 
             /**
-             * Detail.
+             * <p>The content of the list entry. The meaning is determined by the AdditionalType to which it belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>.tmp</p>
              */
             public Builder detail(String detail) {
                 this.detail = detail;
@@ -170,7 +179,10 @@ public class ListVirusScanAdditionalListsResponseBody extends TeaModel {
             }
 
             /**
-             * ListId.
+             * <p>The ID of the list entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>additional-list-4d7b1e9a6c38****</p>
              */
             public Builder listId(String listId) {
                 this.listId = listId;
@@ -237,7 +249,7 @@ public class ListVirusScanAdditionalListsResponseBody extends TeaModel {
             } 
 
             /**
-             * ListDetail.
+             * <p>The list of list entries.</p>
              */
             public Builder listDetail(java.util.List<ListDetail> listDetail) {
                 this.listDetail = listDetail;
@@ -245,7 +257,14 @@ public class ListVirusScanAdditionalListsResponseBody extends TeaModel {
             }
 
             /**
-             * ListType.
+             * <p>The list type. Valid values:</p>
+             * <ul>
+             * <li><strong>Blacklist</strong>: Blacklist. Matched files are directly identified as virus files.</li>
+             * <li><strong>Whitelist</strong>: Whitelist. Matched files are excluded from virus detection.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Whitelist</p>
              */
             public Builder listType(String listType) {
                 this.listType = listType;
@@ -312,7 +331,17 @@ public class ListVirusScanAdditionalListsResponseBody extends TeaModel {
             } 
 
             /**
-             * AdditionalType.
+             * <p>The match dimension of the list entry. Valid values:</p>
+             * <ul>
+             * <li><strong>FileSuffix</strong>: Matches by file name extension.</li>
+             * <li><strong>FileName</strong>: Matches by file name.</li>
+             * <li><strong>FolderName</strong>: Matches by folder name.</li>
+             * <li><strong>FilePath</strong>: Matches by file path.</li>
+             * <li><strong>FileMd5</strong>: Matches by file MD5 value.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>FileSuffix</p>
              */
             public Builder additionalType(String additionalType) {
                 this.additionalType = additionalType;
@@ -320,7 +349,7 @@ public class ListVirusScanAdditionalListsResponseBody extends TeaModel {
             }
 
             /**
-             * Lists.
+             * <p>The lists grouped by list type under the match dimension.</p>
              */
             public Builder lists(java.util.List<Lists> lists) {
                 this.lists = lists;

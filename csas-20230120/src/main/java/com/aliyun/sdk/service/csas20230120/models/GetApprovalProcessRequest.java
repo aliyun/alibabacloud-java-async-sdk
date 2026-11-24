@@ -60,9 +60,9 @@ public class GetApprovalProcessRequest extends Request {
         } 
 
         /**
-         * <p>The approval flow ID. Valid values:</p>
+         * <p>The ID of the approval process. You can call the following operation to obtain the value:</p>
          * <ul>
-         * <li><a href="~~ListApprovalProcesses~~">ListApprovalProcesses</a>: Lists approval flows.</li>
+         * <li><a href="~~ListApprovalProcesses~~">ListApprovalProcesses</a>: Queries a list of approval processes in batches.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
