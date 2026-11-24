@@ -171,7 +171,10 @@ public class DescribeLifecycleHooksRequest extends Request {
         } 
 
         /**
-         * <p>The IDs of the lifecycle hooks that you want to query.</p>
+         * <p>The IDs of the lifecycle hooks.</p>
+         * <blockquote>
+         * <p>Conditionally required: You must specify at least one of LifecycleHookIds or ScalingGroupId when you query lifecycle hooks. If you specify both parameters, LifecycleHookIds takes precedence. If you specify only RegionId without specifying either of the two parameters, a 400 InvalidParameter error is returned.</p>
+         * </blockquote>
          */
         public Builder lifecycleHookIds(java.util.List<String> lifecycleHookIds) {
             this.putQueryParameter("LifecycleHookIds", lifecycleHookIds);
@@ -210,7 +213,7 @@ public class DescribeLifecycleHooksRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. Pages start from page 1.</p>
+         * <p>The page number of the instance status list. Pages start from 1.</p>
          * <p>Default value: 1.</p>
          * 
          * <strong>example:</strong>
@@ -258,6 +261,9 @@ public class DescribeLifecycleHooksRequest extends Request {
 
         /**
          * <p>The ID of the scaling group.</p>
+         * <blockquote>
+         * <p>Conditionally required: You must specify at least one of LifecycleHookIds or ScalingGroupId when you query lifecycle hooks. If you specify only RegionId without specifying either of the two parameters, a 400 InvalidParameter error is returned.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>asg-bp1igpak5ft1flyp****</p>

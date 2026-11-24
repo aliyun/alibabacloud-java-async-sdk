@@ -207,6 +207,10 @@ public class CreateScalingConfigurationRequest extends Request {
     private java.util.Map<String, ?> schedulerOptions;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecondaryEniVSwitchConstraint")
+    private String secondaryEniVSwitchConstraint;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SecurityEnhancementStrategy")
     private String securityEnhancementStrategy;
 
@@ -315,6 +319,7 @@ public class CreateScalingConfigurationRequest extends Request {
         this.scalingConfigurationName = builder.scalingConfigurationName;
         this.scalingGroupId = builder.scalingGroupId;
         this.schedulerOptions = builder.schedulerOptions;
+        this.secondaryEniVSwitchConstraint = builder.secondaryEniVSwitchConstraint;
         this.securityEnhancementStrategy = builder.securityEnhancementStrategy;
         this.securityGroupId = builder.securityGroupId;
         this.securityGroupIds = builder.securityGroupIds;
@@ -675,6 +680,13 @@ public class CreateScalingConfigurationRequest extends Request {
     }
 
     /**
+     * @return secondaryEniVSwitchConstraint
+     */
+    public String getSecondaryEniVSwitchConstraint() {
+        return this.secondaryEniVSwitchConstraint;
+    }
+
+    /**
      * @return securityEnhancementStrategy
      */
     public String getSecurityEnhancementStrategy() {
@@ -827,6 +839,7 @@ public class CreateScalingConfigurationRequest extends Request {
         private String scalingConfigurationName; 
         private String scalingGroupId; 
         private java.util.Map<String, ?> schedulerOptions; 
+        private String secondaryEniVSwitchConstraint; 
         private String securityEnhancementStrategy; 
         private String securityGroupId; 
         private java.util.List<String> securityGroupIds; 
@@ -896,6 +909,7 @@ public class CreateScalingConfigurationRequest extends Request {
             this.scalingConfigurationName = request.scalingConfigurationName;
             this.scalingGroupId = request.scalingGroupId;
             this.schedulerOptions = request.schedulerOptions;
+            this.secondaryEniVSwitchConstraint = request.secondaryEniVSwitchConstraint;
             this.securityEnhancementStrategy = request.securityEnhancementStrategy;
             this.securityGroupId = request.securityGroupId;
             this.securityGroupIds = request.securityGroupIds;
@@ -941,12 +955,14 @@ public class CreateScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to associate an ECS instance on a dedicated host with the dedicated host. Valid values:</p>
+         * <p>Specifies whether to associate the instance on a dedicated host with the dedicated host. Valid values:</p>
          * <ul>
-         * <li>default: does not associate the ECS instance with the dedicated host. If you start an ECS instance that was stopped in economical mode and the original dedicated host has insufficient resources, the ECS instance is automatically deployed to another dedicated host in the automatic deployment resource pool.</li>
-         * <li>host: associates the ECS instance with the dedicated host. If you start an ECS instance that was stopped in economical mode, the instance remains on the original dedicated host. If the original dedicated host has insufficient resources, the ECS instance fails to start.</li>
+         * <li><p>default: The instance is not associated with the dedicated host. If an instance with the economical mode enabled is stopped and then started, and the resources of the original dedicated host are insufficient, the instance is automatically deployed to another dedicated host in the automatic deployment resource pool.</p>
+         * </li>
+         * <li><p>host: The instance is associated with the dedicated host. If an instance with the economical mode enabled is stopped and then started, it remains on the original dedicated host. If the resources of the original dedicated host are insufficient, the instance fails to start.</p>
+         * </li>
          * </ul>
-         * <p>Default value: default</p>
+         * <p>Default value: default.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -958,7 +974,7 @@ public class CreateScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see the &quot;<a href="https://help.aliyun.com/document_detail/25693.html">How to ensure the idempotence of a request</a>&quot; topic.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">Ensure idempotence</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-42665544****</p>
@@ -970,10 +986,10 @@ public class CreateScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The number of vCPUs.</p>
-         * <p>You can specify the number of vCPUs and the memory size to determine the range of instance types. For example, you can set CPU to 2 and Memory to 16 to specify instance types that have 2 vCPUs and 16 GiB of memory. If you specify Cpu and Memory, Auto Scaling determines the available instance types based on factors such as I/O optimization requirements and zones. Then, Auto Scaling preferentially creates instances by using the lowest-priced instance type.</p>
+         * <p>The number of vCPUs. Unit: cores.</p>
+         * <p>You can specify both Cpu and Memory to define the range of instance types. For example, if you set Cpu to 2 and Memory to 16, all instance types with 2 vCPUs and 16 GiB of memory are matched. Auto Scaling determines the available instance types based on factors such as I/O optimization and zone, and creates instances with the lowest price.</p>
          * <blockquote>
-         * <p>You can specify Cpu and Memory to determine the range of instance types only if you set Scaling Policy to Cost Optimization Policy and you do not specify instance types in the scaling configuration.</p>
+         * <p>This configuration takes effect only when the scaling mode is set to cost optimization and no instance type is specified in the scaling configuration.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -986,12 +1002,14 @@ public class CreateScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The performance mode of the burstable instance. Valid values:</p>
+         * <p>Specifies the running pattern of the burstable instance. Valid values:</p>
          * <ul>
-         * <li>Standard: standard mode</li>
-         * <li>Unlimited: unlimited mode</li>
+         * <li><p>Standard: standard pattern.</p>
+         * </li>
+         * <li><p>Unlimited: unlimited pattern.</p>
+         * </li>
          * </ul>
-         * <p>For more information, see the &quot;Performance modes&quot; section in the &quot;<a href="https://help.aliyun.com/document_detail/59977.html">Overview</a>&quot; topic.</p>
+         * <p>For more information, see the performance schema section in <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>Standard</p>
@@ -1003,17 +1021,17 @@ public class CreateScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The priority of the custom ECS instance type + vSwitch combination.</p>
+         * <p>The custom priority of the ECS instance type and vSwitch combination.</p>
          * <blockquote>
-         * <p> This parameter takes effect only when Scaling Policy of the scaling group is set to Priority Policy.</p>
+         * <p>Notice: This parameter takes effect only when the scaling policy of the scaling group is set to the priority-based policy.</p>
          * </blockquote>
-         * <p>If Auto Scaling cannot create ECS instances by using the custom ECS instance type + vSwitch combination of the highest priority, Auto Scaling creates ECS instances by using the custom ECS instance type + vSwitch combination of the next highest priority.</p>
+         * <p>If an instance cannot be created based on the instance type and vSwitch combination with a higher priority, Auto Scaling automatically selects the combination with the next highest priority to create the instance.</p>
          * <blockquote>
-         * <p> If you specify the priorities of only partial custom ECS instance type + vSwitch combinations, Auto Scaling preferentially creates ECS instances by using the custom combinations that have specified priorities. If the custom combinations that have specified priorities do not provide sufficient resources, Auto Scaling creates ECS instances by using the custom combinations that do not have specified priorities based on the specified orders of vSwitches and instance types.</p>
-         * </blockquote>
+         * <p>If you specify custom priorities for only some instance type and vSwitch combinations, the unspecified combinations have lower priorities than the specified ones. The priorities of the unspecified combinations are determined based on the vSwitch sequence in the scaling group and the instance type sequence in the scaling configuration.</p>
          * <ul>
-         * <li>Example: the specified order of vSwitches for your scaling group is vsw1 and vsw2 and the specified order of instance types in your scaling configuration is type1 and type 2. In addition, you use CustomPriorities to specify [&quot;vsw2+type2&quot;, &quot;vsw1+type2&quot;]. In this example, the vsw2+type2 combination has the highest priority and the vsw2+type1 combination has the lowest priority. The vsw1+type2 combination has a higher priority than the vsw1+type1 combination.</li>
+         * <li>Example: If the vSwitch sequence in the scaling group is vsw1 and vsw2, the instance type sequence in the scaling configuration is type1 and type2, and the custom priority sequence is [&quot;vsw2+type2&quot;, &quot;vsw1+type2&quot;], the final priority sequence is: &quot;vsw2+type2&quot; &gt; &quot;vsw1+type2&quot; &gt; &quot;vsw1+type1&quot; &gt; &quot;vsw2+type1&quot;.</li>
          * </ul>
+         * </blockquote>
          */
         public Builder customPriorities(java.util.List<CustomPriorities> customPriorities) {
             this.putQueryParameter("CustomPriorities", customPriorities);
@@ -1022,7 +1040,7 @@ public class CreateScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The data disks.</p>
+         * <p>The collection of data cloud disk information.</p>
          */
         public Builder dataDisks(java.util.List<DataDisks> dataDisks) {
             this.putQueryParameter("DataDisks", dataDisks);
@@ -1043,8 +1061,8 @@ public class CreateScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The ID of the dedicated host on which you want to create an ECS instance. You cannot create preemptible instances on dedicated hosts. If you specify DedicatedHostId, SpotStrategy and SpotPriceLimit are ignored.</p>
-         * <p>You can call the DescribeDedicatedHosts operation to query dedicated host IDs.</p>
+         * <p>Specifies whether to create the ECS instance on a dedicated host. Because dedicated hosts do not support spot instances, the SpotStrategy and SpotPriceLimit parameters are automatically ignored if DedicatedHostId is specified.</p>
+         * <p>You can call the DescribeDedicatedHosts operation to query the list of dedicated host IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>dh-bp67acfmxazb4p****</p>
@@ -1056,7 +1074,20 @@ public class CreateScalingConfigurationRequest extends Request {
         }
 
         /**
-         * DeletionProtection.
+         * <p>The release protection property of the instance. This property specifies whether the instance can be directly released by using the ECS console or the DeleteInstance API operation, which prevents accidental deletion of the instance. Valid values:</p>
+         * <ul>
+         * <li><p>true: enables release protection for the instance. The instance cannot be directly released by using the ECS console or the DeleteInstance API operation.</p>
+         * </li>
+         * <li><p>false: shutdown release protection for the instance. The instance can be directly released by using the ECS console or the DeleteInstance API operation.</p>
+         * </li>
+         * </ul>
+         * <p>Default value: false.</p>
+         * <blockquote>
+         * <p>This property applies only to pay-as-you-go instances to prevent instances created by Auto Scaling during scale-out from being accidentally deleted. It does not affect normal scale-in activities. Instances with release protection enabled can still be released during scale-in activities.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder deletionProtection(Boolean deletionProtection) {
             this.putQueryParameter("DeletionProtection", deletionProtection);
@@ -1065,7 +1096,7 @@ public class CreateScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The ID of the deployment set of the ECS instances that are created by using the scaling configuration.</p>
+         * <p>The ID of the deployment set to which the ECS instance belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>ds-bp1frxuzdg87zh4pz****</p>
@@ -1077,10 +1108,10 @@ public class CreateScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The hostname of the ECS instance. The hostname cannot start or end with a period (.) or a hyphen (-). The hostname cannot contain consecutive periods (.) or hyphens (-). Naming conventions for different types of instances:</p>
+         * <p>The hostname of the ECS instance. The hostname cannot start or end with a period (.) or a hyphen (-) and cannot contain consecutive periods (.) or hyphens (-). The naming requirements for different instance types are as follows:</p>
          * <ul>
-         * <li>Windows instances: The hostname must be 2 to 15 characters in length and can contain letters, digits, and hyphens (-). The hostname cannot contain periods (.) or contain only digits.</li>
-         * <li>Other instances, such as Linux instances: The hostname must be 2 to 64 characters in length. You can use periods (.) to separate a hostname into multiple segments. Each segment can contain letters, digits, and hyphens (-).</li>
+         * <li>Windows instances: The hostname must be 2 to 15 characters in length and can contain letters, digits, and hyphens (-). It cannot contain periods (.) or contain only digits.</li>
+         * <li>Other instance types such as Linux instances: The hostname must be 2 to 64 characters in length and can contain multiple periods (.). The string between two periods is a segment, which can contain letters, digits, and hyphens (-).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1093,7 +1124,7 @@ public class CreateScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Elastic High Performance Computing (E-HPC) cluster to which the ECS instances that are created by using the scaling configuration belong.</p>
+         * <p>The ID of the HPC cluster to which the ECS instance belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>hpc-clusterid</p>
@@ -1107,12 +1138,12 @@ public class CreateScalingConfigurationRequest extends Request {
         /**
          * <p>Specifies whether to enable the access channel for instance metadata. Valid values:</p>
          * <ul>
-         * <li>enabled</li>
-         * <li>disabled</li>
+         * <li>enabled: enables the access channel.</li>
+         * <li>disabled: disables the access channel.</li>
          * </ul>
          * <p>Default value: enabled.</p>
          * <blockquote>
-         * <p> For information about instance metadata, see <a href="https://help.aliyun.com/document_detail/108460.html">Obtain instance metadata</a>.</p>
+         * <p>For more information about instance metadata, see <a href="https://help.aliyun.com/document_detail/108460.html">Overview of instance metadata</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1125,14 +1156,14 @@ public class CreateScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to forcibly use the security hardening mode (IMDSv2) to access instance metadata. Valid values:</p>
+         * <p>Specifies whether to forcibly use the security-hardened mode (IMDSv2) to access instance metadata. Valid values:</p>
          * <ul>
-         * <li>optional: does not forcibly use the security hardening mode (IMDSv2).</li>
-         * <li>required: forcibly uses the security hardening mode (IMDSv2). If you set this parameter to required, you cannot access instance metadata in normal mode.</li>
+         * <li>optional: does not forcibly use the security-hardened mode.</li>
+         * <li>required: forcibly uses the security-hardened mode. After you set this value, you cannot access instance metadata in normal mode.</li>
          * </ul>
          * <p>Default value: optional.</p>
          * <blockquote>
-         * <p> For more information about instance metadata access modes, see <a href="https://help.aliyun.com/document_detail/108460.html">Access modes of instance metadata</a>.</p>
+         * <p>For more information about the modes for accessing instance metadata, see <a href="https://help.aliyun.com/document_detail/108460.html">Access modes of instance metadata</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1145,7 +1176,7 @@ public class CreateScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The name of the image family. If you specify this parameter, the most recent custom images that are available in the specified image family are returned. You can use the images to create instances. If you specify ImageId, you cannot specify ImageFamily.</p>
+         * <p>The name of the image family. You can set this parameter to obtain the latest available image in the image family to create instances. If <code>ImageId</code> is specified, you cannot specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>hangzhou-daily-update</p>
@@ -1157,7 +1188,7 @@ public class CreateScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The ID of the image that Auto Scaling uses to automatically create ECS instances.</p>
+         * <p>The ID of the image file. The image resource used during automatic creation of instances.</p>
          * 
          * <strong>example:</strong>
          * <p>centos6u5_64_20G_aliaegis****.vhd</p>
@@ -1169,8 +1200,8 @@ public class CreateScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The name of the image. Each image name must be unique in a region. If you specify ImageId, ImageName is ignored.</p>
-         * <p>You cannot use ImageName to specify images that are purchased from Alibaba Cloud Marketplace.</p>
+         * <p>The name of the image file. The image name must be unique within a region. If ImageId is specified, ImageName is ignored.</p>
+         * <p>You cannot use ImageName to specify an Alibaba Cloud Marketplace image.</p>
          * 
          * <strong>example:</strong>
          * <p>image****</p>
@@ -1182,7 +1213,7 @@ public class CreateScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The description of the ECS instance. The description must be 2 to 256 characters in length. The description can contain letters and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>The description of the ECS instance. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>Test instance.</p>
@@ -1194,7 +1225,7 @@ public class CreateScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The name of the ECS instance that Auto Scaling creates based on the scaling configuration.</p>
+         * <p>The name of the ECS instance during automatic creation by using this scaling configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>instance****</p>
@@ -1206,7 +1237,7 @@ public class CreateScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The intelligent configuration settings, which determine the available instance types.</p>
+         * <p>The collection of intelligent configuration information used to filter instance types that meet your requirements.</p>
          */
         public Builder instancePatternInfos(java.util.List<InstancePatternInfos> instancePatternInfos) {
             this.putQueryParameter("InstancePatternInfos", instancePatternInfos);
@@ -1215,7 +1246,7 @@ public class CreateScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The instance type of the ECS instance. For more information, see the <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> topic.</p>
+         * <p>The instance type of the ECS instance. For more information, see instance families.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs.g6.large</p>
@@ -1227,7 +1258,7 @@ public class CreateScalingConfigurationRequest extends Request {
         }
 
         /**
-         * InstanceTypeCandidateOptions.
+         * <p>After you enable the candidate mode, if issues such as insufficient stock occur, the system supplements the currently selected instance types with similar instance types of the same size, or creates vSwitches in candidate zones and adds them to the scaling group.</p>
          */
         public Builder instanceTypeCandidateOptions(InstanceTypeCandidateOptions instanceTypeCandidateOptions) {
             this.putQueryParameter("InstanceTypeCandidateOptions", instanceTypeCandidateOptions);
@@ -1236,7 +1267,7 @@ public class CreateScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The information about instance types.</p>
+         * <p>The information used to specify instance types.</p>
          */
         public Builder instanceTypeOverrides(java.util.List<InstanceTypeOverrides> instanceTypeOverrides) {
             this.putQueryParameter("InstanceTypeOverrides", instanceTypeOverrides);
@@ -1245,8 +1276,8 @@ public class CreateScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The instance types. If you specify InstanceTypes, InstanceType is ignored.</p>
-         * <p>Auto Scaling creates instances based on a priority list of instance types. If it fails to create instances using the highest-priority type, it automatically moves to the next type in the priority order.</p>
+         * <p>The multiple instance types. If InstanceTypes is specified, InstanceType is ignored.</p>
+         * <p>If an instance cannot be created based on the instance type with a higher priority, Auto Scaling automatically selects the instance type with the next highest priority to create the instance.</p>
          */
         public Builder instanceTypes(java.util.List<String> instanceTypes) {
             this.putQueryParameter("InstanceTypes", instanceTypes);
@@ -1255,12 +1286,14 @@ public class CreateScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The metering method for network usage. Valid values:</p>
+         * <p>The network billing method. Valid values:</p>
          * <ul>
-         * <li>PayByBandwidth: You are charged for the maximum available bandwidth that is specified by InternetMaxBandwidthOut.</li>
-         * <li>PayByTraffic: You are charged based on the amount of transferred data. InternetMaxBandwidthOut specifies only the maximum available bandwidth.</li>
+         * <li><p>PayByBandwidth: pay-by-bandwidth. In this case, InternetMaxBandwidthOut specifies the fixed bandwidth value.</p>
+         * </li>
+         * <li><p>PayByTraffic: pay-by-traffic. In this case, InternetMaxBandwidthOut specifies only the maximum bandwidth, and you are billed based on the actual network traffic.</p>
+         * </li>
          * </ul>
-         * <p>For the classic network, the default value is PayByBandwidth. For VPCs, the default value is PayByTraffic.</p>
+         * <p>If this parameter is not specified, the default value is PayByBandwidth for the classic network and PayByTraffic for a VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>PayByTraffic</p>
@@ -1274,12 +1307,12 @@ public class CreateScalingConfigurationRequest extends Request {
         /**
          * <p>The maximum inbound public bandwidth. Unit: Mbit/s. Valid values:</p>
          * <ul>
-         * <li>If the purchased outbound public bandwidth is less than or equal to 10 Mbit/s, the valid values of this parameter are 1 to 10, and the default value is 10.</li>
-         * <li>If the purchased outbound public bandwidth is greater than 10 Mbit/s, the valid values of this parameter are 1 to the value of <code>InternetMaxBandwidthOut</code>, and the default value is the value of <code>InternetMaxBandwidthOut</code>.</li>
+         * <li>If the purchased outbound public bandwidth is less than or equal to 10 Mbit/s: 1 to 10. Default value: 10.</li>
+         * <li>If the purchased outbound public bandwidth is greater than 10 Mbit/s: 1 to the value of <code>InternetMaxBandwidthOut</code>. Default value: the value of <code>InternetMaxBandwidthOut</code>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>100</p>
+         * <p>10</p>
          */
         public Builder internetMaxBandwidthIn(Integer internetMaxBandwidthIn) {
             this.putQueryParameter("InternetMaxBandwidthIn", internetMaxBandwidthIn);
@@ -1292,7 +1325,7 @@ public class CreateScalingConfigurationRequest extends Request {
          * <p>Default value: 0.</p>
          * 
          * <strong>example:</strong>
-         * <p>50</p>
+         * <p>10</p>
          */
         public Builder internetMaxBandwidthOut(Integer internetMaxBandwidthOut) {
             this.putQueryParameter("InternetMaxBandwidthOut", internetMaxBandwidthOut);
@@ -1301,9 +1334,12 @@ public class CreateScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to create an I/O optimized instance. Valid values:</p>
-         * <p>none: does not create an I/O optimized instance. optimized: creates an I/O optimized instance.</p>
-         * <p>For instances of retired instance types, the default value is none. For instances of other instance types, the default value is optimized.</p>
+         * <p>Specifies whether the instance is an I/O optimization instance. Valid values:</p>
+         * <ul>
+         * <li>none: The instance is not an I/O optimization instance.</li>
+         * <li>optimized: The instance is an I/O optimization instance.</li>
+         * </ul>
+         * <p>The default value is none for retired instance types and optimized for other instance types.</p>
          * 
          * <strong>example:</strong>
          * <p>optimized</p>
@@ -1315,7 +1351,7 @@ public class CreateScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The number of randomly generated IPv6 addresses that you want to allocate to the elastic network interface (ENI).</p>
+         * <p>The number of IPv6 addresses that are randomly generated for the network interface controller (NIC).</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1327,10 +1363,10 @@ public class CreateScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The name of the key pair that you want to use to log on to an ECS instance.</p>
+         * <p>The name of the key pair used to log on to the ECS instance. </p>
          * <ul>
-         * <li>Windows instances do not support this parameter.</li>
-         * <li>By default, the username and password authentication method is disabled for Linux instances.</li>
+         * <li>For Windows instances, this parameter is ignored and left empty by default. </li>
+         * <li>For Linux instances, password-based logon is disabled by default.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1343,8 +1379,8 @@ public class CreateScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The weight of an ECS instance as a backend server. Valid values: 1 to 100.</p>
-         * <p>Default value: 50</p>
+         * <p>The weight of the ECS instance as a load balancing backend server. Valid values: 1 to 100.</p>
+         * <p>Default value: 50.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -1357,9 +1393,9 @@ public class CreateScalingConfigurationRequest extends Request {
 
         /**
          * <p>The memory size. Unit: GiB.</p>
-         * <p>You can specify the number of vCPUs and the memory size to determine the range of instance types. For example, you can set Cpu to 2 and Memory to 16 to specify instance types that have 2 vCPUs and 16 GiB of memory. If you specify Cpu and Memory, Auto Scaling determines the available instance types based on factors such as I/O optimization requirements and zones. Then, Auto Scaling preferentially creates instances by using the lowest-priced instance type.</p>
+         * <p>You can specify both Cpu and Memory to define the range of instance types. For example, if you set Cpu to 2 and Memory to 16, all instance types with 2 vCPUs and 16 GiB of memory are matched. Auto Scaling determines the available instance types based on factors such as I/O optimization and zone, and creates instances with the lowest price.</p>
          * <blockquote>
-         * <p>You can specify Cpu and Memory to determine the range of instance types only if you set Scaling Policy to Cost Optimization Policy and you do not specify instance types in the scaling configuration.</p>
+         * <p>This configuration takes effect only when the scaling mode is set to cost optimization and no instance type is specified in the scaling configuration.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1372,7 +1408,7 @@ public class CreateScalingConfigurationRequest extends Request {
         }
 
         /**
-         * NetworkInterfaces.
+         * <p>The list of network interface controller (NIC) devices.</p>
          */
         public Builder networkInterfaces(java.util.List<NetworkInterfaces> networkInterfaces) {
             this.putQueryParameter("NetworkInterfaces", networkInterfaces);
@@ -1399,11 +1435,11 @@ public class CreateScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The password that you want to use to log on to an ECS instance. The password must be 8 to 30 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. The following special characters are supported:</p>
-         * <p><code>`() ~!@#$%^&amp;*-_+=\|{}[]:;\&quot;&lt;&gt;,.?/</code></p>
-         * <p>The password of a Windows instance cannot start with a forward slash (/).</p>
+         * <p>The password of the ECS instance. The password must be 8 to 30 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include:</p>
+         * <p>\<code>()</code> ~!@#$%^&amp;*-_+=\|{}[]:;\&quot;&lt;&gt;,.?/`</p>
+         * <p>For Windows instances, the password cannot start with a forward slash (/).</p>
          * <blockquote>
-         * <p>For security reasons, we recommend that you use HTTPS to send requests if you specify Password.</p>
+         * <p>If you specify the Password parameter, send requests over HTTPS to prevent password leaks.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1416,10 +1452,10 @@ public class CreateScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to use the password that is preconfigured in the image. Before you use this parameter, make sure that a password is configured in the image. Valid values:</p>
+         * <p>Specifies whether to use the preset password of the image. When you use this parameter, make sure that a password is preset in the image. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: uses the preset password of the image.</li>
+         * <li>false: does not use the preset password of the image.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1432,7 +1468,7 @@ public class CreateScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The name of the RAM role that you attach to the ECS instance. The name is provided and maintained by Resource Access Management (RAM). You can call the ListRoles operation to query the available RAM roles.</p>
+         * <p>The name of the Resource Access Management (RAM) role for the ECS instance. RAM roles are provided and maintained by RAM. You can call the ListRoles operation to query available RAM roles.</p>
          * 
          * <strong>example:</strong>
          * <p>ramrole****</p>
@@ -1444,7 +1480,7 @@ public class CreateScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the ECS instances that are created by using the scaling configuration belong.</p>
+         * <p>The ID of the resource group to which the ECS instance belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-resource****</p>
@@ -1465,10 +1501,12 @@ public class CreateScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The resource pools used for instance creation, which can be the public pool or a private pool associated with any active elasticity assurance or capacity reservation. When you specify this parameter, take note of the following items:</p>
+         * <p>The resource pool policy used when creating the instance. Take note of the following items when you configure this parameter:</p>
          * <ul>
-         * <li>This parameter takes effect only when you create pay-as-you-go instances.</li>
-         * <li>If you specify this parameter, you cannot specify PrivatePoolOptions.MatchCriteria or PrivatePoolOptions.Id.</li>
+         * <li><p>This parameter takes effect only when you create pay-as-you-go instances.</p>
+         * </li>
+         * <li><p>You cannot configure this parameter together with PrivatePoolOptions.MatchCriteria or PrivatePoolOptions.Id.</p>
+         * </li>
          * </ul>
          */
         public Builder resourcePoolOptions(ResourcePoolOptions resourcePoolOptions) {
@@ -1478,8 +1516,8 @@ public class CreateScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The name of the scaling configuration. The name must be 2 to 64 characters in length and can contain letters, digits, underscores (_), hyphens (-), and periods (.). The name must start with a letter or a digit.</p>
-         * <p>The name of the scaling configuration must be unique in a region. If you do not specify this parameter, the scaling configuration ID is used.</p>
+         * <p>The name of the scaling configuration. The name must be 2 to 64 characters in length and can contain letters, digits, underscores (_), hyphens (-), and periods (.). It must start with a letter, digit, or Chinese character.</p>
+         * <p>The name must be unique within a scaling group in a region. If you do not specify this parameter, the ID of the scaling configuration is used by default.</p>
          * 
          * <strong>example:</strong>
          * <p>scalingconfig****</p>
@@ -1491,7 +1529,7 @@ public class CreateScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The ID of the scaling group in which you want to create a scaling configuration.</p>
+         * <p>The ID of the scaling group to which the scaling configuration belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1504,7 +1542,7 @@ public class CreateScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The scheduler options.</p>
+         * <p>The scheduling options.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;testManagedPrivateSpaceId****&quot;]</p>
@@ -1517,10 +1555,27 @@ public class CreateScalingConfigurationRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether a vSwitch available for secondary elastic network interfaces (ENIs) must be selected from the list when the VSwitchIds parameter is specified for the secondary ENIs. Valid values:</p>
+         * <ul>
+         * <li>Strict: strict mode. If no vSwitch in the VSwitchIds list meets the requirements, instance creation fails.</li>
+         * <li>Tolerant: fault-tolerant mode. If no vSwitch in the VSwitchIds list meets the requirements, no secondary ENI is configured, and the instance is still created.</li>
+         * </ul>
+         * <p>Default value: Strict.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Strict</p>
+         */
+        public Builder secondaryEniVSwitchConstraint(String secondaryEniVSwitchConstraint) {
+            this.putQueryParameter("SecondaryEniVSwitchConstraint", secondaryEniVSwitchConstraint);
+            this.secondaryEniVSwitchConstraint = secondaryEniVSwitchConstraint;
+            return this;
+        }
+
+        /**
          * <p>Specifies whether to enable security hardening. Valid values:</p>
          * <ul>
-         * <li>Active: enables security hardening. This value is applicable only to public images.</li>
-         * <li>Deactive: disables security hardening. This value is applicable to all image types.</li>
+         * <li>Active: enables security hardening. This value applies only to public images.</li>
+         * <li>Deactive: disables security hardening. This value applies to all image types.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1533,7 +1588,7 @@ public class CreateScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The ID of the security group with which ECS instances are associated. ECS instances that are associated with the same security group can access each other.</p>
+         * <p>The ID of the security group to which the ECS instance belongs. ECS instances in the same security group can access each other.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-280ih****</p>
@@ -1545,9 +1600,9 @@ public class CreateScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the security groups with which you want to associate the ECS instances that are created by using the scaling configuration. For more information, see the &quot;Security group limits&quot; section of the &quot;<a href="https://help.aliyun.com/document_detail/25412.html">Limits</a>&quot; topic.</p>
+         * <p>Adds the ECS instance to multiple security groups at the same time. For more information, see the Security groups section in <a href="https://help.aliyun.com/document_detail/25412.html">Limits</a>.</p>
          * <blockquote>
-         * <p>If you specify SecurityGroupId, you cannot specify SecurityGroupIds.</p>
+         * <p>You cannot specify both SecurityGroupId and SecurityGroupIds at the same time.</p>
          * </blockquote>
          */
         public Builder securityGroupIds(java.util.List<String> securityGroupIds) {
@@ -1557,7 +1612,7 @@ public class CreateScalingConfigurationRequest extends Request {
         }
 
         /**
-         * SecurityOptions.
+         * <p>The security options.</p>
          */
         public Builder securityOptions(SecurityOptions securityOptions) {
             this.putQueryParameter("SecurityOptions", securityOptions);
@@ -1566,12 +1621,15 @@ public class CreateScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The retention period of the preemptible instance. Unit: hours. Valid values: 0, 1, 2, 3, 4, 5, and 6.</p>
+         * <p>The protection period of the spot instance. Unit: hours. Valid values:</p>
          * <ul>
-         * <li>The following retention periods are available in invitational preview: 2, 3, 4, 5, and 6 hours. If you want to set this parameter to one of these values, submit a ticket.</li>
-         * <li>If you set this parameter to 0, no protection period is specified for the preemptible instance.</li>
+         * <li>1: Alibaba Cloud guarantees that the instance runs for 1 hour after it is created and is not automatically released. After 1 hour, the system automatically compares your bid with the market price and checks resource inventory to determine whether to retain automatic release the instance.</li>
+         * <li>0: Alibaba Cloud does not guarantee that the instance runs for 1 hour after it is created. The system automatically compares your bid with the market price and checks resource inventory to determine whether to retain automatic release the instance.</li>
          * </ul>
-         * <p>Default value: 1</p>
+         * <blockquote>
+         * <p>Alibaba Cloud sends you a notification by using ECS system events 5 minutes before the instance is released. Spot instances are billed by the second. Select an appropriate protection period based on the execution duration of your tasks.</p>
+         * </blockquote>
+         * <p>Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1583,7 +1641,7 @@ public class CreateScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The interruption mode of the preemptible instance. Set the value to Terminate. The value specifies that the preemptible instance is to be released.</p>
+         * <p>The break mode of the spot instance. Currently, only terminate (default) is supported, which releases the instance directly.</p>
          * 
          * <strong>example:</strong>
          * <p>Terminate</p>
@@ -1595,7 +1653,7 @@ public class CreateScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The billing information of the spot instances.</p>
+         * <p>The collection of billing information for spot instances.</p>
          */
         public Builder spotPriceLimits(java.util.List<SpotPriceLimits> spotPriceLimits) {
             this.putQueryParameter("SpotPriceLimits", spotPriceLimits);
@@ -1604,13 +1662,13 @@ public class CreateScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The preemption policy that you want to apply to pay-as-you-go and preemptible instances. Valid values:</p>
+         * <p>The preemption policy for the pay-as-you-go instance. Valid values:</p>
          * <ul>
-         * <li>NoSpot: The instance is created as a pay-as-you-go instance.</li>
-         * <li>SpotWithPriceLimit: The instance is a preemptible instance that has a user-defined maximum hourly price.</li>
-         * <li>SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is automatically used as the bid price.</li>
+         * <li>NoSpot: regular pay-as-you-go instance.</li>
+         * <li>SpotWithPriceLimit: spot instance with a maximum hourly price.</li>
+         * <li>SpotAsPriceGo: spot instance whose price is automatically set based on the current market price.</li>
          * </ul>
-         * <p>Default value: NoSpot</p>
+         * <p>Default value: NoSpot.</p>
          * 
          * <strong>example:</strong>
          * <p>NoSpot</p>
@@ -1622,7 +1680,10 @@ public class CreateScalingConfigurationRequest extends Request {
         }
 
         /**
-         * StorageSetId.
+         * <p>The ID of the storage set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ss-bp67acfmxazb4p****</p>
          */
         public Builder storageSetId(String storageSetId) {
             this.putQueryParameter("StorageSetId", storageSetId);
@@ -1631,7 +1692,10 @@ public class CreateScalingConfigurationRequest extends Request {
         }
 
         /**
-         * StorageSetPartitionNumber.
+         * <p>The maximum number of partitions in the storage set. Valid values: integers greater than or equal to 2.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder storageSetPartitionNumber(Integer storageSetPartitionNumber) {
             this.putQueryParameter("StorageSetPartitionNumber", storageSetPartitionNumber);
@@ -1640,15 +1704,15 @@ public class CreateScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The categories of the system disks. If Auto Scaling cannot create instances by using the disk category that has the highest priority, Auto Scaling creates instances by using the disk category that has the next highest priority. Valid values:</p>
+         * <p>The disk types for the system cloud disk. If a disk type with a higher priority is unavailable, Auto Scaling automatically attempts to use the disk type with the next highest priority to create the system cloud disk. Valid values:</p>
          * <ul>
-         * <li>cloud: basic disk</li>
-         * <li>cloud_efficiency: ultra disk</li>
-         * <li>cloud_ssd: standard SSD</li>
-         * <li>cloud_essd: ESSD</li>
+         * <li>cloud: basic cloud disk.</li>
+         * <li>cloud_efficiency: ultra cloud disk.</li>
+         * <li>cloud_ssd: standard SSD cloud disk.</li>
+         * <li>cloud_essd: ESSD cloud disk.</li>
          * </ul>
          * <blockquote>
-         * <p>If you specify SystemDiskCategories, you cannot specify <code>SystemDisk.Category</code>.</p>
+         * <p>You cannot specify both this parameter and <code>SystemDisk.Category</code> at the same time.</p>
          * </blockquote>
          */
         public Builder systemDiskCategories(java.util.List<String> systemDiskCategories) {
@@ -1658,10 +1722,10 @@ public class CreateScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The tags of the ECS instance. Tags must be specified as key-value pairs. You can specify up to 20 tags. When you specify tag keys and tag values, take note of the following items:</p>
+         * <p>The tags of the ECS instance. Tags are passed in as key-value pairs. You can add up to 20 tags. The requirements for keys and values are as follows:</p>
          * <ul>
-         * <li>A tag key can be up to 64 characters in length. The key cannot start with acs: or aliyun and cannot contain <code>http://</code> or <code>https://</code>. You cannot specify an empty string as a tag key.</li>
-         * <li>A tag value can be up to 128 characters in length. The value cannot start with acs: or aliyun and cannot contain <code>http://</code> or <code>https://</code>. You can specify an empty string as a tag value.</li>
+         * <li>A key can be up to 64 characters in length. It cannot start with aliyun or acs: and cannot contain <code>http://</code> or <code>https://</code>. A key cannot be an empty string.</li>
+         * <li>A value can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain <code>http://</code> or <code>https://</code>. A value can be an empty string.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1674,12 +1738,14 @@ public class CreateScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to create an ECS instance on a dedicated host. Valid values:</p>
+         * <p>Specifies whether to create the instance on a dedicated host. Valid values:</p>
          * <ul>
-         * <li>default: does not create an ECS instance on a dedicated host.</li>
-         * <li>host: creates an ECS instance on a dedicated host. If you do not specify DedicatedHostId, Alibaba Cloud selects a dedicated host for the ECS instance.</li>
+         * <li><p>default: creates the instance on a non-dedicated host.</p>
+         * </li>
+         * <li><p>host: creates the instance on a dedicated host. If you do not specify DedicatedHostId, Alibaba Cloud automatically selects a dedicated host for the instance.</p>
+         * </li>
          * </ul>
-         * <p>Default value: default</p>
+         * <p>Default value: default.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -1691,10 +1757,10 @@ public class CreateScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The user data of the Elastic Compute Service (ECS) instance. The user data must be encoded in Base64 format. The size of raw data before Base64 encoding cannot exceed 32 KB.</p>
+         * <p>The user data of the ECS instance. It must be encoded in Base64. The maximum size of the raw data before encoding is 32 KB.</p>
          * 
          * <strong>example:</strong>
-         * <p>echo hello ecs!</p>
+         * <p>ZWNobyBoZWxsbyBlY3Mh</p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);
@@ -1761,10 +1827,12 @@ public class CreateScalingConfigurationRequest extends Request {
             } 
 
             /**
-             * <p>For more information about whether an ECS instance uses the ecs-user user user to log on to an ECS instance, see <a href="https://help.aliyun.com/document_detail/388447.html">Manage the login name of an ECS instance</a>. Value range:</p>
+             * <p>Specifies whether to log on to the ECS instance as the ecs-user user. For more information, see <a href="https://help.aliyun.com/document_detail/388447.html">Manage the logon username of an ECS instance</a>. Valid values:</p>
              * <ul>
-             * <li>true: Yes.</li>
-             * <li>false: No.</li>
+             * <li><p>true: yes.</p>
+             * </li>
+             * <li><p>false: no.</p>
+             * </li>
              * </ul>
              * <p>Default value: false.</p>
              * 
@@ -1836,7 +1904,7 @@ public class CreateScalingConfigurationRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the private pool. The ID of a private pool is the same as the ID of the elasticity assurance or capacity reservation for which the private pool is generated.</p>
+             * <p>The ID of the private pool. It is the ID of the elasticity assurance or capacity reservation.</p>
              * 
              * <strong>example:</strong>
              * <p>eap-bp67acfmxazb4****</p>
@@ -1847,11 +1915,14 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The type of the private pool that you want to use to start ECS instances. A private pool is generated when an elasticity assurance or a capacity reservation takes effect. You can select a private pool to create ECS instances. Valid values:</p>
+             * <p>The private pool options for instance startup. After an elasticity assurance or a capacity reservation takes effect, a private pool is generated for you to select when you start instances. Valid values:</p>
              * <ul>
-             * <li>Open: open private pool. Auto Scaling selects a matching open private pool to start instances. If no matching open private pools are found, Auto Scaling uses the resources in the public pool to start instances. In this case, you do not need to specify PrivatePoolOptions.Id.</li>
-             * <li>Target: specified private pool. Auto Scaling uses the resources in the specified private pool to start ECS instances. If the specified private pool is unavailable, Auto Scaling cannot start ECS instances. If you set this parameter to Target, you must specify PrivatePoolOptions.Id.</li>
-             * <li>None: no private pool. Auto Scaling does not use the resources in private pools to start ECS instances.</li>
+             * <li><p>Open: open mode. The system automatically matches an open private pool. If no matching private pool is available, the system uses resources from the public pool. In this mode, you do not need to specify the PrivatePoolOptions.Id parameter.</p>
+             * </li>
+             * <li><p>Target: specified mode. The system uses the specified private pool to start the instance. If the specified private pool is unavailable, the instance fails to start. In this mode, you must specify the private pool ID by using the PrivatePoolOptions.Id parameter.</p>
+             * </li>
+             * <li><p>None: no private pool. The system does not use private pools to start the instance.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2039,7 +2110,7 @@ public class CreateScalingConfigurationRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the automatic snapshot policy that you want to apply to the system disk.</p>
+             * <p>The ID of the automatic snapshot policy applied to the system cloud disk.</p>
              * 
              * <strong>example:</strong>
              * <p>sp-bp12m37ccmxvbmi5****</p>
@@ -2050,14 +2121,15 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable the burst feature for the system disk. Valid values:</p>
+             * <p>Specifies whether to enable the burst (performance burst) feature for the system cloud disk. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
-             * </ul>
-             * <blockquote>
-             * <p>This parameter is available only if you set <code>SystemDisk.Category</code> to <code>cloud_auto</code>.</p>
+             * <li>true: enables the feature.</li>
+             * <li>false: disables the feature.<blockquote>
+             * <p>This parameter is supported only when <code>SystemDisk.Category</code> is set to <code>cloud_auto</code>.</p>
              * </blockquote>
+             * </li>
+             * </ul>
+             * <p>&lt;props=&quot;china&quot;&gt;For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL cloud disks</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -2068,20 +2140,27 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The category of the system disk. Valid values:</p>
+             * <p>The category of the system cloud disk. Valid values:</p>
              * <ul>
-             * <li>cloud: basic disk</li>
-             * <li>cloud_efficiency: ultra disk</li>
-             * <li>cloud_ssd: standard SSD</li>
-             * <li>ephemeral_ssd: local SSD</li>
-             * <li>cloud_essd: enhanced SSD (ESSD)</li>
-             * <li>cloud_auto: ESSD AutoPL disk</li>
+             * <li><p>cloud: basic cloud disk.</p>
+             * </li>
+             * <li><p>cloud_efficiency: ultra cloud disk.</p>
+             * </li>
+             * <li><p>cloud_ssd: standard SSD cloud disk.</p>
+             * </li>
+             * <li><p>ephemeral_ssd: local SSD.</p>
+             * </li>
+             * <li><p>cloud_essd: ESSD.</p>
+             * </li>
+             * <li><p>cloud_auto: ESSD AutoPL.</p>
+             * </li>
              * </ul>
-             * <p>If you specify SystemDisk.Category, you cannot specify <code>SystemDiskCategories</code>. If you do not specify SystemDisk.Category or <code>SystemDiskCategories</code>, the default value of SystemDisk.Category is used.</p>
+             * <p>You cannot specify this parameter together with <code>SystemDiskCategories</code>. If neither this parameter nor <code>SystemDiskCategories</code> is specified, the default value is used:</p>
              * <ul>
              * <li>For I/O optimized instances, the default value is cloud_efficiency.</li>
              * <li>For non-I/O optimized instances, the default value is cloud.</li>
              * </ul>
+             * <p>This parameter specifies only one system cloud disk type. If you want the system to automatically try other types when the preferred disk type is unavailable, use <code>SystemDiskCategories</code> and configure multiple disk types in order of priority.</p>
              * 
              * <strong>example:</strong>
              * <p>cloud_ssd</p>
@@ -2092,7 +2171,7 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The description of the system disk. The description must be 2 to 256 characters in length. The description can contain letters and cannot start with <code>http://</code> or <code>https://</code>.</p>
+             * <p>The description of the system cloud disk. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>Test system disk.</p>
@@ -2103,7 +2182,7 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The name of the system disk. The name must be 2 to 128 characters in length. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-). The name must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
+             * <p>The name of the system cloud disk. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), and hyphens (-). It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>cloud_ssdSystem</p>
@@ -2114,12 +2193,12 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The encryption algorithm that you want to use to encrypt the system disk. Valid values:</p>
+             * <p>The encryption algorithm used for the system cloud disk. Valid values:</p>
              * <ul>
-             * <li>AES-256</li>
-             * <li>SM4-128</li>
+             * <li>AES-256.</li>
+             * <li>SM4-128.</li>
              * </ul>
-             * <p>Default value: AES-256</p>
+             * <p>Default value: AES-256.</p>
              * 
              * <strong>example:</strong>
              * <p>AES-256</p>
@@ -2130,12 +2209,12 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to encrypt the system disk. Valid values:</p>
+             * <p>Specifies whether to encrypt the system cloud disk. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li>true: encrypts the system cloud disk.</li>
+             * <li>false: does not encrypt the system cloud disk.</li>
              * </ul>
-             * <p>Default value: false</p>
+             * <p>Default value: false.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -2146,7 +2225,7 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The ID of the KMS key that you want to use to encrypt the system disk.</p>
+             * <p>The ID of the KMS key used for the system cloud disk.</p>
              * 
              * <strong>example:</strong>
              * <p>0e478b7a-4262-4802-b8cb-00d3fb40****</p>
@@ -2157,12 +2236,16 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The performance level (PL) of the system disk that is an enhanced SSD (ESSD). Valid values:</p>
+             * <p>The settings of the performance level for the system cloud disk when it is an ESSD. Valid values:</p>
              * <ul>
-             * <li>PL0: An ESSD can provide up to 10,000 random read/write IOPS.</li>
-             * <li>PL1: An ESSD can provide up to 50,000 random read/write IOPS.</li>
-             * <li>PL2: An ESSD can provide up to 100,000 random read/write IOPS.</li>
-             * <li>PL3: An ESSD can provide up to 1,000,000 random read/write IOPS.</li>
+             * <li><p>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</p>
+             * </li>
+             * <li><p>PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</p>
+             * </li>
+             * <li><p>PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</p>
+             * </li>
+             * <li><p>PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</p>
+             * </li>
              * </ul>
              * <p>Default value: PL1.</p>
              * 
@@ -2175,9 +2258,9 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The IOPS metric that is preconfigured for the system disk.</p>
+             * <p>The provisioned IOPS (Input/Output Operations Per Second) performance metrics for the system cloud disk.</p>
              * <blockquote>
-             * <p>IOPS measures the number of read and write operations that an EBS device can process per second.</p>
+             * <p>IOPS refers to the number of I/O operations that can be processed per second. It indicates the read and write processing capability of block storage. Unit: operations per second.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -2189,25 +2272,21 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The size of the system disk. Unit: GiB.</p>
+             * <p>The size of the system cloud disk. Unit: GiB. Valid values:</p>
              * <ul>
-             * <li><p>Basic disk: 20 to 500.</p>
-             * </li>
-             * <li><p>ESSD (cloud_essd): The valid values vary based on the performance level of the ESSD.</p>
-             * <ul>
-             * <li>PL0 ESSD: 1 to 2048.</li>
-             * <li>PL1 ESSD: 20 to 2048.</li>
-             * <li>PL2 ESSD: 461 to 2048.</li>
-             * <li>PL3 ESSD: 1261 to 2048.</li>
+             * <li>Basic cloud disk: 20 to 500.</li>
+             * <li>ESSD:<ul>
+             * <li>PL0: 1 to 2048.</li>
+             * <li>PL1: 20 to 2048.</li>
+             * <li>PL2: 461 to 2048.</li>
+             * <li>PL3: 1261 to 2048.</li>
              * </ul>
              * </li>
-             * <li><p>ESSD AutoPL disk (cloud_auto): 1 to 2048.</p>
-             * </li>
-             * <li><p>Other disk categories: 20 to 2048.</p>
-             * </li>
+             * <li>ESSD AutoPL: 1 to 2048.</li>
+             * <li>Other cloud disk types: 20 to 2048.</li>
              * </ul>
-             * <p>The value of this parameter must be at least 1 and greater than or equal to the image size.</p>
-             * <p>Default value: 40 or the size of the image, whichever is larger.</p>
+             * <p>The value of this parameter must be greater than or equal to max{1, ImageSize}.</p>
+             * <p>Default value: max{40, ImageSize}.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -2277,9 +2356,9 @@ public class CreateScalingConfigurationRequest extends Request {
             } 
 
             /**
-             * <p>The ECS instance type.</p>
+             * <p>The instance type of the ECS instance.</p>
              * <blockquote>
-             * <p> The ECS instance type must be included in the instance types specified in the scaling configuration.</p>
+             * <p>Notice: The instance type must be included in the instance type list of the scaling configuration.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -2291,9 +2370,9 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The vSwitch ID.</p>
+             * <p>The ID of the vSwitch.</p>
              * <blockquote>
-             * <p> The vSwitch must be included in the vSwitch list of the scaling group.</p>
+             * <p>Notice: The vSwitch must be included in the vSwitch list of the scaling group.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -2520,7 +2599,7 @@ public class CreateScalingConfigurationRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the automatic snapshot policy that you want to apply to the data disk.</p>
+             * <p>The ID of the automatic snapshot policy applied to the data cloud disk.</p>
              * 
              * <strong>example:</strong>
              * <p>sp-bp19nq9enxqkomib****</p>
@@ -2531,14 +2610,15 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable the burst feature for the system disk. Valid values:</p>
+             * <p>Specifies whether to enable the burstable performance feature for the data cloud disk. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
-             * </ul>
-             * <blockquote>
-             * <p>This parameter is available only if you set <code>SystemDisk.Category</code> to <code>cloud_auto</code>.</p>
+             * <li>true: enables the feature.</li>
+             * <li>false: disables the feature. <blockquote>
+             * <p>You can set this parameter only when <code>SystemDisk.Category</code> is set to <code>cloud_auto</code>.</p>
              * </blockquote>
+             * </li>
+             * </ul>
+             * <p>&lt;props=&quot;china&quot;&gt;For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL cloud disks</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -2549,15 +2629,18 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The categories of the data disks. If Auto Scaling cannot create instances by using the disk category that has the highest priority, Auto Scaling creates instances by using the disk category that has the next highest priority. Valid values:</p>
+             * <p>The multiple disk types of the data cloud disk. If the disk type with a higher priority is unavailable, Auto Scaling automatically tries the disk type with the next highest priority to create the data cloud disk. Valid values:</p>
              * <ul>
-             * <li>cloud: basic disk. For a basic disk that is created together with the instance, DeleteWithInstance is set to true.</li>
-             * <li>cloud_efficiency: ultra disk.</li>
+             * <li>cloud: basic cloud disk. The DeleteWithInstance property of a basic cloud disk created together with the instance is set to true.</li>
+             * <li>cloud_efficiency: ultra cloud disk.</li>
              * <li>cloud_ssd: standard SSD.</li>
              * <li>cloud_essd: ESSD.</li>
+             * <li>ephemeral_ssd: local SSD.</li>
+             * <li>cloud_auto: ESSD AutoPL.</li>
+             * <li>cloud_regional_disk_auto: regional ESSD.</li>
              * </ul>
              * <blockquote>
-             * <p>If you specify Categories, you cannot specify <code>DataDisks.Category</code>.</p>
+             * <p>If you specify this parameter, you cannot specify <code>DataDisks.Category</code> at the same time.</p>
              * </blockquote>
              */
             public Builder categories(java.util.List<String> categories) {
@@ -2566,16 +2649,17 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The category of the data disk. Valid values:</p>
+             * <p>The category of the data cloud disk. Valid values:</p>
              * <ul>
-             * <li>cloud: basic disk</li>
-             * <li>cloud_efficiency: ultra disk</li>
-             * <li>cloud_ssd: standard SSD</li>
-             * <li>cloud_essd: ESSD</li>
-             * <li>ephemeral_ssd: local SSD</li>
-             * <li>cloud_auto: ESSD AutoPL disk</li>
+             * <li>cloud: basic cloud disk. The DeleteWithInstance attribute of a basic cloud disk created together with the instance is set to true.</li>
+             * <li>cloud_efficiency: ultra cloud disk.</li>
+             * <li>cloud_ssd: standard SSD cloud disk.</li>
+             * <li>cloud_essd: ESSD.</li>
+             * <li>ephemeral_ssd: local SSD.</li>
+             * <li>cloud_auto: ESSD AutoPL.</li>
+             * <li>cloud_regional_disk_auto: regional ESSD.</li>
              * </ul>
-             * <p>If you specify this parameter, you cannot specify Categories. If you do not specify Category or Categories, the default value of Category is used.</p>
+             * <p>You cannot specify this parameter together with DataDisk.Categories. If neither this parameter nor DataDisk.Categories is specified, the default value is used:</p>
              * <ul>
              * <li>For I/O optimized instances, the default value is cloud_efficiency.</li>
              * <li>For non-I/O optimized instances, the default value is cloud.</li>
@@ -2590,13 +2674,13 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to release the data disk when the instance to which the data disk is attached is released. Valid values:</p>
+             * <p>Specifies whether to release the data cloud disk when the instance is released. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li>true: releases the data cloud disk when the instance is released.</li>
+             * <li>false: retains the data cloud disk when the instance is released.</li>
              * </ul>
-             * <p>This parameter is available only for independent disks whose value of Category is set to cloud, cloud_efficiency, cloud_ssd, or cloud_essd. If you specify this parameter for other disks, an error is reported.</p>
-             * <p>Default value: true</p>
+             * <p>You can set this parameter only for independent cloud disks (when DataDisks.Category is set to cloud, cloud_efficiency, cloud_ssd, or cloud_essd). Otherwise, an error is returned.</p>
+             * <p>Default value: true.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -2607,7 +2691,7 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The description of the data disk. The description must be 2 to 256 characters in length. The description can contain letters and cannot start with <code>http://</code> or <code>https://</code>.</p>
+             * <p>The description of the data cloud disk. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>Test data disk.</p>
@@ -2618,7 +2702,7 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The mount target of the data disk. If you do not specify Device, a mount target is automatically assigned when Auto Scaling creates ECS instances. The names of mount targets range from /dev/xvdb to /dev/xvdz.</p>
+             * <p>The mount point of the data cloud disk. If you do not specify this parameter, the system automatically allocates a mount point by default during automatic creation of the ECS instance. The mount point starts from /dev/xvdb and ends at /dev/xvdz.</p>
              * 
              * <strong>example:</strong>
              * <p>/dev/xvdb</p>
@@ -2629,7 +2713,7 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The name of the system disk. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), and hyphens (-). The name must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
+             * <p>The name of the data cloud disk. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), and hyphens (-). It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>cloud_ssdData</p>
@@ -2640,12 +2724,12 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to encrypt the data disk. Valid values:</p>
+             * <p>Specifies whether to encrypt the data cloud disk. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li>true: encrypts the data cloud disk.</li>
+             * <li>false: does not encrypt the data cloud disk.</li>
              * </ul>
-             * <p>Default value: false</p>
+             * <p>Default value: false.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -2656,7 +2740,7 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The ID of the KMS key that you want to use to encrypt the data disk.</p>
+             * <p>The ID of the Key Management Service (KMS) key used by the data cloud disk.</p>
              * 
              * <strong>example:</strong>
              * <p>0e478b7a-4262-4802-b8cb-00d3fb40****</p>
@@ -2667,15 +2751,15 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The PL of the data disk that is an ESSD. Valid values:</p>
+             * <p>The settings of the performance level for the data cloud disk when it is an ESSD. Valid values:</p>
              * <ul>
-             * <li>PL0: An ESSD can provide up to 10,000 random read/write IOPS.</li>
-             * <li>PL1: An ESSD can provide up to 50,000 random read/write IOPS.</li>
-             * <li>PL2: An ESSD can provide up to 100,000 random read/write IOPS.</li>
-             * <li>PL3: An ESSD can provide up to 1,000,000 random read/write IOPS.</li>
+             * <li>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</li>
+             * <li>PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</li>
+             * <li>PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</li>
+             * <li>PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</li>
              * </ul>
              * <blockquote>
-             * <p>For more information about how to select ESSD PLs, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSD</a>.</p>
+             * <p>For more information about how to select the performance level of an ESSD, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -2687,9 +2771,9 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The IOPS metric that is preconfigured for the data disk.</p>
+             * <p>The provisioned IOPS (Input/Output Operations Per Second) performance metrics of the data cloud disk.</p>
              * <blockquote>
-             * <p>IOPS measures the number of read and write operations that an EBS device can process per second.</p>
+             * <p>IOPS indicates the number of I/O operations that can be processed per second. It measures the read and write capabilities of block storage. Unit: operations per second.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -2701,14 +2785,14 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The size of the data disk. Unit: GiB. Valid values:</p>
+             * <p>The size of the data cloud disk. Unit: GiB. Valid values:</p>
              * <ul>
-             * <li>If you set Categories to cloud: 5 to 2000.</li>
-             * <li>If you set Categories to cloud_efficiency: 20 to 32768.</li>
-             * <li>If you set Categories to cloud_essd: 20 to 32768.</li>
-             * <li>If you set Categories to ephemeral_ssd: 5 to 800.</li>
+             * <li>cloud: 5 to 2000.</li>
+             * <li>cloud_efficiency: 20 to 32768.</li>
+             * <li>cloud_essd: 20 to 32768.</li>
+             * <li>ephemeral_ssd: 5 to 800.</li>
              * </ul>
-             * <p>The size of the data disk must be greater than or equal to the size of the snapshot that is specified by SnapshotId.</p>
+             * <p>If you specify this parameter, the disk size must be greater than or equal to the snapshot size specified by SnapshotId.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -2719,8 +2803,8 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The ID of the snapshot that you want to use to create data disks. If you specify this parameter, DataDisks.Size is ignored. The size of the data disk is the same as the size of the specified snapshot.</p>
-             * <p>If you specify a snapshot that is created on or before July 15, 2013, the operation fails and the system returns InvalidSnapshot.TooOld.</p>
+             * <p>The snapshot used to create the data cloud disk. If this parameter is specified, DataDisks.Size is ignored, and the actual size of the created disk is the size of the specified snapshot.</p>
+             * <p>If the snapshot was created on or before July 15, 2013, the call is rejected and the InvalidSnapshot.TooOld error code is returned.</p>
              * 
              * <strong>example:</strong>
              * <p>s-280s7****</p>
@@ -3063,14 +3147,14 @@ public class CreateScalingConfigurationRequest extends Request {
             } 
 
             /**
-             * <p>The architecture types of the instance types. Valid values:</p>
+             * <p>The architecture type of the instance type. Valid values:</p>
              * <ul>
-             * <li>X86: x86 architecture.</li>
-             * <li>Heterogeneous: heterogeneous computing, such as GPU-accelerated or FPGA-accelerated.</li>
-             * <li>BareMetal: ECS Bare Metal Instance.</li>
-             * <li>Arm: Arm.</li>
+             * <li>X86: x86 computing.</li>
+             * <li>Heterogeneous: heterogeneous computing, such as GPU or FPGA.</li>
+             * <li>BareMental: ECS bare metal server.</li>
+             * <li>Arm: Arm computing.</li>
              * </ul>
-             * <p>By default, all values are selected.</p>
+             * <p>Default value: all architecture types.</p>
              */
             public Builder architectures(java.util.List<String> architectures) {
                 this.architectures = architectures;
@@ -3078,9 +3162,9 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to include burstable instance types. Valid values:</p>
+             * <p>Specifies whether the instance type is a burstable instance type. Valid values:</p>
              * <ul>
-             * <li>Exclude: excludes burstable instance types.</li>
+             * <li>Exclude: does not include burstable instance types.</li>
              * <li>Include: includes burstable instance types.</li>
              * <li>Required: includes only burstable instance types.</li>
              * </ul>
@@ -3095,12 +3179,15 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The number of vCPUs per instance type in intelligent configuration mode. You can specify this parameter to filter the available instance types. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</p>
+             * <p>The number of vCPUs of the instance type in intelligent configuration mode. This parameter is used to filter instance types that meet your requirements. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</p>
              * <p>Take note of the following items:</p>
              * <ul>
-             * <li>InstancePatternInfos applies only to scaling groups that reside in virtual private clouds (VPCs).</li>
-             * <li>If you specify InstancePatternInfos, you must also specify InstancePatternInfos.Cores and InstancePatternInfos.Memory.</li>
-             * <li>If you specify InstanceType or InstanceTypes, Auto Scaling preferentially uses the instance type specified by InstanceType or InstanceTypes to create instances during scale-out events. If the specified instance type has insufficient inventory, Auto Scaling uses the lowest-priced instance type specified by InstancePatternInfos to create instances during scale-out events.</li>
+             * <li><p>The InstancePatternInfos parameter is applicable only when the network type of the scaling group is VPC.</p>
+             * </li>
+             * <li><p>You must configure both InstancePatternInfos.Cores and InstancePatternInfos.Memory when you use the InstancePatternInfos parameter.</p>
+             * </li>
+             * <li><p>If you have already specified instance types by using the InstanceType or InstanceTypes parameter, Auto Scaling preferentially uses the specified instance types for scale-out. If the specified instance types are out of stock, Auto Scaling preferentially uses the instance type that has the lowest price among the instance types that meet the requirements specified by the InstancePatternInfos parameter.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3112,13 +3199,13 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The CPU architectures of the instance types. Valid values:</p>
+             * <p>The CPU architecture of the instance. Valid values:</p>
              * <blockquote>
-             * <p> You can specify up to two CPU architectures.</p>
+             * <p>N indicates that you can specify multiple CPU architectures. Valid values of N: 1 to 2.</p>
              * </blockquote>
              * <ul>
-             * <li>x86</li>
-             * <li>Arm</li>
+             * <li>X86.</li>
+             * <li>ARM.</li>
              * </ul>
              */
             public Builder cpuArchitectures(java.util.List<String> cpuArchitectures) {
@@ -3127,10 +3214,10 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The instance types that you want to exclude. You can use an asterisk (*) as a wildcard character to exclude an instance type or an instance family. Examples:</p>
+             * <p>The instance types to be excluded. You can use a wildcard (*) to exclude a single instance type or an entire instance family. Examples:</p>
              * <ul>
              * <li>ecs.c6.large: excludes the ecs.c6.large instance type.</li>
-             * <li>ecs.c6.*: excludes the c6 instance family.</li>
+             * <li>ecs.c6.*: excludes all instance types in the c6 instance family.</li>
              * </ul>
              */
             public Builder excludedInstanceTypes(java.util.List<String> excludedInstanceTypes) {
@@ -3139,7 +3226,7 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The GPU models.</p>
+             * <p>The GPU type.</p>
              */
             public Builder gpuSpecs(java.util.List<String> gpuSpecs) {
                 this.gpuSpecs = gpuSpecs;
@@ -3147,26 +3234,26 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The categories of the instance types. Valid values:</p>
+             * <p>The instance categorization. Valid values:</p>
              * <blockquote>
-             * <p> You can specify up to 10 categories.</p>
+             * <p>N indicates the Settings for multiple instance categories. Valid values of N: 1 to 10.</p>
              * </blockquote>
              * <ul>
-             * <li>General-purpose: general-purpose instance type.</li>
-             * <li>Compute-optimized: compute-optimized instance type.</li>
-             * <li>Memory-optimized: memory-optimized instance type.</li>
-             * <li>Big data: big data instance type.</li>
-             * <li>Local SSDs: instance type that uses local SSDs.</li>
-             * <li>High Clock Speed: instance type that has high clock speeds.</li>
-             * <li>Enhanced: enhanced instance type.</li>
-             * <li>Shared: shared instance type.</li>
-             * <li>Compute-optimized with GPU: GPU-accelerated compute-optimized instance type.</li>
-             * <li>Visual Compute-optimized: visual compute-optimized instance type.</li>
-             * <li>Heterogeneous Service: heterogeneous service instance type.</li>
-             * <li>Compute-optimized with FPGA: FPGA-accelerated compute-optimized instance type.</li>
-             * <li>Compute-optimized with NPU: NPU-accelerated compute-optimized instance type.</li>
-             * <li>ECS Bare Metal: ECS Bare Metal Instance type.</li>
-             * <li>High Performance Compute: HPC-optimized instance type.</li>
+             * <li>General-purpose: general-purpose.</li>
+             * <li>Compute-optimized: compute-optimized.</li>
+             * <li>Memory-optimized: memory-optimized.</li>
+             * <li>Big data: big data.</li>
+             * <li>Local SSDs: local SSD.</li>
+             * <li>High Clock Speed: high frequency.</li>
+             * <li>Enhanced: enhanced.</li>
+             * <li>Shared: shared.</li>
+             * <li>Compute-optimized with GPU: GPU computing.</li>
+             * <li>Visual Compute-optimized: visual compute-optimized.</li>
+             * <li>Heterogeneous Service: heterogeneous service.</li>
+             * <li>Compute-optimized with FPGA: FPGA-accelerated compute-optimized.</li>
+             * <li>Compute-optimized with NPU: NPU-accelerated compute-optimized.</li>
+             * <li>ECS Bare Metal: ECS Bare Metal Instance.</li>
+             * <li>High Performance Compute: high-performance computing (HPC).</li>
              * </ul>
              */
             public Builder instanceCategories(java.util.List<String> instanceCategories) {
@@ -3175,11 +3262,11 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The level of the instance family. You can specify this parameter to match the available instance types. This parameter takes effect only if you set <code>CostOptimization</code> to true. Valid values:</p>
+             * <p>The level of the instance family. This parameter is used to filter instance types that meet your requirements and takes effect when <code>CostOptimization</code> is enabled. Valid values:</p>
              * <ul>
-             * <li>EntryLevel: entry-level (shared instance types). Instance types of this level are the most cost-effective but may not ensure stable computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low. For more information, see <a href="https://help.aliyun.com/document_detail/108489.html">Shared instance families</a>.</li>
-             * <li>EnterpriseLevel: enterprise-level. Instance types of this level provide stable performance and dedicated resources and are suitable for business scenarios that require high stability. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</li>
-             * <li>CreditEntryLevel: credit entry-level (burstable instance types). CPU credits are used to ensure computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low but may fluctuate in specific cases. For more information, see <a href="https://help.aliyun.com/document_detail/59977.html">Overview</a> of burstable instances.</li>
+             * <li>EntryLevel: shared instance types. These instance types are more cost-effective but cannot ensure consistent computing performance. They are suitable for scenarios where the CPU utilization is typically low. For more information, see <a href="https://help.aliyun.com/document_detail/108489.html">Shared instance families</a>.</li>
+             * <li>EnterpriseLevel: enterprise-level instance types. These instance types provide consistent performance and dedicated resources. They are suitable for scenarios that require high stability. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</li>
+             * <li>CreditEntryLevel: credit-based entry-level instance types, which are burstable instances. These instance types use CPU credits to ensure computing performance and are suitable for scenarios where the CPU utilization is typically low but occasionally bursts. For more information, see <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3191,7 +3278,7 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The instance families that you want to specify. You can specify up to 10 instance families in each call.</p>
+             * <p>The instance families to be queried. N indicates that you can specify multiple instance families. Valid values of N: 1 to 10.</p>
              */
             public Builder instanceTypeFamilies(java.util.List<String> instanceTypeFamilies) {
                 this.instanceTypeFamilies = instanceTypeFamilies;
@@ -3199,9 +3286,9 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The maximum hourly price of pay-as-you-go or preemptible instances in intelligent configuration mode. You can specify this parameter to filter the available instance types.</p>
+             * <p>The maximum acceptable hourly price for pay-as-you-go or spot instances in intelligent configuration mode. This parameter is used to filter instance types that meet your requirements.</p>
              * <blockquote>
-             * <p> If you set SpotStrategy to SpotWithPriceLimit, you must specify this parameter. In other cases, this parameter is optional.</p>
+             * <p>This parameter is required when SpotStrategy is set to SpotWithPriceLimit. In other cases, this parameter is optional.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -3213,9 +3300,9 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The maximum number of vCPUs per instance type.</p>
+             * <p>The maximum number of vCPUs of the instance type.</p>
              * <blockquote>
-             * <p> The value of MaximumCpuCoreCount cannot exceed four times the value of MinimumCpuCoreCount.</p>
+             * <p>The value of MaximumCpuCoreCount cannot exceed four times the value of MinimumCpuCoreCount.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -3227,7 +3314,7 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The maximum number of GPUs per instance. The value must be a positive integer.</p>
+             * <p>The maximum number of GPUs for the instance. Valid values: positive integers.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -3238,7 +3325,7 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The maximum memory size per instance. Unit: GiB.</p>
+             * <p>The maximum memory size of the instance. Unit: GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -3249,7 +3336,7 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The memory size per instance type in intelligent configuration mode. Unit: GiB. You can specify this parameter to filter the available instance types.</p>
+             * <p>The memory size of the instance type in intelligent configuration mode. Unit: GiB. This parameter is used to filter instance types that meet your requirements.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -3260,7 +3347,7 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The baseline vCPU computing performance (overall baseline performance of all vCPUs) per t5 or t6 burstable instance.</p>
+             * <p>The minimum baseline vCPU computing performance (the sum of all vCPUs) for t5 and t6 burstable instances.</p>
              * 
              * <strong>example:</strong>
              * <p>12</p>
@@ -3271,7 +3358,7 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The minimum number of vCPUs per instance type.</p>
+             * <p>The minimum number of vCPUs of the instance type.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -3282,7 +3369,7 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The minimum number of IPv6 addresses per ENI.</p>
+             * <p>The minimum upper limit on the number of IPv6 addresses per elastic network interfaces (ENIs) or network interface controller (NIC) for the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -3293,7 +3380,7 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The minimum number of IPv4 addresses per ENI.</p>
+             * <p>The minimum upper limit on the number of IPv4 addresses per elastic network interfaces (ENIs) or network interface controller (NIC) for the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -3304,7 +3391,7 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The minimum number of elastic network interfaces (ENIs) per instance.</p>
+             * <p>The minimum upper limit on the number of network interface controller (NIC) devices that can be mounted to the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -3315,7 +3402,7 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The minimum number of GPUs per instance. The value must be a positive integer.</p>
+             * <p>The minimum number of GPUs for the instance. Valid values: positive integers.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -3326,7 +3413,7 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The initial vCPU credits per t5 or t6 burstable instance.</p>
+             * <p>The minimum initial vCPU credit value for t5 and t6 burstable instances.</p>
              * 
              * <strong>example:</strong>
              * <p>12</p>
@@ -3337,7 +3424,7 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The minimum memory size per instance. Unit: GiB.</p>
+             * <p>The minimum memory size of the instance. Unit: GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -3348,7 +3435,7 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The processor models of the instance types. You can specify up to 10 processor models.</p>
+             * <p>The physical processor model of the instance. N indicates that you can specify multiple processor models. Valid values of N: 1 to 10.</p>
              */
             public Builder physicalProcessorModels(java.util.List<String> physicalProcessorModels) {
                 this.physicalProcessorModels = physicalProcessorModels;
@@ -3454,7 +3541,7 @@ public class CreateScalingConfigurationRequest extends Request {
             } 
 
             /**
-             * AllowCidrBlocks.
+             * <p>Specifies the CIDR blocks of the optional vSwitches when you add vSwitches in other zones.</p>
              */
             public Builder allowCidrBlocks(java.util.List<String> allowCidrBlocks) {
                 this.allowCidrBlocks = allowCidrBlocks;
@@ -3462,7 +3549,14 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * AllowCrossAz.
+             * <p>Specifies whether to allow supplementing vSwitches in other zones.</p>
+             * <blockquote>
+             * <p>The instance types remain unchanged, and only new zones are used as candidates. If the scaling group cannot scale out in all selected zones due to issues such as insufficient stock, the system automatically adds vSwitches in new zones to the scaling group based on this configuration.
+             * For example, if the scaling group is configured with the cn-hangzhou-h and cn-hangzhou-g zones, and scale-out fails in both zones, Auto Scaling may create a vSwitch in the cn-hangzhou-k zone and add it to the scaling group based on real-time stock availability.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder allowCrossAz(Boolean allowCrossAz) {
                 this.allowCrossAz = allowCrossAz;
@@ -3470,7 +3564,13 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * AllowDifferentGeneration.
+             * <p>Specifies whether to allow supplementing instance types of other generations.</p>
+             * <ul>
+             * <li>For example, if the current instance type is ecs.c7.large, instance types such as ecs.c6.large and ecs.c8.large can be used as candidates after this feature is enabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder allowDifferentGeneration(Boolean allowDifferentGeneration) {
                 this.allowDifferentGeneration = allowDifferentGeneration;
@@ -3478,7 +3578,10 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * Enabled.
+             * <p>Specifies whether to enable the candidate mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -3486,13 +3589,10 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The maximum hourly price of pay-as-you-go or preemptible instances in intelligent configuration mode. You can specify this parameter to filter the available instance types.</p>
-             * <blockquote>
-             * <p> If you set SpotStrategy to SpotWithPriceLimit, you must specify this parameter. In other cases, this parameter is optional.</p>
-             * </blockquote>
+             * <p>The maximum price for candidate instance types.</p>
              * 
              * <strong>example:</strong>
-             * <p>2</p>
+             * <p>2.10</p>
              */
             public Builder maxPrice(Float maxPrice) {
                 this.maxPrice = maxPrice;
@@ -3559,12 +3659,12 @@ public class CreateScalingConfigurationRequest extends Request {
             } 
 
             /**
-             * <p>If you want to scale instances in the scaling group based on the weight of an instance type, you must specify this property and WeightedCapacity.</p>
-             * <p>The instance type specified by using this parameter overwrites the instance type of the launch template. You can specify N instance types by using the Extend Launch Template feature. You can specify 1 to 10 memory sizes, indicated by N.</p>
+             * <p>When you need the scaling group to scale based on the capacity of the instance type, specify both this parameter and WeightedCapacity.</p>
+             * <p>This parameter specifies the instance type and overrides the instance type in the launch template. You can specify N instance types to extend the launch template to support N instance types. Valid values of N: 1 to 20.</p>
              * <blockquote>
-             * <p> This parameter takes effect only if you specify LaunchTemplateId.</p>
+             * <p>This parameter takes effect only when LaunchTemplateId is specified.</p>
              * </blockquote>
-             * <p>You can use this parameter to specify any instance types that are available for purchase.</p>
+             * <p>Valid values of InstanceType: available ECS instance types.</p>
              * 
              * <strong>example:</strong>
              * <p>ecs.c5.xlarge</p>
@@ -3575,18 +3675,18 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>If you need to specify the capacity of the instance type in the scaling configuration, you must specify this parameter after you specify InstanceTypeOverrides.InstanceType.</p>
-             * <p>The weight specifies the capacity of an instance of the specified instance type in the scaling group. A higher weight specifies that a smaller number of instances of the specified instance type are required to meet the expected capacity requirement.</p>
-             * <p>Performance metrics such as the number of vCPUs and memory size vary with each instance type. You can specify different weights for different instance types based on your business requirements.</p>
-             * <p>For example:</p>
+             * <p>When you need to specify the capacity of the instance type in the scaling configuration, specify this parameter after you specify InstanceTypeOverrides.InstanceType.</p>
+             * <p>This parameter specifies the weight of the instance type, which indicates the capacity that a single instance of the instance type provides in the scaling group. A greater weight indicates that fewer instances of this instance type are required to meet the expected capacity.</p>
+             * <p>Because instance types have different performance metrics such as the number of vCPUs and memory size, you can configure different weights for different instance types based on your business requirements.</p>
+             * <p>Example:</p>
              * <ul>
              * <li>Current capacity: 0.</li>
-             * <li>Expected capacity: 6</li>
-             * <li>Capacity of ecs.c5.xlarge: 4.</li>
+             * <li>Expected capacity: 6.</li>
+             * <li>Capacity of the ecs.c5.xlarge instance type: 4.</li>
              * </ul>
-             * <p>To reach the expected capacity, Auto Scaling must scale out two instances of ecs.c5.xlarge.</p>
+             * <p>To meet the expected capacity, the scaling group scales out by adding two ecs.c5.xlarge instances.</p>
              * <blockquote>
-             * <p> The total capacity of the scaling group is constrained and cannot surpass the combined total of the maximum group size defined by MaxSize and the highest weight assigned to any instance type.</p>
+             * <p>During scale-out, the capacity of the scaling group cannot exceed the sum of the maximum capacity (MaxSize) and the maximum weight of the instance type.</p>
              * </blockquote>
              * <p>Valid values of WeightedCapacity: 1 to 500.</p>
              * 
@@ -3627,12 +3727,16 @@ public class CreateScalingConfigurationRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("SecurityGroupIds")
         private java.util.List<String> securityGroupIds;
 
+        @com.aliyun.core.annotation.NameInMap("VSwitchIds")
+        private java.util.List<String> vSwitchIds;
+
         private NetworkInterfaces(Builder builder) {
             this.instanceType = builder.instanceType;
             this.ipv6AddressCount = builder.ipv6AddressCount;
             this.networkInterfaceTrafficMode = builder.networkInterfaceTrafficMode;
             this.secondaryPrivateIpAddressCount = builder.secondaryPrivateIpAddressCount;
             this.securityGroupIds = builder.securityGroupIds;
+            this.vSwitchIds = builder.vSwitchIds;
         }
 
         public static Builder builder() {
@@ -3678,12 +3782,20 @@ public class CreateScalingConfigurationRequest extends Request {
             return this.securityGroupIds;
         }
 
+        /**
+         * @return vSwitchIds
+         */
+        public java.util.List<String> getVSwitchIds() {
+            return this.vSwitchIds;
+        }
+
         public static final class Builder {
             private String instanceType; 
             private Integer ipv6AddressCount; 
             private String networkInterfaceTrafficMode; 
             private Integer secondaryPrivateIpAddressCount; 
             private java.util.List<String> securityGroupIds; 
+            private java.util.List<String> vSwitchIds; 
 
             private Builder() {
             } 
@@ -3694,18 +3806,21 @@ public class CreateScalingConfigurationRequest extends Request {
                 this.networkInterfaceTrafficMode = model.networkInterfaceTrafficMode;
                 this.secondaryPrivateIpAddressCount = model.secondaryPrivateIpAddressCount;
                 this.securityGroupIds = model.securityGroupIds;
+                this.vSwitchIds = model.vSwitchIds;
             } 
 
             /**
-             * <p>If you want to scale instances in the scaling group based on the weight of an instance type, you must specify this property and WeightedCapacity.</p>
-             * <p>The instance type specified by using this parameter overwrites the instance type of the launch template. You can specify N instance types by using the Extend Launch Template feature. You can specify 1 to 10 memory sizes, indicated by N.</p>
-             * <blockquote>
-             * <p> This parameter takes effect only if you specify LaunchTemplateId.</p>
-             * </blockquote>
-             * <p>You can use this parameter to specify any instance types that are available for purchase.</p>
+             * <p>The elastic network interfaces (ENIs) type. When you use this parameter, you must use the NetworkInterfaces Settings for the primary network interface controller (NIC), and you cannot set the SecurityGroupId or SecurityGroupIds parameter. Valid values:</p>
+             * <ul>
+             * <li><p>Primary: primary elastic network interface (ENI).</p>
+             * </li>
+             * <li><p>Secondary: secondary elastic network interface (ENI).</p>
+             * </li>
+             * </ul>
+             * <p>Default value: Secondary.</p>
              * 
              * <strong>example:</strong>
-             * <p>ecs.c5.xlarge</p>
+             * <p>Primary</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -3713,7 +3828,14 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The number of randomly generated IPv6 addresses that you want to allocate to the elastic network interface (ENI).</p>
+             * <p>The number of randomly generated IPv6 addresses for the primary ENI.
+             * Take note of the following items:</p>
+             * <ul>
+             * <li><p>This parameter takes effect only when NetworkInterface.InstanceType is set to Primary. If NetworkInterface.InstanceType is set to Secondary or left empty, you cannot configure this parameter.</p>
+             * </li>
+             * <li><p>After you configure this parameter, you cannot configure Ipv6AddressCount.</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -3724,7 +3846,18 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * NetworkInterfaceTrafficMode.
+             * <p>The communication pattern of the network interface controller (NIC). Valid values of the parameter:</p>
+             * <ul>
+             * <li>Standard: uses the TCP communication pattern.</li>
+             * <li>HighPerformance: enables the Elastic RDMA Interface (ERI) and uses the RDMA communication pattern.</li>
+             * </ul>
+             * <p>Default value: Standard.</p>
+             * <blockquote>
+             * <p>The number of elastic network interfaces (ENIs) in RDMA pattern cannot exceed the limit of the instance family. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>HighPerformance</p>
              */
             public Builder networkInterfaceTrafficMode(String networkInterfaceTrafficMode) {
                 this.networkInterfaceTrafficMode = networkInterfaceTrafficMode;
@@ -3732,7 +3865,16 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * SecondaryPrivateIpAddressCount.
+             * <p>The number of secondary private IPv4 addresses to be assigned to the ENI. Valid values: 1 to 49.</p>
+             * <ul>
+             * <li><p>The value cannot exceed the limit on the number of IP addresses for the instance type. For more information, see <a href="https://www.alibabacloud.com/help/en/ecs/user-guide/overview-of-instance-families">Instance families</a>.</p>
+             * </li>
+             * <li><p>NetworkInterface.N.SecondaryPrivateIpAddressCount specifies the number of secondary private IPv4 addresses to be assigned to the ENI, excluding the primary private IP address of the ENI. The system randomly assigns these addresses from the available CIDR block of the vSwitch (NetworkInterface.N.VSwitchId) to which the ENI belongs.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder secondaryPrivateIpAddressCount(Integer secondaryPrivateIpAddressCount) {
                 this.secondaryPrivateIpAddressCount = secondaryPrivateIpAddressCount;
@@ -3740,13 +3882,24 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The IDs of the security groups with which you want to associate the ECS instances that are created by using the scaling configuration. For more information, see the &quot;Security group limits&quot; section of the &quot;<a href="https://help.aliyun.com/document_detail/25412.html">Limits</a>&quot; topic.</p>
-             * <blockquote>
-             * <p>If you specify SecurityGroupId, you cannot specify SecurityGroupIds.</p>
-             * </blockquote>
+             * <p>The IDs of one or more security groups to which the elastic network interfaces (ENIs) belong.</p>
              */
             public Builder securityGroupIds(java.util.List<String> securityGroupIds) {
                 this.securityGroupIds = securityGroupIds;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the vSwitch to which the elastic network interfaces (ENIs) belong. N indicates the Settings for multiple vSwitches. Valid values of N: 1 to 10.</p>
+             * <p>Take note of the following items:</p>
+             * <ul>
+             * <li>If InstanceType is set to Primary, you cannot set this parameter. The default value is the vSwitch to which the instance belongs.</li>
+             * <li>If InstanceType is set to Secondary or left empty, this parameter is optional.</li>
+             * <li>The system selects a vSwitch that is in the same zone as the primary network interface controller (NIC) and has the most active IP addresses.</li>
+             * </ul>
+             */
+            public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
+                this.vSwitchIds = vSwitchIds;
                 return this;
             }
 
@@ -3810,7 +3963,10 @@ public class CreateScalingConfigurationRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag key of the private pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -3818,7 +3974,10 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value of the private pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -3898,7 +4057,7 @@ public class CreateScalingConfigurationRequest extends Request {
             } 
 
             /**
-             * <p>The IDs of private pools. The ID of a private pool is the same as the ID of the elasticity assurance or capacity reservation that is associated with the private pool. You can specify the IDs of only targeted private pools for this parameter.</p>
+             * <p>The ID of the private pool, which is the ID of the elasticity assurance or capacity reservation service. You can only specify the ID of a private pool in Target mode, and you cannot specify this parameter together with PrivatePoolTags.</p>
              */
             public Builder privatePoolIds(java.util.List<String> privatePoolIds) {
                 this.privatePoolIds = privatePoolIds;
@@ -3906,7 +4065,13 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * PrivatePoolTags.
+             * <p>Filters available Target private pools by tag. Valid values of N: 1 to 20.
+             * Note:</p>
+             * <ul>
+             * <li>When you configure this parameter, the system filters private pools from the Target private pools associated with your account. The filtered private pools must match the tags and meet the scaling group constraints, such as zone and instance type.</li>
+             * <li>Tag matching rule: The private pool must match all specified tags.</li>
+             * <li>You cannot specify this parameter together with PrivatePoolIds.</li>
+             * </ul>
              */
             public Builder privatePoolTags(java.util.List<PrivatePoolTags> privatePoolTags) {
                 this.privatePoolTags = privatePoolTags;
@@ -3914,11 +4079,16 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The resource pool used for instance creation, which can be the public pool or a private pool associated with any active elasticity assurance or capacity reservation. Valid values:</p>
+             * <p>Resource pools include private pools generated after the elasticity assurance or capacity reservation service takes effect, as well as public pools. They are available for selection when the instance starts. Valid values:</p>
              * <ul>
-             * <li>PrivatePoolFirst: prioritizes private pools. When this option is set along with ResourcePoolOptions.PrivatePoolIds, the specified private pools are used first. If you leave ResourcePoolOptions.PrivatePoolIds empty or if the specified private pools lack sufficient capacity, the system will automatically use available open private pools instead. If no matching private pools are available, the system defaults to the public pool.</li>
-             * <li>PrivatePoolOnly: uses only private pools. If you set this value, you must specify ResourcePoolOptions.PrivatePoolIds. If the specified private pools lack sufficient capacity, instance creation will fail.</li>
-             * <li>None: uses no resource pools.</li>
+             * <li><p>PrivatePoolFirst: private pools take precedence. When you select this policy, if ResourcePoolOptions.PrivatePoolIds is specified or the PrivatePoolTags condition is met, the corresponding private pool is preferentially used. If no private pool is specified or the specified private pool has insufficient capacity, the system automatically matches an open private pool. If no eligible private pool is available, the public pool is used to create the instance.</p>
+             * </li>
+             * <li><p>PrivatePoolOnly: only private pools are used. When you select this policy, you must specify ResourcePoolOptions.PrivatePoolIds. If the specified private pool has insufficient capacity, the instance fails to start.</p>
+             * </li>
+             * <li><p>PublicPoolFirst: public pool resources take precedence. The public pool is preferentially used to create the instance. When public pool resources are insufficient, private pool resources are used as a supplement. The system preferentially and automatically matches an open private pool. If no eligible private pool is available, the specified ResourcePoolOptions.PrivatePoolIds or a Target private pool that meets the PrivatePoolTags condition is used. (This policy is in invitational preview and is not supported yet.)</p>
+             * </li>
+             * <li><p>None: no resource pool policy is used.</p>
+             * </li>
              * </ul>
              * <p>Default value: None.</p>
              * 
@@ -3979,8 +4149,8 @@ public class CreateScalingConfigurationRequest extends Request {
             /**
              * <p>The confidential computing mode. Valid values:</p>
              * <ul>
-             * <li>Enclave: An enclave-based confidential computing environment is built on the instance. For more information, see <a href="https://help.aliyun.com/document_detail/203433.html">Build a confidential computing environment by using Enclave</a>.</li>
-             * <li>TDX: A Trust Domain Extensions (TDX) confidential computing environment is built on the instance. For more information, see <a href="https://help.aliyun.com/document_detail/479090.html">Build a TDX confidential computing environment</a>.</li>
+             * <li>Enclave: The ECS instance uses Enclave to build a confidential computing environment. For more information, see <a href="https://help.aliyun.com/document_detail/203433.html">Build a confidential computing environment by using Enclave</a>.</li>
+             * <li>TDX: builds a TDX confidential computing environment. For more information, see <a href="https://help.aliyun.com/document_detail/479090.html">Build a TDX confidential computing environment</a>.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -4051,7 +4221,7 @@ public class CreateScalingConfigurationRequest extends Request {
             } 
 
             /**
-             * <p>The instance type of the spot instances. This parameter takes effect only if you set SpotStrategy to SpotWithPriceLimit.</p>
+             * <p>The instance type of the spot instance. This parameter takes effect only when SpotStrategy is set to SpotWithPriceLimit.</p>
              * 
              * <strong>example:</strong>
              * <p>ecs.g6.large</p>
@@ -4062,7 +4232,7 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The price limit of the spot instances. This parameter takes effect only if you set SpotStrategy to SpotWithPriceLimit.</p>
+             * <p>The maximum hourly price for the spot instance. This parameter takes effect only when SpotStrategy is set to SpotWithPriceLimit.</p>
              * 
              * <strong>example:</strong>
              * <p>0.5</p>

@@ -75,7 +75,7 @@ public class CreateDiagnoseReportRequest extends Request {
         } 
 
         /**
-         * <p>The region ID of the scaling group.</p>
+         * <p>The ID of the region to which the scaling group belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class CreateDiagnoseReportRequest extends Request {
         }
 
         /**
-         * <p>The ID of the scaling group.</p>
+         * <p>The ID of the target scaling group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

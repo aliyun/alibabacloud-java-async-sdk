@@ -78,7 +78,7 @@ public class ModifyAlarmResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>BACACF83-7070-4953-A8FD-D81F89F1****</p>

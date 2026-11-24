@@ -98,24 +98,24 @@ public class ApplyScalingGroupRequest extends Request {
          *   name: nginx-deployment
          *   labels:
          *     app: nginx
-         * spec:
-         *   replicas: 3
-         *   selector:
-         *     matchLabels:
-         *       app: nginx
-         *   template:
-         *     metadata:
-         *       labels:
+         *   spec:
+         *     replicas: 3
+         *     selector:
+         *        matchLabels:
          *         app: nginx
-         *       annotations:
-         *         k8s.aliyun.com/eip-bandwidth: 10
-         *         k8s.aliyun.com/eci-with-eip: true
-         *     spec:
-         *       containers:
-         *       - name: nginx
-         *         image: nginx:1.14.2
-         *         ports:
-         *         - containerPort: 80</p>
+         *     template:
+         *       metadata:
+         *         labels:
+         *           app: nginx
+         *         annotations:
+         *           k8s.aliyun.com/eip-bandwidth: 10
+         *           k8s.aliyun.com/eci-with-eip: true
+         *         spec:
+         *           containers:
+         *           - name: nginx
+         *             image: nginx:1.14.2
+         *             ports:
+         *             - containerPort: 80</p>
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -124,10 +124,7 @@ public class ApplyScalingGroupRequest extends Request {
         }
 
         /**
-         * <p>Optional. The format of the configuration file. Default value: YAML. Set the value to YAML.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>YAML</p>
+         * Format.
          */
         public Builder format(String format) {
             this.putQueryParameter("Format", format);

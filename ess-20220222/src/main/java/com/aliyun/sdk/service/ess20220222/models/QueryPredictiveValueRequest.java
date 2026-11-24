@@ -177,7 +177,7 @@ public class QueryPredictiveValueRequest extends Request {
         } 
 
         /**
-         * <p>The end time of the predicted number of instances in the scaling group. The time follows the ISO8601 standard and uses UTC time.</p>
+         * <p>The end time to query the predicted number of instances in the scaling group. The time must be in UTC and follow the ISO 8601 standard.</p>
          * <p>Format: yyyy-MM-ddTHH:mmZ.</p>
          * <p>This parameter is required.</p>
          * 
@@ -191,11 +191,11 @@ public class QueryPredictiveValueRequest extends Request {
         }
 
         /**
-         * <p>The name of the monitoring metric of the prediction rule. Valid values:</p>
+         * <p>The name of the monitoring metrics for the predictive scaling rule. Valid values:</p>
          * <ul>
-         * <li>CpuUtilization: the average CPU utilization.</li>
-         * <li>IntranetRx: the inbound traffic over an internal network.</li>
-         * <li>IntranetTx: the outbound traffic over an internal network.</li>
+         * <li>CpuUtilization: the average CPU utilization of ECS instances.</li>
+         * <li>IntranetRx: the average inbound internal network traffic of ECS instances.</li>
+         * <li>IntranetTx: the average outbound internal network traffic of ECS instances.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -218,7 +218,7 @@ public class QueryPredictiveValueRequest extends Request {
         }
 
         /**
-         * <p>The region ID</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -262,7 +262,7 @@ public class QueryPredictiveValueRequest extends Request {
         }
 
         /**
-         * <p>The start time of the predicted number of instances in the scaling group. The time follows the ISO8601 standard and uses UTC time.</p>
+         * <p>The start time to query the predicted number of instances in the scaling group. The time must be in UTC and follow the ISO 8601 standard.</p>
          * <p>Format: yyyy-MM-ddTHH:mmZ.</p>
          * <p>This parameter is required.</p>
          * 
@@ -276,7 +276,7 @@ public class QueryPredictiveValueRequest extends Request {
         }
 
         /**
-         * <p>The current value of the monitoring metric of the prediction rule.</p>
+         * <p>The current value of the monitoring metrics for the predictive scaling rule.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

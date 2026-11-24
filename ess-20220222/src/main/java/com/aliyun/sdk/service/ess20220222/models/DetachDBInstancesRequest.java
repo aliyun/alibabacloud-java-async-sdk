@@ -159,8 +159,7 @@ public class DetachDBInstancesRequest extends Request {
         } 
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">Ensure idempotence</a>.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">Ensure idempotence</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-42665544****</p>
@@ -172,7 +171,7 @@ public class DetachDBInstancesRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the ApsaraDB RDS instances. You can specify up to five ApsaraDB RDS instances.</p>
+         * <p>The IDs of the ApsaraDB RDS instances. You can remove up to five ApsaraDB RDS instances at a time.</p>
          * <p>This parameter is required.</p>
          */
         public Builder DBInstances(java.util.List<String> DBInstances) {
@@ -182,10 +181,12 @@ public class DetachDBInstancesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to remove the private IP addresses of the existing instances in the scaling group from the IP address whitelist of the ApsaraDB RDS instance. Valid values:</p>
+         * <p>Specifies whether to remove the private IP addresses of the instances in the scaling group from the IP whitelist of the RDS instance. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: removes the private IP addresses of the instances.</p>
+         * </li>
+         * <li><p>false: does not remove the private IP addresses of the instances.</p>
+         * </li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -220,10 +221,10 @@ public class DetachDBInstancesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to remove the security group. This parameter takes effect only if you set <code>AttachMode</code> to <code>SecurityGroup</code>. Valid values:</p>
+         * <p>This parameter is valid only for databases whose <code>AttachMode</code> is set to <code>SecurityGroup</code>. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: removes the security group ID that was added when the scaling group was associated with the database.</li>
+         * <li>false: retains the security group ID that was added when the scaling group was associated with the database.</li>
          * </ul>
          * <p>Default value: false.</p>
          * 

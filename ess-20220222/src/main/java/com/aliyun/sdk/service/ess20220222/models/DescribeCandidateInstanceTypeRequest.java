@@ -269,7 +269,14 @@ public class DescribeCandidateInstanceTypeRequest extends Request {
         } 
 
         /**
-         * AllowCrossAz.
+         * <p>Specifies whether to include vSwitches from other availability zones as candidates.</p>
+         * <blockquote>
+         * <p>The instance types remain unchanged. Only new availability zones are added as candidates. If a scaling group fails to scale out in all selected availability zones due to issues such as insufficient inventory, Auto Scaling automatically adds a vSwitch in a new availability zone to the scaling group based on this setting.
+         * For example, if a scaling group is configured for the cn-hangzhou-h and cn-hangzhou-g availability zones and a scale-out fails in both zones, Auto Scaling may create a vSwitch in the cn-hangzhou-k availability zone and add it to the scaling group based on real-time inventory.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder allowCrossAz(Boolean allowCrossAz) {
             this.putQueryParameter("AllowCrossAz", allowCrossAz);
@@ -278,7 +285,13 @@ public class DescribeCandidateInstanceTypeRequest extends Request {
         }
 
         /**
-         * AllowDifferentGeneration.
+         * <p>Specifies whether to include instance types from other generations as candidates.</p>
+         * <ul>
+         * <li>For example, if the current instance type is ecs.c7.large, you can set this parameter to true to include instance types such as ecs.c6.large and ecs.c8.large in the list of candidates.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder allowDifferentGeneration(Boolean allowDifferentGeneration) {
             this.putQueryParameter("AllowDifferentGeneration", allowDifferentGeneration);
@@ -287,7 +300,7 @@ public class DescribeCandidateInstanceTypeRequest extends Request {
         }
 
         /**
-         * DataDiskCategories.
+         * <p>The data disk categories, ordered by priority from high to low. If Auto Scaling cannot create a data disk by using a higher-priority category, it tries the next one in the list.</p>
          */
         public Builder dataDiskCategories(java.util.List<String> dataDiskCategories) {
             this.putQueryParameter("DataDiskCategories", dataDiskCategories);
@@ -296,7 +309,13 @@ public class DescribeCandidateInstanceTypeRequest extends Request {
         }
 
         /**
-         * ImageFamily.
+         * <p>The name of the image family. When specified, the latest image in this family is used to create instances. This parameter cannot be used with ImageId.</p>
+         * <blockquote>
+         * <p>If you do not specify the scaling group ID, you must specify at least one of ImageId, ImageName, and ImageFamily.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>hangzhou-daily-update</p>
          */
         public Builder imageFamily(String imageFamily) {
             this.putQueryParameter("ImageFamily", imageFamily);
@@ -305,7 +324,13 @@ public class DescribeCandidateInstanceTypeRequest extends Request {
         }
 
         /**
-         * ImageId.
+         * <p>The ID of the image used to create instances.</p>
+         * <blockquote>
+         * <p>If the specified image contains both a system disk and data disks, any existing data disk information in the scaling configuration is cleared.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>centos6u5_64_20G_aliaegis****.vhd</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -314,7 +339,13 @@ public class DescribeCandidateInstanceTypeRequest extends Request {
         }
 
         /**
-         * ImageName.
+         * <p>The name of the image. The name must be unique within a region. You cannot use this parameter to specify an image from Alibaba Cloud Marketplace.</p>
+         * <blockquote>
+         * <p>This parameter is an alternative to the <code>ImageId</code> parameter. If you specify <code>ImageId</code>, <code>ImageName</code> is ignored.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>centos6u5_64_20G_aliaegis_20140703.vhd</p>
          */
         public Builder imageName(String imageName) {
             this.putQueryParameter("ImageName", imageName);
@@ -323,7 +354,7 @@ public class DescribeCandidateInstanceTypeRequest extends Request {
         }
 
         /**
-         * InstanceTypes.
+         * <p>The specified ECS instance types.</p>
          */
         public Builder instanceTypes(java.util.List<String> instanceTypes) {
             this.putQueryParameter("InstanceTypes", instanceTypes);
@@ -332,7 +363,10 @@ public class DescribeCandidateInstanceTypeRequest extends Request {
         }
 
         /**
-         * Ipv6AddressCount.
+         * <p>The number of IPv6 addresses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ipv6AddressCount(Integer ipv6AddressCount) {
             this.putQueryParameter("Ipv6AddressCount", ipv6AddressCount);
@@ -341,7 +375,10 @@ public class DescribeCandidateInstanceTypeRequest extends Request {
         }
 
         /**
-         * MaxPrice.
+         * <p>The maximum price for a candidate instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder maxPrice(Float maxPrice) {
             this.putQueryParameter("MaxPrice", maxPrice);
@@ -359,7 +396,10 @@ public class DescribeCandidateInstanceTypeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region where the scaling group is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-qingdao</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -386,7 +426,19 @@ public class DescribeCandidateInstanceTypeRequest extends Request {
         }
 
         /**
-         * SpotStrategy.
+         * <p>The bidding strategy for pay-as-you-go instances. Valid values:</p>
+         * <ul>
+         * <li><p>NoSpot: a standard pay-as-you-go instance.</p>
+         * </li>
+         * <li><p>SpotWithPriceLimit: a spot instance with a user-defined maximum price.</p>
+         * </li>
+         * <li><p>SpotAsPriceGo: a spot instance where the system automatically bids at the market price.</p>
+         * </li>
+         * </ul>
+         * <p>Default value: NoSpot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NoSpot</p>
          */
         public Builder spotStrategy(String spotStrategy) {
             this.putQueryParameter("SpotStrategy", spotStrategy);
@@ -395,7 +447,7 @@ public class DescribeCandidateInstanceTypeRequest extends Request {
         }
 
         /**
-         * SystemDiskCategories.
+         * <p>The system disk categories, ordered by priority from high to low. If Auto Scaling cannot create a system disk by using a higher-priority category, it tries the next one in the list.</p>
          */
         public Builder systemDiskCategories(java.util.List<String> systemDiskCategories) {
             this.putQueryParameter("SystemDiskCategories", systemDiskCategories);
@@ -404,7 +456,7 @@ public class DescribeCandidateInstanceTypeRequest extends Request {
         }
 
         /**
-         * ZoneIds.
+         * <p>The specified availability zones.</p>
          */
         public Builder zoneIds(java.util.List<String> zoneIds) {
             this.putQueryParameter("ZoneIds", zoneIds);

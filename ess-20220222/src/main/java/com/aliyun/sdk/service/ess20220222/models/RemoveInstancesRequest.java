@@ -229,7 +229,7 @@ public class RemoveInstancesRequest extends Request {
         } 
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">How to ensure idempotence</a>.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">How to ensure idempotence</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-42665544****</p>
@@ -241,10 +241,10 @@ public class RemoveInstancesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to adjust the expected number of ECS instances in the scaling group. Valid values:</p>
+         * <p>Specifies whether to modify the expected number of instances. Valid values:</p>
          * <ul>
-         * <li>true: After ECS instances are removed from the scaling group, the expected number of ECS instances in the scaling group decreases.</li>
-         * <li>false: After ECS instances are removed from the scaling group, the expected number of ECS instances in the scaling group remains unchanged.</li>
+         * <li>true: After the ECS instances are removed from the scaling group, the expected number of instances is decreased by the number of removed instances.</li>
+         * <li>false: After the ECS instances are removed from the scaling group, the expected number of instances remains unchanged.</li>
          * </ul>
          * <p>Default value: true.</p>
          * 
@@ -258,10 +258,10 @@ public class RemoveInstancesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to ignore invalid instances when you remove a batch of instances from the scaling group. Valid values:</p>
+         * <p>Specifies whether to ignore invalid instances when removing a batch of instances from the scaling group. Valid values:</p>
          * <ul>
-         * <li>true: ignores invalid instances. If invalid instances exist and valid instances are deleted, the corresponding scaling activity enters the Warning state. You can check the scaling activity details to view the invalid instances that are ignored.</li>
-         * <li>false: does not ignore invalid instances. If invalid instances exist in the batch of instances that you want to remove from the scaling group, an error is reported.</li>
+         * <li>true: Invalid instances are ignored when removing a batch of instances from the scaling group. If invalid instances exist and valid instances are successfully removed, the execution status of the scaling activity is displayed as Warning. You can view the invalid instances in the scaling activity details.</li>
+         * <li>false: Invalid instances are not ignored when removing a batch of instances from the scaling group. If invalid instances exist in the batch, an error is reported.</li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -275,7 +275,7 @@ public class RemoveInstancesRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the ECS instances that you want to remove from the scaling group.</p>
+         * <p>The IDs of the ECS instances to be removed.</p>
          * <p>This parameter is required.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
@@ -285,7 +285,7 @@ public class RemoveInstancesRequest extends Request {
         }
 
         /**
-         * <p>The context of the lifecycle hook.</p>
+         * <p>The context information of the lifecycle hook.</p>
          */
         public Builder lifecycleHookContext(LifecycleHookContext lifecycleHookContext) {
             String lifecycleHookContextShrink = shrink(lifecycleHookContext, "LifecycleHookContext", "json");
@@ -325,21 +325,22 @@ public class RemoveInstancesRequest extends Request {
         }
 
         /**
-         * <p>The action subsequent to the removal of the Elastic Compute Service (ECS) instances. Valid values:</p>
+         * <p>Specifies the action for the removed ECS instances. Valid values:</p>
          * <ul>
-         * <li><p>recycle: The ECS instances enter the Economical Mode.</p>
-         * <p>**</p>
-         * <p><strong>Note</strong> This setting is applicable only if you set <code>ScalingPolicy</code> to <code>recycle</code>.</p>
+         * <li><p>recycle: The ECS instances are stopped in economical mode.</p>
+         * <blockquote>
+         * <p>This value takes effect only when <code>ScalingPolicy</code> is set to <code>recycle</code>.</p>
+         * </blockquote>
          * </li>
          * <li><p>release: The ECS instances are released.</p>
          * </li>
          * </ul>
-         * <p>ScalingPolicy of the CreateScalingGroup operation specifies the reclaim mode of the scaling group while RemovePolicy of the RemoveInstances operation specifies the subsequent action when an ECS instance is removed from the scaling group. Examples:</p>
+         * <p>The ScalingPolicy parameter of CreateScalingGroup specifies the reclaim mode of the scaling group, but the specific action when an instance is removed is determined by the RemovePolicy parameter of RemoveInstances. Examples:</p>
          * <ul>
-         * <li>If you set ScalingPolicy and RemovePolicy to recycle, the ECS instances enter the Economical Mode when they are removed.</li>
-         * <li>If you set ScalingPolicy to recycle and RemovePolicy to release, the ECS instances are released when they are removed.</li>
-         * <li>If you set ScalingPolicy to release and RemovePolicy to recycle, the ECS instances are released when they are removed.</li>
-         * <li>If you set ScalingPolicy and RemovePolicy to release, the ECS instances are released when they are removed.</li>
+         * <li>If ScalingPolicy is set to recycle and RemovePolicy is set to recycle, the ECS instances are stopped in economical mode.</li>
+         * <li>If ScalingPolicy is set to recycle and RemovePolicy is set to release, the ECS instances are released.</li>
+         * <li>If ScalingPolicy is set to release and RemovePolicy is set to recycle, the ECS instances are released.</li>
+         * <li>If ScalingPolicy is set to release and RemovePolicy is set to release, the ECS instances are released.</li>
          * </ul>
          * <p>Default value: release.</p>
          * 
@@ -384,19 +385,16 @@ public class RemoveInstancesRequest extends Request {
         }
 
         /**
-         * <p>The period of time required by the ECS instance to enter the Stopped state. Unit: seconds. Valid values: 30 to 240.</p>
+         * <p>The timeout period for waiting for the ECS instances to be successfully stopped during the scale-in process. Unit: seconds.
+         * Valid values: 30 to 240.</p>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>By default, this parameter inherits the value of StopInstanceTimeout specified in the CreateScalingGroup or ModifyScalingGroup operation. You can also specify a different value for this parameter in the RemoveInstances operation.</p>
-         * </li>
-         * <li><p>This parameter takes effect only if you set RemovePolicy to release.</p>
-         * </li>
-         * <li><p>If you specify this parameter, the system waits for the ECS instance to enter the Stopped state only for up to the specified period of time before continuing with the scale-in operation, regardless of the status of the ECS instance.</p>
-         * </li>
-         * <li><p>If you do not specify this parameter, the system continues with the scale-in operation until the ECS instance enters the Stopped state. If the ECS instance is not successfully stopped, the scale-in process is rolled back and considered failed.</p>
-         * </li>
+         * <li>By default, this parameter inherits the value from the scaling group. You can also reset it when calling RemoveInstances.</li>
+         * <li>This parameter takes effect only in the scale-in process when RemovePolicy is set to release.  </li>
+         * <li>If this parameter is set, the system waits for a maximum of the StopInstanceTimeout period for the instances to be successfully stopped. After the timeout period, the scale-in process continues regardless of whether the instances are successfully stopped.  </li>
+         * <li>If this parameter is not set, the system waits for a long time for the instances to be successfully stopped. The scale-in process continues only after the instances are successfully stopped. If the instances fail to be stopped, the scale-in process is rolled back and the scale-in fails.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -480,10 +478,10 @@ public class RemoveInstancesRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to disable the lifecycle hook. Valid values:</p>
+             * <p>Specifies whether to disable all lifecycle hooks for the scaling activity. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li>true: Disables all lifecycle hooks.</li>
+             * <li>false: Does not disable lifecycle hooks.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -495,7 +493,7 @@ public class RemoveInstancesRequest extends Request {
             }
 
             /**
-             * <p>The IDs of the lifecycle hooks that you want to disable.</p>
+             * <p>The IDs of the lifecycle hooks disabled for the scaling activity.</p>
              */
             public Builder ignoredLifecycleHookIds(java.util.List<String> ignoredLifecycleHookIds) {
                 this.ignoredLifecycleHookIds = ignoredLifecycleHookIds;
@@ -503,7 +501,10 @@ public class RemoveInstancesRequest extends Request {
             }
 
             /**
-             * LifecycleHookResult.
+             * <p>The default execution result of the lifecycle hook in this scaling activity. After this parameter is set, it overwrites the original default execution result of the hook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONTINUE</p>
              */
             public Builder lifecycleHookResult(String lifecycleHookResult) {
                 this.lifecycleHookResult = lifecycleHookResult;

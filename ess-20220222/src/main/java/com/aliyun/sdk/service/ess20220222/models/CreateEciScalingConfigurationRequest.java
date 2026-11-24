@@ -751,7 +751,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
         } 
 
         /**
-         * <p>The Container Registry Enterprise Edition instances.</p>
+         * <p>The information about the Container Registry Enterprise instances.</p>
          */
         public Builder acrRegistryInfos(java.util.List<AcrRegistryInfos> acrRegistryInfos) {
             this.putQueryParameter("AcrRegistryInfos", acrRegistryInfos);
@@ -760,7 +760,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The validity period of the scaling configuration. Unit: seconds.</p>
+         * <p>The validity period. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -772,7 +772,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to automatically create elastic IP addresses (EIPs) and bind the EIPs to elastic container instances.</p>
+         * <p>Specifies whether automatic creation of an elastic IP address (EIP) is performed and the EIP is attached to the ECI instance.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -784,10 +784,10 @@ public class CreateEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to automatically match the image cache. Valid values:</p>
+         * <p>Specifies whether to automatically match an image cache. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: Yes.</li>
+         * <li>false: No.</li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -801,11 +801,27 @@ public class CreateEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The name series of elastic container instances.</p>
-         * <p>If you want to use an ordered instance name, specify the value for this parameter in the following format: name_prefix[begin_number,bits]name_suffix.</p>
+         * <p>The name of the ECI instance, which is the name of the container group.</p>
+         * <p>To set a sequential instance name, use the following format: name_prefix(AUTO_INCREMENT)[begin_number,bits]name_suffix.</p>
+         * <ul>
+         * <li><p><strong>name_prefix</strong>: the prefix of the hostname.</p>
+         * </li>
+         * <li><p><strong>(AUTO_INCREMENT)</strong>: a fixed value that identifies this sorting method.</p>
+         * </li>
+         * <li><p><strong>begin_number</strong>: the start value of the sequential number. Valid values: 0 to 999999.</p>
+         * </li>
+         * <li><p><strong>bits</strong>: the number of digits of the sequential number. Valid values: 1 to 6. If the number of digits of the specified begin_number is greater than the value of bits, bits defaults to 6.
+         * <notice>We recommend that you set bits to at least 3. Otherwise, the upper limit of the sequential number is easily reached. After the upper limit is reached, if scale-out is still required, the scaling activity reports an error and stops. In this case, you must reset the rule for generating hostnames.</notice></p>
+         * </li>
+         * <li><p><strong>name_suffix</strong> (optional): the suffix of the hostname.</p>
+         * </li>
+         * </ul>
+         * <p><notice>No spaces are allowed in [begin_number,bits]. The system increments the number sequentially by default. However, if an ECI instance created during scale-out fails to start, the instance is removed from the scaling group and a new ECI instance is created. Therefore, the hostnames of ECI instances in the scaling group may be incremented discontinuously.</notice></p>
+         * <p><strong>Example:</strong> If you set the value to nginx-test-(AUTO_INCREMENT)[0,3], the container group names are nginx-test-000, nginx-test-001, and nginx-test-002.</p>
+         * <p>The rules for setting sequential ECI instance names are the same as those for setting sequential ECS instance names in a scaling group. For more information, see <a href="https://help.aliyun.com/document_detail/203831.html">Set a rule for sequential and unique instance names or hostnames</a>.</p>
          * 
          * <strong>example:</strong>
-         * <p>nginx-test</p>
+         * <p>nginx-test-(AUTO_INCREMENT)[0,3]</p>
          */
         public Builder containerGroupName(String containerGroupName) {
             this.putQueryParameter("ContainerGroupName", containerGroupName);
@@ -814,7 +830,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The containers per elastic container instance.</p>
+         * <p>The list of containers included in the instance.</p>
          */
         public Builder containers(java.util.List<Containers> containers) {
             this.putQueryParameter("Containers", containers);
@@ -823,10 +839,10 @@ public class CreateEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the Cost Optimization feature. Valid values:</p>
+         * <p>Specifies whether to enable cost optimization. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: Enabled.</li>
+         * <li>false: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -839,7 +855,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The number of vCPUs per elastic container instance.</p>
+         * <p>The number of vCPUs for the instance. Unit: cores.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0</p>
@@ -851,7 +867,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The number of physical CPU cores. You can specify this parameter for specific instance types. For more information, see <a href="https://help.aliyun.com/document_detail/197781.html">Specify CPU options</a>.</p>
+         * <p>The number of physical CPU cores. Only specific instance types support custom settings. For more information, see <a href="https://help.aliyun.com/document_detail/197781.html">Customize CPU options</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -863,7 +879,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The number of threads per core. You can specify this parameter for specific instance types. A value of 1 specifies that Hyper-Threading is disabled. For more information, see <a href="https://help.aliyun.com/document_detail/197781.html">Specify CPU options</a>.</p>
+         * <p>The number of threads per core. Only specific instance types support custom settings. A value of 1 indicates that hyper-threading is disabled. For more information, see <a href="https://help.aliyun.com/document_detail/197781.html">Customize CPU options</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -875,7 +891,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The bucket that you want to use to store data caches.</p>
+         * <p>The data cache bucket.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -887,14 +903,14 @@ public class CreateEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the performance burst feature when ESSD AutoPL disks are used to store data caches. Valid values:</p>
+         * <p>Specifies whether to enable the burst feature for the ESSD AutoPL cloud disk used for data caching. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: Enabled.</li>
+         * <li>false: Disabled.</li>
          * </ul>
          * <p>Default value: false.</p>
          * <blockquote>
-         * <p> For more information about ESSD AutoPL disks, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
+         * <p>For more information about ESSD AutoPL cloud disks, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL cloud disks</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -907,16 +923,16 @@ public class CreateEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The PL of the cloud disk that you want to use to store data caches. We recommend that you use ESSDs. Valid values:</p>
+         * <p>The performance level of the cloud disk used for data caching. ESSDs are recommended. Valid values for the performance level of an ESSD:</p>
          * <ul>
-         * <li>PL0: An ESSD can provide up to 10,000 random read/write IOPS.</li>
-         * <li>PL1: An ESSD can provide up to 50,000 random read/write IOPS.</li>
-         * <li>PL2: An ESSD can provide up to 100,000 random read/write IOPS.</li>
-         * <li>PL3: An ESSD can provide up to 1,000,000 random read/write IOPS.</li>
+         * <li>PL0: An ESSD at PL0 delivers up to 10,000 random read/write IOPS.</li>
+         * <li>PL1: An ESSD at PL1 delivers up to 50,000 random read/write IOPS.</li>
+         * <li>PL2: An ESSD at PL2 delivers up to 100,000 random read/write IOPS.</li>
+         * <li>PL3: An ESSD at PL3 delivers up to 1,000,000 random read/write IOPS.</li>
          * </ul>
          * <p>Default value: PL1.</p>
          * <blockquote>
-         * <p> For more information about ESSDs, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
+         * <p>For more information about ESSDs, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -929,9 +945,9 @@ public class CreateEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The provisioned IOPS of the ESSD AutoPL disk that you want to use to store data caches. Valid values: 0 to min{50,000, 1,000 × *Capacity - Baseline IOPS}. Baseline IOPS = min{1,800 + 50 × *Capacity, 50,000}.</p>
+         * <p>The provisioned read/write IOPS of the ESSD AutoPL cloud disk used for data caching. Valid values: 0 to min{50000, 1000 × capacity - baseline performance}, where baseline performance = min{1800 + 50 × capacity, 50000}.</p>
          * <blockquote>
-         * <p> For more information about ESSD AutoPL disks, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
+         * <p>For more information about ESSD AutoPL cloud disks, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL cloud disks</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -945,7 +961,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
 
         /**
          * <blockquote>
-         * <p> This parameter is unavailable for use.</p>
+         * <p>This parameter is unavailable.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -958,7 +974,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The IP addresses of the DNS servers.</p>
+         * <p>The list of IP addresses of DNS servers.</p>
          */
         public Builder dnsConfigNameServers(java.util.List<String> dnsConfigNameServers) {
             this.putQueryParameter("DnsConfigNameServers", dnsConfigNameServers);
@@ -967,7 +983,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The options. Each option is a name-value pair. The value in the name-value pair is optional.</p>
+         * <p>The list of object options. Each object consists of a Name and an optional Value.</p>
          */
         public Builder dnsConfigOptions(java.util.List<DnsConfigOptions> dnsConfigOptions) {
             this.putQueryParameter("DnsConfigOptions", dnsConfigOptions);
@@ -976,7 +992,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The search domains of the DNS servers.</p>
+         * <p>The list of DNS search domains.</p>
          */
         public Builder dnsConfigSearchs(java.util.List<String> dnsConfigSearchs) {
             this.putQueryParameter("DnsConfigSearchs", dnsConfigSearchs);
@@ -985,10 +1001,12 @@ public class CreateEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The Domain Name System (DNS) policy. Valid values:</p>
+         * <p>The DNS policy. Valid values:</p>
          * <ul>
-         * <li>None: uses the DNS that is specified by DnsConfig.</li>
-         * <li>Default: uses the DNS that is specified for the runtime environment.</li>
+         * <li><p>None: Uses the DNS settings specified in the DnsConfig field.</p>
+         * </li>
+         * <li><p>Default: Inherits the DNS settings of the runtime environment.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1001,7 +1019,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The maximum outbound bandwidth. Unit: bit/s.</p>
+         * <p>The outbound bandwidth limit. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>1024000</p>
@@ -1013,7 +1031,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The EIP bandwidth. Default value: 5. Unit: Mbit/s.</p>
+         * <p>The bandwidth of the EIP. Default value: 5 Mbit/s.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -1026,7 +1044,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
 
         /**
          * <blockquote>
-         * <p> This parameter is unavailable for use.</p>
+         * <p>This parameter is unavailable.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1039,7 +1057,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The size of the temporary storage space. By default, an Enterprise SSD (ESSD) of performance level 1 (PL1) is used. Unit: GiB.</p>
+         * <p>The size of the ephemeral storage space. By default, a PL1 ESSD cloud disk is used. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -1051,13 +1069,13 @@ public class CreateEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The version of the GPU driver. Valid values:</p>
+         * <p>The GPU driver version. Valid values:</p>
          * <ul>
          * <li>tesla=470.82.01 (default)</li>
          * <li>tesla=525.85.12</li>
          * </ul>
          * <blockquote>
-         * <p> You can switch the GPU driver version only for a few Elastic Compute Service (ECS) instance types. For more information, see <a href="https://help.aliyun.com/document_detail/2579486.html">Specify GPU-accelerated ECS instance types to create an elastic container instance</a>.</p>
+         * <p>Only specific instance types support switching the GPU driver version. For more information, see <a href="https://help.aliyun.com/document_detail/2579486.html">Create a GPU-accelerated instance</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1070,7 +1088,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The custom hostnames of the containers.</p>
+         * <p>The custom hostname mappings for a container in the instance.</p>
          */
         public Builder hostAliases(java.util.List<HostAliases> hostAliases) {
             this.putQueryParameter("HostAliases", hostAliases);
@@ -1079,7 +1097,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The hostname series of elastic container instances.</p>
+         * <p>The hostname, which is the name of the container group.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -1091,7 +1109,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The image repositories.</p>
+         * <p>The details of the image registry.</p>
          */
         public Builder imageRegistryCredentials(java.util.List<ImageRegistryCredentials> imageRegistryCredentials) {
             this.putQueryParameter("ImageRegistryCredentials", imageRegistryCredentials);
@@ -1112,7 +1130,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The maximum inbound bandwidth. Unit: bit/s.</p>
+         * <p>The inbound bandwidth limit. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>1024000</p>
@@ -1124,7 +1142,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The init containers.</p>
+         * <p>The list of init containers.</p>
          */
         public Builder initContainers(java.util.List<InitContainers> initContainers) {
             this.putQueryParameter("InitContainers", initContainers);
@@ -1133,11 +1151,11 @@ public class CreateEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The level of the instance family. You can specify this parameter to match the available instance types. This parameter takes effect only if you set <code>CostOptimization</code> to true. Valid values:</p>
+         * <p>The instance family level, which is used to filter instance types that meet your requirements. This parameter takes effect only when CostOptimization is enabled. Valid values:</p>
          * <ul>
-         * <li>EntryLevel: entry level (shared instance types). Instance types of this level are the most cost-effective, but may not ensure stable computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low. For more information, see <a href="https://help.aliyun.com/document_detail/108489.html">Shared instance families</a>.</li>
-         * <li>EnterpriseLevel: enterprise level. Instance types of this level provide stable performance and dedicated resources, and are suitable for business scenarios that require high stability. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</li>
-         * <li>CreditEntryLevel: credit-based entry level (burstable instance types). CPU credits are used to ensure computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low but may fluctuate in specific cases. For more information, see <a href="https://help.aliyun.com/document_detail/59977.html">Overview</a> of burstable instances.</li>
+         * <li>EntryLevel: entry-level, which indicates shared instance types. Shared instance types are more cost-effective but cannot guarantee stable computing performance. They are suitable for business scenarios with low average CPU utilization. For more information, see <a href="https://help.aliyun.com/document_detail/108489.html">Shared instance families</a>.</li>
+         * <li>EnterpriseLevel: enterprise-level. Enterprise-level instance types provide stable performance and dedicated resources, and are suitable for business scenarios that require high stability. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</li>
+         * <li>CreditEntryLevel: credit entry-level, which indicates burstable instances. Burstable instances use CPU credits to ensure computing performance and are suitable for business scenarios with low average CPU utilization but occasional CPU bursts. For more information, see <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1150,7 +1168,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The ECS instance types that you want to use to create elastic container instances. You can specify up to five ECS instance types.</p>
+         * <p>The specified ECS instance types. You can specify up to five instance types.</p>
          */
         public Builder instanceTypes(java.util.List<String> instanceTypes) {
             this.putQueryParameter("InstanceTypes", instanceTypes);
@@ -1171,7 +1189,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The load balancing weight of each elastic container instance. Valid values: 1 to 100.</p>
+         * <p>The weight of the ECI instance when it is used as a backend server for load balancing. Valid values: 1 to 100.</p>
          * <p>Default value: 50.</p>
          * 
          * <strong>example:</strong>
@@ -1184,7 +1202,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The memory size per elastic container instance. Unit: GiB.</p>
+         * <p>The memory size for the instance. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>2.0</p>
@@ -1196,7 +1214,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The endpoints of the Network Time Protocol (NTP) servers.</p>
+         * <p>The NTP server.</p>
          */
         public Builder ntpServers(java.util.List<String> ntpServers) {
             this.putQueryParameter("NtpServers", ntpServers);
@@ -1214,7 +1232,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The name of the instance Resource Access Management (RAM) role. Elastic container instances and Elastic Compute Service (ECS) instances can share the same RAM role. For more information, see <a href="https://help.aliyun.com/document_detail/61175.html">RAM roles</a>.</p>
+         * <p>The name of the instance RAM role. ECI and ECS share instance RAM roles. For more information, see <a href="https://help.aliyun.com/document_detail/61175.html">Instance RAM roles</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>RamTestRole</p>
@@ -1247,11 +1265,11 @@ public class CreateEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The restart policy of elastic container instances. Valid values:</p>
+         * <p>The restart policy of the ECI instance. Valid values:</p>
          * <ul>
-         * <li>Always: always restarts elastic container instances.</li>
-         * <li>Never: never restarts elastic container instances.</li>
-         * <li>OnFailure: restarts elastic container instances upon failures.</li>
+         * <li>Always: Always restarts the instance.</li>
+         * <li>Never: Never restarts the instance.</li>
+         * <li>OnFailure: Restarts the instance upon failure.</li>
          * </ul>
          * <p>Default value: Always.</p>
          * 
@@ -1265,8 +1283,8 @@ public class CreateEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The name of the scaling configuration. The name must be 2 to 64 characters in length and can contain letters, digits, underscores (_), hyphens (-), and periods (.). It must start with a letter or a digit.</p>
-         * <p>The name of the scaling configuration must be unique in a scaling group within a region. If you do not specify this parameter, the value of ScalingConfigurationId is used.</p>
+         * <p>The name of the scaling configuration. The name must be 2 to 64 characters in length and start with a digit, letter, or Chinese character. It can contain digits, underscores (_), hyphens (-), and periods (.).</p>
+         * <p>The name must be unique within a scaling group in a region. If you do not specify this parameter, the ID of the scaling configuration is used by default.</p>
          * 
          * <strong>example:</strong>
          * <p>scalingconfig****</p>
@@ -1291,7 +1309,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The system information of the security context in which the elastic container instance runs.</p>
+         * <p>The security context system information for the instance.</p>
          */
         public Builder securityContextSysctls(java.util.List<SecurityContextSysctls> securityContextSysctls) {
             this.putQueryParameter("SecurityContextSysctls", securityContextSysctls);
@@ -1300,8 +1318,8 @@ public class CreateEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The ID of the security group to which elastic container instances belong. Elastic container instances that belong to the same security group can communicate with each other.</p>
-         * <p>If you do not specify a security group, the system uses the default security group in the region that you selected. Make sure that the inbound rules of the security group contain the protocols and port numbers of the containers that you want to expose. If you do not have a default security group in the region, the system creates a default security group, and then adds the container protocols and port numbers that you specified to the inbound rules of the security group.</p>
+         * <p>The ID of the security group to which the ECI instance belongs. ECI instances in the same security group can access each other.</p>
+         * <p>If you do not specify a security group, the system automatically uses the default security group in the selected region. You must ensure that the inbound rules of this security group include the protocols and ports that the containers need to expose. If no default security group exists in the region, the system performs automatic creation of a default security group and adds the declared container protocols and ports to the inbound rules of the security group.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-uf66jeqopgqa9hdn****</p>
@@ -1313,8 +1331,8 @@ public class CreateEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The maximum hourly price of preemptible elastic container instances. The value can be accurate to three decimal places.</p>
-         * <p>If you set SpotStrategy to SpotWithPriceLimit, you must specify SpotPriceLimit.</p>
+         * <p>The maximum hourly price for the spot instance. The value is accurate to three decimal places.</p>
+         * <p>This parameter is required when SpotStrategy is set to SpotWithPriceLimit.</p>
          * 
          * <strong>example:</strong>
          * <p>0.025</p>
@@ -1326,16 +1344,16 @@ public class CreateEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The instance bidding policy. Valid values:</p>
+         * <p>The preemption policy for the instance. Valid values:</p>
          * <ul>
-         * <li>NoSpot: The instances are created as pay-as-you-go instances.</li>
-         * <li>SpotWithPriceLimit: The instances are preemptible instances for which you can specify the maximum hourly price.</li>
-         * <li>SpotAsPriceGo: The instances are created as preemptible instances for which the market price at the time of purchase is used as the bid price.</li>
+         * <li>NoSpot: Regular pay-as-you-go instance.</li>
+         * <li>SpotWithPriceLimit: Spot instance with a maximum price limit.</li>
+         * <li>SpotAsPriceGo: Spot instance whose price automatically follows the current market price.</li>
          * </ul>
          * <p>Default value: NoSpot.</p>
          * 
          * <strong>example:</strong>
-         * <p>SpotPriceLimit</p>
+         * <p>SpotWithPriceLimit</p>
          */
         public Builder spotStrategy(String spotStrategy) {
             this.putQueryParameter("SpotStrategy", spotStrategy);
@@ -1344,10 +1362,10 @@ public class CreateEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The tags of elastic container instances. Tags must be specified as key-value pairs. You can specify up to 20 tags for each elastic container instance. When you specify Key and Value, take note of the following items:</p>
+         * <p>The tags of the ECI instance. Tags are passed as key-value pairs. You can use up to 20 tags. The requirements for keys and values are as follows:</p>
          * <ul>
-         * <li>A tag key can be up to 64 characters in length. The key cannot start with acs: or aliyun or contain <code>http://</code> or <code>https://</code>. You cannot specify an empty string as a tag key.</li>
-         * <li>A tag value can be up to 128 characters in length. The value cannot start with acs: or aliyun or contain <code>http://</code> or <code>https://</code>. You can specify an empty string as a tag value.</li>
+         * <li>A key can be up to 64 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>. A key cannot be an empty string.</li>
+         * <li>A value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>. A value can be an empty string.</li>
          * </ul>
          */
         public Builder tags(java.util.List<Tags> tags) {
@@ -1357,7 +1375,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The buffer time during which a program handles operations before the program stops. Unit: seconds.</p>
+         * <p>The buffer time for the program to handle operations before shutdown. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -1369,7 +1387,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The volumes.</p>
+         * <p>The volume information.</p>
          */
         public Builder volumes(java.util.List<Volumes> volumes) {
             this.putQueryParameter("Volumes", volumes);
@@ -1463,7 +1481,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             } 
 
             /**
-             * <p>The domain names of the Container Registry Enterprise Edition instances. By default, all domain names are displayed. Separate multiple domain names with commas (,).</p>
+             * <p>The domain names of the Container Registry Enterprise instance. By default, all domain names of the instance are used. You can specify one or more domain names. Separate multiple domain names with commas (,).</p>
              */
             public Builder domains(java.util.List<String> domains) {
                 this.domains = domains;
@@ -1471,7 +1489,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The ID of the Container Registry Enterprise Edition instance.</p>
+             * <p>The instance ID of the Container Registry Enterprise instance.</p>
              * 
              * <strong>example:</strong>
              * <p>cri-nwj395hgf6f3****</p>
@@ -1482,7 +1500,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The name of the Container Registry Enterprise Edition instance.</p>
+             * <p>The name of the Container Registry Enterprise instance.</p>
              * 
              * <strong>example:</strong>
              * <p>acr-test</p>
@@ -1493,7 +1511,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The region ID of the Container Registry Enterprise Edition instance.</p>
+             * <p>The region where the Container Registry Enterprise instance resides.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-beijing</p>
@@ -1550,7 +1568,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             } 
 
             /**
-             * Commands.
+             * <p>The command executed in the container when the exec probe is used for health checks.</p>
              */
             public Builder commands(java.util.List<String> commands) {
                 this.commands = commands;
@@ -1630,7 +1648,10 @@ public class CreateEciScalingConfigurationRequest extends Request {
             } 
 
             /**
-             * Path.
+             * <p>The path accessed by the HTTP GET request when the HTTP probe is used for health checks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/healthyz</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -1638,7 +1659,10 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * Port.
+             * <p>The port number on which the HTTP GET probe performs health checks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8888</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -1646,7 +1670,14 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * Scheme.
+             * <p>The protocol type used for the HTTP GET request when the HTTP probe is used for health checks. Valid values:</p>
+             * <ul>
+             * <li>HTTP</li>
+             * <li>HTTPS</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTP</p>
              */
             public Builder scheme(String scheme) {
                 this.scheme = scheme;
@@ -1700,7 +1731,10 @@ public class CreateEciScalingConfigurationRequest extends Request {
             } 
 
             /**
-             * Port.
+             * <p>The port number on which the TCP socket probe performs health checks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8000</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -1856,7 +1890,11 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * FailureThreshold.
+             * <p>The minimum consecutive failures for the probe to be considered failed after having succeeded.</p>
+             * <p>Default value: 3.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder failureThreshold(Integer failureThreshold) {
                 this.failureThreshold = failureThreshold;
@@ -1872,7 +1910,10 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * InitialDelaySeconds.
+             * <p>The number of seconds after the container has started before the probe is initiated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder initialDelaySeconds(Integer initialDelaySeconds) {
                 this.initialDelaySeconds = initialDelaySeconds;
@@ -1880,7 +1921,10 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * PeriodSeconds.
+             * <p>The interval at which the probe is performed in seconds. Default value: 10. Minimum value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder periodSeconds(Integer periodSeconds) {
                 this.periodSeconds = periodSeconds;
@@ -1888,7 +1932,10 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * SuccessThreshold.
+             * <p>The minimum consecutive successes for the probe to be considered successful after having failed. Default value: 1. The current value must be 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder successThreshold(Integer successThreshold) {
                 this.successThreshold = successThreshold;
@@ -1904,7 +1951,10 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * TimeoutSeconds.
+             * <p>The timeout period for the probe in seconds. Default value: 1. Minimum value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder timeoutSeconds(Integer timeoutSeconds) {
                 this.timeoutSeconds = timeoutSeconds;
@@ -1958,7 +2008,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             } 
 
             /**
-             * Commands.
+             * <p>The command executed in the container when the exec probe is used for health checks.</p>
              */
             public Builder commands(java.util.List<String> commands) {
                 this.commands = commands;
@@ -2038,7 +2088,10 @@ public class CreateEciScalingConfigurationRequest extends Request {
             } 
 
             /**
-             * Path.
+             * <p>The path accessed by the HTTP GET request when the HTTP probe is used for health checks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/healthz</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -2046,7 +2099,10 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * Port.
+             * <p>The port number on which the HTTP GET probe performs health checks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -2054,7 +2110,14 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * Scheme.
+             * <p>The protocol type used for the HTTP GET request when the HTTP probe is used for health checks. Valid values:</p>
+             * <ul>
+             * <li>HTTP</li>
+             * <li>HTTPS</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTP</p>
              */
             public Builder scheme(String scheme) {
                 this.scheme = scheme;
@@ -2108,7 +2171,10 @@ public class CreateEciScalingConfigurationRequest extends Request {
             } 
 
             /**
-             * Port.
+             * <p>The port number on which the TCP socket probe performs health checks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8000</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -2264,7 +2330,10 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * FailureThreshold.
+             * <p>The minimum consecutive failures for the probe to be considered failed after having succeeded. Default value: 3.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder failureThreshold(Integer failureThreshold) {
                 this.failureThreshold = failureThreshold;
@@ -2280,7 +2349,10 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * InitialDelaySeconds.
+             * <p>The number of seconds after the container has started before the probe is initiated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder initialDelaySeconds(Integer initialDelaySeconds) {
                 this.initialDelaySeconds = initialDelaySeconds;
@@ -2288,7 +2360,10 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * PeriodSeconds.
+             * <p>The interval at which the probe is performed in seconds. Default value: 10. Minimum value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder periodSeconds(Integer periodSeconds) {
                 this.periodSeconds = periodSeconds;
@@ -2296,7 +2371,10 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * SuccessThreshold.
+             * <p>The minimum consecutive successes for the probe to be considered successful after having failed. Default value: 1. The current value must be 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder successThreshold(Integer successThreshold) {
                 this.successThreshold = successThreshold;
@@ -2312,7 +2390,10 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * TimeoutSeconds.
+             * <p>The timeout period for the probe in seconds. Default value: 1. Minimum value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder timeoutSeconds(Integer timeoutSeconds) {
                 this.timeoutSeconds = timeoutSeconds;
@@ -2366,7 +2447,10 @@ public class CreateEciScalingConfigurationRequest extends Request {
             } 
 
             /**
-             * Add.
+             * <p>Grants specific privileges to processes in the container. Currently, only NET_ADMIN and NET_RAW are supported.</p>
+             * <blockquote>
+             * <p>NET_RAW is not supported by default. To use NET_RAW, submit a ticket.</p>
+             * </blockquote>
              */
             public Builder add(java.util.List<String> add) {
                 this.add = add;
@@ -2455,7 +2539,10 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * ReadOnlyRootFilesystem.
+             * <p>Specifies whether the root file system of the container is read-only. Currently, only true is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder readOnlyRootFilesystem(Boolean readOnlyRootFilesystem) {
                 this.readOnlyRootFilesystem = readOnlyRootFilesystem;
@@ -2463,7 +2550,10 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * RunAsUser.
+             * <p>The user ID used to run the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder runAsUser(Long runAsUser) {
                 this.runAsUser = runAsUser;
@@ -2544,7 +2634,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
 
             /**
              * <blockquote>
-             * <p> This parameter is unavailable for use.</p>
+             * <p>This parameter is unavailable.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -2556,7 +2646,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The name of the environment variable. The name can be 1 to 128 characters in length and can contain letters, underscores (_), and digits. It cannot start with a digit. Specify the value in the [0-9a-zA-Z] format.</p>
+             * <p>The name of the environment variable. The name must be 1 to 128 characters in length and can contain letters, digits, and underscores (_). It cannot start with a digit.</p>
              * 
              * <strong>example:</strong>
              * <p>PATH</p>
@@ -2567,7 +2657,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The value of the environment variable. The value can be up to 256 characters in length.</p>
+             * <p>The value of the environment variable. The value must be 0 to 256 characters in length.</p>
              * 
              * <strong>example:</strong>
              * <p>/usr/local/bin</p>
@@ -2637,7 +2727,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             } 
 
             /**
-             * <p>The port. Valid values: 1 to 65535.</p>
+             * <p>The port number. Valid values: 1 to 65535.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -2648,9 +2738,9 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The type of the protocol. Valid values:</p>
+             * <p>The protocol type. Valid values:</p>
              * <ul>
-             * <li>TCP.</li>
+             * <li>TCP</li>
              * <li>UDP</li>
              * </ul>
              * 
@@ -2761,9 +2851,9 @@ public class CreateEciScalingConfigurationRequest extends Request {
             } 
 
             /**
-             * <p>The directory in which the container mounts the volume.</p>
+             * <p>The directory where the volume is mounted in the container.</p>
              * <blockquote>
-             * <p> Data in this directory is overwritten by data on the volume. Specify this parameter with caution.</p>
+             * <p>Notice: The contents of the container mount directory are directly overwritten by the contents of the volume. Proceed with caution.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -2775,11 +2865,11 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The mount propagation setting. Mount propagation enables volume sharing from one container to other containers within the same pod or to containers across separate pods on the same node. Valid values:</p>
+             * <p>The mount propagation settings for the volume. Mount propagation allows volumes mounted by a container to be shared with other containers in the same pod, or even with other pods on the same node. Valid values:</p>
              * <ul>
-             * <li>None: Subsequent mounts executed on the volume or its subdirectories are not propagated to the volume.</li>
-             * <li>HostToCotainer: Subsequent mounts executed on the volume or its subdirectories are propagated to the volume.</li>
-             * <li>Bidirectional: This value is similar to HostToCotainer. Subsequent mounts executed on the volume or its subdirectories are propagated to the volume. All volume mounts executed on the container are not only propagate back to the underlying host but also to all containers across every pod that uses the same volume.</li>
+             * <li>None: The volume is not aware of any subsequent mount operations performed on the volume or its subdirectories.</li>
+             * <li>HostToCotainer: The volume is aware of subsequent mount operations performed on the volume or its subdirectories.</li>
+             * <li>Bidirectional: Similar to HostToCotainer, the volume is aware of mount operations. In addition, the volume is propagated back to the host and to all containers of all pods that use the same volume.</li>
              * </ul>
              * <p>Default value: None.</p>
              * 
@@ -2792,7 +2882,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The volume name. The value of this parameter is the same as the value of Volumes.Name.</p>
+             * <p>The name of the volume. The value must be the same as the Name value in Volumes.</p>
              * 
              * <strong>example:</strong>
              * <p>default-volume1</p>
@@ -2805,8 +2895,10 @@ public class CreateEciScalingConfigurationRequest extends Request {
             /**
              * <p>Specifies whether the volume is read-only. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li><p>true: Yes.</p>
+             * </li>
+             * <li><p>false: No.</p>
+             * </li>
              * </ul>
              * <p>Default value: false.</p>
              * 
@@ -2819,7 +2911,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The volume subdirectory.</p>
+             * <p>The subpath of the volume.</p>
              * 
              * <strong>example:</strong>
              * <p>data2/</p>
@@ -3303,7 +3395,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The startup arguments of the container. You can specify up to 10 arguments.</p>
+             * <p>The arguments for the container startup command. A maximum of 10 arguments are supported.</p>
              */
             public Builder args(java.util.List<String> args) {
                 this.args = args;
@@ -3311,7 +3403,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The commands that you want to run by using the CLI for liveness probing within the container.</p>
+             * <p>The startup commands for the container. A maximum of 20 commands are supported. Each command can contain up to 256 characters.</p>
              */
             public Builder commands(java.util.List<String> commands) {
                 this.commands = commands;
@@ -3319,7 +3411,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The number of vCPUs per container.</p>
+             * <p>The number of CPU cores allocated to the container.</p>
              * 
              * <strong>example:</strong>
              * <p>0.25</p>
@@ -3330,7 +3422,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The environment variables.</p>
+             * <p>The environment variable information.</p>
              */
             public Builder environmentVars(java.util.List<EnvironmentVars> environmentVars) {
                 this.environmentVars = environmentVars;
@@ -3338,7 +3430,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The number of GPUs per container.</p>
+             * <p>The number of GPUs allocated to the container.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -3349,7 +3441,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The image in the container.</p>
+             * <p>The container image. You can pull images from an image repository such as Docker Hub and Alibaba Cloud Container Registry (ACR). When you pull an image over the Internet, if no NAT gateway is created in the VPC, you must associate the ECI instance with an EIP.</p>
              * 
              * <strong>example:</strong>
              * <p>registry-vpc.cn-hangzhou.aliyuncs.com/eci_open/nginx:latest</p>
@@ -3360,12 +3452,15 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The image pulling policy. Valid values:</p>
+             * <p>The image pull policy for the container. Valid values:</p>
              * <ul>
-             * <li>Always: Each time instances are created, image pulling is performed.</li>
-             * <li>IfNotPresent: Image pulling is performed based on your business requirements. On-premises images are used by default. If no on-premises images are available, images are pulled from remote sources.</li>
-             * <li>Never: Image pulling is not performed. On-premises images are always used. Image pulling is not performed.</li>
+             * <li>Always: Always pulls the image.</li>
+             * <li>IfNotPresent: Pulls the image only if it is not present locally.</li>
+             * <li>Never: Never pulls the image. Only local images are used.</li>
              * </ul>
+             * <blockquote>
+             * <p>If image caching is enabled, ImagePullPolicy is overridden to Always when the container is created.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>Always</p>
@@ -3376,7 +3471,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The commands that you want to run by using the CLI to configure the postStart callback function within the container.</p>
+             * <p>The command executed in the container when the command line method is used to configure the postStart callback function.</p>
              */
             public Builder lifecyclePostStartHandlerExecs(java.util.List<String> lifecyclePostStartHandlerExecs) {
                 this.lifecyclePostStartHandlerExecs = lifecyclePostStartHandlerExecs;
@@ -3384,7 +3479,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The IP address of the host to which you want to send HTTP GET requests to configure the postStart callback function.</p>
+             * <p>The host address that receives the HTTP GET request when the HTTP request method is used to configure the postStart callback function.</p>
              * 
              * <strong>example:</strong>
              * <p>10.0.XX.XX</p>
@@ -3395,7 +3490,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The path to which you want to send HTTP GET requests to configure the postStart callback function.</p>
+             * <p>The path accessed by the HTTP GET request when the HTTP request method is used to configure the postStart callback function.</p>
              * 
              * <strong>example:</strong>
              * <p>/healthyz</p>
@@ -3406,7 +3501,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The port over which you want to send HTTP GET requests to configure the postStart callback function.</p>
+             * <p>The port number checked by the HTTP GET request when the HTTP request method is used to configure the postStart callback function.</p>
              * 
              * <strong>example:</strong>
              * <p>5050</p>
@@ -3417,7 +3512,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The protocol type of HTTP GET requests that you want to send to configure the postStart callback function. Valid values:</p>
+             * <p>The protocol type used for the HTTP GET request when the HTTP request method is used to configure the postStart callback function. Valid values:</p>
              * <ul>
              * <li>HTTP</li>
              * <li>HTTPS</li>
@@ -3432,7 +3527,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The IP address of the host detected by the TCP sockets that you want to use to configure the postStart callback function.</p>
+             * <p>The host address checked by the TCP socket when the TCP socket method is used to configure the postStart callback function.</p>
              * 
              * <strong>example:</strong>
              * <p>10.0.XX.XX</p>
@@ -3443,7 +3538,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The port detected by the TCP sockets that you want to use to configure the postStart callback function.</p>
+             * <p>The port checked by the TCP socket when the TCP socket method is used to configure the postStart callback function.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -3454,7 +3549,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The commands that you want to run by using the CLI to configure the preStop callback function within the container.</p>
+             * <p>The command executed in the container when the command line method is used to configure the preStop callback function.</p>
              */
             public Builder lifecyclePreStopHandlerExecs(java.util.List<String> lifecyclePreStopHandlerExecs) {
                 this.lifecyclePreStopHandlerExecs = lifecyclePreStopHandlerExecs;
@@ -3462,7 +3557,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The IP address of the host to which you want to send HTTP GET requests to configure the preStop callback function.</p>
+             * <p>The host address that receives the HTTP GET request when the HTTP request method is used to configure the preStop callback function.</p>
              * 
              * <strong>example:</strong>
              * <p>10.0.XX.XX</p>
@@ -3473,7 +3568,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The path to which you want to send HTTP GET requests to configure the preStop callback function.</p>
+             * <p>The path accessed by the HTTP GET request when the HTTP request method is used to configure the preStop callback function.</p>
              * 
              * <strong>example:</strong>
              * <p>/healthyz</p>
@@ -3484,7 +3579,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The port over which you want to send HTTP GET requests to configure the preStop callback function.</p>
+             * <p>The port number checked by the HTTP GET request when the HTTP request method is used to configure the preStop callback function.</p>
              * 
              * <strong>example:</strong>
              * <p>88</p>
@@ -3495,7 +3590,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The protocol type of the HTTP GET requests that you want to send to configure the preStop callback function. Valid values:</p>
+             * <p>The protocol type used for the HTTP GET request when the HTTP request method is used to configure the preStop callback function. Valid values:</p>
              * <ul>
              * <li>HTTP</li>
              * <li>HTTPS</li>
@@ -3510,7 +3605,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The IP address of the host detected by the TCP sockets that you want to use to configure the preStop callback function.</p>
+             * <p>The host address checked by the TCP socket when the TCP socket method is used to configure the preStop callback function.</p>
              * 
              * <strong>example:</strong>
              * <p>10.0.XX.XX</p>
@@ -3521,7 +3616,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The port detected by the TCP sockets that you want to use to configure the preStop callback function.</p>
+             * <p>The port checked by the TCP socket when the TCP socket method is used to configure the preStop callback function.</p>
              * 
              * <strong>example:</strong>
              * <p>90</p>
@@ -3532,7 +3627,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The memory size that you want to allocate to the container. Unit: GiB.</p>
+             * <p>The memory size of the container. Unit: GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>0.5</p>
@@ -3554,7 +3649,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The ports.</p>
+             * <p>The list of ports.</p>
              */
             public Builder ports(java.util.List<Ports> ports) {
                 this.ports = ports;
@@ -3562,7 +3657,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether the container allocates buffer resources to standard input streams during its active runtime. If you do not specify this parameter, an end-of-file (EOF) error occurs when standard input streams in the container are read.</p>
+             * <p>Specifies whether to allocate a buffer for standard input (stdin) during container runtime. If this parameter is not set, reads from stdin in the container result in an EOF.</p>
              * <p>Default value: false.</p>
              * 
              * <strong>example:</strong>
@@ -3574,8 +3669,8 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether standard input streams remain connected during multiple sessions if Stdin is set to true.</p>
-             * <p>If you set StdinOnce to true, standard input streams are connected after the container is started, and remain idle until a client is connected to receive data. After the client is disconnected, streams are also disconnected and remain disconnected until the container is restarted.</p>
+             * <p>Specifies whether the standard input stream maintains the enabling status across multiple attached sessions when stdin is set to true.</p>
+             * <p>If StdinOnce is set to true, standard input is opened when the container starts and remains empty until the first client attaches to it. It then stays open to accept data until the client disconnects, at which point standard input is shutdown and remains shutdown until the container is restarted.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -3586,12 +3681,12 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable interaction. Valid values:</p>
+             * <p>Specifies whether to enable interactive mode. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li>true: Enabled.</li>
+             * <li>false: Disabled.</li>
              * </ul>
-             * <p>If the command is a /bin/bash command, set the value to true.</p>
+             * <p>For example, if Command is set to /bin/bash, set this parameter to true.</p>
              * <p>Default value: false.</p>
              * 
              * <strong>example:</strong>
@@ -3603,7 +3698,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The volume mounts of the container.</p>
+             * <p>The volume mount information of the container.</p>
              */
             public Builder volumeMounts(java.util.List<VolumeMounts> volumeMounts) {
                 this.volumeMounts = volumeMounts;
@@ -3681,7 +3776,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             } 
 
             /**
-             * <p>The variable name of the option.</p>
+             * <p>The name of the object variable.</p>
              * 
              * <strong>example:</strong>
              * <p>name</p>
@@ -3692,7 +3787,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The variable value of the option.</p>
+             * <p>The value of the object variable.</p>
              * 
              * <strong>example:</strong>
              * <p>value</p>
@@ -3762,7 +3857,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             } 
 
             /**
-             * <p>The hostnames of the containers that you want to add.</p>
+             * <p>The hostname to be added.</p>
              */
             public Builder hostnames(java.util.List<String> hostnames) {
                 this.hostnames = hostnames;
@@ -3770,7 +3865,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The IP address of the container that you want to add.</p>
+             * <p>The IP address to be added.</p>
              * 
              * <strong>example:</strong>
              * <p>1.1.1.1</p>
@@ -3853,10 +3948,10 @@ public class CreateEciScalingConfigurationRequest extends Request {
             } 
 
             /**
-             * <p>The password of the image repository.</p>
+             * <p>The password of the image registry.</p>
              * 
              * <strong>example:</strong>
-             * <p>yourpaasword</p>
+             * <p>yourpassword</p>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -3864,7 +3959,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The endpoint of the image repository.</p>
+             * <p>The address of the image registry.</p>
              * 
              * <strong>example:</strong>
              * <p>registry-vpc.cn-shanghai.aliyuncs.com</p>
@@ -3875,7 +3970,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The username of the image repository.</p>
+             * <p>The username of the image registry.</p>
              * 
              * <strong>example:</strong>
              * <p>yourusername</p>
@@ -3932,7 +4027,10 @@ public class CreateEciScalingConfigurationRequest extends Request {
             } 
 
             /**
-             * Adds.
+             * <p>Grants specific permissions to processes in the container. Only NET_ADMIN and NET_RAW are supported.</p>
+             * <blockquote>
+             * <p>NET_RAW is not supported by default. Submit a ticket to apply for this permission.</p>
+             * </blockquote>
              */
             public Builder adds(java.util.List<String> adds) {
                 this.adds = adds;
@@ -4021,7 +4119,10 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * ReadOnlyRootFilesystem.
+             * <p>Specifies whether the root file system where the container runs is read-only. Only true is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder readOnlyRootFilesystem(Boolean readOnlyRootFilesystem) {
                 this.readOnlyRootFilesystem = readOnlyRootFilesystem;
@@ -4029,7 +4130,10 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * RunAsUser.
+             * <p>The user ID used to run the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>587</p>
              */
             public Builder runAsUser(Long runAsUser) {
                 this.runAsUser = runAsUser;
@@ -4110,7 +4214,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
 
             /**
              * <blockquote>
-             * <p> This parameter is unavailable for use.</p>
+             * <p>This parameter is unavailable.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -4122,7 +4226,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The name of the environment variable. The name can be 1 to 128 characters in length and can contain letters, underscores (_), and digits. It cannot start with a digit. Specify the value in the <code>[0-9a-zA-Z]</code> format.</p>
+             * <p>The name of the environment variable. The name must be 1 to 128 characters in length and can contain letters, digits, and underscores (_). It cannot start with a digit.</p>
              * 
              * <strong>example:</strong>
              * <p>Path</p>
@@ -4133,7 +4237,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The value of the environment variable. The value can be up to 256 characters in length.</p>
+             * <p>The value of the environment variable. The value must be 0 to 256 characters in length.</p>
              * 
              * <strong>example:</strong>
              * <p>/usr/bin/</p>
@@ -4327,7 +4431,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             } 
 
             /**
-             * <p>The directory to which the init container mounts the volume. The data stored in this directory is overwritten by the data on the volume. Specify this parameter with caution.</p>
+             * <p>The mount directory. The content in the mount directory of the container is directly overwritten by the content of the volume. Use this parameter with caution.</p>
              * 
              * <strong>example:</strong>
              * <p>/usr/share/</p>
@@ -4338,11 +4442,11 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The mount propagation settings of the volume. Mount propagation enables volume sharing from one container to other containers within the same pod or to containers across separate pods on the same node. Valid values:</p>
+             * <p>The mount propagation settings of the volume. Mount propagation allows a volume mounted by a container to be shared with other containers in the same pod, or even with other pods on the same node. Valid values:</p>
              * <ul>
-             * <li>None: Subsequent mounts executed on the volume or its subdirectories do not propagate to the volume.</li>
-             * <li>HostToCotainer: Subsequent mounts executed on the volume or its subdirectories propagate to the volume.</li>
-             * <li>Bidirectional: This value is similar to HostToCotainer. Subsequent mounts executed on the volume or its subdirectories propagate to the volume. All volume mounts executed on the container not only propagate back to the underlying host but also to all containers across every pod that uses the same volume.</li>
+             * <li>None: The volume is not aware of any subsequent mount operations performed on this volume or its subdirectories.</li>
+             * <li>HostToCotainer: The volume is aware of subsequent mount operations performed on this volume or its subdirectories.</li>
+             * <li>Bidirectional: Similar to HostToCotainer, the volume is aware of mount operations. In addition, the volume is propagated back to the host and to all containers of all pods that use the same volume.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -4354,7 +4458,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The name of the volume.</p>
+             * <p>The name of the mounted volume.</p>
              * 
              * <strong>example:</strong>
              * <p>test-empty</p>
@@ -4365,8 +4469,8 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether the mount path is read-only.</p>
-             * <p>Default value: false.</p>
+             * <p>Specifies whether the mount path is read-only.
+             * Default value: false.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -4377,7 +4481,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The subdirectory of the volume. The pod can mount different directories of the same volume to different subdirectories of init containers.</p>
+             * <p>The subdirectory under the volume. This allows a pod to mount different directories under the same volume to different directories in the container.</p>
              * 
              * <strong>example:</strong>
              * <p>/usr/sub/</p>
@@ -4598,7 +4702,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The startup arguments of the init container. You can specify up to 10 arguments.</p>
+             * <p>The arguments for the container startup command. A maximum of 10 arguments are supported.</p>
              */
             public Builder args(java.util.List<String> args) {
                 this.args = args;
@@ -4606,7 +4710,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The startup commands of the init container.</p>
+             * <p>The startup commands of the container.</p>
              */
             public Builder commands(java.util.List<String> commands) {
                 this.commands = commands;
@@ -4614,7 +4718,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The number of vCPUs per init container.</p>
+             * <p>The number of vCPUs for the container. Unit: cores.</p>
              * 
              * <strong>example:</strong>
              * <p>0.5</p>
@@ -4625,7 +4729,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The number of GPUs per init container.</p>
+             * <p>The number of GPUs allocated to the container.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -4636,7 +4740,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The image of the init container.</p>
+             * <p>The image used by the container.</p>
              * 
              * <strong>example:</strong>
              * <p>nginx</p>
@@ -4647,7 +4751,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The image pulling policy.</p>
+             * <p>The image pull policy.</p>
              * 
              * <strong>example:</strong>
              * <p>Always</p>
@@ -4658,7 +4762,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The environment variables of the init container.</p>
+             * <p>The environment variable information of the init container.</p>
              */
             public Builder initContainerEnvironmentVars(java.util.List<InitContainerEnvironmentVars> initContainerEnvironmentVars) {
                 this.initContainerEnvironmentVars = initContainerEnvironmentVars;
@@ -4666,7 +4770,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The ports of init containers.</p>
+             * <p>The list of port mappings for the init container.</p>
              */
             public Builder initContainerPorts(java.util.List<InitContainerPorts> initContainerPorts) {
                 this.initContainerPorts = initContainerPorts;
@@ -4674,7 +4778,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The volume mounts of the init container.</p>
+             * <p>The array of mount point information for the init container.</p>
              */
             public Builder initContainerVolumeMounts(java.util.List<InitContainerVolumeMounts> initContainerVolumeMounts) {
                 this.initContainerVolumeMounts = initContainerVolumeMounts;
@@ -4682,7 +4786,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The memory size per init container. Unit: GiB.</p>
+             * <p>The memory size. Unit: GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0</p>
@@ -4693,7 +4797,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The name of the init container.</p>
+             * <p>The name of the container.</p>
              * 
              * <strong>example:</strong>
              * <p>test-init</p>
@@ -4704,7 +4808,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The working directory of the init container.</p>
+             * <p>The working directory.</p>
              * 
              * <strong>example:</strong>
              * <p>/usr/local</p>
@@ -4774,7 +4878,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             } 
 
             /**
-             * <p>The variable name of the security context in which the container group runs.</p>
+             * <p>The system name of the security context for the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>kernel.msgmax</p>
@@ -4785,7 +4889,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The variable value of the security context in which the elastic container instance runs.</p>
+             * <p>The contextual variable value of the security context for the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>65536</p>
@@ -4855,8 +4959,8 @@ public class CreateEciScalingConfigurationRequest extends Request {
             } 
 
             /**
-             * <p>The tag key of the elastic container instance.</p>
-             * <p>The tag key cannot be an empty string. The tag key can be up to 128 characters in length. It cannot start with <code>acs:</code> or <code>aliyun</code> or contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag key of the instance.</p>
+             * <p>If you specify this parameter, it cannot be an empty string. It can be up to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>, or contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>version</p>
@@ -4867,8 +4971,8 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The tag value of the elastic container instance.</p>
-             * <p>The tag value can be an empty string. The tag value can be up to 128 characters in length. It cannot start with <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag value of the instance.</p>
+             * <p>If you specify this parameter, it can be an empty string. It can be up to 128 characters in length, and cannot start with <code>acs:</code>, or contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -4951,7 +5055,10 @@ public class CreateEciScalingConfigurationRequest extends Request {
             } 
 
             /**
-             * DiskId.
+             * <p>The ID of the DiskVolume.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-xx</p>
              */
             public Builder diskId(String diskId) {
                 this.diskId = diskId;
@@ -4959,7 +5066,10 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * DiskSize.
+             * <p>The size of the DiskVolume. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder diskSize(Integer diskSize) {
                 this.diskSize = diskSize;
@@ -4967,7 +5077,10 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * FsType.
+             * <p>This file system type is not recommended. Use the FlexVolume.FsType parameter instead.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xfs</p>
              */
             public Builder fsType(String fsType) {
                 this.fsType = fsType;
@@ -5034,7 +5147,10 @@ public class CreateEciScalingConfigurationRequest extends Request {
             } 
 
             /**
-             * Medium.
+             * <p>The storage medium of the EmptyDirVolume. The default value is empty, which indicates that the node file system is used. The value memory is supported, which indicates that memory is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>memory</p>
              */
             public Builder medium(String medium) {
                 this.medium = medium;
@@ -5042,7 +5158,10 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * SizeLimit.
+             * <p>The size of the EmptyDir volume. Specify a unit for the value. Use Gi or Mi.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>256Mi</p>
              */
             public Builder sizeLimit(String sizeLimit) {
                 this.sizeLimit = sizeLimit;
@@ -5122,7 +5241,10 @@ public class CreateEciScalingConfigurationRequest extends Request {
             } 
 
             /**
-             * Driver.
+             * <p>The name of the driver used for the FlexVolume.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>flexvolume</p>
              */
             public Builder driver(String driver) {
                 this.driver = driver;
@@ -5130,7 +5252,10 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * FsType.
+             * <p>The type of the file system to be mounted. The default value depends on the script of the FlexVolume.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ext4</p>
              */
             public Builder fsType(String fsType) {
                 this.fsType = fsType;
@@ -5138,7 +5263,11 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * Options.
+             * <p>The list of FlexVolume object options. The options are in key-value pairs and passed in JSON format.
+             * For example, when you mount a cloud disk by using FlexVolume, the format of Options is <code>{&quot;volumeId&quot;:&quot;d-2zehdahrwoa7srg****&quot;,&quot;performanceLevel&quot;: &quot;PL2&quot;}</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;volumeId&quot;:&quot;d-2zehdahrwoa7srg****&quot;,&quot;performanceLevel&quot;: &quot;PL2&quot;}</p>
              */
             public Builder options(String options) {
                 this.options = options;
@@ -5205,7 +5334,10 @@ public class CreateEciScalingConfigurationRequest extends Request {
             } 
 
             /**
-             * Path.
+             * <p>The absolute path on the host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/xx/xx/path</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -5213,7 +5345,10 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The type of the host directory. Examples: File, Directory, and Socket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Directory</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -5293,7 +5428,10 @@ public class CreateEciScalingConfigurationRequest extends Request {
             } 
 
             /**
-             * Path.
+             * <p>The path of the NFS volume.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/share</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -5301,8 +5439,12 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether the mount path is read-only.</p>
-             * <p>Default value: false.</p>
+             * <p>Specifies whether the NFS volume is read-only. Valid values:</p>
+             * <ul>
+             * <li>true: Yes.</li>
+             * <li>false: No.
+             * Default value: false.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -5313,10 +5455,10 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The endpoint of the image repository.</p>
+             * <p>The address of the NFS server.</p>
              * 
              * <strong>example:</strong>
-             * <p>registry-vpc.cn-shanghai.aliyuncs.com</p>
+             * <p>3f9cd4a596-naw76.cn-shanghai.nas.aliyuncs.com</p>
              */
             public Builder server(String server) {
                 this.server = server;
@@ -5407,7 +5549,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The permissions on the configuration file.</p>
+             * <p>The directory permissions of the ConfigFileVolume.</p>
              * 
              * <strong>example:</strong>
              * <p>0644</p>
@@ -5619,7 +5761,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The paths to the configuration files.</p>
+             * <p>The list of configuration file paths.</p>
              */
             public Builder configFileVolumeConfigFileToPaths(java.util.List<ConfigFileVolumeConfigFileToPaths> configFileVolumeConfigFileToPaths) {
                 this.configFileVolumeConfigFileToPaths = configFileVolumeConfigFileToPaths;
@@ -5627,7 +5769,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The default permissions on the ConfigFile volume.</p>
+             * <p>The default permissions of the ConfigFileVolume.</p>
              * 
              * <strong>example:</strong>
              * <p>0644</p>
@@ -5649,7 +5791,15 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The type of the Host directory. Examples: File, Directory, and Socket.</p>
+             * <p>The volume type. Valid values:</p>
+             * <ul>
+             * <li>EmptyDirVolume: the EmptyDir volume, which represents an empty directory.</li>
+             * <li>NFSVolume: the NFS volume, which represents a network file system.</li>
+             * <li>ConfigFileVolume: the ConfigFile volume, which represents a configuration file.</li>
+             * <li>FlexVolume: uses the FlexVolume plug-in to extend storage types and supports mounting cloud disks.</li>
+             * <li>HostPathVolume: the HostPath volume, which represents a file or directory on the host node.</li>
+             * <li>DiskVolume (not recommended): the cloud disk volume. Use FlexVolume to mount cloud disks instead.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>ConfigFileVolume</p>

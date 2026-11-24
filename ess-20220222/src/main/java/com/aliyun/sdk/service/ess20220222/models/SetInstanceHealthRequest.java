@@ -103,10 +103,10 @@ public class SetInstanceHealthRequest extends Request {
         } 
 
         /**
-         * <p>The health status of the instance. Valid values:</p>
+         * <p>The health status to set for the instance. Valid values:</p>
          * <ul>
-         * <li>Healthy: sets the instance as healthy.</li>
-         * <li>Unhealthy: sets the instance as unhealthy.</li>
+         * <li>Healthy: Sets the instance to the healthy state.</li>
+         * <li>Unhealthy: Sets the instance to the unhealthy state.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -120,7 +120,7 @@ public class SetInstanceHealthRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The ID of the instance in the scaling group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

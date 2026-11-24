@@ -93,9 +93,7 @@ public class ScaleWithAdjustmentResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The type of the scaling activity.</p>
-         * <p>If <code>ActivityType</code> is set to <code>CapacityChange</code>, only the expected number of instances is changed during the scaling activity specified by ScalingActivityId and no scale-out is triggered.</p>
-         * <p>This parameter is applicable to only scaling groups that have an expected number of instances.</p>
+         * <p>The type of the scaling activity. If <code>ActivityType</code> is <code>CapacityChange</code>, the scaling activity corresponding to the returned <code>ScalingActivityId</code> only modifies the expected number of instances in the scaling group and does not immediately execute scale-out or scale-in. Applicable scope: scaling groups with the expected number of instances configured.</p>
          * 
          * <strong>example:</strong>
          * <p>CapacityChange</p>
@@ -106,7 +104,7 @@ public class ScaleWithAdjustmentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The elastic planning result returned when the ExecutionMode is set to PlanOnly.</p>
+         * <p>The elastic planning results returned when ExecutionMode is set to PlanOnly.</p>
          */
         public Builder planResult(PlanResult planResult) {
             this.planResult = planResult;
@@ -244,7 +242,7 @@ public class ScaleWithAdjustmentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing method of the instance. Valid values:</p>
+             * <p>The billing method. Valid values:</p>
              * <ul>
              * <li><strong>Prepaid</strong>: subscription.</li>
              * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
@@ -270,11 +268,11 @@ public class ScaleWithAdjustmentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The spot policy of instances. Valid values:</p>
+             * <p>The preemption policy for the instance. Valid values:</p>
              * <ul>
-             * <li>NoSpot: The instances are created as pay-as-you-go instances.</li>
-             * <li>SpotWithPriceLimit: The instances are created as spot instances for which you can specify the maximum hourly price.</li>
-             * <li>SpotAsPriceGo: The instances are spot instances for which the market price at the time of purchase is automatically used as the bid price.</li>
+             * <li>NoSpot: regular pay-as-you-go instance.</li>
+             * <li>SpotWithPriceLimit: spot instance with a maximum price limit.</li>
+             * <li>SpotAsPriceGo: spot instance whose price is automatically set by the system based on the current market price.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -286,7 +284,7 @@ public class ScaleWithAdjustmentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the zone.</p>
+             * <p>The zone ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-beijing-g</p>
@@ -343,7 +341,7 @@ public class ScaleWithAdjustmentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The resource allocation information in the elastic planning result.</p>
+             * <p>The resource allocation information in the elastic planning results.</p>
              */
             public Builder resourceAllocations(java.util.List<ResourceAllocations> resourceAllocations) {
                 this.resourceAllocations = resourceAllocations;

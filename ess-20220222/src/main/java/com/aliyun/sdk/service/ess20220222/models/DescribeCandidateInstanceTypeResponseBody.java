@@ -80,7 +80,7 @@ public class DescribeCandidateInstanceTypeResponseBody extends TeaModel {
         } 
 
         /**
-         * CandidateInstanceTypes.
+         * <p>A list of candidate ECS instance types.</p>
          */
         public Builder candidateInstanceTypes(java.util.List<String> candidateInstanceTypes) {
             this.candidateInstanceTypes = candidateInstanceTypes;
@@ -88,7 +88,7 @@ public class DescribeCandidateInstanceTypeResponseBody extends TeaModel {
         }
 
         /**
-         * CandidateZoneIds.
+         * <p>A list of candidate availability zones.</p>
          */
         public Builder candidateZoneIds(java.util.List<String> candidateZoneIds) {
             this.candidateZoneIds = candidateZoneIds;
@@ -96,7 +96,7 @@ public class DescribeCandidateInstanceTypeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The unique ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>

@@ -26,6 +26,10 @@ public class ModifyLifecycleHookRequest extends Request {
     private Integer heartbeatTimeout;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LifecycleActionSources")
+    private java.util.List<String> lifecycleActionSources;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LifecycleHookId")
     private String lifecycleHookId;
 
@@ -73,6 +77,7 @@ public class ModifyLifecycleHookRequest extends Request {
         super(builder);
         this.defaultResult = builder.defaultResult;
         this.heartbeatTimeout = builder.heartbeatTimeout;
+        this.lifecycleActionSources = builder.lifecycleActionSources;
         this.lifecycleHookId = builder.lifecycleHookId;
         this.lifecycleHookName = builder.lifecycleHookName;
         this.lifecycleHookStatus = builder.lifecycleHookStatus;
@@ -111,6 +116,13 @@ public class ModifyLifecycleHookRequest extends Request {
      */
     public Integer getHeartbeatTimeout() {
         return this.heartbeatTimeout;
+    }
+
+    /**
+     * @return lifecycleActionSources
+     */
+    public java.util.List<String> getLifecycleActionSources() {
+        return this.lifecycleActionSources;
     }
 
     /**
@@ -193,6 +205,7 @@ public class ModifyLifecycleHookRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyLifecycleHookRequest, Builder> {
         private String defaultResult; 
         private Integer heartbeatTimeout; 
+        private java.util.List<String> lifecycleActionSources; 
         private String lifecycleHookId; 
         private String lifecycleHookName; 
         private String lifecycleHookStatus; 
@@ -213,6 +226,7 @@ public class ModifyLifecycleHookRequest extends Request {
             super(request);
             this.defaultResult = request.defaultResult;
             this.heartbeatTimeout = request.heartbeatTimeout;
+            this.lifecycleActionSources = request.lifecycleActionSources;
             this.lifecycleHookId = request.lifecycleHookId;
             this.lifecycleHookName = request.lifecycleHookName;
             this.lifecycleHookStatus = request.lifecycleHookStatus;
@@ -227,12 +241,13 @@ public class ModifyLifecycleHookRequest extends Request {
         } 
 
         /**
-         * <p>The action that you want Auto Scaling to perform after the lifecycle hook ends. Valid values:</p>
+         * <p>The subsequent action to perform after the wait state ends. Valid values: </p>
          * <ul>
-         * <li>CONTINUE: Auto Scaling continues to respond to scaling requests.</li>
-         * <li>ABANDON: Auto Scaling releases Elastic Compute Service (ECS) instances that are created during scale-out activities, or removes ECS instances from the scaling group during scale-in activities.</li>
+         * <li>CONTINUE: Continues the response to the scale-out or scale-down activity.</li>
+         * <li>ABANDON: Releases the ECS instances created during the scale-out activity or removes the ECS instances from the scaling group during the scale-down activity.</li>
+         * <li>ROLLBACK: Rejects the release of ECS instances and rolls back the scale-down activity. For a scale-out activity, releases the created ECS instances, which has the same effect as ABANDON.</li>
          * </ul>
-         * <p>If multiple lifecycle hooks in a scaling group are triggered during scale-in activities and you set the DefaultResult parameter to ABANDON for the lifecycle hook that you want to modify, Auto Scaling immediately performs the action after the lifecycle hook that you want to modify ends. As a result, other lifecycle hooks end ahead of schedule. In other cases, Auto Scaling performs the action only after all lifecycle hooks end.</p>
+         * <p>If a scale-down activity is triggered and multiple lifecycle hooks are invoked, and the DefaultResult of one lifecycle hook is set to ABANDON or ROLLBACK, the wait states of other lifecycle hooks are ended in advance when the wait state of this hook ends. In other cases, the subsequent action is determined by the last lifecycle hook that ends its wait state.</p>
          * 
          * <strong>example:</strong>
          * <p>CONTINUE</p>
@@ -244,8 +259,8 @@ public class ModifyLifecycleHookRequest extends Request {
         }
 
         /**
-         * <p>The period of time before the lifecycle hook ends. Auto Scaling performs the specified action after the lifecycle hook ends. Valid values: 30 to 21600. Unit: seconds.</p>
-         * <p>You can call the RecordLifecycleActionHeartbeat operation to prolong the length of a lifecycle hook. You can also call the CompleteLifecycleAction operation to end a lifecycle hook ahead of schedule.</p>
+         * <p>The wait time set by the lifecycle hook for the scaling activity. The subsequent action is performed after the wait state times out. Valid values: 30 to 21600. Unit: seconds.</p>
+         * <p>You can call the RecordLifecycleActionHeartbeat operation to extend the wait time of the ECS instance, or call the CompleteLifecycleAction operation to end the wait state of the scaling activity in advance.</p>
          * 
          * <strong>example:</strong>
          * <p>600</p>
@@ -257,7 +272,16 @@ public class ModifyLifecycleHookRequest extends Request {
         }
 
         /**
-         * <p>The ID of the lifecycle hook that you want to modify.</p>
+         * <p>The specific scenarios that trigger the lifecycle hook.</p>
+         */
+        public Builder lifecycleActionSources(java.util.List<String> lifecycleActionSources) {
+            this.putQueryParameter("LifecycleActionSources", lifecycleActionSources);
+            this.lifecycleActionSources = lifecycleActionSources;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the lifecycle hook to be modified.</p>
          * 
          * <strong>example:</strong>
          * <p>ash-bp1fxuqyi98w0aib****</p>
@@ -269,10 +293,10 @@ public class ModifyLifecycleHookRequest extends Request {
         }
 
         /**
-         * <p>The name of the lifecycle hook that you want to modify.</p>
+         * <p>The name of the lifecycle hook to be modified.</p>
          * 
          * <strong>example:</strong>
-         * <p>test_SCALE_IN</p>
+         * <p>test_SCAL****</p>
          */
         public Builder lifecycleHookName(String lifecycleHookName) {
             this.putQueryParameter("LifecycleHookName", lifecycleHookName);
@@ -281,14 +305,14 @@ public class ModifyLifecycleHookRequest extends Request {
         }
 
         /**
-         * <p>The status into which you want to put the lifecycle hook. Valid values:</p>
+         * <p>The status of the lifecycle hook. Valid values:</p>
          * <ul>
-         * <li>Active</li>
-         * <li>InActive</li>
+         * <li>Active: Enables the lifecycle hook.</li>
+         * <li>InActive: Disables the lifecycle hook.</li>
          * </ul>
-         * <p>If you do not specify this parameter, the status of the lifecycle hook remains unchanged after you call this operation.</p>
+         * <p>If you do not specify this parameter, the status of the lifecycle hook remains unchanged.</p>
          * <blockquote>
-         * <p>By default, a lifecycle hook is in the Active state after you create it.</p>
+         * <p>After a lifecycle hook is created, it is enabled by default.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -303,8 +327,8 @@ public class ModifyLifecycleHookRequest extends Request {
         /**
          * <p>The type of scaling activity to which the lifecycle hook applies. Valid values:</p>
          * <ul>
-         * <li>SCALE_OUT</li>
-         * <li>SCALE_IN</li>
+         * <li>SCALE_OUT: Scale-out activity of the scaling group.</li>
+         * <li>SCALE_IN: Scale-in activity of the scaling group.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -317,20 +341,20 @@ public class ModifyLifecycleHookRequest extends Request {
         }
 
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the notification recipient. Specify the value in one of the following formats:</p>
+         * <p>The identifier of the notification recipient for the lifecycle hook. The following notification methods are supported:</p>
          * <ul>
-         * <li>If you specify a Simple Message Queue (SMQ, formerly MNS) as the notification recipient, specify the value in the acs:mns:{region-id}:{account-id}:queue/{queuename} format.</li>
-         * <li>If you specify an SMQ topic as the notification recipient, specify the value in the acs:mns:{region-id}:{account-id}:topic/{topicname} format.</li>
-         * <li>If you specify a CloudOps Orchestration Service (OOS) template as the notification recipient, specify the value in the acs:oos:{region-id}:{account-id}:template/{templatename} format.</li>
-         * <li>If you specify an event bus as the notification recipient, specify the value in the acs:eventbridge:{region-id}:{account-id}:eventbus/default format.</li>
+         * <li>Message Service (MNS) queue. Format: acs:mns:{region-id}:{account-id}:queue/{queuename}.</li>
+         * <li>MNS topic. Format: acs:mns:{region-id}:{account-id}:topic/{topicname}.</li>
+         * <li>Operation Orchestration Service (OOS) template. Format: acs:oos:{region-id}:{account-id}:template/{templatename}.</li>
+         * <li>EventBridge. Format: acs:eventbridge:{region-id}:{account-id}:eventbus/default.</li>
          * </ul>
-         * <p>The variables in the preceding value formats have the following meanings:</p>
+         * <p>Variables in the formats:</p>
          * <ul>
-         * <li>region-id: the region ID of your scaling group.</li>
-         * <li>account-id: the ID of your Alibaba Cloud account.</li>
-         * <li>queuename: the name of the SMQ queue.</li>
-         * <li>topicname: the name of the SMQ topic.</li>
-         * <li>templatename: the name of the OOS template.</li>
+         * <li>region-id: The ID of the region where the scaling group resides.</li>
+         * <li>account-id: The Alibaba Cloud account ID.</li>
+         * <li>queuename: The name of the MNS queue.</li>
+         * <li>topicname: The name of the MNS topic.</li>
+         * <li>templatename: The name of the OOS template.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -343,8 +367,8 @@ public class ModifyLifecycleHookRequest extends Request {
         }
 
         /**
-         * <p>The fixed string that is included in a notification. Auto Scaling sends the notification when the lifecycle hook takes effect. The value of this parameter cannot exceed 4,096 characters in length.</p>
-         * <p>Auto Scaling sends the value specified for the NotificationMetadata parameter together with the notification. This helps you categorize your notifications. The NotificationMetadata parameter takes effect only after you specify the NotificationArn parameter.</p>
+         * <p>The fixed string information for the wait state of the scaling activity. The value can be up to 4,096 characters in length.</p>
+         * <p>When Auto Scaling pushes a message to the notification recipient, it also sends the predefined NotificationMetadata value to help you manage and tag different types of notifications. This parameter takes effect only when the NotificationArn parameter is specified.</p>
          * 
          * <strong>example:</strong>
          * <p>Test</p>

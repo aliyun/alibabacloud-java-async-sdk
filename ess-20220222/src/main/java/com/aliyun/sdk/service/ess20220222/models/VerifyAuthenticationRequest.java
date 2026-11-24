@@ -115,10 +115,11 @@ public class VerifyAuthenticationRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to check only the authorization status. Valid values:</p>
+         * <p>Specifies whether to only check the authorization status. Valid values:</p>
          * <ul>
-         * <li>true: checks only the authorization status. The service-linked role is not created.</li>
-         * <li>false (default): checks the authorization status and resource usage.</li>
+         * <li>true: Only checks the authorization status and does not create the service-linked role.</li>
+         * <li>false: Checks the authorization status and resource usage.
+         * Default value: false.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -158,7 +159,7 @@ public class VerifyAuthenticationRequest extends Request {
         }
 
         /**
-         * <p>The ID of your Alibaba Cloud account.</p>
+         * <p>The ID of the Alibaba Cloud account.</p>
          * 
          * <strong>example:</strong>
          * <p>12345678123*****</p>

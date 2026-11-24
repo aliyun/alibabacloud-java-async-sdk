@@ -103,10 +103,10 @@ public class DescribeScalingGroupDetailRequest extends Request {
         } 
 
         /**
-         * <p>The output format. Set the value to yaml.</p>
+         * <p>The output format. Only the YAML format is supported.</p>
          * 
          * <strong>example:</strong>
-         * <p>yaml</p>
+         * <p>YAML</p>
          */
         public Builder outputFormat(String outputFormat) {
             this.putQueryParameter("OutputFormat", outputFormat);

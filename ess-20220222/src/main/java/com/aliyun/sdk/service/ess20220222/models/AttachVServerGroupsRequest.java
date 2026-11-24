@@ -146,8 +146,7 @@ public class AttachVServerGroupsRequest extends Request {
         } 
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">Ensure idempotence</a>.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">Ensure idempotence</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-42665544****</p>
@@ -159,10 +158,10 @@ public class AttachVServerGroupsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to add the existing Elastic Compute Service (ECS) instances or elastic container instances in the scaling group to the new vServer group. Valid values:</p>
+         * <p>Specifies whether to add the ECS instances or elastic container instances in the current scaling group to the newly added vServer groups. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: adds the instances.</li>
+         * <li>false: does not add the instances.</li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -185,7 +184,7 @@ public class AttachVServerGroupsRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the scaling group. Examples: cn-hangzhou and cn-shanghai. For information about regions and zones, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * <p>The ID of the region to which the scaling group belongs. Examples: cn-hangzhou and cn-shanghai. For more information, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -220,7 +219,7 @@ public class AttachVServerGroupsRequest extends Request {
         }
 
         /**
-         * <p>The information about the vServer groups.</p>
+         * <p>The details of the vServer groups associated with the scaling group.</p>
          * <p>This parameter is required.</p>
          */
         public Builder vServerGroups(java.util.List<VServerGroups> vServerGroups) {
@@ -302,7 +301,7 @@ public class AttachVServerGroupsRequest extends Request {
             } 
 
             /**
-             * <p>The port number over which Auto Scaling adds ECS instances or elastic container instances to the new vServer group. Valid values: 1 to 65535.</p>
+             * <p>The port number used when Auto Scaling adds the ECS instance or elastic container instance to the vServer group. Valid values: 1 to 65535.</p>
              * 
              * <strong>example:</strong>
              * <p>22</p>
@@ -324,7 +323,7 @@ public class AttachVServerGroupsRequest extends Request {
             }
 
             /**
-             * <p>The weight of an ECS instance or elastic container instance as a backend server. Valid values: 0 to 100.</p>
+             * <p>The weight configured when Auto Scaling adds the ECS instance or elastic container instance to the vServer group. Valid values: 0 to 100.</p>
              * <p>Default value: 50.</p>
              * 
              * <strong>example:</strong>
@@ -395,7 +394,7 @@ public class AttachVServerGroupsRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the CLB instance to which the new vServer group belongs.</p>
+             * <p>The ID of the CLB instance to which the vServer group belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>rsp-bp1jp1rge****</p>
@@ -406,7 +405,7 @@ public class AttachVServerGroupsRequest extends Request {
             }
 
             /**
-             * <p>The attributes of the vServer group.</p>
+             * <p>The properties of the vServer group.</p>
              */
             public Builder vServerGroupAttributes(java.util.List<VServerGroupAttributes> vServerGroupAttributes) {
                 this.vServerGroupAttributes = vServerGroupAttributes;

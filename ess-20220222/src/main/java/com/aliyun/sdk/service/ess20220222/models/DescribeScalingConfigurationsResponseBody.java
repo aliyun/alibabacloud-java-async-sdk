@@ -106,7 +106,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -117,7 +117,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -128,7 +128,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
@@ -203,7 +203,14 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             } 
 
             /**
-             * NestedVirtualization.
+             * <p>Specifies whether to enable hardware-based nested virtualization. Valid values:</p>
+             * <ul>
+             * <li>enabled: Enabled.</li>
+             * <li>disabled: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder nestedVirtualization(String nestedVirtualization) {
                 this.nestedVirtualization = nestedVirtualization;
@@ -270,7 +277,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ECS instance type.</p>
+             * <p>The instance type of the ECS instance.</p>
              * 
              * <strong>example:</strong>
              * <p>ecs.c6a.4xlarge</p>
@@ -281,7 +288,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The vSwitch ID.</p>
+             * <p>The ID of the vSwitch.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-bp14zolna43z266bq****</p>
@@ -507,7 +514,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the automatic snapshot policy that is applied to the data disk.</p>
+             * <p>The ID of the automatic snapshot policy applied to the data cloud disk.</p>
              * 
              * <strong>example:</strong>
              * <p>sp-bp19nq9enxqkomib****</p>
@@ -518,14 +525,15 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the Performance Burst feature is enabled for the data disk. Valid values:</p>
+             * <p>Specifies whether to enable the performance burst feature for the data cloud disk. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
-             * </ul>
-             * <blockquote>
-             * <p> This parameter is available only when you set <code>DataDisk.Category</code> to <code>cloud_auto</code>.</p>
+             * <li>true: enables the feature.</li>
+             * <li>false: disables the feature.<blockquote>
+             * <p>This parameter is displayed only when the DataDisk.Category parameter is set to cloud_auto.
+             * &lt;props=&quot;china&quot;&gt;For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
              * </blockquote>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -536,12 +544,15 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The categories of the data disks. The values are sorted based on their priorities. The first value has the highest priority. If Auto Scaling cannot create instances by using the disk category of the highest priority, Auto Scaling creates instances by using the disk category of the next highest priority. Valid values:</p>
+             * <p>The disk types of the data cloud disks. The first disk type has the highest priority, and the priorities of other disk types decrease in sequence. If a disk type with a higher priority is unavailable, Auto Scaling automatically attempts to create the data cloud disk by using the disk type with the next highest priority. Valid values:</p>
              * <ul>
-             * <li>cloud: basic disk. DeleteWithInstance of a basic disk created along with the ECS instance is set to true.</li>
+             * <li>cloud: basic cloud disk. The DeleteWithInstance property of a basic cloud disk created along with an instance is set to true.</li>
              * <li>cloud_efficiency: ultra disk.</li>
              * <li>cloud_ssd: standard SSD.</li>
              * <li>cloud_essd: ESSD.</li>
+             * <li>ephemeral_ssd: local SSD.</li>
+             * <li>cloud_auto: ESSD AutoPL disk.</li>
+             * <li>cloud_regional_disk_auto: regional ESSD.</li>
              * </ul>
              */
             public Builder categories(java.util.List<String> categories) {
@@ -550,14 +561,15 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The category of the data disk. Valid values:</p>
+             * <p>The category of the data cloud disk. Valid values:</p>
              * <ul>
-             * <li>cloud: basic disk. DeleteWithInstance of a basic disk created along with the ECS instance is set to true.</li>
+             * <li>cloud: basic cloud disk. The DeleteWithInstance attribute of a basic cloud disk created along with an instance is set to true.</li>
              * <li>cloud_efficiency: ultra disk.</li>
              * <li>cloud_ssd: standard SSD.</li>
              * <li>ephemeral_ssd: local SSD.</li>
              * <li>cloud_essd: ESSD.</li>
-             * <li>cloud_auto: ESSD AutoPL.</li>
+             * <li>cloud_auto: ESSD AutoPL disk.</li>
+             * <li>cloud_regional_disk_auto: regional ESSD.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -569,10 +581,10 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the data disk is released when the instance to which the data disk is attached is released. Valid values:</p>
+             * <p>Specifies whether to release the data cloud disk when the instance is released. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li>true: releases the data cloud disk when the instance is released.</li>
+             * <li>false: retains the data cloud disk when the instance is released.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -584,7 +596,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the data disk.</p>
+             * <p>The description of the data cloud disk.</p>
              * 
              * <strong>example:</strong>
              * <p>FinanceDept</p>
@@ -595,7 +607,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mount target of the data disk.</p>
+             * <p>The mount point of the data cloud disk.</p>
              * 
              * <strong>example:</strong>
              * <p>/dev/xvdb</p>
@@ -606,7 +618,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the data disk.</p>
+             * <p>The name of the data cloud disk.</p>
              * 
              * <strong>example:</strong>
              * <p>cloud_ssdData</p>
@@ -617,12 +629,12 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the data disk is encrypted. Valid values:</p>
+             * <p>Specifies whether to encrypt the data cloud disk. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li>true: encrypts the data cloud disk.</li>
+             * <li>false: does not encrypt the data cloud disk.
+             * Default value: false.</li>
              * </ul>
-             * <p>Default value: false.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -633,7 +645,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Key Management Service (KMS) key that is applied to the data disk.</p>
+             * <p>The ID of the Key Management Service (KMS) key used to encrypt the data cloud disk.</p>
              * 
              * <strong>example:</strong>
              * <p>0e478b7a-4262-4802-b8cb-00d3fb40****</p>
@@ -644,7 +656,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The PL of the data disk that is an ESSD.</p>
+             * <p>The performance level of the data cloud disk when it is an ESSD (standard SSD).</p>
              * 
              * <strong>example:</strong>
              * <p>PL1</p>
@@ -655,9 +667,9 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The provisioned IOPS of the data disk.</p>
+             * <p>The provisioned IOPS (Input/Output Operations Per Second) performance metrics of the data cloud disk.</p>
              * <blockquote>
-             * <p> IOPS measures the number of read and write operations that an Elastic Block Storage (EBS) device can process per second.</p>
+             * <p>IOPS measures the number of I/O operations per second and indicates the read and write capabilities of the block storage. Unit: operations per second.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -669,13 +681,13 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the data disk. Unit: GB. Valid values:</p>
+             * <p>The size of the data cloud disk. Unit: GiB. Valid values:</p>
              * <ul>
-             * <li>5 to 2000 if you set Category to cloud.</li>
-             * <li>20 to 32768 if you set Category to cloud_efficiency.</li>
-             * <li>20 to 32768 if you set Category to cloud_ssd.</li>
-             * <li>20 to 32768 if you set Category to cloud_essd.</li>
-             * <li>5 to 800 if you set Category to ephemeral_ssd.</li>
+             * <li>cloud: 5 to 2000.</li>
+             * <li>cloud_efficiency: 20 to 32768.</li>
+             * <li>cloud_ssd: 20 to 32768.</li>
+             * <li>cloud_essd: 20 to 32768.</li>
+             * <li>ephemeral_ssd: 5 to 800.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -687,7 +699,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the snapshot based on which the data disk is created.</p>
+             * <p>The ID of the snapshot used to create the data cloud disk.</p>
              * 
              * <strong>example:</strong>
              * <p>s-23f2i****</p>
@@ -1030,12 +1042,12 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The architectures of instance types. Valid values:</p>
+             * <p>The architecture type of the instance type. Valid values:</p>
              * <ul>
-             * <li>X86: x86.</li>
-             * <li>Heterogeneous: heterogeneous computing, such as GPU-accelerated or FPGA-accelerated.</li>
-             * <li>BareMetal: ECS Bare Metal Instance.</li>
-             * <li>Arm: Arm.</li>
+             * <li>X86: x86 computing.</li>
+             * <li>Heterogeneous: heterogeneous computing, such as GPU or FPGA.</li>
+             * <li>BareMental: ECS Bare Metal server.</li>
+             * <li>Arm: Arm computing.</li>
              * </ul>
              */
             public Builder architectures(java.util.List<String> architectures) {
@@ -1044,11 +1056,11 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether burstable instance types are included. Valid values:</p>
+             * <p>Specifies whether the instance type is a burstable instance type. Valid values:</p>
              * <ul>
-             * <li>Exclude: Burstable instance types are not included.</li>
-             * <li>Include: Burstable instance types are included.</li>
-             * <li>Required: Only burstable instance types are included.</li>
+             * <li>Exclude: excludes burstable instance types.</li>
+             * <li>Include: includes burstable instance types.</li>
+             * <li>Required: includes only burstable instance types.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1060,7 +1072,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of vCPUs of the instance type.</p>
+             * <p>The number of vCPU cores of the instance type.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -1071,13 +1083,13 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The CPU architectures of the instance types. Valid values:</p>
+             * <p>The CPU architecture of the instance type. Valid values:</p>
              * <blockquote>
-             * <p> You can specify 1 to 2 CPU architectures.</p>
+             * <p>N indicates that you can specify multiple CPU architectures. Valid values of N: 1 to 2.</p>
              * </blockquote>
              * <ul>
-             * <li>x86</li>
-             * <li>Arm</li>
+             * <li>X86.</li>
+             * <li>ARM.</li>
              * </ul>
              */
             public Builder cpuArchitectures(java.util.List<String> cpuArchitectures) {
@@ -1086,10 +1098,10 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance types that are excluded. You can use wildcard characters, such as an asterisk (*), to exclude an instance type or an instance family. Examples:</p>
+             * <p>The instance types to be excluded. You can use a wildcard (*) to exclude a single instance type or an entire instance family. Examples:</p>
              * <ul>
-             * <li>ecs.c6.large: The ecs.c6.large instance type is excluded.</li>
-             * <li>ecs.c6.*: The c6 instance family is excluded.</li>
+             * <li>ecs.c6.large: excludes the ecs.c6.large instance type.</li>
+             * <li>ecs.c6.*: excludes all instance types in the c6 instance family.</li>
              * </ul>
              */
             public Builder excludedInstanceTypes(java.util.List<String> excludedInstanceTypes) {
@@ -1098,7 +1110,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The GPU models.</p>
+             * <p>The GPU type.</p>
              */
             public Builder gpuSpecs(java.util.List<String> gpuSpecs) {
                 this.gpuSpecs = gpuSpecs;
@@ -1106,26 +1118,26 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The categories of ECS instances. Valid values:</p>
+             * <p>The instance categorization. Valid values:</p>
              * <blockquote>
-             * <p> Up to 10 categories of ECS instances are supported.</p>
+             * <p>N indicates that you can specify multiple instance categories in the Settings. Valid values of N: 1 to 10.</p>
              * </blockquote>
              * <ul>
-             * <li>General-purpose: general-purpose instance type.</li>
-             * <li>Compute-optimized: compute-optimized instance type.</li>
-             * <li>Memory-optimized: memory-optimized instance type.</li>
-             * <li>Big data: big data instance type.</li>
-             * <li>Local SSDs: instance type with local SSDs.</li>
-             * <li>High Clock Speed: instance type with high clock speeds.</li>
-             * <li>Enhanced: enhanced instance type.</li>
-             * <li>Shared: shared instance type.</li>
-             * <li>Compute-optimized with GPU: GPU-accelerated compute-optimized instance type.</li>
-             * <li>Visual Compute-optimized: visual compute-optimized instance type.</li>
-             * <li>Heterogeneous Service: heterogeneous service instance type.</li>
-             * <li>Compute-optimized with FPGA: FPGA-accelerated compute-optimized instance type.</li>
-             * <li>Compute-optimized with NPU: NPU-accelerated compute-optimized instance type.</li>
-             * <li>ECS Bare Metal: ECS Bare Metal Instance type.</li>
-             * <li>High Performance Compute: HPC-optimized instance type.</li>
+             * <li>General-purpose: general-purpose.</li>
+             * <li>Compute-optimized: compute-optimized.</li>
+             * <li>Memory-optimized: memory-optimized.</li>
+             * <li>Big data: big data.</li>
+             * <li>Local SSDs: local SSD.</li>
+             * <li>High Clock Speed: high frequency.</li>
+             * <li>Enhanced: enhanced.</li>
+             * <li>Shared: shared.</li>
+             * <li>Compute-optimized with GPU: GPU computing.</li>
+             * <li>Visual Compute-optimized: visual compute-optimized.</li>
+             * <li>Heterogeneous Service: heterogeneous service.</li>
+             * <li>Compute-optimized with FPGA: FPGA-accelerated compute-optimized.</li>
+             * <li>Compute-optimized with NPU: NPU-accelerated compute-optimized.</li>
+             * <li>ECS Bare Metal: ECS Bare Metal server.</li>
+             * <li>High Performance Compute: high-performance computing (HPC).</li>
              * </ul>
              */
             public Builder instanceCategories(java.util.List<String> instanceCategories) {
@@ -1134,11 +1146,11 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The level of the instance family.</p>
+             * <p>The level of the instance family. Valid values:</p>
              * <ul>
-             * <li>EntryLevel: entry level (shared instance types). Instance types of this level are the most cost-effective but may not provide stable computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low. For more information, see <a href="https://help.aliyun.com/document_detail/108489.html">Shared instance families</a>.</li>
-             * <li>EnterpriseLevel: enterprise level. Instance types of this level provide stable performance and dedicated resources, and are suitable for scenarios that require high stability. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</li>
-             * <li>CreditEntryLevel: credit entry level (burstable instance types). CPU credits are used to ensure computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low but may fluctuate in specific cases. For more information, see <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</li>
+             * <li>EntryLevel: entry-level instance families, which are shared instance families. These instance families are more cost-effective but do not guarantee consistent computing performance. They are suitable for workloads with low CPU utilization. For more information, see <a href="https://help.aliyun.com/document_detail/108489.html">Shared instance families</a>.</li>
+             * <li>EnterpriseLevel: enterprise-level instance families. These instance families provide stable performance and dedicated resources, and are suitable for workloads that require high stability. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</li>
+             * <li>CreditEntryLevel: credit entry-level instance families, which are burstable instances. These instance families use CPU credits to maintain computing performance and are suitable for workloads with low CPU utilization but occasional CPU bursts. For more information, see <a href="https://help.aliyun.com/document_detail/59977.html">Burstable instances</a>.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1150,7 +1162,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance families that are queried. You can query 1 to 10 instance families in each call.</p>
+             * <p>The instance families to be queried. N indicates that you can specify multiple instance families. Valid values of N: 1 to 10.</p>
              */
             public Builder instanceTypeFamilies(java.util.List<String> instanceTypeFamilies) {
                 this.instanceTypeFamilies = instanceTypeFamilies;
@@ -1158,7 +1170,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum hourly price for the pay-as-you-go or preemptible instances.</p>
+             * <p>The maximum hourly price acceptable for pay-as-you-go or spot instances.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -1169,9 +1181,9 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of vCPUs per instance type.</p>
+             * <p>The maximum number of vCPU cores of the instance type.</p>
              * <blockquote>
-             * <p> The value of MaximumCpuCoreCount cannot exceed four times the value of MinimumCpuCoreCount.</p>
+             * <p>The value of MaximumCpuCoreCount cannot exceed four times the value of MinimumCpuCoreCount.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1183,7 +1195,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of GPUs per instance. The value must be a positive integer.</p>
+             * <p>The maximum number of GPUs for the instance. Valid values: positive integers.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -1194,7 +1206,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum memory size per instance. Unit: GiB.</p>
+             * <p>The maximum memory size of the instance. Unit: GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -1216,7 +1228,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The baseline vCPU computing performance (overall baseline performance of all vCPUs) per t5 or t6 burstable instance.</p>
+             * <p>The minimum baseline vCPU computing performance (the sum of all vCPUs) for t5 and t6 burstable instances.</p>
              * 
              * <strong>example:</strong>
              * <p>12</p>
@@ -1227,7 +1239,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The minimum number of vCPUs per instance type.</p>
+             * <p>The minimum number of vCPU cores of the instance type.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -1238,7 +1250,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The minimum number of IPv6 addresses per ENI.</p>
+             * <p>The minimum value for the maximum number of IPv6 addresses supported by a single elastic network interfaces (ENIs) on the instance. Each ENI is a network interface controller (NIC).</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1249,7 +1261,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The minimum number of IPv4 addresses per ENI.</p>
+             * <p>The minimum value for the maximum number of IPv4 addresses supported by a single elastic network interfaces (ENIs) on the instance. Each ENI is a network interface controller (NIC).</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -1260,7 +1272,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The minimum number of elastic network interfaces (ENIs) per instance.</p>
+             * <p>The minimum value for the maximum number of elastic network interfaces (ENIs) that can be attached to the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -1271,7 +1283,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The minimum number of GPUs per instance. The value must be a positive integer.</p>
+             * <p>The minimum number of GPUs for the instance. Valid values: positive integers.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -1282,7 +1294,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The initial vCPU credits per t5 or t6 burstable instance.</p>
+             * <p>The minimum initial vCPU credit value for t5 and t6 burstable instances.</p>
              * 
              * <strong>example:</strong>
              * <p>12</p>
@@ -1293,7 +1305,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The minimum memory size per instance. Unit: GiB.</p>
+             * <p>The minimum memory size of the instance. Unit: GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -1304,7 +1316,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The processor models of the instance types. You can specify 1 to 10 processor models.</p>
+             * <p>The processor model of the instance. N indicates that you can specify multiple processor models. Valid values of N: 1 to 10.</p>
              */
             public Builder physicalProcessorModels(java.util.List<String> physicalProcessorModels) {
                 this.physicalProcessorModels = physicalProcessorModels;
@@ -1410,7 +1422,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             } 
 
             /**
-             * AllowCidrBlocks.
+             * <p>The CIDR blocks of the vSwitches that can be selected when adding vSwitches from other zones is allowed.</p>
              */
             public Builder allowCidrBlocks(java.util.List<String> allowCidrBlocks) {
                 this.allowCidrBlocks = allowCidrBlocks;
@@ -1418,7 +1430,14 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * AllowCrossAz.
+             * <p>Specifies whether to allow adding vSwitches from other zones.</p>
+             * <blockquote>
+             * <p>The instance types remain unchanged, and only new zones are selected as alternatives. When the scaling group fails to scale out in all selected zones due to inventory shortages or other issues, this configuration automatically adds vSwitches from new zones to the scaling group.
+             * For example, if the scaling group is configured with the cn-hangzhou-h and cn-hangzhou-g zones and fails to scale out in both zones, Auto Scaling may create a vSwitch in the cn-hangzhou-k zone and add it to the scaling group based on real-time inventory.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder allowCrossAz(Boolean allowCrossAz) {
                 this.allowCrossAz = allowCrossAz;
@@ -1426,7 +1445,13 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * AllowDifferentGeneration.
+             * <p>Specifies whether to allow supplementing instance types from other generations.</p>
+             * <ul>
+             * <li>For example, if the current instance type is ecs.c7.large, enabling this option allows fallback to instance types such as ecs.c6.large and ecs.c8.large.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder allowDifferentGeneration(Boolean allowDifferentGeneration) {
                 this.allowDifferentGeneration = allowDifferentGeneration;
@@ -1434,7 +1459,10 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * Enabled.
+             * <p>Specifies whether to enable the fallback mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -1442,7 +1470,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum hourly price for the pay-as-you-go or preemptible instances.</p>
+             * <p>The maximum price for fallback instance types.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -1481,12 +1509,16 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SecurityGroupIds")
         private java.util.List<String> securityGroupIds;
 
+        @com.aliyun.core.annotation.NameInMap("VSwitchIds")
+        private java.util.List<String> vSwitchIds;
+
         private NetworkInterfaces(Builder builder) {
             this.instanceType = builder.instanceType;
             this.ipv6AddressCount = builder.ipv6AddressCount;
             this.networkInterfaceTrafficMode = builder.networkInterfaceTrafficMode;
             this.secondaryPrivateIpAddressCount = builder.secondaryPrivateIpAddressCount;
             this.securityGroupIds = builder.securityGroupIds;
+            this.vSwitchIds = builder.vSwitchIds;
         }
 
         public static Builder builder() {
@@ -1532,12 +1564,20 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             return this.securityGroupIds;
         }
 
+        /**
+         * @return vSwitchIds
+         */
+        public java.util.List<String> getVSwitchIds() {
+            return this.vSwitchIds;
+        }
+
         public static final class Builder {
             private String instanceType; 
             private Integer ipv6AddressCount; 
             private String networkInterfaceTrafficMode; 
             private Integer secondaryPrivateIpAddressCount; 
             private java.util.List<String> securityGroupIds; 
+            private java.util.List<String> vSwitchIds; 
 
             private Builder() {
             } 
@@ -1548,13 +1588,16 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
                 this.networkInterfaceTrafficMode = model.networkInterfaceTrafficMode;
                 this.secondaryPrivateIpAddressCount = model.secondaryPrivateIpAddressCount;
                 this.securityGroupIds = model.securityGroupIds;
+                this.vSwitchIds = model.vSwitchIds;
             } 
 
             /**
-             * <p>The ENI type. Valid values:</p>
+             * <p>The type of the elastic network interfaces (ENIs). Valid values:</p>
              * <ul>
-             * <li>Primary: the primary ENI</li>
-             * <li>Secondary: the secondary ENI</li>
+             * <li><p>Primary: primary network interface controller (NIC).</p>
+             * </li>
+             * <li><p>Secondary: secondary elastic network interfaces (ENIs).</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1566,7 +1609,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of randomly generated IPv6 addresses that are allocated to the primary ENI.</p>
+             * <p>The number of randomly generated IPv6 addresses specified for the primary ENI.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1577,10 +1620,10 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The communication mode of the ENI. Valid values:</p>
+             * <p>The communication pattern of the elastic network interfaces (ENIs), which act as a network interface controller (NIC). Valid values:</p>
              * <ul>
-             * <li>Standard: The TCP communication mode is used.</li>
-             * <li>HighPerformance: The Elastic RDMA Interface (ERI) is enabled and the remote direct memory access (RDMA) communication mode is used.</li>
+             * <li>Standard: uses the TCP communication pattern.</li>
+             * <li>HighPerformance: enables the Elastic RDMA Interface (ERI) and uses the RDMA communication pattern.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1592,7 +1635,14 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * SecondaryPrivateIpAddressCount.
+             * <p>The number of secondary private IPv4 addresses specified for the ENI. Valid values: 1 to 49.</p>
+             * <ul>
+             * <li>The value cannot exceed the limit on the number of IP addresses for the instance type. For more information, see <a href="https://www.alibabacloud.com/help/en/ecs/user-guide/overview-of-instance-families">Instance families</a>.</li>
+             * <li>NetworkInterface.N.SecondaryPrivateIpAddressCount is used to specify the number of secondary private IPv4 addresses (excluding the primary private IP address of the ENI) to be assigned to the ENI. The system randomly assigns the addresses from the available CIDR block of the vSwitch (NetworkInterface.N.VSwitchId) to which the ENI belongs.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder secondaryPrivateIpAddressCount(Integer secondaryPrivateIpAddressCount) {
                 this.secondaryPrivateIpAddressCount = secondaryPrivateIpAddressCount;
@@ -1600,10 +1650,18 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IDs of the security groups to which the ENIs belong.</p>
+             * <p>The IDs of one or more security groups to which the elastic network interfaces (ENIs) belong. Each ENI is a network interface controller (NIC).</p>
              */
             public Builder securityGroupIds(java.util.List<String> securityGroupIds) {
                 this.securityGroupIds = securityGroupIds;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the vSwitch to which the elastic network interfaces (ENIs) belong. Each ENI is a network interface controller (NIC).</p>
+             */
+            public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
+                this.vSwitchIds = vSwitchIds;
                 return this;
             }
 
@@ -1667,7 +1725,10 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The tag key of the private pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1675,7 +1736,10 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value of the private pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1755,7 +1819,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The IDs of private pools. The ID of a private pool is the same as the ID of the elasticity assurance or capacity reservation that is associated with the private pool.</p>
+             * <p>The ID of the private pool, which is the ID of the elasticity assurance or capacity reservation.</p>
              */
             public Builder privatePoolIds(java.util.List<String> privatePoolIds) {
                 this.privatePoolIds = privatePoolIds;
@@ -1763,7 +1827,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * PrivatePoolTags.
+             * <p>Filters available Target private pools by tag.</p>
              */
             public Builder privatePoolTags(java.util.List<PrivatePoolTags> privatePoolTags) {
                 this.privatePoolTags = privatePoolTags;
@@ -1771,11 +1835,12 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource pool used for instance creation, which can be the public pool or a private pool associated with any active elasticity assurance or capacity reservation. Valid values:</p>
+             * <p>Resource pools include private pools generated after the elasticity assurance or capacity reservation service takes effect, as well as public pools, which are available for selection when an instance starts. Valid values:</p>
              * <ul>
-             * <li>PrivatePoolFirst: prioritizes private pools. When this option is set along with ResourcePoolOptions.PrivatePoolIds, the specified private pools are used first. If you leave ResourcePoolOptions.PrivatePoolIds empty or if the specified private pools lack sufficient capacity, the system will automatically use available open private pools instead. If no matching private pools are available, the system defaults to the public pool.</li>
-             * <li>PrivatePoolOnly: uses only private pools. If you use this value, you must specify ResourcePoolOptions.PrivatePoolIds. If the specified private pools lack sufficient capacity, instance creation will fail.</li>
-             * <li>None: uses no resource pools.</li>
+             * <li>PrivatePoolFirst: private pool first. When this policy is selected, if ResourcePoolOptions.PrivatePoolIds is specified or the PrivatePoolTags condition is met, the corresponding private pool is used first. If no private pool is specified or the specified private pool has insufficient capacity, the system automatically matches an open private pool. If no eligible private pool is available, the public pool is used to create the instance.</li>
+             * <li>PrivatePoolOnly: private pool only. When this policy is selected, ResourcePoolOptions.PrivatePoolIds must be specified. If the specified private pool has insufficient capacity, the instance fails to start.</li>
+             * <li>PublicPoolFirst: public pool first. The public pool is used first to create the instance. When public pool resources are insufficient, private pool resources are used as a supplement. The system preferentially matches an open private pool. If no eligible private pool is available, the system uses the Target private pool specified by ResourcePoolOptions.PrivatePoolIds or the one that meets the PrivatePoolTags condition.</li>
+             * <li>None: no resource pool policy is used.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1834,7 +1899,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
 
             /**
              * <blockquote>
-             * <p> This parameter is in invitational preview and is not available for use.</p>
+             * <p>This parameter is in invitational preview and is not available for public use.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1892,7 +1957,14 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             } 
 
             /**
-             * ConfidentialComputingMode.
+             * <p>The confidential computing mode. Valid values:</p>
+             * <ul>
+             * <li>Enclave: The ECS instance uses Enclave to build a confidential computing environment. For more information, see <a href="https://help.aliyun.com/document_detail/203433.html">Build a confidential computing environment by using Enclave</a>.</li>
+             * <li>TDX: builds a TDX confidential computing environment. For more information, see <a href="https://help.aliyun.com/document_detail/479090.html">Build a TDX confidential computing environment</a>.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TDX</p>
              */
             public Builder confidentialComputingMode(String confidentialComputingMode) {
                 this.confidentialComputingMode = confidentialComputingMode;
@@ -1959,7 +2031,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The instance type of the preemptible instances.</p>
+             * <p>The instance type of the spot instance.</p>
              * 
              * <strong>example:</strong>
              * <p>ecs.g6.large</p>
@@ -1970,7 +2042,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The price limit of the preemptible instances.</p>
+             * <p>The bid price for the spot instance.</p>
              * 
              * <strong>example:</strong>
              * <p>0.125</p>
@@ -2040,8 +2112,8 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tag key of the ECS instance. You can specify up to 20 tags for each ECS instance.</p>
-             * <p>The tag key cannot be an empty string. The tag key can be up to 128 characters in length. It cannot start with <code>acs:</code> or <code>aliyun</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The key of tag N of the instance. Valid values of N: 1 to 20.
+             * If you specify this parameter, it cannot be an empty string. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
              * 
              * <strong>example:</strong>
              * <p>binary</p>
@@ -2052,8 +2124,8 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value of the ECS instance. You can specify up to 20 tags for each ECS instance.</p>
-             * <p>The tag value can be an empty string. The tag value can be up to 128 characters in length. It cannot start with <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The value of tag N of the instance. Valid values of N: 1 to 20.
+             * If you specify this parameter, it can be an empty string. The tag value can be up to 128 characters in length. It cannot start with acs:, and cannot contain http:// or https://.</p>
              * 
              * <strong>example:</strong>
              * <p>alterTable</p>
@@ -2221,6 +2293,9 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SchedulerOptions")
         private SchedulerOptions schedulerOptions;
 
+        @com.aliyun.core.annotation.NameInMap("SecondaryEniVSwitchConstraint")
+        private String secondaryEniVSwitchConstraint;
+
         @com.aliyun.core.annotation.NameInMap("SecurityEnhancementStrategy")
         private String securityEnhancementStrategy;
 
@@ -2351,6 +2426,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             this.scalingConfigurationName = builder.scalingConfigurationName;
             this.scalingGroupId = builder.scalingGroupId;
             this.schedulerOptions = builder.schedulerOptions;
+            this.secondaryEniVSwitchConstraint = builder.secondaryEniVSwitchConstraint;
             this.securityEnhancementStrategy = builder.securityEnhancementStrategy;
             this.securityGroupId = builder.securityGroupId;
             this.securityGroupIds = builder.securityGroupIds;
@@ -2725,6 +2801,13 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return secondaryEniVSwitchConstraint
+         */
+        public String getSecondaryEniVSwitchConstraint() {
+            return this.secondaryEniVSwitchConstraint;
+        }
+
+        /**
          * @return securityEnhancementStrategy
          */
         public String getSecurityEnhancementStrategy() {
@@ -2962,6 +3045,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             private String scalingConfigurationName; 
             private String scalingGroupId; 
             private SchedulerOptions schedulerOptions; 
+            private String secondaryEniVSwitchConstraint; 
             private String securityEnhancementStrategy; 
             private String securityGroupId; 
             private java.util.List<String> securityGroupIds; 
@@ -3042,6 +3126,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
                 this.scalingConfigurationName = model.scalingConfigurationName;
                 this.scalingGroupId = model.scalingGroupId;
                 this.schedulerOptions = model.schedulerOptions;
+                this.secondaryEniVSwitchConstraint = model.secondaryEniVSwitchConstraint;
                 this.securityEnhancementStrategy = model.securityEnhancementStrategy;
                 this.securityGroupId = model.securityGroupId;
                 this.securityGroupIds = model.securityGroupIds;
@@ -3072,10 +3157,10 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the ECS instance on a dedicated host is associated with the dedicated host. Valid values:</p>
+             * <p>Specifies whether the instance on a dedicated host is associated with the dedicated host. Valid values:</p>
              * <ul>
-             * <li>default: The instance is not associated with the dedicated host. If you restart an instance that was stopped in Economical Mode and the original dedicated host of the instance has insufficient resources, the instance is automatically deployed to another dedicated host in the automatic deployment resource pool.</li>
-             * <li>host: The instance is associated with the dedicated host. If you restart an instance that was stopped in Economical Mode, the instance remains on the original dedicated host. If the available resources of the original dedicated host are insufficient, the instance cannot be restarted.</li>
+             * <li>default: The instance is not associated with the dedicated host. If the economical mode is enabled and the original dedicated host has insufficient resources when the instance is restarted, the instance is automatically deployed to another dedicated host in the automatic deployment resource pool.</li>
+             * <li>host: The instance is associated with the dedicated host. If the economical mode is enabled and the original dedicated host has insufficient resources when the instance is restarted, the instance fails to be restarted.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3087,10 +3172,10 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of vCPUs.</p>
-             * <p>You can specify CPU and Memory to define the range of instance types. For example, if you set CPU to 2 and Memory to 16, the instance types that have 2 vCPUs and 16 GiB are returned. If you specify CPU and Memory, Auto Scaling determines the available instance types based on factors such as I/O optimization requirements and zones and preferentially creates instances by using the lowest-priced instance type.</p>
+             * <p>The number of vCPUs.
+             * You can specify both the Cpu and Memory parameters to define the instance type range. For example, if you set Cpu to 2 and Memory to 16, all instance types that have 2 vCPUs and 16 GiB of memory are matched. Auto Scaling determines the available instance types based on factors such as I/O optimization and zones, and creates instances of the type that has the lowest price.</p>
              * <blockquote>
-             * <p> You can specify CPU and Memory to define instance types only when you set Scaling Policy to Cost Optimization and no instance type is specified in the scaling configuration.</p>
+             * <p>This configuration takes effect only when the scaling mode is set to cost optimization and no instance types are specified in the scaling configuration.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -3102,7 +3187,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * CpuOptions.
+             * <p>The CPU options.</p>
              */
             public Builder cpuOptions(CpuOptions cpuOptions) {
                 this.cpuOptions = cpuOptions;
@@ -3110,7 +3195,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time at which the scaling configuration was created.</p>
+             * <p>The time when the scaling configuration was created. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mmZ format. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2014-08-14T10:58Z</p>
@@ -3121,10 +3206,10 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The performance mode of the burstable instances. Valid values:</p>
+             * <p>The performance mode of the burstable instance. Valid values:</p>
              * <ul>
-             * <li>Standard: the standard mode. For more information, see the &quot;Standard mode&quot; section in the <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a> topic.</li>
-             * <li>Unlimited: the unlimited mode. For more information, see the &quot;Unlimited mode&quot; section in <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</li>
+             * <li>Standard: standard mode. For more information, see the &quot;Standard mode&quot; section in <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</li>
+             * <li>Unlimited: unlimited mode. For more information, see the &quot;Unlimited mode&quot; section in <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3136,17 +3221,15 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The priority of the custom ECS instance type + vSwitch combination.</p>
+             * <p>The custom priority of ECS instance type and vSwitch combination.</p>
              * <blockquote>
-             * <p> This parameter takes effect only when Scaling Policy of the scaling group is set to Priority Policy.</p>
-             * </blockquote>
-             * <p>If Auto Scaling cannot create ECS instances by using the custom ECS instance type + vSwitch combination of the highest priority, Auto Scaling creates ECS instances by using the custom ECS instance type + vSwitch combination of the next highest priority.</p>
-             * <blockquote>
-             * <p> If you specify the priorities of only a portion of custom ECS instance type + vSwitch combinations, Auto Scaling preferentially creates ECS instances by using the custom combinations that have specified priorities. If the custom combinations that have specified priorities do not provide sufficient resources, Auto Scaling creates ECS instances by using the custom combinations that do not have specified priorities based on the specified orders of vSwitches and instance types.</p>
-             * </blockquote>
+             * <p>Notice: This parameter takes effect only when the scaling policy of the scaling group is set to priority-based policy.</notice>
+             * If an instance cannot be created by using ECS instance type and vSwitch combination that has the highest priority, Auto Scaling automatically uses the combination that has the next highest priority to create ECS instance.
+             * If you specify custom priorities for only some instance type and vSwitch combinations, the unspecified combinations have lower priorities than the specified ones. The priorities of the unspecified combinations are determined based on the vSwitch sequence in the scaling group and ECS instance type sequence in the scaling configuration.</p>
              * <ul>
-             * <li>Example: the specified order of vSwitches for your scaling group is vsw1 and vsw2 and the specified order of instance types in your scaling configuration is type1 and type 2. In addition, you use CustomPriorities to specify [&quot;vsw2+type2&quot;, &quot;vsw1+type2&quot;]. In this example, the vsw2+type2 combination has the highest priority and the vsw2+type1 combination has the lowest priority. The vsw1+type2 combination has a higher priority than the vsw1+type1 combination.</li>
+             * <li>For example, if the vSwitch sequence in the scaling group is vsw1 and vsw2, ECS instance type sequence in the scaling configuration is type1 and type2, and the custom priority sequence is [&quot;vsw2+type2&quot;, &quot;vsw1+type2&quot;], the final priority sequence is: &quot;vsw2+type2&quot; &gt; &quot;vsw1+type2&quot; &gt; &quot;vsw1+type1&quot; &gt; &quot;vsw2+type1&quot;.</li>
              * </ul>
+             * </blockquote>
              */
             public Builder customPriorities(java.util.List<CustomPriorities> customPriorities) {
                 this.customPriorities = customPriorities;
@@ -3154,7 +3237,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data disks.</p>
+             * <p>The data cloud disks.</p>
              */
             public Builder dataDisks(java.util.List<DataDisks> dataDisks) {
                 this.dataDisks = dataDisks;
@@ -3173,8 +3256,8 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the dedicated host on which the ECS instance is created. Preemptible instances are not supported by dedicated hosts. Therefore, if you specify DedicatedHostId, SpotStrategy and SpotPriceLimit are ignored.</p>
-             * <p>You can call the DescribeDedicatedHosts operation to query the IDs of dedicated hosts.</p>
+             * <p>The ID of the dedicated host on which to create the ECS instance. Dedicated hosts do not support spot instances. If you specify the DedicatedHostId parameter, the SpotStrategy and SpotPriceLimit parameters are ignored.
+             * You can call the DescribeDedicatedHosts operation to query the list of dedicated host IDs.</p>
              * 
              * <strong>example:</strong>
              * <p>dh-bp67acfmxazb4p****</p>
@@ -3185,14 +3268,14 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether Release Protection is enabled for the ECS instances. You can specify this parameter to determine whether the ECS instances can be deleted by using the ECS console or calling the DeleteInstance operation. Valid values:</p>
+             * <p>The release protection property of the instance, which specifies whether the instance can be directly released by using the ECS console or the DeleteInstance API operation. Valid values:</p>
              * <ul>
-             * <li>true: Release Protection is enabled for the ECS instances. You cannot delete the ECS instances by using the ECS console or calling the DeleteInstance operation.</li>
-             * <li>false: Release Protection is disabled for the ECS instances. You can delete the ECS instances by using the ECS console or calling the DeleteInstance operation.</li>
-             * </ul>
-             * <blockquote>
-             * <p> You can enable Release Protection for only pay-as-you-go instances to prevent unexpected instance deletion during scale-in events. The Release Protection feature does not affect normal scaling activities. In other words, an instance that meets the criteria of scale-in policies may be removed from a scaling group during a scale-in event even if you enabled Release Protection for the instance.</p>
+             * <li>true: Release protection is enabled. The instance cannot be directly released by using the ECS console or the DeleteInstance API operation.</li>
+             * <li>false: Release protection is shutdown. The instance can be directly released by using the ECS console or the DeleteInstance API operation.<blockquote>
+             * <p>This property applies only to pay-as-you-go instances. It prevents instances created by Auto Scaling during scale-out from being accidentally deleted, but does not affect normal scale-in activities. Instances with release protection enabled can still be released during scale-in activities.</p>
              * </blockquote>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -3203,7 +3286,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the deployment set to which the Elastic Compute Service (ECS) instances belong.</p>
+             * <p>The ID of the deployment set to which the ECS instance belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>ds-bp1frxuzdg87zh4p****</p>
@@ -3214,7 +3297,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The hostname series of the ECS instances.</p>
+             * <p>The hostname of the ECS instance.</p>
              * 
              * <strong>example:</strong>
              * <p>LocalHost</p>
@@ -3225,7 +3308,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the High Performance Computing (HPC) cluster to which the ECS instances belong.</p>
+             * <p>The ID of the High Performance Computing (HPC) cluster to which the ECS instance belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>hpc-clus****</p>
@@ -3236,10 +3319,10 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the access channel is enabled for instance metadata. Valid values:</p>
+             * <p>Specifies whether to enable the access channel for instance metadata. Valid values:</p>
              * <ul>
-             * <li>enabled</li>
-             * <li>disabled</li>
+             * <li>enabled: enabled.</li>
+             * <li>disabled: disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3251,10 +3334,10 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the security hardening mode (IMDSv2) is forcefully used to access instance metadata. Valid values:</p>
+             * <p>Specifies whether to forcibly use the security hardening mode (IMDSv2) when accessing instance metadata. Valid values:</p>
              * <ul>
-             * <li>optional: The security hardening mode IMDSv2 is not forcibly used.</li>
-             * <li>required: The security hardening mode (IMDSv2) is forcibly used. After you set this parameter to required, you cannot access instance metadata in normal mode.</li>
+             * <li>optional: not forcibly used.</li>
+             * <li>required: forcibly used. If this value is set, instance metadata cannot be accessed in normal mode.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3266,7 +3349,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the image family. You can specify this parameter to obtain the latest available images in the current image family for instance creation. If you specify ImageId, you cannot specify <code>ImageFamily</code>.</p>
+             * <p>The name of the image family. You can set this parameter to obtain the latest available image in the image family to create instances. If the ImageId parameter is specified, you cannot specify this parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>hangzhou-daily-update</p>
@@ -3277,7 +3360,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the image file that provides the image resource for Auto Scaling to create ECS instances.</p>
+             * <p>The ID of the image file, which is the image resource used for the automatic creation of instances.</p>
              * 
              * <strong>example:</strong>
              * <p>centos6u5_64_20G_aliaegis_2014****.vhd</p>
@@ -3288,7 +3371,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the image file.</p>
+             * <p>The name of the image.</p>
              * 
              * <strong>example:</strong>
              * <p>centos6u5_64_20G_aliaegis_2014****.vhd</p>
@@ -3299,10 +3382,10 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the ecs-user username can be used to log on to an ECS instance created from the scaling configuration. Valid values:</p>
+             * <p>Specifies whether to log on to the ECS instance as the ecs-user user. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li>true: yes.</li>
+             * <li>false: no.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3314,12 +3397,12 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The image source. Valid values:</p>
+             * <p>The source of the image. Valid values:</p>
              * <ul>
-             * <li>system: a public image provided by Alibaba Cloud</li>
-             * <li>self: a custom image that you created</li>
-             * <li>others: a shared image from another Alibaba Cloud account or a community image published by another Alibaba Cloud account</li>
-             * <li>marketplace: an Alibaba Cloud Marketplace image</li>
+             * <li>system: public images provided by Alibaba Cloud.</li>
+             * <li>self: custom images created by you.</li>
+             * <li>others: shared images or community images provided by other Alibaba Cloud users.</li>
+             * <li>marketplace: images provided by Alibaba Cloud Marketplace.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3331,7 +3414,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the ECS instances.</p>
+             * <p>The description of the ECS instance.</p>
              * 
              * <strong>example:</strong>
              * <p>FinanceDept</p>
@@ -3342,7 +3425,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The generation of the ECS instances.</p>
+             * <p>The generation of the ECS instance.</p>
              * 
              * <strong>example:</strong>
              * <p>ecs-3</p>
@@ -3353,7 +3436,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The naming series of the ECS instances.</p>
+             * <p>The name of the ECS instance.</p>
              * 
              * <strong>example:</strong>
              * <p>instance****</p>
@@ -3364,7 +3447,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The intelligent configuration settings, which determine the available instance types.</p>
+             * <p>The collection of intelligent configuration information used to filter instance types that meet your requirements.</p>
              */
             public Builder instancePatternInfos(java.util.List<InstancePatternInfos> instancePatternInfos) {
                 this.instancePatternInfos = instancePatternInfos;
@@ -3372,7 +3455,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance types of the ECS instances.</p>
+             * <p>The instance type of the ECS instance.</p>
              * 
              * <strong>example:</strong>
              * <p>ecs.g6.large</p>
@@ -3383,7 +3466,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceTypeCandidateOptions.
+             * <p>After the fallback mode is configured, if issues such as insufficient inventory occur, the system supplements the selected instance types with similar instance types of the same size, or creates vSwitches in fallback zones and adds them to the scaling group.</p>
              */
             public Builder instanceTypeCandidateOptions(InstanceTypeCandidateOptions instanceTypeCandidateOptions) {
                 this.instanceTypeCandidateOptions = instanceTypeCandidateOptions;
@@ -3391,7 +3474,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ECS instance types.</p>
+             * <p>The collection of instance types for ECS instances.</p>
              */
             public Builder instanceTypes(java.util.List<String> instanceTypes) {
                 this.instanceTypes = instanceTypes;
@@ -3399,10 +3482,10 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing method for network usage. Valid values:</p>
+             * <p>The network billing method. Valid values:</p>
              * <ul>
-             * <li>PayByBandwidth: pay-by-bandwidth. You are charged for the bandwidth that you specified by using InternetMaxBandwidthOut.</li>
-             * <li>PayByTraffic: pay-by-traffic. You are charged for the actual traffic that you used. InternetMaxBandwidthOut specifies only the maximum available bandwidth.</li>
+             * <li>PayByBandwidth: pay-by-bandwidth. In this case, the InternetMaxBandwidthOut parameter specifies the fixed bandwidth value.</li>
+             * <li>PayByTraffic: pay-by-traffic. In this case, the InternetMaxBandwidthOut parameter specifies the bandwidth cap, and you are billed based on the actual network traffic.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3417,7 +3500,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
              * <p>The maximum inbound public bandwidth. Unit: Mbit/s.</p>
              * 
              * <strong>example:</strong>
-             * <p>200</p>
+             * <p>10</p>
              */
             public Builder internetMaxBandwidthIn(Integer internetMaxBandwidthIn) {
                 this.internetMaxBandwidthIn = internetMaxBandwidthIn;
@@ -3428,7 +3511,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
              * <p>The maximum outbound public bandwidth. Unit: Mbit/s.</p>
              * 
              * <strong>example:</strong>
-             * <p>0</p>
+             * <p>10</p>
              */
             public Builder internetMaxBandwidthOut(Integer internetMaxBandwidthOut) {
                 this.internetMaxBandwidthOut = internetMaxBandwidthOut;
@@ -3436,10 +3519,10 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the ECS instances are I/O optimized. Valid values:</p>
+             * <p>Specifies whether the instance is an I/O optimized instance. Valid values:</p>
              * <ul>
-             * <li>none: The ECS instances are not I/O optimized.</li>
-             * <li>optimized: The ECS instances are I/O optimized.</li>
+             * <li>none: non-I/O optimization.</li>
+             * <li>optimized: I/O optimization.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3451,7 +3534,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of randomly generated IPv6 addresses that are allocated to the elastic network interface (ENI).</p>
+             * <p>The number of IPv6 addresses that are randomly generated for the elastic network interface controller (NIC).</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -3462,7 +3545,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the key pair that is used to log on to an ECS instance created from the scaling configuration.</p>
+             * <p>The name of the key pair used to log on to the ECS instance.</p>
              * 
              * <strong>example:</strong>
              * <p>keypair****</p>
@@ -3473,10 +3556,10 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the scaling configuration in the scaling group. Valid values:</p>
+             * <p>The lifecycle status of the scaling configuration in the scaling group. Valid values:</p>
              * <ul>
-             * <li>Active: The scaling configuration is active in the scaling group. Auto Scaling uses the scaling configuration that is in the Active state to create ECS instances during scale-out events.</li>
-             * <li>Inactive: The scaling configuration is inactive in the scaling group. Scaling configurations that are in the Inactive state are still contained in the scaling group, but Auto Scaling does not use the inactive scaling configurations to create ECS instances during scale-out events.</li>
+             * <li>Active: The scaling configuration is active. The scaling group uses active scaling configurations for the automatic creation of ECS instances.</li>
+             * <li>Inacitve: The scaling configuration is inactive. Inactive scaling configurations exist in the scaling group, but the scaling group does not use them for the automatic creation of ECS instances.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3488,7 +3571,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The weight of an ECS instance as a backend server. Valid values: 1 to 100.</p>
+             * <p>The weight of the ECS instance when it is used as an SLB backend server. Valid values: 1 to 100.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -3499,10 +3582,10 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The memory size. Unit: GiB.</p>
-             * <p>You can specify CPU and Memory to define the range of instance types. For example, if you set CPU to 2 and Memory to 16, the instance types that have 2 vCPUs and 16 GiB are returned. If you specify CPU and Memory, Auto Scaling determines the available instance types based on factors such as I/O optimization requirements and zones and preferentially creates instances by using the lowest-priced instance type.</p>
+             * <p>The memory size. Unit: GiB.
+             * You can specify both the Cpu and Memory parameters to define the instance type range. For example, if you set Cpu to 2 and Memory to 16, all instance types that have 2 vCPUs and 16 GiB of memory are matched. Auto Scaling determines the available instance types based on factors such as I/O optimization and zones, and creates instances of the type that has the lowest price.</p>
              * <blockquote>
-             * <p> You can specify CPU and Memory to define instance types only when you set Scaling Policy to Cost Optimization and no instance type is specified in the scaling configuration.</p>
+             * <p>This configuration takes effect only when the scaling mode is set to cost optimization and no instance types are specified in the scaling configuration.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -3514,7 +3597,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ENIs.</p>
+             * <p>The list of elastic network interfaces (ENIs). Each ENI is a network interface controller (NIC).</p>
              */
             public Builder networkInterfaces(java.util.List<NetworkInterfaces> networkInterfaces) {
                 this.networkInterfaces = networkInterfaces;
@@ -3522,7 +3605,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the password preconfigured in the image is used.</p>
+             * <p>Specifies whether to use the password preset in the image.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -3533,7 +3616,11 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether a password is configured for the instance.</p>
+             * <p>Specifies whether an instance password is set. Valid values:</p>
+             * <ul>
+             * <li>true: An instance password is set.</li>
+             * <li>false: No instance password is set.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -3544,7 +3631,10 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * PrivatePoolOptions.Id.
+             * <p>The ID of the private pool. The ID is the same as the ID of the elasticity assurance or capacity reservation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eap-bp67acfmxazb4****</p>
              */
             public Builder privatePoolOptions_id(String privatePoolOptions_id) {
                 this.privatePoolOptions_id = privatePoolOptions_id;
@@ -3552,7 +3642,15 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * PrivatePoolOptions.MatchCriteria.
+             * <p>The private pool type for starting the instance. After an elasticity assurance or capacity reservation takes effect, a private pool is generated. You can select a private pool type when you start an instance. Valid values:</p>
+             * <ul>
+             * <li>Open: open mode. The system automatically matches a private pool of the Open type. If no matching private pool is available, the system uses resources from the public pool to start the instance.</li>
+             * <li>Target: targeted mode. The system uses the specified private pool to start the instance. If the specified private pool is unavailable, the instance fails to be started.</li>
+             * <li>None: no private pool. The system does not use private pools to start the instance.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Open</p>
              */
             public Builder privatePoolOptions_matchCriteria(String privatePoolOptions_matchCriteria) {
                 this.privatePoolOptions_matchCriteria = privatePoolOptions_matchCriteria;
@@ -3560,7 +3658,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the Resource Access Management (RAM) role assumed by the ECS instances. This name is provided and maintained by RAM. You can call the ListRoles operation to query the available RAM roles.</p>
+             * <p>The name of the Resource Access Management (RAM) role for the ECS instance. RAM roles are provided and maintained by RAM. You can call the ListRoles operation to query available RAM roles.</p>
              * 
              * <strong>example:</strong>
              * <p>ramrole****</p>
@@ -3571,7 +3669,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource group to which the ECS instances belong.</p>
+             * <p>The ID of the resource group to which the ECS instance belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>rg-aekzn2ou7xo****</p>
@@ -3582,9 +3680,9 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource pools used for instance creation, which can be the public pool or a private pool associated with any active elasticity assurance or capacity reservation.</p>
+             * <p>The resource pool policy used when creating instances.</p>
              * <ul>
-             * <li>This parameter takes effect only when you create pay-as-you-go instances.</li>
+             * <li>This parameter takes effect only when creating pay-as-you-go instances.</li>
              * </ul>
              */
             public Builder resourcePoolOptions(ResourcePoolOptions resourcePoolOptions) {
@@ -3627,7 +3725,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
 
             /**
              * <blockquote>
-             * <p> This parameter is in invitational preview and is not available for use.</p>
+             * <p>This parameter is in invitational preview and is not available for public use.</p>
              * </blockquote>
              */
             public Builder schedulerOptions(SchedulerOptions schedulerOptions) {
@@ -3636,10 +3734,21 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether Security Hardening is enabled. Valid values:</p>
+             * <p>Specifies whether a vSwitch available for secondary elastic network interfaces (ENIs) must be selected from the list when the VSwitchIds parameter is specified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Strict</p>
+             */
+            public Builder secondaryEniVSwitchConstraint(String secondaryEniVSwitchConstraint) {
+                this.secondaryEniVSwitchConstraint = secondaryEniVSwitchConstraint;
+                return this;
+            }
+
+            /**
+             * <p>Specifies whether to enable security hardening. Valid values:</p>
              * <ul>
-             * <li>Active: Security Hardening is enabled. This value is applicable to only public images.</li>
-             * <li>Deactive: Security Hardening is disabled. This value is applicable to all images.</li>
+             * <li>Active: enables security hardening. This value is applicable only to public images.</li>
+             * <li>Deactive: disables security hardening. This value is applicable to all image types.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3651,7 +3760,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the security group to which the ECS instances belong. ECS instances that belong to the same security group can communicate with each other.</p>
+             * <p>The ID of the security group to which the ECS instance belongs. ECS instances in the same security group can access each other.</p>
              * 
              * <strong>example:</strong>
              * <p>sg-bp18kz60mefs****</p>
@@ -3662,7 +3771,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IDs of the security groups to which the ECS instances belong. ECS instances that belong to the same security group can communicate with each other.</p>
+             * <p>The IDs of the security groups to which the ECS instances belong. ECS instances in the same security group can access each other.</p>
              */
             public Builder securityGroupIds(java.util.List<String> securityGroupIds) {
                 this.securityGroupIds = securityGroupIds;
@@ -3670,7 +3779,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityOptions.
+             * <p>The security options.</p>
              */
             public Builder securityOptions(SecurityOptions securityOptions) {
                 this.securityOptions = securityOptions;
@@ -3678,7 +3787,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The protection period of the preemptible instances. Unit: hours.</p>
+             * <p>The protection period of the spot instance. Unit: hours.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -3689,7 +3798,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The interruption event of the preemptible instances.</p>
+             * <p>The interruption pattern of the spot instance.</p>
              * 
              * <strong>example:</strong>
              * <p>Terminate</p>
@@ -3700,7 +3809,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The preemptible instances.</p>
+             * <p>The spot instances.</p>
              */
             public Builder spotPriceLimits(java.util.List<SpotPriceLimits> spotPriceLimits) {
                 this.spotPriceLimits = spotPriceLimits;
@@ -3708,11 +3817,11 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The preemption policy that is applied to pay-as-you-go instances. Valid values:</p>
+             * <p>The preemption policy for the pay-as-you-go instance. Valid values:</p>
              * <ul>
-             * <li>NoSpot: The instances are created as regular pay-as-you-go instances.</li>
-             * <li>SpotWithPriceLimit: The instances are created as preemptible instances that have a user-defined maximum hourly price.</li>
-             * <li>SpotAsPriceGo: The instances are preemptible instances for which the market price at the time of purchase is automatically used as the bid price.</li>
+             * <li>NoSpot: regular pay-as-you-go instances.</li>
+             * <li>SpotWithPriceLimit: spot instances that have a maximum hourly price.</li>
+             * <li>SpotAsPriceGo: spot instances for which the system automatically bids based on the current market price.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3735,7 +3844,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of partitions in the storage set. The value is an integer that is greater than or equal to 2.</p>
+             * <p>The maximum number of partitions in the storage set. The value must be an integer greater than or equal to 2.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -3746,7 +3855,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the automatic snapshot policy that is applied to the system disk.</p>
+             * <p>The ID of the automatic snapshot policy applied to the system cloud disk.</p>
              * 
              * <strong>example:</strong>
              * <p>sp-bp12m37ccmxvbmi5****</p>
@@ -3757,14 +3866,14 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the Performance Burst feature is enabled for the system disk. Valid values:</p>
+             * <p>Specifies whether to enable the burst feature for the system cloud disk. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
-             * </ul>
-             * <blockquote>
-             * <p> This parameter is available only when you set SystemDisk.Category to cloud_auto.</p>
+             * <li>true: enabled.</li>
+             * <li>false: disabled.<blockquote>
+             * <p>This parameter is supported only when SystemDisk.Category is set to cloud_auto.</p>
              * </blockquote>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -3775,12 +3884,12 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The categories of the system disks. The values are sorted based on their priorities. The first value has the highest priority. If Auto Scaling cannot create instances by using the disk category of the highest priority, Auto Scaling creates instances by using the disk category of the next highest priority. Valid values:</p>
+             * <p>The disk types for the system cloud disk. The first disk type has the highest priority, and the priorities of the other disk types decrease in sequence. If the disk type with a higher priority is unavailable, Auto Scaling automatically attempts to create the system cloud disk by using the disk type with the next highest priority. Valid values:</p>
              * <ul>
-             * <li>cloud: basic disk</li>
-             * <li>cloud_efficiency: ultra disk</li>
-             * <li>cloud_ssd: standard SSD</li>
-             * <li>cloud_essd: ESSD</li>
+             * <li>cloud: basic cloud disk.</li>
+             * <li>cloud_efficiency: ultra cloud disk.</li>
+             * <li>cloud_ssd: standard SSD cloud disk.</li>
+             * <li>cloud_essd: ESSD cloud disk.</li>
              * </ul>
              */
             public Builder systemDiskCategories(java.util.List<String> systemDiskCategories) {
@@ -3789,14 +3898,14 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The category of the system disk. Valid values:</p>
+             * <p>The category of the system cloud disk. Valid values:</p>
              * <ul>
-             * <li>cloud: basic disk</li>
-             * <li>cloud_efficiency: ultra disk</li>
-             * <li>cloud_ssd: standard SSD</li>
-             * <li>ephemeral_ssd: local SSD</li>
-             * <li>cloud_essd: enterprise SSD (ESSD)</li>
-             * <li>cloud_auto: ESSD AutoPL</li>
+             * <li>cloud: basic cloud disk.</li>
+             * <li>cloud_efficiency: ultra disk.</li>
+             * <li>cloud_ssd: standard SSD.</li>
+             * <li>ephemeral_ssd: local SSD.</li>
+             * <li>cloud_essd: ESSD.</li>
+             * <li>cloud_auto: ESSD AutoPL disk.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3808,7 +3917,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the system disk.</p>
+             * <p>The description of the system cloud disk.</p>
              * 
              * <strong>example:</strong>
              * <p>Test system disk.</p>
@@ -3819,10 +3928,10 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The encryption algorithm that is applied to the system disk. Valid values:</p>
+             * <p>The encryption algorithm used for the system cloud disk. Valid values:</p>
              * <ul>
-             * <li>AES-256</li>
-             * <li>SM4-128</li>
+             * <li>AES-256.</li>
+             * <li>SM4-128.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3834,10 +3943,10 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the system disk is encrypted. Valid values:</p>
+             * <p>Specifies whether the system cloud disk is encrypted. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li>true: The system cloud disk is encrypted.</li>
+             * <li>false: The system cloud disk is not encrypted.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3849,7 +3958,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the KMS key that is applied to the system disk.</p>
+             * <p>The ID of the KMS key used for the system cloud disk.</p>
              * 
              * <strong>example:</strong>
              * <p>0e478b7a-4262-4802-b8cb-00d3fb40****</p>
@@ -3860,7 +3969,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the system disk.</p>
+             * <p>The name of the system cloud disk.</p>
              * 
              * <strong>example:</strong>
              * <p>cloud_ssd_Test</p>
@@ -3871,7 +3980,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The performance level (PL) of the system disk that is an ESSD.</p>
+             * <p>The performance level of the system cloud disk when it is an ESSD (standard SSD).</p>
              * 
              * <strong>example:</strong>
              * <p>PL1</p>
@@ -3882,9 +3991,9 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The provisioned IOPS of the system disk.</p>
+             * <p>The provisioned IOPS (Input/Output Operations Per Second) performance metrics for the system cloud disk.</p>
              * <blockquote>
-             * <p> IOPS measures the number of read and write operations that an EBS device can process per second.</p>
+             * <p>IOPS refers to the number of I/O operations that can be processed per second, which indicates the read and write processing capability of the block storage. Unit: operations per second.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -3896,7 +4005,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the system disk. Unit: GiB.</p>
+             * <p>The size of the system cloud disk. Unit: GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -3915,12 +4024,12 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the ECS instance is created on a dedicated host. Valid values:</p>
+             * <p>Specifies whether to create the instance on a dedicated host. Valid values:</p>
              * <ul>
-             * <li>default: The ECS instance is created on a non-dedicated host.</li>
-             * <li>host: The ECS instance is created on a dedicated host. If you do not specify DedicatedHostId, the system selects a dedicated host for the ECS instance.</li>
+             * <li>default: creates the instance on a non-dedicated host.</li>
+             * <li>host: creates the instance on a dedicated host. If you do not specify the DedicatedHostId parameter, Alibaba Cloud automatically selects a dedicated host for the instance.
+             * Default value: default.</li>
              * </ul>
-             * <p>Default value: default.</p>
              * 
              * <strong>example:</strong>
              * <p>default</p>
@@ -3931,7 +4040,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user data of the ECS instances.</p>
+             * <p>The user data of the ECS instance.</p>
              * 
              * <strong>example:</strong>
              * <p>echo hello ecs!</p>
@@ -3942,7 +4051,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The weights of the instance types. The value of this parameter indicates the capacity of an instance of the specified instance type in the scaling group. A higher weight indicates that a smaller number of instances of the instance type are required to meet the expected capacity requirement.</p>
+             * <p>The weight of the specified instance type, which indicates the capacity that a single instance of the specified instance type provides in the scaling group. A greater weight indicates that fewer instances of the instance type are required to meet the expected capacity.</p>
              */
             public Builder weightedCapacities(java.util.List<Integer> weightedCapacities) {
                 this.weightedCapacities = weightedCapacities;
@@ -3950,7 +4059,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the zone in which the ECS instances are created. You can call the DescribeZones operation to query the zone IDs.</p>
+             * <p>The zone ID of the instance. You can call the DescribeZones operation to query the zone list.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou-g</p>

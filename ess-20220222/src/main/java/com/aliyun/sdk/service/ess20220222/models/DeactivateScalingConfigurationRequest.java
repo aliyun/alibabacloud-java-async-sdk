@@ -129,11 +129,7 @@ public class DeactivateScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The ID of the scaling configuration.</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>asc-bp1ahp2ud7qkzt2a****</p>
          */
         public Builder scalingConfigurationId(String scalingConfigurationId) {
             this.putQueryParameter("ScalingConfigurationId", scalingConfigurationId);

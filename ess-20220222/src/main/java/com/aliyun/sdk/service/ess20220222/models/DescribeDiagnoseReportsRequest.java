@@ -141,7 +141,7 @@ public class DescribeDiagnoseReportsRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the scaling group.</p>
+         * <p>The ID of the region to which the scaling group belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,7 +154,7 @@ public class DescribeDiagnoseReportsRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the diagnostic reports. You can specify at most 20 IDs.</p>
+         * <p>The IDs of the diagnostic reports. You can specify up to 20 IDs.</p>
          */
         public Builder reportIds(java.util.List<String> reportIds) {
             this.putQueryParameter("ReportIds", reportIds);

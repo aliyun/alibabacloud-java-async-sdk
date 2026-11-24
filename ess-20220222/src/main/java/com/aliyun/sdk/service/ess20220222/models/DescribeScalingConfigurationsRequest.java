@@ -205,7 +205,7 @@ public class DescribeScalingConfigurationsRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page 1.</p>
+         * <p>The page number of the scaling configuration list. The starting value is 1.</p>
          * <p>Default value: 1.</p>
          * 
          * <strong>example:</strong>
@@ -218,7 +218,7 @@ public class DescribeScalingConfigurationsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Maximum value: 50.</p>
+         * <p>The number of entries per page set in the paging Settings for a paged query. Maximum value: 50.</p>
          * <p>Default value: 10.</p>
          * 
          * <strong>example:</strong>
@@ -231,7 +231,7 @@ public class DescribeScalingConfigurationsRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the scaling group to which the scaling configuration that you want to query belongs.</p>
+         * <p>The region ID of the scaling group to which the scaling configuration belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -262,8 +262,8 @@ public class DescribeScalingConfigurationsRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the scaling configurations that you want to query.</p>
-         * <p>The IDs of active and inactive scaling configurations are displayed in the query results. You can differentiate between active and inactive scaling configurations based on the value of the <code>LifecycleState</code> parameter.</p>
+         * <p>The ID of the scaling configuration to be queried.</p>
+         * <p>The query results include both active and inactive scaling configurations. The response parameter LifecycleState identifies the state.</p>
          */
         public Builder scalingConfigurationIds(java.util.List<String> scalingConfigurationIds) {
             this.putQueryParameter("ScalingConfigurationIds", scalingConfigurationIds);
@@ -272,8 +272,8 @@ public class DescribeScalingConfigurationsRequest extends Request {
         }
 
         /**
-         * <p>The names of the scaling configurations that you want to query.</p>
-         * <p>The names of inactive scaling configurations are not displayed in the query results, and no error is reported.</p>
+         * <p>The name of the scaling configuration to be queried.</p>
+         * <p>The query results ignore invalid scaling configuration names and do not return an error.</p>
          */
         public Builder scalingConfigurationNames(java.util.List<String> scalingConfigurationNames) {
             this.putQueryParameter("ScalingConfigurationNames", scalingConfigurationNames);
@@ -282,7 +282,7 @@ public class DescribeScalingConfigurationsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the scaling group. You can use the ID to query all scaling configurations in the scaling group.</p>
+         * <p>The ID of the scaling group. You can query all scaling configurations in the scaling group.</p>
          * 
          * <strong>example:</strong>
          * <p>asg-bp17pelvl720x3v7****</p>

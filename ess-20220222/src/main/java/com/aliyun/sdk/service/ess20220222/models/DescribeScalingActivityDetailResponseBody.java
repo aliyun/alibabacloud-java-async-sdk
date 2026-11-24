@@ -83,7 +83,7 @@ public class DescribeScalingActivityDetailResponseBody extends TeaModel {
          * <p>The details of the scaling activity. The result of a scaling activity is either successful or failed. If the scaling activity is rejected, no scaling activity details are returned.</p>
          * 
          * <strong>example:</strong>
-         * <p>new ECS instances &quot;i-bp16t2cgmiiymeqv****&quot; are created.</p>
+         * <p>new ECS instances \&quot;i-bp16t2cgmiiymeqv****\&quot; are created.</p>
          */
         public Builder detail(String detail) {
             this.detail = detail;

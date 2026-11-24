@@ -91,7 +91,7 @@ public class DescribeScalingActivityStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message statistics of the scaling activity.</p>
+         * ScalingActivityErrorCodeStatistics.
          */
         public Builder scalingActivityErrorCodeStatistics(ScalingActivityErrorCodeStatistics scalingActivityErrorCodeStatistics) {
             this.scalingActivityErrorCodeStatistics = scalingActivityErrorCodeStatistics;
@@ -99,7 +99,7 @@ public class DescribeScalingActivityStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The statistical metrics of the scaling activity status.</p>
+         * ScalingActivityStatusStatistics.
          */
         public Builder scalingActivityStatusStatistics(ScalingActivityStatusStatistics scalingActivityStatusStatistics) {
             this.scalingActivityStatusStatistics = scalingActivityStatusStatistics;
@@ -178,10 +178,7 @@ public class DescribeScalingActivityStatisticsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of failed scaling activities.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>4</p>
+             * Count.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -189,10 +186,7 @@ public class DescribeScalingActivityStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Scaling Activity Error Codes</p>
-             * 
-             * <strong>example:</strong>
-             * <p>QuotaExceeded.PrivateIpAddress</p>
+             * ErrorCode.
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -200,10 +194,7 @@ public class DescribeScalingActivityStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the statistics are generated. The time is in UTC. Format: yyyyMMddHH.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2025121623</p>
+             * Time.
              */
             public Builder time(String time) {
                 this.time = time;
@@ -350,10 +341,7 @@ public class DescribeScalingActivityStatisticsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of failed scaling activities.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * FailedActivityCount.
              */
             public Builder failedActivityCount(Integer failedActivityCount) {
                 this.failedActivityCount = failedActivityCount;
@@ -361,10 +349,7 @@ public class DescribeScalingActivityStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of successful scaling activities.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>10</p>
+             * SuccessActivityCount.
              */
             public Builder successActivityCount(Integer successActivityCount) {
                 this.successActivityCount = successActivityCount;
@@ -372,10 +357,7 @@ public class DescribeScalingActivityStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the statistics are generated. The time is in UTC. Format: yyyyMMddHH.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2025121623</p>
+             * Time.
              */
             public Builder time(String time) {
                 this.time = time;
@@ -383,10 +365,7 @@ public class DescribeScalingActivityStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of partially executed scaling activities.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * WarningActivityCount.
              */
             public Builder warningActivityCount(Integer warningActivityCount) {
                 this.warningActivityCount = warningActivityCount;

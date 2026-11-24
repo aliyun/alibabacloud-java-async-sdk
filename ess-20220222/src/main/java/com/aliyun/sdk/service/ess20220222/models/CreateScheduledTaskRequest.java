@@ -87,6 +87,10 @@ public class CreateScheduledTaskRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("TaskEnabled")
     private Boolean taskEnabled;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WarmPoolCapacityOptions")
+    private WarmPoolCapacityOptions warmPoolCapacityOptions;
+
     private CreateScheduledTaskRequest(Builder builder) {
         super(builder);
         this.description = builder.description;
@@ -106,6 +110,7 @@ public class CreateScheduledTaskRequest extends Request {
         this.scheduledAction = builder.scheduledAction;
         this.scheduledTaskName = builder.scheduledTaskName;
         this.taskEnabled = builder.taskEnabled;
+        this.warmPoolCapacityOptions = builder.warmPoolCapacityOptions;
     }
 
     public static Builder builder() {
@@ -240,6 +245,13 @@ public class CreateScheduledTaskRequest extends Request {
         return this.taskEnabled;
     }
 
+    /**
+     * @return warmPoolCapacityOptions
+     */
+    public WarmPoolCapacityOptions getWarmPoolCapacityOptions() {
+        return this.warmPoolCapacityOptions;
+    }
+
     public static final class Builder extends Request.Builder<CreateScheduledTaskRequest, Builder> {
         private String description; 
         private Integer desiredCapacity; 
@@ -258,6 +270,7 @@ public class CreateScheduledTaskRequest extends Request {
         private String scheduledAction; 
         private String scheduledTaskName; 
         private Boolean taskEnabled; 
+        private WarmPoolCapacityOptions warmPoolCapacityOptions; 
 
         private Builder() {
             super();
@@ -282,6 +295,7 @@ public class CreateScheduledTaskRequest extends Request {
             this.scheduledAction = request.scheduledAction;
             this.scheduledTaskName = request.scheduledTaskName;
             this.taskEnabled = request.taskEnabled;
+            this.warmPoolCapacityOptions = request.warmPoolCapacityOptions;
         } 
 
         /**
@@ -297,9 +311,9 @@ public class CreateScheduledTaskRequest extends Request {
         }
 
         /**
-         * <p>The expected number of instances in the scaling group if you specify the ScalingGroupId parameter.</p>
+         * <p>The expected number of instances in the scaling group when the scaling method of the scheduled task is set to specifying the number of instances in the scaling group.</p>
          * <blockquote>
-         * <p>You must specify the <code>DesiredCapacity</code> parameter when you create a scaling group.</p>
+         * <p>The scaling group must support the expected number of instances. This means that DesiredCapacity must be specified when the scaling group is created.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -312,7 +326,7 @@ public class CreateScheduledTaskRequest extends Request {
         }
 
         /**
-         * <p>The time period during which the failed scheduled task can be retried. Unit: seconds. Valid values: 0 to 1800.</p>
+         * <p>The period within which the scheduled task retries after a trigger failure. Unit: seconds. Valid values: 0 to 1800.</p>
          * <p>Default value: 600.</p>
          * 
          * <strong>example:</strong>
@@ -325,10 +339,12 @@ public class CreateScheduledTaskRequest extends Request {
         }
 
         /**
-         * <p>The point in time at which the scheduled task is triggered. Specify the time in the ISO 8601 standard. The time must be in UTC. You cannot trigger a scheduled task more than 90 days after its creation.</p>
+         * <p>The time at which the scheduled task is triggered. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mmZ format. The time must be in UTC. You cannot specify a time that is later than 90 days from the creation date. </p>
          * <ul>
-         * <li>If you specify <code>RecurrenceType</code>, the scheduled task is repeatedly triggered at the point in time that is specified by LaunchTime.</li>
-         * <li>If you do not specify <code>RecurrenceType</code>, the scheduled task is triggered only once at the time point that is specified by LaunchTime.</li>
+         * <li><p>If RecurrenceType is specified, the time specified by this parameter is the default time for recurring execution.</p>
+         * </li>
+         * <li><p>If RecurrenceType is not specified, the task is executed only once at the specified date and time.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -341,7 +357,7 @@ public class CreateScheduledTaskRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of instances in the scaling group if you specify the ScalingGroupId parameter.</p>
+         * <p>The maximum number of instances in the scaling group when the scaling method of the scheduled task is set to specifying the number of instances in the scaling group.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -353,7 +369,7 @@ public class CreateScheduledTaskRequest extends Request {
         }
 
         /**
-         * <p>The minimum number of instances in the scaling group if you specify the ScalingGroupId parameter.</p>
+         * <p>The minimum number of instances in the scaling group when the scaling method of the scheduled task is set to specifying the number of instances in the scaling group.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -383,8 +399,7 @@ public class CreateScheduledTaskRequest extends Request {
         }
 
         /**
-         * <p>The end time of the scheduled task. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mmZ format.</p>
-         * <p>The time must be in UTC. You cannot enter a point in time that is later than 365 days from the point in time at which the scheduled task is created.</p>
+         * <p>The end time of the scheduled task that is executed repeatedly. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mmZ format. The time must be in UTC. You cannot specify a time that is later than 365 days from the creation date.</p>
          * 
          * <strong>example:</strong>
          * <p>2014-08-17T16:55Z</p>
@@ -396,14 +411,14 @@ public class CreateScheduledTaskRequest extends Request {
         }
 
         /**
-         * <p>The interval at which the scheduled task is repeated. Valid values:</p>
+         * <p>The recurrence type of the scheduled task. Valid values: </p>
          * <ul>
-         * <li>Daily: The scheduled task is executed once every specified number of days.</li>
-         * <li>Weekly: The scheduled task is executed on each specified day of the week.</li>
-         * <li>Monthly: The scheduled task is executed on each specified day of the month.</li>
+         * <li>Daily: The scheduled task is executed once every specified number of days. </li>
+         * <li>Weekly: The scheduled task is executed on specified days of each week. </li>
+         * <li>Monthly: The scheduled task is executed on specified days of each month. </li>
          * <li>Cron: The scheduled task is executed based on the specified cron expression.</li>
          * </ul>
-         * <p>You must specify the <code>RecurrenceType</code> and <code>RecurrenceValue</code> parameters at the same time.</p>
+         * <p>You must specify both RecurrenceType and RecurrenceValue.</p>
          * 
          * <strong>example:</strong>
          * <p>Daily</p>
@@ -415,14 +430,14 @@ public class CreateScheduledTaskRequest extends Request {
         }
 
         /**
-         * <p>The number of recurrences of the scheduled task.</p>
+         * <p>The recurrence value of the scheduled task. </p>
          * <ul>
-         * <li>If you set the <code>RecurrenceType</code> parameter to <code>Daily</code>, you can specify only one value for this parameter. Valid values: 1 to 31.</li>
-         * <li>If you set the <code>RecurrenceType</code> parameter to <code>Weekly</code>, you can specify multiple values for this parameter. Separate the values with commas (,). The values that correspond to Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday are 0, 1, 2, 3, 4, 5, and 6.``</li>
-         * <li>If you set the <code>RecurrenceType</code> parameter to <code>Monthly</code>, you can specify two values in the <code>A-B</code> format for this parameter. Valid values of A and B: 1 to 31. B must be greater than or equal to A.</li>
-         * <li>If you set the <code>RecurrenceType</code> parameter to <code>Cron</code>, you can specify a cron expression. A cron expression is written in UTC time and consists of the following fields: minute, hour, day, month, and week. The expression can contain the letters L and W and the following wildcard characters: commas (,), question marks (?), hyphens (-), asterisks (*), number signs (#), and forward slashes (/).</li>
+         * <li>If RecurrenceType is set to Daily, you can specify only one value. Valid values: 1 to 31. </li>
+         * <li>If RecurrenceType is set to Weekly, you can specify multiple values separated by commas (,). For example, the values for Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday are 0,1,2,3,4,5,6.  </li>
+         * <li>If RecurrenceType is set to Monthly, the format is A-B. Valid values of A and B: 1 to 31. B must be greater than or equal to A. </li>
+         * <li>If RecurrenceType is set to Cron, the value represents UTC time and supports a five-field expression for minutes, hours, days, months, and days of the week. The expression supports the following wildcards: commas (,), question marks (?), hyphens (-), asterisks (*), number signs (#), forward slashes (/), L, and W.</li>
          * </ul>
-         * <p>You must specify both the <code>RecurrenceType</code> parameter and the <code>RecurrenceValue</code> parameter.</p>
+         * <p>You must specify both RecurrenceType and RecurrenceValue.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -434,7 +449,7 @@ public class CreateScheduledTaskRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the scheduled task.</p>
+         * <p>The ID of the region to which the scheduled task belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -456,8 +471,15 @@ public class CreateScheduledTaskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the scaling group. If you specify this parameter, the number of instances in the scaling group will be changed when the scheduled task is triggered.</p>
-         * <p>If you specify <code>ScalingGroupId</code>, you must also specify at least one of the following parameters: <code>MinValue</code>, <code>MaxValue</code>, and <code>DesiredCapacity</code>. You cannot specify <code>ScheduledAction</code> and <code>ScalingGroupId</code> at the same time.</p>
+         * <p>The ID of the scaling group in which you want to modify the number of instances or adjust the warm pool capacity when the scheduled task is triggered.</p>
+         * <p>After you specify ScalingGroupId, the scaling method of the scheduled task is set to specifying the number of instances in the scaling group or adjusting the warm pool capacity.</p>
+         * <ul>
+         * <li>To specify the number of instances in the scaling group, you must specify a value for at least one of the following parameters: MinValue, MaxValue, and DesiredCapacity.</li>
+         * <li>To adjust the warm pool capacity, you must configure WarmPoolCapacityOptions.</li>
+         * </ul>
+         * <blockquote>
+         * <p>You cannot specify both ScheduledAction and ScalingGroupId at the same time.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>asg-bp18p2yfxow2dloq****</p>
@@ -469,8 +491,8 @@ public class CreateScheduledTaskRequest extends Request {
         }
 
         /**
-         * <p>The scaling rule that you want to execute when the scheduled task is triggered. Specify the unique identifier of the scaling rule.</p>
-         * <p>If you specify <code>ScheduledAction</code>, the scheduled task uses an existing scaling rule. You cannot specify <code>ScheduledAction</code> and <code>ScalingGroupId</code> at the same time.</p>
+         * <p>The unique identifier of the scaling rule to be executed when the scheduled task is triggered.</p>
+         * <p>After you specify ScheduledAction, the scaling method of the scheduled task is set to selecting an existing scaling rule. You cannot specify both ScheduledAction and ScalingGroupId at the same time.</p>
          * 
          * <strong>example:</strong>
          * <p>ari:acs:ess:cn-hangzhou:140692647****:scalingrule/asr-bp12tcnol686y1ik****</p>
@@ -482,8 +504,8 @@ public class CreateScheduledTaskRequest extends Request {
         }
 
         /**
-         * <p>The name of the scheduled task. The name must be 2 to 64 characters in length, and can contain letters, digits, underscores (_), hyphens (-), and periods (.). The name must start with a letter or a digit. The name of the scheduled task must be unique in the region and within the Alibaba Cloud account.</p>
-         * <p>If you do not specify this parameter, the value of the <code>ScheduledTaskId</code> parameter is used.</p>
+         * <p>The name of the scheduled task. The name must be 2 to 64 characters in length and can contain letters, digits, underscores (_), hyphens (-), and periods (.). It must start with a letter, digit, or Chinese character. The name must be unique within the same region and Alibaba Cloud account. </p>
+         * <p>Default value: the value of ScheduledTaskId.</p>
          * 
          * <strong>example:</strong>
          * <p>scheduled****</p>
@@ -495,10 +517,10 @@ public class CreateScheduledTaskRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the scheduled task.</p>
+         * <p>Specifies whether to enable the scheduled task. Valid values: </p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: enables the task.</li>
+         * <li>false: disables the task.</li>
          * </ul>
          * <p>Default value: true.</p>
          * 
@@ -511,6 +533,18 @@ public class CreateScheduledTaskRequest extends Request {
             return this;
         }
 
+        /**
+         * <p>The warm pool capacity configurations of the scaling group. This parameter takes effect only when a warm pool is configured for the scaling group.</p>
+         * <blockquote>
+         * <p>When you configure this parameter, you must specify ScalingGroupId.</p>
+         * </blockquote>
+         */
+        public Builder warmPoolCapacityOptions(WarmPoolCapacityOptions warmPoolCapacityOptions) {
+            this.putQueryParameter("WarmPoolCapacityOptions", warmPoolCapacityOptions);
+            this.warmPoolCapacityOptions = warmPoolCapacityOptions;
+            return this;
+        }
+
         @Override
         public CreateScheduledTaskRequest build() {
             return new CreateScheduledTaskRequest(this);
@@ -518,4 +552,85 @@ public class CreateScheduledTaskRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateScheduledTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateScheduledTaskRequest</p>
+     */
+    public static class WarmPoolCapacityOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DesiredGroupPreparedCapacity")
+        private Integer desiredGroupPreparedCapacity;
+
+        @com.aliyun.core.annotation.NameInMap("MinCapacity")
+        private Integer minCapacity;
+
+        private WarmPoolCapacityOptions(Builder builder) {
+            this.desiredGroupPreparedCapacity = builder.desiredGroupPreparedCapacity;
+            this.minCapacity = builder.minCapacity;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static WarmPoolCapacityOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return desiredGroupPreparedCapacity
+         */
+        public Integer getDesiredGroupPreparedCapacity() {
+            return this.desiredGroupPreparedCapacity;
+        }
+
+        /**
+         * @return minCapacity
+         */
+        public Integer getMinCapacity() {
+            return this.minCapacity;
+        }
+
+        public static final class Builder {
+            private Integer desiredGroupPreparedCapacity; 
+            private Integer minCapacity; 
+
+            private Builder() {
+            } 
+
+            private Builder(WarmPoolCapacityOptions model) {
+                this.desiredGroupPreparedCapacity = model.desiredGroupPreparedCapacity;
+                this.minCapacity = model.minCapacity;
+            } 
+
+            /**
+             * <p>The expected number of prepared instances to be covered. The system maintains the sum of the current number of instances in the scaling group and the number of instances in the warm pool at this value. Default value: the maximum number of instances in the scaling group, which is specified by MaxSize.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
+             */
+            public Builder desiredGroupPreparedCapacity(Integer desiredGroupPreparedCapacity) {
+                this.desiredGroupPreparedCapacity = desiredGroupPreparedCapacity;
+                return this;
+            }
+
+            /**
+             * <p>The minimum number of instances in the warm pool. The system always retains at least this number of prepared instances in the warm pool to ensure that instances can be quickly added from the warm pool during scale-out. Default value: 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
+             */
+            public Builder minCapacity(Integer minCapacity) {
+                this.minCapacity = minCapacity;
+                return this;
+            }
+
+            public WarmPoolCapacityOptions build() {
+                return new WarmPoolCapacityOptions(this);
+            } 
+
+        } 
+
+    }
 }

@@ -106,7 +106,7 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -131,7 +131,7 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -139,7 +139,7 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information collection of the scheduled tasks.</p>
+         * <p>The information about the scheduled tasks.</p>
          */
         public Builder scheduledTasks(java.util.List<ScheduledTasks> scheduledTasks) {
             this.scheduledTasks = scheduledTasks;
@@ -163,6 +163,87 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeScheduledTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeScheduledTasksResponseBody</p>
+     */
+    public static class WarmPoolCapacityOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DesiredGroupPreparedCapacity")
+        private Integer desiredGroupPreparedCapacity;
+
+        @com.aliyun.core.annotation.NameInMap("MinCapacity")
+        private Integer minCapacity;
+
+        private WarmPoolCapacityOptions(Builder builder) {
+            this.desiredGroupPreparedCapacity = builder.desiredGroupPreparedCapacity;
+            this.minCapacity = builder.minCapacity;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static WarmPoolCapacityOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return desiredGroupPreparedCapacity
+         */
+        public Integer getDesiredGroupPreparedCapacity() {
+            return this.desiredGroupPreparedCapacity;
+        }
+
+        /**
+         * @return minCapacity
+         */
+        public Integer getMinCapacity() {
+            return this.minCapacity;
+        }
+
+        public static final class Builder {
+            private Integer desiredGroupPreparedCapacity; 
+            private Integer minCapacity; 
+
+            private Builder() {
+            } 
+
+            private Builder(WarmPoolCapacityOptions model) {
+                this.desiredGroupPreparedCapacity = model.desiredGroupPreparedCapacity;
+                this.minCapacity = model.minCapacity;
+            } 
+
+            /**
+             * <p>The expected number of instances covered by the warm pool. The system maintains the sum of the current number of instances in the scaling group and the number of instances in the warm pool at this value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
+             */
+            public Builder desiredGroupPreparedCapacity(Integer desiredGroupPreparedCapacity) {
+                this.desiredGroupPreparedCapacity = desiredGroupPreparedCapacity;
+                return this;
+            }
+
+            /**
+             * <p>The minimum number of instances in the warm pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
+             */
+            public Builder minCapacity(Integer minCapacity) {
+                this.minCapacity = minCapacity;
+                return this;
+            }
+
+            public WarmPoolCapacityOptions build() {
+                return new WarmPoolCapacityOptions(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link DescribeScheduledTasksResponseBody} extends {@link TeaModel}
@@ -212,6 +293,9 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TaskEnabled")
         private Boolean taskEnabled;
 
+        @com.aliyun.core.annotation.NameInMap("WarmPoolCapacityOptions")
+        private WarmPoolCapacityOptions warmPoolCapacityOptions;
+
         private ScheduledTasks(Builder builder) {
             this.description = builder.description;
             this.desiredCapacity = builder.desiredCapacity;
@@ -227,6 +311,7 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             this.scheduledTaskId = builder.scheduledTaskId;
             this.scheduledTaskName = builder.scheduledTaskName;
             this.taskEnabled = builder.taskEnabled;
+            this.warmPoolCapacityOptions = builder.warmPoolCapacityOptions;
         }
 
         public static Builder builder() {
@@ -335,6 +420,13 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             return this.taskEnabled;
         }
 
+        /**
+         * @return warmPoolCapacityOptions
+         */
+        public WarmPoolCapacityOptions getWarmPoolCapacityOptions() {
+            return this.warmPoolCapacityOptions;
+        }
+
         public static final class Builder {
             private String description; 
             private Integer desiredCapacity; 
@@ -350,6 +442,7 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             private String scheduledTaskId; 
             private String scheduledTaskName; 
             private Boolean taskEnabled; 
+            private WarmPoolCapacityOptions warmPoolCapacityOptions; 
 
             private Builder() {
             } 
@@ -369,6 +462,7 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
                 this.scheduledTaskId = model.scheduledTaskId;
                 this.scheduledTaskName = model.scheduledTaskName;
                 this.taskEnabled = model.taskEnabled;
+                this.warmPoolCapacityOptions = model.warmPoolCapacityOptions;
             } 
 
             /**
@@ -383,7 +477,7 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expected number of instances in the scaling group. If you set <code>Scaling Method</code> to <code>Configure Number of Instances in Scaling Group</code>, you can specify this parameter.</p>
+             * <p>The expected number of instances in the scaling group. This parameter takes effect when the scaling method of the scheduled task is set to adjust the number of instances in the scaling group.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -394,7 +488,7 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time window during which the scheduled task can be retried. Unit: seconds. Valid values: 0 to 21600.</p>
+             * <p>The time period during which a retry is performed after the scheduled task fails to be triggered. Unit: seconds. Valid values: 0 to 21600.</p>
              * 
              * <strong>example:</strong>
              * <p>600</p>
@@ -405,7 +499,7 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The point in time at which the scheduled task is triggered.</p>
+             * <p>The time at which the scheduled task is triggered. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mmZ format. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2014-08-18T10:52Z</p>
@@ -416,7 +510,7 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of instances that must be contained in the scaling group. If you set <code>Scaling Method</code> to <code>Configure Number of Instances in Scaling Group</code>, you can specify this parameter.</p>
+             * <p>The maximum number of instances in the scaling group. This parameter takes effect when the scaling method of the scheduled task is set to adjust the number of instances in the scaling group.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -427,7 +521,7 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The minimum number of instances that must be contained in the scaling group. If you set <code>Scaling Method</code> to <code>Configure Number of Instances in Scaling Group</code>, you can specify this parameter.</p>
+             * <p>The minimum number of instances in the scaling group. This parameter takes effect when the scaling method of the scheduled task is set to adjust the number of instances in the scaling group.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -438,7 +532,7 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the recurrence of the scheduled task.</p>
+             * <p>The end time of the recurring scheduled task. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mmZ format. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2014-08-20T16:55Z</p>
@@ -449,7 +543,7 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The recurring interval of the scheduled task.</p>
+             * <p>The recurrence type of the scheduled task.</p>
              * 
              * <strong>example:</strong>
              * <p>Daily</p>
@@ -460,7 +554,7 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The frequency of recurrence of the scheduled task.</p>
+             * <p>The recurrence value of the scheduled task.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -471,7 +565,7 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the scaling group to which the scheduled task belongs.</p>
+             * <p>The ID of the scaling group that executes the scheduled task.</p>
              * 
              * <strong>example:</strong>
              * <p>asg-bp1bo5tca4m56nap****</p>
@@ -482,7 +576,7 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scaling rule of the scheduled task. A value is returned for this parameter only after you specify ScheduledActions.</p>
+             * <p>The scaling rule used when the scheduled task is executed. This parameter is returned only when a scaling rule is specified for the scheduled task.</p>
              * 
              * <strong>example:</strong>
              * <p>ari:acs:ess:cn-hangzhou:1406926474****:scalingrule/asr-bp1id5rhu8edp7kd****</p>
@@ -515,10 +609,10 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the scheduled task is enabled.</p>
+             * <p>Indicates whether the scheduled task is started. Valid values: </p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li>true: The task is started.</li>
+             * <li>false: The task is stopped.</li>
              * </ul>
              * <p>Default value: true.</p>
              * 
@@ -527,6 +621,14 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
              */
             public Builder taskEnabled(Boolean taskEnabled) {
                 this.taskEnabled = taskEnabled;
+                return this;
+            }
+
+            /**
+             * <p>The warm pool capacity configurations of the scaling group.</p>
+             */
+            public Builder warmPoolCapacityOptions(WarmPoolCapacityOptions warmPoolCapacityOptions) {
+                this.warmPoolCapacityOptions = warmPoolCapacityOptions;
                 return this;
             }
 

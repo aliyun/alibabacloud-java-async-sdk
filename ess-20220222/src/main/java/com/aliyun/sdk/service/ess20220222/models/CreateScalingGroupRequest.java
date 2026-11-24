@@ -216,6 +216,10 @@ public class CreateScalingGroupRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("VSwitchIds")
     private java.util.List<String> vSwitchIds;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneShiftPolicy")
+    private ZoneShiftPolicy zoneShiftPolicy;
+
     private CreateScalingGroupRequest(Builder builder) {
         super(builder);
         this.albServerGroups = builder.albServerGroups;
@@ -267,6 +271,7 @@ public class CreateScalingGroupRequest extends Request {
         this.vServerGroups = builder.vServerGroups;
         this.vSwitchId = builder.vSwitchId;
         this.vSwitchIds = builder.vSwitchIds;
+        this.zoneShiftPolicy = builder.zoneShiftPolicy;
     }
 
     public static Builder builder() {
@@ -625,6 +630,13 @@ public class CreateScalingGroupRequest extends Request {
         return this.vSwitchIds;
     }
 
+    /**
+     * @return zoneShiftPolicy
+     */
+    public ZoneShiftPolicy getZoneShiftPolicy() {
+        return this.zoneShiftPolicy;
+    }
+
     public static final class Builder extends Request.Builder<CreateScalingGroupRequest, Builder> {
         private java.util.List<AlbServerGroups> albServerGroups; 
         private String allocationStrategy; 
@@ -675,6 +687,7 @@ public class CreateScalingGroupRequest extends Request {
         private java.util.List<VServerGroups> vServerGroups; 
         private String vSwitchId; 
         private java.util.List<String> vSwitchIds; 
+        private ZoneShiftPolicy zoneShiftPolicy; 
 
         private Builder() {
             super();
@@ -731,10 +744,11 @@ public class CreateScalingGroupRequest extends Request {
             this.vServerGroups = request.vServerGroups;
             this.vSwitchId = request.vSwitchId;
             this.vSwitchIds = request.vSwitchIds;
+            this.zoneShiftPolicy = request.zoneShiftPolicy;
         } 
 
         /**
-         * <p>The Application Load Balancer (ALB) server groups.</p>
+         * <p>The collection of information about the ALB server groups.</p>
          */
         public Builder albServerGroups(java.util.List<AlbServerGroups> albServerGroups) {
             this.putQueryParameter("AlbServerGroups", albServerGroups);
@@ -743,10 +757,10 @@ public class CreateScalingGroupRequest extends Request {
         }
 
         /**
-         * <p>The allocation policy of instances. Auto Scaling selects instance types based on the allocation policy to create the required number of instances. The policy can be applied to pay-as-you-go instances and preemptible instances. This parameter takes effect only when you set the <code>MultiAZPolicy</code> parameter to <code>COMPOSABLE</code>. Valid values:</p>
+         * <p>The capacity allocation policy, which determines how the scaling group selects available instance types to meet the capacity requirements. The capacity distribution policy applies to both pay-as-you-go and spot capacities. This parameter takes effect only when the MultiAZPolicy parameter is set to COMPOSABLE. Valid values:</p>
          * <ul>
-         * <li>priority: Auto Scaling selects instance types based on the specified order of the instance types to create the required number of instances.</li>
-         * <li>lowestPrice: Auto Scaling selects instance types that have the lowest unit price of vCPUs to create the required number of instances.</li>
+         * <li>priority: Creates instances based on the order of the configured instance types.</li>
+         * <li>lowestPrice: Creates instances based on the unit price per vCPU of the instance types in ascending order.</li>
          * </ul>
          * <p>Default value: priority.</p>
          * 
@@ -760,10 +774,10 @@ public class CreateScalingGroupRequest extends Request {
         }
 
         /**
-         * <p>Whether to enable automatic rebalancing for the scaling group. This takes effect only when BalancedOnly is enabled for the scaling group. Valid values:</p>
+         * <p>Specifies whether to enable automatic balancing for the scaling group. This parameter takes effect only when BalancedOnly is enabled for the zone-balanced scaling group. Valid values:</p>
          * <ul>
-         * <li>false: Auto rebalancing is disabled for the scaling group.</li>
-         * <li>true: If Auto rebalancing is enabled, the scaling group automatically detects the capacity of the zone. If the capacity of the zone is unbalanced, the scaling group actively scales out the zone and re-balances the capacity of the zone.</li>
+         * <li>false: Does not enable automatic balancing for the scaling group.</li>
+         * <li>true: Enables automatic balancing for the scaling group. The scaling group automatically detects the capacity across zones. When the capacity is unbalanced across zones, the scaling group proactively scales out or in to rebalance the capacity across zones.</li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -777,13 +791,13 @@ public class CreateScalingGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to evenly distribute instances in the scaling group across multiple zones. This parameter takes effect only if you set <code>MultiAZPolicy</code> to <code>COMPOSABLE</code>. Valid values:</p>
+         * <p>Specifies whether the capacity of the scaling group is evenly distributed across multiple zones. This parameter takes effect only when the MultiAZPolicy parameter is set to COMPOSABLE. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: The capacity of the scaling group is evenly distributed across multiple zones.</li>
+         * <li>false: The capacity of the scaling group is not evenly distributed across multiple zones.</li>
          * </ul>
          * <blockquote>
-         * <p> If you set <code>MultiAZPolicy</code> to <code>COMPOSABLE</code> and enable <code>AzBalance</code> to <code>true</code>, this setting has an equivalent effect to setting <code>MultiAZPolicy</code> to <code>BALANCE</code>.</p>
+         * <p>If the MultiAZPolicy parameter is set to COMPOSABLE and the AzBalance parameter is set to true, the effect is the same as when the MultiAZPolicy parameter is set to BALANCE.</p>
          * </blockquote>
          * <p>Default value: false.</p>
          * 
@@ -797,10 +811,12 @@ public class CreateScalingGroupRequest extends Request {
         }
 
         /**
-         * <p>The zone balancing mode. This mode takes effect only when the zone balancing mode is enabled. Valid values:</p>
+         * <p>The zone balancing mode. This parameter takes effect only when the zone balancing mode is enabled. Valid values:</p>
          * <ul>
-         * <li>BalancedBestEffort: If a resource fails to be created in a zone, it is downgraded to another zone to ensure best-effort delivery of the resource.</li>
-         * <li>BalancedOnly: If a resource fails to be created in a zone, it is not downgraded to another zone. The scale-out activity is partially successful to avoid excessive imbalance of resources in different zones.</li>
+         * <li><p>BalancedBestEffort: When resource creation fails in a zone, the system falls back to other zones to ensure best-effort delivery of resources.</p>
+         * </li>
+         * <li><p>BalancedOnly: When resource creation fails in a zone, the system does not fall back to other zones. The scale-out activity partially succeeds to avoid excessive imbalance of resources across different zones.</p>
+         * </li>
          * </ul>
          * <p>Default value: BalancedBestEffort.</p>
          * 
@@ -824,7 +840,7 @@ public class CreateScalingGroupRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">Ensure idempotence</a>.</p>
+         * <p>You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">Ensure idempotence</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-42665544****</p>
@@ -836,10 +852,10 @@ public class CreateScalingGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to automatically create pay-as-you-go instances to meet the requirement on the number of ECS instances when the expected capacity of preemptible instances cannot be provided due to reasons such as cost-related issues and insufficient resources. This parameter is available only if you set the MultiAZPolicy parameter to COST_OPTIMIZED. Valid values:</p>
+         * <p>Specifies whether to automatically attempt to create pay-as-you-go instances to meet the required number of ECS instances when the MultiAZPolicy parameter is set to COST_OPTIMIZED and sufficient spot instances cannot be created due to price or inventory reasons. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: allows the creation.</li>
+         * <li>false: does not allow the creation.</li>
          * </ul>
          * <p>Default value: true.</p>
          * 
@@ -853,7 +869,7 @@ public class CreateScalingGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the elastic container instance.</p>
+         * <p>The ECI instance ID, which is the container group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>eci-uf6fonnghi50u374****</p>
@@ -865,7 +881,7 @@ public class CreateScalingGroupRequest extends Request {
         }
 
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the custom scale-in policy (Function). This parameter is available only if you specify CustomPolicy as the first step to remove instances.</p>
+         * <p>The ARN of the Function Compute function for the custom scale-in policy. This parameter takes effect only when the first removal policy configured in RemovalPolicies is CustomPolicy.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:fc:cn-zhangjiakou:16145688****:services/ess_custom_terminate_policy.LATEST/functions/ess_custom_terminate_policy_name</p>
@@ -877,8 +893,10 @@ public class CreateScalingGroupRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the ApsaraDB RDS instances that you want to associate with the scaling group. The value can be a JSON array that contains multiple ApsaraDB RDS instance IDs. Separate multiple IDs with commas (,).</p>
-         * <p>You can associate only a limited number of ApsaraDB RDS instances with a scaling group. Go to <a href="https://quotas.console.aliyun.com/products/ess/quotas">Quota Center</a> to check the maximum number of ApsaraDB RDS instances that you can associate with a scaling group.</p>
+         * <p>The IDs of the ApsaraDB RDS instances. The value can be a JSON array that contains multiple ApsaraDB RDS instance IDs. Separate multiple IDs with commas (,). </p>
+         * <p>&lt;props=&quot;china&quot;&gt;The maximum number of ApsaraDB RDS instances that can be associated with a scaling group depends on your Auto Scaling usage. Go to <a href="https://quotas.console.aliyun.com/products/ess/quotas">Quota Center</a> to check the quota for the <strong>maximum number of ApsaraDB RDS instances that can be associated with a scaling group</strong>.</p>
+         * <p>&lt;props=&quot;intl&quot;&gt;The maximum number of ApsaraDB RDS instances that can be associated with a scaling group depends on your Auto Scaling usage. Go to <a href="https://quotas.console.aliyun.com/products/ess/quotas">Quota Center</a> to check the quota for the <strong>maximum number of ApsaraDB RDS instances that can be associated with a scaling group</strong>.</p>
+         * <p>&lt;props=&quot;partner&quot;&gt;The maximum number of ApsaraDB RDS instances that can be associated with a scaling group depends on your Auto Scaling usage. Go to Quota Center to check the quota for the <strong>maximum number of ApsaraDB RDS instances that can be associated with a scaling group</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;rm-bp142f86de0t7****&quot;, &quot;rm-bp18l1z42ar4o****&quot;, &quot;rm-bp1lqr97h4aqk****&quot;]</p>
@@ -890,7 +908,7 @@ public class CreateScalingGroupRequest extends Request {
         }
 
         /**
-         * <p>The databases that you want to attach to the scaling group.</p>
+         * <p>The list of databases associated with the scaling group.</p>
          */
         public Builder DBInstances(java.util.List<DBInstances> DBInstances) {
             this.putQueryParameter("DBInstances", DBInstances);
@@ -899,8 +917,8 @@ public class CreateScalingGroupRequest extends Request {
         }
 
         /**
-         * <p>The cooldown period of the scaling group after a scaling activity is complete in the scaling group. Valid values: 0 to 86400. Unit: seconds.</p>
-         * <p>During the cooldown period, Auto Scaling does not execute scaling activities that are triggered by CloudMonitor event-triggered tasks.</p>
+         * <p>The cooldown time after a scaling activity (adding or removing instances) is completed. Valid values: 0 to 86400. Unit: seconds.</p>
+         * <p>During the cooldown time, the scaling group does not execute other scaling activities. This parameter takes effect only for scaling activities triggered by CloudMonitor event-triggered tasks.  </p>
          * <p>Default value: 300.</p>
          * 
          * <strong>example:</strong>
@@ -913,7 +931,7 @@ public class CreateScalingGroupRequest extends Request {
         }
 
         /**
-         * <p>The expected number of ECS instances in the scaling group. Auto Scaling automatically maintains the specified expected number of ECS instances. The DesiredCapacity value cannot be greater than the MaxSize value or less than the MinSize value.</p>
+         * <p>The expected number of instances in the scaling group. The scaling group automatically maintains the number of instances at the expected number. The value cannot be greater than MaxSize or less than MinSize.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -927,7 +945,7 @@ public class CreateScalingGroupRequest extends Request {
         /**
          * <p>Specifies whether to enable deletion protection for the scaling group. Valid values:</p>
          * <ul>
-         * <li>true: enables deletion protection for the scaling group. This way, the scaling group cannot be deleted.</li>
+         * <li>true: enables deletion protection for the scaling group. In this case, the scaling group cannot be deleted.</li>
          * <li>false: disables deletion protection for the scaling group.</li>
          * </ul>
          * <p>Default value: false.</p>
@@ -942,10 +960,12 @@ public class CreateScalingGroupRequest extends Request {
         }
 
         /**
-         * <p>The type of the instances that are managed by the scaling group. Valid values:</p>
+         * <p>The type of instances managed by the scaling group. Valid values:</p>
          * <ul>
-         * <li>ECS: ECS instances.</li>
-         * <li>ECI: elastic container instances.</li>
+         * <li><p>ECS: the scaling group manages ECS instances.</p>
+         * </li>
+         * <li><p>ECI: the scaling group manages ECI instances.</p>
+         * </li>
          * </ul>
          * <p>Default value: ECS.</p>
          * 
@@ -959,15 +979,15 @@ public class CreateScalingGroupRequest extends Request {
         }
 
         /**
-         * <p>The health check mode of the scaling group. Valid values:</p>
+         * <p>The health check type of the scaling group. Valid values:</p>
          * <ul>
-         * <li>NONE: Auto Scaling does not check the health status of instances.</li>
-         * <li>ECS: Auto Scaling checks the health status of instances in the scaling group. If you want to enable instance health check, you can set the value to ECS, regardless of whether the scaling group is of ECS type or Elastic Container Instance type.</li>
-         * <li>LOAD_BALANCER: Auto Scaling checks the health status of instances in the scaling group based on the health check results of load balancers. The health check results of Classic Load Balancer (CLB) instances are not supported as the health check basis for instances in the scaling group.</li>
+         * <li>NONE: disables health checks.</li>
+         * <li>ECS: performs health checks on instances in the scaling group. This value is used to enable instance health checks for both ECS and ECI scaling groups.</li>
+         * <li>LOAD_BALANCER: determines the health status of instances based on the health check results of the load balancer. CLB is not supported.</li>
          * </ul>
          * <p>Default value: ECS.</p>
          * <blockquote>
-         * <p> If you want to enable instance health check and load balancer health check at the same time, we recommend that you specify <code>HealthCheckTypes</code>.</p>
+         * <p>If you want to enable both instance health checks and load balancer health checks, use the <code>HealthCheckTypes</code> parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -980,9 +1000,9 @@ public class CreateScalingGroupRequest extends Request {
         }
 
         /**
-         * <p>The health check mode of the scaling group.</p>
+         * <p>The health check modes of the scaling group.</p>
          * <blockquote>
-         * <p> You can specify multiple values for this parameter to enable multiple health check options at the same time. If you specify <code>HealthCheckType</code>, this parameter is ignored.</p>
+         * <p>You can set multiple values for this parameter to enable multiple health check options. If the HealthCheckType parameter is specified, this parameter is ignored.</p>
          * </blockquote>
          */
         public Builder healthCheckTypes(java.util.List<String> healthCheckTypes) {
@@ -992,7 +1012,7 @@ public class CreateScalingGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the ECS instance. When you create a scaling group, you can specify an existing ECS instance. Auto Scaling obtains the configurations of the ECS instance and automatically creates a scaling configuration from the obtained configurations.</p>
+         * <p>The ID of the instance. When you create a scaling group, Auto Scaling obtains the required configuration information from the specified instance and automatically creates a scaling configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>i-28wt4****</p>
@@ -1004,7 +1024,7 @@ public class CreateScalingGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the launch template that provides instance configurations for Auto Scaling to create instances.</p>
+         * <p>The ID of the launch template. This parameter is used to specify the launch template from which the scaling group obtains launch configurations.</p>
          * 
          * <strong>example:</strong>
          * <p>lt-m5e3ofjr1zn1aw7****</p>
@@ -1016,7 +1036,7 @@ public class CreateScalingGroupRequest extends Request {
         }
 
         /**
-         * <p>Details of the instance types that you specify by using the Extended Configurations feature of the launch template.</p>
+         * <p>The extended instance type information of the launch template.</p>
          */
         public Builder launchTemplateOverrides(java.util.List<LaunchTemplateOverrides> launchTemplateOverrides) {
             this.putQueryParameter("LaunchTemplateOverrides", launchTemplateOverrides);
@@ -1025,11 +1045,14 @@ public class CreateScalingGroupRequest extends Request {
         }
 
         /**
-         * <p>The version number of the launch template. Valid values:</p>
+         * <p>The version of the launch template. Valid values:</p>
          * <ul>
-         * <li>A fixed template version number.</li>
-         * <li>Default: the default template version.</li>
-         * <li>Latest: the latest template version.</li>
+         * <li><p>A specific version number.</p>
+         * </li>
+         * <li><p>Default: always uses the default version of the launch template.</p>
+         * </li>
+         * <li><p>Latest: always uses the latest version of the launch template.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1042,7 +1065,7 @@ public class CreateScalingGroupRequest extends Request {
         }
 
         /**
-         * <p>The lifecycle hooks.</p>
+         * <p>The list of lifecycle hook information.</p>
          */
         public Builder lifecycleHooks(java.util.List<LifecycleHooks> lifecycleHooks) {
             this.putQueryParameter("LifecycleHooks", lifecycleHooks);
@@ -1051,7 +1074,7 @@ public class CreateScalingGroupRequest extends Request {
         }
 
         /**
-         * <p>The load balancer configurations.</p>
+         * <p>The list of load balancing configurations.</p>
          */
         public Builder loadBalancerConfigs(java.util.List<LoadBalancerConfigs> loadBalancerConfigs) {
             this.putQueryParameter("LoadBalancerConfigs", loadBalancerConfigs);
@@ -1060,8 +1083,10 @@ public class CreateScalingGroupRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the CLB instances that you want to associate with the scaling group. The value can be a JSON array that contains multiple CLB instance IDs. Separate multiple IDs with commas (,).</p>
-         * <p>You can associate only a limited number of CLB instances with a scaling group. Go to <a href="https://quotas.console.aliyun.com/products/ess/quotas">Quota Center</a> to check the maximum number of CLB instances that you can associate with a scaling group.</p>
+         * <p>The IDs of the Classic Load Balancer (CLB) instances. The value can be a JSON array that contains multiple CLB instance IDs. Separate multiple IDs with commas (,).</p>
+         * <p>&lt;props=&quot;china&quot;&gt;The maximum number of CLB instances that can be associated with a scaling group depends on your Auto Scaling usage. Go to <a href="https://quotas.console.aliyun.com/products/ess/quotas">Quota Center</a> to check the quota for the <strong>maximum number of load balancing instances that can be associated with a scaling group</strong>.</p>
+         * <p>&lt;props=&quot;intl&quot;&gt;The maximum number of CLB instances that can be associated with a scaling group depends on your Auto Scaling usage. Go to <a href="https://quotas.console.aliyun.com/products/ess/quotas">Quota Center</a> to check the quota for the <strong>maximum number of load balancing instances that can be associated with a scaling group</strong>.</p>
+         * <p>&lt;props=&quot;partner&quot;&gt;The maximum number of CLB instances that can be associated with a scaling group depends on your Auto Scaling usage. Go to Quota Center to check the quota for the <strong>maximum number of load balancing instances that can be associated with a scaling group</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;lb-bp1u7etiogg38yvwz****&quot;, &quot;lb-bp168cqrux9ai9l7f****&quot;, &quot;lb-bp1jv3m9zvj22ufxp****&quot;]</p>
@@ -1073,12 +1098,12 @@ public class CreateScalingGroupRequest extends Request {
         }
 
         /**
-         * <p>The maximum life span of an instance in the scaling group. Unit: seconds.</p>
-         * <p>Valid values: 86400 to the value of the Integer.maxValue parameter.</p>
+         * <p>The maximum lifetime of an instance in the scaling group. Unit: seconds.</p>
+         * <p>Valid values: [86400, Integer.maxValue].</p>
          * <p>Default value: null.</p>
          * 
          * <strong>example:</strong>
-         * <p>null</p>
+         * <p>86400</p>
          */
         public Builder maxInstanceLifetime(Integer maxInstanceLifetime) {
             this.putQueryParameter("MaxInstanceLifetime", maxInstanceLifetime);
@@ -1087,9 +1112,11 @@ public class CreateScalingGroupRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of instances that can be contained in the scaling group. When the total number of ECS instances in the scaling group exceeds the value of MaxSize, Auto Scaling automatically removes ECS instances from the scaling group until the total number equals the maximum number.</p>
-         * <p>The value range of MaxSize is directly correlated with the degree of dependency your business has on Auto Scaling. You can go to <a href="https://quotas.console.aliyun.com/products/ess/quotas">Quota Center</a> to check <strong>the maximum number of instances that a single scaling group can contain.</strong></p>
-         * <p>If <strong>a single scaling group can contain up to 2,000 ECS instances</strong>, the value range of MaxSize is 0 to 2,000.</p>
+         * <p>The maximum number of instances in the scaling group. If the number of instances in the scaling group is greater than the value of MaxSize, Auto Scaling automatically removes instances. </p>
+         * <p>&lt;props=&quot;china&quot;&gt;The value range of MaxSize depends on your Auto Scaling usage. Go to <a href="https://quotas.console.aliyun.com/products/ess/quotas">Quota Center</a> to check the quota for the <strong>maximum number of instances in a scaling group</strong>.</p>
+         * <p>&lt;props=&quot;intl&quot;&gt;The value range of MaxSize depends on your Auto Scaling usage. Go to <a href="https://quotas.console.aliyun.com/products/ess/quotas">Quota Center</a> to check the quota for the <strong>maximum number of instances in a scaling group</strong>.</p>
+         * <p>&lt;props=&quot;partner&quot;&gt;The value range of MaxSize depends on your Auto Scaling usage. Go to Quota Center to check the quota for the <strong>maximum number of instances in a scaling group</strong>.</p>
+         * <p>If the quota for the <strong>maximum number of instances in a scaling group</strong> is 2000, the value range of MaxSize is 0 to 2000.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1102,9 +1129,9 @@ public class CreateScalingGroupRequest extends Request {
         }
 
         /**
-         * <p>The minimum number of instances that must be contained in the scaling group. When the total number of ECS instances in the scaling group is less than the value of MinSize, Auto Scaling automatically creates ECS instances in the scaling group until the total number reaches the minimum number.</p>
+         * <p>The minimum number of instances in the scaling group. If the number of instances in the scaling group is less than the value of MinSize, Auto Scaling automatically creates instances. </p>
          * <blockquote>
-         * <p> The value of MinSize must be less than or equal to the value of MaxSize.</p>
+         * <p>The value of MinSize must be less than or equal to the value of MaxSize.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -1118,19 +1145,21 @@ public class CreateScalingGroupRequest extends Request {
         }
 
         /**
-         * <p>The scaling policy for ECS instances in the multi-zone scaling group. Valid values:</p>
+         * <p>The multi-zone scaling policy for ECS instances in the scaling group. Valid values: </p>
          * <ul>
-         * <li><p>PRIORITY: scale ECS instances based on the priority of the vSwitches specified by VSwitchIds. Auto Scaling preferentially scales instances in the zone where the vSwitch of the highest priority resides. If the scaling fails, Auto Scaling scales instances in the zone where the vSwitch of the next highest priority resides.</p>
+         * <li><p>PRIORITY: the vSwitches specified by VSwitchIds are prioritized. Auto Scaling preferentially attempts to scale ECS instances in the zone where the highest-priority vSwitch resides. If the scaling fails, Auto Scaling automatically attempts to scale instances in the zone of the next highest-priority vSwitch.  </p>
          * </li>
-         * <li><p>COST_OPTIMIZED: create ECS instances that have the lowest unit price of vCPUs during scale-out events and removes ECS instances that have the highest unit price of vCPUs during scale-in events. If you specify preemptible instance types in your scaling configuration, Auto Scaling will preferentially create preemptible instances. You can also specify CompensateWithOnDemand to allow Auto Scaling to create pay-as-you-go instances in the case that preemptible instances cannot be created due to limited stock.</p>
-         * <p>**</p>
-         * <p><strong>Note</strong> The COST_OPTIMIZED setting takes effect only when your scaling configuration contains multiple instance types or specifically contains preemptible instance types.</p>
+         * <li><p>COST_OPTIMIZED: during scale-out, Auto Scaling attempts to create ECS instances in ascending order of vCPU unit price. During scale-in, Auto Scaling attempts to remove ECS instances in descending order of vCPU unit price. If the scaling configuration settings specify multiple instance types that use the preemptible billing method, spot instances are preferentially created. You can use the CompensateWithOnDemand parameter to specify whether to automatically attempt to create pay-as-you-go instances when spot instances cannot be created due to insufficient inventory or other reasons. </p>
+         * <blockquote>
+         * <p>COST_OPTIMIZED takes effect only when the scaling configuration settings specify multiple instance types or use spot instances. </p>
+         * </blockquote>
          * </li>
-         * <li><p>BALANCE: evenly distribute ECS instances across the zones that are specified for the scaling group. If ECS instances are unevenly distributed across the specified zones due to insufficient inventory, you can call the <a href="https://help.aliyun.com/document_detail/71516.html">RebalanceInstance</a> operation to evenly distribute the instances across the zones.</p>
-         * <p>**</p>
-         * <p><strong>Note</strong> When you set <code>MultiAZPolicy</code> to <code>BALANCE</code>, this setting has an equivalent effect to setting <code>MultiAZPolicy</code> to <code>COMPOSABLE</code> and enabling <code>AzBalance</code> to <code>true</code>.</p>
+         * <li><p>BALANCE: evenly distributes ECS instances across the zones specified for the scaling group. If the instances are unevenly allocated across zones due to insufficient inventory or other reasons, you can invoke the <a href="https://help.aliyun.com/document_detail/71516.html">RebalanceInstance</a> operation to balance the resources.</p>
+         * <blockquote>
+         * <p>If the <code>MultiAZPolicy</code> parameter is set to <code>BALANCE</code>, the effect is the same as when the <code>MultiAZPolicy</code> parameter is set to <code>COMPOSABLE</code> and the <code>AzBalance</code> parameter is set to <code>true</code>. </p>
+         * </blockquote>
          * </li>
-         * <li><p>COMPOSABLE: combine the preceding policies into a custom scaling policy based on your business requirements. Alternatively, you can specify custom parameters to finely control the capacity of the scaling group.</p>
+         * <li><p>COMPOSABLE: a combined policy that allows you to combine the preceding multi-zone scaling policies for ECS instances based on your needs. You can also specify additional parameters to control the capacity of the scaling group in a more fine-grained manner.</p>
          * </li>
          * </ul>
          * <p>Default value: PRIORITY.</p>
@@ -1145,7 +1174,7 @@ public class CreateScalingGroupRequest extends Request {
         }
 
         /**
-         * <p>The minimum number of pay-as-you-go instances that must be contained in the scaling group. Valid values: 0 to 1000. If the number of pay-as-you-go instances is less than the value of this parameter, Auto Scaling preferentially creates pay-as-you-go instances.</p>
+         * <p>The minimum number of pay-as-you-go instances required in the scaling group. Valid values: 0 to 1000. If the number of pay-as-you-go instances is less than this value, pay-as-you-go instances are preferentially created.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -1157,7 +1186,7 @@ public class CreateScalingGroupRequest extends Request {
         }
 
         /**
-         * <p>The percentage of pay-as-you-go instances in the excess instances when the minimum number of pay-as-you-go instances reaches the requirement. Valid values: 0 to 100.</p>
+         * <p>The percentage of pay-as-you-go instances in the excess instances after the scaling group meets the minimum number of pay-as-you-go instances (OnDemandBaseCapacity). Valid values: 0 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -1200,16 +1229,16 @@ public class CreateScalingGroupRequest extends Request {
         }
 
         /**
-         * <p>The instance removal policies. Valid values:</p>
+         * <p>The filtering policy for the instance removal policy. Valid values:</p>
          * <ul>
-         * <li>OldestInstance: removes ECS instances that are added at the earliest point in time to the scaling group.</li>
-         * <li>NewestInstance: removes ECS instances that are most recently added to the scaling group.</li>
-         * <li>OldestScalingConfiguration: removes ECS instances that are created based on the earliest scaling configuration.</li>
-         * <li>CustomPolicy: removes ECS instances based on the custom scale-in policy (Function).</li>
+         * <li>OldestInstance: removes the ECS instances that were added to the scaling group at the earliest point in time.</li>
+         * <li>NewestInstance: removes the ECS instances that were added to the scaling group at the latest point in time.</li>
+         * <li>OldestScalingConfiguration: removes the ECS instances that were created based on the earliest scaling configuration.</li>
+         * <li>CustomPolicy: removes ECS instances based on a custom scale-in policy function.</li>
          * </ul>
-         * <p>The scaling configuration source specified by the OldestScalingConfiguration setting can be a scaling configuration or a launch template. The CustomPolicy setting takes effect only if you specify it as the first step to remove instances. If you specify CustomPolicy, you must also specify the CustomPolicyARN parameter.</p>
+         * <p>The scaling configuration mentioned in OldestScalingConfiguration refers to the instance configuration source in the scaling group, including scaling configurations and launch templates. CustomPolicy can only be set as the first removal policy. If you specify CustomPolicy, you must also specify the CustomPolicyARN parameter.</p>
          * <blockquote>
-         * <p>The removal of ECS instances from a scaling group is also affected by the value of the MultiAZPolicy parameter. For more information, see the <a href="https://help.aliyun.com/document_detail/254822.html">Configure a combination policy for removing instances</a> topic.</p>
+         * <p>The removal of ECS instances from a scaling group is also affected by the multi-zone scaling policy (MultiAZPolicy) of the scaling group. For more information, see <a href="https://help.aliyun.com/document_detail/254822.html">Configure a combined policy for removing instances</a>.</p>
          * </blockquote>
          */
         public Builder removalPolicies(java.util.List<String> removalPolicies) {
@@ -1219,9 +1248,9 @@ public class CreateScalingGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which you want to add the scaling group.</p>
+         * <p>The ID of the resource group to which the newly created scaling group belongs.</p>
          * <blockquote>
-         * <p>If you specify this parameter, new scaling groups are added to the specified resource group. If you do not specify this parameter, new scaling groups are added to the default resource group.</p>
+         * <p>Assigns the newly created scaling group to the specified resource group. If you do not specify this parameter, the scaling group belongs to the default resource group.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1243,9 +1272,9 @@ public class CreateScalingGroupRequest extends Request {
         }
 
         /**
-         * <p>The name of the scaling group. The name of each scaling group must be unique in a region.</p>
-         * <p>The name must be 2 to 64 characters in length, and can contain letters, digits, underscores (_), hyphens (-), and periods (.). The name must start with a letter or a digit.</p>
-         * <p>If you do not specify this parameter, the value of the ScalingGroupId parameter is used.</p>
+         * <p>The name of the scaling group. The name must be unique within a region.</p>
+         * <p>It must be 2 to 64 characters in length. It must start with a digit, a letter, or a Chinese character, and can contain digits, underscores (_), hyphens (-), and periods (.).</p>
+         * <p>Default value: the value of ScalingGroupId.</p>
          * 
          * <strong>example:</strong>
          * <p>scalinggroup****</p>
@@ -1257,22 +1286,20 @@ public class CreateScalingGroupRequest extends Request {
         }
 
         /**
-         * <p>The reclaim mode of the scaling group. Valid values:</p>
+         * <p>The reclaim mode of the scaling group. Valid values: </p>
          * <ul>
-         * <li><p>recycle: the economical mode</p>
+         * <li>recycle: sets the reclaim mode of the scaling group to shutdown and reclaim mode.  </li>
+         * <li>release: sets the reclaim mode of the scaling group to release mode.</li>
+         * <li>forcerelease: sets the reclaim mode of the scaling group to force release mode.<blockquote>
+         * <p>If you select forcerelease, the system forcibly releases instances in the <code>Running</code> state during scale-down activities. Forcibly releasing an instance is equivalent to a power-off operation, which erases temporary data in the memory and storage of the instance. The data cannot be recovered. Proceed with caution.</p>
+         * </blockquote>
          * </li>
-         * <li><p>release: the release mode</p>
-         * </li>
-         * <li><p>forcerelease: the forced release mode</p>
-         * <p>**</p>
-         * <p><strong>Note</strong> If you set the value to forcerelease, Auto Scaling will forcibly release the ECS instances that are in the <code>Running</code> state during the scale-out events. Forced release equates to an immediate power-off, resulting in the irreversible deletion of all ephemeral data stored on the instance. Once executed, this action cannot be undone and the lost data cannot be recovered. Exercise caution when you select this option.</p>
-         * </li>
-         * <li><p>forcerecycle: the forced recycle mode</p>
-         * <p>**</p>
-         * <p><strong>Note</strong> If you set the value to forcerecycle, Auto Scaling will forcibly shut down the ECS instances that are in the <code>Running</code> state during the scale-out events. Forced recycle equates to an immediate power-off, resulting in the irreversible deletion of all ephemeral data stored on the instance. Once executed, this action cannot be undone and the lost data cannot be recovered. Exercise caution when you select this option.</p>
+         * <li>forcerecycle: sets the reclaim mode of the scaling group to force shutdown and reclaim mode.<blockquote>
+         * <p>If you select forcerecycle, the system forcibly shuts down instances in the <code>Running</code> state during scale-down activities. Forcibly shutting down an instance is equivalent to a power-off operation, which erases temporary data in the memory and storage of the instance. The data cannot be recovered. Proceed with caution.</p>
+         * </blockquote>
          * </li>
          * </ul>
-         * <p>ScalingPolicy specifies the reclaim mode of the scaling group. RemovePolicy of the RemoveInstances operation specifies the specific instance removal action. For more information, see <a href="https://help.aliyun.com/document_detail/25955.html">RemoveInstances</a>.</p>
+         * <p>The ScalingPolicy parameter specifies the reclaim mode of the scaling group, but the specific action taken when an instance is removed from the scaling group is determined by the RemovePolicy parameter of RemoveInstances. For more information, see <a href="https://help.aliyun.com/document_detail/25955.html">RemoveInstances</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>recycle</p>
@@ -1284,9 +1311,9 @@ public class CreateScalingGroupRequest extends Request {
         }
 
         /**
-         * <p>The information about the server groups.</p>
+         * <p>The collection of information about the server groups.</p>
          * <blockquote>
-         * <p>You cannot use AlbServerGroups and ServerGroups to specify the same server group.</p>
+         * <p>You cannot configure the same server group settings in both AlbServerGroups and ServerGroups at the same time.</p>
          * </blockquote>
          */
         public Builder serverGroups(java.util.List<ServerGroups> serverGroups) {
@@ -1296,10 +1323,10 @@ public class CreateScalingGroupRequest extends Request {
         }
 
         /**
-         * <p>The allocation policy of preemptible instances. You can use this parameter to individually specify the allocation policy of preemptible instances. This parameter takes effect only if you set the <code>MultiAZPolicy</code> parameter to <code>COMPOSABLE</code>. Valid values:</p>
+         * <p>The spot capacity distribution policy. You can use this parameter to separately specify the distribution policy for spot capacity. This parameter takes effect only when the MultiAZPolicy parameter is set to COMPOSABLE. Valid values:</p>
          * <ul>
-         * <li>priority: Auto Scaling selects instance types based on the specified order of the instance types to create the required number of preemptible instances.</li>
-         * <li>lowestPrice: Auto Scaling selects instance types that have the lowest unit price of vCPUs to create the required number of preemptible instances.</li>
+         * <li>priority: Creates instances based on the order of the configured instance types.</li>
+         * <li>lowestPrice: Creates instances based on the unit price per vCPU of the instance types in ascending order.</li>
          * </ul>
          * <p>Default value: priority.</p>
          * 
@@ -1313,7 +1340,7 @@ public class CreateScalingGroupRequest extends Request {
         }
 
         /**
-         * <p>The number of available instance types. Auto Scaling evenly creates preemptible instances of multiple instance types that are provided at the lowest cost in the scaling group. Valid values: 1 to 10.</p>
+         * <p>The number of available instance types. The scaling group evenly creates spot instances across multiple instance types with the lowest cost. Valid values: 1 to 10.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -1325,7 +1352,7 @@ public class CreateScalingGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to supplement preemptible instances. If you set this parameter to true, Auto Scaling creates an instance to replace a preemptible instance when Auto Scaling receives a system message which indicates that the preemptible instance is to be reclaimed.</p>
+         * <p>Specifies whether to enable the Auto Scaling policy to supplement spot instances. After this feature is enabled, when a system message indicating that a spot instance is to be reclaimed is received, the scaling group attempts to create a new instance to replace the spot instance to be reclaimed.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1337,17 +1364,15 @@ public class CreateScalingGroupRequest extends Request {
         }
 
         /**
-         * <p>The period of time required by the ECS instance to enter the Stopped state. Unit: seconds. Valid values: 30 to 240.</p>
+         * <p>The timeout period for waiting for an ECS instance to be stopped during the scale-in process. Unit: seconds.
+         * Valid values: 30 to 240.</p>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>This parameter takes effect only if you set ScalingPolicy to release.</p>
-         * </li>
-         * <li><p>If you specify this parameter, the system will wait for the ECS instance to enter the Stopped state for the specified period of time before continuing with the scale-in operation, regardless of the status of the ECS instance.</p>
-         * </li>
-         * <li><p>If you do not specify this parameter, the system will wait for the ECS instance to stop before continuing with the scale-in operation. If the ECS instance is not successfully stopped, the scale-in process will be rolled back and considered failed.</p>
-         * </li>
+         * <li>This parameter takes effect only in the scale-in process when ScalingPolicy is set to release.  </li>
+         * <li>If this parameter is specified, the system waits for a maximum of the StopInstanceTimeout period for the instance to be stopped. After the timeout period elapses, the scale-in process continues regardless of whether the instance is stopped.  </li>
+         * <li>If this parameter is not specified, the system waits for a long time for the instance to be stopped. The scale-in process continues only after the instance is stopped. If the instance fails to be stopped, the scale-in process is rolled back and the scale-in fails.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -1360,7 +1385,7 @@ public class CreateScalingGroupRequest extends Request {
 
         /**
          * <blockquote>
-         * <p>This parameter is unavailable.</p>
+         * <p>This parameter is not available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1382,7 +1407,7 @@ public class CreateScalingGroupRequest extends Request {
         }
 
         /**
-         * <p>The backend vServer group that you want to associate with the scaling group.</p>
+         * <p>The collection of information about the virtual server groups associated with the scaling group.</p>
          */
         public Builder vServerGroups(java.util.List<VServerGroups> vServerGroups) {
             this.putQueryParameter("VServerGroups", vServerGroups);
@@ -1391,9 +1416,9 @@ public class CreateScalingGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the vSwitch. If you specify the VSwitchId parameter, the network type of the scaling group is VPC.</p>
+         * <p>The ID of the vSwitch. After this parameter is specified, the network type of the scaling group is VPC.</p>
          * <blockquote>
-         * <p>If you do not specify the VSwitchId or VSwitchIds parameter, the network type of the scaling group is classic network.</p>
+         * <p>If neither VSwitchId nor VSwitchIds is specified for the scaling group, the network type of the scaling group is classic network by default.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1406,20 +1431,32 @@ public class CreateScalingGroupRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the vSwitches. If you specify VSwitchIds, VSwitchId is ignored. If you specify VSwitchIds, the network type of the scaling group is VPC.</p>
-         * <p>If you specify multiple vSwitches, take note of the following items:</p>
+         * <p>The IDs of one or more vSwitches. If you use the VSwitchIds parameter, the VSwitchId parameter is ignored. After this parameter is specified, the network type of the scaling group is VPC.</p>
+         * <p>When you specify multiple vSwitches:</p>
          * <ul>
-         * <li>The vSwitches must belong to the same VPC.</li>
-         * <li>The vSwitches can belong to different zones.</li>
-         * <li>vSwitches are sorted in ascending order based on their priorities. The first vSwitch has the highest priority. If Auto Scaling fails to create ECS instances in the zone where the vSwitch of the highest priority resides, Auto Scaling attempts to create ECS instances in the zone where the vSwitch of the next highest priority resides.</li>
+         * <li><p>The vSwitches must belong to the same VPC.</p>
+         * </li>
+         * <li><p>The vSwitches can belong to different zones.</p>
+         * </li>
+         * <li><p>The vSwitches are prioritized in ascending order of numbers. 1 indicates the highest priority. If instances cannot be created in the zone of a higher-priority vSwitch, the system automatically selects the next highest-priority vSwitch to create instances.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> If you do not specify VSwitchId or VSwitchIds for your scaling group, the network type of the scaling group is classic network.</p>
+         * <p>If neither VSwitchId nor VSwitchIds is specified for the scaling group, the network type of the scaling group is classic network by default.</p>
          * </blockquote>
          */
         public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
             this.putQueryParameter("VSwitchIds", vSwitchIds);
             this.vSwitchIds = vSwitchIds;
+            return this;
+        }
+
+        /**
+         * <p>The behavior policy of the scaling group during zone shift.</p>
+         */
+        public Builder zoneShiftPolicy(ZoneShiftPolicy zoneShiftPolicy) {
+            this.putQueryParameter("ZoneShiftPolicy", zoneShiftPolicy);
+            this.zoneShiftPolicy = zoneShiftPolicy;
             return this;
         }
 
@@ -1497,7 +1534,7 @@ public class CreateScalingGroupRequest extends Request {
 
             /**
              * <p>The ID of the ALB server group.</p>
-             * <p>You can attach only a limited number of ALB server groups to a scaling group. To view the predefined quota limit or manually request a quota increase, go to <a href="https://quotas.console.aliyun.com/products/ess/quotas">Quota Center</a>.</p>
+             * <p>A scaling group supports a limited number of associated ALB server groups. To view or manually apply for a quota increase, go to the <a href="https://quotas.console.aliyun.com/products/ess/quotas">Quota Center</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>sgp-ddwb0y0g6y9bjm****</p>
@@ -1508,7 +1545,7 @@ public class CreateScalingGroupRequest extends Request {
             }
 
             /**
-             * <p>The port number used by each ECS instance as a backend server in the ALB server group. Valid values: 1 to 65535.</p>
+             * <p>The port number used by the instance after Auto Scaling adds the instance to the ALB server group. Valid values: 1 to 65535.</p>
              * 
              * <strong>example:</strong>
              * <p>22</p>
@@ -1519,7 +1556,7 @@ public class CreateScalingGroupRequest extends Request {
             }
 
             /**
-             * <p>The weight of an ECS instance as a backend server in the ALB server group. If you increase the weight for an ECS instance, the number of requests that are forwarded to the ECS instance also increases. If you set the weight for an ECS instance to 0, no requests are forwarded to the ECS instance. Valid values: 0 to 100.</p>
+             * <p>The weight of the instance as a backend server after Auto Scaling adds the instance to the ALB server group. A higher weight specifies that more requests are distributed to the instance. If the weight is 0, the instance does not receive requests. Valid values: 0 to 100.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -1628,10 +1665,10 @@ public class CreateScalingGroupRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to automatically create pay-as-you-go ECS instances to reach the required number of ECS instances when preemptible ECS instances cannot be created due to high prices or insufficient inventory of resources. This parameter takes effect when you set <code>MultiAZPolicy</code> to <code>COST_OPTIMIZED</code>. Valid values:</p>
+             * <p>Specifies whether to allow the system to automatically attempt to create pay-as-you-go instances to meet the required number of ECS instances when the MultiAZPolicy parameter is set to COST_OPTIMIZED and sufficient spot instances cannot be created due to price or inventory reasons. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li>true: Allowed.</li>
+             * <li>false: Not allowed.</li>
              * </ul>
              * <p>Default value: true.</p>
              * 
@@ -1644,8 +1681,8 @@ public class CreateScalingGroupRequest extends Request {
             }
 
             /**
-             * <p>The minimum number of pay-as-you-go instances required in the scaling group. When the number of pay-as-you-go instances drops below the value of this parameter, Auto Scaling preferentially creates pay-as-you-go instances. Valid values: 0 to 1000.</p>
-             * <p>If you set <code>MultiAZPolicy</code> to <code>COMPOSABLE</code>, the default value is 0.</p>
+             * <p>The minimum number of pay-as-you-go instances required in the scaling group. When the number of pay-as-you-go instances in the scaling group is less than this value, the system preferentially creates pay-as-you-go instances. Valid values: 0 to 1000.</p>
+             * <p>When the MultiAZPolicy parameter is set to COMPOSABLE, the default value is 0.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -1656,8 +1693,8 @@ public class CreateScalingGroupRequest extends Request {
             }
 
             /**
-             * <p>The percentage of pay-as-you-go instances in the excess instances when the minimum number of pay-as-you-go instances is reached. <code>OnDemandBaseCapacity</code> specifies the minimum number of pay-as-you-go instances that must be contained in the scaling group. Valid values: 0 to 100.</p>
-             * <p>If you set <code>MultiAZPolicy</code> to <code>COMPOSABLE</code>, the default value is 100.</p>
+             * <p>The percentage of pay-as-you-go instances in the excess instances after the scaling group meets the minimum number of pay-as-you-go instances specified by OnDemandBaseCapacity. Valid values: 0 to 100.</p>
+             * <p>When the MultiAZPolicy parameter is set to COMPOSABLE, the default value is 100.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -1668,12 +1705,12 @@ public class CreateScalingGroupRequest extends Request {
             }
 
             /**
-             * <p>The cost comparison method. Valid values:</p>
+             * <p>The price comparison mode for the cost optimization policy of the scaling group. Valid values:</p>
              * <ul>
-             * <li><p>PricePerUnit: Prices are compared based on the price per instance capacity.</p>
-             * <p>Capacity is determined by the weights assigned to instance types in the scaling group. If no weight is specified, a default weight of 1 is used, meaning each instance is assigned a capacity of 1.</p>
+             * <li><p>PricePerUnit: Compares prices based on the price per unit of capacity.</p>
+             * <p>The capacity of an instance in the scaling group is equal to the weight set for the instance type. The default weight is 1, which means one ECS instance occupies a capacity of 1.</p>
              * </li>
-             * <li><p>PricePerVCpu: Prices are compared based on the price per vCPU.</p>
+             * <li><p>PricePerVCpu: Compares prices based on the price per vCPU.</p>
              * </li>
              * </ul>
              * <p>Default value: PricePerUnit.</p>
@@ -1687,10 +1724,10 @@ public class CreateScalingGroupRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to replace pay-as-you-go instances with preemptible instances. If you specify <code>CompensateWithOnDemand</code>, it may result in a higher percentage of pay-as-you-go instances compared to the value of <code>OnDemandPercentageAboveBaseCapacity</code>. In this scenario, Auto Scaling will try to deploy preemptible instances to replace the surplus pay-as-you-go instances. When <code>CompensateWithOnDemand</code> is specified, Auto Scaling creates pay-as-you-go instances if there are not enough preemptible instance types. To avoid keeping these pay-as-you-go ECS instances for long periods, Auto Scaling tries to replace them with preemptible instances as soon as enough of preemptible instance types become available. Valid values:</p>
+             * <p>Specifies whether to attempt to use spot instances to replace pay-as-you-go capacity when CompensateWithOnDemand is enabled and the proportion of pay-as-you-go instances exceeds the OnDemandPercentageAboveBaseCapacity value. In common scenarios where CompensateWithOnDemand downgrades spot instances to pay-as-you-go instances due to spot inventory or price reasons, this parameter attempts to use spot instances to replace the excess pay-as-you-go capacity to avoid long-term existence of pay-as-you-go instances. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li>true: Allowed.</li>
+             * <li>false: Not allowed.</li>
              * </ul>
              * <p>Default value: false.</p>
              * 
@@ -1775,10 +1812,10 @@ public class CreateScalingGroupRequest extends Request {
             } 
 
             /**
-             * <p>The mode in which you want to attach the database to the scaling group. Valid values:</p>
+             * <p>The association mode between the scaling group and the database. Valid values:</p>
              * <ul>
-             * <li>SecurityIp: the mode in which Auto Scaling automatically adds the private IP addresses of ECS instances to the IP address whitelist of the database during scale-out events. You can set the value to SecurityIp only if you set Type to RDS.</li>
-             * <li>SecurityGroup: the mode in which Auto Scaling adds the security group of the applied scaling configuration to the security group whitelist of the database. This setting allows ECS instances created from the scaling configuration to access the database.</li>
+             * <li>SecurityIp: Modifies the IP whitelist mode by automatically adding scaled-out instances to the IP whitelist of the database. Only ApsaraDB RDS databases are supported.</li>
+             * <li>SecurityGroup: Uses the security group mode by adding the security group of the scaling configuration to the security group whitelist of the database to allow instances in the security group to access the database.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1790,7 +1827,7 @@ public class CreateScalingGroupRequest extends Request {
             }
 
             /**
-             * <p>The database ID.</p>
+             * <p>The database instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>rm-m5eqju85s45mu0***</p>
@@ -1801,7 +1838,7 @@ public class CreateScalingGroupRequest extends Request {
             }
 
             /**
-             * <p>The database type. Valid values:</p>
+             * <p>The type of the database. Valid values:</p>
              * <ul>
              * <li>RDS</li>
              * <li>Redis</li>
@@ -1890,12 +1927,12 @@ public class CreateScalingGroupRequest extends Request {
             } 
 
             /**
-             * <p>The instance type that you want to use to override the instance type that is specified in the launch template.</p>
-             * <p>If you want to scale instances based on the weighted capacities of the instances, you must specify both the InstanceType and WeightedCapacity parameters.</p>
+             * <p>If you want the scaling group to scale based on the capacity of the instance type, specify both this parameter and LaunchTemplateOverrides.WeightedCapacity.</p>
+             * <p>This parameter is used to specify the instance type and overrides the instance type in the launch template.</p>
              * <blockquote>
-             * <p>This parameter is available only if you specify the LaunchTemplateId parameter.</p>
+             * <p>This parameter takes effect only when the LaunchTemplateId parameter is specified.</p>
              * </blockquote>
-             * <p>You can use the InstanceType parameter to specify only instance types that are available for purchase.</p>
+             * <p>Valid values of InstanceType: available ECS instance types.</p>
              * 
              * <strong>example:</strong>
              * <p>ecs.c5.xlarge</p>
@@ -1906,9 +1943,9 @@ public class CreateScalingGroupRequest extends Request {
             }
 
             /**
-             * <p>The maximum bid price of the instance type that is specified by the <code>InstanceType</code> parameter. You can specify 1 to 10 instance types by using the Extended Configurations feature of the launch template.</p>
+             * <p>This parameter is used to specify the maximum price for the overridden instance type (namely, <code>LaunchTemplateOverride.InstanceType</code>) in the launch template.</p>
              * <blockquote>
-             * <p>This parameter is available only if you specify the <code>LaunchTemplateId</code> parameter.</p>
+             * <p>This parameter takes effect only when the <code>LaunchTemplateId</code> parameter is specified.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1920,20 +1957,23 @@ public class CreateScalingGroupRequest extends Request {
             }
 
             /**
-             * <p>The weight of the instance type. The weight specifies the capacity of an instance of the specified instance type in the scaling group. If you want to scale instances based on the weighted capacities of the instances, you must specify the WeightedCapacity parameter after you specify the InstanceType parameter.</p>
-             * <p>A higher weight specifies that a smaller number of instances of the specified instance type are required to meet the expected capacity requirement.</p>
-             * <p>Performance metrics, such as the number of vCPUs and the memory size of each instance type, may vary. You can specify different weights for different instance types based on your business requirements.</p>
+             * <p>If you want the scaling group to scale based on the capacity of the instance type, specify this parameter after you specify LaunchTemplateOverrides.InstanceType.</p>
+             * <p>This parameter is used to specify the weight of the instance type, which indicates the capacity represented by a single instance of the instance type in the scaling group. A larger weight indicates that fewer instances of this instance type are required to meet the expected capacity.</p>
+             * <p>Because performance metrics such as the number of vCPUs and memory size vary among instance types, you can configure different weights for different instance types based on your needs.</p>
              * <p>Example:</p>
              * <ul>
-             * <li>Current capacity: 0</li>
-             * <li>Expected capacity: 6</li>
-             * <li>Capacity of ecs.c5.xlarge: 4</li>
+             * <li><p>Current capacity: 0.</p>
+             * </li>
+             * <li><p>Expected capacity: 6.</p>
+             * </li>
+             * <li><p>Capacity of the ecs.c5.xlarge instance type: 4.</p>
+             * </li>
              * </ul>
-             * <p>To meet the expected capacity requirement, Auto Scaling must create and add two ecs.c5.xlarge instances.</p>
+             * <p>To meet the expected capacity, the scaling group scales out two ecs.c5.xlarge instances for you.</p>
              * <blockquote>
-             * <p>The capacity of the scaling group cannot exceed the sum of the maximum number of instances that is specified by the MaxSize parameter and the maximum weight of the instance types.</p>
+             * <p>During scale-out, the capacity of the scaling group cannot exceed the sum of the maximum capacity (MaxSize) and the maximum weight of the instance type.</p>
              * </blockquote>
-             * <p>Valid values of the WeightedCapacity parameter: 1 to 500.</p>
+             * <p>Valid values of WeightedCapacity: 1 to 500.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -2055,12 +2095,14 @@ public class CreateScalingGroupRequest extends Request {
             } 
 
             /**
-             * <p>The action that Auto Scaling performs when the lifecycle hook times out. Valid values:</p>
+             * <p>The action to be performed after the wait state ends. Valid values:</p>
              * <ul>
-             * <li>CONTINUE: Auto Scaling continues to respond to the scaling request.</li>
-             * <li>ABANDON: Auto Scaling releases ECS instances that are created during scale-out events, or removes ECS instances from the scaling group during scale-in events.</li>
+             * <li><p>CONTINUE: continues the response to the scale-out activity or continues the response to the scale-down activity.</p>
+             * </li>
+             * <li><p>ABANDON: directly releases the instances created by the scale-out activity or directly removes the instances in the scale-down activity from the scaling group.</p>
+             * </li>
              * </ul>
-             * <p>If multiple lifecycle hooks in the scaling group are triggered during scale-in events, and you set DefaultResult to ABANDON for one of the lifecycle hooks, Auto Scaling immediately performs the action after the lifecycle hook whose DefaultResult is set to ABANDON times out. In this case, other lifecycle hooks time out ahead of schedule. In other cases, Auto Scaling performs the action only after all lifecycle hooks time out. The action that Auto Scaling performs is determined by the value of DefaultResult that you specify for the lifecycle hook that most recently times out.</p>
+             * <p>When a scale-down activity (SCALE_IN) occurs in the scaling group and triggers multiple lifecycle hooks, if the wait state triggered by a lifecycle hook whose DefaultResult is ABANDON ends, the other corresponding wait states end in advance. In other cases, the next action is subject to the next action of the last wait state that ends.</p>
              * <p>Default value: CONTINUE.</p>
              * 
              * <strong>example:</strong>
@@ -2072,8 +2114,8 @@ public class CreateScalingGroupRequest extends Request {
             }
 
             /**
-             * <p>The period of time before the lifecycle hook times out. When the lifecycle hook times out, Auto Scaling performs the action that is specified by DefaultResult. Valid values: 30 to 21600. Unit: seconds.</p>
-             * <p>After you create a lifecycle hook, you can call the RecordLifecycleActionHeartbeat operation to extend the timeout period of the lifecycle hook. You can also call the CompleteLifecycleAction operation to end the timeout period of the lifecycle hook ahead of schedule.</p>
+             * <p>The wait time set by the lifecycle hook for the scaling group activity. After the wait state times out, the next action is performed. Valid values: 30 to 21600. Unit: seconds.</p>
+             * <p>After you create a lifecycle hook, you can call RecordLifecycleActionHeartbeat to extend the wait time of the instance, or call CompleteLifecycleAction to end the wait state of the scaling activity in advance.</p>
              * <p>Default value: 600.</p>
              * 
              * <strong>example:</strong>
@@ -2085,7 +2127,7 @@ public class CreateScalingGroupRequest extends Request {
             }
 
             /**
-             * <p>The name of the lifecycle hook. After you specify this parameter, you cannot change the name of the lifecycle hook. If you do not specify this parameter, the name of the lifecycle hook is the same as the ID of the lifecycle hook.</p>
+             * <p>The name of the lifecycle hook. The name cannot be modified after it is specified. If you do not specify this parameter, the default value is the same as the lifecycle hook ID.</p>
              * 
              * <strong>example:</strong>
              * <p>lifecyclehook****</p>
@@ -2096,13 +2138,15 @@ public class CreateScalingGroupRequest extends Request {
             }
 
             /**
-             * <p>The type of the scaling activity to which you want to apply the lifecycle hook. Valid values:</p>
+             * <p>The type of scaling activity to which the lifecycle hook applies. Valid values:</p>
              * <ul>
-             * <li>SCALE_OUT</li>
-             * <li>SCALE_IN</li>
+             * <li><p>SCALE_OUT: scale-out activities of the scaling group.</p>
+             * </li>
+             * <li><p>SCALE_IN: scale-down activities of the scaling group.</p>
+             * </li>
              * </ul>
              * <blockquote>
-             * <p> If you specify lifecycle hooks for the scaling group, you must specify LifecycleTransition. Other parameters are optional.</p>
+             * <p>If you specify a lifecycle hook for the scaling group, this parameter is required, and other related parameters are optional.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -2114,15 +2158,19 @@ public class CreateScalingGroupRequest extends Request {
             }
 
             /**
-             * <p>The Alibaba Cloud Resource Name (ARN) of the notification recipient party. You can specify a Simple Message Queue (SMQ, formerly MNS) topic or queue as the recipient party. The value is in the acs:ess:{region}:{account-id}:{resource-relative-id} format.</p>
+             * <p>The identifier of the notification recipient for the lifecycle hook. Simple Message Queue (formerly MNS) queues or topics are supported. The parameter value format is acs:ess:{region}:{account-id}:{resource-relative-id}.</p>
              * <ul>
-             * <li>region: the region ID of the scaling group</li>
-             * <li>account-id: the ID of your Alibaba Cloud account.</li>
+             * <li><p>region: the region where the scaling group resides.</p>
+             * </li>
+             * <li><p>account-id: the Alibaba Cloud account ID.</p>
+             * </li>
              * </ul>
              * <p>Examples:</p>
              * <ul>
-             * <li>SMQ queue: acs:ess:{region}:{account-id}:queue/{queuename}</li>
-             * <li>SMQ topic: acs:ess:{region}:{account-id}:topic/{topicname}</li>
+             * <li><p>Simple Message Queue (formerly MNS) queue: acs:ess:{region}:{account-id}:queue/{queuename}.</p>
+             * </li>
+             * <li><p>Simple Message Queue (formerly MNS) topic: acs:ess:{region}:{account-id}:topic/{topicname}.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2134,7 +2182,7 @@ public class CreateScalingGroupRequest extends Request {
             }
 
             /**
-             * <p>The fixed string that you want to include in notifications. When a lifecycle hook takes effect, Auto Scaling sends a notification. The fixed string can contain up to 4,096 characters in length. When Auto Scaling sends a notification to the recipient party, it includes predefined notification metadata into the notification. This helps in managing and labeling notifications of different categories. NotificationMetadata takes effect only if you specify NotificationArn.</p>
+             * <p>The fixed string information for the wait state of the scaling activity. The value cannot exceed 4,096 characters in length. Each time Auto Scaling pushes a message to the notification recipient, it also sends the predefined value of the NotificationMetadata parameter to help you manage and mark different types of notification information. The NotificationMetadata parameter takes effect only when you also specify the NotificationArn parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>Test</p>
@@ -2207,7 +2255,7 @@ public class CreateScalingGroupRequest extends Request {
              * <p>The ID of the CLB instance.</p>
              * 
              * <strong>example:</strong>
-             * <p>lb-2zen1olhfg9yw3f4qgte4</p>
+             * <p>lb-2zen1olhfg9yw3f4q****</p>
              */
             public Builder loadBalancerId(String loadBalancerId) {
                 this.loadBalancerId = loadBalancerId;
@@ -2215,7 +2263,7 @@ public class CreateScalingGroupRequest extends Request {
             }
 
             /**
-             * <p>The weight of each ECS instance as a backend server in the CLB backend server group. If you increase the weight for an ECS instance, the number of requests that are forwarded to the ECS instance also increases. If you set the weight for an ECS instance to 0, no requests are forwarded to the ECS instance. Valid values: 0 to 100.</p>
+             * <p>The weight of the instance as a backend server after Auto Scaling adds the instance to the CLB server group. A higher weight specifies that more requests are distributed to the instance. If the weight is 0, the instance does not receive requests. Valid values: 0 to 100.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -2311,7 +2359,7 @@ public class CreateScalingGroupRequest extends Request {
             } 
 
             /**
-             * <p>The port number used by each ECS instance as backend server in the vServer group. Valid values: 1 to 65535.</p>
+             * <p>The port number used by the instance after Auto Scaling adds the instance to the server group. Valid values: 1 to 65535.</p>
              * 
              * <strong>example:</strong>
              * <p>22</p>
@@ -2333,11 +2381,11 @@ public class CreateScalingGroupRequest extends Request {
             }
 
             /**
-             * <p>The type of server group N. Valid Values:</p>
+             * <p>The type of the server group. Valid values:</p>
              * <ul>
-             * <li>ALB</li>
-             * <li>NLB</li>
-             * <li>GWLB</li>
+             * <li>ALB: Application Load Balancer (ALB).</li>
+             * <li>NLB: Network Load Balancer (NLB).</li>
+             * <li>GWLB: Gateway Load Balancer (GWLB).</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2349,10 +2397,10 @@ public class CreateScalingGroupRequest extends Request {
             }
 
             /**
-             * <p>The weight of each ECS instance as a backend server in the server group. Valid values: 0 to 100.</p>
-             * <p>The higher the weight, the more access requests the instance will be assigned. If the weight is 0, the instance will not receive any access requests.</p>
+             * <p>The weight of the instance as a backend server after Auto Scaling adds the instance to the server group. Valid values: 0 to 100.</p>
+             * <p>A higher weight specifies that more access requests are allocated to the instance. If the weight is 0, the instance does not receive access requests.</p>
              * <blockquote>
-             * <p>For ALB and NLB types, this parameter is required. GWLB type cannot be set.</p>
+             * <p>This parameter is required for ALB and NLB. You cannot configure this parameter for GWLB.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -2447,10 +2495,10 @@ public class CreateScalingGroupRequest extends Request {
             }
 
             /**
-             * <p>Identifies whether the tag is a propagatable tag. Valid values:</p>
+             * <p>Specifies whether the tag is a propagatable tag. Valid values:</p>
              * <ul>
-             * <li>true: propagates the tag to only instances that are newly created.</li>
-             * <li>false: does not propagate the tag to any instances.</li>
+             * <li>true: tags on the scaling group are propagated only to newly created instances, not to existing instances in the scaling group.</li>
+             * <li>false: tags on the scaling group are not propagated to instances.</li>
              * </ul>
              * <p>Default value: false.</p>
              * 
@@ -2546,7 +2594,7 @@ public class CreateScalingGroupRequest extends Request {
             } 
 
             /**
-             * <p>The port number used by each ECS instance as a backend server in the vServer group. Valid values: 1 to 65535.</p>
+             * <p>The port number used by the instance after Auto Scaling adds the instance to the virtual server group. Valid values: 1 to 65535.</p>
              * 
              * <strong>example:</strong>
              * <p>22</p>
@@ -2557,7 +2605,7 @@ public class CreateScalingGroupRequest extends Request {
             }
 
             /**
-             * <p>The ID of the vServer group.</p>
+             * <p>The ID of the virtual server group.</p>
              * 
              * <strong>example:</strong>
              * <p>rsp-bp1443g77****</p>
@@ -2568,7 +2616,7 @@ public class CreateScalingGroupRequest extends Request {
             }
 
             /**
-             * <p>The weight of each ECS instance as a backend server in the vServer group. If you increase the weight for an ECS instance, the number of requests that are forwarded to the ECS instance also increases. If you set the weight for an ECS instance to 0, no requests are forwarded to the ECS instance. Valid values: 0 to 100.</p>
+             * <p>The weight of the instance as a backend server after Auto Scaling adds the instance to the virtual server group. A higher weight indicates that more access requests are allocated to the instance. If the weight is 0, the instance does not receive access requests. Valid values: 0 to 100.</p>
              * <p>Default value: 50.</p>
              * 
              * <strong>example:</strong>
@@ -2639,7 +2687,7 @@ public class CreateScalingGroupRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the CLB instance to which the backend vServer group belongs.</p>
+             * <p>The ID of the Classic Load Balancer (CLB) instance to which the virtual server group belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>lb-bp1u7etiogg38yvwz****</p>
@@ -2650,7 +2698,7 @@ public class CreateScalingGroupRequest extends Request {
             }
 
             /**
-             * <p>The attributes of the backend vServer group.</p>
+             * <p>The attributes of the backend server group.</p>
              */
             public Builder vServerGroupAttributes(java.util.List<VServerGroupAttributes> vServerGroupAttributes) {
                 this.vServerGroupAttributes = vServerGroupAttributes;
@@ -2659,6 +2707,127 @@ public class CreateScalingGroupRequest extends Request {
 
             public VServerGroups build() {
                 return new VServerGroups(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateScalingGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateScalingGroupRequest</p>
+     */
+    public static class ZoneShiftPolicy extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ImpairedZoneHealthCheckBehavior")
+        private String impairedZoneHealthCheckBehavior;
+
+        @com.aliyun.core.annotation.NameInMap("ScaleInBlockedRuleTypes")
+        private java.util.List<String> scaleInBlockedRuleTypes;
+
+        @com.aliyun.core.annotation.NameInMap("ScaleOutInHealthyZonesOnly")
+        private Boolean scaleOutInHealthyZonesOnly;
+
+        private ZoneShiftPolicy(Builder builder) {
+            this.impairedZoneHealthCheckBehavior = builder.impairedZoneHealthCheckBehavior;
+            this.scaleInBlockedRuleTypes = builder.scaleInBlockedRuleTypes;
+            this.scaleOutInHealthyZonesOnly = builder.scaleOutInHealthyZonesOnly;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ZoneShiftPolicy create() {
+            return builder().build();
+        }
+
+        /**
+         * @return impairedZoneHealthCheckBehavior
+         */
+        public String getImpairedZoneHealthCheckBehavior() {
+            return this.impairedZoneHealthCheckBehavior;
+        }
+
+        /**
+         * @return scaleInBlockedRuleTypes
+         */
+        public java.util.List<String> getScaleInBlockedRuleTypes() {
+            return this.scaleInBlockedRuleTypes;
+        }
+
+        /**
+         * @return scaleOutInHealthyZonesOnly
+         */
+        public Boolean getScaleOutInHealthyZonesOnly() {
+            return this.scaleOutInHealthyZonesOnly;
+        }
+
+        public static final class Builder {
+            private String impairedZoneHealthCheckBehavior; 
+            private java.util.List<String> scaleInBlockedRuleTypes; 
+            private Boolean scaleOutInHealthyZonesOnly; 
+
+            private Builder() {
+            } 
+
+            private Builder(ZoneShiftPolicy model) {
+                this.impairedZoneHealthCheckBehavior = model.impairedZoneHealthCheckBehavior;
+                this.scaleInBlockedRuleTypes = model.scaleInBlockedRuleTypes;
+                this.scaleOutInHealthyZonesOnly = model.scaleOutInHealthyZonesOnly;
+            } 
+
+            /**
+             * <p>The health check behavior in impaired zones. Valid values: </p>
+             * <ul>
+             * <li>ReplaceUnhealthy: Replaces unhealthy instances in all zones normally. </li>
+             * <li>IgnoreUnhealthy: Does not replace unhealthy instances in impaired zones. Healthy zones are not affected.</li>
+             * </ul>
+             * <p>Default value: ReplaceUnhealthy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ReplaceUnhealthy</p>
+             */
+            public Builder impairedZoneHealthCheckBehavior(String impairedZoneHealthCheckBehavior) {
+                this.impairedZoneHealthCheckBehavior = impairedZoneHealthCheckBehavior;
+                return this;
+            }
+
+            /**
+             * <p>Blocks scale-in triggered by specified types of scaling rules. The blocking scope applies to all zones under the scaling group, not just the impaired zones. This prevents false scale-in caused by fake improvements in monitoring metrics due to unreachable instances in impaired zones. Valid values: </p>
+             * <ul>
+             * <li>StepScalingRule: Blocks scale-in triggered by step scaling rules. </li>
+             * <li>TargetTrackingScalingRule: Blocks scale-in triggered by target tracking scaling rules. </li>
+             * <li>None: Does not block.</li>
+             * </ul>
+             * <p>Default value: None.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>StepScalingRule</p>
+             */
+            public Builder scaleInBlockedRuleTypes(java.util.List<String> scaleInBlockedRuleTypes) {
+                this.scaleInBlockedRuleTypes = scaleInBlockedRuleTypes;
+                return this;
+            }
+
+            /**
+             * <p>Specifies whether scale-out creates instances only in healthy zones during zone shift. Valid values: </p>
+             * <ul>
+             * <li>true: Scale-out creates instances only in healthy zones and skips impaired zones. </li>
+             * <li>false: Scale-out is not restricted by zone and can create instances in any zone of the scaling group.</li>
+             * </ul>
+             * <p>Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder scaleOutInHealthyZonesOnly(Boolean scaleOutInHealthyZonesOnly) {
+                this.scaleOutInHealthyZonesOnly = scaleOutInHealthyZonesOnly;
+                return this;
+            }
+
+            public ZoneShiftPolicy build() {
+                return new ZoneShiftPolicy(this);
             } 
 
         } 

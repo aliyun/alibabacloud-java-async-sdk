@@ -78,7 +78,7 @@ public class ApplyScalingGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the enabled scaling group.</p>
+         * <p>The ID of the applied scaling group.</p>
          * 
          * <strong>example:</strong>
          * <p>asg-bp1igpak5ft1flyp****</p>

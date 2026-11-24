@@ -205,7 +205,7 @@ public class DescribeEciScalingConfigurationsRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page 1.</p>
+         * <p>The page number of the scaling configuration list. Pages start from 1.</p>
          * <p>Default value: 1.</p>
          * 
          * <strong>example:</strong>
@@ -218,7 +218,7 @@ public class DescribeEciScalingConfigurationsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Maximum value: 50.</p>
+         * <p>The number of entries per page for a paged query. Settings for paging: Maximum value: 50.</p>
          * <p>Default value: 10.</p>
          * 
          * <strong>example:</strong>
@@ -262,8 +262,8 @@ public class DescribeEciScalingConfigurationsRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the scaling configurations that you want to query. You can specify 1 to 10 scaling configuration IDs.</p>
-         * <p>The IDs of active and inactive scaling configurations are displayed in the query results. You can distinguish between active and inactive scaling configurations based on the value of <code>LifecycleState</code>.</p>
+         * <p>The IDs of the scaling configurations to be queried. You can specify 1 to 10 IDs.</p>
+         * <p>The query results include both active and inactive scaling configurations, which are identified by the LifecycleState response parameter.</p>
          */
         public Builder scalingConfigurationIds(java.util.List<String> scalingConfigurationIds) {
             this.putQueryParameter("ScalingConfigurationIds", scalingConfigurationIds);
@@ -272,8 +272,8 @@ public class DescribeEciScalingConfigurationsRequest extends Request {
         }
 
         /**
-         * <p>The names of the scaling configurations that you want to query. You can specify 1 to 10 scaling configuration names.</p>
-         * <p>The names of inactive scaling configurations are not displayed in the query results, and no error is reported.</p>
+         * <p>The names of the scaling configurations to be queried. You can specify 1 to 10 names.</p>
+         * <p>Invalid scaling configuration names are ignored in the query results, and no error is reported.</p>
          */
         public Builder scalingConfigurationNames(java.util.List<String> scalingConfigurationNames) {
             this.putQueryParameter("ScalingConfigurationNames", scalingConfigurationNames);
@@ -282,7 +282,7 @@ public class DescribeEciScalingConfigurationsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the scaling group. You can use the ID to query all scaling configurations in the scaling group.</p>
+         * <p>The ID of the scaling group. You can query all scaling configurations in the scaling group.</p>
          * 
          * <strong>example:</strong>
          * <p>asg-bp17pelvl720x3v7****</p>

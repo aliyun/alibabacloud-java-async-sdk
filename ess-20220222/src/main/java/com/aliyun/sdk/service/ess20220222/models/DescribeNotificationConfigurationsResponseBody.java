@@ -183,7 +183,10 @@ public class DescribeNotificationConfigurationsResponseBody extends TeaModel {
             } 
 
             /**
-             * MessageEncoding.
+             * <p>The codec of the notification message content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PlainText</p>
              */
             public Builder messageEncoding(String messageEncoding) {
                 this.messageEncoding = messageEncoding;

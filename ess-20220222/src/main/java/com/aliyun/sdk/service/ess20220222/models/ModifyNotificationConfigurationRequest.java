@@ -160,7 +160,18 @@ public class ModifyNotificationConfigurationRequest extends Request {
         } 
 
         /**
-         * MessageEncoding.
+         * <p>The codec of the notification message content. Valid values:</p>
+         * <ul>
+         * <li>PlainText: No encoding is applied. The content is transmitted as plaintext.</li>
+         * <li>Base64: Base64 encoding is applied.</li>
+         * </ul>
+         * <p>Default Value: Base64.  </p>
+         * <blockquote>
+         * <p>This parameter can be set only for MNS notification objects.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>PlainText</p>
          */
         public Builder messageEncoding(String messageEncoding) {
             this.putQueryParameter("MessageEncoding", messageEncoding);

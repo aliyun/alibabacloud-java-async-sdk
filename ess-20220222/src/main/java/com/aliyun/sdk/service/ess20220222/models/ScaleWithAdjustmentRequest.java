@@ -242,11 +242,11 @@ public class ScaleWithAdjustmentRequest extends Request {
         }
 
         /**
-         * <p>The type of the scaling policy. Valid values:</p>
+         * <p>The adjustment method for the scaling activity. Valid values:</p>
          * <ul>
-         * <li>QuantityChangeInCapacity: adds the specified number of ECS instances to or removes the specified number of ECS instances from the scaling group.</li>
-         * <li>PercentChangeInCapacity: adds the specified percentage of ECS instances to or removes the specified percentage of ECS instances from the scaling group.</li>
-         * <li>TotalCapacity: adjusts the number of ECS instances in the scaling group to a specified number.</li>
+         * <li>QuantityChangeInCapacity: Increases or decreases a specified number of ECS instances.</li>
+         * <li>PercentChangeInCapacity: Increases or decreases a specified percentage of ECS instances.</li>
+         * <li>TotalCapacity: Adjusts the number of ECS instances in the current scaling group to a specified number.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -260,11 +260,11 @@ public class ScaleWithAdjustmentRequest extends Request {
         }
 
         /**
-         * <p>The number of instances in each adjustment. The number of ECS instances in each adjustment cannot exceed 1,000.</p>
+         * <p>The adjustment value for the scaling activity. In all cases, the number of ECS instances adjusted in a single operation cannot exceed 1,000. Otherwise, the adjustment fails. Valid values vary based on the adjustment method:</p>
          * <ul>
-         * <li>Valid values if you set the AdjustmentType parameter to QuantityChangeInCapacity: -1000 to 1000.</li>
-         * <li>Valid values if you set the AdjustmentType parameter to PercentChangeInCapacity: -100 to 10000.</li>
-         * <li>Valid values if you set the AdjustmentType parameter to TotalCapacity: 0 to 2000.</li>
+         * <li>QuantityChangeInCapacity: -1,000 to 1,000.</li>
+         * <li>PercentChangeInCapacity: -100 to 10,000.</li>
+         * <li>TotalCapacity: 0 to 2,000.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -278,7 +278,7 @@ public class ScaleWithAdjustmentRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can generate the value of this parameter on the client side. The value must be unique across different requests and can be up to 64 ASCII characters in length. The value cannot contain non-ASCII characters.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-42665544****</p>
@@ -292,8 +292,8 @@ public class ScaleWithAdjustmentRequest extends Request {
         /**
          * <p>The execution mode. Valid values:</p>
          * <ul>
-         * <li>None: If this is not specified, auto scaling is performed.</li>
-         * <li>PlanOnly: Scaling is not triggered. Only elastic planning is performed. The planning result is returned in PlanResult, including the instance type, zone ID, billing type, and number of created instances.</li>
+         * <li>None: Not specified. Normal scaling is performed.</li>
+         * <li>PlanOnly: Does not trigger scaling. Only elastic planning is executed. The planning results, including instance types, zone IDs, billing methods, and the number of instances to be created, are returned in PlanResult.</li>
          * </ul>
          * <p>Default value: None.</p>
          * 
@@ -307,7 +307,7 @@ public class ScaleWithAdjustmentRequest extends Request {
         }
 
         /**
-         * <p>The context of the lifecycle hook.</p>
+         * <p>The context information of the lifecycle hook.</p>
          */
         public Builder lifecycleHookContext(LifecycleHookContext lifecycleHookContext) {
             String lifecycleHookContextShrink = shrink(lifecycleHookContext, "LifecycleHookContext", "json");
@@ -317,7 +317,7 @@ public class ScaleWithAdjustmentRequest extends Request {
         }
 
         /**
-         * <p>The minimum number of instances allowed in each adjustment. This parameter takes effect only if you set the <code>AdjustmentType</code> parameter to <code>PercentChangeInCapacity</code>.</p>
+         * <p>The minimum number of instances to be adjusted in the scaling activity. This parameter takes effect only when <code>AdjustmentType</code> is set to <code>PercentChangeInCapacity</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -329,7 +329,7 @@ public class ScaleWithAdjustmentRequest extends Request {
         }
 
         /**
-         * <p>The overrides that allow you to adjust the scaling group of the Elastic Container Instance (ECI) type during a scale-out event.</p>
+         * <p>The override parameters specified for scaling out an Elastic Container Instance (ECI) scaling group.</p>
          */
         public Builder overrides(Overrides overrides) {
             String overridesShrink = shrink(overrides, "Overrides", "json");
@@ -348,7 +348,7 @@ public class ScaleWithAdjustmentRequest extends Request {
         }
 
         /**
-         * <p>Whether the current scale-out task supports concurrency.</p>
+         * <p>Specifies whether the current scaling task supports concurrent execution.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -382,13 +382,13 @@ public class ScaleWithAdjustmentRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to trigger the scaling task in a synchronous manner. This parameter takes effect only on scaling groups for which you specified an expected number of instances. Valid Values:</p>
+         * <p>Specifies whether to synchronously execute the scaling activity. This parameter is valid only for scaling groups that have the expected number of instances configured. Valid values:</p>
          * <ul>
-         * <li>true: triggers the scaling task in a synchronous manner. A scaling activity is triggered at the time when the scaling rule is executed.</li>
-         * <li>false: does not trigger the scaling task in a synchronous manner. After you change the expected number of instances for the scaling group, Auto Scaling checks whether the total number of instances in the scaling group matches the new expected number and determines whether to trigger the scaling activity based on the check result.</li>
+         * <li>true: Synchronous process. When the scaling rule is executed, the scale-out or scale-in activity of the scaling group is directly triggered.</li>
+         * <li>false: Asynchronous process. When the expected number of instances in the scaling group is modified, the actual scale-out or scale-in activity of the scaling group is not immediately triggered. The system automatically detects the difference between the expected number of instances and the current number of instances in the scaling group, and then triggers the scale-out or scale-in activity.</li>
          * </ul>
          * <blockquote>
-         * <p> For more information, see <a href="https://help.aliyun.com/document_detail/146231.html">Expected number of instances</a>.</p>
+         * <p>For more information about the expected number of instances, see <a href="https://help.aliyun.com/document_detail/146231.html">Expected number of instances</a>.</p>
          * </blockquote>
          * <p>Default value: false.</p>
          * 
@@ -474,10 +474,10 @@ public class ScaleWithAdjustmentRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to disable the lifecycle hook. Valid values:</p>
+             * <p>Specifies whether to disable all lifecycle hooks for the scaling activity. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li>true: Disables all lifecycle hooks.</li>
+             * <li>false: Does not disable lifecycle hooks.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -489,7 +489,7 @@ public class ScaleWithAdjustmentRequest extends Request {
             }
 
             /**
-             * <p>The IDs of the lifecycle hooks that you want to disable.</p>
+             * <p>The list of IDs of the lifecycle hooks that are disabled for the scaling activity.</p>
              */
             public Builder ignoredLifecycleHookIds(java.util.List<String> ignoredLifecycleHookIds) {
                 this.ignoredLifecycleHookIds = ignoredLifecycleHookIds;
@@ -497,7 +497,10 @@ public class ScaleWithAdjustmentRequest extends Request {
             }
 
             /**
-             * LifecycleHookResult.
+             * <p>The default execution result of the lifecycle hook in this scaling activity. If specified, this value overrides the original default execution result of the hook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONTINUE</p>
              */
             public Builder lifecycleHookResult(String lifecycleHookResult) {
                 this.lifecycleHookResult = lifecycleHookResult;
@@ -564,7 +567,7 @@ public class ScaleWithAdjustmentRequest extends Request {
             } 
 
             /**
-             * <p>The name of the environment variable. The name must be 1 to 128 characters in length. Format requirement: <code>[0-9a-zA-Z]</code> and underscores (_). It cannot start with a digit.</p>
+             * <p>The name of the environment variable. The name must be 1 to 128 characters in length. It can contain letters, digits, and underscores (_), and cannot start with a digit.</p>
              * 
              * <strong>example:</strong>
              * <p>PATH</p>
@@ -575,7 +578,7 @@ public class ScaleWithAdjustmentRequest extends Request {
             }
 
             /**
-             * <p>The value of the environment variable. The value can be up to 256 characters in length.</p>
+             * <p>The value of the environment variable. The value can be 0 to 256 characters in length.</p>
              * 
              * <strong>example:</strong>
              * <p>/usr/local/tomcat</p>
@@ -697,7 +700,7 @@ public class ScaleWithAdjustmentRequest extends Request {
             } 
 
             /**
-             * <p>The argument that corresponds to the startup command of the container. You can specify up to 10 arguments.</p>
+             * <p>The arguments for the container startup command. A maximum of 10 arguments can be specified.</p>
              */
             public Builder args(java.util.List<String> args) {
                 this.args = args;
@@ -705,7 +708,7 @@ public class ScaleWithAdjustmentRequest extends Request {
             }
 
             /**
-             * <p>The container startup commands. You can specify up to 20 commands. Each command can contain up to 256 characters.</p>
+             * <p>The startup commands for the container. A maximum of 20 commands can be specified. Each command can contain up to 256 characters.</p>
              */
             public Builder commands(java.util.List<String> commands) {
                 this.commands = commands;
@@ -713,7 +716,7 @@ public class ScaleWithAdjustmentRequest extends Request {
             }
 
             /**
-             * <p>The number of vCPUs that you want to allocate to the container. Unit: vCPUs.</p>
+             * <p>The number of vCPUs for the container. Unit: cores.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -724,7 +727,7 @@ public class ScaleWithAdjustmentRequest extends Request {
             }
 
             /**
-             * <p>The information about the environment variables.</p>
+             * <p>The list of environment variables.</p>
              */
             public Builder environmentVars(java.util.List<EnvironmentVars> environmentVars) {
                 this.environmentVars = environmentVars;
@@ -732,7 +735,7 @@ public class ScaleWithAdjustmentRequest extends Request {
             }
 
             /**
-             * <p>The memory size that you want to allocate to the container. Unit: GiB.</p>
+             * <p>The memory size of the container. Unit: GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -743,7 +746,7 @@ public class ScaleWithAdjustmentRequest extends Request {
             }
 
             /**
-             * <p>The name of the container. If you specify ContainerOverrides, you must also specify Name. ContainerOverrides takes effect only when the container name specified by Name matches that specified in the scaling configuration.</p>
+             * <p>The name of the container. When you need to override container parameters, you must specify the container name. The container parameters can be overridden only when the container name matches the container name in the scaling configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>container-1</p>
@@ -839,7 +842,7 @@ public class ScaleWithAdjustmentRequest extends Request {
             } 
 
             /**
-             * <p>The list of parameters that you want to use to override specific configurations for containers.</p>
+             * <p>The override parameters for the container list.</p>
              */
             public Builder containerOverrides(java.util.List<ContainerOverrides> containerOverrides) {
                 this.containerOverrides = containerOverrides;
@@ -847,7 +850,7 @@ public class ScaleWithAdjustmentRequest extends Request {
             }
 
             /**
-             * <p>The number of vCPUs that you want to allocate to the instance. Unit: vCPUs.</p>
+             * <p>The number of vCPUs at the instance level. Unit: cores.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -858,7 +861,7 @@ public class ScaleWithAdjustmentRequest extends Request {
             }
 
             /**
-             * <p>The memory size that you want to allocate to the instance. Unit: GiB.</p>
+             * <p>The memory size at the instance level. Unit: GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -869,7 +872,7 @@ public class ScaleWithAdjustmentRequest extends Request {
             }
 
             /**
-             * <p>The user data of the Elastic Compute Service (ECS) instance. The user data must be encoded in Base64 format. The size of raw data before Base64 encoding cannot exceed 32 KB.</p>
+             * <p>The user data of the ECS instance. The user data must be encoded in Base64. The maximum size of the raw data before encoding is 32 KB.</p>
              * 
              * <strong>example:</strong>
              * <p>ZWNobyBoZWxsbyBlY3Mh</p>

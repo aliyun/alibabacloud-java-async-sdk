@@ -173,7 +173,7 @@ public class DescribeInstanceRefreshesRequest extends Request {
         } 
 
         /**
-         * <p>The IDs of the instance refresh tasks that you want to query.</p>
+         * <p>The IDs of the instance refresh tasks to be queried.</p>
          */
         public Builder instanceRefreshTaskIds(java.util.List<String> instanceRefreshTaskIds) {
             this.putQueryParameter("InstanceRefreshTaskIds", instanceRefreshTaskIds);
@@ -182,7 +182,8 @@ public class DescribeInstanceRefreshesRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page. Valid values: 1 to 50. Default value: 10.</p>
+         * <p>The maximum number of entries per page for a paged query. Valid values: 1 to 50.
+         * Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -194,7 +195,7 @@ public class DescribeInstanceRefreshesRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * <p>The query token. Set the value to the NextToken value returned from the previous call. You do not need to specify this parameter for the first call.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a****</p>
@@ -224,7 +225,7 @@ public class DescribeInstanceRefreshesRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the scaling group to which the instance refresh task belongs.</p>
+         * <p>The region ID of the scaling group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -257,7 +258,7 @@ public class DescribeInstanceRefreshesRequest extends Request {
         /**
          * <p>The ID of the scaling group.</p>
          * <blockquote>
-         * <p> When you call this operation, you must specify one of the following parameters: ScalingGroupId and InstanceRefreshTaskIds. You cannot specify both of them. If you specify neither of them, an error is reported.</p>
+         * <p>When you call this operation, you must specify either ScalingGroupId or InstanceRefreshTaskIds. If neither is specified, an error occurs.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

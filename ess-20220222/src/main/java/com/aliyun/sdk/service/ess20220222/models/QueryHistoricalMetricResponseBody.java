@@ -67,7 +67,7 @@ public class QueryHistoricalMetricResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The monitoring metrics of the prediction rule.</p>
+         * HistoricalMetrics.
          */
         public Builder historicalMetrics(HistoricalMetrics historicalMetrics) {
             this.historicalMetrics = historicalMetrics;
@@ -144,10 +144,7 @@ public class QueryHistoricalMetricResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The value of the metric.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>10.0</p>
+             * MetricValue.
              */
             public Builder metricValue(String metricValue) {
                 this.metricValue = metricValue;
@@ -155,10 +152,7 @@ public class QueryHistoricalMetricResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The point in time of the monitoring metric. The value must be in the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2025-12-17T16:00Z</p>
+             * Time.
              */
             public Builder time(String time) {
                 this.time = time;

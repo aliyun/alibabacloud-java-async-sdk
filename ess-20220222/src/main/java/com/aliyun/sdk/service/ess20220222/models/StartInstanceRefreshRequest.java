@@ -215,11 +215,11 @@ public class StartInstanceRefreshRequest extends Request {
         } 
 
         /**
-         * <p>The duration of the pause when the refresh task checkpoint is entered.</p>
+         * <p>The pause duration when a checkpoint of the refresh task is reached.</p>
          * <ul>
-         * <li>Unit: minutes</li>
+         * <li>Unit: minutes.</li>
          * <li>Valid values: 1 to 2880.</li>
-         * <li>Default: 60.</li>
+         * <li>Default value: 60.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -232,7 +232,7 @@ public class StartInstanceRefreshRequest extends Request {
         }
 
         /**
-         * <p>Refresh Task Checkpoint: specifies that the task is automatically suspended for CheckpointPauseTime minutes when the proportion of new instances reaches the specified value during instance refresh.</p>
+         * <p>The checkpoints for the refresh task. This parameter specifies that the task is automatically paused for the duration specified by CheckpointPauseTime in minutes when the percentage of new instances reaches the specified value during the instance refresh.</p>
          */
         public Builder checkpoints(java.util.List<Checkpoints> checkpoints) {
             this.putQueryParameter("Checkpoints", checkpoints);
@@ -241,7 +241,7 @@ public class StartInstanceRefreshRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">Ensure idempotence</a>.</p>
+         * <p>Ensures the idempotence of the request. You can generate the value on the client to ensure that the value is unique across different requests. The value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">How to ensure idempotence</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-42665544****</p>
@@ -253,15 +253,13 @@ public class StartInstanceRefreshRequest extends Request {
         }
 
         /**
-         * <p>The desired configurations of the instance refresh task.</p>
+         * <p>The desired configuration for the instance refresh.</p>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>ScalingConfigurationId, ImageId, LaunchTemplateId, and Containers cannot be set at the same time. If you do not specify this parameter, the scaling group is refreshed based on the configurations that are in effect.</p>
-         * </li>
-         * <li><p>After the instance refresh task is complete, the scaling group uses the scaling configuration specified by this parameter.</p>
-         * </li>
+         * <li>ScalingConfigurationId, ImageId, LaunchTemplateId, and Containers cannot be specified at the same time. If this parameter is left empty, the instances are refreshed based on the active configuration of the scaling group.</li>
+         * <li>After the instance refresh task is successfully executed, the active scaling configuration of the scaling group is updated to this configuration.</li>
          * </ul>
+         * </blockquote>
          */
         public Builder desiredConfiguration(DesiredConfiguration desiredConfiguration) {
             this.putQueryParameter("DesiredConfiguration", desiredConfiguration);
@@ -270,9 +268,10 @@ public class StartInstanceRefreshRequest extends Request {
         }
 
         /**
-         * <p>The ratio of instances that can exceed the upper limit of the scaling group capacity to all instances in the scaling group during instance refresh. Valid values: 100 to 200. Default value: 120.</p>
+         * <p>The maximum percentage by which the number of instances in the scaling group can exceed the scaling group capacity during the instance refresh. Valid values: 100 to 200.
+         * Default value: 120.</p>
          * <blockquote>
-         * <p> If you set MinHealthyPercentage and MaxHealthyPercentage to 100, Auto Scaling refreshes the configurations of one instance each time the instance refresh task starts.</p>
+         * <p>If both MinHealthyPercentage and MaxHealthyPercentage are set to 100, one instance is refreshed at a time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -285,7 +284,8 @@ public class StartInstanceRefreshRequest extends Request {
         }
 
         /**
-         * <p>The ratio of instances that are in the In Service state to all instances in the scaling group during instance refresh. Valid values: 0 to 100. Default value: 80.</p>
+         * <p>The minimum percentage of the scaling group capacity that must remain in service during the instance refresh. Valid values: 0 to 100.
+         * Default value: 80.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -341,14 +341,14 @@ public class StartInstanceRefreshRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to skip instances that match the desired scaling configuration.</p>
+         * <p>Specifies whether to skip instances that match the desired configuration.</p>
          * <blockquote>
-         * <p> The system determines the match based on the ID of the desired scaling configuration rather than individual configuration items.</p>
+         * <p>The system determines whether an instance matches the desired configuration based on the ID of the desired scaling configuration, without comparing specific configuration items.</p>
          * </blockquote>
          * <p>Valid values:</p>
          * <ul>
-         * <li>true: skips instances that match the desired scaling configuration. When you initiate an instance refresh task, the system checks the configurations of all instances. The refresh operation is skipped for instances created based on the desired scaling configuration.</li>
-         * <li>false: does not skip instances that match the desired scaling configuration. When an instance refresh task is initiated, all instances in the scaling group at the time of initiation are refreshed.</li>
+         * <li>true: skips the instances. When the instance refresh task is started, the system checks the configuration of each instance. Instances that are already created with the desired configuration are not refreshed.</li>
+         * <li>false: does not skip the instances. After the instance refresh task is started, all instances in the scaling group are refreshed.</li>
          * </ul>
          * <p>Default value: true.</p>
          * 
@@ -362,7 +362,17 @@ public class StartInstanceRefreshRequest extends Request {
         }
 
         /**
-         * Strategy.
+         * <p>The execution strategy for the instance refresh task. Valid values:</p>
+         * <ul>
+         * <li><p>Rolling: refreshes instances by creating new instances and releasing old instances.</p>
+         * </li>
+         * <li><p>ReplaceSystemDisk: updates the system cloud disks of existing instances by specifying DesiredConfiguration.image.</p>
+         * </li>
+         * </ul>
+         * <p>Default value: Rolling.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Rolling</p>
          */
         public Builder strategy(String strategy) {
             this.putQueryParameter("Strategy", strategy);
@@ -417,9 +427,9 @@ public class StartInstanceRefreshRequest extends Request {
             } 
 
             /**
-             * <p>The percentage of new instances in the scaling group to the total number of instances. When this percentage is reached, the task is automatically suspended. Valid values: 1 to 100 (%).</p>
+             * <p>The percentage of new instances out of the total instances in the scaling group. When this percentage is reached, the task is automatically paused. Valid values: 1 to 100. Unit: %.</p>
              * <blockquote>
-             * <p> Requires a small to large setting, and the last progress percentage needs to be 100.</p>
+             * <p>The values must be set in ascending order, and the last percentage must be 100.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -504,7 +514,7 @@ public class StartInstanceRefreshRequest extends Request {
 
             /**
              * <blockquote>
-             * <p> This parameter is unavailable for use.</p>
+             * <p>This parameter is not available.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -516,7 +526,7 @@ public class StartInstanceRefreshRequest extends Request {
             }
 
             /**
-             * <p>The name of the environment variable. It can be 1 to 128 characters in length. Format requirement:[0-9a-zA-Z], and underscores, cannot start with a number.</p>
+             * <p>The name of the environment variable. The name must be 1 to 128 characters in length. It can contain letters, digits, and underscores (_), and cannot start with a digit.</p>
              * 
              * <strong>example:</strong>
              * <p>PATH</p>
@@ -527,7 +537,7 @@ public class StartInstanceRefreshRequest extends Request {
             }
 
             /**
-             * <p>The value of the environment variable. The value must be 0 to 256 bits in length.</p>
+             * <p>The value of the environment variable. The value must be 0 to 256 characters in length.</p>
              * 
              * <strong>example:</strong>
              * <p>/usr/local/bin</p>
@@ -636,7 +646,7 @@ public class StartInstanceRefreshRequest extends Request {
             } 
 
             /**
-             * <p>The argument that corresponds to the startup command of the container. You can specify up to 10 arguments.</p>
+             * <p>The arguments for the container startup commands. You can specify up to 10 arguments.</p>
              */
             public Builder args(java.util.List<String> args) {
                 this.args = args;
@@ -644,7 +654,7 @@ public class StartInstanceRefreshRequest extends Request {
             }
 
             /**
-             * <p>The container startup commands. You can specify up to 20 commands. Each command can contain up to 256 characters.</p>
+             * <p>The startup commands for the container. You can specify up to 20 commands. Each command can contain up to 256 characters.</p>
              */
             public Builder commands(java.util.List<String> commands) {
                 this.commands = commands;
@@ -660,7 +670,7 @@ public class StartInstanceRefreshRequest extends Request {
             }
 
             /**
-             * <p>The image in the container.</p>
+             * <p>The container image.</p>
              * 
              * <strong>example:</strong>
              * <p>registry-vpc.cn-hangzhou.aliyuncs.com/eci_open/nginx:latest</p>
@@ -728,9 +738,9 @@ public class StartInstanceRefreshRequest extends Request {
             } 
 
             /**
-             * <p>The instance type specified by using this parameter overwrites the instance type of the launch template.</p>
+             * <p>This parameter is used to specify the instance type, which overrides the instance type in the launch template.</p>
              * <blockquote>
-             * <p> This parameter takes effect only if you specify LaunchTemplateId.</p>
+             * <p>This parameter takes effect only when the LaunchTemplateId parameter is specified.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -853,15 +863,13 @@ public class StartInstanceRefreshRequest extends Request {
             } 
 
             /**
-             * <p>The containers in the elastic container instance.</p>
+             * <p>The list of containers included in the instance.</p>
              * <blockquote>
-             * </blockquote>
              * <ul>
-             * <li><p>This parameter supports only scaling groups of the ECI type.</p>
-             * </li>
-             * <li><p>Only the containers in the scaling configuration list that are the same as those in the <code>Container.Name</code> are refreshed.</p>
-             * </li>
+             * <li>This parameter is supported only for Elastic Container Instance (ECI) scaling groups.</li>
+             * <li>Only the container configurations whose Container.Name matches the container names in the current scaling configuration are refreshed.</li>
              * </ul>
+             * </blockquote>
              */
             public Builder containers(java.util.List<Containers> containers) {
                 this.containers = containers;
@@ -869,15 +877,14 @@ public class StartInstanceRefreshRequest extends Request {
             }
 
             /**
-             * <p>The image ID.</p>
+             * <p>The ID of the image.</p>
              * <blockquote>
-             * </blockquote>
              * <ul>
-             * <li><p>After the instance refresh task is complete, the active scaling configuration uses the image specified by this parameter.</p>
-             * </li>
-             * <li><p>If the instance configuration source of the scaling group is a launch template, you cannot specify this parameter.</p>
-             * </li>
+             * <li>After the instance refresh task is successfully executed, the image configuration in the active configuration of the scaling group is updated to this image.</li>
+             * <li>This parameter is not supported if the source of the active configuration of the scaling group is a launch template.</li>
+             * <li>Images that contain data cloud disks are not supported.</li>
              * </ul>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>m-2ze8cqacj7opnf***</p>
@@ -888,7 +895,7 @@ public class StartInstanceRefreshRequest extends Request {
             }
 
             /**
-             * <p>The ID of the launch template that you want to enable in the scaling group.</p>
+             * <p>The ID of the launch template. This parameter is used to specify that the scaling group obtains launch configurations from the launch template.</p>
              * 
              * <strong>example:</strong>
              * <p>lt-2ze2qli30u***</p>
@@ -899,7 +906,7 @@ public class StartInstanceRefreshRequest extends Request {
             }
 
             /**
-             * <p>The information about the instance types that are extended in the launch template.</p>
+             * <p>The instance type overrides for the launch template.</p>
              */
             public Builder launchTemplateOverrides(java.util.List<LaunchTemplateOverrides> launchTemplateOverrides) {
                 this.launchTemplateOverrides = launchTemplateOverrides;
@@ -907,14 +914,14 @@ public class StartInstanceRefreshRequest extends Request {
             }
 
             /**
-             * <p>The version number of the launch template. Valid value:</p>
+             * <p>The version of the launch template. Valid values:</p>
              * <ul>
-             * <li>A fixed template version number.</li>
-             * <li>Default: the default version of the template.</li>
-             * <li>Latest: the latest version of the template.</li>
+             * <li>A specific template version number.</li>
+             * <li>Default: always uses the default version of the template.</li>
+             * <li>Latest: always uses the latest version of the template.</li>
              * </ul>
              * <blockquote>
-             * <p> If you set the version to Default or Latest, the instance refresh task cannot be rolled back.</p>
+             * <p>If the version is set to Default or Latest, the instance refresh task cannot be rolled back.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

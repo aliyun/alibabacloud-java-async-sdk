@@ -106,7 +106,7 @@ public class DescribeLifecycleHooksResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Details about the lifecycle hooks.</p>
+         * <p>The list of lifecycle hooks.</p>
          */
         public Builder lifecycleHooks(java.util.List<LifecycleHooks> lifecycleHooks) {
             this.lifecycleHooks = lifecycleHooks;
@@ -176,6 +176,9 @@ public class DescribeLifecycleHooksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HeartbeatTimeout")
         private Integer heartbeatTimeout;
 
+        @com.aliyun.core.annotation.NameInMap("LifecycleActionSources")
+        private java.util.List<String> lifecycleActionSources;
+
         @com.aliyun.core.annotation.NameInMap("LifecycleHookId")
         private String lifecycleHookId;
 
@@ -200,6 +203,7 @@ public class DescribeLifecycleHooksResponseBody extends TeaModel {
         private LifecycleHooks(Builder builder) {
             this.defaultResult = builder.defaultResult;
             this.heartbeatTimeout = builder.heartbeatTimeout;
+            this.lifecycleActionSources = builder.lifecycleActionSources;
             this.lifecycleHookId = builder.lifecycleHookId;
             this.lifecycleHookName = builder.lifecycleHookName;
             this.lifecycleHookStatus = builder.lifecycleHookStatus;
@@ -229,6 +233,13 @@ public class DescribeLifecycleHooksResponseBody extends TeaModel {
          */
         public Integer getHeartbeatTimeout() {
             return this.heartbeatTimeout;
+        }
+
+        /**
+         * @return lifecycleActionSources
+         */
+        public java.util.List<String> getLifecycleActionSources() {
+            return this.lifecycleActionSources;
         }
 
         /**
@@ -283,6 +294,7 @@ public class DescribeLifecycleHooksResponseBody extends TeaModel {
         public static final class Builder {
             private String defaultResult; 
             private Integer heartbeatTimeout; 
+            private java.util.List<String> lifecycleActionSources; 
             private String lifecycleHookId; 
             private String lifecycleHookName; 
             private String lifecycleHookStatus; 
@@ -297,6 +309,7 @@ public class DescribeLifecycleHooksResponseBody extends TeaModel {
             private Builder(LifecycleHooks model) {
                 this.defaultResult = model.defaultResult;
                 this.heartbeatTimeout = model.heartbeatTimeout;
+                this.lifecycleActionSources = model.lifecycleActionSources;
                 this.lifecycleHookId = model.lifecycleHookId;
                 this.lifecycleHookName = model.lifecycleHookName;
                 this.lifecycleHookStatus = model.lifecycleHookStatus;
@@ -307,7 +320,7 @@ public class DescribeLifecycleHooksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The next action that is performed after the lifecycle hook times out.</p>
+             * <p>The action to perform after the wait state of the instance ends.</p>
              * 
              * <strong>example:</strong>
              * <p>CONTINUE</p>
@@ -318,13 +331,21 @@ public class DescribeLifecycleHooksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The period of time before the lifecycle hook times out. When the lifecycle hook times out, Auto Scaling performs the action that is specified by DefaultResult.</p>
+             * <p>The wait time configured in the lifecycle hook for the scaling activity. The next action is performed after the wait time expires.</p>
              * 
              * <strong>example:</strong>
              * <p>60</p>
              */
             public Builder heartbeatTimeout(Integer heartbeatTimeout) {
                 this.heartbeatTimeout = heartbeatTimeout;
+                return this;
+            }
+
+            /**
+             * <p>The specific scenarios in which the lifecycle hook is triggered.</p>
+             */
+            public Builder lifecycleActionSources(java.util.List<String> lifecycleActionSources) {
+                this.lifecycleActionSources = lifecycleActionSources;
                 return this;
             }
 
@@ -353,8 +374,8 @@ public class DescribeLifecycleHooksResponseBody extends TeaModel {
             /**
              * <p>The status of the lifecycle hook. Valid values:</p>
              * <ul>
-             * <li>Active: The lifecycle hook is enabled.</li>
-             * <li>InActive: The lifecycle hook is disabled.</li>
+             * <li>Active: The lifecycle hook is active.</li>
+             * <li>InActive: The lifecycle hook is inactive.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -366,7 +387,7 @@ public class DescribeLifecycleHooksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the scaling activity to which the lifecycle hook applies.</p>
+             * <p>The scaling activity type associated with the lifecycle hook.</p>
              * 
              * <strong>example:</strong>
              * <p>SCALE_OUT</p>
@@ -377,21 +398,21 @@ public class DescribeLifecycleHooksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ARN of the notification recipient when the lifecycle hook takes effect. The value of this parameter must be in one of the following formats:</p>
+             * <p>The identifier of the notification recipient for the lifecycle hook. The parameter format is as follows:</p>
              * <ul>
-             * <li>If you do not create a notification rule, specify the value in the <code>acs:ess:{region-id}:{account-id}:null/null</code> format.</li>
-             * <li>If you specify a Simple Message Queue (SMQ, formerly MNS) queue as the notification recipient, specify the value in the <code>acs:mns:{region-id}:{account-id}:queue/{queuename}</code> format.</li>
-             * <li>If you specify an SMQ as the notification recipient, specify the value in the <code>acs:mns:{region-id}:{account-id}:topic/{topicname}</code> format.</li>
-             * <li>If you specify a CloudOps Orchestration Service (OOS) template as the notification recipient, specify the value in the <code>acs:oos:{region-id}:{account-id}:template/{templatename}</code> format.</li>
-             * <li>If you specify an event bus as the notification recipient, specify the value in the <code>acs:eventbridge:{region-id}:{account-id}:eventbus/default</code> format.</li>
+             * <li>Notifications not configured: <code>acs:ess:{region-id}:{account-id}:null/null</code>.</li>
+             * <li>MNS queue: <code>acs:mns:{region-id}:{account-id}:queue/{queuename}</code>.</li>
+             * <li>MNS topic: <code>acs:mns:{region-id}:{account-id}:topic/{topicname}</code>.</li>
+             * <li>OOS template: <code>acs:oos:{region-id}:{account-id}:template/{templatename}</code>.</li>
+             * <li>EventBridge: <code>acs:eventbridge:{region-id}:{account-id}:eventbus/default</code>.</li>
              * </ul>
-             * <p>The variables in the preceding value formats have the following meanings:</p>
+             * <p>The variables in the parameter format have the following meanings:</p>
              * <ul>
-             * <li>region-id: the region ID of your scaling group.</li>
-             * <li>account-id: the ID of your Alibaba Cloud account.</li>
-             * <li>queuename: the name of the SMQ queue.</li>
-             * <li>topicname: the name of the SMQ topic.</li>
-             * <li>templatename: the name of the OOS template.</li>
+             * <li>region-id: The ID of the region where the scaling group resides.</li>
+             * <li>account-id: The Alibaba Cloud account ID.</li>
+             * <li>queuename: The name of the MNS queue.</li>
+             * <li>topicname: The name of the MNS topic.</li>
+             * <li>templatename: The name of the OOS template.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -403,7 +424,7 @@ public class DescribeLifecycleHooksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The fixed string that is included in a notification that Auto Scaling sends when the lifecycle hook takes effect.</p>
+             * <p>The fixed string information for the wait state of the scaling activity.</p>
              * 
              * <strong>example:</strong>
              * <p>Test Lifecycle Hook.</p>
