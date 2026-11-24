@@ -181,7 +181,7 @@ public class UpdateApsWebhookResponseBody extends TeaModel {
          * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
-         * <p>Operation succeeded</p>
+         * <p>操作成功</p>
          */
         public Builder message(String message) {
             this.message = message;

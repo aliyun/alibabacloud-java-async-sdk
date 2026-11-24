@@ -336,9 +336,7 @@ public class DescribeApsMigrationWorkloadsResponseBody extends TeaModel {
              * <p>The number of ACUs.</p>
              * 
              * <strong>example:</strong>
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <p>16</p>
              */
             public Builder acuCount(Integer acuCount) {
                 this.acuCount = acuCount;
@@ -346,7 +344,7 @@ public class DescribeApsMigrationWorkloadsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the task was created. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format and in UTC.</p>
+             * <p>The time when the task was created. The time is displayed in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-06-21T02:15:16Z</p>
@@ -360,9 +358,7 @@ public class DescribeApsMigrationWorkloadsResponseBody extends TeaModel {
              * <p>The error message.</p>
              * 
              * <strong>example:</strong>
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <p>The task execution failed</p>
              */
             public Builder failedMsg(String failedMsg) {
                 this.failedMsg = failedMsg;
@@ -392,7 +388,7 @@ public class DescribeApsMigrationWorkloadsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the task was modified. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format and in UTC.</p>
+             * <p>The time when the task was modified. The time is displayed in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-06-21T02:15:16Z</p>

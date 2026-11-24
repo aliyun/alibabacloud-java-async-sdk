@@ -119,7 +119,7 @@ public class UpdateLakeStorageResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code. A value of 200 indicates that the request is successful.</p>
+         * <p>The status code. A value of 200 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -130,12 +130,10 @@ public class UpdateLakeStorageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The returned result.</p>
          * 
          * <strong>example:</strong>
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>{&quot;Description&quot;:&quot;Sample lake storage&quot;,&quot;RowCount&quot;:1000,&quot;TableCount&quot;:1}</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -143,7 +141,7 @@ public class UpdateLakeStorageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code. A value of 200 indicates that the request was successful.</p>
+         * <p>The HTTP status code returned for the request. A value of 200 indicates that the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -154,10 +152,10 @@ public class UpdateLakeStorageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message. Valid values:</p>
+         * <p>The additional information about the call result. Description:</p>
          * <ul>
-         * <li>If the request was successful, an OK message is returned.</li>
-         * <li>If the request failed, an error message is returned.</li>
+         * <li>If the request is successful, OK is returned.</li>
+         * <li>If the request fails, a specific error code is returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -180,10 +178,10 @@ public class UpdateLakeStorageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -282,7 +280,7 @@ public class UpdateLakeStorageResponseBody extends TeaModel {
              * <p>The account ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>test</p>
+             * <p>1234567890123456</p>
              */
             public Builder account(String account) {
                 this.account = account;
@@ -290,7 +288,7 @@ public class UpdateLakeStorageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The read permissions.</p>
+             * <p>The read permission.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -312,7 +310,7 @@ public class UpdateLakeStorageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The write permissions.</p>
+             * <p>The write permission.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -538,7 +536,7 @@ public class UpdateLakeStorageResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the lake storage was created.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-05-15T07:24:58Z</p>
@@ -549,7 +547,7 @@ public class UpdateLakeStorageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creator UID.</p>
+             * <p>The UID of the creator.</p>
              * 
              * <strong>example:</strong>
              * <p>123456</p>
@@ -560,7 +558,7 @@ public class UpdateLakeStorageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the AnalyticDB for MySQL cluster that is associated with the lake storage.</p>
+             * <p>The ADB instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>amv-23xxxx</p>
@@ -596,9 +594,7 @@ public class UpdateLakeStorageResponseBody extends TeaModel {
              * <p>The unique identifier of the lake storage.</p>
              * 
              * <strong>example:</strong>
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <p>adb-lake-cn-hangzhou-1a1aaaa11a</p>
              */
             public Builder lakeStorageId(String lakeStorageId) {
                 this.lakeStorageId = lakeStorageId;
@@ -606,7 +602,7 @@ public class UpdateLakeStorageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operator UID.</p>
+             * <p>The UID of the operator.</p>
              * 
              * <strong>example:</strong>
              * <p>123456</p>
@@ -617,7 +613,7 @@ public class UpdateLakeStorageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The owner UID.</p>
+             * <p>The UID of the owner.</p>
              * 
              * <strong>example:</strong>
              * <p>123456</p>
@@ -639,12 +635,10 @@ public class UpdateLakeStorageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The permissions on the lake storage.</p>
+             * <p>The permissions of the lake storage.</p>
              * 
              * <strong>example:</strong>
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <p>[{&quot;Account&quot;:&quot;1234567890123456&quot;,&quot;Read&quot;:true,&quot;Write&quot;:true}]</p>
              */
             public Builder permissions(java.util.List<Permissions> permissions) {
                 this.permissions = permissions;
@@ -663,12 +657,10 @@ public class UpdateLakeStorageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of data rows.</p>
              * 
              * <strong>example:</strong>
-             * <blockquote>
-             * <p>=</p>
-             * </blockquote>
+             * <p>1000</p>
              */
             public Builder rowCount(Long rowCount) {
                 this.rowCount = rowCount;
@@ -676,7 +668,7 @@ public class UpdateLakeStorageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of tables.</p>
+             * <p>The number of databases and tables.</p>
              * 
              * <strong>example:</strong>
              * <p>1234</p>
@@ -687,7 +679,7 @@ public class UpdateLakeStorageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the lake storage was last updated.</p>
+             * <p>The update time.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-07-01T09:22:17Z</p>

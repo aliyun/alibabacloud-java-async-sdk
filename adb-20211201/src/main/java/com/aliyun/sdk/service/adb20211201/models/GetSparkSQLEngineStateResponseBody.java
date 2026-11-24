@@ -67,7 +67,7 @@ public class GetSparkSQLEngineStateResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The state information about the Spark SQL engine.</p>
+         * <p>The status details of the Spark SQL engine.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,7 @@ public class GetSparkSQLEngineStateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>xxxx-xxx-xx</p>
@@ -222,7 +222,7 @@ public class GetSparkSQLEngineStateResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the Spark application.</p>
+             * <p>The application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>s202207151211hz0c****</p>
@@ -244,7 +244,7 @@ public class GetSparkSQLEngineStateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The third-party JAR package.</p>
+             * <p>The third-party JAR packages.</p>
              * 
              * <strong>example:</strong>
              * <p>oss://test-bucket/test.jar</p>
@@ -255,7 +255,7 @@ public class GetSparkSQLEngineStateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of started Spark executors.</p>
+             * <p>The maximum number of Spark executors to start.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -266,7 +266,7 @@ public class GetSparkSQLEngineStateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The minimum number of started Spark executors.</p>
+             * <p>The minimum number of Spark executors to start.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -277,7 +277,7 @@ public class GetSparkSQLEngineStateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The slot number of the Spark application.</p>
+             * <p>The slot value of the Spark application.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -288,19 +288,19 @@ public class GetSparkSQLEngineStateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution state of the application. Valid values:</p>
+             * <p>The execution status of the application. Valid values:</p>
              * <ul>
-             * <li>SUBMITTED</li>
-             * <li>STARTING</li>
-             * <li>RUNNING</li>
-             * <li>FAILING</li>
-             * <li>FAILED</li>
-             * <li>KILLING</li>
-             * <li>KILLED</li>
-             * <li>SUCCEEDING</li>
-             * <li>COMPLETED</li>
-             * <li>FATAL</li>
-             * <li>UNKNOWN</li>
+             * <li>SUBMITTED: Submitted.</li>
+             * <li>STARTING: Starting.</li>
+             * <li>RUNNING: Running.</li>
+             * <li>FAILING: The task failed and the environment is being cleaned up.</li>
+             * <li>FAILED: Failed.</li>
+             * <li>KILLING: The task is being terminated and the environment is being cleaned up.</li>
+             * <li>KILLED: Terminated.</li>
+             * <li>SUCCEEDING: The task execution is complete and the environment is being cleaned up.</li>
+             * <li>COMPLETED: Completed.</li>
+             * <li>FATAL: Unexpected failure.</li>
+             * <li>UNKNOWN: Unknown error.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -312,7 +312,7 @@ public class GetSparkSQLEngineStateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the Spark SQL application was submitted. Unit: milliseconds.</p>
+             * <p>The submission time of the Spark SQL application. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1651213645000</p>

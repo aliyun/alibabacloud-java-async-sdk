@@ -260,7 +260,7 @@ public class CreateAPSJobRequest extends Request {
          * <p>The password of the destination instance.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>Example****123!</p>
          */
         public Builder destinationEndpointPassword(String destinationEndpointPassword) {
             this.putBodyParameter("DestinationEndpointPassword", destinationEndpointPassword);
@@ -272,7 +272,7 @@ public class CreateAPSJobRequest extends Request {
          * <p>The username of the destination instance.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>example_user</p>
          */
         public Builder destinationEndpointUserName(String destinationEndpointUserName) {
             this.putBodyParameter("DestinationEndpointUserName", destinationEndpointUserName);
@@ -293,10 +293,7 @@ public class CreateAPSJobRequest extends Request {
         }
 
         /**
-         * <p>The region ID.</p>
-         * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the region ID.</p>
-         * </blockquote>
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -325,7 +322,7 @@ public class CreateAPSJobRequest extends Request {
          * <p>The password of the source endpoint.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>Example****123!</p>
          */
         public Builder sourceEndpointPassword(String sourceEndpointPassword) {
             this.putBodyParameter("SourceEndpointPassword", sourceEndpointPassword);
@@ -349,7 +346,7 @@ public class CreateAPSJobRequest extends Request {
          * <p>The username of the source endpoint.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxx</p>
+         * <p>example_user</p>
          */
         public Builder sourceEndpointUserName(String sourceEndpointUserName) {
             this.putBodyParameter("SourceEndpointUserName", sourceEndpointUserName);
@@ -358,7 +355,7 @@ public class CreateAPSJobRequest extends Request {
         }
 
         /**
-         * <p>The destination table mode.</p>
+         * <p>The mode of the destination table.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

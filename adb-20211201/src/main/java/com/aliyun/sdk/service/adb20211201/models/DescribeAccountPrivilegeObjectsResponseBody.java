@@ -106,7 +106,7 @@ public class DescribeAccountPrivilegeObjectsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The permissions.</p>
+         * <p>The list of privileges.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class DescribeAccountPrivilegeObjectsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number, which is the same as the value passed in the request.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class DescribeAccountPrivilegeObjectsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The page size, which is the same as the value passed in the request.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -242,7 +242,7 @@ public class DescribeAccountPrivilegeObjectsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the column. This parameter is returned when PrivilegeType is set to Column.</p>
+             * <p>The column name. This field is returned when the privilege level is Column.</p>
              * 
              * <strong>example:</strong>
              * <p>column1</p>
@@ -253,7 +253,7 @@ public class DescribeAccountPrivilegeObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the database. This parameter is returned when PrivilegeType is set to Database, Table, or Column.</p>
+             * <p>The database name. This field is returned when the privilege level is Database, Table, or Column.</p>
              * 
              * <strong>example:</strong>
              * <p>tdb1</p>
@@ -264,7 +264,7 @@ public class DescribeAccountPrivilegeObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description that is specified when you create a table or column. This parameter is returned only when PrivilegeType is set to Database or Table, indicating the database description or table description.</p>
+             * <p>The description specified when the table or column is created. This field has a value only when the privilege level is Database or Table, representing the description of the database or table, respectively.</p>
              * 
              * <strong>example:</strong>
              * <p>a test db</p>
@@ -275,7 +275,7 @@ public class DescribeAccountPrivilegeObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the table. This parameter is returned when PrivilegeType is set to Table or Column.</p>
+             * <p>The table name. This field is returned when the privilege level is Table or Column.</p>
              * 
              * <strong>example:</strong>
              * <p>table1</p>

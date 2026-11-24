@@ -241,6 +241,9 @@ public class TableDetailModel extends TeaModel {
 
         /**
          * <p>The creation source of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>APS</p>
          */
         public Builder createdBySource(String createdBySource) {
             this.createdBySource = createdBySource;
@@ -249,6 +252,9 @@ public class TableDetailModel extends TeaModel {
 
         /**
          * <p>The user who created the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example_user</p>
          */
         public Builder createdByUser(String createdByUser) {
             this.createdByUser = createdByUser;
@@ -290,6 +296,9 @@ public class TableDetailModel extends TeaModel {
 
         /**
          * <p>The table property parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;escape.delim&quot;:&quot;\\&quot;,&quot;field.delim&quot;:&quot; &quot;}</p>
          */
         public Builder parameters(java.util.Map<String, String> parameters) {
             this.parameters = parameters;

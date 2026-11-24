@@ -103,7 +103,7 @@ public class GetFormationCrawlerRequest extends Request {
         } 
 
         /**
-         * <p>The task ID.</p>
+         * <p>The ID of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>247</p>
@@ -115,7 +115,7 @@ public class GetFormationCrawlerRequest extends Request {
         }
 
         /**
-         * <p>The task name.</p>
+         * <p>The name of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>test-crawler-dbname</p>
@@ -127,7 +127,7 @@ public class GetFormationCrawlerRequest extends Request {
         }
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The ID of the cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,7 +142,7 @@ public class GetFormationCrawlerRequest extends Request {
         /**
          * <p>The region ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the supported regions and zones, including region IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to view information about supported regions and zones, including region IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

@@ -147,7 +147,7 @@ public class DescribeDiagnosisSQLInfoRequest extends Request {
         /**
          * <p>The cluster ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the cluster IDs of AnalyticDB for MySQL clusters in a specific region.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the ID of an AnalyticDB for MySQL cluster in a specific region.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -161,12 +161,12 @@ public class DescribeDiagnosisSQLInfoRequest extends Request {
         }
 
         /**
-         * <p>The language of the file title and error messages in the downloaded file. Valid values:</p>
+         * <p>The language of the downloaded file title and some error messages. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: simplified Chinese.</li>
+         * <li><strong>zh</strong>: Simplified Chinese.</li>
          * <li><strong>en</strong>: English.</li>
          * <li><strong>ja</strong>: Japanese.</li>
-         * <li><strong>zh-tw</strong>: traditional Chinese.</li>
+         * <li><strong>zh-tw</strong>: Traditional Chinese.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -194,9 +194,9 @@ public class DescribeDiagnosisSQLInfoRequest extends Request {
         }
 
         /**
-         * <p>The IP address and port number of the AnalyticDB for MySQL frontend node that executes the SQL statement.</p>
+         * <p>The IP address and port of the AnalyticDB for MySQL frontend node that executes the SQL statement.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/308207.html">DescribeDiagnosisRecords</a> operation to query the SQL summary information of a specific AnalyticDB for MySQL cluster, including the IP address and port number of the frontend node.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/308207.html">DescribeDiagnosisRecords</a> operation to query the SQL summary information of a specific AnalyticDB for MySQL cluster, including the IP address and port of the frontend node.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -209,7 +209,7 @@ public class DescribeDiagnosisSQLInfoRequest extends Request {
         }
 
         /**
-         * <p>The start time of the SQL statement execution. Specify the value as a UNIX timestamp in milliseconds.</p>
+         * <p>The start time of the SQL statement execution. The time is a UNIX timestamp in milliseconds.</p>
          * <blockquote>
          * <p>You can call the <a href="https://help.aliyun.com/document_detail/308207.html">DescribeDiagnosisRecords</a> operation to query the SQL summary information of a specific AnalyticDB for MySQL cluster, including the start time of the SQL statement execution.</p>
          * </blockquote>
@@ -226,9 +226,9 @@ public class DescribeDiagnosisSQLInfoRequest extends Request {
         /**
          * <p>The status of the SQL statement. Valid values:</p>
          * <ul>
-         * <li><strong>running</strong>: The SQL statement is being executed.</li>
-         * <li><strong>finished</strong>: The SQL statement has been executed.</li>
-         * <li><strong>failed</strong>: The SQL statement failed to be executed.<blockquote>
+         * <li><strong>running</strong>: Running.</li>
+         * <li><strong>finished</strong>: Finished.</li>
+         * <li><strong>failed</strong>: Failed.<blockquote>
          * <p>You can call the <a href="https://help.aliyun.com/document_detail/308207.html">DescribeDiagnosisRecords</a> operation to query the SQL summary information of a specific AnalyticDB for MySQL cluster, including the status of the SQL statement.</p>
          * </blockquote>
          * </li>

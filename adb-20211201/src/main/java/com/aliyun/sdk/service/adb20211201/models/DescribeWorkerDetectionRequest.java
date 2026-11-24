@@ -175,7 +175,7 @@ public class DescribeWorkerDetectionRequest extends Request {
         /**
          * <p>The cluster ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the details of all AnalyticDB for MySQL clusters in a region, including the cluster ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the details of all AnalyticDB for MySQL clusters in a specific region, including the cluster ID.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -189,7 +189,7 @@ public class DescribeWorkerDetectionRequest extends Request {
         }
 
         /**
-         * <p>The end of the query time range. Specify the time in the <i>yyyy-MM-ddTHH:mmZ</i> format (UTC).</p>
+         * <p>The end time of the query. Specify the time in the <i>yyyy-MM-ddTHH:mmZ</i> format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-04-25T02:04Z</p>
@@ -201,9 +201,9 @@ public class DescribeWorkerDetectionRequest extends Request {
         }
 
         /**
-         * <p>The display language of suggestions. Valid values:</p>
+         * <p>The display language of the suggestions. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: simplified Chinese (default).</li>
+         * <li><strong>zh</strong>: Simplified Chinese (default).</li>
          * <li><strong>en</strong>: English.</li>
          * </ul>
          * 
@@ -237,7 +237,7 @@ public class DescribeWorkerDetectionRequest extends Request {
         /**
          * <p>The region ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/612293.html">DescribeRegions</a> operation to query the region ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/612293.html">DescribeRegions</a> operation to query region IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -269,7 +269,7 @@ public class DescribeWorkerDetectionRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the query time range. Specify the time in the <i>yyyy-MM-ddTHH:mmZ</i> format (UTC).</p>
+         * <p>The start time of the query. Specify the time in the <i>yyyy-MM-ddTHH:mmZ</i> format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-11-18T00:00Z</p>

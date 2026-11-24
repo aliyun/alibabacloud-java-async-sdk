@@ -129,9 +129,9 @@ public class DescribeRegionsRequest extends Request {
         } 
 
         /**
-         * <p>The language used for the names of regions and zones (the LocalName values in the response). Valid values:</p>
+         * <p>The language used for the region and zone names (the LocalName field in the response). Valid values:</p>
          * <ul>
-         * <li><strong>zh-CN</strong>: simplified Chinese (default).</li>
+         * <li><strong>zh-CN</strong>: Simplified Chinese (default).</li>
          * <li><strong>en-US</strong>: English.</li>
          * <li><strong>ja</strong>: Japanese.</li>
          * </ul>

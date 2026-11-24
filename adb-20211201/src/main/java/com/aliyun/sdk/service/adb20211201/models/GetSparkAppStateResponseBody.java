@@ -216,7 +216,7 @@ public class GetSparkAppStateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The alert message returned, such as task execution failure or insufficient resources. This parameter is empty if no alerts are generated.</p>
+             * <p>The alert message, such as task execution failure or insufficient resources. This field is empty if no alerts are triggered.</p>
              * 
              * <strong>example:</strong>
              * <p>Insufficient resources.</p>

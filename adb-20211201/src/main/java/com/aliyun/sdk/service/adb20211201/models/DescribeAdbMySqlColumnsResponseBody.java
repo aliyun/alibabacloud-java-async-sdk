@@ -151,9 +151,9 @@ public class DescribeAdbMySqlColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The additional information about the call result. Valid values:</p>
+         * <p>The additional information about the call result.</p>
          * <ul>
-         * <li>If the request is successful, <strong>Success</strong> is returned.</li>
+         * <li>If the request is successful, <strong>Success</strong> is returned. </li>
          * <li>If the request fails, a specific error code is returned.</li>
          * </ul>
          * 
@@ -285,7 +285,7 @@ public class DescribeAdbMySqlColumnsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The column comment.</p>
+             * <p>The comment of the column.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>

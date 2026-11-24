@@ -114,7 +114,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Page number.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of pages.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -136,7 +136,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
@@ -147,7 +147,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Total records.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

@@ -261,7 +261,7 @@ public class GetSparkReplStatementResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the Alibaba Cloud account that owns the cluster.</p>
+             * <p>The ID of the Alibaba Cloud account to which the instance belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>144740799645****</p>
@@ -272,7 +272,7 @@ public class GetSparkReplStatementResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The code that is executed.</p>
+             * <p>The executed code.</p>
              * 
              * <strong>example:</strong>
              * <p>print(1+1)</p>
@@ -283,12 +283,12 @@ public class GetSparkReplStatementResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The code execution status. Valid values:</p>
+             * <p>The execution status of the code. Valid values:</p>
              * <ul>
-             * <li>CANCELLED</li>
-             * <li>RUNNING</li>
-             * <li>SUCCEEDED</li>
-             * <li>ERROR</li>
+             * <li>CANCELLED: The execution is canceled.</li>
+             * <li>RUNNING: The execution is in progress.</li>
+             * <li>SUCCEEDED: The execution is completed.</li>
+             * <li>ERROR: The execution failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -300,7 +300,7 @@ public class GetSparkReplStatementResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The code type. Valid values:</p>
+             * <p>The type of the code. Valid values:</p>
              * <ul>
              * <li>PYTHON</li>
              * <li>SCALA</li>
@@ -315,7 +315,7 @@ public class GetSparkReplStatementResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The column names.</p>
+             * <p>The array of column names.</p>
              */
             public Builder columns(java.util.List<String> columns) {
                 this.columns = columns;
@@ -323,7 +323,7 @@ public class GetSparkReplStatementResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * <p>The end time of the task. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1730968194000</p>
@@ -345,7 +345,7 @@ public class GetSparkReplStatementResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The code execution result, which is a JSON string.</p>
+             * <p>The output result, which is a string in JSON format.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;text/plain&quot;: 2}</p>
@@ -356,12 +356,7 @@ public class GetSparkReplStatementResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution result type.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>TABLE</li>
-             * <li>TEXT</li>
-             * </ul>
+             * <p>The type of the output result.</p>
              * 
              * <strong>example:</strong>
              * <p>TEXT</p>
@@ -372,7 +367,7 @@ public class GetSparkReplStatementResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * <p>The start time of the task. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1730968194000</p>
@@ -383,7 +378,7 @@ public class GetSparkReplStatementResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique ID of the code block in the Spark job.</p>
+             * <p>The unique ID of the code block in this Spark job.</p>
              * 
              * <strong>example:</strong>
              * <p>123</p>

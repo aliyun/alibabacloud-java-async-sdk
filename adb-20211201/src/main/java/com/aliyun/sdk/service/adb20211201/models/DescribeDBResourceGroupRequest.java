@@ -132,7 +132,7 @@ public class DescribeDBResourceGroupRequest extends Request {
         /**
          * <p>The name of the resource group.</p>
          * <blockquote>
-         * <p>If you do not specify this parameter, information about all resource groups in the specified cluster is returned by default.</p>
+         * <p>If you do not specify this parameter, the information about all resource groups in the specified cluster is returned by default.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -149,7 +149,7 @@ public class DescribeDBResourceGroupRequest extends Request {
          * <ul>
          * <li><strong>Interactive</strong></li>
          * <li><strong>Job</strong><blockquote>
-         * <p>For more information about resource groups in Data Lakehouse Edition, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource group overview</a>.</p>
+         * <p>For more information about Data Lakehouse Edition resource groups, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource groups</a>.</p>
          * </blockquote>
          * </li>
          * </ul>

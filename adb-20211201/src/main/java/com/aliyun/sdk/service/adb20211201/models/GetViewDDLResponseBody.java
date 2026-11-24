@@ -67,7 +67,7 @@ public class GetViewDDLResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>421794A3-72A5-5D27-9E8B-A75A4C503E17</p>
@@ -78,7 +78,7 @@ public class GetViewDDLResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The SQL statement.</p>
+         * <p>The details of the SQL statement.</p>
          * 
          * <strong>example:</strong>
          * <p>CREATE VIEW <code>test</code>.<code>test_view</code> AS SELECT

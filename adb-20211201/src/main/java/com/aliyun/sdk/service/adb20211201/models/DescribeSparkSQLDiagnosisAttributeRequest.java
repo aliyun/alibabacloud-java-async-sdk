@@ -139,7 +139,7 @@ public class DescribeSparkSQLDiagnosisAttributeRequest extends Request {
          * <p>The cluster ID.</p>
          * <blockquote>
          * <ul>
-         * <li>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to view the information of all clusters in the specified region, including cluster IDs.</li>
+         * <li>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to view the information of all clusters in the specified region, including the cluster ID.</li>
          * </ul>
          * </blockquote>
          * <p>This parameter is required.</p>
@@ -167,7 +167,7 @@ public class DescribeSparkSQLDiagnosisAttributeRequest extends Request {
         }
 
         /**
-         * <p>The language type. The description of the system access policy is returned in this language.</p>
+         * <p>The language type. The description of the system access policy is returned in this language. Valid values:</p>
          * <ul>
          * <li>en: English.</li>
          * <li>zh: Chinese.</li>

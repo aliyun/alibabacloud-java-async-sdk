@@ -209,7 +209,7 @@ public class QueryFormationInstsByTaskIDResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message. The value is OK when the request is successful.</p>
+         * <p>The message. The value is OK if the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -231,7 +231,7 @@ public class QueryFormationInstsByTaskIDResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of pages.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -253,7 +253,7 @@ public class QueryFormationInstsByTaskIDResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -540,11 +540,7 @@ public class QueryFormationInstsByTaskIDResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task source. Valid values:</p>
-             * <ul>
-             * <li><strong>system</strong>: System.</li>
-             * <li><strong>custom</strong>: Custom.</li>
-             * </ul>
+             * <p>The task source. Valid values: - <strong>system</strong>: System. - <strong>custom</strong>: Custom.</p>
              * 
              * <strong>example:</strong>
              * <p>shareScreen</p>

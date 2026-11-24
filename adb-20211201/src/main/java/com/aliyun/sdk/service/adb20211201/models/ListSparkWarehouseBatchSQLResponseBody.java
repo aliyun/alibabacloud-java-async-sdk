@@ -192,7 +192,7 @@ public class ListSparkWarehouseBatchSQLResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The queried Spark SQL statements.</p>
+             * <p>The list of executed Spark SQL statements.</p>
              */
             public Builder queries(java.util.List<SparkBatchSQL> queries) {
                 this.queries = queries;

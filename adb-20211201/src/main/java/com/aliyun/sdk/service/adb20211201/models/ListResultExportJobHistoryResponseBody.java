@@ -158,7 +158,7 @@ public class ListResultExportJobHistoryResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The operation status code or POP error code.</p>
          * 
          * <strong>example:</strong>
          * <p>InvalidInput</p>
@@ -169,7 +169,7 @@ public class ListResultExportJobHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response code. The status code 200 indicates that the request was successful.</p>
+         * <p>The HTTP status code returned. A status code of 200 indicates that the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -180,7 +180,7 @@ public class ListResultExportJobHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The queried result set export jobs.</p>
+         * <p>The list details.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -188,10 +188,10 @@ public class ListResultExportJobHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message. Valid values:</p>
+         * <p>The additional information about the call result. Valid values:</p>
          * <ul>
-         * <li>If the request was successful, an <strong>OK</strong> message is returned.</li>
-         * <li>If the request failed, an error message is returned.</li>
+         * <li><strong>Ok</strong>: The request is normal.                                </li>
+         * <li>Specific error code: An exception occurred.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -203,7 +203,7 @@ public class ListResultExportJobHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number, which is the same as the value passed in the request.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -214,7 +214,7 @@ public class ListResultExportJobHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -236,10 +236,10 @@ public class ListResultExportJobHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -251,7 +251,7 @@ public class ListResultExportJobHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>174</p>
@@ -554,7 +554,7 @@ public class ListResultExportJobHistoryResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The RAM user ID.</p>
+             * <p>The ID of the Resource Access Management (RAM) user.</p>
              * 
              * <strong>example:</strong>
              * <p>120010511678****</p>
@@ -565,7 +565,7 @@ public class ListResultExportJobHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the result set export job was created. The time follows the ISO 8601 standard in the <em>yyyy-mm-ddThh:mm:ssZ</em> format. The time is displayed in UTC.</p>
+             * <p>The time when the result set export task was created. Specify the time in the <i>yyyy-mm-ddThh:mm:ssZ</i> format. The time must be in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-04-01T09:50:18Z</p>
@@ -576,7 +576,7 @@ public class ListResultExportJobHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+             * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (3.0) cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>amv-7xv5ty5m9o4v****</p>
@@ -587,7 +587,7 @@ public class ListResultExportJobHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the database account that is associated with the RAM user.</p>
+             * <p>The name of the database account associated with the Resource Access Management (RAM) user.</p>
              * 
              * <strong>example:</strong>
              * <p>ram_user</p>
@@ -598,9 +598,9 @@ public class ListResultExportJobHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the result set export job. The time follows the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mm:ssZ</em> format. The time is displayed in UTC.</p>
+             * <p>The end time of the query. Specify the time in the <i>yyyy-MM-ddTHH:mm:ssZ</i> format. The time must be in UTC.</p>
              * <blockquote>
-             * <p> The end time must be later than the start time.</p>
+             * <p>The end time must be later than the start time.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -612,7 +612,7 @@ public class ListResultExportJobHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The engine that is used to execute the result set export job. Only XIHE is returned.</p>
+             * <p>The engine used to execute the task. Only XIHE is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>XIHE</p>
@@ -623,7 +623,7 @@ public class ListResultExportJobHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique identifier of the result set export job.</p>
+             * <p>The unique identifier of the result set export task.</p>
              * 
              * <strong>example:</strong>
              * <p>export_2024051319271219802100800401300****</p>
@@ -634,7 +634,7 @@ public class ListResultExportJobHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The complete URL of the path to store the exported result set.</p>
+             * <p>The complete address of the result set.</p>
              */
             public Builder exportPath(String exportPath) {
                 this.exportPath = exportPath;
@@ -642,7 +642,7 @@ public class ListResultExportJobHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of exported rows. This parameter is returned only when the request was successful.</p>
+             * <p>The number of exported rows. This parameter is returned only when the operation call is successful.</p>
              * 
              * <strong>example:</strong>
              * <p>10000</p>
@@ -653,12 +653,10 @@ public class ListResultExportJobHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the result set export job.</p>
+             * <p>The export type.</p>
              * 
              * <strong>example:</strong>
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <p>OSS</p>
              */
             public Builder exportType(String exportType) {
                 this.exportType = exportType;
@@ -666,10 +664,10 @@ public class ListResultExportJobHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the result set export job has expired. Valid values:</p>
+             * <p>Indicates whether the task has expired. Valid values:</p>
              * <ul>
-             * <li><strong>false</strong></li>
-             * <li><strong>true</strong></li>
+             * <li><strong>false</strong>: The task has not expired.</li>
+             * <li><strong>true</strong>: The task has expired.</li>
              * </ul>
              */
             public Builder isExpired(Boolean isExpired) {
@@ -678,7 +676,7 @@ public class ListResultExportJobHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The returned message. This parameter is returned only when the request failed.</p>
+             * <p>The error message of the SQL execution for the result set export. This message is returned only when the task fails.</p>
              * 
              * <strong>example:</strong>
              * <p>Failed to execute SQL</p>
@@ -689,9 +687,9 @@ public class ListResultExportJobHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The query ID that can be used for diagnostics.</p>
+             * <p>The SQL query ID returned for diagnostics.</p>
              * <blockquote>
-             * <p> You can call the <a href="https://help.aliyun.com/document_detail/612337.html">DescribeDiagnosisSQLInfo</a> operation to query the execution information about a query.</p>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/612495.html">DescribeDiagnosisSQLInfo</a> operation to diagnose the query.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -703,7 +701,7 @@ public class ListResultExportJobHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The progress of the result set export job. Unit: %. Valid values: 0 to 100.</p>
+             * <p>The export progress. Unit: percentage (%). Valid values: 0 to 100.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -714,7 +712,7 @@ public class ListResultExportJobHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the resource group that runs the result set export job.</p>
+             * <p>The resource group in which the task is executed.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -736,7 +734,7 @@ public class ListResultExportJobHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The SQL statement that is used in the result set export job.</p>
+             * <p>The details of the SQL statement used in the result set export task.</p>
              * 
              * <strong>example:</strong>
              * <p>SELECT * FROM <code>ADB_SampleData_TPCH</code>.<code>supplier</code> LIMIT 20</p>
@@ -747,7 +745,7 @@ public class ListResultExportJobHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the result set export job. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * <p>The start time of the task. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-07-03T04:00:00Z</p>
@@ -758,12 +756,12 @@ public class ListResultExportJobHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution status of the result set export job. Valid values:</p>
+             * <p>The execution status of the export task. Valid values:</p>
              * <ol>
-             * <li><strong>SUBMITTED</strong></li>
-             * <li><strong>RUNNING</strong></li>
-             * <li><strong>SUCCEEDED</strong></li>
-             * <li><strong>FAILED</strong></li>
+             * <li><strong>SUBMITTED</strong>: The task is submitted.</li>
+             * <li><strong>RUNNING</strong>: The task is running.</li>
+             * <li><strong>SUCCEEDED</strong>: The task succeeded.</li>
+             * <li><strong>FAILED</strong>: The task failed.</li>
              * </ol>
              * 
              * <strong>example:</strong>
@@ -775,9 +773,9 @@ public class ListResultExportJobHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The amount of time consumed to export execution records. Unit: milliseconds.</p>
+             * <p>The time consumed for data export, in milliseconds.</p>
              * <blockquote>
-             * <p> The value is the duration between the time when the result set export job starts and the time when the result set export job ends.</p>
+             * <p>The time is calculated from the start of the data export task to the end of the export.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

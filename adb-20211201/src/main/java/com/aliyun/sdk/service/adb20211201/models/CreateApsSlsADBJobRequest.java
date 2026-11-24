@@ -503,7 +503,7 @@ public class CreateApsSlsADBJobRequest extends Request {
         } 
 
         /**
-         * <p>The role name for cross-account access.</p>
+         * <p>The cross-account role name.</p>
          * 
          * <strong>example:</strong>
          * <p>test-role</p>
@@ -515,7 +515,7 @@ public class CreateApsSlsADBJobRequest extends Request {
         }
 
         /**
-         * <p>The UID for cross-account access.</p>
+         * <p>The cross-account UID.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -545,9 +545,7 @@ public class CreateApsSlsADBJobRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>[{&quot;MapName&quot;:&quot;test&quot;,&quot;MapType&quot;:&quot;int&quot;,&quot;Name&quot;:&quot;id&quot;,&quot;Type&quot;:&quot;bigint&quot;}]</p>
          */
         public Builder columns(java.util.List<Columns> columns) {
             String columnsShrink = shrink(columns, "Columns", "json");
@@ -599,9 +597,7 @@ public class CreateApsSlsADBJobRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>STOP</p>
          */
         public Builder dirtyDataHandleMode(String dirtyDataHandleMode) {
             this.putBodyParameter("DirtyDataHandleMode", dirtyDataHandleMode);
@@ -622,7 +618,7 @@ public class CreateApsSlsADBJobRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable exactly-once semantics.</p>
+         * <p>Specifies whether exactly-once semantics is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -634,7 +630,7 @@ public class CreateApsSlsADBJobRequest extends Request {
         }
 
         /**
-         * <p>The number of AnalyticDB compute units (ACUs) for full data synchronization.</p>
+         * <p>The full ACUs.</p>
          * 
          * <strong>example:</strong>
          * <p>16</p>
@@ -660,7 +656,7 @@ public class CreateApsSlsADBJobRequest extends Request {
         }
 
         /**
-         * <p>The number of AnalyticDB compute units (ACUs) for incremental data synchronization.</p>
+         * <p>The incremental ACUs.</p>
          * 
          * <strong>example:</strong>
          * <p>168</p>
@@ -672,7 +668,7 @@ public class CreateApsSlsADBJobRequest extends Request {
         }
 
         /**
-         * <p>lakehosue ID。</p>
+         * <p>The lakehouse ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -684,12 +680,10 @@ public class CreateApsSlsADBJobRequest extends Request {
         }
 
         /**
-         * <p>The maximum offset.</p>
+         * <p>The maximum number of offsets per trigger.</p>
          * 
          * <strong>example:</strong>
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>20000</p>
          */
         public Builder maxOffsetsPerTrigger(Long maxOffsetsPerTrigger) {
             this.putBodyParameter("MaxOffsetsPerTrigger", maxOffsetsPerTrigger);
@@ -698,7 +692,7 @@ public class CreateApsSlsADBJobRequest extends Request {
         }
 
         /**
-         * <p>The OSS address.</p>
+         * <p>The OSS location.</p>
          * 
          * <strong>example:</strong>
          * <p>oss://test*</p>
@@ -727,9 +721,7 @@ public class CreateApsSlsADBJobRequest extends Request {
          * <p>The partition information.</p>
          * 
          * <strong>example:</strong>
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>[]</p>
          */
         public Builder partitionSpecs(java.util.List<java.util.Map<String, ?>> partitionSpecs) {
             String partitionSpecsShrink = shrink(partitionSpecs, "PartitionSpecs", "json");
@@ -815,7 +807,7 @@ public class CreateApsSlsADBJobRequest extends Request {
         }
 
         /**
-         * <p>The starting offset for delivery.</p>
+         * <p>The starting offset.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -828,7 +820,7 @@ public class CreateApsSlsADBJobRequest extends Request {
         }
 
         /**
-         * <p>sls Store。</p>
+         * <p>The SLS store.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -853,7 +845,7 @@ public class CreateApsSlsADBJobRequest extends Request {
         }
 
         /**
-         * <p>The generation rule for the destination.</p>
+         * <p>The destination generation rule.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -879,12 +871,10 @@ public class CreateApsSlsADBJobRequest extends Request {
         }
 
         /**
-         * <p>The UNIX timestamp conversion configuration.</p>
+         * <p>The UNIX timestamp conversion.</p>
          * 
          * <strong>example:</strong>
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>{&quot;Transform&quot;:false}</p>
          */
         public Builder unixTimestampConvert(UnixTimestampConvert unixTimestampConvert) {
             String unixTimestampConvertShrink = shrink(unixTimestampConvert, "UnixTimestampConvert", "json");
@@ -1038,7 +1028,7 @@ public class CreateApsSlsADBJobRequest extends Request {
             }
 
             /**
-             * <p>The column data type.</p>
+             * <p>The data type of the column.</p>
              * 
              * <strong>example:</strong>
              * <p>bigint</p>
@@ -1121,7 +1111,7 @@ public class CreateApsSlsADBJobRequest extends Request {
             } 
 
             /**
-             * <p>The conversion method.</p>
+             * <p>The conversion.</p>
              * 
              * <strong>example:</strong>
              * <p>false。</p>
@@ -1143,7 +1133,7 @@ public class CreateApsSlsADBJobRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable conversion.</p>
+             * <p>Specifies whether to enable the conversion.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>

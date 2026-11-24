@@ -125,7 +125,7 @@ public class DescribeViewJobsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of records per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -147,7 +147,7 @@ public class DescribeViewJobsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of records.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>44</p>
@@ -261,7 +261,7 @@ public class DescribeViewJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of records per page.</p>
+             * <p>The number of entries per page.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -272,7 +272,7 @@ public class DescribeViewJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of records.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>44</p>

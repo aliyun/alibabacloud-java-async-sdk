@@ -183,7 +183,7 @@ public class DescribePerformanceViewAttributeRequest extends Request {
         /**
          * <p>The region ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the supported regions and zones, including region IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query information about supported regions and zones, including region IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -219,7 +219,7 @@ public class DescribePerformanceViewAttributeRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>Custom-All metrics-2 columns-Linked</p>
+         * <p>Custom-All metrics-2 columns-linked</p>
          */
         public Builder viewName(String viewName) {
             this.putQueryParameter("ViewName", viewName);

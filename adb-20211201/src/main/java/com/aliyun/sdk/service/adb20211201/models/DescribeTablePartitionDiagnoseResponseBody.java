@@ -171,7 +171,7 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the request denial.</p>
+         * <p>The details of the access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -201,7 +201,7 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The queried detection items and detection results.</p>
+         * <p>The list of check items and check results.</p>
          */
         public Builder detectionItems(java.util.List<DetectionItems> detectionItems) {
             this.detectionItems = detectionItems;
@@ -209,7 +209,7 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The queried partition diagnostic information.</p>
+         * <p>The details.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -250,7 +250,7 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The recommended maximum number of rows in each partition.</p>
+         * <p>The recommended maximum number of rows for subpartitions.</p>
          * 
          * <strong>example:</strong>
          * <p>640000000</p>
@@ -261,7 +261,7 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The recommended minimum number of rows in each partition.</p>
+         * <p>The recommended minimum number of rows for subpartitions.</p>
          * 
          * <strong>example:</strong>
          * <p>64000000</p>
@@ -272,7 +272,7 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>185</p>
@@ -354,10 +354,10 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The detection result.</p>
+             * <p>The check result message.</p>
              * 
              * <strong>example:</strong>
-             * <p>Multiple oversized non-partitioned tables are detected.</p>
+             * <p>Unreasonable partitions detected in the table</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -365,10 +365,10 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the detection item.</p>
+             * <p>The name of the check item.</p>
              * 
              * <strong>example:</strong>
-             * <p>Improper partition field diagnostics</p>
+             * <p>Table partition rationality check</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -376,7 +376,7 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The severity level of the detection result. Valid values:</p>
+             * <p>The status of the check result. Valid values:</p>
              * <ul>
              * <li>NORMAL</li>
              * <li>WARNING</li>
@@ -503,7 +503,7 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The improper partitions.</p>
+             * <p>The unreasonable partitions.</p>
              * 
              * <strong>example:</strong>
              * <p>[20210110, 20210113,20210123]</p>
@@ -525,7 +525,7 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the database.</p>
+             * <p>The database name.</p>
              * 
              * <strong>example:</strong>
              * <p>test_db</p>
@@ -536,9 +536,9 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage percentage of the table. Unit: %.</p>
+             * <p>The table storage proportion. Unit: %.</p>
              * <blockquote>
-             * <p> Formula: Table storage percentage = Total data size of a table/Total data size of the cluster × 100%.</p>
+             * <p>Calculation formula: Table storage proportion = Total data volume of the table / Total data volume of the instance × 100.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -550,7 +550,7 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the table.</p>
+             * <p>The table name.</p>
              * 
              * <strong>example:</strong>
              * <p>user</p>
@@ -561,7 +561,7 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total data size of the table. Unit: bytes.</p>
+             * <p>The total data volume. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>42949672960</p>

@@ -115,12 +115,10 @@ public class CreateLakeStorageRequest extends Request {
         } 
 
         /**
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>The client token that is used to ensure request idempotence. If you use the same token for requests with different parameters, the IdempotentParameterMismatch error is returned.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>b2cd****3efg</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -129,7 +127,7 @@ public class CreateLakeStorageRequest extends Request {
         }
 
         /**
-         * <p>The instance ID of the ADB instance attached to the lake storage.</p>
+         * <p>The instance ID of the ADB instance to which the lake storage is attached.</p>
          * 
          * <strong>example:</strong>
          * <p>amv-******</p>
@@ -153,12 +151,10 @@ public class CreateLakeStorageRequest extends Request {
         }
 
         /**
-         * <p>When lake storage is created, permissions are automatically granted to the Resource Access Management (RAM) users performing the operation and the Alibaba Cloud account. You can increase additional Alibaba Cloud account authorizations here.</p>
+         * <p>When you create a lake storage, permissions are automatically granted to the Resource Access Management (RAM) users and the primary account used for the operation. You can increase additional authorizations for the primary account here.</p>
          * 
          * <strong>example:</strong>
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>[{&quot;Account&quot;:&quot;1234567890123456&quot;,&quot;Read&quot;:true,&quot;Type&quot;:&quot;CUSTOMER&quot;,&quot;Write&quot;:true}]</p>
          */
         public Builder permissions(java.util.List<Permissions> permissions) {
             String permissionsShrink = shrink(permissions, "Permissions", "json");
@@ -268,9 +264,7 @@ public class CreateLakeStorageRequest extends Request {
              * <p>The account ID.</p>
              * 
              * <strong>example:</strong>
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <p>1234567890123456</p>
              */
             public Builder account(String account) {
                 this.account = account;
@@ -281,9 +275,7 @@ public class CreateLakeStorageRequest extends Request {
              * <p>The read permission.</p>
              * 
              * <strong>example:</strong>
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <p>true</p>
              */
             public Builder read(Boolean read) {
                 this.read = read;
@@ -294,9 +286,7 @@ public class CreateLakeStorageRequest extends Request {
              * <p>The account type.</p>
              * 
              * <strong>example:</strong>
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <p>CUSTOMER</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -307,9 +297,7 @@ public class CreateLakeStorageRequest extends Request {
              * <p>The write permission.</p>
              * 
              * <strong>example:</strong>
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <p>true</p>
              */
             public Builder write(Boolean write) {
                 this.write = write;

@@ -209,6 +209,9 @@ public class TableSummaryModel extends TeaModel {
 
         /**
          * <p>The creation source of the table or view.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>XIHE</p>
          */
         public Builder createdBySource(String createdBySource) {
             this.createdBySource = createdBySource;
@@ -217,6 +220,9 @@ public class TableSummaryModel extends TeaModel {
 
         /**
          * <p>The user who created the table or view.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example_user</p>
          */
         public Builder createdByUser(String createdByUser) {
             this.createdByUser = createdByUser;

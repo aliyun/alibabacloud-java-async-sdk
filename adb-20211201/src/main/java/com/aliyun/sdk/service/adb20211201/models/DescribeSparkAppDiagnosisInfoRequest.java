@@ -107,7 +107,7 @@ public class DescribeSparkAppDiagnosisInfoRequest extends Request {
         /**
          * <p>The application ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/455888.html">ListSparkApps</a> operation to query all application IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/455888.html">ListSparkApps</a> operation to query all application IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -123,7 +123,7 @@ public class DescribeSparkAppDiagnosisInfoRequest extends Request {
         /**
          * <p>The cluster ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to view the information of all clusters in the specified region, including cluster IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -137,15 +137,15 @@ public class DescribeSparkAppDiagnosisInfoRequest extends Request {
         }
 
         /**
-         * <p>The language in which you want to display the results. Valid values:</p>
+         * <p>The language of the response. Valid values: </p>
          * <ul>
-         * <li>en: English.</li>
-         * <li>zh (default): Chinese.</li>
+         * <li>en: English. </li>
+         * <li>zh: Chinese. This is the default value.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>PYTHON</p>
+         * <p>zh</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -156,7 +156,7 @@ public class DescribeSparkAppDiagnosisInfoRequest extends Request {
         /**
          * <p>The region ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to view the regions and zones supported by AnalyticDB for MySQL, including region IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

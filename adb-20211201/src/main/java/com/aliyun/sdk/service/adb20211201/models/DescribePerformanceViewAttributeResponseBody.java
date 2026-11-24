@@ -177,7 +177,7 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the keys completed in the original monitoring view are populated when you view the monitoring view. Valid values:</p>
+         * <p>Specifies whether to populate the keys from the original monitoring view when querying the monitoring view. Valid values:</p>
          * <ul>
          * <li>true</li>
          * <li>false</li>
@@ -214,7 +214,7 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
          * <p>The name of the monitoring view.</p>
          * 
          * <strong>example:</strong>
-         * <p>Custom-All metrics-2 columns-Linked</p>
+         * <p>Custom-All metrics-2 columns-linked</p>
          */
         public Builder viewName(String viewName) {
             this.viewName = viewName;
@@ -354,7 +354,7 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the metric is selected. Valid values:</p>
+             * <p>Specifies whether the metric is selected. Valid values:</p>
              * <ul>
              * <li>true</li>
              * <li>false</li>
@@ -533,7 +533,7 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether it is a linkage chart. Valid values:</p>
+             * <p>Specifies whether it is a linkage chart. Valid values:</p>
              * <ul>
              * <li>true</li>
              * <li>false</li>

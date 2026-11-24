@@ -219,7 +219,7 @@ public class DeletePerformanceViewRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>Custom-All metrics-2 columns-Linked</p>
+         * <p>自定义-全部指标-2列-联动</p>
          */
         public Builder viewName(String viewName) {
             this.putQueryParameter("ViewName", viewName);

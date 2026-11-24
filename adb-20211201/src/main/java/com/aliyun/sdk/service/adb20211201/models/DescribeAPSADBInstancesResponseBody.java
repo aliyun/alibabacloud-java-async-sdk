@@ -158,7 +158,7 @@ public class DescribeAPSADBInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code or the error code.</p>
+         * <p>The status code or POP error code.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -180,12 +180,10 @@ public class DescribeAPSADBInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The queried clusters.</p>
+         * <p>The list of items.</p>
          * 
          * <strong>example:</strong>
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>[{&quot;DBClusterId&quot;:&quot;amv-example&quot;,&quot;DBClusterDescription&quot;:&quot;Example cluster&quot;}]</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -193,10 +191,10 @@ public class DescribeAPSADBInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message. Valid values:</p>
+         * <p>The additional information about the call result. Valid values:</p>
          * <ul>
-         * <li>If the request was successful, a success message is returned.****</li>
-         * <li>If the request failed, an error message is returned.</li>
+         * <li>If the request is normal, <strong>Success</strong> is returned. </li>
+         * <li>If the request is abnormal, a specific error code is returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -233,7 +231,7 @@ public class DescribeAPSADBInstancesResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>12345678-1234-4ABC-8DEF-123456789012</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -241,10 +239,10 @@ public class DescribeAPSADBInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -256,7 +254,7 @@ public class DescribeAPSADBInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of returned entries.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -390,7 +388,7 @@ public class DescribeAPSADBInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The specifications of the reserved computing resources.</p>
+             * <p>The specifications of reserved compute resources.</p>
              * 
              * <strong>example:</strong>
              * <p>16ACU</p>
@@ -412,7 +410,7 @@ public class DescribeAPSADBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+             * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (3.0) cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>am-bp1********</p>
@@ -434,7 +432,7 @@ public class DescribeAPSADBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The amount of remaining reserved computing resources that are available in the cluster.</p>
+             * <p>The remaining allocatable reserved compute resources of the cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>24ACU</p>
@@ -445,7 +443,7 @@ public class DescribeAPSADBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The specifications of the reserved storage resources.</p>
+             * <p>The specifications of reserved storage resources.</p>
              * 
              * <strong>example:</strong>
              * <p>24ACU</p>

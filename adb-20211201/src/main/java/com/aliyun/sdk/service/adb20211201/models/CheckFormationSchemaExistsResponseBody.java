@@ -130,7 +130,7 @@ public class CheckFormationSchemaExistsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the schema exists.</p>
+         * <p>Indicates whether the metadata discovery schema exists.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -152,7 +152,7 @@ public class CheckFormationSchemaExistsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message. OK is returned if the request is successful.</p>
+         * <p>The returned message. The value is OK if the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -174,7 +174,7 @@ public class CheckFormationSchemaExistsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

@@ -357,10 +357,10 @@ public class DescribeSparkAuditLogRecordsRequest extends Request {
         /**
          * <p>The cluster ID.</p>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li>You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query cluster IDs.</li>
+         * <li>You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the cluster ID.</li>
          * </ul>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -373,7 +373,8 @@ public class DescribeSparkAuditLogRecordsRequest extends Request {
         }
 
         /**
-         * <p>Query end time. The end time must be later than the start time, and the interval between them must be less than 1 day. Format: yyyy-MM-ddTHH:mmZ (UTC time).</p>
+         * <p>The end time of the query. The end time must be later than the start time, and the interval between the start time and the end time must be less than one day.
+         * Format: yyyy-MM-ddTHH:mmZ (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2025-09-25T01:00Z</p>
@@ -385,24 +386,24 @@ public class DescribeSparkAuditLogRecordsRequest extends Request {
         }
 
         /**
-         * <p>Sort the SQL statements based on specified fields. The format is a JSON array that preserves order, and composite sorting is performed according to the sequence of objects in the array. Each object contains two fields: <code>Field</code> and <code>Type</code>. For example:<code>[{&quot;Field&quot;:&quot;CreateTime&quot;, &quot;Type&quot;: &quot;desc&quot; }]</code>. Where:</p>
+         * <p>The sorting rule for SQL statements based on specified fields. The value is a JSON array that specifies composite sorting in the order of the input array. The array contains the <code>Field</code> and <code>Type</code> fields. Example: <code>[{&quot;Field&quot;:&quot;TotalTime&quot;, &quot;Type&quot;: &quot;desc&quot; }]</code>.</p>
          * <ul>
-         * <li><p><code>Field</code> specifies the field that is used to sort the SQL statements. Valid values:</p>
+         * <li><p><code>Field</code>: the name of the field to sort by. Valid values:</p>
          * <ul>
-         * <li><code>ResourceGroupName</code>: The name of the resource group.</li>
-         * <li><code>Status</code> :SQL execution status.</li>
-         * <li><code>User</code>: The username that is used to execute the SQL statement.</li>
-         * <li><code>ExecuteTime</code>: The start time of SQL execution.</li>
-         * <li><code>TotalTime</code>: The amount of time consumed to execute the SQL statement.</li>
-         * <li><code>ProcessId</code>: Query ID.</li>
-         * <li><code>ClientIp</code>: The source IP address.</li>
-         * <li><code>StatementSource</code>: The source from which the query was initiated.</li>
+         * <li><code>ResourceGroupName</code>: the name of the resource group.</li>
+         * <li><code>Status</code>: the execution status of the SQL statement.</li>
+         * <li><code>User</code>: the username that executed the SQL statement.</li>
+         * <li><code>ExecuteTime</code>: the start time of the SQL execution.</li>
+         * <li><code>TotalTime</code>: the execution duration of the SQL statement.</li>
+         * <li><code>ProcessId</code>: the query ID.</li>
+         * <li><code>ClientIp</code>: the source IP address.</li>
+         * <li><code>StatementSource</code>: the source from which the query is initiated.</li>
          * </ul>
          * </li>
-         * <li><p><code>Type</code> specifies the sorting order. Valid values (case-insensitive):</p>
+         * <li><p><code>Type</code>: the sorting type. Valid values (case-insensitive):</p>
          * <ul>
-         * <li><code>Desc</code>: Descending order.</li>
-         * <li><code>Asc</code>: Ascending order.</li>
+         * <li><code>Desc</code>: descending order.</li>
+         * <li><code>Asc</code>: ascending order.</li>
          * </ul>
          * </li>
          * </ul>
@@ -447,7 +448,7 @@ public class DescribeSparkAuditLogRecordsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -471,7 +472,7 @@ public class DescribeSparkAuditLogRecordsRequest extends Request {
         }
 
         /**
-         * <p>This parameter is deprecated.</p>
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated.</p>
          * 
          * <strong>example:</strong>
          * <p>user</p>
@@ -485,7 +486,7 @@ public class DescribeSparkAuditLogRecordsRequest extends Request {
         /**
          * <p>The region ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/612293.html">DescribeRegions</a> operation to query the available regions and zones, including region ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/612293.html">DescribeRegions</a> operation to view the regions and zones supported by AnalyticDB for MySQL, including region IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -499,9 +500,9 @@ public class DescribeSparkAuditLogRecordsRequest extends Request {
         }
 
         /**
-         * <p>The resource group name.</p>
+         * <p>The name of the resource group.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/612410.html">DescribeDBResourceGroup</a> operation to query the resource group ID within a cluster.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/612410.html">DescribeDBResourceGroup</a> operation to view the resource group ID of the cluster.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -544,9 +545,9 @@ public class DescribeSparkAuditLogRecordsRequest extends Request {
         }
 
         /**
-         * <p>Query start time. Format: <em>yyyy-MM-ddTHH:mmZ</em> (UTC time).</p>
+         * <p>The start time of the query. Format: <i>yyyy-MM-ddTHH:mmZ</i> (UTC).</p>
          * <blockquote>
-         * <p> We recommend that you set the query start time to any point in time within 30 days.</p>
+         * <p>Set the start time to a point in time within the last 30 days.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -559,7 +560,7 @@ public class DescribeSparkAuditLogRecordsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the statement.</p>
+         * <p>The statement ID.</p>
          * 
          * <strong>example:</strong>
          * <p>fbd22066-1c03-xxxx-aa16-6ae28288****</p>
@@ -571,12 +572,7 @@ public class DescribeSparkAuditLogRecordsRequest extends Request {
         }
 
         /**
-         * <p>The source from which the query was initiated.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>SQL_EDITOR: SQL_EDITOR.</li>
-         * <li>JDBC: JDBC.</li>
-         * </ul>
+         * <p>The source from which the query is initiated.</p>
          * 
          * <strong>example:</strong>
          * <p>SQL_EDITOR</p>
@@ -589,13 +585,6 @@ public class DescribeSparkAuditLogRecordsRequest extends Request {
 
         /**
          * <p>The execution status of the SQL statement.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>cancel: The task is canceled .</li>
-         * <li>finished: The execution succeeds .</li>
-         * <li>error:The execution fails .</li>
-         * <li>timeout: The execution timed out .</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>finish</p>
@@ -607,7 +596,7 @@ public class DescribeSparkAuditLogRecordsRequest extends Request {
         }
 
         /**
-         * <p>The duration of the SQL statement. Unit: milliseconds.</p>
+         * <p>The execution duration of the SQL statement. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>3000</p>
@@ -619,7 +608,7 @@ public class DescribeSparkAuditLogRecordsRequest extends Request {
         }
 
         /**
-         * <p>The username that is used to execute SQL statements.</p>
+         * <p>The username that executed the SQL statement.</p>
          * 
          * <strong>example:</strong>
          * <p>test_user</p>

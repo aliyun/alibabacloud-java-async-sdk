@@ -91,7 +91,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -210,7 +210,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
              * <p>The number of elastic ACUs.</p>
              * 
              * <strong>example:</strong>
-             * <p>16ACU</p>
+             * <p>16</p>
              */
             public Builder elasticAcuNumber(Float elasticAcuNumber) {
                 this.elasticAcuNumber = elasticAcuNumber;
@@ -221,7 +221,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
              * <p>The number of reserved ACUs.</p>
              * 
              * <strong>example:</strong>
-             * <p>16ACU</p>
+             * <p>16</p>
              */
             public Builder reservedAcuNumber(Float reservedAcuNumber) {
                 this.reservedAcuNumber = reservedAcuNumber;
@@ -232,7 +232,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
              * <p>The number of spot instance ACUs.</p>
              * 
              * <strong>example:</strong>
-             * <p>16ACU</p>
+             * <p>16</p>
              */
             public Builder spotAcuNumber(Float spotAcuNumber) {
                 this.spotAcuNumber = spotAcuNumber;
@@ -240,7 +240,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The percentage of spot instance resources in the total elastic resources.</p>
+             * <p>The ratio of spot instance resources to total elastic resources.</p>
              * 
              * <strong>example:</strong>
              * <p>0.9</p>
@@ -254,7 +254,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
              * <p>The total number of ACUs.</p>
              * 
              * <strong>example:</strong>
-             * <p>32ACU</p>
+             * <p>32</p>
              */
             public Builder totalAcuNumber(Float totalAcuNumber) {
                 this.totalAcuNumber = totalAcuNumber;
@@ -386,7 +386,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ACU resource usage details.</p>
+             * <p>The ACU resource usage.</p>
              */
             public Builder acuUsageDetail(AcuUsageDetail acuUsageDetail) {
                 this.acuUsageDetail = acuUsageDetail;
@@ -449,7 +449,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the cache pool is used.</p>
+             * <p>Indicates whether the hot pool is used.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -607,7 +607,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ACU usage of the job resource group.</p>
+             * <p>The ACU usage of job resource groups.</p>
              */
             public Builder jobAcuUsage(java.util.List<JobAcuUsage> jobAcuUsage) {
                 this.jobAcuUsage = jobAcuUsage;

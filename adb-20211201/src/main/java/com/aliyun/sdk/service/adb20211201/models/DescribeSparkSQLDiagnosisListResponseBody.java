@@ -163,7 +163,7 @@ public class DescribeSparkSQLDiagnosisListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The SQL diagnostics information collection.</p>
+         * <p>The collection of SQL diagnostic information.</p>
          */
         public Builder SQLDiagnosisList(java.util.List<SQLDiagnosisList> SQLDiagnosisList) {
             this.SQLDiagnosisList = SQLDiagnosisList;
@@ -369,7 +369,7 @@ public class DescribeSparkSQLDiagnosisListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The internal query execution ID within the Spark application.</p>
+             * <p>The internal query execution ID of the Spark application.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -437,10 +437,10 @@ public class DescribeSparkSQLDiagnosisListResponseBody extends TeaModel {
             /**
              * <p>The final execution state of the query. Valid values:</p>
              * <ul>
-             * <li>COMPLETED: The query is completed.</li>
-             * <li>CANCELED: The query is canceled.</li>
-             * <li>ABORTED: The query is aborted.</li>
-             * <li>FAILED: The query failed.</li>
+             * <li>COMPLETED: completed.</li>
+             * <li>CANCELED: canceled.</li>
+             * <li>ABORTED: aborted.</li>
+             * <li>FAILED: failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>

@@ -91,7 +91,7 @@ public class DescribeEnabledPrivilegesRequest extends Request {
         /**
          * <p>The name of the database account.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/612430.html">DescribeAccounts</a> operation to query the database account information of a specified cluster, including the account name.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/612430.html">DescribeAccounts</a> operation to view the database account information of a specified cluster, including the account name.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -105,7 +105,7 @@ public class DescribeEnabledPrivilegesRequest extends Request {
 
         /**
          * <p>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
-         * &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster..</p>
+         * &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

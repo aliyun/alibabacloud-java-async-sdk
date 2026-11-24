@@ -17,10 +17,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddKnowledgeFileResponseBody</p>
  */
 public class AddKnowledgeFileResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("Id")
+    private Long id;
+
+    @com.aliyun.core.annotation.NameInMap("Location")
+    private String location;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private AddKnowledgeFileResponseBody(Builder builder) {
+        this.id = builder.id;
+        this.location = builder.location;
         this.requestId = builder.requestId;
     }
 
@@ -37,6 +45,20 @@ public class AddKnowledgeFileResponseBody extends TeaModel {
     }
 
     /**
+     * @return id
+     */
+    public Long getId() {
+        return this.id;
+    }
+
+    /**
+     * @return location
+     */
+    public String getLocation() {
+        return this.location;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -44,14 +66,40 @@ public class AddKnowledgeFileResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Long id; 
+        private String location; 
         private String requestId; 
 
         private Builder() {
         } 
 
         private Builder(AddKnowledgeFileResponseBody model) {
+            this.id = model.id;
+            this.location = model.location;
             this.requestId = model.requestId;
         } 
+
+        /**
+         * <p>The ID of the imported file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2059412857631539200</p>
+         */
+        public Builder id(Long id) {
+            this.id = id;
+            return this;
+        }
+
+        /**
+         * <p>The location of the imported file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://bucket_name/path/to/file</p>
+         */
+        public Builder location(String location) {
+            this.location = location;
+            return this;
+        }
 
         /**
          * <p>Id of the request</p>

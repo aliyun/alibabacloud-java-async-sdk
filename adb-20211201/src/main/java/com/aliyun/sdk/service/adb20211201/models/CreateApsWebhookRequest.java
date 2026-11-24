@@ -104,7 +104,7 @@ public class CreateApsWebhookRequest extends Request {
         } 
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The ID of the cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,8 +117,10 @@ public class CreateApsWebhookRequest extends Request {
         }
 
         /**
-         * <p>The task type. Valid values:</p>
-         * <p>ResultExport: SLS/OSS export task.</p>
+         * <p>The node type. Valid values:</p>
+         * <ul>
+         * <li>ResultExport: SLS or OSS export task.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -244,7 +246,7 @@ public class CreateApsWebhookRequest extends Request {
              * <p>The signing key.</p>
              * 
              * <strong>example:</strong>
-             * <hr>
+             * <p>example****key</p>
              */
             public Builder key(String key) {
                 this.key = key;

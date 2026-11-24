@@ -211,8 +211,8 @@ public class GetSparkReplSessionResponseBody extends TeaModel {
             /**
              * <p>Indicates whether the session is active. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li>true: Active.</li>
+             * <li>false: Inactive.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -224,7 +224,7 @@ public class GetSparkReplSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account that owns the cluster.</p>
+             * <p>The ID of the Alibaba Cloud account to which the instance belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>178157466101****</p>
@@ -235,7 +235,7 @@ public class GetSparkReplSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The attempt ID of the Spark application.</p>
+             * <p>The retry ID of the Spark application.</p>
              * 
              * <strong>example:</strong>
              * <p>s202301061000hz57d797b00002****</p>
@@ -257,7 +257,7 @@ public class GetSparkReplSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the session that executes the code.</p>
+             * <p>The ID of the session for code execution.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -268,11 +268,11 @@ public class GetSparkReplSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the session. Valid values:</p>
+             * <p>The current session status. Valid values:</p>
              * <ul>
-             * <li>IDLE</li>
-             * <li>BUSY</li>
-             * <li>DEAD</li>
+             * <li>IDLE: The session is idle.</li>
+             * <li>BUSY: The session is busy and executing a task.</li>
+             * <li>DEAD: The session is closed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -284,7 +284,7 @@ public class GetSparkReplSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the web UI for the Spark application.</p>
+             * <p>The Web UI address of the Spark application.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://adbsparkui-cn-hangzhou.aliyuncs.com/?token=">https://adbsparkui-cn-hangzhou.aliyuncs.com/?token=</a>****</p>

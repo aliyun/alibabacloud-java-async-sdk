@@ -132,7 +132,7 @@ public class DescribeTableDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The detailed reason why the access was denied.</p>
+         * <p>The detailed reason for access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -151,7 +151,7 @@ public class DescribeTableDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The average number of rows in a shard.</p>
+         * <p>The average number of rows per shard.</p>
          * 
          * <strong>example:</strong>
          * <p>160</p>
@@ -162,7 +162,7 @@ public class DescribeTableDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The queried data distribution.</p>
+         * <p>The details.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -181,7 +181,7 @@ public class DescribeTableDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of records per page.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -203,7 +203,7 @@ public class DescribeTableDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>9</p>
@@ -272,7 +272,7 @@ public class DescribeTableDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The shard ID. Only the numeric part of the shard name is returned.</p>
+             * <p>The shard number. Only the numeric part of the shard name is returned.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -283,7 +283,7 @@ public class DescribeTableDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of rows in the table.</p>
+             * <p>The table size and number of rows.</p>
              * 
              * <strong>example:</strong>
              * <p>9484858</p>
@@ -340,7 +340,7 @@ public class DescribeTableDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The queried shards.</p>
+             * <p>The list of shards.</p>
              */
             public Builder shard(java.util.List<Shard> shard) {
                 this.shard = shard;

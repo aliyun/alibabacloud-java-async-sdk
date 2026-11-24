@@ -242,7 +242,7 @@ public class DescribeMvRecommendSubTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The execution list of the materialized view recommendation task.</p>
+             * <p>The list of materialized view recommendation task executions.</p>
              */
             public Builder mvRecommendSubTaskModels(java.util.List<OpenStructMvRecommendSubTaskModel> mvRecommendSubTaskModels) {
                 this.mvRecommendSubTaskModels = mvRecommendSubTaskModels;

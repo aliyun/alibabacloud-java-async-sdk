@@ -88,7 +88,7 @@ public class DeleteLakeStorageRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the AnalyticDB for MySQL cluster.</p>
+         * <p>The ADB instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>amv-bp*********</p>
@@ -100,13 +100,11 @@ public class DeleteLakeStorageRequest extends Request {
         }
 
         /**
-         * <p>The ID of the lake storage.</p>
+         * <p>The ID of the lake storage instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>adb-lake-cn-hangzhou-1aa1a1aa11</p>
          */
         public Builder lakeStorageId(String lakeStorageId) {
             this.putBodyParameter("LakeStorageId", lakeStorageId);

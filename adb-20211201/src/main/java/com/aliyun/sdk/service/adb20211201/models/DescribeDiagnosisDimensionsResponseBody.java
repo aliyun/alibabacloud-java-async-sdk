@@ -106,7 +106,7 @@ public class DescribeDiagnosisDimensionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The queried source IP addresses.</p>
+         * <p>The source IP addresses.</p>
          */
         public Builder clientIps(java.util.List<String> clientIps) {
             this.clientIps = clientIps;
@@ -114,7 +114,7 @@ public class DescribeDiagnosisDimensionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The queried database names.</p>
+         * <p>The database names.</p>
          */
         public Builder databases(java.util.List<String> databases) {
             this.databases = databases;
@@ -133,7 +133,7 @@ public class DescribeDiagnosisDimensionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The queried resource group names.</p>
+         * <p>The resource group names.</p>
          */
         public Builder resourceGroups(java.util.List<String> resourceGroups) {
             this.resourceGroups = resourceGroups;
@@ -141,7 +141,7 @@ public class DescribeDiagnosisDimensionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The queried usernames.</p>
+         * <p>The usernames.</p>
          */
         public Builder userNames(java.util.List<String> userNames) {
             this.userNames = userNames;

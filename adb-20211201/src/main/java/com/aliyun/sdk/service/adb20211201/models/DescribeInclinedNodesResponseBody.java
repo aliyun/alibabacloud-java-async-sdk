@@ -67,7 +67,7 @@ public class DescribeInclinedNodesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The queried storage nodes.</p>
+         * <p>The list information.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -155,7 +155,7 @@ public class DescribeInclinedNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of the storage node.</p>
+             * <p>The storage node number.</p>
              * 
              * <strong>example:</strong>
              * <p>Node1</p>

@@ -170,6 +170,9 @@ public class DatabaseSummaryModel extends TeaModel {
 
         /**
          * <p>The creation source of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>XIHE</p>
          */
         public Builder createdBySource(String createdBySource) {
             this.createdBySource = createdBySource;
@@ -178,6 +181,9 @@ public class DatabaseSummaryModel extends TeaModel {
 
         /**
          * <p>The user who created the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example_user</p>
          */
         public Builder createdByUser(String createdByUser) {
             this.createdByUser = createdByUser;
@@ -186,6 +192,9 @@ public class DatabaseSummaryModel extends TeaModel {
 
         /**
          * <p>The database type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EXTERNAL_DB</p>
          */
         public Builder dbType(String dbType) {
             this.dbType = dbType;
@@ -205,6 +214,9 @@ public class DatabaseSummaryModel extends TeaModel {
 
         /**
          * <p>The data storage location of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://example-bucket/database/</p>
          */
         public Builder location(String location) {
             this.location = location;

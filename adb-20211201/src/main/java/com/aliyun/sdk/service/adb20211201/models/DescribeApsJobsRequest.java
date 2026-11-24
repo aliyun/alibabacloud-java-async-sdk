@@ -143,7 +143,7 @@ public class DescribeApsJobsRequest extends Request {
         }
 
         /**
-         * <p>The end time of creation.</p>
+         * <p>The end of the creation time range.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-04-23T01:10Z</p>
@@ -155,7 +155,7 @@ public class DescribeApsJobsRequest extends Request {
         }
 
         /**
-         * <p>The start time of creation.</p>
+         * <p>The start of the creation time range.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-03-23T01:10Z</p>

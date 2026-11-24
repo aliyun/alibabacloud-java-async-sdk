@@ -187,9 +187,9 @@ public class DescribeAvailableAdvicesRequest extends Request {
         } 
 
         /**
-         * <p>The generation date of the suggestion, in the yyyyMMdd format.</p>
+         * <p>The generation date of the suggestions, in the yyyyMMdd format.</p>
          * <blockquote>
-         * <p>Data is generated after daily analysis in the early morning. Therefore, you must specify a date of T-1 or earlier to query the data. For example, if today is 20240627, you must specify 20240626 or an earlier date.</p>
+         * <p>Data is generated after daily analysis in the early morning. Therefore, you must specify a date of T-1 or earlier to query the data. For example, if today is 20240627, you should pass 20240626 or an earlier date.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -204,8 +204,8 @@ public class DescribeAvailableAdvicesRequest extends Request {
         /**
          * <p>The type of the suggestion. Valid values:</p>
          * <ul>
-         * <li><strong>INDEX</strong>: Index optimization.</li>
-         * <li><strong>TIERING</strong>: Hot and cold data optimization.</li>
+         * <li><strong>INDEX</strong>: index optimization.</li>
+         * <li><strong>TIERING</strong>: hot and cold data optimization.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -261,7 +261,7 @@ public class DescribeAvailableAdvicesRequest extends Request {
         }
 
         /**
-         * <p>The field by which to sort the query results. The value is a JSON string. Example: <code>[{&quot;Field&quot;:&quot;SchemaName&quot;,&quot;Type&quot;:&quot;Asc&quot;}]</code>. Parameters:</p>
+         * <p>The field by which to sort the query results. The value must be a JSON string. Example: <code>[{&quot;Field&quot;:&quot;SchemaName&quot;,&quot;Type&quot;:&quot;Asc&quot;}]</code>. Parameters:</p>
          * <ul>
          * <li><code>Field</code>: the sort field. Valid values:<ul>
          * <li><code>SchemaName</code>: the database name.</li>
@@ -331,7 +331,7 @@ public class DescribeAvailableAdvicesRequest extends Request {
         }
 
         /**
-         * <p>The concatenated string of the database name and table name.</p>
+         * <p>The concatenated string of the database name and the table name.</p>
          * 
          * <strong>example:</strong>
          * <p>tpch.lineitem</p>

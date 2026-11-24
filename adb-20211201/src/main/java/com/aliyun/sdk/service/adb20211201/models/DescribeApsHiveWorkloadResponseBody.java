@@ -70,9 +70,7 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
          * <p>The workload information.</p>
          * 
          * <strong>example:</strong>
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>{&quot;WorkloadName&quot;:&quot;test&quot;,&quot;State&quot;:&quot;COMPLETED&quot;,&quot;FullComputeUnit&quot;:&quot;16&quot;}</p>
          */
         public Builder apsWorkload(ApsWorkload apsWorkload) {
             this.apsWorkload = apsWorkload;
@@ -396,7 +394,7 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The advanced configurations.</p>
+             * <p>The advanced configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>test.adv.config=value</p>
@@ -407,7 +405,7 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The handling strategy when a database or table with the same name exists at the destination.</p>
+             * <p>The handling strategy for databases or tables with the same name in the destination.</p>
              * 
              * <strong>example:</strong>
              * <p>Intercept</p>
@@ -467,9 +465,7 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
              * <p>The EMR cluster ID.</p>
              * 
              * <strong>example:</strong>
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <p>c-b933c5aac8fe****</p>
              */
             public Builder emrClusterId(String emrClusterId) {
                 this.emrClusterId = emrClusterId;
@@ -477,7 +473,7 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of ACUs required for migration.</p>
+             * <p>The number of ACUs required for the migration.</p>
              * 
              * <strong>example:</strong>
              * <p>16</p>
@@ -534,7 +530,7 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource pool to which the SQL statement belongs.</p>
+             * <p>The resource pool to which the SQL statements belong.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -622,7 +618,7 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The workload name.</p>
+             * <p>The workload type name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>

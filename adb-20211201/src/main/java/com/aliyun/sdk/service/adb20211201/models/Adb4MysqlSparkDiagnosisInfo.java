@@ -93,7 +93,10 @@ public class Adb4MysqlSparkDiagnosisInfo extends TeaModel {
         } 
 
         /**
-         * DiagnosisCode.
+         * <p>The diagnostic code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task_long_tail</p>
          */
         public Builder diagnosisCode(String diagnosisCode) {
             this.diagnosisCode = diagnosisCode;
@@ -101,7 +104,10 @@ public class Adb4MysqlSparkDiagnosisInfo extends TeaModel {
         }
 
         /**
-         * DiagnosisCodeLabel.
+         * <p>The diagnostic cause.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>查询执行耗时较长。</p>
          */
         public Builder diagnosisCodeLabel(String diagnosisCodeLabel) {
             this.diagnosisCodeLabel = diagnosisCodeLabel;
@@ -109,7 +115,10 @@ public class Adb4MysqlSparkDiagnosisInfo extends TeaModel {
         }
 
         /**
-         * DiagnosisMsg.
+         * <p>The diagnostic suggestion.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>检查查询执行计划并优化 SQL。</p>
          */
         public Builder diagnosisMsg(String diagnosisMsg) {
             this.diagnosisMsg = diagnosisMsg;
@@ -117,7 +126,10 @@ public class Adb4MysqlSparkDiagnosisInfo extends TeaModel {
         }
 
         /**
-         * DiagnosisType.
+         * <p>The diagnostic information type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>APPLICATION</p>
          */
         public Builder diagnosisType(String diagnosisType) {
             this.diagnosisType = diagnosisType;

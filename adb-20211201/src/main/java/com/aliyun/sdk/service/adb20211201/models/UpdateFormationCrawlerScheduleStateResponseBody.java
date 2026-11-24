@@ -152,7 +152,7 @@ public class UpdateFormationCrawlerScheduleStateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message. OK is returned if the call was successful.</p>
+         * <p>The message returned. OK is returned when the call is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -176,8 +176,8 @@ public class UpdateFormationCrawlerScheduleStateResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the call was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Successful.</li>
-         * <li><strong>false</strong>: Failed.</li>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

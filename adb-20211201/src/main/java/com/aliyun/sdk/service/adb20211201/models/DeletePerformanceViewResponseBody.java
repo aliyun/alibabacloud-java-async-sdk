@@ -109,7 +109,7 @@ public class DeletePerformanceViewResponseBody extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>SUCCESS</p>
+         * <p>true</p>
          */
         public Builder deleteStatus(Boolean deleteStatus) {
             this.deleteStatus = deleteStatus;

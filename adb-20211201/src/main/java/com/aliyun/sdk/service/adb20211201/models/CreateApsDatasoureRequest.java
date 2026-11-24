@@ -300,9 +300,7 @@ public class CreateApsDatasoureRequest extends Request {
          * <p>The Hive data source information.</p>
          * 
          * <strong>example:</strong>
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>{&quot;Vswitch&quot;:&quot;vsw-bp1*<strong><strong>k&quot;,&quot;SecurityGroup&quot;:&quot;sg-uf</strong></strong>***h&quot;}</p>
          */
         public Builder hiveInfo(HiveInfo hiveInfo) {
             String hiveInfoShrink = shrink(hiveInfo, "HiveInfo", "json");
@@ -315,9 +313,7 @@ public class CreateApsDatasoureRequest extends Request {
          * <p>The Kafka information.</p>
          * 
          * <strong>example:</strong>
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>{&quot;KafkaClusterId&quot;:&quot;alikafka_pre-cn-aaa1a1aaa111&quot;,&quot;KafkaTopic&quot;:&quot;example-topic&quot;}</p>
          */
         public Builder kafkaInfo(KafkaInfo kafkaInfo) {
             String kafkaInfoShrink = shrink(kafkaInfo, "KafkaInfo", "json");
@@ -342,9 +338,7 @@ public class CreateApsDatasoureRequest extends Request {
          * <p>The PolarDB for MySQL data source information.</p>
          * 
          * <strong>example:</strong>
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>{&quot;RegionId&quot;:&quot;cn-shanghai&quot;}</p>
          */
         public Builder polarDBMysqlInfo(PolarDBMysqlInfo polarDBMysqlInfo) {
             String polarDBMysqlInfoShrink = shrink(polarDBMysqlInfo, "PolarDBMysqlInfo", "json");
@@ -372,9 +366,7 @@ public class CreateApsDatasoureRequest extends Request {
          * <p>The ApsaraDB RDS for MySQL data source information.</p>
          * 
          * <strong>example:</strong>
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>{&quot;RegionId&quot;:&quot;cn-shanghai&quot;}</p>
          */
         public Builder rdsMysqlInfo(RdsMysqlInfo rdsMysqlInfo) {
             String rdsMysqlInfoShrink = shrink(rdsMysqlInfo, "RdsMysqlInfo", "json");
@@ -400,9 +392,7 @@ public class CreateApsDatasoureRequest extends Request {
          * <p>The Simple Log Service (SLS) information.</p>
          * 
          * <strong>example:</strong>
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>{&quot;Project&quot;:&quot;example-project&quot;,&quot;Store&quot;:&quot;example-logstore&quot;,&quot;Across&quot;:false}</p>
          */
         public Builder slsInfo(SlsInfo slsInfo) {
             String slsInfoShrink = shrink(slsInfo, "SlsInfo", "json");
@@ -708,7 +698,7 @@ public class CreateApsDatasoureRequest extends Request {
              * <p>The Kafka instance ID.</p>
              * 
              * <strong>example:</strong>
-             * <hr>
+             * <p>alikafka_pre-cn-aaa1a1aaa111</p>
              */
             public Builder kafkaClusterId(String kafkaClusterId) {
                 this.kafkaClusterId = kafkaClusterId;
@@ -716,7 +706,7 @@ public class CreateApsDatasoureRequest extends Request {
             }
 
             /**
-             * <p>The name of the allocated Kafka topic.</p>
+             * <p>The assigned Kafka topic name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -914,7 +904,7 @@ public class CreateApsDatasoureRequest extends Request {
             }
 
             /**
-             * <p>The endpoint of the private custom RDS instance.</p>
+             * <p>The private custom RDS endpoint.</p>
              * 
              * <strong>example:</strong>
              * <hr>
@@ -939,7 +929,7 @@ public class CreateApsDatasoureRequest extends Request {
              * <p>The password.</p>
              * 
              * <strong>example:</strong>
-             * <hr>
+             * <p>Example****123!</p>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -1175,7 +1165,7 @@ public class CreateApsDatasoureRequest extends Request {
              * <p>The password.</p>
              * 
              * <strong>example:</strong>
-             * <hr>
+             * <p>Example****123!</p>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -1208,7 +1198,7 @@ public class CreateApsDatasoureRequest extends Request {
              * <p>The username.</p>
              * 
              * <strong>example:</strong>
-             * <p>Username.</p>
+             * <p>username</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -1338,7 +1328,7 @@ public class CreateApsDatasoureRequest extends Request {
             }
 
             /**
-             * <p>The name of the cross-account role.</p>
+             * <p>The cross-account role name.</p>
              * 
              * <strong>example:</strong>
              * <p>yyy</p>
@@ -1382,7 +1372,7 @@ public class CreateApsDatasoureRequest extends Request {
             }
 
             /**
-             * <p>The Simple Log Service Logstore.</p>
+             * <p>The Simple Log Service (SLS) Logstore.</p>
              * 
              * <strong>example:</strong>
              * <p>test-store</p>

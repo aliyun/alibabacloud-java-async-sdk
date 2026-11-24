@@ -130,7 +130,7 @@ public class CreateAPSJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The operation status code or POP error code.</p>
+         * <p>The API status code or POP error code.</p>
          * 
          * <strong>example:</strong>
          * <p>InvalidInput</p>
@@ -141,7 +141,7 @@ public class CreateAPSJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned. A value of 200 indicates that the request was sent successfully.</p>
+         * <p>The HTTP status code. A value of 200 indicates that the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>

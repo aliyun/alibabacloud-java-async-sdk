@@ -119,7 +119,7 @@ public class ModifyApsSlsADBJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code or the error code.</p>
+         * <p>The status code or POP error code.</p>
          * 
          * <strong>example:</strong>
          * <p>InvalidInput</p>
@@ -133,9 +133,7 @@ public class ModifyApsSlsADBJobResponseBody extends TeaModel {
          * <p>The returned data.</p>
          * 
          * <strong>example:</strong>
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>{&quot;test&quot;:&quot;test&quot;,&quot;test2&quot;:1}</p>
          */
         public Builder data(java.util.Map<String, ?> data) {
             this.data = data;
@@ -143,7 +141,7 @@ public class ModifyApsSlsADBJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response code. The status code 200 indicates that the request was successful.</p>
+         * <p>The HTTP status code returned by the request. A status code of 200 indicates that the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -154,10 +152,10 @@ public class ModifyApsSlsADBJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message. Valid values:</p>
+         * <p>The execution result of applying the suggestion. Valid values:</p>
          * <ul>
-         * <li>If the request was successful, a success message is returned.****</li>
-         * <li>If the request failed, an error message is returned.</li>
+         * <li>If the request is successful, <strong>SUCCESS</strong> is returned.</li>
+         * <li>If an exception occurs, the specific error message is returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -169,7 +167,7 @@ public class ModifyApsSlsADBJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong><strong>-3EEC-</strong></strong></strong>-9F06-******</p>
@@ -180,10 +178,10 @@ public class ModifyApsSlsADBJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

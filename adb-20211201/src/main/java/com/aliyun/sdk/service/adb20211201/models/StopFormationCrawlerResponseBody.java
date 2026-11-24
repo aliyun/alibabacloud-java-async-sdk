@@ -163,7 +163,7 @@ public class StopFormationCrawlerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>9CCFAAB4-97B7-5800-B9F2-685EB596E3EF</p>
@@ -174,7 +174,7 @@ public class StopFormationCrawlerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the operation was successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

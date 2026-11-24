@@ -127,7 +127,7 @@ public class DescribeTableDetailRequest extends Request {
         }
 
         /**
-         * <p>The name of the database.</p>
+         * <p>The database name.</p>
          * 
          * <strong>example:</strong>
          * <p>adb_demo</p>
@@ -139,7 +139,7 @@ public class DescribeTableDetailRequest extends Request {
         }
 
         /**
-         * <p>The name of the table.</p>
+         * <p>The table name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

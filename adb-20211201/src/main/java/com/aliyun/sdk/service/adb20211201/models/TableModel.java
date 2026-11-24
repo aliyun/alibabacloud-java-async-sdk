@@ -777,6 +777,9 @@ public class TableModel extends TeaModel {
 
         /**
          * <p>The creation source of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>XIHE</p>
          */
         public Builder createdBySource(String createdBySource) {
             this.createdBySource = createdBySource;
@@ -785,6 +788,9 @@ public class TableModel extends TeaModel {
 
         /**
          * <p>The user who created the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example_user</p>
          */
         public Builder createdByUser(String createdByUser) {
             this.createdByUser = createdByUser;
@@ -814,7 +820,7 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether encryption is enabled.</p>
+         * <p>Specifies whether encryption is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -844,7 +850,7 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether DFS is enabled.</p>
+         * <p>Specifies whether DFS is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -874,7 +880,7 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether full indexing is enabled.</p>
+         * <p>Specifies whether full indexing is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -885,7 +891,7 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether it is a full-text index dictionary.</p>
+         * <p>Specifies whether it is a full-text index dictionary.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -899,7 +905,7 @@ public class TableModel extends TeaModel {
          * <p>The maximum column ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>MaxColumnId</p>
+         * <p>1</p>
          */
         public Builder maxColumnId(Long maxColumnId) {
             this.maxColumnId = maxColumnId;
@@ -908,6 +914,9 @@ public class TableModel extends TeaModel {
 
         /**
          * <p>The parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;format&quot;:&quot;columnstore&quot;}</p>
          */
         public Builder parameters(java.util.Map<String, String> parameters) {
             this.parameters = parameters;
@@ -1038,7 +1047,7 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether all indexes are routed.</p>
+         * <p>Specifies whether all indexes are routed.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1060,7 +1069,7 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * <p>The storage description.</p>
+         * <p>The storage descriptor information.</p>
          */
         public Builder sd(StorageDescriptorModel sd) {
             this.sd = sd;
@@ -1156,7 +1165,7 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the table is a temporary table.</p>
+         * <p>Specifies whether the table is a temporary table.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1200,7 +1209,7 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * <p>The view safe mode pattern.</p>
+         * <p>The view security pattern.</p>
          * 
          * <strong>example:</strong>
          * <p>ViewSecurityMode</p>

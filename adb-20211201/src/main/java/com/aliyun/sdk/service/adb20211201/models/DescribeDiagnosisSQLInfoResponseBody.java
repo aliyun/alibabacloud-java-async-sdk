@@ -80,7 +80,7 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The execution details of the SQL statement, including the detailed SQL statement, statistics information, execution plan, and operator information.</p>
+         * <p>The execute details of the SQL statement, including the detailed SQL statement, statistics information, execute plan, and operator information.</p>
          */
         public Builder diagnosisSQLInfo(String diagnosisSQLInfo) {
             this.diagnosisSQLInfo = diagnosisSQLInfo;
@@ -99,7 +99,7 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The stage-level execution information of the query.</p>
+         * <p>The staged execution information of the query.</p>
          */
         public Builder stageInfos(java.util.List<StageInfos> stageInfos) {
             this.stageInfos = stageInfos;
@@ -269,7 +269,10 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * ExecutionType.
+             * <p>The type of the SQL execution engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Java</p>
              */
             public Builder executionType(String executionType) {
                 this.executionType = executionType;
@@ -277,7 +280,7 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total input data size of the stage, in bytes.</p>
+             * <p>The total amount of input data for the stage. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>2341</p>
@@ -288,7 +291,7 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of input rows in the stage.</p>
+             * <p>The total number of input rows for the stage.</p>
              * 
              * <strong>example:</strong>
              * <p>2341</p>
@@ -299,7 +302,7 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cumulative operator duration of the stage, in milliseconds.</p>
+             * <p>The cumulative execution duration of operators for the stage. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>2341</p>
@@ -310,7 +313,7 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total output data size of the stage, in bytes.</p>
+             * <p>The total amount of output data for the stage. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>2341</p>
@@ -321,7 +324,7 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of output rows in the stage.</p>
+             * <p>The total number of output rows for the stage.</p>
              * 
              * <strong>example:</strong>
              * <p>2341</p>
@@ -332,7 +335,7 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total peak memory of the stage, in bytes.</p>
+             * <p>The peak memory usage for the stage. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>2341</p>
@@ -354,7 +357,7 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>StageID。</p>
+             * <p>The stage ID.</p>
              * 
              * <strong>example:</strong>
              * <p>Stage[26]</p>

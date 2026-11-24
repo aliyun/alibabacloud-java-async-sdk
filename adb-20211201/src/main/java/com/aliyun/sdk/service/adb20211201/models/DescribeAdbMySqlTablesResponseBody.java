@@ -108,8 +108,8 @@ public class DescribeAdbMySqlTablesResponseBody extends TeaModel {
         /**
          * <p>The additional information about the call result. Valid values:</p>
          * <ul>
-         * <li>If the request is successful, <strong>Success</strong> is returned.</li>
-         * <li>If the request fails, a specific error code is returned.</li>
+         * <li><strong>Success</strong>: The request is successful. </li>
+         * <li>Specific error code: The request is abnormal.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -121,7 +121,7 @@ public class DescribeAdbMySqlTablesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>7A7D49E3-5585-5DF8-B62C-75C46B4991DC</p>

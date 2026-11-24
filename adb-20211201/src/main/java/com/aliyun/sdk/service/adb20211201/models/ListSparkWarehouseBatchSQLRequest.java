@@ -116,7 +116,7 @@ public class ListSparkWarehouseBatchSQLRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
