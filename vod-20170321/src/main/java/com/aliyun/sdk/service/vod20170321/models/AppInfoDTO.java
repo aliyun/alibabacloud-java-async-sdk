@@ -159,6 +159,9 @@ public class AppInfoDTO extends TeaModel {
 
         /**
          * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vod-demo-app</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -182,6 +185,9 @@ public class AppInfoDTO extends TeaModel {
 
         /**
          * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-01-02T03:04:05Z</p>
          */
         public Builder creationTime(String creationTime) {
             this.creationTime = creationTime;
@@ -190,6 +196,9 @@ public class AppInfoDTO extends TeaModel {
 
         /**
          * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-01-02 03:04:05</p>
          */
         public Builder gmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
@@ -198,6 +207,9 @@ public class AppInfoDTO extends TeaModel {
 
         /**
          * <p>The update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-01-02 03:04:05</p>
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
@@ -206,6 +218,9 @@ public class AppInfoDTO extends TeaModel {
 
         /**
          * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3ba9c7d21f4e6a80</p>
          */
         public Builder itemId(String itemId) {
             this.itemId = itemId;
@@ -214,6 +229,9 @@ public class AppInfoDTO extends TeaModel {
 
         /**
          * <p>The update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-01-02T03:04:05Z</p>
          */
         public Builder modificationTime(String modificationTime) {
             this.modificationTime = modificationTime;
@@ -221,7 +239,7 @@ public class AppInfoDTO extends TeaModel {
         }
 
         /**
-         * <p>The list of platform information for the application.</p>
+         * <p>The list of platform information included in the application.</p>
          */
         public Builder platforms(java.util.List<Platforms> platforms) {
             this.platforms = platforms;
@@ -230,6 +248,9 @@ public class AppInfoDTO extends TeaModel {
 
         /**
          * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2544469002080159</p>
          */
         public Builder userId(Long userId) {
             this.userId = userId;
@@ -348,6 +369,9 @@ public class AppInfoDTO extends TeaModel {
 
             /**
              * <p>The platform ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3ba9c7d21f4e6a81</p>
              */
             public Builder itemId(String itemId) {
                 this.itemId = itemId;
@@ -355,7 +379,7 @@ public class AppInfoDTO extends TeaModel {
             }
 
             /**
-             * <p>The list of licenses.</p>
+             * <p>The authorization list.</p>
              */
             public Builder licenseItemIds(java.util.List<String> licenseItemIds) {
                 this.licenseItemIds = licenseItemIds;
@@ -364,6 +388,9 @@ public class AppInfoDTO extends TeaModel {
 
             /**
              * <p>The package name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>com.example.vodapp</p>
              */
             public Builder pkgName(String pkgName) {
                 this.pkgName = pkgName;
@@ -372,6 +399,9 @@ public class AppInfoDTO extends TeaModel {
 
             /**
              * <p>The package signature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8e610rzjg613h0u58v8473d029h7</p>
              */
             public Builder pkgSignature(String pkgSignature) {
                 this.pkgSignature = pkgSignature;
@@ -380,6 +410,9 @@ public class AppInfoDTO extends TeaModel {
 
             /**
              * <p>The platform type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder platformType(Long platformType) {
                 this.platformType = platformType;
@@ -388,6 +421,9 @@ public class AppInfoDTO extends TeaModel {
 
             /**
              * <p>The platform type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder type(Long type) {
                 this.type = type;

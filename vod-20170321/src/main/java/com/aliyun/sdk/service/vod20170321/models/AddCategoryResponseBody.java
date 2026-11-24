@@ -183,7 +183,7 @@ public class AddCategoryResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The category ID. You can use it as a request parameter for the <a href="~~UpdateCategory~~">UpdateCategory</a>, <a href="~~DeleteCategory~~">DeleteCategory</a>, and <a href="~~GetCategories~~">GetCategories</a> operations.</p>
+             * <p>The category ID. You can use this ID as a request parameter for the <a href="~~UpdateCategory~~">UpdateCategory</a>, <a href="~~DeleteCategory~~">DeleteCategory</a>, and <a href="~~GetCategories~~">GetCategories</a> operations.</p>
              * 
              * <strong>example:</strong>
              * <p>10020</p>

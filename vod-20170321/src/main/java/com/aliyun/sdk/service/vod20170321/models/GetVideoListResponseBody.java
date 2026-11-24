@@ -91,7 +91,7 @@ public class GetVideoListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of audio and video files.</p>
+         * <p>The total number of audio and video assets.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

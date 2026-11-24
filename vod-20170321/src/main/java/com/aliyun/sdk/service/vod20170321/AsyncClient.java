@@ -35,8 +35,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Audio and video/image categories (<code>Type</code> set to <code>default</code>) support up to three levels of categories, with a maximum of 100 subcategories per level. Short video material categories (<code>Type</code> set to <code>material</code>) support up to two levels of categories, with a maximum of 100 subcategories per level.</li>
-     * <li>After creating a category, you can classify media assets during or after upload. For more information, see <a href="https://help.aliyun.com/document_detail/86070.html">Media asset categories</a>.</li>
+     * <li>Audio, video, and image categories (where <code>Type</code> is <code>default</code>) support up to three levels, with a maximum of 100 subcategories per level. Short video material categories (where <code>Type</code> is <code>material</code>) support up to two levels, with a maximum of 100 subcategories per level.</li>
+     * <li>After you create a category, you can classify media assets during or after upload. For more information, see <a href="https://help.aliyun.com/document_detail/86070.html">Media asset categories</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of AddCategory  AddCategoryRequest
@@ -60,6 +60,21 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return AddEditingProjectMaterialsResponse
      */
     CompletableFuture<AddEditingProjectMaterialsResponse> addEditingProjectMaterials(AddEditingProjectMaterialsRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>The <code>Name</code> parameter is required and must pass the <code>COMPLEX_STRING_SPACE_ALLOWED</code> format validation.</li>
+     * <li>Other parameters are optional, but if provided, they must meet the corresponding format requirements.</li>
+     * <li>The encryption type <code>EncryptType</code> supports a combination of multiple encryption methods. For more information, see the valid values.</li>
+     * <li>When HLS encryption is used, <code>EncryptConfig</code> must include information such as <code>DecryptKeyUri</code>, <code>KeyServiceType</code>, <code>CipherText</code>, and <code>MasterKeyId</code>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of AddManifestEditTemplate  AddManifestEditTemplateRequest
+     * @return AddManifestEditTemplateResponse
+     */
+    CompletableFuture<AddManifestEditTemplateResponse> addManifestEditTemplate(AddManifestEditTemplateRequest request);
 
     /**
      * <b>description</b> :
@@ -395,6 +410,18 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <ul>
+     * <li>After deletion, the template and its track configurations cannot be recovered. Submitted jobs are not affected, but resubmitting a SubmitEditMediaManifestJob job with the deleted template ID will fail.</li>
+     * <li>The custom transcoding template configurations associated with the template in the MediaConvert pipeline will also be cleared (preset templates are not affected).</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteManifestEditTemplate  DeleteManifestEditTemplateRequest
+     * @return DeleteManifestEditTemplateResponse
+     */
+    CompletableFuture<DeleteManifestEditTemplateResponse> deleteManifestEditTemplate(DeleteManifestEditTemplateRequest request);
+
+    /**
+     * <b>description</b> :
      * <blockquote>
      * <p>For more information, see <a href="https://help.aliyun.com/document_detail/55627.html">Event notification development guide</a>.</p>
      * </blockquote>
@@ -516,8 +543,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Currently, this operation is supported only in the China (Shanghai) region.</li>
-     * <li>If you do not specify StartTime and EndTime, this operation returns data for the past 7 days by default. If you specify StartTime and EndTime, this operation returns data for the specified time range.</li>
+     * <li>Currently, the endpoint for this API operation supports only China (Shanghai).</li>
+     * <li>If you do not specify StartTime and EndTime, this API operation returns data for the past 7 days by default. If you specify StartTime and EndTime, this API operation returns data for the specified time period.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeMediaDistribution  DescribeMediaDistributionRequest
@@ -1810,9 +1837,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <h3>Usage notes</h3>
-     * <p>You can query task information for all audio or video files under a purge or prefetch task, or query task information for a specific audio or video file.</p>
+     * <p>You can query the task information of all audio and video files under a refresh or prefetch task, or specify a single audio or video file to query its task information.</p>
      * <h3>QPS limit</h3>
-     * <p>The single-user QPS limit for this operation is 50 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation as needed. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</p>
+     * <p>The queries per second (QPS) limit for a single user calling this API operation is 50. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</p>
      * 
      * @param request the request parameters of GetMediaRefreshJobs  GetMediaRefreshJobsRequest
      * @return GetMediaRefreshJobsResponse
@@ -1842,12 +1869,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>Before you call this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Downloading or playing videos directly from the VOD playback URL incurs outbound traffic fees. If no accelerated domain name is configured, refer to <a href="~~188308#section-rwh-e88-f7j~~">Billing of outbound traffic</a>. If an accelerated domain name is configured, refer to <a href="~~188308#section-c5t-oq9-15e~~">Billing of acceleration services</a>. If you have enabled storage transfer acceleration, downloading or playing videos directly from the VOD playback URL also incurs download acceleration fees. For more information about billing, refer to <a href="~~188310#section_sta_zm2_tsv~~">Billing of storage transfer acceleration</a>.</strong></li>
-     * <li>Only videos in the Normal state (the Status field is set to Normal) can be played. For more information about playback instructions and limits for playback URLs, refer to <a href="https://help.aliyun.com/document_detail/57290.html">Media playback</a>.</li>
+     * <li><strong>Before you invoke this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Downloading or playing videos directly from the playback URL of ApsaraVideo VOD incurs outbound traffic fees. If no accelerated domain name is configured, refer to <a href="~~188308#section-rwh-e88-f7j~~">Billing of storage outbound traffic</a>. If an accelerated domain name is configured, refer to <a href="~~188308#section-c5t-oq9-15e~~">Billing of acceleration services</a>. If you have enabled storage transfer acceleration, downloading or playing videos directly from the playback URL of ApsaraVideo VOD also incurs download acceleration fees. For billing details, refer to <a href="~~188310#section_sta_zm2_tsv~~">Billing of storage transfer acceleration</a>.</strong></li>
+     * <li>Only videos in the Normal status (the value of the Status field is Normal) can be played normally. For more information about the playback instructions and limits of playback URLs, refer to <a href="https://help.aliyun.com/document_detail/57290.html">Media playback</a>.</li>
      * <li>When the <a href="https://help.aliyun.com/document_detail/2392368.html">media asset storage</a> type is non-standard storage, you must configure the StorageClass field in the PlayConfig parameter accordingly. For more information, refer to <a href="~~86952#section-9g7-s9b-v7z~~">PlayConfig</a>.</li>
-     * <li>If video playback is abnormal, you can call the <a href="~~GetMezzanineInfo~~">GetMezzanineInfo</a> operation to check whether the video source file information is correct.
+     * <li>If video playback is abnormal, you can invoke the <a href="~~GetMezzanineInfo~~">GetMezzanineInfo</a> operation to check whether the information about the video source file is correct.
      * &lt;props=&quot;china&quot;&gt;</li>
-     * <li>To call this operation to generate an m3u8 tracing watermark video stream, submit a ticket to apply for activation. For more information about how to submit a ticket, refer to <a href="https://help.aliyun.com/document_detail/464625.html">Contact us</a>. For more information about tracing watermarks, refer to <a href="https://help.aliyun.com/document_detail/2527021.html">Digital watermarking</a>.</li>
+     * <li>To invoke this operation to generate an m3u8 tracing watermark video stream, submit a ticket to apply for activation. For more information about how to submit a ticket, refer to <a href="https://help.aliyun.com/document_detail/464625.html">Contact us</a>. For more information about tracing watermarks, refer to <a href="https://help.aliyun.com/document_detail/2527021.html">Digital watermarking</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of GetPlayInfo  GetPlayInfoRequest
@@ -1931,7 +1958,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>After an audio or video file is uploaded, ApsaraVideo VOD analyzes the uploaded source file. Therefore, media asset information is generated asynchronously. You can configure an <a href="https://help.aliyun.com/document_detail/55627.html">event notification</a> for <a href="https://help.aliyun.com/document_detail/99935.html">AudioVideoAnalysisComplete</a>. After you receive the <a href="https://help.aliyun.com/document_detail/99935.html">AudioVideoAnalysisComplete</a> event notification, call this operation to retrieve the audio or video information.</p>
+     * <p>After an audio or video file is uploaded, ApsaraVideo VOD analyzes the uploaded source file. Therefore, media asset information is generated asynchronously. You can configure <a href="https://help.aliyun.com/document_detail/55627.html">event notifications</a> for <a href="https://help.aliyun.com/document_detail/99935.html">audio and video analysis completion</a>. After receiving the event notification for <a href="https://help.aliyun.com/document_detail/99935.html">audio and video analysis completion</a>, call this operation to retrieve the audio or video information.</p>
      * 
      * @param request the request parameters of GetVideoInfo  GetVideoInfoRequest
      * @return GetVideoInfoResponse
@@ -1952,7 +1979,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation retrieves up to <strong>5000</strong> audio and video files that match the specified filter conditions (such as video status and category ID). Specify StartTime and EndTime to retrieve data in batches. To query more audio and video files or traverse all audio and video information, see <a href="https://help.aliyun.com/document_detail/86044.html">Search for media information</a>.</p>
+     * <p>This operation retrieves up to the first <strong>5,000</strong> audio and video assets that match specified filter conditions, such as video status and category ID. Specify StartTime and EndTime to retrieve data in batches. To query more audio and video assets or traverse all audio and video information, refer to <a href="https://help.aliyun.com/document_detail/86044.html">Search for media assets</a>.</p>
      * 
      * @param request the request parameters of GetVideoList  GetVideoListRequest
      * @return GetVideoListResponse
@@ -2093,12 +2120,18 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>A maximum of 5,000 records that match the specified filter conditions can be retrieved.</p>
+     * <p>You can retrieve up to 5,000 records that match the specified filter conditions.</p>
      * 
      * @param request the request parameters of ListLiveRecordVideo  ListLiveRecordVideoRequest
      * @return ListLiveRecordVideoResponse
      */
     CompletableFuture<ListLiveRecordVideoResponse> listLiveRecordVideo(ListLiveRecordVideoRequest request);
+
+    /**
+     * @param request the request parameters of ListManifestEditTemplate  ListManifestEditTemplateRequest
+     * @return ListManifestEditTemplateResponse
+     */
+    CompletableFuture<ListManifestEditTemplateResponse> listManifestEditTemplate(ListManifestEditTemplateRequest request);
 
     /**
      * <b>description</b> :
@@ -2474,6 +2507,23 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>This API operation incrementally edits the manifest of an existing HLS/DASH AUTO stream (definition=7) without re-transcoding.</li>
+     * <li><code>VideoId</code> and <code>JobId</code> are required parameters used for authentication isolation and consistency verification.</li>
+     * <li>You can specify <code>TemplateId</code> to apply a predefined manifest editing template.</li>
+     * <li>This operation supports appending, removing, and replacing audio, subtitle, and video tracks.</li>
+     * <li>The <code>OutputConfig</code> parameter specifies the storage location of the edited manifest.</li>
+     * <li>You can pass custom data in <code>UserData</code> as pass-through information.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of SubmitEditMediaManifestJob  SubmitEditMediaManifestJobRequest
+     * @return SubmitEditMediaManifestJobResponse
+     */
+    CompletableFuture<SubmitEditMediaManifestJobResponse> submitEditMediaManifestJob(SubmitEditMediaManifestJobRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>Currently, this operation is supported in the following regions: <strong>China (Beijing)</strong>, <strong>China (Shanghai)</strong>, and <strong>Singapore</strong>.</p>
      * 
      * @param request the request parameters of SubmitMediaDNADeleteJob  SubmitMediaDNADeleteJobRequest
@@ -2573,7 +2623,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>After a category is created, you can call this operation to modify the name of the category. If the category has been annotated to some media assets, the category name annotated to those media assets is updated synchronously after the category name is modified.</p>
+     * <p>After you create a category, you can call this operation to update the category name. If the category is already tagged on media assets, the category name tagged on these media assets is automatically updated.</p>
      * 
      * @param request the request parameters of UpdateCategory  UpdateCategoryRequest
      * @return UpdateCategoryResponse
@@ -2601,12 +2651,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD before you call this operation. Modifying the storage class of media assets in ApsaraVideo VOD incurs storage fees. For billing details, see <a href="~~188308#section-e97-xrp-mzz~~">Media asset storage billing</a>.</li>
-     * <li>Modifying the storage class of media assets is an <strong>asynchronous operation</strong>. A callback is sent to you after the operation is complete.</li>
-     * <li>If the current storage class of a media asset is Archive or Cold Archive, calling this operation automatically triggers restoration. The storage class is modified after the restoration is complete. You do not need to manually call the RestoreMedia operation to restore the media asset. For Cold Archive media assets, you must specify the restoration priority. The default value is RestoreTier=Standard.</li>
-     * <li>Media assets that are being modified cannot be submitted for another modification task, production, or processing.</li>
-     * <li>Media assets in non-standard storage classes have minimum storage duration requirements. Infrequent Access (IA) and Source File IA require a minimum of 30 days. Archive and Source File Archive require a minimum of 60 days. Cold Archive and Source File Cold Archive require a minimum of 180 days. If the storage duration does not meet the requirement when you modify the storage class, you are charged for the remaining days. For example, if you modify the storage class of a media asset from IA to Standard after 10 days of IA storage, you are charged for the remaining 20 days of IA storage at a time, resulting in a total charge for 30 days of IA storage.</li>
-     * <li><strong>Modifying the storage class of media assets in custom buckets is not supported.</strong></li>
+     * <li>Before calling this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Modifying the storage class of a media asset in ApsaraVideo VOD incurs storage fees. For billing details, see <a href="~~188308#section-e97-xrp-mzz~~">Media asset storage billing</a>.</li>
+     * <li>Modifying the storage class of a media asset is an <strong>asynchronous operation</strong>. A callback is sent to you after the operation is complete.</li>
+     * <li>If the current storage class of the media asset is Archive or Cold Archive, calling this operation automatically triggers restoration. The storage class is modified after the restoration is complete. You do not need to manually call the RestoreMedia operation to restore the media asset. For Cold Archive media assets, you must specify the restoration priority. The default value is RestoreTier=Standard.</li>
+     * <li>You cannot initiate another modification task for a media asset that is being modified, nor can you produce or process it.</li>
+     * <li>Media assets in non-standard storage classes have minimum storage duration requirements. Infrequent Access (IA) and Source File IA require a minimum storage duration of 30 days. Archive and Source File Archive require a minimum storage duration of 60 days. Cold Archive and Source File Cold Archive require a minimum storage duration of 180 days. If the storage duration does not meet the requirement when you modify the storage class of a media asset, you are charged for the remaining days of the minimum storage duration. For example, if you change the storage class of a media asset from IA to Standard after 10 days of IA storage, you are charged for the remaining 20 days of IA storage at a time, resulting in a total charge for 30 days of IA storage.</li>
+     * <li><strong>Modifying the storage class of media assets in your own buckets is not supported.</strong></li>
      * </ul>
      * 
      * @param request the request parameters of UpdateMediaStorageClass  UpdateMediaStorageClassRequest
