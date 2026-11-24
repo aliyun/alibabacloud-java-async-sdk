@@ -73,11 +73,10 @@ public class CreateEduProblemSolveRequest extends Request {
         } 
 
         /**
-         * <p><strong>The question image container.</strong></p>
+         * <p>The query information.</p>
          */
         public Builder query(CreateEduProblemSolveRequestQuery query) {
-            String queryShrink = shrink(query, "query", "json");
-            this.putBodyParameter("query", queryShrink);
+            this.putBodyParameter("query", query);
             this.query = query;
             return this;
         }
@@ -112,7 +111,6 @@ public class CreateEduProblemSolveRequest extends Request {
         private String base64;
 
         @com.aliyun.core.annotation.NameInMap("format")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String format;
 
         @com.aliyun.core.annotation.NameInMap("url")
@@ -168,10 +166,10 @@ public class CreateEduProblemSolveRequest extends Request {
             } 
 
             /**
-             * <p><strong>The Base64-encoded image</strong>. If both this parameter and the URL are provided, this parameter takes precedence.</p>
+             * <p>The Base64 encoding of the image.</p>
              * 
              * <strong>example:</strong>
-             * <p>iVBORw0KGgoAAAANSUhEUgAAAAUA...</p>
+             * <p>/9j/4AAQSkZJRgABAQAASABIAAD/4QCMRXhpZgAATU0AK...</p>
              */
             public Builder base64(String base64) {
                 this.base64 = base64;
@@ -179,8 +177,7 @@ public class CreateEduProblemSolveRequest extends Request {
             }
 
             /**
-             * <p><strong>The image format</strong>: jpg, jpeg, or png. The value must match the actual file format.</p>
-             * <p>This parameter is required.</p>
+             * <p>The image format. Valid values: jpg, jpeg, and png. The value must match the actual file format.</p>
              * 
              * <strong>example:</strong>
              * <p>jpg</p>
@@ -191,10 +188,10 @@ public class CreateEduProblemSolveRequest extends Request {
             }
 
             /**
-             * <p>The URL of a single question image.</p>
+             * <p>The image URL.</p>
              * 
              * <strong>example:</strong>
-             * <p><a href="https://your-cdn.example.com/question.jpg">https://your-cdn.example.com/question.jpg</a></p>
+             * <p><a href="https://xxx/xxx.jpg">https://xxx/xxx.jpg</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -248,7 +245,7 @@ public class CreateEduProblemSolveRequest extends Request {
             } 
 
             /**
-             * <p><strong>The image information.</strong></p>
+             * <p>The query image.</p>
              */
             public Builder image(Image image) {
                 this.image = image;

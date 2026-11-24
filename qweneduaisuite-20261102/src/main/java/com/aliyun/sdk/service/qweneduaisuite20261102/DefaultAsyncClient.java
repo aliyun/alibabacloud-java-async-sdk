@@ -75,12 +75,12 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>This operation submits a homework image to the server for question segmentation, recognition, and grading.</li>
-     * <li>You can submit the image by using <code>imageBase64</code> or <code>imageUrl</code>. <code>imageBase64</code> takes precedence.</li>
-     * <li>The optional <code>dewarp</code> parameter specifies whether to correct the image distortion. Default value: <code>true</code>.</li>
+     * <li>This operation is used to submit a homework image to the server for question segmentation, recognition, and grading.</li>
+     * <li>You can submit the image by using <code>imageBase64</code> or <code>imageUrl</code>. <code>imageBase64</code> is preferred.</li>
+     * <li>The optional parameter <code>dewarp</code> specifies whether to correct the image distortion. Default value: <code>true</code>.</li>
      * <li>Provide <code>requestId</code> to facilitate troubleshooting and reconciliation.</li>
-     * <li>Image size limit: The Base64-encoded image size cannot exceed 15 MB.</li>
-     * <li>All requests and responses use the JSON format.</li>
+     * <li>Image size limit: The Base64-encoded image cannot exceed 15 MB.</li>
+     * <li>All requests and responses are in JSON format.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateEduHomeworkCorrectSubmit  CreateEduHomeworkCorrectSubmitRequest
@@ -90,7 +90,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<CreateEduHomeworkCorrectSubmitResponse> createEduHomeworkCorrectSubmit(CreateEduHomeworkCorrectSubmitRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateEduHomeworkCorrectSubmit").setMethod(HttpMethod.POST).setPathRegex("/v1/homework/correct/submit").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateEduHomeworkCorrectSubmit").setMethod(HttpMethod.POST).setPathRegex("/v1/homework/correct/submit").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateEduHomeworkCorrectSubmitResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -102,19 +102,19 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
+     * <h2>Request instructions</h2>
      * <ul>
-     * <li>This API supports obtaining question resolution results by providing the URL or Base64 encoding of a question image.</li>
-     * <li>Supports processing a single image. The image format must be JPG, JPEG, or PNG.</li>
+     * <li>This API retrieves question resolution results by using the URL or Base64 encoding of a question image.</li>
+     * <li>Only a single image is supported per request, and the image format must be JPG, JPEG, or PNG.</li>
      * <li>The image must be clear and complete. Avoid tilted, obscured, or irrelevant content.</li>
      * <li>Each request can process only one image. Multi-image or plain text requests are not supported.</li>
-     * <li>The recommended image size is up to 1 MB, with a maximum of 10 MB. The image width and height must not exceed 8,000 pixels, and the total pixel count must not exceed 2.6 million.</li>
-     * <li>You must use the HTTPS protocol to call the API and provide image URLs.</li>
-     * <li>The user_id parameter must be an anonymized identifier. Do not pass direct identity information such as names or phone numbers.</li>
-     * <li>The API uses the HTTP POST method combined with Server-Sent Events (SSE) streaming response. The client must read the response event by event, rather than waiting for the connection to close to read the entire response.</li>
-     * <li>A successful response returns the question resolution process through a series of message events and ends with a complete event. If an error occurs, an error event is returned.</li>
+     * <li>The recommended image size is up to 1 MB, with a maximum limit of 10 MB. The width and height of the image must not exceed 8,000 pixels, and the total number of pixels must not exceed 2.6 million.</li>
+     * <li>Use the HTTPS protocol to call the API and provide image URLs.</li>
+     * <li>The user_id must be an anonymized identifier. Do not pass direct identity information such as names or phone numbers.</li>
+     * <li>This API uses the HTTP POST method combined with Server-Sent Events (SSE) streaming response technology. The client must read the response event by event and must not wait for the connection to close before reading the entire response.</li>
+     * <li>A successful response returns the question resolution process step by step through a series of message events and ends with a complete event. If an error occurs, an error event is returned.</li>
      * <li>For retryable errors such as TOO_MANY_ACTIVE_STREAMS, use an exponential backoff strategy to retry the request.</li>
-     * <li>Set a reasonable timeout period of at least 3 minutes on the client, and ensure that the proxy layer does not cache SSE responses.</li>
+     * <li>Set a reasonable timeout period for the client, which must be at least 3 minutes, and ensure that the proxy layer does not cache SSE responses.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateEduProblemSolve  CreateEduProblemSolveRequest
@@ -124,7 +124,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<CreateEduProblemSolveResponse> createEduProblemSolve(CreateEduProblemSolveRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateEduProblemSolve").setMethod(HttpMethod.POST).setPathRegex("/v1/problem/solve/stream").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateEduProblemSolve").setMethod(HttpMethod.POST).setPathRegex("/v1/problem/solve/stream").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateEduProblemSolveResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -137,7 +137,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     @Override
     public ResponseIterable<CreateEduProblemSolveResponseBody> createEduProblemSolveWithResponseIterable(CreateEduProblemSolveRequest request) {
         this.handler.validateRequestModel(request);
-        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("CreateEduProblemSolve").setMethod(HttpMethod.POST).setPathRegex("/v1/problem/solve/stream").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("CreateEduProblemSolve").setMethod(HttpMethod.POST).setPathRegex("/v1/problem/solve/stream").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
         CreateEduProblemSolveResponseBodyIterator iterator = CreateEduProblemSolveResponseBodyIterator.create();
         ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
         this.handler.execute(params);

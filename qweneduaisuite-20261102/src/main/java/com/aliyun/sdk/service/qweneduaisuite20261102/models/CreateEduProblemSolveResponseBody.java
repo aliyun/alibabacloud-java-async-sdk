@@ -156,7 +156,7 @@ public class CreateEduProblemSolveResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether this is the final full snapshot. The value is fixed to true in the complete event.</p>
+         * <p>Specifies whether the response is the final full snapshot. This value is fixed to true in the complete event.</p>
          */
         public Builder finished(Boolean finished) {
             this.finished = finished;
@@ -172,7 +172,7 @@ public class CreateEduProblemSolveResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The actual response message of the request.</p>
+         * <p>The actual message returned by the request.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>
@@ -196,7 +196,7 @@ public class CreateEduProblemSolveResponseBody extends TeaModel {
         /**
          * <p>The type of the question resolution result. Valid values:</p>
          * <ul>
-         * <li>single: Single question.</li>
+         * <li>single: A single question.</li>
          * <li>multiple: Multiple questions.</li>
          * </ul>
          * 
@@ -217,7 +217,7 @@ public class CreateEduProblemSolveResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token usage. Only the complete event carries the final value. The message event does not return this field.</p>
+         * <p>The token usage. Only the complete event carries the final value. This field is not returned in message events.</p>
          */
         public Builder usage(Usage usage) {
             this.usage = usage;
@@ -296,8 +296,8 @@ public class CreateEduProblemSolveResponseBody extends TeaModel {
             /**
              * <p>The thinking status. Valid values:</p>
              * <ul>
-             * <li>processing: Processing.</li>
-             * <li>complete: Complete.</li>
+             * <li>processing: The thinking process is in progress.</li>
+             * <li>complete: The thinking process is complete.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -407,7 +407,7 @@ public class CreateEduProblemSolveResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The complete Markdown content of the question resolution, including the deduction process and the final result.</p>
+             * <p>The complete question resolution content in Markdown format, including the deduction process and the final result.</p>
              * 
              * <strong>example:</strong>
              * <p>{}</p>
@@ -429,7 +429,7 @@ public class CreateEduProblemSolveResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The question identifier. The value is the question title, such as Question 1. The server does not return a separate title field. If the downstream service does not provide a question title, which is always the case for single-question scenarios, titles such as Question 1 and Question 2 are generated in the order of the questions.</p>
+             * <p>The question identifier. The value is the question title, such as Question 1. The server does not return a separate title field. If the downstream service does not provide a question title, which is always the case in single-question scenarios, titles such as Question 1 and Question 2 are generated in the order of the questions.</p>
              * 
              * <strong>example:</strong>
              * <p>50a10e43a33e36179e355556d319ebd5</p>
@@ -442,8 +442,8 @@ public class CreateEduProblemSolveResponseBody extends TeaModel {
             /**
              * <p>The current question status. Valid values:</p>
              * <ul>
-             * <li>processing: Processing.</li>
-             * <li>complete: Complete.</li>
+             * <li>processing: The question is being processed.</li>
+             * <li>complete: The question processing is complete.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -455,7 +455,7 @@ public class CreateEduProblemSolveResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The thinking process. This field is returned only when result_type is single, and is not returned for multiple questions.</p>
+             * <p>The thinking process. This field is returned only when result_type is single. It is not returned for multiple questions.</p>
              */
             public Builder thinking(Thinking thinking) {
                 this.thinking = thinking;
