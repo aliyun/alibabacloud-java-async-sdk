@@ -103,7 +103,7 @@ public class DescribeSubaccountK8sClusterUserConfigRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,10 +129,10 @@ public class DescribeSubaccountK8sClusterUserConfigRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the internal network connection configuration is obtained. Valid values:</p>
+         * <p>Specifies whether to obtain the internal network connection configuration. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: Obtains only the KubeConfig credentials for the internal network connection.</li>
-         * <li><code>false</code>: Obtains only the KubeConfig credentials for the public network connection.</li>
+         * <li><code>true</code>: obtains only the KubeConfig credentials for internal network connections</li>
+         * <li><code>false</code>: obtains only the KubeConfig credentials for public network connections</li>
          * </ul>
          * <p>Default value: <code>false</code>.</p>
          * 
@@ -146,10 +146,10 @@ public class DescribeSubaccountK8sClusterUserConfigRequest extends Request {
         }
 
         /**
-         * <p>The validity period of the temporary KubeConfig. Unit: minutes.</p>
+         * <p>The validity period of the temporary KubeConfig, in minutes.</p>
          * <p>Valid values: 15 to 4320, which indicates a maximum of 3 days.</p>
          * <blockquote>
-         * <p>If you do not specify this parameter, the system automatically determines a longer validity period. The specific expiration time is determined by the value of the returned expiration field.</p>
+         * <p>If you do not specify this parameter, the system automatically determines a longer validity period. The specific expiration time is determined by the value of the expiration field in the response.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

@@ -194,10 +194,10 @@ public class DeleteAlertContactGroupResponse extends Response {
             } 
 
             /**
-             * <p>The deletion status.</p>
+             * <p>The deletion status. Valid values:</p>
              * <ul>
-             * <li>true: Deletion succeeded.</li>
-             * <li>false: Deletion failed.</li>
+             * <li>true: The deletion succeeded.</li>
+             * <li>false: The deletion failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>

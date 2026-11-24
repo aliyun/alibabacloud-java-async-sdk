@@ -272,10 +272,10 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             /**
              * <p>The category of the image. Valid values:</p>
              * <ul>
-             * <li><code>system</code>: public images</li>
-             * <li><code>self</code>: custom images</li>
-             * <li><code>others</code>: public images from other users</li>
-             * <li><code>marketplace</code>: marketplace images</li>
+             * <li><code>system</code>: public image</li>
+             * <li><code>self</code>: custom image</li>
+             * <li><code>others</code>: shared image</li>
+             * <li><code>marketplace</code>: Alibaba Cloud Marketplace image</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -309,7 +309,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * <p>The operating system distribution type. Use this field to specify the node operating system. Valid values:</p>
+             * <p>The type of the operating system distribution. Use this field to specify the operating system for nodes. Valid values:</p>
              * <ul>
              * <li><code>CentOS</code></li>
              * <li><code>AliyunLinux</code></li>
@@ -331,7 +331,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * <p>The operating system type. Valid values:</p>
+             * <p>The type of the operating system. Examples:</p>
              * <ul>
              * <li><code>Windows</code></li>
              * <li><code>Linux</code></li>
@@ -564,7 +564,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * <p>Indicates whether the Kubernetes version can be created.</p>
+             * <p>Specifies whether the Kubernetes version is available for cluster creation.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -605,7 +605,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * <p>The metadata information of the Kubernetes version.</p>
+             * <p>The metadata of the Kubernetes version.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -639,10 +639,10 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * <p>The support policy required to obtain this patch version. The value is case-sensitive. Valid values:</p>
+             * <p>The support policy required to obtain the patch version. The values are case-sensitive. Valid values:</p>
              * <ul>
-             * <li>Standard: regular patch versions</li>
-             * <li>Extended: patch versions exclusive to the extended support period, which include backported CVE and critical bug fixes. Only clusters with extended support enabled can be upgraded to these versions.
+             * <li>Standard: regular patch version</li>
+             * <li>Extended: patch version exclusive to the extended support period, which includes backported CVE and critical bug fixes, and is only available for clusters with extended support enabled
              * This field always has a value. It shares the same name and value range as the support_policy of the cluster. You can directly compare the policy enabled for the cluster with the policy required for this version.</li>
              * </ul>
              * 
@@ -663,7 +663,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * <p>The Kubernetes version released by ACK. For more version information, see <a href="https://help.aliyun.com/document_detail/185269.html">Kubernetes version release overview</a>.</p>
+             * <p>The Kubernetes version released by ACK. For more information about versions, see <a href="https://help.aliyun.com/document_detail/185269.html">Kubernetes version release overview</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>1.31.1-aliyun.1</p>

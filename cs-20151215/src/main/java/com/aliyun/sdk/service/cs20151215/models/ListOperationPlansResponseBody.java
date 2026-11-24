@@ -235,7 +235,7 @@ public class ListOperationPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time of the execution plan.</p>
+             * <p>The time when the execution plan was created.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-11-21T20:01:22+08:00</p>
@@ -246,7 +246,7 @@ public class ListOperationPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expected end time in ISO 8601 format, including time zone information.</p>
+             * <p>The expected end time in ISO 8601 format, including the time zone information.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-11-22T18:00:00+08:00</p>
@@ -268,7 +268,7 @@ public class ListOperationPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expected start time in ISO 8601 format, including time zone information.</p>
+             * <p>The expected start time in ISO 8601 format, including the time zone information.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-11-22T15:18:00+08:00</p>

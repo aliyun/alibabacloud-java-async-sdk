@@ -32,7 +32,12 @@ public class DescribeClusterAttachScriptsRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("format_disk")
+    @Deprecated
     private Boolean formatDisk;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("format_disk_option")
+    private String formatDiskOption;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("keep_instance_name")
@@ -60,6 +65,7 @@ public class DescribeClusterAttachScriptsRequest extends Request {
         this.arch = builder.arch;
         this.expired = builder.expired;
         this.formatDisk = builder.formatDisk;
+        this.formatDiskOption = builder.formatDiskOption;
         this.keepInstanceName = builder.keepInstanceName;
         this.nodepoolId = builder.nodepoolId;
         this.oneTimeToken = builder.oneTimeToken;
@@ -109,6 +115,13 @@ public class DescribeClusterAttachScriptsRequest extends Request {
     }
 
     /**
+     * @return formatDiskOption
+     */
+    public String getFormatDiskOption() {
+        return this.formatDiskOption;
+    }
+
+    /**
      * @return keepInstanceName
      */
     public Boolean getKeepInstanceName() {
@@ -148,6 +161,7 @@ public class DescribeClusterAttachScriptsRequest extends Request {
         private String arch; 
         private Long expired; 
         private Boolean formatDisk; 
+        private String formatDiskOption; 
         private Boolean keepInstanceName; 
         private String nodepoolId; 
         private Boolean oneTimeToken; 
@@ -164,6 +178,7 @@ public class DescribeClusterAttachScriptsRequest extends Request {
             this.arch = request.arch;
             this.expired = request.expired;
             this.formatDisk = request.formatDisk;
+            this.formatDiskOption = request.formatDiskOption;
             this.keepInstanceName = request.keepInstanceName;
             this.nodepoolId = request.nodepoolId;
             this.oneTimeToken = request.oneTimeToken;
@@ -188,7 +203,7 @@ public class DescribeClusterAttachScriptsRequest extends Request {
          * <p>The CPU architecture of the node. Valid values: <code>amd64</code>, <code>arm</code>, and <code>arm64</code>.</p>
          * <p>Default value: <code>amd64</code>.</p>
          * <blockquote>
-         * <p>This parameter is required when the cluster type is ACK Edge.</p>
+         * <p>Required when the cluster type is ACK Edge.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -215,8 +230,8 @@ public class DescribeClusterAttachScriptsRequest extends Request {
         /**
          * <p><strong>[Deprecated]</strong> Use <code>format_disk_option</code> instead.</p>
          * <ul>
-         * <li><code>true</code>: equivalent to setting <code>format_disk_option</code> to <code>DataDisk</code>.</li>
-         * <li><code>false</code>: equivalent to setting <code>format_disk_option</code> to <code>SystemDisk</code>.</li>
+         * <li><code>true</code>: Equivalent to setting <code>format_disk_option</code> to <code>DataDisk</code>.</li>
+         * <li><code>false</code>: Equivalent to setting <code>format_disk_option</code> to <code>SystemDisk</code>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -229,10 +244,32 @@ public class DescribeClusterAttachScriptsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to retain the instance name when adding an existing instance to the cluster. If the instance name is not retained, the instance name format is <code>worker-k8s-for-cs-&lt;clusterid&gt;</code>. Valid values:</p>
+         * <p>The disk formatting method. This parameter is mutually exclusive with <code>format_disk</code> when <code>format_disk</code> is set to <code>true</code>. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: retains the instance name.</li>
-         * <li><code>false</code>: does not retain the instance name. The instance name is replaced based on system rules.</li>
+         * <li><code>SystemDisk</code>: No additional initialization is performed. Container runtime data is stored on the system cloud disk or any disk that is already mounted to the relevant directory during import.</li>
+         * <li><code>DataDisk</code>: If a data cloud disk or local disk is mounted, the last disk is formatted and mounted to store container runtime data.</li>
+         * <li><code>NodePoolDiskConfig</code>: Initializes data cloud disks based on the configurations of the imported node pool. Cloud disks and elastic ephemeral disks are matched based on the <code>disk_name</code> field of the node pool and the <code>DiskName</code> field of the block storage. Local disks are matched sequentially based on the PCI address order. Node pool configurations that do not match any disk are ignored.</li>
+         * </ul>
+         * <blockquote>
+         * <p>Warning: The <code>DataDisk</code> option is retained only for historical compatibility and is strongly discouraged.
+         * This option uses the last disk in lexicographical order of device names under <code>/dev</code> (NVMe is preferred). Note that nvme9 takes precedence over nvme10. Operating systems with newer kernels such as Alinux 4 cannot guarantee a stable device order.</p>
+         * </blockquote>
+         * <p>Disks with a recognizable file system during import skip the formatting step and are directly mounted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NodePoolDiskConfig</p>
+         */
+        public Builder formatDiskOption(String formatDiskOption) {
+            this.putBodyParameter("format_disk_option", formatDiskOption);
+            this.formatDiskOption = formatDiskOption;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to retain the instance name when adding an existing instance to the cluster. If you do not retain the instance name, the instance name format is <code>worker-k8s-for-cs-&lt;clusterid&gt;</code>. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: Retains the instance name.</li>
+         * <li><code>false</code>: Does not retain the instance name. The instance name is replaced based on system rules.</li>
          * </ul>
          * <p>Default value: <code>true</code>.</p>
          * 
@@ -246,7 +283,7 @@ public class DescribeClusterAttachScriptsRequest extends Request {
         }
 
         /**
-         * <p>The node pool ID. When you add a node, you can add the node to a specified node pool.</p>
+         * <p>The ID of the node pool. Specifies the node pool to which the node is added.</p>
          * <blockquote>
          * <p>If you do not specify a node pool ID, the node is added to the default node pool by default.</p>
          * </blockquote>
@@ -270,9 +307,9 @@ public class DescribeClusterAttachScriptsRequest extends Request {
         }
 
         /**
-         * <p>The onboarding configuration parameters for the node.</p>
+         * <p>The access configuration parameters for the node.</p>
          * <blockquote>
-         * <p>This parameter is required when the cluster type is ACK Edge.</p>
+         * <p>Required when the cluster type is ACK Edge.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

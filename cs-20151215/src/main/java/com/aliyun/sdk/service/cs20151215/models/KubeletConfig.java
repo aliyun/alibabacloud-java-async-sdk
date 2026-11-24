@@ -465,7 +465,7 @@ public class KubeletConfig extends TeaModel {
         }
 
         /**
-         * <p>The list of IP addresses for the cluster DNS servers.</p>
+         * <p>The list of IP addresses of cluster DNS servers.</p>
          */
         public Builder clusterDNS(java.util.List<String> clusterDNS) {
             this.clusterDNS = clusterDNS;
@@ -473,7 +473,7 @@ public class KubeletConfig extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of log files that can exist per container.</p>
+         * <p>The maximum number of log files that can exist for each container.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -484,7 +484,7 @@ public class KubeletConfig extends TeaModel {
         }
 
         /**
-         * <p>The maximum size a log file can reach before log rotation is performed.</p>
+         * <p>The maximum size that a log file can reach before it is rotated.</p>
          * 
          * <strong>example:</strong>
          * <p>10Mi</p>
@@ -495,7 +495,7 @@ public class KubeletConfig extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of concurrent workers for log rotation operations.</p>
+         * <p>Specifies the maximum number of concurrent workers required to perform log rotation operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -506,7 +506,7 @@ public class KubeletConfig extends TeaModel {
         }
 
         /**
-         * <p>The interval for monitoring container logs to perform log rotation.</p>
+         * <p>Specifies the duration for monitoring container logs to perform log rotation operations.</p>
          * 
          * <strong>example:</strong>
          * <p>10s</p>
@@ -517,7 +517,7 @@ public class KubeletConfig extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether to enable CPU CFS quota enforcement.</p>
+         * <p>The switch for CPU CFS quota enforcement.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -550,7 +550,7 @@ public class KubeletConfig extends TeaModel {
         }
 
         /**
-         * <p>The maximum burst size for event records.</p>
+         * <p>The burst limit for the number of event records.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -561,7 +561,7 @@ public class KubeletConfig extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of events that can be generated per second.</p>
+         * <p>The number of events that can be generated per second.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -572,7 +572,7 @@ public class KubeletConfig extends TeaModel {
         }
 
         /**
-         * <p>The set of hard eviction thresholds that trigger pod eviction.</p>
+         * <p>The set of hard thresholds that trigger pod eviction.</p>
          */
         public Builder evictionHard(java.util.Map<String, ?> evictionHard) {
             this.evictionHard = evictionHard;
@@ -588,7 +588,7 @@ public class KubeletConfig extends TeaModel {
         }
 
         /**
-         * <p>The set of eviction grace periods.</p>
+         * <p>The set of soft eviction grace periods.</p>
          */
         public Builder evictionSoftGracePeriod(java.util.Map<String, ?> evictionSoftGracePeriod) {
             this.evictionSoftGracePeriod = evictionSoftGracePeriod;
@@ -596,7 +596,7 @@ public class KubeletConfig extends TeaModel {
         }
 
         /**
-         * <p>The feature gates configuration used to enable experimental features.</p>
+         * <p>The feature gates used to enable experimental features.</p>
          */
         public Builder featureGates(java.util.Map<String, ?> featureGates) {
             this.featureGates = featureGates;
@@ -604,7 +604,7 @@ public class KubeletConfig extends TeaModel {
         }
 
         /**
-         * <p>The threshold above which image garbage collection runs continuously.</p>
+         * <p>The threshold above which image garbage collection is continuously performed.</p>
          * 
          * <strong>example:</strong>
          * <p>85</p>
@@ -626,7 +626,7 @@ public class KubeletConfig extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of burst requests sent to the API server per second.</p>
+         * <p>The burst limit for the number of requests sent to the API server per second.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -637,7 +637,7 @@ public class KubeletConfig extends TeaModel {
         }
 
         /**
-         * <p>The number of queries per second when communicating with the API server.</p>
+         * <p>The number of queries per second for communication with the API server.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -648,7 +648,7 @@ public class KubeletConfig extends TeaModel {
         }
 
         /**
-         * <p>The resource configuration reserved for Kubernetes system components.</p>
+         * <p>The resource configuration reserved for the Kubernetes system.</p>
          */
         public Builder kubeReserved(java.util.Map<String, ?> kubeReserved) {
             this.kubeReserved = kubeReserved;
@@ -656,7 +656,7 @@ public class KubeletConfig extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of pods that can run on the node.</p>
+         * <p>The maximum number of running pods.</p>
          * 
          * <strong>example:</strong>
          * <p>110</p>
@@ -667,7 +667,7 @@ public class KubeletConfig extends TeaModel {
         }
 
         /**
-         * <p>The policy used by the memory management manager.</p>
+         * <p>The memory management policy to use.</p>
          * 
          * <strong>example:</strong>
          * <p>none</p>
@@ -700,7 +700,7 @@ public class KubeletConfig extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of burst image pulls.</p>
+         * <p>The burst limit for the number of image pulls.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -730,7 +730,7 @@ public class KubeletConfig extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether to pull images one at a time.</p>
+         * <p>Specifies whether to pull images one by one.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -741,11 +741,11 @@ public class KubeletConfig extends TeaModel {
         }
 
         /**
-         * <p>Enables automatic issuance and rotation of kubelet server certificates. When enabled, you must also set &quot;RotateKubeletServerCertificate&quot;: true in the kubelet featureGates configuration.</p>
+         * <p>Enables the automatic issuance and rotation of Kubelet server certificates. When enabled, you must also configure &quot;RotateKubeletServerCertificate&quot;: true in the featureGates of the Kubelet.</p>
          * <blockquote>
          * <ul>
-         * <li>Available only for clusters running version 1.30 or later.</li>
-         * <li>For clusters running version 1.30 to v1.33, submit a ticket to apply for this feature.</li>
+         * <li>Only applicable to clusters of version 1.30 and later.</li>
+         * <li>Clusters of versions 1.30 to v1.33 must commit a ticket to apply.</li>
          * </ul>
          * </blockquote>
          * 
@@ -766,7 +766,7 @@ public class KubeletConfig extends TeaModel {
         }
 
         /**
-         * <p>The Policy Name of the topology management manager to use.</p>
+         * <p>The topology manager policy name to use.</p>
          * 
          * <strong>example:</strong>
          * <p>restricted</p>
@@ -777,7 +777,7 @@ public class KubeletConfig extends TeaModel {
         }
 
         /**
-         * <p>The versioned configuration for the OpenTelemetry tracing client.</p>
+         * <p>The versioned configuration information for OpenTelemetry tracing client settings.</p>
          */
         public Builder tracing(Tracing tracing) {
             this.tracing = tracing;
@@ -843,7 +843,7 @@ public class KubeletConfig extends TeaModel {
             } 
 
             /**
-             * <p>The memory resources limit.</p>
+             * <p>The limits on memory resources.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;memory&quot;: &quot;1Gi&quot;}</p>

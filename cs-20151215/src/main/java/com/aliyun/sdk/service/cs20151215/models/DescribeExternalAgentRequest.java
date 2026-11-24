@@ -103,8 +103,8 @@ public class DescribeExternalAgentRequest extends Request {
         /**
          * <p>The agent permission mode. Valid values:</p>
          * <ul>
-         * <li>admin: Administrator mode. The agent has all permissions.</li>
-         * <li>restricted: Restricted mode. The agent has only partial permissions.</li>
+         * <li>admin: the administrator mode, which grants all permissions.</li>
+         * <li>restricted: the restricted mode, which grants only specific permissions.</li>
          * </ul>
          * <p>Default value: admin.</p>
          * 
@@ -120,8 +120,8 @@ public class DescribeExternalAgentRequest extends Request {
         /**
          * <p>Specifies whether to obtain internal network access credentials. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: Obtains only internal network connection credentials.</li>
-         * <li><code>false</code>: Obtains only public network connection credentials.</li>
+         * <li><code>true</code>: obtains only internal network connection credentials.</li>
+         * <li><code>false</code>: obtains only public network connection credentials.</li>
          * </ul>
          * <p>Default value: <code>false</code>.</p>
          * 

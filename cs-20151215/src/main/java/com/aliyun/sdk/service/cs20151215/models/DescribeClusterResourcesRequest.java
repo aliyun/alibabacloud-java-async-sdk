@@ -91,8 +91,10 @@ public class DescribeClusterResourcesRequest extends Request {
         /**
          * <p>Specifies whether to query the resources created by cluster add-ons. Valid values:</p>
          * <ul>
-         * <li>true: Queries the resources.</li>
-         * <li>false: Does not query the resources.</li>
+         * <li><p>true: Queries the resources.</p>
+         * </li>
+         * <li><p>false: Does not query the resources.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

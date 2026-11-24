@@ -67,7 +67,7 @@ public class ListClusterAddonInstanceResourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The Helm release instance information corresponding to the component.</p>
+         * <p>The information about the Helm release instance corresponding to the component.</p>
          */
         public Builder helmRelease(HelmRelease helmRelease) {
             this.helmRelease = helmRelease;
@@ -342,7 +342,7 @@ public class ListClusterAddonInstanceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The namespace to which the object belongs.</p>
+             * <p>The namespace of the object.</p>
              * 
              * <strong>example:</strong>
              * <p>kube-system</p>

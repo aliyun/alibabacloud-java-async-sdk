@@ -99,13 +99,9 @@ public class ListUserKubeConfigStatesRequest extends Request {
         }
 
         /**
-         * <p>The current page number.</p>
-         * <ul>
-         * <li><p>Valid values: an integer greater than or equal to 1.</p>
-         * </li>
-         * <li><p>Default value: 1.</p>
-         * </li>
-         * </ul>
+         * <p>The page number.</p>
+         * <p>Valid values: an integer greater than or equal to 1.</p>
+         * <p>Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -117,13 +113,9 @@ public class ListUserKubeConfigStatesRequest extends Request {
         }
 
         /**
-         * <p>The number of results to return per page.</p>
-         * <ul>
-         * <li><p>Valid values: 1 to 100.</p>
-         * </li>
-         * <li><p>Default value: 50.</p>
-         * </li>
-         * </ul>
+         * <p>The number of entries to return on each page.</p>
+         * <p>Valid values: 1 to 100.</p>
+         * <p>Default value: 50.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

@@ -89,7 +89,7 @@ public class DescribeClusterAddonMetadataRequest extends Request {
         } 
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The ID of the cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class DescribeClusterAddonMetadataRequest extends Request {
         }
 
         /**
-         * <p>The component ID.</p>
+         * <p>The ID of the add-on.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +115,7 @@ public class DescribeClusterAddonMetadataRequest extends Request {
         }
 
         /**
-         * <p>The component version.</p>
+         * <p>The version of the add-on.</p>
          * 
          * <strong>example:</strong>
          * <p>1.8.4.1</p>

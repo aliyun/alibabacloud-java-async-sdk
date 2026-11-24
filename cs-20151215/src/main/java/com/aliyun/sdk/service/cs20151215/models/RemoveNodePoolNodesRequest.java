@@ -188,10 +188,10 @@ public class RemoveNodePoolNodesRequest extends Request {
         /**
          * <p>Specifies whether to remove nodes concurrently. Valid values:</p>
          * <ul>
-         * <li>true: Nodes are removed from the scaling group concurrently.</li>
-         * <li>false: Nodes are removed from the scaling group sequentially.</li>
+         * <li>true: Nodes are concurrently removed from the scaling group.</li>
+         * <li>false: Nodes are sequentially removed from the scaling group.
+         * Default value: false.</li>
          * </ul>
-         * <p>Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -205,8 +205,8 @@ public class RemoveNodePoolNodesRequest extends Request {
         /**
          * <p>Specifies whether to drain the nodes. Valid values:</p>
          * <ul>
-         * <li>true: Drain the nodes.</li>
-         * <li>false: Do not drain the nodes.</li>
+         * <li>true: Drains the nodes.</li>
+         * <li>false: Does not drain the nodes.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -241,10 +241,9 @@ public class RemoveNodePoolNodesRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong></p>
-         * <p>The list of nodes to be removed.</p>
+         * <p><strong>[Deprecated]</strong> The list of removed nodes.</p>
          * <blockquote>
-         * <p>Danger: This parameter is deprecated. Use <code>instance_ids</code> instead.</danger></p>
+         * <p>Danger: This parameter is deprecated. Use instance_ids instead.</danger></p>
          * </blockquote>
          */
         public Builder nodes(java.util.List<String> nodes) {
@@ -257,10 +256,10 @@ public class RemoveNodePoolNodesRequest extends Request {
         /**
          * <p>Specifies whether automatic release the nodes. Valid values:</p>
          * <ul>
-         * <li>true: Release the nodes.</li>
-         * <li>false: Do not release the nodes.</li>
+         * <li>true: Releases the nodes.</li>
+         * <li>false: Does not release the nodes.</li>
          * </ul>
-         * <p>Removing nodes does not automatically release subscription nodes. Automatic release subscription nodes, <a href="https://www.alibabacloud.com/help/en/ecs/change-the-billing-method-of-an-instance-from-subscription-to-pay-as-you-go-1">change the billing method of the nodes from subscription to pay-as-you-go</a>, and then log on to the ECS console automatic release them.</p>
+         * <p>Removing nodes does not automatically release subscription nodes. Automatic release subscription nodes, <a href="https://www.alibabacloud.com/help/en/ecs/change-the-billing-method-of-an-instance-from-subscription-to-pay-as-you-go-1">change the billing method of the nodes from subscription to pay-as-you-go</a> and then log on to the ECS console automatic release them.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

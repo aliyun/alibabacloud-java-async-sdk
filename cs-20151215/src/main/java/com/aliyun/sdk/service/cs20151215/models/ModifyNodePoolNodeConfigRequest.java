@@ -171,7 +171,7 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
         }
 
         /**
-         * <p>The containerd runtime configuration.</p>
+         * <p>The containerd runtime configurations.</p>
          */
         public Builder containerdConfig(ContainerdConfig containerdConfig) {
             this.putBodyParameter("containerd_config", containerdConfig);
@@ -189,7 +189,7 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
         }
 
         /**
-         * <p>The list of nodes to upgrade.</p>
+         * <p>The list of specified nodes to upgrade.</p>
          */
         public Builder nodeNames(java.util.List<String> nodeNames) {
             this.putBodyParameter("node_names", nodeNames);
@@ -275,7 +275,7 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
             } 
 
             /**
-             * <p>The hugepage configuration.</p>
+             * <p>The hugepage configurations.</p>
              */
             public Builder hugepage(Hugepage hugepage) {
                 this.hugepage = hugepage;
@@ -350,7 +350,7 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
             } 
 
             /**
-             * <p>The maximum number of nodes that are allowed to fail during the rolling update. Default value: 0, which indicates that the task fails if any node fails. If the value is greater than 0, the task fails and stops when the cumulative number of failed nodes exceeds this value.</p>
+             * <p>The maximum number of nodes that are allowed to fail during a rolling update. Default value: 0. A value of 0 indicates that the task fails if any node fails. A value greater than 0 indicates that the task fails and stops if the cumulative number of failed nodes exceeds this value.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -361,8 +361,8 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
             }
 
             /**
-             * <p>Node updates in the node pool are performed in batches. This parameter specifies the maximum number of nodes that can be updated in parallel per batch.</p>
-             * <p>Valid values: [1,10].</p>
+             * <p>Nodes in the node pool are updated in batches. This parameter specifies the maximum number of nodes that can be updated in parallel in each batch.</p>
+             * <p>Valid values: 1 to 10.</p>
              * <p>Default value: 10.</p>
              * 
              * <strong>example:</strong>

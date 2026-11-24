@@ -261,7 +261,7 @@ public class InvokeAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The tool output text for the TOOL_CALL_RESULT event. The text may be truncated.</p>
+         * <p>The tool output text for the TOOL_CALL_RESULT event, which may be truncated.</p>
          * 
          * <strong>example:</strong>
          * <p>done</p>
@@ -360,7 +360,7 @@ public class InvokeAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The thread snapshot for the STATE_SNAPSHOT event, including sessionId and requestId.</p>
+         * <p>The session snapshot for the STATE_SNAPSHOT event, which includes sessionId and requestId.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;sessionId&quot;:&quot;abcdef0123456789abcdef0123456789&quot;,&quot;requestId&quot;:&quot;req-1&quot;}</p>
@@ -371,7 +371,7 @@ public class InvokeAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The thread ID for RUN_STARTED and RUN_FINISHED events. It is consistent with the request and the thread snapshot.</p>
+         * <p>The thread ID for RUN_STARTED and RUN_FINISHED events. It is consistent with the request and the session snapshot.</p>
          * 
          * <strong>example:</strong>
          * <p>abcdef0123456789abcdef0123456789</p>
@@ -416,7 +416,7 @@ public class InvokeAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The extension value of the CUSTOM event. It can be any JSON object or null.</p>
+         * <p>The extension value of the CUSTOM event, which can be any JSON object or null.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;reference&quot;:null,&quot;actions&quot;:[],&quot;messageId&quot;:null}</p>
@@ -563,7 +563,7 @@ public class InvokeAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the interrupt. It is used as resume[].interruptId when resuming the run.</p>
+             * <p>The interrupt ID, which is used as resume[].interruptId when resuming the run.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -578,7 +578,7 @@ public class InvokeAgentResponseBody extends TeaModel {
              * <p>The approval description or follow-up question text displayed to the user.</p>
              * 
              * <strong>example:</strong>
-             * <p>Proceed with execution?</p>
+             * <p>Do you want to proceed?</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -586,7 +586,7 @@ public class InvokeAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The optional extension information of the interrupt. It cannot replace tool events.</p>
+             * <p>The optional extension information of the interrupt, which cannot replace tool events.</p>
              * 
              * <strong>example:</strong>
              * <p>{}</p>
@@ -620,7 +620,7 @@ public class InvokeAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The optional associated tool invoke ID. It is the same as the toolCallId of the preceding TOOL_CALL_START event.</p>
+             * <p>The optional associated tool invoke ID, which is the same as the toolCallId of the preceding TOOL_CALL_START event.</p>
              * 
              * <strong>example:</strong>
              * <p>call-1</p>
@@ -702,7 +702,7 @@ public class InvokeAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The outcome type. A value of success indicates normal completion. A value of interrupt indicates waiting for a response, in which case the interrupts array contains at least one item.</p>
+             * <p>The outcome type. A value of success indicates normal completion, and interrupt indicates waiting for a response. When the value is interrupt, the interrupts array contains at least one item.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

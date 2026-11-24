@@ -94,7 +94,7 @@ public class UpdateNodePoolComponentInstanceResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxx</p>
+         * <p>123e4567-e89b-12d3-a456-426614174000</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

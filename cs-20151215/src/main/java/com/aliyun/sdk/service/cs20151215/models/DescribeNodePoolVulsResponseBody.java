@@ -75,10 +75,12 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the Security Center CVE fix service is purchased. Valid values:</p>
+         * <p>Specifies whether the Security Center CVE fix service is purchased.</p>
          * <ul>
-         * <li>true: Purchased.</li>
-         * <li>false: Not purchased.</li>
+         * <li><p>true: Purchased.</p>
+         * </li>
+         * <li><p>false: Not purchased.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -135,7 +137,7 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the package.</p>
+             * <p>The package name.</p>
              * 
              * <strong>example:</strong>
              * <p>WebLogic</p>
@@ -276,7 +278,7 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the vulnerability.</p>
+             * <p>The vulnerability name.</p>
              * 
              * <strong>example:</strong>
              * <p>oval:com.redhat.rhsa:def:20193197</p>
@@ -298,7 +300,7 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether a restart is required.</p>
+             * <p>Specifies whether a restart is required.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -400,7 +402,7 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the node, which identifies the node in the cluster.</p>
+             * <p>The node name, which identifies the node in the cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou.192.168.x.x</p>

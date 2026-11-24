@@ -230,7 +230,7 @@ public class GetClusterInspectReportDetailRequest extends Request {
         }
 
         /**
-         * <p>The query language. Valid values:</p>
+         * <p>The query language.</p>
          * <ul>
          * <li>zh_CN</li>
          * <li>en_US</li>
@@ -288,7 +288,7 @@ public class GetClusterInspectReportDetailRequest extends Request {
         }
 
         /**
-         * <p>The object type. Only check items that match the object type are returned.</p>
+         * <p>The inspection object type. Only inspection items that match the specified object type are returned.</p>
          * 
          * <strong>example:</strong>
          * <p>NodePool</p>

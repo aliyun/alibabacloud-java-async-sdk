@@ -132,7 +132,7 @@ public class ContainerdConfig extends TeaModel {
         } 
 
         /**
-         * <p>Whether to ignore volumes defined in the image.</p>
+         * <p>The configuration to ignore volumes defined in the image.</p>
          */
         public Builder ignoreImageDefinedVolume(Boolean ignoreImageDefinedVolume) {
             this.ignoreImageDefinedVolume = ignoreImageDefinedVolume;
@@ -140,7 +140,7 @@ public class ContainerdConfig extends TeaModel {
         }
 
         /**
-         * <p>A list of insecure registries that skip TLS certificate verification.</p>
+         * <p>The registries that skip certificate verification.</p>
          */
         public Builder insecureRegistries(java.util.List<String> insecureRegistries) {
             this.insecureRegistries = insecureRegistries;
@@ -148,7 +148,10 @@ public class ContainerdConfig extends TeaModel {
         }
 
         /**
-         * <p>Maximum core dump size in bytes.</p>
+         * <p>The core dump size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder limitCore(Long limitCore) {
             this.limitCore = limitCore;
@@ -156,7 +159,10 @@ public class ContainerdConfig extends TeaModel {
         }
 
         /**
-         * <p>Maximum locked memory in bytes.</p>
+         * <p>The maximum memory lock limit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>65536</p>
          */
         public Builder limitMemLock(Long limitMemLock) {
             this.limitMemLock = limitMemLock;
@@ -164,7 +170,10 @@ public class ContainerdConfig extends TeaModel {
         }
 
         /**
-         * <p>Maximum number of open file handles.</p>
+         * <p>The maximum number of file handles.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1048576</p>
          */
         public Builder limitNoFile(Long limitNoFile) {
             this.limitNoFile = limitNoFile;
@@ -172,7 +181,10 @@ public class ContainerdConfig extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of concurrent image layer downloads.</p>
+         * <p>The maximum number of concurrent downloads.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxConcurrentDownloads(Long maxConcurrentDownloads) {
             this.maxConcurrentDownloads = maxConcurrentDownloads;
@@ -180,7 +192,7 @@ public class ContainerdConfig extends TeaModel {
         }
 
         /**
-         * <p>A list of registry mirrors to accelerate image pulls.</p>
+         * <p>The registry mirror configuration.</p>
          */
         public Builder registryMirrors(java.util.List<String> registryMirrors) {
             this.registryMirrors = registryMirrors;

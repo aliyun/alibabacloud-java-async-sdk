@@ -60,7 +60,7 @@ public class CheckServiceRoleRequest extends Request {
         } 
 
         /**
-         * <p>The list of service roles to check.</p>
+         * <p>The list of service roles to be checked.</p>
          * <p>This parameter is required.</p>
          */
         public Builder roles(java.util.List<Roles> roles) {
@@ -117,7 +117,7 @@ public class CheckServiceRoleRequest extends Request {
             } 
 
             /**
-             * <p>The name of the service role. For more information about the service roles and permission scopes in Container Service for Kubernetes (ACK), see <a href="https://help.aliyun.com/document_detail/86483.html">Service roles for ACK</a>.</p>
+             * <p>The name of the service role. For more information about the service roles and their permission scopes in Container Service for Kubernetes (ACK), see <a href="https://help.aliyun.com/document_detail/86483.html">Service roles for ACK</a>.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

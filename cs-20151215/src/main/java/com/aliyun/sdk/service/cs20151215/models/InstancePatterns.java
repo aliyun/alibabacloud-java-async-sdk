@@ -292,7 +292,7 @@ public class InstancePatterns extends TeaModel {
         } 
 
         /**
-         * <p>[This parameter is deprecated and replaced by cpu_architectures] The architectures of instance types.</p>
+         * <p><strong>[Deprecated]</strong> Use the cpu_architectures parameter instead. The architecture type of the instance type.</p>
          */
         public Builder architectures(java.util.List<String> architectures) {
             this.architectures = architectures;
@@ -300,7 +300,7 @@ public class InstancePatterns extends TeaModel {
         }
 
         /**
-         * <p>[This parameter is deprecated] Specifies whether to include burstable instance types.</p>
+         * <p><strong>[Deprecated]</strong> Do not use this parameter. Specifies whether the instance type is a burstable instance type.</p>
          * 
          * <strong>example:</strong>
          * <p>Exclude</p>
@@ -311,7 +311,7 @@ public class InstancePatterns extends TeaModel {
         }
 
         /**
-         * <p>[This parameter is deprecated and replaced by cores] The number of vCores provided by the instance type.</p>
+         * <p><strong>[Deprecated]</strong> Use the cores parameter instead. The number of vCPU cores of the instance type.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -322,7 +322,7 @@ public class InstancePatterns extends TeaModel {
         }
 
         /**
-         * <p>The number of vCPU cores for the instance type.</p>
+         * <p>The number of vCPU cores of the instance type.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -333,7 +333,7 @@ public class InstancePatterns extends TeaModel {
         }
 
         /**
-         * <p>The CPU architecture of the instance type.</p>
+         * <p>The CPU architecture of the instance.</p>
          */
         public Builder cpuArchitectures(java.util.List<String> cpuArchitectures) {
             this.cpuArchitectures = cpuArchitectures;
@@ -341,7 +341,7 @@ public class InstancePatterns extends TeaModel {
         }
 
         /**
-         * <p>The instance type that you want to exclude.</p>
+         * <p>The instance types to exclude.</p>
          */
         public Builder excludedInstanceTypes(java.util.List<String> excludedInstanceTypes) {
             this.excludedInstanceTypes = excludedInstanceTypes;
@@ -349,7 +349,7 @@ public class InstancePatterns extends TeaModel {
         }
 
         /**
-         * <p>The type of the instance.</p>
+         * <p>The instance categories.</p>
          */
         public Builder instanceCategories(java.util.List<String> instanceCategories) {
             this.instanceCategories = instanceCategories;
@@ -368,7 +368,7 @@ public class InstancePatterns extends TeaModel {
         }
 
         /**
-         * <p>The specified instance family.</p>
+         * <p>The specified instance families.</p>
          */
         public Builder instanceTypeFamilies(java.util.List<String> instanceTypeFamilies) {
             this.instanceTypeFamilies = instanceTypeFamilies;
@@ -376,7 +376,7 @@ public class InstancePatterns extends TeaModel {
         }
 
         /**
-         * <p>The maximum vCPU cores allowed for the instance type.</p>
+         * <p>The maximum number of vCPU cores of the instance type.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -387,7 +387,7 @@ public class InstancePatterns extends TeaModel {
         }
 
         /**
-         * <p>The maximum allowed memory size. Unit: GiB.</p>
+         * <p>The maximum memory of the instance type. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>16</p>
@@ -398,7 +398,7 @@ public class InstancePatterns extends TeaModel {
         }
 
         /**
-         * <p>[This parameter is deprecated] The maximum hourly price of the instance.</p>
+         * <p><strong>[Deprecated]</strong> Do not use this parameter. The maximum hourly price of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -409,7 +409,7 @@ public class InstancePatterns extends TeaModel {
         }
 
         /**
-         * <p>The maximum allowed number of GPUs per instance.</p>
+         * <p>The expected maximum number of GPUs.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -431,7 +431,7 @@ public class InstancePatterns extends TeaModel {
         }
 
         /**
-         * <p>The minimum vCPU cores required for the instance type.</p>
+         * <p>The minimum number of vCPU cores of the instance type.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -442,7 +442,7 @@ public class InstancePatterns extends TeaModel {
         }
 
         /**
-         * <p>The minimum required memory size. Unit: GiB.</p>
+         * <p>The minimum memory of the instance type. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -453,7 +453,7 @@ public class InstancePatterns extends TeaModel {
         }
 
         /**
-         * <p>The minimum required number of IPv6 addresses per ENI.</p>
+         * <p>The expected minimum number of IPv6 addresses per elastic network interface controller (NIC).</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -464,7 +464,7 @@ public class InstancePatterns extends TeaModel {
         }
 
         /**
-         * <p>The minimum required number of IPv4 addresses per ENI.</p>
+         * <p>The expected minimum number of IPv4 addresses per elastic network interface controller (NIC).</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -475,7 +475,7 @@ public class InstancePatterns extends TeaModel {
         }
 
         /**
-         * <p>The minimum required number of elastic network interfaces (ENIs) per instance.</p>
+         * <p>The expected minimum number of elastic network interfaces (ENIs) that can be mounted.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>

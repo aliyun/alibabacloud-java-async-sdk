@@ -78,10 +78,10 @@ public class UpdateContactGroupForAlertResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the update result. Valid values:</p>
+         * <p>Indicates whether the update was successful. Valid values:</p>
          * <ul>
-         * <li>true: The operation succeeded.</li>
-         * <li>false: The operation failed.</li>
+         * <li>true: The update was successful.</li>
+         * <li>false: The update failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -88,7 +88,7 @@ public class StartAlertRequest extends Request {
         } 
 
         /**
-         * <p>The cluster ID. You can obtain the cluster ID by calling ListClusters.</p>
+         * <p>The cluster ID. You can call ListClusters to obtain the cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -231,7 +231,7 @@ public class CreateNodePoolComponentInstancesRequest extends Request {
             } 
 
             /**
-             * <p>The name of the environment variable.</p>
+             * <p>The environment variable name.</p>
              * 
              * <strong>example:</strong>
              * <p>LOG_LEVEL</p>
@@ -242,7 +242,7 @@ public class CreateNodePoolComponentInstancesRequest extends Request {
             }
 
             /**
-             * <p>The value of the environment variable.</p>
+             * <p>The environment variable value.</p>
              * 
              * <strong>example:</strong>
              * <p>info</p>
@@ -405,7 +405,7 @@ public class CreateNodePoolComponentInstancesRequest extends Request {
             } 
 
             /**
-             * <p>The configuration of the component.</p>
+             * <p>The component configuration.</p>
              */
             public Builder config(Config config) {
                 this.config = config;
@@ -413,7 +413,7 @@ public class CreateNodePoolComponentInstancesRequest extends Request {
             }
 
             /**
-             * <p>The name of the component.</p>
+             * <p>The component name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -425,7 +425,7 @@ public class CreateNodePoolComponentInstancesRequest extends Request {
             }
 
             /**
-             * <p>The version of the component.</p>
+             * <p>The component version.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -544,7 +544,7 @@ public class CreateNodePoolComponentInstancesRequest extends Request {
             }
 
             /**
-             * <p>The maximum number of parallel updates per batch. Default value: 1.</p>
+             * <p>The maximum number of parallel operations per batch. Default value: 1.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -555,7 +555,7 @@ public class CreateNodePoolComponentInstancesRequest extends Request {
             }
 
             /**
-             * <p>The auto-pause policy during the node upgrade process. Valid values: NotPause, FirstBatch, and EveryBatch. Default value: NotPause.</p>
+             * <p>The automatic pause policy during the node upgrade. Valid values: NotPause, FirstBatch, and EveryBatch. Default value: NotPause.</p>
              * 
              * <strong>example:</strong>
              * <p>NotPause</p>

@@ -99,7 +99,7 @@ public class DescribeClustersRequest extends Request {
         }
 
         /**
-         * <p>The cluster name used for fuzzy matching.</p>
+         * <p>Performs a fuzzy match based on the cluster name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

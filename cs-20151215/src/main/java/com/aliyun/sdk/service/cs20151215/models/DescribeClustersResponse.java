@@ -665,7 +665,7 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * <p>The data disk size of the node.</p>
+             * <p>The size of the data disk for the node.</p>
              */
             public Builder dataDiskSize(Long dataDiskSize) {
                 this.dataDiskSize = dataDiskSize;
@@ -714,7 +714,7 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * <p>The access address of the cluster API server, including the internal network access address and the public network access address.</p>
+             * <p>The access endpoint of the cluster API server, including the internal network access endpoint and the public network access endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;api_server_endpoint&quot;:&quot;&quot;,&quot;intranet_api_server_endpoint&quot;:&quot;<a href="https://192.0.2.10:6443%22%7D">https://192.0.2.10:6443&quot;}</a></p>
@@ -758,7 +758,7 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * <p>Indicates whether Private Zone is enabled for the cluster. Default value: false.</p>
+             * <p>Indicates whether PrivateZone is enabled for the cluster. Default value: false.</p>
              */
             public Builder privateZone(Boolean privateZone) {
                 this.privateZone = privateZone;
@@ -810,7 +810,7 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * <p>The current number of nodes in the cluster, including master and worker nodes.</p>
+             * <p>The current number of nodes in the cluster, including master nodes and worker nodes.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -821,7 +821,7 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * <p>The state of the cluster.</p>
+             * <p>The running state of the cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>running</p>
@@ -832,7 +832,7 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * <p>The subnet CIDR of the cluster.</p>
+             * <p>The subnet CIDR block of the cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>172.16.0.0/16</p>
@@ -862,7 +862,7 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * <p>The VPC ID of the cluster.</p>
+             * <p>The virtual private cloud (VPC) ID of the cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-a1b2c3d4e5f6g7h8i9j0k</p>
@@ -873,7 +873,7 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * <p>The vSwitch CIDR.</p>
+             * <p>The CIDR block of the vSwitch.</p>
              */
             public Builder vswitchCidr(String vswitchCidr) {
                 this.vswitchCidr = vswitchCidr;
@@ -892,7 +892,7 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * <p>The name of the RAM role used by the worker nodes.</p>
+             * <p>The name of the Resource Access Management (RAM) role used by the worker nodes.</p>
              * 
              * <strong>example:</strong>
              * <p>example-worker-ram-role</p>

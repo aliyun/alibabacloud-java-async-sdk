@@ -280,7 +280,7 @@ public class DescribeTriggerResponse extends Response {
 
             /**
              * <p>The trigger project name.</p>
-             * <p>It consists of the namespace and application name in the <code>${namespace}/${name}</code> format. Example: default/test-app.</p>
+             * <p>It consists of the namespace and application name, in the <code>${namespace}/${name}</code> format. Example: default/test-app.</p>
              * 
              * <strong>example:</strong>
              * <p>default/test-app</p>
@@ -294,9 +294,9 @@ public class DescribeTriggerResponse extends Response {
              * <p>The trigger type.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li><p><code>deployment</code>: the trigger for stateless applications. </p>
+             * <li><p><code>deployment</code>: trigger for stateless applications. </p>
              * </li>
-             * <li><p><code>application</code>: the trigger for Hybrid Cloud Application Center applications.</p>
+             * <li><p><code>application</code>: trigger for Hybrid Cloud Application Center applications.</p>
              * </li>
              * </ul>
              * 
@@ -310,7 +310,7 @@ public class DescribeTriggerResponse extends Response {
 
             /**
              * <p>The trigger action. Valid values:</p>
-             * <p><code>redeploy</code>: redeploys the application.</p>
+             * <p><code>redeploy</code>: Redeploys the application.</p>
              * 
              * <strong>example:</strong>
              * <p>redeploy</p>

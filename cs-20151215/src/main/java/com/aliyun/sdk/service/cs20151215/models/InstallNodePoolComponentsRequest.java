@@ -317,7 +317,7 @@ public class InstallNodePoolComponentsRequest extends Request {
             }
 
             /**
-             * <p>The environment variables for the node component.</p>
+             * <p>The environment variables of the node component.</p>
              */
             public Builder envs(java.util.List<Envs> envs) {
                 this.envs = envs;

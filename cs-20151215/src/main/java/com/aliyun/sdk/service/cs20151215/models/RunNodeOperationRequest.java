@@ -145,7 +145,7 @@ public class RunNodeOperationRequest extends Request {
         }
 
         /**
-         * <p>The node on which O&amp;M operations are performed.</p>
+         * <p>The node on which to perform O&amp;M operations.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,7 +158,7 @@ public class RunNodeOperationRequest extends Request {
         }
 
         /**
-         * <p>The name of the O&amp;M action to execute.</p>
+         * <p>The name of the O&amp;M action to perform.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,7 +171,7 @@ public class RunNodeOperationRequest extends Request {
         }
 
         /**
-         * <p>The list of parameters for the O&amp;M action.</p>
+         * <p>The list of parameters accepted by the O&amp;M action.</p>
          */
         public Builder operationArgs(java.util.List<String> operationArgs) {
             this.putBodyParameter("operationArgs", operationArgs);

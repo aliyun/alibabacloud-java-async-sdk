@@ -1588,19 +1588,19 @@ public class CreateClusterRequest extends Request {
 
         /**
          * <p>The list of cluster components. You can use <code>addons</code> to specify the cluster components that you want to install when you create a cluster.</p>
-         * <p><strong>Network components</strong>: Required. Includes two options for the network type: Flannel and Terway. You must select one of them when you create a cluster:</p>
+         * <p><strong>Network components</strong>: Required. Two network types, Flannel and Terway, are supported. You must select one of the network types when you create a cluster:</p>
          * <ul>
          * <li>Flannel: [{&quot;name&quot;:&quot;flannel&quot;,&quot;config&quot;:&quot;&quot;}\].</li>
          * <li>Terway: [{&quot;name&quot;: &quot;terway-eniip&quot;,&quot;config&quot;: &quot;&quot;}\].</li>
          * </ul>
          * <p><strong>Storage components</strong>: Optional. Only <code>csi</code> is supported:</p>
          * <p><code>csi</code>: [{&quot;name&quot;:&quot;csi-plugin&quot;,&quot;config&quot;: &quot;&quot;},{&quot;name&quot;: &quot;csi-provisioner&quot;,&quot;config&quot;: &quot;&quot;}\].</p>
-         * <p><strong>Log components</strong>: Optional. We recommend that you enable this component. If you do not enable Log Service, you cannot use the cluster audit feature.</p>
+         * <p><strong>Log component</strong>: Optional. We recommend that you enable this component. If you do not enable Simple Log Service, you cannot use the cluster audit feature.</p>
          * <ul>
          * <li>Use an existing <code>SLS Project</code>: [{&quot;name&quot;: &quot;loongcollector&quot;,&quot;config&quot;: &quot;{\&quot;IngressDashboardEnabled\&quot;:\&quot;true\&quot;,\&quot;sls_project_name\&quot;:\&quot;your_sls_project_name\&quot;}&quot;}\].</li>
          * <li>Create a new <code>SLS Project</code>: [{&quot;name&quot;: &quot;loongcollector&quot;,&quot;config&quot;: &quot;{\&quot;IngressDashboardEnabled\&quot;:\&quot;true\&quot;}&quot;}\].</li>
          * </ul>
-         * <p><strong>Ingress components</strong>: Optional. By default, the <code>nginx-ingress-controller</code> Ingress component is installed in ACK dedicated clusters.</p>
+         * <p><strong>Ingress component</strong>: Optional. By default, the <code>nginx-ingress-controller</code> Ingress component is installed in ACK dedicated clusters.</p>
          * <ul>
          * <li>Install the Ingress component and enable Internet access: [{&quot;name&quot;:&quot;nginx-ingress-controller&quot;,&quot;config&quot;:&quot;{\&quot;IngressSlbNetworkType\&quot;:\&quot;internet\&quot;}&quot;}\].</li>
          * <li>Disable the default installation of the Ingress component: [{&quot;name&quot;: &quot;nginx-ingress-controller&quot;,&quot;config&quot;: &quot;&quot;,&quot;disabled&quot;: true}\].</li>
@@ -1616,7 +1616,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>A ServiceAccount is the access credential for communication between pods and the cluster API server. <code>api-audiences</code> specifies the valid identities for request <code>tokens</code> and is used by the <code>apiserver</code> to authenticate whether a request <code>token</code> is valid. You can configure multiple <code>audiences</code> and separate them with commas (,).</p>
+         * <p>A ServiceAccount is the access credential for communication between pods and the cluster API server. <code>api-audiences</code> specifies the valid identities for request <code>tokens</code> and is used by the <code>apiserver</code> to verify whether a request <code>token</code> is valid. You can configure multiple <code>audiences</code> and separate them with commas (,).</p>
          * <p>For more information about <code>ServiceAccount</code>, see <a href="https://help.aliyun.com/document_detail/160384.html">Deploy service account token volume projection</a>.</p>
          * 
          * <strong>example:</strong>
@@ -1629,7 +1629,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The cluster audit log configurations.</p>
+         * <p>The cluster audit log configuration.</p>
          */
         public Builder auditLogConfig(AuditLogConfig auditLogConfig) {
             this.putBodyParameter("audit_log_config", auditLogConfig);
@@ -1638,7 +1638,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The <a href="https://help.aliyun.com/document_detail/2938898.html">intelligent managed mode</a> configurations.</p>
+         * <p>The <a href="https://help.aliyun.com/document_detail/2938898.html">ACK Auto Mode</a> configuration.</p>
          */
         public Builder autoMode(AutoMode autoMode) {
             this.putBodyParameter("auto_mode", autoMode);
@@ -1647,13 +1647,14 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> Specifies whether to enable auto-renewal. This parameter takes effect only when <code>charge_type</code> is set to <code>PrePaid</code>. Valid values:</p>
+         * <p><strong>[Deprecated]</strong></p>
+         * <p>Specifies whether to enable auto-renewal. This parameter takes effect only when <code>charge_type</code> is set to <code>PrePaid</code>. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: Enables auto-renewal.</li>
-         * <li><code>false</code>: Disables auto-renewal.</li>
+         * <li><code>true</code>: enables auto-renewal.</li>
+         * <li><code>false</code>: disables auto-renewal.</li>
          * </ul>
          * <p>Default value: <code>false</code>.</p>
-         * <p>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on parameter behavior changes of the CreateCluster operation for cluster creation</a>.</p>
+         * <p>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on parameter behavior changes of the CreateCluster operation</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1665,9 +1666,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> The auto-renewal cycle. This parameter takes effect only when you select subscription and auto-renewal. When <code>PeriodUnit</code> is set to <code>Month</code>, valid values are 1, 2, 3, 6, and 12.</p>
+         * <p><strong>[Deprecated]</strong></p>
+         * <p>The auto-renewal epoch. This parameter takes effect only when you select upfront and auto-renewal. When <code>PeriodUnit</code> is set to <code>Month</code>, valid values are 1, 2, 3, 6, and 12.</p>
          * <p>Default value: 1.</p>
-         * <p>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on parameter behavior changes of the CreateCluster operation for cluster creation</a>.</p>
+         * <p>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on parameter behavior changes of the CreateCluster operation</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1679,19 +1681,20 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> The billing method of the Classic Load Balancer (CLB) instance used by the API server. Default value: PostPaid. Valid values:</p>
+         * <p><strong>[Deprecated]</strong></p>
+         * <p>The billing method of the Classic Load Balancer (CLB) instance used by the API server. Default value: PostPaid. Valid values:</p>
          * <ul>
-         * <li>PostPaid: Pay-as-you-go.</li>
-         * <li>PrePaid: Subscription. This billing method is no longer supported for new CLB instances, but existing instances are not affected.</li>
+         * <li>PostPaid: pay-as-you-go.</li>
+         * <li>PrePaid: subscription. This billing method is no longer supported for new CLB instances, but existing instances are not affected.</li>
          * </ul>
          * <blockquote>
          * <p>Notice: </p>
          * </blockquote>
          * <ul>
-         * <li>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on parameter behavior changes of the CreateCluster operation for cluster creation</a>.</li>
+         * <li>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on parameter behavior changes of the CreateCluster operation</a>.</li>
          * <li>Starting December 1, 2024, newly created CLB instances no longer support the subscription billing method, and an instance fee is charged.</notice>
-         * <props="china">For more information, see [Service notices: Deprecation of the subscription billing method for the CLB instance of the API server in newly created clusters](https://help.aliyun.com/document_detail/2851191.html) and [Announcement on billing item adjustments for Classic Load Balancer (CLB)](https://help.aliyun.com/document_detail/2839797.html).
-         * <props="intl">For more information, see [Announcement on billing item adjustments for Classic Load Balancer (CLB)](https://help.aliyun.com/document_detail/2839797.html).</li>
+         * <props="china">For more information, see [Service notices: Announcement on the cancellation of the subscription billing method for the Classic Load Balancer (CLB) instance of the API server in newly created clusters](https://help.aliyun.com/document_detail/2851191.html) and [Announcement on the adjustment of Classic Load Balancer (CLB) billable items](https://help.aliyun.com/document_detail/2839797.html).
+         * <props="intl">For more information, see [Announcement on the adjustment of Classic Load Balancer (CLB) billable items](https://help.aliyun.com/document_detail/2839797.html).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1704,7 +1707,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> To configure the cluster control plane, use the <code>security_hardening_os</code> parameter under <code>control_plane_config</code> instead. To configure node pools, use the <code>security_hardening_os</code> parameter under <code>scaling_group</code> in <code>nodepool</code> instead.</p>
+         * <p><strong>[Deprecated]</strong> To configure the cluster control plane, use the <code>security_hardening_os</code> parameter under <code>control_plane_config</code> instead. To configure a node pool, use the <code>security_hardening_os</code> parameter under <code>scaling_group</code> in <code>nodepool</code> instead.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1728,11 +1731,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> To configure control plane nodes of a cluster, use the <code>cloud_monitor_flags</code> parameter under <code>control_plane_config</code> instead. To configure node pools, use the <code>cms_enabled</code> parameter under <code>kubernetes_config</code> in <code>nodepool</code> instead.</p>
-         * <p>Specifies whether to install the CloudMonitor agent on the cluster. Valid values:</p>
+         * <p><strong>[Deprecated]</strong> To configure control plane nodes, use the <code>cloud_monitor_flags</code> parameter under <code>control_plane_config</code> instead. To configure a node pool, use the <code>cms_enabled</code> parameter under <code>kubernetes_config</code> in <code>nodepool</code> instead.</p>
+         * <p>Specifies whether to install the CloudMonitor agent for the cluster. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: Installs the CloudMonitor agent.</li>
-         * <li><code>false</code>: Does not install the CloudMonitor agent.</li>
+         * <li><code>true</code>: installs the CloudMonitor agent.</li>
+         * <li><code>false</code>: does not install the CloudMonitor agent.</li>
          * </ul>
          * <p>Default value: <code>false</code>.</p>
          * 
@@ -1767,7 +1770,7 @@ public class CreateClusterRequest extends Request {
          * <li><code>ack.pro.2xlarge</code>: Pro 2XL.</li>
          * <li><code>ack.pro.4xlarge</code>: Pro 4XL. You must contact customer service to apply for whitelist access.</li>
          * </ul>
-         * <p>Pro XL, Pro 2XL, and Pro 4XL are three tiers provided by &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro Provisioned Control Plane</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro Provisioned Control Plane</a>. By pre-allocating and reserving control plane resources, these editions ensure that API concurrency and pod scheduling capabilities are always maintained at a consistently high level. They are suitable for AI training and inference, ultra-large-scale clusters, and mission-critical workloads.</p>
+         * <p>Pro XL, Pro 2XL, and Pro 4XL are three tiers provided by &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro Provisioned Control Plane</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro Provisioned Control Plane</a>. By pre-allocating and fixing control plane resources, these editions ensure that API concurrency and pod scheduling capabilities are always maintained at a consistently high level. They are suitable for AI training and inference, ultra-large-scale clusters, and mission-critical workloads.</p>
          * <p>For more information about the cluster management fees for Pro Edition and provisioned control plane editions, see &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>.</p>
          * 
          * <strong>example:</strong>
@@ -1780,11 +1783,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>Valid values:</p>
          * <ul>
          * <li><code>Kubernetes</code>: ACK dedicated cluster.</li>
          * <li><code>ManagedKubernetes</code>: ACK managed cluster, including ACK managed clusters (Pro Edition and Basic Edition), ACK Serverless clusters (Pro Edition and Basic Edition), ACK Edge clusters (Pro Edition and Basic Edition), and ACK Lingjun clusters (Pro Edition).</li>
-         * <li><code>ExternalKubernetes</code>: Registered cluster.</li>
+         * <li><code>ExternalKubernetes</code>: registered cluster.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1797,7 +1799,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The CIDR block for pods. It must be a valid private CIDR block, specifically one of the following CIDR blocks or their subnets: 10.0.0.0/8, 172.16.0.0/12, and 192.168.0.0/16. It cannot overlap with the CIDR block of the VPC or the CIDR blocks used by existing Kubernetes clusters in the VPC. It cannot be modified after the cluster is created.</p>
+         * <p>The pod CIDR block. It must be a valid private CIDR block, which is one of the following CIDR blocks or their subnets: 10.0.0.0/8, 172.16.0.0/12 to 172.31.0.0/16, and 192.168.0.0/16. It cannot overlap with the CIDR block of the VPC or the CIDR blocks used by existing Kubernetes clusters in the VPC. It cannot be modified after the cluster is created.</p>
          * <p>For more information about cluster network planning, see <a href="https://help.aliyun.com/document_detail/86500.html">Network planning for ACK managed clusters</a>.</p>
          * <blockquote>
          * <p>This parameter is required for Flannel clusters.</p>
@@ -1813,7 +1815,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The control plane configuration for an ACK dedicated cluster.</p>
+         * <p>The control plane configuration for dedicated ACK clusters.</p>
          */
         public Builder controlPlaneConfig(ControlPlaneConfig controlPlaneConfig) {
             this.putBodyParameter("control_plane_config", controlPlaneConfig);
@@ -1822,7 +1824,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The connection configuration of the cluster. If you specify this parameter, the endpoint_public_access and load_balancer_id parameters do not take effect. To specify a CLB or NLB instance, use load_balancers_config to specify the corresponding instance ID.</p>
+         * <p>The endpoint configuration of the cluster. If you specify this parameter, the endpoint_public_access and load_balancer_id parameters do not take effect. To specify a CLB or NLB instance, use the load_balancers_config parameter to specify the instance ID.</p>
          */
         public Builder controlPlaneEndpointsConfig(ControlPlaneEndpointsConfig controlPlaneEndpointsConfig) {
             this.putBodyParameter("control_plane_endpoints_config", controlPlaneEndpointsConfig);
@@ -1831,7 +1833,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The list of component names. This parameter specifies the control plane components whose logs are collected. By default, logs of kube-apiserver, kube-controller-manager, kube-scheduler, and cloud-controller-manager are collected.</p>
+         * <p>The names of the control plane components for which logs are collected. By default, logs are collected for kube-apiserver, kube-controller-manager, kube-scheduler, and cloud-controller-manager.</p>
          */
         public Builder controlplaneLogComponents(java.util.List<String> controlplaneLogComponents) {
             this.putBodyParameter("controlplane_log_components", controlplaneLogComponents);
@@ -1840,7 +1842,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The Log Service project for control plane component logs. You can use an existing project for log storage, or use the automatic creation feature to create a project. If you choose automatic creation, a Log Service project named k8s-log-{ClusterID} is created.</p>
+         * <p>The Log Service project for control plane component logs. You can use an existing project for log storage, or use the automatic creation of a project by the system. If you choose automatic creation, a Log Service project named <code>k8s-log-{ClusterID}</code> is created.</p>
          * 
          * <strong>example:</strong>
          * <p>k8s-log-xxx</p>
@@ -1852,7 +1854,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The log retention period for control plane components. Unit: days.</p>
+         * <p>The log retention period in days for control plane components.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -1864,11 +1866,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> Use the cpu_policy parameter under control_plane_config for cluster control plane configuration, and use the cpu_policy parameter under kubernetes_config in nodepool for node pool configuration.</p>
-         * <p>The CPU management policy for nodes. This parameter supports the following policies when the cluster version is 1.12.6 or later:</p>
+         * <p><strong>[Deprecated]</strong> Use the cpu_policy parameter in control_plane_config for cluster control plane configuration, or the cpu_policy parameter in kubernetes_config of nodepool for node pool configuration.</p>
+         * <p>The CPU management policy for nodes. If the cluster version is 1.12.6 or later, the following policies are supported:</p>
          * <ul>
          * <li>static: allows you to enhance CPU affinity and exclusivity for pods with specific resource characteristics on the node.</li>
-         * <li>none: uses the default CPU affinity policy.</li>
+         * <li>none: enables the default CPU affinity scheme.</li>
          * </ul>
          * <p>Default value: none.</p>
          * 
@@ -1882,8 +1884,8 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> Use the extra_sans parameter instead.</p>
-         * <p>The SANs of the custom certificate. Separate multiple IP addresses or domain names with commas (,).</p>
+         * <p><strong>[Deprecated]</strong> Use the <code>extra_sans</code> parameter instead.</p>
+         * <p>The custom certificate SANs. Separate multiple IP addresses or domain names with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>cs.aliyun.com</p>
@@ -1895,10 +1897,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable deletion protection for the cluster to prevent accidental deletion through the console or API calls. Valid values:</p>
+         * <p>Specifies whether to enable cluster deletion protection to prevent accidental deletion of the cluster through the console or API. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: Enables cluster deletion protection. The cluster cannot be deleted through the console or API.</li>
-         * <li><code>false</code>: Disables cluster deletion protection. The cluster can be deleted through the console or API.</li>
+         * <li><code>true</code>: enables cluster deletion protection. The cluster cannot be deleted through the console or API.</li>
+         * <li><code>false</code>: disables cluster deletion protection. The cluster can be deleted through the console or API.</li>
          * </ul>
          * <p>Default value: <code>false</code>.</p>
          * 
@@ -1915,8 +1917,8 @@ public class CreateClusterRequest extends Request {
          * <p><strong>[Deprecated]</strong> By default, no rollback is performed when cluster creation fails. You must manually clean up the failed cluster.</p>
          * <p>Specifies whether to perform a rollback when cluster creation fails. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: Performs a rollback when cluster creation fails.</li>
-         * <li><code>false</code>: Does not perform a rollback when cluster creation fails.</li>
+         * <li><code>true</code>: performs a rollback when cluster creation fails.</li>
+         * <li><code>false</code>: does not perform a rollback when cluster creation fails.</li>
          * </ul>
          * <p>Default value: <code>true</code>.</p>
          * 
@@ -1930,11 +1932,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> Use the <code>rrsa_config</code> parameter instead.</p>
-         * <p>Specifies whether to enable RRSA. Valid values:</p>
+         * <p><strong>[Deprecated]</strong> Use the rrsa_config parameter instead.</p>
+         * <p>Specifies whether to enable RAM Roles for Service Accounts (RRSA). Valid values:</p>
          * <ul>
-         * <li>true: Enables RRSA.</li>
-         * <li>false: Disables RRSA.</li>
+         * <li><code>true</code>: enables RRSA.</li>
+         * <li><code>false</code>: disables RRSA.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1947,7 +1949,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The ID of the KMS key used to encrypt data cloud disks. For more information, see <a href="https://help.aliyun.com/document_detail/28935.html">Key Management Service</a>.</p>
+         * <p>The ID of the Key Management Service (KMS) key used to encrypt data cloud disks. For more information, see <a href="https://help.aliyun.com/document_detail/28935.html">Key Management Service</a>.</p>
          * <blockquote>
          * <p>This feature takes effect only in ACK Pro clusters.</p>
          * </blockquote>
@@ -1962,10 +1964,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable public network access. An elastic IP address (EIP) is used to expose the API Server for public network access to the cluster. Valid values:</p>
+         * <p>Specifies whether to enable public network access. An elastic IP address (EIP) is used to expose the API server for public network access to the cluster. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: Enables public network access.</li>
-         * <li><code>false</code>: Disables public network access. If you select this value, the cluster API Server cannot be accessed over the Internet.</li>
+         * <li><code>true</code>: enables public network access.</li>
+         * <li><code>false</code>: disables public network access. If you select this value, the cluster API server cannot be accessed over the Internet.</li>
          * </ul>
          * <p>Default value: <code>false</code>.</p>
          * 
@@ -1979,7 +1981,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The custom Subject Alternative Name (SAN) of the API Server certificate.</p>
+         * <p>The custom Subject Alternative Name (SAN) of the API server certificate.</p>
          */
         public Builder extraSans(java.util.List<String> extraSans) {
             this.putBodyParameter("extra_sans", extraSans);
@@ -1988,17 +1990,17 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> You cannot select existing nodes when creating a cluster. To add existing nodes to a cluster, create a node pool first and call the <a href="https://help.aliyun.com/document_detail/2667920.html">AttachInstancesToNodePool</a> operation.</p>
-         * <p>Specifies whether to mount data cloud disks to existing instances when creating a cluster. Valid values:</p>
+         * <p><strong>[Deprecated]</strong> Existing nodes cannot be selected when you create a cluster. To add existing nodes to a cluster, create a node pool first and call the <a href="https://help.aliyun.com/document_detail/2667920.html">AttachInstancesToNodePool</a> operation.</p>
+         * <p>Specifies whether to mount data cloud disks to existing instances when you create a cluster by using existing instances. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: Stores containers and images on data cloud disks. Existing data on the data cloud disks will be lost. Back up your data first.</li>
-         * <li><code>false</code>: Does not store containers and images on data cloud disks.</li>
+         * <li><code>true</code>: stores containers and images on data cloud disks. The original data on the data cloud disks will be lost. Back up your data first.</li>
+         * <li><code>false</code>: does not store containers and images on data cloud disks.</li>
          * </ul>
          * <p>Default value: <code>false</code>.</p>
-         * <p>Data cloud disk mounting rules:</p>
+         * <p>Rules for mounting data cloud disks:</p>
          * <ul>
-         * <li>If the ECS instance has data cloud disks attached and the file system of the last data cloud disk is not initialized, the system automatically formats the data cloud disk to ext4 to store /var/lib/docker and /var/lib/kubelet.</li>
-         * <li>If the ECS instance does not have data cloud disks attached, no new data cloud disk will be attached.</li>
+         * <li>If an ECS instance has data cloud disks mounted and the file system of the last data cloud disk is not initialized, the system automatically formats the data cloud disk to ext4 to store the /var/lib/docker and /var/lib/kubelet directories.</li>
+         * <li>If an ECS instance does not have data cloud disks mounted, no new data cloud disk will be mounted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2011,7 +2013,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> For cluster control plane configurations, use the <code>image_id</code> parameter under <code>control_plane_config</code> instead. For node pool configurations, use the <code>image_id</code> parameter under <code>scaling_group</code> in <code>nodepool</code> instead.</p>
+         * <p><strong>[Deprecated]</strong> For the control plane configuration, use the image_id parameter under control_plane_config instead. For the node pool configuration, use the image_id parameter under scaling_group in nodepool instead.</p>
          * <p>The custom image for nodes. By default, the system image is used. If you select a custom image, it replaces the default system image. For more information, see <a href="https://help.aliyun.com/document_detail/146647.html">Custom images</a>.</p>
          * 
          * <strong>example:</strong>
@@ -2024,7 +2026,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> For cluster control plane configurations, use the <code>image_type</code> parameter under <code>control_plane_config</code> instead. For node pool configurations, use the <code>image_type</code> parameter under <code>scaling_group</code> in <code>nodepool</code> instead.</p>
+         * <p><strong>[Deprecated]</strong> For the control plane configuration, use the image_type parameter under control_plane_config instead. For the node pool configuration, use the image_type parameter under scaling_group in nodepool instead.</p>
          * <p>The operating system distribution type. We recommend that you use this field to specify the node operating system. Valid values:</p>
          * <ul>
          * <li>CentOS</li>
@@ -2049,10 +2051,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> You cannot select existing nodes when creating a cluster. To add existing nodes to a cluster, create a node pool first and call the <a href="https://help.aliyun.com/document_detail/2667920.html">AttachInstancesToNodePool</a> operation.</p>
-         * <p>The list of existing ECS instances to be added as worker nodes when creating a cluster with existing nodes.</p>
+         * <p><strong>[Deprecated]</strong> Existing nodes cannot be selected when you create a cluster. To add existing nodes to a cluster, create a node pool first and call the <a href="https://help.aliyun.com/document_detail/2667920.html">AttachInstancesToNodePool</a> operation.</p>
+         * <p>The list of existing ECS instances to be added as worker nodes when you create a cluster by using existing nodes.</p>
          * <blockquote>
-         * <p>This field is required when you create a cluster with existing instances.</p>
+         * <p>This field is required when you create a cluster by using existing instances.</p>
          * </blockquote>
          */
         public Builder instances(java.util.List<String> instances) {
@@ -2062,12 +2064,15 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The IP stack of the cluster.</p>
+         * <p>The IP stack of the cluster. Valid values:</p>
+         * <ul>
+         * <li><code>ipv4</code>: single stack.</li>
+         * <li><code>dual</code>: dual stack.</li>
+         * </ul>
+         * <p>Default value: <code>ipv4</code>.</p>
          * 
          * <strong>example:</strong>
-         * <p>Valid values:
-         * ipv4 (single-stack)
-         * dual (dual-stack). Default value: ipv4</p>
+         * <p>ipv4</p>
          */
         public Builder ipStack(String ipStack) {
             this.putBodyParameter("ip_stack", ipStack);
@@ -2076,14 +2081,14 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable automatic creation of an advanced security group. This parameter takes effect when <code>security_group_id</code> is empty.</p>
+         * <p>Specifies whether to enable automatic creation of an advanced security group. This parameter takes effect when security_group_id is empty.</p>
          * <blockquote>
-         * <p>If you use a basic security group, the total number of nodes and Terway pods in the cluster cannot exceed 2,000. Therefore, we recommend that you use an advanced security group when creating a cluster of the Terway network type.</p>
+         * <p>When a basic security group is used, the total number of nodes and Terway pods in the cluster cannot exceed 2,000. Therefore, we recommend that you use an advanced security group when you create a cluster with the Terway network type.</p>
          * </blockquote>
          * <p>Valid values:</p>
          * <ul>
-         * <li><code>true</code>: Creates and uses an advanced security group.</li>
-         * <li><code>false</code>: Uses a basic security group.</li>
+         * <li><code>true</code>: creates and uses an advanced security group.</li>
+         * <li><code>false</code>: uses a basic security group.</li>
          * </ul>
          * <p>Default value: <code>true</code>.</p>
          * 
@@ -2097,11 +2102,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> You cannot select existing nodes when creating a cluster. To add existing nodes to a cluster, create a node pool first and call the <a href="https://help.aliyun.com/document_detail/2667920.html">AttachInstancesToNodePool</a> operation.</p>
-         * <p>Specifies whether to retain the instance names when creating a cluster with existing instances. Valid values:</p>
+         * <p><strong>[Deprecated]</strong> Existing nodes cannot be selected when you create a cluster. To add existing nodes to a cluster, create a node pool first and call the <a href="https://help.aliyun.com/document_detail/2667920.html">AttachInstancesToNodePool</a> operation.</p>
+         * <p>Specifies whether to retain the instance names when you create a cluster by using existing instances. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: Retains the instance names.</li>
-         * <li><code>false</code>: Does not retain the instance names. The names are replaced based on system rules.</li>
+         * <li><code>true</code>: retains the instance names.</li>
+         * <li><code>false</code>: does not retain the instance names. The names are replaced based on system rules.</li>
          * </ul>
          * <p>Default value: <code>true</code>.</p>
          * 
@@ -2115,8 +2120,8 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> For cluster control plane configurations, use the <code>key_pair</code> parameter under <code>control_plane_config</code> instead. For node pool configurations, use the <code>key_pair</code> parameter under <code>scaling_group</code> in <code>nodepool</code> instead.</p>
-         * <p>The name of the key pair. You must specify either this parameter or <code>login_password</code>.</p>
+         * <p><strong>[Deprecated]</strong> For the control plane configuration, use the key_pair parameter under control_plane_config instead. For the node pool configuration, use the key_pair parameter under scaling_group in nodepool instead.</p>
+         * <p>The name of the key pair. You must specify either this parameter or login_password.</p>
          * 
          * <strong>example:</strong>
          * <p>security-key</p>
@@ -2130,7 +2135,7 @@ public class CreateClusterRequest extends Request {
         /**
          * <p>The cluster version, which is consistent with the Kubernetes community baseline version. We recommend that you select the latest version. If you do not specify this parameter, the latest version is used by default.</p>
          * <p>You can create clusters of the latest three versions. You can call the <a href="https://help.aliyun.com/document_detail/2667899.html">DescribeKubernetesVersionMetadata</a> operation to query the supported cluster versions.</p>
-         * <p>For more information about the Kubernetes versions supported by ACK, see <a href="https://help.aliyun.com/document_detail/185269.html">Kubernetes version release overview</a>.</p>
+         * <p>For more information about the Kubernetes versions supported by ACK, see <a href="https://help.aliyun.com/document_detail/185269.html">Kubernetes version release notes</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>1.32.1-aliyun.1</p>
@@ -2142,7 +2147,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The instance ID of the Classic Load Balancer (CLB) used for API server access. If you specify this parameter, automatic creation of a CLB instance for the API server is disabled.</p>
+         * <p>The instance ID of the Classic Load Balancer (CLB) used for API server access. If you specify this parameter, automatic creation of a CLB instance for the API server is not performed.</p>
          * <blockquote>
          * <p>Make sure that the CLB instance has no other dependencies, such as listeners or backend servers. Shared-resource and Internet-facing CLB instances are not supported.</p>
          * </blockquote>
@@ -2157,7 +2162,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> For CLB instances, billing is based on usage. This parameter does not take effect.</p>
+         * <p><strong>[Deprecated]</strong> CLB instances use usage-based billing. This parameter does not take effect.</p>
          * <p>The load balancing specification. Valid values:</p>
          * <ul>
          * <li>slb.s1.small</li>
@@ -2179,7 +2184,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> This parameter enables Simple Log Service for the cluster. It takes effect only for ACK Serverless clusters and must be set to <code>SLS</code>.</p>
+         * <p><strong>[Deprecated]</strong> This parameter specifies whether to enable Simple Log Service for the cluster. It takes effect only for ACK Serverless clusters, and the value must be <code>SLS</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>SLS</p>
@@ -2191,8 +2196,8 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> For cluster control plane configurations, use the <code>login_password</code> parameter under <code>control_plane_config</code> instead. For node pool configurations, use the <code>login_password</code> parameter under <code>scaling_group</code> in <code>nodepool</code> instead.</p>
-         * <p>The SSH logon password. You must specify either this parameter or <code>key_pair</code>. The password must be 8 to 30 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
+         * <p><strong>[Deprecated]</strong> For the control plane configuration, use the login_password parameter under control_plane_config instead. For the node pool configuration, use the login_password parameter under scaling_group in nodepool instead.</p>
+         * <p>The SSH logon password. You must specify either this parameter or key_pair. The password must be 8 to 30 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -2213,11 +2218,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> For cluster control plane configurations, use the <code>auto_renew</code> parameter under <code>control_plane_config</code> instead.</p>
-         * <p>Specifies whether to enable auto-renewal for master nodes. This parameter takes effect only when <code>master_instance_charge_type</code> is set to <code>PrePaid</code>. Valid values:</p>
+         * <p><strong>[Deprecated]</strong> For the control plane configuration, use the auto_renew parameter under control_plane_config instead.</p>
+         * <p>Specifies whether to enable auto-renewal for master nodes. This parameter takes effect only when master_instance_charge_type is set to <code>PrePaid</code>. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: Enables auto-renewal.</li>
-         * <li><code>false</code>: Disables auto-renewal.</li>
+         * <li><code>true</code>: enables auto-renewal.</li>
+         * <li><code>false</code>: disables auto-renewal.</li>
          * </ul>
          * <p>Default value: <code>true</code>.</p>
          * 
@@ -2231,8 +2236,8 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> For cluster control plane configurations, use the <code>auto_renew_period</code> parameter under <code>control_plane_config</code> instead.</p>
-         * <p>The auto-renewal epoch for master nodes. This parameter takes effect and is required only when the subscription billing method is selected.</p>
+         * <p><strong>[Deprecated]</strong> For the control plane configuration, use the auto_renew_period parameter under control_plane_config instead.</p>
+         * <p>The auto-renewal period for master nodes. This parameter is required and takes effect only when the subscription billing method is selected.</p>
          * <p>Valid values: 1, 2, 3, 6, and 12.</p>
          * <p>Default value: 1.</p>
          * 
@@ -2246,7 +2251,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> For cluster control plane configurations, use the <code>size</code> parameter under <code>control_plane_config</code> instead.</p>
+         * <p><strong>[Deprecated]</strong> For the control plane configuration, use the size parameter under control_plane_config instead.</p>
          * <p>The number of master nodes. Valid values: <code>3</code> and <code>5</code>.</p>
          * <p>Default value: <code>3</code>.</p>
          * 
@@ -2260,7 +2265,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> For cluster control plane configurations, use the <code>instance_charge_type</code> parameter under <code>control_plane_config</code> instead.</p>
+         * <p><strong>[Deprecated]</strong> For the control plane configuration, use the instance_charge_type parameter under control_plane_config instead.</p>
          * <p>The billing method of master nodes. Valid values:</p>
          * <ul>
          * <li><code>PrePaid</code>: subscription.</li>
@@ -2278,7 +2283,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> For cluster control plane configurations, use the <code>instance_types</code> parameter under <code>control_plane_config</code> instead.</p>
+         * <p><strong>[Deprecated]</strong> For the control plane configuration, use the instance_types parameter under control_plane_config instead.</p>
          * <p>The instance types of master nodes. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</p>
          */
         public Builder masterInstanceTypes(java.util.List<String> masterInstanceTypes) {
@@ -2288,8 +2293,8 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> For cluster control plane configurations, use the <code>unit</code> parameter under <code>control_plane_config</code> instead.</p>
-         * <p>The subscription period of master nodes. This parameter takes effect and is required only when <code>master_instance_charge_type</code> is set to <code>PrePaid</code>.</p>
+         * <p><strong>[Deprecated]</strong> For the control plane configuration, use the unit parameter under control_plane_config instead.</p>
+         * <p>The subscription duration of master nodes. This parameter is required and takes effect only when master_instance_charge_type is set to <code>PrePaid</code>.</p>
          * <p>Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</p>
          * <p>Default value: 1.</p>
          * 
@@ -2303,9 +2308,9 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> For cluster control plane configurations, use the <code>period_unit</code> parameter under <code>control_plane_config</code> instead.</p>
+         * <p><strong>[Deprecated]</strong> For the control plane configuration, use the period_unit parameter under control_plane_config instead.</p>
          * <p>The subscription period unit of master nodes. This parameter is required when the billing method is <code>PrePaid</code>.</p>
-         * <p>Valid value: <code>Month</code>. Currently, only month is supported.</p>
+         * <p>Valid value: <code>Month</code>. Only monthly subscription is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>Month</p>
@@ -2317,7 +2322,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> For cluster control plane configurations, use the <code>system_disk_category</code> parameter under <code>control_plane_config</code> instead.</p>
+         * <p><strong>[Deprecated]</strong> For the control plane configuration, use the system_disk_category parameter under control_plane_config instead.</p>
          * <p>The system cloud disk category of master nodes. Valid values:</p>
          * <ul>
          * <li><code>cloud_efficiency</code>: ultra disk.</li>
@@ -2336,8 +2341,8 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> For cluster control plane configurations, use the <code>system_disk_performance_level</code> parameter under <code>control_plane_config</code> instead.</p>
-         * <p>The performance level of the system cloud disk for master nodes. This parameter takes effect only for ESSDs. The performance level is related to the disk size. For more information, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSD standard SSD</a>.</p>
+         * <p><strong>[Deprecated]</strong> For the control plane configuration, use the system_disk_performance_level parameter under control_plane_config instead.</p>
+         * <p>The performance level of the system cloud disk for master nodes. This parameter takes effect only for ESSD. The performance level is related to the disk size. For more information, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSD</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>PL1</p>
@@ -2349,8 +2354,8 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> For cluster control plane configurations, use the <code>system_disk_size</code> parameter under <code>control_plane_config</code> instead.</p>
-         * <p>The system cloud disk size of master nodes. Valid values: 40 to 500. Unit: GiB.</p>
+         * <p><strong>[Deprecated]</strong> For the control plane configuration, use the system_disk_size parameter under control_plane_config instead.</p>
+         * <p>The size of the system cloud disk for master nodes. Valid values: 40 to 500. Unit: GiB.</p>
          * <p>Default value: <code>120</code>.</p>
          * 
          * <strong>example:</strong>
@@ -2363,8 +2368,8 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> For cluster control plane configurations, use the <code>system_disk_snapshot_policy_id</code> parameter under <code>control_plane_config</code> instead.</p>
-         * <p>The ID of the automatic snapshot policy applied to the system cloud disk of master nodes.</p>
+         * <p><strong>[Deprecated]</strong> For the control plane configuration, use the system_disk_snapshot_policy_id parameter under control_plane_config instead.</p>
+         * <p>The ID of the automatic snapshot policy applied to the system cloud disks of master nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>sp-2zej1nogjvovnz4z****</p>
@@ -2376,9 +2381,9 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> Use the <code>vswitch_ids</code> parameter instead.</p>
+         * <p><strong>[Deprecated]</strong> Use the vswitch_ids parameter instead.</p>
          * <p>The list of vSwitch IDs for master nodes. You can specify 1 to 3 vSwitches. To ensure high availability of the cluster, we recommend that you select three vSwitches in different zones.</p>
-         * <p>The number of specified vSwitches must be consistent with the value of <code>master_count</code> and correspond to the elements in <code>master_vswitch_ids</code> one by one.</p>
+         * <p>The number of specified instance types must be the same as the value of master_count and correspond to the elements in master_vswitch_ids one by one.</p>
          */
         public Builder masterVswitchIds(java.util.List<String> masterVswitchIds) {
             this.putBodyParameter("master_vswitch_ids", masterVswitchIds);
@@ -2387,7 +2392,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The custom name of the cluster. The name must be 1 to 63 characters in length and can contain digits, Chinese characters, English letters, and hyphens (-). It cannot start with a hyphen (-).</p>
+         * <p>The custom name of the cluster. The name must be 1 to 63 characters in length and can contain digits, Chinese characters, letters, and hyphens (-). It cannot start with a hyphen (-).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -2400,7 +2405,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> Use the <code>snat_entry</code> parameter instead.</p>
+         * <p><strong>[Deprecated]</strong> Use the snat_entry parameter instead.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -2412,7 +2417,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of IP addresses that can be assigned to nodes. This parameter determines the number of IP addresses by specifying the CIDR block of the network. It takes effect only for clusters of the Flannel network type.</p>
+         * <p>The number of node IP addresses. The number of IP addresses is determined by the CIDR block of the network. This parameter takes effect only for clusters of the Flannel network type.</p>
          * <p>Default value: <code>26</code>.</p>
          * 
          * <strong>example:</strong>
@@ -2425,7 +2430,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> For node pool configurations, use the <code>node_name_mode</code> parameter under <code>kubernetes_config</code> in <code>nodepool</code> instead.</p>
+         * <p><strong>[Deprecated]</strong> For the node pool configuration, use the node_name_mode parameter under kubernetes_config in nodepool instead.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -2437,7 +2442,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The node service port. Valid port range: 30000 to 65535.</p>
+         * <p>The node service port. Valid values: 30000 to 65535.</p>
          * <p>Default value: <code>30000-32767</code>.</p>
          * 
          * <strong>example:</strong>
@@ -2459,7 +2464,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> For node pool configurations, use the <code>desired_size</code> parameter under <code>scaling_group</code> in <code>nodepool</code> instead. The number of worker nodes. Valid values: 0 to 100.</p>
+         * <p><strong>[Deprecated]</strong> For node pool configurations, use the desired_size parameter under scaling_group in nodepool instead. The number of worker nodes. Valid values: 0 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -2480,11 +2485,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> For control plane node configurations, use the <code>image_type</code> parameter under <code>control_plane_config</code> instead. For node pool configurations, use the <code>image_type</code> parameter under <code>scaling_group</code> in <code>nodepool</code> instead. The operating system platform type. Valid values:</p>
+         * <p><strong>[Deprecated]</strong> For control plane node configurations, use the image_type parameter under control_plane_config instead. For node pool configurations, use the image_type parameter under scaling_group in nodepool instead. The operating system platform type. Valid values:</p>
          * <ul>
          * <li>Windows</li>
          * <li>Linux
-         * Default value: <code>Linux</code>.</li>
+         * Default value: Linux.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2497,7 +2502,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> The subscription duration. This parameter takes effect and is required only when <code>charge_type</code> is set to <code>PrePaid</code>. Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60. Default value: 1. This field was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on parameter behavior changes of the CreateCluster API operation</a>.</p>
+         * <p><strong>[Deprecated]</strong> The subscription duration. This parameter takes effect and is required only when charge_type is set to PrePaid. Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60. Default value: 1. This field was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on parameter behavior changes of the CreateCluster API operation</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -2509,7 +2514,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> The billing cycle. This parameter is required when the billing method is <code>PrePaid</code>. Valid value: <code>Month</code>. Currently, only monthly billing is supported. This field was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on parameter behavior changes of the CreateCluster API operation</a>.</p>
+         * <p><strong>[Deprecated]</strong> The billing cycle. This parameter is required when the billing method is PrePaid. Valid values: Month. Currently, only monthly billing is supported. This field was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on parameter behavior changes of the CreateCluster API operation</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>Month</p>
@@ -2521,7 +2526,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> For node pool configurations, use the <code>platform</code> parameter under <code>scaling_group</code> in <code>nodepool</code> instead. The operating system distribution. Valid values:</p>
+         * <p><strong>[Deprecated]</strong> For node pool configurations, use the platform parameter under scaling_group in nodepool instead. The operating system distribution. Valid values:</p>
          * <ul>
          * <li>CentOS</li>
          * <li>AliyunLinux</li>
@@ -2529,7 +2534,7 @@ public class CreateClusterRequest extends Request {
          * <li>Qboot</li>
          * <li>Windows</li>
          * <li>WindowsCore
-         * Default value: <code>CentOS</code>.</li>
+         * Default value: CentOS.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2542,9 +2547,9 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> When the Terway network plug-in is selected, you must specify the vSwitches used to assign IP addresses to pods. Each pod vSwitch corresponds to a worker node vSwitch, and they must be in the same zone.</p>
+         * <p><strong>[Deprecated]</strong> When the Terway network plug-in is used, you must specify vSwitches to assign IP addresses to pods. Each pod vSwitch corresponds to a worker node vSwitch. The pod vSwitch and the worker node vSwitch must be in the same zone.</p>
          * <blockquote>
-         * <p>We recommend that the subnet mask length of the pod vSwitch does not exceed 19, and the maximum subnet mask length does not exceed 25. Otherwise, the number of pod IP addresses that can be allocated in the cluster network is very limited, which affects the normal use of the cluster.</p>
+         * <p>We recommend that the subnet mask of the pod vSwitch CIDR block be no larger than /19, and /25 at most. Otherwise, the number of pod IP addresses that can be allocated in the cluster network is very limited, which affects the normal use of the cluster.</p>
          * </blockquote>
          */
         public Builder podVswitchIds(java.util.List<String> podVswitchIds) {
@@ -2554,12 +2559,12 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The cluster subtype when <code>cluster_type</code> is set to <code>ManagedKubernetes</code>, which indicates an ACK managed cluster. Valid values:</p>
+         * <p>When cluster_type is set to ManagedKubernetes, which indicates an ACK managed cluster, you can further specify the cluster subtype. Valid values:</p>
          * <ul>
-         * <li><code>Default</code>: ACK managed clusters, including ACK Pro and ACK ACK clusters.</li>
-         * <li><code>Edge</code>: ACK Edge clusters, including ACK Edge Pro and ACK Edge ACK clusters.</li>
-         * <li><code>Serverless</code>: ACK Serverless clusters, including ACK Serverless Pro and ACK Serverless ACK clusters.</li>
-         * <li><code>Lingjun</code>: ACK Lingjun clusters, which provide the Pro edition.</li>
+         * <li>Default: ACK managed clusters, including ACK Pro and ACK ACK clusters.</li>
+         * <li>Edge: ACK Edge clusters, including ACK Edge Pro and ACK Edge ACK clusters.</li>
+         * <li>Serverless: ACK Serverless clusters, including ACK Serverless Pro and ACK Serverless ACK clusters.</li>
+         * <li>Lingjun: ACK Lingjun clusters, which are available only in Pro Edition.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2574,11 +2579,10 @@ public class CreateClusterRequest extends Request {
         /**
          * <p>The kube-proxy mode. Valid values:</p>
          * <ul>
-         * <li><code>iptables</code>: A mature and stable kube-proxy mode. Service discovery and load balancing for Kubernetes Services are configured by using iptables rules. However, the performance is average and greatly affected by the scale. This mode is suitable for clusters with a small number of Services.</li>
-         * <li><code>ipvs</code>: A high-performance kube-proxy mode. Service discovery and load balancing for Kubernetes Services are configured by using the Linux IPVS module. This mode is suitable for clusters with a large number of Services and scenarios that require high-performance load balancing.</li>
-         * <li><code>nftables</code>: A next-generation kube-proxy mode. Service discovery and load balancing are implemented based on Linux nftables, which is a modern alternative to iptables. Compared with iptables, nftables provides better network performance, rule update efficiency, and performance in large-scale Service scenarios.
-         * This mode is supported only in clusters of Kubernetes 1.35 and later. The Kubernetes community deprecated IPVS in version 1.35. We recommend that you use nftables for new clusters to obtain long-term community support.
-         * Default value: <code>ipvs</code>.</li>
+         * <li>iptables: A mature and stable kube-proxy mode. Service discovery and load balancing for Kubernetes Services are configured by using iptables rules. However, the performance is average and heavily affected by scale. This mode is suitable for clusters with a small number of Services.</li>
+         * <li>ipvs: A high-performance kube-proxy mode. Service discovery and load balancing for Kubernetes Services are configured by using the Linux IPVS module. This mode is suitable for clusters with a large number of Services and scenarios that require high-performance load balancing.</li>
+         * <li>nftables: A next-generation kube-proxy mode. Service discovery and load balancing are implemented based on Linux nftables. It is a modern alternative to iptables. Compared with iptables, nftables performs better in network performance, rule update efficiency, and large-scale Service scenarios. This mode is supported only in clusters of Kubernetes 1.35 and later. The Kubernetes community deprecated IPVS starting from version 1.35. We recommend that you use nftables for new clusters to obtain long-term community support.
+         * Default value: ipvs.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2591,7 +2595,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> For node pool configurations, use the <code>rds_instances</code> parameter under <code>scaling_group</code> in <code>nodepool</code> instead. The list of ApsaraDB RDS instances to which you want to add the cluster to the whitelist. We recommend that you add the pod CIDR block and node CIDR block to the RDS whitelist. If you specify RDS instances here, nodes may fail to be created because the instances are not in the running state.</p>
+         * <p><strong>[Deprecated]</strong> For node pool configurations, use the rds_instances parameter under scaling_group in nodepool instead. The list of ApsaraDB RDS instances to which you want to add the cluster nodes to the whitelist. We recommend that you add the pod CIDR block and node CIDR block to the whitelist of the ApsaraDB RDS instances. If the ApsaraDB RDS instances are not in the running state, the nodes cannot be scaled out.</p>
          */
         public Builder rdsInstances(java.util.List<String> rdsInstances) {
             this.putBodyParameter("rds_instances", rdsInstances);
@@ -2600,7 +2604,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the cluster is deployed. For details, see <a href="https://help.aliyun.com/document_detail/216938.html">Regions supported by container service</a>.</p>
+         * <p>The ID of the region where the cluster is deployed. For more information, see <a href="https://help.aliyun.com/document_detail/216938.html">Regions supported by Container Service for Kubernetes</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -2634,10 +2638,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The container runtime used in the cluster. Valid values: containerd, sandboxed container, and Docker.</p>
+         * <p>The container runtime of the cluster. Valid values: containerd, sandboxed container, and Docker.</p>
          * <blockquote>
          * <p>Kubernetes 1.24 and later no longer support Docker as a built-in container runtime.
-         * For more information, see <a href="https://help.aliyun.com/document_detail/160313.html">Comparison among Docker, containerd, and sandboxed container runtimes</a>.</p>
+         * For more information, see <a href="https://help.aliyun.com/document_detail/160313.html">Comparison among Docker, containerd, and sandboxed container</a>.</p>
          * </blockquote>
          */
         public Builder runtime(Runtime runtime) {
@@ -2647,7 +2651,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The ID of the security group. Required when you create a cluster by using an existing security group. This parameter and is_enterprise_security_group are mutually exclusive. Cluster nodes are automatically added to this security group.</p>
+         * <p>The ID of the security group. This parameter is required when you create a cluster by using an existing security group. You must specify either this parameter or is_enterprise_security_group. Cluster nodes are automatically added to this security group.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-bp1bdue0qc1g7k****</p>
@@ -2659,11 +2663,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> For control plane configurations, use the <code>security_hardening_os</code> parameter under <code>control_plane_config</code> instead. For node pool configurations, use the <code>security_hardening_os</code> parameter under <code>scaling_group</code> in <code>nodepool</code> instead. Specifies whether to enable Alibaba Cloud OS security hardening. Valid values:</p>
+         * <p><strong>[Deprecated]</strong> For control plane configurations, use the security_hardening_os parameter under control_plane_config instead. For node pool configurations, use the security_hardening_os parameter under scaling_group in nodepool instead. Specifies whether to enable Alibaba Cloud OS security hardening. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: Enabled.</li>
-         * <li><code>false</code>: Disabled.
-         * Default value: <code>false</code>.</li>
+         * <li>true: Enables Alibaba Cloud OS security hardening.</li>
+         * <li>false: Disables Alibaba Cloud OS security hardening.
+         * Default value: false.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2676,7 +2680,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>A ServiceAccount is an access credential for communication between pods and the cluster API server. The <code>service-account-issuer</code> is the issuer identity in the <code>serviceaccount token</code>, which is the <code>iss</code> field in the <code>token payload</code>. For more information about <code>ServiceAccount</code>, see <a href="https://help.aliyun.com/document_detail/160384.html">Deploy service account token volume projection</a>.</p>
+         * <p>A ServiceAccount is an access credential for communication between pods and the cluster API server. The service-account-issuer is the issuer identity in the serviceaccount token, which is the iss field in the token payload. For more information about ServiceAccount, see <a href="https://help.aliyun.com/document_detail/160384.html">Deploy ServiceAccount token volume projection</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>kubernetes.default.svc</p>
@@ -2700,10 +2704,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> The service discovery type used in the cluster. This parameter is used to specify the service discovery method in an <code>ACK Serverless</code> cluster. Valid values:</p>
+         * <p><strong>[Deprecated]</strong> The service discovery type in the cluster. This parameter is used to specify the service discovery method in ACK Serverless clusters. Valid values:</p>
          * <ul>
-         * <li><code>CoreDNS</code>: Uses the standard Kubernetes service discovery component CoreDNS. You must deploy a group of containers in the cluster for DNS resolution. By default, two ECI instances with 0.25 vCPUs and 512 MiB of memory are used.</li>
-         * <li><code>PrivateZone</code>: Uses Alibaba Cloud PrivateZone to provide service discovery capabilities. You must activate the PrivateZone service.
+         * <li>CoreDNS: Uses CoreDNS, a native standard service discovery component of Kubernetes. You must deploy a group of containers in the cluster for DNS resolution. By default, two Elastic Container Instance (ECI) instances with 0.25 vCPUs and 512 MiB of memory are used.</li>
+         * <li>PrivateZone: Uses Alibaba Cloud PrivateZone to provide service discovery capabilities. You must enable the PrivateZone service.
          * Default value: None (disabled).</li>
          * </ul>
          */
@@ -2716,9 +2720,9 @@ public class CreateClusterRequest extends Request {
         /**
          * <p>Specifies whether to configure SNAT for the VPC. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: Enables automatic creation of a NAT gateway and configures SNAT rules. Settings: <code>true</code> is required if nodes and applications in the cluster need to access the Internet.</li>
+         * <li><code>true</code>: Automatically creates a NAT gateway and configures SNAT rules. Set this parameter to <code>true</code> if nodes and applications in the cluster need to access the Internet.</li>
          * <li><code>false</code>: Does not create a NAT gateway or configure SNAT rules. Nodes and applications in the cluster cannot access the Internet.<blockquote>
-         * <p>If you do not enable this feature when you create the cluster, you can <a href="https://help.aliyun.com/document_detail/178480.html">manually enable it</a> later if your business needs to access the Internet.
+         * <p>If this feature is not enabled when you create the cluster, you can <a href="https://help.aliyun.com/document_detail/178480.html">manually enable it</a> later if your business needs to access the Internet.
          * Default value: <code>false</code>.</p>
          * </blockquote>
          * </li>
@@ -2736,8 +2740,8 @@ public class CreateClusterRequest extends Request {
         /**
          * <p><strong>[Deprecated]</strong> For control plane node configurations, use the <code>soc_enabled</code> parameter under <code>control_plane_config</code> instead. For node pool configurations, use the <code>soc_enabled</code> parameter under <code>scaling_group</code> in <code>nodepool</code> instead. Specifies whether to enable mlps 2.0 security hardening. For more information, see <a href="https://help.aliyun.com/document_detail/196148.html">ACK mlps 2.0 security hardening instructions</a>. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: Enabled.</li>
-         * <li><code>false</code>: Disabled.
+         * <li><code>true</code>: Enables mlps 2.0 security hardening.</li>
+         * <li><code>false</code>: Disables mlps 2.0 security hardening.
          * Default value: <code>false</code>.</li>
          * </ul>
          * 
@@ -2753,9 +2757,9 @@ public class CreateClusterRequest extends Request {
         /**
          * <p>Specifies whether to enable public SSH access. This parameter is used to log on to the master nodes of an ACK dedicated cluster. This parameter does not take effect in managed clusters. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: Enabled.</li>
-         * <li><code>false</code>: Disabled.
-         * Default value: <code>false</code>.</li>
+         * <li>true: Enabled.</li>
+         * <li>false: Disabled.
+         * Default value: false.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2768,11 +2772,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The support policy for the cluster version. The value is case-sensitive. Valid values:</p>
+         * <p>The cluster version support policy. The value is case-sensitive. Valid values:</p>
          * <ul>
          * <li>Standard: Standard support.</li>
          * <li>Extended: Extended support. After the standard support period ends, the cluster enters the extended support period and continues to receive CVE patch versions.
-         * Only ACK Pro managed clusters (where <code>cluster_spec</code> is set to <code>ack.pro.*</code> and <code>profile</code> is set to <code>Default</code>) support the <code>Extended</code> value. Specifying <code>Extended</code> for ACK Basic, ACS, ACK Edge managed, and ACK dedicated clusters will be rejected. Patch versions in the extended support period are also applicable only to ACK Pro managed clusters. Specifying such versions for other cluster types will be rejected. If this parameter is not specified, the default value is determined by the server configuration.</li>
+         * Only ACK Pro managed clusters (where cluster_spec is set to ack.pro.* and profile is set to Default) support the Extended value. Specifying Extended for ACK Basic, ACS, ACK Edge managed, and ACK dedicated clusters will be rejected. Patch versions in the extended support period are also applicable only to ACK Pro managed clusters. Specifying such versions to create clusters of other types will be rejected. If this parameter is not specified, the default value is determined by the server configuration.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2798,7 +2802,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> For node pool configurations, use the <code>taints</code> parameter under <code>kubernetes_config</code> in <code>nodepool</code> instead. The taints of the nodes. Taints and tolerations work together to prevent pods from being scheduled to inappropriate nodes. For more information, see <a href="https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/">Taints and Tolerations</a>.
+         * <p><strong>[Deprecated]</strong> For node pool configurations, use the taints parameter under kubernetes_config in nodepool instead. The node taints. Taints and tolerations work together to prevent pods from being scheduled onto inappropriate nodes. For more information, see <a href="https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/">Taints and Tolerations</a>.
          * <a href="https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/">taint-and-toleration</a></p>
          */
         public Builder taints(java.util.List<Taint> taints) {
@@ -2808,7 +2812,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> By default, no rollback is performed when cluster creation fails. You must manually clean up the failed cluster. The timeout period for cluster creation, in minutes. Default value: <code>60</code>.</p>
+         * <p><strong>[Deprecated]</strong> By default, no rollback is performed when cluster creation fails. You must manually clean up the failed cluster. The timeout period for cluster creation, in minutes. Default value: 60.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -2856,7 +2860,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The ID of the VPC used by the cluster. This parameter is required when you create the cluster.</p>
+         * <p>The ID of the VPC used by the cluster. This parameter is required when you do not automatically create a VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-2zeik9h3ahvv2zz95****</p>
@@ -2868,7 +2872,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The vSwitches where the cluster nodes are deployed. This parameter is required when you create a managed cluster with zero nodes.</p>
+         * <p>The vSwitches where the cluster nodes reside. This parameter is required when you create a managed cluster with zero nodes.</p>
          */
         public Builder vswitchIds(java.util.List<String> vswitchIds) {
             this.putBodyParameter("vswitch_ids", vswitchIds);
@@ -2877,11 +2881,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> For node pool configurations, use the <code>auto_renew</code> parameter under <code>scaling_group</code> in <code>nodepool</code> instead. Specifies whether to enable auto-renewal for worker nodes. This parameter takes effect only when <code>worker_instance_charge_type</code> is set to <code>PrePaid</code>. Valid values:</p>
+         * <p><strong>[Deprecated]</strong> For node pool configurations, use the auto_renew parameter under scaling_group in nodepool instead. Specifies whether to enable auto-renewal for worker nodes. This parameter takes effect only when worker_instance_charge_type is set to PrePaid. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: Enabled.</li>
-         * <li><code>false</code>: Disabled.
-         * Default value: <code>true</code>.</li>
+         * <li>true: Enables auto-renewal.</li>
+         * <li>false: Disables auto-renewal.
+         * Default value: true.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2894,9 +2898,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> For node pool configurations, use the <code>auto_renew_period</code> parameter under <code>scaling_group</code> in <code>nodepool</code> instead.</p>
-         * <p>The auto-renewal epoch for worker nodes. This parameter takes effect and is required only when the subscription billing method is selected.</p>
-         * <p>Valid values: 1, 2, 3, 6, and 12.</p>
+         * <p><strong>[Deprecated]</strong> For node pool configurations, use the <code>auto_renew_period</code> parameter under <code>scaling_group</code> in <code>nodepool</code> instead. The auto-renewal epoch for worker nodes. This parameter takes effect and is required only when the subscription billing method is selected. Valid values: 1, 2, 3, 6, and 12.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -2908,8 +2910,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> For node pool configurations, use the <code>data_disks</code> parameter under <code>scaling_group</code> in <code>nodepool</code> instead.</p>
-         * <p>The combination of configurations such as the type and size of the data cloud disks for worker nodes.</p>
+         * <p><strong>[Deprecated]</strong> For node pool configurations, use the <code>data_disks</code> parameter under <code>scaling_group</code> in <code>nodepool</code> instead. The combination of configurations such as the type and size of data cloud disks for worker nodes.</p>
          */
         public Builder workerDataDisks(java.util.List<WorkerDataDisks> workerDataDisks) {
             this.putBodyParameter("worker_data_disks", workerDataDisks);
@@ -2918,13 +2919,12 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> For node pool configurations, use the <code>instance_charge_type</code> parameter under <code>scaling_group</code> in <code>nodepool</code> instead.</p>
-         * <p>The billing method for worker nodes. Valid values:</p>
+         * <p><strong>[Deprecated]</strong> For node pool configurations, use the <code>instance_charge_type</code> parameter under <code>scaling_group</code> in <code>nodepool</code> instead. The billing method for worker nodes. Valid values:</p>
          * <ul>
          * <li><code>PrePaid</code>: Subscription.</li>
          * <li><code>PostPaid</code>: Pay-as-you-go.</li>
          * </ul>
-         * <p>Default value: <code>PostPaid</code>.</p>
+         * <p>Default value: pay-as-you-go.</p>
          * 
          * <strong>example:</strong>
          * <p>PrePaid</p>
@@ -2936,8 +2936,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> For node pool configurations, use the <code>instance_types</code> parameter under <code>scaling_group</code> in <code>nodepool</code> instead.</p>
-         * <p>The instance configurations for worker nodes.</p>
+         * <p><strong>[Deprecated]</strong> For node pool configurations, use the <code>instance_types</code> parameter under <code>scaling_group</code> in <code>nodepool</code> instead. The instance configurations for worker nodes.</p>
          */
         public Builder workerInstanceTypes(java.util.List<String> workerInstanceTypes) {
             this.putBodyParameter("worker_instance_types", workerInstanceTypes);
@@ -2946,8 +2945,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> For node pool configurations, use the <code>period</code> parameter under <code>scaling_group</code> in <code>nodepool</code> instead.</p>
-         * <p>The subscription duration for worker nodes. This parameter takes effect and is required only when <code>worker_instance_charge_type</code> is set to <code>PrePaid</code>.</p>
+         * <p><strong>[Deprecated]</strong> For node pool configurations, use the <code>period</code> parameter under <code>scaling_group</code> in <code>nodepool</code> instead. The subscription duration for worker nodes. This parameter is required and takes effect only when <code>worker_instance_charge_type</code> is set to <code>PrePaid</code>.</p>
          * <p>Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</p>
          * <p>Default value: 1.</p>
          * 
@@ -2961,9 +2959,8 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> For node pool configurations, use the <code>period_unit</code> parameter under <code>scaling_group</code> in <code>nodepool</code> instead.</p>
-         * <p>The subscription period unit for worker nodes. This parameter is required when the billing method is set to <code>PrePaid</code>.</p>
-         * <p>Valid value: <code>Month</code>. Currently, only month is supported.</p>
+         * <p><strong>[Deprecated]</strong> For node pool configurations, use the <code>period_unit</code> parameter under <code>scaling_group</code> in <code>nodepool</code> instead. The billing cycle for worker nodes. This parameter is required when the billing method is <code>PrePaid</code>.</p>
+         * <p>Valid value: <code>Month</code>. Only monthly subscription is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>Month</p>
@@ -2975,11 +2972,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> For node pool configurations, use the <code>system_disk_category</code> parameter under <code>scaling_group</code> in <code>nodepool</code> instead.</p>
-         * <p>The type of the system cloud disk for worker nodes. For more information, see <a href="https://help.aliyun.com/document_detail/63136.html">Block Storage overview</a>.</p>
+         * <p><strong>[Deprecated]</strong> For node pool configurations, use the <code>system_disk_category</code> parameter under <code>scaling_group</code> in <code>nodepool</code> instead. The type of the system cloud disk for worker nodes. For more information, see <a href="https://help.aliyun.com/document_detail/63136.html">Block Storage overview</a>.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><code>cloud_efficiency</code>: Ultra cloud disk.</li>
+         * <li><code>cloud_efficiency</code>: Ultra disk.</li>
          * <li><code>cloud_ssd</code>: Standard SSD.</li>
          * </ul>
          * <p>Default value: <code>cloud_ssd</code>.</p>
@@ -2994,8 +2990,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> For node pool configurations, use the <code>system_disk_performance_level</code> parameter under <code>scaling_group</code> in <code>nodepool</code> instead.</p>
-         * <p>When the system cloud disk is an ESSD, you can configure the performance level (PL). For more information, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSD</a>.</p>
+         * <p><strong>[Deprecated]</strong> For node pool configurations, use the <code>system_disk_performance_level</code> parameter under <code>scaling_group</code> in <code>nodepool</code> instead. When the system cloud disk is a standard SSD, you can configure the performance level (PL) of the standard SSD. For more information, see <a href="https://help.aliyun.com/document_detail/122389.html">standard SSDs</a>.</p>
          * <p>Valid values:</p>
          * <ul>
          * <li>PL0</li>
@@ -3014,10 +3009,9 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> For node pool configurations, use the <code>system_disk_size</code> parameter under <code>scaling_group</code> in <code>nodepool</code> instead.</p>
-         * <p>The size of the system cloud disk for worker nodes. Unit: GiB.</p>
+         * <p><strong>[Deprecated]</strong> For node pool configurations, use the <code>system_disk_size</code> parameter under <code>scaling_group</code> in <code>nodepool</code> instead. The size of the system cloud disk for worker nodes. Unit: GiB.</p>
          * <p>Valid values: 40 to 500.</p>
-         * <p>The value of this parameter must be greater than or equal to the maximum of 40 and the image size.</p>
+         * <p>The value of this parameter must be greater than or equal to max{40, ImageSize}.</p>
          * <p>Default value: <code>120</code>.</p>
          * 
          * <strong>example:</strong>
@@ -3030,8 +3024,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> For node pool configurations, use the <code>system_disk_snapshot_policy_id</code> parameter under <code>scaling_group</code> in <code>nodepool</code> instead.</p>
-         * <p>The ID of the automatic snapshot policy applied to the system cloud disk of worker nodes.</p>
+         * <p><strong>[Deprecated]</strong> For node pool configurations, use the <code>system_disk_snapshot_policy_id</code> parameter under <code>scaling_group</code> in <code>nodepool</code> instead. The ID of the automatic snapshot policy applied to the system cloud disk of worker nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>sp-2zej1nogjvovnz4z****</p>
@@ -3043,8 +3036,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> For node pool configurations, use the <code>vswitch_ids</code> parameter under <code>scaling_group</code> in <code>nodepool</code> instead.</p>
-         * <p>The list of vSwitches used by cluster nodes. Each node corresponds to one vSwitch.</p>
+         * <p><strong>[Deprecated]</strong> For node pool configurations, use the <code>vswitch_ids</code> parameter under <code>scaling_group</code> in <code>nodepool</code> instead. The list of vSwitches used by cluster nodes. Each node corresponds to one vSwitch.</p>
          * <p>When you create a managed cluster with zero nodes, the <code>worker_vswitch_ids</code> parameter is not required, but you must specify <code>vswitch_ids</code>.</p>
          */
         public Builder workerVswitchIds(java.util.List<String> workerVswitchIds) {
@@ -3054,9 +3046,8 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> Use the <code>zone_ids</code> parameter instead.</p>
-         * <p>The zone ID of the region where the cluster resides. This parameter is specific to managed ACK clusters.</p>
-         * <p>When you create a managed ACK cluster, if <code>vpc_id</code> and <code>vswitch_ids</code> are not specified, you must specify <code>zone_id</code> for the cluster to automatically create a VPC and network resources in this zone. If <code>vpc_id</code> and <code>vswitch_ids</code> are specified, this parameter does not take effect.</p>
+         * <p><strong>[Deprecated]</strong> Use the <code>zone_ids</code> parameter instead. The ID of the zone in the region where the cluster resides. This parameter is specific to managed ACK clusters.</p>
+         * <p>When you create a managed ACK cluster, if <code>vpc_id</code> and <code>vswitch_ids</code> are not specified, you must specify <code>zone_id</code> to automatically create a VPC and network resources in the active zone. If <code>vpc_id</code> and <code>vswitch_ids</code> are specified, this parameter does not take effect.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beiji****</p>
@@ -3068,7 +3059,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The zone IDs of the region where the cluster resides. This parameter is specific to managed ACK clusters.</p>
+         * <p>The IDs of multiple zones in the region where the cluster resides. This parameter is specific to managed ACK clusters.</p>
          */
         public Builder zoneIds(java.util.List<String> zoneIds) {
             this.putBodyParameter("zone_ids", zoneIds);
@@ -3136,7 +3127,7 @@ public class CreateClusterRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to enable the cluster audit log feature. Valid values:</p>
+             * <p>Specifies whether to enable the cluster audit log feature.</p>
              * <ul>
              * <li><p>true: Enabled.</p>
              * </li>
@@ -3216,7 +3207,7 @@ public class CreateClusterRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to enable the intelligent managed mode. Valid values:</p>
+             * <p>Specifies whether to enable ACK Auto Mode.</p>
              * <ul>
              * <li><p>true: Enabled.</p>
              * </li>
@@ -3607,8 +3598,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The auto-renewal period for control plane nodes. Valid values: 1, 2, 3, 6, and 12. Unit: months.</p>
-             * <p>Default value: 1.</p>
+             * <p>The auto-renewal period for control plane nodes. Valid values: 1, 2, 3, 6, and 12. Unit: months. Default value: 1.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -3654,7 +3644,7 @@ public class CreateClusterRequest extends Request {
              * <p>The CPU management policy for nodes. Valid values:</p>
              * <ul>
              * <li>static: allows you to enhance CPU affinity and exclusivity for pods with specific resource characteristics on the node.</li>
-             * <li>none: uses the default CPU affinity policy.</li>
+             * <li>none: enables the default CPU affinity scheme.</li>
              * </ul>
              * <p>Default value: none.</p>
              * 
@@ -3700,7 +3690,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The instance metadata access configuration for ECS instances. This parameter is available only to users in the whitelist. To use this parameter, submit a ticket.</p>
+             * <p>The instance metadata access configuration for ECS instances. This parameter is available only to whitelisted accounts. To use this parameter, submit a ticket.</p>
              */
             public Builder instanceMetadataOptions(InstanceMetadataOptions instanceMetadataOptions) {
                 this.instanceMetadataOptions = instanceMetadataOptions;
@@ -3730,7 +3720,7 @@ public class CreateClusterRequest extends Request {
              * <p>The SSH logon password. The password must be 8 to 30 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. You must specify this parameter or the key_pair parameter.</p>
              * 
              * <strong>example:</strong>
-             * <hr>
+             * <p>AckDemo123****</p>
              */
             public Builder loginPassword(String loginPassword) {
                 this.loginPassword = loginPassword;
@@ -3738,7 +3728,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p><strong>[Deprecated]</strong> The service port range of the node.</p>
+             * <p><strong>[Deprecated]</strong> The service port range for nodes.</p>
              * 
              * <strong>example:</strong>
              * <p>30000-32767</p>
@@ -3749,8 +3739,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The subscription period for control plane nodes. This parameter is required and takes effect only when the billing method is set to PrePaid. Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60. Unit: months.</p>
-             * <p>Default value: 1.</p>
+             * <p>The subscription period for control plane nodes. This parameter is required and takes effect only when the billing method is set to PrePaid. Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60. Unit: months. Default value: 1.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -3761,7 +3750,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The unit of the subscription period for control plane nodes. This parameter is required and takes effect only when the billing method is set to PrePaid. Valid value: Month. Currently, only months are supported.</p>
+             * <p>The unit of the subscription period for control plane nodes. This parameter is required and takes effect only when the billing method is set to PrePaid. Valid value: Month. Only months are supported.</p>
              * 
              * <strong>example:</strong>
              * <p>Month</p>
@@ -3772,8 +3761,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p><strong>[Deprecated]</strong> The name of the runtime for control plane nodes. Valid value:</p>
-             * <p>containerd: the containerd runtime, which supports all cluster versions.</p>
+             * <p><strong>[Deprecated]</strong> The name of the runtime for control plane nodes. Valid values:</p>
+             * <ul>
+             * <li>containerd: the containerd runtime, which supports all cluster versions.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>containerd</p>
@@ -3832,7 +3823,7 @@ public class CreateClusterRequest extends Request {
              * <li>true: enables the feature.</li>
              * <li>false: disables the feature.</li>
              * </ul>
-             * <p>This parameter is supported only when system_disk_category is set to cloud_auto.</p>
+             * <p>This parameter is supported only when the system_disk_category parameter is set to cloud_auto.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -3848,8 +3839,8 @@ public class CreateClusterRequest extends Request {
              * <li>cloud_efficiency: ultra disk.</li>
              * <li>cloud_ssd: standard SSD.</li>
              * <li>cloud_essd: ESSD.</li>
-             * <li>cloud_auto: ESSD AutoPL cloud disk.</li>
-             * <li>cloud_essd_entry: ESSD Entry cloud disk.</li>
+             * <li>cloud_auto: ESSD AutoPL disk.</li>
+             * <li>cloud_essd_entry: ESSD Entry disk.</li>
              * </ul>
              * <p>Default value: cloud_ssd. The default value may vary by zone.</p>
              * 
@@ -3862,7 +3853,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The performance level of the system cloud disk for the node. This parameter takes effect only for ESSDs. The performance level varies based on the disk size. For more information, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSD (standard SSD)</a>.</p>
+             * <p>The performance level of the system cloud disk for the node. This parameter takes effect only for ESSDs. The performance level is related to the disk size. For more information, see <a href="https://help.aliyun.com/document_detail/122389.html">standard SSD</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>PL1</p>
@@ -3873,8 +3864,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The provisioned read and write IOPS for the system cloud disk of the node. Valid values: 0 to min{50,000, 1000 × capacity - baseline performance}. Baseline performance = min{1,800 + 50 × capacity, 50,000}. </p>
-             * <p>This parameter is supported only when system_disk_category is set to cloud_auto.</p>
+             * <p>The provisioned read and write IOPS for the system cloud disk of the node. Valid values: 0 to min{50,000, 1000 × capacity - baseline performance}. Baseline performance = min{1,800 + 50 × capacity, 50000}. This parameter is supported only when the system_disk_category parameter is set to cloud_auto.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>
@@ -3885,8 +3875,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The size of the system cloud disk for the node. Valid values: 40 to 500. Unit: GiB.</p>
-             * <p>Default value: 120.</p>
+             * <p>The size of the system cloud disk for the node. Valid values: 40 to 500. Unit: GiB. Default value: 120.</p>
              * 
              * <strong>example:</strong>
              * <p>120</p>
@@ -3954,7 +3943,7 @@ public class CreateClusterRequest extends Request {
             } 
 
             /**
-             * <p>The VPCs where the internal DNS records of the cluster take effect.</p>
+             * <p>The VPCs in which the internal DNS records of the cluster take effect.</p>
              */
             public Builder bindVpcs(java.util.List<String> bindVpcs) {
                 this.bindVpcs = bindVpcs;
@@ -4102,7 +4091,7 @@ public class CreateClusterRequest extends Request {
             } 
 
             /**
-             * <p>The internal DNS configuration of the cluster, which applies to ACK managed clusters. The internal domain name is used by node-side system components such as kubelet and kube-proxy to access the API server. If internal domain name access is not enabled, node-side system components access the API server by using the IP address of the CLB instance.</p>
+             * <p>The internal DNS configuration for the cluster. This parameter applies to ACK managed clusters. The internal domain name of the cluster is used by node-side system components such as kubelet and kube-proxy to access the API server. If internal domain name access is not enabled, node-side system components access the API server by using the IP address of the CLB instance.</p>
              */
             public Builder internalDnsConfig(InternalDnsConfig internalDnsConfig) {
                 this.internalDnsConfig = internalDnsConfig;
@@ -4110,7 +4099,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The connection configuration of the cluster. If you specify this parameter, the endpoint_public_access and load_balancer_id parameters do not take effect. ACK supports only automatic creation of NLB instances. To specify a CLB or NLB instance, use load_balancers_config to specify the corresponding instance ID.</p>
+             * <p>The endpoint configuration of the cluster. If you specify this parameter, the endpoint_public_access and load_balancer_id parameters do not take effect. ACK supports automatic creation of NLB instances. To use an existing NLB instance, use the load_balancers_config parameter to specify the instance ID.</p>
              */
             public Builder loadBalancersConfig(java.util.List<LoadBalancersConfig> loadBalancersConfig) {
                 this.loadBalancersConfig = loadBalancersConfig;
@@ -4254,7 +4243,7 @@ public class CreateClusterRequest extends Request {
             } 
 
             /**
-             * <p>The automatic cluster upgrade configuration.</p>
+             * <p>The automatic cluster upgrade.</p>
              */
             public Builder clusterAutoUpgrade(ClusterAutoUpgrade clusterAutoUpgrade) {
                 this.clusterAutoUpgrade = clusterAutoUpgrade;
@@ -4438,7 +4427,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The performance level of the data cloud disk. This parameter takes effect only for <a href="https://help.aliyun.com/document_detail/122389.html">ESSD</a>.</p>
+             * <p>The performance level of the data cloud disk for the node. This parameter takes effect only for <a href="https://help.aliyun.com/document_detail/122389.html">standard SSDs</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>PL1</p>

@@ -131,7 +131,7 @@ public class ListAutoRepairPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The diagnostic type.</p>
+             * <p>The diagnosis type.</p>
              * 
              * <strong>example:</strong>
              * <p>system</p>
@@ -389,7 +389,7 @@ public class ListAutoRepairPoliciesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The label configuration for authorization confirmation. When you add the following labels to a node, you authorize ACK to perform operations in this phase. After completing the operations in this phase, ACK automatically removes the inquiry and confirmation labels for this phase. If you do not add the following labels in time, ACK will not perform the actions in this phase and subsequent phases, and the node may remain in a damaged state.</p>
+             * <p>The label configuration for authorization confirmation. When you add the following labels to the node, you authorize ACK to execute the operations in this stage. After completing the operations in this stage, ACK automatically removes the authorization inquiry and confirmation labels for this stage. If you do not add the following labels in time, ACK will not execute the actions in this stage and subsequent stages, and the node may remain in a damaged state.</p>
              */
             public Builder approvedLabel(ApprovedLabel approvedLabel) {
                 this.approvedLabel = approvedLabel;
@@ -397,7 +397,7 @@ public class ListAutoRepairPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether manual approval is enabled.</p>
+             * <p>Specifies whether to enable manual approval.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -408,7 +408,7 @@ public class ListAutoRepairPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The label configuration for authorization inquiry. When this phase is entered, ACK adds the following labels to your node and waits for your authorization to perform the actions in this phase.</p>
+             * <p>The label configuration for authorization inquiry. When this stage is reached, ACK adds the following labels to your node and waits for your authorization to execute the actions in this stage.</p>
              */
             public Builder inquiringLabel(InquiringLabel inquiringLabel) {
                 this.inquiringLabel = inquiringLabel;
@@ -507,7 +507,7 @@ public class ListAutoRepairPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The manual intervention configuration for the procedure.</p>
+             * <p>The configuration for the manual intervention procedure.</p>
              */
             public Builder intervention(Intervention intervention) {
                 this.intervention = intervention;
@@ -755,7 +755,7 @@ public class ListAutoRepairPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource subtype bound to the self-healing rule.</p>
+             * <p>The subtype of the resource bound to the self-healing rule.</p>
              * 
              * <strong>example:</strong>
              * <p>ess</p>
@@ -766,7 +766,7 @@ public class ListAutoRepairPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource type bound to the self-healing rule.</p>
+             * <p>The type of the resource bound to the self-healing rule.</p>
              * 
              * <strong>example:</strong>
              * <p>nodepool</p>
@@ -787,8 +787,8 @@ public class ListAutoRepairPoliciesResponseBody extends TeaModel {
             /**
              * <p>The rule type. The value is case-sensitive. Valid values:</p>
              * <ul>
-             * <li>custom: user-defined rules that support modification and deletion</li>
-             * <li>builtin: built-in system rules that are read-only and do not support creation, modification, or deletion</li>
+             * <li>custom: User-defined rules. You can modify and delete these rules.</li>
+             * <li>builtin: Built-in system rules. These rules are read-only and cannot be created, modified, or deleted.</li>
              * </ul>
              * 
              * <strong>example:</strong>

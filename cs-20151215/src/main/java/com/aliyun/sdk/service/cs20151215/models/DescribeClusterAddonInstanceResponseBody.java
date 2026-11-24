@@ -93,7 +93,7 @@ public class DescribeClusterAddonInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The add-on configuration.</p>
+         * <p>The configuration of the add-on.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;NetworkPolicy&quot;:&quot;true&quot;}</p>
@@ -104,7 +104,7 @@ public class DescribeClusterAddonInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The add-on name.</p>
+         * <p>The name of the add-on.</p>
          * 
          * <strong>example:</strong>
          * <p>terway-eniip</p>
@@ -115,15 +115,15 @@ public class DescribeClusterAddonInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The add-on state. Valid values:</p>
+         * <p>The state of the add-on. Valid values:</p>
          * <ul>
-         * <li>initial: Installing.</li>
-         * <li>active: Installed.</li>
-         * <li>unhealthy: Abnormal.</li>
-         * <li>upgrading: Upgrading.</li>
-         * <li>updating: Updating.</li>
-         * <li>deleting: Uninstalling.</li>
-         * <li>deleted: Deleted.</li>
+         * <li>initial: The add-on is being installed.</li>
+         * <li>active: The add-on is installed.</li>
+         * <li>unhealthy: The add-on is in an abnormal state.</li>
+         * <li>upgrading: The add-on is being upgraded.</li>
+         * <li>updating: The add-on is being updated.</li>
+         * <li>deleting: The add-on is being uninstalled.</li>
+         * <li>deleted: The add-on is deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -135,7 +135,7 @@ public class DescribeClusterAddonInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The add-on version.</p>
+         * <p>The version of the add-on.</p>
          * 
          * <strong>example:</strong>
          * <p>v1.4.3</p>

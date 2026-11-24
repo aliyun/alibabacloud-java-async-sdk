@@ -29,7 +29,12 @@ public class AttachInstancesToNodePoolRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("format_disk")
+    @Deprecated
     private Boolean formatDisk;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("format_disk_option")
+    private String formatDiskOption;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("instances")
@@ -48,6 +53,7 @@ public class AttachInstancesToNodePoolRequest extends Request {
         this.clusterId = builder.clusterId;
         this.nodepoolId = builder.nodepoolId;
         this.formatDisk = builder.formatDisk;
+        this.formatDiskOption = builder.formatDiskOption;
         this.instances = builder.instances;
         this.keepInstanceName = builder.keepInstanceName;
         this.password = builder.password;
@@ -88,6 +94,13 @@ public class AttachInstancesToNodePoolRequest extends Request {
     }
 
     /**
+     * @return formatDiskOption
+     */
+    public String getFormatDiskOption() {
+        return this.formatDiskOption;
+    }
+
+    /**
      * @return instances
      */
     public java.util.List<String> getInstances() {
@@ -112,6 +125,7 @@ public class AttachInstancesToNodePoolRequest extends Request {
         private String clusterId; 
         private String nodepoolId; 
         private Boolean formatDisk; 
+        private String formatDiskOption; 
         private java.util.List<String> instances; 
         private Boolean keepInstanceName; 
         private String password; 
@@ -125,6 +139,7 @@ public class AttachInstancesToNodePoolRequest extends Request {
             this.clusterId = request.clusterId;
             this.nodepoolId = request.nodepoolId;
             this.formatDisk = request.formatDisk;
+            this.formatDiskOption = request.formatDiskOption;
             this.instances = request.instances;
             this.keepInstanceName = request.keepInstanceName;
             this.password = request.password;
@@ -157,10 +172,10 @@ public class AttachInstancesToNodePoolRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> Use <code>format_disk_option</code> instead.</p>
+         * <p><strong>[Deprecated]</strong> Use <code>format_disk_option</code> instead. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: Equivalent to setting <code>format_disk_option</code> to <code>DataDisk</code>.</li>
-         * <li><code>false</code>: Equivalent to setting <code>format_disk_option</code> to <code>SystemDisk</code>.</li>
+         * <li><code>true</code>: equivalent to setting <code>format_disk_option</code> to <code>DataDisk</code>.</li>
+         * <li><code>false</code>: equivalent to setting <code>format_disk_option</code> to <code>SystemDisk</code>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -169,6 +184,28 @@ public class AttachInstancesToNodePoolRequest extends Request {
         public Builder formatDisk(Boolean formatDisk) {
             this.putBodyParameter("format_disk", formatDisk);
             this.formatDisk = formatDisk;
+            return this;
+        }
+
+        /**
+         * <p>The disk formatting method. This parameter is mutually exclusive with <code>format_disk</code> set to <code>true</code>. Valid values:</p>
+         * <ul>
+         * <li><code>SystemDisk</code>: No additional initialization is performed. Container runtime data is stored on the system cloud disk or any disk that is already mounted to the relevant directory during import.</li>
+         * <li><code>DataDisk</code>: If a data cloud disk or local disk is mounted, the last disk is formatted and mounted to store container runtime data.</li>
+         * <li><code>NodePoolDiskConfig</code>: Initializes data cloud disks based on the configuration of the imported node pool. Cloud disks and elastic ephemeral disks are matched based on the <code>disk_name</code> field of the node pool and the <code>DiskName</code> field of the block storage. Local disks are matched sequentially based on the PCI address order. Node pool configurations that do not match any disk are ignored.</li>
+         * </ul>
+         * <blockquote>
+         * <p>Warning: The <code>DataDisk</code> option is retained only for historical compatibility and is strongly discouraged.
+         * This option uses the last disk in lexicographical order of device names under <code>/dev</code> (NVMe is preferred). Note that nvme9 takes precedence over nvme10. Operating systems with newer kernels such as Alinux 4 cannot guarantee a stable device order.</p>
+         * </blockquote>
+         * <p>Disks with recognizable file systems during import skip the formatting step and are mounted directly.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NodePoolDiskConfig</p>
+         */
+        public Builder formatDiskOption(String formatDiskOption) {
+            this.putBodyParameter("format_disk_option", formatDiskOption);
+            this.formatDiskOption = formatDiskOption;
             return this;
         }
 

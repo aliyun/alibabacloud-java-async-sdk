@@ -72,12 +72,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Read <a href="https://help.aliyun.com/document_detail/86919.html">Limits</a> before calling this operation to ensure that the ECS instances to be added meet the requirements.</p>
+     * @deprecated OpenAPI AttachInstances is deprecated, please use CS::2015-12-15::AttachInstancesToNodePool instead.  * @description Before calling this operation, read [Limits](https://help.aliyun.com/document_detail/86919.html) to ensure that the ECS instances to be added meet the requirements.
      * 
      * @param request the request parameters of AttachInstances  AttachInstancesRequest
      * @return AttachInstancesResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<AttachInstancesResponse> attachInstances(AttachInstancesRequest request) {
         try {
@@ -224,9 +224,9 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <blockquote>
      * <ol>
-     * <li>You must have the permissions to manage Container Service for Kubernetes (CS) (AliyunCSFullAccess). </li>
-     * <li>This operation does not support clearing the permissions of an Alibaba Cloud account.</li>
-     * <li>This operation does not support clearing the permissions of the current user.</li>
+     * <li>You must have the permissions to manage Container Service (CS) (AliyunCSFullAccess). </li>
+     * <li>You cannot clear the permissions of an Alibaba Cloud account.</li>
+     * <li>You cannot clear the permissions of the user who performs the operation.</li>
      * </ol>
      * </blockquote>
      * 
@@ -251,9 +251,9 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>You must have the permissions to manage Container Service for Kubernetes (CS) (AliyunCSFullAccess).</li>
+     * <li>You must have the permissions to manage Container Service for Kubernetes (CS), specifically the AliyunCSFullAccess policy.</li>
      * <li>You cannot clear the permissions of an Alibaba Cloud account.</li>
-     * <li>You cannot clear your own permissions.</li>
+     * <li>You cannot clear the permissions of the user who performs this operation.</li>
      * </ul>
      * </blockquote>
      * 
@@ -317,14 +317,14 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Generate OpenAPI request parameters by using the console</h3>
-     * <p>When you call the CreateCluster API operation to create a cluster, if the API call fails due to an incorrect combination of request parameters, you can generate the required combination of request parameters for cluster creation by using the console. Proceed as follows:</p>
+     * <h3>Generate OpenAPI request parameters in the console</h3>
+     * <p>When you call the CreateCluster operation, if the call fails due to an incorrect combination of request parameters, you can generate the required combination of request parameters in the console. Perform the following steps:</p>
      * <ol>
-     * <li>Log on to the <a href="https://csnew.console.aliyun.com">Container Service console</a>. In the left-side navigation pane, click <strong>Clusters</strong>.</li>
+     * <li>Log on to the <a href="https://csnew.console.aliyun.com">Container Service console</a>. In the left-side navigation pane, choose <strong>Clusters</strong>.</li>
      * <li>On the <strong>Clusters</strong> page, click <strong>Cluster Templates</strong>.</li>
      * <li>In the dialog box, select the type of cluster that you want to create, click Create, and then configure the cluster information on the cluster configuration page.</li>
-     * <li>After the configuration is complete, on the <strong>Confirm</strong> page, click <strong>Equivalent Code</strong> in the upper-right corner. The dialog box displays the combination of parameters required for cluster creation. You can copy and use the parameters.<blockquote>
-     * <p>Notice: Starting July 4, 2026, some request parameters will no longer take effect. For details about the changes and replacement parameters, see <a href="https://help.aliyun.com/document_detail/2932733.html">Announcement on changes to input and output parameters of ACK cluster management-related OpenAPIs and OpenAPI deprecation</a>.</notice></p>
+     * <li>After the configuration is complete, on the <strong>Confirm Configuration</strong> page, click <strong>Equivalent Code</strong> in the upper-right corner. The dialog box displays the combination of parameters required to create the cluster. You can copy and use it.<blockquote>
+     * <p>Notice: Starting July 4, 2026, some request parameters will no longer take effect. For details about the changes and replacement parameters, see <a href="https://help.aliyun.com/document_detail/2932733.html">Announcement on changes to request and response parameters of ACK cluster management OpenAPI operations and OpenAPI deprecation</a>.</notice></p>
      * </blockquote>
      * </li>
      * </ol>
@@ -458,7 +458,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Creating a trigger only supports pod redeployment.</p>
+     * <p>Creating a trigger only supports the redeployment of pods.</p>
      * </blockquote>
      * 
      * @param request the request parameters of CreateTrigger  CreateTriggerRequest
@@ -517,7 +517,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Notice: This API is not yet available. Stay tuned.</p>
+     * <p>Notice: This API is not yet available. Stay tuned.</notice></p>
      * </blockquote>
      * 
      * @param request the request parameters of DeleteAutoRepairPolicy  DeleteAutoRepairPolicyRequest
@@ -541,11 +541,11 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <p>Risk warnings:</p>
      * <ul>
-     * <li>Subscription ECS instances and Lingjun computing nodes in the cluster cannot be automatically released. To avoid unnecessary costs, perform a manual release. For more information, see Cluster deletion and node release rules.</li>
-     * <li>Subscription API server SLB resources cannot be automatically released. To avoid unnecessary costs, perform a manual release.</li>
-     * <li>VPCs, vSwitches, security groups, and RAM roles are retained by default if they are used by other resources and cannot be deleted. Perform a manual release.</li>
-     * <li>Elastic Container Instance (ECI) pods created by using virtual nodes are automatically released.</li>
-     * <li>Some cloud resources created by the cluster are not automatically released when the cluster is deleted. These resources continue to incur charges after the cluster is deleted. Release or retain them based on your business requirements. These resources include: Simple Log Service (SLS) projects automatically created by the cluster, and cloud disks purchased by using dynamic volumes.</li>
+     * <li>Subscription ECS instances and Lingjun computing nodes in the cluster cannot be automatically released. To avoid unnecessary fees, perform manual release. For more information, see Cluster deletion and node release rules.</li>
+     * <li>Subscription APIServer SLB resources cannot be automatically released. To avoid unnecessary fees, perform manual release.</li>
+     * <li>VPCs, vSwitches, security groups, and RAM roles are retained by default if they are occupied by other resources and cannot be deleted. Perform manual release.</li>
+     * <li>Elastic Container Instance (ECI) resources created by using virtual nodes are automatically released.</li>
+     * <li>Some cloud resources created by the cluster are not automatically released when the cluster is deleted. Billing continues for these resources after the cluster is deleted. Release or retain them based on your actual needs. These resources include: Simple Log Service (SLS) projects automatically created by the cluster, and cloud disks purchased by using dynamic volumes.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteCluster  DeleteClusterRequest
@@ -605,11 +605,11 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <ul>
      * <li>When removing nodes, perform standard operations by using this API operation or the <a href="https://cs.console.aliyun.com">Container Service console</a>. Do not manually remove nodes by running the <code>kubectl delete node</code> command.</li>
-     * <li>Do not manually release nodes or remove instances in the ECS or Auto Scaling (ESS) console (or by calling related API operations), or passively release nodes when a subscription instance expires. In these cases, the nodes are directly stopped and automatically removed from the Container Service console.</li>
-     * <li>If the expected number of nodes is configured for a node pool, the node pool automatically scales out other instances based on the configuration to maintain the expected number of nodes.</li>
+     * <li>Do not actively release nodes or remove instances in the ECS or Auto Scaling console (or by calling related API operations), or passively release nodes because a subscription instance expires. In these cases, the nodes are directly stopped and automatically removed from the Container Service console.</li>
+     * <li>If the expected number of nodes is configured for the node pool, the node pool automatically scales out other instances based on the corresponding configurations to maintain the expected number of nodes.</li>
      * <li>Removing nodes involves pod migration, which may affect your services. Perform this operation during off-peak hours. Unexpected risks may occur during the operation. Back up your data in advance.</li>
-     * <li>When removing nodes, ACK executes a drain operation. Ensure that other nodes in the cluster have sufficient resources to avoid application pod scheduling failures.</li>
-     * <li>Check the node affinity rules and scheduling policies of the pods on the nodes to be removed to ensure that the pods can be scheduled to other nodes after the nodes are removed.</li>
+     * <li>When you remove nodes, ACK executes a drain operation. Ensure that other nodes in the cluster have sufficient resources to prevent scheduling failures of application pods.</li>
+     * <li>Check the node affinity rules and scheduling policies of the pods on the nodes to be removed. Ensure that the pods can be scheduled to other nodes after the nodes are removed.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteClusterNodes  DeleteClusterNodesRequest
@@ -778,7 +778,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Notice: This API is not yet available. Stay tuned.</p>
+     * <p>Notice: This API is not yet available. Please stay tuned.</notice></p>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeAutoRepairPolicy  DescribeAutoRepairPolicyRequest
@@ -1068,8 +1068,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>The default validity period of a certificate issued for a kubeconfig file is three years. Within 180 days before expiration, you can obtain a refreshed kubeconfig file with rotated certificates through the Container Service for Kubernetes console or by calling the API operation to retrieve the cluster kubeconfig. The new kubeconfig certificate remains valid for three years. The old kubeconfig credentials remain valid until the certificate expires. Obtain the rotated credentials promptly based on the kubeconfig expiration time displayed in the console or returned by the API operation.</li>
-     * <li>Properly manage the kubeconfig credentials for cluster management and revoke them promptly when they are no longer needed to prevent security risks such as data leaks caused by kubeconfig exposure.</li>
+     * <li>The default validity period of a certificate issued for a kubeconfig is three years. Within 180 days before expiration, you can obtain a refreshed kubeconfig after rotation through the Container Service console or the Retrieve cluster kubeconfig API operation. The validity period of the new kubeconfig certificate remains three years. The old kubeconfig credentials remain valid until the certificate expires. Obtain the rotated credentials promptly based on the kubeconfig expiration time displayed in the console or returned by the API operation.</li>
+     * <li>Properly manage the kubeconfig credentials for cluster management, and revoke them promptly when they are no longer needed to avoid security risks such as data leaks caused by kubeconfig leaks.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeClusterUserKubeconfig  DescribeClusterUserKubeconfigRequest
@@ -1402,7 +1402,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This API operation can be called only by an Alibaba Cloud account.</p>
+     * <p>Only an Alibaba Cloud account can call this operation.</p>
      * 
      * @param request the request parameters of DescribeSubaccountK8sClusterUserConfig  DescribeSubaccountK8sClusterUserConfigRequest
      * @return DescribeSubaccountK8sClusterUserConfigResponse
@@ -1515,7 +1515,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <p><em>Precautions</em>*:</p>
      * <ul>
-     * <li>If the account that invokes this API operation is a Resource Access Management (RAM) user or RAM role, the API operation returns only the permissions for clusters on which the calling account has RBAC administrator permissions. To list permissions for all clusters, the calling account must have RBAC administrator permissions on all clusters.</li>
+     * <li>If the account that invokes this API operation is a Resource Access Management (RAM) user or RAM role, the API operation returns only the permissions for the clusters on which the caller has RBAC administrator permissions. To list the permissions for all clusters, the caller must have RBAC administrator permissions on all clusters.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeUserPermission  DescribeUserPermissionRequest
@@ -1556,8 +1556,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>CVE compatibility is guaranteed by Security Center. Ensure that you have activated the Ultimate edition of Security Center or <a href="https://help.aliyun.com/document_detail/42308.html">purchased vulnerability fixes (pay-as-you-go)</a>.</li>
-     * <li>Fixing certain CVEs requires node restarts. Container Service performs drain operations on a node before it restarts. Ensure that the cluster has sufficient idle resources for drain operations, such as scaling out the node pool in advance.</li>
+     * <li>CVE compatibility is guaranteed by Security Center. Ensure that you have activated the Ultimate Edition of Security Center or <a href="https://help.aliyun.com/document_detail/42308.html">purchased the vulnerability fix feature (pay-as-you-go)</a>.</li>
+     * <li>Fixing certain CVEs requires restarting nodes. Container Service performs draining operations on a node before it is restarted. Ensure that the cluster has sufficient idle resources for draining, such as scaling out the node pool in advance.</li>
      * <li>Pay attention to the compatibility between your applications and CVEs. CVE fixes are performed in batches. During the fix process, you can pause or cancel the task. After you pause or cancel the task, the batches to which fix tasks have been delivered continue to run until completion. The delivery of fix tasks to undelivered batches is paused or canceled.</li>
      * </ul>
      * 
@@ -1745,8 +1745,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>If the account that invokes this API operation is a Resource Access Management (RAM) user, make sure that the account has been granted permissions to modify the cluster authorization information of other RAM users or RAM roles. Otherwise, the API returns the <code>StatusForbidden</code> or <code>ForbiddenGrantPermissions</code> fault code. For more information, see <a href="https://help.aliyun.com/document_detail/119035.html">Grant RBAC authorization to other RAM users</a>.</li>
-     * <li>The operation of updating all RBAC permissions of a RAM user or RAM role overwrites the existing cluster permissions of the target RAM user or RAM role. The request must include all permission configurations that you want to grant to the target RAM user or RAM role.</li>
+     * <li>If the account that calls this API is a RAM user, make sure that the account has the permissions to modify the RBAC authorization information of other RAM users or RAM roles. Otherwise, the API returns the <code>StatusForbidden</code> or <code>ForbiddenGrantPermissions</code> error code. For more information, see <a href="https://help.aliyun.com/document_detail/119035.html">How a RAM user grants RBAC permissions to other RAM users</a>.</li>
+     * <li>The operation to fully update the RBAC authorization information of a RAM user or RAM role overwrites the existing cluster permissions of the target RAM user or RAM role. The request must include all permission configurations that you want to grant to the target RAM user or RAM role.</li>
      * </ul>
      * 
      * @param request the request parameters of GrantPermissions  GrantPermissionsRequest
@@ -1803,9 +1803,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of InstallNodePoolComponents  InstallNodePoolComponentsRequest
+     * @deprecated OpenAPI InstallNodePoolComponents is deprecated, please use CS::2015-12-15::CreateNodePoolComponentInstances instead.  * @param request  the request parameters of InstallNodePoolComponents  InstallNodePoolComponentsRequest
      * @return InstallNodePoolComponentsResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<InstallNodePoolComponentsResponse> installNodePoolComponents(InstallNodePoolComponentsRequest request) {
         try {
@@ -1822,7 +1823,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The standalone native AG-UI API that returns a text/event-stream response upon successful stream establishment.</p>
+     * <p>The standalone native AG-UI API that returns a text/event-stream upon successful stream establishment.</p>
      * 
      * @param request the request parameters of InvokeAgent  InvokeAgentRequest
      * @return InvokeAgentResponse
@@ -1968,8 +1969,8 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>You must have the ram:ListUsers and ram:ListRoles permissions.</li>
-     * <li>You must have the permissions to manage Container Service for Kubernetes (CS) (AliyunCSFullAccess).</li>
+     * <li>To call this operation, you must have the ram:ListUsers and ram:ListRoles permissions.</li>
+     * <li>To call this operation, you must have the permissions to manage Container Service (CS) (AliyunCSFullAccess).</li>
      * </ul>
      * </blockquote>
      * 
@@ -2101,7 +2102,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>To call this operation, you must have the AliyunCSFullAccess permission to manage Container Service for Kubernetes (CS).</p>
+     * <p>To call this operation, you must have the permissions to manage Container Service for Kubernetes (CS) (AliyunCSFullAccess).</p>
      * </blockquote>
      * 
      * @param request the request parameters of ListUserKubeConfigStates  ListUserKubeConfigStatesRequest
@@ -2123,7 +2124,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>After you migrate an ACK basic managed cluster to an ACK Pro managed cluster, a <a href="https://help.aliyun.com/document_detail/462278.html">cluster management fee</a> charged by ACK is added. The billing of other cloud resources remains unchanged.</p>
+     * <p>After an ACK managed cluster is migrated from the Basic Edition to the Pro Edition, a <a href="https://help.aliyun.com/document_detail/462278.html">cluster management fee</a> (charged by ACK) is added. The billing of other cloud resources remains unchanged.</p>
      * 
      * @param request the request parameters of MigrateCluster  MigrateClusterRequest
      * @return MigrateClusterResponse
@@ -2188,11 +2189,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to modify the configuration of add-ons in common clusters and the control plane parameter settings of ACK Pro clusters:</p>
+     * <p>You can call this operation to modify the configuration of components in common clusters and the control plane parameter settings of ACK Pro clusters:</p>
      * <ul>
-     * <li>You can call the DescribeClusterAddonMetadata API operation to query the list of configurable parameters for common add-ons. For details, see <a href="https://help.aliyun.com/document_detail/2667944.html">Query cluster add-on version metadata</a>.</li>
-     * <li>For the list of configurable parameters for the control plane components of ACK Pro clusters, see <a href="https://help.aliyun.com/document_detail/199588.html">Customize the control plane parameter settings of an ACK Pro cluster</a>.
-     * Modifying the configuration may cause add-on redeployment and restart. Evaluate the impact before you proceed.</li>
+     * <li>You can query the list of configurable parameters for common components by calling the DescribeClusterAddonMetadata API. For details, see <a href="https://help.aliyun.com/document_detail/2667944.html">Query cluster component version metadata</a>.</li>
+     * <li>For the list of configurable parameters for the control plane components of ACK Pro clusters, see <a href="https://help.aliyun.com/document_detail/199588.html">Customize control plane parameter settings for ACK Pro clusters</a>.
+     * Modifying the configuration may trigger a new deployment and restart of the component. Evaluate the impact before you proceed.</li>
      * </ul>
      * 
      * @param request the request parameters of ModifyClusterAddon  ModifyClusterAddonRequest
@@ -2214,7 +2215,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p><notice>Starting July 4, 2026, the request parameters instance_deletion_protection, ingress_loadbalancer_id, and access_control_list will no longer take effect. For more information about the changes, see <a href="https://help.aliyun.com/document_detail/2932733.html">Announcement on changes to request and response parameters and deprecation of OpenAPI operations related to ACK cluster management</a>.</notice></p>
+     * <p><notice>Starting July 4, 2026, the request parameters instance_deletion_protection, ingress_loadbalancer_id, and access_control_list will no longer take effect. For more information about the changes, see <a href="https://help.aliyun.com/document_detail/2932733.html">Announcement on changes to request and response parameters of ACK cluster management API operations and API operation deprecation</a>.</notice></p>
      * 
      * @param request the request parameters of ModifyClusterNodePool  ModifyClusterNodePoolRequest
      * @return ModifyClusterNodePoolResponse
@@ -2236,7 +2237,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>This operation performs a full update. When you call this operation, specify all target tags in the request parameters to avoid losing existing tags. To perform an incremental update, use the <a href="https://help.aliyun.com/document_detail/2667969.html">TagResources</a> operation to add tags to the cluster.</li>
+     * <li>This operation performs a full update. When you call this operation, specify all target tags in the request parameters to prevent existing tags from being lost. For incremental updates, use the <a href="https://help.aliyun.com/document_detail/2667969.html">TagResources</a> operation to add tags to the cluster.</li>
      * </ul>
      * 
      * @param request the request parameters of ModifyClusterTags  ModifyClusterTagsRequest
@@ -2259,7 +2260,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>ACK supports modifying the kubelet configurations of nodes in a node pool. After the modification is complete, the configurations automatically take effect on existing nodes in the node pool, and new nodes added to the node pool also use the new configurations.</p>
+     * <p>ACK allows you to modify the kubelet configurations of nodes in a node pool. After the modification, the new configurations automatically take effect on the existing nodes in the node pool and are applied to newly added nodes.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ModifyNodePoolNodeConfig  ModifyNodePoolNodeConfigRequest
@@ -2300,8 +2301,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>An Alibaba Cloud account can activate Container Service for Kubernetes (ACK).</li>
-     * <li>A Resource Access Management (RAM) user to which the AdministratorAccess policy is attached can activate the service.</li>
+     * <li>An Alibaba Cloud account can activate the container service ACK.</li>
+     * <li>A Resource Access Management (RAM) user that is granted the AdministratorAccess permission can activate the service.</li>
      * </ul>
      * 
      * @param request the request parameters of OpenAckService  OpenAckServiceRequest
@@ -2341,7 +2342,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI PauseComponentUpgrade is deprecated, please use CS::2015-12-15::PauseTask instead.  * @param request  the request parameters of PauseComponentUpgrade  PauseComponentUpgradeRequest
+     * @deprecated OpenAPI PauseComponentUpgrade is deprecated, please use CS::2015-12-15::PauseTask instead.  * @description 暂停集群组件的升级任务。
+     * 请求说明：该接口为 POST 请求，请求体不可为空，至少需传入空 JSON 对象 `{}`，否则返回 400（Request body can\\"t be empty）。
+     * > 该接口已废弃，建议改用 PauseTask 暂停组件升级任务。
+     * 
+     * @param request the request parameters of PauseComponentUpgrade  PauseComponentUpgradeRequest
      * @return PauseComponentUpgradeResponse
      */
     @Deprecated
@@ -2399,11 +2404,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Removing nodes involves pod migration, which may affect your services. Perform this operation during off-peak hours.</li>
+     * <li>Removing nodes involves pod migration and may affect your services. Perform this operation during off-peak hours.</li>
      * <li>Unexpected risks may occur during the operation. Back up your data in advance.</li>
-     * <li>During the operation, the system sets the current nodes to the unschedulable state.</li>
+     * <li>During the operation, the system sets the nodes to the unschedulable state.</li>
      * <li>Only worker nodes are removed. Master nodes are not removed.</li>
-     * <li>Even if you choose to release nodes (that is, set <code>release_node</code> to <code>true</code>), subscription nodes are not released. To release subscription nodes, you must remove them first and then release them in the <a href="https://ecs.console.aliyun.com/">ECS console</a>.</li>
+     * <li>Even if you choose to release nodes (that is, release_node is set to true), subscription nodes are not released. To release subscription nodes, you must release them in the <a href="https://ecs.console.aliyun.com/">ECS console</a> after removing the nodes.</li>
      * </ul>
      * 
      * @param request the request parameters of RemoveNodePoolNodes  RemoveNodePoolNodesRequest
@@ -2733,7 +2738,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you fully understand the billing methods and pricing of &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/sls/detail/sls">Simple Log Service</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/product/log-service/pricing">Simple Log Service</a>.</p>
+     * <p>Before calling this operation, make sure that you fully understand the billing methods and pricing of &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/sls/detail/sls">Simple Log Service</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/product/log-service/pricing">Simple Log Service</a>.</p>
      * 
      * @param request the request parameters of UpdateClusterAuditLogConfig  UpdateClusterAuditLogConfigRequest
      * @return UpdateClusterAuditLogConfigResponse
@@ -2810,7 +2815,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <ul>
      * <li>Only Alibaba Cloud accounts can call this operation.</li>
-     * <li>If the KubeConfig credential used for the cluster is revoked, the custom expiration time configured for the cluster KubeConfig is also reset. You must call this operation to reconfigure the expiration time.</li>
+     * <li>If the kubeconfig credentials used for the cluster are revoked, the custom expiration time of the kubeconfig file is also reset. You must call this operation again to specify the expiration time.</li>
      * </ul>
      * 
      * @param request the request parameters of UpdateK8sClusterUserConfigExpire  UpdateK8sClusterUserConfigExpireRequest
@@ -2856,9 +2861,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of UpdateNodePoolComponent  UpdateNodePoolComponentRequest
+     * @deprecated OpenAPI UpdateNodePoolComponent is deprecated, please use CS::2015-12-15::UpdateNodePoolComponentInstance instead.  * @param request  the request parameters of UpdateNodePoolComponent  UpdateNodePoolComponentRequest
      * @return UpdateNodePoolComponentResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<UpdateNodePoolComponentResponse> updateNodePoolComponent(UpdateNodePoolComponentRequest request) {
         try {
@@ -2984,9 +2990,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Upgrading cluster component instance versions may affect your business. Assess the impact before performing the operation during off-peak hours and back up relevant data in advance.</li>
-     * <li>Before upgrading a component, refer to <a href="https://help.aliyun.com/document_detail/176087.html">Component release notes</a> to learn about the changes and their impact for the specified component.</li>
-     * <li>Upgrade components one at a time. Confirm that one component has been successfully upgraded before upgrading the next.</li>
+     * <li>Upgrading the versions of cluster add-ons may affect your workloads. Evaluate the impact, perform the upgrade during off-peak hours, and back up your data in advance.</li>
+     * <li>Before upgrading an add-on, refer to <a href="https://help.aliyun.com/document_detail/176087.html">Add-on release notes</a> to understand the changes and impact of the specified add-on.</li>
+     * <li>Upgrade add-ons one by one. Make sure that an add-on is upgraded successfully before you upgrade the next one.</li>
      * </ul>
      * 
      * @param request the request parameters of UpgradeClusterAddons  UpgradeClusterAddonsRequest
@@ -3008,7 +3014,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Upgrades the Kubernetes version, operating system version, or container runtime version of nodes in a specified cluster node pool. After you successfully call the UpgradeClusterNodepool operation, the API returns a <code>task_id</code> for the upgrade task. You can manage the task by calling the following task API operations:</p>
+     * <p>You can call the UpgradeClusterNodepool operation to upgrade the Kubernetes version, operating system version, or container runtime version of nodes in a specified node pool of a cluster. After a successful call to the UpgradeClusterNodepool operation, the API returns the <code>task_id</code> of the upgrade task. You can manage the task by calling the following task APIs:</p>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/2667985.html">Call DescribeTaskInfo to query task details</a></li>
      * <li><a href="https://help.aliyun.com/document_detail/2667986.html">Call PauseTask to pause a running task</a></li>

@@ -54,7 +54,7 @@ public class ListAddonsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of available components.</p>
+         * <p>The list of available add-ons.</p>
          */
         public Builder addons(java.util.List<Addons> addons) {
             this.addons = addons;
@@ -198,7 +198,7 @@ public class ListAddonsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The CPU architectures supported by the component.</p>
+             * <p>The CPU architectures supported by the add-on.</p>
              */
             public Builder architecture(java.util.List<String> architecture) {
                 this.architecture = architecture;
@@ -206,16 +206,16 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The category of the component. Valid values:</p>
+             * <p>The category of the add-on. Valid values:</p>
              * <ul>
-             * <li>core: core component</li>
-             * <li>network: network component</li>
-             * <li>security: security component</li>
-             * <li>storage: storage component</li>
-             * <li>monitor: logging and monitoring component</li>
-             * <li>application: application component</li>
+             * <li>core: Core add-on.</li>
+             * <li>network: Network add-on.</li>
+             * <li>security: Security add-on.</li>
+             * <li>storage: Storage add-on.</li>
+             * <li>monitor: Logging and monitoring add-on.</li>
+             * <li>application: Application add-on.
+             * An empty value indicates that the add-on type is other.</li>
              * </ul>
-             * <p>An empty value indicates that the component belongs to another category.</p>
              * 
              * <strong>example:</strong>
              * <p>monitor</p>
@@ -226,7 +226,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The schema of custom parameters for the component.</p>
+             * <p>The schema of custom parameters for the add-on.</p>
              * 
              * <strong>example:</strong>
              * <p>{}</p>
@@ -237,10 +237,10 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the component is installed by default. Valid values:</p>
+             * <p>Indicates whether the add-on is installed by default. Valid values:</p>
              * <ul>
-             * <li>true: The component is installed by default when the cluster is created.</li>
-             * <li>false: The component is not installed by default.</li>
+             * <li>true: The add-on is installed by default when the cluster is created.</li>
+             * <li>false: The add-on is not installed by default.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -252,10 +252,10 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the component is managed. Valid values:</p>
+             * <p>Indicates whether the add-on is managed. Valid values:</p>
              * <ul>
-             * <li>true: The component is managed.</li>
-             * <li>false: The component is not managed.</li>
+             * <li>true: The add-on is managed.</li>
+             * <li>false: The add-on is not managed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -267,7 +267,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the component.</p>
+             * <p>The name of the add-on.</p>
              * 
              * <strong>example:</strong>
              * <p>arms-prometheus</p>
@@ -278,7 +278,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operations supported by the component.</p>
+             * <p>The operations supported by the add-on.</p>
              */
             public Builder supportedActions(java.util.List<String> supportedActions) {
                 this.supportedActions = supportedActions;
@@ -286,7 +286,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the component.</p>
+             * <p>The version of the add-on.</p>
              * 
              * <strong>example:</strong>
              * <p>1.1.9</p>

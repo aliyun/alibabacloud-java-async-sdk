@@ -89,6 +89,9 @@ public class DescribeEventsForRegionResponseBody extends TeaModel {
 
         /**
          * <p>The pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>242x17815i414s****78ev616v3wd38o</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -489,7 +492,7 @@ public class DescribeEventsForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of results to return per page.</p>
+             * <p>The maximum number of results to display per page.</p>
              * 
              * <strong>example:</strong>
              * <p>50</p>

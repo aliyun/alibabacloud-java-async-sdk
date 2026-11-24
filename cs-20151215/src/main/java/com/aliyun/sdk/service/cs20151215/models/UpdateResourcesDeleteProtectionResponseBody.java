@@ -128,7 +128,7 @@ public class UpdateResourcesDeleteProtectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>0527ac9a-c899-4341-a21a-xxxxxxxxx</p>
@@ -150,7 +150,7 @@ public class UpdateResourcesDeleteProtectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of resources for which the deletion protection status is updated.</p>
+         * <p>The list of resources whose deletion protection status is updated.</p>
          */
         public Builder resources(java.util.List<String> resources) {
             this.resources = resources;

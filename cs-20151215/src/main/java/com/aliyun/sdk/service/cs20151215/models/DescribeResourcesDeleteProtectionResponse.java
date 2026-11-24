@@ -242,7 +242,7 @@ public class DescribeResourcesDeleteProtectionResponse extends Response {
             }
 
             /**
-             * <p>Indicates whether deletion protection is enabled. Valid values:</p>
+             * <p>Specifies whether deletion protection is enabled. Valid values:</p>
              * <ul>
              * <li>true: Enabled.</li>
              * <li>false: Disabled.</li>

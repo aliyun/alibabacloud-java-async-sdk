@@ -233,11 +233,11 @@ public class DescribeUserPermissionResponse extends Response {
             } 
 
             /**
-             * <p>The cluster access configuration. The format varies based on the authorization scope:</p>
+             * <p>The cluster access configuration. The format is as follows:</p>
              * <ul>
-             * <li>Cluster-level authorization: <code>{cluster_id}</code>.</li>
-             * <li>Namespace-level authorization: <code>{cluster_id}/{namespace}</code>.</li>
-             * <li>All-cluster authorization: <code>all-clusters</code>.</li>
+             * <li>For cluster-level authorization, the format is <code>{cluster_id}</code>.</li>
+             * <li>For namespace-level authorization, the format is <code>{cluster_id}/{namespace}</code>.</li>
+             * <li>For authorization across all clusters, the value is fixed as <code>all-clusters</code>.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -251,9 +251,9 @@ public class DescribeUserPermissionResponse extends Response {
             /**
              * <p>The authorization type. Valid values:</p>
              * <ul>
-             * <li><code>cluster</code>: cluster-level.</li>
-             * <li><code>namespace</code>: namespace-level.</li>
-             * <li><code>console</code>: all-cluster-level authorization.</li>
+             * <li><code>cluster</code>: cluster level.</li>
+             * <li><code>namespace</code>: namespace level.</li>
+             * <li><code>console</code>: authorization across all clusters.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -265,7 +265,7 @@ public class DescribeUserPermissionResponse extends Response {
             }
 
             /**
-             * <p>The custom role name. When a custom role is authorized, this field specifies the name of the custom cluster management role.</p>
+             * <p>The name of the custom role. When a custom role is authorized, this field specifies the name of the custom cluster management role.</p>
              * 
              * <strong>example:</strong>
              * <p>terway-pod-reader</p>
@@ -278,11 +278,11 @@ public class DescribeUserPermissionResponse extends Response {
             /**
              * <p>The preset role type. Valid values:</p>
              * <ul>
-             * <li><code>admin</code>: Administrator.</li>
+             * <li><code>admin</code>: administrator.</li>
              * <li><code>ops</code>: O&amp;M engineer.</li>
-             * <li><code>dev</code>: Developer.</li>
-             * <li><code>restricted</code>: Restricted user.</li>
-             * <li><code>custom</code>: Custom cluster management role.</li>
+             * <li><code>dev</code>: developer.</li>
+             * <li><code>restricted</code>: restricted user.</li>
+             * <li><code>custom</code>: custom cluster management role.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -294,10 +294,10 @@ public class DescribeUserPermissionResponse extends Response {
             }
 
             /**
-             * <p>Indicates whether the authorization belongs to the cluster creator. Valid values:</p>
+             * <p>Indicates whether the authorization is granted to the cluster creator. Valid values:</p>
              * <ul>
              * <li><code>0</code>: The authorization record does not belong to the cluster creator.</li>
-             * <li><code>1</code>: The authorization record represents the administrator permissions of the cluster creator.</li>
+             * <li><code>1</code>: The authorization record grants administrator permissions to the cluster creator.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -309,10 +309,10 @@ public class DescribeUserPermissionResponse extends Response {
             }
 
             /**
-             * <p>Indicates whether the authorization is for a RAM role. Valid values:</p>
+             * <p>Indicates whether the authorization is granted to a RAM role. Valid values:</p>
              * <ul>
-             * <li><code>0</code>: The record is not a RAM role authorization.</li>
-             * <li><code>1</code>: The record is a RAM role authorization.</li>
+             * <li><code>0</code>: The current record is not a RAM role authorization.</li>
+             * <li><code>1</code>: The current record is a RAM role authorization.</li>
              * </ul>
              * 
              * <strong>example:</strong>

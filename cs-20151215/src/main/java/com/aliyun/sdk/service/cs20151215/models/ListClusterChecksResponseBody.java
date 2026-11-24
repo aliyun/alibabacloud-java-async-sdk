@@ -54,7 +54,7 @@ public class ListClusterChecksResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of checks.</p>
+         * <p>The check list.</p>
          */
         public Builder checks(java.util.List<Checks> checks) {
             this.checks = checks;

@@ -151,7 +151,7 @@ public class GetClusterCheckResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The creation time in ISO 8601 format with time zone information.</p>
+         * <p>The creation time in ISO 8601 format, including the time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-10-16T08:31:20.292030178Z</p>

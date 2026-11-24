@@ -73,7 +73,10 @@ public class WakeUpClusterRequest extends Request {
         } 
 
         /**
-         * clusterId.
+         * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c82e6987e2961451182edacd74faf****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("clusterId", clusterId);
@@ -82,7 +85,10 @@ public class WakeUpClusterRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * <p>The client token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c82e6987e2961451182edacd74faf</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);

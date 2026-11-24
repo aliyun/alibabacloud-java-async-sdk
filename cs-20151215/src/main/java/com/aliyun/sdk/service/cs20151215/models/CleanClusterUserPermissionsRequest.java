@@ -89,7 +89,7 @@ public class CleanClusterUserPermissionsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class CleanClusterUserPermissionsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the specified Resource Access Management (RAM) user or RAM role within the Alibaba Cloud account.</p>
+         * <p>The ID of the specified Resource Access Management (RAM) user or RAM role in the Alibaba Cloud account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,7 +117,7 @@ public class CleanClusterUserPermissionsRequest extends Request {
         /**
          * <p>Specifies whether to force delete the specified KubeConfig. Valid values:</p>
          * <ul>
-         * <li>false (default): Checks whether cluster access records exist within the last seven days before deleting the KubeConfig. If such records exist or cannot be found, the deletion is not allowed.</li>
+         * <li>false (default): Checks whether there are cluster access records within the last seven days before deleting the KubeConfig. If such records exist or the cluster access records cannot be found, the deletion is not allowed.</li>
          * <li>true: Force deletes the KubeConfig without checking cluster access records.</li>
          * </ul>
          * 

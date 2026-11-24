@@ -404,7 +404,7 @@ public class ListClusterInspectReportsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The inspection report summary.</p>
+             * <p>The summary of the inspection report.</p>
              */
             public Builder summary(Summary summary) {
                 this.summary = summary;

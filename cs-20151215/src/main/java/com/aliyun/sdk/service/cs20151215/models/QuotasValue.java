@@ -115,7 +115,7 @@ public class QuotasValue extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the quota can be adjusted.</p>
+         * <p>Specifies whether the quota can be adjusted.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

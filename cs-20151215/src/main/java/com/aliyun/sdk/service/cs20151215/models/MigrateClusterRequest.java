@@ -88,7 +88,7 @@ public class MigrateClusterRequest extends Request {
         } 
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The ID of the cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +101,7 @@ public class MigrateClusterRequest extends Request {
         }
 
         /**
-         * <p>The bucket endpoint.</p>
+         * <p>The access endpoint of the bucket.</p>
          * 
          * <strong>example:</strong>
          * <p>*******.oss-cn-hangzhou.aliyuncs.com</p>
@@ -113,7 +113,7 @@ public class MigrateClusterRequest extends Request {
         }
 
         /**
-         * <p>The bucket name.</p>
+         * <p>The name of the bucket.</p>
          * 
          * <strong>example:</strong>
          * <p>bucket-****</p>

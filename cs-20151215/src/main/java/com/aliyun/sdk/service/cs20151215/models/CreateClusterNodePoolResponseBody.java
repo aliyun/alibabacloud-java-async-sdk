@@ -80,7 +80,7 @@ public class CreateClusterNodePoolResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The node pool ID.</p>
+         * <p>The ID of the node pool.</p>
          * 
          * <strong>example:</strong>
          * <p>np31da1b38983f4511b490fc62108a****</p>
@@ -91,7 +91,7 @@ public class CreateClusterNodePoolResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>0527ac9a-c899-4341-a21a-****</p>
@@ -102,7 +102,7 @@ public class CreateClusterNodePoolResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The task ID.</p>
+         * <p>The ID of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>T-613b19bbd160ad492800****</p>

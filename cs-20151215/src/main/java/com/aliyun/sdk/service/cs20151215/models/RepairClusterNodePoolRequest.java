@@ -144,7 +144,7 @@ public class RepairClusterNodePoolRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> Specifies whether to restart the instance.</p>
+         * <p><strong>[Deprecated]</strong> Specifies whether to allow restarting instances.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
