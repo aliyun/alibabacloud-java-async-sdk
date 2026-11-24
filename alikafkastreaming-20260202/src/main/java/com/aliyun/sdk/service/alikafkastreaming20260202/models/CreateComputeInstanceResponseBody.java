@@ -93,7 +93,10 @@ public class CreateComputeInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The return code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class CreateComputeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class CreateComputeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>062D8E8B-8D47-5DCC-BB12-5A1D93C3A66B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +123,10 @@ public class CreateComputeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -183,7 +192,10 @@ public class CreateComputeInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * InstanceId.
+             * <p>The compute instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alikafka_streaming-cn-pe333xxxxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -191,7 +203,10 @@ public class CreateComputeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * OrderId.
+             * <p>The order ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234567890</p>
              */
             public Builder orderId(String orderId) {
                 this.orderId = orderId;

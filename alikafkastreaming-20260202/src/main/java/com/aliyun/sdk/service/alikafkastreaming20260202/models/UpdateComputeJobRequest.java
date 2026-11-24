@@ -104,6 +104,7 @@ public class UpdateComputeJobRequest extends Request {
         } 
 
         /**
+         * <p><strong>The compute instance ID.</strong></p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,6 +117,7 @@ public class UpdateComputeJobRequest extends Request {
         }
 
         /**
+         * <p><strong>The compute job name.</strong></p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,6 +130,7 @@ public class UpdateComputeJobRequest extends Request {
         }
 
         /**
+         * <p><strong>The region ID.</strong></p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,7 +143,10 @@ public class UpdateComputeJobRequest extends Request {
         }
 
         /**
-         * Remark.
+         * <p><strong>The job remarks.</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>Real-time order flow cleaning</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);

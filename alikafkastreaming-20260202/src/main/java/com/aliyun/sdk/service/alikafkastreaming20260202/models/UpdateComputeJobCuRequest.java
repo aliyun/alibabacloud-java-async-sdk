@@ -120,6 +120,7 @@ public class UpdateComputeJobCuRequest extends Request {
         } 
 
         /**
+         * <p><strong>The CU limit for the job.</strong></p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,10 +133,14 @@ public class UpdateComputeJobCuRequest extends Request {
         }
 
         /**
+         * <p><strong>The reserved CUs for the job.</strong></p>
+         * <blockquote>
+         * <p>The number of reserved CUs must not exceed the CU limit.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>1.0</p>
+         * <p>2.0</p>
          */
         public Builder cuReserved(Double cuReserved) {
             this.putQueryParameter("CuReserved", cuReserved);
@@ -144,6 +149,7 @@ public class UpdateComputeJobCuRequest extends Request {
         }
 
         /**
+         * <p><strong>The compute instance ID.</strong></p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,6 +162,7 @@ public class UpdateComputeJobCuRequest extends Request {
         }
 
         /**
+         * <p><strong>The name of the compute job.</strong></p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -168,6 +175,7 @@ public class UpdateComputeJobCuRequest extends Request {
         }
 
         /**
+         * <p><strong>The region ID.</strong></p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

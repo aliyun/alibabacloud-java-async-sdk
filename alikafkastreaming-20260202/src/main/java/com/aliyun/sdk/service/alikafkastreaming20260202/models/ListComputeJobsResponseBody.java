@@ -132,7 +132,10 @@ public class ListComputeJobsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The return code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -140,7 +143,7 @@ public class ListComputeJobsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -148,7 +151,10 @@ public class ListComputeJobsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -156,7 +162,10 @@ public class ListComputeJobsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJvZmZzZXQiOjIwfQ==</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -164,7 +173,10 @@ public class ListComputeJobsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>062D8E8B-8D47-5DCC-BB12-5A1D93C3A66B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -172,7 +184,10 @@ public class ListComputeJobsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -180,7 +195,10 @@ public class ListComputeJobsResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of records that match the query conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -363,6 +381,7 @@ public class ListComputeJobsResponseBody extends TeaModel {
             } 
 
             /**
+             * <p>The creation time.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
              * 
              * <strong>example:</strong>
@@ -374,7 +393,10 @@ public class ListComputeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * CuLimit.
+             * <p>The CU limit for the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.0</p>
              */
             public Builder cuLimit(Double cuLimit) {
                 this.cuLimit = cuLimit;
@@ -382,7 +404,10 @@ public class ListComputeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * CuReserved.
+             * <p>The reserved CUs for the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder cuReserved(Double cuReserved) {
                 this.cuReserved = cuReserved;
@@ -390,7 +415,10 @@ public class ListComputeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * CuUsed.
+             * <p>The number of CUs used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.5</p>
              */
             public Builder cuUsed(Double cuUsed) {
                 this.cuUsed = cuUsed;
@@ -398,7 +426,10 @@ public class ListComputeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * DebugMode.
+             * <p>Specifies whether the job is a debug job. Valid values: 0: No. 1: Yes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder debugMode(Integer debugMode) {
                 this.debugMode = debugMode;
@@ -406,7 +437,10 @@ public class ListComputeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The compute instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alikafka_streaming-cn-a1b2c3d4</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -414,7 +448,10 @@ public class ListComputeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * JobName.
+             * <p>The name of the compute job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>order_enrichment</p>
              */
             public Builder jobName(String jobName) {
                 this.jobName = jobName;
@@ -422,7 +459,10 @@ public class ListComputeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>The owner of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234567890123456</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -430,7 +470,10 @@ public class ListComputeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -438,7 +481,10 @@ public class ListComputeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Remark.
+             * <p>The job remark.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Real-time order stream cleansing</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -446,7 +492,10 @@ public class ListComputeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The job status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder status(String status) {
                 this.status = status;

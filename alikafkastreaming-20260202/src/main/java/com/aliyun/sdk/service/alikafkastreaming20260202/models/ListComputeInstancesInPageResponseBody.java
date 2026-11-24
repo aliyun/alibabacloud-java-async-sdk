@@ -132,7 +132,10 @@ public class ListComputeInstancesInPageResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The return code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -140,7 +143,10 @@ public class ListComputeInstancesInPageResponseBody extends TeaModel {
         }
 
         /**
-         * CurrentPage.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -148,7 +154,7 @@ public class ListComputeInstancesInPageResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -156,7 +162,10 @@ public class ListComputeInstancesInPageResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -164,7 +173,10 @@ public class ListComputeInstancesInPageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9079DD86-09F1-5303-A64F-D9089F96BC16</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -172,7 +184,10 @@ public class ListComputeInstancesInPageResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -180,7 +195,10 @@ public class ListComputeInstancesInPageResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of entries that meet the query conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -428,7 +446,10 @@ public class ListComputeInstancesInPageResponseBody extends TeaModel {
             } 
 
             /**
-             * AutoRenewFlag.
+             * <p>Indicates whether auto-renewal is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder autoRenewFlag(Boolean autoRenewFlag) {
                 this.autoRenewFlag = autoRenewFlag;
@@ -436,7 +457,10 @@ public class ListComputeInstancesInPageResponseBody extends TeaModel {
             }
 
             /**
-             * ChargeType.
+             * <p>The billing method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>POST_PAID</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -444,6 +468,7 @@ public class ListComputeInstancesInPageResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The creation time.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
              * 
              * <strong>example:</strong>
@@ -455,7 +480,10 @@ public class ListComputeInstancesInPageResponseBody extends TeaModel {
             }
 
             /**
-             * CuLimitSum.
+             * <p>The total CU limit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4.0</p>
              */
             public Builder cuLimitSum(Double cuLimitSum) {
                 this.cuLimitSum = cuLimitSum;
@@ -463,7 +491,10 @@ public class ListComputeInstancesInPageResponseBody extends TeaModel {
             }
 
             /**
-             * CuReservedSum.
+             * <p>The total number of reserved CUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.0</p>
              */
             public Builder cuReservedSum(Double cuReservedSum) {
                 this.cuReservedSum = cuReservedSum;
@@ -471,7 +502,10 @@ public class ListComputeInstancesInPageResponseBody extends TeaModel {
             }
 
             /**
-             * CuUsedSum.
+             * <p>The total number of used CUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.5</p>
              */
             public Builder cuUsedSum(Double cuUsedSum) {
                 this.cuUsedSum = cuUsedSum;
@@ -479,6 +513,7 @@ public class ListComputeInstancesInPageResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The expiration time.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
              * 
              * <strong>example:</strong>
@@ -490,7 +525,10 @@ public class ListComputeInstancesInPageResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The compute instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alikafka_streaming-cn-xxxxxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -498,7 +536,10 @@ public class ListComputeInstancesInPageResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>streaming-prod</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -506,7 +547,10 @@ public class ListComputeInstancesInPageResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>The owner of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234567890123456</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -514,7 +558,10 @@ public class ListComputeInstancesInPageResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -522,7 +569,10 @@ public class ListComputeInstancesInPageResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceStatus.
+             * <p>The service status of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder serviceStatus(String serviceStatus) {
                 this.serviceStatus = serviceStatus;
@@ -530,7 +580,10 @@ public class ListComputeInstancesInPageResponseBody extends TeaModel {
             }
 
             /**
-             * TotalJobs.
+             * <p>The total number of jobs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder totalJobs(Long totalJobs) {
                 this.totalJobs = totalJobs;
@@ -538,7 +591,10 @@ public class ListComputeInstancesInPageResponseBody extends TeaModel {
             }
 
             /**
-             * TotalRunningJobs.
+             * <p>The number of running jobs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder totalRunningJobs(Long totalRunningJobs) {
                 this.totalRunningJobs = totalRunningJobs;
@@ -546,7 +602,7 @@ public class ListComputeInstancesInPageResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchIds.
+             * <p>The list of vSwitch IDs.</p>
              */
             public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -554,7 +610,10 @@ public class ListComputeInstancesInPageResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1abcdefg</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

@@ -93,7 +93,10 @@ public class CheckSqlContentResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The return code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class CheckSqlContentResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class CheckSqlContentResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>062D8E8B-8D47-5DCC-BB12-5A1D93C3A66B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +123,10 @@ public class CheckSqlContentResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -248,7 +257,10 @@ public class CheckSqlContentResponseBody extends TeaModel {
             } 
 
             /**
-             * CodeSnippet.
+             * <p>The SQL snippet where the error occurred.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SELECT FROM source_table</p>
              */
             public Builder codeSnippet(String codeSnippet) {
                 this.codeSnippet = codeSnippet;
@@ -256,7 +268,10 @@ public class CheckSqlContentResponseBody extends TeaModel {
             }
 
             /**
-             * ColumnNumber.
+             * <p>The starting column number of the error.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder columnNumber(Integer columnNumber) {
                 this.columnNumber = columnNumber;
@@ -264,7 +279,10 @@ public class CheckSqlContentResponseBody extends TeaModel {
             }
 
             /**
-             * EndColumnNumber.
+             * <p>The ending column number of the error.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder endColumnNumber(Integer endColumnNumber) {
                 this.endColumnNumber = endColumnNumber;
@@ -272,7 +290,10 @@ public class CheckSqlContentResponseBody extends TeaModel {
             }
 
             /**
-             * EndLineNumber.
+             * <p>The ending line number of the error.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder endLineNumber(Integer endLineNumber) {
                 this.endLineNumber = endLineNumber;
@@ -280,7 +301,10 @@ public class CheckSqlContentResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorType.
+             * <p>The error type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SYNTAX_ERROR</p>
              */
             public Builder errorType(String errorType) {
                 this.errorType = errorType;
@@ -288,7 +312,10 @@ public class CheckSqlContentResponseBody extends TeaModel {
             }
 
             /**
-             * LineNumber.
+             * <p>The starting line number of the error.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder lineNumber(Integer lineNumber) {
                 this.lineNumber = lineNumber;
@@ -296,7 +323,10 @@ public class CheckSqlContentResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SQL parse failed near FROM</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -363,7 +393,7 @@ public class CheckSqlContentResponseBody extends TeaModel {
             } 
 
             /**
-             * ErrorList.
+             * <p>The list of SQL validation errors.</p>
              */
             public Builder errorList(java.util.List<ErrorList> errorList) {
                 this.errorList = errorList;
@@ -371,7 +401,10 @@ public class CheckSqlContentResponseBody extends TeaModel {
             }
 
             /**
-             * Valid.
+             * <p>Indicates whether the SQL statement passed the validation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder valid(Boolean valid) {
                 this.valid = valid;

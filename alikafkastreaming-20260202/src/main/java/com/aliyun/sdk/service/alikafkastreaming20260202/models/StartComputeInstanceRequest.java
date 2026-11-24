@@ -119,6 +119,7 @@ public class StartComputeInstanceRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,7 +132,10 @@ public class StartComputeInstanceRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * <p>The name of the compute instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>streaming-prod</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -140,6 +144,7 @@ public class StartComputeInstanceRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,6 +157,7 @@ public class StartComputeInstanceRequest extends Request {
         }
 
         /**
+         * <p>The list of vSwitch IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
@@ -162,6 +168,7 @@ public class StartComputeInstanceRequest extends Request {
         }
 
         /**
+         * <p>The ID of the VPC where the instance is deployed.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

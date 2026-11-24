@@ -134,6 +134,7 @@ public class CreateComputeJobRequest extends Request {
         } 
 
         /**
+         * <p>The compute unit (CU) limit for the job.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,10 +147,14 @@ public class CreateComputeJobRequest extends Request {
         }
 
         /**
+         * <p>The reserved compute units (CUs) for the job.</p>
+         * <blockquote>
+         * <p>The reserved CUs must not exceed the CU limit.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>1.0</p>
+         * <p>2.0</p>
          */
         public Builder cuReserved(Double cuReserved) {
             this.putQueryParameter("CuReserved", cuReserved);
@@ -158,6 +163,7 @@ public class CreateComputeJobRequest extends Request {
         }
 
         /**
+         * <p>The compute instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,6 +176,7 @@ public class CreateComputeJobRequest extends Request {
         }
 
         /**
+         * <p>The name of the compute job.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -182,6 +189,7 @@ public class CreateComputeJobRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -194,7 +202,10 @@ public class CreateComputeJobRequest extends Request {
         }
 
         /**
-         * Remark.
+         * <p>The remarks for the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Real-time order stream cleaning</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);

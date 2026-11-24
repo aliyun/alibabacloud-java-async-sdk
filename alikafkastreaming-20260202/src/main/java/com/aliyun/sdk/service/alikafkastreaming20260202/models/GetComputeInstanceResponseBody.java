@@ -93,7 +93,10 @@ public class GetComputeInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The return code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class GetComputeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class GetComputeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>019F5939-507B-57C1-B82C-E55821456FA6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +123,10 @@ public class GetComputeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -352,7 +361,10 @@ public class GetComputeInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * ChargeType.
+             * <p>The billing method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>POST_PAID</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -360,6 +372,7 @@ public class GetComputeInstanceResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The creation time.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
              * 
              * <strong>example:</strong>
@@ -371,7 +384,10 @@ public class GetComputeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * CuLimitSum.
+             * <p>The total CU limit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4.0</p>
              */
             public Builder cuLimitSum(Double cuLimitSum) {
                 this.cuLimitSum = cuLimitSum;
@@ -379,7 +395,10 @@ public class GetComputeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * CuReservedSum.
+             * <p>The total number of reserved CUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.0</p>
              */
             public Builder cuReservedSum(Double cuReservedSum) {
                 this.cuReservedSum = cuReservedSum;
@@ -387,7 +406,10 @@ public class GetComputeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * CuUsedSum.
+             * <p>The total number of used CUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.5</p>
              */
             public Builder cuUsedSum(Double cuUsedSum) {
                 this.cuUsedSum = cuUsedSum;
@@ -395,6 +417,7 @@ public class GetComputeInstanceResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The expiration time.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
              * 
              * <strong>example:</strong>
@@ -406,7 +429,10 @@ public class GetComputeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The compute instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alikafka_streaming-cn-pe333xxxxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -414,7 +440,10 @@ public class GetComputeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * <p>The name of the compute instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>streaming-prod</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -422,7 +451,10 @@ public class GetComputeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -430,7 +462,10 @@ public class GetComputeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aek53bg4tl6fgma</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -438,7 +473,10 @@ public class GetComputeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceStatus.
+             * <p>The service status of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder serviceStatus(String serviceStatus) {
                 this.serviceStatus = serviceStatus;
@@ -446,7 +484,10 @@ public class GetComputeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * TotalJobs.
+             * <p>The total number of jobs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder totalJobs(Long totalJobs) {
                 this.totalJobs = totalJobs;
@@ -454,7 +495,10 @@ public class GetComputeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * TotalRunningJobs.
+             * <p>The number of running jobs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder totalRunningJobs(Long totalRunningJobs) {
                 this.totalRunningJobs = totalRunningJobs;
@@ -462,7 +506,7 @@ public class GetComputeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchIds.
+             * <p>The list of vSwitch IDs.</p>
              */
             public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -470,7 +514,10 @@ public class GetComputeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>VPC ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1abcdefg</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

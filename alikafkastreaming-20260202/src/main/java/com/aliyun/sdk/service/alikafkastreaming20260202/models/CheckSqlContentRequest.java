@@ -105,6 +105,7 @@ public class CheckSqlContentRequest extends Request {
         } 
 
         /**
+         * <p>The compute instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,6 +118,7 @@ public class CheckSqlContentRequest extends Request {
         }
 
         /**
+         * <p>The compute job name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +131,7 @@ public class CheckSqlContentRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,6 +144,7 @@ public class CheckSqlContentRequest extends Request {
         }
 
         /**
+         * <p>The Flink SQL statement to be validated.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

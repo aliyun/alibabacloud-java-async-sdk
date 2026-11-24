@@ -90,6 +90,7 @@ public class DeleteComputeJobRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the compute instance, excluding the region name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class DeleteComputeJobRequest extends Request {
         }
 
         /**
+         * <p>The name of the compute job.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class DeleteComputeJobRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

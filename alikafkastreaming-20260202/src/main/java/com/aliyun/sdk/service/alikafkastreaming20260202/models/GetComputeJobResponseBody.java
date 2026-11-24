@@ -93,7 +93,10 @@ public class GetComputeJobResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The return code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class GetComputeJobResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class GetComputeJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>062D8E8B-8D47-5DCC-BB12-5A1D93C3A66B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +123,10 @@ public class GetComputeJobResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -365,6 +374,7 @@ public class GetComputeJobResponseBody extends TeaModel {
             } 
 
             /**
+             * <p>The creation time.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
              * 
              * <strong>example:</strong>
@@ -376,7 +386,10 @@ public class GetComputeJobResponseBody extends TeaModel {
             }
 
             /**
-             * CuLimit.
+             * <p>The CU limit for the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.0</p>
              */
             public Builder cuLimit(Double cuLimit) {
                 this.cuLimit = cuLimit;
@@ -384,7 +397,10 @@ public class GetComputeJobResponseBody extends TeaModel {
             }
 
             /**
-             * CuReserved.
+             * <p>The reserved CUs for the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder cuReserved(Double cuReserved) {
                 this.cuReserved = cuReserved;
@@ -392,7 +408,10 @@ public class GetComputeJobResponseBody extends TeaModel {
             }
 
             /**
-             * CuUsed.
+             * <p>The used CUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.5</p>
              */
             public Builder cuUsed(Double cuUsed) {
                 this.cuUsed = cuUsed;
@@ -400,7 +419,14 @@ public class GetComputeJobResponseBody extends TeaModel {
             }
 
             /**
-             * DebugMode.
+             * <p>Indicates whether the job is a debug job. Valid values:</p>
+             * <ul>
+             * <li>0: No.</li>
+             * <li>1: Yes.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder debugMode(Integer debugMode) {
                 this.debugMode = debugMode;
@@ -408,7 +434,10 @@ public class GetComputeJobResponseBody extends TeaModel {
             }
 
             /**
-             * DeployedSql.
+             * <p>The currently deployed SQL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>INSERT INTO sink_table SELECT * FROM source_table;</p>
              */
             public Builder deployedSql(String deployedSql) {
                 this.deployedSql = deployedSql;
@@ -416,7 +445,10 @@ public class GetComputeJobResponseBody extends TeaModel {
             }
 
             /**
-             * DraftSql.
+             * <p>The Flink SQL draft.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>INSERT INTO sink_table SELECT * FROM source_table;</p>
              */
             public Builder draftSql(String draftSql) {
                 this.draftSql = draftSql;
@@ -424,7 +456,10 @@ public class GetComputeJobResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMsg.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SQL validation or compilation failed: Column \&quot;xxx\&quot; not found</p>
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -432,6 +467,7 @@ public class GetComputeJobResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The expiration time.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
              * 
              * <strong>example:</strong>
@@ -443,7 +479,10 @@ public class GetComputeJobResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The compute instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alikafka_streaming-cn-hangzhou-a1b2c3d4</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -451,7 +490,10 @@ public class GetComputeJobResponseBody extends TeaModel {
             }
 
             /**
-             * JobName.
+             * <p>The name of the compute job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>order_enrichment</p>
              */
             public Builder jobName(String jobName) {
                 this.jobName = jobName;
@@ -459,7 +501,10 @@ public class GetComputeJobResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>The owner of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234567890123456</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -467,7 +512,10 @@ public class GetComputeJobResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -475,7 +523,10 @@ public class GetComputeJobResponseBody extends TeaModel {
             }
 
             /**
-             * Remark.
+             * <p>The remark for the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Real-time order stream cleansing</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -483,7 +534,10 @@ public class GetComputeJobResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -491,7 +545,10 @@ public class GetComputeJobResponseBody extends TeaModel {
             }
 
             /**
-             * UpgradeMode.
+             * <p>The startup mode, such as savepoint or stateless.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>savepoint</p>
              */
             public Builder upgradeMode(String upgradeMode) {
                 this.upgradeMode = upgradeMode;

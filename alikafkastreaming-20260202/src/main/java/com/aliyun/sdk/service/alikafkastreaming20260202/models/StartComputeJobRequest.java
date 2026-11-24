@@ -146,7 +146,10 @@ public class StartComputeJobRequest extends Request {
         } 
 
         /**
-         * CuLimit.
+         * <p>The CU limit for the job. Integers and decimals are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0</p>
          */
         public Builder cuLimit(Double cuLimit) {
             this.putQueryParameter("CuLimit", cuLimit);
@@ -155,7 +158,13 @@ public class StartComputeJobRequest extends Request {
         }
 
         /**
-         * CuReserved.
+         * <p>The number of reserved CUs for the job. Integers and decimals are supported.</p>
+         * <blockquote>
+         * <p>The number of reserved CUs cannot exceed the CU limit.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0</p>
          */
         public Builder cuReserved(Double cuReserved) {
             this.putQueryParameter("CuReserved", cuReserved);
@@ -164,7 +173,10 @@ public class StartComputeJobRequest extends Request {
         }
 
         /**
-         * DraftSql.
+         * <p><strong>The Flink SQL draft, which must be a self-contained and complete DDL and DML statement.</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>CREATE TEMPORARY TABLE src (id BIGINT) WITH (\&quot;connector\&quot; = \&quot;datagen\&quot;); CREATE TEMPORARY TABLE sink (id BIGINT) WITH (\&quot;connector\&quot; = \&quot;print\&quot;); INSERT INTO sink SELECT id FROM src;</p>
          */
         public Builder draftSql(String draftSql) {
             this.putQueryParameter("DraftSql", draftSql);
@@ -173,6 +185,7 @@ public class StartComputeJobRequest extends Request {
         }
 
         /**
+         * <p><strong>The compute instance ID.</strong></p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -185,6 +198,7 @@ public class StartComputeJobRequest extends Request {
         }
 
         /**
+         * <p><strong>The name of the compute job.</strong></p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -197,7 +211,10 @@ public class StartComputeJobRequest extends Request {
         }
 
         /**
-         * RecoveryMode.
+         * <p><strong>The recovery mode, such as savepoint or stateless.</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>savepoint</p>
          */
         public Builder recoveryMode(String recoveryMode) {
             this.putQueryParameter("RecoveryMode", recoveryMode);
@@ -206,6 +223,7 @@ public class StartComputeJobRequest extends Request {
         }
 
         /**
+         * <p><strong>The region ID.</strong></p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
