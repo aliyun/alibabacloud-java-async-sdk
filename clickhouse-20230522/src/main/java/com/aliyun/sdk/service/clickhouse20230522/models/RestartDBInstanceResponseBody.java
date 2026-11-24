@@ -160,7 +160,7 @@ public class RestartDBInstanceResponseBody extends TeaModel {
              * <p>The cluster ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>cc-bp100p4q1g9z3****</p>
+             * <p>100001</p>
              */
             public Builder DBInstanceID(Long DBInstanceID) {
                 this.DBInstanceID = DBInstanceID;
@@ -171,7 +171,7 @@ public class RestartDBInstanceResponseBody extends TeaModel {
              * <p>The cluster name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Enterprise edition cluster test</p>
+             * <p>Enterprise Edition cluster test</p>
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;
