@@ -154,7 +154,7 @@ public class ListEventCenterRecordResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -165,7 +165,7 @@ public class ListEventCenterRecordResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -176,7 +176,7 @@ public class ListEventCenterRecordResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of historical events.</p>
+         * <p>The event history list.</p>
          * 
          * <strong>example:</strong>
          * <p>[]</p>
@@ -187,7 +187,7 @@ public class ListEventCenterRecordResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>665C7A5E-BAEC-5BCD-AF9F-5F9260D672BF</p>
@@ -198,7 +198,7 @@ public class ListEventCenterRecordResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total entries of historical events.</p>
+         * <p>The total number of event history records.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -410,7 +410,7 @@ public class ListEventCenterRecordResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the event was created.</p>
+             * <p>The creation time, in UNIX timestamp format. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1638188622000</p>
@@ -421,7 +421,7 @@ public class ListEventCenterRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The event notification channel.</p>
+             * <p>The notification channel.</p>
              * 
              * <strong>example:</strong>
              * <p>EVENT_BRIDGE</p>
@@ -432,7 +432,7 @@ public class ListEventCenterRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the event notification.</p>
+             * <p>The event ID of the downstream notification.</p>
              * 
              * <strong>example:</strong>
              * <p>7d478419-61df-49e5-b92b-30ce730c2127</p>
@@ -445,9 +445,12 @@ public class ListEventCenterRecordResponseBody extends TeaModel {
             /**
              * <p>The notification method. Valid values:</p>
              * <ul>
-             * <li><code>http</code>: The notification is sent over HTTP.</li>
-             * <li><code>https</code>: The notification is sent over HTTPS.</li>
-             * <li><code>dingding</code>: The notification is sent by using DingTalk.</li>
+             * <li><p><code>http</code>: HTTP notification.</p>
+             * </li>
+             * <li><p><code>https</code>: HTTPS notification.</p>
+             * </li>
+             * <li><p><code>dingding</code>: DingTalk notification.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -459,7 +462,7 @@ public class ListEventCenterRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the event.</p>
+             * <p>The event type.</p>
              * 
              * <strong>example:</strong>
              * <p>cr:Artifact:DeliveryChainCompleted</p>
@@ -470,7 +473,7 @@ public class ListEventCenterRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance.</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cri-gl34plsa****</p>
@@ -492,7 +495,7 @@ public class ListEventCenterRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the event record.</p>
+             * <p>The event record ID.</p>
              * 
              * <strong>example:</strong>
              * <p>crecrr-ctdbzwtkpr*****</p>
@@ -503,7 +506,7 @@ public class ListEventCenterRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the image repository.</p>
+             * <p>The repository name.</p>
              * 
              * <strong>example:</strong>
              * <p>ruby-2.4.0</p>
@@ -514,7 +517,7 @@ public class ListEventCenterRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the event notification rule.</p>
+             * <p>The event rule ID.</p>
              * 
              * <strong>example:</strong>
              * <p>crecr-n6pbhgjxtla*****</p>
@@ -525,7 +528,7 @@ public class ListEventCenterRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the event notification rule.</p>
+             * <p>The event rule name.</p>
              * 
              * <strong>example:</strong>
              * <p>chain-demo</p>
@@ -536,7 +539,7 @@ public class ListEventCenterRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags.</p>
+             * <p>The label.</p>
              * 
              * <strong>example:</strong>
              * <p>ruby-2.4.0</p>
@@ -547,7 +550,7 @@ public class ListEventCenterRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the event was last updated.</p>
+             * <p>The update time, in UNIX timestamp format. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1638188622000</p>

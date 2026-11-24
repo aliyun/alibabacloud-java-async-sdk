@@ -80,7 +80,7 @@ public class ArtifactLifecyclePolicy extends TeaModel {
         } 
 
         /**
-         * Condition.
+         * <p>The retention conditions for artifact versions.</p>
          */
         public Builder condition(Condition condition) {
             this.condition = condition;
@@ -88,7 +88,7 @@ public class ArtifactLifecyclePolicy extends TeaModel {
         }
 
         /**
-         * Filter.
+         * <p>The filter conditions for artifact versions.</p>
          */
         public Builder filter(Filter filter) {
             this.filter = filter;
@@ -96,7 +96,7 @@ public class ArtifactLifecyclePolicy extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>The type of the artifact version data retention policy.</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -175,7 +175,10 @@ public class ArtifactLifecyclePolicy extends TeaModel {
             } 
 
             /**
-             * LastPullOlderThanDays.
+             * <p>Retains artifact versions whose most recent pull time is within the specified number of days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder lastPullOlderThanDays(Integer lastPullOlderThanDays) {
                 this.lastPullOlderThanDays = lastPullOlderThanDays;
@@ -183,7 +186,10 @@ public class ArtifactLifecyclePolicy extends TeaModel {
             }
 
             /**
-             * LastPushOlderThanDays.
+             * <p>Retains artifact versions whose most recent push time is within the specified number of days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder lastPushOlderThanDays(Integer lastPushOlderThanDays) {
                 this.lastPushOlderThanDays = lastPushOlderThanDays;
@@ -191,7 +197,10 @@ public class ArtifactLifecyclePolicy extends TeaModel {
             }
 
             /**
-             * LatestTagCount.
+             * <p>The number of most recently pushed artifact versions to retain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder latestTagCount(Integer latestTagCount) {
                 this.latestTagCount = latestTagCount;
@@ -245,7 +254,7 @@ public class ArtifactLifecyclePolicy extends TeaModel {
             } 
 
             /**
-             * TagWildcard.
+             * <p>The matching expression for the names of additionally retained artifact versions.</p>
              */
             public Builder tagWildcard(String tagWildcard) {
                 this.tagWildcard = tagWildcard;

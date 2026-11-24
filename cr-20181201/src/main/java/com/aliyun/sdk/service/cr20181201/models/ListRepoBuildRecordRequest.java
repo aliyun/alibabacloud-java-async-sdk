@@ -126,7 +126,7 @@ public class ListRepoBuildRecordRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,7 +139,7 @@ public class ListRepoBuildRecordRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -151,7 +151,7 @@ public class ListRepoBuildRecordRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -163,7 +163,7 @@ public class ListRepoBuildRecordRequest extends Request {
         }
 
         /**
-         * <p>The ID of the repository.</p>
+         * <p>The repository ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

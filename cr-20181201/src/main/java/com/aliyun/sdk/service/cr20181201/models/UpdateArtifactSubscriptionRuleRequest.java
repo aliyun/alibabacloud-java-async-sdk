@@ -68,6 +68,10 @@ public class UpdateArtifactSubscriptionRuleRequest extends Request {
     private Long tagCount;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TagList")
+    private java.util.List<String> tagList;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TagRegexp")
     private String tagRegexp;
 
@@ -85,6 +89,7 @@ public class UpdateArtifactSubscriptionRuleRequest extends Request {
         this.sourceProvider = builder.sourceProvider;
         this.sourceRepoName = builder.sourceRepoName;
         this.tagCount = builder.tagCount;
+        this.tagList = builder.tagList;
         this.tagRegexp = builder.tagRegexp;
     }
 
@@ -186,6 +191,13 @@ public class UpdateArtifactSubscriptionRuleRequest extends Request {
     }
 
     /**
+     * @return tagList
+     */
+    public java.util.List<String> getTagList() {
+        return this.tagList;
+    }
+
+    /**
      * @return tagRegexp
      */
     public String getTagRegexp() {
@@ -205,6 +217,7 @@ public class UpdateArtifactSubscriptionRuleRequest extends Request {
         private String sourceProvider; 
         private String sourceRepoName; 
         private Long tagCount; 
+        private java.util.List<String> tagList; 
         private String tagRegexp; 
 
         private Builder() {
@@ -225,6 +238,7 @@ public class UpdateArtifactSubscriptionRuleRequest extends Request {
             this.sourceProvider = request.sourceProvider;
             this.sourceRepoName = request.sourceRepoName;
             this.tagCount = request.tagCount;
+            this.tagList = request.tagList;
             this.tagRegexp = request.tagRegexp;
         } 
 
@@ -238,7 +252,7 @@ public class UpdateArtifactSubscriptionRuleRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable an acceleration link for image subscription. The subscription acceleration feature is in public preview. The feature is optimized based on scheduling policies and network links to accelerate image subscription.</p>
+         * <p>Specifies whether to enable the acceleration link. The subscription acceleration feature is in public preview. It improves the image subscription speed based on scheduling policies and network link optimization.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -263,7 +277,7 @@ public class UpdateArtifactSubscriptionRuleRequest extends Request {
         }
 
         /**
-         * <p>The name of the Container Registry namespace.</p>
+         * <p>The ACR namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>test-ns</p>
@@ -275,7 +289,7 @@ public class UpdateArtifactSubscriptionRuleRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to overwrite the original image.</p>
+         * <p>Specifies whether to overwrite images.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -287,7 +301,7 @@ public class UpdateArtifactSubscriptionRuleRequest extends Request {
         }
 
         /**
-         * <p>The operating system and architecture. If the source repository contains multi-arch images, only the images with the specified operating system and architecture are subscribed to the destination repository of the Enterprise Edition instance.</p>
+         * <p>The operating system and architecture. If the source repository contains multi-architecture images, only images with the specified operating system and architecture are subscribed to the destination repository of the Enterprise instance.</p>
          */
         public Builder platform(java.util.List<String> platform) {
             this.putQueryParameter("Platform", platform);
@@ -296,7 +310,7 @@ public class UpdateArtifactSubscriptionRuleRequest extends Request {
         }
 
         /**
-         * <p>The name of the Container Registry repository.</p>
+         * <p>The ACR repository.</p>
          * 
          * <strong>example:</strong>
          * <p>test-repo</p>
@@ -321,7 +335,7 @@ public class UpdateArtifactSubscriptionRuleRequest extends Request {
         }
 
         /**
-         * <p>The name of the source namespace.</p>
+         * <p>The source namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>library</p>
@@ -333,13 +347,7 @@ public class UpdateArtifactSubscriptionRuleRequest extends Request {
         }
 
         /**
-         * <p>The source of the artifacts.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>DOCKER_HUB: Docker Hub</li>
-         * <li>GCR: GCR</li>
-         * <li>QUAY: Quay.io</li>
-         * </ul>
+         * <p>The artifact source.</p>
          * 
          * <strong>example:</strong>
          * <p>DOCKER_HUB</p>
@@ -363,7 +371,7 @@ public class UpdateArtifactSubscriptionRuleRequest extends Request {
         }
 
         /**
-         * <p>The number of subscribed images.</p>
+         * <p>The number of images to subscribe to.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -375,7 +383,23 @@ public class UpdateArtifactSubscriptionRuleRequest extends Request {
         }
 
         /**
-         * <p>The image tags in the subscription source repository. Regular expressions are supported.</p>
+         * <ul>
+         * <li>The image tags to subscribe to when matching by tag list. A maximum of 10 tags are supported.</li>
+         * <li>This parameter is valid only when the rule is created by using tag list matching. It cannot be specified together with TagRegexp or TagCount.</li>
+         * <li>If this parameter is not specified or an empty list is specified, the original tag list is retained and cannot be cleared. The matching method cannot be modified. To modify the matching method, delete the rule and create a new one.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>latest</p>
+         */
+        public Builder tagList(java.util.List<String> tagList) {
+            this.putQueryParameter("TagList", tagList);
+            this.tagList = tagList;
+            return this;
+        }
+
+        /**
+         * <p>The image versions in the source repository to subscribe to. Regular expressions are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>release-v.*</p>

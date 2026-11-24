@@ -132,7 +132,7 @@ public class ListInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The return value.</p>
+         * <p>The return code.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -449,7 +449,7 @@ public class ListInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time.</p>
+             * <p>The creation time, in UNIX timestamp format. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1562849679000</p>
@@ -474,11 +474,11 @@ public class ListInstanceResponseBody extends TeaModel {
              * <p>The instance issue.</p>
              * 
              * <strong>example:</strong>
-             * <p>实例问题，取值：
-             * OSS_TOO_MANY_BUCKETS：OSS Bucket 数量超限</p>
-             * <p>OSS_BUCKET_ALREADY_EXISTS：同名 OSS Bucket 已存在</p>
-             * <p>OSS_SERVICE_ROLE_UNAUTHORIZED：OSS 权限未授权</p>
-             * <p>USER_NOT_REGISTERED_BY_REAL_NAME：国际站账号在购买中国站 OSS Bucket 时未进行实名认证</p>
+             * <p>Instance issue. Valid values:
+             * OSS_TOO_MANY_BUCKETS: The number of OSS buckets exceeds the limit.</p>
+             * <p>OSS_BUCKET_ALREADY_EXISTS: An OSS bucket with the same name already exists.</p>
+             * <p>OSS_SERVICE_ROLE_UNAUTHORIZED: OSS permissions are not authorized.</p>
+             * <p>USER_NOT_REGISTERED_BY_REAL_NAME: The China site account has not completed real-name verification when purchasing an OSS bucket on the China site</p>
              */
             public Builder instanceIssue(String instanceIssue) {
                 this.instanceIssue = instanceIssue;
@@ -519,7 +519,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last modification time.</p>
+             * <p>The last modification time, in UNIX timestamp format. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1562849760000</p>
@@ -552,7 +552,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags of the instance.</p>
+             * <p>The collection of instance tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;

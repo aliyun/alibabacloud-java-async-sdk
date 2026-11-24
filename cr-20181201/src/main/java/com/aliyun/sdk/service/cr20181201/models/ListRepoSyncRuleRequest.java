@@ -216,7 +216,7 @@ public class ListRepoSyncRuleRequest extends Request {
         }
 
         /**
-         * <p>The image repository name.</p>
+         * <p>The repository name.</p>
          * 
          * <strong>example:</strong>
          * <p>test-repo</p>

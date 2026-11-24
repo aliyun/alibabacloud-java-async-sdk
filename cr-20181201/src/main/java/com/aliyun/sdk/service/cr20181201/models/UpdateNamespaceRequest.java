@@ -141,7 +141,7 @@ public class UpdateNamespaceRequest extends Request {
         }
 
         /**
-         * <p>Whether to automatically create a repository when an image is pushed.</p>
+         * <p>Specifies whether to allow automatic creation of a repository upon push.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -153,7 +153,7 @@ public class UpdateNamespaceRequest extends Request {
         }
 
         /**
-         * <p>The default configuration for automatically created repositories.</p>
+         * <p>The default repository configuration.</p>
          */
         public Builder defaultRepoConfiguration(RepoConfiguration defaultRepoConfiguration) {
             String defaultRepoConfigurationShrink = shrink(defaultRepoConfiguration, "DefaultRepoConfiguration", "json");
@@ -163,11 +163,11 @@ public class UpdateNamespaceRequest extends Request {
         }
 
         /**
-         * <p>The default type for automatically created repositories. This parameter applies only if <code>AutoCreateRepo</code> is set to <code>true</code>. Valid values:</p>
+         * <p>The default repository type. Valid values:</p>
          * <ul>
-         * <li><p><code>PUBLIC</code>: a public repository</p>
+         * <li><p><code>PUBLIC</code>: public repository</p>
          * </li>
-         * <li><p><code>PRIVATE</code>: a private repository</p>
+         * <li><p><code>PRIVATE</code>: private repository</p>
          * </li>
          * </ul>
          * 
@@ -194,7 +194,7 @@ public class UpdateNamespaceRequest extends Request {
         }
 
         /**
-         * <p>The name of the namespace.</p>
+         * <p>The namespace name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -113,7 +113,7 @@ public class CreateBuildRecordByRuleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the image building rule.</p>
+         * <p>The build rule ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -126,7 +126,7 @@ public class CreateBuildRecordByRuleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,7 +139,7 @@ public class CreateBuildRecordByRuleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the image repository.</p>
+         * <p>The image repository ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -126,9 +126,13 @@ public class CreateChartNamespaceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to automatically create repositories in the namespace. Valid values:</p>
-         * <p>\-<code> true</code>: automatically creates repositories in the namespace.</p>
-         * <p>\-<code> false</code>: does not automatically create repositories in the namespace.</p>
+         * <p>Specifies whether automatic creation of a repository is enabled. Valid values:</p>
+         * <ul>
+         * <li><p><code>true</code>: Automatic creation of a repository is enabled.</p>
+         * </li>
+         * <li><p><code>false</code>: Automatic creation of a repository is disabled.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -142,8 +146,10 @@ public class CreateChartNamespaceRequest extends Request {
         /**
          * <p>The default repository type. Valid values:</p>
          * <ul>
-         * <li><code>PUBLIC</code>: a public repository</li>
-         * <li><code>PRIVATE</code>: a private repository</li>
+         * <li><p><code>PUBLIC</code>: Public repository.</p>
+         * </li>
+         * <li><p><code>PRIVATE</code>: Private repository.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -156,7 +162,7 @@ public class CreateChartNamespaceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -169,7 +175,7 @@ public class CreateChartNamespaceRequest extends Request {
         }
 
         /**
-         * <p>The name of the namespace.</p>
+         * <p>The namespace name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

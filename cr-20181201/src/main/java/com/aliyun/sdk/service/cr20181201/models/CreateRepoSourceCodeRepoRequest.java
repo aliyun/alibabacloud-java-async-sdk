@@ -185,10 +185,12 @@ public class CreateRepoSourceCodeRepoRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to trigger image building when source code is committed. Valid values:</p>
+         * <p>Specifies whether to enable automatic building. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: triggers image building when source code is committed.</li>
-         * <li><code>false</code>: does not trigger image building when source code is committed.</li>
+         * <li><p><code>true</code>: enables automatic building.</p>
+         * </li>
+         * <li><p><code>false</code>: disables automatic building.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -214,7 +216,7 @@ public class CreateRepoSourceCodeRepoRequest extends Request {
         }
 
         /**
-         * <p>The namespace to which the source code repository belongs.</p>
+         * <p>The namespace name of the source code repository.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -227,7 +229,7 @@ public class CreateRepoSourceCodeRepoRequest extends Request {
         }
 
         /**
-         * <p>The type of the source code hosting platform. Valid values: <code>GITHUB</code>, <code>GITLAB</code>, <code>GITEE</code>, <code>CODE</code>, and <code>CODEUP</code>.</p>
+         * <p>The type of the source code platform. Valid values: <code>GITHUB</code>, <code>GITLAB</code>, <code>GITEE</code>, <code>CODE</code>, and <code>CODEUP</code>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -240,10 +242,12 @@ public class CreateRepoSourceCodeRepoRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to disable building caches. Valid values:</p>
+         * <p>Specifies whether to disable the build cache. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: disables building caches.</li>
-         * <li><code>false</code>: enables building caches.</li>
+         * <li><p><code>true</code>: disables the build cache.</p>
+         * </li>
+         * <li><p><code>false</code>: enables the build cache.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -256,7 +260,7 @@ public class CreateRepoSourceCodeRepoRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -269,10 +273,12 @@ public class CreateRepoSourceCodeRepoRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable Build With Servers Deployed Outside Chinese Mainland. Valid values:</p>
+         * <p>Specifies whether to enable intelligent build acceleration for overseas sources. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: enables Build With Servers Deployed Outside Chinese Mainland.</li>
-         * <li><code>false</code>: does not enable Build With Servers Deployed Outside Chinese Mainland.</li>
+         * <li><p><code>true</code>: enables intelligent build acceleration for overseas sources.</p>
+         * </li>
+         * <li><p><code>false</code>: disables intelligent build acceleration for overseas sources.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -285,7 +291,7 @@ public class CreateRepoSourceCodeRepoRequest extends Request {
         }
 
         /**
-         * <p>The ID of the image repository.</p>
+         * <p>The image repository ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

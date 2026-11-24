@@ -223,7 +223,7 @@ public class CreateArtifactLifecycleRuleRequest extends Request {
         }
 
         /**
-         * <p>Specify whether to automatically execute the lifecycle management rule.</p>
+         * <p>Specifies whether to automatically execute the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -235,7 +235,10 @@ public class CreateArtifactLifecycleRuleRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * <p>Specifies whether to enable DryRun mode. If DryRun mode is enabled, only the lifecycle task scan is performed and no actual data cleanup is executed. This mode is disabled by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -244,7 +247,8 @@ public class CreateArtifactLifecycleRuleRequest extends Request {
         }
 
         /**
-         * <p>Specify whether to enable lifecycle management for the artifact.</p>
+         * <p>Specifies whether to enable lifecycle management.</p>
+         * <p>Only one of this parameter and EnableDeleteUntaggedManifest can be set to true.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -256,7 +260,11 @@ public class CreateArtifactLifecycleRuleRequest extends Request {
         }
 
         /**
-         * EnableDeleteUntaggedManifest.
+         * <p>Specifies whether to enable artifact cleanup.</p>
+         * <p>Only one of this parameter and EnableDeleteTag can be set to true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableDeleteUntaggedManifest(Boolean enableDeleteUntaggedManifest) {
             this.putQueryParameter("EnableDeleteUntaggedManifest", enableDeleteUntaggedManifest);
@@ -278,7 +286,7 @@ public class CreateArtifactLifecycleRuleRequest extends Request {
         }
 
         /**
-         * <p>The name of the namespace.</p>
+         * <p>The namespace name.</p>
          * 
          * <strong>example:</strong>
          * <p>dev-backend</p>
@@ -290,7 +298,7 @@ public class CreateArtifactLifecycleRuleRequest extends Request {
         }
 
         /**
-         * <p>The name of the image repository.</p>
+         * <p>The image repository name.</p>
          * 
          * <strong>example:</strong>
          * <p>test_1</p>
@@ -302,7 +310,7 @@ public class CreateArtifactLifecycleRuleRequest extends Request {
         }
 
         /**
-         * <p>The number of images that you want to retain.</p>
+         * <p>The number of images to retain.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -314,7 +322,7 @@ public class CreateArtifactLifecycleRuleRequest extends Request {
         }
 
         /**
-         * <p>The execution cycle of the lifecycle management rule.</p>
+         * <p>The execution cycle.</p>
          * 
          * <strong>example:</strong>
          * <p>WEEK</p>
@@ -326,7 +334,7 @@ public class CreateArtifactLifecycleRuleRequest extends Request {
         }
 
         /**
-         * <p>The deletion scope.</p>
+         * <p>The cleanup scope.</p>
          * 
          * <strong>example:</strong>
          * <p>INSTANCE</p>
@@ -338,7 +346,7 @@ public class CreateArtifactLifecycleRuleRequest extends Request {
         }
 
         /**
-         * <p>The regular expression that is used to indicate which image tags are retained.</p>
+         * <p>The regular expression used to match image versions to retain.</p>
          * 
          * <strong>example:</strong>
          * <p>release-.*</p>

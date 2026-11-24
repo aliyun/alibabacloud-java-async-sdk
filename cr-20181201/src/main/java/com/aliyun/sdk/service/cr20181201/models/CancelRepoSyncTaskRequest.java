@@ -111,7 +111,7 @@ public class CancelRepoSyncTaskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the replication task.</p>
+         * <p>The synchronization task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

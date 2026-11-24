@@ -65,12 +65,15 @@ public class CreateArtifactSubscriptionRuleRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TagCount")
-    @com.aliyun.core.annotation.Validation(required = true, maximum = 30, minimum = 1)
+    @com.aliyun.core.annotation.Validation(maximum = 30, minimum = 1)
     private Long tagCount;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TagList")
+    private java.util.List<String> tagList;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TagRegexp")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String tagRegexp;
 
     private CreateArtifactSubscriptionRuleRequest(Builder builder) {
@@ -86,6 +89,7 @@ public class CreateArtifactSubscriptionRuleRequest extends Request {
         this.sourceProvider = builder.sourceProvider;
         this.sourceRepoName = builder.sourceRepoName;
         this.tagCount = builder.tagCount;
+        this.tagList = builder.tagList;
         this.tagRegexp = builder.tagRegexp;
     }
 
@@ -180,6 +184,13 @@ public class CreateArtifactSubscriptionRuleRequest extends Request {
     }
 
     /**
+     * @return tagList
+     */
+    public java.util.List<String> getTagList() {
+        return this.tagList;
+    }
+
+    /**
      * @return tagRegexp
      */
     public String getTagRegexp() {
@@ -198,6 +209,7 @@ public class CreateArtifactSubscriptionRuleRequest extends Request {
         private String sourceProvider; 
         private String sourceRepoName; 
         private Long tagCount; 
+        private java.util.List<String> tagList; 
         private String tagRegexp; 
 
         private Builder() {
@@ -217,6 +229,7 @@ public class CreateArtifactSubscriptionRuleRequest extends Request {
             this.sourceProvider = request.sourceProvider;
             this.sourceRepoName = request.sourceRepoName;
             this.tagCount = request.tagCount;
+            this.tagList = request.tagList;
             this.tagRegexp = request.tagRegexp;
         } 
 
@@ -230,7 +243,7 @@ public class CreateArtifactSubscriptionRuleRequest extends Request {
         }
 
         /**
-         * <p>Indicates whether an acceleration link is enabled for image subscription. The subscription acceleration feature is in public preview. The feature is optimized based on scheduling policies and network links to accelerate image subscription.</p>
+         * <p>Specifies whether to enable the acceleration link. The subscription acceleration feature is in public preview. Based on scheduling policies and network link optimization, it can improve the image subscription speed.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -255,7 +268,7 @@ public class CreateArtifactSubscriptionRuleRequest extends Request {
         }
 
         /**
-         * <p>The name of the Container Registry namespace.</p>
+         * <p>The ACR namespace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -268,7 +281,7 @@ public class CreateArtifactSubscriptionRuleRequest extends Request {
         }
 
         /**
-         * <p>Indicates whether the original image is overwritten.</p>
+         * <p>Specifies whether to overwrite images.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -280,7 +293,7 @@ public class CreateArtifactSubscriptionRuleRequest extends Request {
         }
 
         /**
-         * <p>The operating system and architecture. If the source repository contains a multi-arch image, only the specified operating system and architecture are subscribed to the destination repository of the Enterprise Edition instance. Subscribe to the destination repository of an Enterprise Edition instance</p>
+         * <p>The operating system or architecture. If the source repository contains multi-architecture images, only images with the specified operating system or architecture are subscribed to the destination repository of the Enterprise instance.</p>
          * <p>This parameter is required.</p>
          */
         public Builder platform(java.util.List<String> platform) {
@@ -290,7 +303,7 @@ public class CreateArtifactSubscriptionRuleRequest extends Request {
         }
 
         /**
-         * <p>The name of the Container Registry repository.</p>
+         * <p>The ACR repository.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -303,7 +316,7 @@ public class CreateArtifactSubscriptionRuleRequest extends Request {
         }
 
         /**
-         * <p>The source namespace.</p>
+         * <p>The source namespace. If <code>SourceProvider</code> is set to <code>DOCKER_HUB</code>, the default value is <code>library</code>. This parameter is required in other scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>library</p>
@@ -315,13 +328,7 @@ public class CreateArtifactSubscriptionRuleRequest extends Request {
         }
 
         /**
-         * <p>The source of the artifact.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>DOCKER_HUB: Docker Hub</li>
-         * <li>GCR: GCR</li>
-         * <li>QUAY: Quay.io</li>
-         * </ul>
+         * <p>The artifact source.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -347,8 +354,7 @@ public class CreateArtifactSubscriptionRuleRequest extends Request {
         }
 
         /**
-         * <p>The number of subscribed images.</p>
-         * <p>This parameter is required.</p>
+         * <p>The number of images to subscribe to.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -360,8 +366,23 @@ public class CreateArtifactSubscriptionRuleRequest extends Request {
         }
 
         /**
-         * <p>The image tag in the subscription source repository. Regular expressions are supported.</p>
-         * <p>This parameter is required.</p>
+         * <ul>
+         * <li>The image tags to subscribe to when matching by tag list. A maximum of 10 tags are supported.</li>
+         * <li>If TagList is specified, these tags are queried one by one. TagRegexp and TagCount cannot be specified at the same time. If TagList is not specified, TagRegexp and TagCount are used for matching, and both must be specified.</li>
+         * <li>The matching method cannot be changed after the rule is created. To change the matching method, delete the rule and create a new one.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>latest</p>
+         */
+        public Builder tagList(java.util.List<String> tagList) {
+            this.putQueryParameter("TagList", tagList);
+            this.tagList = tagList;
+            return this;
+        }
+
+        /**
+         * <p>The image versions to subscribe to from the source repository. Regular expressions are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>release-v.*</p>

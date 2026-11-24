@@ -68,6 +68,9 @@ public class GetArtifactSubscriptionRuleResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("TagCount")
     private Long tagCount;
 
+    @com.aliyun.core.annotation.NameInMap("TagList")
+    private java.util.List<String> tagList;
+
     @com.aliyun.core.annotation.NameInMap("TagRegexp")
     private String tagRegexp;
 
@@ -89,6 +92,7 @@ public class GetArtifactSubscriptionRuleResponseBody extends TeaModel {
         this.sourceProvider = builder.sourceProvider;
         this.sourceRepoName = builder.sourceRepoName;
         this.tagCount = builder.tagCount;
+        this.tagList = builder.tagList;
         this.tagRegexp = builder.tagRegexp;
     }
 
@@ -224,6 +228,13 @@ public class GetArtifactSubscriptionRuleResponseBody extends TeaModel {
     }
 
     /**
+     * @return tagList
+     */
+    public java.util.List<String> getTagList() {
+        return this.tagList;
+    }
+
+    /**
      * @return tagRegexp
      */
     public String getTagRegexp() {
@@ -248,6 +259,7 @@ public class GetArtifactSubscriptionRuleResponseBody extends TeaModel {
         private String sourceProvider; 
         private String sourceRepoName; 
         private Long tagCount; 
+        private java.util.List<String> tagList; 
         private String tagRegexp; 
 
         private Builder() {
@@ -271,11 +283,12 @@ public class GetArtifactSubscriptionRuleResponseBody extends TeaModel {
             this.sourceProvider = model.sourceProvider;
             this.sourceRepoName = model.sourceRepoName;
             this.tagCount = model.tagCount;
+            this.tagList = model.tagList;
             this.tagRegexp = model.tagRegexp;
         } 
 
         /**
-         * <p>Indicates whether to enable the accelerated data transfer feature. This feature is in public preview. It optimizes scheduling policies and network paths to improve the speed of artifact subscription.</p>
+         * <p>Specifies whether to enable link acceleration. The subscription acceleration feature is in public preview and can improve image subscription speed through scheduling policies and network link optimization.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -297,7 +310,7 @@ public class GetArtifactSubscriptionRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the rule was created.</p>
+         * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1570759546000</p>
@@ -319,11 +332,11 @@ public class GetArtifactSubscriptionRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the API call was successful. Valid values:</p>
          * <ul>
-         * <li><p><code>true</code>: The request succeeded.</p>
+         * <li><p><code>true</code>: The API call was successful.</p>
          * </li>
-         * <li><p><code>false</code>: The request failed.</p>
+         * <li><p><code>false</code>: The API call failed.</p>
          * </li>
          * </ul>
          * 
@@ -336,7 +349,7 @@ public class GetArtifactSubscriptionRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the rule was last modified.</p>
+         * <p>The modification time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1638259914000</p>
@@ -347,7 +360,7 @@ public class GetArtifactSubscriptionRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The destination ACR namespace.</p>
+         * <p>The ACR namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>test-ns</p>
@@ -358,7 +371,7 @@ public class GetArtifactSubscriptionRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether to overwrite the existing images that have the same tag in the destination repository.</p>
+         * <p>Specifies whether to overwrite images.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -369,7 +382,7 @@ public class GetArtifactSubscriptionRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The operating systems and architectures. If a source repository contains multi-architecture images, only images that match the specified platforms are synchronized to the destination repository of the Enterprise Edition instance.</p>
+         * <p>The operating system and architecture. If the source repository contains multi-architecture images, only images with the specified operating system and architecture are subscribed to the destination repository of the Enterprise instance.</p>
          */
         public Builder platform(java.util.List<String> platform) {
             this.platform = platform;
@@ -377,7 +390,7 @@ public class GetArtifactSubscriptionRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The destination ACR repository.</p>
+         * <p>The ACR repository.</p>
          * 
          * <strong>example:</strong>
          * <p>test-repo</p>
@@ -410,7 +423,10 @@ public class GetArtifactSubscriptionRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The domain name of the artifact source.</p>
+         * <p>The domain name of the source image repository for the subscription rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registry-1.docker.io</p>
          */
         public Builder sourceDomain(String sourceDomain) {
             this.sourceDomain = sourceDomain;
@@ -451,7 +467,7 @@ public class GetArtifactSubscriptionRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of images to subscribe to.</p>
+         * <p>The number of subscribed images.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -462,7 +478,18 @@ public class GetArtifactSubscriptionRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The regular expression that is used to match the tags of images in the source repository for subscription.</p>
+         * <p>The list of subscribed tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>latest</p>
+         */
+        public Builder tagList(java.util.List<String> tagList) {
+            this.tagList = tagList;
+            return this;
+        }
+
+        /**
+         * <p>The image versions in the source repository to subscribe to. Regular expressions are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>release-v.*</p>

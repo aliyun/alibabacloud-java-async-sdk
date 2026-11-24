@@ -158,7 +158,7 @@ public class ListRepositoryResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The return value.</p>
+         * <p>The return code.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -169,7 +169,7 @@ public class ListRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -180,7 +180,7 @@ public class ListRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of entries returned.</p>
+         * <p>The maximum number of returned results.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -191,7 +191,7 @@ public class ListRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token. If a next page exists, the service returns a NextToken value. Pass this value in the next request.</p>
+         * <p>The token for the next page. If a next page exists, the service returns a NextToken value, which you can pass in the next request.</p>
          * 
          * <strong>example:</strong>
          * <p>*****V3MpHK1AP0pfERHZN5pu6lESTRpd5hnHNnmKOP/+w9F</p>
@@ -213,7 +213,7 @@ public class ListRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page size.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -442,7 +442,7 @@ public class ListRepositoryResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the repository was created.</p>
+             * <p>The time when the repository was created. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1564153576000</p>
@@ -464,7 +464,7 @@ public class ListRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the repository was last modified.</p>
+             * <p>The time when the repository was last modified. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1564153576000</p>
@@ -477,9 +477,9 @@ public class ListRepositoryResponseBody extends TeaModel {
             /**
              * <p>The repository build type. Valid values:</p>
              * <ul>
-             * <li><p><code>AUTO</code>: Automatically triggered build.</p>
+             * <li><p><code>AUTO</code>: Automatically triggered.</p>
              * </li>
-             * <li><p><code>MANUAL</code>: Manually triggered build.</p>
+             * <li><p><code>MANUAL</code>: Manually triggered.</p>
              * </li>
              * </ul>
              * 
@@ -564,7 +564,7 @@ public class ListRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The summary.</p>
+             * <p>The summary information.</p>
              * 
              * <strong>example:</strong>
              * <p>test OK</p>
@@ -575,7 +575,7 @@ public class ListRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag immutability of the image.</p>
+             * <p>The immutability of image tags.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>

@@ -183,7 +183,7 @@ public class ListRepositoryRequest extends Request {
         }
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The instance ID. You can call the ListInstance operation to query existing Enterprise instances.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -196,8 +196,8 @@ public class ListRepositoryRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return.</p>
-         * <p>Use this parameter together with NextToken. This parameter takes priority over PageNo and PageSize.</p>
+         * <p>The maximum number of returned results.</p>
+         * <p>Use this parameter together with the NextToken parameter. This parameter takes precedence over PageNo and PageSize.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -209,8 +209,8 @@ public class ListRepositoryRequest extends Request {
         }
 
         /**
-         * <p>The pagination token. If a next page exists, the service returns a NextToken value. Pass this value in the next request.</p>
-         * <p>Use this parameter together with MaxResults. This parameter takes priority over PageNo and PageSize.</p>
+         * <p>The token for the next page. If a next page exists, the service returns a NextToken value, which you can pass in the next request.</p>
+         * <p>Use this parameter together with the MaxResults parameter. This parameter takes precedence over PageNo and PageSize.</p>
          * 
          * <strong>example:</strong>
          * <p>*****V3MpHK1AP0pfERHZN5pu6lESTRpd5hnHNnmKOP/+w9F</p>
@@ -234,7 +234,7 @@ public class ListRepositoryRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. The maximum value is 100. If the specified value exceeds 100, the system returns a parameter error or uses 100 as the actual maximum number of entries returned.</p>
+         * <p>The number of entries per page. Maximum value: 100. If the specified value exceeds 100, the system returns a parameter error or uses 100 as the maximum number of returned entries.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -258,7 +258,7 @@ public class ListRepositoryRequest extends Request {
         }
 
         /**
-         * <p>The repository namespace name.</p>
+         * <p>The name of the repository namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>repo-namespace-test</p>
@@ -274,7 +274,7 @@ public class ListRepositoryRequest extends Request {
          * <ul>
          * <li><p><code>NORMAL</code>: Normal.</p>
          * </li>
-         * <li><p><code>DELETING</code>: Being deleted.</p>
+         * <li><p><code>DELETING</code>: Deleting.</p>
          * </li>
          * <li><p><code>DELETED</code>: Deleted.</p>
          * </li>

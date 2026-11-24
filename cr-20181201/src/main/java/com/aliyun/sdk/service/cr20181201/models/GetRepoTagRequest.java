@@ -113,7 +113,7 @@ public class GetRepoTagRequest extends Request {
         }
 
         /**
-         * <p>The return value of status code.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -126,7 +126,7 @@ public class GetRepoTagRequest extends Request {
         }
 
         /**
-         * <p>The operation that you want to perform. Set the value to <strong>GetRepoTag</strong>.</p>
+         * <p>The repository ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,7 +139,7 @@ public class GetRepoTagRequest extends Request {
         }
 
         /**
-         * <p>The number of milliseconds that have elapsed since the image was created.</p>
+         * <p>The repository tag.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -145,7 +145,7 @@ public class GetInstanceEndpointResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether the access control list (ACL) feature is enabled.</p>
+         * <p>Indicates whether the access control list (ACL) is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -156,7 +156,7 @@ public class GetInstanceEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ACLs.</p>
+         * <p>The list of ACL entries.</p>
          */
         public Builder aclEntries(java.util.List<AclEntries> aclEntries) {
             this.aclEntries = aclEntries;
@@ -175,7 +175,7 @@ public class GetInstanceEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Domain names.</p>
+         * <p>The list of domain names.</p>
          */
         public Builder domains(java.util.List<Domains> domains) {
             this.domains = domains;
@@ -183,7 +183,7 @@ public class GetInstanceEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the ACL feature is enabled.</p>
+         * <p>Indicates whether the access endpoint is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -205,7 +205,7 @@ public class GetInstanceEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>8F3D5EC5-39D1-4C53-A198-48C54C658FA3</p>
@@ -216,7 +216,10 @@ public class GetInstanceEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the instance.</p>
+         * <p>The running status. Valid values:</p>
+         * <p><code>CREATING</code>: Creating.</p>
+         * <p><code>RUNNING</code>: Running.</p>
+         * <p><code>DELETING</code>: Deleting.</p>
          * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
@@ -285,7 +288,7 @@ public class GetInstanceEndpointResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Remarks for public IP address whitelists.</p>
+             * <p>The comment for adding an Internet whitelist entry.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -296,7 +299,7 @@ public class GetInstanceEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public IP address whitelist.</p>
+             * <p>The CIDR block added to the Internet whitelist.</p>
              * 
              * <strong>example:</strong>
              * <p>192.168.1.0/24</p>
@@ -366,7 +369,7 @@ public class GetInstanceEndpointResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The domain name that is used to access the Container Registry Enterprise Edition instance.</p>
+             * <p>The domain name used to access the Enterprise instance.</p>
              * 
              * <strong>example:</strong>
              * <p>shanghai-instance1-registry.cn-shanghai.cr.aliyuncs.com</p>
@@ -377,10 +380,12 @@ public class GetInstanceEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the domain name. Valid values:</p>
+             * <p>The domain name type. Valid values:</p>
              * <ul>
-             * <li><code>SYSTEM</code>: a system domain name.</li>
-             * <li><code>USER</code>: a user domain name.</li>
+             * <li><p><code>SYSTEM</code>: system domain name</p>
+             * </li>
+             * <li><p><code>USER</code>: user domain name</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

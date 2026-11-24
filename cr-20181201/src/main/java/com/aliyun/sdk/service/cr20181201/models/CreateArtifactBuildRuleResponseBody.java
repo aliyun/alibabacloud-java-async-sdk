@@ -93,7 +93,7 @@ public class CreateArtifactBuildRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the accelerated image building rule.</p>
+         * <p>The ID of the build rule.</p>
          * 
          * <strong>example:</strong>
          * <p>crabr-7dfa5qye5****</p>
@@ -115,7 +115,7 @@ public class CreateArtifactBuildRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful.</p>
+         * <p>Indicates whether the operation was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

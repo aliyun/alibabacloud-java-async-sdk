@@ -288,7 +288,7 @@ public class GetArtifactLifecycleRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether automatic execution is enabled.</p>
+         * <p>Indicates whether the rule is automatically executed.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -310,7 +310,7 @@ public class GetArtifactLifecycleRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The creation time. This value is a UNIX timestamp in milliseconds.</p>
+         * <p>The creation time. The value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1571926439000</p>
@@ -321,7 +321,10 @@ public class GetArtifactLifecycleRuleResponseBody extends TeaModel {
         }
 
         /**
-         * DryRun.
+         * <p>Indicates whether DryRun mode is enabled. When DryRun mode is enabled, only lifecycle task scanning is performed, and actual data cleanup is not executed. This mode is disabled by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.dryRun = dryRun;
@@ -341,7 +344,11 @@ public class GetArtifactLifecycleRuleResponseBody extends TeaModel {
         }
 
         /**
-         * EnableDeleteUntaggedManifest.
+         * <p>Indicates whether artifact cleanup is enabled.</p>
+         * <p>Only one of this parameter and EnableDeleteTag can be set to true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder enableDeleteUntaggedManifest(Boolean enableDeleteUntaggedManifest) {
             this.enableDeleteUntaggedManifest = enableDeleteUntaggedManifest;
@@ -377,7 +384,7 @@ public class GetArtifactLifecycleRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The last modification time. This value is a UNIX timestamp in milliseconds.</p>
+         * <p>The last modification time. The value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1638259914000</p>
@@ -399,7 +406,7 @@ public class GetArtifactLifecycleRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The next execution time. This value is a UNIX timestamp in milliseconds.</p>
+         * <p>The next execution time. The value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1701878400000</p>
@@ -440,7 +447,7 @@ public class GetArtifactLifecycleRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of images to retain.</p>
+         * <p>The number of retained images.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -484,7 +491,7 @@ public class GetArtifactLifecycleRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The regular expression used to match image versions to retain.</p>
+         * <p>The regular expression used to retain image versions.</p>
          * 
          * <strong>example:</strong>
          * <p>.*-alpine</p>

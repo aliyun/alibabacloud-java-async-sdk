@@ -67,7 +67,10 @@ public class AccessControlEntry extends TeaModel {
         } 
 
         /**
-         * Comment.
+         * <p>The description of the whitelist entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder comment(String comment) {
             this.comment = comment;
@@ -75,7 +78,10 @@ public class AccessControlEntry extends TeaModel {
         }
 
         /**
-         * Entry.
+         * <p>The IP address or CIDR block that is allowed to access the public endpoint of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.1.1/32</p>
          */
         public Builder entry(String entry) {
             this.entry = entry;

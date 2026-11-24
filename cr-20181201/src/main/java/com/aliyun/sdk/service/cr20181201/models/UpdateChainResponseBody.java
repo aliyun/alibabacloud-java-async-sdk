@@ -80,7 +80,7 @@ public class UpdateChainResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The return value.</p>
+         * <p>The return code.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -102,7 +102,7 @@ public class UpdateChainResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>85A99B10-3926-5201-958E-C06FA47F****</p>

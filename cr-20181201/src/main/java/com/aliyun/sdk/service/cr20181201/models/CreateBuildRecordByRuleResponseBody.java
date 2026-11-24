@@ -93,7 +93,7 @@ public class CreateBuildRecordByRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the image building record.</p>
+         * <p>The build record ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0A311FC5-B8C6-4332-80E4-539EB73****</p>

@@ -132,7 +132,7 @@ public class DiagnosisTarget extends TeaModel {
         } 
 
         /**
-         * <p>The end of the diagnostic time window, in ISO 8601 format. Must be after <code>StartTime</code>.</p>
+         * <p>The end time of the diagnostic.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -144,7 +144,7 @@ public class DiagnosisTarget extends TeaModel {
         }
 
         /**
-         * <p>A map of key-value pairs providing additional context for the diagnosis.</p>
+         * <p>The extra parameters.</p>
          */
         public Builder extra(java.util.Map<String, String> extra) {
             this.extra = extra;
@@ -152,7 +152,7 @@ public class DiagnosisTarget extends TeaModel {
         }
 
         /**
-         * <p>The namespace that contains the repository.</p>
+         * <p>The namespace name.</p>
          * 
          * <strong>example:</strong>
          * <p>test_namespace</p>
@@ -163,7 +163,7 @@ public class DiagnosisTarget extends TeaModel {
         }
 
         /**
-         * <p>The ID of a related operation, such as a previous diagnostic task.</p>
+         * <p>The ID of the diagnosed item.</p>
          */
         public Builder relatedId(String relatedId) {
             this.relatedId = relatedId;
@@ -171,7 +171,7 @@ public class DiagnosisTarget extends TeaModel {
         }
 
         /**
-         * <p>The name of the repository.</p>
+         * <p>The repository name.</p>
          * 
          * <strong>example:</strong>
          * <p>test_repo</p>
@@ -182,7 +182,7 @@ public class DiagnosisTarget extends TeaModel {
         }
 
         /**
-         * <p>The start of the diagnostic time window, in ISO 8601 format.</p>
+         * <p>The start time of the diagnostic.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -194,7 +194,7 @@ public class DiagnosisTarget extends TeaModel {
         }
 
         /**
-         * <p>The container image tag.</p>
+         * <p>The image tag.</p>
          * 
          * <strong>example:</strong>
          * <p>latest</p>

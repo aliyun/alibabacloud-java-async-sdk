@@ -145,8 +145,10 @@ public class ListRepoTagScanResultResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: The request is successful.</li>
-         * <li><code>false</code>: The request failed.</li>
+         * <li><p><code>true</code>: Success</p>
+         * </li>
+         * <li><p><code>false</code>: Failure</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -158,7 +160,7 @@ public class ListRepoTagScanResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of the returned page.</p>
+         * <p>The page number of the scan result list.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -169,7 +171,7 @@ public class ListRepoTagScanResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page in the scan result list.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -180,7 +182,7 @@ public class ListRepoTagScanResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>56B5C92F-F5D9-46E0-823F-EC71D1892DAA</p>
@@ -191,7 +193,7 @@ public class ListRepoTagScanResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of vulnerabilities detected on images.</p>
+         * <p>The total number of scanned vulnerabilities.</p>
          * 
          * <strong>example:</strong>
          * <p>196</p>
@@ -202,7 +204,7 @@ public class ListRepoTagScanResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details about the detected vulnerabilities.</p>
+         * <p>The array of scanned vulnerabilities.</p>
          */
         public Builder vulnerabilities(java.util.List<Vulnerabilities> vulnerabilities) {
             this.vulnerabilities = vulnerabilities;
@@ -412,7 +414,7 @@ public class ListRepoTagScanResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the image layer where the vulnerability was detected.</p>
+             * <p>The image layer that introduced the vulnerability.</p>
              * 
              * <strong>example:</strong>
              * <p>sha256:123456717b8e40b6480979b739010d8d549989602bcdd07922119aec6f9dbe57</p>
@@ -423,10 +425,10 @@ public class ListRepoTagScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the vulnerability.</p>
+             * <p>The vulnerability name.</p>
              * 
              * <strong>example:</strong>
-             * <p>漏洞</p>
+             * <p>Vulnerability</p>
              */
             public Builder aliasName(String aliasName) {
                 this.aliasName = aliasName;
@@ -434,7 +436,7 @@ public class ListRepoTagScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the vulnerability.</p>
+             * <p>The vulnerability link.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://security-tracker.debian.org/tracker/CVE-2009-5155">https://security-tracker.debian.org/tracker/CVE-2009-5155</a></p>
@@ -445,7 +447,7 @@ public class ListRepoTagScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The directory of the vulnerability.</p>
+             * <p>The vulnerability location.</p>
              * 
              * <strong>example:</strong>
              * <p>/test.txt</p>
@@ -456,7 +458,7 @@ public class ListRepoTagScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the vulnerability.</p>
+             * <p>The vulnerability name.</p>
              * 
              * <strong>example:</strong>
              * <p>CVE-2009-5155</p>
@@ -467,7 +469,7 @@ public class ListRepoTagScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the vulnerability.</p>
+             * <p>The vulnerability description.</p>
              * 
              * <strong>example:</strong>
              * <p>description.</p>
@@ -478,7 +480,7 @@ public class ListRepoTagScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cause of the vulnerability.</p>
+             * <p>The feature that introduced the vulnerability.</p>
              * 
              * <strong>example:</strong>
              * <p>eglibc</p>
@@ -489,7 +491,7 @@ public class ListRepoTagScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The command used to fix the vulnerability.</p>
+             * <p>The vulnerability fix command.</p>
              * 
              * <strong>example:</strong>
              * <p>yum install -y xxx</p>
@@ -500,10 +502,12 @@ public class ListRepoTagScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the vulnerability. Valid values:</p>
+             * <p>The vulnerability type. Valid values:</p>
              * <ul>
-             * <li><code>cve</code>: image system vulnerability</li>
-             * <li><code>sca</code>: image application vulnerability</li>
+             * <li><p><code>cve</code>: System vulnerability</p>
+             * </li>
+             * <li><p><code>sca</code>: Application vulnerability</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -515,7 +519,17 @@ public class ListRepoTagScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The severity of the vulnerability.</p>
+             * <p>The severity level of the scanned vulnerability. Valid values:</p>
+             * <ul>
+             * <li><p><code>High</code>: High</p>
+             * </li>
+             * <li><p><code>Medium</code>: Medium</p>
+             * </li>
+             * <li><p><code>Low</code>: Low</p>
+             * </li>
+             * <li><p><code>Unknown</code>: Unknown</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Medium</p>
@@ -526,7 +540,7 @@ public class ListRepoTagScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the vulnerability.</p>
+             * <p>The vulnerability version.</p>
              * 
              * <strong>example:</strong>
              * <p>2.19-6.9</p>
@@ -537,7 +551,7 @@ public class ListRepoTagScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version where the vulnerability was fixed.</p>
+             * <p>The version that fixes the vulnerability.</p>
              * 
              * <strong>example:</strong>
              * <p>2.19-18+deb8u5</p>
@@ -548,7 +562,7 @@ public class ListRepoTagScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The format of the vulnerability.</p>
+             * <p>The version format.</p>
              * 
              * <strong>example:</strong>
              * <p>dpkg</p>

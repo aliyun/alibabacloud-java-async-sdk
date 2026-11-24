@@ -93,7 +93,7 @@ public class ListRepoTriggerResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The return value.</p>
+         * <p>The return code.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -104,10 +104,10 @@ public class ListRepoTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <p>Indicates whether the API call was successful. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: The request is successful.</li>
-         * <li><code>false</code>: The request fails.</li>
+         * <li><code>true</code>: The API call was successful.</li>
+         * <li><code>false</code>: The API call failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -119,7 +119,7 @@ public class ListRepoTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2CA76D52-A8F0-4D0B-854E-FBD9F6C99049</p>
@@ -130,7 +130,7 @@ public class ListRepoTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The triggers of the repository.</p>
+         * <p>The list of triggers.</p>
          */
         public Builder triggers(java.util.List<Triggers> triggers) {
             this.triggers = triggers;
@@ -248,10 +248,10 @@ public class ListRepoTriggerResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The type of the event that activates the trigger. Valid values:</p>
+             * <p>The event type of the trigger. Valid values:</p>
              * <ul>
-             * <li><code>BUILD_SUCCESS</code>: The trigger is activated when an image building task is successful.</li>
-             * <li><code>BUILD_Fail</code>: The trigger is activated when an image building task fails.</li>
+             * <li><code>BUILD_SUCCESS</code>: The trigger was successful.</li>
+             * <li><code>BUILD_Fail</code>: The trigger failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -285,7 +285,7 @@ public class ListRepoTriggerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The image tag based on which the trigger is set.</p>
+             * <p>The image version that triggers the trigger.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -298,11 +298,11 @@ public class ListRepoTriggerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the trigger. Valid values:</p>
+             * <p>The trigger type. Valid values:</p>
              * <ul>
-             * <li><code>ALL</code>: a trigger that supports both tags and regular expressions.</li>
-             * <li><code>TAG_LISTTAG</code>: a tag-based trigger.</li>
-             * <li><code>TAG_REG_EXP</code>: a regular expression-based trigger.</li>
+             * <li><code>ALL</code>: All.</li>
+             * <li><code>TAG_LISTTAG</code>: Tag list.</li>
+             * <li><code>TAG_REG_EXP</code>: Regular expression.</li>
              * </ul>
              * 
              * <strong>example:</strong>

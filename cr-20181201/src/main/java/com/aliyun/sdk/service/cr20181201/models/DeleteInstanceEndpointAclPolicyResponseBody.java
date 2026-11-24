@@ -80,7 +80,7 @@ public class DeleteInstanceEndpointAclPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The return value.</p>
+         * <p>The return code.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>

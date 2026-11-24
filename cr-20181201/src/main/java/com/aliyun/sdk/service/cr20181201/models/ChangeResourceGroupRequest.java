@@ -90,7 +90,7 @@ public class ChangeResourceGroupRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the resource group to which you want to move the resource.</p>
+         * <p>The ID of the destination resource group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -103,7 +103,7 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource.</p>
+         * <p>The resource ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

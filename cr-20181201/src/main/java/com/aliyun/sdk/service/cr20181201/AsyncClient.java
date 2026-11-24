@@ -45,8 +45,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can create building rules of accelerated images only for image repositories of Container Registry Advanced Edition instances. You cannot create building rules of accelerated images for image repositories of Container Registry Basic Edition instances. For more information, see <a href="https://www.alibabacloud.com/help/en/acr/product-overview/what-is-container-registry?spm=openapi-amp.newDocPublishment.0.0.bf82281fRj7rmV#section-n3q-ps7-x6k">Specifications of different editions</a>.
-     * Accelerated images are not supported in Alibaba Finance Cloud regions or Alibaba Gov Cloud regions.</p>
+     * <p>&lt;props=&quot;intl&quot;&gt;You can create accelerated image build rules only for Standard Edition and Advanced Edition instances. Basic Edition does not support accelerated image build rules. For more information about instance specifications, see <a href="https://www.alibabacloud.com/help/zh/container-registry/latest/what-is-container-registry#section-go7-lhg-qbc">Specifications</a>.
+     * &lt;props=&quot;china&quot;&gt;You can create accelerated image build rules only for Standard Edition and Advanced Edition instances. Basic Edition does not support accelerated image build rules. For more information about instance specifications, see <a href="https://help.aliyun.com/document_detail/257112.html#section-go7-lhg-qbc">Specifications</a>.
+     * Accelerated image conversion is not supported in Alibaba Finance Cloud and Alibaba Gov Cloud regions.</p>
      * 
      * @param request the request parameters of CreateArtifactBuildRule  CreateArtifactBuildRuleRequest
      * @return CreateArtifactBuildRuleResponse
@@ -192,9 +193,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateScanRuleResponse> createScanRule(CreateScanRuleRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>此API白名单开放，请<a href="https://smartservice.console.aliyun.com/service/create-ticket">提交工单</a>获取支持。</p>
-     * 
      * @param request the request parameters of CreateStorageDomainRoutingRule  CreateStorageDomainRoutingRuleRequest
      * @return CreateStorageDomainRoutingRuleResponse
      */
@@ -310,18 +308,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteRepositoryResponse> deleteRepository(DeleteRepositoryRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>删除扫描规则。</p>
-     * 
      * @param request the request parameters of DeleteScanRule  DeleteScanRuleRequest
      * @return DeleteScanRuleResponse
      */
     CompletableFuture<DeleteScanRuleResponse> deleteScanRule(DeleteScanRuleRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>此API白名单开放，请<a href="https://smartservice.console.aliyun.com/service/create-ticket">提交工单</a>获取支持。</p>
-     * 
      * @param request the request parameters of DeleteStorageDomainRoutingRule  DeleteStorageDomainRoutingRuleRequest
      * @return DeleteStorageDomainRoutingRuleResponse
      */
@@ -499,7 +491,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This API is available through whitelist access. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a> to obtain support.</p>
+     * <p>This API is available through a whitelist. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a> to request access.</p>
      * 
      * @param request the request parameters of GetStorageDomainRoutingRule  GetStorageDomainRoutingRuleRequest
      * @return GetStorageDomainRoutingRuleResponse
@@ -627,6 +619,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListRepoSyncTaskResponse> listRepoSyncTask(ListRepoSyncTaskRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before you invoke this operation, prepare an Enterprise Edition instance and an image repository. You can invoke ListInstance to query the InstanceId and invoke ListRepository to query the RepoId.</p>
+     * 
      * @param request the request parameters of ListRepoTag  ListRepoTagRequest
      * @return ListRepoTagResponse
      */
@@ -652,7 +647,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, use a Security Center scan engine to scan the image.</p>
+     * <p>Before calling this operation, scan the image by using the cloud security engine.</p>
      * 
      * @param request the request parameters of ListScanBaselineByTask  ListScanBaselineByTaskRequest
      * @return ListScanBaselineByTaskResponse
@@ -661,7 +656,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, use a Security Center scan engine to scan the image.</p>
+     * <p>Before calling this operation, scan the image by using the cloud security engine.</p>
      * 
      * @param request the request parameters of ListScanMaliciousFileByTask  ListScanMaliciousFileByTaskRequest
      * @return ListScanMaliciousFileByTaskResponse
@@ -670,7 +665,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>列举扫描规则。</p>
+     * <p>Lists scan rules.</p>
      * 
      * @param request the request parameters of ListScanRule  ListScanRuleRequest
      * @return ListScanRuleResponse
@@ -680,9 +675,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>请求中ResourceId.N 及 (Tag.N.Key,Tag.N.Value) 至少存在一个，以确定检索对象。</li>
-     * <li>Tag.N是资源的标签，由一个键值对组成。仅指定Tag.N.Key时，则返回该标签键关联的所有标签值。仅指定Tag.N.Value会报错。</li>
-     * <li>ResourceId.N需满足所有输入的键值对。当输入多个键值对，查询结果为资源中包含指定多个键值对的资源。</li>
+     * <li>At least one of ResourceId.N or (Tag.N.Key, Tag.N.Value) must be specified in the request to determine the objects to query.</li>
+     * <li>Tag.N is a tag of the resource, which consists of a key-value pair. If you specify only Tag.N.Key, all tag values associated with the specified tag key are returned. If you specify only Tag.N.Value, an error is returned.</li>
+     * <li>ResourceId.N must match all specified key-value pairs. If you specify multiple key-value pairs, the query results include only resources that contain all the specified key-value pairs.</li>
      * </ul>
      * 
      * @param request the request parameters of ListTagResources  ListTagResourcesRequest
@@ -698,7 +693,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>单个实例最多可绑定 20 条标签。绑定标签前，阿里云会校验资源已有标签数量，超过限制值会返回报错信息。</p>
+     * <p>You can attach up to 20 tags to a single instance. Before attaching tags, Alibaba Cloud verifies the number of existing tags on the resource. If the limit is exceeded, an error message is returned.</p>
      * 
      * @param request the request parameters of TagResources  TagResourcesRequest
      * @return TagResourcesResponse
@@ -718,6 +713,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateArtifactLifecycleRuleResponse> updateArtifactLifecycleRule(UpdateArtifactLifecycleRuleRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;intl&quot;&gt;Accelerated image build rules can only be created for Standard and Advanced Edition instances. Basic Edition does not support the creation of accelerated image build rules. For differences in instance specifications, refer to <a href="https://www.alibabacloud.com/help/zh/container-registry/latest/what-is-container-registry#section-go7-lhg-qbc">Specifications</a>.
+     * &lt;props=&quot;china&quot;&gt;Accelerated image build rules can only be created for Standard and Advanced Edition instances. Basic Edition does not support the creation of accelerated image build rules. For differences in instance specifications, refer to <a href="https://help.aliyun.com/document_detail/257112.html#section-go7-lhg-qbc">Specifications</a>.
+     * Accelerated image conversion is currently not supported in Alibaba Finance Cloud and Alibaba Gov Cloud regions.</p>
+     * 
      * @param request the request parameters of UpdateArtifactSubscriptionRule  UpdateArtifactSubscriptionRuleRequest
      * @return UpdateArtifactSubscriptionRuleResponse
      */
@@ -791,7 +791,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This API is available through whitelist access. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a> to request access.</p>
+     * <p>This API is available through a whitelist. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a> to request access.</p>
      * 
      * @param request the request parameters of UpdateScanRule  UpdateScanRuleRequest
      * @return UpdateScanRuleResponse
@@ -799,9 +799,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateScanRuleResponse> updateScanRule(UpdateScanRuleRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>此API白名单开放，请<a href="https://smartservice.console.aliyun.com/service/create-ticket">提交工单</a>获取支持。</p>
-     * 
      * @param request the request parameters of UpdateStorageDomainRoutingRule  UpdateStorageDomainRoutingRuleRequest
      * @return UpdateStorageDomainRoutingRuleResponse
      */

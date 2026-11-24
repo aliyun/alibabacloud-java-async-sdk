@@ -223,7 +223,7 @@ public class ListRepoTagScanResultRequest extends Request {
         }
 
         /**
-         * <p>The digest of the image.</p>
+         * <p>The image digest.</p>
          * 
          * <strong>example:</strong>
          * <p>sha256:6b0b094f8a904f8fb6602427aed0d1fa</p>
@@ -235,7 +235,7 @@ public class ListRepoTagScanResultRequest extends Request {
         }
 
         /**
-         * <p>The parameter whose value that you want to query. Fox example, if the value is <code>FixCmd</code>, only the <code>FixCmd</code> parameter is returned.</p>
+         * <p>The query filter parameter. If the value is <code>FixCmd</code>, only the <code>FixCmd</code> result is returned, and other fields are not returned.</p>
          * 
          * <strong>example:</strong>
          * <p>FixCmd</p>
@@ -247,7 +247,7 @@ public class ListRepoTagScanResultRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -260,7 +260,7 @@ public class ListRepoTagScanResultRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The page number of the scan result list.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -272,7 +272,7 @@ public class ListRepoTagScanResultRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The number of entries per page in the scan result list.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -284,7 +284,7 @@ public class ListRepoTagScanResultRequest extends Request {
         }
 
         /**
-         * <p>The ID of the image repository.</p>
+         * <p>The image repository ID.</p>
          * 
          * <strong>example:</strong>
          * <p>crr-uf082u9dg8do****</p>
@@ -296,7 +296,7 @@ public class ListRepoTagScanResultRequest extends Request {
         }
 
         /**
-         * <p>The ID of the security scan task.</p>
+         * <p>The image scan task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>6b0b094f-8a90-4f8f-b660-2427aed0****</p>
@@ -308,10 +308,10 @@ public class ListRepoTagScanResultRequest extends Request {
         }
 
         /**
-         * <p>The type of the vulnerability. Valid values:</p>
+         * <p>The vulnerability type. Valid values:</p>
          * <ul>
-         * <li><code>cve</code>: image system vulnerability</li>
-         * <li><code>sca</code>: image application vulnerability</li>
+         * <li><code>cve</code>: Image system vulnerability</li>
+         * <li><code>sca</code>: Image application vulnerability</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -324,12 +324,16 @@ public class ListRepoTagScanResultRequest extends Request {
         }
 
         /**
-         * <p>The severity of the vulnerability. Valid values:</p>
+         * <p>The severity level of the scanned vulnerability. Valid values:</p>
          * <ul>
-         * <li><code>High</code></li>
-         * <li><code>Medium</code></li>
-         * <li><code>Low</code></li>
-         * <li><code>Unknown</code></li>
+         * <li><p><code>High</code>: High</p>
+         * </li>
+         * <li><p><code>Medium</code>: Medium</p>
+         * </li>
+         * <li><p><code>Low</code>: Low</p>
+         * </li>
+         * <li><p><code>Unknown</code>: Unknown</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -342,7 +346,7 @@ public class ListRepoTagScanResultRequest extends Request {
         }
 
         /**
-         * <p>The name of the image tag.</p>
+         * <p>The image version name.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -354,7 +358,7 @@ public class ListRepoTagScanResultRequest extends Request {
         }
 
         /**
-         * <p>The keyword for fuzzy search used in scanning. The value can be a CVE name.</p>
+         * <p>The fuzzy search keyword for scanning. Fuzzy match by CVE name is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>CVE-2021</p>

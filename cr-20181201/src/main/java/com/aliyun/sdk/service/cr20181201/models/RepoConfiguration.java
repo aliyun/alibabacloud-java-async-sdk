@@ -82,7 +82,7 @@ public class RepoConfiguration extends TeaModel {
         } 
 
         /**
-         * ArtifactBuildRuleParameters.
+         * <p>The default parameters for the image build rule.</p>
          */
         public Builder artifactBuildRuleParameters(ArtifactBuildRuleParameters artifactBuildRuleParameters) {
             this.artifactBuildRuleParameters = artifactBuildRuleParameters;
@@ -90,7 +90,11 @@ public class RepoConfiguration extends TeaModel {
         }
 
         /**
+         * <p>The type of the image repository for automatic creation. Valid values: PRIVATE (private repository) and PUBLIC (public repository).</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PRIVATE</p>
          */
         public Builder repoType(String repoType) {
             this.repoType = repoType;
@@ -98,6 +102,7 @@ public class RepoConfiguration extends TeaModel {
         }
 
         /**
+         * <p>Specifies whether image version immutability is enabled. After it is enabled, you cannot overwrite image versions other than latest.</p>
          * <p>This parameter is required.</p>
          */
         public Builder tagImmutability(Boolean tagImmutability) {
@@ -152,6 +157,7 @@ public class RepoConfiguration extends TeaModel {
             } 
 
             /**
+             * <p>Specifies whether to build only the image index.</p>
              * <p>This parameter is required.</p>
              */
             public Builder imageIndexOnly(Boolean imageIndexOnly) {

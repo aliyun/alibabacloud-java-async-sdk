@@ -172,7 +172,7 @@ public class CreateInstanceEndpointAclPolicyRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>internet</p>
+         * <p>Internet</p>
          */
         public Builder endpointType(String endpointType) {
             this.putQueryParameter("EndpointType", endpointType);

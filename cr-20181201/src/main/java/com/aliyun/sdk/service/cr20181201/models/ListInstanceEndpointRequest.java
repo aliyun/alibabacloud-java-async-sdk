@@ -131,7 +131,7 @@ public class ListInstanceEndpointRequest extends Request {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>Registry</p>
+         * <p>Chart</p>
          */
         public Builder moduleName(String moduleName) {
             this.putQueryParameter("ModuleName", moduleName);

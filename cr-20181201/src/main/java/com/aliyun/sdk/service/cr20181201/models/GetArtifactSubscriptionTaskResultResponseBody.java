@@ -132,7 +132,7 @@ public class GetArtifactSubscriptionTaskResultResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The return value.</p>
+         * <p>The return code.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -143,10 +143,12 @@ public class GetArtifactSubscriptionTaskResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <p>Specifies whether the call was successful. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: The request is successful.</li>
-         * <li><code>false</code>: The request fails.</li>
+         * <li><p><code>true</code>: The call was successful.</p>
+         * </li>
+         * <li><p><code>false</code>: The call failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -191,7 +193,7 @@ public class GetArtifactSubscriptionTaskResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result of the artifact subscription task.</p>
+         * <p>The image task results.</p>
          */
         public Builder taskResults(java.util.List<TaskResults> taskResults) {
             this.taskResults = taskResults;
@@ -199,7 +201,7 @@ public class GetArtifactSubscriptionTaskResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -228,6 +230,9 @@ public class GetArtifactSubscriptionTaskResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
+        @com.aliyun.core.annotation.NameInMap("Message")
+        private String message;
+
         @com.aliyun.core.annotation.NameInMap("NamespaceName")
         private String namespaceName;
 
@@ -252,6 +257,7 @@ public class GetArtifactSubscriptionTaskResultResponseBody extends TeaModel {
         private TaskResults(Builder builder) {
             this.endTime = builder.endTime;
             this.instanceId = builder.instanceId;
+            this.message = builder.message;
             this.namespaceName = builder.namespaceName;
             this.repoName = builder.repoName;
             this.result = builder.result;
@@ -281,6 +287,13 @@ public class GetArtifactSubscriptionTaskResultResponseBody extends TeaModel {
          */
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        /**
+         * @return message
+         */
+        public String getMessage() {
+            return this.message;
         }
 
         /**
@@ -335,6 +348,7 @@ public class GetArtifactSubscriptionTaskResultResponseBody extends TeaModel {
         public static final class Builder {
             private Long endTime; 
             private String instanceId; 
+            private String message; 
             private String namespaceName; 
             private String repoName; 
             private String result; 
@@ -349,6 +363,7 @@ public class GetArtifactSubscriptionTaskResultResponseBody extends TeaModel {
             private Builder(TaskResults model) {
                 this.endTime = model.endTime;
                 this.instanceId = model.instanceId;
+                this.message = model.message;
                 this.namespaceName = model.namespaceName;
                 this.repoName = model.repoName;
                 this.result = model.result;
@@ -359,7 +374,7 @@ public class GetArtifactSubscriptionTaskResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The end time of the subscription task.</p>
+             * <p>The end time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1692756630000</p>
@@ -381,7 +396,18 @@ public class GetArtifactSubscriptionTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the namespace.</p>
+             * <p>The error message returned when the task fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Tag not found.</p>
+             */
+            public Builder message(String message) {
+                this.message = message;
+                return this;
+            }
+
+            /**
+             * <p>The namespace.</p>
              * 
              * <strong>example:</strong>
              * <p>test-ns</p>
@@ -392,7 +418,7 @@ public class GetArtifactSubscriptionTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the repository.</p>
+             * <p>The repository name.</p>
              * 
              * <strong>example:</strong>
              * <p>test-reop</p>
@@ -403,7 +429,7 @@ public class GetArtifactSubscriptionTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The result of the task.</p>
+             * <p>The result.</p>
              * 
              * <strong>example:</strong>
              * <p>SUCCESS</p>
@@ -414,7 +440,7 @@ public class GetArtifactSubscriptionTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the subscription task.</p>
+             * <p>The start time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1691719501000</p>
@@ -425,7 +451,7 @@ public class GetArtifactSubscriptionTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the task.</p>
+             * <p>The task status.</p>
              * 
              * <strong>example:</strong>
              * <p>COMPLETED</p>

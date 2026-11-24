@@ -113,7 +113,7 @@ public class GetChartRepositoryRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Container Registry instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -126,7 +126,7 @@ public class GetChartRepositoryRequest extends Request {
         }
 
         /**
-         * <p>The name of the repository.</p>
+         * <p>The repository name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,7 +139,7 @@ public class GetChartRepositoryRequest extends Request {
         }
 
         /**
-         * <p>The name of the namespace.</p>
+         * <p>The namespace name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

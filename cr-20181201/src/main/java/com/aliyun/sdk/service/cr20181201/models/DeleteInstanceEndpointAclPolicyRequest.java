@@ -154,7 +154,7 @@ public class DeleteInstanceEndpointAclPolicyRequest extends Request {
         }
 
         /**
-         * Entries.
+         * <p>The list of public access whitelist entries to delete for the instance.</p>
          */
         public Builder entries(java.util.List<AccessControlEntry> entries) {
             String entriesShrink = shrink(entries, "Entries", "json");
@@ -189,11 +189,11 @@ public class DeleteInstanceEndpointAclPolicyRequest extends Request {
         }
 
         /**
-         * <p>The module for which the access policy is set. Valid values:</p>
+         * <p>The module for which the access policy is configured. Valid values:</p>
          * <ul>
-         * <li><p><code>Registry</code>: access to the image repository</p>
+         * <li><p><code>Registry</code>: Access to the image repository.</p>
          * </li>
-         * <li><p><code>Chart</code>: access to Helm Chart</p>
+         * <li><p><code>Chart</code>: Access to Helm Chart.</p>
          * </li>
          * </ul>
          * 

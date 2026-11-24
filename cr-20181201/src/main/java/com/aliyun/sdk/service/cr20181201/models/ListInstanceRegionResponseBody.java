@@ -104,10 +104,12 @@ public class ListInstanceRegionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <p>Indicates whether the call is successful. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: The request is successful.</li>
-         * <li><code>false</code>: The request fails.</li>
+         * <li><p><code>true</code>: The call is successful.</p>
+         * </li>
+         * <li><p><code>false</code>: The call failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -127,7 +129,7 @@ public class ListInstanceRegionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>11F182E1-0F84-4F5B-8D3B-61E991482727</p>
@@ -196,10 +198,10 @@ public class ListInstanceRegionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the region.</p>
+             * <p>The region name.</p>
              * 
              * <strong>example:</strong>
-             * <p>华南1（深圳）</p>
+             * <p>China South 1 (Shenzhen)</p>
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -207,7 +209,7 @@ public class ListInstanceRegionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-shenzhen</p>

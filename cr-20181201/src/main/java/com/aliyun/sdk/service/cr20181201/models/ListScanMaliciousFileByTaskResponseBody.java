@@ -132,7 +132,7 @@ public class ListScanMaliciousFileByTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The return value.</p>
+         * <p>The return code.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -143,10 +143,12 @@ public class ListScanMaliciousFileByTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the API request is successful. Valid values:</p>
+         * <p>Indicates whether the API call was successful. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: successful</li>
-         * <li><code>false</code>: failed</li>
+         * <li><p><code>true</code>: The API call was successful.</p>
+         * </li>
+         * <li><p><code>false</code>: The API call failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -158,7 +160,7 @@ public class ListScanMaliciousFileByTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number. Default value: 1.</p>
+         * <p>The current page number of the queried data. You can specify this parameter to determine the page from which the queried data is returned. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -191,7 +193,7 @@ public class ListScanMaliciousFileByTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The queried malicious files.</p>
+         * <p>The list of malicious files.</p>
          */
         public Builder scanMaliciousFiles(java.util.List<ScanMaliciousFiles> scanMaliciousFiles) {
             this.scanMaliciousFiles = scanMaliciousFiles;
@@ -199,7 +201,7 @@ public class ListScanMaliciousFileByTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>13</p>
@@ -346,7 +348,7 @@ public class ListScanMaliciousFileByTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the image was created.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-04-10 11:42:06</p>
@@ -357,7 +359,7 @@ public class ListScanMaliciousFileByTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The path of the file.</p>
+             * <p>The file path.</p>
              * 
              * <strong>example:</strong>
              * <p>tenant/0000000000000000/</p>
@@ -368,7 +370,7 @@ public class ListScanMaliciousFileByTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the image was first scanned.</p>
+             * <p>The time of the first scan.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-04-10 11:42:06</p>
@@ -379,7 +381,7 @@ public class ListScanMaliciousFileByTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The severity of the malicious file.</p>
+             * <p>The severity level.</p>
              * 
              * <strong>example:</strong>
              * <p>remind</p>
@@ -390,7 +392,7 @@ public class ListScanMaliciousFileByTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The MD5 hash value of the malicious file.</p>
+             * <p>The MD5 hash of the malicious file.</p>
              * 
              * <strong>example:</strong>
              * <p>e76c9759783cbbc9be0ff91ca3xxxxxx</p>
@@ -401,10 +403,10 @@ public class ListScanMaliciousFileByTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the malicious file.</p>
+             * <p>The type of the malicious sample.</p>
              * 
              * <strong>example:</strong>
-             * <p>疑似含有Webshell代码</p>
+             * <p>Suspected webshell code</p>
              */
             public Builder maliciousName(String maliciousName) {
                 this.maliciousName = maliciousName;
@@ -423,7 +425,7 @@ public class ListScanMaliciousFileByTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the image was updated.</p>
+             * <p>The update time.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-04-10 11:42:06</p>

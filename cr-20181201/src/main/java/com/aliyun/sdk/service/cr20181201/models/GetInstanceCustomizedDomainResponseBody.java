@@ -219,7 +219,7 @@ public class GetInstanceCustomizedDomainResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1571926439000</p>
@@ -285,7 +285,7 @@ public class GetInstanceCustomizedDomainResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The modification time.</p>
+         * <p>The modification time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1638259914000</p>

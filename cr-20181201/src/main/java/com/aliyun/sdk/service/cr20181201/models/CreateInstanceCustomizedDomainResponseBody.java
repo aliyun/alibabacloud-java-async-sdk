@@ -80,7 +80,7 @@ public class CreateInstanceCustomizedDomainResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The return code.</p>
+         * <p>The return value.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>

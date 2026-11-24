@@ -93,7 +93,7 @@ public class CreateBuildRecordByRecordResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the image building record.</p>
+         * <p>The build record ID.</p>
          * 
          * <strong>example:</strong>
          * <p>crbr-ly77w5i3t31f****</p>
@@ -104,8 +104,7 @@ public class CreateBuildRecordByRecordResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code. The status code 200 indicates that the request is successful.\
-         * Other status codes indicate that the request failed.</p>
+         * <p>The return code of the API operation. A value of 200 indicates success. Other values indicate error codes.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -116,10 +115,12 @@ public class CreateBuildRecordByRecordResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: The request is successful.</li>
-         * <li><code>false</code>: The request fails.</li>
+         * <li><p><code>true</code>: The call was successful.</p>
+         * </li>
+         * <li><p><code>false</code>: The call failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

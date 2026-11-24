@@ -155,7 +155,7 @@ public class ListChartReleaseRequest extends Request {
         }
 
         /**
-         * <p>The chart whose versions you want to query.</p>
+         * <p>The version prefix.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -167,7 +167,7 @@ public class ListChartReleaseRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -180,7 +180,7 @@ public class ListChartReleaseRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -192,7 +192,7 @@ public class ListChartReleaseRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -204,7 +204,7 @@ public class ListChartReleaseRequest extends Request {
         }
 
         /**
-         * <p>The name of the repository.</p>
+         * <p>The repository name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -217,7 +217,7 @@ public class ListChartReleaseRequest extends Request {
         }
 
         /**
-         * <p>The name of the namespace.</p>
+         * <p>The namespace name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

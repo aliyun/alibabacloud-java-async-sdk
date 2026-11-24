@@ -98,7 +98,7 @@ public class CancelArtifactBuildTaskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the artifact building task.</p>
+         * <p>The artifact build task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,7 +111,7 @@ public class CancelArtifactBuildTaskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

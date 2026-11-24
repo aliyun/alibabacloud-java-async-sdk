@@ -104,10 +104,12 @@ public class CreateChartRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <p>Indicates whether the API call was successful. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: The request is successful.</li>
-         * <li><code>false</code>: The request fails.</li>
+         * <li><p><code>true</code>: The API call was successful.</p>
+         * </li>
+         * <li><p><code>false</code>: The API call failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -119,7 +121,7 @@ public class CreateChartRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the repository.</p>
+         * <p>The ID of the image repository.</p>
          * 
          * <strong>example:</strong>
          * <p>crcr-2micxey5ewj4****</p>
@@ -130,7 +132,7 @@ public class CreateChartRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>60390244-A483-491A-B41D-F866C95380A1</p>

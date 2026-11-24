@@ -165,7 +165,7 @@ public class GetRepoTagScanStatusRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -178,7 +178,7 @@ public class GetRepoTagScanStatusRequest extends Request {
         }
 
         /**
-         * <p>The ID of the repository.</p>
+         * <p>The image repository ID.</p>
          * 
          * <strong>example:</strong>
          * <p>crr-uf082u9dg8do****</p>
@@ -190,7 +190,7 @@ public class GetRepoTagScanStatusRequest extends Request {
         }
 
         /**
-         * <p>The ID of the image scan task.</p>
+         * <p>The image scan task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>838152F9-F725-5A52-A344-8972D65AC045</p>
@@ -202,7 +202,10 @@ public class GetRepoTagScanStatusRequest extends Request {
         }
 
         /**
-         * ScanType.
+         * <p>The image security scan type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cve</p>
          */
         public Builder scanType(String scanType) {
             this.putQueryParameter("ScanType", scanType);

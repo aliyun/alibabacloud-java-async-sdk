@@ -132,7 +132,7 @@ public class DiagnosisIssue extends TeaModel {
         } 
 
         /**
-         * <p>A unique code that identifies the issue type.</p>
+         * <p>The event code.</p>
          * 
          * <strong>example:</strong>
          * <p>RepoNumOverLimit</p>
@@ -143,7 +143,7 @@ public class DiagnosisIssue extends TeaModel {
         }
 
         /**
-         * <p>An object that contains additional, unstructured key-value information about the issue.</p>
+         * <p>The additional information.</p>
          */
         public Builder extra(java.util.Map<String, String> extra) {
             this.extra = extra;
@@ -151,7 +151,7 @@ public class DiagnosisIssue extends TeaModel {
         }
 
         /**
-         * <p>The time, in ISO 8601 format, when the issue was first detected.</p>
+         * <p>The first occurrence time of the event.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -163,7 +163,7 @@ public class DiagnosisIssue extends TeaModel {
         }
 
         /**
-         * <p>The time, in ISO 8601 format, when the issue was last detected.</p>
+         * <p>The last occurrence time of the event.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -175,7 +175,7 @@ public class DiagnosisIssue extends TeaModel {
         }
 
         /**
-         * <p>Specifies the severity of the issue. Valid values are <code>INFO</code>, <code>WARN</code>, and <code>ERROR</code>.</p>
+         * <p>The event level.</p>
          * 
          * <strong>example:</strong>
          * <p>INFO</p>
@@ -186,7 +186,7 @@ public class DiagnosisIssue extends TeaModel {
         }
 
         /**
-         * <p>The total number of times the issue has occurred.</p>
+         * <p>The number of occurrences of the event.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -197,7 +197,7 @@ public class DiagnosisIssue extends TeaModel {
         }
 
         /**
-         * <p>The recommended action to resolve the issue.</p>
+         * <p>The Solutions.</p>
          * 
          * <strong>example:</strong>
          * <p>Buy repository quota</p>

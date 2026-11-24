@@ -98,7 +98,7 @@ public class GetRepoBuildRecordRequest extends Request {
         }
 
         /**
-         * <p>The ID of the image building record.</p>
+         * <p>The build record ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,7 +111,7 @@ public class GetRepoBuildRecordRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
