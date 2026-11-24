@@ -117,7 +117,7 @@ public class UpdateDisplayKnowledgeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The modification result of the display knowledge base content.</p>
+         * <p>The content modification result of the display knowledge base.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class UpdateDisplayKnowledgeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message or failure description.</p>
+         * <p>The returned message or failure description.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -147,7 +147,7 @@ public class UpdateDisplayKnowledgeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful.</p>
+         * <p>Indicates whether the call is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -303,7 +303,7 @@ public class UpdateDisplayKnowledgeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The index of the original request array.</p>
+             * <p>The index in the original request array.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -347,7 +347,7 @@ public class UpdateDisplayKnowledgeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the record was accepted.</p>
+             * <p>Indicates whether the record is accepted.</p>
              * 
              * <strong>example:</strong>
              * <p>True</p>
@@ -587,7 +587,7 @@ public class UpdateDisplayKnowledgeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The processing results for each record.</p>
+             * <p>The processing result of each record.</p>
              */
             public Builder results(java.util.List<Results> results) {
                 this.results = results;
@@ -595,7 +595,7 @@ public class UpdateDisplayKnowledgeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the business processing was successful.</p>
+             * <p>Indicates whether the business processing is successful.</p>
              * 
              * <strong>example:</strong>
              * <p>True</p>
@@ -606,7 +606,7 @@ public class UpdateDisplayKnowledgeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The asynchronous task ID. This parameter is empty for synchronous API operations.</p>
+             * <p>The asynchronous task ID. This field is empty for synchronous API operations.</p>
              * 
              * <strong>example:</strong>
              * <p>ed9d8504-6141-9fbb-8345-4fa36433483f</p>
@@ -617,7 +617,10 @@ public class UpdateDisplayKnowledgeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The usage information. This parameter is empty for free API operations.</p>
+             * <p>The usage information. This field is empty for free API operations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;ProcessedImageCount&quot;:1}</p>
              */
             public Builder usageMap(java.util.Map<String, Long> usageMap) {
                 this.usageMap = usageMap;

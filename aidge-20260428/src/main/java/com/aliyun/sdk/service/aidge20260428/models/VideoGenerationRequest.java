@@ -193,7 +193,7 @@ public class VideoGenerationRequest extends Request {
             } 
 
             /**
-             * <p>The asset index, such as 0, 1, 2, or 3, which must be consistent with the number of the image URL.</p>
+             * <p>The asset index, such as 0, 1, 2, or 3, which must be consistent with the index of the image URL.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -206,15 +206,18 @@ public class VideoGenerationRequest extends Request {
             /**
              * <p>The description of the image. Examples:   </p>
              * <ol>
-             * <li>Description for look_reference: Front full-body outfit reference image of the person.   </li>
-             * <li>Description for scene_reference: Specified clothing display scene.   </li>
-             * <li>Description for garment_reference:<br>● Front of the top;<br>● Back of the bottom;<br>● Side of the shoes.</li>
+             * <li>Description for look_reference: front full-body try-on reference image of the person.   </li>
+             * <li>Description for scene_reference: specified apparel showcase scene.   </li>
+             * <li>Description for garment_reference:</li>
              * </ol>
+             * <ul>
+             * <li>Front view of the top.   </li>
+             * <li>Back view of the bottom.   </li>
+             * <li>Side view of the shoes.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <p>Front full-body try-on reference image of the person</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -222,17 +225,15 @@ public class VideoGenerationRequest extends Request {
             }
 
             /**
-             * <p>Specifies the asset usage. Valid values:   </p>
+             * <p>The asset slot. Select one of the following three values: look_reference, scene_reference, or garment_reference.<br>Description:   </p>
              * <ul>
-             * <li>look_reference: Corresponds to the full outfit effect image of the person wearing the clothes (overall visual).   </li>
-             * <li>scene_reference: Corresponds to the scene reference image (usually the cover main image).   </li>
-             * <li>garment_reference: Corresponds to all product detail images (including front, back, and side of clothes, shoes, skirts, and other partial close-ups).</li>
+             * <li>look_reference: corresponds to the full-body try-on effect image of the person (overall visual).   </li>
+             * <li>scene_reference: corresponds to the scene reference image (usually the cover main image).   </li>
+             * <li>garment_reference: corresponds to all product detail images (including front, back, and side views of clothes, shoes, skirts, and other partial close-ups).</li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <p>look_reference</p>
              */
             public Builder slot(String slot) {
                 this.slot = slot;
@@ -336,6 +337,9 @@ public class VideoGenerationRequest extends Request {
 
             /**
              * <p>The extended information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder extra(java.util.Map<String, ?> extra) {
                 this.extra = extra;
@@ -436,7 +440,7 @@ public class VideoGenerationRequest extends Request {
             } 
 
             /**
-             * <p>The delivery channel.</p>
+             * <p>The placement channel.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -449,14 +453,11 @@ public class VideoGenerationRequest extends Request {
             }
 
             /**
-             * <p>Specifies the business goal. Valid values:</p>
+             * <p>The business goal. Valid values:</p>
              * <ul>
-             * <li><p>camera_motion: Camera movement mode. Generates videos based on a fixed 360-degree camera movement logic.</p>
-             * </li>
-             * <li><p>scripted_video: Scripted mode. Provides a script or prompt, and the system generates the video according to the script.</p>
-             * </li>
-             * <li><p>auto_video: Unscripted mode. Does not provide a script, and the system automatically plans the script and generates the video.</p>
-             * </li>
+             * <li>camera_motion: camera movement mode. Generates the video based on a fixed 360° camera movement logic.</li>
+             * <li>scripted_video: scripted mode. Generates the video based on the provided script or prompt.</li>
+             * <li>auto_video: scriptless mode. Automatically plans the script and generates the video without a provided script.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -564,7 +565,7 @@ public class VideoGenerationRequest extends Request {
             } 
 
             /**
-             * <p>The video duration varies by Intent.goal: auto_video supports 5 to 15 seconds, scripted_video supports 5 to 30 seconds, and camera_motion generates a fixed 10-second video and returns two 5-second videos.</p>
+             * <p>The video duration, which varies based on Intent.goal: auto_video supports 5 to 15 seconds, scripted_video supports 5 to 30 seconds, and camera_motion generates a fixed 10-second video and returns two 5-second videos.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -588,7 +589,7 @@ public class VideoGenerationRequest extends Request {
             }
 
             /**
-             * <p>The aspect ratio varies by Intent.goal: auto_video and scripted_video only support 9:16, and camera_motion only supports 3:4.</p>
+             * <p>The aspect ratio, which varies based on Intent.goal: auto_video and scripted_video only support 9:16, and camera_motion only supports 3:4.</p>
              * 
              * <strong>example:</strong>
              * <p>9:16</p>

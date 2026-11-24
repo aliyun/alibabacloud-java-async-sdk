@@ -60,7 +60,7 @@ public class StorefrontSceneRecognitionRequest extends Request {
         } 
 
         /**
-         * <p>The HTTP(S) URL of the image to be reviewed.</p>
+         * <p>The HTTP(S) URL of the image to be checked.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -117,7 +117,7 @@ public class VirtualTryOnRequest extends Request {
         }
 
         /**
-         * <p>The garment type. Valid values: tops, bottoms, dresses, tops_and_bottoms, shoes, and hats. If you do not specify this parameter, the system automatically recognizes the garment type.</p>
+         * <p>The type of the garment. Valid values: tops, bottoms, dresses, tops_and_bottoms, shoes, and hats. If this parameter is not specified, the system automatically recognizes the garment type.</p>
          * 
          * <strong>example:</strong>
          * <p>tops</p>
@@ -142,7 +142,7 @@ public class VirtualTryOnRequest extends Request {
         }
 
         /**
-         * <p>Required. The image resolution. Valid values: 1K and 2K.</p>
+         * <p>Required. The resolution of the generated image. Valid values: 1K and 2K.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -160,7 +160,7 @@ public class ImageTranslationStandardAsyncRequest extends Request {
         } 
 
         /**
-         * <p>The business order ID of the caller. It is recorded upon acceptance and returned as-is when querying the asynchronous task result.</p>
+         * <p>The business order ID of the caller. This ID is recorded upon acceptance and returned as-is when querying the asynchronous task result.</p>
          * 
          * <strong>example:</strong>
          * <p>order-20260928-001</p>
@@ -200,7 +200,7 @@ public class ImageTranslationStandardAsyncRequest extends Request {
          * <p>Specifies whether to include translation for the product area.</p>
          * 
          * <strong>example:</strong>
-         * <p>false</p>
+         * <p>true</p>
          */
         public Builder includingProductArea(Boolean includingProductArea) {
             this.putQueryParameter("IncludingProductArea", includingProductArea);
@@ -238,7 +238,7 @@ public class ImageTranslationStandardAsyncRequest extends Request {
          * <p>Specifies whether to translate brand text in the product area.</p>
          * 
          * <strong>example:</strong>
-         * <p>false</p>
+         * <p>true</p>
          */
         public Builder translatingBrandInTheProduct(Boolean translatingBrandInTheProduct) {
             this.putQueryParameter("TranslatingBrandInTheProduct", translatingBrandInTheProduct);

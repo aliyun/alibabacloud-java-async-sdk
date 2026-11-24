@@ -171,7 +171,7 @@ public class ImageRecognitionRequest extends Request {
         }
 
         /**
-         * <p>The elements to detect outside the image subject. Valid values: 1 (watermark), 2 (logo), 3 (text), and 4 (text-containing color block). You can specify multiple values. This parameter and ObjectDetectElements cannot be empty at the same time.</p>
+         * <p>Specifies the elements to detect on the non-subject area of the image. Valid values: 1 for watermark, 2 for logo, 3 for text, and 4 for text-containing color block. You can specify multiple element types. This parameter and ObjectDetectElements cannot be empty at the same time.</p>
          * 
          * <strong>example:</strong>
          * <p>[1,2,3,4]</p>
@@ -184,7 +184,7 @@ public class ImageRecognitionRequest extends Request {
         }
 
         /**
-         * <p>The elements to detect on the image subject. Valid values: 1 (watermark), 2 (logo), 3 (text), and 4 (text-containing color block). You can specify multiple values.</p>
+         * <p>Specifies the elements to detect on the image subject. Valid values: 1 for watermark, 2 for logo, 3 for text, and 4 for text-containing color block. You can specify multiple element types.</p>
          * 
          * <strong>example:</strong>
          * <p>[1,2,3,4]</p>
@@ -197,7 +197,11 @@ public class ImageRecognitionRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return border pixel information. Valid values: 1 (return) and 0 (do not return).</p>
+         * <p>Specifies whether to return border pixel information. Valid values:</p>
+         * <ul>
+         * <li>1: Return border pixel information.</li>
+         * <li>0: Do not return border pixel information.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -209,7 +213,11 @@ public class ImageRecognitionRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return text information. Valid values: 1 (return) and 0 (do not return).</p>
+         * <p>Specifies whether to return text information. Valid values:</p>
+         * <ul>
+         * <li>1: Return text information.</li>
+         * <li>0: Do not return text information.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -221,7 +229,11 @@ public class ImageRecognitionRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return text attribute information. Valid values: 1 (return) and 0 (do not return).</p>
+         * <p>Specifies whether to return text property information. Valid values:</p>
+         * <ul>
+         * <li>1: Return text property information.</li>
+         * <li>0: Do not return text property information.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -233,7 +245,11 @@ public class ImageRecognitionRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return the product quantity. Valid values: 1 (return) and 0 (do not return).</p>
+         * <p>Specifies whether to return the product quantity. Valid values:</p>
+         * <ul>
+         * <li>1: Return the product quantity.</li>
+         * <li>0: Do not return the product quantity.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -245,7 +261,11 @@ public class ImageRecognitionRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return product attribute information. Valid values: 1 (return) and 0 (do not return).</p>
+         * <p>Specifies whether to return product property information. Valid values:</p>
+         * <ul>
+         * <li>1: Return product property information.</li>
+         * <li>0: Do not return product property information.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>

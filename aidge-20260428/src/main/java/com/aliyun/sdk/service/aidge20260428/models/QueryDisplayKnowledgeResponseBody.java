@@ -136,7 +136,7 @@ public class QueryDisplayKnowledgeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>70CBEFDF-BB17-1EB3-8A21-569F3124738F</p>
@@ -147,7 +147,7 @@ public class QueryDisplayKnowledgeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call is successful.</p>
+         * <p>Indicates whether the call was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -307,7 +307,7 @@ public class QueryDisplayKnowledgeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the failure reason. This parameter is returned only when the status is FAILED.</p>
+             * <p>The failure reason description. This parameter is returned only when the status is FAILED.</p>
              * 
              * <strong>example:</strong>
              * <p>Image not accessible</p>
@@ -318,7 +318,7 @@ public class QueryDisplayKnowledgeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The code of the failure reason. This parameter is returned only when the status is FAILED.</p>
+             * <p>The failure reason code. This parameter is returned only when the status is FAILED.</p>
              * 
              * <strong>example:</strong>
              * <p>Image not accessible</p>
@@ -340,7 +340,7 @@ public class QueryDisplayKnowledgeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The 24-hour signed URL of the transferred image.</p>
+             * <p>The signed URL of the transferred image, valid for 24 hours.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://xxx/2190149752-0-cib.jpg">https://xxx/2190149752-0-cib.jpg</a></p>
@@ -362,7 +362,7 @@ public class QueryDisplayKnowledgeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the record.</p>
+             * <p>The record ID.</p>
              * 
              * <strong>example:</strong>
              * <p>4410879640480000</p>
@@ -384,7 +384,7 @@ public class QueryDisplayKnowledgeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the SKU.</p>
+             * <p>The SKU name.</p>
              * 
              * <strong>example:</strong>
              * <p>Product side image</p>
@@ -395,7 +395,7 @@ public class QueryDisplayKnowledgeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the record.</p>
+             * <p>The record status.</p>
              * 
              * <strong>example:</strong>
              * <p>UPDATING - Updating
@@ -652,7 +652,7 @@ public class QueryDisplayKnowledgeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the knowledge base.</p>
+             * <p>The knowledge base ID.</p>
              * 
              * <strong>example:</strong>
              * <p>rag_xxx</p>
@@ -671,7 +671,7 @@ public class QueryDisplayKnowledgeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the business processing is successful.</p>
+             * <p>Indicates whether the business processing was successful.</p>
              * 
              * <strong>example:</strong>
              * <p>True</p>
@@ -682,7 +682,7 @@ public class QueryDisplayKnowledgeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the asynchronous task. This parameter is empty for synchronous API operations.</p>
+             * <p>The asynchronous task ID. This parameter is empty for synchronous API operations.</p>
              * 
              * <strong>example:</strong>
              * <p>a8323ada-a196-9061-976f-90e38b27323a</p>
@@ -716,6 +716,9 @@ public class QueryDisplayKnowledgeResponseBody extends TeaModel {
 
             /**
              * <p>The usage information. This parameter is empty for free API operations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;ProcessingCount&quot;:1}</p>
              */
             public Builder usageMap(java.util.Map<String, Long> usageMap) {
                 this.usageMap = usageMap;

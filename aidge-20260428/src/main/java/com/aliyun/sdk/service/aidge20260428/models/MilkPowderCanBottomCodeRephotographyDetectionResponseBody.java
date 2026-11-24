@@ -125,7 +125,7 @@ public class MilkPowderCanBottomCodeRephotographyDetectionResponseBody extends T
         }
 
         /**
-         * <p>The response message or failure description.</p>
+         * <p>The return message or failure description.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -147,7 +147,7 @@ public class MilkPowderCanBottomCodeRephotographyDetectionResponseBody extends T
         }
 
         /**
-         * <p>Specifies whether the call is successful. A valid business conclusion does not mean that the review is passed.</p>
+         * <p>Indicates whether the call is successful. A valid business conclusion does not mean the review is passed.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -229,7 +229,7 @@ public class MilkPowderCanBottomCodeRephotographyDetectionResponseBody extends T
             } 
 
             /**
-             * <p>The bounding box coordinates in the format of <code>[top-left x, top-left y, bottom-right x, bottom-right y]</code>. Valid values: 0 to 1000. The left value must be less than the right value, and the top value must be less than the bottom value.</p>
+             * <p>The bounding box coordinates in the format of <code>[top-left x, top-left y, bottom-right x, bottom-right y]</code>. The values range from 0 to 1000. The left coordinate is less than the right coordinate, and the top coordinate is less than the bottom coordinate.</p>
              */
             public Builder bbox2d(java.util.List<Float> bbox2d) {
                 this.bbox2d = bbox2d;
@@ -237,7 +237,7 @@ public class MilkPowderCanBottomCodeRephotographyDetectionResponseBody extends T
             }
 
             /**
-             * <p>The target category. For valid values, see the following table.</p>
+             * <p>The target category. For enumerations, see the following table.</p>
              * 
              * <strong>example:</strong>
              * <p>milk_powder</p>
@@ -421,7 +421,7 @@ public class MilkPowderCanBottomCodeRephotographyDetectionResponseBody extends T
             }
 
             /**
-             * <p>Specifies whether the image is recaptured.</p>
+             * <p>Indicates whether the image is a recapture.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -432,7 +432,7 @@ public class MilkPowderCanBottomCodeRephotographyDetectionResponseBody extends T
             }
 
             /**
-             * <p>The detection type. The value is fixed to canBottom.</p>
+             * <p>The detection type. Fixed to canBottom.</p>
              * 
              * <strong>example:</strong>
              * <p>canBottom</p>
@@ -510,7 +510,7 @@ public class MilkPowderCanBottomCodeRephotographyDetectionResponseBody extends T
             }
 
             /**
-             * <p>The usage information. If the call is successful, the value is <code>{&quot;ProcessingCount&quot;:1}</code>. If the call fails, an empty object is returned.</p>
+             * <p>The usage information. If the call is successful, the value is <code>{&quot;ProcessingCount&quot;:1}</code>. If the call fails, the value is an empty object.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;ProcessingCount&quot;:1}</p>

@@ -117,7 +117,7 @@ public class ProductHotspotDetectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The product hotzone recognition result.</p>
+         * <p>The product hot zone recognition results.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -242,7 +242,7 @@ public class ProductHotspotDetectionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The bottom boundary of the bounding box.</p>
+             * <p>The bottom boundary of the detection box.</p>
              * 
              * <strong>example:</strong>
              * <p>947</p>
@@ -253,7 +253,7 @@ public class ProductHotspotDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The left boundary of the bounding box.</p>
+             * <p>The left boundary of the detection box.</p>
              * 
              * <strong>example:</strong>
              * <p>280</p>
@@ -264,7 +264,7 @@ public class ProductHotspotDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The right boundary of the bounding box.</p>
+             * <p>The right boundary of the detection box.</p>
              * 
              * <strong>example:</strong>
              * <p>743</p>
@@ -275,7 +275,7 @@ public class ProductHotspotDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The top boundary of the bounding box.</p>
+             * <p>The top boundary of the detection box.</p>
              * 
              * <strong>example:</strong>
              * <p>965</p>
@@ -358,7 +358,7 @@ public class ProductHotspotDetectionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The bounding boxes of the detected product instances.</p>
+             * <p>The detection boxes for product instances.</p>
              */
             public Builder boxes(java.util.List<Boxes> boxes) {
                 this.boxes = boxes;
@@ -447,7 +447,7 @@ public class ProductHotspotDetectionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of detected products and their bounding boxes.</p>
+             * <p>The list of recognized products and detection boxes.</p>
              */
             public Builder products(java.util.List<Products> products) {
                 this.products = products;

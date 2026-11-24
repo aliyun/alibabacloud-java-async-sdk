@@ -117,7 +117,7 @@ public class MerchandisePlacementDetectionProResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The detection result of product display detection Pro.</p>
+         * <p>The detection results of the Pro edition.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class MerchandisePlacementDetectionProResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message or failure description.</p>
+         * <p>The return message or failure description.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -229,7 +229,7 @@ public class MerchandisePlacementDetectionProResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The normalized bounding box coordinates [x1,y1,x2,y2], with values in the range 0–1000.</p>
+             * <p>The normalized bounding box coordinates in the [x1,y1,x2,y2] format. Valid values: 0 to 1000.</p>
              */
             public Builder bbox2d(java.util.List<Integer> bbox2d) {
                 this.bbox2d = bbox2d;
@@ -237,7 +237,7 @@ public class MerchandisePlacementDetectionProResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The detected product name. The value is unknown if the name cannot be determined.</p>
+             * <p>The recognized product name. If the name cannot be determined, the value is unknown.</p>
              * 
              * <strong>example:</strong>
              * <p>unknown</p>
@@ -248,7 +248,7 @@ public class MerchandisePlacementDetectionProResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The bounding box index, starting from 1.</p>
+             * <p>The index of the bounding box, starting from 1.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -342,7 +342,7 @@ public class MerchandisePlacementDetectionProResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of per-box detection details.</p>
+             * <p>The list of detection details for each bounding box.</p>
              */
             public Builder data(java.util.List<DataData> data) {
                 this.data = data;

@@ -482,7 +482,7 @@ public class ImageRecognitionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The product proportion.</p>
+             * <p>The proportion of the product in the image.</p>
              * 
              * <strong>example:</strong>
              * <p>74.15%</p>
@@ -501,7 +501,7 @@ public class ImageRecognitionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The text proportion.</p>
+             * <p>The proportion of text in the image.</p>
              * 
              * <strong>example:</strong>
              * <p>7.52%</p>

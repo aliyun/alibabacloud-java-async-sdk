@@ -106,7 +106,7 @@ public class MaterialInspectionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code. This parameter is not returned if the call is successful.</p>
+         * <p>The error code. This parameter is not returned when the call is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -125,7 +125,7 @@ public class MaterialInspectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message. This parameter is not returned if the call is successful.</p>
+         * <p>The error message. This parameter is not returned when the call is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -150,7 +150,7 @@ public class MaterialInspectionResponseBody extends TeaModel {
          * <p>Indicates whether the call is successful. Valid values:</p>
          * <ul>
          * <li>true: The call is successful.</li>
-         * <li>false: The call failed.</li>
+         * <li>false: The call fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -220,7 +220,7 @@ public class MaterialInspectionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The determination result of the step. Valid values: PASS, FAIL, and UNABLE_TO_JUDGE.</p>
+             * <p>The judgment result. Valid values: PASS, FAIL, UNABLE_TO_JUDGE.</p>
              * 
              * <strong>example:</strong>
              * <p>PASS</p>
@@ -234,7 +234,7 @@ public class MaterialInspectionResponseBody extends TeaModel {
              * <p>The step ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>XXX</p>
+             * <p>S1</p>
              */
             public Builder stepId(String stepId) {
                 this.stepId = stepId;
@@ -340,10 +340,10 @@ public class MaterialInspectionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The natural language summary, such as &quot;1 rule: 1 PASS, all inspection items are compliant.&quot;</p>
+             * <p>The natural language summary, such as &quot;1 rule: 1 PASS, all detection items are compliant&quot;.</p>
              * 
              * <strong>example:</strong>
-             * <p>1 rule: 1 PASS, all inspection items are compliant</p>
+             * <p>1 rule: 1 PASS, all detection items are compliant</p>
              */
             public Builder evidence(String evidence) {
                 this.evidence = evidence;
@@ -351,7 +351,7 @@ public class MaterialInspectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The overall determination result. Valid values: PASS and FAIL.</p>
+             * <p>The overall judgment. Valid values: PASS, FAIL.</p>
              * 
              * <strong>example:</strong>
              * <p>PASS</p>
@@ -362,7 +362,7 @@ public class MaterialInspectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The request ID returned as-is from the request.</p>
+             * <p>The request ID returned as-is.</p>
              * 
              * <strong>example:</strong>
              * <p>req-001</p>
@@ -459,7 +459,7 @@ public class MaterialInspectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The usage information. The key is the usage metric name and the value is the count.</p>
+             * <p>The usage information. The key is the usage name and the value is the count.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;ProcessingCount&quot;:1}</p>

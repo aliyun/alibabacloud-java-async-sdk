@@ -117,7 +117,7 @@ public class ImageRemoveResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The intelligent removal result.</p>
+         * <p>The object removal result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -147,7 +147,7 @@ public class ImageRemoveResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful.</p>
+         * <p>Indicates whether the call is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -253,7 +253,7 @@ public class ImageRemoveResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the result image after removal.</p>
+             * <p>The URL of the result image.</p>
              * 
              * <strong>example:</strong>
              * <p>“<a href="http://dashscope-7c2c.oss-cn-shanghai.aliyuncs.com/xxx.jpg">http://dashscope-7c2c.oss-cn-shanghai.aliyuncs.com/xxx.jpg</a>

@@ -106,7 +106,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code. A value of 200 indicates a successful call. For other response codes, refer to the error code information.</p>
+         * <p>The response code. A value of 200 indicates that the call is successful. For other response codes, see Error codes.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -125,7 +125,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message. &quot;Success&quot; is returned for successful calls. Specific error messages are returned for exceptions, such as &quot;The content contains sensitive data. Try another input.&quot;</p>
+         * <p>The error message. &quot;Success&quot; is returned for a normal call. For an abnormal call, a specific error message is returned, such as &quot;The content contains sensitive data. Try another input.&quot;</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -136,7 +136,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID, which is used to uniquely identify a request.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>61785C32-80C2-19A3-9E55-2C3702C84B40</p>
@@ -255,7 +255,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The rotation angle of the text box in degrees. A value less than 1 indicates a horizontal text box.</p>
+             * <p>The rotation angle of the text box in degrees. A value of less than 1 indicates a horizontal text box.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -408,7 +408,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The rotation angle of the text box in degrees. A value less than 1 indicates a horizontal text box.</p>
+             * <p>The rotation angle of the text box in degrees. A value of less than 1 indicates a horizontal text box.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -561,7 +561,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The rotation angle of the text box in degrees. A value less than 1 indicates a horizontal text box.</p>
+             * <p>The rotation angle of the text box in degrees. A value of less than 1 indicates a horizontal text box.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -801,7 +801,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The horizontal layout method. Valid values: center, left, and right.</p>
+             * <p>The horizontal layout. Valid values: center, left, and right.</p>
              * 
              * <strong>example:</strong>
              * <p>center</p>
@@ -812,7 +812,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The coordinates of the image repair area.</p>
+             * <p>The coordinates of the image inpainting area.</p>
              */
             public Builder imageRect(ImageRect imageRect) {
                 this.imageRect = imageRect;
@@ -842,7 +842,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The coordinates of the text box area.</p>
+             * <p>The coordinates of the text box.</p>
              */
             public Builder textRect(TextRect textRect) {
                 this.textRect = textRect;
@@ -850,7 +850,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the text item is valid. If this value is missing or set to false, the text item is invalid.</p>
+             * <p>Indicates whether the text item is valid. If this value does not exist or is set to false, the item is invalid.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -872,7 +872,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The vertical layout method. Valid values: center, top, and down.</p>
+             * <p>The vertical layout. Valid values: center, top, and down.</p>
              * 
              * <strong>example:</strong>
              * <p>center</p>
@@ -1021,7 +1021,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
              * <p>The original text before translation.</p>
              * 
              * <strong>example:</strong>
-             * <p>Cute design · Crisp bell</p>
+             * <p>Cute design and crisp bell</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -1040,7 +1040,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The horizontal layout method. Valid values: center, left, and right.</p>
+             * <p>The horizontal layout. Valid values: center, left, and right.</p>
              * 
              * <strong>example:</strong>
              * <p>left</p>
@@ -1062,7 +1062,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of translated texts, where each element corresponds to the translation result in a target language.</p>
+             * <p>The list of translated texts. Each element corresponds to the translation result in a target language.</p>
              */
             public Builder texts(java.util.List<Texts> texts) {
                 this.texts = texts;
@@ -1070,7 +1070,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The vertical layout method. Valid values: center, top, and down.</p>
+             * <p>The vertical layout. Valid values: center, top, and down.</p>
              * 
              * <strong>example:</strong>
              * <p>center</p>
@@ -1200,7 +1200,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The coordinate information of the product bounding box area.</p>
+             * <p>The coordinate information of the product bounding box.</p>
              */
             public Builder goodsRects(GoodsRects goodsRects) {
                 this.goodsRects = goodsRects;
@@ -1216,7 +1216,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the image with all text erased.</p>
+             * <p>The URL of the image with all text removed.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://dashscope-a717.oss-cn-beijing.aliyuncs.com/repaired.png">http://dashscope-a717.oss-cn-beijing.aliyuncs.com/repaired.png</a></p>
@@ -1235,7 +1235,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of text boxes, which includes information about all recognized text areas.</p>
+             * <p>The list of text boxes, including information about all recognized text areas.</p>
              */
             public Builder textAreas(java.util.List<TextAreas> textAreas) {
                 this.textAreas = textAreas;
@@ -1396,7 +1396,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The editor information, which includes recognition information such as text areas, product areas, and fonts.</p>
+             * <p>The editor information, including recognition information such as text areas, product areas, and fonts.</p>
              */
             public Builder editInfo(EditInfo editInfo) {
                 this.editInfo = editInfo;
@@ -1412,7 +1412,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the source image.</p>
+             * <p>The URL of the original image.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://img.alicdn.com/imgextra/i3/O1CN01HTDhDi28Fd85ZYs7H_!!6000000007903-0-tps-800-800.jpg">https://img.alicdn.com/imgextra/i3/O1CN01HTDhDi28Fd85ZYs7H_!!6000000007903-0-tps-800-800.jpg</a></p>
@@ -1589,7 +1589,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The editor protocol, which includes the translation result files and editing information.</p>
+             * <p>The editor protocol, including the translation result files and editing information.</p>
              */
             public Builder genFiles(java.util.List<GenFiles> genFiles) {
                 this.genFiles = genFiles;
@@ -1616,7 +1616,10 @@ public class ImageTranslationProResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The usage information, which includes the number of processed images.</p>
+             * <p>The usage information, including the number of processed images.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;ProcessedImageCount&quot;:1}</p>
              */
             public Builder usageMap(java.util.Map<String, Long> usageMap) {
                 this.usageMap = usageMap;

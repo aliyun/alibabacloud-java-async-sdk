@@ -196,7 +196,7 @@ public class AddDisplayKnowledgeRequest extends Request {
              * <p>The SKU name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Product front image</p>
+             * <p>Front image of the product</p>
              */
             public Builder skuName(String skuName) {
                 this.skuName = skuName;

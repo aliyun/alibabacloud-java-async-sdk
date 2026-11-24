@@ -117,7 +117,7 @@ public class VideoTranslationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result of the asynchronous task submission.</p>
+         * <p>The submission result of the asynchronous task.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class VideoTranslationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message.</p>
+         * <p>The description message.</p>
          * 
          * <strong>example:</strong>
          * <p>Translation processing</p>
@@ -149,8 +149,8 @@ public class VideoTranslationResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the call is successful. Valid values:</p>
          * <ul>
-         * <li>true: The call is successful.</li>
-         * <li>false: The call fails.</li>
+         * <li><code>true</code>: The call is successful.</li>
+         * <li><code>false</code>: The call fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -207,7 +207,7 @@ public class VideoTranslationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the asynchronous task. You can use this ID for subsequent queries.</p>
+             * <p>The ID of the asynchronous task, which is used for subsequent queries.</p>
              * 
              * <strong>example:</strong>
              * <p>0ea3b66e88a543658520c994f08896a0</p>

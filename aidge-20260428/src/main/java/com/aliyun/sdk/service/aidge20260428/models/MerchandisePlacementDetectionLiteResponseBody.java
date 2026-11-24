@@ -125,7 +125,7 @@ public class MerchandisePlacementDetectionLiteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message or failure description.</p>
+         * <p>The return message or failure description.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -248,7 +248,7 @@ public class MerchandisePlacementDetectionLiteResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The confirmable short name or text of up to 24 characters. This field is an empty string when the text is unclear.</p>
+             * <p>The confirmable short name or text of up to 24 characters. This is an empty string when the text is unclear.</p>
              * 
              * <strong>example:</strong>
              * <p>5.50</p>
@@ -322,7 +322,7 @@ public class MerchandisePlacementDetectionLiteResponseBody extends TeaModel {
              * <ul>
              * <li>complete: The relevant visible targets are complete.</li>
              * <li>partial: Only some targets are valid or recognizable.</li>
-             * <li>Empty string: No valid supplementary grounding results are obtained.</li>
+             * <li>Empty string: No valid supplementary grounding result is obtained.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -334,7 +334,7 @@ public class MerchandisePlacementDetectionLiteResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The target array, which contains up to 12 items. This array can be empty when no relevant targets are found.</p>
+             * <p>The target array, which contains up to 12 items. This array can be empty when no relevant targets exist.</p>
              */
             public Builder regions(java.util.List<Regions> regions) {
                 this.regions = regions;
@@ -452,7 +452,7 @@ public class MerchandisePlacementDetectionLiteResponseBody extends TeaModel {
              * <p>The right coordinate.</p>
              * 
              * <strong>example:</strong>
-             * <p>(\&quot;874\&quot;)</p>
+             * <p>874</p>
              */
             public Builder right(Long right) {
                 this.right = right;
@@ -634,7 +634,7 @@ public class MerchandisePlacementDetectionLiteResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The supplementary element grounding results.</p>
+             * <p>The supplementary element grounding result.</p>
              */
             public Builder grounding(Grounding grounding) {
                 this.grounding = grounding;
@@ -658,7 +658,7 @@ public class MerchandisePlacementDetectionLiteResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The result type, which is fixed to sku.</p>
+             * <p>The type, which is fixed to sku.</p>
              * 
              * <strong>example:</strong>
              * <p>sku</p>
@@ -736,7 +736,10 @@ public class MerchandisePlacementDetectionLiteResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The usage map. The value is {&quot;ProcessingCount&quot;:1} for a successful call, and an empty object for a failed call.</p>
+             * <p>The usage map. The value is {&quot;ProcessingCount&quot;:1} if the call is successful, or an empty object if the call fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;ProcessingCount&quot;:1}</p>
              */
             public Builder usageMap(java.util.Map<String, Long> usageMap) {
                 this.usageMap = usageMap;

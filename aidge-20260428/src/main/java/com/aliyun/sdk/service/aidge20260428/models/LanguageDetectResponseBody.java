@@ -106,7 +106,7 @@ public class LanguageDetectResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code. A value of 200 indicates a successful call. For other response codes, refer to the error code documentation.</p>
+         * <p>The response code. A value of 200 indicates a successful call. For other response codes, refer to the error code information.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class LanguageDetectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The language identification result data, including the detected language and usage information.</p>
+         * <p>The language detection result data, which includes the detected language and usage information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class LanguageDetectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message. &quot;Success&quot; is returned for a successful call. A specific error message is returned for a failed call, such as &quot;The parameters contain sensitive information. Try other input.&quot;</p>
+         * <p>The error message. &quot;Success&quot; is returned for normal calls. For exceptions, a specific error message is returned, such as &quot;The parameter contains sensitive information. Try another input.&quot;</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -136,7 +136,7 @@ public class LanguageDetectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID, which uniquely identifies the request.</p>
+         * <p>The request ID, which is used to uniquely identify a request.</p>
          * 
          * <strong>example:</strong>
          * <p>42542C6C-F2A4-1B2B-8EFF-130C8FD06F54</p>
@@ -147,7 +147,7 @@ public class LanguageDetectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call is successful. A value of true indicates success. A value of false indicates failure.</p>
+         * <p>Indicates whether the call is successful. A value of true indicates success, and a value of false indicates failure.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -216,7 +216,7 @@ public class LanguageDetectResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The detected language code.</p>
+             * <p>The code of the detected language.</p>
              * 
              * <strong>example:</strong>
              * <p>zh</p>
@@ -227,7 +227,7 @@ public class LanguageDetectResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The usage information, including the number of input characters.</p>
+             * <p>The usage information, which includes the number of input characters.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;InputCharacterCount&quot;:4}</p>

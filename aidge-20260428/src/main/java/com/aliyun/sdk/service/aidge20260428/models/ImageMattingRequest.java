@@ -159,7 +159,7 @@ public class ImageMattingRequest extends Request {
         }
 
         /**
-         * <p>The height of the target image. Unit: pixels.</p>
+         * <p>The target height of the image, in pixels.</p>
          * 
          * <strong>example:</strong>
          * <p>800</p>
@@ -171,7 +171,7 @@ public class ImageMattingRequest extends Request {
         }
 
         /**
-         * <p>The width of the target image. Unit: pixels.</p>
+         * <p>The target width of the image, in pixels.</p>
          * 
          * <strong>example:</strong>
          * <p>800</p>

@@ -136,7 +136,7 @@ public class AiTryOnResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request. It is used to identify a unique API call.</p>
+         * <p>The request ID, which is used to identify a unique request.</p>
          * 
          * <strong>example:</strong>
          * <p>E1AD60F1-BAC7-546B-9533-E7AD02B16E3F</p>
@@ -227,7 +227,7 @@ public class AiTryOnResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resolution of the processed images.</p>
+             * <p>The image resolution.</p>
              * 
              * <strong>example:</strong>
              * <p>1K</p>
@@ -323,7 +323,7 @@ public class AiTryOnResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The height of the result image in pixels.</p>
+             * <p>The actual height of the generated image.</p>
              * 
              * <strong>example:</strong>
              * <p>1360</p>
@@ -334,7 +334,7 @@ public class AiTryOnResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the virtual try-on result image.</p>
+             * <p>The recognition result of a single image.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example.com/virtual-try-on-result.png">https://example.com/virtual-try-on-result.png</a></p>
@@ -345,7 +345,7 @@ public class AiTryOnResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The width of the result image in pixels.</p>
+             * <p>The actual width of the generated image.</p>
              * 
              * <strong>example:</strong>
              * <p>768</p>
@@ -356,7 +356,7 @@ public class AiTryOnResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The usage details.</p>
+             * <p>The usage field.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;ProcessedImageCount&quot;:1,&quot;Resolution&quot;:&quot;1K&quot;}</p>

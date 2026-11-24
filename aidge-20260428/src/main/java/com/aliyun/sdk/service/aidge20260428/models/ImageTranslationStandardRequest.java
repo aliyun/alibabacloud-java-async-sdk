@@ -159,10 +159,10 @@ public class ImageTranslationStandardRequest extends Request {
 
         /**
          * <ul>
-         * <li>Image URL: Must be publicly accessible over the Internet.</li>
+         * <li>Image URL: Must be publicly accessible.</li>
          * <li>Formats: PNG, JPEG, JPG, BMP, and WEBP.</li>
          * <li>Pixels: Both width and height must not exceed 4,000.</li>
-         * <li>File size: The original file must be 10 MB or smaller.</li>
+         * <li>File size: The original file must be 10 MB or less.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -176,10 +176,10 @@ public class ImageTranslationStandardRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to translate the text on the product subject in the image. This parameter is optional. Default value: false. This helps protect information and prevents embedded information such as product names from being translated.</p>
+         * <p>Specifies whether to translate the text on the product subject in the image. This parameter is optional. Default value: true. This helps protect the subject information from being translated, preventing the translation of embedded information such as product names.</p>
          * 
          * <strong>example:</strong>
-         * <p>false</p>
+         * <p>true</p>
          */
         public Builder includingProductArea(Boolean includingProductArea) {
             this.putQueryParameter("IncludingProductArea", includingProductArea);
@@ -214,7 +214,7 @@ public class ImageTranslationStandardRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to translate brand names in the image. This parameter is optional. Default value: false. This helps protect brand name information from being translated.</p>
+         * <p>Specifies whether to translate the brand names in the image. This parameter is optional. Default value: false. This helps protect brand name information from being translated.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -226,7 +226,7 @@ public class ImageTranslationStandardRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return layer information such as text position, font, and color. If set to true, layer information is returned and can be used to integrate with image editors for secondary editing. Default value: false.</p>
+         * <p>Specifies whether to return layer information such as the position, font, and color of the text. If this parameter is set to true, layer information is returned and can be used to integrate with an image editor for secondary editing. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

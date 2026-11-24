@@ -125,7 +125,7 @@ public class MerchandisePriceTagDetectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The return message or failure description.</p>
+         * <p>The response message or failure description.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -329,7 +329,7 @@ public class MerchandisePriceTagDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region list.</p>
+             * <p>The list of regions.</p>
              */
             public Builder regions(java.util.List<Regions> regions) {
                 this.regions = regions;
@@ -583,7 +583,7 @@ public class MerchandisePriceTagDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The selling price, retained as a string to avoid being parsed as a reserved word or reserved character.</p>
+             * <p>The selling price, retained as a character string.</p>
              * 
              * <strong>example:</strong>
              * <p>5.50</p>
@@ -594,7 +594,7 @@ public class MerchandisePriceTagDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The associated product code.</p>
+             * <p>The code of the associated product.</p>
              * 
              * <strong>example:</strong>
              * <p>001</p>
@@ -605,7 +605,7 @@ public class MerchandisePriceTagDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The associated product name.</p>
+             * <p>The name of the associated product.</p>
              * 
              * <strong>example:</strong>
              * <p>sku_test</p>
@@ -688,7 +688,7 @@ public class MerchandisePriceTagDetectionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The localization information.</p>
+             * <p>The grounding information.</p>
              */
             public Builder grounding(Grounding grounding) {
                 this.grounding = grounding;
@@ -696,7 +696,7 @@ public class MerchandisePriceTagDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The price tag list. This can be an empty array if no price tags are recognized under normal conditions.</p>
+             * <p>The list of price tags. This can be an empty array if no price tags are recognized under normal conditions.</p>
              */
             public Builder priceTags(java.util.List<PriceTags> priceTags) {
                 this.priceTags = priceTags;
@@ -704,7 +704,7 @@ public class MerchandisePriceTagDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value is fixed to priceTag.</p>
+             * <p>The fixed value priceTag.</p>
              * 
              * <strong>example:</strong>
              * <p>priceTag</p>

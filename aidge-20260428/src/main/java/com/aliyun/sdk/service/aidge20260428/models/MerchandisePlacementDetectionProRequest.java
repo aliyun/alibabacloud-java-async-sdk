@@ -88,7 +88,7 @@ public class MerchandisePlacementDetectionProRequest extends Request {
         } 
 
         /**
-         * <p>The HTTPS URL of the display image to detect.</p>
+         * <p>The HTTPS URL of the display image to be detected.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,10 +101,10 @@ public class MerchandisePlacementDetectionProRequest extends Request {
         }
 
         /**
-         * <p>The detection rule. When non-empty, this value takes priority as the model prompt.</p>
+         * <p>The detection rule. If this parameter is not empty, it takes precedence as the model prompt.</p>
          * 
          * <strong>example:</strong>
-         * <p>Identify all Genki Forest beverages on the shelf and mark their positions</p>
+         * <p>Recognize all Genki Forest beverages on the shelf and draw bounding boxes around their positions</p>
          */
         public Builder rule(String rule) {
             this.putQueryParameter("Rule", rule);
@@ -113,10 +113,10 @@ public class MerchandisePlacementDetectionProRequest extends Request {
         }
 
         /**
-         * <p>The product type. This parameter must be set to Genki Forest when Rule is empty.</p>
+         * <p>The product type. If the Rule parameter is empty, you must set this parameter to Genki Forest.</p>
          * 
          * <strong>example:</strong>
-         * <p>元气森林</p>
+         * <p>Genki Forest</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

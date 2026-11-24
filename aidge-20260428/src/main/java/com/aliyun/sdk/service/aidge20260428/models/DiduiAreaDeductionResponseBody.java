@@ -517,7 +517,7 @@ public class DiduiAreaDeductionResponseBody extends TeaModel {
              * <p>The downstream HTTP status code.</p>
              * 
              * <strong>example:</strong>
-             * <p>OK</p>
+             * <p>200</p>
              */
             public Builder httpStatus(Integer httpStatus) {
                 this.httpStatus = httpStatus;

@@ -117,7 +117,7 @@ public class QueryAsyncTaskResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result of the asynchronous task.</p>
+         * <p>The asynchronous node result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -147,7 +147,11 @@ public class QueryAsyncTaskResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call is successful. Valid values: true: The call is successful. false: The call fails.</p>
+         * <p>Indicates whether the call is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call is successful.</li>
+         * <li>false: The call fails.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -266,7 +270,7 @@ public class QueryAsyncTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task result.</p>
+             * <p>The node result.</p>
              * 
              * <strong>example:</strong>
              * <p>{\&quot;url\&quot;:\&quot;<a href="https://aidge-bailian-oss.oss-cn-beijing.aliyuncs.com/gaolinfeng/pdf_trans/translated_en.pdf?security-token=CAISzwJ1q6Ft5B2yfSjIr5ntKv7urOdn9YTeaVbb1lQRfcxi2Kz%2BgDz2IHhMeHFgAeAbs%2Fw%2Fm29W6v4SlqZdVplOWU3Da%2BB364xK7Q754wRDcULuv9I%2Bk5SANTW5KXyShb3%2FAYjQSNfaZY3eCTTtnTNyxr3XbCirW0ffX7SClZ9gaKZ8PGD6F00kYu1bPQx%2FssQXGGLMPPK2SH7Qj3HXEVBjt3gX6wo9y9zmk53FsUWA1QKmlr9F%2BdWhGPX%2BMZkwZqUYesyuwel7epDG1CNt8BVQ%2FM909vccoWuf7onNXgQJs0rZbbaMoscSJQ51aaV%2FFaUBt%2FXmi%2Fxzt6nJkID626jAvGbZzsW0rumBtyikcIvBXr5RHT3rIrVAU%2BuEf19557bo3dbfkNdWOrtHZDY5Qn9nURKxAbSEg2uBaWTIIJPmvc97r9wbhjuH87JeC0jQHt3xuRqAATp5EbLOeo%2BZktMLbi%2FUsZgcvdIEIv3tPBCYfyJnh%2Bj6U8IyaLKQYHQBtjsfyMngFfS09jFdjBcUebzvYJs21gyU5u%2FZ9SeReh%2FacuIMVoggWy3o9Y%2BnBA2QPCcKqVM7XlwriM%2FJOAyhvj%2Bjtj7BUoyD%2BrSgF5brq5ykjN7t2U7oIAA%3D&OSSAccessKeyId=STS.NZXaDZA8FBF5kpj2TDqCN7iUb&Expires=1780315869&Signature=CdbMkhcED4Ovhw438ZVe5nzU1mk%3D%5C%5C%22%7D">https://aidge-bailian-oss.oss-cn-beijing.aliyuncs.com/gaolinfeng/pdf_trans/translated_en.pdf?security-token=CAISzwJ1q6Ft5B2yfSjIr5ntKv7urOdn9YTeaVbb1lQRfcxi2Kz%2BgDz2IHhMeHFgAeAbs%2Fw%2Fm29W6v4SlqZdVplOWU3Da%2BB364xK7Q754wRDcULuv9I%2Bk5SANTW5KXyShb3%2FAYjQSNfaZY3eCTTtnTNyxr3XbCirW0ffX7SClZ9gaKZ8PGD6F00kYu1bPQx%2FssQXGGLMPPK2SH7Qj3HXEVBjt3gX6wo9y9zmk53FsUWA1QKmlr9F%2BdWhGPX%2BMZkwZqUYesyuwel7epDG1CNt8BVQ%2FM909vccoWuf7onNXgQJs0rZbbaMoscSJQ51aaV%2FFaUBt%2FXmi%2Fxzt6nJkID626jAvGbZzsW0rumBtyikcIvBXr5RHT3rIrVAU%2BuEf19557bo3dbfkNdWOrtHZDY5Qn9nURKxAbSEg2uBaWTIIJPmvc97r9wbhjuH87JeC0jQHt3xuRqAATp5EbLOeo%2BZktMLbi%2FUsZgcvdIEIv3tPBCYfyJnh%2Bj6U8IyaLKQYHQBtjsfyMngFfS09jFdjBcUebzvYJs21gyU5u%2FZ9SeReh%2FacuIMVoggWy3o9Y%2BnBA2QPCcKqVM7XlwriM%2FJOAyhvj%2Bjtj7BUoyD%2BrSgF5brq5ykjN7t2U7oIAA%3D&amp;OSSAccessKeyId=STS.NZXaDZA8FBF5kpj2TDqCN7iUb&amp;Expires=1780315869&amp;Signature=CdbMkhcED4Ovhw438ZVe5nzU1mk%3D\\&quot;}</a></p>
@@ -277,7 +281,7 @@ public class QueryAsyncTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task status.</p>
+             * <p>The status of the task.</p>
              * 
              * <strong>example:</strong>
              * <p>COMPLETED</p>
@@ -300,6 +304,9 @@ public class QueryAsyncTaskResultResponseBody extends TeaModel {
 
             /**
              * <p>The usage information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;ProcessedDocumentPageCount&quot;:&quot;1&quot;}</p>
              */
             public Builder usageMap(java.util.Map<String, ?> usageMap) {
                 this.usageMap = usageMap;

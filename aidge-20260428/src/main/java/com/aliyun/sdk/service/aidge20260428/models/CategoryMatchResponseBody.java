@@ -106,7 +106,7 @@ public class CategoryMatchResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code. &quot;success&quot; is returned for successful calls.</p>
+         * <p>The status code. Returns &quot;success&quot; for normal calls.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -125,7 +125,7 @@ public class CategoryMatchResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message. &quot;Success&quot; is returned for successful calls.</p>
+         * <p>The error message. Returns &quot;Success&quot; for normal calls.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -136,7 +136,7 @@ public class CategoryMatchResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID, which is used to identify a unique request call.</p>
+         * <p>The request ID, which identifies a unique request.</p>
          * 
          * <strong>example:</strong>
          * <p>2157065A-D6C8-1F3E-A4D0-B1234567890</p>
@@ -306,7 +306,7 @@ public class CategoryMatchResponseBody extends TeaModel {
              * <p>The full path of the category, separated by forward slashes (/).</p>
              * 
              * <strong>example:</strong>
-             * <p>Pet Supplies/Cat Supplies/Cat Charms, Collars &amp; Leashes/Location and Activity Trackers</p>
+             * <p>Pet Supplies/Cat Supplies/Cat Collars, Harnesses and Leashes/Location and Activity Trackers</p>
              */
             public Builder categoryPath(String categoryPath) {
                 this.categoryPath = categoryPath;
@@ -325,7 +325,7 @@ public class CategoryMatchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the match is successful.</p>
+             * <p>Indicates whether the matching is successful.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -336,7 +336,7 @@ public class CategoryMatchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The matching rationale.</p>
+             * <p>The matching reason.</p>
              * 
              * <strong>example:</strong>
              * <p>The core of the product is a cat collar with AirTag tracking functionality, which belongs to the \&quot;Location and Activity Trackers\&quot; category. The leaf node semantics precisely match its tracking function and cat-specific attributes</p>
@@ -348,6 +348,9 @@ public class CategoryMatchResponseBody extends TeaModel {
 
             /**
              * <p>The usage information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;ProcessingCount&quot;:1}</p>
              */
             public Builder usageMap(java.util.Map<String, Integer> usageMap) {
                 this.usageMap = usageMap;

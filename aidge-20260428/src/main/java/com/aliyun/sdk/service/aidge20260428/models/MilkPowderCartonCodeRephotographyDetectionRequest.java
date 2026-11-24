@@ -60,7 +60,7 @@ public class MilkPowderCartonCodeRephotographyDetectionRequest extends Request {
         } 
 
         /**
-         * <p>The HTTP(S) URL of the image to be analyzed.</p>
+         * <p>The HTTP or HTTPS URL of the image to be analyzed.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

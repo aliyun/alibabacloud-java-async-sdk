@@ -152,7 +152,7 @@ public class CategoryMatchRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>Silk, new spring arrival</p>
+         * <p>Silk, spring new arrival</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -161,10 +161,10 @@ public class CategoryMatchRequest extends Request {
         }
 
         /**
-         * <p>The product attributes and feature descriptions, such as the material of the product. Enter the product attribute name and attribute value.</p>
+         * <p>The product attributes and feature descriptions, such as the product material. Specify the attribute names and values.</p>
          * 
          * <strong>example:</strong>
-         * <p>Material:Polyester,Target user:Universal,Brand:AMASON PET</p>
+         * <p>Material:Polyester,Target audience:Universal,Brand:AMASON PET</p>
          */
         public Builder itemSpec(String itemSpec) {
             this.putQueryParameter("ItemSpec", itemSpec);
@@ -228,7 +228,7 @@ public class CategoryMatchRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>Women\&quot;s new spring clothing</p>
+         * <p>Women\&quot;s spring new arrival clothing</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);

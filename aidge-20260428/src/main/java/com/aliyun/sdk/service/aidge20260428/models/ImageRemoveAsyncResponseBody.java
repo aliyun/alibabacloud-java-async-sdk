@@ -106,7 +106,7 @@ public class ImageRemoveAsyncResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code, such as success.</p>
+         * <p>The status code, such as &quot;success&quot;.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -117,7 +117,7 @@ public class ImageRemoveAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned result struct information.</p>
+         * <p>The returned result struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class ImageRemoveAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message, such as \&quot;The parameter contains sensitive information. Please try another input.\&quot;</p>
+         * <p>The error message, such as &quot;The parameters contain sensitive information. Try another input.&quot;</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -147,7 +147,7 @@ public class ImageRemoveAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call is successful. Valid values: true: The call is successful. false: The call failed.</p>
+         * <p>Indicates whether the call is successful. A value of true indicates success, and a value of false indicates failure.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>

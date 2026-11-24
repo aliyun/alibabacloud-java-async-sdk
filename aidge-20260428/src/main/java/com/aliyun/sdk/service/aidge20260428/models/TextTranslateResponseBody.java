@@ -106,7 +106,7 @@ public class TextTranslateResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code. The value &quot;success&quot; is returned for successful calls.</p>
+         * <p>The response code. If the call is successful, &quot;success&quot; is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -117,7 +117,7 @@ public class TextTranslateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The translation result data, including the translation list and usage information.</p>
+         * <p>The translation result data, which includes the translation list and usage information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class TextTranslateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message. The value &quot;Success&quot; is returned for successful calls. For failed calls, a specific error message is returned, such as &quot;The parameters contain sensitive information. Try other input.&quot;</p>
+         * <p>The error message. If the call is successful, &quot;Success&quot; is returned. If an exception occurs, a specific error message is returned, such as &quot;The parameter contains sensitive information. Please try another input.&quot;</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -136,7 +136,7 @@ public class TextTranslateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID, which uniquely identifies a single API call.</p>
+         * <p>The request ID, which is used to identify a unique request call.</p>
          * 
          * <strong>example:</strong>
          * <p>922E43BB-EE0E-1A29-B143-BB91BB3EA6AB</p>
@@ -147,7 +147,7 @@ public class TextTranslateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call is successful. A value of true indicates success. A value of false indicates failure.</p>
+         * <p>Indicates whether the call is successful. A value of true indicates success, and a value of false indicates failure.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -254,7 +254,7 @@ public class TextTranslateResponseBody extends TeaModel {
              * <p>The translated text.</p>
              * 
              * <strong>example:</strong>
-             * <p>Hello World</p>
+             * <p>Hello world</p>
              */
             public Builder translatedText(String translatedText) {
                 this.translatedText = translatedText;
@@ -321,7 +321,7 @@ public class TextTranslateResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The translation result list. Each element corresponds to a translation result for an entry in the input text list.</p>
+             * <p>The list of translation results. Each element corresponds to a translation result for an item in the input text list.</p>
              */
             public Builder translations(java.util.List<Translations> translations) {
                 this.translations = translations;
@@ -329,7 +329,7 @@ public class TextTranslateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The usage information, including the number of input characters.</p>
+             * <p>The usage information, which includes the number of input characters.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;InputCharacterCount&quot;:5}</p>

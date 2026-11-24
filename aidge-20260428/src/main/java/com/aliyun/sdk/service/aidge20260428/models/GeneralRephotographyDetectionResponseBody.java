@@ -125,7 +125,7 @@ public class GeneralRephotographyDetectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The return message or failure description.</p>
+         * <p>The response message or failure description.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -147,7 +147,7 @@ public class GeneralRephotographyDetectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call is successful.</p>
+         * <p>Indicates whether the call was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -169,194 +169,7 @@ public class GeneralRephotographyDetectionResponseBody extends TeaModel {
      *
      * <p>GeneralRephotographyDetectionResponseBody</p>
      */
-    public static class Regions extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Bbox2d")
-        private java.util.List<Float> bbox2d;
-
-        @com.aliyun.core.annotation.NameInMap("Label")
-        private String label;
-
-        @com.aliyun.core.annotation.NameInMap("Text")
-        private String text;
-
-        private Regions(Builder builder) {
-            this.bbox2d = builder.bbox2d;
-            this.label = builder.label;
-            this.text = builder.text;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Regions create() {
-            return builder().build();
-        }
-
-        /**
-         * @return bbox2d
-         */
-        public java.util.List<Float> getBbox2d() {
-            return this.bbox2d;
-        }
-
-        /**
-         * @return label
-         */
-        public String getLabel() {
-            return this.label;
-        }
-
-        /**
-         * @return text
-         */
-        public String getText() {
-            return this.text;
-        }
-
-        public static final class Builder {
-            private java.util.List<Float> bbox2d; 
-            private String label; 
-            private String text; 
-
-            private Builder() {
-            } 
-
-            private Builder(Regions model) {
-                this.bbox2d = model.bbox2d;
-                this.label = model.label;
-                this.text = model.text;
-            } 
-
-            /**
-             * <p>The bounding box coordinates.</p>
-             */
-            public Builder bbox2d(java.util.List<Float> bbox2d) {
-                this.bbox2d = bbox2d;
-                return this;
-            }
-
-            /**
-             * <p>The target category. For enumerations, see the following table.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>product</p>
-             */
-            public Builder label(String label) {
-                this.label = label;
-                return this;
-            }
-
-            /**
-             * <p>The confirmed short name or text of up to 24 characters. This is an empty string if the text is unclear.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Product</p>
-             */
-            public Builder text(String text) {
-                this.text = text;
-                return this;
-            }
-
-            public Regions build() {
-                return new Regions(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link GeneralRephotographyDetectionResponseBody} extends {@link TeaModel}
-     *
-     * <p>GeneralRephotographyDetectionResponseBody</p>
-     */
-    public static class Grounding extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Coverage")
-        private String coverage;
-
-        @com.aliyun.core.annotation.NameInMap("Regions")
-        private java.util.List<Regions> regions;
-
-        private Grounding(Builder builder) {
-            this.coverage = builder.coverage;
-            this.regions = builder.regions;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Grounding create() {
-            return builder().build();
-        }
-
-        /**
-         * @return coverage
-         */
-        public String getCoverage() {
-            return this.coverage;
-        }
-
-        /**
-         * @return regions
-         */
-        public java.util.List<Regions> getRegions() {
-            return this.regions;
-        }
-
-        public static final class Builder {
-            private String coverage; 
-            private java.util.List<Regions> regions; 
-
-            private Builder() {
-            } 
-
-            private Builder(Grounding model) {
-                this.coverage = model.coverage;
-                this.regions = model.regions;
-            } 
-
-            /**
-             * <p>The coverage. Valid values:</p>
-             * <ul>
-             * <li><code>complete</code>: The relevant visible targets are complete.</li>
-             * <li><code>partial</code>: Only some targets are valid or recognizable.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>complete</p>
-             */
-            public Builder coverage(String coverage) {
-                this.coverage = coverage;
-                return this;
-            }
-
-            /**
-             * <p>The target array. It contains up to 12 items and can be empty if no relevant targets are found.</p>
-             */
-            public Builder regions(java.util.List<Regions> regions) {
-                this.regions = regions;
-                return this;
-            }
-
-            public Grounding build() {
-                return new Grounding(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link GeneralRephotographyDetectionResponseBody} extends {@link TeaModel}
-     *
-     * <p>GeneralRephotographyDetectionResponseBody</p>
-     */
     public static class Result extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Grounding")
-        private Grounding grounding;
-
         @com.aliyun.core.annotation.NameInMap("IsFake")
         private Boolean isFake;
 
@@ -364,7 +177,6 @@ public class GeneralRephotographyDetectionResponseBody extends TeaModel {
         private String type;
 
         private Result(Builder builder) {
-            this.grounding = builder.grounding;
             this.isFake = builder.isFake;
             this.type = builder.type;
         }
@@ -375,13 +187,6 @@ public class GeneralRephotographyDetectionResponseBody extends TeaModel {
 
         public static Result create() {
             return builder().build();
-        }
-
-        /**
-         * @return grounding
-         */
-        public Grounding getGrounding() {
-            return this.grounding;
         }
 
         /**
@@ -399,7 +204,6 @@ public class GeneralRephotographyDetectionResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private Grounding grounding; 
             private Boolean isFake; 
             private String type; 
 
@@ -407,18 +211,9 @@ public class GeneralRephotographyDetectionResponseBody extends TeaModel {
             } 
 
             private Builder(Result model) {
-                this.grounding = model.grounding;
                 this.isFake = model.isFake;
                 this.type = model.type;
             } 
-
-            /**
-             * <p>The supplementary element localization result.</p>
-             */
-            public Builder grounding(Grounding grounding) {
-                this.grounding = grounding;
-                return this;
-            }
 
             /**
              * <p>Indicates whether the image is recaptured.</p>
@@ -432,7 +227,7 @@ public class GeneralRephotographyDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The detection type. The value is fixed to general.</p>
+             * <p>Fixed to general.</p>
              * 
              * <strong>example:</strong>
              * <p>general</p>

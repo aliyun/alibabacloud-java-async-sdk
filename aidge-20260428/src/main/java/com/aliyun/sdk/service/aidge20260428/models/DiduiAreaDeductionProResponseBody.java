@@ -203,7 +203,7 @@ public class DiduiAreaDeductionProResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the asynchronous task used to query the result by calling QueryAsyncTaskResult.</p>
+             * <p>The ID of the asynchronous task used for querying with QueryAsyncTaskResult.</p>
              * 
              * <strong>example:</strong>
              * <p>task_778xxxxxxxxxxx</p>

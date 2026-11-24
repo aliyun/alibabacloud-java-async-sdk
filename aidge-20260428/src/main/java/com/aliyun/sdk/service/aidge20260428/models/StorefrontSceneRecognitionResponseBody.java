@@ -125,7 +125,7 @@ public class StorefrontSceneRecognitionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message or failure description.</p>
+         * <p>The response message or failure description.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -219,7 +219,7 @@ public class StorefrontSceneRecognitionResponseBody extends TeaModel {
              * <p>The non-empty category name.</p>
              * 
              * <strong>example:</strong>
-             * <p>oppo vivo smartphone specialty store</p>
+             * <p>OPPO VIVO Smartphone Store</p>
              */
             public Builder clazz(String clazz) {
                 this.clazz = clazz;
@@ -227,7 +227,7 @@ public class StorefrontSceneRecognitionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A finite numerical value. The source document does not specify a value range.</p>
+             * <p>A finite numeric value. The value range is not specified.</p>
              * 
              * <strong>example:</strong>
              * <p>0.99</p>
@@ -311,6 +311,9 @@ public class StorefrontSceneRecognitionResponseBody extends TeaModel {
 
             /**
              * <p>The bounding box coordinates.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[0,0,456,398]</p>
              */
             public Builder bbox2d(java.util.List<Float> bbox2d) {
                 this.bbox2d = bbox2d;
@@ -410,7 +413,7 @@ public class StorefrontSceneRecognitionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region list.</p>
+             * <p>The list of regions.</p>
              */
             public Builder regions(java.util.List<Regions> regions) {
                 this.regions = regions;
@@ -506,7 +509,7 @@ public class StorefrontSceneRecognitionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The non-empty scene classification array.</p>
+             * <p>The non-empty array of scene classifications.</p>
              */
             public Builder scenes(java.util.List<String> scenes) {
                 this.scenes = scenes;
@@ -573,7 +576,7 @@ public class StorefrontSceneRecognitionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The scene recognition result details.</p>
+             * <p>The details of the scene recognition result.</p>
              */
             public Builder result(Result result) {
                 this.result = result;

@@ -117,7 +117,7 @@ public class SizeChartExtractAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The submission result of the asynchronous task for size chart extraction.</p>
+         * <p>The submission result of the size chart extraction asynchronous task.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -136,7 +136,7 @@ public class SizeChartExtractAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID, which is used to identify a unique request.</p>
+         * <p>The request ID. It is used to identify a unique request.</p>
          * 
          * <strong>example:</strong>
          * <p>E1AD60F1-BAC7-546B-9533-E7AD02B16E3F</p>

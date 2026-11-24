@@ -128,7 +128,7 @@ public class MaterialInspectionRequest extends Request {
         }
 
         /**
-         * <p>The URL of the reference image. This parameter is optional. If a non-empty value is specified, multi-image differential comparison is performed.</p>
+         * <p>The URL of the reference image. This parameter is optional. If it is not empty, multi-image difference comparison is used.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/reference.jpg">https://example.com/reference.jpg</a></p>
@@ -153,7 +153,7 @@ public class MaterialInspectionRequest extends Request {
         }
 
         /**
-         * <p>The business request identity. This parameter is optional. The value is returned as-is in the response for Tracing Analysis purposes.</p>
+         * <p>The business request identity. This parameter is optional and is returned as-is to facilitate Tracing Analysis.</p>
          * 
          * <strong>example:</strong>
          * <p>req-2026-06-04-001</p>
@@ -165,10 +165,10 @@ public class MaterialInspectionRequest extends Request {
         }
 
         /**
-         * <p>The rule prompt in natural language.</p>
+         * <p>The rule prompt.</p>
          * 
          * <strong>example:</strong>
-         * <p>The door-shaped display stand must be placed in the entrance area; the functional card stand must be placed on the counter surface</p>
+         * <p>Door display stands must be placed in the entrance area; functional table cards must be placed on the middle counter surface</p>
          */
         public Builder rules(String rules) {
             this.putQueryParameter("Rules", rules);

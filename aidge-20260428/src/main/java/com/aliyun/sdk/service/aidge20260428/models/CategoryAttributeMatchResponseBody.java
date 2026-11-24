@@ -106,7 +106,7 @@ public class CategoryAttributeMatchResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code. This parameter is not returned when the call is successful.</p>
+         * <p>The error code. This parameter is not returned for successful calls.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -125,7 +125,7 @@ public class CategoryAttributeMatchResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message. This parameter is not returned when the call is successful.</p>
+         * <p>The error message. This parameter is not returned for successful calls.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -384,7 +384,7 @@ public class CategoryAttributeMatchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of selected attribute value texts, such as [&quot;iOS&quot;,&quot;Android&quot;].</p>
+             * <p>The list of selected attribute value texts, such as [&quot;iOS&quot;,&quot;Android&quot;\].</p>
              */
             public Builder selectedValues(java.util.List<String> selectedValues) {
                 this.selectedValues = selectedValues;
@@ -392,7 +392,10 @@ public class CategoryAttributeMatchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of selected attribute value IDs, such as [30127,30128].</p>
+             * <p>The list of selected attribute value IDs, such as [30127,30128\].</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[30127,30128]</p>
              */
             public Builder selectedVids(java.util.List<Integer> selectedVids) {
                 this.selectedVids = selectedVids;
@@ -605,7 +608,7 @@ public class CategoryAttributeMatchResponseBody extends TeaModel {
              * <p>The category ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>FC-F3A8A2802D10606D</p>
+             * <p>1516</p>
              */
             public Builder categoryId(Integer categoryId) {
                 this.categoryId = categoryId;
@@ -627,7 +630,7 @@ public class CategoryAttributeMatchResponseBody extends TeaModel {
              * <p>The full path of the category, separated by forward slashes (/).</p>
              * 
              * <strong>example:</strong>
-             * <p>Pet Supplies/Cat Supplies/Cat Pendants, Collars, Leashes/Cat Collar</p>
+             * <p>Pet Supplies/Cat Supplies/Cat Pendants, Collars, and Leashes/Cat Collar</p>
              */
             public Builder categoryPath(String categoryPath) {
                 this.categoryPath = categoryPath;

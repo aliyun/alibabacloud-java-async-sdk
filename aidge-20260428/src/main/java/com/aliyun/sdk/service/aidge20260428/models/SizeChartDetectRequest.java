@@ -74,7 +74,7 @@ public class SizeChartDetectRequest extends Request {
         } 
 
         /**
-         * <p>The URL of the image to detect.</p>
+         * <p>The URL of the image to be detected.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

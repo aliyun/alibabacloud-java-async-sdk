@@ -117,7 +117,7 @@ public class ImageTranslationStandardAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The submission result of the asynchronous task for Image Translation Standard Edition.</p>
+         * <p>The submission result of the asynchronous task for the standard edition of image translation.</p>
          */
         public Builder data(Data data) {
             this.data = data;

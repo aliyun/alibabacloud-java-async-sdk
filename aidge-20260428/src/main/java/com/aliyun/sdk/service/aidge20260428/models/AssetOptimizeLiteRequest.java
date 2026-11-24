@@ -212,7 +212,7 @@ public class AssetOptimizeLiteRequest extends Request {
         }
 
         /**
-         * <p>The product URL.</p>
+         * <p>The product link URL.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

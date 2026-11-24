@@ -117,7 +117,7 @@ public class DeleteDisplayKnowledgeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result of deleting content from the display knowledge base.</p>
+         * <p>The deletion result of the display knowledge base content.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -147,7 +147,7 @@ public class DeleteDisplayKnowledgeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful.</p>
+         * <p>Indicates whether the call is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -325,7 +325,7 @@ public class DeleteDisplayKnowledgeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The SKU ID. This field is empty for deletion results.</p>
+             * <p>The SKU ID. This parameter is empty in deletion results.</p>
              * 
              * <strong>example:</strong>
              * <p>sku-001</p>
@@ -336,10 +336,10 @@ public class DeleteDisplayKnowledgeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The record status. This field is empty for deletion results.</p>
+             * <p>The record status. This parameter is empty in deletion results.</p>
              * 
              * <strong>example:</strong>
-             * <p>Empty for deletion API operations</p>
+             * <p>Empty for deletion operations</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -347,7 +347,7 @@ public class DeleteDisplayKnowledgeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the deletion was successful.</p>
+             * <p>Indicates whether the operation is successful.</p>
              * 
              * <strong>example:</strong>
              * <p>True</p>
@@ -578,7 +578,7 @@ public class DeleteDisplayKnowledgeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the knowledge base.</p>
+             * <p>The knowledge base status.</p>
              * 
              * <strong>example:</strong>
              * <p>UPDATING</p>
@@ -619,7 +619,7 @@ public class DeleteDisplayKnowledgeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the business processing was successful.</p>
+             * <p>Indicates whether the business processing is successful.</p>
              * 
              * <strong>example:</strong>
              * <p>True</p>
@@ -630,7 +630,7 @@ public class DeleteDisplayKnowledgeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The asynchronous task ID. This field is empty for synchronous API operations.</p>
+             * <p>The asynchronous task ID. This parameter is empty for synchronous API operations.</p>
              * 
              * <strong>example:</strong>
              * <p>task-xxxxx</p>
@@ -641,7 +641,10 @@ public class DeleteDisplayKnowledgeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The usage information. This field is empty for free API operations.</p>
+             * <p>The usage information. This parameter is empty for free API operations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;ProcessedImageCount&quot;:1}</p>
              */
             public Builder usageMap(java.util.Map<String, Long> usageMap) {
                 this.usageMap = usageMap;

@@ -114,7 +114,7 @@ public class DiduiAreaDeductionRequest extends Request {
         }
 
         /**
-         * <p>The ID of the customer\&quot;s dedicated SKU vector database, which determines the database used for retrieval. The database must be created through the database creation process in advance.</p>
+         * <p>The ID of the customer-specific SKU vector database, which determines the database used for retrieval. The database must be created through the database creation process in advance.</p>
          * 
          * <strong>example:</strong>
          * <p>rag_xxx</p>
@@ -126,7 +126,7 @@ public class DiduiAreaDeductionRequest extends Request {
         }
 
         /**
-         * <p>The optional business request ID, used for end-to-end Tracing Analysis.</p>
+         * <p>The optional business request ID, which is used for Tracing Analysis.</p>
          * 
          * <strong>example:</strong>
          * <p>didui-request-001</p>
@@ -349,7 +349,7 @@ public class DiduiAreaDeductionRequest extends Request {
             } 
 
             /**
-             * <p>The bounding boxes of the current SKU, with coordinate values ranging from 0 to 1000.</p>
+             * <p>The instance boxes of the current SKU, with coordinate values ranging from 0 to 1000.</p>
              * <p>This parameter is required.</p>
              */
             public Builder boxes(java.util.List<Boxes> boxes) {
