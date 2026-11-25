@@ -358,7 +358,7 @@ public class DescribeEventsResponseBody extends TeaModel {
              * <p>The additional information.</p>
              * 
              * <strong>example:</strong>
-             * <p>{\&quot;Domain\&quot;: \&quot;rds-cn-hangzhou.aliyuncs.com\&quot;}</p>
+             * <p>{&quot;Domain&quot;: &quot;rds-cn-hangzhou.aliyuncs.com&quot;}</p>
              */
             public Builder eventPayload(String eventPayload) {
                 this.eventPayload = eventPayload;

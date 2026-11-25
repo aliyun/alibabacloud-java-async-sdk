@@ -135,7 +135,7 @@ public class ModifyEngineMigrationRequest extends Request {
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;pc-bp1m9tt23o5kh834y.rwlb.rds.aliyuncs.com\&quot;:\&quot;rm-bp1ycl5o6ojs957o0.mysql.rds.aliyuncs.com\&quot;}</p>
+         * <p>{&quot;pc-bp1m9tt23o5kh834y.rwlb.rds.aliyuncs.com&quot;:&quot;rm-bp1ycl5o6ojs957o0.mysql.rds.aliyuncs.com&quot;}</p>
          */
         public Builder connectionStrings(String connectionStrings) {
             this.putQueryParameter("ConnectionStrings", connectionStrings);

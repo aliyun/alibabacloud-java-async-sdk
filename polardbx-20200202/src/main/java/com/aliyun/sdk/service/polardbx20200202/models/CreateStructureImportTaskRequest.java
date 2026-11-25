@@ -106,7 +106,7 @@ public class CreateStructureImportTaskRequest extends Request {
          * <p>The configuration information.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{\&quot;schemaName\&quot;:\&quot;transfer_test\&quot;,\&quot;tableList\&quot;:[]}]</p>
+         * <p>[{&quot;schemaName&quot;:&quot;transfer_test&quot;,&quot;tableList&quot;:[]}]</p>
          */
         public Builder config(String config) {
             this.putBodyParameter("Config", config);

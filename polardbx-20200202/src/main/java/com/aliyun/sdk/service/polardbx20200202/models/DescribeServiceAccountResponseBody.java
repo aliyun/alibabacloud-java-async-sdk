@@ -122,7 +122,7 @@ public class DescribeServiceAccountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned. If the request is successful, \&quot;success\&quot; is returned. If the request fails, the corresponding error code is returned.</p>
+         * <p>The message returned. If the request is successful, &quot;success&quot; is returned. If the request fails, the corresponding error code is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>

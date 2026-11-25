@@ -261,7 +261,7 @@ public class DescribeCustomEndpointListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>[\&quot;pxc-i-vb1sqa7llp\&quot;,\&quot;pxc-i-bemprx50ad\&quot;]</p>
+             * <p>[&quot;pxc-i-vb1sqa7llp&quot;,&quot;pxc-i-bemprx50ad&quot;]</p>
              */
             public Builder cnNames(java.util.List<String> cnNames) {
                 this.cnNames = cnNames;

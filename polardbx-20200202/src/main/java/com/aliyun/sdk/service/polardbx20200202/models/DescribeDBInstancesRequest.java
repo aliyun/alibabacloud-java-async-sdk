@@ -308,7 +308,7 @@ public class DescribeDBInstancesRequest extends Request {
          * <p>The list of tags.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{\&quot;TagKey\&quot;:\&quot;test\&quot;,\&quot;TagValue\&quot;:\&quot;test-value\&quot;}]</p>
+         * <p>[{&quot;TagKey&quot;:&quot;test&quot;,&quot;TagValue&quot;:&quot;test-value&quot;}]</p>
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);

@@ -241,7 +241,7 @@ public class DescribeSupabaseInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the authentication principal.</p>
+             * <p>The display name of the authentication principal.</p>
              * 
              * <strong>example:</strong>
              * <p>xxx</p>
@@ -274,7 +274,7 @@ public class DescribeSupabaseInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The diagnostic message.</p>
+             * <p>The encoded diagnostic message.</p>
              * 
              * <strong>example:</strong>
              * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
@@ -285,7 +285,7 @@ public class DescribeSupabaseInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The no permission type.</p>
+             * <p>The type of missing permissions.</p>
              * 
              * <strong>example:</strong>
              * <p>ImplicitDeny</p>
@@ -521,7 +521,7 @@ public class DescribeSupabaseInstanceAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The specification code.</p>
+             * <p>The class code.</p>
              * 
              * <strong>example:</strong>
              * <p>polarx.supabase.x2.small</p>
@@ -593,6 +593,9 @@ public class DescribeSupabaseInstanceAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Expired")
         private Boolean expired;
 
+        @com.aliyun.core.annotation.NameInMap("LatestMinorVersion")
+        private String latestMinorVersion;
+
         @com.aliyun.core.annotation.NameInMap("LockMode")
         private String lockMode;
 
@@ -632,6 +635,12 @@ public class DescribeSupabaseInstanceAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
+        @com.aliyun.core.annotation.NameInMap("WebAppsHttpUrl")
+        private String webAppsHttpUrl;
+
+        @com.aliyun.core.annotation.NameInMap("WebAppsUrl")
+        private String webAppsUrl;
+
         @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
@@ -641,6 +650,7 @@ public class DescribeSupabaseInstanceAttributeResponseBody extends TeaModel {
             this.DBInstanceName = builder.DBInstanceName;
             this.engineVersion = builder.engineVersion;
             this.expired = builder.expired;
+            this.latestMinorVersion = builder.latestMinorVersion;
             this.lockMode = builder.lockMode;
             this.minorVersion = builder.minorVersion;
             this.nodeClass = builder.nodeClass;
@@ -654,6 +664,8 @@ public class DescribeSupabaseInstanceAttributeResponseBody extends TeaModel {
             this.topologyType = builder.topologyType;
             this.vSwitchId = builder.vSwitchId;
             this.vpcId = builder.vpcId;
+            this.webAppsHttpUrl = builder.webAppsHttpUrl;
+            this.webAppsUrl = builder.webAppsUrl;
             this.zoneId = builder.zoneId;
         }
 
@@ -698,6 +710,13 @@ public class DescribeSupabaseInstanceAttributeResponseBody extends TeaModel {
          */
         public Boolean getExpired() {
             return this.expired;
+        }
+
+        /**
+         * @return latestMinorVersion
+         */
+        public String getLatestMinorVersion() {
+            return this.latestMinorVersion;
         }
 
         /**
@@ -792,6 +811,20 @@ public class DescribeSupabaseInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return webAppsHttpUrl
+         */
+        public String getWebAppsHttpUrl() {
+            return this.webAppsHttpUrl;
+        }
+
+        /**
+         * @return webAppsUrl
+         */
+        public String getWebAppsUrl() {
+            return this.webAppsUrl;
+        }
+
+        /**
          * @return zoneId
          */
         public String getZoneId() {
@@ -804,6 +837,7 @@ public class DescribeSupabaseInstanceAttributeResponseBody extends TeaModel {
             private String DBInstanceName; 
             private String engineVersion; 
             private Boolean expired; 
+            private String latestMinorVersion; 
             private String lockMode; 
             private String minorVersion; 
             private String nodeClass; 
@@ -817,6 +851,8 @@ public class DescribeSupabaseInstanceAttributeResponseBody extends TeaModel {
             private String topologyType; 
             private String vSwitchId; 
             private String vpcId; 
+            private String webAppsHttpUrl; 
+            private String webAppsUrl; 
             private String zoneId; 
 
             private Builder() {
@@ -828,6 +864,7 @@ public class DescribeSupabaseInstanceAttributeResponseBody extends TeaModel {
                 this.DBInstanceName = model.DBInstanceName;
                 this.engineVersion = model.engineVersion;
                 this.expired = model.expired;
+                this.latestMinorVersion = model.latestMinorVersion;
                 this.lockMode = model.lockMode;
                 this.minorVersion = model.minorVersion;
                 this.nodeClass = model.nodeClass;
@@ -841,11 +878,13 @@ public class DescribeSupabaseInstanceAttributeResponseBody extends TeaModel {
                 this.topologyType = model.topologyType;
                 this.vSwitchId = model.vSwitchId;
                 this.vpcId = model.vpcId;
+                this.webAppsHttpUrl = model.webAppsHttpUrl;
+                this.webAppsUrl = model.webAppsUrl;
                 this.zoneId = model.zoneId;
             } 
 
             /**
-             * <p>The endpoints.</p>
+             * <p>The connection endpoints.</p>
              */
             public Builder connAddrs(java.util.List<ConnAddrs> connAddrs) {
                 this.connAddrs = connAddrs;
@@ -897,6 +936,17 @@ public class DescribeSupabaseInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The latest minor engine version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>polardb-2.6.0_xcluster8.4.21-20260716_pxbaas-20260915</p>
+             */
+            public Builder latestMinorVersion(String latestMinorVersion) {
+                this.latestMinorVersion = latestMinorVersion;
+                return this;
+            }
+
+            /**
              * <p>The lock mode.</p>
              * 
              * <strong>example:</strong>
@@ -908,7 +958,7 @@ public class DescribeSupabaseInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The minor version.</p>
+             * <p>The minor engine version.</p>
              * 
              * <strong>example:</strong>
              * <p>polardb-2.6.0_xcluster8.4.21-20260716_pxbaas-20260915</p>
@@ -982,7 +1032,7 @@ public class DescribeSupabaseInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Supabase specification code.</p>
+             * <p>The Supabase class code.</p>
              * 
              * <strong>example:</strong>
              * <p>polarx.supabase.x4.xlarge</p>
@@ -1033,6 +1083,28 @@ public class DescribeSupabaseInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
+                return this;
+            }
+
+            /**
+             * <p>The complete HTTP access URL for WebApps. This parameter is not returned if WebApps is not enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://example.com:8000/apps/">http://example.com:8000/apps/</a></p>
+             */
+            public Builder webAppsHttpUrl(String webAppsHttpUrl) {
+                this.webAppsHttpUrl = webAppsHttpUrl;
+                return this;
+            }
+
+            /**
+             * <p>The complete HTTPS access URL for WebApps. This parameter is not returned if WebApps is not enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.com:8443/apps/">https://example.com:8443/apps/</a></p>
+             */
+            public Builder webAppsUrl(String webAppsUrl) {
+                this.webAppsUrl = webAppsUrl;
                 return this;
             }
 
