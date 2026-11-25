@@ -262,7 +262,7 @@ public class CreateParentPlatformRequest extends Request {
          * <p>The description of the parent platform.</p>
          * 
          * <strong>example:</strong>
-         * <p>级联平台测试</p>
+         * <p>Cascade platform test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -301,7 +301,7 @@ public class CreateParentPlatformRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>级联平台测试</p>
+         * <p>Cascade platform test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

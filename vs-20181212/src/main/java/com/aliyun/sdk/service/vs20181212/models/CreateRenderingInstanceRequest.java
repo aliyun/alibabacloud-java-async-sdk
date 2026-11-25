@@ -187,7 +187,7 @@ public class CreateRenderingInstanceRequest extends Request {
 
         /**
          * <blockquote>
-         * <p>Keep the default value unless you have special requirements. If you have special requirements, contact technical support to confirm and then specify the relevant parameters.</p>
+         * <p>Unless you have special requirements, keep the default value. If you have special requirements, contact technical support to confirm and then specify this parameter.</p>
          * </blockquote>
          * <p>The attribute information.</p>
          */
@@ -204,8 +204,8 @@ public class CreateRenderingInstanceRequest extends Request {
          * </blockquote>
          * <p>Specifies whether to enable auto-renewal. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: enables auto-renewal.</li>
-         * <li><strong>false</strong>: disables auto-renewal.</li>
+         * <li><strong>true</strong>: Enabled.</li>
+         * <li><strong>false</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -263,9 +263,9 @@ public class CreateRenderingInstanceRequest extends Request {
 
         /**
          * <blockquote>
-         * <p>Only one billing method is supported. If a billing method already exists, the new value is invalid by default, and the existing billing method prevails. Note that this parameter is required when you purchase the instance for the first time.</p>
+         * <p>Only one Billable methods is supported. If a Billable methods already exists, the new value is invalid by default, and the existing one prevails. Note that this parameter is required when you purchase the instance for the first time.</p>
          * </blockquote>
-         * <p>The network billing type. Valid values:</p>
+         * <p>The network billing method. Valid values:</p>
          * <ul>
          * <li>95BandwidthByMonth: monthly 95th percentile bandwidth.</li>
          * </ul>
@@ -295,7 +295,7 @@ public class CreateRenderingInstanceRequest extends Request {
          * <blockquote>
          * <p>This parameter takes effect only when <code>InstanceChargeType</code> is set to <code>PrePaid</code> (subscription).</p>
          * </blockquote>
-         * <p>The subscription duration. Valid values (Note: If you select 12, the duration is calculated as one year. For other values, the unit is months):</p>
+         * <p>The subscription duration. Valid values (Note: If you select 12, it is calculated as one year. Other values are calculated in months.):</p>
          * <ul>
          * <li>1 (default)</li>
          * <li>2</li>
@@ -337,7 +337,7 @@ public class CreateRenderingInstanceRequest extends Request {
         }
 
         /**
-         * <p>The cloud storage capacity used by the cloud application service instance. Note: This is not local storage.</p>
+         * <p>The cloud storage capacity used by the cloud application service instance. Note: This does not include local storage.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

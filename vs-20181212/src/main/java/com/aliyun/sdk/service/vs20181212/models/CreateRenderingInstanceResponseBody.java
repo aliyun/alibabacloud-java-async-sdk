@@ -80,7 +80,7 @@ public class CreateRenderingInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The instance ID of the cloud application service.</p>
+         * <p>The cloud application service instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>render-9f8c57355d224ad7beaf95e145f22111</p>
@@ -91,7 +91,7 @@ public class CreateRenderingInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The instance ID list of the cloud application service.</p>
+         * <p>The cloud application service instance ID list.</p>
          */
         public Builder renderingInstanceIds(java.util.List<String> renderingInstanceIds) {
             this.renderingInstanceIds = renderingInstanceIds;

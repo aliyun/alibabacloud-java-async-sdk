@@ -144,7 +144,7 @@ public class UploadFileRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>mytest</p>
+         * <p>mytest01</p>
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("FileName", fileName);

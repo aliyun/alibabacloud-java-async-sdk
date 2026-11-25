@@ -129,7 +129,7 @@ public class DescribeComfyTasksRequest extends Request {
         } 
 
         /**
-         * <p>The Hive ID, used as a filter to query tasks executed under the specified Hive.</p>
+         * <p>The Hive ID used as a filter to query tasks executed under the specified Hive.</p>
          * 
          * <strong>example:</strong>
          * <p>hive-26cd567b35c04a0a90f0xxxxx</p>
@@ -153,7 +153,7 @@ public class DescribeComfyTasksRequest extends Request {
         }
 
         /**
-         * <p>The number of records to display on each page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

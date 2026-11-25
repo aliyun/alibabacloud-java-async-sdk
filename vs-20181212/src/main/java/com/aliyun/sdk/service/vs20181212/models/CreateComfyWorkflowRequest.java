@@ -92,7 +92,7 @@ public class CreateComfyWorkflowRequest extends Request {
          * <p>The description of the workflow.</p>
          * 
          * <strong>example:</strong>
-         * <p>This is a workflow for image-to-video</p>
+         * <p>This is an image-to-video workflow</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -105,7 +105,7 @@ public class CreateComfyWorkflowRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>Sample workflow for image-to-video</p>
+         * <p>Sample image-to-video workflow</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

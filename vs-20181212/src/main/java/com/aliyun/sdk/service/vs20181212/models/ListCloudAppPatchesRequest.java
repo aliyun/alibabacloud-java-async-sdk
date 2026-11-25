@@ -158,7 +158,7 @@ public class ListCloudAppPatchesRequest extends Request {
         }
 
         /**
-         * <p>The start time of the time range filter. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The start time of the time range filter. The time must be in UTC and follow the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2017-12-10T21:00:00Z</p>
@@ -170,7 +170,7 @@ public class ListCloudAppPatchesRequest extends Request {
         }
 
         /**
-         * <p>The page number of the list to query. Pages start from 1. Default value: 1.</p>
+         * <p>The page number of the list to query. The starting value is 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -182,7 +182,7 @@ public class ListCloudAppPatchesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page for a paged query. Maximum value: 100. Default value: 10.</p>
+         * <p>The paging Settings for the number of entries per page in a paged query. Maximum value: 100. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -218,7 +218,7 @@ public class ListCloudAppPatchesRequest extends Request {
         }
 
         /**
-         * <p>The start time of the time range filter. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The start time of the time range filter. The time must be in UTC and follow the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2015-11-29T00:00:00Z</p>

@@ -178,7 +178,7 @@ public class ListFilesRequest extends Request {
         }
 
         /**
-         * <p>The Settings for the number of entries per page during paging in a paged query. Valid values: 1 to 100. Default value: 10.</p>
+         * <p>The Settings for the number of entries to return on each page during paging in a paged query. Valid values: 1 to 100. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

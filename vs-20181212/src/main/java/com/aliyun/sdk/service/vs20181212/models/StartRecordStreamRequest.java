@@ -115,7 +115,7 @@ public class StartRecordStreamRequest extends Request {
         } 
 
         /**
-         * <p>The stream\&quot;s App name.</p>
+         * <p>The stream&quot;s App name.</p>
          * 
          * <strong>example:</strong>
          * <p>live</p>
@@ -160,7 +160,7 @@ public class StartRecordStreamRequest extends Request {
         }
 
         /**
-         * <p>The stream\&quot;s playback domain name.</p>
+         * <p>The stream&quot;s playback domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com</p>

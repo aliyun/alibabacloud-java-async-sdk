@@ -21,12 +21,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Usage notes</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li><strong>HiveId</strong> is a required parameter that specifies the ID of the target cluster.</li>
-     * <li><strong>InstanceIds</strong> is a required parameter that specifies a list of instance IDs to add.</li>
-     * <li>Adding an instance that already exists in the target cluster returns an error message.</li>
-     * <li>The response includes lists of successful and failed instances. This allows you to verify which instances were added and review the reasons for any failures.</li>
+     * <li><strong>HiveId</strong> is a required parameter that specifies the ID of the target cluster to which the workloads are bound.</li>
+     * <li><strong>InstanceIds</strong> is a required parameter that specifies the list of workload IDs to bind to the cluster.</li>
+     * <li>If you attempt to bind a workload ID that already exists in the target cluster, an error message is returned.</li>
+     * <li>After the binding operation succeeds, the returned lists of successful and failed workload instances help you identify which workloads were successfully bound and which were not, along with the reasons for failure.</li>
      * </ul>
      * 
      * @param request the request parameters of AddHiveEdgeWorkers  AddHiveEdgeWorkersRequest
@@ -86,9 +86,9 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li><strong>Authentication</strong>: The request must include the <code>AliUid</code> parameter to authenticate and perform identity verification.</li>
-     * <li><strong>Instance specification</strong>: You can specify the instances to capture screenshots of by using <code>RenderingInstanceIds</code>.</li>
-     * <li><strong>Screenshot quality</strong>: You can configure the Settings for the screenshot image quality by using the <code>Quality</code> parameter. The default value is 75 if not configured, and the valid values range from 1 to 100.</li>
+     * <li><strong>Authenticate</strong>: The request must include the AliUid parameter for identity verification.</li>
+     * <li><strong>Instance specification</strong>: You can use the RenderingInstanceIds parameter to specify the instances for which you want to capture screenshots.</li>
+     * <li><strong>Screenshot quality</strong>: The Quality parameter specifies the screenshot quality settings. The default value is 75 if not configured. Valid values: 1 to 100.</li>
      * <li><strong>Response processing</strong>: The response includes lists of successful and failed instances along with their related information, such as download URLs and screenshot completion times.</li>
      * </ul>
      * 
@@ -236,7 +236,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Enable the on-demand screenshot feature in the associated screenshot template.</p>
+     * <p>Enable the on-demand screenshot feature in the associated screenshot template in advance.</p>
      * </blockquote>
      * 
      * @param request the request parameters of CreateComfyTask  CreateComfyTaskRequest
@@ -258,7 +258,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>You must first enable the on-demand snapshot feature in the associated snapshot template.</p>
+     * <p>You must enable the on-demand screenshot feature in the associated screenshot template in advance.</p>
      * </blockquote>
      * 
      * @param request the request parameters of CreateComfyWorkflow  CreateComfyWorkflowRequest
@@ -267,6 +267,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateComfyWorkflowResponse> createComfyWorkflow(CreateComfyWorkflowRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>This operation is applicable only to workspaces whose access type is <strong>GB28181 pull streaming</strong> or <strong>ODCAP</strong>.</li>
+     * <li>Workspaces whose access type is <strong>RTMP push streaming</strong> <strong>do not support</strong> adding devices.</li>
+     * </ul>
+     * </blockquote>
+     * 
      * @param request the request parameters of CreateDevice  CreateDeviceRequest
      * @return CreateDeviceResponse
      */
@@ -292,7 +300,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
+     * <h2>Request description</h2>
      * <ul>
      * <li>This operation creates an empty cluster to manage workloads.</li>
      * </ul>
@@ -523,7 +531,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Screenshot queries do not support pagination and only support iteration. To request the next page, use the value of the extStartTime parameter in the response as the StartTime parameter in the new request.</p>
+     * <p>Screenshot queries currently do not support pagination and only support iteration. To request the next page, use the value of the extStartTime parameter in the response as the StartTime parameter in the new request.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeComfyProductionDownloadUrl  DescribeComfyProductionDownloadUrlRequest
@@ -551,7 +559,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Screenshot queries currently do not support pagination and only support iteration. To request the next page, use the value of the extStartTime parameter in the response as the StartTime parameter in a new request.</p>
+     * <p>Screenshot queries currently do not support pagination and only support iteration. To request the next page, use the value of the extStartTime parameter in the response as the StartTime parameter in the new request.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeComfyTasks  DescribeComfyTasksRequest
@@ -977,7 +985,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Specify at least one of the template ID and the templatetype.</p>
+     * <p>Specify at least one of the template ID and templatetype.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ListCloudAppPatches  ListCloudAppPatchesRequest
@@ -1542,6 +1550,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpgradeRenderingInstanceImageResponse
      */
     CompletableFuture<UpgradeRenderingInstanceImageResponse> upgradeRenderingInstanceImage(UpgradeRenderingInstanceImageRequest request);
+
+    /**
+     * @param request the request parameters of UpgradeRenderingServerImage  UpgradeRenderingServerImageRequest
+     * @return UpgradeRenderingServerImageResponse
+     */
+    CompletableFuture<UpgradeRenderingServerImageResponse> upgradeRenderingServerImage(UpgradeRenderingServerImageRequest request);
 
     /**
      * @param request the request parameters of UploadCloudApp  UploadCloudAppRequest

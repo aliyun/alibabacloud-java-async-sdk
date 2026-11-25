@@ -272,7 +272,7 @@ public class ListCloudAppsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page during paging for a paged query. Settings: 1 to 100. Default value: 10.</p>
+         * <p>Settings for the number of entries to return on each page during paging for a paged query. Valid values: 1 to 100. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -289,7 +289,7 @@ public class ListCloudAppsRequest extends Request {
          * <li>hot</li>
          * <li>game</li>
          * <li>app
-         * To query cloud applications without labels, set this parameter to NULL.</li>
+         * To query applications without labels, set the value to NULL.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -333,8 +333,8 @@ public class ListCloudAppsRequest extends Request {
         /**
          * <p>The upload status of the application. Valid values:</p>
          * <ul>
-         * <li>Success: The upload is successful. This is a final state.</li>
-         * <li>Failed: The upload failed. This is a final state.</li>
+         * <li>Success: successful. This is a final state.</li>
+         * <li>Failed: failed. This is a final state.</li>
          * <li>Created</li>
          * <li>Doing</li>
          * </ul>

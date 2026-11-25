@@ -75,7 +75,7 @@ public class AddHiveEdgeWorkersRequest extends Request {
         } 
 
         /**
-         * <p>The cluster ID.</p>
+         * <p><strong>The cluster ID.</strong></p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,11 +88,11 @@ public class AddHiveEdgeWorkersRequest extends Request {
         }
 
         /**
-         * <p>A list of instance IDs.</p>
+         * <p><strong>The list of workload IDs.</strong></p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>[\&quot;acp-c4b9pbj4fzkagfexv\&quot;, \&quot;acp-c4b9pbj4fzkagfexw\&quot;]</p>
+         * <p>[&quot;acp-c4b9pbj4fzkagfexv&quot;, &quot;acp-c4b9pbj4fzkagfexw&quot;]</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             String instanceIdsShrink = shrink(instanceIds, "InstanceIds", "json");

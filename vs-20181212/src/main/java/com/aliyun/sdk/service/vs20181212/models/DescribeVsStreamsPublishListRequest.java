@@ -261,7 +261,7 @@ public class DescribeVsStreamsPublishListRequest extends Request {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>publish_time_asc</p>
+         * <p>stream_name_desc</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);

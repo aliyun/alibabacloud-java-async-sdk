@@ -146,7 +146,13 @@ public class ResumeVsStreamRequest extends Request {
         }
 
         /**
-         * ControlStreamAction.
+         * <p>Controls the stream behavior. Valid values:</p>
+         * <ul>
+         * <li><strong>resume</strong>: Resumes the stream.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>resume</p>
          */
         public Builder controlStreamAction(String controlStreamAction) {
             this.putQueryParameter("ControlStreamAction", controlStreamAction);
@@ -155,7 +161,7 @@ public class ResumeVsStreamRequest extends Request {
         }
 
         /**
-         * <p>Your accelerated domain name.</p>
+         * <p>The accelerated domain name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,7 +176,7 @@ public class ResumeVsStreamRequest extends Request {
         /**
          * <p>The stream type.</p>
          * <blockquote>
-         * <p>Only publisher is supported.</p>
+         * <p>Currently, only publisher is supported.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

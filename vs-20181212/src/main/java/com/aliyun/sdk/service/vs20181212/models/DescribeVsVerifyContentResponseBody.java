@@ -67,7 +67,7 @@ public class DescribeVsVerifyContentResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The verification content.</p>
+         * <p>The check content.</p>
          * 
          * <strong>example:</strong>
          * <p>verify_dffeb6610035dcb77b413a59c3*****</p>

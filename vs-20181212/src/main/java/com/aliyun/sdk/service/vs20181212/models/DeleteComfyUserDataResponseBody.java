@@ -91,7 +91,7 @@ public class DeleteComfyUserDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The description.</p>
+         * <p>The message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>

@@ -74,10 +74,10 @@ public class CreateHiveRequest extends Request {
         } 
 
         /**
-         * <p>A description of the cluster.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>G49单卡集群</p>
+         * <p>G49 single-GPU cluster</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);

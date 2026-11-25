@@ -60,7 +60,7 @@ public class DescribeRenderingInstanceRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID of the cloud application service.</p>
+         * <p>The cloud application service instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

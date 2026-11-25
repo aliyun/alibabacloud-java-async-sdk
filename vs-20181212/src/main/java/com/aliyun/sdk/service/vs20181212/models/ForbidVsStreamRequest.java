@@ -174,7 +174,13 @@ public class ForbidVsStreamRequest extends Request {
         }
 
         /**
-         * ControlStreamAction.
+         * <p>The stream control action. Valid values:</p>
+         * <ul>
+         * <li><strong>forbid</strong>: Disables the stream.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>forbid</p>
          */
         public Builder controlStreamAction(String controlStreamAction) {
             this.putQueryParameter("ControlStreamAction", controlStreamAction);
@@ -196,7 +202,7 @@ public class ForbidVsStreamRequest extends Request {
         }
 
         /**
-         * <p>Only &quot;publisher&quot; is supported.</p>
+         * <p>The live stream type. Valid values: publisher.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -209,7 +215,7 @@ public class ForbidVsStreamRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to only interrupt the stream without adding it to the blacklist. A value of \<code>yes\\</code> indicates that the stream is only interrupted.</p>
+         * <p>Specifies whether to only interrupt the stream without adding it to the blacklist. Valid values: yes: Interrupts the stream without adding it to the blacklist.</p>
          * 
          * <strong>example:</strong>
          * <p>yes</p>
@@ -230,7 +236,7 @@ public class ForbidVsStreamRequest extends Request {
         }
 
         /**
-         * <p>The time to resume the stream. The time is in UTC format.</p>
+         * <p>The time to resume the stream in UTC format.</p>
          * 
          * <strong>example:</strong>
          * <p>2015-12-01T17:37:00Z</p>

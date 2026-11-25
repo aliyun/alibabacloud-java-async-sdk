@@ -126,7 +126,7 @@ public class DescribeComfyTaskWaitingQueueResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The task waiting queue information.</p>
+         * <p>The waiting queue information.</p>
          */
         public Builder taskWaitingQueue(TaskWaitingQueue taskWaitingQueue) {
             this.taskWaitingQueue = taskWaitingQueue;

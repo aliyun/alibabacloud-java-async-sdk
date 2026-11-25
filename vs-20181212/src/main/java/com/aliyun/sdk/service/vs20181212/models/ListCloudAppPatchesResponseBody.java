@@ -117,7 +117,7 @@ public class ListCloudAppPatchesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Settings for the number of entries per page when paging in a paged query.</p>
+         * <p>The paging Settings for the number of entries returned on each page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -128,7 +128,7 @@ public class ListCloudAppPatchesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The patch list of the cloud application.</p>
+         * <p>The list of patches for the cloud application.</p>
          */
         public Builder patches(java.util.List<Patches> patches) {
             this.patches = patches;
@@ -342,10 +342,10 @@ public class ListCloudAppPatchesResponseBody extends TeaModel {
              * <ul>
              * <li>Created</li>
              * <li>Doing</li>
-             * <li>Success: desired state</li>
-             * <li>Failed: desired state</li>
+             * <li>Success: final state</li>
+             * <li>Failed: final state</li>
              * <li>Deleting</li>
-             * <li>DeleteFailed: desired state</li>
+             * <li>DeleteFailed: final state</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -368,7 +368,7 @@ public class ListCloudAppPatchesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The latest time when the status was updated. The time is in the YYYY-MM-DDTHH:mm:ss format.</p>
+             * <p>The time when the status was last updated. The time is in the YYYY-MM-DDTHH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-09-23T02:12:28</p>
@@ -379,7 +379,7 @@ public class ListCloudAppPatchesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the application was uploaded. The time is in the ISO 8601 standard and includes the time zone offset, in the YYYY-MM-DDTHH:mm:ss+HH:mm format.</p>
+             * <p>The time when the patch was uploaded. The time follows the ISO 8601 standard and includes a time zone offset in the YYYY-MM-DDTHH:mm:ss+HH:mm format.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-07-24T14:45:36+08:00</p>

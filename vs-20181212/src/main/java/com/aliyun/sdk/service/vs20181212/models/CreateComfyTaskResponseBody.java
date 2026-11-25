@@ -93,7 +93,7 @@ public class CreateComfyTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code returned if the call fails. For more information, see Error codes.</p>
+         * <p>The error code returned when the call fails. For more information, see Error codes.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

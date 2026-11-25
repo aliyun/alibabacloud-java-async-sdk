@@ -55,6 +55,10 @@ public class ListCloudAppInstallationsRequest extends Request {
     private String renderingInstanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RenderingInstanceIds")
+    private java.util.List<String> renderingInstanceIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
@@ -69,6 +73,7 @@ public class ListCloudAppInstallationsRequest extends Request {
         this.patchId = builder.patchId;
         this.projectId = builder.projectId;
         this.renderingInstanceId = builder.renderingInstanceId;
+        this.renderingInstanceIds = builder.renderingInstanceIds;
         this.startTime = builder.startTime;
     }
 
@@ -149,6 +154,13 @@ public class ListCloudAppInstallationsRequest extends Request {
     }
 
     /**
+     * @return renderingInstanceIds
+     */
+    public java.util.List<String> getRenderingInstanceIds() {
+        return this.renderingInstanceIds;
+    }
+
+    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -165,6 +177,7 @@ public class ListCloudAppInstallationsRequest extends Request {
         private String patchId; 
         private String projectId; 
         private String renderingInstanceId; 
+        private java.util.List<String> renderingInstanceIds; 
         private String startTime; 
 
         private Builder() {
@@ -182,6 +195,7 @@ public class ListCloudAppInstallationsRequest extends Request {
             this.patchId = request.patchId;
             this.projectId = request.projectId;
             this.renderingInstanceId = request.renderingInstanceId;
+            this.renderingInstanceIds = request.renderingInstanceIds;
             this.startTime = request.startTime;
         } 
 
@@ -246,7 +260,7 @@ public class ListCloudAppInstallationsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page for a paged query. Valid values: 1 to 100. Default value: 10.</p>
+         * <p>The Settings for the number of entries per page during paging in a paged query. Valid values: 1 to 100. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -258,7 +272,10 @@ public class ListCloudAppInstallationsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the patch package. This parameter is supported only in Windows scenarios. If you enter origin, only the original version is filtered.</p>
+         * <p>The ID of the patch package. This parameter is only supported in Windows scenarios. Valid values:</p>
+         * <ul>
+         * <li>origin: Only the original version is filtered.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>patch-7bdf679812484df08a956b73e0b3bdf6</p>
@@ -282,7 +299,7 @@ public class ListCloudAppInstallationsRequest extends Request {
         }
 
         /**
-         * <p>The cloud application service instance ID, which is used to query the cloud applications installed on the specified instance.</p>
+         * <p>The instance ID of the cloud application service. This parameter is used to query the cloud applications installed on the specified instance.</p>
          * 
          * <strong>example:</strong>
          * <p>render-9f8c57355d224ad7beaf95e145f22111</p>
@@ -290,6 +307,19 @@ public class ListCloudAppInstallationsRequest extends Request {
         public Builder renderingInstanceId(String renderingInstanceId) {
             this.putQueryParameter("RenderingInstanceId", renderingInstanceId);
             this.renderingInstanceId = renderingInstanceId;
+            return this;
+        }
+
+        /**
+         * <p>The list of cloud application service instance IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;render-eb01436f39ac459a96ac566c418ca926&quot;]</p>
+         */
+        public Builder renderingInstanceIds(java.util.List<String> renderingInstanceIds) {
+            String renderingInstanceIdsShrink = shrink(renderingInstanceIds, "RenderingInstanceIds", "json");
+            this.putQueryParameter("RenderingInstanceIds", renderingInstanceIdsShrink);
+            this.renderingInstanceIds = renderingInstanceIds;
             return this;
         }
 
