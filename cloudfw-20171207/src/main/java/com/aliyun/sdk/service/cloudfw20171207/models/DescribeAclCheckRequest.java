@@ -32,6 +32,10 @@ public class DescribeAclCheckRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProcessStatus")
+    private String processStatus;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TaskId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String taskId;
@@ -41,6 +45,7 @@ public class DescribeAclCheckRequest extends Request {
         this.lang = builder.lang;
         this.pageNo = builder.pageNo;
         this.pageSize = builder.pageSize;
+        this.processStatus = builder.processStatus;
         this.taskId = builder.taskId;
     }
 
@@ -79,6 +84,13 @@ public class DescribeAclCheckRequest extends Request {
     }
 
     /**
+     * @return processStatus
+     */
+    public String getProcessStatus() {
+        return this.processStatus;
+    }
+
+    /**
      * @return taskId
      */
     public String getTaskId() {
@@ -89,6 +101,7 @@ public class DescribeAclCheckRequest extends Request {
         private String lang; 
         private Integer pageNo; 
         private Integer pageSize; 
+        private String processStatus; 
         private String taskId; 
 
         private Builder() {
@@ -100,6 +113,7 @@ public class DescribeAclCheckRequest extends Request {
             this.lang = request.lang;
             this.pageNo = request.pageNo;
             this.pageSize = request.pageSize;
+            this.processStatus = request.processStatus;
             this.taskId = request.taskId;
         } 
 
@@ -138,6 +152,26 @@ public class DescribeAclCheckRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * <p>The processing status. Valid values:</p>
+         * <ul>
+         * <li>Pending: Unprocessed.</li>
+         * <li>Success: Processed successfully.</li>
+         * <li>Processing: Processing.</li>
+         * <li>Ignored: Ignored.</li>
+         * <li>Failed: Processing failed.</li>
+         * <li>PendingOrFailed: Unprocessed or processing failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Pending</p>
+         */
+        public Builder processStatus(String processStatus) {
+            this.putQueryParameter("ProcessStatus", processStatus);
+            this.processStatus = processStatus;
             return this;
         }
 

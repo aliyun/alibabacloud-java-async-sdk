@@ -88,7 +88,7 @@ public class CreateAclCheckRequest extends Request {
         } 
 
         /**
-         * <p>The type of the ACL check.</p>
+         * <p>The ACL check type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
