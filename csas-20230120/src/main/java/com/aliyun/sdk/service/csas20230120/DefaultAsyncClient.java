@@ -43,6 +43,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of AddDeviceBelongIdentifiers  AddDeviceBelongIdentifiersRequest
+     * @return AddDeviceBelongIdentifiersResponse
+     */
+    @Override
+    public CompletableFuture<AddDeviceBelongIdentifiersResponse> addDeviceBelongIdentifiers(AddDeviceBelongIdentifiersRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AddDeviceBelongIdentifiers").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AddDeviceBelongIdentifiersResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AddDeviceBelongIdentifiersResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of AddDeviceGroupMatchDevices  AddDeviceGroupMatchDevicesRequest
      * @return AddDeviceGroupMatchDevicesResponse
      */
@@ -2252,6 +2270,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListDeviceBelongIdentifiers  ListDeviceBelongIdentifiersRequest
+     * @return ListDeviceBelongIdentifiersResponse
+     */
+    @Override
+    public CompletableFuture<ListDeviceBelongIdentifiersResponse> listDeviceBelongIdentifiers(ListDeviceBelongIdentifiersRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListDeviceBelongIdentifiers").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListDeviceBelongIdentifiersResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListDeviceBelongIdentifiersResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListDeviceGroups  ListDeviceGroupsRequest
      * @return ListDeviceGroupsResponse
      */
@@ -3401,6 +3437,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModifyForwardStrategyBindingItemsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of RemoveDeviceBelongIdentifiers  RemoveDeviceBelongIdentifiersRequest
+     * @return RemoveDeviceBelongIdentifiersResponse
+     */
+    @Override
+    public CompletableFuture<RemoveDeviceBelongIdentifiersResponse> removeDeviceBelongIdentifiers(RemoveDeviceBelongIdentifiersRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RemoveDeviceBelongIdentifiers").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RemoveDeviceBelongIdentifiersResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RemoveDeviceBelongIdentifiersResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

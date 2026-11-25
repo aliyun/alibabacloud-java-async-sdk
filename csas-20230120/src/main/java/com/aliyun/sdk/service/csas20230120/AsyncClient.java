@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of AddDeviceBelongIdentifiers  AddDeviceBelongIdentifiersRequest
+     * @return AddDeviceBelongIdentifiersResponse
+     */
+    CompletableFuture<AddDeviceBelongIdentifiersResponse> addDeviceBelongIdentifiers(AddDeviceBelongIdentifiersRequest request);
+
+    /**
      * @param request the request parameters of AddDeviceGroupMatchDevices  AddDeviceGroupMatchDevicesRequest
      * @return AddDeviceGroupMatchDevicesResponse
      */
@@ -813,6 +819,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListConnectorsResponse> listConnectors(ListConnectorsRequest request);
 
     /**
+     * @param request the request parameters of ListDeviceBelongIdentifiers  ListDeviceBelongIdentifiersRequest
+     * @return ListDeviceBelongIdentifiersResponse
+     */
+    CompletableFuture<ListDeviceBelongIdentifiersResponse> listDeviceBelongIdentifiers(ListDeviceBelongIdentifiersRequest request);
+
+    /**
      * @param request the request parameters of ListDeviceGroups  ListDeviceGroupsRequest
      * @return ListDeviceGroupsResponse
      */
@@ -1222,6 +1234,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyForwardStrategyBindingItemsResponse
      */
     CompletableFuture<ModifyForwardStrategyBindingItemsResponse> modifyForwardStrategyBindingItems(ModifyForwardStrategyBindingItemsRequest request);
+
+    /**
+     * @param request the request parameters of RemoveDeviceBelongIdentifiers  RemoveDeviceBelongIdentifiersRequest
+     * @return RemoveDeviceBelongIdentifiersResponse
+     */
+    CompletableFuture<RemoveDeviceBelongIdentifiersResponse> removeDeviceBelongIdentifiers(RemoveDeviceBelongIdentifiersRequest request);
 
     /**
      * @param request the request parameters of RemoveDeviceGroupMatchDevices  RemoveDeviceGroupMatchDevicesRequest

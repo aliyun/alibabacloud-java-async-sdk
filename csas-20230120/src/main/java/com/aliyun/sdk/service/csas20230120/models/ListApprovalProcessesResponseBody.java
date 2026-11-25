@@ -806,7 +806,7 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
              * <p>The username of the approver.</p>
              * 
              * <strong>example:</strong>
-             * <p>王先生</p>
+             * <p>Mr. Wang</p>
              */
             public Builder username(String username) {
                 this.username = username;
