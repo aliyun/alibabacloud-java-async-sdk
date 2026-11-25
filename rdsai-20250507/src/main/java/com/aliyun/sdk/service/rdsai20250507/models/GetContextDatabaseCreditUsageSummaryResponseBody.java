@@ -145,7 +145,7 @@ public class GetContextDatabaseCreditUsageSummaryResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The bucketing results, sorted by BucketStart, Item, and SubItem in sequence. Unpriced records are included in Quantity and RecordCount, but not in Credits.</p>
+         * <p>The bucketing results, sorted sequentially by BucketStart, Item, and SubItem. Unpriced records are included in Quantity and RecordCount, but not in Credits.</p>
          */
         public Builder buckets(java.util.List<Buckets> buckets) {
             this.buckets = buckets;
@@ -164,7 +164,7 @@ public class GetContextDatabaseCreditUsageSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The end time of the query range passed in the request, exclusive.</p>
+         * <p>The end time of the query interval passed in the request, exclusive.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-15T00:00:00Z</p>
@@ -175,7 +175,7 @@ public class GetContextDatabaseCreditUsageSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The actual bucketing granularity used. Valid values: Hour (hourly) and Day (daily). If the request parameter is omitted, the automatically selected granularity is returned.</p>
+         * <p>The actual bucketing granularity used. Valid values: Hour (hourly) and Day (daily). When the request parameter is omitted, the automatically selected granularity is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>Day</p>
@@ -186,7 +186,7 @@ public class GetContextDatabaseCreditUsageSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the OpenAPI request, which is used to troubleshoot call issues.</p>
+         * <p>The ID of the API request, which is used to troubleshoot call issues.</p>
          * 
          * <strong>example:</strong>
          * <p>00000000-0000-4000-8000-000000000001</p>
@@ -197,7 +197,7 @@ public class GetContextDatabaseCreditUsageSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The start time of the query range passed in the request, inclusive.</p>
+         * <p>The start time of the query interval passed in the request, inclusive.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-09-15T00:00:00Z</p>
@@ -208,7 +208,7 @@ public class GetContextDatabaseCreditUsageSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total credit consumption of priced records that meet the filter conditions within the query range. The value is returned as a decimal string with up to 6 decimal places. 1 credit = 1 CNY. If there are no priced records, the string 0 is returned. Unpriced records are not included in the total amount. Do not treat this value as the final bill amount.</p>
+         * <p>The total credit consumption of priced records that meet the filter conditions within the query interval. Returned as a decimal string with up to 6 decimal places, where 1 credit equals 1 CNY. Returns the string <code>0</code> when there are no priced records. Unpriced records are not included in the total. Do not treat this value as the final bill amount.</p>
          * 
          * <strong>example:</strong>
          * <p>0.2513</p>
@@ -353,7 +353,7 @@ public class GetContextDatabaseCreditUsageSummaryResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The start time of the bucket, in ISO 8601 UTC time format ending with Z.</p>
+             * <p>The start time of the bucket, in ISO 8601 UTC time format ending with <code>Z</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-10-01T00:00:00Z</p>
@@ -364,7 +364,7 @@ public class GetContextDatabaseCreditUsageSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total credit consumption of priced records in the bucket. The value is returned as a decimal string with up to 6 decimal places. 1 credit = 1 CNY. If all records are unpriced, the string 0 is returned.</p>
+             * <p>The total credit consumption of priced records in the bucket. Returned as a decimal string with up to 6 decimal places, where 1 credit equals 1 CNY. Returns the string <code>0</code> when all records are unpriced.</p>
              * 
              * <strong>example:</strong>
              * <p>0.2513</p>
@@ -375,7 +375,7 @@ public class GetContextDatabaseCreditUsageSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing item corresponding to the bucket. Valid values: KnowledgeBaseRead (knowledge base read), MemoryRead (memory read), MemoryWrite (memory write), KnowledgeBaseWriteToken (knowledge base write token), and ContextGrowth (context evolution).</p>
+             * <p>The billing item corresponding to the bucket. Valid values: KnowledgeBaseRead (knowledge base read), MemoryRead (memory read), MemoryWrite (memory write), KnowledgeBaseWriteToken (knowledge base write token), and ContextGrowth (context growth).</p>
              * 
              * <strong>example:</strong>
              * <p>ContextGrowth</p>
@@ -408,7 +408,7 @@ public class GetContextDatabaseCreditUsageSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The context evolution sub-item. Recognized values include KnowledgeOrganization (knowledge organization), MemoryPromotion (memory promotion), KnowledgeReview (knowledge review), KnowledgeEvolution (knowledge evolution), and MemoryEvolution (memory evolution). For other billing items, missing sub-items, or unrecognized sub-items, null is returned.</p>
+             * <p>The context evolution sub-item. Recognized values include KnowledgeOrganization (knowledge organization), MemoryPromotion (memory promotion), KnowledgeReview (knowledge review), KnowledgeEvolution (knowledge evolution), and MemoryEvolution (memory evolution). Returns null for other billing items, missing sub-items, or unrecognized sub-items.</p>
              * 
              * <strong>example:</strong>
              * <p>MemoryEvolution</p>

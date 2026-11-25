@@ -145,7 +145,7 @@ public class GetContextDatabaseCreditUsageSummaryByMemberResponseBody extends Te
         } 
 
         /**
-         * <p>The end time of the query range passed in the request, exclusive.</p>
+         * <p>The end time of the query interval passed in the request, exclusive.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-08T00:00:00Z</p>
@@ -156,7 +156,7 @@ public class GetContextDatabaseCreditUsageSummaryByMemberResponseBody extends Te
         }
 
         /**
-         * <p>The member summaries on the current page, sorted in descending order of total credit consumption. Each record covers the entire query range.</p>
+         * <p>The member summaries on the current page, sorted by total credit consumption in descending order. Each record covers the entire query interval.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -164,7 +164,7 @@ public class GetContextDatabaseCreditUsageSummaryByMemberResponseBody extends Te
         }
 
         /**
-         * <p>The actual page number used for the query.</p>
+         * <p>The actual page number used in this query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -175,7 +175,7 @@ public class GetContextDatabaseCreditUsageSummaryByMemberResponseBody extends Te
         }
 
         /**
-         * <p>The actual number of items per page used for the query.</p>
+         * <p>The actual number of items per page used in this query.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -186,7 +186,7 @@ public class GetContextDatabaseCreditUsageSummaryByMemberResponseBody extends Te
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The ID of the OpenAPI request, used to troubleshoot call issues.</p>
          * 
          * <strong>example:</strong>
          * <p>00000000-0000-4000-8000-000000000001</p>
@@ -197,7 +197,7 @@ public class GetContextDatabaseCreditUsageSummaryByMemberResponseBody extends Te
         }
 
         /**
-         * <p>The start time of the query range passed in the request, inclusive.</p>
+         * <p>The start time of the query interval passed in the request, inclusive.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-01T00:00:00Z</p>
@@ -219,7 +219,7 @@ public class GetContextDatabaseCreditUsageSummaryByMemberResponseBody extends Te
         }
 
         /**
-         * <p>The ID of the workspace queried.</p>
+         * <p>The ID of the workspace queried in this request.</p>
          * 
          * <strong>example:</strong>
          * <p>ws-x9z4ctzed9gfu2w</p>
@@ -314,7 +314,7 @@ public class GetContextDatabaseCreditUsageSummaryByMemberResponseBody extends Te
             } 
 
             /**
-             * <p>The total credit consumption of priced records for the member. Returned as a decimal string with up to 6 decimal places. 1 credit equals 1 CNY. The value is null if there are no priced records.</p>
+             * <p>The total credit consumption of priced records for this member. Returned as a decimal string with up to 6 decimal places, where 1 credit = 1 CNY. The value is <code>null</code> if there are no priced records.</p>
              * 
              * <strong>example:</strong>
              * <p>0.2513</p>
@@ -336,7 +336,7 @@ public class GetContextDatabaseCreditUsageSummaryByMemberResponseBody extends Te
             }
 
             /**
-             * <p>The total metered quantity of records that match the filter criteria for the member, including unpriced records. To view the usage of a specific billable item, specify Item in the request.</p>
+             * <p>The total metered quantity of records that match the filter criteria for this member, including unpriced records. To view the usage of a specific billing item, specify <code>Item</code> in the request.</p>
              * 
              * <strong>example:</strong>
              * <p>12</p>
@@ -347,7 +347,7 @@ public class GetContextDatabaseCreditUsageSummaryByMemberResponseBody extends Te
             }
 
             /**
-             * <p>The number of metering records that match the filter criteria for the member, including unpriced records.</p>
+             * <p>The number of metering records that match the filter criteria for this member, including unpriced records.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>

@@ -89,7 +89,7 @@ public class GetContextDatabaseUsageRequest extends Request {
         } 
 
         /**
-         * <p>The end time of the query range, exclusive. It must be later than StartTime. Use the ISO 8601 time format, such as 2026-08-01T00:00:00Z (UTC).</p>
+         * <p>The end time of the query range, exclusive. It must be later than <code>StartTime</code>. Use the ISO 8601 time format, such as <code>2026-08-01T00:00:00Z</code> (UTC).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class GetContextDatabaseUsageRequest extends Request {
         }
 
         /**
-         * <p>The start time of the query range, inclusive. Use the ISO 8601 time format, such as 2026-07-01T00:00:00Z (UTC).</p>
+         * <p>The start time of the query range, inclusive. Use the ISO 8601 time format, such as <code>2026-07-01T00:00:00Z</code> (UTC).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
