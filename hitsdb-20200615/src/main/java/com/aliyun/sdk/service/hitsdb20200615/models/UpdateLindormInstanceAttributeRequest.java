@@ -211,7 +211,14 @@ public class UpdateLindormInstanceAttributeRequest extends Request {
         }
 
         /**
-         * DeletionProtection.
+         * <p>Specifies whether to enable deletion protection. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Enabled.</li>
+         * <li><strong>false</strong>: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder deletionProtection(Boolean deletionProtection) {
             this.putQueryParameter("DeletionProtection", deletionProtection);
@@ -220,7 +227,10 @@ public class UpdateLindormInstanceAttributeRequest extends Request {
         }
 
         /**
-         * DispositionType.
+         * <p>The risk disposition type for a single zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PLAN_MIGRATION</p>
          */
         public Builder dispositionType(String dispositionType) {
             this.putQueryParameter("DispositionType", dispositionType);
@@ -229,7 +239,10 @@ public class UpdateLindormInstanceAttributeRequest extends Request {
         }
 
         /**
-         * InstanceAlias.
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lindorm-test</p>
          */
         public Builder instanceAlias(String instanceAlias) {
             this.putQueryParameter("InstanceAlias", instanceAlias);
@@ -238,6 +251,7 @@ public class UpdateLindormInstanceAttributeRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -268,7 +282,10 @@ public class UpdateLindormInstanceAttributeRequest extends Request {
         }
 
         /**
-         * PlannedCompletionDate.
+         * <p>The planned completion date for risk disposition, in the yyyy-MM-dd format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-10-01</p>
          */
         public Builder plannedCompletionDate(String plannedCompletionDate) {
             this.putQueryParameter("PlannedCompletionDate", plannedCompletionDate);

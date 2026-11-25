@@ -106,7 +106,10 @@ public class GetInstanceSummaryResponseBody extends TeaModel {
         } 
 
         /**
-         * LockingCount.
+         * <p>The number of instances that are about to expire.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder lockingCount(Integer lockingCount) {
             this.lockingCount = lockingCount;
@@ -114,7 +117,7 @@ public class GetInstanceSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * RegionalSummary.
+         * <p>The collection of region information.</p>
          */
         public Builder regionalSummary(java.util.List<RegionalSummary> regionalSummary) {
             this.regionalSummary = regionalSummary;
@@ -122,7 +125,10 @@ public class GetInstanceSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1556DCB0-043A-4444-8BD9-CF4A68E7EE64</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +136,10 @@ public class GetInstanceSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * RunningCount.
+         * <p>The number of running instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         public Builder runningCount(Integer runningCount) {
             this.runningCount = runningCount;
@@ -138,7 +147,10 @@ public class GetInstanceSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of running instances and instances that are about to expire.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -230,7 +242,10 @@ public class GetInstanceSummaryResponseBody extends TeaModel {
             } 
 
             /**
-             * LockingCount.
+             * <p>The number of instances that are about to expire in {RegionId}.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder lockingCount(Integer lockingCount) {
                 this.lockingCount = lockingCount;
@@ -238,7 +253,10 @@ public class GetInstanceSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -246,7 +264,10 @@ public class GetInstanceSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * RunningCount.
+             * <p>The number of running instances in {RegionId}.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder runningCount(Integer runningCount) {
                 this.runningCount = runningCount;
@@ -254,7 +275,10 @@ public class GetInstanceSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of running instances and instances that are about to expire in {RegionId}.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder total(Integer total) {
                 this.total = total;

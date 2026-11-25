@@ -218,7 +218,10 @@ public class UpdateLindormV2InstanceRequest extends Request {
         } 
 
         /**
-         * CapacityStorageSize.
+         * <p>The capacity storage space.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder capacityStorageSize(Integer capacityStorageSize) {
             this.putQueryParameter("CapacityStorageSize", capacityStorageSize);
@@ -227,7 +230,10 @@ public class UpdateLindormV2InstanceRequest extends Request {
         }
 
         /**
-         * CloudStorageSize.
+         * <p>The cloud storage space. Unit: GB. When you modify the cloud storage space, you must also specify EngineList. The EngineType parameter in EngineList, and the NodeSpec and NodeCount parameters in NodeGroupList are required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>480</p>
          */
         public Builder cloudStorageSize(Integer cloudStorageSize) {
             this.putQueryParameter("CloudStorageSize", cloudStorageSize);
@@ -236,7 +242,14 @@ public class UpdateLindormV2InstanceRequest extends Request {
         }
 
         /**
-         * CloudStorageType.
+         * <p>The cloud storage type. Valid values:</p>
+         * <ul>
+         * <li><strong>PerformanceStorage</strong>: Performance cloud storage.</li>
+         * <li><strong>StandardStorage</strong>: Standard cloud storage.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PerformanceStorage</p>
          */
         public Builder cloudStorageType(String cloudStorageType) {
             this.putQueryParameter("CloudStorageType", cloudStorageType);
@@ -245,7 +258,10 @@ public class UpdateLindormV2InstanceRequest extends Request {
         }
 
         /**
-         * EnableCapacityStorage.
+         * <p>Specifies whether to enable capacity storage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableCapacityStorage(Boolean enableCapacityStorage) {
             this.putQueryParameter("EnableCapacityStorage", enableCapacityStorage);
@@ -254,6 +270,7 @@ public class UpdateLindormV2InstanceRequest extends Request {
         }
 
         /**
+         * <p>The list of engine types.</p>
          * <p>This parameter is required.</p>
          */
         public Builder engineList(java.util.List<EngineList> engineList) {
@@ -263,6 +280,7 @@ public class UpdateLindormV2InstanceRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -293,6 +311,7 @@ public class UpdateLindormV2InstanceRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/426062.html">DescribeRegions</a> operation to query the region ID. Use this parameter to specify the region where you want to create the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -445,7 +464,10 @@ public class UpdateLindormV2InstanceRequest extends Request {
             } 
 
             /**
-             * GroupId.
+             * <p>The ID of the node group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ix90Yes</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -453,6 +475,7 @@ public class UpdateLindormV2InstanceRequest extends Request {
             }
 
             /**
+             * <p>The number of nodes.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -464,7 +487,10 @@ public class UpdateLindormV2InstanceRequest extends Request {
             }
 
             /**
-             * NodeDiskSize.
+             * <p>The disk size per node. This parameter is not required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder nodeDiskSize(Integer nodeDiskSize) {
                 this.nodeDiskSize = nodeDiskSize;
@@ -472,7 +498,10 @@ public class UpdateLindormV2InstanceRequest extends Request {
             }
 
             /**
-             * NodeDiskType.
+             * <p>The cloud disk type of the node. This parameter is not required. <strong>This parameter is used in special scenarios and is available only after your account is added to the whitelist.</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_essd</p>
              */
             public Builder nodeDiskType(String nodeDiskType) {
                 this.nodeDiskType = nodeDiskType;
@@ -480,6 +509,15 @@ public class UpdateLindormV2InstanceRequest extends Request {
             }
 
             /**
+             * <p>The node specifications of the engine. Valid values:</p>
+             * <ul>
+             * <li><strong>lindorm.c.2xlarge</strong>: 8 vCPUs and 16 GB of memory.</li>
+             * <li><strong>lindorm.g.2xlarge</strong>: 8 vCPUs and 32 GB of memory.</li>
+             * <li><strong>lindorm.c.4xlarge</strong>: 16 vCPUs and 32 GB of memory.</li>
+             * <li><strong>lindorm.g.4xlarge</strong>: 16 vCPUs and 64 GB of memory.</li>
+             * <li><strong>lindorm.c.8xlarge</strong>: 32 vCPUs and 64 GB of memory.</li>
+             * <li><strong>lindorm.g.8xlarge</strong>: 32 vCPUs and 128 GB of memory.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -491,7 +529,10 @@ public class UpdateLindormV2InstanceRequest extends Request {
             }
 
             /**
-             * ResourceGroupName.
+             * <p>The name of the node group. You can call the GetLindormV2InstanceDetails operation to query the name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>groupName</p>
              */
             public Builder resourceGroupName(String resourceGroupName) {
                 this.resourceGroupName = resourceGroupName;
@@ -559,6 +600,16 @@ public class UpdateLindormV2InstanceRequest extends Request {
             } 
 
             /**
+             * <p>The engine type. Valid values:</p>
+             * <ul>
+             * <li>TABLE: LindormTable.</li>
+             * <li>TSDB: LindormTSDB.</li>
+             * <li>LSEARCH: search engine.</li>
+             * <li>LTS: Lindorm Tunnel Service.</li>
+             * <li>LVECTOR: vector engine.</li>
+             * <li>LCOLUMN: column store engine.</li>
+             * <li>LAI: AI engine.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -570,7 +621,7 @@ public class UpdateLindormV2InstanceRequest extends Request {
             }
 
             /**
-             * NodeGroupList.
+             * <p>The list of engine node groups.</p>
              */
             public Builder nodeGroupList(java.util.List<NodeGroupList> nodeGroupList) {
                 this.nodeGroupList = nodeGroupList;

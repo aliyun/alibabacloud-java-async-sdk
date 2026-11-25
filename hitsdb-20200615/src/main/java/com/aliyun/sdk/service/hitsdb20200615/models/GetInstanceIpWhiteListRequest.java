@@ -155,11 +155,11 @@ public class GetInstanceIpWhiteListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance whose whitelists you want to query. You can call the <a href="https://help.aliyun.com/document_detail/426068.html">GetLindormInstanceList</a> operation to obtain the instance ID.</p>
+         * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/426068.html">GetLindormInstanceList</a> operation to obtain the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ld-bp1z3506imz2f****</p>
+         * <p>ld-bp1z3506imz2g****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

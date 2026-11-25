@@ -198,16 +198,18 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to remove all tags from the instances. Valid values:</p>
+         * <p>Specifies whether to remove all tags from the instance. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Remove all tags from the instances.</li>
-         * <li><strong>false</strong>: Do not remove all tags from the instances.</li>
+         * <li><strong>true</strong>: Removes all tags from the instance.</li>
+         * <li><strong>false</strong>: Does not remove all tags from the instance.</li>
          * </ul>
          * <blockquote>
-         * <p> The default value of this parameter is false.</p>
+         * <ul>
+         * <li>Default value: false.</li>
+         * </ul>
          * </blockquote>
          * <ul>
-         * <li>If you specify this parameter together with the TagKey parameter, this parameter does not take effect.</li>
+         * <li>If you specify both TagKey and this parameter, this parameter does not take effect.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -238,7 +240,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The IDs of instances.</p>
+         * <p>The list of instance IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
@@ -288,7 +290,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The list of keys of the tags that you want to remove.</p>
+         * <p>The list of tag keys.</p>
          */
         public Builder tagKey(java.util.List<String> tagKey) {
             this.putQueryParameter("TagKey", tagKey);

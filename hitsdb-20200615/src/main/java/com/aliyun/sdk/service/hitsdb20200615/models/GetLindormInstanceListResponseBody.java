@@ -106,7 +106,7 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The instances.</p>
+         * <p>The list of instances.</p>
          */
         public Builder instanceList(java.util.List<InstanceList> instanceList) {
             this.instanceList = instanceList;
@@ -114,7 +114,7 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of returned pages.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of instances that are returned on each page.</p>
+         * <p>The number of entries returned per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -136,7 +136,7 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1CA1FAFD-E8DC-51C2-AA7E-CA6E2D049BA0</p>
@@ -147,7 +147,7 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of returned instances.</p>
+         * <p>The total number of instances returned.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -216,7 +216,7 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The key of the tag.</p>
+             * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -227,7 +227,7 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the tag.</p>
+             * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
              * <p>2.2.18</p>
@@ -609,7 +609,7 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The 16-digit AliUid of the Alibaba Cloud account that owns the instance.</p>
+             * <p>The 16-character AliUid of the Alibaba Cloud account.</p>
              * 
              * <strong>example:</strong>
              * <p>164901546557****</p>
@@ -620,7 +620,10 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * CreateErrorCode.
+             * <p>The cause of the creation failure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Resource is not enough</p>
              */
             public Builder createErrorCode(String createErrorCode) {
                 this.createErrorCode = createErrorCode;
@@ -628,7 +631,7 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the instance is created. This value is a UNIX timestamp that indicates the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+             * <p>The number of milliseconds between the instance creation time and 00:00:00 on January 1, 1970.</p>
              * 
              * <strong>example:</strong>
              * <p>1631772842000</p>
@@ -639,7 +642,7 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the instance is created.</p>
+             * <p>The creation time of the instance. The time is in the yyyy-MM-dd HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-09-16 14:13:13</p>
@@ -650,9 +653,10 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the column storage engine is enabled, returning:</p>
+             * <p>Indicates whether the column store engine is enabled. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: Enabled. - <strong>false</strong>: Not enabled.</li>
+             * <li><strong>true</strong>: Enabled.</li>
+             * <li><strong>false</strong>: Not enabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -664,10 +668,10 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether LDPS is activated for the instance. Valid values:</p>
+             * <p>Indicates whether the compute engine is enabled for the instance. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: LDPS is activated for the instance.</li>
-             * <li><strong>false</strong>: LDPS is not activated for the instance.</li>
+             * <li><strong>true</strong>: Enabled.</li>
+             * <li><strong>false</strong>: Not enabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -679,9 +683,10 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the LTS engine is enabled, returning:</p>
+             * <p>Indicates whether Lindorm Tunnel Service (LTS) is enabled. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: Enabled. - <strong>false</strong>: Not enabled.</li>
+             * <li><strong>true</strong>: Enabled.</li>
+             * <li><strong>false</strong>: Not enabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -693,9 +698,10 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the message engine is enabled, returning:</p>
+             * <p>Indicates whether the message engine is enabled. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: Enabled. - <strong>false</strong>: Not enabled.</li>
+             * <li><strong>true</strong>: Enabled.</li>
+             * <li><strong>false</strong>: Not enabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -707,8 +713,11 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the table 3.0 storage engine is enabled, returning:</p>
-             * <p>true: Enabled. - false: Not enabled.</p>
+             * <p>Indicates whether LindormTable 3.0 is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: Enabled.</li>
+             * <li><strong>false</strong>: Not enabled.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -719,10 +728,10 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the Lindorm streaming engine is activated for the instance. Valid values:</p>
+             * <p>Indicates whether the streaming engine is enabled for the instance. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: The Lindorm streaming engine is activated for the instance.</li>
-             * <li><strong>false</strong>: The Lindorm streaming engine is not activated for the instance.</li>
+             * <li><strong>true</strong>: The streaming engine is enabled.</li>
+             * <li><strong>false</strong>: The streaming engine is not enabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -734,9 +743,10 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether the vector engine is enabled, returns:</p>
+             * <p>Indicates whether the vector engine is enabled. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: Enabled. - <strong>false</strong>: Not enabled.</li>
+             * <li><strong>true</strong>: Enabled.</li>
+             * <li><strong>false</strong>: Not enabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -748,15 +758,15 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The engine supported by the instance. The engines are indicated by different numbers:</p>
+             * <p>The engine types supported by the instance. The return value is the sum of the following engine type values:</p>
              * <ul>
-             * <li><strong>1</strong>: LindormSearch.</li>
-             * <li><strong>2</strong>: LindormTSDB.</li>
-             * <li><strong>4</strong>: LindormTable.</li>
-             * <li><strong>8</strong>: LindormDFS.</li>
+             * <li><strong>1</strong>: Search engine</li>
+             * <li><strong>2</strong>: LindormTSDB</li>
+             * <li><strong>4</strong>: LindormTable</li>
+             * <li><strong>8</strong>: File engine</li>
              * </ul>
              * <blockquote>
-             * <p>The value of this parameter is the sum of all numbers that indicate the engines supported by the instance. For example, if the value of this parameter is 15, which is the sum of 1, 2, 4, and 8, the instance supports all four engines. If the value of this parameter is 6, which is the sum of 2 and 4, the instance supports LindormTSDB and LindormTable.</p>
+             * <p>For example, if the value is 15 (15 = 8 + 4 + 2 + 1), the instance supports the search engine, LindormTSDB, LindormTable, and file engine. If the value is 6 (6 = 4 + 2), the instance supports LindormTSDB and LindormTable.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -768,9 +778,9 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the instance expires.</p>
+             * <p>The expiration time of the instance. The time is in the yyyy-MM-dd HH:mm:ss format.</p>
              * <blockquote>
-             * <p>This parameter is returned only if the billing method of the instance is subscription.</p>
+             * <p>This parameter is returned only when the billing method of the instance is subscription.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -782,7 +792,7 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the instance expires. This value is a UNIX timestamp that indicates the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+             * <p>The number of milliseconds between the time when the instance expires and 00:00:00 on January 1, 1970.</p>
              * 
              * <strong>example:</strong>
              * <p>1650902400000</p>
@@ -793,7 +803,7 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the VPC.</p>
+             * <p>The instance name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -804,7 +814,7 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ld-bp17pwu1541ia****</p>
@@ -815,29 +825,29 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the instance. Valid values:</p>
+             * <p>The instance status. Valid values:</p>
              * <ul>
-             * <li><strong>CREATING</strong>: The instance is being created.</li>
-             * <li><strong>ACTIVATION</strong>: The instance is running.</li>
-             * <li><strong>COLD_EXPANDING</strong>: The Capacity storage of the instance is being scaled up.</li>
-             * <li><strong>MINOR_VERSION_TRANSING</strong>: The minor version of the instance is being updated.</li>
-             * <li><strong>RESIZING</strong>: The nodes in the instance are being scaled up.</li>
-             * <li><strong>SHRINKING</strong>: The nodes in the instance are being scaled down.</li>
-             * <li><strong>CLASS_CHANGING</strong>: The specification of the instance is being changed.</li>
-             * <li><strong>SSL_SWITCHING: SSL</strong>: The SSL configurations of the instance are being changed.</li>
-             * <li><strong>CDC_OPENING</strong>: Data subscription is being enabled for the instance.</li>
-             * <li><strong>TRANSFER</strong>: The data of the instance is being transferred.</li>
-             * <li><strong>DATABASE_TRANSFER</strong>: The data of the instance is being transferred to databases.</li>
-             * <li><strong>GUARD_CREATING</strong>: A disaster recovery instance is being created.</li>
-             * <li><strong>BACKUP_RECOVERING</strong>: The data of the instance is being restored from a backup.</li>
-             * <li><strong>DATABASE_IMPORTING</strong>: Data is being imported to the instance.</li>
-             * <li><strong>NET_MODIFYING</strong>: The network configurations of the instance are being changed.</li>
-             * <li><strong>NET_SWITCHING</strong>: The network of the instance is being switched between a virtual private cloud (VPC) and the Internet.</li>
-             * <li><strong>NET_CREATING</strong>: The connection to the instance is being created.</li>
-             * <li><strong>NET_DELETING</strong>: The connection to the instance is being deleted.</li>
-             * <li><strong>DELETING</strong>: The instance is being deleted.</li>
-             * <li><strong>RESTARTING</strong>: The instance is restarting.</li>
-             * <li><strong>LOCKED</strong>: The instance is locked because it expires.</li>
+             * <li><strong>CREATING</strong>: Creating.</li>
+             * <li><strong>ACTIVATION</strong>: Running.</li>
+             * <li><strong>COLD_EXPANDING</strong>: Performing storage expansion for storage-optimized cloud storage.</li>
+             * <li><strong>MINOR_VERSION_TRANSING</strong>: Upgrading the minor version.</li>
+             * <li><strong>RESIZING</strong>: Scaling out nodes.</li>
+             * <li><strong>SHRINKING</strong>: Scaling in nodes.</li>
+             * <li><strong>CLASS_CHANGING</strong>: Upgrading or downgrading specifications.</li>
+             * <li><strong>SSL_SWITCHING</strong>: Modifying SSL configurations.</li>
+             * <li><strong>CDC_OPENING</strong>: Enabling the data subscription feature.</li>
+             * <li><strong>TRANSFER</strong>: Migrating data.</li>
+             * <li><strong>DATABASE_TRANSFER</strong>: Migrating data to the database.</li>
+             * <li><strong>GUARD_CREATING</strong>: Creating a disaster recovery instance.</li>
+             * <li><strong>BACKUP_RECOVERING</strong>: Restoring from a backup.</li>
+             * <li><strong>DATABASE_IMPORTING</strong>: Importing data.</li>
+             * <li><strong>NET_MODIFYING</strong>: Modifying network configurations.</li>
+             * <li><strong>NET_SWITCHING</strong>: Switching between the internal network and the Internet.</li>
+             * <li><strong>NET_CREATING</strong>: Creating a network connection.</li>
+             * <li><strong>NET_DELETING</strong>: Performing a delete operation on the network connection.</li>
+             * <li><strong>DELETING</strong>: Performing a delete operation.</li>
+             * <li><strong>RESTARTING</strong>: Restarting.</li>
+             * <li><strong>LOCKED</strong>: Locked because the instance has expired.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -873,8 +883,8 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
             /**
              * <p>The billing method of the instance. Valid values:</p>
              * <ul>
-             * <li><strong>PREPAY</strong>: subscription.</li>
-             * <li><strong>POSTPAY</strong>: pay-as-you-go.</li>
+             * <li><strong>PREPAY</strong>: Subscription</li>
+             * <li><strong>POSTPAY</strong>: Pay-as-you-go</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -886,7 +896,7 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the instance.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -897,7 +907,7 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource group to which the instance belongs.</p>
+             * <p>The resource group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>rg-aekzledqeat****</p>
@@ -908,12 +918,12 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The series of the instance. Valid values:</p>
+             * <p>The instance type. Valid values:</p>
              * <ul>
-             * <li><strong>lindorm</strong>: The instance is a Lindorm instance.</li>
-             * <li><strong>serverless_lindorm</strong>: The instance is a Lindorm Serverless instance.</li>
-             * <li><strong>lindorm_standalone</strong>: The instance is a single-node Lindorm instance.</li>
-             * <li><strong>lts</strong>: The instance is an LTS instance.</li>
+             * <li><strong>lindorm</strong>: Lindorm instance</li>
+             * <li><strong>serverless_lindorm</strong>: Lindorm Serverless instance</li>
+             * <li><strong>lindorm_standalone</strong>: Lindorm single-node instance</li>
+             * <li><strong>lts</strong>: Lindorm Tunnel Service</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -925,7 +935,7 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of tags associated with the specified instances.</p>
+             * <p>The list of tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -933,7 +943,7 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the VPC in which the instance is deployed.</p>
+             * <p>The VPC ID of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-bp1n3i15v90el48nx****</p>
@@ -944,7 +954,7 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the zone in which the instance is created.</p>
+             * <p>The zone ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou-h</p>

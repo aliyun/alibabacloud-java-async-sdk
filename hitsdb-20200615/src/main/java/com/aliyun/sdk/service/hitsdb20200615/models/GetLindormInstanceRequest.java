@@ -155,11 +155,7 @@ public class GetLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The disk type of the log nodes. This parameter is returned only for multi-zone instances. Valid values:</p>
-         * <ul>
-         * <li><strong>cloud_efficiency</strong>: The nodes use the Standard type of storage.</li>
-         * <li><strong>cloud_ssd</strong>: The nodes use the Performance type of storage.</li>
-         * </ul>
+         * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/426069.html">GetLindormInstanceList</a> operation to obtain the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

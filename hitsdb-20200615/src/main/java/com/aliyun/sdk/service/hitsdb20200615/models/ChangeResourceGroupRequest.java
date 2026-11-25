@@ -90,7 +90,7 @@ public class ChangeResourceGroupRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the resource group into which you want to change.</p>
+         * <p>The destination resource group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -103,7 +103,7 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>The resource ID.</p>
+         * <p>The ID of the resource.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

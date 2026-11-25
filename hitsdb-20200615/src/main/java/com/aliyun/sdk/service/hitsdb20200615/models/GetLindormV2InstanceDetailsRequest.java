@@ -155,10 +155,11 @@ public class GetLindormV2InstanceDetailsRequest extends Request {
         }
 
         /**
+         * <p>The instance ID. This operation supports only Lindorm V2 architecture instances where ServiceType is lindorm_v2, lindorm_v2_multizone, or lindorm_v2_multizone_ha. For V1 instances, use the GetLindormInstance operation. GetLindormInstanceList does not return V2 architecture instances. When you create a V2 instance, you can obtain this value from the InstanceId response parameter of CreateLindormV2Instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ts-xxxxxxxxxxxxxxxxx</p>
+         * <p>ld-bp1mq0tdzbx1m****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

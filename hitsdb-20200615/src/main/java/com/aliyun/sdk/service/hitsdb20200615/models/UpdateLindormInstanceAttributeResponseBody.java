@@ -67,7 +67,10 @@ public class UpdateLindormInstanceAttributeResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The detailed reason why access was denied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;AuthAction&quot;:&quot;xxx&quot;,&quot;AuthPrincipalDisplayName&quot;:&quot;222&quot;,&quot;AuthPrincipalOwnerId&quot;:&quot;111&quot;,&quot;AuthPrincipalType&quot;:&quot;SubUser&quot;,,&quot;NoPermissionType&quot;:&quot;ImplicitDeny&quot;,&quot;PolicyType&quot;:&quot;AccountLevelIdentityBasedPolicy&quot;,&quot;EncodedDiagnosticMessage&quot;:&quot;xxxxxx&quot;}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -75,7 +78,10 @@ public class UpdateLindormInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1556DCB0-043A-4444-8BD9-CF4A68E7EE64</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

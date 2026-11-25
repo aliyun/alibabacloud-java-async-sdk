@@ -169,7 +169,10 @@ public class ReleaseLindormV2InstanceRequest extends Request {
         }
 
         /**
-         * Immediately.
+         * <p>Specifies whether to release the instance immediately. Default value: false. If this parameter is set to false, the instance data is retained for 7 days and then deleted. If this parameter is set to true, the instance data is immediately deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder immediately(Boolean immediately) {
             this.putQueryParameter("Immediately", immediately);
@@ -178,6 +181,7 @@ public class ReleaseLindormV2InstanceRequest extends Request {
         }
 
         /**
+         * <p>Instance ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/190281.html">GetLindormInstanceList</a> operation to obtain instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

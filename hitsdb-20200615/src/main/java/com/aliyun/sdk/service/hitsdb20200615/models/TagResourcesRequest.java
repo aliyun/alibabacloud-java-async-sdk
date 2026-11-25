@@ -195,7 +195,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region in which the instances you want to associate tags with are located. You can call the <a href="https://help.aliyun.com/document_detail/426062.html">DescribeRegions</a> operation to query the region ID.</p>
+         * <p>The ID of the region where the instance resides. You can call the <a href="https://help.aliyun.com/document_detail/426062.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -258,7 +258,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The tags that you want to associate with the resource.</p>
+         * <p>The list of tags.</p>
          * <p>This parameter is required.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
@@ -328,9 +328,9 @@ public class TagResourcesRequest extends Request {
             } 
 
             /**
-             * <p>The key of the tag that you want to associate with the resource.</p>
+             * <p>The tag key.</p>
              * <blockquote>
-             * <p>You can specify the keys of multiple tags. For example, you can specify the key of the first tag in the first key-value pair contained in the value of this parameter and specify the key of the second tag in the second key-value pair.</p>
+             * <p>You can specify multiple tag keys. For example, the Key in the first pair specifies the key of the first tag, and the Key in the second pair specifies the key of the second tag.</p>
              * </blockquote>
              * <p>This parameter is required.</p>
              * 
@@ -343,9 +343,9 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * <p>The value of the tag that you want to associate with the resource.</p>
+             * <p>The tag value.</p>
              * <blockquote>
-             * <p>You can specify the values of multiple tags. For example, you can specify the value of the first tag in the first key-value pair contained in the value of this parameter and specify the value of the second tag in the second key-value pair.</p>
+             * <p>You can specify multiple tag values. For example, the Value in the first pair specifies the value of the first tag, and the Value in the second pair specifies the value of the second tag.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

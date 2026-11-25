@@ -248,7 +248,7 @@ public class GetLindormInstanceListRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -260,7 +260,7 @@ public class GetLindormInstanceListRequest extends Request {
         }
 
         /**
-         * <p>The number of instances to return on each page.</p>
+         * <p>The number of entries to return per page for paging in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -272,7 +272,7 @@ public class GetLindormInstanceListRequest extends Request {
         }
 
         /**
-         * <p>The keyword contained in the names of Lindorm instances you want to query. Fuzzy queries based on the keyword is supported.</p>
+         * <p>The keyword used to perform a fuzzy search by instance name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -284,7 +284,7 @@ public class GetLindormInstanceListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region in which the instances that you want to query is located. You can call the <a href="https://help.aliyun.com/document_detail/426062.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/426062.html">DescribeRegions</a> operation to query the region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -296,7 +296,7 @@ public class GetLindormInstanceListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the instance belongs.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aek3b63arvg27vi</p>
@@ -335,13 +335,13 @@ public class GetLindormInstanceListRequest extends Request {
         }
 
         /**
-         * <p>The series of instances that you want to query. Valid values:</p>
+         * <p>The instance type. Valid values:</p>
          * <ul>
-         * <li><strong>lindorm</strong>: The instance is a single-zone Lindorm instance.</li>
-         * <li><strong>lindorm_multizone</strong>: The instance is a multi-zone Lindorm instance.</li>
-         * <li><strong>serverless_lindorm</strong>: The instance is a Lindorm Serverless instance.</li>
-         * <li><strong>lindorm_standalone</strong>: The instance is a single-node Lindorm instance.</li>
-         * <li><strong>lts</strong>: The instance is an LTS instance.</li>
+         * <li><strong>lindorm</strong>: Lindorm single-zone instance</li>
+         * <li><strong>lindorm_multizone</strong>: Lindorm multi-zone instance</li>
+         * <li><strong>serverless_lindorm</strong>: Lindorm Serverless instance</li>
+         * <li><strong>lindorm_standalone</strong>: Lindorm single-node instance</li>
+         * <li><strong>lts</strong>: Lindorm Tunnel Service</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -354,19 +354,19 @@ public class GetLindormInstanceListRequest extends Request {
         }
 
         /**
-         * <p>The engine supported by the instances that you want to query. The engines are indicated by different numbers:</p>
+         * <p>The data engine types supported by the instance. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: LindormSearch.</li>
+         * <li><strong>1</strong>: Search engine</li>
          * <li><strong>2</strong>: LindormTSDB</li>
          * <li><strong>4</strong>: LindormTable</li>
-         * <li><strong>8</strong>: LindormDFS</li>
+         * <li><strong>8</strong>: File engine</li>
          * </ul>
          * <blockquote>
-         * <p> The value of this parameter is the sum of all numbers that indicate the engines supported by the instance. For example, if you set the value of this parameter to 15, which is the sum of 1, 2, 4, and 8, this operation queries instances that support all four engines. If you set the value of this parameter to 6, which is the sum of 2 and 4, this operation queries instances that support LindormTSDB and LindormTable.</p>
+         * <p>For example, if the value is 15 (15 = 8 + 4 + 2 + 1), the instance supports the search engine, LindormTSDB, LindormTable, and file engine. If the value is 6 (6 = 4 + 2), the instance supports LindormTSDB and LindormTable.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>15</p>
+         * <p>6</p>
          */
         public Builder supportEngine(Integer supportEngine) {
             this.putQueryParameter("SupportEngine", supportEngine);
@@ -375,7 +375,7 @@ public class GetLindormInstanceListRequest extends Request {
         }
 
         /**
-         * <p>The list of tags associated with the specified instances.</p>
+         * <p>The list of tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -443,9 +443,9 @@ public class GetLindormInstanceListRequest extends Request {
             } 
 
             /**
-             * <p>The key of tag N of the instances you want to query. You can specify 1 to 20 tag keys.</p>
+             * <p>The tag key. Valid values of N: 1 to 20.</p>
              * <blockquote>
-             * <p>You can specify the keys of multiple tags. For example, you can specify the key of the first tag in the first key-value pair contained in the value of this parameter and specify the key of the second tag in the second key-value pair.</p>
+             * <p>You can specify multiple tag keys. For example, the first Key specifies the first tag key, and the second Key specifies the second tag key.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -457,9 +457,9 @@ public class GetLindormInstanceListRequest extends Request {
             }
 
             /**
-             * <p>The value of tag N of the instances you want to query. You can specify 1 to 20 tag values.</p>
+             * <p>The tag value. Valid values of N: 1 to 20.</p>
              * <blockquote>
-             * <p>You can specify the values of multiple tags. For example, you can specify the value of the first tag in the first key-value pair contained in the value of this parameter and specify the value of the second tag in the second key-value pair.</p>
+             * <p>You can specify multiple tag values. For example, the first Value specifies the first tag value, and the second Value specifies the second tag value.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

@@ -159,6 +159,7 @@ public class UpdateLindormV2WhiteIpListRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID. You can call the GetLindormV2InstanceList operation to query the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -189,7 +190,10 @@ public class UpdateLindormV2WhiteIpListRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region where the instance resides. You can call the <a href="https://help.aliyun.com/document_detail/426062.html">DescribeRegions</a> operation to query the region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -225,6 +229,7 @@ public class UpdateLindormV2WhiteIpListRequest extends Request {
         }
 
         /**
+         * <p>The list of whitelist groups.</p>
          * <p>This parameter is required.</p>
          */
         public Builder whiteIpGroupList(java.util.List<WhiteIpGroupList> whiteIpGroupList) {
@@ -295,6 +300,7 @@ public class UpdateLindormV2WhiteIpListRequest extends Request {
             } 
 
             /**
+             * <p>The name of the whitelist group.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -306,6 +312,10 @@ public class UpdateLindormV2WhiteIpListRequest extends Request {
             }
 
             /**
+             * <p>The IP addresses to be added to the whitelist.</p>
+             * <blockquote>
+             * <p>127.0.0.1 indicates that access from all IP addresses is denied. For example, 192.168.0.0/24 indicates that access from all IP addresses in the 192.168.0.X CIDR block is allowed to the Lindorm instance. Separate multiple IP addresses with commas (,).</p>
+             * </blockquote>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

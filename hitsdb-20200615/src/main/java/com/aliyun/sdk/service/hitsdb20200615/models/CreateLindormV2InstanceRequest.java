@@ -472,7 +472,10 @@ public class CreateLindormV2InstanceRequest extends Request {
         } 
 
         /**
-         * ArbiterVSwitchId.
+         * <p>The vSwitch ID of the arbiter zone for a multi-zone instance. The vSwitch must be deployed in the zone specified by <strong>ArbiterZoneId</strong>. <strong>This parameter is required if you want to create a multi-zone instance.</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-uf6664pqjawb87k36****</p>
          */
         public Builder arbiterVSwitchId(String arbiterVSwitchId) {
             this.putQueryParameter("ArbiterVSwitchId", arbiterVSwitchId);
@@ -481,7 +484,10 @@ public class CreateLindormV2InstanceRequest extends Request {
         }
 
         /**
-         * ArbiterZoneId.
+         * <p>The zone ID of the arbiter zone for a multi-zone instance. <strong>This parameter is required if you want to create a multi-zone instance.</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai-g</p>
          */
         public Builder arbiterZoneId(String arbiterZoneId) {
             this.putQueryParameter("ArbiterZoneId", arbiterZoneId);
@@ -490,7 +496,15 @@ public class CreateLindormV2InstanceRequest extends Request {
         }
 
         /**
-         * ArchVersion.
+         * <p>The deployment architecture. Valid values:</p>
+         * <ul>
+         * <li><strong>1.0</strong>: Single-zone.</li>
+         * <li><strong>2.0</strong>: Multi-zone Basic Edition.</li>
+         * <li><strong>3.0</strong>: Multi-zone High-availability Edition.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0</p>
          */
         public Builder archVersion(String archVersion) {
             this.putQueryParameter("ArchVersion", archVersion);
@@ -499,7 +513,13 @@ public class CreateLindormV2InstanceRequest extends Request {
         }
 
         /**
-         * AutoRenewDuration.
+         * <p>The auto-renewal duration. Unit: months. Valid values: <strong>1</strong> to <strong>12</strong>.</p>
+         * <blockquote>
+         * <p>This parameter takes effect only when <strong>AutoRenewal</strong> is set to <strong>true</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder autoRenewDuration(String autoRenewDuration) {
             this.putQueryParameter("AutoRenewDuration", autoRenewDuration);
@@ -508,7 +528,18 @@ public class CreateLindormV2InstanceRequest extends Request {
         }
 
         /**
-         * AutoRenewal.
+         * <p>Specifies whether to enable auto-renewal for the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Enables auto-renewal.</li>
+         * <li><strong>false</strong>: Disables auto-renewal.</li>
+         * </ul>
+         * <p>Default value: false.</p>
+         * <blockquote>
+         * <p>This parameter is valid only when <strong>PayType</strong> is set to <strong>PREPAY</strong> (subscription).</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoRenewal(Boolean autoRenewal) {
             this.putQueryParameter("AutoRenewal", autoRenewal);
@@ -517,7 +548,10 @@ public class CreateLindormV2InstanceRequest extends Request {
         }
 
         /**
-         * CapacityStorageSize.
+         * <p>The size of the capacity storage. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder capacityStorageSize(Integer capacityStorageSize) {
             this.putQueryParameter("CapacityStorageSize", capacityStorageSize);
@@ -526,7 +560,10 @@ public class CreateLindormV2InstanceRequest extends Request {
         }
 
         /**
-         * CloudStorageSize.
+         * <p>The size of the cloud storage space. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>320</p>
          */
         public Builder cloudStorageSize(Integer cloudStorageSize) {
             this.putQueryParameter("CloudStorageSize", cloudStorageSize);
@@ -535,7 +572,15 @@ public class CreateLindormV2InstanceRequest extends Request {
         }
 
         /**
-         * CloudStorageType.
+         * <p>The storage type. If you select the <strong>big data</strong> or <strong>local SSD</strong> type, you can leave this parameter empty. Valid values:</p>
+         * <ul>
+         * <li><strong>PerformanceStorage</strong>: Performance cloud storage.</li>
+         * <li><strong>StandardStorage</strong>: Standard cloud storage.</li>
+         * <li><strong>CapacityStorage</strong>: Capacity cloud storage.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PerformanceStorage</p>
          */
         public Builder cloudStorageType(String cloudStorageType) {
             this.putQueryParameter("CloudStorageType", cloudStorageType);
@@ -544,7 +589,13 @@ public class CreateLindormV2InstanceRequest extends Request {
         }
 
         /**
-         * ClusterMode.
+         * <p>The instance mode. This parameter is optional. Valid values:</p>
+         * <ul>
+         * <li><strong>BASIC</strong>: General mode.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>BASIC</p>
          */
         public Builder clusterMode(String clusterMode) {
             this.putQueryParameter("ClusterMode", clusterMode);
@@ -553,7 +604,13 @@ public class CreateLindormV2InstanceRequest extends Request {
         }
 
         /**
-         * ClusterPattern.
+         * <p>The cluster pattern. Valid values:</p>
+         * <ul>
+         * <li><strong>basic</strong>: Production.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>basic</p>
          */
         public Builder clusterPattern(String clusterPattern) {
             this.putQueryParameter("ClusterPattern", clusterPattern);
@@ -562,7 +619,17 @@ public class CreateLindormV2InstanceRequest extends Request {
         }
 
         /**
-         * Duration.
+         * <p>The subscription duration of the instance. Valid values:</p>
+         * <ul>
+         * <li>If <strong>PricingCycle</strong> is set to <strong>Month</strong>, the value ranges from <strong>1</strong> to <strong>9</strong>.</li>
+         * <li>If <strong>PricingCycle</strong> is set to <strong>Year</strong>, the value ranges from <strong>1</strong> to <strong>3</strong>.</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is available and required only when <strong>PayType</strong> is set to <strong>PREPAY</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder duration(Integer duration) {
             this.putQueryParameter("Duration", duration);
@@ -571,7 +638,10 @@ public class CreateLindormV2InstanceRequest extends Request {
         }
 
         /**
-         * EnableCapacityStorage.
+         * <p>Specifies whether to enable capacity storage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableCapacityStorage(Boolean enableCapacityStorage) {
             this.putQueryParameter("EnableCapacityStorage", enableCapacityStorage);
@@ -580,6 +650,7 @@ public class CreateLindormV2InstanceRequest extends Request {
         }
 
         /**
+         * <p>The list of engine information.</p>
          * <p>This parameter is required.</p>
          */
         public Builder engineList(java.util.List<EngineList> engineList) {
@@ -589,7 +660,10 @@ public class CreateLindormV2InstanceRequest extends Request {
         }
 
         /**
-         * InstanceAlias.
+         * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lindorm-test</p>
          */
         public Builder instanceAlias(String instanceAlias) {
             this.putQueryParameter("InstanceAlias", instanceAlias);
@@ -616,6 +690,11 @@ public class CreateLindormV2InstanceRequest extends Request {
         }
 
         /**
+         * <p>The billing method of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>PREPAY</strong>: Subscription.</li>
+         * <li><strong>POSTPAY</strong>: Pay-as-you-go.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -628,7 +707,17 @@ public class CreateLindormV2InstanceRequest extends Request {
         }
 
         /**
-         * PricingCycle.
+         * <p>The billing cycle of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Month</strong>: Month.</li>
+         * <li><strong>Year</strong>: Year.</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is available and required only when <strong>PayType</strong> is set to <strong>PREPAY</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder pricingCycle(String pricingCycle) {
             this.putQueryParameter("PricingCycle", pricingCycle);
@@ -637,7 +726,10 @@ public class CreateLindormV2InstanceRequest extends Request {
         }
 
         /**
-         * PrimaryVSwitchId.
+         * <p>The vSwitch ID of the primary zone for a multi-zone instance. The vSwitch must be deployed in the zone specified by <strong>PrimaryZoneId</strong>. <strong>This parameter is required if you want to create a multi-zone instance.</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-uf6fdqa7c0pipnqzq****</p>
          */
         public Builder primaryVSwitchId(String primaryVSwitchId) {
             this.putQueryParameter("PrimaryVSwitchId", primaryVSwitchId);
@@ -646,7 +738,10 @@ public class CreateLindormV2InstanceRequest extends Request {
         }
 
         /**
-         * PrimaryZoneId.
+         * <p>The zone ID of the primary zone for a multi-zone instance. <strong>This parameter is required if you want to create a multi-zone instance.</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai-e</p>
          */
         public Builder primaryZoneId(String primaryZoneId) {
             this.putQueryParameter("PrimaryZoneId", primaryZoneId);
@@ -655,7 +750,11 @@ public class CreateLindormV2InstanceRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/426062.html">DescribeRegions</a> operation to query the most recent region list. Use this parameter to specify the region where you want to create the instance.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -664,7 +763,10 @@ public class CreateLindormV2InstanceRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2i6weeb4nfii</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -700,7 +802,10 @@ public class CreateLindormV2InstanceRequest extends Request {
         }
 
         /**
-         * StandbyVSwitchId.
+         * <p>The vSwitch ID of the secondary zone for a multi-zone instance. The vSwitch must be deployed in the zone specified by <strong>StandbyZoneId</strong>. <strong>This parameter is required if you want to create a multi-zone instance.</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-2zec0kcn08cgdtr6****</p>
          */
         public Builder standbyVSwitchId(String standbyVSwitchId) {
             this.putQueryParameter("StandbyVSwitchId", standbyVSwitchId);
@@ -709,7 +814,10 @@ public class CreateLindormV2InstanceRequest extends Request {
         }
 
         /**
-         * StandbyZoneId.
+         * <p>The zone ID of the secondary zone for a multi-zone instance. <strong>This parameter is required if you want to create a multi-zone instance.</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai-f</p>
          */
         public Builder standbyZoneId(String standbyZoneId) {
             this.putQueryParameter("StandbyZoneId", standbyZoneId);
@@ -718,6 +826,7 @@ public class CreateLindormV2InstanceRequest extends Request {
         }
 
         /**
+         * <p>The VPC ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -730,7 +839,10 @@ public class CreateLindormV2InstanceRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * <p>The vSwitch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1e7clcw529l773d****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -739,6 +851,7 @@ public class CreateLindormV2InstanceRequest extends Request {
         }
 
         /**
+         * <p>The zone ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -851,6 +964,7 @@ public class CreateLindormV2InstanceRequest extends Request {
             } 
 
             /**
+             * <p>The number of nodes in the cluster.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -862,7 +976,10 @@ public class CreateLindormV2InstanceRequest extends Request {
             }
 
             /**
-             * NodeDiskSize.
+             * <p>The disk size per node. Default unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder nodeDiskSize(Integer nodeDiskSize) {
                 this.nodeDiskSize = nodeDiskSize;
@@ -870,7 +987,10 @@ public class CreateLindormV2InstanceRequest extends Request {
             }
 
             /**
-             * NodeDiskType.
+             * <p>The cloud disk type of the node. This parameter is optional. <strong>This parameter is used in special scenarios and is available only to whitelisted users.</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_essd</p>
              */
             public Builder nodeDiskType(String nodeDiskType) {
                 this.nodeDiskType = nodeDiskType;
@@ -878,6 +998,47 @@ public class CreateLindormV2InstanceRequest extends Request {
             }
 
             /**
+             * <p>The node specifications. If you select performance cloud storage or standard cloud storage, valid values are:</p>
+             * <ul>
+             * <li><strong>lindorm.c.2xlarge</strong>: 8 vCPUs and 16 GB of memory.</li>
+             * <li><strong>lindorm.g.2xlarge</strong>: 8 vCPUs and 32 GB of memory.</li>
+             * <li><strong>lindorm.c.4xlarge</strong>: 16 vCPUs and 32 GB of memory.</li>
+             * <li><strong>lindorm.g.4xlarge</strong>: 16 vCPUs and 64 GB of memory.</li>
+             * <li><strong>lindorm.c.8xlarge</strong>: 32 vCPUs and 64 GB of memory.</li>
+             * <li><strong>lindorm.g.8xlarge</strong>: 32 vCPUs and 128 GB of memory.</li>
+             * <li><strong>lindorm.r.2xlarge</strong>: 8 vCPUs and 64 GB of memory.</li>
+             * <li><strong>lindorm.r.4xlarge</strong>: 16 vCPUs and 128 GB of memory.</li>
+             * <li><strong>lindorm.r.8xlarge</strong>: 32 vCPUs and 256 GB of memory.</li>
+             * </ul>
+             * <p>If you select the local SSD type, valid values are:</p>
+             * <ul>
+             * <li><strong>lindorm.i4.xlarge</strong>: 4 vCPUs and 32 GB of memory (I4).</li>
+             * <li><strong>lindorm.i4.2xlarge</strong>: 8 vCPUs and 64 GB of memory (I4).</li>
+             * <li><strong>lindorm.i4.4xlarge</strong>: 16 vCPUs and 128 GB of memory (I4).</li>
+             * <li><strong>lindorm.i4.8xlarge</strong>: 32 vCPUs and 256 GB of memory (I4).</li>
+             * <li><strong>lindorm.i3.xlarge</strong>: 4 vCPUs and 32 GB of memory (I3).</li>
+             * <li><strong>lindorm.i3.2xlarge</strong>: 8 vCPUs and 64 GB of memory (I3).</li>
+             * <li><strong>lindorm.i3.4xlarge</strong>: 16 vCPUs and 128 GB of memory (I3).</li>
+             * <li><strong>lindorm.i3.8xlarge</strong>: 32 vCPUs and 256 GB of memory (I3).</li>
+             * <li><strong>lindorm.i2.xlarge</strong>: 4 vCPUs and 32 GB of memory (I2).</li>
+             * <li><strong>lindorm.i2.2xlarge</strong>: 8 vCPUs and 64 GB of memory (I2).</li>
+             * <li><strong>lindorm.i2.4xlarge</strong>: 16 vCPUs and 128 GB of memory (I2).</li>
+             * <li><strong>lindorm.i2.8xlarge</strong>: 32 vCPUs and 256 GB of memory (I2).</li>
+             * </ul>
+             * <p>If you select the big data type, valid values are:</p>
+             * <ul>
+             * <li><strong>lindorm.sd3c.3xlarge</strong>: 14 vCPUs and 56 GB of memory (D3C PRO).</li>
+             * <li><strong>lindorm.sd3c.7xlarge</strong>: 28 vCPUs and 112 GB of memory (D3C PRO).</li>
+             * <li><strong>lindorm.sd3c.14xlarge</strong>: 56 vCPUs and 224 GB of memory (D3C PRO).</li>
+             * <li><strong>lindorm.d2c.6xlarge</strong>: 24 vCPUs and 88 GB of memory (D2C).</li>
+             * <li><strong>lindorm.d2c.12xlarge</strong>: 48 vCPUs and 176 GB of memory (D2C).</li>
+             * <li><strong>lindorm.d2c.24xlarge</strong>: 96 vCPUs and 352 GB of memory (D2C).</li>
+             * <li><strong>lindorm.d2s.5xlarge</strong>: 20 vCPUs and 88 GB of memory (D2S).</li>
+             * <li><strong>lindorm.d2s.10xlarge</strong>: 40 vCPUs and 176 GB of memory (D2S).</li>
+             * <li><strong>lindorm.d1.2xlarge</strong>: 8 vCPUs and 32 GB of memory (D1NE).</li>
+             * <li><strong>lindorm.d1.4xlarge</strong>: 16 vCPUs and 64 GB of memory (D1NE).</li>
+             * <li><strong>lindorm.d1.6xlarge</strong>: 24 vCPUs and 96 GB of memory (D1NE).</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -889,7 +1050,10 @@ public class CreateLindormV2InstanceRequest extends Request {
             }
 
             /**
-             * ResourceGroupName.
+             * <p>The name of the node group. This parameter is optional.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>group_name_01</p>
              */
             public Builder resourceGroupName(String resourceGroupName) {
                 this.resourceGroupName = resourceGroupName;
@@ -957,6 +1121,16 @@ public class CreateLindormV2InstanceRequest extends Request {
             } 
 
             /**
+             * <p>The engine type. Valid values:</p>
+             * <ul>
+             * <li><strong>TABLE</strong>: LindormTable.</li>
+             * <li><strong>TSDB</strong>: LindormTSDB.</li>
+             * <li><strong>LSEARCH</strong>: Search engine.</li>
+             * <li><strong>LTS</strong>: Lindorm Tunnel Service.</li>
+             * <li><strong>LVECTOR</strong>: Vector engine.</li>
+             * <li><strong>LCOLUMN</strong>: Column store engine.</li>
+             * <li><strong>LAI</strong>: AI engine.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -968,7 +1142,7 @@ public class CreateLindormV2InstanceRequest extends Request {
             }
 
             /**
-             * NodeGroupList.
+             * <p>The list of engine nodes.</p>
              */
             public Builder nodeGroupList(java.util.List<NodeGroupList> nodeGroupList) {
                 this.nodeGroupList = nodeGroupList;

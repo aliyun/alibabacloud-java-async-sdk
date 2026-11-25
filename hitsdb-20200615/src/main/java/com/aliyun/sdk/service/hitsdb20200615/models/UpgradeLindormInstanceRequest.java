@@ -429,7 +429,7 @@ public class UpgradeLindormInstanceRequest extends Request {
         } 
 
         /**
-         * <p>The storage capacity of the instance after it is upgraded. Unit: GB. Valid values: <strong>480</strong> to <strong>1017600</strong>.</p>
+         * <p>The storage capacity of the instance after the specification change. Unit: GB. Valid values: <strong>480</strong> to <strong>1017600</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>480</p>
@@ -441,7 +441,7 @@ public class UpgradeLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The cold storage capacity of the instance after it is upgraded. Unit: GB. Valid values: <strong>800</strong> to <strong>1000000</strong>.</p>
+         * <p>The cold storage capacity of the instance after the specification change. Unit: GB. Valid values: <strong>800</strong> to <strong>1000000</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>800</p>
@@ -453,7 +453,7 @@ public class UpgradeLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The storage capacity of a single core node in the instance after the instance upgraded. This parameter is available only if the instance you want to upgrade is a multi-zone instance. Unit: GB. Valid values: 400 to 64000. <strong>This parameter is optional</strong>.</p>
+         * <p>The storage capacity per core node of the instance after the specification change for a multi-zone instance. Valid values: 400 to 64000. Unit: GB. <strong>Specify this parameter if the target instance is a multi-zone instance.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>400</p>
@@ -465,7 +465,7 @@ public class UpgradeLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The number of LindormDFS nodes in the instance after the instance is upgraded. Valid values: integers from <strong>0</strong> to <strong>60</strong>.</p>
+         * <p>The number of file engine nodes of the instance after the specification change. Valid values: <strong>0</strong> to <strong>60</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -477,16 +477,11 @@ public class UpgradeLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The specification of LindormDFS nodes in the instance after the instance is upgraded. Valid values:</p>
-         * <ul>
-         * <li><strong>lindorm.g.xlarge</strong>: Each node has 4 dedicated CPU cores and 16 GB of dedicated memory.</li>
-         * <li><strong>lindorm.g.2xlarge</strong>: Each node has 8 dedicated CPU cores and 32 GB of dedicated memory.</li>
-         * <li><strong>lindorm.g.4xlarge</strong>: Each node has 16 dedicated CPU cores and 64 GB of dedicated memory.</li>
-         * <li><strong>lindorm.g.8xlarge</strong>: Each node has 32 dedicated CPU cores and 128 GB of dedicated memory.</li>
-         * </ul>
+         * <p>The file engine node specifications of the instance after the specification change. Valid values:</p>
+         * <p><strong>indorm.c.xlarge</strong>: 4 cores and 8 GB of memory (standard specification).</p>
          * 
          * <strong>example:</strong>
-         * <p>lindorm.g.xlarge</p>
+         * <p>lindorm.c.xlarge</p>
          */
         public Builder filestoreSpec(String filestoreSpec) {
             this.putQueryParameter("FilestoreSpec", filestoreSpec);
@@ -495,7 +490,7 @@ public class UpgradeLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance that you want to upgrade, scale up, or enable cold storage. You can call the <a href="https://help.aliyun.com/document_detail/426069.html">GetLindormInstanceList</a> operation to query the instance ID.</p>
+         * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/426069.html">GetLindormInstanceList</a> operation to query the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -508,7 +503,7 @@ public class UpgradeLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The number of LindormTable nodes in the instance after the instance is upgraded. Valid values: integers from <strong>0</strong> to <strong>90</strong>.</p>
+         * <p>The number of LindormTable nodes of the instance after the specification change. Valid values: <strong>0</strong> to <strong>90</strong>.</p>
          * <blockquote>
          * <p>This parameter must be specified together with the LindormSpec parameter.</p>
          * </blockquote>
@@ -523,12 +518,12 @@ public class UpgradeLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The specification of LindormTable nodes in the instance after the instance is upgraded. Valid values:</p>
+         * <p>The LindormTable engine node specifications of the instance after the specification change. Valid values:</p>
          * <ul>
-         * <li><strong>lindorm.c.xlarge</strong>: Each node has 4 dedicated CPU cores and 8 GB of dedicated memory.</li>
-         * <li><strong>lindorm.c.2xlarge</strong>: Each node has 8 dedicated CPU cores and 16 GB of dedicated memory.</li>
-         * <li><strong>lindorm.c.4xlarge</strong>: Each node has 16 dedicated CPU cores and 32 GB of dedicated memory.</li>
-         * <li><strong>lindorm.c.8xlarge</strong>: Each node has 32 dedicated CPU cores and 64 GB of dedicated memory.</li>
+         * <li><strong>lindorm.c.xlarge</strong>: 4 cores and 8 GB of memory (dedicated specification).</li>
+         * <li><strong>lindorm.c.2xlarge</strong>: 8 cores and 16 GB of memory (dedicated specification).</li>
+         * <li><strong>lindorm.c.4xlarge</strong>: 16 cores and 32 GB of memory (dedicated specification).</li>
+         * <li><strong>lindorm.c.8xlarge</strong>: 32 cores and 64 GB of memory (dedicated specification).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -541,7 +536,7 @@ public class UpgradeLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The number of log nodes in the instance after the instance is upgraded. This parameter is available only if the instance you want to upgrade is a multi-zone instance. <strong>This parameter is optional</strong>.</p>
+         * <p>The number of log nodes of the instance after the specification change for a multi-zone instance. Valid values: 4 to 400. <strong>Specify this parameter if the target instance is a multi-zone instance.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -553,7 +548,7 @@ public class UpgradeLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The storage capacity of a single log node in the instance after the instance upgraded. This parameter is available only if the instance you want to upgrade is a multi-zone instance. <strong>This parameter is optional</strong>.</p>
+         * <p>The disk capacity per log node of the instance after the specification change for a multi-zone instance. Valid values: 400 to 64000. Unit: GB. <strong>Specify this parameter if the target instance is a multi-zone instance.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>400</p>
@@ -565,12 +560,12 @@ public class UpgradeLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The specification of log nodes in the instance after the instance is upgraded. This parameter is available only if the instance you want to upgrade is a multi-zone instance. Valid values:</p>
+         * <p>The log node specifications of the instance after the specification change for a multi-zone instance. Valid values:</p>
          * <ul>
-         * <li><strong>lindorm.sn1.large</strong>: Each node has 4 dedicated CPU cores and 8 GB of dedicated memory.</li>
-         * <li><strong>lindorm.sn1.2xlarge</strong>: Each node has 8 dedicated CPU cores and 16 GB of dedicated memory.</li>
+         * <li><strong>lindorm.sn1.large</strong>: 4 cores and 8 GB of memory (dedicated specification).</li>
+         * <li><strong>lindorm.sn1.2xlarge</strong>: 8 cores and 16 GB of memory (dedicated specification).</li>
          * </ul>
-         * <p><strong>This parameter is optional</strong>.</p>
+         * <p><strong>Specify this parameter if the target instance is a multi-zone instance.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>lindorm.sn1.large</p>
@@ -582,7 +577,7 @@ public class UpgradeLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The number of LTS nodes in the instance after the instance is upgraded. Valid values: integers from <strong>0</strong> to <strong>50</strong>.</p>
+         * <p>The number of LTS nodes of the instance after the specification change. Valid values: <strong>0</strong> to <strong>50</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -594,10 +589,10 @@ public class UpgradeLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The specification of Lindorm Tunnel Service (LTS) nodes in the instance after the instance is upgraded. Valid values:</p>
+         * <p>The LTS node specifications of the instance after the specification change. Valid values:</p>
          * <ul>
-         * <li><strong>lindorm.g.xlarge</strong>: Each node has 4 dedicated CPU cores and 16 GB of dedicated memory.</li>
-         * <li><strong>lindorm.g.2xlarge</strong>: Each node has 8 dedicated CPU cores and 32 GB of dedicated memory.</li>
+         * <li><strong>lindorm.g.xlarge</strong>: 4 cores and 16 GB of memory (dedicated specification).</li>
+         * <li><strong>lindorm.g.2xlarge</strong>: 8 cores and 32 GB of memory (dedicated specification).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -628,7 +623,7 @@ public class UpgradeLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region in which the instance that you want to upgrade, scale up, or enable cold storage is located. You can call the <a href="https://help.aliyun.com/document_detail/426062.html">DescribeRegions</a> operation to query the region ID.</p>
+         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/426062.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -668,7 +663,7 @@ public class UpgradeLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The number of LindormSearch nodes in the instance after the instance is upgraded. Valid values: integers from <strong>0</strong> to <strong>60</strong>.</p>
+         * <p>The number of search index engine nodes of the instance after the specification change. Valid values: <strong>0</strong> to <strong>60</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -680,12 +675,12 @@ public class UpgradeLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The specification of LindormSearch nodes in the instance after the instance is upgraded. Valid values:</p>
+         * <p>The search index engine node specifications of the instance after the specification change. Valid values:</p>
          * <ul>
-         * <li><strong>lindorm.g.xlarge</strong>: Each node has 4 dedicated CPU cores and 16 GB of dedicated memory.</li>
-         * <li><strong>lindorm.g.2xlarge</strong>: Each node has 8 dedicated CPU cores and 32 GB of dedicated memory.</li>
-         * <li><strong>lindorm.g.4xlarge</strong>: Each node has 16 dedicated CPU cores and 64 GB of dedicated memory.</li>
-         * <li><strong>lindorm.g.8xlarge</strong>: Each node has 32 dedicated CPU cores and 128 GB of dedicated memory.</li>
+         * <li><strong>lindorm.g.xlarge</strong>: 4 cores and 16 GB of memory (dedicated specification).</li>
+         * <li><strong>lindorm.g.2xlarge</strong>: 8 cores and 32 GB of memory (dedicated specification).</li>
+         * <li><strong>lindorm.g.4xlarge</strong>: 16 cores and 64 GB of memory (dedicated specification).</li>
+         * <li><strong>lindorm.g.8xlarg</strong>e: 32 cores and 128 GB of memory (dedicated specification).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -698,7 +693,7 @@ public class UpgradeLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The number of LindormStream nodes in the instance after the instance is upgraded. Valid values: integers from <strong>0</strong> to <strong>60</strong>.</p>
+         * <p>The number of stream engine nodes of the instance after the specification change. Valid values: <strong>0</strong> to <strong>90</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -710,12 +705,11 @@ public class UpgradeLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The specification of LindormStream nodes in the instance after the instance is upgraded. Valid values:</p>
+         * <p>The stream engine node specifications of the instance after the specification change. Valid values:</p>
          * <ul>
-         * <li><strong>lindorm.g.xlarge</strong>: Each node has 4 dedicated CPU cores and 16 GB of dedicated memory.</li>
-         * <li><strong>lindorm.g.2xlarge</strong>: Each node has 8 dedicated CPU cores and 32 GB of dedicated memory.</li>
-         * <li><strong>lindorm.g.4xlarge</strong>: Each node has 16 dedicated CPU cores and 64 GB of dedicated memory.</li>
-         * <li><strong>lindorm.g.8xlarge</strong>: Each node has 32 dedicated CPU cores and 128 GB of dedicated memory.</li>
+         * <li><strong>lindorm.c.2xlarge</strong>: 8 cores and 16 GB of memory (dedicated specification).</li>
+         * <li><strong>lindorm.c.4xlarge</strong>: 16 cores and 32 GB of memory (dedicated specification).</li>
+         * <li><strong>lindorm.c.8xlarge</strong>: 32 cores and 64 GB of memory (dedicated specification).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -728,7 +722,7 @@ public class UpgradeLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The number of LindormTSDB nodes in the instance after the instance is upgraded. Valid values: integers from <strong>0</strong> to <strong>24</strong>.</p>
+         * <p>The number of LindormTSDB nodes of the instance after the specification change. Valid values: <strong>0</strong> to <strong>24</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -740,12 +734,12 @@ public class UpgradeLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The specification of LindormTSDB nodes in the instance after the instance is upgraded. Valid values:</p>
+         * <p>The LindormTSDB engine node specifications of the instance after the specification change. Valid values:</p>
          * <ul>
-         * <li><strong>lindorm.g.xlarge</strong>: Each node has 4 dedicated CPU cores and 16 GB of dedicated memory.</li>
-         * <li><strong>lindorm.g.2xlarge</strong>: Each node has 8 dedicated CPU cores and 32 GB of dedicated memory.</li>
-         * <li><strong>lindorm.g.4xlarge</strong>: Each node has 16 dedicated CPU cores and 64 GB of dedicated memory.</li>
-         * <li><strong>lindorm.g.8xlarge</strong>: Each node has 32 dedicated CPU cores and 128 GB of dedicated memory.</li>
+         * <li><strong>lindorm.g.xlarge</strong>: 4 cores and 16 GB of memory (dedicated specification).</li>
+         * <li><strong>lindorm.g.2xlarge</strong>: 8 cores and 32 GB of memory (dedicated specification).</li>
+         * <li><strong>lindorm.g.4xlarge</strong>: 16 cores and 64 GB of memory (dedicated specification).</li>
+         * <li><strong>lindorm.g.8xlarge</strong>: 32 cores and 128 GB of memory (dedicated specification).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -758,7 +752,7 @@ public class UpgradeLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The upgrade type of the operation. For more information about upgrade types, see the UpgradeType parameters section.</p>
+         * <p>The type of specification change for the instance. For supported types, see the UpgradeType parameter description in the request parameters supplement.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -771,7 +765,7 @@ public class UpgradeLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the zone in which the instance that you want to upgrade, scale up, or enable cold storage is located. You can call the <a href="https://help.aliyun.com/document_detail/426067.html">GetLindormInstance</a> operation to query the zone ID.</p>
+         * <p>The zone ID. You can call the <a href="https://help.aliyun.com/document_detail/426067.html">GetLindormInstance</a> operation to query the zone ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

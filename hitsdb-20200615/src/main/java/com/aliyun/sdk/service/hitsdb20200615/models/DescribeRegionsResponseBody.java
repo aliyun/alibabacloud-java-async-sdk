@@ -67,7 +67,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The regions supported by Lindorm.</p>
+         * <p>The region list information.</p>
          */
         public Builder regions(java.util.List<Regions> regions) {
             this.regions = regions;
@@ -75,7 +75,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>73F6E6DA-9AE5-5548-9E07-761A554DAF2E</p>
@@ -157,7 +157,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the region.</p>
+             * <p>The region name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China (Hangzhou)</p>
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -165,10 +168,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The endpoint for the region.</p>
+             * <p>The endpoint of the region.</p>
              * 
              * <strong>example:</strong>
-             * <p>hitsdb.aliyuncs.com</p>
+             * <p>hitsdb.cn-hangzhou.aliyuncs.com</p>
              */
             public Builder regionEndpoint(String regionEndpoint) {
                 this.regionEndpoint = regionEndpoint;
@@ -176,7 +179,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>

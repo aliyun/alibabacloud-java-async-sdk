@@ -170,10 +170,13 @@ public class SwitchLSQLV3MySQLServiceRequest extends Request {
         }
 
         /**
-         * <p>The type of the operation. Valid value:</p>
+         * <p>The operation type.</p>
+         * <p>Valid values:</p>
          * <ul>
-         * <li>1: enables the MySQL compatibility feature.</li>
-         * <li>0: disables the MySQL compatibility feature.</li>
+         * <li><p>1: Enable.</p>
+         * </li>
+         * <li><p>0: Disable.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -187,7 +190,7 @@ public class SwitchLSQLV3MySQLServiceRequest extends Request {
         }
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

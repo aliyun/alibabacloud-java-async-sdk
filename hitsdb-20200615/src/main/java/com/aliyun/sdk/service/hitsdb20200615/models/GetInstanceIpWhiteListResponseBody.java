@@ -106,7 +106,7 @@ public class GetInstanceIpWhiteListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details about the access denial.</p>
+         * <p>The details of the access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;AuthAction&quot;:&quot;xxx&quot;,&quot;AuthPrincipalDisplayName&quot;:&quot;222&quot;,&quot;AuthPrincipalOwnerId&quot;:&quot;111&quot;,&quot;AuthPrincipalType&quot;:&quot;SubUser&quot;,,&quot;NoPermissionType&quot;:&quot;ImplicitDeny&quot;,&quot;PolicyType&quot;:&quot;AccountLevelIdentityBasedPolicy&quot;,&quot;EncodedDiagnosticMessage&quot;:&quot;xxxxxx&quot;}</p>
@@ -117,7 +117,7 @@ public class GetInstanceIpWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details about the IP address whitelists.</p>
+         * <p>The list of whitelist groups.</p>
          */
         public Builder groupList(java.util.List<GroupList> groupList) {
             this.groupList = groupList;
@@ -125,7 +125,7 @@ public class GetInstanceIpWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the Lindorm instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ld-bp1z3506imz2f****</p>
@@ -136,7 +136,7 @@ public class GetInstanceIpWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of IP addresses in the whitelist of the instance.</p>
+         * <p>The list of IP addresses in the whitelist.</p>
          */
         public Builder ipList(java.util.List<String> ipList) {
             this.ipList = ipList;
@@ -213,7 +213,7 @@ public class GetInstanceIpWhiteListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the IP address whitelist.</p>
+             * <p>The name of the whitelist group.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -224,7 +224,7 @@ public class GetInstanceIpWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP addresses in the whitelist.</p>
+             * <p>The list of IP addresses in the whitelist.</p>
              * 
              * <strong>example:</strong>
              * <p>192.168.1.0/24</p>

@@ -697,7 +697,7 @@ public class CreateLindormInstanceRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the vSwitch that is specified for the zone for the coordinate node of the instance. The vSwitch must be deployed in the zone specified by the ArbiterZoneId parameter. <strong>This parameter is required if you want to create a multi-zone instance</strong>.</p>
+         * <p>The vSwitch ID of the arbiter zone for a multi-zone instance. The vSwitch must be in the zone specified by ArbiterZoneId. <strong>To create a multi-zone instance, this parameter is required.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>vsw-uf6664pqjawb87k36****</p>
@@ -709,7 +709,7 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the zone for the coordinate node of the instance. <strong>This parameter is required if you want to create a multi-zone instance</strong>.</p>
+         * <p>The zone ID of the arbiter zone for a multi-zone instance. <strong>To create a multi-zone instance, this parameter is required.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai-g</p>
@@ -721,12 +721,12 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The architecture of the instance. Valid values:</p>
+         * <p>The deployment architecture. Valid values:</p>
          * <ul>
-         * <li><strong>1.0</strong>: The instance that you want to create is a single-zone instance.</li>
-         * <li><strong>2.0</strong>: The instance that you want to create is a multi-zone instance.</li>
+         * <li><strong>1.0</strong>: single-zone.</li>
+         * <li><strong>2.0</strong>: multi-zone.</li>
          * </ul>
-         * <p>By default, the value of this parameter is 1.0. To create a multi-zone instance, set this parameter to 2.0. <strong>This parameter is required if you want to create a multi-zone instance</strong>.</p>
+         * <p>If this parameter is not specified, the default value is 1.0. To create a multi-zone instance, set this parameter to 2.0. <strong>To create a multi-zone instance, this parameter is required.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>2.0</p>
@@ -738,10 +738,10 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The auto-renewal duration. Unit: month.</p>
+         * <p>The auto-renewal duration. Unit: months.</p>
          * <p>Valid values: <strong>1</strong> to <strong>12</strong>.</p>
          * <blockquote>
-         * <p> This parameter is available only when the <strong>AutoRenewal</strong> parameter is set to <strong>true</strong>.</p>
+         * <p>This parameter takes effect only when <strong>AutoRenewal</strong> is set to <strong>true</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -756,12 +756,12 @@ public class CreateLindormInstanceRequest extends Request {
         /**
          * <p>Specifies whether to enable auto-renewal for the instance. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: enables auto-renewal.</li>
-         * <li><strong>false</strong>: disables auto-renewal.</li>
+         * <li><strong>true</strong>: Auto-renewal is enabled.</li>
+         * <li><strong>false</strong>: Auto-renewal is disabled.</li>
          * </ul>
          * <p>Default value: false.</p>
          * <blockquote>
-         * <p> This parameter is available only when the <strong>PayType</strong> parameter is set to <strong>PREPAY</strong>.</p>
+         * <p>This parameter takes effect only when <strong>PayType</strong> is set to <strong>PREPAY</strong> (subscription).</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -774,7 +774,7 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The cold storage capacity of the instance. By default, if you leave this parameter unspecified, cold storage is not enabled for the instance. Unit: GB. Valid values: <strong>800</strong> to <strong>1000000</strong>.</p>
+         * <p>The capacity cloud storage capacity of the instance. Unit: GB. If this parameter is not specified, capacity cloud storage is not enabled. Valid values: <strong>800</strong> to <strong>1000000</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>800</p>
@@ -786,7 +786,7 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The storage capacity of the disk of a single core node. Valid values: 400 to 64000. Unit: GB. <strong>This parameter is required if you want to create a multi-zone instance</strong>.</p>
+         * <p>The storage capacity per core node for a multi-zone instance. Valid values: 400 to 64000. Unit: GB. <strong>To create a multi-zone instance, this parameter is required.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>400</p>
@@ -798,35 +798,35 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The specification of the nodes in the instance if you set DiskCategory to local_ssd_pro or local_hdd_pro.</p>
-         * <p>Valid values when DiskCategory is set to local_ssd_pro (i3 instance types support only subscription instances):</p>
+         * <p>The node specifications for local disk type of the instance.</p>
+         * <p>When the local storage type is local_ssd_pro, valid values are as follows. I3 instance types currently support only subscription:</p>
          * <ul>
-         * <li><strong>lindorm.i4.xlarge</strong>: Each node has 4 CPU cores and 32 GB of memory.</li>
-         * <li><strong>lindorm.i4.2xlarge</strong>: Each node has 8 CPU cores and 64 GB of memory.</li>
-         * <li><strong>lindorm.i4.4xlarge</strong>: Each node has 16 CPU cores and 128 GB of memory.</li>
-         * <li><strong>lindorm.i4.8xlarge</strong>: Each node has 32 CPU cores and 256 GB of memory.</li>
-         * <li><strong>lindorm.i3.xlarge</strong>: Each node has 4 CPU cores and 32 GB of memory.</li>
-         * <li><strong>lindorm.i3.2xlarge</strong>: Each node has 8 CPU cores and 64 GB of memory.</li>
-         * <li><strong>lindorm.i3.4xlarge</strong>: Each node has 16 CPU cores and 128 GB of memory.</li>
-         * <li><strong>lindorm.i3.8xlarge</strong>: Each node has 32 CPU cores and 256 GB of memory.</li>
-         * <li><strong>lindorm.i2.xlarge</strong>: Each node has 4 CPU cores and 32 GB of memory.</li>
-         * <li><strong>lindorm.i2.2xlarge</strong>: Each node has 8 CPU cores and 64 GB of memory.</li>
-         * <li><strong>lindorm.i2.4xlarge</strong>: Each node has 16 CPU cores and 128 GB of memory.</li>
-         * <li><strong>lindorm.i2.8xlarge</strong>: Each node has 32 CPU cores and 256 GB of memory.</li>
+         * <li><strong>lindorm.i4.xlarge</strong>: 4 cores, 32 GB (I4).</li>
+         * <li><strong>lindorm.i4.2xlarge</strong>: 8 cores, 64 GB (I4).</li>
+         * <li><strong>lindorm.i4.4xlarge</strong>: 16 cores, 128 GB (I4).</li>
+         * <li><strong>lindorm.i4.8xlarge</strong>: 32 cores, 256 GB (I4).</li>
+         * <li><strong>lindorm.i3.xlarge</strong>: 4 cores, 32 GB (I3).</li>
+         * <li><strong>lindorm.i3.2xlarge</strong>: 8 cores, 64 GB (I3).</li>
+         * <li><strong>lindorm.i3.4xlarge</strong>: 16 cores, 128 GB (I3).</li>
+         * <li><strong>lindorm.i3.8xlarge</strong>: 32 cores, 256 GB (I3).</li>
+         * <li><strong>lindorm.i2.xlarge</strong>: 4 cores, 32 GB (I2).</li>
+         * <li><strong>lindorm.i2.2xlarge</strong>: 8 cores, 64 GB (I2).</li>
+         * <li><strong>lindorm.i2.4xlarge</strong>: 16 cores, 128 GB (I2).</li>
+         * <li><strong>lindorm.i2.8xlarge</strong>: 32 cores, 256 GB (I2).</li>
          * </ul>
-         * <p>Valid values when DiskCategory is set to local_hhd_pro:</p>
+         * <p>When the local storage type is local_hdd_pro, valid values are as follows:</p>
          * <ul>
-         * <li><strong>lindorm.sd3c.3xlarge</strong>: Each node has 14 CPU cores and 56 GB of memory.</li>
-         * <li><strong>lindorm.sd3c.7xlarge</strong>: Each node has 28 CPU cores and 112 GB of memory.</li>
-         * <li><strong>lindorm.sd3c.14xlarge</strong>: Each node has 56 CPU cores and 224 GB of memory.</li>
-         * <li><strong>lindorm.d2c.6xlarge</strong>: Each node has 24 CPU cores and 88 GB of memory.</li>
-         * <li><strong>lindorm.d2c.12xlarge</strong>: Each node has 48 CPU cores and 176 GB of memory.</li>
-         * <li><strong>lindorm.d2c.24xlarge</strong>: Each node has 96 CPU cores and 352 GB of memory.</li>
-         * <li><strong>lindorm.d2s.5xlarge</strong>: Each node has 20 CPU cores and 88 GB of memory.</li>
-         * <li><strong>lindorm.d2s.10xlarge</strong>: Each node has 40 CPU cores and 176 GB of memory.</li>
-         * <li><strong>lindorm.d1.2xlarge</strong>: Each node has 8 CPU cores and 32 GB of memory.</li>
-         * <li><strong>lindorm.d1.4xlarge</strong>: Each node has 16 CPU cores and 64 GB of memory.</li>
-         * <li><strong>lindorm.d1.6xlarge</strong>: Each node has 24 CPU cores and 96 GB of memory.</li>
+         * <li><strong>lindorm.sd3c.3xlarge</strong>: 14 cores, 56 GB (D3C PRO).</li>
+         * <li><strong>lindorm.sd3c.7xlarge</strong>: 28 cores, 112 GB (D3C PRO).</li>
+         * <li><strong>lindorm.sd3c.14xlarge</strong>: 56 cores, 224 GB (D3C PRO).</li>
+         * <li><strong>lindorm.d2c.6xlarge</strong>: 24 cores, 88 GB (D2C).</li>
+         * <li><strong>lindorm.d2c.12xlarge</strong>: 48 cores, 176 GB (D2C).</li>
+         * <li><strong>lindorm.d2c.24xlarge</strong>: 96 cores, 352 GB (D2C).</li>
+         * <li><strong>lindorm.d2s.5xlarge</strong>: 20 cores, 88 GB (D2S).</li>
+         * <li><strong>lindorm.d2s.10xlarge</strong>: 40 cores, 176 GB (D2S).</li>
+         * <li><strong>lindorm.d1.2xlarge</strong>: 8 cores, 32 GB (D1NE).</li>
+         * <li><strong>lindorm.d1.4xlarge</strong>: 16 cores, 64 GB (D1NE).</li>
+         * <li><strong>lindorm.d1.6xlarge</strong>: 24 cores, 96 GB (D1NE).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -841,11 +841,13 @@ public class CreateLindormInstanceRequest extends Request {
         /**
          * <p>The storage type of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>cloud_efficiency</strong>: This instance uses the Standard type of storage.</li>
-         * <li><strong>cloud_ssd</strong>: This instance uses the Performance type of storage.</li>
-         * <li><strong>capacity_cloud_storage</strong>: This instance uses the Capacity type of storage.</li>
-         * <li><strong>local_ssd_pro</strong>: This instance uses local SSDs.</li>
-         * <li><strong>local_hdd_pro</strong>: This instance uses local HDDs.</li>
+         * <li><strong>cloud_efficiency</strong>: standard cloud storage.</li>
+         * <li><strong>cloud_ssd</strong>: performance cloud storage.</li>
+         * <li><strong>cloud_essd</strong>: enhanced performance cloud storage.</li>
+         * <li><strong>cloud_essd_pl0</strong>: performance cloud storage PL0.</li>
+         * <li><strong>capacity_cloud_storage</strong>: capacity cloud storage (not supported for multi-zone instances).</li>
+         * <li><strong>local_ssd_pro</strong>: local SSD (not supported for multi-zone instances).</li>
+         * <li><strong>local_hdd_pro</strong>: local HDD (not supported for multi-zone instances).</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -859,13 +861,13 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The subscription period of the instance. The valid values of this parameter depend on the value of the PricingCycle parameter.</p>
+         * <p>The subscription duration of the instance. Valid values:</p>
          * <ul>
-         * <li>If PricingCycle is set to <strong>Month</strong>, set this parameter to an integer that ranges from <strong>1</strong> to <strong>9</strong>.</li>
-         * <li>If PricingCycle is set to <strong>Year</strong>, set this parameter to an integer that ranges from <strong>1</strong> to <strong>3</strong>.</li>
+         * <li>If PricingCycle is set to <strong>Month</strong>, valid values are <strong>1</strong> to <strong>9</strong>.</li>
+         * <li>If PricingCycle is set to <strong>Year</strong>, valid values are <strong>1</strong> to <strong>3</strong>.</li>
          * </ul>
          * <blockquote>
-         * <p>This parameter is available and required when the PayType parameter is set to <strong>PREPAY</strong>.</p>
+         * <p>This parameter is available and required when PayType is set to <strong>PREPAY</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -878,10 +880,10 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The number of LindormDFS nodes in the instance. The valid values of this parameter depend on the value of the PayType parameter.</p>
+         * <p>The number of file engine nodes of the instance. Valid values:</p>
          * <ul>
-         * <li>If the PayType parameter is set to <strong>PREPAY</strong>, set this parameter to an integer that ranges from <strong>0</strong> to <strong>60</strong>.</li>
-         * <li>If the PayType parameter is set to <strong>POSTPAY</strong>, set this parameter to an integer that ranges from <strong>0</strong> to <strong>8</strong>.</li>
+         * <li>If the billing method of the instance is <strong>PREPAY</strong>, valid values are <strong>0</strong> to <strong>60</strong>.</li>
+         * <li>If the billing method of the instance is <strong>POSTPAY</strong>, valid values are <strong>0</strong> to <strong>8</strong>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -894,7 +896,10 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The specification of LindormDFS nodes in the instance. Set the value of this parameter to <strong>lindorm.c.xlarge</strong>, which indicates that each node has 4 dedicated CPU cores and 8 GB of dedicated memory.</p>
+         * <p>The file engine node specifications of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>lindorm.c.xlarge</strong>: 4 cores, 8 GB (standard).</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>lindorm.c.xlarge</p>
@@ -906,7 +911,7 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The name of the instance that you want to create.</p>
+         * <p>The name of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>lindorm_test</p>
@@ -918,7 +923,7 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The storage capacity of the instance you want to create. Unit: GB.</p>
+         * <p>The storage capacity of the instance. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>480</p>
@@ -930,12 +935,9 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The number of LindormTable nodes in the instance. The valid values of this parameter depend on the value of the PayType parameter.</p>
-         * <ul>
-         * <li>If the PayType parameter is set to <strong>PREPAY</strong>, set this parameter to an integer that ranges from <strong>0</strong> to <strong>90</strong>.</li>
-         * <li>If the PayType parameter is set to <strong>POSTPAY</strong>, set this parameter to an integer that ranges from <strong>0</strong> to <strong>400</strong>.</li>
-         * </ul>
-         * <p><strong>This parameter is required if you want to create a multi-zone instance</strong>.  The valid values of this parameter range from 4 to 400 if you want to create a multi-zone instance.</p>
+         * <p>The number of LindormTable engine nodes of the instance.</p>
+         * <p>To create a single-zone instance, valid values are <strong>0</strong> to <strong>90</strong>.</p>
+         * <p><strong>To create a multi-zone instance, this parameter is required.</strong> For instances with non-local disk storage types, valid values are <strong>4</strong> to <strong>400</strong>. For instances with local disk storage types, valid values are <strong>6</strong> to <strong>400</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -947,16 +949,19 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The specification of LindormTable nodes in the instance. Valid values:</p>
+         * <p>The LindormTable engine node specifications of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>lindorm.c.xlarge</strong>: Each node has 4 dedicated CPU cores and 8 GB of dedicated memory.</li>
-         * <li><strong>lindorm.c.2xlarge</strong>: Each node has 8 dedicated CPU cores and 16 GB of dedicated memory.</li>
-         * <li><strong>lindorm.c.4xlarge</strong>: Each node has 16 dedicated CPU cores and 32 GB of dedicated memory.</li>
-         * <li><strong>lindorm.c.8xlarge</strong>: Each node has 32 dedicated CPU cores and 64 GB of dedicated memory.</li>
+         * <li><strong>lindorm.g.xlarge</strong>: 4 cores, 16 GB (dedicated).</li>
+         * <li><strong>lindorm.c.2xlarge</strong>: 8 cores, 16 GB (dedicated).</li>
+         * <li><strong>lindorm.g.2xlarge</strong>: 8 cores, 32 GB (dedicated).</li>
+         * <li><strong>lindorm.c.4xlarge</strong>: 16 cores, 32 GB (dedicated).</li>
+         * <li><strong>lindorm.g.4xlarge</strong>: 16 cores, 64 GB (dedicated).</li>
+         * <li><strong>lindorm.c.8xlarge</strong>: 32 cores, 64 GB (dedicated).</li>
+         * <li><strong>lindorm.g.8xlarge</strong>: 32 cores, 128 GB (dedicated).</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>lindorm.c.xlarge</p>
+         * <p>lindorm.g.4xlarge</p>
          */
         public Builder lindormSpec(String lindormSpec) {
             this.putQueryParameter("LindormSpec", lindormSpec);
@@ -965,12 +970,12 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The disk type of the log nodes. Valid values:</p>
+         * <p>The disk type of log nodes for a multi-zone instance. Valid values:</p>
          * <ul>
-         * <li><strong>cloud_efficiency</strong>: This instance uses the Standard type of storage.</li>
-         * <li><strong>cloud_ssd</strong>: This instance uses the Performance type of storage.</li>
+         * <li><strong>cloud_efficiency</strong>: standard cloud storage.</li>
+         * <li><strong>cloud_ssd</strong>: performance cloud storage.</li>
          * </ul>
-         * <p><strong>This parameter is required if you want to create a multi-zone instance</strong>.</p>
+         * <p><strong>To create a multi-zone instance, this parameter is required.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>cloud_ssd</p>
@@ -982,7 +987,7 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The number of the log nodes. Valid values: 4 to 400. <strong>This parameter is required if you want to create a multi-zone instance</strong>.</p>
+         * <p>The number of log nodes for a multi-zone instance. Valid values: 4 to 400. <strong>To create a multi-zone instance, this parameter is required.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -994,7 +999,7 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The storage capacity of the disk of a single log node. Valid values: 400 to 64000. Unit: GB. <strong>This parameter is required if you want to create a multi-zone instance</strong>.</p>
+         * <p>The storage capacity per log node for a multi-zone instance. Valid values: 400 to 64000. Unit: GB. <strong>To create a multi-zone instance, this parameter is required.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>400</p>
@@ -1006,12 +1011,12 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The type of the log nodes. Valid values:</p>
+         * <p>The log node specifications for a multi-zone instance. Valid values:</p>
          * <ul>
-         * <li><strong>lindorm.sn1.xlarge</strong>: Each node has 4 dedicated CPU cores and 8 GB of dedicated memory.</li>
-         * <li><strong>lindorm.sn1.2xlarge</strong>: Each node has 8 dedicated CPU cores and 16 GB of dedicated memory.</li>
+         * <li><strong>lindorm.sn1.large</strong>: 4 cores, 8 GB (dedicated).</li>
+         * <li><strong>lindorm.sn1.2xlarge</strong>: 8 cores, 16 GB (dedicated).</li>
          * </ul>
-         * <p><strong>This parameter is required if you want to create a multi-zone instance</strong>.</p>
+         * <p><strong>To create a multi-zone instance, this parameter is required and active.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>lindorm.sn1.large</p>
@@ -1023,7 +1028,7 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The number of LTS nodes in the instance. Valid values: <strong>0</strong> to <strong>60</strong>.</p>
+         * <p>The number of LTS engine nodes of the instance. Valid values: <strong>0</strong> to <strong>60</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -1035,16 +1040,16 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The specification of LTS nodes in the instance. Valid values:</p>
+         * <p>The LTS engine node specifications of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>lindorm.c.xlarge</strong>: Each node has 4 dedicated CPU cores and 8 GB of dedicated memory.</li>
-         * <li><strong>lindorm.g.xlarge</strong>: Each node has 4 dedicated CPU cores and 16 GB of dedicated memory.</li>
-         * <li><strong>lindorm.c.2xlarge</strong>: Each node has 8 dedicated CPU cores and 16 GB of dedicated memory.</li>
-         * <li><strong>lindorm.g.2xlarge</strong>: Each node has 8 dedicated CPU cores and 32 GB of dedicated memory.</li>
-         * <li><strong>lindorm.c.4xlarge</strong>: Each node has 16 dedicated CPU cores and 32 GB of dedicated memory.</li>
-         * <li><strong>lindorm.g.4xlarge</strong>: Each node has 16 dedicated CPU cores and 64 GB of dedicated memory.</li>
-         * <li><strong>lindorm.c.8xlarge</strong>: Each node has 32 dedicated CPU cores and 64 GB of dedicated memory.</li>
-         * <li><strong>lindorm.g.8xlarge</strong>: Each node has 32 dedicated CPU cores and 128 GB of dedicated memory.</li>
+         * <li><strong>lindorm.c.xlarge</strong>: 4 cores, 8 GB (dedicated).</li>
+         * <li><strong>lindorm.g.xlarge</strong>: 4 cores, 16 GB (dedicated).</li>
+         * <li><strong>lindorm.c.2xlarge</strong>: 8 cores, 16 GB (dedicated).</li>
+         * <li><strong>lindorm.g.2xlarge</strong>: 8 cores, 32 GB (dedicated).</li>
+         * <li><strong>lindorm.c.4xlarge</strong>: 16 cores, 32 GB (dedicated).</li>
+         * <li><strong>lindorm.g.4xlarge</strong>: 16 cores, 64 GB (dedicated).</li>
+         * <li><strong>lindorm.c.8xlarge</strong>: 32 cores, 64 GB (dedicated).</li>
+         * <li><strong>lindorm.g.8xlarge</strong>: 32 cores, 128 GB (dedicated).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1057,21 +1062,21 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The combinations of zones that are available for the multi-zone instance. You can go to the purchase page of Lindorm to view the supported zone combinations.</p>
+         * <p>The multi-zone combination. You can check the supported zone combinations on the buy page.</p>
          * <ul>
-         * <li><strong>ap-southeast-5abc-aliyun</strong>: Zone A+B+C in the Indonesia (Jakarta) region.</li>
-         * <li><strong>cn-hangzhou-ehi-aliyun</strong>: Zone E+H+I in the China (Hangzhou) region.</li>
-         * <li><strong>cn-beijing-acd-aliyun</strong>: Zone A+C+D in the China (Beijing) region.</li>
-         * <li><strong>ap-southeast-1-abc-aliyun</strong>: Zone A+B+C in the Singapore region.</li>
-         * <li><strong>cn-zhangjiakou-abc-aliyun</strong>: Zone A+B+C in the China (Zhangjiakou) region.</li>
-         * <li><strong>cn-shanghai-efg-aliyun</strong>: Zone E+F+G in the China (Shanghai) region.</li>
-         * <li><strong>cn-shanghai-abd-aliyun</strong>: Zone A+B+D in the China (Shanghai) region.</li>
-         * <li><strong>cn-hangzhou-bef-aliyun</strong>: Zone B+E+F in the China (Hangzhou) region.</li>
-         * <li><strong>cn-hangzhou-bce-aliyun</strong>: Zone B+C+E in the China (Hangzhou) region.</li>
-         * <li><strong>cn-beijing-fgh-aliyun</strong>: Zone F+G+H in the China (Beijing) region.</li>
-         * <li><strong>cn-shenzhen-abc-aliyun</strong>: Zone A+B+C in the China (Shenzhen) region.</li>
+         * <li><strong>ap-southeast-5abc-aliyun</strong>: Indonesia (Jakarta) A+B+C.</li>
+         * <li><strong>cn-hangzhou-ehi-aliyun</strong>: China (Hangzhou) E+H+I.</li>
+         * <li><strong>cn-beijing-acd-aliyun</strong>: China (Beijing) A+C+D.</li>
+         * <li><strong>ap-southeast-1-abc-aliyun</strong>: Singapore A+B+C.</li>
+         * <li><strong>cn-zhangjiakou-abc-aliyun</strong>: China (Zhangjiakou) A+B+C.</li>
+         * <li><strong>cn-shanghai-efg-aliyun</strong>: China (Shanghai) E+F+G.</li>
+         * <li><strong>cn-shanghai-abd-aliyun</strong>: China (Shanghai) A+B+D.</li>
+         * <li><strong>cn-hangzhou-bef-aliyun</strong>: China (Hangzhou) B+E+F.</li>
+         * <li><strong>cn-hangzhou-bce-aliyun</strong>: China (Hangzhou) B+C+E.</li>
+         * <li><strong>cn-beijing-fgh-aliyun</strong>: China (Beijing) F+G+H.</li>
+         * <li><strong>cn-shenzhen-abc-aliyun</strong>: China (Shenzhen) A+B+C.</li>
          * </ul>
-         * <p><strong>This parameter is required if you want to create a multi-zone instance</strong>.</p>
+         * <p><strong>To create a multi-zone instance, this parameter is required.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai-efg-aliyun</p>
@@ -1101,7 +1106,7 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The billing method of the instance you want to create. Valid values:</p>
+         * <p>The billing method of the instance. Valid values:</p>
          * <ul>
          * <li><strong>PREPAY</strong>: subscription.</li>
          * <li><strong>POSTPAY</strong>: pay-as-you-go.</li>
@@ -1118,13 +1123,13 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The period based on which you are charged for the instance. Valid values:</p>
+         * <p>The billing cycle of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>Month</strong>: You are charged for the instance on a monthly basis.</li>
-         * <li><strong>Year</strong>: You are charged for the instance on a yearly basis.</li>
+         * <li><strong>Month</strong>: monthly billing.</li>
+         * <li><strong>Year</strong>: yearly billing.</li>
          * </ul>
          * <blockquote>
-         * <p>This parameter is available and required when the PayType parameter is set to <strong>PREPAY</strong>.</p>
+         * <p>This parameter is available and required when PayType is set to <strong>PREPAY</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1137,7 +1142,7 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the vSwitch that is specified for the secondary zone of the instance. The vSwitch must be deployed in the zone specified by the StandbyZoneId parameter. <strong>This parameter is required if you want to create a multi-zone instance</strong>.</p>
+         * <p>The vSwitch ID of the primary zone for a multi-zone instance. The vSwitch must be in the zone specified by PrimaryZoneId. <strong>To create a multi-zone instance, this parameter is required.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>vsw-uf6fdqa7c0pipnqzq****</p>
@@ -1149,7 +1154,7 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>Multi-zone instance, availability zone ID of the primary zone. <strong>This parameter is required if you need to create a multi-zone instance.</strong></p>
+         * <p>The zone ID of the primary zone for a multi-zone instance. <strong>To create a multi-zone instance, this parameter is required.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai-e</p>
@@ -1161,7 +1166,7 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region in which you want to create the instance. You can call the <a href="https://help.aliyun.com/document_detail/426062.html">DescribeRegions</a> operation to query the region in which you can create the instance.</p>
+         * <p>The region ID of the instance. You can call <a href="https://help.aliyun.com/document_detail/426062.html">DescribeRegions</a> to query available regions. Use this parameter to specify the region in which to create the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1174,7 +1179,7 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the Lindorm instance belongs.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aek2i6weeb4nfii</p>
@@ -1213,7 +1218,7 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The number of LindormSearch nodes in the instance. Valid values: integers from <strong>0</strong> to <strong>60</strong>.</p>
+         * <p>The number of search index engine nodes of the instance. Valid values: <strong>0</strong> to <strong>60</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -1225,15 +1230,15 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The specification of the LindormSearch nodes in the instance. Valid values:</p>
+         * <p>The search index engine node specifications of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>lindorm.g.xlarge</strong>: Each node has 4 dedicated CPU cores and 16 GB of dedicated memory.</li>
-         * <li><strong>lindorm.c.2xlarge</strong>: Each node has 8 dedicated CPU cores and 16 GB of dedicated memory.</li>
-         * <li><strong>lindorm.g.2xlarge</strong>: Each node has 8 dedicated CPU cores and 32 GB of dedicated memory.</li>
-         * <li><strong>lindorm.c.4xlarge</strong>: Each node has 16 dedicated CPU cores and 32 GB of dedicated memory.</li>
-         * <li><strong>lindorm.g.4xlarge</strong>: Each node has 16 dedicated CPU cores and 64 GB of dedicated memory.</li>
-         * <li><strong>lindorm.c.8xlarge</strong>: Each node has 32 dedicated CPU cores and 64 GB of dedicated memory.</li>
-         * <li><strong>lindorm.g.8xlarge</strong>: Each node has 32 dedicated CPU cores and 128 GB of dedicated memory.</li>
+         * <li><strong>lindorm.g.xlarge</strong>: 4 cores, 16 GB (dedicated).</li>
+         * <li><strong>lindorm.c.2xlarge</strong>: 8 cores, 16 GB (dedicated).</li>
+         * <li><strong>lindorm.g.2xlarge</strong>: 8 cores, 32 GB (dedicated).</li>
+         * <li><strong>lindorm.c.4xlarge</strong>: 16 cores, 32 GB (dedicated).</li>
+         * <li><strong>lindorm.g.4xlarge</strong>: 16 cores, 64 GB (dedicated).</li>
+         * <li><strong>lindorm.c.8xlarge</strong>: 32 cores, 64 GB (dedicated).</li>
+         * <li><strong>lindorm.g.8xlarge</strong>: 32 cores, 128 GB (dedicated).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1246,7 +1251,7 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the vSwitch that is specified for the secondary zone of the instance. The vSwitch must be deployed in the zone specified by the StandbyZoneId parameter. <strong>This parameter is required if you want to create a multi-zone instance</strong>.</p>
+         * <p>The vSwitch ID of the secondary zone for a multi-zone instance. The vSwitch must be in the zone specified by StandbyZoneId. <strong>To create a multi-zone instance, this parameter is required.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>vsw-2zec0kcn08cgdtr6****</p>
@@ -1258,7 +1263,7 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the secondary zone of the instance. <strong>This parameter is required if you want to create a multi-zone instance</strong>.</p>
+         * <p>The zone ID of the secondary zone for a multi-zone instance. <strong>To create a multi-zone instance, this parameter is required.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai-f</p>
@@ -1270,7 +1275,7 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The number of LindormStream nodes in the instance. Valid values: integers from <strong>0</strong> to <strong>60</strong>.</p>
+         * <p>The number of stream engine nodes of the instance. Valid values: <strong>0</strong> to <strong>60</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -1282,12 +1287,15 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The specification of the LindormStream nodes in the instance. Valid values:</p>
+         * <p>The stream engine node specifications of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>lindorm.g.xlarge</strong>: Each node has 4 dedicated CPU cores and 16 GB of dedicated memory.</li>
-         * <li><strong>lindorm.g.2xlarge</strong>: Each node has 8 dedicated CPU cores and 32 GB of dedicated memory.</li>
-         * <li><strong>lindorm.g.4xlarge</strong>: Each node has 16 dedicated CPU cores and 64 GB of dedicated memory.</li>
-         * <li><strong>lindorm.g.8xlarge</strong>: Each node has 32 dedicated CPU cores and 128 GB of dedicated memory.</li>
+         * <li><strong>lindorm.g.xlarge</strong>: 4 cores, 16 GB (dedicated).</li>
+         * <li><strong>lindorm.c.2xlarge</strong>: 8 cores, 16 GB (dedicated).</li>
+         * <li><strong>lindorm.g.2xlarge</strong>: 8 cores, 32 GB (dedicated).</li>
+         * <li><strong>lindorm.c.4xlarge</strong>: 16 cores, 32 GB (dedicated).</li>
+         * <li><strong>lindorm.g.4xlarge</strong>: 16 cores, 64 GB (dedicated).</li>
+         * <li><strong>lindorm.c.8xlarge</strong>: 32 cores, 64 GB (dedicated).</li>
+         * <li><strong>lindorm.g.8xlarge</strong>: 32 cores, 128 GB (dedicated).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1300,7 +1308,7 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The tags that are added to instances.</p>
+         * <p>The list of tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -1309,10 +1317,10 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The number of the LindormTSDB nodes in the instance. The valid values of this parameter depend on the value of the PayType parameter.</p>
+         * <p>The number of LindormTSDB engine nodes of the instance. Valid values:</p>
          * <ul>
-         * <li>If the PayType parameter is set to <strong>PREPAY</strong>, set this parameter to an integer that ranges from <strong>0</strong> to <strong>24</strong>.</li>
-         * <li>If the PayType parameter is set to <strong>POSTPAY</strong>, set this parameter to an integer that ranges from <strong>0</strong> to <strong>32</strong>.</li>
+         * <li>If the billing method of the instance is <strong>PREPAY</strong>, valid values are <strong>0</strong> to <strong>24</strong>.</li>
+         * <li>If the billing method of the instance is <strong>POSTPAY</strong>, valid values are <strong>0</strong> to <strong>32</strong>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1325,12 +1333,12 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The specification of the LindormTSDB nodes in the instance. Valid values:</p>
+         * <p>The LindormTSDB engine node specifications of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>lindorm.g.xlarge</strong>: Each node has 4 dedicated CPU cores and 16 GB of dedicated memory.</li>
-         * <li><strong>lindorm.g.2xlarge</strong>: Each node has 8 dedicated CPU cores and 32 GB of dedicated memory.</li>
-         * <li><strong>lindorm.g.4xlarge</strong>: Each node has 16 dedicated CPU cores and 64 GB of dedicated memory.</li>
-         * <li><strong>lindorm.g.8xlarge</strong>: Each node has 32 dedicated CPU cores and 128 GB of dedicated memory.</li>
+         * <li><strong>lindorm.g.xlarge</strong>: 4 cores, 16 GB (dedicated).</li>
+         * <li><strong>lindorm.g.2xlarge</strong>: 8 cores, 32 GB (dedicated).</li>
+         * <li><strong>lindorm.g.4xlarge</strong>: 16 cores, 64 GB (dedicated).</li>
+         * <li><strong>lindorm.g.8xlarge</strong>: 32 cores, 128 GB (dedicated).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1343,7 +1351,7 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the VPC in which you want to create the instance.</p>
+         * <p>The VPC ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1356,7 +1364,7 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the vSwitch to which you want the instance to connect.</p>
+         * <p>The vSwitch ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1369,7 +1377,7 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the zone in which you want to create the instance.</p>
+         * <p>The zone ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1443,7 +1451,7 @@ public class CreateLindormInstanceRequest extends Request {
             /**
              * <p>The tag key. Valid values of N: 1 to 20.</p>
              * <blockquote>
-             * <p> You can specify the keys of multiple tags. For example, you can specify the key of the first tag in the first key-value pair contained in the value of this parameter and specify the key of the second tag in the second key-value pair.</p>
+             * <p>You can specify multiple tag keys. For example, the Key in the first pair specifies the first tag key, and the Key in the second pair specifies the second tag key.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1457,7 +1465,7 @@ public class CreateLindormInstanceRequest extends Request {
             /**
              * <p>The tag value. Valid values of N: 1 to 20.</p>
              * <blockquote>
-             * <p> You can specify the values of multiple tags. For example, you can specify the value of the first tag in the first key-value pair contained in the value of this parameter and specify the value of the second tag in the second key-value pair.</p>
+             * <p>You can specify multiple tag values. For example, the Value in the first pair specifies the first tag value, and the Value in the second pair specifies the second tag value.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

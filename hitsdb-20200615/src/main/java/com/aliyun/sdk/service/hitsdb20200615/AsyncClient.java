@@ -63,7 +63,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You must select at least one engine when you create a Lindorm instance. For more information about how to select the storage type and engine type when you create a Lindorm instance, see <a href="https://help.aliyun.com/document_detail/181971.html">Select engine types</a> and <a href="https://help.aliyun.com/document_detail/174643.html">Select storage types</a>.</p>
+     * <p>When you create an instance, you must select at least one data engine.
+     * For example, to create a LindormTable engine, you must specify both the <strong>LindormNum</strong> (number of LindormTable engine nodes) and <strong>LindormSpec</strong> (LindormTable engine node specifications) parameters. For more information about data engines and storage specifications, see <a href="https://help.aliyun.com/document_detail/174643.html">How to select a data engine</a> and <a href="https://help.aliyun.com/document_detail/181971.html">How to select a storage specification</a>.</p>
+     * <blockquote>
+     * <p>Notice: If you do not specify data engine parameters when creating an instance, the API invoke will fail.</p>
+     * </blockquote>
      * 
      * @param request the request parameters of CreateLindormInstance  CreateLindormInstanceRequest
      * @return CreateLindormInstanceResponse
@@ -71,6 +75,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateLindormInstanceResponse> createLindormInstance(CreateLindormInstanceRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>You must select at least one data engine when you create an instance. For more information about data engines and storage specifications, see <a href="https://help.aliyun.com/document_detail/174643.html">How to select a data engine</a> and <a href="https://help.aliyun.com/document_detail/181971.html">How to select a storage specification</a>.</p>
+     * <blockquote>
+     * <p>Notice: If you do not specify the data engine parameter when you create an instance, the API call fails.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of CreateLindormV2Instance  CreateLindormV2InstanceRequest
      * @return CreateLindormV2InstanceResponse
      */
@@ -192,7 +202,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>If the version of the underlying storage engine in a Lindorm cluster is 4.1.9 or later, the storage usage values returned for the LStorageUsageList parameter prevail.</p>
+     * <p>For Lindorm clusters with an underlying storage version of 4.1.9 or later, refer to the list values returned by LStorageUsageList for storage usage details.</p>
      * 
      * @param request the request parameters of GetLindormFsUsedDetail  GetLindormFsUsedDetailRequest
      * @return GetLindormFsUsedDetailResponse
@@ -224,6 +234,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetLindormV2InstanceResponse> getLindormV2Instance(GetLindormV2InstanceRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>For Lindorm clusters with an underlying storage version of 4.1.9 or later, refer to the list values returned by LStorageUsageList for storage usage details.</p>
+     * 
      * @param request the request parameters of GetLindormV2InstanceDetails  GetLindormV2InstanceDetailsRequest
      * @return GetLindormV2InstanceDetailsResponse
      */
@@ -260,6 +273,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetLindormV2StreamEngineInfoResponse> getLindormV2StreamEngineInfo(GetLindormV2StreamEngineInfoRequest request);
 
     /**
+     * @param request the request parameters of KillQuery  KillQueryRequest
+     * @return KillQueryResponse
+     */
+    CompletableFuture<KillQueryResponse> killQuery(KillQueryRequest request);
+
+    /**
      * @param request the request parameters of ListAutoScalingConfigs  ListAutoScalingConfigsRequest
      * @return ListAutoScalingConfigsResponse
      */
@@ -282,6 +301,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListComputeEngineJobResponse
      */
     CompletableFuture<ListComputeEngineJobResponse> listComputeEngineJob(ListComputeEngineJobRequest request);
+
+    /**
+     * @param request the request parameters of ListHBaseQuotas  ListHBaseQuotasRequest
+     * @return ListHBaseQuotasResponse
+     */
+    CompletableFuture<ListHBaseQuotasResponse> listHBaseQuotas(ListHBaseQuotasRequest request);
 
     /**
      * @param request the request parameters of ListLdpsComputeGroups  ListLdpsComputeGroupsRequest
@@ -315,8 +340,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to change the billing method of an instance to subscription or pay-as-you-go.
-     * Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/en/pricing-calculator?spm=a2c63.p38356.0.0.2b024c2adcHeXL&_p_lc=1#/commodity/hitsdb_lindormpre_public_intl">pricing</a> of Lindorm. Published on only international site (alibabacloud.com).</p>
+     * <p>Adjusts the billing method of an instance. You can switch between the subscription and pay-as-you-go billing methods.
+     * Before you call this operation, make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product?spm=openapi-amp.newDocPublishment.0.0.6345281fu63xJ3#/hitsdb/detail/hitsdb_lindormpre_public_cn">pricing</a> of Lindorm. Published only on the China site.
+     * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/pricing-calculator?_p_lc=1&spm=a2796.7960336.3034855210.1.7396b91aC5VjZ7#/commodity/vm_intl">pricing</a>. Published only on the International site.</p>
      * 
      * @param request the request parameters of ModifyInstancePayType  ModifyInstancePayTypeRequest
      * @return ModifyInstancePayTypeResponse
@@ -373,8 +399,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to renew a subscription Lindorm instance for 1 to 9 months or 1 to 3 years.
-     * Before you call this operation, make sure that you fully understand the billing methods and pricing of Lindorm.</p>
+     * <p>Renews a subscription instance. The renewal period can be measured in months or years. The renewal duration ranges from 1 to 9 months or 1 to 3 years. Before you call this operation, make sure that you fully understand the billing methods and pricing of Lindorm.</p>
      * 
      * @param request the request parameters of RenewLindormInstance  RenewLindormInstanceRequest
      * @return RenewLindormInstanceResponse
@@ -394,12 +419,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SetDefaultOlapComputeGroupResponse> setDefaultOlapComputeGroup(SetDefaultOlapComputeGroupRequest request);
 
     /**
+     * @param request the request parameters of SetHBaseQuotas  SetHBaseQuotasRequest
+     * @return SetHBaseQuotasResponse
+     */
+    CompletableFuture<SetHBaseQuotasResponse> setHBaseQuotas(SetHBaseQuotasRequest request);
+
+    /**
+     * @param request the request parameters of ShowProcessList  ShowProcessListRequest
+     * @return ShowProcessListResponse
+     */
+    CompletableFuture<ShowProcessListResponse> showProcessList(ShowProcessListRequest request);
+
+    /**
      * <b>description</b> :
-     * <p>Prerequisites</p>
+     * <p>Before you begin:</p>
      * <ul>
-     * <li>The LindormTable version of your instance is 2.6.0 or later.</li>
-     * <li>The LindormTable of your instance supports LindormSQL V3. The value of the EnableLsqlVersionV3 parameter in the response of the GetLindormInstance operation is true for Lindorm instances purchased after Oct 24, 2023, which indicates that LindormSQL is supported by these instances by default. If you want to enable LindormSQL for instances purchased before Oct 24, 2023, contact the on-duty technical support.
-     * You can enable the MySQL compatibility feature for a Lindorm instance only when the instance meets the preceding requirements.</li>
+     * <li>The LindormTable database engine version number must be 2.6.0 or later.</li>
+     * <li>The LindormTable DPI engine must support LindormSQL V3. You can check this by verifying that the EnableLsqlVersionV3 field in the response of the GetLindormInstance operation is set to true. Instances purchased after October 24, 2023 support EnableLsqlVersionV3=true by default. For existing instances, contact technical support for evaluation before enabling this feature.
+     * Both conditions must be met before you can enable the MySQL-compatible protocol. You can call the <a href="https://help.aliyun.com/document_detail/2056440.html">GetLindormInstance</a> operation to view instance details.</li>
      * </ul>
      * 
      * @param request the request parameters of SwitchLSQLV3MySQLService  SwitchLSQLV3MySQLServiceRequest
@@ -415,7 +452,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>If a tag is not added to any Lindorm instance, it is deleted.</p>
+     * <p>If a tag is not attached to any Lindorm instance, the tag is deleted.</p>
      * 
      * @param request the request parameters of UntagResources  UntagResourcesRequest
      * @return UntagResourcesResponse
@@ -441,6 +478,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateLdpsComputeGroupResponse> updateLdpsComputeGroup(UpdateLdpsComputeGroupRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>When you create an instance, select at least one data engine.
+     * For example, to create a LindormTable engine, you must specify both the <strong>LindormNum</strong> (number of LindormTable engine nodes) and <strong>LindormSpec</strong> (LindormTable engine node specifications) parameters. For more information about data engines and storage specifications, see <a href="https://help.aliyun.com/document_detail/174643.html">How to select a data engine</a> and <a href="https://help.aliyun.com/document_detail/181971.html">How to select storage specifications</a>.</p>
+     * <blockquote>
+     * <p>Notice: If you do not specify data engine parameters when creating an instance, the API call fails.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of UpdateLindormInstanceAttribute  UpdateLindormInstanceAttributeRequest
      * @return UpdateLindormInstanceAttributeResponse
      */
@@ -466,7 +510,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>For more information about how to select the storage type and engine type when you create a Lindorm instance, see <a href="https://help.aliyun.com/document_detail/181971.html">Select engine typpes</a> and <a href="https://help.aliyun.com/document_detail/174643.html">Select storage types</a>.</p>
+     * <p>For information about data engines and storage specifications of Lindorm instances, see <a href="https://help.aliyun.com/document_detail/174643.html">How to select a data engine</a> and <a href="https://help.aliyun.com/document_detail/181971.html">How to select a storage specification</a>.</p>
      * 
      * @param request the request parameters of UpgradeLindormInstance  UpgradeLindormInstanceRequest
      * @return UpgradeLindormInstanceResponse

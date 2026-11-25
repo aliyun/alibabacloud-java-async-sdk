@@ -93,7 +93,10 @@ public class CreateLindormV2InstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The detailed reasons for access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;AuthAction&quot;:&quot;xxx&quot;,&quot;AuthPrincipalDisplayName&quot;:&quot;222&quot;,&quot;AuthPrincipalOwnerId&quot;:&quot;111&quot;,&quot;AuthPrincipalType&quot;:&quot;SubUser&quot;,,&quot;NoPermissionType&quot;:&quot;ImplicitDeny&quot;,&quot;PolicyType&quot;:&quot;AccountLevelIdentityBasedPolicy&quot;,&quot;EncodedDiagnosticMessage&quot;:&quot;xxxxxx&quot;}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -101,7 +104,10 @@ public class CreateLindormV2InstanceResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ld-bp1mq0tdzbx1m****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -109,7 +115,10 @@ public class CreateLindormV2InstanceResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>211110656240000</p>
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -117,7 +126,10 @@ public class CreateLindormV2InstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1556DCB0-043A-4444-8BD9-CF4A68E7EE64</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

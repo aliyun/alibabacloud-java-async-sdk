@@ -177,10 +177,10 @@ public class RenewLindormInstanceRequest extends Request {
         } 
 
         /**
-         * <p>The subscription duration of the instance. The valid values of this parameter depend on the value of the PricingCycle parameter.</p>
+         * <p>The subscription duration of the instance. Valid values:</p>
          * <ul>
-         * <li>If PricingCycle is set to <strong>Month</strong>, set this parameter to an integer that ranges from <strong>1</strong> to <strong>9</strong>.</li>
-         * <li>If PricingCycle is set to <strong>Year</strong>, set this parameter to an integer that ranges from <strong>1</strong> to <strong>3</strong>.</li>
+         * <li>If PricingCycle is set to <strong>Month</strong>, the instance is billed by month. Valid values: <strong>1</strong> to <strong>9</strong>.</li>
+         * <li>If PricingCycle is set to <strong>Year</strong>, the instance is billed by year. Valid values: <strong>1</strong> to <strong>3</strong>.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -194,7 +194,7 @@ public class RenewLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance that you want to renew. You can call the <a href="https://help.aliyun.com/document_detail/426069.html">GetLindormInstanceList</a> operation to obtain the instance ID.</p>
+         * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/426069.html">GetLindormInstanceList</a> operation to query the instance ID. The instance must be in the ACTIVATION (Running) state to be renewed. Instances in other states, such as CREATING (Creating), cannot be renewed.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -225,10 +225,10 @@ public class RenewLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The period based on which you are charged for the instance. Valid values:</p>
+         * <p>The billing cycle of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>Month</strong>: You are charged for the instance based on months.</li>
-         * <li><strong>Year</strong>: You are charged for the instance based on years.</li>
+         * <li><strong>Month</strong>: months</li>
+         * <li><strong>Year</strong>: years</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -242,7 +242,7 @@ public class RenewLindormInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region in which the instance that you want to renew is located. You can call the <a href="https://help.aliyun.com/document_detail/426062.html">DescribeRegions</a> operation to query the region ID.</p>
+         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/426062.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

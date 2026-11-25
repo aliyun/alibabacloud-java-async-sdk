@@ -301,7 +301,7 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The detailed reason why the access was denied.</p>
+         * <p>The detailed reason why access was denied.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -312,7 +312,7 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total storage space of the cluster. Unit: bytes.</p>
+         * <p>The total storage capacity of the cluster. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>85899345920</p>
@@ -323,7 +323,7 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The cold storage space of the cluster. Unit: bytes.</p>
+         * <p>The cold storage capacity of the cluster. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>85899345920</p>
@@ -334,7 +334,7 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The hot storage space of the cluster. Unit: bytes.</p>
+         * <p>The hot storage capacity of the cluster. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>85899345920</p>
@@ -356,7 +356,7 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The cold storage usage of the table data of the search engine. Unit: bytes.</p>
+         * <p>The cold storage usage of table data in the search index DPI engine. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>33269</p>
@@ -367,7 +367,7 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The cold storage usage of the table data of the time series engine. Unit: bytes.</p>
+         * <p>The cold storage usage of table data in the LindormTSDB engine. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>33269</p>
@@ -378,7 +378,7 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The cold storage usage of the table data of the wide table engine. Unit: bytes.</p>
+         * <p>The cold storage usage of table data in the LindormTable engine. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>33269</p>
@@ -400,7 +400,7 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The hot storage usage of the table data of the search engine. Unit: bytes.</p>
+         * <p>The hot storage usage of table data in the search index DPI engine. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>33269</p>
@@ -411,7 +411,7 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The hot storage usage of the table data of the time series engine. Unit: bytes.</p>
+         * <p>The hot storage usage of table data in the LindormTSDB engine. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>33269</p>
@@ -422,7 +422,7 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The hot storage usage of the table data of the wide table engine. Unit: bytes.</p>
+         * <p>The hot storage usage of table data in the LindormTable engine. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>33269</p>
@@ -433,7 +433,7 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The storage usage of the search engine. Unit: bytes.</p>
+         * <p>The storage usage of the search index DPI engine in the cluster. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>33269</p>
@@ -444,7 +444,7 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The storage usage of the time series engine. Unit: bytes.</p>
+         * <p>The storage usage of the LindormTSDB engine in the cluster. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>33269</p>
@@ -455,7 +455,7 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The space usage of the wide table engine. Unit: bytes.</p>
+         * <p>The storage usage of the LindormTable engine in the cluster. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>33269</p>
@@ -466,7 +466,7 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The storage usage of the table data of the wide table engine. Unit: bytes.</p>
+         * <p>The storage usage of table data in the LindormTable engine. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>33269</p>
@@ -477,7 +477,7 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The storage usage of the log data of the wide table engine. Unit: bytes.</p>
+         * <p>The storage usage of write-ahead log (wal) data in the LindormTable engine. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>33269</p>
@@ -488,7 +488,7 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>If the version of the underlying storage engine is 4.1.9 or later, the storage usage values returned for the LStorageUsageList parameter prevail. Storage details are returned based on the storage type.</p>
+         * <p>For clusters with an underlying storage DPI engine version of 4.1.9 or later, this field is the authoritative source for storage details, categorized by storage medium categorization.</p>
          */
         public Builder lStorageUsageList(java.util.List<LStorageUsageList> lStorageUsageList) {
             this.lStorageUsageList = lStorageUsageList;
@@ -496,7 +496,7 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID. Each request has a unique ID. You can use the request ID to locate and troubleshoot issues.</p>
+         * <p>The request ID. It is a unique identifier generated by Alibaba Cloud for the request and can be used to troubleshoot and locate issues.</p>
          * 
          * <strong>example:</strong>
          * <p>4F23D50C-400C-592C-9486-9D1E10179065</p>
@@ -507,7 +507,7 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the return value is valid. Valid values: true and false. If a value of false is returned, you must provide the request ID for troubleshooting.</p>
+         * <p>Indicates whether the return value is valid. true indicates that the value is valid. false indicates that an exception occurred. Provide the request ID to troubleshoot the issue.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -693,7 +693,7 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The total storage capacity. Unit: bytes.</p>
+             * <p>The total storage capacity for the storage medium type. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>85899345920</p>
@@ -706,12 +706,12 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
             /**
              * <p>The storage type of the cluster. Valid values:</p>
              * <ul>
-             * <li>StandardCloudStorage</li>
-             * <li>PerformanceCloudStorage</li>
-             * <li>CapacityCloudStorage</li>
-             * <li>LocalSsdStorage</li>
-             * <li>LocalHddStorage</li>
-             * <li>LocalEbsStorage</li>
+             * <li>StandardCloudStorage: standard cloud storage.</li>
+             * <li>PerformanceCloudStorage: performance cloud storage.</li>
+             * <li>CapacityCloudStorage: capacity cloud storage.</li>
+             * <li>LocalSsdStorage: local SSD.</li>
+             * <li>LocalHddStorage: local HDD.</li>
+             * <li>LocalEbsStorage: local cloud storage.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -723,7 +723,7 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage usage. Unit: bytes.</p>
+             * <p>The storage usage for the storage medium type. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>33269</p>
@@ -734,7 +734,10 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
             }
 
             /**
-             * UsedLindormColumn3.
+             * <p>The column store engine storage usage for the storage medium type. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>688935</p>
              */
             public Builder usedLindormColumn3(String usedLindormColumn3) {
                 this.usedLindormColumn3 = usedLindormColumn3;
@@ -742,7 +745,10 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
             }
 
             /**
-             * UsedLindormMessage3.
+             * <p>The message engine storage usage for the storage medium type. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder usedLindormMessage3(String usedLindormMessage3) {
                 this.usedLindormMessage3 = usedLindormMessage3;
@@ -750,7 +756,7 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage usage of the search engine. Unit: bytes.</p>
+             * <p>The search index DPI engine storage usage for the storage medium type. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>33269</p>
@@ -761,7 +767,7 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage usage of the compute engine. Unit: bytes.</p>
+             * <p>The compute engine storage usage for the storage medium type. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>33269</p>
@@ -772,7 +778,7 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage usage of the wide table engine. Unit: bytes.</p>
+             * <p>The LindormTable engine storage usage for the storage medium type. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>33269</p>
@@ -783,7 +789,7 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage usage of the time series engine. Unit: bytes.</p>
+             * <p>The LindormTSDB engine storage usage for the storage medium type. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>33269</p>
@@ -794,7 +800,10 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
             }
 
             /**
-             * UsedLindormVector3.
+             * <p>The vector engine storage usage for the storage medium type. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>595054865855</p>
              */
             public Builder usedLindormVector3(String usedLindormVector3) {
                 this.usedLindormVector3 = usedLindormVector3;
@@ -802,7 +811,7 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage usage of other resources, such as logs and recycle bins. Unit: bytes.</p>
+             * <p>The storage usage for other purposes under the storage medium type, such as logs and the recycle bin. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>33269</p>

@@ -54,7 +54,7 @@ public class UntagResourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>8CACBBCE-7519-545C-8695-86D4F09CED7E</p>

@@ -198,10 +198,12 @@ public class ModifyInstancePayTypeRequest extends Request {
         }
 
         /**
-         * <p>The subscription duration of the instance. The parameter is required if the instance is an subscription instance.</p>
+         * <p>The subscription duration. This parameter is required when you change the billing method to subscription.</p>
          * <ul>
-         * <li>If PricingCycle is set to Month, set this parameter to an integer that ranges from 1 to 9.</li>
-         * <li>If PricingCycle is set to Year, set this parameter to an integer that ranges from 1 to 3.</li>
+         * <li><p>If PricingCycle is set to Month, valid values are [1, 9].</p>
+         * </li>
+         * <li><p>If PricingCycle is set to Year, valid values are [1, 3].</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -214,7 +216,7 @@ public class ModifyInstancePayTypeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -247,8 +249,8 @@ public class ModifyInstancePayTypeRequest extends Request {
         /**
          * <p>The billing method of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>PREPAY</strong>: subscription.</li>
-         * <li><strong>POSTPAY</strong>: pay-as-you-go.</li>
+         * <li><strong>PREPAY</strong>: subscription</li>
+         * <li><strong>POSTPAY</strong>: pay-as-you-go</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -262,10 +264,12 @@ public class ModifyInstancePayTypeRequest extends Request {
         }
 
         /**
-         * <p>The unit of the subscription duration for the instance. Valid values:</p>
+         * <p>The unit of the subscription duration. This parameter is required when you change the billing method to subscription. Valid values:</p>
          * <ul>
-         * <li>Month</li>
-         * <li>Year</li>
+         * <li><p>Month: month</p>
+         * </li>
+         * <li><p>Year: year</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
