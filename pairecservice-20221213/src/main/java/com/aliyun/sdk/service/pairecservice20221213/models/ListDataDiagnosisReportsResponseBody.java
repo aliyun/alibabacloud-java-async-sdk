@@ -1182,7 +1182,7 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
              * <p>The equivalent null value count.</p>
              * 
              * <strong>example:</strong>
-             * <p>\\N</p>
+             * <p>\N</p>
              */
             public Builder defaultNullCount(String defaultNullCount) {
                 this.defaultNullCount = defaultNullCount;
@@ -1193,7 +1193,7 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
              * <p>The equivalent null value rate.</p>
              * 
              * <strong>example:</strong>
-             * <p>\\N</p>
+             * <p>\N</p>
              */
             public Builder defaultNullRate(String defaultNullRate) {
                 this.defaultNullRate = defaultNullRate;

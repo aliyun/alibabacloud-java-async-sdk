@@ -73,7 +73,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <h2>Request description</h2>
-     * <p>This operation checks the status or performance of a specific recall management service by using the recall management service ID and related parameters. Ensure that the InstanceId field is correct to target the right instance. To test a specific version of the service, provide the RecallManagementServiceVersionId. You can also customize the request by using parameters such as Recalls, ContextParams, ExposureList, and RetainFields to accurately simulate real-world scenarios.</p>
+     * <p>This operation allows you to check the status or performance of a specific recall management service by providing the recall management service ID and related parameters. Ensure that the <code>InstanceId</code> field is correct to point to the right instance. To test a specific version of the service, provide <code>RecallManagementServiceVersionId</code>. Additionally, you can further customize the request by using parameters such as <code>Recalls</code>, <code>ContextParams</code>, <code>ExposureList</code>, and <code>RetainFields</code> to more accurately simulate real-world scenarios.</p>
      * 
      * @param request the request parameters of CheckRecallManagementService  CheckRecallManagementServiceRequest
      * @return CheckRecallManagementServiceResponse
@@ -831,12 +831,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
+     * <h2>Request description</h2>
      * <ul>
      * <li>This operation retrieves the details of a specific traffic control task, including but not limited to the task name, description, and status.</li>
-     * <li>TrafficControlTaskId and InstanceId are required parameters that specify the task ID and instance ID to query.</li>
-     * <li>Optional parameters such as Environment, Version, and ControlTargetFilter help refine the request to retrieve more specific task data or version information.</li>
-     * <li>Check the returned data structure, especially the TrafficControlTargets section, which contains multiple control targets and their related properties.</li>
+     * <li><code>TrafficControlTaskId</code> and <code>InstanceId</code> are required parameters used to specify the task ID and instance ID to query, respectively.</li>
+     * <li>Optional parameters such as <code>Environment</code>, <code>Version</code>, and <code>ControlTargetFilter</code> can help further refine the request to retrieve more specific task data or version information.</li>
+     * <li>Check the returned data structure, especially the <code>TrafficControlTargets</code> section, which contains multiple control targets and their related attributes.</li>
      * </ul>
      * 
      * @param request the request parameters of GetTrafficControlTask  GetTrafficControlTaskRequest
@@ -990,7 +990,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <h2>Request description</h2>
-     * <p>Provide the instance ID (InstanceId) and data source ID (ResourceId) to retrieve a list of all tables in the data source. You can use the optional <code>MaxcomputeSchema</code> parameter to specify a MaxCompute schema to further filter the results.</p>
+     * <p>By providing the instance ID (InstanceId) and the data source ID (ResourceId), you can retrieve a list of all data tables under the data source. The optional <code>MaxcomputeSchema</code> parameter allows you to specify the MaxCompute schema to further filter the results.</p>
      * 
      * @param request the request parameters of ListInstanceResourceTables  ListInstanceResourceTablesRequest
      * @return ListInstanceResourceTablesResponse
@@ -1155,10 +1155,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>This operation retrieves a list of traffic control nodes that meet specific conditional requirements.</li>
-     * <li>You can filter the returned nodes and apply sorting by specifying different query parameters.</li>
-     * <li>Paged query is supported. You can also choose to return all data at once without paging.</li>
-     * <li>Note: InstanceId is required, and other parameters are options. Specify other parameters as needed to obtain more precise results.</li>
+     * <li>This operation retrieves a list of traffic control nodes that meet specific conditional criteria.</li>
+     * <li>You can use different query parameters for filtering and sorting the returned list of nodes.</li>
+     * <li>Paged query is supported. You can also retrieve all data at once without paging.</li>
+     * <li>Note: <code>InstanceId</code> is required. All other parameters are options. Specify them as needed to obtain more accurate results.</li>
      * </ul>
      * 
      * @param request the request parameters of ListTrafficControlTasks  ListTrafficControlTasksRequest
@@ -1376,8 +1376,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
-     * <p>Call this operation to start a traffic control task by providing the <code>TrafficControlTargetId</code> and <code>InstanceId</code>.</p>
+     * <h2>Request description</h2>
+     * <p>You can call this operation to start a specific traffic shaping task by specifying the <code>TrafficControlTargetId</code> and <code>InstanceId</code> parameters. Ensure that you correctly specify the values of these two parameters in the request to prevent operation failures.</p>
      * 
      * @param request the request parameters of StartTrafficControlTarget  StartTrafficControlTargetRequest
      * @return StartTrafficControlTargetResponse
@@ -1417,8 +1417,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
-     * <p>This operation stops a traffic control task using the provided <code>TrafficControlTargetId</code> and <code>InstanceId</code>. Ensure that the parameter values are accurate to avoid stopping the wrong target or instance.</p>
+     * <h2>Request description</h2>
+     * <p>Call this operation to stop an ongoing traffic control task by specifying the <code>TrafficControlTargetId</code> and <code>InstanceId</code>. Ensure that the parameter values are accurate to avoid operating on the wrong target or instance.</p>
      * 
      * @param request the request parameters of StopTrafficControlTarget  StopTrafficControlTargetRequest
      * @return StopTrafficControlTargetResponse

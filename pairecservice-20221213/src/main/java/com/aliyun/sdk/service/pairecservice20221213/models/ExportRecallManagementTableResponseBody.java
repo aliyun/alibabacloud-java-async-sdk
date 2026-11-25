@@ -67,7 +67,7 @@ public class ExportRecallManagementTableResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The export job ID. Use this ID to track the job\&quot;s status.</p>
+         * <p>The export job ID. Use this ID to track the job&quot;s status.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

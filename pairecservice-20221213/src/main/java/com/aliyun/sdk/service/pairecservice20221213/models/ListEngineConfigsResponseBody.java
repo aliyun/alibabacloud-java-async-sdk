@@ -80,7 +80,7 @@ public class ListEngineConfigsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of engine configurations.</p>
+         * <p>The engine configurations.</p>
          */
         public Builder engineConfigs(java.util.List<EngineConfigs> engineConfigs) {
             this.engineConfigs = engineConfigs;
@@ -99,7 +99,7 @@ public class ListEngineConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries in the list.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -320,7 +320,7 @@ public class ListEngineConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The engine configuration ID.</p>
+             * <p>The ID of the engine configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -333,12 +333,9 @@ public class ListEngineConfigsResponseBody extends TeaModel {
             /**
              * <p>The runtime environment. Valid values:</p>
              * <ul>
-             * <li><p>Daily: Daily environment.</p>
-             * </li>
-             * <li><p>Pre: Pre-release environment.</p>
-             * </li>
-             * <li><p>Prod: Production environment.</p>
-             * </li>
+             * <li>Daily: Daily environment.</li>
+             * <li>Pre: Staging environment.</li>
+             * <li>Prod: Production environment.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -383,7 +380,7 @@ public class ListEngineConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The engine configuration name.</p>
+             * <p>The name of the engine configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>engine_config_v1</p>
@@ -394,7 +391,7 @@ public class ListEngineConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scene ID.</p>
+             * <p>The scenario.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -407,10 +404,8 @@ public class ListEngineConfigsResponseBody extends TeaModel {
             /**
              * <p>The status. Valid values:</p>
              * <ul>
-             * <li><p>Released: Released.</p>
-             * </li>
-             * <li><p>UnReleased: Not released.</p>
-             * </li>
+             * <li>Released: Released.</li>
+             * <li>UnReleased: Unreleased.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -422,7 +417,7 @@ public class ListEngineConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The engine configuration type.</p>
+             * <p>The type of the engine configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>Normal</p>

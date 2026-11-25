@@ -234,7 +234,7 @@ public class ListABMetricGroupsRequest extends Request {
         }
 
         /**
-         * <p>The scene ID. You can call the <a href="%5C(~~2402581~~%5C)">ListScenes</a> operation to obtain this ID.</p>
+         * <p>The scene ID. You can call the <a href="(~~2402581~~)">ListScenes</a> operation to obtain this ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

@@ -134,7 +134,7 @@ public class UpdateParamRequest extends Request {
         }
 
         /**
-         * <p>The parameter\&quot;s value.</p>
+         * <p>The parameter&quot;s value.</p>
          * 
          * <strong>example:</strong>
          * <p>house</p>

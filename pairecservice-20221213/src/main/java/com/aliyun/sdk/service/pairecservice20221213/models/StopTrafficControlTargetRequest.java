@@ -26,6 +26,10 @@ public class StopTrafficControlTargetRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Environment")
+    private String environment;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
@@ -33,6 +37,7 @@ public class StopTrafficControlTargetRequest extends Request {
         super(builder);
         this.trafficControlTargetId = builder.trafficControlTargetId;
         this.regionId = builder.regionId;
+        this.environment = builder.environment;
         this.instanceId = builder.instanceId;
     }
 
@@ -64,6 +69,13 @@ public class StopTrafficControlTargetRequest extends Request {
     }
 
     /**
+     * @return environment
+     */
+    public String getEnvironment() {
+        return this.environment;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -73,6 +85,7 @@ public class StopTrafficControlTargetRequest extends Request {
     public static final class Builder extends Request.Builder<StopTrafficControlTargetRequest, Builder> {
         private String trafficControlTargetId; 
         private String regionId; 
+        private String environment; 
         private String instanceId; 
 
         private Builder() {
@@ -83,11 +96,12 @@ public class StopTrafficControlTargetRequest extends Request {
             super(request);
             this.trafficControlTargetId = request.trafficControlTargetId;
             this.regionId = request.regionId;
+            this.environment = request.environment;
             this.instanceId = request.instanceId;
         } 
 
         /**
-         * <p>The traffic control target ID.</p>
+         * <p>The ID of the traffic control target.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -104,6 +118,18 @@ public class StopTrafficControlTargetRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>The environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Pre</p>
+         */
+        public Builder environment(String environment) {
+            this.putBodyParameter("Environment", environment);
+            this.environment = environment;
             return this;
         }
 

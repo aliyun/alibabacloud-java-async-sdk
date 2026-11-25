@@ -232,7 +232,7 @@ public class BackflowFeatureConsistencyCheckJobDataRequest extends Request {
         }
 
         /**
-         * <p>The ID of the feature consistency check job configuration. For more information about how to obtain the configuration ID, see <a href="https://help.aliyun.com/document_detail/2557567.html">ListFeatureConsistencyCheckJobConfigs</a>.</p>
+         * <p>The ID of the feature consistency check job configuration. To obtain the configuration ID, see <a href="https://help.aliyun.com/document_detail/2557567.html">ListFeatureConsistencyCheckJobConfigs</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -245,7 +245,7 @@ public class BackflowFeatureConsistencyCheckJobDataRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. For more information about how to obtain the instance ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</p>
+         * <p>The ID of the instance. To obtain the instance ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -262,7 +262,7 @@ public class BackflowFeatureConsistencyCheckJobDataRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>[\&quot;{\\\&quot;itemid\\\&quot;:{\\\&quot;value\\\&quot;:1010,\\\&quot;type\\\&quot;:\\\&quot;string\\\&quot;}}\&quot;]</p>
+         * <p>[&quot;{\&quot;itemid\&quot;:{\&quot;value\&quot;:1010,\&quot;type\&quot;:\&quot;string\&quot;}}&quot;]</p>
          */
         public Builder itemFeatures(String itemFeatures) {
             this.putBodyParameter("ItemFeatures", itemFeatures);
@@ -323,7 +323,7 @@ public class BackflowFeatureConsistencyCheckJobDataRequest extends Request {
         }
 
         /**
-         * <p>The scene name.</p>
+         * <p>The name of the scene.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -340,7 +340,7 @@ public class BackflowFeatureConsistencyCheckJobDataRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>[\&quot;{\\\&quot;dbmtl_probs_is_valid_play\\\&quot;:0.00032182207107543945,\\\&quot;dbmtl_y_play_time\\\&quot;:0.0043269748210906982}\&quot;]</p>
+         * <p>[&quot;{\&quot;dbmtl_probs_is_valid_play\&quot;:0.00032182207107543945,\&quot;dbmtl_y_play_time\&quot;:0.0043269748210906982}&quot;]</p>
          */
         public Builder scores(String scores) {
             this.putBodyParameter("Scores", scores);
@@ -365,7 +365,7 @@ public class BackflowFeatureConsistencyCheckJobDataRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;userid\&quot;:{\&quot;value\&quot;:1010,\&quot;type\&quot;:\&quot;string\&quot;},\&quot;click_5_seq\&quot;:{\&quot;value\&quot;:\&quot;9001;9002;9003;9004;9005\&quot;,\&quot;type\&quot;:\&quot;string\&quot;}}</p>
+         * <p>{&quot;userid&quot;:{&quot;value&quot;:1010,&quot;type&quot;:&quot;string&quot;},&quot;click_5_seq&quot;:{&quot;value&quot;:&quot;9001;9002;9003;9004;9005&quot;,&quot;type&quot;:&quot;string&quot;}}</p>
          */
         public Builder userFeatures(String userFeatures) {
             this.putBodyParameter("UserFeatures", userFeatures);

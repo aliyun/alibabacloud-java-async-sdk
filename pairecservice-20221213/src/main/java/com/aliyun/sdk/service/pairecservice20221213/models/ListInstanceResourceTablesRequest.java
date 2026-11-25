@@ -33,12 +33,17 @@ public class ListInstanceResourceTablesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("MaxcomputeSchema")
     private String maxcomputeSchema;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TableType")
+    private String tableType;
+
     private ListInstanceResourceTablesRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
         this.resourceId = builder.resourceId;
         this.regionId = builder.regionId;
         this.maxcomputeSchema = builder.maxcomputeSchema;
+        this.tableType = builder.tableType;
     }
 
     public static Builder builder() {
@@ -82,11 +87,19 @@ public class ListInstanceResourceTablesRequest extends Request {
         return this.maxcomputeSchema;
     }
 
+    /**
+     * @return tableType
+     */
+    public String getTableType() {
+        return this.tableType;
+    }
+
     public static final class Builder extends Request.Builder<ListInstanceResourceTablesRequest, Builder> {
         private String instanceId; 
         private String resourceId; 
         private String regionId; 
         private String maxcomputeSchema; 
+        private String tableType; 
 
         private Builder() {
             super();
@@ -98,6 +111,7 @@ public class ListInstanceResourceTablesRequest extends Request {
             this.resourceId = request.resourceId;
             this.regionId = request.regionId;
             this.maxcomputeSchema = request.maxcomputeSchema;
+            this.tableType = request.tableType;
         } 
 
         /**
@@ -142,6 +156,18 @@ public class ListInstanceResourceTablesRequest extends Request {
         public Builder maxcomputeSchema(String maxcomputeSchema) {
             this.putQueryParameter("MaxcomputeSchema", maxcomputeSchema);
             this.maxcomputeSchema = maxcomputeSchema;
+            return this;
+        }
+
+        /**
+         * <p>The table type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ManagedTable</p>
+         */
+        public Builder tableType(String tableType) {
+            this.putQueryParameter("TableType", tableType);
+            this.tableType = tableType;
             return this;
         }
 

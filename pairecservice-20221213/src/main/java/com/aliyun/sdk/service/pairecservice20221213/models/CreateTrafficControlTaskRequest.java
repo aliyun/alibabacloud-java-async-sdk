@@ -611,7 +611,7 @@ public class CreateTrafficControlTaskRequest extends Request {
          * <p>The conditions for items in array format.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{\&quot;field\&quot;:\&quot;status\&quot;,\&quot;option\&quot;:\&quot;=\&quot;,\&quot;value\&quot;:\&quot;1\&quot;}]</p>
+         * <p>[{&quot;field&quot;:&quot;status&quot;,&quot;option&quot;:&quot;=&quot;,&quot;value&quot;:&quot;1&quot;}]</p>
          */
         public Builder itemConditionArray(String itemConditionArray) {
             this.putBodyParameter("ItemConditionArray", itemConditionArray);
@@ -745,7 +745,7 @@ public class CreateTrafficControlTaskRequest extends Request {
          * <p>The conditions for statistical behaviors in array format.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{\&quot;field\&quot;:\&quot;click\&quot;,\&quot;option\&quot;:\&quot;&lt;=\&quot;,\&quot;value\&quot;:\&quot;30\&quot;}]</p>
+         * <p>[{&quot;field&quot;:&quot;click&quot;,&quot;option&quot;:&quot;&lt;=&quot;,&quot;value&quot;:&quot;30&quot;}]</p>
          */
         public Builder statisBehaviorConditionArray(String statisBehaviorConditionArray) {
             this.putBodyParameter("StatisBehaviorConditionArray", statisBehaviorConditionArray);
@@ -794,7 +794,7 @@ public class CreateTrafficControlTaskRequest extends Request {
          * <p>The conditions for the target users in array format.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{\&quot;field\&quot;:\&quot;gender\&quot;,\&quot;option\&quot;:\&quot;=\&quot;,\&quot;value\&quot;:\&quot;male\&quot;}]</p>
+         * <p>[{&quot;field&quot;:&quot;gender&quot;,&quot;option&quot;:&quot;=&quot;,&quot;value&quot;:&quot;male&quot;}]</p>
          */
         public Builder userConditionArray(String userConditionArray) {
             this.putBodyParameter("UserConditionArray", userConditionArray);
@@ -1070,7 +1070,7 @@ public class CreateTrafficControlTaskRequest extends Request {
              * <p>The conditions for items in array format.</p>
              * 
              * <strong>example:</strong>
-             * <p>[{\&quot;field\&quot;:\&quot;status\&quot;,\&quot;option\&quot;:\&quot;=\&quot;,\&quot;value\&quot;:\&quot;1\&quot;}]</p>
+             * <p>[{&quot;field&quot;:&quot;status&quot;,&quot;option&quot;:&quot;=&quot;,&quot;value&quot;:&quot;1&quot;}]</p>
              */
             public Builder itemConditionArray(String itemConditionArray) {
                 this.itemConditionArray = itemConditionArray;

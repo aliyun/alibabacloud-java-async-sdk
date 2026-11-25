@@ -91,7 +91,7 @@ public class ListInstanceResourceTablesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of tables.</p>
+         * <p>The list of data tables.</p>
          */
         public Builder tables(java.util.List<Tables> tables) {
             this.tables = tables;

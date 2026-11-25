@@ -183,12 +183,9 @@ public class ListEngineConfigsRequest extends Request {
         /**
          * <p>The runtime environment. Valid values:</p>
          * <ul>
-         * <li><p>Daily: Daily environment.</p>
-         * </li>
-         * <li><p>Pre: Pre-release environment.</p>
-         * </li>
-         * <li><p>Prod: Production environment.</p>
-         * </li>
+         * <li>Daily: Daily environment.</li>
+         * <li>Pre: Staging environment.</li>
+         * <li>Prod: Production environment.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -201,7 +198,7 @@ public class ListEngineConfigsRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. You can obtain the instance ID by calling the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation.</p>
+         * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation to query instance IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -214,7 +211,7 @@ public class ListEngineConfigsRequest extends Request {
         }
 
         /**
-         * <p>The engine configuration name.</p>
+         * <p>The name of the engine configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>engine_config_v1</p>
@@ -250,7 +247,7 @@ public class ListEngineConfigsRequest extends Request {
         }
 
         /**
-         * <p>The scene ID.</p>
+         * <p>The scenario.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -264,10 +261,8 @@ public class ListEngineConfigsRequest extends Request {
         /**
          * <p>The status filter. Valid values:</p>
          * <ul>
-         * <li><p>Released: Released.</p>
-         * </li>
-         * <li><p>Unreleased: Not released.</p>
-         * </li>
+         * <li>Released: Released.</li>
+         * <li>Unreleased: Unreleased.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -280,8 +275,10 @@ public class ListEngineConfigsRequest extends Request {
         }
 
         /**
-         * <p>The version filter. Valid values:</p>
-         * <p>latest: the most recently updated version.</p>
+         * <p>The version filter. Valid value:</p>
+         * <ul>
+         * <li>latest: The most recently updated version.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>latest</p>
