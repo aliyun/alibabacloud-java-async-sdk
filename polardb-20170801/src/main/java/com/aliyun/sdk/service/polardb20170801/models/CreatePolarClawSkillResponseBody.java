@@ -80,7 +80,10 @@ public class CreatePolarClawSkillResponseBody extends TeaModel {
         } 
 
         /**
-         * IsUpdate.
+         * <p>Used for system scheduled task checks. The current scheduled task does not support modifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isUpdate(String isUpdate) {
             this.isUpdate = isUpdate;
@@ -88,7 +91,10 @@ public class CreatePolarClawSkillResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3E5CD764-FCCA-5C9C-838E-20E0DE84B2AF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +102,10 @@ public class CreatePolarClawSkillResponseBody extends TeaModel {
         }
 
         /**
-         * SkillName.
+         * <p>The skill name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>polarclawhub</p>
          */
         public Builder skillName(String skillName) {
             this.skillName = skillName;

@@ -689,7 +689,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The AgenticDB branch specifications.</p>
+         * <p>The specifications of the AgenticDB branch.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;DBClusterId&quot;:&quot;pagc-2zea920mcvd5o87&quot;,&quot;TenantId&quot;:&quot;t-cfc2d7df0e59439681f0087f51&quot;,&quot;ProjectId&quot;:&quot;proj-d7849d0050664c758af795d468&quot;,&quot;BranchId&quot;:&quot;br-9054b3b7649e4c0d977bd0df37&quot;,&quot;ForkFromBranch&quot;:true,&quot;ForkFromApplicationId&quot;:&quot;pa-source&quot;}</p>
@@ -719,6 +719,7 @@ public class CreateApplicationRequest extends Request {
          * <li>supabase: Specify this value to create a managed Supabase application.</li>
          * <li>raycluster: Specify this value to create a managed Ray Cluster application.</li>
          * <li>polarclaw: Specify this value to create a managed PolarClaw application.</li>
+         * <li>mem0: Specify this value to create a memory service application. The ApplicationId of this application type can be used in CreateApplicationPrompt. When you create this type of application, you must also configure the VPC, security group, and model or instance parameters as required.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -772,7 +773,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether an elastic IP address is automatically created and attached.</p>
+         * <p>Specifies whether automatic creation is enabled and whether to attach and associate with an EIP.</p>
          */
         public Builder autoAllocatePublicEip(Boolean autoAllocatePublicEip) {
             this.putQueryParameter("AutoAllocatePublicEip", autoAllocatePublicEip);
@@ -781,10 +782,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable automatic creation of a Polarlakebase cold storage instance. Valid values:</p>
+         * <p>Specifies whether to automatically create a Polarlakebase cold storage instance. Valid values:</p>
          * <ul>
-         * <li>false (default): disables automatic creation.</li>
-         * <li>true: enables automatic creation.</li>
+         * <li>false: Does not automatically create the instance. This is the default value.</li>
+         * <li>true: Automatically creates the instance.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -809,10 +810,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to automatically use coupons. Valid values:</p>
+         * <p>Specifies whether to automatically use a coupon. Valid values:</p>
          * <ul>
-         * <li>true: uses coupons. This is the default value.</li>
-         * <li>false: does not use coupons.</li>
+         * <li>true: Uses the coupon. This is the default value.</li>
+         * <li>false: Does not use the coupon.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -835,7 +836,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The PolarDB instance ID on which the application depends.</p>
+         * <p>The ID of the PolarDB instance on which the application depends.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-**************</p>
@@ -859,7 +860,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The list of expected DNAT entries for NAT mapping. This parameter must be specified together with VpcNatGatewayId. You can leave this parameter empty to indicate that no DNAT entries are created.</p>
+         * <p>The expected list of DNAT entries. This parameter must be specified together with VpcNatGatewayId. You can leave this parameter empty to indicate that no DNAT entries are created.</p>
          */
         public Builder dnatEntries(java.util.List<DnatEntries> dnatEntries) {
             String dnatEntriesShrink = shrink(dnatEntries, "DnatEntries", "json");
@@ -869,7 +870,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The dedicated NAT IP address allocated for DNAT, which is separate from the SNAT IP address. The IP address must belong to the gateway, be in the available state, and the vSwitch where the gateway resides must belong to the primary CIDR block reachable from the office network. This parameter must be specified together with VpcNatGatewayId. Prerequisite: An SNAT entry is bound to the vSwitch where the application resides.</p>
+         * <p>The dedicated NAT IP address allocated for DNAT, which is separate from the SNAT IP address. The IP address must belong to the NAT gateway, be in the available state, and the vSwitch where the gateway resides must belong to a primary CIDR block reachable from the office network. This parameter must be specified together with VpcNatGatewayId. Prerequisite: An SNAT entry is associated with the vSwitch where the application resides.</p>
          * 
          * <strong>example:</strong>
          * <p>10.64.0.10</p>
@@ -881,7 +882,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform a dry run. Default value: <code>false</code>. If you set this parameter to <code>true</code>, only parameter and resource validation is performed, and no resources are actually created.</p>
+         * <p>Specifies whether to perform a dry run. Default value: false. If you set this parameter to true, only parameter and resource validations are performed, and no resources are actually created.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -903,7 +904,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The required specification for knowledge applications.</p>
+         * <p>The required parameters for knowledge applications.</p>
          */
         public Builder knowledgeApplicationSpec(KnowledgeApplicationSpec knowledgeApplicationSpec) {
             String knowledgeApplicationSpecShrink = shrink(knowledgeApplicationSpec, "KnowledgeApplicationSpec", "json");
@@ -913,7 +914,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The required specification for mem0 applications.</p>
+         * <p>The required parameters for mem0 applications.</p>
          */
         public Builder memApplicationSpec(MemApplicationSpec memApplicationSpec) {
             String memApplicationSpecShrink = shrink(memApplicationSpec, "MemApplicationSpec", "json");
@@ -947,7 +948,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The base URL of the model. This parameter takes effect only when ApplicationType is set to polarclaw.</p>
+         * <p>The endpoint of the model. This parameter takes effect only when ApplicationType is set to polarclaw.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://dashscope.aliyuncs.com/compatible-mode/v1">https://dashscope.aliyuncs.com/compatible-mode/v1</a></p>
@@ -959,7 +960,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The source of the model. Valid values:</p>
+         * <p>The model source. Valid values:</p>
          * <ul>
          * <li>bailian: Model Studio model.</li>
          * <li>custom: Custom model.</li>
@@ -1022,8 +1023,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The Polarlakebase cold storage or high-performance instance ID. Default value: empty. If you specify this parameter, the corresponding storage is mounted to the application.</p>
-         * <p>Currently, only the following applications are supported:</p>
+         * <p>The ID of the Polarlakebase cold storage or high-performance instance. By default, this parameter is empty. If you specify this parameter, the corresponding storage is mounted to the application. This parameter is supported only for the following applications:</p>
          * <ul>
          * <li>supabase</li>
          * <li>raycluster</li>
@@ -1087,7 +1087,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The name of the IP address whitelist group. Default value: <code>default</code>.</p>
+         * <p>The name of the IP address whitelist group. Default value: default.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -1099,7 +1099,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The IP address whitelist. If you do not specify this parameter, the default value <code>127.0.0.1</code> is used.</p>
+         * <p>The IP address whitelist. If you do not specify this parameter, the default value 127.0.0.1 is used.</p>
          * 
          * <strong>example:</strong>
          * <p>127.0.0.1,172.17.0.0/24</p>
@@ -1135,7 +1135,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The list of application storages.</p>
+         * <p>The list of storage resources for the application.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;StorageType&quot;:&quot;oss&quot;,&quot;StorageInstanceId&quot;:&quot;pfs-xxxx&quot;,&quot;EndpointId&quot;:&quot;pe-xxxx&quot;}]</p>
@@ -1169,7 +1169,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The subscription period.</p>
+         * <p>The subscription duration.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1205,7 +1205,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>NAT mapping: the NAT gateway ID of the self-managed VPC NAT gateway. If you specify this parameter, NAT mapping is enabled when the instance is created. The gateway must be in the same VPC as the application, be of the private network type (intranet), and be in the active state.</p>
+         * <p>The VPC NAT gateway ID of the self-managed VPC NAT gateway for NAT mapping. If you specify this parameter, NAT mapping is enabled when the instance is created. The NAT gateway must be in the same VPC as the application, be of the private network (intranet) type, and be in the active state.</p>
          * 
          * <strong>example:</strong>
          * <p>ngw-xxx</p>
@@ -1580,10 +1580,7 @@ public class CreateApplicationRequest extends Request {
             }
 
             /**
-             * <p>The maximum number of application subcomponents of the same specifications. Default value: the value of ComponentReplica.</p>
-             * <ul>
-             * <li>This parameter is supported only for raycluster.</li>
-             * </ul>
+             * <p>The maximum number of application subcomponents of the same specifications. Default value: the value of ComponentReplica. This parameter is supported only for raycluster.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1606,11 +1603,11 @@ public class CreateApplicationRequest extends Request {
 
             /**
              * <p>The type of the application subcomponent.
-             * For supabase, valid values:</p>
+             * Valid values for supabase:</p>
              * <ul>
              * <li>gateway</li>
              * <li>backend
-             * For raycluster, valid values:</li>
+             * Valid values for raycluster:</li>
              * <li>head</li>
              * <li>worker</li>
              * <li>gpuworker</li>
@@ -1625,7 +1622,7 @@ public class CreateApplicationRequest extends Request {
             }
 
             /**
-             * <p>The upper limit for component scaling.</p>
+             * <p>The upper limit for scaling the component.</p>
              * 
              * <strong>example:</strong>
              * <p>16</p>
@@ -1636,7 +1633,7 @@ public class CreateApplicationRequest extends Request {
             }
 
             /**
-             * <p>The lower limit for component scaling.</p>
+             * <p>The lower limit for scaling the component.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1750,7 +1747,7 @@ public class CreateApplicationRequest extends Request {
             } 
 
             /**
-             * <p>The frontend port. This parameter is optional. By default, the system automatically assigns a port that is not occupied by the gateway. You can call the DescribeApplicationAttribute operation to query the assigned port.</p>
+             * <p>The frontend port. This parameter is optional. By default, the system automatically assigns a port, avoiding ports already occupied by the gateway. You can call the DescribeApplicationAttribute operation to query the assigned port.</p>
              * 
              * <strong>example:</strong>
              * <p>10001</p>
@@ -1761,7 +1758,7 @@ public class CreateApplicationRequest extends Request {
             }
 
             /**
-             * <p>The name of the port. Valid values: webui, hermesagent, dashboard, and ssh.</p>
+             * <p>The port name. Valid values: webui, hermesagent, dashboard, and ssh.</p>
              * 
              * <strong>example:</strong>
              * <p>webui</p>
@@ -1999,7 +1996,7 @@ public class CreateApplicationRequest extends Request {
             }
 
             /**
-             * <p>The name of the LLM model, such as qwen3-max. This parameter is required for knowledge applications.</p>
+             * <p>Required for knowledge applications. The name of the LLM model, such as qwen3-max.</p>
              * 
              * <strong>example:</strong>
              * <p>qwen3-max</p>
@@ -2367,7 +2364,7 @@ public class CreateApplicationRequest extends Request {
             }
 
             /**
-             * <p>The name of the embedder model, such as text-embedding-v4. This parameter is required for mem0 applications.</p>
+             * <p>Required for mem0 applications. The name of the embedder model, such as text-embedding-v4.</p>
              * 
              * <strong>example:</strong>
              * <p>text-embedding-v4</p>
@@ -2400,7 +2397,7 @@ public class CreateApplicationRequest extends Request {
             }
 
             /**
-             * <p>The name of the LLM model, such as qwen3-max. This parameter is required for mem0 applications.</p>
+             * <p>Required for mem0 applications. The name of the LLM model, such as qwen3-max.</p>
              * 
              * <strong>example:</strong>
              * <p>qwen3-max</p>
@@ -2477,7 +2474,7 @@ public class CreateApplicationRequest extends Request {
             }
 
             /**
-             * <p>The name of the reranker model, such as qwen3-rerank. This parameter is required for mem0 applications.</p>
+             * <p>Required for mem0 applications. The name of the reranker model, such as qwen3-rerank.</p>
              * 
              * <strong>example:</strong>
              * <p>qwen3-rerank</p>
@@ -2758,7 +2755,7 @@ public class CreateApplicationRequest extends Request {
             } 
 
             /**
-             * <p>The mount path in the container.</p>
+             * <p>The mount path inside the container.</p>
              * 
              * <strong>example:</strong>
              * <p>/data/container</p>
@@ -2802,7 +2799,7 @@ public class CreateApplicationRequest extends Request {
             }
 
             /**
-             * <p>The access address of the storage.</p>
+             * <p>The access endpoint of the storage.</p>
              * 
              * <strong>example:</strong>
              * <p>polarfs.example.com</p>
@@ -2813,7 +2810,7 @@ public class CreateApplicationRequest extends Request {
             }
 
             /**
-             * <p>The storage instance ID.</p>
+             * <p>The ID of the storage instance.</p>
              * 
              * <strong>example:</strong>
              * <p>pfs-xxxx</p>

@@ -158,7 +158,7 @@ public class DescribeLakebaseMountParameterGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The creation time (UTC).</p>
+         * <p>The creation time in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-01T00:00:00Z</p>
@@ -180,7 +180,7 @@ public class DescribeLakebaseMountParameterGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The modification time (UTC).</p>
+         * <p>The modification time in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-10T12:00:00Z</p>
@@ -191,7 +191,7 @@ public class DescribeLakebaseMountParameterGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The parameter details of the template. An empty array is returned if no data is available.</p>
+         * <p>The details of the parameters in the template. An empty array is returned if no data is available.</p>
          */
         public Builder parameterDetail(java.util.List<ParameterDetail> parameterDetail) {
             this.parameterDetail = parameterDetail;

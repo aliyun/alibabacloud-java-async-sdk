@@ -59,7 +59,7 @@ public class RestartAIDBClusterRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The instance ID. Usage notes: Add a description of the supported cluster types to the DBClusterId parameter description and clarify the meaning of the example value prefix.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-**************</p>

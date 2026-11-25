@@ -67,7 +67,7 @@ public class CreateApplicationAgentRelationResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the Squad application.</p>
+         * <p>The ID of the squad application.</p>
          * 
          * <strong>example:</strong>
          * <p>pa-xxx</p>

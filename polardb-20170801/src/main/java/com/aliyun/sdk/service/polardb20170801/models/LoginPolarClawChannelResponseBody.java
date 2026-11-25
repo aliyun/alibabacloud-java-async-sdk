@@ -165,7 +165,7 @@ public class LoginPolarClawChannelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the operation.</p>
+         * <p>The operation name.</p>
          * 
          * <strong>example:</strong>
          * <p>LoginPolarClawChannel</p>
@@ -187,7 +187,7 @@ public class LoginPolarClawChannelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The state of the asynchronous task.</p>
+         * <p>The task status.</p>
          * 
          * <strong>example:</strong>
          * <p>running</p>
@@ -198,7 +198,7 @@ public class LoginPolarClawChannelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the asynchronous task.</p>
+         * <p>The asynchronous task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>dc6762fb-20ad-4796-84fe-5c5d0dc413ce</p>

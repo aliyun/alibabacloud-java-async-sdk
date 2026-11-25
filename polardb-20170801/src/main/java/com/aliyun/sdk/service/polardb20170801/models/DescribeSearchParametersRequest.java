@@ -60,7 +60,7 @@ public class DescribeSearchParametersRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the PolarDB primary cluster, which is used to locate the Search cluster associated with the current account.</p>
+         * <p>The ID of the PolarDB primary cluster, which is used to locate the Search cluster associated with the current account. Only PolarDB for MySQL clusters are supported. PolarDB for PostgreSQL and PolarDB for PostgreSQL (Oracle-Compatible) clusters do not support Search. Before you call this operation, you must enable the Search engine for the target cluster in the PolarDB console. If the Search engine is not enabled, the InvalidDBClusterId.NotFound error may be returned.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

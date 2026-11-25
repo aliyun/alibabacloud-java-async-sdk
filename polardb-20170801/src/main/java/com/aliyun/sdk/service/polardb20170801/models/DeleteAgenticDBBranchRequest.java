@@ -120,7 +120,7 @@ public class DeleteAgenticDBBranchRequest extends Request {
         } 
 
         /**
-         * <p>The branch ID.</p>
+         * <p>The branch ID. You can obtain this ID by calling CreateAgenticDBBranch.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,7 +133,7 @@ public class DeleteAgenticDBBranchRequest extends Request {
         }
 
         /**
-         * <p>The AgenticDB cluster ID.</p>
+         * <p>The AgenticDB cluster ID. You can obtain this ID by calling CreateDBCluster and setting AgenticDbType to dedicated. The ID starts with pagc-.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,7 +146,7 @@ public class DeleteAgenticDBBranchRequest extends Request {
         }
 
         /**
-         * <p>The project ID.</p>
+         * <p>The project ID. You can obtain this ID by calling CreateAgenticDBProject.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -172,7 +172,7 @@ public class DeleteAgenticDBBranchRequest extends Request {
         }
 
         /**
-         * <p>The tenant ID.</p>
+         * <p>The tenant ID. You can obtain this ID by calling CreateAgenticDBTenant or CreateAgenticDBProject.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -67,7 +67,7 @@ public class DescribeBackupLogDownloadLinksResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the redo log backups.</p>
+         * <p>The physical log backup details.</p>
          */
         public Builder backupLogDownloadLinkItem(java.util.List<BackupLogDownloadLinkItem> backupLogDownloadLinkItem) {
             this.backupLogDownloadLinkItem = backupLogDownloadLinkItem;
@@ -196,7 +196,7 @@ public class DescribeBackupLogDownloadLinksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the physical backup log.</p>
+             * <p>The physical backup log ID.</p>
              * 
              * <strong>example:</strong>
              * <p>78167430</p>
@@ -207,7 +207,7 @@ public class DescribeBackupLogDownloadLinksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public download URL of the physical backup log.</p>
+             * <p>The Internet download link for the physical backup log.</p>
              */
             public Builder downloadLink(String downloadLink) {
                 this.downloadLink = downloadLink;
@@ -215,7 +215,7 @@ public class DescribeBackupLogDownloadLinksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error code for a single item. This parameter is empty if the request is successful.</p>
+             * <p>The error code for a single record. This parameter is empty if the call is successful.</p>
              * 
              * <strong>example:</strong>
              * <p>BackupLogNotFound</p>
@@ -226,7 +226,7 @@ public class DescribeBackupLogDownloadLinksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The internal network download URL of the physical backup log.</p>
+             * <p>The internal network download link for the physical backup log.</p>
              */
             public Builder intranetDownloadLink(String intranetDownloadLink) {
                 this.intranetDownloadLink = intranetDownloadLink;
@@ -234,7 +234,7 @@ public class DescribeBackupLogDownloadLinksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration time of the download URL. The time is displayed in UTC.</p>
+             * <p>The expiration time of the download link. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-10-23T03:00:00Z</p>
@@ -245,7 +245,7 @@ public class DescribeBackupLogDownloadLinksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message for a single item. This parameter is empty if the request is successful.</p>
+             * <p>The error message for a single record. This parameter is empty if the call is successful.</p>
              * 
              * <strong>example:</strong>
              * <p>The specified archived log file does not exist or has been cleaned up.</p>

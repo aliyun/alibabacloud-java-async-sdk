@@ -134,11 +134,7 @@ public class CreateLakebaseMountParameterGroupRequest extends Request {
         } 
 
         /**
-         * <p>The instance category. Valid values:</p>
-         * <ul>
-         * <li>basic: Basic Edition.</li>
-         * <li>high_performance: High-performance Edition.</li>
-         * </ul>
+         * <p>The instance edition. Valid values: basic (Basic Edition) and high_performance (High-performance Edition).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,7 +147,7 @@ public class CreateLakebaseMountParameterGroupRequest extends Request {
         }
 
         /**
-         * <p>The description of the parameter template.</p>
+         * <p>The parameter template description.</p>
          * 
          * <strong>example:</strong>
          * <p>Test template</p>
@@ -163,7 +159,7 @@ public class CreateLakebaseMountParameterGroupRequest extends Request {
         }
 
         /**
-         * <p>The name of the parameter template.</p>
+         * <p>The parameter template name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

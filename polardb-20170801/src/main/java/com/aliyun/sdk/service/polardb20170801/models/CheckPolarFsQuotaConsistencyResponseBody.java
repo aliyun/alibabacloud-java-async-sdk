@@ -80,7 +80,7 @@ public class CheckPolarFsQuotaConsistencyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the PolarFS instance.</p>
+         * <p>The PolarFS instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pfs-2ze0i74ka607*****</p>
@@ -91,7 +91,10 @@ public class CheckPolarFsQuotaConsistencyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>An object that contains details about the quota.</p>
+         * <p>The quota consistency check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder quotaItem(QuotaItem quotaItem) {
             this.quotaItem = quotaItem;
@@ -207,7 +210,7 @@ public class CheckPolarFsQuotaConsistencyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The storage capacity quota.</p>
+             * <p>The quota capacity.</p>
              * 
              * <strong>example:</strong>
              * <p>104857600</p>
@@ -218,7 +221,7 @@ public class CheckPolarFsQuotaConsistencyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The inode quota.</p>
+             * <p>The number of inodes in the file system.</p>
              * 
              * <strong>example:</strong>
              * <p>50000</p>
@@ -229,7 +232,7 @@ public class CheckPolarFsQuotaConsistencyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The directory path.</p>
+             * <p>The path.</p>
              * 
              * <strong>example:</strong>
              * <p>/zookeepertest718</p>
@@ -240,7 +243,7 @@ public class CheckPolarFsQuotaConsistencyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The used capacity, in bytes.</p>
+             * <p>The used capacity. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>104857600</p>

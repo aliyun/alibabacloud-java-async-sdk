@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyCostRuleRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BypassQuotaCheck")
+    private Boolean bypassQuotaCheck;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CacheCostPointsPerMillion")
     private String cacheCostPointsPerMillion;
 
@@ -75,6 +79,7 @@ public class ModifyCostRuleRequest extends Request {
 
     private ModifyCostRuleRequest(Builder builder) {
         super(builder);
+        this.bypassQuotaCheck = builder.bypassQuotaCheck;
         this.cacheCostPointsPerMillion = builder.cacheCostPointsPerMillion;
         this.cacheCreationCostPointsPerMillion = builder.cacheCreationCostPointsPerMillion;
         this.costRuleId = builder.costRuleId;
@@ -101,6 +106,13 @@ public class ModifyCostRuleRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return bypassQuotaCheck
+     */
+    public Boolean getBypassQuotaCheck() {
+        return this.bypassQuotaCheck;
     }
 
     /**
@@ -195,6 +207,7 @@ public class ModifyCostRuleRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyCostRuleRequest, Builder> {
+        private Boolean bypassQuotaCheck; 
         private String cacheCostPointsPerMillion; 
         private String cacheCreationCostPointsPerMillion; 
         private String costRuleId; 
@@ -215,6 +228,7 @@ public class ModifyCostRuleRequest extends Request {
 
         private Builder(ModifyCostRuleRequest request) {
             super(request);
+            this.bypassQuotaCheck = request.bypassQuotaCheck;
             this.cacheCostPointsPerMillion = request.cacheCostPointsPerMillion;
             this.cacheCreationCostPointsPerMillion = request.cacheCreationCostPointsPerMillion;
             this.costRuleId = request.costRuleId;
@@ -229,6 +243,18 @@ public class ModifyCostRuleRequest extends Request {
             this.regionId = request.regionId;
             this.videoCostPointsPerSecond = request.videoCostPointsPerSecond;
         } 
+
+        /**
+         * <p>Specifies whether to bypass the quota check. This parameter is optional and has no default value. If omitted, it is not passed through. Both false and true are passed through as-is.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder bypassQuotaCheck(Boolean bypassQuotaCheck) {
+            this.putQueryParameter("BypassQuotaCheck", bypassQuotaCheck);
+            this.bypassQuotaCheck = bypassQuotaCheck;
+            return this;
+        }
 
         /**
          * <p>The cache cost points per million tokens. Default value: 0.</p>
@@ -255,7 +281,7 @@ public class ModifyCostRuleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the cost rule.</p>
+         * <p>The cost rule ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -317,7 +343,7 @@ public class ModifyCostRuleRequest extends Request {
         }
 
         /**
-         * <p>The input token tiered price (non-cumulative) specified as a JSON array character string. Each element contains Tier and InputCostPointsPerMillion. Valid values for Tier: &quot;&quot; (default tier), 0-32K, 32K-64K, 64K-128K, 128K-256K, 256K-512K, 512K-1M, and 1M+. Example: [{&quot;Tier&quot;:&quot;0-32K&quot;,&quot;InputCostPointsPerMillion&quot;:&quot;1200&quot;}]. A non-empty value replaces all existing tiers. If this parameter is not specified or is set to an empty string, the original tiers are retained. An empty array [] is not allowed.</p>
+         * <p>The tiered price for input tokens (non-cumulative). This parameter is a JSON array character string. Each element contains Tier and InputCostPointsPerMillion. Valid values for Tier: &quot;&quot; (default tier), 0-32K, 32K-64K, 64K-128K, 128K-256K, 256K-512K, 512K-1M, and 1M+. Example: [{&quot;Tier&quot;:&quot;0-32K&quot;,&quot;InputCostPointsPerMillion&quot;:&quot;1200&quot;}]. If this parameter is not empty, all tiers are replaced. If this parameter is not specified or an empty string is passed, the original tiers are retained. An empty array [] is not allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;Tier&quot;:&quot;0-32K&quot;,&quot;InputCostPointsPerMillion&quot;:&quot;1200&quot;}]</p>
@@ -342,7 +368,7 @@ public class ModifyCostRuleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the model service.</p>
+         * <p>The model service ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

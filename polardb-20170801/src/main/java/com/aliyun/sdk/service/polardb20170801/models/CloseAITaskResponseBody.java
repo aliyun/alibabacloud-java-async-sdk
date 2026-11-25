@@ -67,7 +67,7 @@ public class CloseAITaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>936C7025-27A5-4CB1-BB31-540E1F0CCA12</p>
@@ -78,7 +78,7 @@ public class CloseAITaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the task.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>53879cdb-9a00-428e-acaf-ff4cff******</p>

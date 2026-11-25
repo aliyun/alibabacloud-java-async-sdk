@@ -54,7 +54,7 @@ public class DeleteApplicationResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The unique identifier for the API request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3E5CD764-FCCA-5C9C-838E-20E0DE84B2AF</p>

@@ -158,7 +158,10 @@ public class DescribeInstanceReportAttributeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether the report is the latest one.</p>
+         * <p>Indicates whether the report is the latest report.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder latest(Boolean latest) {
             this.latest = latest;
@@ -210,7 +213,10 @@ public class DescribeInstanceReportAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The check results in the report.</p>
+         * <p>The inspection results for each item in the report.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder reportSubItems(java.util.List<ReportSubItems> reportSubItems) {
             this.reportSubItems = reportSubItems;
@@ -335,7 +341,7 @@ public class DescribeInstanceReportAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The risk level of the check item.</p>
+             * <p>The risk level of the inspection item.</p>
              * 
              * <strong>example:</strong>
              * <p>low</p>
@@ -346,7 +352,7 @@ public class DescribeInstanceReportAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The score of the check item.</p>
+             * <p>The score of the inspection item.</p>
              * 
              * <strong>example:</strong>
              * <p>90</p>
@@ -357,7 +363,7 @@ public class DescribeInstanceReportAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the inspection skill that generated the check result.</p>
+             * <p>The name of the inspection skill that generated the inspection result.</p>
              * 
              * <strong>example:</strong>
              * <p>performance</p>
@@ -368,7 +374,7 @@ public class DescribeInstanceReportAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The result summary of the check item.</p>
+             * <p>The result summary of the inspection item.</p>
              * 
              * <strong>example:</strong>
              * <p>No anomalies found</p>

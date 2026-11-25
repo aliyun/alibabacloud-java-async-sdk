@@ -115,7 +115,7 @@ public class GetLakebaseTenantTokenRequest extends Request {
         }
 
         /**
-         * <p>The PolarFS instance ID.</p>
+         * <p>The PolarFS instance ID. The CreationCategory of the instance must be basic (Basic Edition). Other categories are not supported by this operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,7 +128,7 @@ public class GetLakebaseTenantTokenRequest extends Request {
         }
 
         /**
-         * <p>The mount subdirectory. Specify an absolute path.</p>
+         * <p>The absolute path of the mount subdirectory.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

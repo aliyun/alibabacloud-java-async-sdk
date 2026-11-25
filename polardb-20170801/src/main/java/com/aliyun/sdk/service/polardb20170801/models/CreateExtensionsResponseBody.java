@@ -54,7 +54,7 @@ public class CreateExtensionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>86627CF4-CBB6-531E-BBDA-7B6DD5C42E85</p>

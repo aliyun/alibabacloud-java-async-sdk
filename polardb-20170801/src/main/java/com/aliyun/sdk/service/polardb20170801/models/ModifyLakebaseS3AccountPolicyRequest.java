@@ -105,7 +105,7 @@ public class ModifyLakebaseS3AccountPolicyRequest extends Request {
         } 
 
         /**
-         * <p>The PolarFS instance ID.</p>
+         * <p>The PolarFS instance ID. You can call DescribePolarFs to query available instances and their IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -120,7 +120,7 @@ public class ModifyLakebaseS3AccountPolicyRequest extends Request {
         /**
          * <p>The region ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the regions of all clusters under the target account.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to view the regions of all clusters under the account.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -134,9 +134,12 @@ public class ModifyLakebaseS3AccountPolicyRequest extends Request {
         }
 
         /**
-         * <p>The access key of the S3 account whose policy you want to modify.</p>
+         * <p>The access key of the S3 account for which you want to modify the policy.</p>
          * <blockquote>
          * <p>You cannot modify the default account.</p>
+         * </blockquote>
+         * <blockquote>
+         * <p>You can call ListLakebaseS3Accounts to obtain the account access key. Select an account with AccountType=user.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -150,7 +153,7 @@ public class ModifyLakebaseS3AccountPolicyRequest extends Request {
         }
 
         /**
-         * <p>The user account policy.</p>
+         * <p>The user account policy in JSON object format. The Version and Statement fields are required. For Statement.Action, specify exact operations such as s3:GetObject and s3:PutObject. The s3:* wildcard is not supported. For Statement.Resource, specify exact ARNs such as arn:aws:s3:::bucket-name/<em>. A standalone asterisk (</em>) is not supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

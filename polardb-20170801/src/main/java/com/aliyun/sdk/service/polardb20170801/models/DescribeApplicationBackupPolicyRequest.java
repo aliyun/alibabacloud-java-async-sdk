@@ -88,7 +88,7 @@ public class DescribeApplicationBackupPolicyRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the application.</p>
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +101,7 @@ public class DescribeApplicationBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The application type, such as polarclaw.</p>
+         * <p>The application type, such as polarclaw. This parameter is required. If it is not provided, the service returns an InvalidApplicationType.Malformed (400) error. The value of this parameter must not include the polardb_ prefix, which differs from the format of the ApplicationType field returned by DescribeApplications. For example, if DescribeApplications returns polardb_polarclaw, set this parameter to polarclaw.</p>
          * 
          * <strong>example:</strong>
          * <p>polarclaw</p>

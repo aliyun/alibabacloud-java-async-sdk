@@ -169,7 +169,7 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of records on the current page.</p>
+         * <p>The number of entries on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -180,7 +180,7 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of records per page. Valid values: 5 to 50. Default value: 10.</p>
+         * <p>The number of entries per page. Valid values: 5 to 50. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -229,7 +229,7 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2FED790E-FB61-4721-8C1C-07C627******</p>
@@ -240,7 +240,7 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of records.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -426,7 +426,7 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The TTL for access time. Unit: seconds.</p>
+             * <p>The time-to-live (TTL) for the access time. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>7200</p>
@@ -437,7 +437,7 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The TTL for change time. Unit: seconds.</p>
+             * <p>The time-to-live (TTL) for the change time. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>7200</p>
@@ -461,8 +461,8 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
             /**
              * <p>Specifies whether the rule is enabled. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: The new event takes effect immediately for new transactions. This is the default value.</li>
-             * <li><strong>false</strong>: The new event does not take effect for new transactions.</li>
+             * <li><strong>true</strong>: New events take effect immediately on new transactions. This is the default value.</li>
+             * <li><strong>false</strong>: New events do not take effect on new transactions.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -476,7 +476,7 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
             /**
              * <p>The matching rule for excluding specific paths.</p>
              * <ul>
-             * <li>A path pattern that starts with <code>/</code> (supports <code>*</code>, <code>?</code>, and <code>**</code> glob syntax).</li>
+             * <li>Path patterns starting with <code>/</code> (supports glob syntax such as <code>*</code>, <code>?</code>, and <code>**</code>).</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -488,7 +488,7 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The file count limit for users in the directory.</p>
+             * <p>The limit on the number of files for users in the directory.</p>
              * 
              * <strong>example:</strong>
              * <p>77</p>
@@ -510,9 +510,9 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The glob pattern for matching paths.</p>
+             * <p>The wildcard pattern for matching paths.</p>
              * <ul>
-             * <li>A path pattern that starts with <code>/</code> (supports <code>*</code>, <code>?</code>, and <code>**</code> glob syntax).</li>
+             * <li>Path patterns starting with <code>/</code> (supports glob syntax such as <code>*</code>, <code>?</code>, and <code>**</code>).</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -527,7 +527,7 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
              * <p>The rule name.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxxxx</p>
+             * <p>File system quota rule</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -546,7 +546,7 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total file capacity limit for the directory. Unit: GB.</p>
+             * <p>The total capacity limit for files in the directory. Unit: GB.</p>
              * <ul>
              * <li>Note: The value must be at least 1 GB.</li>
              * </ul>
@@ -669,7 +669,7 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Inodes</p>
+             * <p>The inode quota of the file system.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

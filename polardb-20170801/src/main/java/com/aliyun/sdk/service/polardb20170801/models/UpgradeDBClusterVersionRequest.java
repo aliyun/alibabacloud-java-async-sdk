@@ -228,7 +228,10 @@ public class UpgradeDBClusterVersionRequest extends Request {
         } 
 
         /**
-         * <p>The ID of cluster.</p>
+         * <p>The cluster ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of all clusters under your account, such as the cluster ID.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -241,13 +244,15 @@ public class UpgradeDBClusterVersionRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to immediately run the kernel upgrade task. Valid values:</p>
+         * <p>Specifies whether to execute the kernel version upgrade immediately or on a schedule. Valid values:</p>
          * <ul>
-         * <li><strong>false</strong> (default)</li>
-         * <li><strong>true</strong></li>
+         * <li><p><strong>false</strong> (default): The upgrade is executed on a schedule.</p>
+         * </li>
+         * <li><p><strong>true</strong>: The upgrade is executed immediately.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is not required when you call the operation.</p>
+         * <p>You do not need to specify this parameter when you invoke this operation.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -278,11 +283,11 @@ public class UpgradeDBClusterVersionRequest extends Request {
         }
 
         /**
-         * <p>The latest start time to run the task that updates the kernel version of the cluster. Specify the time in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time must be in UTC.</p>
+         * <p>The latest time to start the scheduled task. The time is in the <code>YYYY-MM-DDThh:mm:ssZ</code> format and displayed in UTC.</p>
          * <blockquote>
          * <ul>
-         * <li>The value of this parameter must be at least 30 minutes later than the value of PlannedStartTime.</li>
-         * <li>If you specify <code>PlannedStartTime</code> but do not specify PlannedEndTime, the latest start time of the task is <code>PlannedEndTime + 30 minutes</code>. For example, if you set <code>PlannedStartTime</code> to <code>2021-01-14T09:00:00Z</code> and do not specify PlannedEndTime, the latest start time of the task is set to <code>2021-01-14T09:30:00Z</code>.</li>
+         * <li>The latest time must be at least 30 minutes later than the start time.</li>
+         * <li>If you specify PlannedStartTime but do not specify this parameter, the latest time to start the task defaults to the start time plus 30 minutes. For example, if PlannedStartTime is set to <code>2021-01-14T09:00:00Z</code> and this parameter is left empty, the task starts at <code>2021-01-14T09:30:00Z</code> at the latest.</li>
          * </ul>
          * </blockquote>
          * 
@@ -296,15 +301,13 @@ public class UpgradeDBClusterVersionRequest extends Request {
         }
 
         /**
-         * <p>The earliest start time to run the task that updates the kernel version of the cluster. Specify the time in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time must be in UTC.</p>
+         * <p>The earliest time to start the scheduled Milvus version upgrade task. The time is in the <code>YYYY-MM-DDThh:mm:ssZ</code> format and displayed in UTC.</p>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>The earliest start time of the task can be a point in time within the next 72 hours. For example, if the current time is <code>2021-01-14T09:00:00Z</code>, you can specify a point in time from <code>2021-01-14T09:00:00Z</code> to <code>2021-01-17T09:00:00Z</code>.</p>
-         * </li>
-         * <li><p>If you do not specify this parameter, the kernel update task runs immediately after you submit the request.</p>
-         * </li>
+         * <li>The start time must be within the next 72 hours. For example, if the current time is <code>2021-01-14T09:00:00Z</code>, the allowed start time ranges from <code>2021-01-14T09:00:00Z</code> to <code>2021-01-17T09:00:00Z</code>.</li>
+         * <li>If you leave this parameter empty, the Milvus version upgrade task is executed immediately by default.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>2021-01-14T09:00:00Z</p>
@@ -334,7 +337,7 @@ public class UpgradeDBClusterVersionRequest extends Request {
         }
 
         /**
-         * <p>The code of the db version to which you want to upgrade the cluster. You can call the <a href="https://help.aliyun.com/document_detail/2319145.html">DescribeDBClusterVersion</a> operation to query the version code.</p>
+         * <p>The VersionCode of the target database version. You can obtain the value from the <a href="https://help.aliyun.com/document_detail/2319145.html">DescribeDBClusterVersion</a> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>20230707</p>
@@ -346,7 +349,7 @@ public class UpgradeDBClusterVersionRequest extends Request {
         }
 
         /**
-         * <p>The code of the proxy version to which you want to upgrade the cluster. You can call the <a href="https://help.aliyun.com/document_detail/2319145.html">DescribeDBClusterVersion</a> operation to query the version code.</p>
+         * <p>The VersionCode of the target PolarProxy version. You can obtain the value from the <a href="https://help.aliyun.com/document_detail/2319145.html">DescribeDBClusterVersion</a> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>20240702</p>
@@ -358,11 +361,11 @@ public class UpgradeDBClusterVersionRequest extends Request {
         }
 
         /**
-         * <p>The upgrade tag. The value is fixed as <strong>INNOVATE</strong>.</p>
+         * <p>The kernel version upgrade label. Set the value to <strong>INNOVATE</strong>.</p>
          * <blockquote>
          * <ul>
-         * <li>This parameter is applicable only when you upgrade PolarDB for MySQL 8.0.1 to PolarDB for MySQL 8.0.2.</li>
-         * <li>If you specify this parameter, you must set <code>UpgradePolicy</code> to <strong>COLD</strong>.</li>
+         * <li>This parameter applies only to upgrades from PolarDB for MySQL 8.0.1 to PolarDB for MySQL 8.0.2.</li>
+         * <li>When you specify this parameter, you must set UpgradePolicy to <strong>COLD</strong>.</li>
          * </ul>
          * </blockquote>
          * 
@@ -376,10 +379,12 @@ public class UpgradeDBClusterVersionRequest extends Request {
         }
 
         /**
-         * <p>The engine version upgrade policy. Valid values:</p>
+         * <p>The kernel version upgrade policy. Valid values:</p>
          * <ul>
-         * <li><strong>HOT</strong>: hot upgrade.</li>
-         * <li><strong>COLD</strong>: cold upgrade. Only PolarDB for MySQL 8.0 Cluster Edition supports this upgrade method.</li>
+         * <li><p><strong>HOT</strong>: Hot upgrade.</p>
+         * </li>
+         * <li><p><strong>COLD</strong>: Cold upgrade. Currently, only PolarDB for MySQL 8.0 Cluster Edition supports this upgrade method.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -392,11 +397,14 @@ public class UpgradeDBClusterVersionRequest extends Request {
         }
 
         /**
-         * <p>The update type. Valid values:</p>
+         * <p>The upgrade type. Valid values:</p>
          * <ul>
-         * <li><strong>PROXY</strong>: specifies to upgrade PloarProxy.</li>
-         * <li><strong>DB</strong>: specifies to upgrade the kernel version.</li>
-         * <li><strong>ALL</strong>: specifies to upgrade both PloarProxy and kernel version.</li>
+         * <li><p><strong>PROXY</strong>: Upgrades only PolarProxy.</p>
+         * </li>
+         * <li><p><strong>DB</strong>: Upgrades only the database engine.</p>
+         * </li>
+         * <li><p><strong>ALL</strong> (default): Upgrades both PolarProxy and the database engine.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

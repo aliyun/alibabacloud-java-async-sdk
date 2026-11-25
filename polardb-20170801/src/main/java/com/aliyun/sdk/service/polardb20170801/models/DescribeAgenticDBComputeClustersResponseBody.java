@@ -437,7 +437,7 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The associated branch ID.</p>
+             * <p>The ID of the associated branch.</p>
              * 
              * <strong>example:</strong>
              * <p>br-7g8h9i0j1k2l</p>
@@ -448,7 +448,7 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The associated branch name.</p>
+             * <p>The name of the associated branch.</p>
              * 
              * <strong>example:</strong>
              * <p>feature-analytics</p>
@@ -459,7 +459,7 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The compute instance ID.</p>
+             * <p>The ID of the compute instance.</p>
              * 
              * <strong>example:</strong>
              * <p>pc-g0lsayq8c5qe</p>
@@ -470,7 +470,7 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of compute nodes (fixed to 1 in the first phase).</p>
+             * <p>The number of compute nodes. The value is fixed to 1 in the first phase.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -481,7 +481,8 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time. The time is in ISO 8601 format and uses the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+             * <p>The creation time.</p>
+             * <p>The time is displayed in ISO 8601 format in UTC (YYYY-MM-DDTHH:mm:ssZ).</p>
              * 
              * <strong>example:</strong>
              * <p>2026-06-10T11:00:00Z</p>
@@ -503,7 +504,7 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether it is the default branch.</p>
+             * <p>Specifies whether the branch is the default branch.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -514,8 +515,7 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last activation time.
-             * The time is in ISO 8601 format and uses the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+             * <p>The last activation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-06-10T12:30:00Z</p>
@@ -526,7 +526,7 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum compute unit.</p>
+             * <p>The maximum number of compute units.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -537,7 +537,7 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The minimum compute unit.</p>
+             * <p>The minimum number of compute units.</p>
              * 
              * <strong>example:</strong>
              * <p>0.25</p>
@@ -559,7 +559,7 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parent branch ID. An empty string indicates the root branch.</p>
+             * <p>The ID of the parent branch. An empty string indicates the root branch.</p>
              * 
              * <strong>example:</strong>
              * <p>br-1a2b3c4d5e6f</p>
@@ -570,7 +570,7 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parent branch name. An empty string indicates the root branch.</p>
+             * <p>The name of the parent branch. An empty string indicates the root branch.</p>
              * 
              * <strong>example:</strong>
              * <p>main</p>
@@ -581,7 +581,7 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The associated project ID.</p>
+             * <p>The ID of the associated project.</p>
              * 
              * <strong>example:</strong>
              * <p>proj-a1b2c3d4e5f6</p>
@@ -592,7 +592,7 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The associated project name.</p>
+             * <p>The name of the associated project.</p>
              * 
              * <strong>example:</strong>
              * <p>analytics-prod</p>
@@ -614,7 +614,7 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The used data volume (in bytes).</p>
+             * <p>The used storage space in bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>1073741824</p>
@@ -625,7 +625,7 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The associated tenant ID.</p>
+             * <p>The ID of the associated tenant.</p>
              * 
              * <strong>example:</strong>
              * <p>t-4b83e0da66674951</p>
@@ -636,7 +636,7 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The associated tenant name.</p>
+             * <p>The name of the associated tenant.</p>
              * 
              * <strong>example:</strong>
              * <p>my-saas-app</p>

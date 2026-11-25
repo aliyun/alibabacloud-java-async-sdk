@@ -63,7 +63,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Adds a transparent acceleration path for a PolarFS instance. Before you call this operation, make sure that you have a running PolarDB cluster, a valid OSS bucket in the same region, and a PolarFS instance of the basic type with acceleration enabled. The bucket endpoint format is {bucket-name}.oss-{regionId}-internal.aliyuncs.com. This operation is not applicable to instances of the cold type or instances with acceleration disabled. You can call the DescribePolarFs and DescribePolarFsAttribute operations to verify the instance type and acceleration status.</p>
+     * <p>Adds a transparent acceleration path for a PolarFS instance. Before calling this operation, ensure that a running PolarDB cluster, a valid OSS bucket in the same region, and a basic PolarFS instance with acceleration enabled are available. The bucket address format is {bucket-name}.oss-{regionId}-internal.aliyuncs.com. This operation is not applicable to cold instances or instances with acceleration disabled. You can call the DescribePolarFs and DescribePolarFsAttribute operations to verify the instance type and acceleration status.</p>
      * 
      * @param request the request parameters of AddPolarFsPathMapping  AddPolarFsPathMappingRequest
      * @return AddPolarFsPathMappingResponse
@@ -72,14 +72,14 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li>This operation adds a new path policy—a directory quota rule—to a specified Polarlakebase instance.</li>
-     * <li>The <code>Quotas</code> parameter is a list. Each element represents a new quota rule. You can add up to 11 rules in a single request.</li>
-     * <li>Each rule must include the <code>Name</code> and <code>Include</code> fields. Other fields, such as <code>Description</code> and <code>Exclude</code>, are optional.</li>
-     * <li>To define the quota limit, specify at least one of the following parameters: <code>SizeLimit</code>, <code>FileCountLimit</code>, <code>AccessTTL</code>, or <code>ChangeTTL</code>.</li>
-     * <li>The <code>Priority</code> field specifies the rule priority. A larger value indicates higher priority. The default value is 0.</li>
-     * <li>The <code>Enabled</code> field determines whether the rule takes effect immediately. The default value is true.</li>
+     * <li>This operation adds a new PathPolicy (quota rule) to a specified Polarlakebase instance.</li>
+     * <li>The <code>Quotas</code> parameter is a list. Each element represents a rule to be added. You can add up to 11 rules at a time.</li>
+     * <li>Each rule must include the <code>Name</code> and <code>Include</code> fields. Other fields such as <code>Description</code> and <code>Exclude</code> are optional.</li>
+     * <li>You must specify at least one of the following fields to define the quota limit: <code>SizeLimit</code>, <code>FileCountLimit</code>, <code>AccessTTL</code>, and <code>ChangeTTL</code>.</li>
+     * <li>The <code>Priority</code> field specifies the priority of the rule. A larger value indicates a higher priority. Default value: 0.</li>
+     * <li>The <code>Enabled</code> field specifies whether the rule takes effect immediately. Default value: true, which indicates that the rule takes effect immediately.</li>
      * </ul>
      * 
      * @param request the request parameters of AddPolarFsQuota  AddPolarFsQuotaRequest
@@ -127,6 +127,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ApprovePolarClawDevicePairResponse> approvePolarClawDevicePair(ApprovePolarClawDevicePairRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Before you begin</h2>
+     * <p>The Before you begin section specifies the following: (1) The application must be of the supabase type (ApplicationType=polardb_supabase). (2) PolarFS must be created by calling CreatePolarFs with CreationCategory set to cold. (3) PolarFS and the application must be in the same VPC, vSwitch, and zone. You can query this information by calling DescribeApplicationAttribute. A dependency chain example is provided: CreateApplication → DescribeApplicationAttribute → CreatePolarFs → AttachApplicationPolarFS.</p>
+     * 
      * @param request the request parameters of AttachApplicationPolarFS  AttachApplicationPolarFSRequest
      * @return AttachApplicationPolarFSResponse
      */
@@ -230,7 +234,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <h2>Request description</h2>
-     * <p>This operation prechecks a skill before it is uploaded to a PolarClaw instance.</p>
+     * <p>This operation performs a pre-check before uploading a skill to a PolarClaw instance.</p>
      * 
      * @param request the request parameters of CheckPolarClawSkill  CheckPolarClawSkillRequest
      * @return CheckPolarClawSkillResponse
@@ -239,15 +243,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
-     * <p>This operation verifies the consistency of quota configurations within a specified PolarFS instance. These configurations include storage capacity and inode limits on directory paths. If inconsistencies are found, the operation returns a list of the inconsistent paths and any related error information.</p>
-     * <h3>Usage notes</h3>
-     * <ul>
-     * <li>Ensure that the <code>PolarFsInstanceId</code> parameter correctly identifies the target PolarFS instance.</li>
-     * <li>When the system detects quota inconsistencies, it returns <code>IsConsistent=false</code> and populates the <code>InconsistentPaths</code> array.</li>
-     * <li>If the request is successful and no inconsistencies are found, the <code>InconsistentPaths</code> array is empty and <code>IsConsistent</code> is set to <code>true</code>.</li>
-     * <li>For errors such as insufficient permissions or a non-existent resource, see the error codes for details.</li>
-     * </ul>
+     * <h2>Before you begin</h2>
+     * <p>Before you call this operation, you must use SetPolarFsFileQuota to configure a quota for the target path specified by the Path parameter. Otherwise, the API returns a QuotaConsistencyCheck.Failed error.</p>
      * 
      * @param request the request parameters of CheckPolarFsQuotaConsistency  CheckPolarFsQuotaConsistencyRequest
      * @return CheckPolarFsQuotaConsistencyResponse
@@ -273,6 +270,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ClonePolarFsBasicSnapshotResponse> clonePolarFsBasicSnapshot(ClonePolarFsBasicSnapshotRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Closes a PolarDB for AI task. Prerequisites: The category of the destination cluster must be Normal (SENormal is not supported), and the AI task must have been enabled by calling OpenAITask. Call DescribeAITaskStatus to confirm that Status is 1 before you close the task. For the paid DLNode path, you must first call CreateDBNodes and set DBNodeType to DLNode to create an AI node, and then call OpenAITask. For the free trial path, if a trial AI node is already available, you do not need to create an additional paid DLNode to close the task. However, you must still confirm that the task is enabled and its status is 1.</p>
+     * <h2>Prerequisites</h2>
+     * <p>Supplement the prerequisite workflow in the detailed description of CloseAITask (CreateDBNodes(DBNodeType=DLNode) → OpenAITask → CloseAITask). Explicitly state that the cluster must be of the Normal category and the AI task status must be Status=1 (which can be queried by calling DescribeAITaskStatus). Distinguish the applicability of this API between the free trial AI node path and the paid DLNode path.</p>
+     * 
      * @param request the request parameters of CloseAITask  CloseAITaskRequest
      * @return CloseAITaskResponse
      */
@@ -312,6 +314,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAIDBClusterApiKeyResponse> createAIDBClusterApiKey(CreateAIDBClusterApiKeyRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, call CreateAIDBCluster to create a cluster with DBType set to polardb_ai, and then call EnableAIDBClusterDatasetService to enable the dataset service. Finally, call this operation to create a dataset.</p>
+     * 
      * @param request the request parameters of CreateAIDBClusterDataset  CreateAIDBClusterDatasetRequest
      * @return CreateAIDBClusterDatasetResponse
      */
@@ -324,6 +329,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAIDBClusterTaskResponse> createAIDBClusterTask(CreateAIDBClusterTaskRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Creates a node for an AI cluster. This operation is applicable only to clusters whose AiNodeType is vnode or container. Clusters of the maas type are not supported. You can call the DescribeAIDBClusters operation to view the AiNodeType of the target cluster.</p>
+     * 
      * @param request the request parameters of CreateAINodes  CreateAINodesRequest
      * @return CreateAINodesResponse
      */
@@ -354,6 +362,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAgenticDBBranchResponse> createAgenticDBBranch(CreateAgenticDBBranchRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before you begin: Call CreateDBCluster and specify AgenticDbType=dedicated and ServerlessType=AgileServerless to create an AgenticDB cluster and obtain the DBClusterId with the pagc- prefix. Then, call CreateAgenticDBTenant to create a tenant and obtain the TenantId. Finally, call this operation to create a project.</p>
+     * 
      * @param request the request parameters of CreateAgenticDBProject  CreateAgenticDBProjectRequest
      * @return CreateAgenticDBProjectResponse
      */
@@ -361,7 +372,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Creates an independent business tenant without creating an API key.</p>
+     * <p>Creates an independent business tenant without creating an API key.
+     * Before you begin: Call <a href="https://www.alibabacloud.com/help/en/polardb/api-polardb-2017-08-01-createdbcluster">CreateDBCluster</a> and set AgenticDbType to dedicated to create an AgenticDB cluster. Obtain the DBClusterId that starts with the pagc- prefix, and then use this ID to call this operation to create a tenant. The pc- prefix IDs of standard PolarDB clusters are not supported.</p>
      * 
      * @param request the request parameters of CreateAgenticDBTenant  CreateAgenticDBTenantRequest
      * @return CreateAgenticDBTenantResponse
@@ -493,6 +505,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDBClusterEndpointResponse> createDBClusterEndpoint(CreateDBClusterEndpointRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before you begin: This operation applies only to Edge Node Service (ENS) edge cloud clusters and is not applicable to standard PolarDB clusters. Currently, the CreateDBClusterZonal operation is unavailable. To create an edge cluster, apply through ENS or MyBase infrastructure, or call CreateDBCluster with CloudProvider set to ENS, and then call DescribeDBClustersZonal to obtain the edge cluster ID. Operation description: Prerequisites for edge cloud clusters: This API applies only to ENS edge cloud clusters and is not applicable to standard PolarDB clusters. It provides an overview of edge clouds, activation methods, and instructions on how to obtain the edge cluster ID, noting that the CreateDBClusterZonal API is currently unavailable and clusters must be created through alternative methods.</p>
+     * 
      * @param request the request parameters of CreateDBClusterEndpointZonal  CreateDBClusterEndpointZonalRequest
      * @return CreateDBClusterEndpointZonalResponse
      */
@@ -511,15 +526,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>A DBLink provides connectivity between two PolarDB for PostgreSQL (Oracle-compatible) clusters, or between a PolarDB for PostgreSQL (Oracle-compatible) cluster and a self-managed PostgreSQL database on an Elastic Compute Service (ECS) instance. This lets you query data across clusters.</p>
+     * <p>A DBLink can connect two PolarDB for PostgreSQL (Compatible with Oracle) clusters, or connect a PolarDB for PostgreSQL (Compatible with Oracle) cluster and a self-managed PostgreSQL database on an ECS instance. You can use a DBLink to query data across clusters.</p>
      * <blockquote>
      * <ul>
-     * <li><p>Each cluster supports a maximum of 10 DBLinks.</p>
-     * </li>
-     * <li><p>A DBLink consumes one DBLink quota from both the source cluster and the destination cluster.</p>
-     * </li>
-     * <li><p>The source cluster and the destination cluster or destination ECS instance must be in the same region.</p>
-     * </li>
+     * <li>You can create up to 10 DBLinks for a cluster.</li>
+     * <li>Both the source and destination clusters of a DBLink consume one DBLink quota.</li>
+     * <li>The source cluster and the destination cluster or destination ECS instance must be in the same region.</li>
      * </ul>
      * </blockquote>
      * 
@@ -560,6 +572,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDatabaseResponse> createDatabase(CreateDatabaseRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Prerequisites: The DBClusterId must be the ID of a PolarDB on ENS cluster. You can call the DescribeDBClustersZonal operation to query edge clusters in ENS dedicated regions, or call the CreateDBCluster operation with CloudProvider set to ENS to create an edge cluster, and then call CreateDatabaseZonal.</p>
+     * <h2>Before you begin</h2>
+     * <p>Append the complete dependency chain for creating an ENS cluster to the detailed_description of the CreateDatabaseZonal API. Specify that you must first create a VPC and a vSwitch in an edge region by using the ENS API, then create an ENS cluster, and finally call CreateDatabaseZonal.</p>
+     * 
      * @param request the request parameters of CreateDatabaseZonal  CreateDatabaseZonalRequest
      * @return CreateDatabaseZonalResponse
      */
@@ -580,8 +597,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>This API creates a PolarFileSystem (PolarFS) Global Data Network (GDN). Do not confuse it with the CreateGlobalDatabaseNetwork API, which operates on a PolarDB cluster. Ensure you are using the correct API to avoid unintended actions.</p>
+     * <p>This API operation creates a Polarlakebase global database network (GDN). Note that this operation is different from creating a global database network for a PolarDB cluster by calling CreateGlobalDatabaseNetwork.</p>
      * </blockquote>
+     * <h2>Before you begin</h2>
+     * <p>Prerequisites: You must first create a Polarlakebase instance by calling CreatePolarFs, or query an existing instance by calling DescribePolarFs, and use the returned instance ID as the SourceId or DestinationId.</p>
      * 
      * @param request the request parameters of CreateGlobalDataNetwork  CreateGlobalDataNetworkRequest
      * @return CreateGlobalDataNetworkResponse
@@ -631,7 +650,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Prerequisites: Before you call this operation, you must activate the PrivateLink service in your current account. If the service is not activated, the API returns the PrivateLinkService.NotOpen (400) error. You can check the activation status of the service in the PrivateLink console. Before creating a knowledge space, you must also prepare the VpcId, VSwitchId, SecurityGroupId, and OSSBucket parameters. You can query VPCs and vSwitches by calling the DescribeVpcs and DescribeVSwitches operations of VPC, query security groups by calling the DescribeSecurityGroups operation of ECS, and query buckets by calling the ListBuckets operation of OSS. If the resources do not exist, create them in the corresponding services first.</p>
+     * <p>Prerequisites: You must activate the PrivateLink service in your current account before calling this operation. If the service is not activated, the operation returns the PrivateLinkService.NotOpen (400) error. You can check the activation status of the service in the PrivateLink console. Before creating a knowledge space, you must also prepare a VpcId, VSwitchId, SecurityGroupId, and OSSBucket. You can query VPCs and vSwitches by calling the DescribeVpcs and DescribeVSwitches operations of VPC, query security groups by calling the DescribeSecurityGroups operation of ECS, and query buckets by calling the ListBuckets operation of OSS. If the resources do not exist, create them in the corresponding services first.</p>
      * 
      * @param request the request parameters of CreateKnowledgeSpace  CreateKnowledgeSpaceRequest
      * @return CreateKnowledgeSpaceResponse
@@ -716,6 +735,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreatePolarClawCronJobResponse> createPolarClawCronJob(CreatePolarClawCronJobRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Before you begin</h2>
+     * <ul>
+     * <li>A PolarClaw application is created: The skill will be uploaded to this application. You can call the DescribeApplications operation and set ApplicationTypes to polardb_polarclaw to query the application list and obtain the application ID.</li>
+     * <li>The skill files are stored in an OSS bucket: The OSS bucket must exist and be in the same region as the application. You can specify the region of the bucket by using BucketRegionId.</li>
+     * <li>OSSPrefix is the object prefix of the skill files in the bucket.</li>
+     * </ul>
+     * 
      * @param request the request parameters of CreatePolarClawSkill  CreatePolarClawSkillRequest
      * @return CreatePolarClawSkillResponse
      */
@@ -757,10 +784,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Resource Control limits the CPU resources available to specified users, databases, queries, or connections in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules, but does not support querying CPU utilization for Resource Control.</p>
+     * <p>Resource Control limits the CPU resources available to specified users, databases, queries, or connections in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules, but does not support querying Resource Control CPU utilization.</p>
      * <h3>Limits</h3>
      * <ul>
-     * <li>Applies only to PolarDB for MySQL Cluster Edition that supports Resource Control. PolarDB for MySQL Standard Edition is not supported.</li>
+     * <li>This feature applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</li>
      * <li>The cluster kernel parameter loose_enable_resource_control must be set to ON.</li>
      * <li>MaxCpu and CpuCount are two mutually exclusive CPU quota modes.</li>
      * <li>The maximum value of CpuCount is determined by the resource_control_cpu_count_limit kernel parameter of the target cluster.<blockquote>
@@ -834,12 +861,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteAccountResponse> deleteAccount(DeleteAccountRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before you begin, call DescribeEdgeCloudRegion to query available edge regions and the CentralControlRegionId. Prepare a VPC and a vSwitch in the central control region. Call CreateDBCluster and set CloudProvider to ENS, EnsRegionId, VPCId, and VSwitchId to create a PolarDB on ENS cluster. Then, call CreateAccountZonal to create an account. After you complete these steps, call this operation by using the PolarDB on ENS cluster ID and the account name.</p>
+     * 
      * @param request the request parameters of DeleteAccountZonal  DeleteAccountZonalRequest
      * @return DeleteAccountZonalResponse
      */
     CompletableFuture<DeleteAccountZonalResponse> deleteAccountZonal(DeleteAccountZonalRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before you begin: Call CreateDBCluster and set AgenticDbType to dedicated to create an AgenticDB cluster and obtain the DBClusterId with the pagc- prefix. Call CreateAgenticDBTenant to create a tenant. Call CreateAgenticDBProject to create a project and obtain the TenantId and ProjectId. Call CreateAgenticDBBranch to create a branch and obtain the BranchId. Finally, call this operation to delete the branch.</p>
+     * 
      * @param request the request parameters of DeleteAgenticDBBranch  DeleteAgenticDBBranchRequest
      * @return DeleteAgenticDBBranchResponse
      */
@@ -852,6 +885,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteAgenticDBComputeClusterResponse> deleteAgenticDBComputeCluster(DeleteAgenticDBComputeClusterRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Prerequisites: First, call CreateDBCluster and specify AgenticDbType=dedicated to create an AgenticDB cluster with the pagc- prefix. Then, call CreateAgenticDBTenant to create a tenant and obtain the TenantId. Next, call CreateAgenticDBProject to create a project and obtain the ProjectId. Finally, call this operation to delete the project.</p>
+     * <h2>Prerequisites</h2>
+     * <p>Complete prerequisite instructions, including how to create an AgenticDB cluster by using CreateDBCluster (AgenticDbType=dedicated), how to obtain a valid TenantId and ProjectId, and the dependencies among resources.</p>
+     * 
      * @param request the request parameters of DeleteAgenticDBProject  DeleteAgenticDBProjectRequest
      * @return DeleteAgenticDBProjectResponse
      */
@@ -859,7 +897,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can only delete a tenant whose projects and branches have been cleaned up. After the tenant is deleted, all its API keys become invalid. This operation does not automatically clean up projects, branches, or storage.</p>
+     * <p>You can delete only a tenant whose projects and branches have been completely cleaned up. After the tenant is deleted, all its API keys become invalid. This operation does not automatically clean up projects, branches, or storage.</p>
      * 
      * @param request the request parameters of DeleteAgenticDBTenant  DeleteAgenticDBTenantRequest
      * @return DeleteAgenticDBTenantResponse
@@ -874,12 +912,14 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Important</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This operation deletes a PolarDB application but does not affect the associated PolarDB instance.</li>
-     * <li>The delete operation is irreversible and permanently deletes the application. Proceed with caution.</li>
-     * <li>Ensure that you have backed up all critical data before proceeding.Before you delete an application, make sure that you have backed up all important data.</li>
+     * <li>This operation deletes an existing PolarDB application without affecting the associated PolarDB instance.</li>
+     * <li>The deletion is irreversible. Proceed with caution.</li>
+     * <li>Before you perform the deletion, make sure that all important data is backed up.</li>
      * </ul>
+     * <h2>Before you begin</h2>
+     * <p>The associated database cluster must be in the Running state. You can call DescribeDBClusterAttribute to check the DBClusterStatus field and confirm the cluster status before you delete the application. Note: The associated database cluster must be in the Running state. You can query the DBClusterStatus field by calling DescribeDBClusterAttribute to confirm the status.</p>
      * 
      * @param request the request parameters of DeleteApplication  DeleteApplicationRequest
      * @return DeleteApplicationResponse
@@ -893,6 +933,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteApplicationEndpointAddressResponse> deleteApplicationEndpointAddress(DeleteApplicationEndpointAddressRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before you begin: Place an order on the purchase page or call CreateApplication (with MemApplicationSpec specified) to create an application with mem0 capabilities enabled. Then, call CreateApplicationPrompt to create a prompt and obtain the PromptId. Finally, call this operation. If CreateApplication does not currently support the automated creation of this type of application, submit a prior application on the purchase page.</p>
+     * 
      * @param request the request parameters of DeleteApplicationPrompt  DeleteApplicationPromptRequest
      * @return DeleteApplicationPromptResponse
      */
@@ -963,12 +1006,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li><p>You can delete a public-facing or classic network endpoint of the primary endpoint, the default cluster endpoint, or a custom cluster endpoint.</p>
-     * </li>
-     * <li><p>Classic network endpoints are supported only on the China site (aliyun.com). Therefore, you do not need to delete classic network endpoints on the International site (alibabacloud.com).</p>
-     * </li>
+     * <li>You can delete the public or classic network connectivity addresses of the primary endpoint, default cluster endpoint, and custom cluster endpoints of a PolarDB cluster. </li>
+     * <li>Classic network connectivity addresses are supported only on the Alibaba Cloud China site. The Alibaba Cloud International site does not support classic network connectivity addresses. Therefore, you do not need to delete classic network connectivity addresses on the International site.</li>
      * </ul>
      * </blockquote>
+     * <h2>Before you begin</h2>
+     * <p>After you invoke the CreateDBEndpointAddress operation, wait for about 30 to 60 seconds for the endpoint to enter the ready state before you execute the deletion. Invoke the DescribeDBClusterEndpoints operation every 10 seconds to check the endpoint status. After you confirm that the endpoint is ready, invoke the DeleteDBEndpointAddress operation.</p>
      * 
      * @param request the request parameters of DeleteDBEndpointAddress  DeleteDBEndpointAddressRequest
      * @return DeleteDBEndpointAddressResponse
@@ -976,6 +1019,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteDBEndpointAddressResponse> deleteDBEndpointAddress(DeleteDBEndpointAddressRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Database links are supported only in PolarDB for PostgreSQL (Compatible with Oracle) clusters, specifically Oracle syntax-compatible 2.0 clusters created by calling the CreateDBCluster operation with DBType set to Oracle and DBVersion set to 14. Other engine specifications such as MySQL, standard PostgreSQL, and PolarDB Oracle SENormal are not supported. Usage notes: Database links are supported only in PolarDB for PostgreSQL (Compatible with Oracle) clusters, which correspond to Oracle syntax-compatible 2.0 clusters created by calling the CreateDBCluster operation with DBType set to Oracle and DBVersion set to 14. Other engine specifications such as MySQL, PostgreSQL, and PolarDB Oracle SENormal are not supported.</p>
+     * 
      * @param request the request parameters of DeleteDBLink  DeleteDBLinkRequest
      * @return DeleteDBLinkResponse
      */
@@ -1054,8 +1100,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>A GDN can be deleted only if it contains a single primary cluster.</p>
+     * <p>You can delete a GDN only when it contains a single primary cluster.</p>
      * </blockquote>
+     * <h2>Before you begin</h2>
+     * <p>Prerequisites for the GDN status: The GDN must be in the active state before you delete it. You can check the GDNStatus field by calling the DescribeGlobalDatabaseNetwork operation to confirm the status. It typically takes a few minutes for the GDN to reach the active state after it is created.</p>
      * 
      * @param request the request parameters of DeleteGlobalDatabaseNetwork  DeleteGlobalDatabaseNetworkRequest
      * @return DeleteGlobalDatabaseNetworkResponse
@@ -1182,11 +1230,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li><code>PolarFsInstanceId</code> 是必须提供的参数，用来指定要操作的PolarFS实例。</li>
-     * <li><code>DBClusterId</code> 参数是可选的，如果提供，则表示与特定PolarDB集群关联的操作。</li>
-     * <li><code>Objects</code> 参数是一个字符串数组，列出了所有需要被删除的对象路径，并且是必需的。</li>
+     * <li><code>PolarFsInstanceId</code> is a required parameter that specifies the PolarFS instance to operate.</li>
+     * <li>The <code>DBClusterId</code> parameter is optional. If provided, it indicates that the operation is associated with a specific PolarDB cluster.</li>
+     * <li>The <code>Objects</code> parameter is a required array of character strings that lists all object paths to delete.</li>
      * </ul>
      * 
      * @param request the request parameters of DeletePolarFsObjects  DeletePolarFsObjectsRequest
@@ -1228,11 +1276,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Resource Control is used to limit the CPU resources available to specified users, databases, queries, or connections in a PolarDB for MySQL cluster. This release supports the create, update, delete, attach, and detach operations for resource control rules. Querying Resource Control CPU usage is not supported.</p>
+     * <p>Resource Control limits the CPU resources that specific users, databases, queries, or connections can use in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules, but does not support querying Resource Control CPU utilization.</p>
      * <h3>Limits</h3>
      * <ul>
      * <li>This feature applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</li>
-     * <li>In the cluster kernel parameter Settings, loose_enable_resource_control must be set to ON.<blockquote>
+     * <li>The cluster kernel parameter loose_enable_resource_control must be set to ON.<blockquote>
      * <p>Notice: This is a notice.</notice></p>
      * </blockquote>
      * </li>
@@ -1300,8 +1348,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>For more information about kernel versions for PolarDB for MySQL clusters, see <a href="https://help.aliyun.com/document_detail/471239.html">Kernel versions</a> and <a href="https://help.aliyun.com/document_detail/423884.html">Kernel release notes</a>.</p>
+     * <p>For more information about the Milvus versions of PolarDB for MySQL clusters, see <a href="https://help.aliyun.com/document_detail/471239.html">Milvus version descriptions</a> and <a href="https://help.aliyun.com/document_detail/423884.html">Kernel release notes</a>.</p>
      * </blockquote>
+     * <h2>Before you begin</h2>
+     * <p>The Prerequisites section lists the complete dependency chain: 1) Call CreateAIDBCluster to create a training AIDB cluster. 2) Call CreateAIDBClusterTask to create a training task. 3) Wait for the task to enter the Running state and generate metric data.</p>
      * 
      * @param request the request parameters of DescribeAIDBClusterTaskMetrics  DescribeAIDBClusterTaskMetricsRequest
      * @return DescribeAIDBClusterTaskMetricsResponse
@@ -1310,10 +1360,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li>This operation allows you to filter and retrieve a list of model operators by using the <code>RelativeDBClusterId</code> and <code>KubeType</code> parameters.</li>
-     * <li>Note: Make sure that the <code>RelativeDBClusterId</code> you provide matches the instance ID of an existing PolarDB database. Otherwise, the data cannot be retrieved.</li>
+     * <li>This operation filters and returns a list of model operators based on the <code>RelativeDBClusterId</code> and <code>KubeType</code> parameters.</li>
+     * <li>Note: Ensure that the <code>RelativeDBClusterId</code> you provide matches an existing PolarDB instance ID. Otherwise, the data cannot be retrieved.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeAIDBClusterTasks  DescribeAIDBClusterTasksRequest
@@ -1388,6 +1438,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeAgenticDBBranchEndpointsResponse> describeAgenticDBBranchEndpoints(DescribeAgenticDBBranchEndpointsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before you begin: Call CreateDBCluster and specify AgenticDbType=dedicated and ServerlessType=AgileServerless to create an AgenticDB cluster. Then, call CreateAgenticDBTenant to obtain the TenantId, call CreateAgenticDBProject to obtain the ProjectId, and call CreateAgenticDBBranch to create a branch. Finally, call DescribeAgenticDBBranchLineage by using the IDs of the cluster, tenant, project, and branch.</p>
+     * 
      * @param request the request parameters of DescribeAgenticDBBranchLineage  DescribeAgenticDBBranchLineageRequest
      * @return DescribeAgenticDBBranchLineageResponse
      */
@@ -1425,6 +1478,17 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeAgenticDBComputeClustersResponse> describeAgenticDBComputeClusters(DescribeAgenticDBComputeClustersRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>This operation is applicable only to PolarDB for MySQL.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of DescribeAgenticDBPerformance  DescribeAgenticDBPerformanceRequest
+     * @return DescribeAgenticDBPerformanceResponse
+     */
+    CompletableFuture<DescribeAgenticDBPerformanceResponse> describeAgenticDBPerformance(DescribeAgenticDBPerformanceRequest request);
+
+    /**
      * @param request the request parameters of DescribeAgenticDBProject  DescribeAgenticDBProjectRequest
      * @return DescribeAgenticDBProjectResponse
      */
@@ -1437,12 +1501,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeAgenticDBProjectHistoryRetentionResponse> describeAgenticDBProjectHistoryRetention(DescribeAgenticDBProjectHistoryRetentionRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, complete the following steps in sequence. Create an AgenticDB cluster by calling CreateDBCluster and setting AgenticDbType to dedicated. Create a tenant by calling CreateAgenticDBTenant. Create a project by calling CreateAgenticDBProject. Finally, call this operation to query the list of projects.</p>
+     * 
      * @param request the request parameters of DescribeAgenticDBProjects  DescribeAgenticDBProjectsRequest
      * @return DescribeAgenticDBProjectsResponse
      */
     CompletableFuture<DescribeAgenticDBProjectsResponse> describeAgenticDBProjects(DescribeAgenticDBProjectsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This operation queries the tenant API keys of AgenticDB dedicated clusters (with the pagc- prefix) and standard PolarDB clusters that support AgenticDB tenant capabilities (with the pc- prefix).</p>
+     * 
      * @param request the request parameters of DescribeAgenticDBTenantApiKeys  DescribeAgenticDBTenantApiKeysRequest
      * @return DescribeAgenticDBTenantApiKeysResponse
      */
@@ -1456,7 +1526,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This API queries all relevant information about a specific PolarDB application, including but not limited to component details and endpoints.</p>
+     * <p>This API operation queries all relevant information about a specific PolarDB application, including but not limited to component details and endpoints.</p>
      * 
      * @param request the request parameters of DescribeApplicationAttribute  DescribeApplicationAttributeRequest
      * @return DescribeApplicationAttributeResponse
@@ -1540,7 +1610,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Logs for different roles may contain different fields. User messages may include Content. Assistant messages may include the model, token usage, and cost statistics. Tool execution results may include the tool name and execution status. Cost statistics are returned exactly as provided by the log source, and this API operation does not perform currency conversion.</p>
+     * <p>The fields included in logs may vary by role. User messages may include content. Assistant messages may include the model, token usage, and cost statistics. Tool execution results may include the tool name and execution status. Cost statistics are returned as-is from the log source, and this operation does not perform currency conversion.</p>
      * 
      * @param request the request parameters of DescribeApplicationSessionLogs  DescribeApplicationSessionLogsRequest
      * @return DescribeApplicationSessionLogsResponse
@@ -1578,6 +1648,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeAvailableModelsResponse> describeAvailableModels(DescribeAvailableModelsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before you begin: Log backup is enabled for the target cluster, and the required physical logs are archived. Invoke DescribeBackupLogs to query valid physical log backup IDs, and then invoke this operation with the cluster ID and log backup ID.</p>
+     * 
      * @param request the request parameters of DescribeBackupLogDownloadLinks  DescribeBackupLogDownloadLinksRequest
      * @return DescribeBackupLogDownloadLinksResponse
      */
@@ -1900,9 +1973,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <blockquote>
-     * <p>You can query only the database links that use a PolarDB for Oracle cluster as the source.</p>
-     * </blockquote>
+     * <p>Queries DBLink information. Currently, only PolarDB for PostgreSQL (Compatible with Oracle) clusters with Oracle syntax compatibility 2.0 (DBType=Oracle, DBVersion=14) are supported as sources. Other engines or versions may return InvalidEngine.Unsupported.</p>
      * 
      * @param request the request parameters of DescribeDBLinks  DescribeDBLinksRequest
      * @return DescribeDBLinksResponse
@@ -2010,10 +2081,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>When you invoke this operation, the PolarDB cluster must be in the <strong>Released</strong> state, and one of the following backup retention options must have been selected when the cluster was released: <strong>Long-term Retention (LTR) of All Backups</strong> or <strong>Long-term Retention (LTR) of the Last Backup (Automatic Backup Before Deletion)</strong>. If all retained backup sets of a released cluster have been manually deleted, this operation can no longer query the cluster.</p>
+     * <p>When you invoke this operation, the PolarDB cluster must be in the <strong>Released</strong> state, and you must have selected <strong>long-term retention (LTR) of all backups</strong> or <strong>long-term retention (LTR) of the last backup (automatic backup before deletion)</strong> when releasing the cluster. If all retained backup sets are manually deleted after the cluster is released, this operation can no longer query the cluster.</p>
      * <blockquote>
      * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/98181.html">DescribeDBClusterAttribute</a> operation to query the cluster status.</p>
      * </blockquote>
+     * <h2>Obtain the ID of a released cluster</h2>
+     * <p>When you invoke CreateDBCluster to create a cluster, configure the Settings BackupRetentionPolicyOnClusterDeletion=ALL, and save the returned DBClusterId. After you invoke DeleteDBCluster to release the cluster, use the saved ID to invoke this operation. Filtering by DBClusterStatus=Deleted in DescribeDBClusters may not return released clusters. Therefore, save the ID before releasing the cluster.</p>
      * 
      * @param request the request parameters of DescribeDetachedBackups  DescribeDetachedBackupsRequest
      * @return DescribeDetachedBackupsResponse
@@ -2160,6 +2233,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeInspectionTaskListResponse> describeInspectionTaskList(DescribeInspectionTaskListRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Before you begin</h2>
+     * <p>In the &quot;Before you begin&quot; or &quot;Usage process&quot; section, describe the complete dependency chain: first, call CreateInspectionTask (which requires SpaceId) to create an inspection task and obtain the TaskId. Then, call DescribeInspectionReportList (passing the TaskId) to obtain the ReportId. Finally, use this API to query the report details. Also, describe how to obtain the SpaceId.</p>
+     * 
      * @param request the request parameters of DescribeInstanceReportAttribute  DescribeInstanceReportAttributeRequest
      * @return DescribeInstanceReportAttributeResponse
      */
@@ -2172,6 +2249,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeKBSyncLinkAttributeResponse> describeKBSyncLinkAttribute(DescribeKBSyncLinkAttributeRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Prerequisites</h2>
+     * <p>This section describes the complete dependency chain for obtaining the KnowledgeBaseId: you must first create a knowledge base by calling CreateKnowledgeBase (which requires a KnowledgeSpaceId), and the KnowledgeSpaceId must be created by calling CreateKnowledgeSpace (which requires cross-product resources such as VpcId, VSwitchId, SecurityGroupId, and OSSBucket). Include links to the documentation of each dependent API.</p>
+     * 
      * @param request the request parameters of DescribeKBSyncLinks  DescribeKBSyncLinksRequest
      * @return DescribeKBSyncLinksResponse
      */
@@ -2417,6 +2498,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribePolarClawCronJobsResponse> describePolarClawCronJobs(DescribePolarClawCronJobsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before you begin, call DescribeApplications to obtain the application ID where ApplicationType is set to polardb_polarclaw, and then use it as the ApplicationId parameter to call this operation.</p>
+     * 
      * @param request the request parameters of DescribePolarClawMCPServers  DescribePolarClawMCPServersRequest
      * @return DescribePolarClawMCPServersResponse
      */
@@ -2449,14 +2533,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
-     * <ul>
-     * <li>This API operation queries all quota rules under a specific Polarlakebase instance and supports fuzzy matching by using the <code>QuotaNameMatch</code> and <code>PatternMatch</code> parameters.</li>
-     * <li>The pagination feature is not yet public and will be available after the kernel is ready. Currently, there is no pagination limit on the returned results.</li>
-     * <li><code>PolarFsInstanceId</code> is required and specifies the Polarlakebase instance to query.</li>
-     * <li>Optional parameters such as <code>QuotaNameMatch</code> and <code>PatternMatch</code> can be used to further filter the quota rules that meet the conditions.</li>
-     * <li>The returned data includes but is not limited to the total number of quota rules, the number of rules on the current page, and specific rule details such as the rule ID, name, description, and capacity limit.</li>
-     * </ul>
+     * <p>Queries the PolarClaw skill templates associated with a specified application. You must provide ApplicationId when calling this operation. If this parameter is not specified, InvalidApplicationId.Malformed is returned. The SkillTemplates field in the response is a list of templates, and Skills is a map of keys to strings. Each string can be parsed into an array of skill details, where each array element contains skillName and version.</p>
      * 
      * @param request the request parameters of DescribePolarClawSkillTemplate  DescribePolarClawSkillTemplateRequest
      * @return DescribePolarClawSkillTemplateResponse
@@ -2482,6 +2559,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribePolarClawSkillsMarketResponse> describePolarClawSkillsMarket(DescribePolarClawSkillsMarketRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Before you begin</h2>
+     * <p>This section explains that the TaskId is returned by asynchronous operation APIs such as LoginPolarClawChannel and provides a complete call chain example: DescribeApplications → DescribePolarClawChannels → LoginPolarClawChannel → DescribePolarClawTask.</p>
+     * 
      * @param request the request parameters of DescribePolarClawTask  DescribePolarClawTaskRequest
      * @return DescribePolarClawTaskResponse
      */
@@ -2507,12 +2588,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li><strong>Path</strong> 参数必须提供一个绝对路径。</li>
-     * <li><strong>Recursive</strong> 参数默认为 <code>false</code>，如果设置为 <code>true</code>，则会递归列出所有子目录的内容。</li>
-     * <li><strong>Depth</strong> 参数用于限制递归深度，默认值为 <code>1</code>。</li>
-     * <li><strong>Filter</strong> 参数支持通配符或正则表达式过滤结果。</li>
+     * <li>The <strong>Path</strong> parameter must be an absolute path.</li>
+     * <li>The <strong>Recursive</strong> parameter defaults to <code>false</code>. If set to <code>true</code>, the contents of all subdirectories are listed recursively.</li>
+     * <li>The <strong>Depth</strong> parameter limits the recursion depth. Default value: <code>1</code>.</li>
+     * <li>The <strong>Filter</strong> parameter supports wildcards or regular expressions to filter results.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribePolarFsObjects  DescribePolarFsObjectsRequest
@@ -2533,11 +2614,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>This API operation queries all quota rules for a specific Polarlakebase instance. You can use the <code>QuotaNameMatch</code> and <code>PatternMatch</code> parameters for fuzzy matching.</li>
-     * <li>The pagination feature is not yet publicly available and will be released after the kernel is ready. Currently, results are returned without pagination limits.</li>
-     * <li><code>PolarFsInstanceId</code> is required and specifies the Polarlakebase instance to query.</li>
-     * <li>Optional parameters such as <code>QuotaNameMatch</code> and <code>PatternMatch</code> can be used to further filter quota rules that meet the specified conditions.</li>
-     * <li>The returned data includes but is not limited to the total number of quota rules, the number of rules on the current page, and specific rule details such as rule ID, name, description, and capacity limits.</li>
+     * <li>This API operation is used to query all quota rules under a specific Polarlakebase instance. It supports fuzzy matching through the <code>QuotaNameMatch</code> and <code>PatternMatch</code> parameters.</li>
+     * <li>The pagination feature is not yet public and will be available after the kernel is ready. Currently, there is no pagination limit on the returned results.</li>
+     * <li><code>PolarFsInstanceId</code> is required and is used to specify the Polarlakebase instance to query.</li>
+     * <li>Optional parameters such as <code>QuotaNameMatch</code> and <code>PatternMatch</code> can be used to further filter the matching quota rules.</li>
+     * <li>The returned data includes but is not limited to the total number of quota rules, the number of rules on the current page, and specific rule details (such as rule ID, name, description, and capacity limit).</li>
      * </ul>
      * 
      * @param request the request parameters of DescribePolarFsQuota  DescribePolarFsQuotaRequest
@@ -2622,6 +2703,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeScheduleTasksResponse> describeScheduleTasks(DescribeScheduleTasksRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Queries the parameter modification history of PolarDB Search. Before you begin, ensure that the target cluster is a PolarDB for MySQL cluster and intelligent search (PolarSearch) is enabled. If PolarSearch is not enabled, log on to the PolarDB console, go to the cluster list, open the Basic Information page of the target cluster, click Add or Remove Node in the Database Nodes section, and add a search node. For more information, see <a href="https://www.alibabacloud.com/help/en/polardb/polardb-for-mysql/user-guide/guidelines-for-using-polarsearch">Guidelines for using PolarSearch</a>.</p>
+     * 
      * @param request the request parameters of DescribeSearchModifyParameterLog  DescribeSearchModifyParameterLogRequest
      * @return DescribeSearchModifyParameterLogResponse
      */
@@ -2661,8 +2745,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>Only PolarDB for MySQL supports this operation.</li>
-     * <li>Starting from September 1, 2024, due to the optimization of the SQL template algorithm, the value of the SQLHash field will change when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/2845725.html">Notice: Optimization of the slow SQL template algorithm</a>.</li>
+     * <li>This operation is supported only by PolarDB for MySQL.</li>
+     * <li>Starting September 1, 2024, the value of the SQLHash field will change when you call this operation due to the optimization of the SQL template algorithm. For more information, see <a href="https://help.aliyun.com/document_detail/2845725.html">Notice on the optimization of the SQL template algorithm for slow SQL queries</a>.</li>
      * </ul>
      * </blockquote>
      * 
@@ -2749,6 +2833,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DisableDBClusterDynamoDBResponse> disableDBClusterDynamoDB(DisableDBClusterDynamoDBRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Before you begin</h2>
+     * <p>Cluster status constraint: The cluster must be in the Running state. After you enable Orca, wait for the status transition to complete (about 2 minutes) before you call this API operation. You can call the DescribeDBClusterAttribute operation to query the DBClusterStatus.</p>
+     * <h2>Before you begin</h2>
+     * <p>Before you call this operation, make sure that Orca is enabled for the cluster by calling the EnableDBClusterOrca operation, and add the link to the associated API operation.</p>
+     * 
      * @param request the request parameters of DisableDBClusterOrca  DisableDBClusterOrcaRequest
      * @return DisableDBClusterOrcaResponse
      */
@@ -2783,6 +2873,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DisablePolarClawPluginResponse> disablePolarClawPlugin(DisablePolarClawPluginRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Operation description: The prerequisites section describes the resource type that DBClusterId must point to, the creation API used to obtain it, the ID format requirements, and the relationship and usage scenarios between RelativeDBClusterId and DBClusterId.</p>
+     * 
      * @param request the request parameters of EnableAIDBClusterDatasetService  EnableAIDBClusterDatasetServiceRequest
      * @return EnableAIDBClusterDatasetServiceResponse
      */
@@ -2871,6 +2964,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<FailoverDBClusterResponse> failoverDBCluster(FailoverDBClusterRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Switches the primary node of an edge cloud cluster. This operation applies only to edge clusters deployed by using MyBase or ENS infrastructure. You can call DescribeEdgeCloudRegion to query edge regions and call DescribeDBClustersZonal to obtain the edge cluster ID. For standard PolarDB clusters, use FailoverDBCluster.</p>
+     * <h2>Before you begin</h2>
+     * <p>Complete the prerequisites. Note that this API applies only to edge clusters deployed by using MyBase or ENS. Specify the method to obtain the edge cluster ID, and note that you must use FailoverDBCluster for standard clusters.</p>
+     * 
      * @param request the request parameters of FailoverDBClusterZonal  FailoverDBClusterZonalRequest
      * @return FailoverDBClusterZonalResponse
      */
@@ -2883,6 +2981,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GenerateUpgradeReportForSyncCloneResponse> generateUpgradeReportForSyncClone(GenerateUpgradeReportForSyncCloneRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves the token required for mounting a Lakebase tenant. Only PolarFS instances whose CreationCategory is basic (Basic Edition) are supported. The server verifies the instance category before calling the backend, and returns OperationDenied.PolarFsCategory for other categories. Before calling this operation, provide PolarFsInstanceId and specify the associated DBClusterId, mount subdirectory, and tenant identifier as needed.</p>
+     * 
      * @param request the request parameters of GetLakebaseTenantToken  GetLakebaseTenantTokenRequest
      * @return GetLakebaseTenantTokenResponse
      */
@@ -2994,6 +3095,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListTagResourcesForRegionResponse> listTagResourcesForRegion(ListTagResourcesForRegionRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Before you begin</h2>
+     * <p>Prerequisites: You must obtain the application ID of an application whose ApplicationType is polardb_polarclaw by calling the DescribeApplications operation. The call chain is DescribeApplications(RegionId) → LoginPolarClawChannel(ApplicationId, ChannelId).</p>
+     * 
      * @param request the request parameters of LoginPolarClawChannel  LoginPolarClawChannelRequest
      * @return LoginPolarClawChannelResponse
      */
@@ -3018,6 +3123,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyAIDBClusterModelResponse> modifyAIDBClusterModel(ModifyAIDBClusterModelRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Before you begin</h2>
+     * <p>Refer to the Prerequisites section in the API reference. Before you invoke ModifyAIDBClusterTask, you must create a training node and obtain the node ID by invoking CreateAIDBClusterTask.</p>
+     * 
      * @param request the request parameters of ModifyAIDBClusterTask  ModifyAIDBClusterTaskRequest
      * @return ModifyAIDBClusterTaskResponse
      */
@@ -3036,6 +3145,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyAccountDescriptionZonalResponse> modifyAccountDescriptionZonal(ModifyAccountDescriptionZonalRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Modifies the lock status of an account. Prerequisites: The target cluster must be a PolarDB for PostgreSQL cluster (DBType=PostgreSQL) and its status must be Running (DBClusterStatus=Running). You can call the DescribeDBClusters operation to verify the engine type and status. Calling this operation on a MySQL cluster may return the InvalidDBType.Malformed error (HTTP 400). Calling this operation on a cluster in a non-Running state, such as Creating or Stopped, may return the OperationDenied.DBClusterStatus error (HTTP 403).</p>
+     * 
      * @param request the request parameters of ModifyAccountLockState  ModifyAccountLockStateRequest
      * @return ModifyAccountLockStateResponse
      */
@@ -3102,6 +3214,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyApplicationPromptResponse> modifyApplicationPrompt(ModifyApplicationPromptRequest request);
 
     /**
+     * @param request the request parameters of ModifyApplicationSSL  ModifyApplicationSSLRequest
+     * @return ModifyApplicationSSLResponse
+     */
+    CompletableFuture<ModifyApplicationSSLResponse> modifyApplicationSSL(ModifyApplicationSSLRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Before you begin: This operation applies only to applications whose Category is set to serverless. You can call DescribeApplicationAttribute and check the Category field in the response to confirm the application type. Usage notes: This operation applies only to applications whose Category is set to serverless. You can check the Category field returned by the DescribeApplicationAttribute API operation to confirm the application type.</p>
+     * 
      * @param request the request parameters of ModifyApplicationServerlessConf  ModifyApplicationServerlessConfRequest
      * @return ModifyApplicationServerlessConfResponse
      */
@@ -3114,6 +3235,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyApplicationWhitelistResponse> modifyApplicationWhitelist(ModifyApplicationWhitelistRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Modifies the auto-renewal settings for a subscription PolarDB cluster. The target cluster must be a subscription cluster. For a pay-as-you-go cluster, you must first call the TransformDBClusterPayType operation to change the billing method before calling this operation. Usage notes: Prerequisites: If the cluster uses the pay-as-you-go billing method, you must first call the TransformDBClusterPayType operation to change the billing method. A call chain diagram is provided.</p>
+     * 
      * @param request the request parameters of ModifyAutoRenewAttribute  ModifyAutoRenewAttributeRequest
      * @return ModifyAutoRenewAttributeResponse
      */
@@ -3179,6 +3303,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyDBClusterAndNodesParametersResponse> modifyDBClusterAndNodesParameters(ModifyDBClusterAndNodesParametersRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Modifies the high-availability mode of a cluster. Before you begin: The target cluster must be a PolarDB for MySQL cluster (DBType=MySQL) with DeployUnit set to Advanced. This operation is not applicable to PostgreSQL or Oracle clusters. Before you call this operation, you can call DescribeDBClusterAttribute to verify the DBType, DeployUnit, HotStandbyCluster, and ZoneIds values.</p>
+     * 
      * @param request the request parameters of ModifyDBClusterArch  ModifyDBClusterArchRequest
      * @return ModifyDBClusterArchResponse
      */
@@ -3227,6 +3354,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyDBClusterEndpointResponse> modifyDBClusterEndpoint(ModifyDBClusterEndpointRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This operation is applicable only to edge cloud clusters. Before you call this operation, you must have applied for an edge cloud cluster through MyBase or ENS infrastructure. You can call DescribeEdgeCloudRegion to query edge cloud regions and call DescribeDBClustersZonal to obtain the edge cloud cluster ID. This operation is not applicable to common PolarDB clusters.</p>
+     * 
      * @param request the request parameters of ModifyDBClusterEndpointZonal  ModifyDBClusterEndpointZonalRequest
      * @return ModifyDBClusterEndpointZonalResponse
      */
@@ -3245,13 +3375,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>If you call this operation before the switchover, a switchover is performed.</p>
      * <ul>
-     * <li>If this operation is called before the switchover, it performs a switchover.</li>
-     * <li>If this operation is called after the switchover is complete, it performs a rollback.<blockquote>
-     * <p>A one-click upgrade task must be created for the cluster before you call this operation. To create the task, call the <a href="https://help.aliyun.com/document_detail/98169.html">CreateDBCluster</a> operation and set the <strong>CreationOption</strong> parameter to <strong>MigrationFromRDS</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/121582.html">One-click upgrade from RDS MySQL to PolarDB for MySQL</a>.</p>
+     * <li>If you call this operation after the switchover is completed, a rollback is performed. <blockquote>
+     * <p>When you call this operation, a one-click upgrade task must have been created for the cluster. To create a one-click upgrade task, call the <a href="https://help.aliyun.com/document_detail/98169.html">CreateDBCluster</a> operation and set the <strong>CreationOption</strong> parameter to <strong>MigrationFromRDS</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/121582.html">Upgrade an ApsaraDB RDS for MySQL instance to a PolarDB for MySQL cluster with one click</a>.</p>
      * </blockquote>
      * </li>
      * </ul>
+     * <h2>Before you begin</h2>
+     * <p>Complete dependency chain: You must first create a migration cluster by calling CreateDBCluster with CreationOption set to MigrationFromRDS. This step requires that AliyunDTSDefaultRole has been authorized in the DTS console.</p>
      * 
      * @param request the request parameters of ModifyDBClusterMigration  ModifyDBClusterMigrationRequest
      * @return ModifyDBClusterMigrationResponse
@@ -3374,6 +3506,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyDBDescriptionZonalResponse> modifyDBDescriptionZonal(ModifyDBDescriptionZonalRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Before you begin</h2>
+     * <p>This section describes the endpoint statuses that allow modifications, such as Active, and explains that the endpoint status is independent of the cluster status.</p>
+     * 
      * @param request the request parameters of ModifyDBEndpointAddress  ModifyDBEndpointAddressRequest
      * @return ModifyDBEndpointAddressResponse
      */
@@ -3608,6 +3744,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<MovePolarFsObjectsResponse> movePolarFsObjects(MovePolarFsObjectsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Enables PolarDB for AI tasks. Prerequisites: The target cluster must have AI nodes. If no AI node exists, call CreateAINodes to create one and then call DescribeAIDBClusters to verify. You can enable the free trial only once per cluster. If you call this operation again for a cluster that has already used the free trial, the OperationDenied.AiFreeDLProbation error may be returned. In this case, purchase AI nodes instead. If the DLNode is already activated, you do not need to call this operation again. Repeated calls may return the OperationDenied.AiOpenDLNode error. You can enable the free trial only once for each cluster. For clusters that have already used the free trial, purchase AI nodes by calling CreateAINodes. You do not need to call this operation again for clusters where AI is already activated. Call instructions: Before calling this operation, create AI nodes by calling CreateAINodes. You can call DescribeAIDBClusters to check whether the current cluster already has AI nodes.</p>
+     * 
      * @param request the request parameters of OpenAITask  OpenAITaskRequest
      * @return OpenAITaskResponse
      */
@@ -3650,6 +3789,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RegisterAIDBClusterCustomModelResponse> registerAIDBClusterCustomModel(RegisterAIDBClusterCustomModelRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Registers an uploaded file to a knowledge base. Before you begin: activate the PrivateLink service, create a knowledge space and a knowledge base, upload the file to OSS, and then call this operation by using the knowledge base ID and the OSS object key of the file.</p>
+     * <h2>Before you begin</h2>
+     * <p>Note: The complete dependency chain is as follows: 1) Activate the PrivateLink service. 2) Call CreateKnowledgeSpace to create a knowledge space. 3) Call CreateKnowledgeBase to create a knowledge base. 4) Upload the file to the associated OSS bucket. Include links to the API operations for each step.</p>
+     * 
      * @param request the request parameters of RegisterKnowledgeBaseFile  RegisterKnowledgeBaseFileRequest
      * @return RegisterKnowledgeBaseFileResponse
      */
@@ -3679,6 +3823,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RemoveDBClusterFromGDNResponse> removeDBClusterFromGDN(RemoveDBClusterFromGDNRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, the physical device must initiate pairing through the PolarClaw mobile app and be approved by calling ApprovePolarClawDevicePair. After approval, the device is added to the paired device list returned by ListPolarClawDevicePairs. Pairing initiation relies on the physical device and the mobile app, and cannot be completed solely through API calls.</p>
+     * 
      * @param request the request parameters of RemovePolarClawDevicePair  RemovePolarClawDevicePairRequest
      * @return RemovePolarClawDevicePairResponse
      */
@@ -3728,8 +3875,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>Only privileged accounts of PolarDB for MySQL clusters can be reset.</li>
-     * <li>If the privileged account encounters issues, such as unexpected permission revocation (REVOKE), you can reset the permissions of the privileged account to restore normal access.</li>
+     * <li>You can only reset the password of a privileged account in a PolarDB for MySQL cluster.</li>
+     * <li>If the privileged account encounters issues, such as unexpected permission revocation (REVOKE), you can reset the permissions of the privileged account to restore normal access. Usage notes: The &quot;Before you begin&quot; section lists the complete dependency chain: 1) Create a PolarDB for MySQL cluster (CreateDBCluster, DBType=MySQL). 2) Create an associated PolarDB application for the cluster (CreateApplication, ApplicationType=polarclaw). 3) Wait until the application status changes to Activated (query by calling DescribeApplications). 4) Confirm that the application contains a privileged account whose password needs to be reset.</li>
      * </ul>
      * </blockquote>
      * 
@@ -3775,12 +3922,21 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RestartDBLinkResponse> restartDBLink(RestartDBLinkRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Restarts a specified node in a PolarDB cluster. Before you begin: This operation applies only to nodes in non-serverless clusters. Nodes in clusters with ServerlessType set to AgileServerless are not supported. Before calling this operation, you can call DescribeDBClusters to query the ServerlessType and node ID of the cluster.</p>
+     * 
      * @param request the request parameters of RestartDBNode  RestartDBNodeRequest
      * @return RestartDBNodeResponse
      */
     CompletableFuture<RestartDBNodeResponse> restartDBNode(RestartDBNodeRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>前提条件</h2>
+     * <p>本接口用于重启边缘云（ENS）PolarDB 集群的节点。边缘云集群需通过 CreateDBCluster 创建，并将 CloudProvider 设置为 ENS；可通过 DescribeDBClustersZonal 查询当前账号下的边缘云集群及其节点，通过 DescribeEdgeCloudRegion 查询可用的边缘云地域、中心管控地域（CentralControlRegionId）及备用边缘云地域。</p>
+     * <h2>地域说明</h2>
+     * <p>本接口 spec 未声明、也不转发 RegionId 参数；但通过 SDK 或 OpenAPI 调用时仍需指定地域，请使用 DescribeEdgeCloudRegion 返回的中心管控地域 ID，以完成 endpoint 路由；未指定地域时 SDK 无法构建正确的区域化 endpoint。若研发确认该接口为非地域化接口、调用时无需地域路由，则以研发结论为准。</p>
+     * 
      * @param request the request parameters of RestartDBNodeZonal  RestartDBNodeZonalRequest
      * @return RestartDBNodeZonalResponse
      */
@@ -3852,12 +4008,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <h2>Request description</h2>
-     * <p>This operation sets file quota rules for a specific directory in a Polarlakebase instance. By configuring the <code>FilePathQuotas</code> parameter, you can specify the directories to which quota rules are applied and their related attributes. When you use <code>FilePathId</code> to specify a directory, ensure that the path is an absolute path from the root directory rather than a mount point path. You can also use the <code>Strategy</code> parameter to control how rules take effect on existing files. By default, rules take effect only when they are missing.</p>
-     * <h3>Notes</h3>
+     * <p>This operation sets file quota rules for specific directories in a Polarlakebase instance. By configuring the <code>FilePathQuotas</code> parameter, you can specify the exact directories to which the quota rules apply and their related attributes. Note that when you use <code>FilePathId</code> to specify a directory, make sure the path is an absolute path starting from the root directory, not a mount point path. In addition, you can use the <code>Strategy</code> parameter to control how the rules take effect on existing files. By default, the rules take effect only when they are missing.</p>
+     * <h3>Important notes</h3>
      * <ul>
      * <li>The maximum length of the <code>FilePathQuotas</code> list is 21.</li>
-     * <li>To apply rules to multiple levels of subdirectories under <code>FilePathId</code>, set the <code>MaxDepth</code> parameter. To traverse to the deepest level, set this value to 0.</li>
+     * <li>If you need to apply rules to multi-level subdirectories under <code>FilePathId</code>, set the <code>MaxDepth</code> parameter. To traverse to the deepest level, set this value to 0.</li>
      * </ul>
+     * <h2>Before you begin</h2>
+     * <p>The Prerequisites section clarifies the following: (1) Only PolarFS instances of the high_performance category are supported. The cold category is not supported. (2) You must first configure a quota policy by calling AddPolarFsQuota. (3) The complete dependency call chain is CreatePolarFs(high_performance) → AddPolarFsQuota → SetPolarFsFileQuota.</p>
      * 
      * @param request the request parameters of SetPolarFsFileQuota  SetPolarFsFileQuotaRequest
      * @return SetPolarFsFileQuotaResponse
@@ -3865,6 +4023,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SetPolarFsFileQuotaResponse> setPolarFsFileQuota(SetPolarFsFileQuotaRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Before you begin</h2>
+     * <p>This section describes the requirements for the number of GDN members, the GDN status, and the status of the destination secondary cluster.</p>
+     * 
      * @param request the request parameters of SwitchOverGlobalDatabaseNetwork  SwitchOverGlobalDatabaseNetworkRequest
      * @return SwitchOverGlobalDatabaseNetworkResponse
      */
@@ -4032,10 +4194,14 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>You can update only the revision version of a PolarDB for MySQL cluster, for example, from 8.0.1.1.3 to 8.0.1.1.4.</li>
-     * <li>You can use only your Alibaba Cloud account to create scheduled tasks that update the kernel version of a PolarDB for MySQL cluster. RAM users are not authorized to update the kernel version of a PolarDB for MySQL cluster.</li>
+     * <li>Currently, only the revision version of a PolarDB for MySQL cluster can be upgraded, such as from 8.0.1.1.3 to 8.0.1.1.4.</li>
+     * <li>Only Alibaba Cloud accounts can perform scheduled Milvus version upgrade tasks, which are executed within a specified time period. Resource Access Management (RAM) users cannot perform scheduled Milvus version upgrade tasks.</li>
      * </ul>
      * </blockquote>
+     * <h2>Before you begin</h2>
+     * <p>The DBClusterStatus of the target cluster must be Running. You can call the DescribeDBClusters operation to query the current status. If the cluster is in the Stopped state, call the ManuallyStartDBCluster operation to resume the cluster before you upgrade it.</p>
+     * <h2>Before you begin</h2>
+     * <p>The DBCluster must be in the Running state. You can query the status by checking the DBClusterStatus field returned by the DescribeDBClusters operation. If the cluster is in the Stopped state, call the ManuallyStartDBCluster operation to resume it.</p>
      * 
      * @param request the request parameters of UpgradeDBClusterVersion  UpgradeDBClusterVersionRequest
      * @return UpgradeDBClusterVersionResponse

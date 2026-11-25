@@ -249,7 +249,7 @@ public class DescribeDataProcessJobAttributeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The time when the job was created, in RFC 3339 format.</p>
+         * <p>The time when the task was created, in RFC 3339 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-01-01T00:00:00Z</p>
@@ -293,7 +293,7 @@ public class DescribeDataProcessJobAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The destination type. Currently, only PolarDB is supported.</p>
+         * <p>The type of the destination. Currently, only PolarDB is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>PolarDB</p>
@@ -304,7 +304,7 @@ public class DescribeDataProcessJobAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the data processing job.</p>
+         * <p>The ID of the data processing task.</p>
          * 
          * <strong>example:</strong>
          * <p>job-123456</p>
@@ -337,7 +337,7 @@ public class DescribeDataProcessJobAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the region where the data processing job is located.</p>
+         * <p>The region ID of the region where the data processing task is located.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -381,7 +381,7 @@ public class DescribeDataProcessJobAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data source type. Currently, only PolarFS is supported.</p>
+         * <p>The type of the data source. Currently, only PolarFS is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>PolarFS</p>
@@ -392,7 +392,7 @@ public class DescribeDataProcessJobAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the data processing job.</p>
+         * <p>The status of the data processing task.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -403,7 +403,7 @@ public class DescribeDataProcessJobAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the template used by the job.</p>
+         * <p>The ID of the template used by the task.</p>
          * 
          * <strong>example:</strong>
          * <p>tpl-123456</p>

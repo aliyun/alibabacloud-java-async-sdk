@@ -187,7 +187,7 @@ public class RefreshProxyLevelRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the PolarDB cluster.</p>
+         * <p>The PolarDB cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -200,7 +200,7 @@ public class RefreshProxyLevelRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the execution is initiated by the scheduled task service. Default value: false. If this parameter is set to false and PlannedStartTime is specified, a scheduled task is created. If this parameter is set to true, the task is executed immediately.</p>
+         * <p>Specifies whether the execution is initiated by the scheduled task service. Default value: false. If this parameter is set to false and PlannedStartTime is specified, a scheduled task is created. If this parameter is set to true, the task is executed immediately. Usage notes: If the DBClusterStatus of the cluster is not Running, you must specify the PlannedStartTime and PlannedEndTime parameters to create a scheduled task. The description of this parameter specifies that the task can be executed immediately only when the cluster is in the Running state and this parameter is set to true.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -230,7 +230,7 @@ public class RefreshProxyLevelRequest extends Request {
         }
 
         /**
-         * <p>The latest time to start the proxy specification upgrade, in the YYYY-MM-DDThh:mm:ssZ format (UTC).</p>
+         * <p>The latest time to start the proxy upgrade, in the YYYY-MM-DDThh:mm:ssZ format (UTC). Usage notes: If the DBClusterStatus of the cluster is not Running, you must specify both the PlannedStartTime and PlannedEndTime parameters to create a scheduled task. The description of the FromTimeService parameter specifies that the task can be executed immediately only when the cluster is in the Running state and FromTimeService is set to true.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-04-28T14:30:00Z</p>
@@ -242,7 +242,7 @@ public class RefreshProxyLevelRequest extends Request {
         }
 
         /**
-         * <p>The earliest time to start the proxy specification upgrade, in the YYYY-MM-DDThh:mm:ssZ format (UTC).</p>
+         * <p>The earliest time to start the proxy upgrade, in the YYYY-MM-DDThh:mm:ssZ format (UTC). Usage notes: If the DBClusterStatus of the cluster is not Running, you must specify both the PlannedStartTime and PlannedEndTime parameters to create a scheduled task. The description of the FromTimeService parameter specifies that the task can be executed immediately only when the cluster is in the Running state and FromTimeService is set to true.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-04-28T14:00:00Z</p>
@@ -267,7 +267,7 @@ public class RefreshProxyLevelRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-************</p>

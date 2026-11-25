@@ -173,7 +173,7 @@ public class DescribeActivationCodesRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the Alibaba Cloud order (including virtual orders) used to purchase the activation codes.</p>
+         * <p>The Alibaba Cloud order ID, including virtual orders. Usage note: Append the following to the end of the AliyunOrderId description: If an empty string is passed, all activation codes are returned. This parameter is actually optional.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,7 +186,7 @@ public class DescribeActivationCodesRequest extends Request {
         }
 
         /**
-         * <p>Filters the list to return only the activation code matching the specified MAC address.</p>
+         * <p>The MAC address used to filter the activation codes.</p>
          * 
          * <strong>example:</strong>
          * <p>aa:bb:cc:dd:ee:ff</p>
@@ -216,7 +216,7 @@ public class DescribeActivationCodesRequest extends Request {
         }
 
         /**
-         * <p>Page number</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -228,7 +228,7 @@ public class DescribeActivationCodesRequest extends Request {
         }
 
         /**
-         * <p>Number of records to return per page</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -258,7 +258,7 @@ public class DescribeActivationCodesRequest extends Request {
         }
 
         /**
-         * <p>Filters the list to return only the activation code matching the specified system identifier.</p>
+         * <p>The system identifier used to filter the activation codes.</p>
          * 
          * <strong>example:</strong>
          * <p>3312548696141831911</p>

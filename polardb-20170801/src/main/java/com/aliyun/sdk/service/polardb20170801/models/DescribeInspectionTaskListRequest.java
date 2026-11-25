@@ -125,7 +125,7 @@ public class DescribeInspectionTaskListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the task is located.</p>
+         * <p>The ID of the region where the task resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>

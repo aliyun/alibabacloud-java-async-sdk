@@ -54,7 +54,7 @@ public class CreateDBLinkResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>F9F1CB1A-B1D5-4EF5-A53A-************</p>

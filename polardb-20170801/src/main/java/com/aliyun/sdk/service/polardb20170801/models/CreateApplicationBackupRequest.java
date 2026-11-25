@@ -103,7 +103,7 @@ public class CreateApplicationBackupRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the application to back up.</p>
+         * <p>The ID of the application to be backed up.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,7 +141,7 @@ public class CreateApplicationBackupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the application resides. The server uses the actual region of the application.</p>
+         * <p>The region ID of the region where the application resides. The server uses the actual region of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

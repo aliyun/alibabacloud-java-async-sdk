@@ -87,7 +87,10 @@ public class DescribeBackupLogDownloadLinksRequest extends Request {
         } 
 
         /**
-         * <p>The IDs of the redo log backups.</p>
+         * <p>The physical log backup IDs.</p>
+         * <blockquote>
+         * <p>Call DescribeBackupLogs to obtain valid IDs. This parameter is required when you call the operation. If you omit this parameter, the InvalidArchiveLogIds.Malformed error (HTTP 400) is returned.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>78167430</p>
@@ -100,6 +103,9 @@ public class DescribeBackupLogDownloadLinksRequest extends Request {
 
         /**
          * <p>The cluster ID.</p>
+         * <blockquote>
+         * <p>This parameter is required when you call the operation. If you omit this parameter, the InvalidDBClusterId.Malformed error (HTTP 400) is returned.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>pc-**************</p>
@@ -111,7 +117,7 @@ public class DescribeBackupLogDownloadLinksRequest extends Request {
         }
 
         /**
-         * <p>The validity period of the download URL in hours. Valid values: 1 to 596523.</p>
+         * <p>The validity period of the download link, in hours. Valid values: 1 to 596523.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>

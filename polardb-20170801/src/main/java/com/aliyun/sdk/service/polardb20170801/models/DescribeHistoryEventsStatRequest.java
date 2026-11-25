@@ -103,9 +103,9 @@ public class DescribeHistoryEventsStatRequest extends Request {
         /**
          * <p>The archive status of the events. Valid values:</p>
          * <ul>
-         * <li>Archived: Archived.</li>
-         * <li>UnArchived: Unarchived.</li>
-         * <li>All: All.</li>
+         * <li>Archived: The events are archived.</li>
+         * <li>UnArchived: The events are not archived.</li>
+         * <li>All: All events.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -118,7 +118,7 @@ public class DescribeHistoryEventsStatRequest extends Request {
         }
 
         /**
-         * <p>The start time of the time range for the task start time. Specify the time in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The start time of the query time range for the task start time. Specify the time in the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time must be in UTC. This parameter is required. If you do not specify this parameter, the service returns a Param.Invalid (400) error.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-01-02T11:31:03Z</p>
@@ -142,7 +142,7 @@ public class DescribeHistoryEventsStatRequest extends Request {
         }
 
         /**
-         * <p>The end time of the time range for the task start time. Specify the time in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The end time of the query time range for the task start time. Specify the time in the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time must be in UTC. This parameter is required. If you do not specify this parameter, the service returns a Param.Invalid (400) error.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-01-03T12:31:03Z</p>

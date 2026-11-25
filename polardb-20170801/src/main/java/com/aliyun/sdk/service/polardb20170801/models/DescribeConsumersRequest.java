@@ -158,7 +158,7 @@ public class DescribeConsumersRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the consumer group.</p>
+         * <p>The consumer group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cg-xxxxxxxx</p>
@@ -170,7 +170,7 @@ public class DescribeConsumersRequest extends Request {
         }
 
         /**
-         * <p>The ID of the consumer.</p>
+         * <p>The consumer ID.</p>
          * 
          * <strong>example:</strong>
          * <p>c-mqveroemc***</p>
@@ -195,6 +195,9 @@ public class DescribeConsumersRequest extends Request {
 
         /**
          * <p>The list of names used to filter consumers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;consumer-a&quot;,&quot;consumer-b&quot;]</p>
          */
         public Builder consumerNameList(String consumerNameList) {
             this.putQueryParameter("ConsumerNameList", consumerNameList);

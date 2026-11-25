@@ -126,6 +126,9 @@ public class DescribeApplicationAvailableVersionRequest extends Request {
 
         /**
          * <p>The list of application subcomponents.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder components(java.util.List<Components> components) {
             String componentsShrink = shrink(components, "Components", "json");

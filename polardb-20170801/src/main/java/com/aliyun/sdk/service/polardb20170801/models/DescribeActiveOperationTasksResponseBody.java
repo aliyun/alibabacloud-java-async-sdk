@@ -106,7 +106,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of O\&amp;M tasks.</p>
+         * <p>The list of O&amp;M tasks.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;

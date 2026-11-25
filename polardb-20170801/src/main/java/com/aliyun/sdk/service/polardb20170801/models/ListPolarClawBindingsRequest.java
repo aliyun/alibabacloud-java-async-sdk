@@ -74,7 +74,7 @@ public class ListPolarClawBindingsRequest extends Request {
         } 
 
         /**
-         * <p>A list of agent IDs to filter the bindings.</p>
+         * <p>Filters by a list of agent IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>work,research</p>

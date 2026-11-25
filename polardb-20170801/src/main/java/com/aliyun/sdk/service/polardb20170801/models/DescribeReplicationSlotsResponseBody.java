@@ -314,7 +314,7 @@ public class DescribeReplicationSlotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The child node name of the distributed instance.</p>
+             * <p>The name of the child node of the distributed instance.</p>
              * 
              * <strong>example:</strong>
              * <p>testGroup</p>
@@ -325,7 +325,7 @@ public class DescribeReplicationSlotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The replay lag value of the subscription.</p>
+             * <p>The replay lag of the subscription.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -336,7 +336,7 @@ public class DescribeReplicationSlotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the replication slot is temporary. The value is returned as a string: true or false.</p>
+             * <p>Indicates whether the replication slot is temporary. The value is a string: true or false.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -347,7 +347,7 @@ public class DescribeReplicationSlotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The WAL latency value.</p>
+             * <p>The WAL latency.</p>
              * 
              * <strong>example:</strong>
              * <p>50</p>

@@ -201,7 +201,7 @@ public class ModifyAutoRenewAttributeRequest extends Request {
         } 
 
         /**
-         * <p>The cloud provider of the cluster.</p>
+         * <p>The cloud service provider to which the instance belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>ENS</p>
@@ -213,7 +213,7 @@ public class ModifyAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the database cluster.</p>
+         * <p>The IDs of the database clusters. The billing method of the clusters must be subscription. If you call this operation for a pay-as-you-go cluster, the OperationDenied.DBClusterPayType error may be returned. You can first call the TransformDBClusterPayType operation to change the billing method. Usage notes: The billing method of the cluster must be subscription. Calling this operation for a pay-as-you-go cluster returns the OperationDenied.DBClusterPayType error.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -226,12 +226,10 @@ public class ModifyAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * <p>The auto-renewal period. Valid values:</p>
+         * <p>The auto-renewal duration for the instance. Valid values: </p>
          * <ul>
-         * <li><p>When <strong>PeriodUnit</strong> is <strong>Month</strong>, the valid values are <code>[1,2,3,6,12]</code>.</p>
-         * </li>
-         * <li><p>When <strong>PeriodUnit</strong> is <strong>Year</strong>, the valid values are <code>[1-3]</code>.</p>
-         * </li>
+         * <li>If <strong>PeriodUnit</strong> is set to <strong>Month</strong>, valid values are <code>1</code>, <code>2</code>, <code>3</code>, <code>6</code>, and <code>12</code>.</li>
+         * <li>If <strong>PeriodUnit</strong> is set to <strong>Year</strong>, valid values are <code>1</code>, <code>2</code>, and <code>3</code>.</li>
          * </ul>
          * <p>Default value: <strong>1</strong>.</p>
          * 
@@ -263,12 +261,10 @@ public class ModifyAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * <p>The unit of the auto-renewal period. Valid values:</p>
+         * <p>The unit of the renewal duration. Valid values: </p>
          * <ul>
-         * <li><p><strong>Year</strong></p>
-         * </li>
-         * <li><p><strong>Month</strong></p>
-         * </li>
+         * <li><strong>Year</strong>: Year.</li>
+         * <li><strong>Month</strong>: Month.</li>
          * </ul>
          * <p>Default value: <strong>Month</strong>.</p>
          * 
@@ -282,7 +278,7 @@ public class ModifyAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * <p>The region ID. The ID can be up to 50 characters in length.</p>
+         * <p>The region ID. The value can be up to 50 characters in length.</p>
          * <blockquote>
          * <p>You can call the <a href="https://help.aliyun.com/document_detail/2319134.html">DescribeRegions</a> operation to query available regions.</p>
          * </blockquote>
@@ -298,18 +294,15 @@ public class ModifyAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * <p>The auto-renewal status. Valid values:</p>
+         * <p>The auto-renewal status. Valid values: </p>
          * <ul>
-         * <li><p><strong>AutoRenewal</strong>: Enables auto-renewal.</p>
-         * </li>
-         * <li><p><strong>Normal</strong>: Enables manual renewal.</p>
-         * </li>
-         * <li><p><strong>NotRenewal</strong>: Disables renewal.</p>
-         * </li>
+         * <li><strong>AutoRenewal</strong>: Auto-renewal.</li>
+         * <li><strong>Normal</strong>: Manual renewal. </li>
+         * <li><strong>NotRenewal</strong>: No renewal.</li>
          * </ul>
-         * <p>Default value: <strong>AutoRenewal</strong>.</p>
+         * <p>Default value: <strong>AutoRenewal</strong>. </p>
          * <blockquote>
-         * <p>When you set this parameter to <strong>NotRenewal</strong>, the system stops sending expiration reminders and sends only a non-renewal notification three days before the expiration date.</p>
+         * <p>If you set this parameter to <strong>NotRenewal</strong>, the system no longer sends expiration reminders and only sends a non-renewal reminder three days before expiration.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

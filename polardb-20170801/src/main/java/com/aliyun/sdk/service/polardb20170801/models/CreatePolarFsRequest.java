@@ -96,7 +96,7 @@ public class CreatePolarFsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StorageSpace")
-    @com.aliyun.core.annotation.Validation(maximum = 100000, minimum = 10)
+    @com.aliyun.core.annotation.Validation(maximum = 100000)
     private Long storageSpace;
 
     @com.aliyun.core.annotation.Query
@@ -397,7 +397,7 @@ public class CreatePolarFsRequest extends Request {
         } 
 
         /**
-         * <p>The size of the acceleration space. Unit: GB. The value must be no less than 5000 and must be a multiple of 1000. This parameter is required when acceleration is enabled for the Basic Edition.</p>
+         * <p>The acceleration space size. Unit: GB. The value must be no less than 5000 and must be a multiple of 1000. This parameter is required when acceleration is enabled for the Basic Edition.</p>
          * 
          * <strong>example:</strong>
          * <p>5000</p>
@@ -441,7 +441,7 @@ public class CreatePolarFsRequest extends Request {
         }
 
         /**
-         * <p>The list of authorized accounts for the Cold Storage Edition instance, separated by commas (<code>,</code>).</p>
+         * <p>The list of authorized accounts for the Cold Storage Edition instance. Separate multiple accounts with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>128***********，198***********</p>
@@ -460,7 +460,7 @@ public class CreatePolarFsRequest extends Request {
          * </ul>
          * <p>Default value: <strong>false</strong>.</p>
          * <blockquote>
-         * <p>This parameter takes effect only when the <strong>PayType</strong> parameter is set to <strong>Prepaid</strong>.</p>
+         * <p>This parameter takes effect only when <strong>PayType</strong> is set to <strong>Prepaid</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -475,7 +475,7 @@ public class CreatePolarFsRequest extends Request {
         /**
          * <p>Specifies whether to automatically use coupons. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: uses coupons. This is the default value.</li>
+         * <li><strong>true</strong>: uses coupons (default).</li>
          * <li><strong>false</strong>: does not use coupons.</li>
          * </ul>
          * 
@@ -489,7 +489,7 @@ public class CreatePolarFsRequest extends Request {
         }
 
         /**
-         * <p>The edition. Valid values: basic (Basic Edition, default), high_performance (High-performance Edition), and cold (Cold Storage Edition). For the basic edition, you must specify AccelerateSwitch and AccelerateStorageSize. For the high_performance edition, you must specify StorageType (essdpl0 or essdpl1). For the cold edition, StorageType (local_redundancy or city_redundancy) is optional.</p>
+         * <p>The edition. Valid values: basic (Basic Edition, default), high_performance (High-performance Edition), and cold (Cold Storage Edition). For the Basic Edition, you must specify AccelerateSwitch and AccelerateStorageSize. For the High-performance Edition, you must specify StorageType (essdpl0 or essdpl1). For the Cold Storage Edition, StorageType (local_redundancy or city_redundancy) is optional.</p>
          * 
          * <strong>example:</strong>
          * <p>basic</p>
@@ -579,14 +579,10 @@ public class CreatePolarFsRequest extends Request {
         }
 
         /**
-         * <p>The database ecosystem. Valid values:</p>
-         * <ul>
-         * <li><strong>MySQL</strong></li>
-         * <li><strong>PostgreSQL</strong></li>
-         * </ul>
+         * <p>The database ecosystem. Valid values: polardb_mysql (PolarDB for MySQL), polardb_pg (PolarDB for PostgreSQL), and polar_agentic_db (AgenticDB). The gateway maps these values to the mysql, postgresql, and agentic_db backends respectively. Pass the request value instead of the display name such as MySQL or PostgreSQL. If an ActionUnauthorized (HTTP 403) error is returned, check the call permissions.</p>
          * 
          * <strong>example:</strong>
-         * <p>MySQL</p>
+         * <p>polardb_mysql</p>
          */
         public Builder DBType(String DBType) {
             this.putQueryParameter("DBType", DBType);
@@ -597,8 +593,8 @@ public class CreatePolarFsRequest extends Request {
         /**
          * <p>The billing method. Valid values: </p>
          * <ul>
-         * <li><strong>Postpaid</strong>: pay-as-you-go</li>
-         * <li><strong>Prepaid</strong>: subscription</li>
+         * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
+         * <li><strong>Prepaid</strong>: subscription.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -611,10 +607,10 @@ public class CreatePolarFsRequest extends Request {
         }
 
         /**
-         * <p>If the <strong>PayType</strong> parameter is set to <strong>Prepaid</strong>, this parameter is required. Specifies the billing cycle of the upfront cluster. Valid values: </p>
+         * <p>The subscription period. This parameter is required when PayType is set to <strong>Prepaid</strong>. Specifies whether the subscription cluster is billed on a yearly or monthly basis. </p>
          * <ul>
-         * <li><strong>Year</strong>: year.</li>
-         * <li><strong>Month</strong>: month.</li>
+         * <li><strong>Year</strong>: yearly.</li>
+         * <li><strong>Month</strong>: monthly.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -679,7 +675,7 @@ public class CreatePolarFsRequest extends Request {
         }
 
         /**
-         * <p>The storage type. For the high_performance edition, use lowercase essdpl0 or essdpl1. For the cold edition, use local_redundancy or city_redundancy. Select the value based on the edition. The value is case-sensitive.</p>
+         * <p>The storage type. For high_performance, use lowercase essdpl0 or essdpl1. For cold, use local_redundancy or city_redundancy. Select the value based on the edition. The value is case-sensitive.</p>
          * 
          * <strong>example:</strong>
          * <p>local_redundancy</p>
@@ -691,10 +687,10 @@ public class CreatePolarFsRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required when the <strong>PayType</strong> parameter is set to <strong>Prepaid</strong>.</p>
+         * <p>The subscription duration. This parameter is required when PayType is set to <strong>Prepaid</strong>.</p>
          * <ul>
-         * <li>If the <strong>Period</strong> parameter is set to <strong>Month</strong>, the value of <strong>UsedTime</strong> must be an integer in the range of <code>[1-9]</code>.</li>
-         * <li>If the <strong>Period</strong> parameter is set to <strong>Year</strong>, the value of <strong>UsedTime</strong> must be an integer in the range of <code>[1-3]</code>.</li>
+         * <li>When <strong>Period</strong> is set to <strong>Month</strong>, <strong>UsedTime</strong> must be an integer in the range of <code>[1-9]</code>.</li>
+         * <li>When <strong>Period</strong> is set to <strong>Year</strong>, <strong>UsedTime</strong> must be an integer in the range of <code>[1-3]</code>.</li>
          * </ul>
          * 
          * <strong>example:</strong>

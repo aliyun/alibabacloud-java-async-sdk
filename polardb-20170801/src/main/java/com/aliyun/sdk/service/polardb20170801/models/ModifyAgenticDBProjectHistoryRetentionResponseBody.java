@@ -106,7 +106,7 @@ public class ModifyAgenticDBProjectHistoryRetentionResponseBody extends TeaModel
         } 
 
         /**
-         * <p>DBClusterId</p>
+         * <p>The database cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pagc-bp1abcdef1234567</p>
@@ -117,7 +117,7 @@ public class ModifyAgenticDBProjectHistoryRetentionResponseBody extends TeaModel
         }
 
         /**
-         * <p>The current effective history retention period for the project. For the actual recoverable range, query the branch recovery window.</p>
+         * <p>The effective retention period for historical data, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>604800</p>
@@ -128,7 +128,7 @@ public class ModifyAgenticDBProjectHistoryRetentionResponseBody extends TeaModel
         }
 
         /**
-         * <p>ProjectId</p>
+         * <p>The project ID.</p>
          * 
          * <strong>example:</strong>
          * <p>proj-a1b2c3d4e5f6</p>
@@ -150,7 +150,7 @@ public class ModifyAgenticDBProjectHistoryRetentionResponseBody extends TeaModel
         }
 
         /**
-         * <p>TenantId</p>
+         * <p>The tenant ID.</p>
          * 
          * <strong>example:</strong>
          * <p>t-4b83e0da66674951</p>

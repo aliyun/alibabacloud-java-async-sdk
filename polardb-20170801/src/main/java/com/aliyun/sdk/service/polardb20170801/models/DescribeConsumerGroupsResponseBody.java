@@ -119,7 +119,10 @@ public class DescribeConsumerGroupsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A list of consumer groups.</p>
+         * <p>The list of consumer groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -138,7 +141,7 @@ public class DescribeConsumerGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of records on the current page.</p>
+         * <p>The number of entries on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -149,7 +152,7 @@ public class DescribeConsumerGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of records returned per page. Valid values: 30, 50, and 100. Default value: 30.</p>
+         * <p>The number of entries per page. Valid values: 30, 50, and 100. Default value: 30.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -171,7 +174,7 @@ public class DescribeConsumerGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of records.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -362,10 +365,8 @@ public class DescribeConsumerGroupsResponseBody extends TeaModel {
             /**
              * <p>Indicates whether the consumer group is the default group. Valid values:</p>
              * <ul>
-             * <li><p><strong>0</strong>: No</p>
-             * </li>
-             * <li><p><strong>1</strong>: Yes</p>
-             * </li>
+             * <li><strong>0</strong>: No.</li>
+             * <li><strong>1</strong>: Yes.</li>
              * </ul>
              * 
              * <strong>example:</strong>

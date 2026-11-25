@@ -102,7 +102,7 @@ public class GetPolarAgentRequest extends Request {
         } 
 
         /**
-         * <p>Additional information, as a JSON string.</p>
+         * <p>The additional information. The value is a JSON string.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -114,7 +114,7 @@ public class GetPolarAgentRequest extends Request {
         }
 
         /**
-         * <p>The session query. Get this value from the return value of the &quot;Start a digital human&quot; API.</p>
+         * <p>The session query. You can obtain this value from the response of the Start a digital human API.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -127,7 +127,7 @@ public class GetPolarAgentRequest extends Request {
         }
 
         /**
-         * <p>The session ID. Get this value from the return value of the &quot;Start a digital human&quot; API.</p>
+         * <p>The session ID. You can obtain this value from the response of the Start a digital human API.</p>
          * 
          * <strong>example:</strong>
          * <p>c4d242f3-c909-4846-91d9-f84c238a9820</p>
@@ -139,7 +139,7 @@ public class GetPolarAgentRequest extends Request {
         }
 
         /**
-         * <p>The product type source. Valid value: polardb-console.</p>
+         * <p>The product type source. Valid values: polardb-console.</p>
          * 
          * <strong>example:</strong>
          * <p>polardb-console</p>

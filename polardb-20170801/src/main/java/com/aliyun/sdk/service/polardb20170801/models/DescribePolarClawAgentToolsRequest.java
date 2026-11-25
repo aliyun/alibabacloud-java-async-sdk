@@ -115,7 +115,7 @@ public class DescribePolarClawAgentToolsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to include plugin tools.</p>
+         * <p>Specifies whether to include plug-in tools.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

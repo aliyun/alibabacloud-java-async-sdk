@@ -157,7 +157,7 @@ public class DescribePolarClawSkillTemplatesRequest extends Request {
         } 
 
         /**
-         * <p>The application ID.</p>
+         * <p>The application ID. You can call the DescribeApplications operation to obtain a valid ApplicationId value. This parameter is conditionally required. If SkillTemplateId is not specified, you must provide a valid ApplicationId.</p>
          * 
          * <strong>example:</strong>
          * <p>pa-**************</p>
@@ -171,7 +171,7 @@ public class DescribePolarClawSkillTemplatesRequest extends Request {
         /**
          * <p>The application type.</p>
          * <blockquote>
-         * <p>If this is your first time calling this operation, you do not need to specify this parameter.</p>
+         * <p>If you call this operation for the first time, you do not need to specify this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -184,7 +184,7 @@ public class DescribePolarClawSkillTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The end time of the query in UTC.</p>
+         * <p>The end time of the query. The time is in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-11-16T16:00Z</p>
@@ -222,7 +222,7 @@ public class DescribePolarClawSkillTemplatesRequest extends Request {
         /**
          * <p>The region ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to view all available regions for the current account, including region IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query all available regions under the current account, including region IDs.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -247,7 +247,7 @@ public class DescribePolarClawSkillTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The start time of the query in UTC.</p>
+         * <p>The start time of the query. The time is in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-11-15T16:00Z</p>

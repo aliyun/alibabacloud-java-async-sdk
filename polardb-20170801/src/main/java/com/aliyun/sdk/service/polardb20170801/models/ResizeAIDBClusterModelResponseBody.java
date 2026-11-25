@@ -167,7 +167,7 @@ public class ResizeAIDBClusterModelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the current request only performs a capacity dry run.</p>
+         * <p>Indicates whether this request performs only a capacity dry run.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -200,7 +200,7 @@ public class ResizeAIDBClusterModelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3AA6E0E4-1234-5678-90AB-1234567890AB</p>

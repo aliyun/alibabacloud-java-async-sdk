@@ -80,13 +80,13 @@ public class ModifyDBNodeHotReplicaModeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query information about all clusters that are deployed in a specified region, such as the cluster ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the information of all clusters in the target region, including the cluster ID.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>pc-2vc327c2a14a3u858</p>
+         * <p>pc-*****************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -94,7 +94,7 @@ public class ModifyDBNodeHotReplicaModeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the order.</p>
+         * <p>The ID of the generated order.</p>
          * 
          * <strong>example:</strong>
          * <p>2148126708*****</p>
@@ -105,10 +105,10 @@ public class ModifyDBNodeHotReplicaModeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>9F4DDFBF-205C-5A3E-8DC2-C60F3E3FDC38</p>
+         * <p>9F4DDFBF-205C-5A3E-8DC2-C6**********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

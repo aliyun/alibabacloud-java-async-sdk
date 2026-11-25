@@ -208,7 +208,7 @@ public class ModifyDBNodeSccModeRequest extends Request {
         }
 
         /**
-         * <p>The SCC mode to set for the node.</p>
+         * <p>SCC</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

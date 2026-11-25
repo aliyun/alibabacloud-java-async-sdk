@@ -111,7 +111,7 @@ public class DescribeDBClusterPriceResponseBody extends TeaModel {
          * <li>BUY: new purchase.</li>
          * <li>UPGRADE: specification change.</li>
          * <li>RENEW: renewal.</li>
-         * <li>CONVERT: billing method conversion.</li>
+         * <li>CONVERT: billing method change.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -123,7 +123,7 @@ public class DescribeDBClusterPriceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The price details.</p>
+         * <p>The pricing details.</p>
          */
         public Builder priceInfo(PriceInfo priceInfo) {
             this.priceInfo = priceInfo;

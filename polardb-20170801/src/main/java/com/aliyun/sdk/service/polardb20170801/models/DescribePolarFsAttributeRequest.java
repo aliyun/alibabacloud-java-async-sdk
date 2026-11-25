@@ -119,7 +119,7 @@ public class DescribePolarFsAttributeRequest extends Request {
          * <p>Specifies whether to query FUSE mount information. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: Yes.</li>
-         * <li><strong>false</strong>: No. Default value: false.</li>
+         * <li><strong>false</strong>: No. This is the default value.</li>
          * </ul>
          * 
          * <strong>example:</strong>

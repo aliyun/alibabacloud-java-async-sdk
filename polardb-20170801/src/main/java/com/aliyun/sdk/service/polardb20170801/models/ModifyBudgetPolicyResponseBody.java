@@ -67,7 +67,7 @@ public class ModifyBudgetPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the gateway instance.</p>
+         * <p>The instance ID of the gateway instance.</p>
          * 
          * <strong>example:</strong>
          * <p>pg-xxxxxxxx</p>
@@ -78,7 +78,7 @@ public class ModifyBudgetPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>925B84D9-CA72-432C-95CF-738C22******</p>

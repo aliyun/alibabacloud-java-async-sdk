@@ -190,7 +190,10 @@ public class CreatePolarClawSkillRequest extends Request {
         } 
 
         /**
-         * BucketRegionId.
+         * <p>The region ID of the OSS bucket where the skill files are stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder bucketRegionId(String bucketRegionId) {
             this.putQueryParameter("BucketRegionId", bucketRegionId);
@@ -199,7 +202,10 @@ public class CreatePolarClawSkillRequest extends Request {
         }
 
         /**
-         * BucketType.
+         * <p>The type of the bucket used for skill files. Valid values: UserOwned: a user-owned bucket. Hosted: a managed bucket. You must have the required permissions to use a managed bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UserOwned</p>
          */
         public Builder bucketType(String bucketType) {
             this.putQueryParameter("BucketType", bucketType);
@@ -208,6 +214,7 @@ public class CreatePolarClawSkillRequest extends Request {
         }
 
         /**
+         * <p>The name of the OSS bucket that is in the same region as the current project.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -220,6 +227,7 @@ public class CreatePolarClawSkillRequest extends Request {
         }
 
         /**
+         * <p>The prefix of your OSS object. The prefix can contain digits and letters and must be 1 to 30 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -232,7 +240,13 @@ public class CreatePolarClawSkillRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the region where the parameter template resides.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query region IDs.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -241,6 +255,7 @@ public class CreatePolarClawSkillRequest extends Request {
         }
 
         /**
+         * <p>The skill name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -253,6 +268,7 @@ public class CreatePolarClawSkillRequest extends Request {
         }
 
         /**
+         * <p>The skill version.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -265,7 +281,10 @@ public class CreatePolarClawSkillRequest extends Request {
         }
 
         /**
-         * Summary.
+         * <p>The brief description of the skill.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Example for managing PolarDB skills</p>
          */
         public Builder summary(String summary) {
             this.putQueryParameter("Summary", summary);
@@ -274,7 +293,10 @@ public class CreatePolarClawSkillRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>The tag details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;PolarDB&quot;]</p>
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);
@@ -283,6 +305,7 @@ public class CreatePolarClawSkillRequest extends Request {
         }
 
         /**
+         * <p>The title.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

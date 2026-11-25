@@ -106,7 +106,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The task list.</p>
+         * <p>The list of tasks.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -385,7 +385,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the task was created. The time is in the <code>yyyy-MM-ddTHH:mmZ</code> format (UTC).</p>
+             * <p>The time when the task was created. The time is displayed in the <code>yyyy-MM-ddTHH:mmZ</code> format (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2020-06-09T22:00:42Z</p>
@@ -418,7 +418,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The latest deadline for adjusting the task execution time. The time is in the <code>yyyy-MM-ddTHH:mmZ</code> format (UTC).</p>
+             * <p>The latest deadline within the adjustable range for task execution time. The time is displayed in the <code>yyyy-MM-ddTHH:mmZ</code> format (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2020-06-11T15:59:59Z</p>
@@ -451,7 +451,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The modification time. The time is in the <code>yyyy-MM-ddTHH:mmZ</code> format (UTC).</p>
+             * <p>The time when the task was modified. The time is displayed in the <code>yyyy-MM-ddTHH:mmZ</code> format (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2020-06-09T22:00:42Z</p>
@@ -462,7 +462,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The preparation time before the transient disconnection. The time is in the <code>HH:mm:ss</code> format.</p>
+             * <p>The preparation time before the transient disconnection. The time is displayed in the <code>HH:mm:ss</code> format.</p>
              * 
              * <strong>example:</strong>
              * <p>04:00:00</p>
@@ -495,7 +495,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the task is executed in the background. The time is in the <code>yyyy-MM-ddTHH:mmZ</code> format (UTC).</p>
+             * <p>The time when the task is executed in the background. The time is displayed in the <code>yyyy-MM-ddTHH:mmZ</code> format (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2020-06-09T18:00:00Z</p>
@@ -510,16 +510,16 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
              * <ul>
              * <li><p>If you set <code>IsHistory</code> to <strong>0</strong>, the details of the pending task status are returned. Valid values:</p>
              * <ul>
-             * <li><strong>2</strong>: waiting for the user to set the task start time</li>
-             * <li><strong>3</strong>: waiting to be processed</li>
-             * <li><strong>4</strong>: being processed</li>
+             * <li><strong>2</strong>: Waiting for the user to set the task start time.</li>
+             * <li><strong>3</strong>: Waiting to be processed.</li>
+             * <li><strong>4</strong>: The task is being processed.</li>
              * </ul>
              * </li>
              * <li><p>If you set <code>IsHistory</code> to <strong>1</strong>, the details of the historical task status are returned. Valid values:</p>
              * <ul>
-             * <li><strong>5</strong>: task completed and executed successfully</li>
-             * <li><strong>6</strong>: task completed but execution failed</li>
-             * <li><strong>7</strong>: task canceled</li>
+             * <li><strong>5</strong>: The task is completed and executed successfully.</li>
+             * <li><strong>6</strong>: The task is completed but failed.</li>
+             * <li><strong>7</strong>: The task is canceled.</li>
              * </ul>
              * </li>
              * </ul>
@@ -533,7 +533,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time of the transient disconnection. The time is in the <code>yyyy-MM-ddTHH:mmZ</code> format (UTC).</p>
+             * <p>The time when the transient disconnection occurs. The time is displayed in the <code>yyyy-MM-ddTHH:mmZ</code> format (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2020-06-09T22:00:00Z</p>
@@ -547,7 +547,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
              * <p>The task parameters.</p>
              * 
              * <strong>example:</strong>
-             * <p>{\&quot;action\&quot;: \&quot;UpgradeDBVersion\&quot;, \&quot;check_method\&quot;: \&quot;check_cpu_usage\&quot;, \&quot;params\&quot;: {\&quot;RelativeDbtype\&quot;: \&quot;maxscale\&quot;, \&quot;DBInstanceName\&quot;: \&quot;pc-*************\&quot;, \&quot;User_ID\&quot;: \&quot;11111\&quot;, \&quot;UID\&quot;: \&quot;1406926474******\&quot;, \&quot;UpgradePolicy\&quot;: \&quot;hot\&quot;}}&quot;</p>
+             * <p>{&quot;action&quot;: &quot;UpgradeDBVersion&quot;, &quot;check_method&quot;: &quot;check_cpu_usage&quot;, &quot;params&quot;: {&quot;RelativeDbtype&quot;: &quot;maxscale&quot;, &quot;DBInstanceName&quot;: &quot;pc-*************&quot;, &quot;User_ID&quot;: &quot;11111&quot;, &quot;UID&quot;: &quot;1406926474******&quot;, &quot;UpgradePolicy&quot;: &quot;hot&quot;}}&quot;</p>
              */
             public Builder taskParams(String taskParams) {
                 this.taskParams = taskParams;

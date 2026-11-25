@@ -160,7 +160,7 @@ public class ModifyDBClusterVpcRequest extends Request {
         } 
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The cluster ID. This operation is supported only for clusters of specific categories. MySQL Normal and Exclusive clusters are not supported. You can call the DescribeDBClusters operation to query the cluster category before you call this operation. Note: This operation is supported only for clusters of specific categories. MySQL Normal and Exclusive clusters are not supported. Before calling this operation, call DescribeDBClusters to confirm the cluster category.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -175,10 +175,8 @@ public class ModifyDBClusterVpcRequest extends Request {
         /**
          * <p>Specifies whether to switch existing endpoints. Valid values:</p>
          * <ul>
-         * <li><p><strong>NONE</strong>: Does not switch existing endpoints.</p>
-         * </li>
-         * <li><p><strong>ALL</strong>: Switches all existing endpoints.</p>
-         * </li>
+         * <li><strong>NONE</strong>: Does not switch existing endpoints.</li>
+         * <li><strong>ALL</strong>: Switches existing endpoints.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -228,7 +226,7 @@ public class ModifyDBClusterVpcRequest extends Request {
         }
 
         /**
-         * <p>The ID of the virtual private cloud (VPC).</p>
+         * <p>The specified VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-*******************</p>
@@ -240,7 +238,7 @@ public class ModifyDBClusterVpcRequest extends Request {
         }
 
         /**
-         * <p>The ID of the virtual switch.</p>
+         * <p>The specified vSwitch ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

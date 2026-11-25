@@ -119,7 +119,7 @@ public class CreateAIDBClusterDatasetResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the PolarDB database cluster.</p>
+         * <p>The instance ID of the PolarDB database for the AI model service.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-****************</p>
@@ -130,7 +130,7 @@ public class CreateAIDBClusterDatasetResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dataset management service ID.</p>
+         * <p>The instance ID of the dataset management service.</p>
          * 
          * <strong>example:</strong>
          * <p>pcs-2zeei***</p>
@@ -152,7 +152,7 @@ public class CreateAIDBClusterDatasetResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dataset name.</p>
+         * <p>The name of the dataset.</p>
          * 
          * <strong>example:</strong>
          * <p>dataset01</p>
@@ -163,7 +163,7 @@ public class CreateAIDBClusterDatasetResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The path to the dataset.</p>
+         * <p>The path to which the dataset belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>polardb_ai/datasets/train/sft/dataset01</p>

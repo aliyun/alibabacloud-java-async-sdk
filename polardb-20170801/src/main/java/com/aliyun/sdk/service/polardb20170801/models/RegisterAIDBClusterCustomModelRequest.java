@@ -231,7 +231,7 @@ public class RegisterAIDBClusterCustomModelRequest extends Request {
         } 
 
         /**
-         * <p>The startup environment variables of the container. The variable name cannot be empty or contain whitespace, and the variable value can be an empty string.</p>
+         * <p>The startup environment variables of the container. Variable names cannot be empty or contain whitespace. Variable values can be empty strings.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;HF_HOME&quot;:&quot;/cache/hf&quot;,&quot;EMPTY_VALUE&quot;:&quot;&quot;}</p>
@@ -294,7 +294,7 @@ public class RegisterAIDBClusterCustomModelRequest extends Request {
         }
 
         /**
-         * <p>The display name in the candidate list and the initial invocation name for clients.</p>
+         * <p>The display name in the candidate list and the initial client invocation name.</p>
          * 
          * <strong>example:</strong>
          * <p>my-qwen3</p>
@@ -306,7 +306,7 @@ public class RegisterAIDBClusterCustomModelRequest extends Request {
         }
 
         /**
-         * <p>The full reference of the customer-owned inference image, in the format of registry/repository:tag.</p>
+         * <p>The full reference of the custom inference image, in the format of registry/repository:tag.</p>
          * 
          * <strong>example:</strong>
          * <p>registry.example.com/customer/model:v1</p>
@@ -343,7 +343,7 @@ public class RegisterAIDBClusterCustomModelRequest extends Request {
         }
 
         /**
-         * <p>The startup parameters of the model. The parameter key must start with --.</p>
+         * <p>The startup parameters of the model. Parameter keys must start with --.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;--max-model-len&quot;:&quot;32768&quot;}</p>
@@ -369,7 +369,7 @@ public class RegisterAIDBClusterCustomModelRequest extends Request {
         }
 
         /**
-         * <p>The password or temporary token for the customer\&quot;s image repository. This parameter is required when ImageName is specified.</p>
+         * <p>The password or temporary token for the image repository. This parameter is required when ImageName is specified.</p>
          * 
          * <strong>example:</strong>
          * <p>temporary-token</p>
@@ -381,7 +381,7 @@ public class RegisterAIDBClusterCustomModelRequest extends Request {
         }
 
         /**
-         * <p>The username for the customer\&quot;s image repository. This parameter is required when ImageName is specified.</p>
+         * <p>The username for the image repository. This parameter is required when ImageName is specified.</p>
          * 
          * <strong>example:</strong>
          * <p>temporary-user</p>

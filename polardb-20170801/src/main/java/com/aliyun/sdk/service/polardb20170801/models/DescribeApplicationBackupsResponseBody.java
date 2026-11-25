@@ -136,7 +136,7 @@ public class DescribeApplicationBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>2921D843-433A-5FB3-A03B-4EC093B219F8</p>
@@ -279,7 +279,7 @@ public class DescribeApplicationBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The backup set ID.</p>
+             * <p>The ID of the backup set.</p>
              * 
              * <strong>example:</strong>
              * <p>61*******</p>
@@ -301,7 +301,7 @@ public class DescribeApplicationBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The backup status. A value of Success indicates that the backup is completed, and a value of Failed indicates that the backup failed.</p>
+             * <p>The backup status. Valid values: Success: The backup is completed. Failed: The backup failed.</p>
              * 
              * <strong>example:</strong>
              * <p>Success</p>
@@ -312,7 +312,7 @@ public class DescribeApplicationBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The backup type. A value of FullBackup indicates a full backup, and a value of IncrementalBackup indicates an incremental backup.</p>
+             * <p>The backup type. Valid values: FullBackup: full backup. IncrementalBackup: incremental backup.</p>
              * 
              * <strong>example:</strong>
              * <p>FullBackup</p>
@@ -323,7 +323,7 @@ public class DescribeApplicationBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The backup mode. A value of Automated indicates an automatic backup, and a value of Manual indicates a manual backup.</p>
+             * <p>The backup mode. Valid values: Automated: automatic backup. Manual: manual backup.</p>
              * 
              * <strong>example:</strong>
              * <p>Manual</p>

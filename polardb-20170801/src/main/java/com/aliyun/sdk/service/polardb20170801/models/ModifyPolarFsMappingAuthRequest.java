@@ -151,7 +151,7 @@ public class ModifyPolarFsMappingAuthRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>LTAI5tExampleAccessKeyId</p>
          */
         public Builder bucketAccessKeyId(String bucketAccessKeyId) {
             this.putQueryParameter("BucketAccessKeyId", bucketAccessKeyId);
@@ -164,7 +164,7 @@ public class ModifyPolarFsMappingAuthRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>exampleAccessKeySecret1234567890</p>
          */
         public Builder bucketAccessKeySecret(String bucketAccessKeySecret) {
             this.putQueryParameter("BucketAccessKeySecret", bucketAccessKeySecret);
@@ -173,10 +173,7 @@ public class ModifyPolarFsMappingAuthRequest extends Request {
         }
 
         /**
-         * <p>The cluster ID.</p>
-         * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query information about all clusters in a specified region, including the cluster ID.</p>
-         * </blockquote>
+         * <p>The cluster ID. This parameter is required. If you do not provide this parameter, the service returns InvalidDBClusterId.Malformed. You can call DescribeDBClusters to query the cluster ID in the destination region.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-******************</p>

@@ -93,7 +93,7 @@ public class ModifyTaskInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code returned when the task update fails.</p>
+         * <p>The error code returned when the task modification fails.</p>
          * 
          * <strong>example:</strong>
          * <p>InvalidParameter</p>
@@ -104,7 +104,7 @@ public class ModifyTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the task that failed to be updated.</p>
+         * <p>The ID of the task that failed to be modified.</p>
          * 
          * <strong>example:</strong>
          * <p>32077061</p>
@@ -126,7 +126,7 @@ public class ModifyTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of tasks that were successfully updated.</p>
+         * <p>The number of successfully modified tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

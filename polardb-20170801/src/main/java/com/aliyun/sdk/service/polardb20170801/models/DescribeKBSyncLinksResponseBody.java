@@ -107,6 +107,9 @@ public class DescribeKBSyncLinksResponseBody extends TeaModel {
 
         /**
          * <p>The list of synchronization links.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -114,7 +117,7 @@ public class DescribeKBSyncLinksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned results.</p>
+         * <p>The page number of the returned page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +128,7 @@ public class DescribeKBSyncLinksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of records returned on each page.</p>
+         * <p>The number of records per page in the returned results.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -136,7 +139,7 @@ public class DescribeKBSyncLinksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>EB07CFF0-D8A4-5C76-AED7-D00E26FC2***</p>
@@ -307,7 +310,7 @@ public class DescribeKBSyncLinksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The client identifier.</p>
+             * <p>The client ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cli_xxxxxxbe8</p>
@@ -362,7 +365,7 @@ public class DescribeKBSyncLinksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the synchronization link.</p>
+             * <p>The name of the link.</p>
              * 
              * <strong>example:</strong>
              * <p>testName</p>

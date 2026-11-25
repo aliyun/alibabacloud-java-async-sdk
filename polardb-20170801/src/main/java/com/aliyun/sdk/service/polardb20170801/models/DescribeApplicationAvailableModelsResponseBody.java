@@ -339,7 +339,7 @@ public class DescribeApplicationAvailableModelsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The default vision-language model.</p>
+         * <p>The default visual language model.</p>
          */
         public Builder defaultVLModel(DefaultVLModel defaultVLModel) {
             this.defaultVLModel = defaultVLModel;
@@ -425,7 +425,7 @@ public class DescribeApplicationAvailableModelsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of available vision-language models.</p>
+         * <p>The list of available visual language models.</p>
          */
         public Builder VLModels(java.util.List<VLModels> VLModels) {
             this.VLModels = VLModels;

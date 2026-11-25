@@ -152,7 +152,7 @@ public class RegisterKnowledgeBaseFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether an existing idempotent record is matched. Valid values:</p>
+         * <p>Indicates whether an existing idempotent record is hit. Valid values:</p>
          * <ul>
          * <li>true: Yes.</li>
          * <li>false: No.</li>

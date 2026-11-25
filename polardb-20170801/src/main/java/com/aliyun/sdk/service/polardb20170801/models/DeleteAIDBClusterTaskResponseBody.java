@@ -91,7 +91,7 @@ public class DeleteAIDBClusterTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the PolarDB database instance for the AI model service.</p>
+         * <p>The ID of the PolarDB instance for AI model services.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-2zejpr***</p>

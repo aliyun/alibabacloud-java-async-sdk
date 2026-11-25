@@ -68,6 +68,9 @@ public class DescribeHistoryEventsStatResponseBody extends TeaModel {
 
         /**
          * <p>The statistical results summarized by event category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -144,7 +147,7 @@ public class DescribeHistoryEventsStatResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The category of the system event. For example, Exception indicates an exception event.</p>
+             * <p>The system event category. For example, Exception indicates an exception event.</p>
              * 
              * <strong>example:</strong>
              * <p>Exception</p>

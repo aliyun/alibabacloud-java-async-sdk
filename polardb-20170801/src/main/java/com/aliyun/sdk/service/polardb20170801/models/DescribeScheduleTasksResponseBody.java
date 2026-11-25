@@ -362,7 +362,7 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the scheduled O\&amp;M task.</p>
+             * <p>The ID of the scheduled O&amp;M task.</p>
              * 
              * <strong>example:</strong>
              * <p>86293c29-a03d-4872-b625-***********</p>

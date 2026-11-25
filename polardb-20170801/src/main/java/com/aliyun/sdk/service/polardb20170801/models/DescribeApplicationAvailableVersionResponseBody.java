@@ -103,6 +103,9 @@ public class DescribeApplicationAvailableVersionResponseBody extends TeaModel {
 
         /**
          * <p>The list of versions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder versions(java.util.List<Versions> versions) {
             this.versions = versions;
@@ -207,7 +210,7 @@ public class DescribeApplicationAvailableVersionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The release date.</p>
+             * <p>The release date in RFC 3339 UTC format.</p>
              * 
              * <strong>example:</strong>
              * <p>2019-08-01T00:00:00Z</p>
@@ -218,7 +221,7 @@ public class DescribeApplicationAvailableVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The release notes of the version.</p>
+             * <p>The release notes.</p>
              * 
              * <strong>example:</strong>
              * <p>release</p>

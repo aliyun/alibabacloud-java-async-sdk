@@ -231,11 +231,7 @@ public class DescribeLakebaseMountParameterTemplateListResponseBody extends TeaM
             }
 
             /**
-             * <p>Indicates whether the parameter takes effect dynamically. Valid values:</p>
-             * <ul>
-             * <li>1: Yes.</li>
-             * <li>0: No.</li>
-             * </ul>
+             * <p>Indicates whether the parameter takes effect dynamically. Valid values: 1 and 0.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -246,11 +242,7 @@ public class DescribeLakebaseMountParameterTemplateListResponseBody extends TeaM
             }
 
             /**
-             * <p>Indicates whether users are allowed to modify the parameter. Valid values:</p>
-             * <ul>
-             * <li>1: Yes.</li>
-             * <li>0: No.</li>
-             * </ul>
+             * <p>Indicates whether the parameter can be modified by users. Valid values: 1 and 0.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -261,7 +253,7 @@ public class DescribeLakebaseMountParameterTemplateListResponseBody extends TeaM
             }
 
             /**
-             * <p>The value range or enumerated values, such as [0-3600].</p>
+             * <p>The value range or valid values. Example: [0-3600].</p>
              * 
              * <strong>example:</strong>
              * <p>[0-3600]</p>

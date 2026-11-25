@@ -186,7 +186,7 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The primary agent key name.</p>
+         * <p>The main agent key name.</p>
          * 
          * <strong>example:</strong>
          * <p>main</p>
@@ -208,7 +208,7 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>24A1990B-4F6E-482B-B8CB-75C612******</p>
@@ -360,7 +360,7 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The file size, in bytes.</p>
+             * <p>The file size in bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>1024</p>
@@ -371,7 +371,7 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last updated timestamp, in milliseconds.</p>
+             * <p>The timestamp of the last update in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1716000000000</p>
@@ -502,7 +502,7 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The emoji identifier in Unicode format such as U+1F99E, or a direct emoji character.</p>
+             * <p>The emoji identifier, in Unicode format such as U+1F99E or as a direct emoji character.</p>
              * 
              * <strong>example:</strong>
              * <p>U+1F99E</p>
@@ -594,7 +594,7 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The fallback model list.</p>
+             * <p>The list of fallback models.</p>
              */
             public Builder fallbacks(java.util.List<String> fallbacks) {
                 this.fallbacks = fallbacks;
@@ -750,7 +750,7 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether this is the default agent.</p>
+             * <p>Indicates whether the agent is the default agent.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -761,7 +761,7 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The agent file list.</p>
+             * <p>The list of agent files.</p>
              */
             public Builder files(java.util.List<Files> files) {
                 this.files = files;
@@ -769,7 +769,7 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Agent ID</p>
+             * <p>The PolarClaw agent ID.</p>
              * 
              * <strong>example:</strong>
              * <p>main</p>

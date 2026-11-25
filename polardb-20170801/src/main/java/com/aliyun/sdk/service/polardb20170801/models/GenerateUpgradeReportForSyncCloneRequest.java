@@ -333,7 +333,7 @@ public class GenerateUpgradeReportForSyncCloneRequest extends Request {
          * <p>The reserved parameter. The value is a JSON string.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;targetTableMode\&quot;:2}</p>
+         * <p>{&quot;targetTableMode&quot;:2}</p>
          */
         public Builder reserve(String reserve) {
             this.putQueryParameter("Reserve", reserve);

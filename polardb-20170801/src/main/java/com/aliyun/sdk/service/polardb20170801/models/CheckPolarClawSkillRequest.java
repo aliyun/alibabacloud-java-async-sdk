@@ -173,7 +173,7 @@ public class CheckPolarClawSkillRequest extends Request {
         } 
 
         /**
-         * <p>The region ID of the OSS bucket where the skill files are stored.</p>
+         * <p>The region ID of the OSS bucket that stores the skill files.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -185,7 +185,7 @@ public class CheckPolarClawSkillRequest extends Request {
         }
 
         /**
-         * <p>The type of the bucket used for skill files. UserOwned indicates a user-owned bucket. Hosted indicates a hosted bucket. You must have the required permissions to use a hosted bucket.</p>
+         * <p>The type of the bucket used for skill files. UserOwned indicates a user-owned bucket. Hosted indicates a hosted bucket, which requires corresponding permissions. Usage notes: The parameter dependencies for each value specify that OSSBucket is required for UserOwned, and whitelist permissions are required for Hosted.</p>
          * 
          * <strong>example:</strong>
          * <p>UserOwned</p>
@@ -197,7 +197,7 @@ public class CheckPolarClawSkillRequest extends Request {
         }
 
         /**
-         * <p>The name of the OSS bucket to be unbound.</p>
+         * <p>The name of the OSS bucket to be disassociated.</p>
          * 
          * <strong>example:</strong>
          * <p>oss-bucket-test</p>
@@ -221,7 +221,7 @@ public class CheckPolarClawSkillRequest extends Request {
         }
 
         /**
-         * <p>The name of the skill.</p>
+         * <p>The skill name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -234,7 +234,7 @@ public class CheckPolarClawSkillRequest extends Request {
         }
 
         /**
-         * <p>The version number of the skill.</p>
+         * <p>The skill version number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -247,10 +247,10 @@ public class CheckPolarClawSkillRequest extends Request {
         }
 
         /**
-         * <p>The brief description of the skill.</p>
+         * <p>The brief description of the skill. This parameter is actually required. If it is not provided, the service returns InvalidParam (404).</p>
          * 
          * <strong>example:</strong>
-         * <p>An example for managing PolarDB skills</p>
+         * <p>Sample for managing PolarDB skills</p>
          */
         public Builder summary(String summary) {
             this.putQueryParameter("Summary", summary);
@@ -262,7 +262,7 @@ public class CheckPolarClawSkillRequest extends Request {
          * <p>The tag details.</p>
          * 
          * <strong>example:</strong>
-         * <p>[\&quot;PolarDB\&quot;,\&quot;programming\&quot;]</p>
+         * <p>[&quot;PolarDB&quot;,&quot;programming&quot;]</p>
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);
@@ -271,7 +271,7 @@ public class CheckPolarClawSkillRequest extends Request {
         }
 
         /**
-         * <p>The title.</p>
+         * <p>The title. This parameter is actually required. If it is not provided, the service returns InvalidParam (404).</p>
          * 
          * <strong>example:</strong>
          * <p>PolarClawHub</p>

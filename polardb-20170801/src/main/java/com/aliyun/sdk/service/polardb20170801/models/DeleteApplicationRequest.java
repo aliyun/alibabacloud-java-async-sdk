@@ -60,7 +60,7 @@ public class DeleteApplicationRequest extends Request {
         } 
 
         /**
-         * <p>Application ID</p>
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

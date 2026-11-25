@@ -114,7 +114,7 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The type of the database. The value is fixed as <strong>MySQL</strong>.</p>
+         * <p>The database type. The value is fixed as <strong>MySQL</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>MySQL</p>
@@ -125,7 +125,7 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The version of the MySQL database. Valid values:</p>
+         * <p>The MySQL version. Valid values:</p>
          * <ul>
          * <li><p><strong>5.6</strong></p>
          * </li>
@@ -144,7 +144,7 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The database engine of the cluster.</p>
+         * <p>The cluster engine.</p>
          * 
          * <strong>example:</strong>
          * <p>POLARDB</p>
@@ -155,7 +155,7 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9B7BFB11-C077-4FE3-B051-F69CEB******</p>
@@ -354,7 +354,7 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The valid values of the parameter.</p>
+             * <p>The value range of the parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>[utf8|latin1|gbk|utf8mb4]</p>
@@ -365,13 +365,13 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data type of the parameter. Valid values:</p>
+             * <p>The data type of the parameter value. Valid values:</p>
              * <ul>
-             * <li><p><strong>INT</strong>: Integer</p>
+             * <li><p><strong>INT</strong>: integer</p>
              * </li>
-             * <li><p><strong>STRING</strong>: String</p>
+             * <li><p><strong>STRING</strong>: string</p>
              * </li>
-             * <li><p><strong>B</strong>: Byte</p>
+             * <li><p><strong>B</strong>: byte</p>
              * </li>
              * </ul>
              * 
@@ -395,7 +395,7 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The divisor. For integer and byte type parameters, the parameter value must be a multiple of this factor. The factor cannot be 0.</p>
+             * <p>The divisibility factor. For parameters of the integer and byte types, the parameter value must not only fall within the valid range but also be a multiple of the factor (which cannot be 0).</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -406,11 +406,11 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether a restart is required for the parameter modification to take effect. Valid values:</p>
+             * <p>Specifies whether a restart is required for the parameter to take effect. Valid values:</p>
              * <ul>
-             * <li><p><strong>false</strong>: No</p>
+             * <li><p><strong>false</strong>: no</p>
              * </li>
-             * <li><p><strong>true</strong>: Yes</p>
+             * <li><p><strong>true</strong>: yes</p>
              * </li>
              * </ul>
              * 
@@ -423,11 +423,11 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the parameter can be modified. Valid values:</p>
+             * <p>Specifies whether the parameter is modifiable. Valid values:</p>
              * <ul>
-             * <li><p><strong>false</strong>: No</p>
+             * <li><p><strong>false</strong>: not modifiable</p>
              * </li>
-             * <li><p><strong>true</strong>: Yes</p>
+             * <li><p><strong>true</strong>: modifiable</p>
              * </li>
              * </ul>
              * 
@@ -440,11 +440,11 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the parameter is a global parameter. Valid values:</p>
+             * <p>Specifies whether the parameter is a global parameter. Valid values:</p>
              * <ul>
-             * <li><p><strong>0</strong>: The parameter is a global parameter. Modifications to the parameter are applied to other nodes by default and cannot be canceled.</p>
+             * <li><p><strong>0</strong>: The parameter is a global parameter. Parameter modifications have a default application to other nodes and cannot be canceled.</p>
              * </li>
-             * <li><p><strong>1</strong>: The parameter is not a global parameter. You can specify the nodes to which you want to apply the parameter modifications.</p>
+             * <li><p><strong>1</strong>: The parameter is not a global parameter. You can specify the nodes to which modifications to this parameter are applied.</p>
              * </li>
              * </ul>
              * 
@@ -457,7 +457,7 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The dependency of the parameter.</p>
+             * <p>The parameter dependency.</p>
              * 
              * <strong>example:</strong>
              * <p>utf8</p>
@@ -471,7 +471,7 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
              * <p>The description of the parameter.</p>
              * 
              * <strong>example:</strong>
-             * <p>The server\&quot;s default character set.</p>
+             * <p>The server&quot;s default character set.</p>
              */
             public Builder parameterDescription(String parameterDescription) {
                 this.parameterDescription = parameterDescription;
@@ -492,9 +492,9 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
             /**
              * <p>The status of the parameter. Valid values:</p>
              * <ul>
-             * <li><p><strong>normal</strong>: Normal</p>
+             * <li><p><strong>normal</strong>: normal</p>
              * </li>
-             * <li><p><strong>modifying</strong>: Modifying</p>
+             * <li><p><strong>modifying</strong>: modifying</p>
              * </li>
              * </ul>
              * 
@@ -577,7 +577,7 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the node.</p>
+             * <p>The node ID.</p>
              * 
              * <strong>example:</strong>
              * <p>pi-bp1r4qe3s534*****</p>
@@ -588,7 +588,7 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of parameters that are running on the node.</p>
+             * <p>The list of running parameters for the current node.</p>
              */
             public Builder runningParameters(java.util.List<RunningParameters> runningParameters) {
                 this.runningParameters = runningParameters;

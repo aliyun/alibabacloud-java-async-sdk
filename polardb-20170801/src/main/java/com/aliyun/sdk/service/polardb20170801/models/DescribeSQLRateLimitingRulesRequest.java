@@ -158,7 +158,7 @@ public class DescribeSQLRateLimitingRulesRequest extends Request {
         } 
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The cluster ID. Note: The SQL throttling feature is supported only by clusters that use the PostgreSQL or Oracle database engine. Clusters that use the MySQL database engine do not support this feature.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,7 +171,7 @@ public class DescribeSQLRateLimitingRulesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries per page in a paging query.</p>
          * <p>Maximum value: 100.</p>
          * <p>Default value: 10.</p>
          * 
@@ -185,7 +185,7 @@ public class DescribeSQLRateLimitingRulesRequest extends Request {
         }
 
         /**
-         * <p>The token for the next page of results.</p>
+         * <p>The pagination token.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAARbaCuN6hiD08qrLdwJ9Fh3QbdIPYBaCDXsvvjLHCQfi</p>
@@ -233,9 +233,9 @@ public class DescribeSQLRateLimitingRulesRequest extends Request {
         }
 
         /**
-         * <p>The name of the SQL throttling rule that you want to query. You can specify multiple rule names for a batch query. Separate the rule names with commas (,).</p>
+         * <p>The names of the SQL throttling rules to query. You can specify multiple rule names for a batch query. Separate multiple names with commas (,).</p>
          * <blockquote>
-         * <p>Call the <a href="https://help.aliyun.com/document_detail/212573.html">DescribeSQLRateLimitingRules</a> operation to query the details of all SQL throttling rules for the cluster, including the rule names.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/212573.html">DescribeSQLRateLimitingRules</a> operation to view the details of all rules in the specified cluster, including the rule names.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

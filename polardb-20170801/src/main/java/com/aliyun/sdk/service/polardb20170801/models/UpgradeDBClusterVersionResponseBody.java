@@ -54,7 +54,7 @@ public class UpgradeDBClusterVersionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>CAE6755F-B79A-4861-B227-801FE8******</p>

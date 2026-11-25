@@ -173,7 +173,7 @@ public class DescribePolarFsObjectsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The PolarFs instance ID.</p>
+         * <p>The PolarFS instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pfs-2ze0i7*****</p>
@@ -366,10 +366,10 @@ public class DescribePolarFsObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time.</p>
+             * <p>The creation time. The value is a UNIX timestamp in seconds, and the time zone is UTC.</p>
              * 
              * <strong>example:</strong>
-             * <p>2025-03-25T09:37:10Z</p>
+             * <p>1793809871</p>
              */
             public Builder creationTime(Long creationTime) {
                 this.creationTime = creationTime;
@@ -377,10 +377,10 @@ public class DescribePolarFsObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last modified time.</p>
+             * <p>The last modified time. The value is a UNIX timestamp in seconds, and the time zone is UTC.</p>
              * 
              * <strong>example:</strong>
-             * <p>2025-03-25T09:37:10Z</p>
+             * <p>1793809534</p>
              */
             public Builder lastModified(Long lastModified) {
                 this.lastModified = lastModified;
@@ -410,10 +410,10 @@ public class DescribePolarFsObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of links.</p>
+             * <p>The number of hard links. The value is an integer. This field may not be returned for some entries.</p>
              * 
              * <strong>example:</strong>
-             * <p>test</p>
+             * <p>1</p>
              */
             public Builder nlink(Integer nlink) {
                 this.nlink = nlink;
@@ -421,7 +421,7 @@ public class DescribePolarFsObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Owner</p>
+             * <p>The owner of the file or directory.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>

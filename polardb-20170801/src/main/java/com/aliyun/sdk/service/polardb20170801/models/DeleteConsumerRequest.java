@@ -89,7 +89,7 @@ public class DeleteConsumerRequest extends Request {
         } 
 
         /**
-         * <p>The consumer ID.</p>
+         * <p>The ID of the consumer.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -73,7 +73,7 @@ public class DescribeInstanceReportAttributeRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the region where the instance resides.</p>
+         * <p>The region ID of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -85,7 +85,7 @@ public class DescribeInstanceReportAttributeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance inspection report to query.</p>
+         * <p>The ID of the instance inspection report.</p>
          * 
          * <strong>example:</strong>
          * <p>report-001</p>

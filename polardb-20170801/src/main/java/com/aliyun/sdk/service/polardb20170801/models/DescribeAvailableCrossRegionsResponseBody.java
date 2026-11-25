@@ -70,7 +70,7 @@ public class DescribeAvailableCrossRegionsResponseBody extends TeaModel {
          * <p>The list of regions available for cross-region backup.</p>
          * 
          * <strong>example:</strong>
-         * <p>[\&quot;cn-beijing\&quot;, \&quot;cn-shanghai\&quot;, \&quot;cn-qingdao\&quot;, \&quot;cn-shenzhen\&quot;, \&quot;cn-hongkong\&quot;]</p>
+         * <p>[&quot;cn-beijing&quot;, &quot;cn-shanghai&quot;, &quot;cn-qingdao&quot;, &quot;cn-shenzhen&quot;, &quot;cn-hongkong&quot;]</p>
          */
         public Builder regions(java.util.List<String> regions) {
             this.regions = regions;

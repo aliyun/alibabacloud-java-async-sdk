@@ -160,7 +160,7 @@ public class DescribeAIDBClusterTaskMetricsRequest extends Request {
         } 
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The cluster ID. Usage note: This parameter accepts only the ID of a training AIDB cluster created by calling CreateAIDBClusterTask. MaaS clusters with RunType set to maas are not supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -173,7 +173,7 @@ public class DescribeAIDBClusterTaskMetricsRequest extends Request {
         }
 
         /**
-         * <p>The end time of the query. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format in UTC.</p>
+         * <p>The end time of the query. Format: <code>yyyy-MM-ddTHH:mm:ssZ</code> (UTC time).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -188,15 +188,12 @@ public class DescribeAIDBClusterTaskMetricsRequest extends Request {
         /**
          * <p>The metric type. Valid values:</p>
          * <ul>
-         * <li><p><code>all</code></p>
-         * </li>
-         * <li><p><code>train</code></p>
-         * </li>
-         * <li><p><code>eval</code></p>
-         * </li>
+         * <li><code>all</code></li>
+         * <li><code>train</code></li>
+         * <li><code>eval</code></li>
          * </ul>
          * <blockquote>
-         * <p>The default value is <em>all</em>.</p>
+         * <p>Default value: <em>all</em>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -209,7 +206,7 @@ public class DescribeAIDBClusterTaskMetricsRequest extends Request {
         }
 
         /**
-         * <p>The page number of the query result.</p>
+         * <p>The page number of the query results.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -221,16 +218,13 @@ public class DescribeAIDBClusterTaskMetricsRequest extends Request {
         }
 
         /**
-         * <p>The number of records to return on each page. Valid values:</p>
+         * <p>The number of entries per page. Valid values:</p>
          * <ul>
-         * <li><p><strong>30</strong></p>
-         * </li>
-         * <li><p><strong>50</strong></p>
-         * </li>
-         * <li><p><strong>100</strong></p>
-         * </li>
+         * <li><strong>30</strong></li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
          * </ul>
-         * <p>The default value is 100.</p>
+         * <p>Default value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -242,7 +236,7 @@ public class DescribeAIDBClusterTaskMetricsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the associated PolarDB instance.</p>
+         * <p>The instance ID of the associated PolarDB.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-2zejpr***</p>
@@ -254,7 +248,7 @@ public class DescribeAIDBClusterTaskMetricsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to sort the results in reverse order. The default value is <em>false</em>.</p>
+         * <p>Specifies whether to sort the results in descending order. Default value: <em>false</em>.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -266,7 +260,7 @@ public class DescribeAIDBClusterTaskMetricsRequest extends Request {
         }
 
         /**
-         * <p>The start time of the query. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format in UTC.</p>
+         * <p>The start time of the query. Format: <code>yyyy-MM-ddTHH:mm:ssZ</code> (UTC time).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

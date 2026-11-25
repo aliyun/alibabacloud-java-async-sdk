@@ -130,7 +130,7 @@ public class ModifyApplicationBackupPolicyRequest extends Request {
         } 
 
         /**
-         * <p>The application ID.</p>
+         * <p>The ID of the application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,7 +143,7 @@ public class ModifyApplicationBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The application type, such as polarclaw.</p>
+         * <p>The application type, such as polarclaw. This parameter is required. If it is not provided, the service returns InvalidApplicationType.Malformed. Valid values: polarclaw, supabase, and polarclawsaas. Note: The ApplicationType field in the DescribeApplications response contains the polardb_ prefix, such as polardb_polarclaw. When calling this API, remove the prefix and use the short format.</p>
          * 
          * <strong>example:</strong>
          * <p>polarclaw</p>
@@ -167,7 +167,7 @@ public class ModifyApplicationBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The retention period of level-1 backups, in days.</p>
+         * <p>The retention period of level-1 backups. Unit: days.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -191,7 +191,7 @@ public class ModifyApplicationBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the application.</p>
+         * <p>The ID of the region where the application resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

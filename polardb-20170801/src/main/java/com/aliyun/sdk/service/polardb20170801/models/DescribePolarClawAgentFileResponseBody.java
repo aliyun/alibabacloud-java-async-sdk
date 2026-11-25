@@ -132,7 +132,7 @@ public class DescribePolarClawAgentFileResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Agent ID</p>
+         * <p>The PolarClaw agent ID.</p>
          * 
          * <strong>example:</strong>
          * <p>main</p>
@@ -184,7 +184,7 @@ public class DescribePolarClawAgentFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>F45FFACC-xxx</p>
@@ -360,7 +360,7 @@ public class DescribePolarClawAgentFileResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The file size, in bytes.</p>
+             * <p>The file size in bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>1024</p>
@@ -371,7 +371,7 @@ public class DescribePolarClawAgentFileResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last updated UNIX timestamp, in milliseconds.</p>
+             * <p>The last updated timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1716000000000</p>

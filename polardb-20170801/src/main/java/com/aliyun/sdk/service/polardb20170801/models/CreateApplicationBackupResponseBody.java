@@ -102,7 +102,7 @@ public class CreateApplicationBackupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the workflow task corresponding to the backup creation.</p>
+         * <p>The ID of the workflow task corresponding to the created backup.</p>
          * 
          * <strong>example:</strong>
          * <p>32077061</p>

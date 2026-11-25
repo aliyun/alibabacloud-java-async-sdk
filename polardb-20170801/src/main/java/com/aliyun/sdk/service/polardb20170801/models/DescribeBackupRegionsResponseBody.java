@@ -67,7 +67,7 @@ public class DescribeBackupRegionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of regions where the backup sets are stored.</p>
+         * <p>The list of regions where backup sets are located.</p>
          */
         public Builder regions(java.util.List<String> regions) {
             this.regions = regions;

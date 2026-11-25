@@ -90,7 +90,7 @@ public class DescribePolarClawAgentFileRequest extends Request {
         } 
 
         /**
-         * <p>Agent ID</p>
+         * <p>The PolarClaw agent ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -91,6 +91,9 @@ public class RegisterKnowledgeBaseFileRequest extends Request {
 
         /**
          * <p>The OSS object key of the uploaded file, excluding the oss://BucketName/ prefix.</p>
+         * <blockquote>
+         * <p>Before calling this operation, upload the target file to OSS.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -103,7 +106,7 @@ public class RegisterKnowledgeBaseFileRequest extends Request {
         }
 
         /**
-         * <p>The knowledge base ID.</p>
+         * <p>The knowledge base ID. Create a knowledge space first, then create a knowledge base, and obtain this ID from the creation result.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

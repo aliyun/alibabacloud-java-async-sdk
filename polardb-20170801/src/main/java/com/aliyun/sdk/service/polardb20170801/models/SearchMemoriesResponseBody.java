@@ -130,7 +130,7 @@ public class SearchMemoriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of records per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -160,7 +160,7 @@ public class SearchMemoriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries that meet the conditions.</p>
+         * <p>The total number of records that meet the specified conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -197,8 +197,14 @@ public class SearchMemoriesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
+        @com.aliyun.core.annotation.NameInMap("Event")
+        private String event;
+
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
+
+        @com.aliyun.core.annotation.NameInMap("Input")
+        private java.util.List<?> input;
 
         @com.aliyun.core.annotation.NameInMap("Memory")
         private String memory;
@@ -206,26 +212,44 @@ public class SearchMemoriesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MemoryAgentId")
         private String memoryAgentId;
 
+        @com.aliyun.core.annotation.NameInMap("MemoryId")
+        private String memoryId;
+
         @com.aliyun.core.annotation.NameInMap("MemoryUserId")
         private String memoryUserId;
 
         @com.aliyun.core.annotation.NameInMap("Metadata")
         private String metadata;
 
+        @com.aliyun.core.annotation.NameInMap("NewMemory")
+        private String newMemory;
+
+        @com.aliyun.core.annotation.NameInMap("OldMemory")
+        private String oldMemory;
+
         @com.aliyun.core.annotation.NameInMap("Score")
         private String score;
+
+        @com.aliyun.core.annotation.NameInMap("UpdateCount")
+        private Integer updateCount;
 
         @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private Results(Builder builder) {
             this.createTime = builder.createTime;
+            this.event = builder.event;
             this.id = builder.id;
+            this.input = builder.input;
             this.memory = builder.memory;
             this.memoryAgentId = builder.memoryAgentId;
+            this.memoryId = builder.memoryId;
             this.memoryUserId = builder.memoryUserId;
             this.metadata = builder.metadata;
+            this.newMemory = builder.newMemory;
+            this.oldMemory = builder.oldMemory;
             this.score = builder.score;
+            this.updateCount = builder.updateCount;
             this.updateTime = builder.updateTime;
         }
 
@@ -245,10 +269,24 @@ public class SearchMemoriesResponseBody extends TeaModel {
         }
 
         /**
+         * @return event
+         */
+        public String getEvent() {
+            return this.event;
+        }
+
+        /**
          * @return id
          */
         public String getId() {
             return this.id;
+        }
+
+        /**
+         * @return input
+         */
+        public java.util.List<?> getInput() {
+            return this.input;
         }
 
         /**
@@ -266,6 +304,13 @@ public class SearchMemoriesResponseBody extends TeaModel {
         }
 
         /**
+         * @return memoryId
+         */
+        public String getMemoryId() {
+            return this.memoryId;
+        }
+
+        /**
          * @return memoryUserId
          */
         public String getMemoryUserId() {
@@ -280,10 +325,31 @@ public class SearchMemoriesResponseBody extends TeaModel {
         }
 
         /**
+         * @return newMemory
+         */
+        public String getNewMemory() {
+            return this.newMemory;
+        }
+
+        /**
+         * @return oldMemory
+         */
+        public String getOldMemory() {
+            return this.oldMemory;
+        }
+
+        /**
          * @return score
          */
         public String getScore() {
             return this.score;
+        }
+
+        /**
+         * @return updateCount
+         */
+        public Integer getUpdateCount() {
+            return this.updateCount;
         }
 
         /**
@@ -295,12 +361,18 @@ public class SearchMemoriesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String createTime; 
+            private String event; 
             private String id; 
+            private java.util.List<?> input; 
             private String memory; 
             private String memoryAgentId; 
+            private String memoryId; 
             private String memoryUserId; 
             private String metadata; 
+            private String newMemory; 
+            private String oldMemory; 
             private String score; 
+            private Integer updateCount; 
             private String updateTime; 
 
             private Builder() {
@@ -308,24 +380,41 @@ public class SearchMemoriesResponseBody extends TeaModel {
 
             private Builder(Results model) {
                 this.createTime = model.createTime;
+                this.event = model.event;
                 this.id = model.id;
+                this.input = model.input;
                 this.memory = model.memory;
                 this.memoryAgentId = model.memoryAgentId;
+                this.memoryId = model.memoryId;
                 this.memoryUserId = model.memoryUserId;
                 this.metadata = model.metadata;
+                this.newMemory = model.newMemory;
+                this.oldMemory = model.oldMemory;
                 this.score = model.score;
+                this.updateCount = model.updateCount;
                 this.updateTime = model.updateTime;
             } 
 
             /**
              * <p>The creation time.</p>
-             * <p>The time follows the ISO 8601 standard and is displayed in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+             * <p>The time is in ISO 8601 format and follows the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</p>
              * 
              * <strong>example:</strong>
              * <p>2025-09-26T08:25:44Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * <p>The event information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
+             */
+            public Builder event(String event) {
+                this.event = event;
                 return this;
             }
 
@@ -337,6 +426,14 @@ public class SearchMemoriesResponseBody extends TeaModel {
              */
             public Builder id(String id) {
                 this.id = id;
+                return this;
+            }
+
+            /**
+             * <p>The first input item in the result list.</p>
+             */
+            public Builder input(java.util.List<?> input) {
+                this.input = input;
                 return this;
             }
 
@@ -363,6 +460,17 @@ public class SearchMemoriesResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The first memory ID in the result set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
+             */
+            public Builder memoryId(String memoryId) {
+                this.memoryId = memoryId;
+                return this;
+            }
+
+            /**
              * <p>The user to whom the memory belongs.</p>
              * 
              * <strong>example:</strong>
@@ -377,10 +485,32 @@ public class SearchMemoriesResponseBody extends TeaModel {
              * <p>The metadata.</p>
              * 
              * <strong>example:</strong>
-             * <p>{\&quot;tags\&quot;:\&quot;Issue_date_2023-11-30,VD_Active\&quot;}</p>
+             * <p>{&quot;tags&quot;:&quot;Issue_date_2023-11-30,VD_Active&quot;}</p>
              */
             public Builder metadata(String metadata) {
                 this.metadata = metadata;
+                return this;
+            }
+
+            /**
+             * <p>The first new memory information in the result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
+             */
+            public Builder newMemory(String newMemory) {
+                this.newMemory = newMemory;
+                return this;
+            }
+
+            /**
+             * <p>The first old memory value in the result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
+             */
+            public Builder oldMemory(String oldMemory) {
+                this.oldMemory = oldMemory;
                 return this;
             }
 
@@ -396,8 +526,19 @@ public class SearchMemoriesResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The number of update records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder updateCount(Integer updateCount) {
+                this.updateCount = updateCount;
+                return this;
+            }
+
+            /**
              * <p>The update time.</p>
-             * <p>The time follows the ISO 8601 standard and is displayed in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+             * <p>The time is in ISO 8601 format and follows the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</p>
              * 
              * <strong>example:</strong>
              * <p>2025-10-16T02:27:33Z</p>

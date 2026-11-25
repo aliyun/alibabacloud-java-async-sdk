@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateCostRuleRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BypassQuotaCheck")
+    private Boolean bypassQuotaCheck;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CacheCostPointsPerMillion")
     private String cacheCostPointsPerMillion;
 
@@ -55,6 +59,10 @@ public class CreateCostRuleRequest extends Request {
     private String inputCostPointsPerMillion;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InputTokenTier")
+    private String inputTokenTier;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InputTokenTiers")
     private String inputTokenTiers;
 
@@ -82,6 +90,7 @@ public class CreateCostRuleRequest extends Request {
 
     private CreateCostRuleRequest(Builder builder) {
         super(builder);
+        this.bypassQuotaCheck = builder.bypassQuotaCheck;
         this.cacheCostPointsPerMillion = builder.cacheCostPointsPerMillion;
         this.cacheCreationCostPointsPerMillion = builder.cacheCreationCostPointsPerMillion;
         this.effectiveStartTime = builder.effectiveStartTime;
@@ -91,6 +100,7 @@ public class CreateCostRuleRequest extends Request {
         this.gwClusterId = builder.gwClusterId;
         this.imageCostPointsPerCount = builder.imageCostPointsPerCount;
         this.inputCostPointsPerMillion = builder.inputCostPointsPerMillion;
+        this.inputTokenTier = builder.inputTokenTier;
         this.inputTokenTiers = builder.inputTokenTiers;
         this.modelName = builder.modelName;
         this.modelServiceId = builder.modelServiceId;
@@ -110,6 +120,13 @@ public class CreateCostRuleRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return bypassQuotaCheck
+     */
+    public Boolean getBypassQuotaCheck() {
+        return this.bypassQuotaCheck;
     }
 
     /**
@@ -176,6 +193,13 @@ public class CreateCostRuleRequest extends Request {
     }
 
     /**
+     * @return inputTokenTier
+     */
+    public String getInputTokenTier() {
+        return this.inputTokenTier;
+    }
+
+    /**
      * @return inputTokenTiers
      */
     public String getInputTokenTiers() {
@@ -218,6 +242,7 @@ public class CreateCostRuleRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateCostRuleRequest, Builder> {
+        private Boolean bypassQuotaCheck; 
         private String cacheCostPointsPerMillion; 
         private String cacheCreationCostPointsPerMillion; 
         private String effectiveStartTime; 
@@ -227,6 +252,7 @@ public class CreateCostRuleRequest extends Request {
         private String gwClusterId; 
         private String imageCostPointsPerCount; 
         private String inputCostPointsPerMillion; 
+        private String inputTokenTier; 
         private String inputTokenTiers; 
         private String modelName; 
         private String modelServiceId; 
@@ -240,6 +266,7 @@ public class CreateCostRuleRequest extends Request {
 
         private Builder(CreateCostRuleRequest request) {
             super(request);
+            this.bypassQuotaCheck = request.bypassQuotaCheck;
             this.cacheCostPointsPerMillion = request.cacheCostPointsPerMillion;
             this.cacheCreationCostPointsPerMillion = request.cacheCreationCostPointsPerMillion;
             this.effectiveStartTime = request.effectiveStartTime;
@@ -249,6 +276,7 @@ public class CreateCostRuleRequest extends Request {
             this.gwClusterId = request.gwClusterId;
             this.imageCostPointsPerCount = request.imageCostPointsPerCount;
             this.inputCostPointsPerMillion = request.inputCostPointsPerMillion;
+            this.inputTokenTier = request.inputTokenTier;
             this.inputTokenTiers = request.inputTokenTiers;
             this.modelName = request.modelName;
             this.modelServiceId = request.modelServiceId;
@@ -256,6 +284,18 @@ public class CreateCostRuleRequest extends Request {
             this.regionId = request.regionId;
             this.videoCostPointsPerSecond = request.videoCostPointsPerSecond;
         } 
+
+        /**
+         * <p>Specifies whether to bypass the quota check. This parameter is optional and has no default value. If omitted, it is not passed through. Both false and true are passed through as-is.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder bypassQuotaCheck(Boolean bypassQuotaCheck) {
+            this.putQueryParameter("BypassQuotaCheck", bypassQuotaCheck);
+            this.bypassQuotaCheck = bypassQuotaCheck;
+            return this;
+        }
 
         /**
          * <p>The cache read cost points per million tokens. Default value: 0.</p>
@@ -282,7 +322,7 @@ public class CreateCostRuleRequest extends Request {
         }
 
         /**
-         * <p>The effective start time in the yyyy-MM-dd HH:mm:ss format. If this parameter is not specified, the rule takes effect immediately.</p>
+         * <p>The effective start time in the yyyy-MM-dd HH:mm:ss format. If this parameter is not provided, the rule takes effect immediately.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-14 00:00:00</p>
@@ -367,7 +407,19 @@ public class CreateCostRuleRequest extends Request {
         }
 
         /**
-         * <p>The tiered price for input tokens (non-cumulative). The value is a JSON array character string. Each element contains Tier and InputCostPointsPerMillion. Valid values for Tier: &quot;&quot; (default tier), 0-32K, 32K-64K, 64K-128K, 128K-256K, 256K-512K, 512K-1M, and 1M+. Example: [{&quot;Tier&quot;:&quot;0-32K&quot;,&quot;InputCostPointsPerMillion&quot;:&quot;1000&quot;},{&quot;Tier&quot;:&quot;32K-64K&quot;,&quot;InputCostPointsPerMillion&quot;:&quot;1800&quot;}]. If this parameter is specified, it takes precedence over InputCostPointsPerMillion. An empty array [] is not allowed.</p>
+         * <p>The input token tier. An empty string indicates the default tier. If this parameter is omitted, it is processed by the backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0-32K</p>
+         */
+        public Builder inputTokenTier(String inputTokenTier) {
+            this.putQueryParameter("InputTokenTier", inputTokenTier);
+            this.inputTokenTier = inputTokenTier;
+            return this;
+        }
+
+        /**
+         * <p>The tiered price for input tokens (non-cumulative). The value is a JSON array character string. Each element contains Tier and InputCostPointsPerMillion. Valid values for Tier: &quot;&quot; (default tier), 0-32K, 32K-64K, 64K-128K, 128K-256K, 256K-512K, 512K-1M, and 1M+. Example: [{&quot;Tier&quot;:&quot;0-32K&quot;,&quot;InputCostPointsPerMillion&quot;:&quot;1000&quot;},{&quot;Tier&quot;:&quot;32K-64K&quot;,&quot;InputCostPointsPerMillion&quot;:&quot;1800&quot;}]. If this parameter is provided, it takes precedence over InputCostPointsPerMillion. An empty array [] is not allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;Tier&quot;:&quot;0-32K&quot;,&quot;InputCostPointsPerMillion&quot;:&quot;1000&quot;},{&quot;Tier&quot;:&quot;32K-64K&quot;,&quot;InputCostPointsPerMillion&quot;:&quot;1800&quot;}]</p>

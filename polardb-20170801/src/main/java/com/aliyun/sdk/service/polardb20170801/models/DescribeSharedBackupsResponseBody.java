@@ -106,7 +106,7 @@ public class DescribeSharedBackupsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A list of shared backup sets.</p>
+         * <p>The list of shared backup sets.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -147,7 +147,7 @@ public class DescribeSharedBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total record count.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>16</p>
@@ -424,7 +424,7 @@ public class DescribeSharedBackupsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The end time of the backup, in UTC.</p>
+             * <p>The end time of the backup. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-05-12T03:25:55Z</p>
@@ -446,7 +446,7 @@ public class DescribeSharedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The backup method. Only snapshot backup is supported. The value is fixed to <strong>Snapshot</strong>.</p>
+             * <p>The data backup method. Only snapshot backups are supported. The value is fixed as <strong>Snapshot</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>Snapshot</p>
@@ -457,12 +457,10 @@ public class DescribeSharedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The backup mode. Valid values:</p>
+             * <p>The backup mode. Valid values: </p>
              * <ul>
-             * <li><p><strong>Automated</strong>: automated backup</p>
-             * </li>
-             * <li><p><strong>Manual</strong>: manual backup</p>
-             * </li>
+             * <li><strong>Automated</strong>: automatic backup</li>
+             * <li><strong>Manual</strong>: manual backup</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -474,7 +472,7 @@ public class DescribeSharedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the backup set, in bytes.</p>
+             * <p>The size of the backup file. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>4639948800</p>
@@ -485,7 +483,7 @@ public class DescribeSharedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the backup, in UTC.</p>
+             * <p>The start time of the backup. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-11-15T07:30:05Z</p>
@@ -498,10 +496,8 @@ public class DescribeSharedBackupsResponseBody extends TeaModel {
             /**
              * <p>The backup status. Valid values:</p>
              * <ul>
-             * <li><p><strong>Success</strong>: The backup is complete.</p>
-             * </li>
-             * <li><p><strong>Failed</strong>: The backup failed.</p>
-             * </li>
+             * <li><strong>Success</strong>: The backup is completed.</li>
+             * <li><strong>Failed</strong>: The backup failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -513,7 +509,7 @@ public class DescribeSharedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The backup type. Only full backups are supported. The value is fixed to <strong>FullBackup</strong>.</p>
+             * <p>The backup type. Only full backups are supported. The value is fixed as <strong>FullBackup</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>FullBackup</p>
@@ -524,12 +520,10 @@ public class DescribeSharedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The backup level. Valid values:</p>
+             * <p>The backup set level. Valid values:</p>
              * <ul>
-             * <li><p><strong>Level-1</strong>: Level-1 backup.</p>
-             * </li>
-             * <li><p><strong>Level-2</strong>: Level-2 backup.</p>
-             * </li>
+             * <li><strong>Level-1</strong>: level-1 backup</li>
+             * <li><strong>Level-2</strong>: level-2 backup</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -541,7 +535,7 @@ public class DescribeSharedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The UNIX timestamp of the consistent snapshot, in seconds.</p>
+             * <p>The point in time of the consistent snapshot. The value is a UNIX timestamp. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1589253947</p>
@@ -587,10 +581,8 @@ public class DescribeSharedBackupsResponseBody extends TeaModel {
             /**
              * <p>The billing method. Valid values:</p>
              * <ul>
-             * <li><p><strong>Postpaid</strong>: pay-as-you-go.</p>
-             * </li>
-             * <li><p><strong>Prepaid</strong>: prepaid (subscription)</p>
-             * </li>
+             * <li><strong>Postpaid</strong>: pay-as-you-go</li>
+             * <li><strong>Prepaid</strong>: subscription</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -613,7 +605,7 @@ public class DescribeSharedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Serverless type. A value of <strong>AgileServerless</strong> indicates a Serverless cluster, while an empty value indicates a standard cluster.</p>
+             * <p>The Serverless type. A value of <strong>AgileServerless</strong> indicates that the current cluster is a Serverless cluster. An empty value indicates that the current cluster is one of the common clusters.</p>
              * 
              * <strong>example:</strong>
              * <p>AgileServerless</p>
@@ -635,7 +627,7 @@ public class DescribeSharedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The UID of the account that shared the backup set.</p>
+             * <p>The UID of the sharer.</p>
              * 
              * <strong>example:</strong>
              * <p>170*************</p>

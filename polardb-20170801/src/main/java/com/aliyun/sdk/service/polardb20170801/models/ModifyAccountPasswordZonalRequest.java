@@ -174,7 +174,7 @@ public class ModifyAccountPasswordZonalRequest extends Request {
         } 
 
         /**
-         * <p>The account name.</p>
+         * <p>The name of the account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -187,7 +187,7 @@ public class ModifyAccountPasswordZonalRequest extends Request {
         }
 
         /**
-         * <p>A client-generated, case-sensitive token that you can use to ensure the idempotence of the request. The token must be unique among different requests and can be up to 64 ASCII characters in length.</p>
+         * <p>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can generate the value of this parameter on the client side. The value must be unique across different requests, case-sensitive, and up to 64 ASCII characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>6000170000591aed949d0f5********************</p>
@@ -199,7 +199,7 @@ public class ModifyAccountPasswordZonalRequest extends Request {
         }
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The ID of the edge cluster. This operation applies only to zonal edge clusters. You can obtain a valid ID by calling the DescribeDBClustersZonal operation. Standard PolarDB cluster IDs are not supported. For standard clusters, use the ModifyAccountPassword operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -212,14 +212,11 @@ public class ModifyAccountPasswordZonalRequest extends Request {
         }
 
         /**
-         * <p>The new password for the account. The password must meet the following requirements:</p>
+         * <p>The new password of the account. The password must meet the following requirements:</p>
          * <ul>
-         * <li><p>Contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
-         * </li>
-         * <li><p>Be 8 to 32 characters in length.</p>
-         * </li>
-         * <li><p>The special characters are <code>!@#$%^&amp;*()_+-=</code>.</p>
-         * </li>
+         * <li>Contains at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
+         * <li>Is 8 to 32 characters in length.</li>
+         * <li>Special characters include <code>!@#$%^&amp;*()_+-=</code>.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -251,7 +248,7 @@ public class ModifyAccountPasswordZonalRequest extends Request {
         }
 
         /**
-         * <p>The password type.</p>
+         * <p>The type of the password.</p>
          * 
          * <strong>example:</strong>
          * <p>Tair</p>

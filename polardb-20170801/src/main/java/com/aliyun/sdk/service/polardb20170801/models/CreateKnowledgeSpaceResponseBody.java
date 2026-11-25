@@ -93,7 +93,7 @@ public class CreateKnowledgeSpaceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The PolarDB instance ID for automatic creation.</p>
+         * <p>The ID of the PolarDB instance created by automatic creation.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-**************</p>

@@ -107,6 +107,9 @@ public class CheckPolarClawSkillResponseBody extends TeaModel {
 
         /**
          * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder message(java.util.List<String> message) {
             this.message = message;
@@ -149,9 +152,9 @@ public class CheckPolarClawSkillResponseBody extends TeaModel {
         /**
          * <p>The request result. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: The request succeeded.</p>
+         * <li><p><strong>true</strong>: The request is successful.</p>
          * </li>
-         * <li><p><strong>false</strong>: The request failed.</p>
+         * <li><p><strong>false</strong>: The request fails.</p>
          * </li>
          * </ul>
          * 

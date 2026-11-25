@@ -162,7 +162,7 @@ public class DescribePolarFsPerformanceRequest extends Request {
         }
 
         /**
-         * <p>The end time of the query. Specify the time in the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time must be in UTC and must not be earlier than the start time.</p>
+         * <p>The end time of the query. Specify the time in the YYYY-MM-DDTHH:mm:ssZ format. The time must be in UTC. The end time must not be earlier than the start time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -225,7 +225,7 @@ public class DescribePolarFsPerformanceRequest extends Request {
         }
 
         /**
-         * <p>The start time of the query. Specify the time in the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The start time of the query. Specify the time in the YYYY-MM-DDTHH:mm:ssZ format. The time must be in UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

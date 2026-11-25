@@ -131,7 +131,7 @@ public class CreatePolarClawSkillTemplateRequest extends Request {
         } 
 
         /**
-         * <p>The application ID.</p>
+         * <p>The application ID. This parameter is required. If you do not specify this parameter, an InvalidApplicationId.Malformed error (HTTP 400) is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>pa-**************</p>
@@ -160,7 +160,7 @@ public class CreatePolarClawSkillTemplateRequest extends Request {
         /**
          * <p>The region ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query all available regions for the current account, including region IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to view all available regions under the current account, including region IDs.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -198,11 +198,11 @@ public class CreatePolarClawSkillTemplateRequest extends Request {
         }
 
         /**
-         * <p>The skill template parameters.</p>
+         * <p>The skill template parameters. Specify a standard JSON object string with the skill identifier as the key, such as {&quot;skill1&quot;:{&quot;skillName&quot;:&quot;polarclawhub&quot;,&quot;version&quot;:&quot;0.0.0&quot;}}. JSON arrays and single quotes are not supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{\&quot;skillName\&quot;:\&quot;polarclawhub\&quot;,\&quot;version\&quot;:\&quot;0.0.0\&quot;},{\&quot;skillName\&quot;:\&quot;github\&quot;,\&quot;version\&quot;:\&quot;1.0.0\&quot;}]</p>
+         * <p>{&quot;skill1&quot;:{&quot;skillName&quot;:&quot;polarclawhub&quot;,&quot;version&quot;:&quot;0.0.0&quot;}}</p>
          */
         public Builder skillTemplateParam(String skillTemplateParam) {
             this.putQueryParameter("SkillTemplateParam", skillTemplateParam);

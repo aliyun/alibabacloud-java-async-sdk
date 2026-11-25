@@ -157,7 +157,7 @@ public class ModifyLakebaseMountParameterGroupRequest extends Request {
         }
 
         /**
-         * <p>The new parameter template name.</p>
+         * <p>The new name of the parameter template.</p>
          * 
          * <strong>example:</strong>
          * <p>pg-new</p>

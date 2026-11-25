@@ -174,7 +174,7 @@ public class DescribeApplicationComponentPerformanceRequest extends Request {
         }
 
         /**
-         * <p>The end time of the query. The end time must be later than or equal to the start time. Specify the time in the ISO 8601 standard in the YYYY-MM-DDTHH:mmZ format. The time must be in UTC.</p>
+         * <p>The end time of the query. The end time must not be earlier than the start time. Specify the time in the ISO 8601 standard in the YYYY-MM-DDTHH:mmZ format. The time must be in UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -199,7 +199,7 @@ public class DescribeApplicationComponentPerformanceRequest extends Request {
         }
 
         /**
-         * <p>The performance metrics to query. Separate multiple metrics with commas (,). You can specify up to 5 metrics.</p>
+         * <p>The performance metrics to query. Separate multiple metrics with commas. You can specify up to 5 metrics.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -225,7 +225,7 @@ public class DescribeApplicationComponentPerformanceRequest extends Request {
         }
 
         /**
-         * <p>The type of the performance data.</p>
+         * <p>The type of performance data. Note: Add the valid values, the meaning of each value, and the correspondence with ApplicationType to the description of the Type parameter, and explicitly specify that this parameter should be omitted in most scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>supabase</p>

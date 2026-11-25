@@ -89,11 +89,7 @@ public class DescribeLakebaseMountParameterGroupsRequest extends Request {
         } 
 
         /**
-         * <p>The instance category. Valid values:</p>
-         * <ul>
-         * <li>basic: Basic Edition.</li>
-         * <li>high_performance: High-performance Edition.</li>
-         * </ul>
+         * <p>The instance category. Valid values: basic (Basic Edition) and high_performance (High-performance Edition).</p>
          * 
          * <strong>example:</strong>
          * <p>basic</p>

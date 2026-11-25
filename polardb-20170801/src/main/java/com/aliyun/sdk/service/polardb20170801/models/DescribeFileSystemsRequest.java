@@ -102,7 +102,7 @@ public class DescribeFileSystemsRequest extends Request {
         } 
 
         /**
-         * <p>The absolute path of the directory to query. If you do not specify this parameter, the default path is used.</p>
+         * <p>The absolute path of the directory to query. If not specified, the default path is used.</p>
          * 
          * <strong>example:</strong>
          * <p>/test</p>
@@ -114,7 +114,7 @@ public class DescribeFileSystemsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of records to return for each request.</p>
+         * <p>The maximum number of records to return per request.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

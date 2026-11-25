@@ -158,7 +158,7 @@ public class InstallPolarClawSkillRequest extends Request {
         } 
 
         /**
-         * <p>The target agent in the workspace. If not specified, the default agent is used.</p>
+         * <p>The target agent in the workspace. If this parameter is not specified, the default agent is used.</p>
          * 
          * <strong>example:</strong>
          * <p>test1</p>
@@ -231,7 +231,7 @@ public class InstallPolarClawSkillRequest extends Request {
         }
 
         /**
-         * <p>The source. Default value: polarhub.</p>
+         * <p>The source.</p>
          * 
          * <strong>example:</strong>
          * <p>clawhub</p>
@@ -243,7 +243,7 @@ public class InstallPolarClawSkillRequest extends Request {
         }
 
         /**
-         * <p>URL</p>
+         * <p>The URL for installing the skill. This parameter is not supported. If a value is provided, a 400 InvalidParameters error is returned.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/skill.tar.gz">https://example.com/skill.tar.gz</a></p>

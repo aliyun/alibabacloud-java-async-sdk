@@ -22,12 +22,22 @@ public class OperateApplicationRequest extends Request {
     private String applicationId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ComponentTypes")
+    private String componentTypes;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupNames")
+    private String groupNames;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Operation")
     private String operation;
 
     private OperateApplicationRequest(Builder builder) {
         super(builder);
         this.applicationId = builder.applicationId;
+        this.componentTypes = builder.componentTypes;
+        this.groupNames = builder.groupNames;
         this.operation = builder.operation;
     }
 
@@ -52,6 +62,20 @@ public class OperateApplicationRequest extends Request {
     }
 
     /**
+     * @return componentTypes
+     */
+    public String getComponentTypes() {
+        return this.componentTypes;
+    }
+
+    /**
+     * @return groupNames
+     */
+    public String getGroupNames() {
+        return this.groupNames;
+    }
+
+    /**
      * @return operation
      */
     public String getOperation() {
@@ -60,6 +84,8 @@ public class OperateApplicationRequest extends Request {
 
     public static final class Builder extends Request.Builder<OperateApplicationRequest, Builder> {
         private String applicationId; 
+        private String componentTypes; 
+        private String groupNames; 
         private String operation; 
 
         private Builder() {
@@ -69,6 +95,8 @@ public class OperateApplicationRequest extends Request {
         private Builder(OperateApplicationRequest request) {
             super(request);
             this.applicationId = request.applicationId;
+            this.componentTypes = request.componentTypes;
+            this.groupNames = request.groupNames;
             this.operation = request.operation;
         } 
 
@@ -85,11 +113,35 @@ public class OperateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The operation type. Valid values:</p>
+         * <p>The Ray component type. Supported only for the restart operation of Ray applications. The value is a comma-separated list of components. Valid components are head, jupyterlab, and grafana, which can be combined. worker or gpuworker is not accepted. To select workers, you must specify GroupNames. If only head is specified, other components are not actively restarted, but connections and jobs may be affected. To restore dependencies, explicitly add jupyterlab or select the entire cluster. When provided together with GroupNames, the union of both is used and deduplicated. If neither selection parameter is provided, all resident components are restarted, but scaled-out workers are not restarted. Explicit empty strings, pure whitespace, comma-only strings, unknown types, or non-Ray applications are rejected and do not fall back to a full-cluster operation. DisableHeadScheduling and EnableHeadScheduling always apply to the head of the entire application. Specifying this parameter for these operations is rejected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>head,jupyterlab,grafana</p>
+         */
+        public Builder componentTypes(String componentTypes) {
+            this.putQueryParameter("ComponentTypes", componentTypes);
+            this.componentTypes = componentTypes;
+            return this;
+        }
+
+        /**
+         * <p>The Ray resident worker group name. Supported only for the restart operation of Ray applications. The value is a comma-separated list of exact workerGroup names, which are trimmed, deduplicated, and case-sensitive. Only resident CPU or GPU workers in the specified groups are restarted, excluding scaled-out workers. If only this parameter is specified, the head, other groups, or auxiliary components are not restarted. Unknown group names, explicit empty strings, pure whitespace, comma-only strings, or non-Ray applications are rejected. If any explicitly selected group exists but has no resident targets, the entire request is rejected and does not expand to scaled-out workers or a full-cluster operation. Full-cluster requests without selection parameters skip groups with no resident targets. DisableHeadScheduling and EnableHeadScheduling do not restart any workers. Specifying this parameter for these operations is rejected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpuGroup,gpuGroup</p>
+         */
+        public Builder groupNames(String groupNames) {
+            this.putQueryParameter("GroupNames", groupNames);
+            this.groupNames = groupNames;
+            return this;
+        }
+
+        /**
+         * <p>The operation type.</p>
          * <ul>
-         * <li><strong>restart</strong>: restart</li>
-         * <li><strong>stop</strong>: stop</li>
-         * <li><strong>start</strong>: start.</li>
+         * <li><strong>restart</strong>: Restart.</li>
+         * <li><strong>stop</strong>: Stop.</li>
+         * <li><strong>start</strong>: Start.</li>
          * </ul>
          * 
          * <strong>example:</strong>

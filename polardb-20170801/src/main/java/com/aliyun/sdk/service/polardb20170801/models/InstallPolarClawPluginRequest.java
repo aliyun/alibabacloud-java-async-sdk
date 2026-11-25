@@ -128,7 +128,7 @@ public class InstallPolarClawPluginRequest extends Request {
         }
 
         /**
-         * <p>The plug-in ID.</p>
+         * <p>The plugin identifier.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

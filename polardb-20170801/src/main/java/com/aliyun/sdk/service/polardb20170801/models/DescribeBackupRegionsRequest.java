@@ -115,7 +115,7 @@ public class DescribeBackupRegionsRequest extends Request {
         } 
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The cluster ID. This parameter is required. If you do not specify this parameter, the API returns the InvalidDBClusterId.NotFound error with an HTTP 400 status code. You can call the DescribeDBClusters operation to obtain a valid cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-uf64u64fln9039***</p>

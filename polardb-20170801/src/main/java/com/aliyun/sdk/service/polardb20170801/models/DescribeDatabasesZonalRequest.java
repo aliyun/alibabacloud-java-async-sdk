@@ -186,7 +186,7 @@ public class DescribeDatabasesZonalRequest extends Request {
         } 
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The ID of the edge cluster. Only edge clusters are supported. You can call the DescribeDBClustersZonal operation to obtain a list of valid edge clusters and call the DescribeEdgeCloudRegion operation to query the regions that support edge clusters.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -199,7 +199,7 @@ public class DescribeDatabasesZonalRequest extends Request {
         }
 
         /**
-         * <p>The database name.</p>
+         * <p>The name of the database.</p>
          * 
          * <strong>example:</strong>
          * <p>test_db</p>
@@ -211,7 +211,7 @@ public class DescribeDatabasesZonalRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return for the current request.</p>
+         * <p>The maximum number of entries to return in this call.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -223,7 +223,7 @@ public class DescribeDatabasesZonalRequest extends Request {
         }
 
         /**
-         * <p>The query token. This is the NextToken value from the previous API call. If there are no more results, do not specify this parameter.</p>
+         * <p>The query token. Set the value to the NextToken value returned from the previous API call. If no subsequent query is required, do not specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>212db86sca4384811e0b5e8707e******</p>
@@ -253,7 +253,7 @@ public class DescribeDatabasesZonalRequest extends Request {
         }
 
         /**
-         * <p>The page number. The value must be an integer that is greater than 0 and does not exceed the maximum value of the Integer data type. The default value is 1.</p>
+         * <p>The page number. Valid values: integers greater than 0 and less than or equal to the maximum value of the Integer data type. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -265,16 +265,13 @@ public class DescribeDatabasesZonalRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Valid values:</p>
+         * <p>The number of entries per page. Valid values:</p>
          * <ul>
-         * <li><p>30</p>
-         * </li>
-         * <li><p>50</p>
-         * </li>
-         * <li><p>100</p>
-         * </li>
+         * <li>30</li>
+         * <li>50</li>
+         * <li>100</li>
          * </ul>
-         * <p>The default value is 30.</p>
+         * <p>Default value: 30.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>

@@ -161,7 +161,7 @@ public class DescribeAIDBClusterTaskLogFilesRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the model operator instance.</p>
+         * <p>The instance ID of the model operator.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -174,7 +174,7 @@ public class DescribeAIDBClusterTaskLogFilesRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format and is displayed in UTC.</p>
+         * <p>The end time of the query. Specify the time in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -187,7 +187,7 @@ public class DescribeAIDBClusterTaskLogFilesRequest extends Request {
         }
 
         /**
-         * <p>The log type. Set the value to:</p>
+         * <p>The log type. Valid values:</p>
          * <ul>
          * <li><strong>sls</strong></li>
          * </ul>
@@ -215,8 +215,7 @@ public class DescribeAIDBClusterTaskLogFilesRequest extends Request {
         }
 
         /**
-         * <p>The number of records to return on each page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>.</p>
-         * <p>The default value is <strong>100</strong>.</p>
+         * <p>The number of entries per page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>. Default value: <strong>100</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -228,7 +227,7 @@ public class DescribeAIDBClusterTaskLogFilesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the PolarDB cluster.</p>
+         * <p>The instance ID of the associated PolarDB instance.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-bp10ze***</p>
@@ -240,7 +239,7 @@ public class DescribeAIDBClusterTaskLogFilesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return the results in reverse order. The default value is <em>false</em>.</p>
+         * <p>Specifies whether to sort the results in descending order. Default value: <em>false</em>.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -252,7 +251,7 @@ public class DescribeAIDBClusterTaskLogFilesRequest extends Request {
         }
 
         /**
-         * <p>The start of the time range to query. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format and is displayed in UTC.</p>
+         * <p>The start time of the query. Specify the time in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

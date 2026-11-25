@@ -18,12 +18,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateKnowledgeSpaceRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoCreateMcpInstance")
+    private Boolean autoCreateMcpInstance;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBType")
     private String DBType;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EmbeddingDimension")
@@ -104,8 +112,10 @@ public class CreateKnowledgeSpaceRequest extends Request {
 
     private CreateKnowledgeSpaceRequest(Builder builder) {
         super(builder);
+        this.autoCreateMcpInstance = builder.autoCreateMcpInstance;
         this.DBType = builder.DBType;
         this.description = builder.description;
+        this.dryRun = builder.dryRun;
         this.embeddingDimension = builder.embeddingDimension;
         this.embeddingModel = builder.embeddingModel;
         this.enforceAcl = builder.enforceAcl;
@@ -138,6 +148,13 @@ public class CreateKnowledgeSpaceRequest extends Request {
     }
 
     /**
+     * @return autoCreateMcpInstance
+     */
+    public Boolean getAutoCreateMcpInstance() {
+        return this.autoCreateMcpInstance;
+    }
+
+    /**
      * @return DBType
      */
     public String getDBType() {
@@ -149,6 +166,13 @@ public class CreateKnowledgeSpaceRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -264,8 +288,10 @@ public class CreateKnowledgeSpaceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateKnowledgeSpaceRequest, Builder> {
+        private Boolean autoCreateMcpInstance; 
         private String DBType; 
         private String description; 
+        private Boolean dryRun; 
         private Integer embeddingDimension; 
         private String embeddingModel; 
         private Boolean enforceAcl; 
@@ -289,8 +315,10 @@ public class CreateKnowledgeSpaceRequest extends Request {
 
         private Builder(CreateKnowledgeSpaceRequest request) {
             super(request);
+            this.autoCreateMcpInstance = request.autoCreateMcpInstance;
             this.DBType = request.DBType;
             this.description = request.description;
+            this.dryRun = request.dryRun;
             this.embeddingDimension = request.embeddingDimension;
             this.embeddingModel = request.embeddingModel;
             this.enforceAcl = request.enforceAcl;
@@ -308,6 +336,18 @@ public class CreateKnowledgeSpaceRequest extends Request {
             this.vpcId = request.vpcId;
             this.zoneId = request.zoneId;
         } 
+
+        /**
+         * <p>Specifies whether to automatically activate MCP. The specifications are fixed to polar.app.g2.medium with 2 nodes and the pay-as-you-go billing method. If you set this parameter to true, you must also explicitly set EnforceAcl to true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder autoCreateMcpInstance(Boolean autoCreateMcpInstance) {
+            this.putQueryParameter("AutoCreateMcpInstance", autoCreateMcpInstance);
+            this.autoCreateMcpInstance = autoCreateMcpInstance;
+            return this;
+        }
 
         /**
          * <p>The type of the database engine.</p>
@@ -330,6 +370,18 @@ public class CreateKnowledgeSpaceRequest extends Request {
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to only validate the creation request without placing an order or creating resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 
@@ -360,7 +412,7 @@ public class CreateKnowledgeSpaceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enforce access control list (ACL) authentication for the knowledge space.</p>
+         * <p>Specifies whether to enable mandatory ACL authentication for the knowledge space.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -474,7 +526,7 @@ public class CreateKnowledgeSpaceRequest extends Request {
         }
 
         /**
-         * <p>The shard size, in tokens.</p>
+         * <p>The shard size in tokens.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -489,8 +541,8 @@ public class CreateKnowledgeSpaceRequest extends Request {
         /**
          * <p>The sharding strategy. Valid values:</p>
          * <ul>
-         * <li>hierarchical: hierarchical sharding. This is the default value.</li>
-         * <li>hybrid: hybrid sharding.</li>
+         * <li>hierarchical: The default value.</li>
+         * <li>hybrid</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -504,7 +556,7 @@ public class CreateKnowledgeSpaceRequest extends Request {
         }
 
         /**
-         * <p>The vSwitch for automatic creation of the database.</p>
+         * <p>The ID of the vSwitch for automatic creation of the database.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -517,7 +569,7 @@ public class CreateKnowledgeSpaceRequest extends Request {
         }
 
         /**
-         * <p>The VPC for automatic creation of the database.</p>
+         * <p>The ID of the VPC for automatic creation of the database.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -54,7 +54,7 @@ public class ModifyPolarFsMappingAuthResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2281C6C9-CBAB-1AFD-8400-670750CF6025_2212</p>

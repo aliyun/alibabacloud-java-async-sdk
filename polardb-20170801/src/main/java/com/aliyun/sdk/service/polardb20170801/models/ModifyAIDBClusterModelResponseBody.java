@@ -158,7 +158,7 @@ public class ModifyAIDBClusterModelResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether the request is a dry run.</p>
+         * <p>Indicates whether the request is a preview request.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -169,7 +169,7 @@ public class ModifyAIDBClusterModelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The model type of the instance.</p>
+         * <p>The instance model type.</p>
          * 
          * <strong>example:</strong>
          * <p>custom</p>
@@ -180,7 +180,7 @@ public class ModifyAIDBClusterModelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3AA6E0E4-1234-5678-90AB-1234567890AB</p>
@@ -191,7 +191,7 @@ public class ModifyAIDBClusterModelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The parsed target model name.</p>
+         * <p>The resolved target model name.</p>
          * 
          * <strong>example:</strong>
          * <p>Qwen3-32B</p>
@@ -202,7 +202,7 @@ public class ModifyAIDBClusterModelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The parsed target OSS path.</p>
+         * <p>The resolved target OSS path.</p>
          * 
          * <strong>example:</strong>
          * <p>/my-model-bucket/models/qwen3</p>
@@ -213,7 +213,7 @@ public class ModifyAIDBClusterModelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the asynchronous task. This parameter is empty when DryRun is set to true.</p>
+         * <p>The asynchronous task ID. This parameter is empty when DryRun is set to true.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -224,7 +224,7 @@ public class ModifyAIDBClusterModelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of modification batches.</p>
+         * <p>The total number of change batches.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -246,7 +246,7 @@ public class ModifyAIDBClusterModelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The modification warnings returned by the upstream service. The caller must display these warnings.</p>
+         * <p>The change warnings returned by the upstream service. Callers must display these warnings.</p>
          */
         public Builder warnings(java.util.List<String> warnings) {
             this.warnings = warnings;

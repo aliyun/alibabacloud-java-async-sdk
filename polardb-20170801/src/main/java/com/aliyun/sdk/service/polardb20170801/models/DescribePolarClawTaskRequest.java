@@ -88,7 +88,7 @@ public class DescribePolarClawTaskRequest extends Request {
         }
 
         /**
-         * <p>The asynchronous task ID.</p>
+         * <p>The ID of the asynchronous task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -150,7 +150,7 @@ public class DescribeSearchParametersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The visible parameters and their modification statuses.</p>
+         * <p>The visible parameters and their modification status.</p>
          */
         public Builder runningParameters(RunningParameters runningParameters) {
             this.runningParameters = runningParameters;
@@ -320,10 +320,10 @@ public class DescribeSearchParametersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The value rule of the template, which can be a numeric range, an enumeration, or a regular expression. This rule must be interpreted in combination with the DataType field.</p>
+             * <p>The value validation rule of the template, which can be a numeric range, an enumeration, or a regular expression. This rule must be interpreted in combination with the DataType field.</p>
              * 
              * <strong>example:</strong>
-             * <p>[true\|false]</p>
+             * <p>[true|false]</p>
              */
             public Builder checkingCode(String checkingCode) {
                 this.checkingCode = checkingCode;
@@ -353,7 +353,7 @@ public class DescribeSearchParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The divisibility factor. If the value is not zero, the numeric value parsed based on the templatetype must be a multiple of this factor.</p>
+             * <p>The divisibility factor. If the value is not zero, the numeric value parsed based on the template type must be a multiple of this factor.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -408,7 +408,7 @@ public class DescribeSearchParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The modification status of the parameter. A value of Normal indicates that no modifications are pending. A value of Modifying indicates that the modification task is not completed.</p>
+             * <p>The modification status of the parameter. A value of Normal indicates that there are no pending modifications. A value of Modifying indicates that the modification task is not completed.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>

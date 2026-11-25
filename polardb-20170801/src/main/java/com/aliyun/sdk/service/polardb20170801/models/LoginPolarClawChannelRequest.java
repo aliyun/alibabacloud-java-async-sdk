@@ -88,7 +88,7 @@ public class LoginPolarClawChannelRequest extends Request {
         }
 
         /**
-         * <p>The ID of the PolarClaw channel to log into.</p>
+         * <p>The ID of the channel to log on to.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

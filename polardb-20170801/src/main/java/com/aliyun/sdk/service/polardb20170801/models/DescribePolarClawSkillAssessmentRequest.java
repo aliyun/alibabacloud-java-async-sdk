@@ -115,7 +115,7 @@ public class DescribePolarClawSkillAssessmentRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the application.</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pa-**************</p>
@@ -142,7 +142,7 @@ public class DescribePolarClawSkillAssessmentRequest extends Request {
         }
 
         /**
-         * <p>The name of the skill.</p>
+         * <p>The name of the skill. This parameter is required. If it is not provided, the API returns an InvalidParameter.SkillName error (HTTP 400).</p>
          * 
          * <strong>example:</strong>
          * <p>polarclawhub</p>
@@ -154,7 +154,7 @@ public class DescribePolarClawSkillAssessmentRequest extends Request {
         }
 
         /**
-         * <p>The version of the skill.</p>
+         * <p>The version of the skill. This parameter is required. If it is not provided, the API returns an InvalidParameter.SkillVersion error (HTTP 400).</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
@@ -166,7 +166,7 @@ public class DescribePolarClawSkillAssessmentRequest extends Request {
         }
 
         /**
-         * <p>The source of the skill. Valid values: PUBLIC, SELF, and OTHER.</p>
+         * <p>The source of the skill. Valid values: PUBLIC, SELF, and OTHER. This parameter is required. If it is not provided, the API returns an InvalidParameter.Source error (HTTP 400).</p>
          * 
          * <strong>example:</strong>
          * <p>PUBLIC</p>

@@ -920,7 +920,7 @@ public class DescribeDBClustersZonalResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Serverless type. \<code>**AgileServerless**\\</code> indicates that the cluster is a Serverless cluster. An empty value indicates that the cluster is a common cluster.</p>
+             * <p>The Serverless type. `**AgileServerless**` indicates that the cluster is a Serverless cluster. An empty value indicates that the cluster is a common cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>AgileServerless</p>

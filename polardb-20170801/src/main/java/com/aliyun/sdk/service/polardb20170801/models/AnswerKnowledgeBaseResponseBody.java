@@ -80,7 +80,7 @@ public class AnswerKnowledgeBaseResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The unique identifier of the Q&amp;A task.</p>
+         * <p>The unique identifier of the question answering task.</p>
          * 
          * <strong>example:</strong>
          * <p>R3BGbnBqcXN******.2a5a23c9-******-179970533d30</p>
@@ -102,7 +102,7 @@ public class AnswerKnowledgeBaseResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the Q&amp;A task.</p>
+         * <p>The status of the question answering task.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>

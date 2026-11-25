@@ -87,7 +87,7 @@ public class DescribePolarClawMCPServersRequest extends Request {
         }
 
         /**
-         * <p>A list of MCP server names. If this parameter is empty, the configurations of all MCP servers are returned.</p>
+         * <p>The list of MCP server names to query. If this parameter is left empty, all MCP servers are returned.</p>
          */
         public Builder serverList(java.util.List<String> serverList) {
             this.putQueryParameter("ServerList", serverList);

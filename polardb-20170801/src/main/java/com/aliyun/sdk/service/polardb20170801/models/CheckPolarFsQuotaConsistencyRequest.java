@@ -102,12 +102,10 @@ public class CheckPolarFsQuotaConsistencyRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to repair an inconsistent quota. Valid values:</p>
+         * <p>Specifies whether to repair inconsistent quotas. Valid values:</p>
          * <ul>
-         * <li><p>false</p>
-         * </li>
-         * <li><p>true</p>
-         * </li>
+         * <li>false</li>
+         * <li>true</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -122,10 +120,8 @@ public class CheckPolarFsQuotaConsistencyRequest extends Request {
         /**
          * <p>Specifies whether to calculate the total usage of the directory in strict mode. Valid values:</p>
          * <ul>
-         * <li><p>false</p>
-         * </li>
-         * <li><p>true</p>
-         * </li>
+         * <li>false</li>
+         * <li>true</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -138,7 +134,7 @@ public class CheckPolarFsQuotaConsistencyRequest extends Request {
         }
 
         /**
-         * <p>The directory path.</p>
+         * <p>The directory.</p>
          * 
          * <strong>example:</strong>
          * <p>/test</p>
@@ -150,7 +146,7 @@ public class CheckPolarFsQuotaConsistencyRequest extends Request {
         }
 
         /**
-         * <p>The ID of the PolarFS instance.</p>
+         * <p>The PolarFS instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

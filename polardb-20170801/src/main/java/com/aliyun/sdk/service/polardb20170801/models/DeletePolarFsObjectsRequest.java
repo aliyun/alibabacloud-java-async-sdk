@@ -101,7 +101,13 @@ public class DeletePolarFsObjectsRequest extends Request {
         }
 
         /**
-         * <p>The list of objects to delete.</p>
+         * <p>The list of files to delete. Parameter value examples:</p>
+         * <ul>
+         * <li><strong>Cold Storage Edition</strong> Example directory path to delete: test001/</li>
+         * <li><strong>Cold Storage Edition</strong> Example file path to delete: test001/file.txt</li>
+         * <li><strong>Basic Edition</strong> Example directory path to delete: /dir</li>
+         * <li><strong>Basic Edition</strong> Example file path to delete: /dir/file.txt</li>
+         * </ul>
          * <p>This parameter is required.</p>
          */
         public Builder objectsToDelete(java.util.List<String> objectsToDelete) {

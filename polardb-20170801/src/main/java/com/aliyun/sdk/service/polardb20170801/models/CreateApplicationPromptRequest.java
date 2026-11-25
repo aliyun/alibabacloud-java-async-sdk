@@ -105,7 +105,7 @@ public class CreateApplicationPromptRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the Application.</p>
+         * <p>The application ID. You must specify an application with <code>ApplicationType</code> set to <code>mem0</code>. You can first call the CreateApplication operation with <code>ApplicationType</code> set to <code>mem0</code> to create an application, and then pass the returned ApplicationId to this operation. This parameter does not apply to other application types such as standard PolarClaw or Supabase.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -118,7 +118,7 @@ public class CreateApplicationPromptRequest extends Request {
         }
 
         /**
-         * <p>The name of the Prompt.</p>
+         * <p>The prompt name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,7 +131,7 @@ public class CreateApplicationPromptRequest extends Request {
         }
 
         /**
-         * <p>The type of the Prompt.</p>
+         * <p>The prompt type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -153,7 +153,7 @@ public class CreateApplicationPromptRequest extends Request {
         }
 
         /**
-         * <p>The content of the Prompt.</p>
+         * <p>The prompt content.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

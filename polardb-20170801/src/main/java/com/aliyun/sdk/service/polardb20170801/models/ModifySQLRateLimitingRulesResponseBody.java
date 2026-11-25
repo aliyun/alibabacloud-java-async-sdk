@@ -80,9 +80,9 @@ public class ModifySQLRateLimitingRulesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response message.</p>
+         * <p>The message returned for the request.</p>
          * <blockquote>
-         * <p>If the request is successful, \<code>Successful\\</code> is returned. If the request fails, an error message is returned, such as an error code.</p>
+         * <p>If the request is successful, Successful is returned. If the request fails, an error message such as an error code is returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -105,11 +105,11 @@ public class ModifySQLRateLimitingRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>The request result. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: The request was successful.</p>
+         * <li><p><strong>true</strong>: The request is successful.</p>
          * </li>
-         * <li><p><strong>false</strong>: The request failed.</p>
+         * <li><p><strong>false</strong>: The request fails.</p>
          * </li>
          * </ul>
          * 

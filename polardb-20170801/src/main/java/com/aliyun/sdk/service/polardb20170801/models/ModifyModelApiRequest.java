@@ -33,17 +33,26 @@ public class ModifyModelApiRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ModelCategory")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String modelCategory;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ModelMappings")
+    private String modelMappings;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ModelRouting")
+    private String modelRouting;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    private String name;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PathPrefix")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String pathPrefix;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Protocol")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String protocol;
 
     @com.aliyun.core.annotation.Query
@@ -60,7 +69,6 @@ public class ModifyModelApiRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RouteRules")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String routeRules;
 
     private ModifyModelApiRequest(Builder builder) {
@@ -69,6 +77,9 @@ public class ModifyModelApiRequest extends Request {
         this.gwClusterId = builder.gwClusterId;
         this.modelApiId = builder.modelApiId;
         this.modelCategory = builder.modelCategory;
+        this.modelMappings = builder.modelMappings;
+        this.modelRouting = builder.modelRouting;
+        this.name = builder.name;
         this.pathPrefix = builder.pathPrefix;
         this.protocol = builder.protocol;
         this.recordInput = builder.recordInput;
@@ -119,6 +130,27 @@ public class ModifyModelApiRequest extends Request {
     }
 
     /**
+     * @return modelMappings
+     */
+    public String getModelMappings() {
+        return this.modelMappings;
+    }
+
+    /**
+     * @return modelRouting
+     */
+    public String getModelRouting() {
+        return this.modelRouting;
+    }
+
+    /**
+     * @return name
+     */
+    public String getName() {
+        return this.name;
+    }
+
+    /**
      * @return pathPrefix
      */
     public String getPathPrefix() {
@@ -165,6 +197,9 @@ public class ModifyModelApiRequest extends Request {
         private String gwClusterId; 
         private String modelApiId; 
         private String modelCategory; 
+        private String modelMappings; 
+        private String modelRouting; 
+        private String name; 
         private String pathPrefix; 
         private String protocol; 
         private String recordInput; 
@@ -182,6 +217,9 @@ public class ModifyModelApiRequest extends Request {
             this.gwClusterId = request.gwClusterId;
             this.modelApiId = request.modelApiId;
             this.modelCategory = request.modelCategory;
+            this.modelMappings = request.modelMappings;
+            this.modelRouting = request.modelRouting;
+            this.name = request.name;
             this.pathPrefix = request.pathPrefix;
             this.protocol = request.protocol;
             this.recordInput = request.recordInput;
@@ -224,7 +262,7 @@ public class ModifyModelApiRequest extends Request {
         }
 
         /**
-         * <p>The model API ID.</p>
+         * <p>The ID of the model API.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -243,7 +281,6 @@ public class ModifyModelApiRequest extends Request {
          * <li><strong>embedding</strong></li>
          * <li><strong>rerank</strong></li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>text</p>
@@ -255,8 +292,43 @@ public class ModifyModelApiRequest extends Request {
         }
 
         /**
+         * <p>The model name mappings, specified as a JSON array string. Each element is in the format of {&quot;Source&quot;:&quot;client model name&quot;,&quot;Target&quot;:&quot;upstream model name&quot;}. If you do not specify this parameter, the current mappings are retained. If you specify &quot;[]&quot;, the mappings are cleared. The Source field is matched in a case-insensitive manner and must be unique.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;Source&quot;:&quot;client-model-a&quot;,&quot;Target&quot;:&quot;upstream-model-a&quot;},{&quot;Source&quot;:&quot;client-model-b&quot;,&quot;Target&quot;:&quot;upstream-model-b&quot;}]</p>
+         */
+        public Builder modelMappings(String modelMappings) {
+            this.putQueryParameter("ModelMappings", modelMappings);
+            this.modelMappings = modelMappings;
+            return this;
+        }
+
+        /**
+         * <p>The intelligent routing candidate list, specified as a JSON object string in the format of {&quot;AllowedModels&quot;:[&quot;candidate model name&quot;]}. If you do not specify this parameter, the current list is retained. If you specify this parameter, the existing list is fully replaced with the new list. You cannot use an empty list to disable the feature. Saving candidates does not enable the feature. You must call EnableModelRouting first.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;AllowedModels&quot;:[&quot;deepseek-v4-pro&quot;,&quot;glm-5.3&quot;,&quot;glm-5.3-flash&quot;]}</p>
+         */
+        public Builder modelRouting(String modelRouting) {
+            this.putQueryParameter("ModelRouting", modelRouting);
+            this.modelRouting = modelRouting;
+            return this;
+        }
+
+        /**
+         * <p>The name of the model API. This parameter is modifiable. If you do not specify this parameter, the original name is retained.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>jev-chat-api</p>
+         */
+        public Builder name(String name) {
+            this.putQueryParameter("Name", name);
+            this.name = name;
+            return this;
+        }
+
+        /**
          * <p>The API path prefix.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>/test</p>
@@ -275,7 +347,6 @@ public class ModifyModelApiRequest extends Request {
          * <li><strong>bailian</strong></li>
          * <li><strong>vllm</strong></li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>openai</p>
@@ -323,8 +394,7 @@ public class ModifyModelApiRequest extends Request {
         }
 
         /**
-         * <p>The list of routing rules. The value is a JSON array string.</p>
-         * <p>This parameter is required.</p>
+         * <p>The list of routing rules, specified as a JSON array string. Usage note: Correct the value of FallbackMode in the RouteRules parameter example by replacing it with a valid value or removing the field, and add the list of valid values and their descriptions for the FallbackMode subfield in the description of RouteRules.</p>
          * 
          * <strong>example:</strong>
          * <p>[

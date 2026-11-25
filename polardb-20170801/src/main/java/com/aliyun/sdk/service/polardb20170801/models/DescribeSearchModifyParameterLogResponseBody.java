@@ -104,7 +104,7 @@ public class DescribeSearchModifyParameterLogResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The database engine version of the Search DPI engine. This is not the MySQL version of the primary cluster.</p>
+         * <p>The DPI engine version of Search. This is not the MySQL version of the primary cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>3.0</p>
@@ -115,7 +115,7 @@ public class DescribeSearchModifyParameterLogResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The parameter modification history. The records are returned in descending order of record IDs.</p>
+         * <p>The parameter modification history. The records are returned in descending order of record ID.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -123,7 +123,7 @@ public class DescribeSearchModifyParameterLogResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>e3a24663-eee5-4009-b635-2e9e8d052e74</p>
@@ -231,7 +231,7 @@ public class DescribeSearchModifyParameterLogResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the parameter was modified. The time is displayed in the yyyy-MM-ddTHH:mm:ssZ format in UTC.</p>
+             * <p>The time when the parameter was modified in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-10-14T07:04:29Z</p>
@@ -242,7 +242,7 @@ public class DescribeSearchModifyParameterLogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The new value of the parameter.</p>
+             * <p>The parameter value after the modification.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -253,7 +253,7 @@ public class DescribeSearchModifyParameterLogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The original value of the parameter.</p>
+             * <p>The parameter value before the modification.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -275,11 +275,7 @@ public class DescribeSearchModifyParameterLogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The modification status. Valid values:</p>
-             * <ul>
-             * <li>Syncing: The modification has not taken effect.</li>
-             * <li>Applied: The modification has taken effect.</li>
-             * </ul>
+             * <p>The modification status. A value of Syncing indicates that the modification has not taken effect. A value of Applied indicates that the modification has taken effect.</p>
              * 
              * <strong>example:</strong>
              * <p>Applied</p>

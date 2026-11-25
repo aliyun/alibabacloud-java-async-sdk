@@ -35,8 +35,11 @@ public class SearchMemoriesRequest extends Request {
     private String memoryAgentId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MemoryId")
+    private String memoryId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MemoryUserId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String memoryUserId;
 
     @com.aliyun.core.annotation.Query
@@ -61,6 +64,7 @@ public class SearchMemoriesRequest extends Request {
         this.createTimeBegin = builder.createTimeBegin;
         this.createTimeEnd = builder.createTimeEnd;
         this.memoryAgentId = builder.memoryAgentId;
+        this.memoryId = builder.memoryId;
         this.memoryUserId = builder.memoryUserId;
         this.page = builder.page;
         this.pageSize = builder.pageSize;
@@ -110,6 +114,13 @@ public class SearchMemoriesRequest extends Request {
     }
 
     /**
+     * @return memoryId
+     */
+    public String getMemoryId() {
+        return this.memoryId;
+    }
+
+    /**
      * @return memoryUserId
      */
     public String getMemoryUserId() {
@@ -149,6 +160,7 @@ public class SearchMemoriesRequest extends Request {
         private String createTimeBegin; 
         private String createTimeEnd; 
         private String memoryAgentId; 
+        private String memoryId; 
         private String memoryUserId; 
         private Integer page; 
         private Integer pageSize; 
@@ -165,6 +177,7 @@ public class SearchMemoriesRequest extends Request {
             this.createTimeBegin = request.createTimeBegin;
             this.createTimeEnd = request.createTimeEnd;
             this.memoryAgentId = request.memoryAgentId;
+            this.memoryId = request.memoryId;
             this.memoryUserId = request.memoryUserId;
             this.page = request.page;
             this.pageSize = request.pageSize;
@@ -173,7 +186,7 @@ public class SearchMemoriesRequest extends Request {
         } 
 
         /**
-         * <p>The application ID. Example: pa-**************. The application must be of the mem0 type. When creating the application by using CreateApplication, set ApplicationType to mem0. Calling this operation on a non-mem0 application returns the IncorrectDBInstanceEngine (403) error.</p>
+         * <p>The application ID. Example: pa-**************. The application must be of the mem0 type. When you create the application by calling CreateApplication, set ApplicationType to mem0. If you call this operation on a non-mem0 application, the IncorrectDBInstanceEngine (403) error is returned.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -222,8 +235,19 @@ public class SearchMemoriesRequest extends Request {
         }
 
         /**
+         * <p>The memory ID. If you specify this parameter, the complete change history of the memory is queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4d83591f-******-4efaf8c3</p>
+         */
+        public Builder memoryId(String memoryId) {
+            this.putQueryParameter("MemoryId", memoryId);
+            this.memoryId = memoryId;
+            return this;
+        }
+
+        /**
          * <p>The ID of the memory user.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>user1</p>
@@ -247,7 +271,7 @@ public class SearchMemoriesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of records to display on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

@@ -88,8 +88,11 @@ public class ModifyApplicationServerlessConfRequest extends Request {
         }
 
         /**
-         * <p>The list of Serverless configurations.</p>
+         * <p>The serverless configuration list.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder serverlessConfList(java.util.List<ServerlessConfList> serverlessConfList) {
             this.putQueryParameter("ServerlessConfList", serverlessConfList);
@@ -170,13 +173,10 @@ public class ModifyApplicationServerlessConfRequest extends Request {
             } 
 
             /**
-             * <p>The type of the application sub-component.</p>
-             * <p>For Supabase, valid values are:</p>
+             * <p>The type of the application subcomponent. For supabase, valid values:</p>
              * <ul>
-             * <li><p>gateway</p>
-             * </li>
-             * <li><p>backend</p>
-             * </li>
+             * <li>gateway</li>
+             * <li>backend</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -188,7 +188,7 @@ public class ModifyApplicationServerlessConfRequest extends Request {
             }
 
             /**
-             * <p>The maximum number of PCUs for a single node. Valid values: 0 to 16.</p>
+             * <p>The upper limit of scaling per node. Valid values: 0 to 16 PCUs.</p>
              * 
              * <strong>example:</strong>
              * <p>16</p>
@@ -199,7 +199,7 @@ public class ModifyApplicationServerlessConfRequest extends Request {
             }
 
             /**
-             * <p>The minimum number of PolarDB Capacity Units (PCUs) for a single node. Valid values: 0 to 16.</p>
+             * <p>The lower limit of scaling per node. Valid values: 0 to 16 PCUs.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

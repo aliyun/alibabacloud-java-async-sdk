@@ -49,6 +49,10 @@ public class CreateAgenticDBProjectRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String tenantId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
+    private String zoneId;
+
     private CreateAgenticDBProjectRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
@@ -58,6 +62,7 @@ public class CreateAgenticDBProjectRequest extends Request {
         this.projectName = builder.projectName;
         this.regionId = builder.regionId;
         this.tenantId = builder.tenantId;
+        this.zoneId = builder.zoneId;
     }
 
     public static Builder builder() {
@@ -122,6 +127,13 @@ public class CreateAgenticDBProjectRequest extends Request {
         return this.tenantId;
     }
 
+    /**
+     * @return zoneId
+     */
+    public String getZoneId() {
+        return this.zoneId;
+    }
+
     public static final class Builder extends Request.Builder<CreateAgenticDBProjectRequest, Builder> {
         private String DBClusterId; 
         private String defaultBranchName; 
@@ -130,6 +142,7 @@ public class CreateAgenticDBProjectRequest extends Request {
         private String projectName; 
         private String regionId; 
         private String tenantId; 
+        private String zoneId; 
 
         private Builder() {
             super();
@@ -144,10 +157,11 @@ public class CreateAgenticDBProjectRequest extends Request {
             this.projectName = request.projectName;
             this.regionId = request.regionId;
             this.tenantId = request.tenantId;
+            this.zoneId = request.zoneId;
         } 
 
         /**
-         * <p>The ID of the AgenticDB cluster.</p>
+         * <p>The ID of the AgenticDB cluster. The ID must have the pagc- prefix. You can obtain the ID after calling CreateDBCluster and specifying AgenticDbType=dedicated and ServerlessType=AgileServerless. A regular cluster ID with the pc- prefix is not supported. If an invalid ID is provided, the InvalidDBClusterId.NotFound error may be returned.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -184,7 +198,7 @@ public class CreateAgenticDBProjectRequest extends Request {
         }
 
         /**
-         * <p>The retention period for historical data to support creating branches at specific points in time. Default value: 604800 seconds (7 days). Valid values: 3600 to 2592000 seconds (1 hour to 30 days), inclusive. The actual range is subject to the service configuration.</p>
+         * <p>The retention period of historical data, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>604800</p>
@@ -196,7 +210,7 @@ public class CreateAgenticDBProjectRequest extends Request {
         }
 
         /**
-         * <p>The name of the project. The name must be unique within the tenant.</p>
+         * <p>The name of the project. The name must be unique within the same tenant.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -222,7 +236,7 @@ public class CreateAgenticDBProjectRequest extends Request {
         }
 
         /**
-         * <p>The ID of the tenant.</p>
+         * <p>The ID of the tenant. You can obtain the ID from the response after calling CreateAgenticDBTenant to create a tenant.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -231,6 +245,18 @@ public class CreateAgenticDBProjectRequest extends Request {
         public Builder tenantId(String tenantId) {
             this.putQueryParameter("TenantId", tenantId);
             this.tenantId = tenantId;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the zone where the project storage resides. The zone must be the same as the zone where the cluster compute resides. If this parameter is not specified, the zone where the cluster compute resides is used by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai-l</p>
+         */
+        public Builder zoneId(String zoneId) {
+            this.putQueryParameter("ZoneId", zoneId);
+            this.zoneId = zoneId;
             return this;
         }
 

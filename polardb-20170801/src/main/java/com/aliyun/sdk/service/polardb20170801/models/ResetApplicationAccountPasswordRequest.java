@@ -103,7 +103,7 @@ public class ResetApplicationAccountPasswordRequest extends Request {
         }
 
         /**
-         * <p>The application ID.</p>
+         * <p>The application ID. Only applications associated with PolarDB for MySQL clusters are supported. Before calling this operation, you can call DescribeApplicationAttribute to obtain the DBClusterId associated with the application, and then call DescribeDBClusterAttribute to query the DBType of the cluster and confirm that the value is MySQL. This operation is not applicable to associated applications of other database engine types.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

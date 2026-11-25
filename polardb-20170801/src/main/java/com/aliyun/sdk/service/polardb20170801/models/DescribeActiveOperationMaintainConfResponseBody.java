@@ -88,7 +88,11 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the configuration has been set. Valid values: 1 (yes) and 0 (no). On the first visit, HasConfig is 0.</p>
+         * <p>Indicates whether the configuration has been created. Valid values:</p>
+         * <ul>
+         * <li>1: Yes.</li>
+         * <li>0: No. If this is your first access, the value is 0.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -233,8 +237,7 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time.</p>
-             * <p>The time is in the YYYY-MM-DDTHH:mm:ss format.</p>
+             * <p>The time when the configuration was created. Format: YYYY-MM-DDTHH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-07-04T19:28:46</p>
@@ -247,8 +250,8 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
             /**
              * <p>The cycle time.</p>
              * <ul>
-             * <li>If CycleType is set to Month, a number from 1 to 28 is returned, indicating the day of the month. Multiple values are separated by commas (,).</li>
-             * <li>If CycleType is set to Week, a number from 1 to 7 is returned, indicating the day of the week. Multiple values are separated by commas (,).</li>
+             * <li>If CycleType is set to Month, the return value is a number from 1 to 28, which indicates the day of the month. Multiple values are separated by commas (,).</li>
+             * <li>If CycleType is set to Week, the return value is a number from 1 to 7, which indicates the day of the week. Multiple values are separated by commas (,).</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -262,12 +265,12 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
             /**
              * <p>The cycle type. Valid values:</p>
              * <ul>
-             * <li>Month: monthly</li>
-             * <li>Week: weekly</li>
+             * <li>Month: Monthly.</li>
+             * <li>Week: Weekly.</li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>Week</p>
+             * <p>1</p>
              */
             public Builder cycleType(Integer cycleType) {
                 this.cycleType = cycleType;
@@ -275,8 +278,7 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the maintenance window.</p>
-             * <p>The time is in UTC in the HH:mmZ format.</p>
+             * <p>The end time of the maintenance window. The time is in UTC and in the HH:mmZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>09:00Z</p>
@@ -287,8 +289,7 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the maintenance window.</p>
-             * <p>The time is in UTC. Example: 8:00Z.</p>
+             * <p>The start time of the maintenance window. The time is in UTC, for example, 8:00Z.</p>
              * 
              * <strong>example:</strong>
              * <p>8:00Z</p>
@@ -299,8 +300,7 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The modification time.</p>
-             * <p>The time is in the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * <p>The time when the configuration was modified. The time follows the ISO 8601 standard and is in UTC. Format: YYYY-MM-DDTHH:mm:ssZ.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-04-02T02:10:08Z</p>
@@ -311,7 +311,11 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the configuration is effective. Valid values: 1 (yes) and 2 (no).</p>
+             * <p>Indicates whether the configuration is effective. Valid values:</p>
+             * <ul>
+             * <li>1: Yes.</li>
+             * <li>2: No.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>1</p>

@@ -32,22 +32,26 @@ public class CreateModelApiRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ModelCategory")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String modelCategory;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ModelMappings")
+    private String modelMappings;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ModelRouting")
+    private String modelRouting;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PathPrefix")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String pathPrefix;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Protocol")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String protocol;
 
     @com.aliyun.core.annotation.Query
@@ -64,7 +68,6 @@ public class CreateModelApiRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RouteRules")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String routeRules;
 
     private CreateModelApiRequest(Builder builder) {
@@ -73,6 +76,8 @@ public class CreateModelApiRequest extends Request {
         this.forceModel = builder.forceModel;
         this.gwClusterId = builder.gwClusterId;
         this.modelCategory = builder.modelCategory;
+        this.modelMappings = builder.modelMappings;
+        this.modelRouting = builder.modelRouting;
         this.name = builder.name;
         this.pathPrefix = builder.pathPrefix;
         this.protocol = builder.protocol;
@@ -121,6 +126,20 @@ public class CreateModelApiRequest extends Request {
      */
     public String getModelCategory() {
         return this.modelCategory;
+    }
+
+    /**
+     * @return modelMappings
+     */
+    public String getModelMappings() {
+        return this.modelMappings;
+    }
+
+    /**
+     * @return modelRouting
+     */
+    public String getModelRouting() {
+        return this.modelRouting;
     }
 
     /**
@@ -177,6 +196,8 @@ public class CreateModelApiRequest extends Request {
         private String forceModel; 
         private String gwClusterId; 
         private String modelCategory; 
+        private String modelMappings; 
+        private String modelRouting; 
         private String name; 
         private String pathPrefix; 
         private String protocol; 
@@ -195,6 +216,8 @@ public class CreateModelApiRequest extends Request {
             this.forceModel = request.forceModel;
             this.gwClusterId = request.gwClusterId;
             this.modelCategory = request.modelCategory;
+            this.modelMappings = request.modelMappings;
+            this.modelRouting = request.modelRouting;
             this.name = request.name;
             this.pathPrefix = request.pathPrefix;
             this.protocol = request.protocol;
@@ -237,7 +260,7 @@ public class CreateModelApiRequest extends Request {
         }
 
         /**
-         * <p>The gateway instance ID. You can obtain this ID from the GwClusterId parameter returned by the CreateGateway operation.</p>
+         * <p>The ID of the gateway instance. You can obtain this ID from the GwClusterId value returned by the CreateGateway operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -256,7 +279,6 @@ public class CreateModelApiRequest extends Request {
          * <li><strong>embedding</strong></li>
          * <li><strong>rerank</strong></li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>text</p>
@@ -268,8 +290,31 @@ public class CreateModelApiRequest extends Request {
         }
 
         /**
+         * <p>The model name mappings, specified as a JSON array string. Each element is in the format of {&quot;Source&quot;:&quot;client model name&quot;,&quot;Target&quot;:&quot;upstream model name&quot;}. The Source parameter is matched in a case-insensitive manner and must be unique. The Target parameter retains its original case when forwarded. Both parameters cannot be empty and cannot contain leading or trailing spaces.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;Source&quot;:&quot;client-model-a&quot;,&quot;Target&quot;:&quot;upstream-model-a&quot;},{&quot;Source&quot;:&quot;client-model-b&quot;,&quot;Target&quot;:&quot;upstream-model-b&quot;}]</p>
+         */
+        public Builder modelMappings(String modelMappings) {
+            this.putQueryParameter("ModelMappings", modelMappings);
+            this.modelMappings = modelMappings;
+            return this;
+        }
+
+        /**
+         * <p>The intelligent routing candidate list, specified as a JSON object string. Currently, it only contains AllowedModels, which is a non-empty array of unique model names. The order of the array determines the candidate order. Do not pass the Enabled, cost, or quality tier parameters. Saving candidates does not enable the feature. You must first call the EnableModelRouting operation to obtain the gateway entitlements.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;AllowedModels&quot;:[&quot;deepseek-v4-pro&quot;,&quot;glm-5.3&quot;,&quot;glm-5.3-flash&quot;]}</p>
+         */
+        public Builder modelRouting(String modelRouting) {
+            this.putQueryParameter("ModelRouting", modelRouting);
+            this.modelRouting = modelRouting;
+            return this;
+        }
+
+        /**
          * <p>The name of the model API.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -282,7 +327,6 @@ public class CreateModelApiRequest extends Request {
 
         /**
          * <p>The API path prefix.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>/test</p>
@@ -301,7 +345,6 @@ public class CreateModelApiRequest extends Request {
          * <li><strong>bailian</strong></li>
          * <li><strong>vllm</strong></li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>openai</p>
@@ -350,7 +393,6 @@ public class CreateModelApiRequest extends Request {
 
         /**
          * <p>The list of routing rules, specified as a JSON array string.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>[

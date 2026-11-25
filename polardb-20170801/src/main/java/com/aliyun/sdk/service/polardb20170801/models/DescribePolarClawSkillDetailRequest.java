@@ -88,7 +88,7 @@ public class DescribePolarClawSkillDetailRequest extends Request {
         }
 
         /**
-         * <p>The Skill identifier.</p>
+         * <p>The skill identifier.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

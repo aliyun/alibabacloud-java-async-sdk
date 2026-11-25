@@ -195,7 +195,7 @@ public class CreateActivationCodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The content of the activation code. Decode the Base64-encoded content and save it to the license.lic file for PolarDB to read during startup.</p>
+         * <p>The content of the activation code. Decode this content by using Base64 and save it to the license.lic file for PolarDB to read during startup.</p>
          * 
          * <strong>example:</strong>
          * <p>AAEAA******AAA=</p>
@@ -217,7 +217,7 @@ public class CreateActivationCodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the activation code expires.</p>
+         * <p>The expiration time.</p>
          * 
          * <strong>example:</strong>
          * <p>2054-10-09 16:46:20</p>
@@ -228,7 +228,7 @@ public class CreateActivationCodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the activation code was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-16 16:46:20</p>
@@ -239,7 +239,7 @@ public class CreateActivationCodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the activation code was updated.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-16 16:46:20</p>

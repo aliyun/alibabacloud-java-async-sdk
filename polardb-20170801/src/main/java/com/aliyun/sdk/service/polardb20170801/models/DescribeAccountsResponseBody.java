@@ -93,7 +93,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the account.</p>
+         * <p>The details of the account information.</p>
          */
         public Builder accounts(java.util.List<Accounts> accounts) {
             this.accounts = accounts;
@@ -101,7 +101,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number. Pages start from page 1.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -112,7 +112,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -203,7 +203,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The database name.</p>
+             * <p>The name of the database.</p>
              * 
              * <strong>example:</strong>
              * <p>DBtest</p>
@@ -338,7 +338,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the database account.</p>
+             * <p>The description of the account.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -351,10 +351,8 @@ public class DescribeAccountsResponseBody extends TeaModel {
             /**
              * <p>The lock status of the account. Valid values:</p>
              * <ul>
-             * <li><p><strong>UnLock</strong>: The account is not locked.</p>
-             * </li>
-             * <li><p><strong>Lock</strong>: The account is locked.</p>
-             * </li>
+             * <li><strong>UnLock</strong>: The account is not locked.</li>
+             * <li><strong>Lock</strong>: The account is locked.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -366,7 +364,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the database account.</p>
+             * <p>The name of the account.</p>
              * 
              * <strong>example:</strong>
              * <p>test_acc</p>
@@ -377,7 +375,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The validity period of the password.</p>
+             * <p>The validity period of the account password. A value of <code>undefined</code> indicates that no validity period is set. A value of <code>infinity</code> indicates that the password never expires. A value of <code>-infinity</code> indicates that the password has expired. If an expiration time is specified, a UTC time string in the ISO 8601 format (<code>YYYY-MM-DDThh:mm:ssZ</code>) is returned instead of a timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>undefined</p>
@@ -388,14 +386,11 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the database account. Valid values:</p>
+             * <p>The status of the account. Valid values:</p>
              * <ul>
-             * <li><p><strong>Creating</strong>: The account is being created.</p>
-             * </li>
-             * <li><p><strong>Available</strong>: The account is available.</p>
-             * </li>
-             * <li><p><strong>Deleting</strong>: The account is being deleted.</p>
-             * </li>
+             * <li><strong>Creating</strong>: The account is being created.</li>
+             * <li><strong>Available</strong>: The account is available.</li>
+             * <li><strong>Deleting</strong>: The account is being deleted.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -409,12 +404,9 @@ public class DescribeAccountsResponseBody extends TeaModel {
             /**
              * <p>The type of the account. Valid values:</p>
              * <ul>
-             * <li><p><strong>Normal</strong>: standard account.</p>
-             * </li>
-             * <li><p><strong>Super</strong>: privileged account.</p>
-             * </li>
-             * <li><p><strong>ReadOnly</strong>: global read-only account.</p>
-             * </li>
+             * <li><strong>Normal</strong>: standard account</li>
+             * <li><strong>Super</strong>: privileged account</li>
+             * <li><strong>ReadOnly</strong>: global read-only account</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -426,7 +418,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of database permissions that are granted to the account.</p>
+             * <p>The details of the database permissions owned by the account.</p>
              */
             public Builder databasePrivileges(java.util.List<DatabasePrivileges> databasePrivileges) {
                 this.databasePrivileges = databasePrivileges;

@@ -144,7 +144,7 @@ public class DescribeRateLimitPolicyRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the gateway instance.</p>
+         * <p>The gateway instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,7 +157,7 @@ public class DescribeRateLimitPolicyRequest extends Request {
         }
 
         /**
-         * <p>The page number to return. The default value is 1.</p>
+         * <p>The page number for paging. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -171,12 +171,10 @@ public class DescribeRateLimitPolicyRequest extends Request {
         /**
          * <p>The number of entries per page. Valid values:</p>
          * <ul>
-         * <li><p><strong>30</strong></p>
-         * </li>
-         * <li><p><strong>50</strong></p>
-         * </li>
-         * <li><p><strong>100</strong>. The default value is <strong>30</strong>.</p>
-         * </li>
+         * <li><strong>30</strong></li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong>
+         * Default value: <strong>30</strong>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -189,7 +187,7 @@ public class DescribeRateLimitPolicyRequest extends Request {
         }
 
         /**
-         * <p>The ID of the rate limit policy.</p>
+         * <p>The ID of the throttling policy.</p>
          * 
          * <strong>example:</strong>
          * <p>02eccf7c61cf4d05a543075ee907f3**</p>
@@ -213,7 +211,7 @@ public class DescribeRateLimitPolicyRequest extends Request {
         }
 
         /**
-         * <p>The ID of the target resource, which can be a consumer group or a consumer, depending on the <code>ScopeType</code> value.</p>
+         * <p>The ID of the throttling dimension, which is the consumer group ID or consumer ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cg-xxxxxxxx</p>
@@ -225,11 +223,11 @@ public class DescribeRateLimitPolicyRequest extends Request {
         }
 
         /**
-         * <p>The scope of the rate limit policy. Valid values:</p>
+         * <p>The throttling dimension. Valid values:</p>
          * <ul>
-         * <li><p><strong>ConsumerGroup</strong>: The policy applies to a consumer group.</p>
+         * <li><p><strong>ConsumerGroup</strong>: consumer group</p>
          * </li>
-         * <li><p><strong>Consumer</strong>: The policy applies to a specific consumer.</p>
+         * <li><p><strong>Consumer</strong>: consumer</p>
          * </li>
          * </ul>
          * 

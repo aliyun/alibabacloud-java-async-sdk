@@ -214,7 +214,7 @@ public class ModifyDBNodesParametersRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the nodes. To specify multiple node IDs, separate the IDs with a comma (,).</p>
+         * <p>The node IDs. You can specify multiple node IDs separated by commas (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -227,7 +227,11 @@ public class ModifyDBNodesParametersRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to apply the parameter modifications and restart the node. Valid values: \<code>false\\</code> (default): Schedules the task. \<code>true\\</code>: Executes the task immediately.</p>
+         * <p>Specifies whether to immediately execute or schedule the parameter modification and restart. Valid values:</p>
+         * <ul>
+         * <li>false: schedules the task. This is the default value.</li>
+         * <li>true: immediately executes the task.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -257,7 +261,7 @@ public class ModifyDBNodesParametersRequest extends Request {
         }
 
         /**
-         * <p>The ID of the parameter template.</p>
+         * <p>The parameter template ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pcpg-**************</p>
@@ -269,10 +273,10 @@ public class ModifyDBNodesParametersRequest extends Request {
         }
 
         /**
-         * <p>A JSON string that contains the parameters and their values.</p>
+         * <p>The JSON string of parameters and their values. Only node-level parameters can be modified. You can call the DescribeDBClusterParameters operation and select parameters where IsNodeAvailable is set to 1 and IsModifiable is set to true. To modify cluster-level parameters, call the ModifyDBClusterParameters operation.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;wait_timeout&quot;:&quot;86&quot;,&quot;innodb_old_blocks_time&quot;:&quot;10&quot;}</p>
+         * <p>{&quot;loose_imci_optimize_const_join_memory&quot;:&quot;ON&quot;}</p>
          */
         public Builder parameters(String parameters) {
             this.putQueryParameter("Parameters", parameters);
@@ -281,7 +285,7 @@ public class ModifyDBNodesParametersRequest extends Request {
         }
 
         /**
-         * <p>The latest time to start the scheduled task. The time must be in the \<code>YYYY-MM-DDThh:mm:ssZ\\</code> format and in UTC.</p>
+         * <p>The latest time to start the scheduled task. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-04-28T14:30:00Z</p>
@@ -293,7 +297,7 @@ public class ModifyDBNodesParametersRequest extends Request {
         }
 
         /**
-         * <p>The earliest time to start the scheduled task. The time must be in the \<code>YYYY-MM-DDThh:mm:ssZ\\</code> format and in UTC.</p>
+         * <p>The earliest time to start the scheduled kernel version upgrade task within the specified time window. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-04-28T14:00:00Z</p>

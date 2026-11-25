@@ -134,6 +134,9 @@ public class ModifyDBClusterArchRequest extends Request {
          * <li>true (default): Uses coupons.</li>
          * <li>false: Does not use coupons.</li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoUseCoupon(Boolean autoUseCoupon) {
             this.putQueryParameter("AutoUseCoupon", autoUseCoupon);
@@ -156,8 +159,8 @@ public class ModifyDBClusterArchRequest extends Request {
         /**
          * <p>Specifies whether to enable the hot standby cluster. Valid values:</p>
          * <ul>
-         * <li><strong>on</strong>: Enables the hot standby cluster.</li>
-         * <li><strong>equal</strong>: Enables the peer cluster.</li>
+         * <li>on: Enables the hot standby cluster.
+         * The equal (peer cluster) feature has been retired and is unavailable. Clusters with HotStandbyCluster set to StandbyClusterON do not support switching the high-availability mode by using this operation.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -170,7 +173,7 @@ public class ModifyDBClusterArchRequest extends Request {
         }
 
         /**
-         * <p>The coupon code. If this parameter is not specified, the default coupon is used.</p>
+         * <p>The coupon code. If you do not specify this parameter, the default coupon is used.</p>
          * 
          * <strong>example:</strong>
          * <p>727xxxxxx934</p>
@@ -184,7 +187,7 @@ public class ModifyDBClusterArchRequest extends Request {
         /**
          * <p>The region ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query region information.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to view region details.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -199,11 +202,14 @@ public class ModifyDBClusterArchRequest extends Request {
         /**
          * <p>The zone of the hot standby storage cluster. Valid values:</p>
          * <ul>
-         * <li><strong>auto</strong> (default): Automatically selected.<blockquote>
-         * <p>When the HotStandbyCluster parameter is set to on, you can use the default value. When the HotStandbyCluster parameter is set to equal, you must specify a specific zone. You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeZones</a> operation to query zone details.</p>
+         * <li><strong>auto</strong> (default): Automatically selects the zone.<blockquote>
+         * <p>You can use the default value when the HotStandbyCluster parameter is set to on. When the HotStandbyCluster parameter is set to equal, you must specify a zone. You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeZones</a> operation to view zone details.</p>
          * </blockquote>
          * </li>
          * </ul>
+         * <blockquote>
+         * <p>When you specify a zone, you must not allocate a zone that is already in use by the cluster. You can query the currently active zones through the ZoneIds parameter of DescribeDBClusterAttribute.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing-i</p>

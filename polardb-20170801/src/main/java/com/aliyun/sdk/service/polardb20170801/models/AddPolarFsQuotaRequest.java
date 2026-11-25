@@ -89,7 +89,7 @@ public class AddPolarFsQuotaRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the PolarDB instance on which the application depends.</p>
+         * <p>The PolarDB instance ID that the application depends on.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-**************</p>
@@ -101,7 +101,7 @@ public class AddPolarFsQuotaRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Polarlakebase instance.</p>
+         * <p>The Polarlakebase instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -289,7 +289,7 @@ public class AddPolarFsQuotaRequest extends Request {
             } 
 
             /**
-             * <p>The time to live (TTL) for the access time. Unit: seconds.</p>
+             * <p>The time-to-live (TTL) for the access time. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>7200</p>
@@ -300,7 +300,7 @@ public class AddPolarFsQuotaRequest extends Request {
             }
 
             /**
-             * <p>The TTL for the change time. Unit: seconds.</p>
+             * <p>The time-to-live (TTL) for the change time. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>7200</p>
@@ -322,12 +322,10 @@ public class AddPolarFsQuotaRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable the rule. Valid values:</p>
+             * <p>Specifies whether the rule is enabled. Valid values:</p>
              * <ul>
-             * <li><p><strong>True</strong>: The rule immediately applies to new items. This is the default value.</p>
-             * </li>
-             * <li><p><strong>False</strong>: The rule does not apply to new items.</p>
-             * </li>
+             * <li><strong>True</strong>: New events take effect immediately for new resources. This is the default value.</li>
+             * <li><strong>False</strong>: New events do not take effect for new resources.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -339,9 +337,9 @@ public class AddPolarFsQuotaRequest extends Request {
             }
 
             /**
-             * <p>The rule to exclude specific paths from matching.</p>
+             * <p>The matching rule used to exclude specific paths.</p>
              * <ul>
-             * <li>A path pattern that starts with a forward slash (/). Supports glob syntax, including <code>*</code>, <code>?</code>, and <code>**</code>.</li>
+             * <li>A path pattern that starts with <code>/</code>. Glob syntax such as <code>*</code>, <code>?</code>, and <code>**</code> is supported.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -353,7 +351,7 @@ public class AddPolarFsQuotaRequest extends Request {
             }
 
             /**
-             * <p>The limit on the number of files for a user in the directory.</p>
+             * <p>The maximum number of files allowed in the directory.</p>
              * 
              * <strong>example:</strong>
              * <p>222</p>
@@ -364,9 +362,9 @@ public class AddPolarFsQuotaRequest extends Request {
             }
 
             /**
-             * <p>The wildcard pattern to match paths.</p>
+             * <p>The wildcard pattern used to match paths.</p>
              * <ul>
-             * <li>A path pattern that starts with a forward slash (/). Supports glob syntax, including <code>*</code>, <code>?</code>, and <code>**</code>.</li>
+             * <li>A path pattern that starts with <code>/</code>. Glob syntax such as <code>*</code>, <code>?</code>, and <code>**</code> is supported.</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -402,7 +400,7 @@ public class AddPolarFsQuotaRequest extends Request {
             }
 
             /**
-             * <p>The total size limit for files in the directory. Unit: GB.</p>
+             * <p>The maximum total capacity of files in the directory. Unit: GB.</p>
              * <ul>
              * <li>Note: The value must be at least 1 GB.</li>
              * </ul>

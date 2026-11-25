@@ -73,7 +73,7 @@ public class DescribeInspectionTaskAttributeRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the region where the task is located.</p>
+         * <p>The region ID of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -85,7 +85,7 @@ public class DescribeInspectionTaskAttributeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the inspection task to query. This parameter is required.</p>
+         * <p>The ID of the inspection task to query. This parameter is required. If this parameter is not specified, the service returns the InvalidTaskId.Malformed error.</p>
          * 
          * <strong>example:</strong>
          * <p>task-001</p>

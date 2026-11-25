@@ -164,7 +164,7 @@ public class DescribeAgenticDBBranchLineageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of nodes returned.</p>
+         * <p>The total number of returned nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>
@@ -175,7 +175,7 @@ public class DescribeAgenticDBBranchLineageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The project ID.</p>
+         * <p>The ID of the project.</p>
          * 
          * <strong>example:</strong>
          * <p>proj-a1b2c3d4e5f6</p>
@@ -186,7 +186,7 @@ public class DescribeAgenticDBBranchLineageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The project name.</p>
+         * <p>The name of the project.</p>
          * 
          * <strong>example:</strong>
          * <p>analytics-prod</p>
@@ -197,7 +197,7 @@ public class DescribeAgenticDBBranchLineageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>B2C3D4E5-F6A7-8901-BCDE-2345678901BC</p>
@@ -208,7 +208,7 @@ public class DescribeAgenticDBBranchLineageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the primary branch.</p>
+         * <p>The ID of the root branch.</p>
          * 
          * <strong>example:</strong>
          * <p>br-root</p>
@@ -219,7 +219,7 @@ public class DescribeAgenticDBBranchLineageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The tenant ID.</p>
+         * <p>The ID of the tenant.</p>
          * 
          * <strong>example:</strong>
          * <p>t-4b83e0da66674951</p>
@@ -457,7 +457,7 @@ public class DescribeAgenticDBBranchLineageResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the compute cluster associated with the branch.</p>
+             * <p>The ID of the compute cluster for the branch.</p>
              * 
              * <strong>example:</strong>
              * <p>pc-g0lsayq8c5qe</p>
@@ -468,7 +468,7 @@ public class DescribeAgenticDBBranchLineageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The branch description.</p>
+             * <p>The description of the branch.</p>
              * 
              * <strong>example:</strong>
              * <p>Feature branch for analytics</p>
@@ -479,7 +479,7 @@ public class DescribeAgenticDBBranchLineageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The branch ID.</p>
+             * <p>The ID of the branch.</p>
              * 
              * <strong>example:</strong>
              * <p>br-7g8h9i0j1k2l</p>
@@ -490,7 +490,7 @@ public class DescribeAgenticDBBranchLineageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The branch name.</p>
+             * <p>The name of the branch.</p>
              * 
              * <strong>example:</strong>
              * <p>feature-analytics</p>
@@ -502,7 +502,7 @@ public class DescribeAgenticDBBranchLineageResponseBody extends TeaModel {
 
             /**
              * <p>The time when the branch was created.</p>
-             * <p>The time is in the ISO 8601 standard in the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+             * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-06-10T11:00:00Z</p>
@@ -513,7 +513,7 @@ public class DescribeAgenticDBBranchLineageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The depth relative to the anchor branch. The anchor branch has a depth of 0. Ancestor branches have negative values, and descendant branches have positive values.</p>
+             * <p>The depth relative to the anchor branch. The depth of the anchor branch is 0. Ancestors have negative values, and descendants have positive values.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -535,7 +535,7 @@ public class DescribeAgenticDBBranchLineageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether more ancestor nodes exist but are not returned.</p>
+             * <p>Indicates whether there are more ancestor nodes that are not returned.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -546,7 +546,7 @@ public class DescribeAgenticDBBranchLineageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether more child nodes exist but are not returned.</p>
+             * <p>Indicates whether there are more child nodes that are not returned.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -579,7 +579,7 @@ public class DescribeAgenticDBBranchLineageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the branch is the primary branch.</p>
+             * <p>Indicates whether the branch is the root branch.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -612,11 +612,7 @@ public class DescribeAgenticDBBranchLineageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The branch status. Valid values:</p>
-             * <ul>
-             * <li>Active</li>
-             * <li>Destroying</li>
-             * </ul>
+             * <p>The status of the branch. Valid values: Active and Destroying.</p>
              * 
              * <strong>example:</strong>
              * <p>Active</p>

@@ -53,6 +53,9 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Expired")
     private Boolean expired;
 
+    @com.aliyun.core.annotation.NameInMap("HeadSchedulingMode")
+    private String headSchedulingMode;
+
     @com.aliyun.core.annotation.NameInMap("IsLatestVersion")
     private Boolean isLatestVersion;
 
@@ -74,6 +77,12 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("MinorVersion")
     private String minorVersion;
 
+    @com.aliyun.core.annotation.NameInMap("MonitorCategory")
+    private String monitorCategory;
+
+    @com.aliyun.core.annotation.NameInMap("MonitorRegionId")
+    private String monitorRegionId;
+
     @com.aliyun.core.annotation.NameInMap("NatGatewayId")
     private String natGatewayId;
 
@@ -91,6 +100,9 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("PolarFSInstanceId")
     private String polarFSInstanceId;
+
+    @com.aliyun.core.annotation.NameInMap("PrometheusVirtualInstanceId")
+    private String prometheusVirtualInstanceId;
 
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
@@ -147,6 +159,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         this.endpoints = builder.endpoints;
         this.expireTime = builder.expireTime;
         this.expired = builder.expired;
+        this.headSchedulingMode = builder.headSchedulingMode;
         this.isLatestVersion = builder.isLatestVersion;
         this.latestVersion = builder.latestVersion;
         this.lockMode = builder.lockMode;
@@ -154,12 +167,15 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         this.maintainStartTime = builder.maintainStartTime;
         this.memApplicationAttribute = builder.memApplicationAttribute;
         this.minorVersion = builder.minorVersion;
+        this.monitorCategory = builder.monitorCategory;
+        this.monitorRegionId = builder.monitorRegionId;
         this.natGatewayId = builder.natGatewayId;
         this.natMappingSnatIpAddress = builder.natMappingSnatIpAddress;
         this.payType = builder.payType;
         this.polarClawApplicationAttribute = builder.polarClawApplicationAttribute;
         this.polarClawSaaSApplicationAttribute = builder.polarClawSaaSApplicationAttribute;
         this.polarFSInstanceId = builder.polarFSInstanceId;
+        this.prometheusVirtualInstanceId = builder.prometheusVirtualInstanceId;
         this.regionId = builder.regionId;
         this.requestId = builder.requestId;
         this.securityGroups = builder.securityGroups;
@@ -273,6 +289,13 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return headSchedulingMode
+     */
+    public String getHeadSchedulingMode() {
+        return this.headSchedulingMode;
+    }
+
+    /**
      * @return isLatestVersion
      */
     public Boolean getIsLatestVersion() {
@@ -322,6 +345,20 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return monitorCategory
+     */
+    public String getMonitorCategory() {
+        return this.monitorCategory;
+    }
+
+    /**
+     * @return monitorRegionId
+     */
+    public String getMonitorRegionId() {
+        return this.monitorRegionId;
+    }
+
+    /**
      * @return natGatewayId
      */
     public String getNatGatewayId() {
@@ -361,6 +398,13 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
      */
     public String getPolarFSInstanceId() {
         return this.polarFSInstanceId;
+    }
+
+    /**
+     * @return prometheusVirtualInstanceId
+     */
+    public String getPrometheusVirtualInstanceId() {
+        return this.prometheusVirtualInstanceId;
     }
 
     /**
@@ -474,6 +518,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         private java.util.List<Endpoints> endpoints; 
         private String expireTime; 
         private Boolean expired; 
+        private String headSchedulingMode; 
         private Boolean isLatestVersion; 
         private String latestVersion; 
         private String lockMode; 
@@ -481,12 +526,15 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         private String maintainStartTime; 
         private MemApplicationAttribute memApplicationAttribute; 
         private String minorVersion; 
+        private String monitorCategory; 
+        private String monitorRegionId; 
         private String natGatewayId; 
         private String natMappingSnatIpAddress; 
         private String payType; 
         private PolarClawApplicationAttribute polarClawApplicationAttribute; 
         private PolarClawSaaSApplicationAttribute polarClawSaaSApplicationAttribute; 
         private String polarFSInstanceId; 
+        private String prometheusVirtualInstanceId; 
         private String regionId; 
         private String requestId; 
         private java.util.List<SecurityGroups> securityGroups; 
@@ -518,6 +566,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             this.endpoints = model.endpoints;
             this.expireTime = model.expireTime;
             this.expired = model.expired;
+            this.headSchedulingMode = model.headSchedulingMode;
             this.isLatestVersion = model.isLatestVersion;
             this.latestVersion = model.latestVersion;
             this.lockMode = model.lockMode;
@@ -525,12 +574,15 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             this.maintainStartTime = model.maintainStartTime;
             this.memApplicationAttribute = model.memApplicationAttribute;
             this.minorVersion = model.minorVersion;
+            this.monitorCategory = model.monitorCategory;
+            this.monitorRegionId = model.monitorRegionId;
             this.natGatewayId = model.natGatewayId;
             this.natMappingSnatIpAddress = model.natMappingSnatIpAddress;
             this.payType = model.payType;
             this.polarClawApplicationAttribute = model.polarClawApplicationAttribute;
             this.polarClawSaaSApplicationAttribute = model.polarClawSaaSApplicationAttribute;
             this.polarFSInstanceId = model.polarFSInstanceId;
+            this.prometheusVirtualInstanceId = model.prometheusVirtualInstanceId;
             this.regionId = model.regionId;
             this.requestId = model.requestId;
             this.securityGroups = model.securityGroups;
@@ -559,7 +611,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The application type.</p>
+         * <p>The type of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>supabase</p>
@@ -572,7 +624,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         /**
          * <p>The CPU architecture. Valid values:</p>
          * <ul>
-         * <li><code>x86</code></li>
+         * <li>x86</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -584,7 +636,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether SNAT can be disabled.</p>
+         * <p>Indicates whether disabling SNAT is supported.</p>
          */
         public Builder canDisableSnat(Boolean canDisableSnat) {
             this.canDisableSnat = canDisableSnat;
@@ -600,8 +652,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The creation time.</p>
-         * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The creation time. The time follows the ISO 8601 standard and is in UTC. Format: YYYY-MM-DDTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-03-25T09:37:10Z</p>
@@ -612,7 +663,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The PolarDB instance ID on which the application depends.</p>
+         * <p>The PolarDB instance ID that the application depends on.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-**************</p>
@@ -634,7 +685,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The NAT mapping: the list of DNAT mapping entries.</p>
+         * <p>The list of DNAT mapping entries for NAT mapping.</p>
          */
         public Builder dnatMappings(java.util.List<DnatMappings> dnatMappings) {
             this.dnatMappings = dnatMappings;
@@ -650,9 +701,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The expiration time.</p>
-         * <p>This parameter is empty when the billing method is pay-as-you-go.</p>
-         * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The expiration time. This field is empty if the billing method is Postpaid. The time follows the ISO 8601 standard and is in UTC. Format: YYYY-MM-DDTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-25T09:37:10Z</p>
@@ -674,7 +723,18 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the application is of the latest version.</p>
+         * <p>The Ray head scheduling mode. enable: allows head scheduling; disable: disables head scheduling. Returned only for Ray instances. Defaults to enable if not configured. Not returned if head metadata is not ready. Indicates that the configuration is persisted, but does not indicate that the head rebuild is complete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>enable</p>
+         */
+        public Builder headSchedulingMode(String headSchedulingMode) {
+            this.headSchedulingMode = headSchedulingMode;
+            return this;
+        }
+
+        /**
+         * <p>Indicates whether the current version is the latest version.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -698,8 +758,8 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         /**
          * <p>The lock mode. Valid values:</p>
          * <ul>
-         * <li>Unlock: unlocked.</li>
-         * <li>Lock: locked.</li>
+         * <li>Unlock: The application is not locked.</li>
+         * <li>Lock: The application is locked.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -711,8 +771,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The end time of the maintenance window.</p>
-         * <p>The time is displayed in UTC in the HH:mmZ format.</p>
+         * <p>The end time of the maintenance window. The time is in UTC and follows the HH:mmZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>19:00Z</p>
@@ -723,8 +782,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The start time of the maintenance window.</p>
-         * <p>The time is displayed in UTC in the HH:mmZ format.</p>
+         * <p>The start time of the maintenance window. The time is in UTC and follows the HH:mmZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>18:00Z</p>
@@ -754,6 +812,28 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * <p>The monitoring categorization used by CloudMonitor monitoring dashboard components, which is the namespace of the Prometheus virtual instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cms_polardb_app</p>
+         */
+        public Builder monitorCategory(String monitorCategory) {
+            this.monitorCategory = monitorCategory;
+            return this;
+        }
+
+        /**
+         * <p>The region ID used by CloudMonitor monitoring dashboard components.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
+         */
+        public Builder monitorRegionId(String monitorRegionId) {
+            this.monitorRegionId = monitorRegionId;
+            return this;
+        }
+
+        /**
          * <p>The NAT gateway ID.</p>
          * 
          * <strong>example:</strong>
@@ -765,7 +845,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The NAT mapping: the SNAT IP address bound to the vSwitch where the application resides. This refers to a customer-managed SNAT entry that is discovered and returned in real time by the control plane, and is unrelated to the SNAT of the Internet NAT gateway.</p>
+         * <p>The SNAT IP address bound to the vSwitch where the application resides for NAT mapping. This refers to customer-managed SNAT entries that are discovered and returned in real time by the control plane, and is independent of the Internet NAT gateway SNAT.</p>
          * 
          * <strong>example:</strong>
          * <p>10.64.0.20</p>
@@ -803,13 +883,24 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The instance ID of the PolarFS Cold Storage Edition or High-performance Edition.</p>
+         * <p>The instance ID of the PolarFS cold storage or high-performance edition.</p>
          * 
          * <strong>example:</strong>
          * <p>pfs-**************</p>
          */
         public Builder polarFSInstanceId(String polarFSInstanceId) {
             this.polarFSInstanceId = polarFSInstanceId;
+            return this;
+        }
+
+        /**
+         * <p>The CloudMonitor Prometheus virtual instance ID, which the console uses to load CloudMonitor monitoring dashboard components. This field is not returned for applications without Grafana components.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>virtual-xxx</p>
+         */
+        public Builder prometheusVirtualInstanceId(String prometheusVirtualInstanceId) {
+            this.prometheusVirtualInstanceId = prometheusVirtualInstanceId;
             return this;
         }
 
@@ -836,7 +927,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of application-level security groups.</p>
+         * <p>The list of security groups at the application level.</p>
          */
         public Builder securityGroups(java.util.List<SecurityGroups> securityGroups) {
             this.securityGroups = securityGroups;
@@ -844,7 +935,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of application-level whitelists.</p>
+         * <p>The list of whitelists at the application level.</p>
          */
         public Builder securityIPArrays(java.util.List<SecurityIPArrays> securityIPArrays) {
             this.securityIPArrays = securityIPArrays;
@@ -852,7 +943,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The Serverless type. Valid values:</p>
+         * <p>The serverless type. Valid values:</p>
          * <ul>
          * <li>2: Agile.</li>
          * <li>3: Stable.</li>
@@ -867,7 +958,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The SNAT status. Valid values: on, off.</p>
+         * <p>The SNAT status. Valid values: on and off.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -878,12 +969,12 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The application status. Valid values:</p>
+         * <p>The status of the application. Valid values:</p>
          * <ul>
          * <li>Creating: The application is being created.</li>
          * <li>Activated: The application is running.</li>
          * <li>Maintaining: The application is under maintenance.</li>
-         * <li>ClassChanging: The application configuration is being changed.</li>
+         * <li>ClassChanging: The configurations of the application are being changed.</li>
          * <li>Transing: The application is being migrated.</li>
          * <li>MinorVersionUpgrading: The minor version of the application is being upgraded.</li>
          * <li>NetCreating: The endpoint of the application is being created.</li>
@@ -905,7 +996,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The storage resource description.</p>
+         * <p>The description of storage resources.</p>
          */
         public Builder storages(java.util.List<Storages> storages) {
             this.storages = storages;
@@ -924,7 +1015,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>VPC ID</p>
+         * <p>The ID of the virtual private cloud (VPC).</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-*******************</p>
@@ -935,7 +1026,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>VSwitch ID</p>
+         * <p>The ID of the vSwitch.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-*******************</p>
@@ -946,7 +1037,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The application version.</p>
+         * <p>The version of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
@@ -957,7 +1048,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The NAT mapping: the customer-managed VPC NAT gateway ID.</p>
+         * <p>The VPC NAT gateway ID of the customer-managed VPC NAT gateway for NAT mapping.</p>
          * 
          * <strong>example:</strong>
          * <p>ngw-xxx</p>
@@ -1088,7 +1179,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The security group ID.</p>
+             * <p>The ID of the security group.</p>
              * 
              * <strong>example:</strong>
              * <p>sg-*******************</p>
@@ -1099,7 +1190,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The security group name.</p>
+             * <p>The name of the security group.</p>
              * 
              * <strong>example:</strong>
              * <p>MyGroupName</p>
@@ -1208,7 +1299,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the IP address group. Default value: <code>default</code>.</p>
+             * <p>The name of the IP address group. Default value: default.</p>
              * 
              * <strong>example:</strong>
              * <p>default</p>
@@ -1230,7 +1321,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The whitelist IP addresses, separated by commas.</p>
+             * <p>The IP addresses in the whitelist, separated by commas.</p>
              * 
              * <strong>example:</strong>
              * <p>127.0.0.1</p>
@@ -1241,7 +1332,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network type of the whitelist IP addresses. Default value: <code>mix</code>.</p>
+             * <p>The network type of the IP addresses in the whitelist. Default value: mix.</p>
              * 
              * <strong>example:</strong>
              * <p>mix</p>
@@ -1335,7 +1426,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of topology child node IDs for the current application subcomponent, or the list of subcomponent types of the child nodes.</p>
+             * <p>The list of topology child node IDs or child node subcomponent types for the current application subcomponent.</p>
              */
             public Builder children(java.util.List<String> children) {
                 this.children = children;
@@ -1354,7 +1445,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of topology parent node IDs for the current application subcomponent, or the list of subcomponent types of the parent nodes.</p>
+             * <p>The list of topology parent node IDs or parent node subcomponent types for the current application subcomponent.</p>
              */
             public Builder parents(java.util.List<String> parents) {
                 this.parents = parents;
@@ -1538,7 +1629,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The specifications of the application subcomponent.</p>
+             * <p>The specification of the application subcomponent.</p>
              * 
              * <strong>example:</strong>
              * <p>polar.app.g2.medium</p>
@@ -1549,7 +1640,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the application subcomponent specifications.</p>
+             * <p>The specification description of the application subcomponent.</p>
              * 
              * <strong>example:</strong>
              * <p>2C4GB</p>
@@ -1560,7 +1651,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The subcomponent ID.</p>
+             * <p>The ID of the subcomponent.</p>
              * 
              * <strong>example:</strong>
              * <p>pac-*******************</p>
@@ -1593,7 +1684,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The replica group name of the application subcomponent.</p>
+             * <p>The name of the replica group for the application subcomponent.</p>
              * 
              * <strong>example:</strong>
              * <p>default</p>
@@ -1615,8 +1706,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of security groups at the subcomponent level.</p>
-             * <p>If the security groups at the subcomponent level are the same as those at the application level, this return value is omitted.</p>
+             * <p>The list of security groups at the subcomponent level. If the security groups at the subcomponent level are the same as those at the application level, this parameter is not returned.</p>
              */
             public Builder securityGroups(java.util.List<ComponentsSecurityGroups> securityGroups) {
                 this.securityGroups = securityGroups;
@@ -1624,8 +1714,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of whitelist IP addresses at the subcomponent level.</p>
-             * <p>If the whitelist at the subcomponent level is the same as that at the application level, this return value is omitted.</p>
+             * <p>The list of whitelist IP addresses at the subcomponent level. If the whitelist at the subcomponent level is the same as that at the application level, this parameter is not returned.</p>
              */
             public Builder securityIPArrays(java.util.List<ComponentsSecurityIPArrays> securityIPArrays) {
                 this.securityIPArrays = securityIPArrays;
@@ -1633,7 +1722,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The component status. The valid values are the same as the application status.</p>
+             * <p>The status of the component. The valid values are the same as those of the application status.</p>
              * 
              * <strong>example:</strong>
              * <p>Activated</p>
@@ -1763,7 +1852,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The access address in the NatIp:FrontPort format, which can be directly used on the office network.</p>
+             * <p>The access address in the format of NatIp:FrontPort. It can be directly used on the corporate network.</p>
              * 
              * <strong>example:</strong>
              * <p>10.64.0.10:10001</p>
@@ -1975,7 +2064,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The endpoint ID.</p>
+             * <p>The ID of the endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p>pa-**************</p>
@@ -1997,7 +2086,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The endpoint type. Valid values:</p>
+             * <p>The type of the endpoint. Valid values:</p>
              * <ul>
              * <li>Private: VPC address.</li>
              * <li>Public: Internet address.</li>
@@ -2023,7 +2112,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The port description.</p>
+             * <p>The description of the port.</p>
              * 
              * <strong>example:</strong>
              * <p>kong_http</p>
@@ -2119,7 +2208,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The account source. Valid values: reuse_vector, existing. This parameter is returned only when the status is ENABLED.</p>
+             * <p>The account source. Valid values: reuse_vector and existing. This parameter is returned only when the status is ENABLED.</p>
              * 
              * <strong>example:</strong>
              * <p>existing</p>
@@ -2152,7 +2241,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The session storage status. Valid values: DISABLED, ENABLING, ENABLED, DISABLING.</p>
+             * <p>The session storage status. Valid values: DISABLED, ENABLING, ENABLED, and DISABLING.</p>
              * 
              * <strong>example:</strong>
              * <p>ENABLED</p>
@@ -2400,7 +2489,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The graph LLM model support.</p>
+             * <p>The graph LLM model.</p>
              * 
              * <strong>example:</strong>
              * <p>qwen3-max</p>
@@ -2422,7 +2511,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The currently active memory type.</p>
+             * <p>The active memory type.</p>
              * 
              * <strong>example:</strong>
              * <p>MULTIMODAL_TEXT</p>
@@ -2433,7 +2522,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether multimodal capabilities are currently enabled.</p>
+             * <p>Indicates whether multimodal capabilities are enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -2444,7 +2533,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The project name, which corresponds to the schema where project data is stored in the database.</p>
+             * <p>The project name, which corresponds to the schema where the database stores project data.</p>
              * 
              * <strong>example:</strong>
              * <p>test-project-name</p>
@@ -2455,7 +2544,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the Reranker model.</p>
+             * <p>The reranker model name.</p>
              * 
              * <strong>example:</strong>
              * <p>qwen3-rerank</p>
@@ -2507,7 +2596,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The currently enabled understanding modalities.</p>
+             * <p>The enabled understanding modalities.</p>
              */
             public Builder visualLlmModalities(java.util.List<String> visualLlmModalities) {
                 this.visualLlmModalities = visualLlmModalities;
@@ -2637,7 +2726,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The effective period of the attachment. The value is a UNIX timestamp.</p>
+             * <p>The effective period of the attachment (UNIX timestamp).</p>
              * 
              * <strong>example:</strong>
              * <p>1788771141</p>
@@ -2648,7 +2737,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Langfuse API Key ID</p>
+             * <p>The Langfuse API key ID.</p>
              * 
              * <strong>example:</strong>
              * <p>api-key-xxx</p>
@@ -2659,7 +2748,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the binding task.</p>
+             * <p>The binding task ID.</p>
              * 
              * <strong>example:</strong>
              * <p>387</p>
@@ -2840,7 +2929,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of authentication providers for the application.</p>
+             * <p>The list of application authentication providers.</p>
              */
             public Builder authProviders(java.util.List<String> authProviders) {
                 this.authProviders = authProviders;
@@ -2969,7 +3058,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The security group ID.</p>
+             * <p>The ID of the security group.</p>
              * 
              * <strong>example:</strong>
              * <p>sg-**************</p>
@@ -2980,7 +3069,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The security group name.</p>
+             * <p>The name of the security group.</p>
              * 
              * <strong>example:</strong>
              * <p>MyGroupName</p>
@@ -3089,7 +3178,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the IP address group. Default value: <code>default</code>.</p>
+             * <p>The name of the IP address group. Default value: default.</p>
              * 
              * <strong>example:</strong>
              * <p>default</p>
@@ -3111,7 +3200,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The whitelist IP addresses, separated by commas.</p>
+             * <p>The IP addresses in the whitelist, separated by commas.</p>
              * 
              * <strong>example:</strong>
              * <p>127.0.0.1</p>
@@ -3122,7 +3211,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network type of the whitelist IP addresses. Default value: <code>mix</code>.</p>
+             * <p>The network type of the IP addresses in the whitelist. Default value: mix.</p>
              * 
              * <strong>example:</strong>
              * <p>mix</p>
@@ -3157,6 +3246,9 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
      * <p>DescribeApplicationAttributeResponseBody</p>
      */
     public static class Storages extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ContainerMountPath")
+        private String containerMountPath;
+
         @com.aliyun.core.annotation.NameInMap("StorageCapacity")
         private String storageCapacity;
 
@@ -3170,6 +3262,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         private String storageType;
 
         private Storages(Builder builder) {
+            this.containerMountPath = builder.containerMountPath;
             this.storageCapacity = builder.storageCapacity;
             this.storageInstanceId = builder.storageInstanceId;
             this.storagePerformanceLevel = builder.storagePerformanceLevel;
@@ -3182,6 +3275,13 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
 
         public static Storages create() {
             return builder().build();
+        }
+
+        /**
+         * @return containerMountPath
+         */
+        public String getContainerMountPath() {
+            return this.containerMountPath;
         }
 
         /**
@@ -3213,6 +3313,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String containerMountPath; 
             private String storageCapacity; 
             private String storageInstanceId; 
             private String storagePerformanceLevel; 
@@ -3222,11 +3323,23 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             } 
 
             private Builder(Storages model) {
+                this.containerMountPath = model.containerMountPath;
                 this.storageCapacity = model.storageCapacity;
                 this.storageInstanceId = model.storageInstanceId;
                 this.storagePerformanceLevel = model.storagePerformanceLevel;
                 this.storageType = model.storageType;
             } 
+
+            /**
+             * <p>The mount point of the file system in the application container. This field is returned only if ContainerMountPath is explicitly specified during mounting. If this field is not returned, the default value /mnt/<StorageInstanceId> is used. The default value is not stored in the database, so existing mount records do not include this field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/mnt/datasets</p>
+             */
+            public Builder containerMountPath(String containerMountPath) {
+                this.containerMountPath = containerMountPath;
+                return this;
+            }
 
             /**
              * <p>The storage capacity.</p>

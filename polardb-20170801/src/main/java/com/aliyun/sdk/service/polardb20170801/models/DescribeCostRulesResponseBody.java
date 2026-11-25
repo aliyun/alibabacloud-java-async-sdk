@@ -32,6 +32,9 @@ public class DescribeCostRulesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("TotalPages")
+    private Integer totalPages;
+
     @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Integer totalRecordCount;
 
@@ -41,6 +44,7 @@ public class DescribeCostRulesResponseBody extends TeaModel {
         this.pageRecordCount = builder.pageRecordCount;
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
+        this.totalPages = builder.totalPages;
         this.totalRecordCount = builder.totalRecordCount;
     }
 
@@ -92,6 +96,13 @@ public class DescribeCostRulesResponseBody extends TeaModel {
     }
 
     /**
+     * @return totalPages
+     */
+    public Integer getTotalPages() {
+        return this.totalPages;
+    }
+
+    /**
      * @return totalRecordCount
      */
     public Integer getTotalRecordCount() {
@@ -104,6 +115,7 @@ public class DescribeCostRulesResponseBody extends TeaModel {
         private Integer pageRecordCount; 
         private Integer pageSize; 
         private String requestId; 
+        private Integer totalPages; 
         private Integer totalRecordCount; 
 
         private Builder() {
@@ -115,6 +127,7 @@ public class DescribeCostRulesResponseBody extends TeaModel {
             this.pageRecordCount = model.pageRecordCount;
             this.pageSize = model.pageSize;
             this.requestId = model.requestId;
+            this.totalPages = model.totalPages;
             this.totalRecordCount = model.totalRecordCount;
         } 
 
@@ -138,7 +151,7 @@ public class DescribeCostRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned on the current page.</p>
+         * <p>The number of records on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -149,7 +162,7 @@ public class DescribeCostRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page. Valid values: 30, 50, and 100. Default value: 30.</p>
+         * <p>The number of records per page. Valid values: 30, 50, and 100. Default value: 30.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -171,7 +184,18 @@ public class DescribeCostRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries.</p>
+         * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
+        public Builder totalPages(Integer totalPages) {
+            this.totalPages = totalPages;
+            return this;
+        }
+
+        /**
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -240,7 +264,7 @@ public class DescribeCostRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The input cost points per million tokens for the tier.</p>
+             * <p>The input cost points per million tokens for this tier.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>
@@ -588,7 +612,7 @@ public class DescribeCostRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the effective period. The time is displayed in UTC in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+             * <p>The effective end time. The format is YYYY-MM-DDTHH:mm:ssZ (UTC time).</p>
              * 
              * <strong>example:</strong>
              * <p>2026-10-01T00:00:00Z</p>
@@ -599,7 +623,7 @@ public class DescribeCostRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the effective period. The time is displayed in UTC in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+             * <p>The effective start time. The format is YYYY-MM-DDTHH:mm:ssZ (UTC time).</p>
              * 
              * <strong>example:</strong>
              * <p>2026-09-01T00:00:00Z</p>
@@ -610,7 +634,7 @@ public class DescribeCostRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the effective target.</p>
+             * <p>The effective target type.</p>
              * 
              * <strong>example:</strong>
              * <p>global</p>
@@ -621,7 +645,7 @@ public class DescribeCostRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the effective target.</p>
+             * <p>The effective target value.</p>
              * 
              * <strong>example:</strong>
              * <p>user</p>
@@ -643,7 +667,7 @@ public class DescribeCostRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the cost rule was created.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-01-04T16:09:29+08:00</p>
@@ -654,7 +678,7 @@ public class DescribeCostRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the cost rule was last updated.</p>
+             * <p>The last update time.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-10-16 16:46:20</p>

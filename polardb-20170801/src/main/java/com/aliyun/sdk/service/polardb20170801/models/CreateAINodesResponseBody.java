@@ -104,7 +104,7 @@ public class CreateAINodesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The IDs of the created DB nodes.</p>
+         * <p>The list of created DBNode IDs.</p>
          */
         public Builder DBNodeIds(java.util.List<String> DBNodeIds) {
             this.DBNodeIds = DBNodeIds;
@@ -112,7 +112,7 @@ public class CreateAINodesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the order.</p>
+         * <p>The ID of the generated order.</p>
          * 
          * <strong>example:</strong>
          * <p>2148126708*****</p>

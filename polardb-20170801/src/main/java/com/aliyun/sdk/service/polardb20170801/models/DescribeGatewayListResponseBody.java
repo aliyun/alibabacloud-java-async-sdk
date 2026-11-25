@@ -200,6 +200,9 @@ public class DescribeGatewayListResponseBody extends TeaModel {
      * <p>DescribeGatewayListResponseBody</p>
      */
     public static class Items extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AutoExpireTime")
+        private String autoExpireTime;
+
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
@@ -227,6 +230,9 @@ public class DescribeGatewayListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
+        @com.aliyun.core.annotation.NameInMap("SmartRoutingEnabled")
+        private Boolean smartRoutingEnabled;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
@@ -237,6 +243,7 @@ public class DescribeGatewayListResponseBody extends TeaModel {
         private String vpcId;
 
         private Items(Builder builder) {
+            this.autoExpireTime = builder.autoExpireTime;
             this.createTime = builder.createTime;
             this.dbType = builder.dbType;
             this.expireTime = builder.expireTime;
@@ -246,6 +253,7 @@ public class DescribeGatewayListResponseBody extends TeaModel {
             this.modifyTime = builder.modifyTime;
             this.payType = builder.payType;
             this.regionId = builder.regionId;
+            this.smartRoutingEnabled = builder.smartRoutingEnabled;
             this.status = builder.status;
             this.vSwitchId = builder.vSwitchId;
             this.vpcId = builder.vpcId;
@@ -257,6 +265,13 @@ public class DescribeGatewayListResponseBody extends TeaModel {
 
         public static Items create() {
             return builder().build();
+        }
+
+        /**
+         * @return autoExpireTime
+         */
+        public String getAutoExpireTime() {
+            return this.autoExpireTime;
         }
 
         /**
@@ -323,6 +338,13 @@ public class DescribeGatewayListResponseBody extends TeaModel {
         }
 
         /**
+         * @return smartRoutingEnabled
+         */
+        public Boolean getSmartRoutingEnabled() {
+            return this.smartRoutingEnabled;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -344,6 +366,7 @@ public class DescribeGatewayListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String autoExpireTime; 
             private String createTime; 
             private String dbType; 
             private String expireTime; 
@@ -353,6 +376,7 @@ public class DescribeGatewayListResponseBody extends TeaModel {
             private String modifyTime; 
             private String payType; 
             private String regionId; 
+            private Boolean smartRoutingEnabled; 
             private String status; 
             private String vSwitchId; 
             private String vpcId; 
@@ -361,6 +385,7 @@ public class DescribeGatewayListResponseBody extends TeaModel {
             } 
 
             private Builder(Items model) {
+                this.autoExpireTime = model.autoExpireTime;
                 this.createTime = model.createTime;
                 this.dbType = model.dbType;
                 this.expireTime = model.expireTime;
@@ -370,14 +395,26 @@ public class DescribeGatewayListResponseBody extends TeaModel {
                 this.modifyTime = model.modifyTime;
                 this.payType = model.payType;
                 this.regionId = model.regionId;
+                this.smartRoutingEnabled = model.smartRoutingEnabled;
                 this.status = model.status;
                 this.vSwitchId = model.vSwitchId;
                 this.vpcId = model.vpcId;
             } 
 
             /**
+             * <p>The cumulative expiration time of the smart routing benefit. The time follows the ISO 8601 standard and is displayed in UTC. If smart routing is not enabled, this parameter may be omitted or set to null.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-12-09T06:43:33Z</p>
+             */
+            public Builder autoExpireTime(String autoExpireTime) {
+                this.autoExpireTime = autoExpireTime;
+                return this;
+            }
+
+            /**
              * <p>The creation time.</p>
-             * <p>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+             * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format and is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-08-14T05:58:42Z</p>
@@ -404,7 +441,7 @@ public class DescribeGatewayListResponseBody extends TeaModel {
              * <li>If the billing method of the cluster is subscription, the actual expiration time is returned.</li>
              * <li>If the billing method of the cluster is pay-as-you-go, an empty value is returned.</li>
              * </ul>
-             * <p>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+             * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format and is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2028-09-01T16:00:00Z</p>
@@ -443,7 +480,7 @@ public class DescribeGatewayListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The gateway description.</p>
+             * <p>The description of the gateway.</p>
              * 
              * <strong>example:</strong>
              * <p>pg-xxxxxx</p>
@@ -455,7 +492,7 @@ public class DescribeGatewayListResponseBody extends TeaModel {
 
             /**
              * <p>The last modification time.</p>
-             * <p>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+             * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format and is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-10-29T09:31:37Z</p>
@@ -492,10 +529,21 @@ public class DescribeGatewayListResponseBody extends TeaModel {
             }
 
             /**
+             * <p>Indicates whether smart routing is enabled for the instance. This value is returned by ApsaraDB based on the benefit validity period. A value of true does not indicate that the data plane is healthy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder smartRoutingEnabled(Boolean smartRoutingEnabled) {
+                this.smartRoutingEnabled = smartRoutingEnabled;
+                return this;
+            }
+
+            /**
              * <p>The application status. Valid values:</p>
              * <ul>
-             * <li>CREATE: being created.</li>
-             * <li>ACTIVATION: running.</li>
+             * <li>CREATE: creating</li>
+             * <li>ACTIVATION: running</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -507,7 +555,7 @@ public class DescribeGatewayListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The vSwitch ID.</p>
+             * <p>The ID of the vSwitch.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-wz9u0v2yuskt1gth3uuju</p>
@@ -518,7 +566,7 @@ public class DescribeGatewayListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The VPC ID.</p>
+             * <p>The ID of the virtual private cloud (VPC).</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-****************</p>

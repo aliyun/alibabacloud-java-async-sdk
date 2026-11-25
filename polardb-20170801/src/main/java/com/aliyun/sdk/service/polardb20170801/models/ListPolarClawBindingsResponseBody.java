@@ -125,7 +125,7 @@ public class ListPolarClawBindingsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status code.</p>
+         * <p>The response status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -147,7 +147,7 @@ public class ListPolarClawBindingsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>7F2007D3-7E74-4ECB-89A8-BF130D******</p>
@@ -229,7 +229,7 @@ public class ListPolarClawBindingsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The agent ID.</p>
+             * <p>The PolarClaw agent ID.</p>
              * 
              * <strong>example:</strong>
              * <p>work</p>
@@ -251,7 +251,7 @@ public class ListPolarClawBindingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The account ID.</p>
+             * <p>The channel account ID.</p>
              * 
              * <strong>example:</strong>
              * <p>default</p>

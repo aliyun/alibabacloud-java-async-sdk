@@ -88,7 +88,7 @@ public class DescribePolarFsObjectsRequest extends Request {
         }
 
         /**
-         * <p>The PolarFs instance ID.</p>
+         * <p>The PolarFS instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

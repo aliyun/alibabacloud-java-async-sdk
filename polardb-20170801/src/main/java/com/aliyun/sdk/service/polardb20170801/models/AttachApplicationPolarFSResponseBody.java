@@ -20,6 +20,9 @@ public class AttachApplicationPolarFSResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ApplicationId")
     private String applicationId;
 
+    @com.aliyun.core.annotation.NameInMap("ContainerMountPath")
+    private String containerMountPath;
+
     @com.aliyun.core.annotation.NameInMap("PolarFSInstanceId")
     private String polarFSInstanceId;
 
@@ -28,6 +31,7 @@ public class AttachApplicationPolarFSResponseBody extends TeaModel {
 
     private AttachApplicationPolarFSResponseBody(Builder builder) {
         this.applicationId = builder.applicationId;
+        this.containerMountPath = builder.containerMountPath;
         this.polarFSInstanceId = builder.polarFSInstanceId;
         this.requestId = builder.requestId;
     }
@@ -52,6 +56,13 @@ public class AttachApplicationPolarFSResponseBody extends TeaModel {
     }
 
     /**
+     * @return containerMountPath
+     */
+    public String getContainerMountPath() {
+        return this.containerMountPath;
+    }
+
+    /**
      * @return polarFSInstanceId
      */
     public String getPolarFSInstanceId() {
@@ -67,6 +78,7 @@ public class AttachApplicationPolarFSResponseBody extends TeaModel {
 
     public static final class Builder {
         private String applicationId; 
+        private String containerMountPath; 
         private String polarFSInstanceId; 
         private String requestId; 
 
@@ -75,12 +87,13 @@ public class AttachApplicationPolarFSResponseBody extends TeaModel {
 
         private Builder(AttachApplicationPolarFSResponseBody model) {
             this.applicationId = model.applicationId;
+            this.containerMountPath = model.containerMountPath;
             this.polarFSInstanceId = model.polarFSInstanceId;
             this.requestId = model.requestId;
         } 
 
         /**
-         * <p>Application ID</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pa-**************</p>
@@ -91,7 +104,18 @@ public class AttachApplicationPolarFSResponseBody extends TeaModel {
         }
 
         /**
-         * <p>PolarLakeBase instance ID</p>
+         * <p>The actual container path to which the file system is mounted. If ContainerMountPath is not specified, the effective default value /mnt/<PolarFSInstanceId> is returned. If the file system is repeatedly mounted without changing the path, the original mount point of the instance is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/mnt/datasets</p>
+         */
+        public Builder containerMountPath(String containerMountPath) {
+            this.containerMountPath = containerMountPath;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the PolarLakebase instance.</p>
          * 
          * <strong>example:</strong>
          * <p>pcs-**************</p>
@@ -102,7 +126,7 @@ public class AttachApplicationPolarFSResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3E5CD764-FCCA-5C9C-838E-20E0DE84B2AF</p>

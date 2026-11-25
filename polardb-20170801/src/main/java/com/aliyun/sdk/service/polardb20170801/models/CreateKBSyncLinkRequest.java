@@ -281,7 +281,7 @@ public class CreateKBSyncLinkRequest extends Request {
         } 
 
         /**
-         * <p>The client ID.</p>
+         * <p>The client identifier.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -319,7 +319,7 @@ public class CreateKBSyncLinkRequest extends Request {
         }
 
         /**
-         * <p>The time-to-live (TTL) of the successful snapshot of Lark chat members for fallback reuse, in seconds. This parameter can be explicitly set only for FEISHU synchronization links. A value of -1 indicates that the snapshot never expires. A value of 0 disables snapshot fallback reuse. A positive integer indicates the maximum age of the snapshot allowed for reuse. Default value: -1. If this parameter is not specified, the default value -1 is used.</p>
+         * <p>The validity period of the successful snapshot of Lark chat members for fallback reuse, in seconds. This parameter can be explicitly set only for Lark synchronization links. A value of -1 indicates that the snapshot never expires. A value of 0 indicates that snapshot fallback reuse is disabled. A positive integer indicates the maximum age of the snapshot allowed for reuse. Default value: -1. If this parameter is not specified, the default value -1 is used.</p>
          * 
          * <strong>example:</strong>
          * <p>-1</p>
@@ -407,7 +407,7 @@ public class CreateKBSyncLinkRequest extends Request {
         }
 
         /**
-         * <p>The data source type. Valid values: FEISHU, SHAREPOINT.</p>
+         * <p>The data source type. Valid values: OSS, DINGTALK, FEISHU, and SHAREPOINT.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -432,7 +432,7 @@ public class CreateKBSyncLinkRequest extends Request {
         }
 
         /**
-         * <p>The tenant ID. This parameter is required when SourceType is set to SHAREPOINT.</p>
+         * <p>The ID of the source tenant. This parameter is required and must be set to the Entra tenant ID when SourceType is set to SHAREPOINT, the tenant_key when SourceType is set to FEISHU, or the corpId when SourceType is set to DINGTALK. This parameter is not required when SourceType is set to OSS.</p>
          * 
          * <strong>example:</strong>
          * <p>63eexxxx-xxxx-xxxx-xxxx-xxxxxx090f82</p>
@@ -456,7 +456,7 @@ public class CreateKBSyncLinkRequest extends Request {
         }
 
         /**
-         * <p>The ID of the DingTalk user who performs the operation.</p>
+         * <p>The ID of the DingTalk user that performs the operation.</p>
          * 
          * <strong>example:</strong>
          * <p>123***56</p>
@@ -468,7 +468,7 @@ public class CreateKBSyncLinkRequest extends Request {
         }
 
         /**
-         * <p>The Lark user refresh token. This token must be provided together with UserAccessToken to automatically rotate the fallback identity for expanding chat members.</p>
+         * <p>The Lark user refresh token. This token must be provided together with UserAccessToken and is used to automatically rotate the fallback identity for expanding chat members.</p>
          * 
          * <strong>example:</strong>
          * <p>example-user-refresh-token</p>

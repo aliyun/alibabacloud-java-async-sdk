@@ -187,7 +187,7 @@ public class OpenAITaskRequest extends Request {
         } 
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The ID of the cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -200,13 +200,7 @@ public class OpenAITaskRequest extends Request {
         }
 
         /**
-         * <p>The node type. Valid values:</p>
-         * <ul>
-         * <li><p><strong>DLNode</strong>: AI node.</p>
-         * </li>
-         * <li><p><strong>SearchNode</strong>: search AI node.</p>
-         * </li>
-         * </ul>
+         * <p>The node type. DLNode indicates an AI node. SearchNode is available only if search AI nodes are already created in the target cluster. Otherwise, the InvalidParameter.NodeType error (HTTP 400) may be returned. You can call DescribeAIDBClusters to check the node types of the cluster before the call. SearchNode is available only if search AI nodes are already created in the cluster. Otherwise, the InvalidParameter.NodeType error is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>DLNode</p>
@@ -236,7 +230,7 @@ public class OpenAITaskRequest extends Request {
         }
 
         /**
-         * <p>The password of the database account.</p>
+         * <p>The password of the database account for which you want to enable the PolarDB for AI feature.</p>
          * 
          * <strong>example:</strong>
          * <p>testPassword</p>
@@ -261,7 +255,7 @@ public class OpenAITaskRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-************</p>
@@ -291,7 +285,7 @@ public class OpenAITaskRequest extends Request {
         }
 
         /**
-         * <p>The database account on which to enable the PolarDB for AI feature.</p>
+         * <p>The database account for which you want to enable the PolarDB for AI feature.</p>
          * 
          * <strong>example:</strong>
          * <p>testAccountName</p>

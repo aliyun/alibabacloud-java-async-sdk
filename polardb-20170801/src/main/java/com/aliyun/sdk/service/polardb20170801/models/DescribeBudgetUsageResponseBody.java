@@ -241,7 +241,7 @@ public class DescribeBudgetUsageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The creation time of the budget usage record in RFC 3339 UTC format.</p>
+         * <p>The creation time of the budget usage record, in RFC 3339 UTC format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-01-01T00:00:00Z</p>
@@ -252,7 +252,7 @@ public class DescribeBudgetUsageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The last modification time of the budget usage record in RFC 3339 UTC format.</p>
+         * <p>The time when the budget usage record was last modified, in RFC 3339 UTC format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-01-15T12:00:00Z</p>
@@ -275,6 +275,9 @@ public class DescribeBudgetUsageResponseBody extends TeaModel {
 
         /**
          * <p>The list of associated budget policies.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder policies(java.util.List<Policies> policies) {
             this.policies = policies;
@@ -304,7 +307,7 @@ public class DescribeBudgetUsageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The end time of the budget statistical window in RFC 3339 UTC format.</p>
+         * <p>The end time of the budget statistical window, in RFC 3339 UTC format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-01-31T23:59:59Z</p>
@@ -315,7 +318,7 @@ public class DescribeBudgetUsageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The start time of the budget statistical window in RFC 3339 UTC format.</p>
+         * <p>The start time of the budget statistical window, in RFC 3339 UTC format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-01-01T00:00:00Z</p>
@@ -473,7 +476,7 @@ public class DescribeBudgetUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The budget dimension reference ID to which the policy applies.</p>
+             * <p>The reference ID of the budget dimension to which the policy applies.</p>
              * 
              * <strong>example:</strong>
              * <p>ref-001</p>
@@ -495,7 +498,7 @@ public class DescribeBudgetUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of budget points set by the policy.</p>
+             * <p>The number of budget points configured in the policy.</p>
              * 
              * <strong>example:</strong>
              * <p>10000</p>
@@ -528,7 +531,7 @@ public class DescribeBudgetUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The day of the month when the budget is reset. For example, 1 indicates the first day of each month.</p>
+             * <p>The day of the month on which the budget is reset. For example, 1 indicates the first day of each month.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

@@ -127,7 +127,7 @@ public class RestoreApplicationByBackupSetRequest extends Request {
         }
 
         /**
-         * <p>The ID of the backup set used to restore the application.</p>
+         * <p>The ID of the backup set used to restore the application. Usage notes: This parameter is required. If this parameter is not provided, the API returns the InvalidBackupSetID.NotFound (404) error.</p>
          * 
          * <strong>example:</strong>
          * <p>bs-123456</p>
@@ -139,7 +139,7 @@ public class RestoreApplicationByBackupSetRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the application.</p>
+         * <p>The ID of the region where the application resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

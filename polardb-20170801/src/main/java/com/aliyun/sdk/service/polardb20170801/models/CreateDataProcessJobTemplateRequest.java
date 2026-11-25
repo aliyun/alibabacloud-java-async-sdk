@@ -160,7 +160,7 @@ public class CreateDataProcessJobTemplateRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to fetch the image summary or video synopsis. When Settings is set to true, CaptioningPrompt must be specified.</p>
+         * <p>Specifies whether to fetch the image summary or video synopsis. When Settings is true, CaptioningPrompt must be provided.</p>
          */
         public Builder captioning(Boolean captioning) {
             this.putQueryParameter("Captioning", captioning);
@@ -169,7 +169,7 @@ public class CreateDataProcessJobTemplateRequest extends Request {
         }
 
         /**
-         * <p>The prompt used for extracting summaries. This parameter takes effect only when Captioning is set to true.</p>
+         * <p>The prompt used for extracting captions. This parameter takes effect only when Captioning is set to true.</p>
          * 
          * <strong>example:</strong>
          * <p>Summarize the image content</p>
@@ -240,7 +240,7 @@ public class CreateDataProcessJobTemplateRequest extends Request {
         }
 
         /**
-         * <p>The templatetype of the node. Valid values: image.</p>
+         * <p>The templatetype of the node template. Valid value: image.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

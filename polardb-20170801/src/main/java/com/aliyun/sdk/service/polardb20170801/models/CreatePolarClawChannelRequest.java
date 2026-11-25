@@ -191,7 +191,7 @@ public class CreatePolarClawChannelRequest extends Request {
         }
 
         /**
-         * <p>The channel plugin name.</p>
+         * <p>The name of the channel plugin.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -204,7 +204,7 @@ public class CreatePolarClawChannelRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to restart the gateway after creation. Default value: true.</p>
+         * <p>Specifies whether to restart the gateway after creation. Default value: true. Note: &#39;The value must be the string true or false. JSON boolean values are not accepted.&#39; Coordinate to confirm whether the type field should be updated to string accordingly.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

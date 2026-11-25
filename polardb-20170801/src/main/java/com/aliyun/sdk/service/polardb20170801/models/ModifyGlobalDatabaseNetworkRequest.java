@@ -209,7 +209,7 @@ public class ModifyGlobalDatabaseNetworkRequest extends Request {
         /**
          * <p>The description of the GDN. It must meet the following requirements:</p>
          * <ul>
-         * <li><p>Cannot start with http\:// or https\://.</p>
+         * <li><p>Cannot start with http:// or https://.</p>
          * </li>
          * <li><p>Must start with a letter or a Chinese character.</p>
          * </li>

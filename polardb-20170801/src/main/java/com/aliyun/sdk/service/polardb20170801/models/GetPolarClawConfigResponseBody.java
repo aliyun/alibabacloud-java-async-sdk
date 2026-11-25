@@ -154,11 +154,11 @@ public class GetPolarClawConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The configuration object.</p>
+         * <p>The configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>{
-         *     &quot;models&quot;: &quot;{\&quot;mode\&quot;:\&quot;merge\&quot;,\&quot;providers\&quot;:{\&quot;bailian\&quot;:{\&quot;models\&quot;:[{\&quot;input\&quot;:[\&quot;text\&quot;,\&quot;image\&quot;],\&quot;name\&quot;:\&quot;qwen3.6-plus\&quot;,\&quot;api\&quot;:\&quot;openai-completions\&quot;,\&quot;id\&quot;:\&quot;qwen3.6-plus\&quot;,\&quot;compat\&quot;:{\&quot;supportsUsageInStreaming\&quot;:true}}],\&quot;baseUrl\&quot;:\&quot;<a href="https://dashscope.aliyuncs.com/compatible-mode/v1%5C%5C%22,%5C%5C%22apiKey%5C%5C%22:%5C%5C%22__OPENCLAW_REDACTED__%5C%5C%22,%5C%5C%22api%5C%5C%22:%5C%5C%22openai-completions%5C%5C%22%7D,%5C%5C%22polardbCustom%5C%5C%22:%7B%5C%5C%22models%5C%5C%22:%5B%7B%5C%5C%22name%5C%5C%22:%5C%5C%22qwen3-max%5C%5C%22,%5C%5C%22api%5C%5C%22:%5C%5C%22openai-completions%5C%5C%22,%5C%5C%22id%5C%5C%22:%5C%5C%22qwen3-max%5C%5C%22%7D%5D,%5C%5C%22baseUrl%5C%5C%22:%5C%5C%22https://dashscope.aliyuncs.com/compatible-mode/v1%5C%5C%22,%5C%5C%22apiKey%5C%5C%22:%5C%5C%22__OPENCLAW_REDACTED__%5C%5C%22,%5C%5C%22api%5C%5C%22:%5C%5C%22openai-completions%5C%5C%22%7D,%5C%5C%22polardb%5C%5C%22:%7B%5C%5C%22models%5C%5C%22:%5B%5D,%5C%5C%22baseUrl%5C%5C%22:%5C%5C%22https://dashscope.aliyuncs.com/compatible-mode/v1%5C%5C%22,%5C%5C%22api%5C%5C%22:%5C%5C%22openai-completions%5C%5C%22%7D%7D%7D">https://dashscope.aliyuncs.com/compatible-mode/v1\\&quot;,\\&quot;apiKey\\&quot;:\\&quot;__OPENCLAW_REDACTED__\\&quot;,\\&quot;api\\&quot;:\\&quot;openai-completions\\&quot;},\\&quot;polardbCustom\\&quot;:{\\&quot;models\\&quot;:[{\\&quot;name\\&quot;:\\&quot;qwen3-max\\&quot;,\\&quot;api\\&quot;:\\&quot;openai-completions\\&quot;,\\&quot;id\\&quot;:\\&quot;qwen3-max\\&quot;}],\\&quot;baseUrl\\&quot;:\\&quot;https://dashscope.aliyuncs.com/compatible-mode/v1\\&quot;,\\&quot;apiKey\\&quot;:\\&quot;__OPENCLAW_REDACTED__\\&quot;,\\&quot;api\\&quot;:\\&quot;openai-completions\\&quot;},\\&quot;polardb\\&quot;:{\\&quot;models\\&quot;:[],\\&quot;baseUrl\\&quot;:\\&quot;https://dashscope.aliyuncs.com/compatible-mode/v1\\&quot;,\\&quot;api\\&quot;:\\&quot;openai-completions\\&quot;}}}</a>&quot;
+         *     &quot;models&quot;: &quot;{&quot;mode&quot;:&quot;merge&quot;,&quot;providers&quot;:{&quot;bailian&quot;:{&quot;models&quot;:[{&quot;input&quot;:[&quot;text&quot;,&quot;image&quot;],&quot;name&quot;:&quot;qwen3.6-plus&quot;,&quot;api&quot;:&quot;openai-completions&quot;,&quot;id&quot;:&quot;qwen3.6-plus&quot;,&quot;compat&quot;:{&quot;supportsUsageInStreaming&quot;:true}}],&quot;baseUrl&quot;:&quot;<a href="https://dashscope.aliyuncs.com/compatible-mode/v1%5C%22,%5C%22apiKey%5C%22:%5C%22__OPENCLAW_REDACTED__%5C%22,%5C%22api%5C%22:%5C%22openai-completions%5C%22%7D,%5C%22polardbCustom%5C%22:%7B%5C%22models%5C%22:%5B%7B%5C%22name%5C%22:%5C%22qwen3-max%5C%22,%5C%22api%5C%22:%5C%22openai-completions%5C%22,%5C%22id%5C%22:%5C%22qwen3-max%5C%22%7D%5D,%5C%22baseUrl%5C%22:%5C%22https://dashscope.aliyuncs.com/compatible-mode/v1%5C%22,%5C%22apiKey%5C%22:%5C%22__OPENCLAW_REDACTED__%5C%22,%5C%22api%5C%22:%5C%22openai-completions%5C%22%7D,%5C%22polardb%5C%22:%7B%5C%22models%5C%22:%5B%5D,%5C%22baseUrl%5C%22:%5C%22https://dashscope.aliyuncs.com/compatible-mode/v1%5C%22,%5C%22api%5C%22:%5C%22openai-completions%5C%22%7D%7D%7D">https://dashscope.aliyuncs.com/compatible-mode/v1\&quot;,\&quot;apiKey\&quot;:\&quot;__OPENCLAW_REDACTED__\&quot;,\&quot;api\&quot;:\&quot;openai-completions\&quot;},\&quot;polardbCustom\&quot;:{\&quot;models\&quot;:[{\&quot;name\&quot;:\&quot;qwen3-max\&quot;,\&quot;api\&quot;:\&quot;openai-completions\&quot;,\&quot;id\&quot;:\&quot;qwen3-max\&quot;}],\&quot;baseUrl\&quot;:\&quot;https://dashscope.aliyuncs.com/compatible-mode/v1\&quot;,\&quot;apiKey\&quot;:\&quot;__OPENCLAW_REDACTED__\&quot;,\&quot;api\&quot;:\&quot;openai-completions\&quot;},\&quot;polardb\&quot;:{\&quot;models\&quot;:[],\&quot;baseUrl\&quot;:\&quot;https://dashscope.aliyuncs.com/compatible-mode/v1\&quot;,\&quot;api\&quot;:\&quot;openai-completions\&quot;}}}</a>&quot;
          * }</p>
          */
         public Builder config(java.util.Map<String, ?> config) {
@@ -167,7 +167,7 @@ public class GetPolarClawConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The configuration hash.</p>
+         * <p>The configuration hash, which is used as an optimistic lock for subsequent patch operations.</p>
          * 
          * <strong>example:</strong>
          * <p>005b55a8e870aaf866598e48a6af0bdbfa3fef704770c5e1cbad99648beaa661</p>
@@ -189,7 +189,7 @@ public class GetPolarClawConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The version of OpenClaw.</p>
+         * <p>The OpenClaw version.</p>
          * 
          * <strong>example:</strong>
          * <p>2026.3.28</p>

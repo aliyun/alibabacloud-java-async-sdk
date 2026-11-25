@@ -168,7 +168,7 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>A7E6A8FD-C50B-46B2-BA85-D8B8D3******</p>
@@ -341,7 +341,7 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The client identifier.</p>
+             * <p>The client ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cli</p>
@@ -676,7 +676,7 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The client identifier.</p>
+             * <p>The client ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cli</p>

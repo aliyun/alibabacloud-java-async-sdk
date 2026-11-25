@@ -67,7 +67,7 @@ public class DescribePolarAgentSessionStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>CDB3258F-B5DE-43C4-8935-CBA0CA******</p>
@@ -78,11 +78,11 @@ public class DescribePolarAgentSessionStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the session. Valid values:</p>
+         * <p>The session status. Valid values:</p>
          * <ul>
-         * <li><p><strong>1</strong>: Enabled</p>
+         * <li><p><strong>1</strong>: Enabled.</p>
          * </li>
-         * <li><p><strong>0</strong>: Disabled</p>
+         * <li><p><strong>0</strong>: Disabled.</p>
          * </li>
          * </ul>
          * 

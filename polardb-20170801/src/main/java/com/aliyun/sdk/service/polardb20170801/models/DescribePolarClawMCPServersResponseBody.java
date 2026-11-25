@@ -128,7 +128,7 @@ public class DescribePolarClawMCPServersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned for the request.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -150,11 +150,11 @@ public class DescribePolarClawMCPServersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The configurations of the MCP servers.</p>
+         * <p>The MCP server configurations.</p>
          * 
          * <strong>example:</strong>
          * <p>{
-         *     &quot;dev-mcp-server&quot;: &quot;{\&quot;args\&quot;:[\&quot;-y\&quot;,\&quot;@polarclaw/mcp-dev\&quot;],\&quot;command\&quot;:\&quot;node\&quot;}&quot;
+         *     &quot;dev-mcp-server&quot;: &quot;{&quot;args&quot;:[&quot;-y&quot;,&quot;@polarclaw/mcp-dev&quot;],&quot;command&quot;:&quot;node&quot;}&quot;
          * }</p>
          */
         public Builder servers(java.util.Map<String, ?> servers) {

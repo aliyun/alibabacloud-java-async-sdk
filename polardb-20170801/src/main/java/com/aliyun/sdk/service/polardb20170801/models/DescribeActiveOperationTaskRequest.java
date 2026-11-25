@@ -261,7 +261,7 @@ public class DescribeActiveOperationTaskRequest extends Request {
         }
 
         /**
-         * <p>The page number. The value must be greater than 0 and cannot exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
+         * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -346,7 +346,7 @@ public class DescribeActiveOperationTaskRequest extends Request {
         }
 
         /**
-         * <p>The task type. You can call the [DescribeActiveOperationTaskType](ID not yet generated) operation to query the task types of pending tasks.</p>
+         * <p>The task type. You can call the [DescribeActiveOperationTaskType](ID not generated yet) operation to query the task types of pending tasks.</p>
          * <blockquote>
          * <ul>
          * <li>You can also enter <strong>all</strong> to view all pending tasks under your account.</li>

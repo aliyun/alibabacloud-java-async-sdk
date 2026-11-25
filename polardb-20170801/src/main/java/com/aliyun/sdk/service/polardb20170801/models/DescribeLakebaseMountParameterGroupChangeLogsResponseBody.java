@@ -67,7 +67,7 @@ public class DescribeLakebaseMountParameterGroupChangeLogsResponseBody extends T
         } 
 
         /**
-         * <p>The change records, sorted in descending order by CreateTime. An empty array is returned if no data is found.</p>
+         * <p>The change logs, sorted in descending order by CreateTime. An empty array is returned if no data is found.</p>
          */
         public Builder changeLogs(java.util.List<ChangeLogs> changeLogs) {
             this.changeLogs = changeLogs;
@@ -255,7 +255,7 @@ public class DescribeLakebaseMountParameterGroupChangeLogsResponseBody extends T
             }
 
             /**
-             * <p>Indicates whether the change has been applied. Valid values: 0 (no) and 1 (yes).</p>
+             * <p>Indicates whether the change is applied. Valid values: 0: No. 1: Yes.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -277,7 +277,7 @@ public class DescribeLakebaseMountParameterGroupChangeLogsResponseBody extends T
             }
 
             /**
-             * <p>The new value after the change. This parameter is empty for delete operations.</p>
+             * <p>The new value after the change. This value is empty if the change type is delete.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -288,7 +288,7 @@ public class DescribeLakebaseMountParameterGroupChangeLogsResponseBody extends T
             }
 
             /**
-             * <p>The old value before the change. This parameter is empty for create operations.</p>
+             * <p>The old value before the change. This value is empty if the change type is create.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

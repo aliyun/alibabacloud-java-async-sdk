@@ -145,7 +145,7 @@ public class GetPolarAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The content returned by the agent.</p>
          * 
          * <strong>example:</strong>
          * <p>QZ-13661677-80</p>
@@ -156,7 +156,7 @@ public class GetPolarAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether FunctionCall is supported.</p>
+         * <p>Specifies whether function calling is supported.</p>
          */
         public Builder functionCall(java.util.List<FunctionCall> functionCall) {
             this.functionCall = functionCall;
@@ -186,10 +186,10 @@ public class GetPolarAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The model\&quot;s reasoning content.</p>
+         * <p>The reasoning content of the model.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxx</p>
+         * <p>Extract the key information based on the input content</p>
          */
         public Builder reasoningContent(String reasoningContent) {
             this.reasoningContent = reasoningContent;
@@ -219,7 +219,7 @@ public class GetPolarAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether UiFunctionCall is supported.</p>
+         * <p>Specifies whether UI function calling is supported.</p>
          */
         public Builder uiFunctionCall(java.util.List<UiFunctionCall> uiFunctionCall) {
             this.uiFunctionCall = uiFunctionCall;
@@ -311,7 +311,7 @@ public class GetPolarAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The operation-related output result.</p>
+             * <p>The output results related to the operation.</p>
              * 
              * <strong>example:</strong>
              * <p>---narguments:n  parameters: []n</p>
@@ -322,7 +322,7 @@ public class GetPolarAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The quota ID.</p>
+             * <p>The ID of the quota.</p>
              * 
              * <strong>example:</strong>
              * <p>393</p>
@@ -347,7 +347,7 @@ public class GetPolarAgentResponseBody extends TeaModel {
              * <p>The status.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>Success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -414,10 +414,10 @@ public class GetPolarAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>xxx</p>
+             * <p>The JSON text of the tool calling parameters.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>{&quot;RegionId&quot;:&quot;cn-hangzhou&quot;}</p>
              */
             public Builder argsText(String argsText) {
                 this.argsText = argsText;
@@ -425,10 +425,10 @@ public class GetPolarAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tool command that is invoked.</p>
+             * <p>The command of the called tool.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>DescribeDBClusters</p>
              */
             public Builder toolName(String toolName) {
                 this.toolName = toolName;

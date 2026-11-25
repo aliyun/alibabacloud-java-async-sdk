@@ -156,7 +156,7 @@ public class RegisterAIDBClusterCustomModelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The display name and the initial invocation name for clients.</p>
+         * <p>The display name and the initial client invocation name.</p>
          * 
          * <strong>example:</strong>
          * <p>my-qwen3</p>
@@ -178,7 +178,7 @@ public class RegisterAIDBClusterCustomModelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The registration ID of the model.</p>
+         * <p>The ID of the model registration.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -222,7 +222,7 @@ public class RegisterAIDBClusterCustomModelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>3AA6E0E4-1234-5678-90AB-1234567890AB</p>

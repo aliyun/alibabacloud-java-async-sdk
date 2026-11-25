@@ -32,6 +32,9 @@ public class DescribeModelApisResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("TotalPages")
+    private Integer totalPages;
+
     @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Integer totalRecordCount;
 
@@ -41,6 +44,7 @@ public class DescribeModelApisResponseBody extends TeaModel {
         this.pageRecordCount = builder.pageRecordCount;
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
+        this.totalPages = builder.totalPages;
         this.totalRecordCount = builder.totalRecordCount;
     }
 
@@ -92,6 +96,13 @@ public class DescribeModelApisResponseBody extends TeaModel {
     }
 
     /**
+     * @return totalPages
+     */
+    public Integer getTotalPages() {
+        return this.totalPages;
+    }
+
+    /**
      * @return totalRecordCount
      */
     public Integer getTotalRecordCount() {
@@ -104,6 +115,7 @@ public class DescribeModelApisResponseBody extends TeaModel {
         private Integer pageRecordCount; 
         private Integer pageSize; 
         private String requestId; 
+        private Integer totalPages; 
         private Integer totalRecordCount; 
 
         private Builder() {
@@ -115,6 +127,7 @@ public class DescribeModelApisResponseBody extends TeaModel {
             this.pageRecordCount = model.pageRecordCount;
             this.pageSize = model.pageSize;
             this.requestId = model.requestId;
+            this.totalPages = model.totalPages;
             this.totalRecordCount = model.totalRecordCount;
         } 
 
@@ -138,7 +151,7 @@ public class DescribeModelApisResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries on the current page.</p>
+         * <p>The number of records on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -149,8 +162,7 @@ public class DescribeModelApisResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>.</p>
-         * <p>Default value: <strong>30</strong>.</p>
+         * <p>The number of entries per page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>. Default value: <strong>30</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -172,7 +184,18 @@ public class DescribeModelApisResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries.</p>
+         * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
+        public Builder totalPages(Integer totalPages) {
+            this.totalPages = totalPages;
+            return this;
+        }
+
+        /**
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -201,11 +224,23 @@ public class DescribeModelApisResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Config")
         private String config;
 
+        @com.aliyun.core.annotation.NameInMap("CustinsName")
+        private String custinsName;
+
         @com.aliyun.core.annotation.NameInMap("GmtCreated")
         private String gmtCreated;
 
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
+        private String gmtModified;
+
         @com.aliyun.core.annotation.NameInMap("ModelApiId")
         private String modelApiId;
+
+        @com.aliyun.core.annotation.NameInMap("ModelMappings")
+        private String modelMappings;
+
+        @com.aliyun.core.annotation.NameInMap("ModelRouting")
+        private String modelRouting;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -231,8 +266,12 @@ public class DescribeModelApisResponseBody extends TeaModel {
         private Items(Builder builder) {
             this.category = builder.category;
             this.config = builder.config;
+            this.custinsName = builder.custinsName;
             this.gmtCreated = builder.gmtCreated;
+            this.gmtModified = builder.gmtModified;
             this.modelApiId = builder.modelApiId;
+            this.modelMappings = builder.modelMappings;
+            this.modelRouting = builder.modelRouting;
             this.name = builder.name;
             this.pathPrefix = builder.pathPrefix;
             this.protocol = builder.protocol;
@@ -265,6 +304,13 @@ public class DescribeModelApisResponseBody extends TeaModel {
         }
 
         /**
+         * @return custinsName
+         */
+        public String getCustinsName() {
+            return this.custinsName;
+        }
+
+        /**
          * @return gmtCreated
          */
         public String getGmtCreated() {
@@ -272,10 +318,31 @@ public class DescribeModelApisResponseBody extends TeaModel {
         }
 
         /**
+         * @return gmtModified
+         */
+        public String getGmtModified() {
+            return this.gmtModified;
+        }
+
+        /**
          * @return modelApiId
          */
         public String getModelApiId() {
             return this.modelApiId;
+        }
+
+        /**
+         * @return modelMappings
+         */
+        public String getModelMappings() {
+            return this.modelMappings;
+        }
+
+        /**
+         * @return modelRouting
+         */
+        public String getModelRouting() {
+            return this.modelRouting;
         }
 
         /**
@@ -330,8 +397,12 @@ public class DescribeModelApisResponseBody extends TeaModel {
         public static final class Builder {
             private String category; 
             private String config; 
+            private String custinsName; 
             private String gmtCreated; 
+            private String gmtModified; 
             private String modelApiId; 
+            private String modelMappings; 
+            private String modelRouting; 
             private String name; 
             private String pathPrefix; 
             private String protocol; 
@@ -346,8 +417,12 @@ public class DescribeModelApisResponseBody extends TeaModel {
             private Builder(Items model) {
                 this.category = model.category;
                 this.config = model.config;
+                this.custinsName = model.custinsName;
                 this.gmtCreated = model.gmtCreated;
+                this.gmtModified = model.gmtModified;
                 this.modelApiId = model.modelApiId;
+                this.modelMappings = model.modelMappings;
+                this.modelRouting = model.modelRouting;
                 this.name = model.name;
                 this.pathPrefix = model.pathPrefix;
                 this.protocol = model.protocol;
@@ -385,6 +460,17 @@ public class DescribeModelApisResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The ID of the gateway instance to which the model API belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pg-2ze3x6i1d7g5rto28</p>
+             */
+            public Builder custinsName(String custinsName) {
+                this.custinsName = custinsName;
+                return this;
+            }
+
+            /**
              * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
@@ -392,6 +478,17 @@ public class DescribeModelApisResponseBody extends TeaModel {
              */
             public Builder gmtCreated(String gmtCreated) {
                 this.gmtCreated = gmtCreated;
+                return this;
+            }
+
+            /**
+             * <p>The modification time of the model API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-11-09T06:43:33Z</p>
+             */
+            public Builder gmtModified(String gmtModified) {
+                this.gmtModified = gmtModified;
                 return this;
             }
 
@@ -407,7 +504,29 @@ public class DescribeModelApisResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the model API.</p>
+             * <p>The model name mappings, which is a JSON array string. Each element is in the format of {&quot;Source&quot;:&quot;client model name&quot;,&quot;Target&quot;:&quot;upstream model name&quot;}. If not configured, this parameter is empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;Source&quot;:&quot;client-model-a&quot;,&quot;Target&quot;:&quot;upstream-model-a&quot;}]</p>
+             */
+            public Builder modelMappings(String modelMappings) {
+                this.modelMappings = modelMappings;
+                return this;
+            }
+
+            /**
+             * <p>The intelligent routing candidate list, which is a JSON object string in the format of {&quot;AllowedModels&quot;:[&quot;candidate model name&quot;]}. If not configured, this parameter is empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;AllowedModels&quot;:[&quot;deepseek-v4-pro&quot;,&quot;glm-5.3&quot;,&quot;glm-5.3-flash&quot;]}</p>
+             */
+            public Builder modelRouting(String modelRouting) {
+                this.modelRouting = modelRouting;
+                return this;
+            }
+
+            /**
+             * <p>The model API name.</p>
              * 
              * <strong>example:</strong>
              * <p>testName</p>
@@ -446,7 +565,7 @@ public class DescribeModelApisResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of input tokens.</p>
+             * <p>The number of input points.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -457,7 +576,7 @@ public class DescribeModelApisResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of output tokens.</p>
+             * <p>The number of output points.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -502,7 +621,7 @@ public class DescribeModelApisResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the model API.</p>
+             * <p>The model API status.</p>
              * 
              * <strong>example:</strong>
              * <p>Enable</p>
