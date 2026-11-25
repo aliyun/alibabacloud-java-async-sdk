@@ -20,8 +20,8 @@ public class QuotaUsage extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("cpuCores")
     private Double cpuCores;
 
-    @com.aliyun.core.annotation.NameInMap("createSessionWithSnapshotConcurrency")
-    private Integer createSessionWithSnapshotConcurrency;
+    @com.aliyun.core.annotation.NameInMap("createSandboxWithSnapshotConcurrency")
+    private Integer createSandboxWithSnapshotConcurrency;
 
     @com.aliyun.core.annotation.NameInMap("createSnapshotConcurrency")
     private Integer createSnapshotConcurrency;
@@ -43,7 +43,7 @@ public class QuotaUsage extends TeaModel {
 
     private QuotaUsage(Builder builder) {
         this.cpuCores = builder.cpuCores;
-        this.createSessionWithSnapshotConcurrency = builder.createSessionWithSnapshotConcurrency;
+        this.createSandboxWithSnapshotConcurrency = builder.createSandboxWithSnapshotConcurrency;
         this.createSnapshotConcurrency = builder.createSnapshotConcurrency;
         this.instanceCount = builder.instanceCount;
         this.memoryGB = builder.memoryGB;
@@ -72,10 +72,10 @@ public class QuotaUsage extends TeaModel {
     }
 
     /**
-     * @return createSessionWithSnapshotConcurrency
+     * @return createSandboxWithSnapshotConcurrency
      */
-    public Integer getCreateSessionWithSnapshotConcurrency() {
-        return this.createSessionWithSnapshotConcurrency;
+    public Integer getCreateSandboxWithSnapshotConcurrency() {
+        return this.createSandboxWithSnapshotConcurrency;
     }
 
     /**
@@ -122,7 +122,7 @@ public class QuotaUsage extends TeaModel {
 
     public static final class Builder {
         private Double cpuCores; 
-        private Integer createSessionWithSnapshotConcurrency; 
+        private Integer createSandboxWithSnapshotConcurrency; 
         private Integer createSnapshotConcurrency; 
         private Long instanceCount; 
         private Double memoryGB; 
@@ -135,7 +135,7 @@ public class QuotaUsage extends TeaModel {
 
         private Builder(QuotaUsage model) {
             this.cpuCores = model.cpuCores;
-            this.createSessionWithSnapshotConcurrency = model.createSessionWithSnapshotConcurrency;
+            this.createSandboxWithSnapshotConcurrency = model.createSandboxWithSnapshotConcurrency;
             this.createSnapshotConcurrency = model.createSnapshotConcurrency;
             this.instanceCount = model.instanceCount;
             this.memoryGB = model.memoryGB;
@@ -145,7 +145,7 @@ public class QuotaUsage extends TeaModel {
         } 
 
         /**
-         * <p>The consumed CPU quota in vCPUs, not the CPU utilization.</p>
+         * <p>The consumed CPU quota in vCPUs, which is not the CPU utilization.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -156,18 +156,18 @@ public class QuotaUsage extends TeaModel {
         }
 
         /**
-         * <p>The number of unreleased snapshot-based sandbox creation concurrency authorizations.</p>
+         * <p>The number of unreleased concurrency authorizations for snapshot-based sandbox creation.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
          */
-        public Builder createSessionWithSnapshotConcurrency(Integer createSessionWithSnapshotConcurrency) {
-            this.createSessionWithSnapshotConcurrency = createSessionWithSnapshotConcurrency;
+        public Builder createSandboxWithSnapshotConcurrency(Integer createSandboxWithSnapshotConcurrency) {
+            this.createSandboxWithSnapshotConcurrency = createSandboxWithSnapshotConcurrency;
             return this;
         }
 
         /**
-         * <p>The number of unreleased snapshot creation concurrency authorizations.</p>
+         * <p>The number of unreleased concurrency authorizations for snapshot creation.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -189,7 +189,7 @@ public class QuotaUsage extends TeaModel {
         }
 
         /**
-         * <p>The consumed memory quota in GB, not the actual memory used by processes.</p>
+         * <p>The consumed memory quota in GB, which is not the actual memory used by processes.</p>
          * 
          * <strong>example:</strong>
          * <p>1.5</p>
@@ -200,7 +200,7 @@ public class QuotaUsage extends TeaModel {
         }
 
         /**
-         * <p>The number of unreleased sandbox hibernation concurrency authorizations.</p>
+         * <p>The number of unreleased concurrency authorizations for sandbox hibernation.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -211,7 +211,7 @@ public class QuotaUsage extends TeaModel {
         }
 
         /**
-         * <p>The number of unreleased sandbox resume concurrency authorizations.</p>
+         * <p>The number of unreleased concurrency authorizations for resuming sandboxes.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -222,7 +222,7 @@ public class QuotaUsage extends TeaModel {
         }
 
         /**
-         * <p>The number of cores consumed from the team\&quot;s exclusive CPU creation quota that have not yet been naturally replenished. This is not the cumulative creation volume in the last minute. This field is omitted when there is no valid exclusive bucket snapshot, and actual zeros and decimal values are preserved.</p>
+         * <p>The number of cores consumed from the exclusive CPU creation quota of the team that have not yet been naturally replenished. This is not the cumulative creation volume over the last minute. This field is omitted when no valid exclusive bucket snapshot is available. Actual zeros and decimals are retained.</p>
          * 
          * <strong>example:</strong>
          * <p>19.875</p>

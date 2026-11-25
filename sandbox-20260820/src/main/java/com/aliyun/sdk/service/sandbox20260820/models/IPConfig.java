@@ -70,7 +70,7 @@ public class IPConfig extends TeaModel {
          * <p>The description of the IP rule. The length cannot exceed 128 characters.</p>
          * 
          * <strong>example:</strong>
-         * <p>办公网出口地址</p>
+         * <p>The egress address of the office network.</p>
          */
         public Builder description(String description) {
             this.description = description;
