@@ -62,6 +62,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddRecordPermissionResponse> addRecordPermission(AddRecordPermissionRequest request);
 
     /**
+     * @param request the request parameters of AddRobotToScenegroup  AddRobotToScenegroupRequest
+     * @return AddRobotToScenegroupResponse
+     */
+    CompletableFuture<AddRobotToScenegroupResponse> addRobotToScenegroup(AddRobotToScenegroupRequest request);
+
+    /**
      * @param request the request parameters of AddScenegroupMember  AddScenegroupMemberRequest
      * @return AddScenegroupMemberResponse
      */

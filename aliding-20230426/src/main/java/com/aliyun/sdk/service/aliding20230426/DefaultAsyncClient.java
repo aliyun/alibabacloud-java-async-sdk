@@ -167,6 +167,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of AddRobotToScenegroup  AddRobotToScenegroupRequest
+     * @return AddRobotToScenegroupResponse
+     */
+    @Override
+    public CompletableFuture<AddRobotToScenegroupResponse> addRobotToScenegroup(AddRobotToScenegroupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("AddRobotToScenegroup").setMethod(HttpMethod.POST).setPathRegex("/dingtalk/v1/im/addRobotToScenegroup").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AddRobotToScenegroupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AddRobotToScenegroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of AddScenegroupMember  AddScenegroupMemberRequest
      * @return AddScenegroupMemberResponse
      */
