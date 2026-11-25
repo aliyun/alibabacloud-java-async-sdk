@@ -82,6 +82,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BatchDeleteConsumerAuthorizationRuleResponse> batchDeleteConsumerAuthorizationRule(BatchDeleteConsumerAuthorizationRuleRequest request);
 
     /**
+     * @param request the request parameters of BatchDeleteHttpApiRoutes  BatchDeleteHttpApiRoutesRequest
+     * @return BatchDeleteHttpApiRoutesResponse
+     */
+    CompletableFuture<BatchDeleteHttpApiRoutesResponse> batchDeleteHttpApiRoutes(BatchDeleteHttpApiRoutesRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Batch requests are processed individually after passing route ownership validation. If some routes fail to be published, other successfully published routes remain valid.</p>
      * 
@@ -107,6 +113,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return BatchRemoveConsumerGroupConsumersResponse
      */
     CompletableFuture<BatchRemoveConsumerGroupConsumersResponse> batchRemoveConsumerGroupConsumers(BatchRemoveConsumerGroupConsumersRequest request);
+
+    /**
+     * @param request the request parameters of BatchUndeployHttpApiRoutes  BatchUndeployHttpApiRoutesRequest
+     * @return BatchUndeployHttpApiRoutesResponse
+     */
+    CompletableFuture<BatchUndeployHttpApiRoutesResponse> batchUndeployHttpApiRoutes(BatchUndeployHttpApiRoutesRequest request);
 
     /**
      * @param request the request parameters of BatchUpdateHttpApiOperation  BatchUpdateHttpApiOperationRequest
@@ -524,7 +536,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Automatically stops the service and cleans up the resources owned by the API when a published new-version model API is deleted. A successful response indicates that the request is accepted or is an idempotent replay of a completed deletion, but does not indicate that all background steps are complete. Monitor the progress by checking the deleteStatus parameter of GetModelApi. Only a NotFound.ModelApi error explicitly indicates that the deletion is fully complete. The object is retained during deletion or upon failure. Shared model sources, model groups, models, services, consumers, and keys are not deleted.</p>
+     * <p>When you delete a published new-version model API, the system automatically stops the service and cleans up the dedicated resources of the API. A successful response indicates that the request is accepted or is an idempotent replay of a completed deletion, but it does not indicate that all background steps are complete. Monitor the progress by checking the deleteStatus parameter of GetModelApi. Only a NotFound.ModelApi error explicitly indicates that the deletion is fully complete. The object is retained if the deletion is in progress or fails. Shared model sources, model groups, models, services, consumers, and keys are not deleted.</p>
      * 
      * @param request the request parameters of DeleteModelApi  DeleteModelApiRequest
      * @return DeleteModelApiResponse
@@ -644,6 +656,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DetachAndDeletePolicyResponse
      */
     CompletableFuture<DetachAndDeletePolicyResponse> detachAndDeletePolicy(DetachAndDeletePolicyRequest request);
+
+    /**
+     * @param request the request parameters of DetectHttpApiConflicts  DetectHttpApiConflictsRequest
+     * @return DetectHttpApiConflictsResponse
+     */
+    CompletableFuture<DetectHttpApiConflictsResponse> detectHttpApiConflicts(DetectHttpApiConflictsRequest request);
 
     /**
      * @param request the request parameters of ExportHttpApi  ExportHttpApiRequest
@@ -844,7 +862,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the current half-open cycle Redis summary for the configured metering policy of the current user\&quot;s dedicated Professional AI gateway. Only total instance counts are supported. Filters for time ranges, models, connections, or SLS destinations are not accepted. If data_present is false, it indicates that no cycle data is available, and the value is not padded with zeros.</p>
+     * <p>Retrieves the current half-open cycle Redis summary of the configured metering policy for the dedicated Professional AI gateway of the current user. It only supports the total number of instances and does not accept filtering by time range, model, connection, or SLS destination. A value of false for data_present indicates that no cycle data is available, and it is not padded with zero values.</p>
      * 
      * @param request the request parameters of GetGatewayWebsocketUsage  GetGatewayWebsocketUsageRequest
      * @return GetGatewayWebsocketUsageResponse

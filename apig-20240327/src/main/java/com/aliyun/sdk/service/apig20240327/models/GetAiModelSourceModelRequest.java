@@ -60,7 +60,7 @@ public class GetAiModelSourceModelRequest extends Request {
         } 
 
         /**
-         * <p>The model identifier. Use the source model card ID for standard models and the vm- identifier for logical model entries.</p>
+         * <p>The model identifier. For standard models, use the source model card ID. For logical model entries, use the vm- prefix.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

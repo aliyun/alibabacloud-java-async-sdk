@@ -1145,7 +1145,7 @@ public class HttpRoute extends TeaModel {
              * <p>The MCP server metadata configuration.</p>
              * 
              * <strong>example:</strong>
-             * <p>{\&quot;config\&quot;:{}}</p>
+             * <p>{&quot;config&quot;:{}}</p>
              */
             public Builder mcpServerConfig(String mcpServerConfig) {
                 this.mcpServerConfig = mcpServerConfig;

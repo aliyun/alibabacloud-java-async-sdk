@@ -219,7 +219,7 @@ public class GetGatewayWebsocketUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether a next page is available.</p>
+             * <p>Indicates whether there is a next page.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>

@@ -163,6 +163,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of BatchDeleteHttpApiRoutes  BatchDeleteHttpApiRoutesRequest
+     * @return BatchDeleteHttpApiRoutesResponse
+     */
+    @Override
+    public CompletableFuture<BatchDeleteHttpApiRoutesResponse> batchDeleteHttpApiRoutes(BatchDeleteHttpApiRoutesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("BatchDeleteHttpApiRoutes").setMethod(HttpMethod.POST).setPathRegex("/v1/http-apis/{httpApiId}/routes/batch-delete").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BatchDeleteHttpApiRoutesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<BatchDeleteHttpApiRoutesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>Batch requests are processed individually after passing route ownership validation. If some routes fail to be published, other successfully published routes remain valid.</p>
      * 
@@ -232,6 +250,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<BatchRemoveConsumerGroupConsumersResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of BatchUndeployHttpApiRoutes  BatchUndeployHttpApiRoutesRequest
+     * @return BatchUndeployHttpApiRoutesResponse
+     */
+    @Override
+    public CompletableFuture<BatchUndeployHttpApiRoutesResponse> batchUndeployHttpApiRoutes(BatchUndeployHttpApiRoutesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("BatchUndeployHttpApiRoutes").setMethod(HttpMethod.POST).setPathRegex("/v1/http-apis/{httpApiId}/routes/batch-undeploy").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BatchUndeployHttpApiRoutesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<BatchUndeployHttpApiRoutesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1361,7 +1397,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Automatically stops the service and cleans up the resources owned by the API when a published new-version model API is deleted. A successful response indicates that the request is accepted or is an idempotent replay of a completed deletion, but does not indicate that all background steps are complete. Monitor the progress by checking the deleteStatus parameter of GetModelApi. Only a NotFound.ModelApi error explicitly indicates that the deletion is fully complete. The object is retained during deletion or upon failure. Shared model sources, model groups, models, services, consumers, and keys are not deleted.</p>
+     * <p>When you delete a published new-version model API, the system automatically stops the service and cleans up the dedicated resources of the API. A successful response indicates that the request is accepted or is an idempotent replay of a completed deletion, but it does not indicate that all background steps are complete. Monitor the progress by checking the deleteStatus parameter of GetModelApi. Only a NotFound.ModelApi error explicitly indicates that the deletion is fully complete. The object is retained if the deletion is in progress or fails. Shared model sources, model groups, models, services, consumers, and keys are not deleted.</p>
      * 
      * @param request the request parameters of DeleteModelApi  DeleteModelApiRequest
      * @return DeleteModelApiResponse
@@ -1693,6 +1729,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DetachAndDeletePolicyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DetectHttpApiConflicts  DetectHttpApiConflictsRequest
+     * @return DetectHttpApiConflictsResponse
+     */
+    @Override
+    public CompletableFuture<DetectHttpApiConflictsResponse> detectHttpApiConflicts(DetectHttpApiConflictsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DetectHttpApiConflicts").setMethod(HttpMethod.POST).setPathRegex("/v1/http-apis/{httpApiId}/detect-conflicts").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DetectHttpApiConflictsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DetectHttpApiConflictsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2209,7 +2263,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the current half-open cycle Redis summary for the configured metering policy of the current user\&quot;s dedicated Professional AI gateway. Only total instance counts are supported. Filters for time ranges, models, connections, or SLS destinations are not accepted. If data_present is false, it indicates that no cycle data is available, and the value is not padded with zeros.</p>
+     * <p>Retrieves the current half-open cycle Redis summary of the configured metering policy for the dedicated Professional AI gateway of the current user. It only supports the total number of instances and does not accept filtering by time range, model, connection, or SLS destination. A value of false for data_present indicates that no cycle data is available, and it is not padded with zero values.</p>
      * 
      * @param request the request parameters of GetGatewayWebsocketUsage  GetGatewayWebsocketUsageRequest
      * @return GetGatewayWebsocketUsageResponse

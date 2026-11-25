@@ -557,7 +557,7 @@ public class RiskCheckResults extends TeaModel {
              * <p>The detailed data related to the risk. The data structure varies based on the risk type.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;30010010001&quot;:&quot;[\&quot;\&quot;,\&quot;\&quot;]&quot;}</p>
+             * <p>{&quot;30010010001&quot;:&quot;[&quot;&quot;,&quot;&quot;]&quot;}</p>
              */
             public Builder data(java.util.Map<String, String> data) {
                 this.data = data;

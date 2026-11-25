@@ -60,7 +60,7 @@ public class GetAiModelSourceRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the model source. Use the modelSourceId returned by CreateAiModelSource.</p>
+         * <p>The model source ID. Use the modelSourceId returned by CreateAiModelSource.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

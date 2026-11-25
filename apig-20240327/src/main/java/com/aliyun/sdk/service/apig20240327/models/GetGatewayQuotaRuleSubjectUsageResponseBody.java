@@ -641,7 +641,7 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
              * <p>The list of usage details.</p>
              * 
              * <strong>example:</strong>
-             * <p>[{&quot;model&quot;:&quot;qwen-plus&quot;,\&quot;usedAmount\&quot;:210}]</p>
+             * <p>[{&quot;model&quot;:&quot;qwen-plus&quot;,&quot;usedAmount&quot;:210}]</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;

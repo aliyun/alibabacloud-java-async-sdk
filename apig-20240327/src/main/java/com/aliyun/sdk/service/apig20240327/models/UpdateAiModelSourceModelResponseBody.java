@@ -506,6 +506,9 @@ public class UpdateAiModelSourceModelResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("availablePaths")
         private java.util.List<AvailablePaths> availablePaths;
 
+        @com.aliyun.core.annotation.NameInMap("callName")
+        private String callName;
+
         @com.aliyun.core.annotation.NameInMap("credit")
         private Credit credit;
 
@@ -553,6 +556,7 @@ public class UpdateAiModelSourceModelResponseBody extends TeaModel {
 
         private Data(Builder builder) {
             this.availablePaths = builder.availablePaths;
+            this.callName = builder.callName;
             this.credit = builder.credit;
             this.features = builder.features;
             this.gatewayId = builder.gatewayId;
@@ -583,6 +587,13 @@ public class UpdateAiModelSourceModelResponseBody extends TeaModel {
          */
         public java.util.List<AvailablePaths> getAvailablePaths() {
             return this.availablePaths;
+        }
+
+        /**
+         * @return callName
+         */
+        public String getCallName() {
+            return this.callName;
         }
 
         /**
@@ -692,6 +703,7 @@ public class UpdateAiModelSourceModelResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<AvailablePaths> availablePaths; 
+            private String callName; 
             private Credit credit; 
             private java.util.Map<String, ?> features; 
             private String gatewayId; 
@@ -713,6 +725,7 @@ public class UpdateAiModelSourceModelResponseBody extends TeaModel {
 
             private Builder(Data model) {
                 this.availablePaths = model.availablePaths;
+                this.callName = model.callName;
                 this.credit = model.credit;
                 this.features = model.features;
                 this.gatewayId = model.gatewayId;
@@ -735,6 +748,14 @@ public class UpdateAiModelSourceModelResponseBody extends TeaModel {
              */
             public Builder availablePaths(java.util.List<AvailablePaths> availablePaths) {
                 this.availablePaths = availablePaths;
+                return this;
+            }
+
+            /**
+             * callName.
+             */
+            public Builder callName(String callName) {
+                this.callName = callName;
                 return this;
             }
 

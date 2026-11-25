@@ -118,7 +118,7 @@ public class AuthorizeConsumerModelCardGrantsRequest extends Request {
         } 
 
         /**
-         * <p>The immutable ID of the new model API. The authorization is valid only within this API.</p>
+         * <p>The immutable ID of the new Model API. The authorization is valid only within this API.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,7 +140,7 @@ public class AuthorizeConsumerModelCardGrantsRequest extends Request {
         }
 
         /**
-         * <p>The actual model group IDs of the current instance. The modelCardIds parameter can be empty only when group licenses are granted. Group licenses allow zero intersection with the current API, but principal relationships with both target types empty cannot be saved.</p>
+         * <p>The actual model group IDs of the current instance. modelCardIds can be empty only when group licenses are granted. Group licenses allow zero intersection with the current API, but principal relationships with both target types empty cannot be saved.</p>
          */
         public Builder modelGroupIds(java.util.List<String> modelGroupIds) {
             this.putBodyParameter("modelGroupIds", modelGroupIds);

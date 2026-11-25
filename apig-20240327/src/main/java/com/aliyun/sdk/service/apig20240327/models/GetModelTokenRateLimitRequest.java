@@ -88,7 +88,7 @@ public class GetModelTokenRateLimitRequest extends Request {
         }
 
         /**
-         * <p>The actual model card ID (prefixed with msc-) or the logical model ID (prefixed with vm-).</p>
+         * <p>The physical model card ID that starts with msc- or the logical model ID that starts with vm-.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

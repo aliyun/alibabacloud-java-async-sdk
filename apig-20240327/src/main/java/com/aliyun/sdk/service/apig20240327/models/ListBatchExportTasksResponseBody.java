@@ -318,7 +318,7 @@ public class ListBatchExportTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time of the task. Format: yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot;.</p>
+             * <p>The creation time of the task. Format: yyyy-MM-dd&quot;T&quot;HH:mm:ss&quot;Z&quot;.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-05-26T10:00:00Z</p>

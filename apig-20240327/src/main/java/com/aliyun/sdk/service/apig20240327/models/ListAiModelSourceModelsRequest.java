@@ -130,7 +130,7 @@ public class ListAiModelSourceModelsRequest extends Request {
         }
 
         /**
-         * <p>The query keyword used to match resources by name or identifier.</p>
+         * <p>The search keyword used to match resources by name or identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>beta</p>
@@ -167,7 +167,7 @@ public class ListAiModelSourceModelsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token returned from the previous page. Omit this parameter for the first page. For the last page, this parameter is empty or omitted.</p>
+         * <p>The pagination token returned from the previous page. Omit this parameter for the first page. The token is empty or omitted for the last page.</p>
          * 
          * <strong>example:</strong>
          * <p>eyJvZmZzZXQiOjIwfQ==</p>

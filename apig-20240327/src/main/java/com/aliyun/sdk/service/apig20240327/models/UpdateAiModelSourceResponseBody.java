@@ -146,6 +146,9 @@ public class UpdateAiModelSourceResponseBody extends TeaModel {
      * <p>UpdateAiModelSourceResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("callNamePrefix")
+        private String callNamePrefix;
+
         @com.aliyun.core.annotation.NameInMap("displayName")
         private String displayName;
 
@@ -171,6 +174,7 @@ public class UpdateAiModelSourceResponseBody extends TeaModel {
         private Long version;
 
         private Data(Builder builder) {
+            this.callNamePrefix = builder.callNamePrefix;
             this.displayName = builder.displayName;
             this.gatewayId = builder.gatewayId;
             this.modelCount = builder.modelCount;
@@ -187,6 +191,13 @@ public class UpdateAiModelSourceResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return callNamePrefix
+         */
+        public String getCallNamePrefix() {
+            return this.callNamePrefix;
         }
 
         /**
@@ -246,6 +257,7 @@ public class UpdateAiModelSourceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String callNamePrefix; 
             private String displayName; 
             private String gatewayId; 
             private Long modelCount; 
@@ -259,6 +271,7 @@ public class UpdateAiModelSourceResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.callNamePrefix = model.callNamePrefix;
                 this.displayName = model.displayName;
                 this.gatewayId = model.gatewayId;
                 this.modelCount = model.modelCount;
@@ -268,6 +281,14 @@ public class UpdateAiModelSourceResponseBody extends TeaModel {
                 this.updateTime = model.updateTime;
                 this.version = model.version;
             } 
+
+            /**
+             * callNamePrefix.
+             */
+            public Builder callNamePrefix(String callNamePrefix) {
+                this.callNamePrefix = callNamePrefix;
+                return this;
+            }
 
             /**
              * <p>The display name of the model source or model provider.</p>

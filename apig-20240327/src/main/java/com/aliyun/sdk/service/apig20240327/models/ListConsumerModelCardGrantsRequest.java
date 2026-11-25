@@ -130,7 +130,7 @@ public class ListConsumerModelCardGrantsRequest extends Request {
         } 
 
         /**
-         * <p>The immutable ID of the new Model API. The authorization is valid only within this API.</p>
+         * <p>The immutable ID of the new Model API. Authorization is valid only within this API.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,7 +143,7 @@ public class ListConsumerModelCardGrantsRequest extends Request {
         }
 
         /**
-         * <p>Filters results by model card ID.</p>
+         * <p>Filters by model card ID for reverse lookup.</p>
          * 
          * <strong>example:</strong>
          * <p>msc-d00000000000000000000</p>
@@ -179,7 +179,7 @@ public class ListConsumerModelCardGrantsRequest extends Request {
         }
 
         /**
-         * <p>Filters results by principal ID. This parameter must be specified together with principalType.</p>
+         * <p>Filters by principal ID. This parameter must be paired with principalType.</p>
          * 
          * <strong>example:</strong>
          * <p>cs-d00000000000000000000</p>
@@ -191,7 +191,7 @@ public class ListConsumerModelCardGrantsRequest extends Request {
         }
 
         /**
-         * <p>Filters results by principal type. Valid values: Consumer and ConsumerGroup. This parameter must be specified together with principalId.</p>
+         * <p>Filters by principal type. Valid values: Consumer and ConsumerGroup. This parameter must be paired with principalId.</p>
          * 
          * <strong>example:</strong>
          * <p>Consumer</p>

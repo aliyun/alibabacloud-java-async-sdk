@@ -93,7 +93,7 @@ public class GetAiModelSourceModelResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response status code. The value is Ok for successful requests and a specific business error code for failed requests.</p>
+         * <p>The response status code. Returns Ok for success and a specific business error code for failure.</p>
          * 
          * <strong>example:</strong>
          * <p>Ok</p>
@@ -104,7 +104,7 @@ public class GetAiModelSourceModelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The business result returned by the model source operation.</p>
+         * <p>The business result returned by operations on models in a source.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -112,7 +112,7 @@ public class GetAiModelSourceModelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message that indicates the result of the request.</p>
+         * <p>The response message that describes the result of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -299,7 +299,7 @@ public class GetAiModelSourceModelResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of credits per million input tokens that hit the cache. The value must be a non-negative number. A value of 0 indicates that cached input is free of charge.</p>
+             * <p>The number of credits per million cached input tokens. This is a non-negative number. A value of 0 indicates free of charge.</p>
              * 
              * <strong>example:</strong>
              * <p>0.1</p>
@@ -310,7 +310,7 @@ public class GetAiModelSourceModelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of credits per million input tokens. The value must be a non-negative number. A value of 0 indicates that the input is free of charge.</p>
+             * <p>The number of credits per million input tokens. This is a non-negative number. A value of 0 indicates free of charge.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -321,7 +321,7 @@ public class GetAiModelSourceModelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of credits per million output tokens. The value must be a non-negative number. A value of 0 indicates that the output is free of charge.</p>
+             * <p>The number of credits per million output tokens. This is a non-negative number. A value of 0 indicates free of charge.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -506,6 +506,9 @@ public class GetAiModelSourceModelResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("availablePaths")
         private java.util.List<AvailablePaths> availablePaths;
 
+        @com.aliyun.core.annotation.NameInMap("callName")
+        private String callName;
+
         @com.aliyun.core.annotation.NameInMap("credit")
         private Credit credit;
 
@@ -553,6 +556,7 @@ public class GetAiModelSourceModelResponseBody extends TeaModel {
 
         private Data(Builder builder) {
             this.availablePaths = builder.availablePaths;
+            this.callName = builder.callName;
             this.credit = builder.credit;
             this.features = builder.features;
             this.gatewayId = builder.gatewayId;
@@ -583,6 +587,13 @@ public class GetAiModelSourceModelResponseBody extends TeaModel {
          */
         public java.util.List<AvailablePaths> getAvailablePaths() {
             return this.availablePaths;
+        }
+
+        /**
+         * @return callName
+         */
+        public String getCallName() {
+            return this.callName;
         }
 
         /**
@@ -692,6 +703,7 @@ public class GetAiModelSourceModelResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<AvailablePaths> availablePaths; 
+            private String callName; 
             private Credit credit; 
             private java.util.Map<String, ?> features; 
             private String gatewayId; 
@@ -713,6 +725,7 @@ public class GetAiModelSourceModelResponseBody extends TeaModel {
 
             private Builder(Data model) {
                 this.availablePaths = model.availablePaths;
+                this.callName = model.callName;
                 this.credit = model.credit;
                 this.features = model.features;
                 this.gatewayId = model.gatewayId;
@@ -739,6 +752,14 @@ public class GetAiModelSourceModelResponseBody extends TeaModel {
             }
 
             /**
+             * callName.
+             */
+            public Builder callName(String callName) {
+                this.callName = callName;
+                return this;
+            }
+
+            /**
              * <p>The credit pricing configuration of the model.</p>
              */
             public Builder credit(Credit credit) {
@@ -747,7 +768,7 @@ public class GetAiModelSourceModelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The set of capabilities declared by the model. The key is the capability name, and the value indicates whether the capability is supported.</p>
+             * <p>The set of capabilities declared for the model. The key is the capability name and the value indicates whether the capability is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;nativeStreaming&quot;:true}</p>
@@ -769,7 +790,7 @@ public class GetAiModelSourceModelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The token limits and input and output modality information of the model.</p>
+             * <p>The token limits and the input and output modality information of the model.</p>
              */
             public Builder meta(Meta meta) {
                 this.meta = meta;
@@ -777,7 +798,7 @@ public class GetAiModelSourceModelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The model identifier. Use the source model card ID for standard models and the vm- identifier for logical model entries.</p>
+             * <p>The model identifier. For standard models, use the source model card ID. For logical model entries, use the vm- prefix.</p>
              * 
              * <strong>example:</strong>
              * <p>msc-d00000000000000000000</p>
@@ -854,7 +875,7 @@ public class GetAiModelSourceModelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the AI service bound to the model source.</p>
+             * <p>The ID of the actual AI service that is bound to the model source.</p>
              * 
              * <strong>example:</strong>
              * <p>svc-d00000000000000000000</p>
@@ -865,7 +886,7 @@ public class GetAiModelSourceModelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source of the model asset. A value of user indicates a user-defined model, and a value of builtin indicates a system built-in model.</p>
+             * <p>The source of the model asset. A value of user indicates a user-defined model, and builtin indicates a system built-in model.</p>
              * 
              * <strong>example:</strong>
              * <p>user</p>
@@ -876,7 +897,7 @@ public class GetAiModelSourceModelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time of the last business update. The time is in RFC 3339 format and in the UTC time zone.</p>
+             * <p>The time of the last business update, in RFC 3339 format and the UTC time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-11-12T00:00:00Z</p>
@@ -887,7 +908,7 @@ public class GetAiModelSourceModelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The current version of the object. This version is used for conditional validation during updates or deletions.</p>
+             * <p>The current version of the object, which is used for conditional validation during updates or deletions.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

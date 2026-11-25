@@ -34,6 +34,10 @@ public class UpdateServiceRequest extends Request {
     private AiServiceConfig aiServiceConfig;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("apiKeyIndexToRemove")
+    private Integer apiKeyIndexToRemove;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("apiKeyReferencesToAdd")
     private java.util.List<String> apiKeyReferencesToAdd;
 
@@ -79,6 +83,7 @@ public class UpdateServiceRequest extends Request {
         this.addresses = builder.addresses;
         this.agentServiceConfig = builder.agentServiceConfig;
         this.aiServiceConfig = builder.aiServiceConfig;
+        this.apiKeyIndexToRemove = builder.apiKeyIndexToRemove;
         this.apiKeyReferencesToAdd = builder.apiKeyReferencesToAdd;
         this.apiKeysToAdd = builder.apiKeysToAdd;
         this.dnsServers = builder.dnsServers;
@@ -130,6 +135,13 @@ public class UpdateServiceRequest extends Request {
      */
     public AiServiceConfig getAiServiceConfig() {
         return this.aiServiceConfig;
+    }
+
+    /**
+     * @return apiKeyIndexToRemove
+     */
+    public Integer getApiKeyIndexToRemove() {
+        return this.apiKeyIndexToRemove;
     }
 
     /**
@@ -207,6 +219,7 @@ public class UpdateServiceRequest extends Request {
         private java.util.List<String> addresses; 
         private AgentServiceConfig agentServiceConfig; 
         private AiServiceConfig aiServiceConfig; 
+        private Integer apiKeyIndexToRemove; 
         private java.util.List<String> apiKeyReferencesToAdd; 
         private java.util.List<String> apiKeysToAdd; 
         private java.util.List<String> dnsServers; 
@@ -228,6 +241,7 @@ public class UpdateServiceRequest extends Request {
             this.addresses = request.addresses;
             this.agentServiceConfig = request.agentServiceConfig;
             this.aiServiceConfig = request.aiServiceConfig;
+            this.apiKeyIndexToRemove = request.apiKeyIndexToRemove;
             this.apiKeyReferencesToAdd = request.apiKeyReferencesToAdd;
             this.apiKeysToAdd = request.apiKeysToAdd;
             this.dnsServers = request.dnsServers;
@@ -280,6 +294,18 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
+         * <p>Removes a custom upstream API key from the current configuration. The index starts from 1. You must specify expectedConfigRevision, maintain the order of the remaining keys, and retain at least one key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
+        public Builder apiKeyIndexToRemove(Integer apiKeyIndexToRemove) {
+            this.putBodyParameter("apiKeyIndexToRemove", apiKeyIndexToRemove);
+            this.apiKeyIndexToRemove = apiKeyIndexToRemove;
+            return this;
+        }
+
+        /**
          * <p>The list of KMS reference names to append. This parameter is only available in Reference mode. KMS content is not read.</p>
          * 
          * <strong>example:</strong>
@@ -313,7 +339,7 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
-         * <p>The expected configuration revision for conditional updates of the AI service. If this parameter is not provided, backward compatibility with legacy calls is maintained. If the version changes, the Conflict.ServiceConfigurationChanged error is returned.</p>
+         * <p>The expected configuration revision for conditional updates of the AI service. If this parameter is not specified, the call is compatible with legacy versions. If the version changes, Conflict.ServiceConfigurationChanged is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>7e4f52a9b0c34d16a268e913f5c2087b</p>
@@ -754,7 +780,9 @@ public class UpdateServiceRequest extends Request {
             }
 
             /**
-             * <p>The panic threshold. When the proportion of healthy nodes in the service is greater than the panic threshold, health checks take effect normally, and requests are sent only to healthy nodes, not to ejected nodes. When the proportion of healthy nodes is less than or equal to the panic threshold, health checks are effectively disabled, and requests are sent to all nodes, including ejected ones.</p>
+             * <p>The panic threshold.</p>
+             * <p>When the proportion of healthy nodes in the service is greater than the panic threshold, health checks take effect normally. Requests are sent only to healthy nodes and not to ejected nodes.
+             * When the proportion of healthy nodes in the service is less than or equal to the panic threshold, health checks are effectively disabled. Requests are sent to all nodes, including ejected nodes.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -765,7 +793,7 @@ public class UpdateServiceRequest extends Request {
             }
 
             /**
-             * <p>The failure rate threshold. When the proportion of failed requests for a node reaches this threshold, the system triggers the ejection mechanism for the node.</p>
+             * <p>The failure percentage threshold. When the proportion of failed requests for a node reaches this threshold, the system triggers the ejection mechanism for the node.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>

@@ -107,7 +107,7 @@ public class UpdateGatewayQuotaRuleResponseBody extends TeaModel {
          * <p>The response data.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;key\&quot;: \&quot;value\&quot;}</p>
+         * <p>{&quot;key&quot;: &quot;value&quot;}</p>
          */
         public Builder data(Data data) {
             this.data = data;

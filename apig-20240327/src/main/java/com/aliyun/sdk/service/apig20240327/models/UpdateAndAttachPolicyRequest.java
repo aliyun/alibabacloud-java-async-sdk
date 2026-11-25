@@ -211,7 +211,7 @@ public class UpdateAndAttachPolicyRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;enable\&quot;:false}</p>
+         * <p>{&quot;enable&quot;:false}</p>
          */
         public Builder config(String config) {
             this.putBodyParameter("config", config);

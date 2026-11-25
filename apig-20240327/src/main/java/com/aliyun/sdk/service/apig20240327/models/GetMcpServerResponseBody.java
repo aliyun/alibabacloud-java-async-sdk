@@ -654,7 +654,7 @@ public class GetMcpServerResponseBody extends TeaModel {
              * <p>The match rule of the canary route.</p>
              * 
              * <strong>example:</strong>
-             * <p>{\&quot;change_order_revision\&quot;:\&quot;3.686.0_fc-sz-futian.1662568293908382_faas-eerouter\&quot;}</p>
+             * <p>{&quot;change_order_revision&quot;:&quot;3.686.0_fc-sz-futian.1662568293908382_faas-eerouter&quot;}</p>
              */
             public Builder match(HttpRouteMatch match) {
                 this.match = match;
@@ -1259,7 +1259,7 @@ public class GetMcpServerResponseBody extends TeaModel {
              * <p>The match rule of the route.</p>
              * 
              * <strong>example:</strong>
-             * <p>{\&quot;product_code\&quot;:\&quot;apigw\&quot;}</p>
+             * <p>{&quot;product_code&quot;:&quot;apigw&quot;}</p>
              */
             public Builder match(HttpRouteMatch match) {
                 this.match = match;

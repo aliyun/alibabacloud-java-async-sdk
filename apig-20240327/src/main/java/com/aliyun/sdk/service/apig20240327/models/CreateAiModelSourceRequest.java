@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateAiModelSourceRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("callNamePrefix")
+    private String callNamePrefix;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("displayName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String displayName;
@@ -43,6 +47,7 @@ public class CreateAiModelSourceRequest extends Request {
 
     private CreateAiModelSourceRequest(Builder builder) {
         super(builder);
+        this.callNamePrefix = builder.callNamePrefix;
         this.displayName = builder.displayName;
         this.gatewayId = builder.gatewayId;
         this.provider = builder.provider;
@@ -61,6 +66,13 @@ public class CreateAiModelSourceRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return callNamePrefix
+     */
+    public String getCallNamePrefix() {
+        return this.callNamePrefix;
     }
 
     /**
@@ -99,6 +111,7 @@ public class CreateAiModelSourceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateAiModelSourceRequest, Builder> {
+        private String callNamePrefix; 
         private String displayName; 
         private String gatewayId; 
         private String provider; 
@@ -111,12 +124,22 @@ public class CreateAiModelSourceRequest extends Request {
 
         private Builder(CreateAiModelSourceRequest request) {
             super(request);
+            this.callNamePrefix = request.callNamePrefix;
             this.displayName = request.displayName;
             this.gatewayId = request.gatewayId;
             this.provider = request.provider;
             this.serviceId = request.serviceId;
             this.clientToken = request.clientToken;
         } 
+
+        /**
+         * callNamePrefix.
+         */
+        public Builder callNamePrefix(String callNamePrefix) {
+            this.putBodyParameter("callNamePrefix", callNamePrefix);
+            this.callNamePrefix = callNamePrefix;
+            return this;
+        }
 
         /**
          * <p>The display name of the model source or model provider.</p>
