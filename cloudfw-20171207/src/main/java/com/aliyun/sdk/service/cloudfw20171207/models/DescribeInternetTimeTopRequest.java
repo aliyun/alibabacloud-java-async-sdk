@@ -318,7 +318,7 @@ public class DescribeInternetTimeTopRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of top entries to return. Default value: 50. Valid values: 1 to 50.</p>
+         * <p>The maximum number of top entries. Default value: 50. Valid values: 1 to 50.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -354,7 +354,7 @@ public class DescribeInternetTimeTopRequest extends Request {
         }
 
         /**
-         * <p>The sorting method.</p>
+         * <p>The sort field.</p>
          * 
          * <strong>example:</strong>
          * <p>in_bps</p>
@@ -415,7 +415,7 @@ public class DescribeInternetTimeTopRequest extends Request {
         }
 
         /**
-         * <p>The traffic time to query. The value is a UNIX timestamp in seconds.</p>
+         * <p>The time of the traffic to query. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1745222880</p>

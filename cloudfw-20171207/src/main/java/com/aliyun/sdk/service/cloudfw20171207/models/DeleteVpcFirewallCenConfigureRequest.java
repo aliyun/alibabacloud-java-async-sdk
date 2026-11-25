@@ -106,7 +106,7 @@ public class DeleteVpcFirewallCenConfigureRequest extends Request {
         }
 
         /**
-         * <p>The UID of a member account of the current Alibaba Cloud account.</p>
+         * <p>The UID of the member accounts that belong to the current Alibaba Cloud account.</p>
          * 
          * <strong>example:</strong>
          * <p>258039427902****</p>
@@ -118,7 +118,7 @@ public class DeleteVpcFirewallCenConfigureRequest extends Request {
         }
 
         /**
-         * <p>The list of instance IDs of VPC border firewalls.</p>
+         * <p>The list of instance IDs of the VPC border firewalls.</p>
          * <p>This parameter is required.</p>
          */
         public Builder vpcFirewallIdList(java.util.List<String> vpcFirewallIdList) {

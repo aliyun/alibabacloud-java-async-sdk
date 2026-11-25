@@ -182,7 +182,7 @@ public class DescribeInternetDropTrafficTrendRequest extends Request {
         }
 
         /**
-         * <p>The source IP address.</p>
+         * <p>The IP address of the access source.</p>
          * 
          * <strong>example:</strong>
          * <p>120.136.21.XXX</p>

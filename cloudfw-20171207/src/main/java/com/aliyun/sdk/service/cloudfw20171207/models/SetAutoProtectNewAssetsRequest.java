@@ -26,15 +26,10 @@ public class SetAutoProtectNewAssetsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("SourceIp")
-    private String sourceIp;
-
     private SetAutoProtectNewAssetsRequest(Builder builder) {
         super(builder);
         this.autoProtect = builder.autoProtect;
         this.lang = builder.lang;
-        this.sourceIp = builder.sourceIp;
     }
 
     public static Builder builder() {
@@ -64,17 +59,9 @@ public class SetAutoProtectNewAssetsRequest extends Request {
         return this.lang;
     }
 
-    /**
-     * @return sourceIp
-     */
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
     public static final class Builder extends Request.Builder<SetAutoProtectNewAssetsRequest, Builder> {
         private Boolean autoProtect; 
         private String lang; 
-        private String sourceIp; 
 
         private Builder() {
             super();
@@ -84,12 +71,14 @@ public class SetAutoProtectNewAssetsRequest extends Request {
             super(request);
             this.autoProtect = request.autoProtect;
             this.lang = request.lang;
-            this.sourceIp = request.sourceIp;
         } 
 
         /**
          * <p>Specifies whether to enable automatic traffic redirection. Valid values:</p>
-         * <p><strong>true****false</strong></p>
+         * <ul>
+         * <li><strong>true</strong>: Enabled.</li>
+         * <li><strong>false</strong>: Disabled.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,7 +91,11 @@ public class SetAutoProtectNewAssetsRequest extends Request {
         }
 
         /**
-         * <p>The language. Valid values are zh (Chinese) and <strong>en</strong> (English). The default value is <strong>zh</strong>.</p>
+         * <p>The language type. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese. Default value.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -110,18 +103,6 @@ public class SetAutoProtectNewAssetsRequest extends Request {
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
             this.lang = lang;
-            return this;
-        }
-
-        /**
-         * <p>The source IP address of the visitor.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>60.182.79.XXX</p>
-         */
-        public Builder sourceIp(String sourceIp) {
-            this.putQueryParameter("SourceIp", sourceIp);
-            this.sourceIp = sourceIp;
             return this;
         }
 

@@ -60,11 +60,11 @@ public class DeleteInstanceMembersRequest extends Request {
         } 
 
         /**
-         * <p>The UIDs of the member accounts.</p>
+         * <p>The list of UIDs of the Cloud Firewall member accounts.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>1234123412341234</p>
+         * <p>[1234123412341234]</p>
          */
         public Builder memberUids(java.util.List<Long> memberUids) {
             this.putQueryParameter("MemberUids", memberUids);

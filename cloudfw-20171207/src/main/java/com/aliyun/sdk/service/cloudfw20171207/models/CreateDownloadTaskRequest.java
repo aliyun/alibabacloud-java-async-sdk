@@ -120,7 +120,7 @@ public class CreateDownloadTaskRequest extends Request {
          * <p>The query conditions for the download task. This parameter is required. If you do not specify this parameter, the API returns error code -340408 (download task TaskData invalid).</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;SearchItem\&quot;:\&quot;\&quot;,\&quot;UserType\&quot;:\&quot;buy\&quot;,\&quot;IpVersion\&quot;:\&quot;4\&quot;}</p>
+         * <p>{&quot;SearchItem&quot;:&quot;&quot;,&quot;UserType&quot;:&quot;buy&quot;,&quot;IpVersion&quot;:&quot;4&quot;}</p>
          */
         public Builder taskData(String taskData) {
             this.putQueryParameter("TaskData", taskData);

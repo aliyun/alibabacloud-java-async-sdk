@@ -104,7 +104,7 @@ public class DescribeInternetTrafficTopResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of traffic data.</p>
+         * <p>The traffic data list.</p>
          */
         public Builder dataList(java.util.List<DataList> dataList) {
             this.dataList = dataList;
@@ -123,7 +123,7 @@ public class DescribeInternetTrafficTopResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>15FCCC52-1E23-57AE-B5EF-3E00A3******</p>
@@ -277,7 +277,7 @@ public class DescribeInternetTrafficTopResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of labels.</p>
+             * <p>The label list.</p>
              */
             public Builder labelList(java.util.List<String> labelList) {
                 this.labelList = labelList;

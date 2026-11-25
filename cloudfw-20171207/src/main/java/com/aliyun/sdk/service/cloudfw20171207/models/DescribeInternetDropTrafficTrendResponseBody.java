@@ -114,7 +114,7 @@ public class DescribeInternetDropTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of dropped sessions in the corresponding period (peak value).</p>
+         * <p>The maximum number of dropped sessions in the specified period, which represents the peak value.</p>
          * 
          * <strong>example:</strong>
          * <p>8090</p>
@@ -125,7 +125,11 @@ public class DescribeInternetDropTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The traffic multiplication mode. Valid values: - <strong>0</strong>: priority mode. - <strong>1</strong>: load balancing mode.</p>
+         * <p>The traffic multiplication mode. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: priority mode.</li>
+         * <li><strong>1</strong>: load balancing mode.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>12.34</p>
@@ -366,7 +370,7 @@ public class DescribeInternetDropTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value range of the object: <strong>[0,10000\]</strong>.</p>
+             * <p>The value range of the object: <strong>[0,10000]</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -377,7 +381,7 @@ public class DescribeInternetDropTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The rate of network traffic. Unit: kbit/s.</p>
+             * <p>The rate of network traffic. Unit: kbps.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -421,7 +425,7 @@ public class DescribeInternetDropTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The dynamic packet drop time. The value is a UNIX timestamp in seconds, which indicates the number of seconds that have elapsed since January 1, 1970 (UTC).</p>
+             * <p>The dynamic packet drop time. The value is a UNIX timestamp in seconds, which represents the number of seconds that have elapsed since January 1, 1970 (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>1724982259</p>

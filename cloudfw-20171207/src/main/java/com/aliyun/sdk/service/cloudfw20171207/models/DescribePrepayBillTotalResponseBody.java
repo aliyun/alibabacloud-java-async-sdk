@@ -146,6 +146,9 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InternetTrafficBandwidth")
         private Float internetTrafficBandwidth;
 
+        @com.aliyun.core.annotation.NameInMap("IsAgenticBilling")
+        private Boolean isAgenticBilling;
+
         @com.aliyun.core.annotation.NameInMap("MonthlyRemainingFreeTraffic")
         private Float monthlyRemainingFreeTraffic;
 
@@ -173,6 +176,7 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
             this.endTime = builder.endTime;
             this.extensionBandwidth = builder.extensionBandwidth;
             this.internetTrafficBandwidth = builder.internetTrafficBandwidth;
+            this.isAgenticBilling = builder.isAgenticBilling;
             this.monthlyRemainingFreeTraffic = builder.monthlyRemainingFreeTraffic;
             this.natTrafficBandwidth = builder.natTrafficBandwidth;
             this.overflowTime = builder.overflowTime;
@@ -246,6 +250,13 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
         }
 
         /**
+         * @return isAgenticBilling
+         */
+        public Boolean getIsAgenticBilling() {
+            return this.isAgenticBilling;
+        }
+
+        /**
          * @return monthlyRemainingFreeTraffic
          */
         public Float getMonthlyRemainingFreeTraffic() {
@@ -296,6 +307,7 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
             private Long endTime; 
             private Long extensionBandwidth; 
             private Float internetTrafficBandwidth; 
+            private Boolean isAgenticBilling; 
             private Float monthlyRemainingFreeTraffic; 
             private Float natTrafficBandwidth; 
             private Long overflowTime; 
@@ -315,6 +327,7 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
                 this.endTime = model.endTime;
                 this.extensionBandwidth = model.extensionBandwidth;
                 this.internetTrafficBandwidth = model.internetTrafficBandwidth;
+                this.isAgenticBilling = model.isAgenticBilling;
                 this.monthlyRemainingFreeTraffic = model.monthlyRemainingFreeTraffic;
                 this.natTrafficBandwidth = model.natTrafficBandwidth;
                 this.overflowTime = model.overflowTime;
@@ -412,7 +425,18 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The monthly free quota for sensitive data detection. Unit: GB.</p>
+             * <p>Specifies whether Agentic billing is used on the date to which the bill belongs. A value of true indicates that Agentic billing is used. A value of false indicates that standard billing is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder isAgenticBilling(Boolean isAgenticBilling) {
+                this.isAgenticBilling = isAgenticBilling;
+                return this;
+            }
+
+            /**
+             * <p>The monthly free quota for sensitive data detection traffic. Unit: GB.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -434,7 +458,7 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the total bandwidth (Internet, VPC, and NAT) reaches the maximum value on the day.</p>
+             * <p>The timestamp when the total bandwidth (Internet + VPC + NAT) reaches the maximum value on the day.</p>
              * 
              * <strong>example:</strong>
              * <p>1761588300</p>

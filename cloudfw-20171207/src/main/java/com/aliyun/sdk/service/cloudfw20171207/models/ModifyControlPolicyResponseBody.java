@@ -67,7 +67,7 @@ public class ModifyControlPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether the request is a dry run. A value of true indicates that only a dry run was performed and no actual modification was made.</p>
+         * <p>Indicates whether the dry run is successful. A value of true indicates that only the dry run is performed and no actual modifications are made.</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.dryRun = dryRun;

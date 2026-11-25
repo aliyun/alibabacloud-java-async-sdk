@@ -131,7 +131,7 @@ public class DescribePostpayBillRequest extends Request {
         } 
 
         /**
-         * <p>The page number of the current page in a paging query.</p>
+         * <p>The Settings for the current page number in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -143,7 +143,7 @@ public class DescribePostpayBillRequest extends Request {
         }
 
         /**
-         * <p>The end time of the bill query. The time is a UNIX timestamp accurate to seconds and must be later than the start time.</p>
+         * <p>The end time of the bill query. The time is a UNIX timestamp in seconds and must be later than the start time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,10 +156,10 @@ public class DescribePostpayBillRequest extends Request {
         }
 
         /**
-         * <p>The aggregation interval of the bill data. Unit: seconds. This parameter is required. If you do not specify this parameter, the ERR_PARAMS_INVALID error is returned. Valid values:</p>
+         * <p>The aggregation interval of the bill data. Unit: seconds. This parameter is required. If this parameter is not specified, ERR_PARAMS_INVALID is returned. Valid values:</p>
          * <ul>
-         * <li>3600: Hourly aggregation.</li>
-         * <li>86400: Daily aggregation.</li>
+         * <li>3600: hourly aggregation.</li>
+         * <li>86400: daily aggregation.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -172,12 +172,7 @@ public class DescribePostpayBillRequest extends Request {
         }
 
         /**
-         * <p>The language. Valid values:</p>
-         * <ul>
-         * <li>en: English.</li>
-         * <li>zh: Chinese.
-         * Default value: zh.</li>
-         * </ul>
+         * <p>The language. Default value: zh. Valid values: en.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -189,7 +184,7 @@ public class DescribePostpayBillRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return on each page in a paging query. Default value: 10.</p>
+         * <p>The maximum number of entries to return on each page in a paged query. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -201,7 +196,7 @@ public class DescribePostpayBillRequest extends Request {
         }
 
         /**
-         * <p>The start time of the bill query. The time is a UNIX timestamp accurate to seconds.</p>
+         * <p>The start time of the bill query. The time is a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

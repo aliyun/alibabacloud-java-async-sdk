@@ -59,7 +59,7 @@ public class CreateNatFirewallSyncTaskRequest extends Request {
         } 
 
         /**
-         * <p>The language of the response message.</p>
+         * <p>The language in which messages are received.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>

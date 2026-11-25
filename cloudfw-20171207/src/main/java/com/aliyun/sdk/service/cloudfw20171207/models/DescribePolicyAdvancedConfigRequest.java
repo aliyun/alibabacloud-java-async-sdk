@@ -90,7 +90,7 @@ public class DescribePolicyAdvancedConfigRequest extends Request {
         }
 
         /**
-         * <p>The source IP address of the request.</p>
+         * <p>The source IP address of the requester.</p>
          * 
          * <strong>example:</strong>
          * <p>192.0.XX.XX</p>

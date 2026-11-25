@@ -186,7 +186,7 @@ public class ModifyIpsRulesRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>[\&quot;4664138c-4f81-4650-9c8d-2230ea0d****\&quot;]</p>
+         * <p>[&quot;4664138c-4f81-4650-9c8d-2230ea0d****&quot;]</p>
          */
         public Builder rules(String rules) {
             this.putQueryParameter("Rules", rules);

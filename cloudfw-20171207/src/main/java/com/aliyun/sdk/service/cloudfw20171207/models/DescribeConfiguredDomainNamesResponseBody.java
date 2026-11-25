@@ -218,7 +218,7 @@ public class DescribeConfiguredDomainNamesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The comment.</p>
+             * <p>The remarks.</p>
              * 
              * <strong>example:</strong>
              * <p>Office network domain name</p>
@@ -240,7 +240,7 @@ public class DescribeConfiguredDomainNamesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the domain name is malicious. Valid values: 0 (not malicious), 1 (malicious).</p>
+             * <p>Indicates whether the domain name is malicious. Valid values: 0 (not malicious), 1 (malicious).</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>

@@ -261,8 +261,8 @@ public class DescribeEventLogRequest extends Request {
          * <p>The attack type of the intrusion prevention event. Valid values:</p>
          * <ul>
          * <li><strong>1</strong>: Abnormal connection.</li>
-         * <li><strong>2</strong>: execute commands.</li>
-         * <li><strong>3</strong>: brute-force attacks.</li>
+         * <li><strong>2</strong>: Command execution.</li>
+         * <li><strong>3</strong>: Brute-force attack.</li>
          * <li><strong>4</strong>: Scan.</li>
          * <li><strong>5</strong>: Other.</li>
          * <li><strong>6</strong>: Information leak.</li>
@@ -270,12 +270,12 @@ public class DescribeEventLogRequest extends Request {
          * <li><strong>8</strong>: Overflow attack.</li>
          * <li><strong>9</strong>: Web attack.</li>
          * <li><strong>10</strong>: Trojan backdoor.</li>
-         * <li><strong>11</strong>: Virus and worm.</li>
+         * <li><strong>11</strong>: Virus or worm.</li>
          * <li><strong>12</strong>: Mining behavior.</li>
          * <li><strong>13</strong>: Reverse shell.</li>
          * </ul>
          * <blockquote>
-         * <p>If you do not specify the Settings for this parameter, events of all attack types are queried.</p>
+         * <p>If you do not specify this parameter, all attack types are queried.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -288,7 +288,7 @@ public class DescribeEventLogRequest extends Request {
         }
 
         /**
-         * <p>The page number for paging in a paged query.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -325,10 +325,10 @@ public class DescribeEventLogRequest extends Request {
         }
 
         /**
-         * <p>The type of Cloud Firewall. Valid values:</p>
+         * <p>The type of the Cloud Firewall. Valid values:</p>
          * <ul>
-         * <li><strong>VpcFirewall</strong>: virtual private cloud (VPC) firewalls at the border.</li>
-         * <li><strong>InternetFirewall</strong> (default): the Internet Border firewall.</li>
+         * <li><strong>VpcFirewall</strong>: VPC firewall.</li>
+         * <li><strong>InternetFirewall</strong> (default): Internet Border firewall.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -345,7 +345,7 @@ public class DescribeEventLogRequest extends Request {
         }
 
         /**
-         * <p>The language for receiving messages.</p>
+         * <p>The language of the response message.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -369,8 +369,8 @@ public class DescribeEventLogRequest extends Request {
         }
 
         /**
-         * <p>Specifies the number of results per page for a paginated query.</p>
-         * <p>Default value: <strong>6</strong>, which indicates that 6 results are returned per page. Maximum value: <strong>10</strong>.</p>
+         * <p>The number of entries to return on each page.</p>
+         * <p>Default value: <strong>6</strong>, which indicates that 6 entries are returned on each page. Maximum value: <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -382,7 +382,7 @@ public class DescribeEventLogRequest extends Request {
         }
 
         /**
-         * <p>Filters event logs by rule hits. The value must be the same as the RuleId value in the response. If LogType is set to ips, pass the UUID of the IPS rule (the RuleUuid value returned by DescribeIPSRules) instead of the numeric format (font style) of the RuleId. If both RuleId and AttackType are specified, records that meet both conditions are returned. This parameter takes effect for ips, app_ctl, web_filter, and threat_intelligence. If LogType is set to tls and this parameter is specified, a parameter fault is returned. If no matching records are found, TotalCount is 0. If you do not specify this parameter, event logs are not filtered by rule hit.</p>
+         * <p>The rule ID.</p>
          * 
          * <strong>example:</strong>
          * <p>c0f5caed-d6a5-11e8-8298-00163e109533</p>
@@ -400,7 +400,7 @@ public class DescribeEventLogRequest extends Request {
          * <li><strong>2</strong>: Block.</li>
          * </ul>
          * <blockquote>
-         * <p>If you do not specify this parameter, events of all defense statuses are queried.</p>
+         * <p>If you do not specify this parameter, all defense statuses are queried.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -450,7 +450,7 @@ public class DescribeEventLogRequest extends Request {
         }
 
         /**
-         * <p>Filters by the exact TLS handshake result. This parameter takes effect only when LogType is set to tls and is ignored for other types. Valid values: bypass, alert, and failed (handshake failure). If this parameter is not specified, records of the bypass, alert, and failed types are returned, and normal traffic with successful handshakes (success) is not returned.</p>
+         * <p>The TLS handshake result.</p>
          * 
          * <strong>example:</strong>
          * <p>failed</p>
