@@ -167,10 +167,10 @@ public class EcomVideoRecreationRequest extends Request {
             } 
 
             /**
-             * <p>The product category. Example: Women\&quot;s clothing/Sun-protective clothing.</p>
+             * <p>The product category. Example: Women&quot;s clothing/Sun-protective clothing.</p>
              * 
              * <strong>example:</strong>
-             * <p>Women\&quot;s clothing/sun protection clothing</p>
+             * <p>Women&quot;s clothing/sun protection clothing</p>
              */
             public Builder category(String category) {
                 this.category = category;

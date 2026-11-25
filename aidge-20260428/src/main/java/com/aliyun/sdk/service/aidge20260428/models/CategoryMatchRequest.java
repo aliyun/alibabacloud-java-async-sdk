@@ -228,7 +228,7 @@ public class CategoryMatchRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>Women\&quot;s spring new arrival clothing</p>
+         * <p>Women&quot;s spring new arrival clothing</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);

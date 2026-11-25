@@ -125,7 +125,7 @@ public class ImageRecognitionAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message, such as \&quot;The parameter contains sensitive information. Try another input.\&quot;</p>
+         * <p>The error message, such as &quot;The parameter contains sensitive information. Try another input.&quot;</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>

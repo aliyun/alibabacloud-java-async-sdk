@@ -254,7 +254,7 @@ public class CategoryAttributeMatchRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>Women\&quot;s spring new clothing</p>
+         * <p>Women&quot;s spring new clothing</p>
          */
         public Builder title(String title) {
             this.putBodyParameter("Title", title);

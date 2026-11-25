@@ -125,7 +125,7 @@ public class PrepaidTextTranslateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message. Success is returned for successful calls. If an exception occurs, a specific error message is returned, such as \&quot;The parameter contains sensitive information. Try another input.\&quot;</p>
+         * <p>The error message. Success is returned for successful calls. If an exception occurs, a specific error message is returned, such as &quot;The parameter contains sensitive information. Try another input.&quot;</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>

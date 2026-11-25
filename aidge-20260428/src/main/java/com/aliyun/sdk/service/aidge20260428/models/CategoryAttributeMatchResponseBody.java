@@ -384,7 +384,7 @@ public class CategoryAttributeMatchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of selected attribute value texts, such as [&quot;iOS&quot;,&quot;Android&quot;\].</p>
+             * <p>The list of selected attribute value texts, such as [&quot;iOS&quot;,&quot;Android&quot;].</p>
              */
             public Builder selectedValues(java.util.List<String> selectedValues) {
                 this.selectedValues = selectedValues;
@@ -392,7 +392,7 @@ public class CategoryAttributeMatchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of selected attribute value IDs, such as [30127,30128\].</p>
+             * <p>The list of selected attribute value IDs, such as [30127,30128].</p>
              * 
              * <strong>example:</strong>
              * <p>[30127,30128]</p>
