@@ -22,6 +22,10 @@ public class ListNodeInstanceTypeRequest extends Request {
     private String bizRegionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizType")
+    private Integer bizType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ChargeType")
     private String chargeType;
 
@@ -38,6 +42,10 @@ public class ListNodeInstanceTypeRequest extends Request {
     private Integer gpuMemory;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GpuSpec")
+    private String gpuSpec;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceTypeForModify")
     private String instanceTypeForModify;
 
@@ -48,6 +56,10 @@ public class ListNodeInstanceTypeRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Memory")
     private Integer memory;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ModelId")
+    private String modelId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NodeInstanceType")
@@ -91,13 +103,16 @@ public class ListNodeInstanceTypeRequest extends Request {
     private ListNodeInstanceTypeRequest(Builder builder) {
         super(builder);
         this.bizRegionId = builder.bizRegionId;
+        this.bizType = builder.bizType;
         this.chargeType = builder.chargeType;
         this.cpu = builder.cpu;
         this.gpu = builder.gpu;
         this.gpuMemory = builder.gpuMemory;
+        this.gpuSpec = builder.gpuSpec;
         this.instanceTypeForModify = builder.instanceTypeForModify;
         this.language = builder.language;
         this.memory = builder.memory;
+        this.modelId = builder.modelId;
         this.nodeInstanceType = builder.nodeInstanceType;
         this.nodeInstanceTypeFamily = builder.nodeInstanceTypeFamily;
         this.orderBy = builder.orderBy;
@@ -130,6 +145,13 @@ public class ListNodeInstanceTypeRequest extends Request {
     }
 
     /**
+     * @return bizType
+     */
+    public Integer getBizType() {
+        return this.bizType;
+    }
+
+    /**
      * @return chargeType
      */
     public String getChargeType() {
@@ -158,6 +180,13 @@ public class ListNodeInstanceTypeRequest extends Request {
     }
 
     /**
+     * @return gpuSpec
+     */
+    public String getGpuSpec() {
+        return this.gpuSpec;
+    }
+
+    /**
      * @return instanceTypeForModify
      */
     public String getInstanceTypeForModify() {
@@ -176,6 +205,13 @@ public class ListNodeInstanceTypeRequest extends Request {
      */
     public Integer getMemory() {
         return this.memory;
+    }
+
+    /**
+     * @return modelId
+     */
+    public String getModelId() {
+        return this.modelId;
     }
 
     /**
@@ -243,13 +279,16 @@ public class ListNodeInstanceTypeRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListNodeInstanceTypeRequest, Builder> {
         private String bizRegionId; 
+        private Integer bizType; 
         private String chargeType; 
         private Float cpu; 
         private Float gpu; 
         private Integer gpuMemory; 
+        private String gpuSpec; 
         private String instanceTypeForModify; 
         private String language; 
         private Integer memory; 
+        private String modelId; 
         private String nodeInstanceType; 
         private String nodeInstanceTypeFamily; 
         private String orderBy; 
@@ -267,13 +306,16 @@ public class ListNodeInstanceTypeRequest extends Request {
         private Builder(ListNodeInstanceTypeRequest request) {
             super(request);
             this.bizRegionId = request.bizRegionId;
+            this.bizType = request.bizType;
             this.chargeType = request.chargeType;
             this.cpu = request.cpu;
             this.gpu = request.gpu;
             this.gpuMemory = request.gpuMemory;
+            this.gpuSpec = request.gpuSpec;
             this.instanceTypeForModify = request.instanceTypeForModify;
             this.language = request.language;
             this.memory = request.memory;
+            this.modelId = request.modelId;
             this.nodeInstanceType = request.nodeInstanceType;
             this.nodeInstanceTypeFamily = request.nodeInstanceTypeFamily;
             this.orderBy = request.orderBy;
@@ -294,6 +336,15 @@ public class ListNodeInstanceTypeRequest extends Request {
         public Builder bizRegionId(String bizRegionId) {
             this.putQueryParameter("BizRegionId", bizRegionId);
             this.bizRegionId = bizRegionId;
+            return this;
+        }
+
+        /**
+         * BizType.
+         */
+        public Builder bizType(Integer bizType) {
+            this.putQueryParameter("BizType", bizType);
+            this.bizType = bizType;
             return this;
         }
 
@@ -346,6 +397,15 @@ public class ListNodeInstanceTypeRequest extends Request {
         }
 
         /**
+         * GpuSpec.
+         */
+        public Builder gpuSpec(String gpuSpec) {
+            this.putQueryParameter("GpuSpec", gpuSpec);
+            this.gpuSpec = gpuSpec;
+            return this;
+        }
+
+        /**
          * <p>The current specification of the instance for specification change.</p>
          * 
          * <strong>example:</strong>
@@ -378,6 +438,15 @@ public class ListNodeInstanceTypeRequest extends Request {
         public Builder memory(Integer memory) {
             this.putQueryParameter("Memory", memory);
             this.memory = memory;
+            return this;
+        }
+
+        /**
+         * ModelId.
+         */
+        public Builder modelId(String modelId) {
+            this.putQueryParameter("ModelId", modelId);
+            this.modelId = modelId;
             return this;
         }
 

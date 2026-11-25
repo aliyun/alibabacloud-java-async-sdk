@@ -661,6 +661,249 @@ public class ListWuyingServerResponseBody extends TeaModel {
      *
      * <p>ListWuyingServerResponseBody</p>
      */
+    public static class ServerModelInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("InferenceEngine")
+        private String inferenceEngine;
+
+        @com.aliyun.core.annotation.NameInMap("InputModalities")
+        private java.util.List<String> inputModalities;
+
+        @com.aliyun.core.annotation.NameInMap("MaxModelLen")
+        private Long maxModelLen;
+
+        @com.aliyun.core.annotation.NameInMap("MaxNumSeqs")
+        private Integer maxNumSeqs;
+
+        @com.aliyun.core.annotation.NameInMap("ModelAccessMethod")
+        private String modelAccessMethod;
+
+        @com.aliyun.core.annotation.NameInMap("ModelId")
+        private String modelId;
+
+        @com.aliyun.core.annotation.NameInMap("ModelName")
+        private String modelName;
+
+        @com.aliyun.core.annotation.NameInMap("ModelServiceInferenceStatus")
+        private String modelServiceInferenceStatus;
+
+        @com.aliyun.core.annotation.NameInMap("OutputModalities")
+        private java.util.List<String> outputModalities;
+
+        @com.aliyun.core.annotation.NameInMap("ServedModelName")
+        private String servedModelName;
+
+        private ServerModelInfo(Builder builder) {
+            this.inferenceEngine = builder.inferenceEngine;
+            this.inputModalities = builder.inputModalities;
+            this.maxModelLen = builder.maxModelLen;
+            this.maxNumSeqs = builder.maxNumSeqs;
+            this.modelAccessMethod = builder.modelAccessMethod;
+            this.modelId = builder.modelId;
+            this.modelName = builder.modelName;
+            this.modelServiceInferenceStatus = builder.modelServiceInferenceStatus;
+            this.outputModalities = builder.outputModalities;
+            this.servedModelName = builder.servedModelName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ServerModelInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return inferenceEngine
+         */
+        public String getInferenceEngine() {
+            return this.inferenceEngine;
+        }
+
+        /**
+         * @return inputModalities
+         */
+        public java.util.List<String> getInputModalities() {
+            return this.inputModalities;
+        }
+
+        /**
+         * @return maxModelLen
+         */
+        public Long getMaxModelLen() {
+            return this.maxModelLen;
+        }
+
+        /**
+         * @return maxNumSeqs
+         */
+        public Integer getMaxNumSeqs() {
+            return this.maxNumSeqs;
+        }
+
+        /**
+         * @return modelAccessMethod
+         */
+        public String getModelAccessMethod() {
+            return this.modelAccessMethod;
+        }
+
+        /**
+         * @return modelId
+         */
+        public String getModelId() {
+            return this.modelId;
+        }
+
+        /**
+         * @return modelName
+         */
+        public String getModelName() {
+            return this.modelName;
+        }
+
+        /**
+         * @return modelServiceInferenceStatus
+         */
+        public String getModelServiceInferenceStatus() {
+            return this.modelServiceInferenceStatus;
+        }
+
+        /**
+         * @return outputModalities
+         */
+        public java.util.List<String> getOutputModalities() {
+            return this.outputModalities;
+        }
+
+        /**
+         * @return servedModelName
+         */
+        public String getServedModelName() {
+            return this.servedModelName;
+        }
+
+        public static final class Builder {
+            private String inferenceEngine; 
+            private java.util.List<String> inputModalities; 
+            private Long maxModelLen; 
+            private Integer maxNumSeqs; 
+            private String modelAccessMethod; 
+            private String modelId; 
+            private String modelName; 
+            private String modelServiceInferenceStatus; 
+            private java.util.List<String> outputModalities; 
+            private String servedModelName; 
+
+            private Builder() {
+            } 
+
+            private Builder(ServerModelInfo model) {
+                this.inferenceEngine = model.inferenceEngine;
+                this.inputModalities = model.inputModalities;
+                this.maxModelLen = model.maxModelLen;
+                this.maxNumSeqs = model.maxNumSeqs;
+                this.modelAccessMethod = model.modelAccessMethod;
+                this.modelId = model.modelId;
+                this.modelName = model.modelName;
+                this.modelServiceInferenceStatus = model.modelServiceInferenceStatus;
+                this.outputModalities = model.outputModalities;
+                this.servedModelName = model.servedModelName;
+            } 
+
+            /**
+             * InferenceEngine.
+             */
+            public Builder inferenceEngine(String inferenceEngine) {
+                this.inferenceEngine = inferenceEngine;
+                return this;
+            }
+
+            /**
+             * InputModalities.
+             */
+            public Builder inputModalities(java.util.List<String> inputModalities) {
+                this.inputModalities = inputModalities;
+                return this;
+            }
+
+            /**
+             * MaxModelLen.
+             */
+            public Builder maxModelLen(Long maxModelLen) {
+                this.maxModelLen = maxModelLen;
+                return this;
+            }
+
+            /**
+             * MaxNumSeqs.
+             */
+            public Builder maxNumSeqs(Integer maxNumSeqs) {
+                this.maxNumSeqs = maxNumSeqs;
+                return this;
+            }
+
+            /**
+             * ModelAccessMethod.
+             */
+            public Builder modelAccessMethod(String modelAccessMethod) {
+                this.modelAccessMethod = modelAccessMethod;
+                return this;
+            }
+
+            /**
+             * ModelId.
+             */
+            public Builder modelId(String modelId) {
+                this.modelId = modelId;
+                return this;
+            }
+
+            /**
+             * ModelName.
+             */
+            public Builder modelName(String modelName) {
+                this.modelName = modelName;
+                return this;
+            }
+
+            /**
+             * ModelServiceInferenceStatus.
+             */
+            public Builder modelServiceInferenceStatus(String modelServiceInferenceStatus) {
+                this.modelServiceInferenceStatus = modelServiceInferenceStatus;
+                return this;
+            }
+
+            /**
+             * OutputModalities.
+             */
+            public Builder outputModalities(java.util.List<String> outputModalities) {
+                this.outputModalities = outputModalities;
+                return this;
+            }
+
+            /**
+             * ServedModelName.
+             */
+            public Builder servedModelName(String servedModelName) {
+                this.servedModelName = servedModelName;
+                return this;
+            }
+
+            public ServerModelInfo build() {
+                return new ServerModelInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListWuyingServerResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWuyingServerResponseBody</p>
+     */
     public static class Sessions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceSessionStartTime")
         private String resourceSessionStartTime;
@@ -818,6 +1061,9 @@ public class ListWuyingServerResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ServerInstanceTypeInfo")
         private ServerInstanceTypeInfo serverInstanceTypeInfo;
 
+        @com.aliyun.core.annotation.NameInMap("ServerModelInfo")
+        private ServerModelInfo serverModelInfo;
+
         @com.aliyun.core.annotation.NameInMap("Sessions")
         private java.util.List<Sessions> sessions;
 
@@ -895,6 +1141,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
             this.resourceSessionStatus = builder.resourceSessionStatus;
             this.securityGroupIds = builder.securityGroupIds;
             this.serverInstanceTypeInfo = builder.serverInstanceTypeInfo;
+            this.serverModelInfo = builder.serverModelInfo;
             this.sessions = builder.sessions;
             this.status = builder.status;
             this.subPayType = builder.subPayType;
@@ -1098,6 +1345,13 @@ public class ListWuyingServerResponseBody extends TeaModel {
         }
 
         /**
+         * @return serverModelInfo
+         */
+        public ServerModelInfo getServerModelInfo() {
+            return this.serverModelInfo;
+        }
+
+        /**
          * @return sessions
          */
         public java.util.List<Sessions> getSessions() {
@@ -1242,6 +1496,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
             private String resourceSessionStatus; 
             private java.util.List<String> securityGroupIds; 
             private ServerInstanceTypeInfo serverInstanceTypeInfo; 
+            private ServerModelInfo serverModelInfo; 
             private java.util.List<Sessions> sessions; 
             private String status; 
             private String subPayType; 
@@ -1289,6 +1544,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
                 this.resourceSessionStatus = model.resourceSessionStatus;
                 this.securityGroupIds = model.securityGroupIds;
                 this.serverInstanceTypeInfo = model.serverInstanceTypeInfo;
+                this.serverModelInfo = model.serverModelInfo;
                 this.sessions = model.sessions;
                 this.status = model.status;
                 this.subPayType = model.subPayType;
@@ -1562,6 +1818,14 @@ public class ListWuyingServerResponseBody extends TeaModel {
              */
             public Builder serverInstanceTypeInfo(ServerInstanceTypeInfo serverInstanceTypeInfo) {
                 this.serverInstanceTypeInfo = serverInstanceTypeInfo;
+                return this;
+            }
+
+            /**
+             * ServerModelInfo.
+             */
+            public Builder serverModelInfo(ServerModelInfo serverModelInfo) {
+                this.serverModelInfo = serverModelInfo;
                 return this;
             }
 

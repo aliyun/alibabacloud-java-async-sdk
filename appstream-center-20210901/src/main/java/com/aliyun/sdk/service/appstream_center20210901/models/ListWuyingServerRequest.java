@@ -54,6 +54,10 @@ public class ListWuyingServerRequest extends Request {
     private String imageId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ModelName")
+    private String modelName;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("NetworkInterfaceIp")
     private String networkInterfaceIp;
 
@@ -113,6 +117,7 @@ public class ListWuyingServerRequest extends Request {
         this.expiredTimeEnd = builder.expiredTimeEnd;
         this.expiredTimeStart = builder.expiredTimeStart;
         this.imageId = builder.imageId;
+        this.modelName = builder.modelName;
         this.networkInterfaceIp = builder.networkInterfaceIp;
         this.officeSiteId = builder.officeSiteId;
         this.pageNumber = builder.pageNumber;
@@ -201,6 +206,13 @@ public class ListWuyingServerRequest extends Request {
      */
     public String getImageId() {
         return this.imageId;
+    }
+
+    /**
+     * @return modelName
+     */
+    public String getModelName() {
+        return this.modelName;
     }
 
     /**
@@ -297,6 +309,7 @@ public class ListWuyingServerRequest extends Request {
         private String expiredTimeEnd; 
         private String expiredTimeStart; 
         private String imageId; 
+        private String modelName; 
         private String networkInterfaceIp; 
         private String officeSiteId; 
         private Integer pageNumber; 
@@ -325,6 +338,7 @@ public class ListWuyingServerRequest extends Request {
             this.expiredTimeEnd = request.expiredTimeEnd;
             this.expiredTimeStart = request.expiredTimeStart;
             this.imageId = request.imageId;
+            this.modelName = request.modelName;
             this.networkInterfaceIp = request.networkInterfaceIp;
             this.officeSiteId = request.officeSiteId;
             this.pageNumber = request.pageNumber;
@@ -444,6 +458,15 @@ public class ListWuyingServerRequest extends Request {
         public Builder imageId(String imageId) {
             this.putBodyParameter("ImageId", imageId);
             this.imageId = imageId;
+            return this;
+        }
+
+        /**
+         * ModelName.
+         */
+        public Builder modelName(String modelName) {
+            this.putBodyParameter("ModelName", modelName);
+            this.modelName = modelName;
             return this;
         }
 

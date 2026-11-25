@@ -71,6 +71,10 @@ public class CreateWuyingServerRequest extends Request {
     private Float maxPrice;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ModelConfig")
+    private ModelConfig modelConfig;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("NetworkStrategyType")
     private String networkStrategyType;
 
@@ -89,6 +93,10 @@ public class CreateWuyingServerRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("PeriodUnit")
     private String periodUnit;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProductType")
+    private String productType;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("PromotionId")
@@ -149,11 +157,13 @@ public class CreateWuyingServerRequest extends Request {
         this.idempotenceToken = builder.idempotenceToken;
         this.imageId = builder.imageId;
         this.maxPrice = builder.maxPrice;
+        this.modelConfig = builder.modelConfig;
         this.networkStrategyType = builder.networkStrategyType;
         this.officeSiteId = builder.officeSiteId;
         this.password = builder.password;
         this.period = builder.period;
         this.periodUnit = builder.periodUnit;
+        this.productType = builder.productType;
         this.promotionId = builder.promotionId;
         this.savingPlanId = builder.savingPlanId;
         this.serverInstanceType = builder.serverInstanceType;
@@ -272,6 +282,13 @@ public class CreateWuyingServerRequest extends Request {
     }
 
     /**
+     * @return modelConfig
+     */
+    public ModelConfig getModelConfig() {
+        return this.modelConfig;
+    }
+
+    /**
      * @return networkStrategyType
      */
     public String getNetworkStrategyType() {
@@ -304,6 +321,13 @@ public class CreateWuyingServerRequest extends Request {
      */
     public String getPeriodUnit() {
         return this.periodUnit;
+    }
+
+    /**
+     * @return productType
+     */
+    public String getProductType() {
+        return this.productType;
     }
 
     /**
@@ -397,11 +421,13 @@ public class CreateWuyingServerRequest extends Request {
         private String idempotenceToken; 
         private String imageId; 
         private Float maxPrice; 
+        private ModelConfig modelConfig; 
         private String networkStrategyType; 
         private String officeSiteId; 
         private String password; 
         private Integer period; 
         private String periodUnit; 
+        private String productType; 
         private String promotionId; 
         private String savingPlanId; 
         private String serverInstanceType; 
@@ -433,11 +459,13 @@ public class CreateWuyingServerRequest extends Request {
             this.idempotenceToken = request.idempotenceToken;
             this.imageId = request.imageId;
             this.maxPrice = request.maxPrice;
+            this.modelConfig = request.modelConfig;
             this.networkStrategyType = request.networkStrategyType;
             this.officeSiteId = request.officeSiteId;
             this.password = request.password;
             this.period = request.period;
             this.periodUnit = request.periodUnit;
+            this.productType = request.productType;
             this.promotionId = request.promotionId;
             this.savingPlanId = request.savingPlanId;
             this.serverInstanceType = request.serverInstanceType;
@@ -656,6 +684,19 @@ public class CreateWuyingServerRequest extends Request {
         }
 
         /**
+         * <p>模型和运行配置。创建 WuyingModelServer 产品时必填。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;ModelId&quot;:&quot;demo-model&quot;,&quot;ModelAccessMethod&quot;:&quot;Lan&quot;,&quot;ServerRunConfig&quot;:{&quot;SettingMode&quot;:&quot;Basic&quot;,&quot;MaxModelLen&quot;:16384,&quot;MaxNumSeqs&quot;:4}}</p>
+         */
+        public Builder modelConfig(ModelConfig modelConfig) {
+            String modelConfigShrink = shrink(modelConfig, "ModelConfig", "json");
+            this.putBodyParameter("ModelConfig", modelConfigShrink);
+            this.modelConfig = modelConfig;
+            return this;
+        }
+
+        /**
          * <p>The type of the network policy (invitational preview).</p>
          * 
          * <strong>example:</strong>
@@ -685,7 +726,7 @@ public class CreateWuyingServerRequest extends Request {
         /**
          * <p>The logon password of the workstation. <strong>This parameter is required when you create a workstation by calling this operation.</strong> If this parameter is not specified, InvalidParameter.password is returned.</p>
          * <p>The password must be 8 to 30 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Spaces, Chinese characters, backslashes, and double quotation marks are not supported. The supported special characters are:</p>
-         * <pre><code class="language-text">()`~!@#$%^&amp;*-_+=|{}[]:;\\&quot;&lt;&gt;,.?/
+         * <pre><code class="language-text">()`~!@#$%^&amp;*-_+=|{}[]:;\&quot;&lt;&gt;,.?/
          * </code></pre>
          * <p>The password of a Windows workstation cannot start with a forward slash /.</p>
          * 
@@ -731,6 +772,18 @@ public class CreateWuyingServerRequest extends Request {
         public Builder periodUnit(String periodUnit) {
             this.putBodyParameter("PeriodUnit", periodUnit);
             this.periodUnit = periodUnit;
+            return this;
+        }
+
+        /**
+         * <p>工作站产品类型。创建无影 AI 模型工作站时传 WuyingModelServer。省略时默认使用 WuyingServer。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WuyingModelServer</p>
+         */
+        public Builder productType(String productType) {
+            this.putBodyParameter("ProductType", productType);
+            this.productType = productType;
             return this;
         }
 
@@ -1023,6 +1076,240 @@ public class CreateWuyingServerRequest extends Request {
 
             public DataDisk build() {
                 return new DataDisk(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateWuyingServerRequest} extends {@link TeaModel}
+     *
+     * <p>CreateWuyingServerRequest</p>
+     */
+    public static class ServerRunConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("MaxModelLen")
+        private Long maxModelLen;
+
+        @com.aliyun.core.annotation.NameInMap("MaxNumSeqs")
+        private Integer maxNumSeqs;
+
+        @com.aliyun.core.annotation.NameInMap("SettingMode")
+        private String settingMode;
+
+        private ServerRunConfig(Builder builder) {
+            this.maxModelLen = builder.maxModelLen;
+            this.maxNumSeqs = builder.maxNumSeqs;
+            this.settingMode = builder.settingMode;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ServerRunConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return maxModelLen
+         */
+        public Long getMaxModelLen() {
+            return this.maxModelLen;
+        }
+
+        /**
+         * @return maxNumSeqs
+         */
+        public Integer getMaxNumSeqs() {
+            return this.maxNumSeqs;
+        }
+
+        /**
+         * @return settingMode
+         */
+        public String getSettingMode() {
+            return this.settingMode;
+        }
+
+        public static final class Builder {
+            private Long maxModelLen; 
+            private Integer maxNumSeqs; 
+            private String settingMode; 
+
+            private Builder() {
+            } 
+
+            private Builder(ServerRunConfig model) {
+                this.maxModelLen = model.maxModelLen;
+                this.maxNumSeqs = model.maxNumSeqs;
+                this.settingMode = model.settingMode;
+            } 
+
+            /**
+             * <p>最大上下文，单位 Token。省略时使用所选规格的默认值。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16384</p>
+             */
+            public Builder maxModelLen(Long maxModelLen) {
+                this.maxModelLen = maxModelLen;
+                return this;
+            }
+
+            /**
+             * <p>最大并发序列数。省略时使用所选规格的推荐值。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
+             */
+            public Builder maxNumSeqs(Integer maxNumSeqs) {
+                this.maxNumSeqs = maxNumSeqs;
+                return this;
+            }
+
+            /**
+             * <p>设置方式。Basic 为基本设置，CustomStartupCommand 为自定义启动命令。省略或传 null 时取 Basic。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Basic</p>
+             */
+            public Builder settingMode(String settingMode) {
+                this.settingMode = settingMode;
+                return this;
+            }
+
+            public ServerRunConfig build() {
+                return new ServerRunConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateWuyingServerRequest} extends {@link TeaModel}
+     *
+     * <p>CreateWuyingServerRequest</p>
+     */
+    public static class ModelConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ModelAccessMethod")
+        private String modelAccessMethod;
+
+        @com.aliyun.core.annotation.NameInMap("ModelId")
+        private String modelId;
+
+        @com.aliyun.core.annotation.NameInMap("ServedModelName")
+        private String servedModelName;
+
+        @com.aliyun.core.annotation.NameInMap("ServerRunConfig")
+        private ServerRunConfig serverRunConfig;
+
+        private ModelConfig(Builder builder) {
+            this.modelAccessMethod = builder.modelAccessMethod;
+            this.modelId = builder.modelId;
+            this.servedModelName = builder.servedModelName;
+            this.serverRunConfig = builder.serverRunConfig;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ModelConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return modelAccessMethod
+         */
+        public String getModelAccessMethod() {
+            return this.modelAccessMethod;
+        }
+
+        /**
+         * @return modelId
+         */
+        public String getModelId() {
+            return this.modelId;
+        }
+
+        /**
+         * @return servedModelName
+         */
+        public String getServedModelName() {
+            return this.servedModelName;
+        }
+
+        /**
+         * @return serverRunConfig
+         */
+        public ServerRunConfig getServerRunConfig() {
+            return this.serverRunConfig;
+        }
+
+        public static final class Builder {
+            private String modelAccessMethod; 
+            private String modelId; 
+            private String servedModelName; 
+            private ServerRunConfig serverRunConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(ModelConfig model) {
+                this.modelAccessMethod = model.modelAccessMethod;
+                this.modelId = model.modelId;
+                this.servedModelName = model.servedModelName;
+                this.serverRunConfig = model.serverRunConfig;
+            } 
+
+            /**
+             * <p>模型接入方式。Normal 为普通接入，Lan 为局域网接入，省略时取 Normal。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Lan</p>
+             */
+            public Builder modelAccessMethod(String modelAccessMethod) {
+                this.modelAccessMethod = modelAccessMethod;
+                return this;
+            }
+
+            /**
+             * <p>模型目录中的真实模型 ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo-model</p>
+             */
+            public Builder modelId(String modelId) {
+                this.modelId = modelId;
+                return this;
+            }
+
+            /**
+             * <p>租户自定义模型 ID，省略时使用真实模型 ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo-model</p>
+             */
+            public Builder servedModelName(String servedModelName) {
+                this.servedModelName = servedModelName;
+                return this;
+            }
+
+            /**
+             * <p>模型运行配置。可传空对象以使用全部默认值。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;SettingMode&quot;:&quot;Basic&quot;,&quot;MaxModelLen&quot;:16384,&quot;MaxNumSeqs&quot;:4}</p>
+             */
+            public Builder serverRunConfig(ServerRunConfig serverRunConfig) {
+                this.serverRunConfig = serverRunConfig;
+                return this;
+            }
+
+            public ModelConfig build() {
+                return new ModelConfig(this);
             } 
 
         } 

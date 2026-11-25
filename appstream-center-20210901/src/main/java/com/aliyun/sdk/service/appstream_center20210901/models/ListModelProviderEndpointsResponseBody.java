@@ -374,7 +374,7 @@ public class ListModelProviderEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the provider\&quot;s official website, which directs users to obtain an API key.</p>
+             * <p>The URL of the provider&quot;s official website, which directs users to obtain an API key.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://test">https://test</a></p>

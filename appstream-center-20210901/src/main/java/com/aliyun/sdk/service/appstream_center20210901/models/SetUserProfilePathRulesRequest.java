@@ -157,7 +157,7 @@ public class SetUserProfilePathRulesRequest extends Request {
          * <p>The JSON array string that contains the complete list of rules. Each item uses <code>blackPath</code> to specify the excluded path and <code>whitePaths</code> to specify the relative paths that still require roaming within the excluded directory. The path type <code>file</code> indicates a file, and <code>folder</code> indicates a directory.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;blackPath&quot;:{&quot;path&quot;:&quot;AppData\\Local&quot;,&quot;type&quot;:&quot;folder&quot;},&quot;whitePaths&quot;:[{&quot;path&quot;:&quot;.\\Microsoft\\Office&quot;,&quot;type&quot;:&quot;folder&quot;}]}]</p>
+         * <p>[{&quot;blackPath&quot;:{&quot;path&quot;:&quot;AppData\Local&quot;,&quot;type&quot;:&quot;folder&quot;},&quot;whitePaths&quot;:[{&quot;path&quot;:&quot;.\Microsoft\Office&quot;,&quot;type&quot;:&quot;folder&quot;}]}]</p>
          */
         public Builder userProfilePathRules(String userProfilePathRules) {
             this.putBodyParameter("UserProfilePathRules", userProfilePathRules);
