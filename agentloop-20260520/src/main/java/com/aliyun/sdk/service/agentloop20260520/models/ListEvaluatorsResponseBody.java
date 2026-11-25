@@ -197,6 +197,12 @@ public class ListEvaluatorsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("properties")
         private java.util.Map<String, ?> properties;
 
+        @com.aliyun.core.annotation.NameInMap("selectable")
+        private Boolean selectable;
+
+        @com.aliyun.core.annotation.NameInMap("status")
+        private String status;
+
         @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
@@ -212,6 +218,8 @@ public class ListEvaluatorsResponseBody extends TeaModel {
             this.metricName = builder.metricName;
             this.name = builder.name;
             this.properties = builder.properties;
+            this.selectable = builder.selectable;
+            this.status = builder.status;
             this.type = builder.type;
             this.updatedAt = builder.updatedAt;
         }
@@ -281,6 +289,20 @@ public class ListEvaluatorsResponseBody extends TeaModel {
         }
 
         /**
+         * @return selectable
+         */
+        public Boolean getSelectable() {
+            return this.selectable;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -303,6 +325,8 @@ public class ListEvaluatorsResponseBody extends TeaModel {
             private String metricName; 
             private String name; 
             private java.util.Map<String, ?> properties; 
+            private Boolean selectable; 
+            private String status; 
             private String type; 
             private Long updatedAt; 
 
@@ -318,6 +342,8 @@ public class ListEvaluatorsResponseBody extends TeaModel {
                 this.metricName = model.metricName;
                 this.name = model.name;
                 this.properties = model.properties;
+                this.selectable = model.selectable;
+                this.status = model.status;
                 this.type = model.type;
                 this.updatedAt = model.updatedAt;
             } 
@@ -407,6 +433,22 @@ public class ListEvaluatorsResponseBody extends TeaModel {
              */
             public Builder properties(java.util.Map<String, ?> properties) {
                 this.properties = properties;
+                return this;
+            }
+
+            /**
+             * selectable.
+             */
+            public Builder selectable(Boolean selectable) {
+                this.selectable = selectable;
+                return this;
+            }
+
+            /**
+             * status.
+             */
+            public Builder status(String status) {
+                this.status = status;
                 return this;
             }
 

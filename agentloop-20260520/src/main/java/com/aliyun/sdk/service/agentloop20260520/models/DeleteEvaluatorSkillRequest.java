@@ -32,11 +32,16 @@ public class DeleteEvaluatorSkillRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String agentSpace;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("evaluatorVersion")
+    private String evaluatorVersion;
+
     private DeleteEvaluatorSkillRequest(Builder builder) {
         super(builder);
         this.name = builder.name;
         this.skillName = builder.skillName;
         this.agentSpace = builder.agentSpace;
+        this.evaluatorVersion = builder.evaluatorVersion;
     }
 
     public static Builder builder() {
@@ -73,10 +78,18 @@ public class DeleteEvaluatorSkillRequest extends Request {
         return this.agentSpace;
     }
 
+    /**
+     * @return evaluatorVersion
+     */
+    public String getEvaluatorVersion() {
+        return this.evaluatorVersion;
+    }
+
     public static final class Builder extends Request.Builder<DeleteEvaluatorSkillRequest, Builder> {
         private String name; 
         private String skillName; 
         private String agentSpace; 
+        private String evaluatorVersion; 
 
         private Builder() {
             super();
@@ -87,6 +100,7 @@ public class DeleteEvaluatorSkillRequest extends Request {
             this.name = request.name;
             this.skillName = request.skillName;
             this.agentSpace = request.agentSpace;
+            this.evaluatorVersion = request.evaluatorVersion;
         } 
 
         /**
@@ -125,6 +139,15 @@ public class DeleteEvaluatorSkillRequest extends Request {
         public Builder agentSpace(String agentSpace) {
             this.putQueryParameter("agentSpace", agentSpace);
             this.agentSpace = agentSpace;
+            return this;
+        }
+
+        /**
+         * evaluatorVersion.
+         */
+        public Builder evaluatorVersion(String evaluatorVersion) {
+            this.putQueryParameter("evaluatorVersion", evaluatorVersion);
+            this.evaluatorVersion = evaluatorVersion;
             return this;
         }
 

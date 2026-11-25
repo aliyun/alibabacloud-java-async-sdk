@@ -131,7 +131,7 @@ public class DataFilter extends TeaModel {
          * <p>The data query filter conditions that take effect together with the evaluator-level filters.query. For trace scenarios, you can specify filter expressions such as service name, environment, and tags.</p>
          * 
          * <strong>example:</strong>
-         * <p>serviceName=\&quot;checkout-service\&quot;</p>
+         * <p>serviceName=&quot;checkout-service&quot;</p>
          */
         public Builder query(String query) {
             this.query = query;

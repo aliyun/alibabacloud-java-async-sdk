@@ -252,7 +252,7 @@ public class CreateEvaluationTaskRequest extends Request {
          * <p>The evaluation data filter conditions. Supports a JSON object or JSON string. Common fields include <code>query</code>, <code>provided</code>, <code>maxRecords</code>, and <code>samplingRate</code>.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;query&quot;:&quot;serviceName=\&quot;checkout-service\&quot;&quot;,&quot;maxRecords&quot;:10,&quot;samplingRate&quot;:100}</p>
+         * <p>{&quot;query&quot;:&quot;serviceName=&quot;checkout-service&quot;&quot;,&quot;maxRecords&quot;:10,&quot;samplingRate&quot;:100}</p>
          */
         public Builder dataFilter(String dataFilter) {
             this.putBodyParameter("dataFilter", dataFilter);

@@ -53,6 +53,14 @@ public class CreateEvaluatorRequest extends Request {
     private java.util.Map<String, ?> properties;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("skills")
+    private java.util.List<Skills> skills;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("status")
+    private String status;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("type")
     @com.aliyun.core.annotation.Validation(required = true)
     private String type;
@@ -80,6 +88,8 @@ public class CreateEvaluatorRequest extends Request {
         this.metricName = builder.metricName;
         this.name = builder.name;
         this.properties = builder.properties;
+        this.skills = builder.skills;
+        this.status = builder.status;
         this.type = builder.type;
         this.version = builder.version;
         this.versionDescription = builder.versionDescription;
@@ -156,6 +166,20 @@ public class CreateEvaluatorRequest extends Request {
     }
 
     /**
+     * @return skills
+     */
+    public java.util.List<Skills> getSkills() {
+        return this.skills;
+    }
+
+    /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
@@ -192,6 +216,8 @@ public class CreateEvaluatorRequest extends Request {
         private String metricName; 
         private String name; 
         private java.util.Map<String, ?> properties; 
+        private java.util.List<Skills> skills; 
+        private String status; 
         private String type; 
         private String version; 
         private String versionDescription; 
@@ -211,6 +237,8 @@ public class CreateEvaluatorRequest extends Request {
             this.metricName = request.metricName;
             this.name = request.name;
             this.properties = request.properties;
+            this.skills = request.skills;
+            this.status = request.status;
             this.type = request.type;
             this.version = request.version;
             this.versionDescription = request.versionDescription;
@@ -317,6 +345,24 @@ public class CreateEvaluatorRequest extends Request {
         }
 
         /**
+         * skills.
+         */
+        public Builder skills(java.util.List<Skills> skills) {
+            this.putBodyParameter("skills", skills);
+            this.skills = skills;
+            return this;
+        }
+
+        /**
+         * status.
+         */
+        public Builder status(String status) {
+            this.putBodyParameter("status", status);
+            this.status = status;
+            return this;
+        }
+
+        /**
          * <p>The evaluator type. Valid values:</p>
          * <ul>
          * <li>LLM: an inner join large language model evaluation evaluator.</li>
@@ -378,4 +424,227 @@ public class CreateEvaluatorRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateEvaluatorRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEvaluatorRequest</p>
+     */
+    public static class Files extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("content")
+        private String content;
+
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
+        private Files(Builder builder) {
+            this.content = builder.content;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Files create() {
+            return builder().build();
+        }
+
+        /**
+         * @return content
+         */
+        public String getContent() {
+            return this.content;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private String content; 
+            private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(Files model) {
+                this.content = model.content;
+                this.name = model.name;
+            } 
+
+            /**
+             * content.
+             */
+            public Builder content(String content) {
+                this.content = content;
+                return this;
+            }
+
+            /**
+             * <p>The evaluator name. The name cannot start with a system-reserved prefix. Maximum length: 128 characters.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>trace_task_completion</p>
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public Files build() {
+                return new Files(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateEvaluatorRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEvaluatorRequest</p>
+     */
+    public static class Skills extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("description")
+        private String description;
+
+        @com.aliyun.core.annotation.NameInMap("displayName")
+        private String displayName;
+
+        @com.aliyun.core.annotation.NameInMap("enable")
+        private Boolean enable;
+
+        @com.aliyun.core.annotation.NameInMap("files")
+        private java.util.List<Files> files;
+
+        @com.aliyun.core.annotation.NameInMap("skillName")
+        private String skillName;
+
+        private Skills(Builder builder) {
+            this.description = builder.description;
+            this.displayName = builder.displayName;
+            this.enable = builder.enable;
+            this.files = builder.files;
+            this.skillName = builder.skillName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Skills create() {
+            return builder().build();
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return displayName
+         */
+        public String getDisplayName() {
+            return this.displayName;
+        }
+
+        /**
+         * @return enable
+         */
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        /**
+         * @return files
+         */
+        public java.util.List<Files> getFiles() {
+            return this.files;
+        }
+
+        /**
+         * @return skillName
+         */
+        public String getSkillName() {
+            return this.skillName;
+        }
+
+        public static final class Builder {
+            private String description; 
+            private String displayName; 
+            private Boolean enable; 
+            private java.util.List<Files> files; 
+            private String skillName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Skills model) {
+                this.description = model.description;
+                this.displayName = model.displayName;
+                this.enable = model.enable;
+                this.files = model.files;
+                this.skillName = model.skillName;
+            } 
+
+            /**
+             * <p>The description of the evaluator. Maximum length: 256 characters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Determines whether the Agent completed the user task</p>
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * <p>The display name. Maximum length: 128 characters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Trace task completion</p>
+             */
+            public Builder displayName(String displayName) {
+                this.displayName = displayName;
+                return this;
+            }
+
+            /**
+             * enable.
+             */
+            public Builder enable(Boolean enable) {
+                this.enable = enable;
+                return this;
+            }
+
+            /**
+             * files.
+             */
+            public Builder files(java.util.List<Files> files) {
+                this.files = files;
+                return this;
+            }
+
+            /**
+             * skillName.
+             */
+            public Builder skillName(String skillName) {
+                this.skillName = skillName;
+                return this;
+            }
+
+            public Skills build() {
+                return new Skills(this);
+            } 
+
+        } 
+
+    }
 }

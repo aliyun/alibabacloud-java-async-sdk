@@ -1277,7 +1277,7 @@ public class CreateContextStoreRequest extends Request {
              * <p>The subset of the pipeline where clause, which is pushed down to SQL.</p>
              * 
              * <strong>example:</strong>
-             * <p>appId = \&quot;crm-service\&quot;</p>
+             * <p>appId = &quot;crm-service&quot;</p>
              */
             public Builder where(String where) {
                 this.where = where;

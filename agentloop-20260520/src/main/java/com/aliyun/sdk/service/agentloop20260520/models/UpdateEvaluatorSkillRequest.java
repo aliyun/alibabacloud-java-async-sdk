@@ -45,6 +45,10 @@ public class UpdateEvaluatorSkillRequest extends Request {
     private Boolean enable;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("evaluatorVersion")
+    private String evaluatorVersion;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("files")
     private java.util.List<Files> files;
 
@@ -60,6 +64,7 @@ public class UpdateEvaluatorSkillRequest extends Request {
         this.description = builder.description;
         this.displayName = builder.displayName;
         this.enable = builder.enable;
+        this.evaluatorVersion = builder.evaluatorVersion;
         this.files = builder.files;
         this.clientToken = builder.clientToken;
     }
@@ -120,6 +125,13 @@ public class UpdateEvaluatorSkillRequest extends Request {
     }
 
     /**
+     * @return evaluatorVersion
+     */
+    public String getEvaluatorVersion() {
+        return this.evaluatorVersion;
+    }
+
+    /**
      * @return files
      */
     public java.util.List<Files> getFiles() {
@@ -140,6 +152,7 @@ public class UpdateEvaluatorSkillRequest extends Request {
         private String description; 
         private String displayName; 
         private Boolean enable; 
+        private String evaluatorVersion; 
         private java.util.List<Files> files; 
         private String clientToken; 
 
@@ -155,6 +168,7 @@ public class UpdateEvaluatorSkillRequest extends Request {
             this.description = request.description;
             this.displayName = request.displayName;
             this.enable = request.enable;
+            this.evaluatorVersion = request.evaluatorVersion;
             this.files = request.files;
             this.clientToken = request.clientToken;
         } 
@@ -231,6 +245,15 @@ public class UpdateEvaluatorSkillRequest extends Request {
         public Builder enable(Boolean enable) {
             this.putBodyParameter("enable", enable);
             this.enable = enable;
+            return this;
+        }
+
+        /**
+         * evaluatorVersion.
+         */
+        public Builder evaluatorVersion(String evaluatorVersion) {
+            this.putBodyParameter("evaluatorVersion", evaluatorVersion);
+            this.evaluatorVersion = evaluatorVersion;
             return this;
         }
 

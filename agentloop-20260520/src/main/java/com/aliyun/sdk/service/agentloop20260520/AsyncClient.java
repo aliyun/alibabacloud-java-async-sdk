@@ -102,6 +102,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateExperimentRunResponse> createExperimentRun(CreateExperimentRunRequest request);
 
     /**
+     * @param request the request parameters of CreateMultiModalTask  CreateMultiModalTaskRequest
+     * @return CreateMultiModalTaskResponse
+     */
+    CompletableFuture<CreateMultiModalTaskResponse> createMultiModalTask(CreateMultiModalTaskRequest request);
+
+    /**
      * @param request the request parameters of CreateOptimizeRun  CreateOptimizeRunRequest
      * @return CreateOptimizeRunResponse
      */
@@ -525,6 +531,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateEvaluatorSkillResponse
      */
     CompletableFuture<UpdateEvaluatorSkillResponse> updateEvaluatorSkill(UpdateEvaluatorSkillRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Publishes a saved evaluator draft, takes a published version offline, or brings an offline version back online.</p>
+     * 
+     * @param request the request parameters of UpdateEvaluatorVersionStatus  UpdateEvaluatorVersionStatusRequest
+     * @return UpdateEvaluatorVersionStatusResponse
+     */
+    CompletableFuture<UpdateEvaluatorVersionStatusResponse> updateEvaluatorVersionStatus(UpdateEvaluatorVersionStatusRequest request);
 
     /**
      * <b>description</b> :

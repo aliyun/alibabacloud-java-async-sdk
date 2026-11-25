@@ -28,6 +28,10 @@ public class ListEvaluatorSkillsRequest extends Request {
     private String agentSpace;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("evaluatorVersion")
+    private String evaluatorVersion;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("maxResults")
     private Integer maxResults;
 
@@ -39,6 +43,7 @@ public class ListEvaluatorSkillsRequest extends Request {
         super(builder);
         this.name = builder.name;
         this.agentSpace = builder.agentSpace;
+        this.evaluatorVersion = builder.evaluatorVersion;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
     }
@@ -71,6 +76,13 @@ public class ListEvaluatorSkillsRequest extends Request {
     }
 
     /**
+     * @return evaluatorVersion
+     */
+    public String getEvaluatorVersion() {
+        return this.evaluatorVersion;
+    }
+
+    /**
      * @return maxResults
      */
     public Integer getMaxResults() {
@@ -87,6 +99,7 @@ public class ListEvaluatorSkillsRequest extends Request {
     public static final class Builder extends Request.Builder<ListEvaluatorSkillsRequest, Builder> {
         private String name; 
         private String agentSpace; 
+        private String evaluatorVersion; 
         private Integer maxResults; 
         private String nextToken; 
 
@@ -98,6 +111,7 @@ public class ListEvaluatorSkillsRequest extends Request {
             super(request);
             this.name = request.name;
             this.agentSpace = request.agentSpace;
+            this.evaluatorVersion = request.evaluatorVersion;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
         } 
@@ -125,6 +139,15 @@ public class ListEvaluatorSkillsRequest extends Request {
         public Builder agentSpace(String agentSpace) {
             this.putQueryParameter("agentSpace", agentSpace);
             this.agentSpace = agentSpace;
+            return this;
+        }
+
+        /**
+         * evaluatorVersion.
+         */
+        public Builder evaluatorVersion(String evaluatorVersion) {
+            this.putQueryParameter("evaluatorVersion", evaluatorVersion);
+            this.evaluatorVersion = evaluatorVersion;
             return this;
         }
 

@@ -100,9 +100,156 @@ public class GetEvaluatorResponseBody extends TeaModel {
      *
      * <p>GetEvaluatorResponseBody</p>
      */
+    public static class Skills extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("currentVersion")
+        private String currentVersion;
+
+        @com.aliyun.core.annotation.NameInMap("description")
+        private String description;
+
+        @com.aliyun.core.annotation.NameInMap("displayName")
+        private String displayName;
+
+        @com.aliyun.core.annotation.NameInMap("enable")
+        private Boolean enable;
+
+        @com.aliyun.core.annotation.NameInMap("skillName")
+        private String skillName;
+
+        private Skills(Builder builder) {
+            this.currentVersion = builder.currentVersion;
+            this.description = builder.description;
+            this.displayName = builder.displayName;
+            this.enable = builder.enable;
+            this.skillName = builder.skillName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Skills create() {
+            return builder().build();
+        }
+
+        /**
+         * @return currentVersion
+         */
+        public String getCurrentVersion() {
+            return this.currentVersion;
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return displayName
+         */
+        public String getDisplayName() {
+            return this.displayName;
+        }
+
+        /**
+         * @return enable
+         */
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        /**
+         * @return skillName
+         */
+        public String getSkillName() {
+            return this.skillName;
+        }
+
+        public static final class Builder {
+            private String currentVersion; 
+            private String description; 
+            private String displayName; 
+            private Boolean enable; 
+            private String skillName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Skills model) {
+                this.currentVersion = model.currentVersion;
+                this.description = model.description;
+                this.displayName = model.displayName;
+                this.enable = model.enable;
+                this.skillName = model.skillName;
+            } 
+
+            /**
+             * currentVersion.
+             */
+            public Builder currentVersion(String currentVersion) {
+                this.currentVersion = currentVersion;
+                return this;
+            }
+
+            /**
+             * description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * displayName.
+             */
+            public Builder displayName(String displayName) {
+                this.displayName = displayName;
+                return this;
+            }
+
+            /**
+             * enable.
+             */
+            public Builder enable(Boolean enable) {
+                this.enable = enable;
+                return this;
+            }
+
+            /**
+             * skillName.
+             */
+            public Builder skillName(String skillName) {
+                this.skillName = skillName;
+                return this;
+            }
+
+            public Skills build() {
+                return new Skills(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetEvaluatorResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetEvaluatorResponseBody</p>
+     */
     public static class Versions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("createdAt")
         private Long createdAt;
+
+        @com.aliyun.core.annotation.NameInMap("selectable")
+        private Boolean selectable;
+
+        @com.aliyun.core.annotation.NameInMap("status")
+        private String status;
+
+        @com.aliyun.core.annotation.NameInMap("updatedAt")
+        private Long updatedAt;
 
         @com.aliyun.core.annotation.NameInMap("version")
         private String version;
@@ -112,6 +259,9 @@ public class GetEvaluatorResponseBody extends TeaModel {
 
         private Versions(Builder builder) {
             this.createdAt = builder.createdAt;
+            this.selectable = builder.selectable;
+            this.status = builder.status;
+            this.updatedAt = builder.updatedAt;
             this.version = builder.version;
             this.versionDescription = builder.versionDescription;
         }
@@ -132,6 +282,27 @@ public class GetEvaluatorResponseBody extends TeaModel {
         }
 
         /**
+         * @return selectable
+         */
+        public Boolean getSelectable() {
+            return this.selectable;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return updatedAt
+         */
+        public Long getUpdatedAt() {
+            return this.updatedAt;
+        }
+
+        /**
          * @return version
          */
         public String getVersion() {
@@ -147,6 +318,9 @@ public class GetEvaluatorResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long createdAt; 
+            private Boolean selectable; 
+            private String status; 
+            private Long updatedAt; 
             private String version; 
             private String versionDescription; 
 
@@ -155,6 +329,9 @@ public class GetEvaluatorResponseBody extends TeaModel {
 
             private Builder(Versions model) {
                 this.createdAt = model.createdAt;
+                this.selectable = model.selectable;
+                this.status = model.status;
+                this.updatedAt = model.updatedAt;
                 this.version = model.version;
                 this.versionDescription = model.versionDescription;
             } 
@@ -167,6 +344,30 @@ public class GetEvaluatorResponseBody extends TeaModel {
              */
             public Builder createdAt(Long createdAt) {
                 this.createdAt = createdAt;
+                return this;
+            }
+
+            /**
+             * selectable.
+             */
+            public Builder selectable(Boolean selectable) {
+                this.selectable = selectable;
+                return this;
+            }
+
+            /**
+             * status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * updatedAt.
+             */
+            public Builder updatedAt(Long updatedAt) {
+                this.updatedAt = updatedAt;
                 return this;
             }
 
@@ -239,6 +440,15 @@ public class GetEvaluatorResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("properties")
         private java.util.Map<String, ?> properties;
 
+        @com.aliyun.core.annotation.NameInMap("selectable")
+        private Boolean selectable;
+
+        @com.aliyun.core.annotation.NameInMap("skills")
+        private java.util.List<Skills> skills;
+
+        @com.aliyun.core.annotation.NameInMap("status")
+        private String status;
+
         @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
@@ -260,6 +470,9 @@ public class GetEvaluatorResponseBody extends TeaModel {
             this.metricName = builder.metricName;
             this.name = builder.name;
             this.properties = builder.properties;
+            this.selectable = builder.selectable;
+            this.skills = builder.skills;
+            this.status = builder.status;
             this.type = builder.type;
             this.updatedAt = builder.updatedAt;
             this.versions = builder.versions;
@@ -351,6 +564,27 @@ public class GetEvaluatorResponseBody extends TeaModel {
         }
 
         /**
+         * @return selectable
+         */
+        public Boolean getSelectable() {
+            return this.selectable;
+        }
+
+        /**
+         * @return skills
+         */
+        public java.util.List<Skills> getSkills() {
+            return this.skills;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -383,6 +617,9 @@ public class GetEvaluatorResponseBody extends TeaModel {
             private String metricName; 
             private String name; 
             private java.util.Map<String, ?> properties; 
+            private Boolean selectable; 
+            private java.util.List<Skills> skills; 
+            private String status; 
             private String type; 
             private Long updatedAt; 
             private java.util.List<Versions> versions; 
@@ -402,6 +639,9 @@ public class GetEvaluatorResponseBody extends TeaModel {
                 this.metricName = model.metricName;
                 this.name = model.name;
                 this.properties = model.properties;
+                this.selectable = model.selectable;
+                this.skills = model.skills;
+                this.status = model.status;
                 this.type = model.type;
                 this.updatedAt = model.updatedAt;
                 this.versions = model.versions;
@@ -525,6 +765,30 @@ public class GetEvaluatorResponseBody extends TeaModel {
              */
             public Builder properties(java.util.Map<String, ?> properties) {
                 this.properties = properties;
+                return this;
+            }
+
+            /**
+             * selectable.
+             */
+            public Builder selectable(Boolean selectable) {
+                this.selectable = selectable;
+                return this;
+            }
+
+            /**
+             * skills.
+             */
+            public Builder skills(java.util.List<Skills> skills) {
+                this.skills = skills;
+                return this;
+            }
+
+            /**
+             * status.
+             */
+            public Builder status(String status) {
+                this.status = status;
                 return this;
             }
 

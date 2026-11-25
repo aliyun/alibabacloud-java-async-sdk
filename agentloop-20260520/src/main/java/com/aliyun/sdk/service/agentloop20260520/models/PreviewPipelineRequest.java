@@ -410,7 +410,7 @@ public class PreviewPipelineRequest extends Request {
              * <p>The data filter condition for the dataset.</p>
              * 
              * <strong>example:</strong>
-             * <p>status = \&quot;pending\&quot;</p>
+             * <p>status = &quot;pending&quot;</p>
              */
             public Builder filter(String filter) {
                 this.filter = filter;
@@ -845,7 +845,7 @@ public class PreviewPipelineRequest extends Request {
              * <p>The dataset datasource config in the current AgentSpace.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;dataset&quot;:&quot;my-dataset&quot;,&quot;filter&quot;:&quot;status = \&quot;pending\&quot;&quot;}</p>
+             * <p>{&quot;dataset&quot;:&quot;my-dataset&quot;,&quot;filter&quot;:&quot;status = &quot;pending&quot;&quot;}</p>
              */
             public Builder dataset(Dataset dataset) {
                 this.dataset = dataset;

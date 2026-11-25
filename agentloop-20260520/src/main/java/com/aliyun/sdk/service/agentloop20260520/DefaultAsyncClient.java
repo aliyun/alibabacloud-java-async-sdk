@@ -266,6 +266,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateMultiModalTask  CreateMultiModalTaskRequest
+     * @return CreateMultiModalTaskResponse
+     */
+    @Override
+    public CompletableFuture<CreateMultiModalTaskResponse> createMultiModalTask(CreateMultiModalTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateMultiModalTask").setMethod(HttpMethod.POST).setPathRegex("/api/v1/media-processings").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateMultiModalTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateMultiModalTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateOptimizeRun  CreateOptimizeRunRequest
      * @return CreateOptimizeRunResponse
      */
@@ -1453,6 +1471,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateEvaluatorSkillResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Publishes a saved evaluator draft, takes a published version offline, or brings an offline version back online.</p>
+     * 
+     * @param request the request parameters of UpdateEvaluatorVersionStatus  UpdateEvaluatorVersionStatusRequest
+     * @return UpdateEvaluatorVersionStatusResponse
+     */
+    @Override
+    public CompletableFuture<UpdateEvaluatorVersionStatusResponse> updateEvaluatorVersionStatus(UpdateEvaluatorVersionStatusRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateEvaluatorVersionStatus").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/evaluators/{agentSpace}/{name}/version-status").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateEvaluatorVersionStatusResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateEvaluatorVersionStatusResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

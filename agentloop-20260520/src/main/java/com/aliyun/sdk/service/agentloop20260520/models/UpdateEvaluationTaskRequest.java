@@ -224,7 +224,7 @@ public class UpdateEvaluationTaskRequest extends Request {
          * <p>The filter conditions for evaluation data. JSON objects and JSON strings are supported.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;query&quot;:&quot;serviceName=\&quot;checkout-service\&quot; AND status=\&quot;OK\&quot;&quot;,&quot;maxRecords&quot;:10,&quot;samplingRate&quot;:50}</p>
+         * <p>{&quot;query&quot;:&quot;serviceName=&quot;checkout-service&quot; AND status=&quot;OK&quot;&quot;,&quot;maxRecords&quot;:10,&quot;samplingRate&quot;:50}</p>
          */
         public Builder dataFilter(String dataFilter) {
             this.putBodyParameter("dataFilter", dataFilter);

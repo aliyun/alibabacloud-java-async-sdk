@@ -33,6 +33,10 @@ public class GetEvaluatorSkillRequest extends Request {
     private String agentSpace;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("evaluatorVersion")
+    private String evaluatorVersion;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("version")
     private String version;
 
@@ -41,6 +45,7 @@ public class GetEvaluatorSkillRequest extends Request {
         this.name = builder.name;
         this.skillName = builder.skillName;
         this.agentSpace = builder.agentSpace;
+        this.evaluatorVersion = builder.evaluatorVersion;
         this.version = builder.version;
     }
 
@@ -79,6 +84,13 @@ public class GetEvaluatorSkillRequest extends Request {
     }
 
     /**
+     * @return evaluatorVersion
+     */
+    public String getEvaluatorVersion() {
+        return this.evaluatorVersion;
+    }
+
+    /**
      * @return version
      */
     public String getVersion() {
@@ -89,6 +101,7 @@ public class GetEvaluatorSkillRequest extends Request {
         private String name; 
         private String skillName; 
         private String agentSpace; 
+        private String evaluatorVersion; 
         private String version; 
 
         private Builder() {
@@ -100,6 +113,7 @@ public class GetEvaluatorSkillRequest extends Request {
             this.name = request.name;
             this.skillName = request.skillName;
             this.agentSpace = request.agentSpace;
+            this.evaluatorVersion = request.evaluatorVersion;
             this.version = request.version;
         } 
 
@@ -139,6 +153,15 @@ public class GetEvaluatorSkillRequest extends Request {
         public Builder agentSpace(String agentSpace) {
             this.putQueryParameter("agentSpace", agentSpace);
             this.agentSpace = agentSpace;
+            return this;
+        }
+
+        /**
+         * evaluatorVersion.
+         */
+        public Builder evaluatorVersion(String evaluatorVersion) {
+            this.putQueryParameter("evaluatorVersion", evaluatorVersion);
+            this.evaluatorVersion = evaluatorVersion;
             return this;
         }
 

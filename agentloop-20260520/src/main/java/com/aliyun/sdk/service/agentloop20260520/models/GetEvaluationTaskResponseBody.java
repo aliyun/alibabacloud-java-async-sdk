@@ -322,7 +322,7 @@ public class GetEvaluationTaskResponseBody extends TeaModel {
          * <p>The filter conditions for evaluation data. The backend returns this value as a JSON string.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;query&quot;:&quot;serviceName=\&quot;checkout-service\&quot;&quot;,&quot;maxRecords&quot;:10,&quot;samplingRate&quot;:100}</p>
+         * <p>{&quot;query&quot;:&quot;serviceName=&quot;checkout-service&quot;&quot;,&quot;maxRecords&quot;:10,&quot;samplingRate&quot;:100}</p>
          */
         public Builder dataFilter(String dataFilter) {
             this.dataFilter = dataFilter;
