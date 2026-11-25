@@ -197,7 +197,7 @@ public class QueryMaterialTaskListRequest extends Request {
          * <p>The ID of the business group.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx</p>
+         * <p>GROUP_1</p>
          */
         public Builder bizGroupId(String bizGroupId) {
             this.putQueryParameter("BizGroupId", bizGroupId);
@@ -206,8 +206,7 @@ public class QueryMaterialTaskListRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per query.</p>
-         * <p>Valid values: 10 to 100. Default value: 20.</p>
+         * <p>The maximum number of entries to return for a single request. Valid values: 10 to 100. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -219,7 +218,7 @@ public class QueryMaterialTaskListRequest extends Request {
         }
 
         /**
-         * <p>The token for the next query. This parameter is empty if no more results exist.</p>
+         * <p>The token used to start the next query. If no next query is available, this parameter is left empty.</p>
          * 
          * <strong>example:</strong>
          * <p>FFh3Xqm+JgZ/U9Jyb7wdVr9LWk80Tghn5UZjbcWEVEderBcbVF+Y6PS0i8PpCL4PQZ3e0C9oEH0Asd4tJEuGtkl2WuKdiWZpEwadNydQdJPFM=</p>
@@ -231,7 +230,7 @@ public class QueryMaterialTaskListRequest extends Request {
         }
 
         /**
-         * <p>The field used for sorting.</p>
+         * <p>The field by which to sort the results.</p>
          * 
          * <strong>example:</strong>
          * <p>gmtCreated</p>
@@ -243,7 +242,7 @@ public class QueryMaterialTaskListRequest extends Request {
         }
 
         /**
-         * <p>The sort type. Valid values: ASC and DESC.</p>
+         * <p>The sort order.</p>
          * 
          * <strong>example:</strong>
          * <p>DESC</p>

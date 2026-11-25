@@ -96,7 +96,7 @@ public class RollbackAppPluginVersionRequest extends Request {
         }
 
         /**
-         * <p>The ID of the gateway plugin.</p>
+         * <p>The ID of the gateway plug-in.</p>
          * 
          * <strong>example:</strong>
          * <p>1bae9ceaceea432d91c7069fab0dfc02</p>
@@ -108,7 +108,7 @@ public class RollbackAppPluginVersionRequest extends Request {
         }
 
         /**
-         * <p>The target version.</p>
+         * <p>The target version number.</p>
          * 
          * <strong>example:</strong>
          * <p>v2</p>

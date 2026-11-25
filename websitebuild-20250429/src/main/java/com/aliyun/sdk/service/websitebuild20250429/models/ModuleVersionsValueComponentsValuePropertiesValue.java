@@ -93,7 +93,7 @@ public class ModuleVersionsValueComponentsValuePropertiesValue extends TeaModel 
         } 
 
         /**
-         * <p>属性编码（系统内部标识）</p>
+         * <p>The code of the property, which is an internal system identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>code</p>
@@ -104,7 +104,7 @@ public class ModuleVersionsValueComponentsValuePropertiesValue extends TeaModel 
         }
 
         /**
-         * <p>属性显示名称（用户可见名称）</p>
+         * <p>The display name of the property, which is visible to users.</p>
          * 
          * <strong>example:</strong>
          * <p>name</p>
@@ -115,7 +115,7 @@ public class ModuleVersionsValueComponentsValuePropertiesValue extends TeaModel 
         }
 
         /**
-         * <p>属性值编码（系统内部值）</p>
+         * <p>The code of the property value, which is an internal system value.</p>
          * 
          * <strong>example:</strong>
          * <p>value</p>
@@ -126,7 +126,7 @@ public class ModuleVersionsValueComponentsValuePropertiesValue extends TeaModel 
         }
 
         /**
-         * <p>模块属性值列表</p>
+         * <p>The list of module property values.</p>
          */
         public Builder values(java.util.List<Values> values) {
             this.values = values;
@@ -205,7 +205,7 @@ public class ModuleVersionsValueComponentsValuePropertiesValue extends TeaModel 
             } 
 
             /**
-             * <p>属性编码（系统内部标识）</p>
+             * <p>The code of the property, which is an internal system identifier.</p>
              * 
              * <strong>example:</strong>
              * <p>code</p>
@@ -216,7 +216,7 @@ public class ModuleVersionsValueComponentsValuePropertiesValue extends TeaModel 
             }
 
             /**
-             * <p>属性值编码（系统内部值）</p>
+             * <p>The code of the property value, which is an internal system value.</p>
              * 
              * <strong>example:</strong>
              * <p>value</p>
@@ -227,7 +227,7 @@ public class ModuleVersionsValueComponentsValuePropertiesValue extends TeaModel 
             }
 
             /**
-             * <p>属性显示名称（用户可见名称）</p>
+             * <p>The display name of the property, which is visible to users.</p>
              * 
              * <strong>example:</strong>
              * <p>name</p>

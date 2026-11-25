@@ -184,7 +184,7 @@ public class DescribeAppDomainDnsRecordResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The access denied details. This field is returned only when RAM authentication fails.</p>
+         * <p>The details of the access denied error. This field is returned only when RAM authentication fails.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -195,7 +195,7 @@ public class DescribeAppDomainDnsRecordResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether retry is allowed.</p>
+         * <p>Indicates whether retries are allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -206,7 +206,7 @@ public class DescribeAppDomainDnsRecordResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The application name. Queries the application with this name.</p>
+         * <p>The name of the application to query.</p>
          * 
          * <strong>example:</strong>
          * <p>ish-intelligence-store-platform-admin-web</p>
@@ -255,7 +255,7 @@ public class DescribeAppDomainDnsRecordResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>6C6B99AC-39EC-5350-874C-204128C905E6</p>
@@ -280,7 +280,7 @@ public class DescribeAppDomainDnsRecordResponseBody extends TeaModel {
          * <p>The exception message.</p>
          * 
          * <strong>example:</strong>
-         * <p>系统异常</p>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;

@@ -228,7 +228,7 @@ public class GetAppConversationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic error message, which is used to replace <code>%s</code> in the <strong>ErrMessage</strong> error message.</p>
+         * <p>The dynamic error message, which is used to replace the <code>%s</code> placeholder in the <strong>ErrMessage</strong> response parameter.</p>
          * <blockquote>
          * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the <strong>DtsJobId</strong> request parameter is invalid.</p>
          * </blockquote>
@@ -533,7 +533,7 @@ public class GetAppConversationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time. The time is in the ISO 8601 format and the UTC time zone (Z).</p>
+             * <p>The update time. The value is in ISO 8601 format and the time zone is UTC (Z).</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
              * 
              * <strong>example:</strong>
@@ -548,7 +548,7 @@ public class GetAppConversationResponseBody extends TeaModel {
              * <p>The extended information in JSON string format.</p>
              * 
              * <strong>example:</strong>
-             * <p>{\&quot;appId\&quot;:\&quot;WS20260507200853000001\&quot;,\&quot;inputTokens\&quot;:1411,\&quot;outputTokens\&quot;:51}</p>
+             * <p>{&quot;appId&quot;:&quot;WS20260507200853000001&quot;,&quot;inputTokens&quot;:1411,&quot;outputTokens&quot;:51}</p>
              */
             public Builder metaData(String metaData) {
                 this.metaData = metaData;
@@ -567,7 +567,7 @@ public class GetAppConversationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</p>
+             * <p>The site ID.</p>
              * 
              * <strong>example:</strong>
              * <p>865181640657408</p>
@@ -581,7 +581,7 @@ public class GetAppConversationResponseBody extends TeaModel {
              * <p>The current viewpoint, which is equivalent to the news title.</p>
              * 
              * <strong>example:</strong>
-             * <p>Feel Like Makin\&quot; Love</p>
+             * <p>Feel Like Makin&quot; Love</p>
              */
             public Builder title(String title) {
                 this.title = title;

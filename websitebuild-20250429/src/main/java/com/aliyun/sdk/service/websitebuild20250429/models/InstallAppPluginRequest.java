@@ -96,7 +96,7 @@ public class InstallAppPluginRequest extends Request {
         }
 
         /**
-         * <p>The ID of the gateway plugin.</p>
+         * <p>The ID of the gateway plug-in.</p>
          * 
          * <strong>example:</strong>
          * <p>1bae9ceaceea432d91c7069fab0dfc02</p>
@@ -108,7 +108,7 @@ public class InstallAppPluginRequest extends Request {
         }
 
         /**
-         * <p>The locked version. If left empty, the latest version is used.</p>
+         * <p>The locked version. If this parameter is left empty, the latest version is used.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.7</p>

@@ -206,7 +206,7 @@ public class ModifyMaterialFileStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the app.</p>
+         * <p>The app name.</p>
          * 
          * <strong>example:</strong>
          * <p>or</p>
@@ -217,7 +217,7 @@ public class ModifyMaterialFileStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic code. This parameter is not used and can be ignored.</p>
+         * <p>The dynamic code. This field is not used and can be ignored.</p>
          * 
          * <strong>example:</strong>
          * <p>ERROR-oo1</p>
@@ -247,7 +247,7 @@ public class ModifyMaterialFileStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the update was successful.</p>
+         * <p>Indicates whether the modification was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -291,7 +291,7 @@ public class ModifyMaterialFileStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is processed synchronously.</p>
+         * <p>Specifies whether the processing is synchronous.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>

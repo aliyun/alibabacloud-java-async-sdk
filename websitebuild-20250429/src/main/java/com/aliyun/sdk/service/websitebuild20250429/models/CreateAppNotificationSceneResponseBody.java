@@ -184,7 +184,7 @@ public class CreateAppNotificationSceneResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The detailed reason why access was denied.</p>
+         * <p>The detailed reason for access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -195,7 +195,7 @@ public class CreateAppNotificationSceneResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether retry is allowed.</p>
+         * <p>Specifies whether retries are allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -239,7 +239,7 @@ public class CreateAppNotificationSceneResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error parameters.</p>
+         * <p>The returned error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -277,7 +277,7 @@ public class CreateAppNotificationSceneResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message.</p>
+         * <p>The exception message.</p>
          * 
          * <strong>example:</strong>
          * <p>System exception</p>
@@ -288,7 +288,7 @@ public class CreateAppNotificationSceneResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is processed synchronously.</p>
+         * <p>Specifies whether the request is processed synchronously.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -344,7 +344,7 @@ public class CreateAppNotificationSceneResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the newly created scenario.</p>
+             * <p>The ID of the created scenario.</p>
              * 
              * <strong>example:</strong>
              * <p>16257</p>

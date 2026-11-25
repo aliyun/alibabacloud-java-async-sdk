@@ -184,7 +184,7 @@ public class GetAppWorkspaceDirectoryResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The detailed reason for access denial.</p>
+         * <p>The detailed cause of access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -228,7 +228,7 @@ public class GetAppWorkspaceDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic message. This parameter is not used and can be ignored.</p>
+         * <p>The dynamic message. This parameter is not in use and can be ignored.</p>
          * 
          * <strong>example:</strong>
          * <p>SYSTEM_ERROR</p>

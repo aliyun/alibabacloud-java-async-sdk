@@ -82,7 +82,7 @@ public class GetAppPluginRequest extends Request {
         }
 
         /**
-         * <p>The ID of the gateway plugin.</p>
+         * <p>The ID of the gateway plug-in.</p>
          * 
          * <strong>example:</strong>
          * <p>1bae9ceaceea432d91c7069fab0dfc02</p>

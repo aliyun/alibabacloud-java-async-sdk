@@ -315,7 +315,7 @@ public class QueryMaterialTaskDetailResponseBody extends TeaModel {
          * <p>The response data.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;Success\&quot;: True}</p>
+         * <p>{&quot;Success&quot;: True}</p>
          */
         public Builder module(AppMaterialTask module) {
             this.module = module;

@@ -176,7 +176,7 @@ public class GetIcpFilingInfoForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The website ICP filing number associated with the domain name.</p>
+             * <p>The website ICP filing number corresponding to the domain name.</p>
              * 
              * <strong>example:</strong>
              * <p>湘ICP备14011526号-3A</p>

@@ -210,7 +210,7 @@ public class ListAppCommoditySpecificationsV2ForPartnerResponseBody extends TeaM
         } 
 
         /**
-         * <p>The access denied detail.</p>
+         * <p>The details about the access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -221,7 +221,7 @@ public class ListAppCommoditySpecificationsV2ForPartnerResponseBody extends TeaM
         }
 
         /**
-         * <p>Indicates whether retry is allowed.</p>
+         * <p>Indicates whether retries are allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -232,7 +232,7 @@ public class ListAppCommoditySpecificationsV2ForPartnerResponseBody extends TeaM
         }
 
         /**
-         * <p>The app name.</p>
+         * <p>The application name.</p>
          * 
          * <strong>example:</strong>
          * <p>or</p>
@@ -254,9 +254,9 @@ public class ListAppCommoditySpecificationsV2ForPartnerResponseBody extends TeaM
         }
 
         /**
-         * <p>The dynamic error message, which is used to replace the <code>%s</code> in the <strong>ErrMessage</strong> error message of the response parameters.</p>
+         * <p>The dynamic error message used to replace <code>%s</code> in the error message returned in the <strong>ErrMessage</strong> response parameter.</p>
          * <blockquote>
-         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the request parameter <strong>DtsJobId</strong> is invalid.</p>
+         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the <strong>DtsJobId</strong> request parameter is invalid.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -276,8 +276,7 @@ public class ListAppCommoditySpecificationsV2ForPartnerResponseBody extends TeaM
         }
 
         /**
-         * <p>The number of results per query.</p>
-         * <p>Valid values: 10 to 100. Default value: 20.</p>
+         * <p>The maximum number of results to return per query. Valid values: 10 to 100. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -296,7 +295,7 @@ public class ListAppCommoditySpecificationsV2ForPartnerResponseBody extends TeaM
         }
 
         /**
-         * <p>The token for the next query. This parameter is empty when there is no next query.</p>
+         * <p>The token used to start the next query. This value is empty if there are no more results.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</p>
@@ -332,7 +331,7 @@ public class ListAppCommoditySpecificationsV2ForPartnerResponseBody extends TeaM
          * <p>The exception message.</p>
          * 
          * <strong>example:</strong>
-         * <p>系统异常</p>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -446,7 +445,10 @@ public class ListAppCommoditySpecificationsV2ForPartnerResponseBody extends TeaM
             }
 
             /**
-             * <p>The default values.</p>
+             * <p>The component mapping for the product specifications, where the key is the component code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;deploy_area&quot;:{&quot;Code&quot;:&quot;deploy_area&quot;,&quot;Name&quot;:&quot;Deployment region&quot;,&quot;ModuleAttrStatus&quot;:1,&quot;Properties&quot;:{&quot;deploy_area&quot;:{&quot;Code&quot;:&quot;deploy_area&quot;,&quot;Name&quot;:&quot;Deployment region&quot;,&quot;Value&quot;:&quot;HongKong&quot;,&quot;Values&quot;:[{&quot;Value&quot;:&quot;HongKong&quot;,&quot;Name&quot;:&quot;China (Hong Kong)&quot;}]}}}}</p>
              */
             public Builder components(java.util.Map<String, ModuleDataComponentsValue> components) {
                 this.components = components;
@@ -457,7 +459,7 @@ public class ListAppCommoditySpecificationsV2ForPartnerResponseBody extends TeaM
              * <p>The file name.</p>
              * 
              * <strong>example:</strong>
-             * <p>文件名</p>
+             * <p>File name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -465,7 +467,10 @@ public class ListAppCommoditySpecificationsV2ForPartnerResponseBody extends TeaM
             }
 
             /**
-             * <p>The duration.</p>
+             * <p>The property mapping for the product specifications, where the key is the property code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;version&quot;:{&quot;Code&quot;:&quot;version&quot;,&quot;Values&quot;:[{&quot;Value&quot;:&quot;V2.0&quot;}]}}</p>
              */
             public Builder properties(java.util.Map<String, ModuleDataPropertiesValue> properties) {
                 this.properties = properties;
@@ -569,7 +574,10 @@ public class ListAppCommoditySpecificationsV2ForPartnerResponseBody extends TeaM
             }
 
             /**
-             * <p>The default values.</p>
+             * <p>The component mapping for the product specifications, where the key is the component code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;deploy_area&quot;:{&quot;Code&quot;:&quot;deploy_area&quot;,&quot;Name&quot;:&quot;Deployment region&quot;,&quot;ModuleAttrStatus&quot;:1,&quot;Properties&quot;:{&quot;deploy_area&quot;:{&quot;Code&quot;:&quot;deploy_area&quot;,&quot;Name&quot;:&quot;Deployment region&quot;,&quot;Value&quot;:&quot;HongKong&quot;,&quot;Values&quot;:[{&quot;Value&quot;:&quot;HongKong&quot;,&quot;Name&quot;:&quot;China (Hong Kong)&quot;}]}}}}</p>
              */
             public Builder components(java.util.Map<String, ModuleNextComponentsValue> components) {
                 this.components = components;
@@ -588,7 +596,10 @@ public class ListAppCommoditySpecificationsV2ForPartnerResponseBody extends TeaM
             }
 
             /**
-             * <p>The frame rate.</p>
+             * <p>The property mapping for the product specifications, where the key is the property code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;version&quot;:{&quot;Code&quot;:&quot;version&quot;,&quot;Values&quot;:[{&quot;Value&quot;:&quot;V2.0&quot;}]}}</p>
              */
             public Builder properties(java.util.Map<String, ModuleNextPropertiesValue> properties) {
                 this.properties = properties;
@@ -757,7 +768,7 @@ public class ListAppCommoditySpecificationsV2ForPartnerResponseBody extends TeaM
             }
 
             /**
-             * <p>The request result.</p>
+             * <p>The request results.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -773,7 +784,7 @@ public class ListAppCommoditySpecificationsV2ForPartnerResponseBody extends TeaM
             }
 
             /**
-             * <p>Indicates whether there is a next page.</p>
+             * <p>Indicates whether a next page exists.</p>
              * 
              * <strong>example:</strong>
              * <p>False</p>
@@ -784,7 +795,7 @@ public class ListAppCommoditySpecificationsV2ForPartnerResponseBody extends TeaM
             }
 
             /**
-             * <p>The page size.</p>
+             * <p>The number of entries per page.</p>
              * 
              * <strong>example:</strong>
              * <p>50</p>
@@ -795,7 +806,7 @@ public class ListAppCommoditySpecificationsV2ForPartnerResponseBody extends TeaM
             }
 
             /**
-             * <p>Indicates whether there is a previous page.</p>
+             * <p>Indicates whether a previous page exists.</p>
              * 
              * <strong>example:</strong>
              * <p>False</p>
@@ -806,7 +817,7 @@ public class ListAppCommoditySpecificationsV2ForPartnerResponseBody extends TeaM
             }
 
             /**
-             * <p>In addition to pagination limits, the server processes a maximum of the most recent 1000 records per query. If the results exceed 1000, <strong>ResultLimit</strong> is <strong>true</strong>, and you need to narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
+             * <p>In addition to the pagination limit, the server processes a maximum of the latest 1,000 records for the current query. If the number of results exceeds 1,000, <strong>ResultLimit</strong> is set to <strong>true</strong>. In this case, narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is set to <strong>false</strong>.</p>
              */
             public Builder resultLimit(Boolean resultLimit) {
                 this.resultLimit = resultLimit;
@@ -814,7 +825,7 @@ public class ListAppCommoditySpecificationsV2ForPartnerResponseBody extends TeaM
             }
 
             /**
-             * <p>The total number of items.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

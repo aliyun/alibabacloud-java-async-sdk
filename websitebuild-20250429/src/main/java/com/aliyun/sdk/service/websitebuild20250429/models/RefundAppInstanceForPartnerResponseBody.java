@@ -184,7 +184,7 @@ public class RefundAppInstanceForPartnerResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The detailed reason why access was denied.</p>
+         * <p>The detailed reason why access is denied.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -195,7 +195,7 @@ public class RefundAppInstanceForPartnerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether retry is allowed.</p>
+         * <p>Specifies whether retries are allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -206,7 +206,7 @@ public class RefundAppInstanceForPartnerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The application name. The application with this name is queried.</p>
+         * <p>The name of the application to query.</p>
          * 
          * <strong>example:</strong>
          * <p>or</p>
@@ -228,10 +228,7 @@ public class RefundAppInstanceForPartnerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic error message, which is used to replace the <code>%s</code> placeholder in the ErrMessage response parameter.</p>
-         * <blockquote>
-         * <p>If ErrMessage returns <strong>The Value of Input Parameter %s is not valid</strong> and DynamicMessage returns <strong>DtsJobId</strong>, the request parameter DtsJobId is invalid.</p>
-         * </blockquote>
+         * <p>The dynamic error message, which is used to replace <code>%s</code> in the error message of the <strong>ErrMessage</strong> response parameter. If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the <strong>DtsJobId</strong> request parameter is invalid.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/u6qw3gxzu3b7sbj/u6qw3gxzu3b7sbj.diff.zip?Expires=1740975709&OSSAccessKeyId=LTAI5tKUErVCETM4ev9SELNb&Signature=FP7dDnkrLlOZHmRRORVqbLOtv9c%3D">https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/u6qw3gxzu3b7sbj/u6qw3gxzu3b7sbj.diff.zip?Expires=1740975709&amp;OSSAccessKeyId=LTAI5tKUErVCETM4ev9SELNb&amp;Signature=FP7dDnkrLlOZHmRRORVqbLOtv9c%3D</a></p>
@@ -242,7 +239,7 @@ public class RefundAppInstanceForPartnerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error parameters returned.</p>
+         * <p>The returned error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -283,7 +280,7 @@ public class RefundAppInstanceForPartnerResponseBody extends TeaModel {
          * <p>The exception message.</p>
          * 
          * <strong>example:</strong>
-         * <p>系统异常</p>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -291,7 +288,7 @@ public class RefundAppInstanceForPartnerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A reserved parameter.</p>
+         * <p>The reserved parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -347,7 +344,7 @@ public class RefundAppInstanceForPartnerResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The order ID.</p>
+             * <p>The ID of the order.</p>
              * 
              * <strong>example:</strong>
              * <p>250822465990301</p>

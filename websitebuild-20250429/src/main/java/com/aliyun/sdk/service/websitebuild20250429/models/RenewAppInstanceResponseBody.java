@@ -184,7 +184,7 @@ public class RenewAppInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details about the access denial.</p>
+         * <p>The details of the access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -195,7 +195,7 @@ public class RenewAppInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether a retry is allowed.</p>
+         * <p>Specifies whether a retry is allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -228,7 +228,7 @@ public class RenewAppInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic error message that is used to replace the <code>%s</code> variable in the <strong>ErrMessage</strong> response parameter.</p>
+         * <p>The dynamic error message, which is used to replace <code>%s</code> in the error message of the <strong>ErrMessage</strong> response parameter.</p>
          * <blockquote>
          * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the <strong>DtsJobId</strong> request parameter is invalid.</p>
          * </blockquote>
@@ -242,7 +242,7 @@ public class RenewAppInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error parameters.</p>
+         * <p>The returned error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -283,7 +283,7 @@ public class RenewAppInstanceResponseBody extends TeaModel {
          * <p>The exception message.</p>
          * 
          * <strong>example:</strong>
-         * <p>系统异常</p>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -291,7 +291,7 @@ public class RenewAppInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A reserved parameter.</p>
+         * <p>The reserved parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>

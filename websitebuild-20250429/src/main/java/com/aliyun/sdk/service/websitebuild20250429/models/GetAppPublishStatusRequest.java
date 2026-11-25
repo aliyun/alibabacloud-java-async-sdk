@@ -30,6 +30,10 @@ public class GetAppPublishStatusRequest extends Request {
     private Long deployOrderId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PublishOrderId")
+    private Long publishOrderId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WebsiteDomain")
     private String websiteDomain;
 
@@ -38,6 +42,7 @@ public class GetAppPublishStatusRequest extends Request {
         this.regionId = builder.regionId;
         this.bizId = builder.bizId;
         this.deployOrderId = builder.deployOrderId;
+        this.publishOrderId = builder.publishOrderId;
         this.websiteDomain = builder.websiteDomain;
     }
 
@@ -76,6 +81,13 @@ public class GetAppPublishStatusRequest extends Request {
     }
 
     /**
+     * @return publishOrderId
+     */
+    public Long getPublishOrderId() {
+        return this.publishOrderId;
+    }
+
+    /**
      * @return websiteDomain
      */
     public String getWebsiteDomain() {
@@ -86,6 +98,7 @@ public class GetAppPublishStatusRequest extends Request {
         private String regionId; 
         private String bizId; 
         private Long deployOrderId; 
+        private Long publishOrderId; 
         private String websiteDomain; 
 
         private Builder() {
@@ -97,6 +110,7 @@ public class GetAppPublishStatusRequest extends Request {
             this.regionId = request.regionId;
             this.bizId = request.bizId;
             this.deployOrderId = request.deployOrderId;
+            this.publishOrderId = request.publishOrderId;
             this.websiteDomain = request.websiteDomain;
         } 
 
@@ -122,7 +136,7 @@ public class GetAppPublishStatusRequest extends Request {
         }
 
         /**
-         * <p>The deployment ticket ID.</p>
+         * <p>The deployment order ID.</p>
          * 
          * <strong>example:</strong>
          * <p>4998717</p>
@@ -130,6 +144,15 @@ public class GetAppPublishStatusRequest extends Request {
         public Builder deployOrderId(Long deployOrderId) {
             this.putQueryParameter("DeployOrderId", deployOrderId);
             this.deployOrderId = deployOrderId;
+            return this;
+        }
+
+        /**
+         * PublishOrderId.
+         */
+        public Builder publishOrderId(Long publishOrderId) {
+            this.putQueryParameter("PublishOrderId", publishOrderId);
+            this.publishOrderId = publishOrderId;
             return this;
         }
 

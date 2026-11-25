@@ -184,7 +184,7 @@ public class UpdateAppChatMessageResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The detailed reasons for access denial.</p>
+         * <p>The detailed reason why access is denied.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -217,7 +217,7 @@ public class UpdateAppChatMessageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic code. This parameter is not used and can be ignored.</p>
+         * <p>The dynamic code. This field is currently unused and can be ignored.</p>
          * 
          * <strong>example:</strong>
          * <p>ERROR-oo1</p>
@@ -228,9 +228,9 @@ public class UpdateAppChatMessageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic error message, which is used to replace <code>%s</code> in the <strong>ErrMessage</strong> error message.</p>
+         * <p>The dynamic error message, which is used to replace the <code>%s</code> placeholder in the <strong>ErrMessage</strong> response parameter.</p>
          * <blockquote>
-         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the request parameter <strong>DtsJobId</strong> is invalid.</p>
+         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the <strong>DtsJobId</strong> request parameter is invalid.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -565,7 +565,7 @@ public class UpdateAppChatMessageResponseBody extends TeaModel {
              * <p>The ID of the called data API.</p>
              * 
              * <strong>example:</strong>
-             * <p>{\&quot;code\&quot;: \&quot;200\&quot;, \&quot;success\&quot;: True, \&quot;content\&quot;: True, \&quot;requestId\&quot;: \&quot;4AF53F7B-FEA9-5966-B0F8-BAF9A1EEFE34\&quot;, \&quot;businessError\&quot;: False, \&quot;message\&quot;: \&quot;success\&quot;, \&quot;httpStatusCode\&quot;: 200}</p>
+             * <p>{&quot;code&quot;: &quot;200&quot;, &quot;success&quot;: True, &quot;content&quot;: True, &quot;requestId&quot;: &quot;4AF53F7B-FEA9-5966-B0F8-BAF9A1EEFE34&quot;, &quot;businessError&quot;: False, &quot;message&quot;: &quot;success&quot;, &quot;httpStatusCode&quot;: 200}</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -607,7 +607,7 @@ public class UpdateAppChatMessageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time in ISO 8601 format in the UTC time zone.</p>
+             * <p>The modification time in ISO 8601 format in the UTC time zone.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
              * 
              * <strong>example:</strong>
@@ -633,7 +633,7 @@ public class UpdateAppChatMessageResponseBody extends TeaModel {
              * <p>The business extension metadata in map format. The value must be a JSON string.</p>
              * 
              * <strong>example:</strong>
-             * <p>{\&quot;appId\&quot;:\&quot;WS20260418211121000001\&quot;,\&quot;inputTokens\&quot;:273,\&quot;outputTokens\&quot;:1}</p>
+             * <p>{&quot;appId&quot;:&quot;WS20260418211121000001&quot;,&quot;inputTokens&quot;:273,&quot;outputTokens&quot;:1}</p>
              */
             public Builder metaData(String metaData) {
                 this.metaData = metaData;
@@ -641,7 +641,7 @@ public class UpdateAppChatMessageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The probability of not wearing a mask, uniform, or hat.</p>
+             * <p>The probability of not wearing a mask, work clothes, or hat.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -654,17 +654,17 @@ public class UpdateAppChatMessageResponseBody extends TeaModel {
             /**
              * <p>The role of the conversation participant. Valid values:</p>
              * <ul>
-             * <li><p>user: User</p>
+             * <li><p>user: user</p>
              * </li>
-             * <li><p>assistant: Assistant</p>
+             * <li><p>assistant: assistant</p>
              * </li>
-             * <li><p>system: System</p>
+             * <li><p>system: system</p>
              * </li>
-             * <li><p>function: Function</p>
+             * <li><p>function: function</p>
              * </li>
-             * <li><p>plugin: Plug-in</p>
+             * <li><p>plugin: plug-in</p>
              * </li>
-             * <li><p>tool: Tool</p>
+             * <li><p>tool: tool</p>
              * </li>
              * </ul>
              * 
@@ -688,7 +688,7 @@ public class UpdateAppChatMessageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The site ID. You can obtain the site ID by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
+             * <p>The site ID.</p>
              * 
              * <strong>example:</strong>
              * <p>865181640657408</p>

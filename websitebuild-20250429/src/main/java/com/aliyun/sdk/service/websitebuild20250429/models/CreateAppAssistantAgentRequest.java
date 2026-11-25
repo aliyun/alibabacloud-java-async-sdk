@@ -113,7 +113,7 @@ public class CreateAppAssistantAgentRequest extends Request {
          * <p>The name of the agent.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试业务空间</p>
+         * <p>Test workspace</p>
          */
         public Builder agentName(String agentName) {
             this.putQueryParameter("AgentName", agentName);

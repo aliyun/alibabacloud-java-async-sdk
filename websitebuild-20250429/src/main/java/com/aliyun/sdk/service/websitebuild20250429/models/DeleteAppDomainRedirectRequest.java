@@ -134,7 +134,7 @@ public class DeleteAppDomainRedirectRequest extends Request {
         }
 
         /**
-         * <p>The ID of the domain name redirect record.</p>
+         * <p>The ID of the domain redirect record.</p>
          * 
          * <strong>example:</strong>
          * <p>803858889404426240</p>

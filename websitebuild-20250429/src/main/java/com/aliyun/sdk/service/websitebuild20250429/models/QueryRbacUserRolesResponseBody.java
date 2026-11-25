@@ -195,7 +195,7 @@ public class QueryRbacUserRolesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether a retry is allowed.</p>
+         * <p>Indicates whether retries are allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -228,7 +228,7 @@ public class QueryRbacUserRolesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic message. This parameter is not used. Ignore this parameter.</p>
+         * <p>The dynamic message. This parameter is not in use and can be ignored.</p>
          * 
          * <strong>example:</strong>
          * <p>SYSTEM_ERROR</p>
@@ -431,10 +431,10 @@ public class QueryRbacUserRolesResponseBody extends TeaModel {
             /**
              * <p>The preset workspace role ID. This will overwrite existing roles. Valid values:</p>
              * <ul>
-             * <li>25: storage management administrator</li>
-             * <li>26: workspace developer</li>
-             * <li>27: storage analysis analyst</li>
-             * <li>30: workspace viewer</li>
+             * <li>25: Storage management administrator.</li>
+             * <li>26: Workspace developer.</li>
+             * <li>27: Storage analysis analyst.</li>
+             * <li>30: Workspace viewer.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -771,7 +771,7 @@ public class QueryRbacUserRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The request result.</p>
+             * <p>The request results.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;

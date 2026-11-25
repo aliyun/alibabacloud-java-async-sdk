@@ -195,7 +195,7 @@ public class QueryRbacRolePermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether retries are allowed.</p>
+         * <p>Indicates whether retries are allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -206,7 +206,7 @@ public class QueryRbacRolePermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the application.</p>
+         * <p>The name of the application to query.</p>
          * 
          * <strong>example:</strong>
          * <p>spring-cloud-b</p>
@@ -228,7 +228,7 @@ public class QueryRbacRolePermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic message. This parameter is not used. Ignore it.</p>
+         * <p>The dynamic message. This parameter is not used and can be ignored.</p>
          * 
          * <strong>example:</strong>
          * <p>SYSTEM_ERROR</p>
@@ -247,7 +247,7 @@ public class QueryRbacRolePermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the move is successful.</p>
+         * <p>Indicates whether the move operation is successful.</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -288,7 +288,7 @@ public class QueryRbacRolePermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether synchronous processing is used.</p>
+         * <p>Indicates whether the processing is synchronous.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -383,7 +383,7 @@ public class QueryRbacRolePermissionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The system-defined parameter. Set the value to <strong>DeleteIntegration</strong>.</p>
+             * <p>The system-defined parameter. Valid value: <strong>DeleteIntegration</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>js</p>
@@ -512,7 +512,7 @@ public class QueryRbacRolePermissionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The system-defined parameter. Set the value to <strong>GetCreateCustomerInfomation</strong>.</p>
+             * <p>The system-defined parameter. Valid value: <strong>GetCreateCustomerInfomation</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>accept</p>
@@ -546,7 +546,7 @@ public class QueryRbacRolePermissionsResponseBody extends TeaModel {
 
             /**
              * <p>The statistical method for the Warn level.</p>
-             * <p>The value of <code>Statistics</code> varies with the cloud service. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring metrics</a>.</p>
+             * <p>The valid values of <code>Statistics</code> vary by cloud service. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring metrics</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>mwaf-apisec0629.wafqax.top-waf</p>
@@ -718,7 +718,7 @@ public class QueryRbacRolePermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The request result.</p>
+             * <p>The request results.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -726,7 +726,7 @@ public class QueryRbacRolePermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the next feature.</p>
+             * <p>The next feature ID.</p>
              */
             public Builder next(Next next) {
                 this.next = next;
@@ -745,7 +745,7 @@ public class QueryRbacRolePermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page size.</p>
+             * <p>The number of entries per page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -767,7 +767,7 @@ public class QueryRbacRolePermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>In addition to the pagination limit, the server processes a maximum of the latest 1,000 records for the current query. If the number of results exceeds 1,000, <strong>ResultLimit</strong> is <strong>true</strong>. Narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
+             * <p>In addition to the pagination limit, the server processes a maximum of the latest 1,000 records for the current query. If the number of results exceeds 1,000, <strong>ResultLimit</strong> is <strong>true</strong>. In this case, narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>False</p>

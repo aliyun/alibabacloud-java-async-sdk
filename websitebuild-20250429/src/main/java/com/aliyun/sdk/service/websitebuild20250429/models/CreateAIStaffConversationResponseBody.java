@@ -184,7 +184,7 @@ public class CreateAIStaffConversationResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The detailed reason why access was denied.</p>
+         * <p>The detailed reason for the access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -195,7 +195,7 @@ public class CreateAIStaffConversationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether retry is allowed.</p>
+         * <p>Specifies whether a retry is allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -206,7 +206,7 @@ public class CreateAIStaffConversationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The application name. The application with this name is queried.</p>
+         * <p>The name of the application to query.</p>
          * 
          * <strong>example:</strong>
          * <p>spring-cloud-b</p>
@@ -239,7 +239,7 @@ public class CreateAIStaffConversationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error parameters returned.</p>
+         * <p>The returned error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -280,7 +280,7 @@ public class CreateAIStaffConversationResponseBody extends TeaModel {
          * <p>The exception message.</p>
          * 
          * <strong>example:</strong>
-         * <p>系统异常</p>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -409,7 +409,7 @@ public class CreateAIStaffConversationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The chatbot ID.</p>
+             * <p>The bot ID.</p>
              * 
              * <strong>example:</strong>
              * <p>Zero2</p>
@@ -453,7 +453,7 @@ public class CreateAIStaffConversationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The site ID. You can obtain this value by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
+             * <p>The site ID. You can obtain this ID by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
              * 
              * <strong>example:</strong>
              * <p>865181640657408</p>
@@ -464,10 +464,10 @@ public class CreateAIStaffConversationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The current viewpoint, equivalent to the news title.</p>
+             * <p>The current viewpoint, which is equivalent to the news title.</p>
              * 
              * <strong>example:</strong>
-             * <p>Feel Like Makin\&quot; Love</p>
+             * <p>Feel Like Makin&quot; Love</p>
              */
             public Builder title(String title) {
                 this.title = title;

@@ -184,7 +184,7 @@ public class SetAppDomainCertificateResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The access denied details.</p>
+         * <p>The access denial details.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -195,7 +195,7 @@ public class SetAppDomainCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether to allow retries. Valid values:</p>
+         * <p>Specifies whether retries are allowed. Valid values:</p>
          * <ul>
          * <li>false: Retries are not allowed.</li>
          * <li>true: Retries are allowed.</li>
@@ -235,7 +235,7 @@ public class SetAppDomainCertificateResponseBody extends TeaModel {
          * <p>The dynamic message.</p>
          * 
          * <strong>example:</strong>
-         * <p><a href="https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/uoa11auyf2565k6/uoa11auyf2565k6.sql.zip?Expires=1730520371&OSSAccessKeyId=LTAI5tKUErVCETM4ev9SELNb&Signature=WIutxAQYbbwxX0aeKmdObduLnDg%3D">https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/uoa11auyf2565k6/uoa11auyf2565k6.sql.zip?Expires=1730520371&amp;OSSAccessKeyId=LTAI5tKUErVCETM4ev9SELNb&amp;Signature=WIutxAQYbbwxX0aeKmdObduLnDg%3D</a></p>
+         * <p><a href="https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/uoa11auyf2565k6/uoa11auyf2565k6.sql.zip?Expires=1730520371&OSSAccessKeyId=LTAI5tKUEr****M4ev9SELNb&Signature=WIutxAQYbbwxX****mdObduLnDg%3D">https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/uoa11auyf2565k6/uoa11auyf2565k6.sql.zip?Expires=1730520371&amp;OSSAccessKeyId=LTAI5tKUEr****M4ev9SELNb&amp;Signature=WIutxAQYbbwxX****mdObduLnDg%3D</a></p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -243,7 +243,7 @@ public class SetAppDomainCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned error parameters.</p>
+         * <p>The error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -292,7 +292,7 @@ public class SetAppDomainCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether the request is processed synchronously.</p>
+         * <p>Indicates whether the request is processed synchronously.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -348,7 +348,7 @@ public class SetAppDomainCertificateResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the operation is successful.</p>
+             * <p>Indicates whether the request is successful.</p>
              * 
              * <strong>example:</strong>
              * <p>True</p>

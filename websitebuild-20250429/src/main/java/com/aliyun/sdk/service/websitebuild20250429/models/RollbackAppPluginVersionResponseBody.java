@@ -206,7 +206,7 @@ public class RollbackAppPluginVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the application.</p>
+         * <p>The application name.</p>
          * 
          * <strong>example:</strong>
          * <p>watermark</p>
@@ -228,10 +228,7 @@ public class RollbackAppPluginVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic error message, which is used to replace <code>%s</code> in the error message of the <strong>ErrMessage</strong> response parameter.</p>
-         * <blockquote>
-         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the <strong>DtsJobId</strong> request parameter is invalid.</p>
-         * </blockquote>
+         * <p>The dynamic error message, which is used to replace <code>%s</code> in the error message of the <strong>ErrMessage</strong> response parameter. If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the <strong>DtsJobId</strong> request parameter is invalid.</p>
          * 
          * <strong>example:</strong>
          * <p>SYSTEM_ERROR</p>
@@ -242,7 +239,7 @@ public class RollbackAppPluginVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error parameters.</p>
+         * <p>The invalid parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -269,7 +266,7 @@ public class RollbackAppPluginVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The root error code.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>SYSTEM.ERROR</p>
@@ -371,7 +368,7 @@ public class RollbackAppPluginVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the operation is successful.</p>
+             * <p>Indicates whether the request is successful.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>

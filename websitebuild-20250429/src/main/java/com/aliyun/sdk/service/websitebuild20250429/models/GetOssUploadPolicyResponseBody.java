@@ -210,7 +210,7 @@ public class GetOssUploadPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The app name.</p>
+         * <p>The application name.</p>
          * 
          * <strong>example:</strong>
          * <p>ish-intelligence-store-platform-admin-web</p>
@@ -439,7 +439,7 @@ public class GetOssUploadPolicyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The upload directory path.</p>
+             * <p>The path of the upload directory.</p>
              * 
              * <strong>example:</strong>
              * <p>pano_src/100070-2679478/images/</p>
@@ -450,7 +450,7 @@ public class GetOssUploadPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The OSS bucket host address.</p>
+             * <p>The host address of the OSS bucket.</p>
              * 
              * <strong>example:</strong>
              * <p>*.com</p>
@@ -472,7 +472,7 @@ public class GetOssUploadPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Security Token Service (STS) token. This value is null in non-STS scenarios.</p>
+             * <p>The Security Token Service (STS) token. This parameter is null in non-STS scenarios.</p>
              * 
              * <strong>example:</strong>
              * <hr>

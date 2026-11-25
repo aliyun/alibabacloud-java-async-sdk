@@ -195,10 +195,10 @@ public class SetRbacRoleHierarchyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether a retry is allowed. Valid values:</p>
+         * <p>Specifies whether retries are allowed. Valid values:</p>
          * <ul>
-         * <li>false: A retry is not allowed.</li>
-         * <li>true: A retry is allowed.</li>
+         * <li>false: Retries are not allowed.</li>
+         * <li>true: Retries are allowed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -210,7 +210,7 @@ public class SetRbacRoleHierarchyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The application name. It can contain digits, letters, and hyphens (-). It must start with a letter, must not end with a hyphen (-), and must not exceed 36 characters in length.</p>
+         * <p>The application name. It can contain digits, letters, and hyphens (-). It must start with a letter, cannot end with a hyphen (-), and can be up to 36 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>or</p>
@@ -251,7 +251,7 @@ public class SetRbacRoleHierarchyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the move is successful.</p>
+         * <p>Indicates whether the move was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -295,7 +295,7 @@ public class SetRbacRoleHierarchyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The backup parameter.</p>
+         * <p>The reserved parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>

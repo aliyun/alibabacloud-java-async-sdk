@@ -114,7 +114,7 @@ public class GetMiniAppBindingForAdminRequest extends Request {
          * <p>The mini program ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxx</p>
+         * <p>wxaaa1111111aaa11a</p>
          */
         public Builder platformAppid(String platformAppid) {
             this.putQueryParameter("PlatformAppid", platformAppid);

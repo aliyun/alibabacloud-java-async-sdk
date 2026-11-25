@@ -126,7 +126,7 @@ public class CreateMaterialDirectoryRequest extends Request {
         }
 
         /**
-         * <p>The folder name.</p>
+         * <p>The name of the folder.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,7 +139,7 @@ public class CreateMaterialDirectoryRequest extends Request {
         }
 
         /**
-         * <p>The parent folder ID.</p>
+         * <p>The ID of the parent folder.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

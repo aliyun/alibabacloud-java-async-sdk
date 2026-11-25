@@ -93,7 +93,7 @@ public class ModuleNextComponentsValuePropertiesValue extends TeaModel {
         } 
 
         /**
-         * <p>Property code (internal system identifier)</p>
+         * <p>The property code (internal system identifier).</p>
          * 
          * <strong>example:</strong>
          * <p>placeholder</p>
@@ -104,7 +104,7 @@ public class ModuleNextComponentsValuePropertiesValue extends TeaModel {
         }
 
         /**
-         * <p>Property display name (user-visible name)</p>
+         * <p>The display name of the property (user-visible name).</p>
          * 
          * <strong>example:</strong>
          * <p>placeholder</p>
@@ -115,7 +115,7 @@ public class ModuleNextComponentsValuePropertiesValue extends TeaModel {
         }
 
         /**
-         * <p>Property value code (internal system value)</p>
+         * <p>The property value code (internal system value).</p>
          * 
          * <strong>example:</strong>
          * <p>placeholder</p>
@@ -126,7 +126,7 @@ public class ModuleNextComponentsValuePropertiesValue extends TeaModel {
         }
 
         /**
-         * <p>Module property value list</p>
+         * <p>The list of module property values.</p>
          */
         public Builder values(java.util.List<Values> values) {
             this.values = values;
@@ -205,7 +205,7 @@ public class ModuleNextComponentsValuePropertiesValue extends TeaModel {
             } 
 
             /**
-             * <p>Property code (internal system identifier)</p>
+             * <p>The property code (internal system identifier).</p>
              * 
              * <strong>example:</strong>
              * <p>placeholder</p>
@@ -216,7 +216,7 @@ public class ModuleNextComponentsValuePropertiesValue extends TeaModel {
             }
 
             /**
-             * <p>Property value code (internal system value)</p>
+             * <p>The property value code (internal system value).</p>
              * 
              * <strong>example:</strong>
              * <p>placeholder</p>
@@ -227,7 +227,7 @@ public class ModuleNextComponentsValuePropertiesValue extends TeaModel {
             }
 
             /**
-             * <p>Property display name (user-visible name)</p>
+             * <p>The display name of the property (user-visible name).</p>
              * 
              * <strong>example:</strong>
              * <p>placeholder</p>

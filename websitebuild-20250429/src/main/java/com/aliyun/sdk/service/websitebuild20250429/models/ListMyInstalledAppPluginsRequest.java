@@ -127,7 +127,7 @@ public class ListMyInstalledAppPluginsRequest extends Request {
          * <p>Filters results by category.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;Status\&quot;: 0, \&quot;Name\&quot;: \&quot;UELBNUP\&quot;, \&quot;BizCode\&quot;: \&quot;\&quot;, \&quot;CategoryId\&quot;: 30000655368, \&quot;ParentCategoryId\&quot;: 30000655367}</p>
+         * <p>{&quot;Status&quot;: 0, &quot;Name&quot;: &quot;UELBNUP&quot;, &quot;BizCode&quot;: &quot;&quot;, &quot;CategoryId&quot;: 30000655368, &quot;ParentCategoryId&quot;: 30000655367}</p>
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -139,7 +139,7 @@ public class ListMyInstalledAppPluginsRequest extends Request {
          * <p>The search keyword. Matches against name or description.</p>
          * 
          * <strong>example:</strong>
-         * <p>${\&quot;wget JiexJPWT.popscan.xaliyun.com\&quot;}</p>
+         * <p>${&quot;wget JiexJPWT.popscan.xaliyun.com&quot;}</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);

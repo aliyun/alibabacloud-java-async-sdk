@@ -114,7 +114,7 @@ public class GetUserTmpIdentityForPartnerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code. If the request is successful, the ErrorCode field is not returned. If the request fails, the ErrorCode field is returned. For more information, see the error code list in this topic.</p>
+         * <p>The error code. If the request is successful, the ErrorCode parameter is not returned. If the request fails, the ErrorCode parameter is returned. For more information, see the error codes in this topic.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -147,7 +147,7 @@ public class GetUserTmpIdentityForPartnerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -264,7 +264,7 @@ public class GetUserTmpIdentityForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The encrypted STS token.</p>
+             * <p>The encrypted Security Token Service (STS) token.</p>
              * 
              * <strong>example:</strong>
              * <p>7t2Rzt37ND7-xxx</p>
@@ -275,7 +275,7 @@ public class GetUserTmpIdentityForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The estimated expiration time of the credential.</p>
+             * <p>The expected expiration time of the credentials.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-04-29T14:00:00Z</p>
@@ -345,7 +345,7 @@ public class GetUserTmpIdentityForPartnerResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The security token.</p>
+             * <p>The security credentials.</p>
              */
             public Builder credentials(Credentials credentials) {
                 this.credentials = credentials;
@@ -353,7 +353,7 @@ public class GetUserTmpIdentityForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the customer authorization has been obtained.</p>
+             * <p>Indicates whether customer authorization has been obtained.</p>
              */
             public Builder hasCustomRoleAuth(Boolean hasCustomRoleAuth) {
                 this.hasCustomRoleAuth = hasCustomRoleAuth;

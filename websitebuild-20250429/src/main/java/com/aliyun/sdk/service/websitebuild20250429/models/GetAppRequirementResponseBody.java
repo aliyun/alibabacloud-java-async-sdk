@@ -184,7 +184,7 @@ public class GetAppRequirementResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The access denied details.</p>
+         * <p>The access denial details.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -195,7 +195,7 @@ public class GetAppRequirementResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether retry is allowed.</p>
+         * <p>Indicates whether a retry is allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -206,7 +206,7 @@ public class GetAppRequirementResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The application name.</p>
+         * <p>The app name.</p>
          * 
          * <strong>example:</strong>
          * <p>or</p>
@@ -228,9 +228,9 @@ public class GetAppRequirementResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic error message, which is used to replace the <code>%s</code> variable in the <strong>ErrMessage</strong> response parameter.</p>
+         * <p>The dynamic error message, which is used to replace <code>%s</code> in the error message of the <strong>ErrMessage</strong> response parameter.</p>
          * <blockquote>
-         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the value of the <strong>DtsJobId</strong> request parameter is invalid.</p>
+         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the <strong>DtsJobId</strong> request parameter is invalid.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -242,7 +242,7 @@ public class GetAppRequirementResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error parameters.</p>
+         * <p>The returned error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -250,7 +250,7 @@ public class GetAppRequirementResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the deletion was successful.</p>
+         * <p>Indicates whether the deletion is successful.</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -280,10 +280,10 @@ public class GetAppRequirementResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The root error message.</p>
+         * <p>The exception message.</p>
          * 
          * <strong>example:</strong>
-         * <p>系统异常</p>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -347,7 +347,7 @@ public class GetAppRequirementResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The requirement document description.</p>
+             * <p>The description of the requirement document.</p>
              * 
              * <strong>example:</strong>
              * <p>content</p>

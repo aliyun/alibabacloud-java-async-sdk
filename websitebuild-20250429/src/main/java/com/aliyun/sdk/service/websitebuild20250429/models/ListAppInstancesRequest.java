@@ -30,6 +30,10 @@ public class ListAppInstancesRequest extends Request {
     private java.util.List<String> bizIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Domain")
+    private String domain;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndTimeBegin")
     private String endTimeBegin;
 
@@ -82,6 +86,7 @@ public class ListAppInstancesRequest extends Request {
         this.applicationType = builder.applicationType;
         this.bizId = builder.bizId;
         this.bizIds = builder.bizIds;
+        this.domain = builder.domain;
         this.endTimeBegin = builder.endTimeBegin;
         this.endTimeEnd = builder.endTimeEnd;
         this.extend = builder.extend;
@@ -128,6 +133,13 @@ public class ListAppInstancesRequest extends Request {
      */
     public java.util.List<String> getBizIds() {
         return this.bizIds;
+    }
+
+    /**
+     * @return domain
+     */
+    public String getDomain() {
+        return this.domain;
     }
 
     /**
@@ -218,6 +230,7 @@ public class ListAppInstancesRequest extends Request {
         private String applicationType; 
         private String bizId; 
         private java.util.List<String> bizIds; 
+        private String domain; 
         private String endTimeBegin; 
         private String endTimeEnd; 
         private String extend; 
@@ -240,6 +253,7 @@ public class ListAppInstancesRequest extends Request {
             this.applicationType = request.applicationType;
             this.bizId = request.bizId;
             this.bizIds = request.bizIds;
+            this.domain = request.domain;
             this.endTimeBegin = request.endTimeBegin;
             this.endTimeEnd = request.endTimeEnd;
             this.extend = request.extend;
@@ -255,11 +269,11 @@ public class ListAppInstancesRequest extends Request {
         } 
 
         /**
-         * <p>The application type. Valid values: </p>
+         * <p>The application type. Valid values:</p>
          * <ul>
-         * <li>PC_WebSite: web application. </li>
-         * <li>Mini_Program: mini program. 
-         * If this parameter is not specified or left empty, applications are not filtered by type. For compatibility, historical missing, NULL, or empty types are treated as PC_WebSite.</li>
+         * <li>PC_WebSite: web application.</li>
+         * <li>Mini_Program: mini program.
+         * If this parameter is not specified or is left empty, no filtering by type is performed. Historical missing, NULL, or empty types are compatible with PC_WebSite.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -290,6 +304,18 @@ public class ListAppInstancesRequest extends Request {
             String bizIdsShrink = shrink(bizIds, "BizIds", "json");
             this.putQueryParameter("BizIds", bizIdsShrink);
             this.bizIds = bizIds;
+            return this;
+        }
+
+        /**
+         * <p>Used only in the CONTENT_CREATION pattern: exact match for the fully attached domain name, mutually exclusive with Query. It does not include the protocol, port, or path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
+         */
+        public Builder domain(String domain) {
+            this.putQueryParameter("Domain", domain);
+            this.domain = domain;
             return this;
         }
 
@@ -330,7 +356,8 @@ public class ListAppInstancesRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of results returned per query. Valid values: 10 to 100. Default value: 20.</p>
+         * <p>The maximum number of results per query.</p>
+         * <p>Valid values: 10 to 100. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -342,7 +369,7 @@ public class ListAppInstancesRequest extends Request {
         }
 
         /**
-         * <p>The token used to start the next query. This parameter is empty if no next query exists.</p>
+         * <p>The token for the next query. It is empty when there is no next query.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</p>
@@ -405,7 +432,7 @@ public class ListAppInstancesRequest extends Request {
          * <p>The query parameter.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;RequestId\&quot;:\&quot;\&quot;}</p>
+         * <p>{&quot;RequestId&quot;:&quot;&quot;}</p>
          */
         public Builder query(String query) {
             this.putQueryParameter("Query", query);
@@ -414,10 +441,7 @@ public class ListAppInstancesRequest extends Request {
         }
 
         /**
-         * <p>The query mode. Valid values: </p>
-         * <ul>
-         * <li>CONTENT_CREATION: specifies a lightweight query for the content creation site selector. It queries only published sites and does not load aggregated information such as profiles, services, and AI staff.</li>
-         * </ul>
+         * <p>The query mode. CONTENT_CREATION indicates a lightweight query for the content creation site selector, which queries only published sites and does not load aggregate information such as Profile, services, or AI Staff.</p>
          * 
          * <strong>example:</strong>
          * <p>CONTENT_CREATION</p>
@@ -429,7 +453,7 @@ public class ListAppInstancesRequest extends Request {
         }
 
         /**
-         * <p>The status range.</p>
+         * <p>The status scope.</p>
          */
         public Builder statusList(java.util.List<String> statusList) {
             String statusListShrink = shrink(statusList, "StatusList", "json");

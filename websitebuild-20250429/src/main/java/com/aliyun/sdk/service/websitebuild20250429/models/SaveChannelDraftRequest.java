@@ -153,10 +153,10 @@ public class SaveChannelDraftRequest extends Request {
         }
 
         /**
-         * <p>The channel content (outside China only).</p>
+         * <p>The content of the channel (outside China only).</p>
          * 
          * <strong>example:</strong>
-         * <p>x</p>
+         * <p>Introduces the main features and usage of the website</p>
          */
         public Builder adaptedContent(String adaptedContent) {
             this.putQueryParameter("AdaptedContent", adaptedContent);
@@ -165,10 +165,10 @@ public class SaveChannelDraftRequest extends Request {
         }
 
         /**
-         * <p>The channel title.</p>
+         * <p>The title of the channel.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>Website features and user guide</p>
          */
         public Builder adaptedTitle(String adaptedTitle) {
             this.putQueryParameter("AdaptedTitle", adaptedTitle);
@@ -177,10 +177,10 @@ public class SaveChannelDraftRequest extends Request {
         }
 
         /**
-         * <p>The display name of the publishing account. A null value does not overwrite the original value. Maximum length: 256 characters.</p>
+         * <p>The display name of the publishing account. If this parameter is left empty, the original value is not overwritten. Maximum length: 256 characters.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx</p>
+         * <p>Sample publishing account</p>
          */
         public Builder channelAccountName(String channelAccountName) {
             this.putQueryParameter("ChannelAccountName", channelAccountName);
@@ -189,7 +189,7 @@ public class SaveChannelDraftRequest extends Request {
         }
 
         /**
-         * <p>The collection of channel cover images (full overwrite).</p>
+         * <p>The collection of cover images for the channel. This parameter overwrites all existing cover images.</p>
          */
         public Builder coverImages(java.util.List<CoverImages> coverImages) {
             String coverImagesShrink = shrink(coverImages, "CoverImages", "json");
@@ -199,7 +199,7 @@ public class SaveChannelDraftRequest extends Request {
         }
 
         /**
-         * <p>The channel draft ID.</p>
+         * <p>The ID of the channel draft.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -212,7 +212,7 @@ public class SaveChannelDraftRequest extends Request {
         }
 
         /**
-         * <p>The article column name for Wanxiaozhi 1.0. This parameter is required only when the website has not enabled an article column.</p>
+         * <p>The name of the article column in Wanxiaozhi 1.0. This parameter is required only when the article column is not enabled for the website.</p>
          * 
          * <strong>example:</strong>
          * <p>Article</p>
@@ -298,11 +298,11 @@ public class SaveChannelDraftRequest extends Request {
             } 
 
             /**
-             * <p>The image URL.</p>
+             * <p>The URL of the image.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p><a href="http://campus-retail-prod.oss-cn-hangzhou.aliyuncs.com/d1c5efed9b3a419bb54b75056d54dae6.jpg?Expires=4928263770&OSSAccessKeyId=LTAI5tLYirCpzCVXoArh1VYt&Signature=">http://campus-retail-prod.oss-cn-hangzhou.aliyuncs.com/d1c5efed9b3a419bb54b75056d54dae6.jpg?Expires=4928263770&amp;OSSAccessKeyId=LTAI5tLYirCpzCVXoArh1VYt&amp;Signature=</a>******************************</p>
+             * <p><a href="http://campus-retail-prod.oss-cn-hangzhou.aliyuncs.com/d1c5efed9b3a419bb54b75056d54dae6.jpg?Expires=4928263770&OSSAccessKeyId=LTAI5tLYir****VXoArh1VYt&Signature=">http://campus-retail-prod.oss-cn-hangzhou.aliyuncs.com/d1c5efed9b3a419bb54b75056d54dae6.jpg?Expires=4928263770&amp;OSSAccessKeyId=LTAI5tLYir****VXoArh1VYt&amp;Signature=</a>******************************</p>
              */
             public Builder imageUrl(String imageUrl) {
                 this.imageUrl = imageUrl;
@@ -310,7 +310,7 @@ public class SaveChannelDraftRequest extends Request {
             }
 
             /**
-             * <p>The material center file ID (optional).</p>
+             * <p>The ID of the file in the material center. This parameter is optional.</p>
              * 
              * <strong>example:</strong>
              * <p>xxx</p>
@@ -325,7 +325,7 @@ public class SaveChannelDraftRequest extends Request {
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>Ascending</p>
+             * <p>1</p>
              */
             public Builder sortOrder(Integer sortOrder) {
                 this.sortOrder = sortOrder;

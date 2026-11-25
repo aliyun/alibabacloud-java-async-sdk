@@ -75,7 +75,7 @@ public class GetAppPluginConfigRequest extends Request {
         } 
 
         /**
-         * <p>The business ID of the customer.</p>
+         * <p>The customer business ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class GetAppPluginConfigRequest extends Request {
         }
 
         /**
-         * <p>The ID of the gateway plugin.</p>
+         * <p>The gateway plugin ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

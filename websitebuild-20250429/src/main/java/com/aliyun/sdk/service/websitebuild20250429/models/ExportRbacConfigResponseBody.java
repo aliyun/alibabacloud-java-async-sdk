@@ -184,7 +184,7 @@ public class ExportRbacConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The detailed reason for the access denial.</p>
+         * <p>The details of the access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -250,7 +250,7 @@ public class ExportRbacConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned object.</p>
+         * <p>The response object.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

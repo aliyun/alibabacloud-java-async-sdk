@@ -194,7 +194,7 @@ public class ModifyAppInstanceSpecRequest extends Request {
          * <p>The extended information.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;deliveryNodeName\&quot;:\&quot;Website acceptance\&quot;,\&quot;deliveryNodeStatus\&quot;:\&quot;Reject\&quot;,\&quot;deliveryOperatorRole\&quot;:\&quot;Customer\&quot;}</p>
+         * <p>{&quot;deliveryNodeName&quot;:&quot;Website acceptance&quot;,&quot;deliveryNodeStatus&quot;:&quot;Reject&quot;,&quot;deliveryOperatorRole&quot;:&quot;Customer&quot;}</p>
          */
         public Builder extend(String extend) {
             this.putQueryParameter("Extend", extend);

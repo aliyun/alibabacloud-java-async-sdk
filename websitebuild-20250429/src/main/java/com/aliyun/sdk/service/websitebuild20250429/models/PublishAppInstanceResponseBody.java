@@ -311,11 +311,75 @@ public class PublishAppInstanceResponseBody extends TeaModel {
      * <p>PublishAppInstanceResponseBody</p>
      */
     public static class Module extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ArtifactDigest")
+        private String artifactDigest;
+
+        @com.aliyun.core.annotation.NameInMap("AuditId")
+        private String auditId;
+
+        @com.aliyun.core.annotation.NameInMap("CandidateId")
+        private String candidateId;
+
+        @com.aliyun.core.annotation.NameInMap("CandidateStatus")
+        private String candidateStatus;
+
+        @com.aliyun.core.annotation.NameInMap("CommitHash")
+        private String commitHash;
+
+        @com.aliyun.core.annotation.NameInMap("PlatformAppid")
+        private String platformAppid;
+
+        @com.aliyun.core.annotation.NameInMap("PluginDeclarationHash")
+        private String pluginDeclarationHash;
+
+        @com.aliyun.core.annotation.NameInMap("PluginState")
+        private String pluginState;
+
+        @com.aliyun.core.annotation.NameInMap("PrivacyDraftId")
+        private String privacyDraftId;
+
+        @com.aliyun.core.annotation.NameInMap("PrivacyRevision")
+        private String privacyRevision;
+
+        @com.aliyun.core.annotation.NameInMap("PublishEnv")
+        private String publishEnv;
+
+        @com.aliyun.core.annotation.NameInMap("PublishNumber")
+        private String publishNumber;
+
         @com.aliyun.core.annotation.NameInMap("PublishOrderId")
         private Long publishOrderId;
 
+        @com.aliyun.core.annotation.NameInMap("ReadbackStatus")
+        private String readbackStatus;
+
+        @com.aliyun.core.annotation.NameInMap("SubmitIntentStatus")
+        private String submitIntentStatus;
+
+        @com.aliyun.core.annotation.NameInMap("UpdatedAt")
+        private Long updatedAt;
+
+        @com.aliyun.core.annotation.NameInMap("UploadSequence")
+        private Long uploadSequence;
+
         private Module(Builder builder) {
+            this.artifactDigest = builder.artifactDigest;
+            this.auditId = builder.auditId;
+            this.candidateId = builder.candidateId;
+            this.candidateStatus = builder.candidateStatus;
+            this.commitHash = builder.commitHash;
+            this.platformAppid = builder.platformAppid;
+            this.pluginDeclarationHash = builder.pluginDeclarationHash;
+            this.pluginState = builder.pluginState;
+            this.privacyDraftId = builder.privacyDraftId;
+            this.privacyRevision = builder.privacyRevision;
+            this.publishEnv = builder.publishEnv;
+            this.publishNumber = builder.publishNumber;
             this.publishOrderId = builder.publishOrderId;
+            this.readbackStatus = builder.readbackStatus;
+            this.submitIntentStatus = builder.submitIntentStatus;
+            this.updatedAt = builder.updatedAt;
+            this.uploadSequence = builder.uploadSequence;
         }
 
         public static Builder builder() {
@@ -327,21 +391,261 @@ public class PublishAppInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return artifactDigest
+         */
+        public String getArtifactDigest() {
+            return this.artifactDigest;
+        }
+
+        /**
+         * @return auditId
+         */
+        public String getAuditId() {
+            return this.auditId;
+        }
+
+        /**
+         * @return candidateId
+         */
+        public String getCandidateId() {
+            return this.candidateId;
+        }
+
+        /**
+         * @return candidateStatus
+         */
+        public String getCandidateStatus() {
+            return this.candidateStatus;
+        }
+
+        /**
+         * @return commitHash
+         */
+        public String getCommitHash() {
+            return this.commitHash;
+        }
+
+        /**
+         * @return platformAppid
+         */
+        public String getPlatformAppid() {
+            return this.platformAppid;
+        }
+
+        /**
+         * @return pluginDeclarationHash
+         */
+        public String getPluginDeclarationHash() {
+            return this.pluginDeclarationHash;
+        }
+
+        /**
+         * @return pluginState
+         */
+        public String getPluginState() {
+            return this.pluginState;
+        }
+
+        /**
+         * @return privacyDraftId
+         */
+        public String getPrivacyDraftId() {
+            return this.privacyDraftId;
+        }
+
+        /**
+         * @return privacyRevision
+         */
+        public String getPrivacyRevision() {
+            return this.privacyRevision;
+        }
+
+        /**
+         * @return publishEnv
+         */
+        public String getPublishEnv() {
+            return this.publishEnv;
+        }
+
+        /**
+         * @return publishNumber
+         */
+        public String getPublishNumber() {
+            return this.publishNumber;
+        }
+
+        /**
          * @return publishOrderId
          */
         public Long getPublishOrderId() {
             return this.publishOrderId;
         }
 
+        /**
+         * @return readbackStatus
+         */
+        public String getReadbackStatus() {
+            return this.readbackStatus;
+        }
+
+        /**
+         * @return submitIntentStatus
+         */
+        public String getSubmitIntentStatus() {
+            return this.submitIntentStatus;
+        }
+
+        /**
+         * @return updatedAt
+         */
+        public Long getUpdatedAt() {
+            return this.updatedAt;
+        }
+
+        /**
+         * @return uploadSequence
+         */
+        public Long getUploadSequence() {
+            return this.uploadSequence;
+        }
+
         public static final class Builder {
+            private String artifactDigest; 
+            private String auditId; 
+            private String candidateId; 
+            private String candidateStatus; 
+            private String commitHash; 
+            private String platformAppid; 
+            private String pluginDeclarationHash; 
+            private String pluginState; 
+            private String privacyDraftId; 
+            private String privacyRevision; 
+            private String publishEnv; 
+            private String publishNumber; 
             private Long publishOrderId; 
+            private String readbackStatus; 
+            private String submitIntentStatus; 
+            private Long updatedAt; 
+            private Long uploadSequence; 
 
             private Builder() {
             } 
 
             private Builder(Module model) {
+                this.artifactDigest = model.artifactDigest;
+                this.auditId = model.auditId;
+                this.candidateId = model.candidateId;
+                this.candidateStatus = model.candidateStatus;
+                this.commitHash = model.commitHash;
+                this.platformAppid = model.platformAppid;
+                this.pluginDeclarationHash = model.pluginDeclarationHash;
+                this.pluginState = model.pluginState;
+                this.privacyDraftId = model.privacyDraftId;
+                this.privacyRevision = model.privacyRevision;
+                this.publishEnv = model.publishEnv;
+                this.publishNumber = model.publishNumber;
                 this.publishOrderId = model.publishOrderId;
+                this.readbackStatus = model.readbackStatus;
+                this.submitIntentStatus = model.submitIntentStatus;
+                this.updatedAt = model.updatedAt;
+                this.uploadSequence = model.uploadSequence;
             } 
+
+            /**
+             * ArtifactDigest.
+             */
+            public Builder artifactDigest(String artifactDigest) {
+                this.artifactDigest = artifactDigest;
+                return this;
+            }
+
+            /**
+             * AuditId.
+             */
+            public Builder auditId(String auditId) {
+                this.auditId = auditId;
+                return this;
+            }
+
+            /**
+             * CandidateId.
+             */
+            public Builder candidateId(String candidateId) {
+                this.candidateId = candidateId;
+                return this;
+            }
+
+            /**
+             * CandidateStatus.
+             */
+            public Builder candidateStatus(String candidateStatus) {
+                this.candidateStatus = candidateStatus;
+                return this;
+            }
+
+            /**
+             * CommitHash.
+             */
+            public Builder commitHash(String commitHash) {
+                this.commitHash = commitHash;
+                return this;
+            }
+
+            /**
+             * PlatformAppid.
+             */
+            public Builder platformAppid(String platformAppid) {
+                this.platformAppid = platformAppid;
+                return this;
+            }
+
+            /**
+             * PluginDeclarationHash.
+             */
+            public Builder pluginDeclarationHash(String pluginDeclarationHash) {
+                this.pluginDeclarationHash = pluginDeclarationHash;
+                return this;
+            }
+
+            /**
+             * PluginState.
+             */
+            public Builder pluginState(String pluginState) {
+                this.pluginState = pluginState;
+                return this;
+            }
+
+            /**
+             * PrivacyDraftId.
+             */
+            public Builder privacyDraftId(String privacyDraftId) {
+                this.privacyDraftId = privacyDraftId;
+                return this;
+            }
+
+            /**
+             * PrivacyRevision.
+             */
+            public Builder privacyRevision(String privacyRevision) {
+                this.privacyRevision = privacyRevision;
+                return this;
+            }
+
+            /**
+             * PublishEnv.
+             */
+            public Builder publishEnv(String publishEnv) {
+                this.publishEnv = publishEnv;
+                return this;
+            }
+
+            /**
+             * PublishNumber.
+             */
+            public Builder publishNumber(String publishNumber) {
+                this.publishNumber = publishNumber;
+                return this;
+            }
 
             /**
              * <p>The publish order ID.</p>
@@ -351,6 +655,38 @@ public class PublishAppInstanceResponseBody extends TeaModel {
              */
             public Builder publishOrderId(Long publishOrderId) {
                 this.publishOrderId = publishOrderId;
+                return this;
+            }
+
+            /**
+             * ReadbackStatus.
+             */
+            public Builder readbackStatus(String readbackStatus) {
+                this.readbackStatus = readbackStatus;
+                return this;
+            }
+
+            /**
+             * SubmitIntentStatus.
+             */
+            public Builder submitIntentStatus(String submitIntentStatus) {
+                this.submitIntentStatus = submitIntentStatus;
+                return this;
+            }
+
+            /**
+             * UpdatedAt.
+             */
+            public Builder updatedAt(Long updatedAt) {
+                this.updatedAt = updatedAt;
+                return this;
+            }
+
+            /**
+             * UploadSequence.
+             */
+            public Builder uploadSequence(Long uploadSequence) {
+                this.uploadSequence = uploadSequence;
                 return this;
             }
 

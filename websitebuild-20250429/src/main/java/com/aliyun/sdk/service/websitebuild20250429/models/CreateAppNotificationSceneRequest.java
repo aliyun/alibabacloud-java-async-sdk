@@ -276,7 +276,7 @@ public class CreateAppNotificationSceneRequest extends Request {
         }
 
         /**
-         * <p>The list of mobile butler delivery platform types in a JSON string array. Valid values: wechat, dingtalk, wecom, and feishu.</p>
+         * <p>The list of mobile butler delivery platform types in a JSON string array. Supported values include wechat, dingtalk, wecom, and feishu.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;feishu&quot;]</p>
@@ -288,7 +288,8 @@ public class CreateAppNotificationSceneRequest extends Request {
         }
 
         /**
-         * <p>The list of mobile butler notification fields in a JSON string array. This parameter is required when the butler channel is selected. A maximum of 10 fields are supported. The butler fields in JSON format.</p>
+         * <p>The list of mobile butler notification fields. The value is a JSON string array. This parameter is required when the butler channel is selected. A maximum of 10 fields are supported.
+         * Butler field JSON.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;id&quot;,&quot;phone&quot;,&quot;name&quot;,&quot;city&quot;,&quot;message&quot;,&quot;is_deleted&quot;,&quot;updated_at&quot;,&quot;created_at&quot;,&quot;status&quot;,&quot;budget&quot;]</p>
@@ -312,7 +313,7 @@ public class CreateAppNotificationSceneRequest extends Request {
         }
 
         /**
-         * <p>The description of the scenario.</p>
+         * <p>The scenario description.</p>
          * 
          * <strong>example:</strong>
          * <p>cn_graph_prod</p>
@@ -336,7 +337,7 @@ public class CreateAppNotificationSceneRequest extends Request {
         }
 
         /**
-         * <p>The email sending limit in a JSON string, including the minInterval and dailyLimit fields.</p>
+         * <p>The email sending limits. The value is a JSON string that contains the minInterval and dailyLimit fields.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -360,7 +361,7 @@ public class CreateAppNotificationSceneRequest extends Request {
         }
 
         /**
-         * <p>The name of the scenario.</p>
+         * <p>The scenario name.</p>
          * 
          * <strong>example:</strong>
          * <p>Device Capability Manual</p>
@@ -396,7 +397,7 @@ public class CreateAppNotificationSceneRequest extends Request {
         }
 
         /**
-         * <p>The SMS sending limit in a JSON string, including the minInterval and dailyLimit fields.</p>
+         * <p>The SMS sending limits. The value is a JSON string that contains the minInterval and dailyLimit fields.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>

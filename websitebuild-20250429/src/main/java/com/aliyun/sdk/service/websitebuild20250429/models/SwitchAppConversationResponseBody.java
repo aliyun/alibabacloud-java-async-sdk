@@ -543,7 +543,7 @@ public class SwitchAppConversationResponseBody extends TeaModel {
              * <p>The extended information in JSON string format.</p>
              * 
              * <strong>example:</strong>
-             * <p>{\&quot;appId\&quot;:\&quot;WS20260504134737000001\&quot;,\&quot;inputTokens\&quot;:1395,\&quot;outputTokens\&quot;:38}</p>
+             * <p>{&quot;appId&quot;:&quot;WS20260504134737000001&quot;,&quot;inputTokens&quot;:1395,&quot;outputTokens&quot;:38}</p>
              */
             public Builder metaData(String metaData) {
                 this.metaData = metaData;
@@ -576,7 +576,7 @@ public class SwitchAppConversationResponseBody extends TeaModel {
              * <p>The current viewpoint, equivalent to the news title.</p>
              * 
              * <strong>example:</strong>
-             * <p>Feel Like Makin\&quot; Love</p>
+             * <p>Feel Like Makin&quot; Love</p>
              */
             public Builder title(String title) {
                 this.title = title;

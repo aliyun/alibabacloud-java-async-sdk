@@ -103,6 +103,9 @@ public class ModuleVersionsValue extends TeaModel {
 
         /**
          * <p>components</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder components(java.util.Map<String, ModuleVersionsValueComponentsValue> components) {
             this.components = components;

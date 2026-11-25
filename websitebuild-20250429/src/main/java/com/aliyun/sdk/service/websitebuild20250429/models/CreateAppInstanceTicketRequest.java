@@ -111,7 +111,10 @@ public class CreateAppInstanceTicketRequest extends Request {
         }
 
         /**
-         * <p>The user role that the ticket will assume.</p>
+         * <p>The user role assumed by the ticket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>admin</p>
          */
         public Builder role(String role) {
             this.putQueryParameter("Role", role);

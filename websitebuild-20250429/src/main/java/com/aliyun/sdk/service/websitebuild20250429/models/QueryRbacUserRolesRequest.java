@@ -188,7 +188,7 @@ public class QueryRbacUserRolesRequest extends Request {
         }
 
         /**
-         * <p>The sort order. Valid values: ASC and DESC.</p>
+         * <p>The sort order. Valid values: ASC, DESC.</p>
          * 
          * <strong>example:</strong>
          * <p>BUY</p>

@@ -182,7 +182,7 @@ public class DispatchConsoleAPIForPartnerResponseBody extends TeaModel {
              * <p>The request result.</p>
              * 
              * <strong>example:</strong>
-             * <p>{\&quot;HasCustomRoleAuth\&quot;: False}</p>
+             * <p>{&quot;HasCustomRoleAuth&quot;: False}</p>
              */
             public Builder data(String data) {
                 this.data = data;

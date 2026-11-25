@@ -164,7 +164,7 @@ public class BatchCheckResourceMeasureRequest extends Request {
         }
 
         /**
-         * <p>The type of the ownership ID, such as siteId or uid.</p>
+         * <p>The ownership ID type, such as siteId or uid.</p>
          * 
          * <strong>example:</strong>
          * <p>USER</p>
@@ -200,7 +200,7 @@ public class BatchCheckResourceMeasureRequest extends Request {
         }
 
         /**
-         * <p>The order component information. This parameter is automatically populated if left empty.</p>
+         * <p>The order component information. This parameter is automatically completed when it is empty.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;siteversion&quot;:&quot;test&quot;}</p>

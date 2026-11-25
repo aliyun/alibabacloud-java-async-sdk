@@ -195,7 +195,7 @@ public class UpdateAppPluginResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether retries are allowed.</p>
+         * <p>Specifies whether retries are allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -206,7 +206,7 @@ public class UpdateAppPluginResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the application. It must start with a letter and can contain digits, letters, underscores (_), and hyphens (-). The name can be up to 36 characters in length.</p>
+         * <p>The application name must start with a letter and can contain digits, letters, underscores (_), and hyphens (-). The name can be up to 36 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>dewuApp</p>
@@ -217,7 +217,7 @@ public class UpdateAppPluginResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic code. This parameter is not used and can be ignored.</p>
+         * <p>The dynamic code. This parameter is currently unused and can be ignored.</p>
          * 
          * <strong>example:</strong>
          * <p>ERROR-oo1</p>
@@ -247,7 +247,7 @@ public class UpdateAppPluginResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the move was successful.</p>
+         * <p>Specifies whether the move operation is successful.</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -288,7 +288,7 @@ public class UpdateAppPluginResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is processed synchronously.</p>
+         * <p>Specifies whether the processing is synchronous.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -368,7 +368,7 @@ public class UpdateAppPluginResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the operation was successful.</p>
+             * <p>Specifies whether the operation is successful.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>

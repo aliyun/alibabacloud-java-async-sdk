@@ -154,10 +154,10 @@ public class ReportChannelPublishResultRequest extends Request {
         }
 
         /**
-         * <p>The display name of the publishing account. A null value does not overwrite the original value. Maximum length: 256 characters.</p>
+         * <p>The display name of the publishing account. An empty value does not overwrite the original value. Maximum length: 256 characters.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx</p>
+         * <p>Sample publishing account</p>
          */
         public Builder channelAccountName(String channelAccountName) {
             this.putQueryParameter("ChannelAccountName", channelAccountName);
@@ -179,7 +179,7 @@ public class ReportChannelPublishResultRequest extends Request {
         }
 
         /**
-         * <p>The ID returned by the platform. Set this parameter when the publishing is successful.</p>
+         * <p>The ID returned by the platform. Specify this parameter when the publishing is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>5467410713875420090</p>
@@ -203,10 +203,10 @@ public class ReportChannelPublishResultRequest extends Request {
         }
 
         /**
-         * <p>The failure reason. Set this parameter when the publishing fails.</p>
+         * <p>The reason for the failure. Specify this parameter when the publishing fails.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>Publishing failed. Try again later</p>
          */
         public Builder failReason(String failReason) {
             this.putQueryParameter("FailReason", failReason);
@@ -215,7 +215,7 @@ public class ReportChannelPublishResultRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the publishing is successful (true/false).</p>
+         * <p>Specifies whether the publishing is successful.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

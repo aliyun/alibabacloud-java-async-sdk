@@ -180,6 +180,9 @@ public class AppOperationAddress extends TeaModel {
 
         /**
          * <p>The customer service design URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/customer-service/config">https://example.com/customer-service/config</a></p>
          */
         public Builder aiCustomerConfigUrl(String aiCustomerConfigUrl) {
             this.aiCustomerConfigUrl = aiCustomerConfigUrl;
@@ -188,6 +191,9 @@ public class AppOperationAddress extends TeaModel {
 
         /**
          * <p>The AI design URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/ai-design">https://example.com/ai-design</a></p>
          */
         public Builder aiDesignUrl(String aiDesignUrl) {
             this.aiDesignUrl = aiDesignUrl;

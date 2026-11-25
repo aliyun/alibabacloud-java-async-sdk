@@ -195,7 +195,7 @@ public class DeleteAppPluginResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether a retry is allowed.</p>
+         * <p>Indicates whether retries are allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -206,7 +206,7 @@ public class DeleteAppPluginResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the application.</p>
+         * <p>The application name.</p>
          * 
          * <strong>example:</strong>
          * <p>dewuApp</p>
@@ -288,7 +288,7 @@ public class DeleteAppPluginResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the processing is synchronous.</p>
+         * <p>Indicates whether the request is processed synchronously.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -368,7 +368,7 @@ public class DeleteAppPluginResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the operation was successful.</p>
+             * <p>Indicates whether the request is successful.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>

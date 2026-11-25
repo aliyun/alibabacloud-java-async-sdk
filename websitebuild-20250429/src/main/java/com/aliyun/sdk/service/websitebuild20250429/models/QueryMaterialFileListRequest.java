@@ -304,8 +304,7 @@ public class QueryMaterialFileListRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return for a single request.</p>
-         * <p>Valid values: 10 to 100. Default value: 20.</p>
+         * <p>The maximum number of entries to return for a single request. Valid values: 10 to 100. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -341,7 +340,7 @@ public class QueryMaterialFileListRequest extends Request {
         }
 
         /**
-         * <p>The token that is used to start the next query. If no next query is available, this parameter is left empty.</p>
+         * <p>The token that is used to start the next query. If no next query exists, this parameter is empty.</p>
          * 
          * <strong>example:</strong>
          * <p>0l45bkwM022Dt+rOvPi/oQ==</p>
@@ -365,7 +364,7 @@ public class QueryMaterialFileListRequest extends Request {
         }
 
         /**
-         * <p>The sort order. Valid values: ASC and DESC.</p>
+         * <p>The sort order. Valid values: ASC, DESC.</p>
          * 
          * <strong>example:</strong>
          * <p>BUY</p>
@@ -411,7 +410,7 @@ public class QueryMaterialFileListRequest extends Request {
         }
 
         /**
-         * <p>The list of file extensions.</p>
+         * <p>The list of file name extensions.</p>
          */
         public Builder suffixList(java.util.List<String> suffixList) {
             String suffixListShrink = shrink(suffixList, "SuffixList", "json");

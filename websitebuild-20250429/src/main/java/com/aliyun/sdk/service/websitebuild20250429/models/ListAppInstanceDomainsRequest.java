@@ -220,7 +220,7 @@ public class ListAppInstanceDomainsRequest extends Request {
         }
 
         /**
-         * <p>The domain name keyword for fuzzy match. This parameter is optional.</p>
+         * <p>The domain name keyword used for fuzzy match.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com</p>
@@ -232,7 +232,7 @@ public class ListAppInstanceDomainsRequest extends Request {
         }
 
         /**
-         * <p>The domain name management type. Valid values: CUSTOM and PLATFORM_PREFIX. If this parameter is not specified, the default value is CUSTOM.</p>
+         * <p>The domain name management type. Valid values: CUSTOM and PLATFORM_PREFIX. Default value: CUSTOM.</p>
          * 
          * <strong>example:</strong>
          * <p>CUSTOM</p>
@@ -244,8 +244,7 @@ public class ListAppInstanceDomainsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return for a single query.</p>
-         * <p>Valid values: 10 to 100. Default value: 20.</p>
+         * <p>The maximum number of entries to return in a single query. Valid values: 10 to 100. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -257,7 +256,7 @@ public class ListAppInstanceDomainsRequest extends Request {
         }
 
         /**
-         * <p>The token used to start the next query. If no next query is available, this value is empty.</p>
+         * <p>The token used to start the next query. If no next query exists, this value is empty.</p>
          * 
          * <strong>example:</strong>
          * <p>0l45bkwM022Dt+rOvPi/oQ==</p>
@@ -317,7 +316,7 @@ public class ListAppInstanceDomainsRequest extends Request {
         }
 
         /**
-         * <p>The query mode for the domain name status. Valid values: BASIC and REALTIME. BASIC returns only the persisted status. REALTIME refreshes the status from external services. If this parameter is not specified, the default value is REALTIME.</p>
+         * <p>The domain name status query mode. Valid values: BASIC and REALTIME. BASIC returns only the persisted status. REALTIME refreshes the status from external services. Default value: REALTIME.</p>
          * 
          * <strong>example:</strong>
          * <p>REALTIME</p>

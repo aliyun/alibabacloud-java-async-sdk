@@ -184,7 +184,7 @@ public class QueryRbacRoleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The detailed reason for the access denial.</p>
+         * <p>The details of the access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -210,7 +210,7 @@ public class QueryRbacRoleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the application.</p>
+         * <p>The name of the application to query.</p>
          * 
          * <strong>example:</strong>
          * <p>spring-cloud-b</p>
@@ -413,7 +413,7 @@ public class QueryRbacRoleResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the task was created, in ISO 8601 format, such as 2024-01-01T00:00:00Z.</p>
+             * <p>The task creation time in ISO 8601 format (such as 2024-01-01T00:00:00+Z).</p>
              * 
              * <strong>example:</strong>
              * <p>2026-02-06T10:20:09Z</p>
@@ -435,7 +435,7 @@ public class QueryRbacRoleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether it is the default. Valid values:</p>
+             * <p>The default status. Valid values:</p>
              * <ul>
              * <li>0: No.</li>
              * <li>1: Yes.</li>

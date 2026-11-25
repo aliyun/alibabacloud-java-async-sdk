@@ -354,6 +354,9 @@ public class QuerySupabaseAuthConfigsForAdminResponseBody extends TeaModel {
              * <li>bot_manager: Bot traffic management.</li>
              * <li>ip_reputation: IP reputation library.</li>
              * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;SMS_ALIYUN_SIGN_NAME&quot;:&quot;示例签名&quot;}</p>
              */
             public Builder configs(java.util.Map<String, ?> configs) {
                 this.configs = configs;

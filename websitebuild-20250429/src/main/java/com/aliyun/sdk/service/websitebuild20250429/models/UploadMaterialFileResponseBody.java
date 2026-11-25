@@ -223,7 +223,7 @@ public class UploadMaterialFileResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The detailed reason for access denial.</p>
+         * <p>The details of the access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -245,7 +245,7 @@ public class UploadMaterialFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The application name.</p>
+         * <p>The name of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>or</p>
@@ -286,7 +286,7 @@ public class UploadMaterialFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code. If the request is successful, the ErrorCode field is not returned. If the request fails, the ErrorCode field is returned. For more information, see the error codes in this topic.</p>
+         * <p>The error code. If the request is successful, the ErrorCode parameter is not returned. If the request fails, the ErrorCode parameter is returned. For more information, see the error codes in this topic.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -311,7 +311,7 @@ public class UploadMaterialFileResponseBody extends TeaModel {
          * <p>The response data.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;Success\&quot;: True}</p>
+         * <p>{&quot;Success&quot;: True}</p>
          */
         public Builder module(AppMaterialFile module) {
             this.module = module;
@@ -330,7 +330,7 @@ public class UploadMaterialFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The root error code.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>SYSTEM.ERROR</p>
@@ -341,7 +341,7 @@ public class UploadMaterialFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The root exception message.</p>
+         * <p>The exception message.</p>
          * 
          * <strong>example:</strong>
          * <p>System exception</p>
@@ -363,7 +363,7 @@ public class UploadMaterialFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the operation is processed synchronously.</p>
+         * <p>Indicates whether the processing is synchronous.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>

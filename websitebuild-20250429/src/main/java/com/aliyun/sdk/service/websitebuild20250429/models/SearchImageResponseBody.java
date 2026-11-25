@@ -106,7 +106,7 @@ public class SearchImageResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code. If the request is successful, this field is not returned. If the request fails, this field is returned. For more information, see the error codes in this topic.</p>
+         * <p>The error code. If the request is successful, the ErrorCode parameter is not returned. If the request fails, the ErrorCode parameter is returned. For more information, see the error code list in this topic.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -147,7 +147,7 @@ public class SearchImageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -320,10 +320,10 @@ public class SearchImageResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The descriptive tones identified from the image.</p>
+             * <p>The descriptive tones recognized from the image.</p>
              * 
              * <strong>example:</strong>
-             * <p>冷色调 蓝色</p>
+             * <p>Cool tone, blue</p>
              */
             public Builder descriptiveTones(String descriptiveTones) {
                 this.descriptiveTones = descriptiveTones;
@@ -344,9 +344,9 @@ public class SearchImageResponseBody extends TeaModel {
             /**
              * <p>The image category. Valid values:</p>
              * <ul>
-             * <li>normal: illustrations or article images.</li>
-             * <li>banner: background images or carousel images.</li>
-             * <li>goods: product or service images.</li>
+             * <li>normal: Illustrations and article images.</li>
+             * <li>banner: Background images and carousel images.</li>
+             * <li>goods: Product or service images.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -405,7 +405,7 @@ public class SearchImageResponseBody extends TeaModel {
              * <p>The image tags.</p>
              * 
              * <strong>example:</strong>
-             * <p>日出、奔跑</p>
+             * <p>Sunrise, running</p>
              */
             public Builder tagsFromImage(String tagsFromImage) {
                 this.tagsFromImage = tagsFromImage;
@@ -515,8 +515,7 @@ public class SearchImageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries returned per query.</p>
-             * <p>Valid values: 10 to 100. Default value: 20.</p>
+             * <p>The number of results returned per query. Valid values: 10 to 100. Default value: 20.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -527,7 +526,7 @@ public class SearchImageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The token for the next query. This value is empty if there are no more results.</p>
+             * <p>The token for the next query. This parameter is empty if no next query exists.</p>
              * 
              * <strong>example:</strong>
              * <p>2c6b65b6f9d625d4e2514a628bde8eb2e0b5e8707e68181f</p>

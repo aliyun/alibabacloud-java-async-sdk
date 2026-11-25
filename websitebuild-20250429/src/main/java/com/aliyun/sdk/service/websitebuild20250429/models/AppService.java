@@ -260,7 +260,7 @@ public class AppService extends TeaModel {
         }
 
         /**
-         * <p>The creation time in ISO 8601 format, in the UTC time zone (Z).</p>
+         * <p>The creation time in ISO 8601 format in the UTC time zone (Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2025-07-30T02:08:40Z</p>
@@ -282,7 +282,7 @@ public class AppService extends TeaModel {
         }
 
         /**
-         * <p>The end time in ISO 8601 format, in the UTC time zone (Z).</p>
+         * <p>The end time in ISO 8601 format in the UTC time zone (Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2025-07-18T02:23:00Z</p>
@@ -304,7 +304,7 @@ public class AppService extends TeaModel {
         }
 
         /**
-         * <p>The update time.</p>
+         * <p>The modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>Tue Sep 09 10:27:49 CST 2025</p>
@@ -365,6 +365,9 @@ public class AppService extends TeaModel {
 
         /**
          * <p>The service type description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Website design service</p>
          */
         public Builder serviceTypeText(String serviceTypeText) {
             this.serviceTypeText = serviceTypeText;
@@ -383,7 +386,7 @@ public class AppService extends TeaModel {
         }
 
         /**
-         * <p>The start time, specified as a UNIX timestamp in milliseconds.</p>
+         * <p>The start time as a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1754447102000</p>

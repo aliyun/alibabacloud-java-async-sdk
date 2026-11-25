@@ -184,7 +184,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The detailed reason why access is denied.</p>
+         * <p>The details about the access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -195,7 +195,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether retry is allowed.</p>
+         * <p>Specifies whether retries are allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -230,7 +230,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
         /**
          * <p>The dynamic error message, which is used to replace the <code>%s</code> placeholder in the <strong>ErrMessage</strong> response parameter.</p>
          * <blockquote>
-         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
+         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the specified <strong>DtsJobId</strong> request parameter is invalid.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -242,7 +242,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error parameters returned.</p>
+         * <p>The returned error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -283,7 +283,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
          * <p>The exception message.</p>
          * 
          * <strong>example:</strong>
-         * <p>系统异常</p>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -512,7 +512,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The access token value.</p>
+             * <p>The value of the access token.</p>
              * 
              * <strong>example:</strong>
              * <p>2108341e17661121129745384e79f9</p>
@@ -534,7 +534,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The extended properties.</p>
+             * <p>The extended attributes.</p>
              * 
              * <strong>example:</strong>
              * <p>{}</p>
@@ -600,7 +600,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The refresh token value.</p>
+             * <p>The value of the refresh token.</p>
              * 
              * <strong>example:</strong>
              * <p>2108341e17661121129745384e79f9</p>
@@ -611,7 +611,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The external unique identifier.</p>
+             * <p>The externally unique identifier.</p>
              * 
              * <strong>example:</strong>
              * <p>357504C7F21FCAE502756332ECE8B533</p>

@@ -76,7 +76,7 @@ public class OperateAppInstanceForPartnerRequest extends Request {
          * <p>The extended information.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;deliveryNodeName\&quot;:\&quot;交付质检\&quot;,\&quot;deliveryNodeStatus\&quot;:\&quot;Finish\&quot;,\&quot;deliveryOperatorRole\&quot;:\&quot;Provider\&quot;}</p>
+         * <p>{&quot;deliveryNodeName&quot;:&quot;Delivery inspection&quot;,&quot;deliveryNodeStatus&quot;:&quot;Finish&quot;,&quot;deliveryOperatorRole&quot;:&quot;Provider&quot;}</p>
          */
         public Builder extend(String extend) {
             this.putQueryParameter("Extend", extend);

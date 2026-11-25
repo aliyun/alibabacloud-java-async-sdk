@@ -106,7 +106,7 @@ public class ModuleVersionsValueComponentsValue extends TeaModel {
         } 
 
         /**
-         * <p>组件唯一编码（系统内部标识）</p>
+         * <p>The unique code of the component, which is an internal system identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>ComponentCode</p>
@@ -117,7 +117,7 @@ public class ModuleVersionsValueComponentsValue extends TeaModel {
         }
 
         /**
-         * <p>组件显示名称（用户可见名称）</p>
+         * <p>The display name of the component, which is visible to users.</p>
          * 
          * <strong>example:</strong>
          * <p>ComponentName</p>
@@ -128,7 +128,7 @@ public class ModuleVersionsValueComponentsValue extends TeaModel {
         }
 
         /**
-         * <p>组件实例属性配置</p>
+         * <p>The instance property configuration of the component.</p>
          */
         public Builder instanceProperty(java.util.List<InstanceProperty> instanceProperty) {
             this.instanceProperty = instanceProperty;
@@ -136,7 +136,10 @@ public class ModuleVersionsValueComponentsValue extends TeaModel {
         }
 
         /**
-         * <p>组件实例属性配置</p>
+         * <p>The instance property configuration of the component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder properties(java.util.Map<String, ModuleVersionsValueComponentsValuePropertiesValue> properties) {
             this.properties = properties;
@@ -144,10 +147,10 @@ public class ModuleVersionsValueComponentsValue extends TeaModel {
         }
 
         /**
-         * <p>模块属性状态</p>
+         * <p>The status of the module property.</p>
          * 
          * <strong>example:</strong>
-         * <p>attr</p>
+         * <p>1</p>
          */
         public Builder moduleAttrStatus(Integer moduleAttrStatus) {
             this.moduleAttrStatus = moduleAttrStatus;
@@ -226,7 +229,7 @@ public class ModuleVersionsValueComponentsValue extends TeaModel {
             } 
 
             /**
-             * <p>属性编码（系统内部标识）</p>
+             * <p>The code of the property, which is an internal system identifier.</p>
              * 
              * <strong>example:</strong>
              * <p>code</p>
@@ -237,7 +240,7 @@ public class ModuleVersionsValueComponentsValue extends TeaModel {
             }
 
             /**
-             * <p>属性值编码（系统内部值）</p>
+             * <p>The code of the property value, which is an internal system value.</p>
              * 
              * <strong>example:</strong>
              * <p>value</p>
@@ -248,7 +251,7 @@ public class ModuleVersionsValueComponentsValue extends TeaModel {
             }
 
             /**
-             * <p>属性显示名称（用户可见名称）</p>
+             * <p>The display name of the property, which is visible to users.</p>
              * 
              * <strong>example:</strong>
              * <p>name</p>
@@ -344,7 +347,7 @@ public class ModuleVersionsValueComponentsValue extends TeaModel {
             } 
 
             /**
-             * <p>属性编码（系统内部标识）</p>
+             * <p>The code of the property, which is an internal system identifier.</p>
              * 
              * <strong>example:</strong>
              * <p>code</p>
@@ -355,7 +358,7 @@ public class ModuleVersionsValueComponentsValue extends TeaModel {
             }
 
             /**
-             * <p>属性显示名称（用户可见名称）</p>
+             * <p>The display name of the property, which is visible to users.</p>
              * 
              * <strong>example:</strong>
              * <p>name</p>
@@ -366,7 +369,7 @@ public class ModuleVersionsValueComponentsValue extends TeaModel {
             }
 
             /**
-             * <p>属性值编码（系统内部值）</p>
+             * <p>The code of the property value, which is an internal system value.</p>
              * 
              * <strong>example:</strong>
              * <p>value</p>
@@ -377,7 +380,7 @@ public class ModuleVersionsValueComponentsValue extends TeaModel {
             }
 
             /**
-             * <p>模块属性值列表</p>
+             * <p>The list of module property values.</p>
              */
             public Builder values(java.util.List<Values> values) {
                 this.values = values;

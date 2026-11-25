@@ -184,7 +184,7 @@ public class ListAppAssistantAgentsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The detailed reason why access was denied.</p>
+         * <p>The detailed reasons for access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -195,7 +195,7 @@ public class ListAppAssistantAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether a retry is allowed.</p>
+         * <p>Specifies whether retries are allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -228,9 +228,9 @@ public class ListAppAssistantAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic error message, which is used to replace the <code>%s</code> placeholder in the <strong>ErrMessage</strong> response element.</p>
+         * <p>The dynamic error message, which is used to replace <code>%s</code> in the <strong>ErrMessage</strong> error message.</p>
          * <blockquote>
-         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the value of the <strong>DtsJobId</strong> request parameter is invalid.</p>
+         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the request parameter <strong>DtsJobId</strong> is invalid.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -242,7 +242,7 @@ public class ListAppAssistantAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error parameters.</p>
+         * <p>The returned error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -283,7 +283,7 @@ public class ListAppAssistantAgentsResponseBody extends TeaModel {
          * <p>The exception message.</p>
          * 
          * <strong>example:</strong>
-         * <p>系统异常</p>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -291,7 +291,7 @@ public class ListAppAssistantAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A reserved parameter.</p>
+         * <p>The reserved parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -421,7 +421,10 @@ public class ListAppAssistantAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The extension field.</p>
+             * <p>The extension fields.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder extra(java.util.Map<String, String> extra) {
                 this.extra = extra;
@@ -510,7 +513,10 @@ public class ListAppAssistantAgentsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The extension field.</p>
+             * <p>The extension fields.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder extra(java.util.Map<String, String> extra) {
                 this.extra = extra;
@@ -729,7 +735,7 @@ public class ListAppAssistantAgentsResponseBody extends TeaModel {
              * <p>The agent name.</p>
              * 
              * <strong>example:</strong>
-             * <p>演示</p>
+             * <p>Demo</p>
              */
             public Builder agentName(String agentName) {
                 this.agentName = agentName;
@@ -748,7 +754,7 @@ public class ListAppAssistantAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The authentication credential.</p>
+             * <p>The authentication credentials.</p>
              */
             public Builder credential(Credential credential) {
                 this.credential = credential;
@@ -764,7 +770,10 @@ public class ListAppAssistantAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The extension parameters.</p>
+             * <p>The extra parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder extraParams(java.util.Map<String, String> extraParams) {
                 this.extraParams = extraParams;
@@ -794,7 +803,7 @@ public class ListAppAssistantAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The platform application ID of the agent.</p>
+             * <p>The application ID of the agent platform.</p>
              * 
              * <strong>example:</strong>
              * <p>WA12313123131</p>

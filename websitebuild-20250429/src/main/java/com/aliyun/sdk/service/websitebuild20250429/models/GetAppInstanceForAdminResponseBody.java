@@ -184,7 +184,7 @@ public class GetAppInstanceForAdminResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the permission check failure.</p>
+         * <p>The details of the access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>

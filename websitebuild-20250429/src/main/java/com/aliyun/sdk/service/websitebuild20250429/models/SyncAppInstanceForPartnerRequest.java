@@ -161,7 +161,7 @@ public class SyncAppInstanceForPartnerRequest extends Request {
         }
 
         /**
-         * <p>The source. Set this parameter to MARKET_CLOUD_DREAM.</p>
+         * <p>The source type. Valid value: MARKET_CLOUD_DREAM.</p>
          * 
          * <strong>example:</strong>
          * <p>MARKET_CLOUD_DREAM</p>
@@ -591,7 +591,7 @@ public class SyncAppInstanceForPartnerRequest extends Request {
             } 
 
             /**
-             * <p>The application type. Set this parameter to WEBSITE.</p>
+             * <p>The application type. Valid value: WEBSITE.</p>
              * 
              * <strong>example:</strong>
              * <p>WEBSITE</p>
@@ -657,7 +657,7 @@ public class SyncAppInstanceForPartnerRequest extends Request {
             }
 
             /**
-             * <p>The timestamp when the vulnerability was published. Unit: milliseconds.</p>
+             * <p>The timestamp when the vulnerability was published, in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-01-01 00:00:00</p>
@@ -693,7 +693,7 @@ public class SyncAppInstanceForPartnerRequest extends Request {
              * <p>The website configuration information.</p>
              * 
              * <strong>example:</strong>
-             * <p>Website configuration information</p>
+             * <p>{&quot;DeployArea&quot;:&quot;ChineseMainland&quot;}</p>
              */
             public Builder profile(Profile profile) {
                 this.profile = profile;
@@ -712,7 +712,7 @@ public class SyncAppInstanceForPartnerRequest extends Request {
             }
 
             /**
-             * <p>The website SiteID.</p>
+             * <p>The site ID of the website.</p>
              * 
              * <strong>example:</strong>
              * <p>31104757</p>
@@ -723,7 +723,7 @@ public class SyncAppInstanceForPartnerRequest extends Request {
             }
 
             /**
-             * <p>The start time of the query. If you do not specify the start time or end time, all historical deployment records of the instance are queried. Specify the time in the ISO 8601 standard in the UTC (Z) time zone.</p>
+             * <p>The start time of the query. If you do not specify the start and end times, all historical deployment records of the instance are queried. Specify the time in the ISO 8601 standard in the UTC time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-07-15T16:00:00Z</p>
@@ -743,11 +743,11 @@ public class SyncAppInstanceForPartnerRequest extends Request {
              * <li>WaitResource: Waiting for resources.</li>
              * <li>Failure: Execution failed.</li>
              * <li>Success: Execution succeeded.</li>
-             * <li>Checking: Submitted for data quality check.</li>
+             * <li>Checking: Dispatched for data quality check.</li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>{\&quot;Phase\&quot;: \&quot;Running\&quot;, \&quot;SlotNum\&quot;: 1, \&quot;UsedCapacity\&quot;: \&quot;500.0Gi\&quot;}</p>
+             * <p>{&quot;Phase&quot;: &quot;Running&quot;, &quot;SlotNum&quot;: 1, &quot;UsedCapacity&quot;: &quot;500.0Gi&quot;}</p>
              */
             public Builder status(String status) {
                 this.status = status;

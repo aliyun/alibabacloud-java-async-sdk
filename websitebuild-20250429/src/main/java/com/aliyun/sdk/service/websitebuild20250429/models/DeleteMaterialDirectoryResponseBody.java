@@ -245,7 +245,7 @@ public class DeleteMaterialDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the application.</p>
+         * <p>The application name.</p>
          * 
          * <strong>example:</strong>
          * <p>or</p>
@@ -308,7 +308,7 @@ public class DeleteMaterialDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the deletion was successful.</p>
+         * <p>Indicates whether the deletion is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -330,7 +330,7 @@ public class DeleteMaterialDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The root error code.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>SYSTEM.ERROR</p>
@@ -363,7 +363,7 @@ public class DeleteMaterialDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the operation is processed synchronously.</p>
+         * <p>Indicates whether the request is processed synchronously.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>

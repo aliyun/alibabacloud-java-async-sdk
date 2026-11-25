@@ -184,7 +184,7 @@ public class QueryMaterialFileSummaryInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The detailed reasons for access denial.</p>
+         * <p>The detailed reason why access is denied.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>

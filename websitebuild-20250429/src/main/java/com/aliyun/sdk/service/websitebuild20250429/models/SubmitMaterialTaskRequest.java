@@ -115,7 +115,7 @@ public class SubmitMaterialTaskRequest extends Request {
          * <p>The business group ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>GROUP_1</p>
          */
         public Builder bizGroupId(String bizGroupId) {
             this.putQueryParameter("BizGroupId", bizGroupId);

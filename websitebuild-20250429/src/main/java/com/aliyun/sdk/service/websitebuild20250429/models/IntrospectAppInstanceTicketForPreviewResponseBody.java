@@ -184,7 +184,7 @@ public class IntrospectAppInstanceTicketForPreviewResponseBody extends TeaModel 
         } 
 
         /**
-         * <p>Detailed reason for access denial.</p>
+         * <p>The detailed cause of the access denied error.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -195,7 +195,7 @@ public class IntrospectAppInstanceTicketForPreviewResponseBody extends TeaModel 
         }
 
         /**
-         * <p>Indicates whether retry is allowed.</p>
+         * <p>Specifies whether retries are allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -206,7 +206,7 @@ public class IntrospectAppInstanceTicketForPreviewResponseBody extends TeaModel 
         }
 
         /**
-         * <p>App Name.</p>
+         * <p>The application name.</p>
          * 
          * <strong>example:</strong>
          * <p>or</p>
@@ -217,7 +217,7 @@ public class IntrospectAppInstanceTicketForPreviewResponseBody extends TeaModel 
         }
 
         /**
-         * <p>Dynamic error code.</p>
+         * <p>The dynamic error code.</p>
          * 
          * <strong>example:</strong>
          * <p>ERROR-oo1</p>
@@ -228,9 +228,9 @@ public class IntrospectAppInstanceTicketForPreviewResponseBody extends TeaModel 
         }
 
         /**
-         * <p>Dynamic error message used to replace the <code>%s</code> placeholder in the <strong>ErrMessage</strong> error message.  </p>
+         * <p>The dynamic error message, which is used to replace <code>%s</code> in the error message of the <strong>ErrMessage</strong> response parameter.</p>
          * <blockquote>
-         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the provided request parameter <strong>DtsJobId</strong> is invalid.</p>
+         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the <strong>DtsJobId</strong> request parameter is invalid.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -242,7 +242,7 @@ public class IntrospectAppInstanceTicketForPreviewResponseBody extends TeaModel 
         }
 
         /**
-         * <p>Returned error parameters</p>
+         * <p>The error arguments.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -250,7 +250,7 @@ public class IntrospectAppInstanceTicketForPreviewResponseBody extends TeaModel 
         }
 
         /**
-         * <p>Returned object.</p>
+         * <p>The response object.</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -269,7 +269,7 @@ public class IntrospectAppInstanceTicketForPreviewResponseBody extends TeaModel 
         }
 
         /**
-         * <p>Error code</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>SYSTEM.ERROR</p>
@@ -280,10 +280,10 @@ public class IntrospectAppInstanceTicketForPreviewResponseBody extends TeaModel 
         }
 
         /**
-         * <p>Abnormal message</p>
+         * <p>The exception message.</p>
          * 
          * <strong>example:</strong>
-         * <p>系统异常</p>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -291,7 +291,7 @@ public class IntrospectAppInstanceTicketForPreviewResponseBody extends TeaModel 
         }
 
         /**
-         * <p>Reserved parameter.</p>
+         * <p>The reserved parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -490,7 +490,7 @@ public class IntrospectAppInstanceTicketForPreviewResponseBody extends TeaModel 
             } 
 
             /**
-             * <p>Access token time-to-live (TTL)</p>
+             * <p>The time when the access token expires.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-12-18T22:30:00+08:00</p>
@@ -501,7 +501,7 @@ public class IntrospectAppInstanceTicketForPreviewResponseBody extends TeaModel 
             }
 
             /**
-             * <p>Access token issue Time</p>
+             * <p>The time when the access token was issued.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-12-18T22:30:00+08:00</p>
@@ -512,7 +512,7 @@ public class IntrospectAppInstanceTicketForPreviewResponseBody extends TeaModel 
             }
 
             /**
-             * <p>Access token value</p>
+             * <p>The value of the access token.</p>
              * 
              * <strong>example:</strong>
              * <p>2108341e17661121129745384e79f9</p>
@@ -534,7 +534,7 @@ public class IntrospectAppInstanceTicketForPreviewResponseBody extends TeaModel 
             }
 
             /**
-             * <p>Extension property</p>
+             * <p>The extended attributes.</p>
              * 
              * <strong>example:</strong>
              * <p>{}</p>
@@ -545,7 +545,7 @@ public class IntrospectAppInstanceTicketForPreviewResponseBody extends TeaModel 
             }
 
             /**
-             * <p>Authorization code Type</p>
+             * <p>The authorization grant type.</p>
              * 
              * <strong>example:</strong>
              * <p>authorization_code</p>
@@ -567,7 +567,7 @@ public class IntrospectAppInstanceTicketForPreviewResponseBody extends TeaModel 
             }
 
             /**
-             * <p>Parent Alibaba Cloud PK</p>
+             * <p>The parent Alibaba Cloud account ID.</p>
              * 
              * <strong>example:</strong>
              * <p>12343131221311</p>
@@ -578,7 +578,7 @@ public class IntrospectAppInstanceTicketForPreviewResponseBody extends TeaModel 
             }
 
             /**
-             * <p>Time-to-live (TTL) of the refresh token</p>
+             * <p>The time when the refresh token expires.</p>
              * 
              * <strong>example:</strong>
              * <p>1768619049924</p>
@@ -589,7 +589,7 @@ public class IntrospectAppInstanceTicketForPreviewResponseBody extends TeaModel 
             }
 
             /**
-             * <p>Refresh token issue Time</p>
+             * <p>The time when the refresh token was issued.</p>
              * 
              * <strong>example:</strong>
              * <p>1768619049924</p>
@@ -600,7 +600,7 @@ public class IntrospectAppInstanceTicketForPreviewResponseBody extends TeaModel 
             }
 
             /**
-             * <p>Refresh token value</p>
+             * <p>The value of the refresh token.</p>
              * 
              * <strong>example:</strong>
              * <p>be9750d595b6cd7c93a80b46</p>
@@ -611,7 +611,7 @@ public class IntrospectAppInstanceTicketForPreviewResponseBody extends TeaModel 
             }
 
             /**
-             * <p>Externally Unique</p>
+             * <p>The external UUID.</p>
              * 
              * <strong>example:</strong>
              * <p>hdm_33be9750d595b6cd7c93a80b46734b22</p>

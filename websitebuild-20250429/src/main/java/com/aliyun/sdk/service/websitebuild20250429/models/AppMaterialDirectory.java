@@ -130,7 +130,7 @@ public class AppMaterialDirectory extends TeaModel {
         }
 
         /**
-         * <p>The list of subfolders.</p>
+         * <p>The list of child folders.</p>
          */
         public Builder children(java.util.List<AppMaterialDirectory> children) {
             this.children = children;
@@ -152,7 +152,7 @@ public class AppMaterialDirectory extends TeaModel {
          * <p>The name.</p>
          * 
          * <strong>example:</strong>
-         * <p>图片管理</p>
+         * <p>Image Management</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -160,7 +160,7 @@ public class AppMaterialDirectory extends TeaModel {
         }
 
         /**
-         * <p>The sort number.</p>
+         * <p>The sort order.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

@@ -184,7 +184,7 @@ public class UpdateRbacOrgUnitResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The detailed reason for the access denial.</p>
+         * <p>The detailed reason why access is denied.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -195,7 +195,7 @@ public class UpdateRbacOrgUnitResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether a retry is allowed.</p>
+         * <p>Indicates whether retries are allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -206,7 +206,7 @@ public class UpdateRbacOrgUnitResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The app name.</p>
+         * <p>The application name.</p>
          * 
          * <strong>example:</strong>
          * <p>spring-cloud-b</p>

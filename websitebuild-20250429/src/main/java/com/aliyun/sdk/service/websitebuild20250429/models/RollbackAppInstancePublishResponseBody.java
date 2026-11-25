@@ -184,7 +184,7 @@ public class RollbackAppInstancePublishResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The detailed reason for access denial.</p>
+         * <p>The detailed reasons for access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -195,7 +195,7 @@ public class RollbackAppInstancePublishResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether retries are allowed.</p>
+         * <p>Specifies whether retries are allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -228,10 +228,7 @@ public class RollbackAppInstancePublishResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic error message, which is used to replace <code>%s</code> in the error message of the <strong>ErrMessage</strong> response parameter.</p>
-         * <blockquote>
-         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the <strong>DtsJobId</strong> request parameter is invalid.</p>
-         * </blockquote>
+         * <p>The dynamic error message, which is used to replace <code>%s</code> in the error message of the <strong>ErrMessage</strong> response parameter. If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the value of the <strong>DtsJobId</strong> request parameter is invalid.</p>
          * 
          * <strong>example:</strong>
          * <p>SYSTEM_ERROR</p>
@@ -347,7 +344,7 @@ public class RollbackAppInstancePublishResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The release order ID.</p>
+             * <p>The deployment order ID.</p>
              * 
              * <strong>example:</strong>
              * <p>123</p>

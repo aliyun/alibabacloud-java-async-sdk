@@ -223,7 +223,7 @@ public class ModifyMaterialFileResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the permission check failure.</p>
+         * <p>The details of the access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -234,7 +234,7 @@ public class ModifyMaterialFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether retries are allowed.</p>
+         * <p>Indicates whether a retry is allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -308,7 +308,7 @@ public class ModifyMaterialFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the update was successful.</p>
+         * <p>Indicates whether the modification was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

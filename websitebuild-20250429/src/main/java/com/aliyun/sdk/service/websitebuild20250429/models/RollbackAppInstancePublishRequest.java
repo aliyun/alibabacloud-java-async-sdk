@@ -148,7 +148,7 @@ public class RollbackAppInstancePublishRequest extends Request {
         }
 
         /**
-         * <p>The release number.</p>
+         * <p>The deployment number.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>

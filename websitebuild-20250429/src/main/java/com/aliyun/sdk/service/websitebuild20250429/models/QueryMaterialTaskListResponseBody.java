@@ -249,7 +249,7 @@ public class QueryMaterialTaskListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The detailed reason why access was denied.</p>
+         * <p>The detailed reasons for access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -260,10 +260,10 @@ public class QueryMaterialTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether a retry is allowed. Valid values:</p>
+         * <p>Indicates whether retries are allowed. Valid values:</p>
          * <ul>
-         * <li>false: No retry is allowed.</li>
-         * <li>true: A retry is allowed.</li>
+         * <li>false: Retries are not allowed.</li>
+         * <li>true: Retries are allowed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -275,7 +275,7 @@ public class QueryMaterialTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The application name.</p>
+         * <p>The name of the app.</p>
          * 
          * <strong>example:</strong>
          * <p>or</p>
@@ -297,7 +297,7 @@ public class QueryMaterialTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic message. Currently not in use. Ignore this parameter.</p>
+         * <p>The dynamic message. This parameter is not used and can be ignored.</p>
          * 
          * <strong>example:</strong>
          * <p>SYSTEM_ERROR</p>
@@ -308,7 +308,7 @@ public class QueryMaterialTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error parameters.</p>
+         * <p>The returned error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -316,7 +316,7 @@ public class QueryMaterialTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code. If the request is successful, the ErrorCode field is not returned. If the request fails, the ErrorCode field is returned. For more information, see the error codes in this topic.</p>
+         * <p>The error code. If the request is successful, the ErrorCode parameter is not returned. If the request fails, the ErrorCode parameter is returned. For more information, see the error codes in this topic.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -338,8 +338,7 @@ public class QueryMaterialTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per query.</p>
-         * <p>Valid values: 10 to 100. Default value: 20.</p>
+         * <p>The maximum number of entries to return for a single request. Valid values: 10 to 100. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -358,7 +357,7 @@ public class QueryMaterialTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token for the next query. This parameter is empty if no more results exist.</p>
+         * <p>The token used to start the next query. If no next query is available, this parameter is left empty.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</p>
@@ -380,7 +379,7 @@ public class QueryMaterialTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The root error code.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>SYSTEM.ERROR</p>
@@ -391,7 +390,7 @@ public class QueryMaterialTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The root error message.</p>
+         * <p>The exception message.</p>
          * 
          * <strong>example:</strong>
          * <p>System exception</p>
@@ -402,7 +401,7 @@ public class QueryMaterialTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -413,7 +412,7 @@ public class QueryMaterialTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is synchronously processed.</p>
+         * <p>Indicates whether synchronous processing is used.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -571,7 +570,7 @@ public class QueryMaterialTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The request result.</p>
+             * <p>The query results.</p>
              */
             public Builder data(java.util.List<AppMaterialTask> data) {
                 this.data = data;
@@ -590,7 +589,7 @@ public class QueryMaterialTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page size.</p>
+             * <p>The number of entries per page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -612,7 +611,7 @@ public class QueryMaterialTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Apart from pagination limits, the server processes up to 1000 recent records per query. If the results exceed 1000 records, <strong>ResultLimit</strong> is <strong>true</strong>. Narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
+             * <p>In addition to the pagination limit, the server processes a maximum of the latest 1,000 records for the current query. If the number of results exceeds 1,000, <strong>ResultLimit</strong> is set to <strong>true</strong>. In this case, narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is set to <strong>false</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>False</p>

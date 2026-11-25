@@ -137,7 +137,7 @@ public class ListAIStaffChatMessagesRequest extends Request {
         }
 
         /**
-         * <p>The creation time of the last entry on the previous page. Do not specify this parameter when you query the first page.</p>
+         * <p>The gmtCreate value of the last entry on the previous page. Do not specify this parameter for the first page.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>

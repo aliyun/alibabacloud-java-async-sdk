@@ -184,7 +184,7 @@ public class BatchCheckResourceMeasureResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The detailed reasons for access denial.</p>
+         * <p>The detailed reason for access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -195,7 +195,7 @@ public class BatchCheckResourceMeasureResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether retries are allowed.</p>
+         * <p>Indicates whether retries are allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -206,7 +206,7 @@ public class BatchCheckResourceMeasureResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the app.</p>
+         * <p>The application name.</p>
          * 
          * <strong>example:</strong>
          * <p>watermark</p>
@@ -266,7 +266,7 @@ public class BatchCheckResourceMeasureResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The root error code.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>SYSTEM.ERROR</p>
@@ -288,7 +288,7 @@ public class BatchCheckResourceMeasureResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether synchronous processing is used.</p>
+         * <p>Specifies whether the request is processed synchronously.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -365,7 +365,10 @@ public class BatchCheckResourceMeasureResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The check results for each resource, where the key is the resourceCode.</p>
+             * <p>The check results for each resource. The key is the resourceCode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;InspirationTokens&quot;:{&quot;Passed&quot;:true,&quot;ResourceCode&quot;:&quot;InspirationTokens&quot;}}</p>
              */
             public Builder results(java.util.Map<String, ModuleResultsValue> results) {
                 this.results = results;

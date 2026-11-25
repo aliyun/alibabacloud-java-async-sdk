@@ -45,7 +45,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the Supabase instance information of a resource.</p>
+     * <p>Queries the information about the Supabase instance associated with a resource.</p>
      * 
      * @param request the request parameters of AllocateSupabaseForAdmin  AllocateSupabaseForAdminRequest
      * @return AllocateSupabaseForAdminResponse
@@ -249,7 +249,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Initiates a WanXiaoZhi 2.0 AI conversation.</p>
+     * <p>Initiates a Wanxiaozhi 2.0 AI conversation.</p>
      * 
      * @param request the request parameters of CreateAIStaffChat  CreateAIStaffChatRequest
      * @return CreateAIStaffChatResponse
@@ -270,7 +270,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Creates an AI session for Wan Xiaozhi 2.0.</p>
+     * <p>Creates an AI session in Wanxiaozhi 2.0.</p>
      * 
      * @param request the request parameters of CreateAIStaffConversation  CreateAIStaffConversationRequest
      * @return CreateAIStaffConversationResponse
@@ -312,7 +312,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the configuration information of the code generation plugin.</p>
+     * <p>Retrieves the configuration information of the code generation plug-in.</p>
      * 
      * @param request the request parameters of CreateAppAssistantAgentSsoLogin  CreateAppAssistantAgentSsoLoginRequest
      * @return CreateAppAssistantAgentSsoLoginResponse
@@ -481,7 +481,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Distributes and generates channel drafts.</p>
+     * <p>Generates and distributes channel drafts.</p>
      * 
      * @param request the request parameters of CreateDistribution  CreateDistributionRequest
      * @return CreateDistributionResponse
@@ -556,7 +556,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Wanxiaozhi 2.0 AI conversation.</p>
+     * <p>The Wanxiaozhi 2.0 AI conversation.</p>
      * 
      * @param request the request parameters of CreateRbacOrgUnit  CreateRbacOrgUnitRequest
      * @return CreateRbacOrgUnitResponse
@@ -577,7 +577,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The Wanxiaozhi 2.0 API operation for creating an AI session.</p>
+     * <p>Creates an AI session in Wanxiaozhi 2.0.</p>
      * 
      * @param request the request parameters of CreateRbacPermission  CreateRbacPermissionRequest
      * @return CreateRbacPermissionResponse
@@ -835,7 +835,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The API operation for creating an AI session in Wanxiaozhi 2.0.</p>
+     * <p>Creates an AI session for Wanxiaozhi 2.0.</p>
      * 
      * @param request the request parameters of DeleteRbacPermission  DeleteRbacPermissionRequest
      * @return DeleteRbacPermissionResponse
@@ -856,7 +856,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the application instance information.</p>
+     * <p>Queries the information of an application instance.</p>
      * 
      * @param request the request parameters of DeleteRbacRole  DeleteRbacRoleRequest
      * @return DeleteRbacRoleResponse
@@ -991,7 +991,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries application instance information.</p>
+     * <p>Queries information about an application instance.</p>
      * 
      * @param request the request parameters of GetAppCodeWorkspaceDetail  GetAppCodeWorkspaceDetailRequest
      * @return GetAppCodeWorkspaceDetailResponse
@@ -1012,7 +1012,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The Wanxiaozhi 2.0 API operation for creating AI conversations.</p>
+     * <p>Creates an AI conversation in Wanxiaozhi 2.0.</p>
      * 
      * @param request the request parameters of GetAppConversation  GetAppConversationRequest
      * @return GetAppConversationResponse
@@ -1033,7 +1033,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The API operation for creating an AI session in Wanxiaozhi 2.0.</p>
+     * <p>Creates an AI session in Wanxiaozhi 2.0.</p>
      * 
      * @param request the request parameters of GetAppConversationLockStatus  GetAppConversationLockStatusRequest
      * @return GetAppConversationLockStatusResponse
@@ -1075,7 +1075,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the configuration information of the code generation plugin.</p>
+     * <p>Retrieves the configuration information of the code generation plug-in.</p>
      * 
      * @param request the request parameters of GetAppFileContent  GetAppFileContentRequest
      * @return GetAppFileContentResponse
@@ -1159,7 +1159,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the configuration information of the code generation plug-in.</p>
+     * <p>Retrieves the configuration information of the code generation plugin.</p>
      * 
      * @param request the request parameters of GetAppInstanceForPartner  GetAppInstanceForPartnerRequest
      * @return GetAppInstanceForPartnerResponse
@@ -1201,7 +1201,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the configuration information of a code generation plugin.</p>
+     * <p>Retrieves the configuration information of the code generation plug-in.</p>
      * 
      * @param request the request parameters of GetAppPlugin  GetAppPluginRequest
      * @return GetAppPluginResponse
@@ -1222,7 +1222,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the configuration information of a code generation plugin.</p>
+     * <p>Retrieves the configuration information of the code generation plugin.</p>
      * 
      * @param request the request parameters of GetAppPluginConfig  GetAppPluginConfigRequest
      * @return GetAppPluginConfigResponse
@@ -1243,7 +1243,37 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the configuration information of the code generation plug-in.</p>
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>This API operation is used in internal platform service design to read the plugin configuration of a specific site by using a service identity.</li>
+     * <li>Authentication relies entirely on gateway RAM control and is available only to trusted internal service accounts.</li>
+     * <li>If the specified plugin is not installed on the site or the request parameters are empty, the API operation returns a success status but the Module field is empty. The invoker must handle this as an unconfigured state.</li>
+     * <li>The returned PluginConfig field contains an AES-encrypted JSON character string. The invoker must perform decryption before use.</li>
+     * <li>To invoke in user mode, continue to use the GetAppPluginConfig API operation instead of this API operation.</li>
+     * <li>The BizId and PluginId parameters are required in the contract. Passing empty character strings is not blocked by the gateway but causes the backend to return an empty Module field. This is a fault-tolerance behavior, and invokers must not rely on it.</li>
+     * <li>This API operation supports HTTPS and RPC-style POST requests. Parameters are passed by using form data.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of GetAppPluginConfigForAdmin  GetAppPluginConfigForAdminRequest
+     * @return GetAppPluginConfigForAdminResponse
+     */
+    @Override
+    public CompletableFuture<GetAppPluginConfigForAdminResponse> getAppPluginConfigForAdmin(GetAppPluginConfigForAdminRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetAppPluginConfigForAdmin").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAppPluginConfigForAdminResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAppPluginConfigForAdminResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the configuration information for the code generation plugin.</p>
      * 
      * @param request the request parameters of GetAppPublishStatus  GetAppPublishStatusRequest
      * @return GetAppPublishStatusResponse
@@ -1285,7 +1315,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the configuration information of the code generation plugin.</p>
+     * <p>Retrieves the configuration information of the code generation plug-in.</p>
      * 
      * @param request the request parameters of GetAppRequirement  GetAppRequirementRequest
      * @return GetAppRequirementResponse
@@ -1474,7 +1504,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the configuration information of the code generation plug-in.</p>
+     * <p>Retrieves the configuration information of the code generation plugin.</p>
      * 
      * @param request the request parameters of GetAppTokenService  GetAppTokenServiceRequest
      * @return GetAppTokenServiceResponse
@@ -1495,7 +1525,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the information of an application instance.</p>
+     * <p>Queries application instance information.</p>
      * 
      * @param request the request parameters of GetAppWorkspaceDirectory  GetAppWorkspaceDirectoryRequest
      * @return GetAppWorkspaceDirectoryResponse
@@ -1570,7 +1600,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the Supabase instance configuration information corresponding to a resource.</p>
+     * <p>Queries the configuration information of the Supabase instance associated with the resource.</p>
      * 
      * @param request the request parameters of GetLlmProxyConfigForAdmin  GetLlmProxyConfigForAdminRequest
      * @return GetLlmProxyConfigForAdminResponse
@@ -1648,7 +1678,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the configuration information of the code generation plug-in.</p>
+     * <p>Retrieves the configuration information of the code generation plugin.</p>
      * 
      * @param request the request parameters of GetOssUploadPolicy  GetOssUploadPolicyRequest
      * @return GetOssUploadPolicyResponse
@@ -1669,7 +1699,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the configuration information of the code generation plugin.</p>
+     * <p>Retrieves the configuration information of the code generation plug-in.</p>
      * 
      * @param request the request parameters of GetTempDownloadUrl  GetTempDownloadUrlRequest
      * @return GetTempDownloadUrlResponse
@@ -1747,7 +1777,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the configuration information of the code generation plugin.</p>
+     * <p>Retrieves the configuration information of the code generation plug-in.</p>
      * 
      * @param request the request parameters of InstallAppPlugin  InstallAppPluginRequest
      * @return InstallAppPluginResponse
@@ -1849,7 +1879,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Wanxiaozhi 2.0 - AI conversation history query API.</p>
+     * <p>The API operation for querying AI conversation history in Wanxiaozhi 2.0.</p>
      * 
      * @param request the request parameters of ListAppChatMessages  ListAppChatMessagesRequest
      * @return ListAppChatMessagesResponse
@@ -1869,7 +1899,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI ListAppCommoditySpecificationsForPartner is deprecated, please use WebsiteBuild::2025-04-29::ListAppCommoditySpecificationsV2ForPartner instead.  * @description Retrieves the configuration information of the code generation plug-in.
+     * @deprecated OpenAPI ListAppCommoditySpecificationsForPartner is deprecated, please use WebsiteBuild::2025-04-29::ListAppCommoditySpecificationsV2ForPartner instead.  * @description Retrieves the configuration information for the code generation plug-in.
      * 
      * @param request the request parameters of ListAppCommoditySpecificationsForPartner  ListAppCommoditySpecificationsForPartnerRequest
      * @return ListAppCommoditySpecificationsForPartnerResponse
@@ -1891,7 +1921,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Get QR code plugin configuration information</p>
+     * <p>Retrieves the configuration information of the code generation plug-in.</p>
      * 
      * @param request the request parameters of ListAppCommoditySpecificationsV2ForPartner  ListAppCommoditySpecificationsV2ForPartnerRequest
      * @return ListAppCommoditySpecificationsV2ForPartnerResponse
@@ -1912,7 +1942,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Wanxiaozhi 2.0 - API for querying AI session history information.</p>
+     * <p>The API operation for querying AI session history in Wanxiaozhi 2.0.</p>
      * 
      * @param request the request parameters of ListAppConversationMessages  ListAppConversationMessagesRequest
      * @return ListAppConversationMessagesResponse
@@ -2281,7 +2311,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the configuration information of the code generation plugin.</p>
+     * <p>Retrieves the configuration information of the code generation plug-in.</p>
      * 
      * @param request the request parameters of ListRbacOrgTree  ListRbacOrgTreeRequest
      * @return ListRbacOrgTreeResponse
@@ -2302,7 +2332,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Creates an AI session in Wanxiaozhi 2.0.</p>
+     * <p>The API operation for creating an AI conversation in Wanxiaozhi 2.0.</p>
      * 
      * @param request the request parameters of ListRbacPermissions  ListRbacPermissionsRequest
      * @return ListRbacPermissionsResponse
@@ -2323,7 +2353,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the application instance information.</p>
+     * <p>Queries application instance information.</p>
      * 
      * @param request the request parameters of ListRbacRoleHierarchy  ListRbacRoleHierarchyRequest
      * @return ListRbacRoleHierarchyResponse
@@ -2344,7 +2374,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the application instance information.</p>
+     * <p>Queries application instance information.</p>
      * 
      * @param request the request parameters of ListRbacRoles  ListRbacRolesRequest
      * @return ListRbacRolesResponse
@@ -2632,7 +2662,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the Supabase instance information corresponding to a resource.</p>
+     * <p>Queries the Supabase instance information associated with the resource.</p>
      * 
      * @param request the request parameters of PushResourceMeasure  PushResourceMeasureRequest
      * @return PushResourceMeasureResponse
@@ -2674,7 +2704,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the Supabase instance information corresponding to the resource.</p>
+     * <p>Queries the information about the Supabase instance associated with the resource.</p>
      * 
      * @param request the request parameters of QueryInspirationBalance  QueryInspirationBalanceRequest
      * @return QueryInspirationBalanceResponse
@@ -2845,7 +2875,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the information of an application instance.</p>
+     * <p>Queries the information about an application instance.</p>
      * 
      * @param request the request parameters of QueryRbacRole  QueryRbacRoleRequest
      * @return QueryRbacRoleResponse
@@ -2866,7 +2896,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The API operation to create an AI session for Wanxiaozhi 2.0.</p>
+     * <p>Creates an AI session in Wanxiaozhi 2.0.</p>
      * 
      * @param request the request parameters of QueryRbacRolePermissions  QueryRbacRolePermissionsRequest
      * @return QueryRbacRolePermissionsResponse
@@ -2950,7 +2980,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the information of the Supabase instance associated with a resource.</p>
+     * <p>Queries the Supabase instance information associated with a resource.</p>
      * 
      * @param request the request parameters of QuerySupabaseInstanceInfoForAdmin  QuerySupabaseInstanceInfoForAdminRequest
      * @return QuerySupabaseInstanceInfoForAdminResponse
@@ -3161,7 +3191,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Rewrites a channel title.</p>
+     * <p>Rewrites the channel title.</p>
      * 
      * @param request the request parameters of RewriteChannelTitle  RewriteChannelTitleRequest
      * @return RewriteChannelTitleResponse
@@ -3182,7 +3212,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the configuration information of the code generation plug-in.</p>
+     * <p>Retrieves the configuration information of the code generation plugin.</p>
      * 
      * @param request the request parameters of RollbackAppCodeSnapshot  RollbackAppCodeSnapshotRequest
      * @return RollbackAppCodeSnapshotResponse
@@ -3203,7 +3233,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of an application instance.</p>
+     * <p>Queries application instance information.</p>
      * 
      * @param request the request parameters of RollbackAppInstancePublish  RollbackAppInstancePublishRequest
      * @return RollbackAppInstancePublishResponse
@@ -3224,7 +3254,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the configuration information of the code generation plugin.</p>
+     * <p>Retrieves the configuration information of the code generation plug-in.</p>
      * 
      * @param request the request parameters of RollbackAppPluginVersion  RollbackAppPluginVersionRequest
      * @return RollbackAppPluginVersionResponse
@@ -3245,7 +3275,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Get code generation plugin configuration information</p>
+     * <p>Retrieves the configuration information of the code generation plug-in.</p>
      * 
      * @param request the request parameters of SaveAppRequirement  SaveAppRequirementRequest
      * @return SaveAppRequirementResponse
@@ -3506,7 +3536,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the AI conversation history for Wanxiaozhi 2.0.</p>
+     * <p>The API operation for querying the AI conversation history in Wanxiaozhi 2.0.</p>
      * 
      * @param request the request parameters of UpdateAppChatMessage  UpdateAppChatMessageRequest
      * @return UpdateAppChatMessageResponse
@@ -3527,7 +3557,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the configuration information of the code generation plug-in.</p>
+     * <p>Retrieves the configuration information of the code generation plugin.</p>
      * 
      * @param request the request parameters of UpdateAppCode  UpdateAppCodeRequest
      * @return UpdateAppCodeResponse
@@ -3590,7 +3620,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the configuration information of the code generation plugin.</p>
+     * <p>Retrieves the configuration information of the code generation plug-in.</p>
      * 
      * @param request the request parameters of UpdateAppPlugin  UpdateAppPluginRequest
      * @return UpdateAppPluginResponse
@@ -3692,7 +3722,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the configuration information of the code generation plug-in.</p>
+     * <p>Retrieves the configuration information of the code generation plugin.</p>
      * 
      * @param request the request parameters of UpdateRbacOrgUnit  UpdateRbacOrgUnitRequest
      * @return UpdateRbacOrgUnitResponse
@@ -3713,7 +3743,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the configuration information of the code generation plugin.</p>
+     * <p>Retrieves the configuration information of the code generation plug-in.</p>
      * 
      * @param request the request parameters of UpdateRbacRole  UpdateRbacRoleRequest
      * @return UpdateRbacRoleResponse
@@ -3734,7 +3764,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the configuration information of the code generation plugin.</p>
+     * <p>Retrieves the configuration information of the code generation plug-in.</p>
      * 
      * @param request the request parameters of UploadAppPluginVersion  UploadAppPluginVersionRequest
      * @return UploadAppPluginVersionResponse

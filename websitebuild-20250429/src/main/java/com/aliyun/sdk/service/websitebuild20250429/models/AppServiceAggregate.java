@@ -71,6 +71,9 @@ public class AppServiceAggregate extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
+    @com.aliyun.core.annotation.NameInMap("Visible")
+    private Boolean visible;
+
     private AppServiceAggregate(Builder builder) {
         this.bizId = builder.bizId;
         this.deleted = builder.deleted;
@@ -90,6 +93,7 @@ public class AppServiceAggregate extends TeaModel {
         this.startTime = builder.startTime;
         this.status = builder.status;
         this.userId = builder.userId;
+        this.visible = builder.visible;
     }
 
     public static Builder builder() {
@@ -230,6 +234,13 @@ public class AppServiceAggregate extends TeaModel {
         return this.userId;
     }
 
+    /**
+     * @return visible
+     */
+    public Boolean getVisible() {
+        return this.visible;
+    }
+
     public static final class Builder {
         private String bizId; 
         private Integer deleted; 
@@ -249,6 +260,7 @@ public class AppServiceAggregate extends TeaModel {
         private String startTime; 
         private String status; 
         private String userId; 
+        private Boolean visible; 
 
         private Builder() {
         } 
@@ -272,6 +284,7 @@ public class AppServiceAggregate extends TeaModel {
             this.startTime = model.startTime;
             this.status = model.status;
             this.userId = model.userId;
+            this.visible = model.visible;
         } 
 
         /**
@@ -297,7 +310,7 @@ public class AppServiceAggregate extends TeaModel {
         }
 
         /**
-         * <p>The end time. It is in ISO 8601 format and uses the UTC time zone (Z).</p>
+         * <p>The end time. The value is in ISO 8601 format and the time zone is UTC (Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2025-07-18T02:23:00Z</p>
@@ -341,7 +354,7 @@ public class AppServiceAggregate extends TeaModel {
         }
 
         /**
-         * <p>The operation address of the application.</p>
+         * <p>The application operation address.</p>
          */
         public Builder group(AppServiceGroup group) {
             this.group = group;
@@ -379,7 +392,7 @@ public class AppServiceAggregate extends TeaModel {
         }
 
         /**
-         * <p>Uniquely identifies an operation.</p>
+         * <p>The unique identifier for an operation.</p>
          */
         public Builder operationAddress(AppOperationAddress operationAddress) {
             this.operationAddress = operationAddress;
@@ -387,7 +400,7 @@ public class AppServiceAggregate extends TeaModel {
         }
 
         /**
-         * <p>The configuration information of the application service.</p>
+         * <p>The application service configuration information.</p>
          */
         public Builder profile(AppServiceProfile profile) {
             this.profile = profile;
@@ -406,7 +419,10 @@ public class AppServiceAggregate extends TeaModel {
         }
 
         /**
-         * <p>The description of the service type.</p>
+         * <p>The service type description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Website design service</p>
          */
         public Builder serviceTypeText(String serviceTypeText) {
             this.serviceTypeText = serviceTypeText;
@@ -425,7 +441,7 @@ public class AppServiceAggregate extends TeaModel {
         }
 
         /**
-         * <p>The start time. It is a UNIX timestamp in milliseconds.</p>
+         * <p>The start time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1754447102000</p>
@@ -454,6 +470,17 @@ public class AppServiceAggregate extends TeaModel {
          */
         public Builder userId(String userId) {
             this.userId = userId;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether the item is visible.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        public Builder visible(Boolean visible) {
+            this.visible = visible;
             return this;
         }
 

@@ -178,7 +178,7 @@ public class ListRbacRoleHierarchyRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return per query.</p>
+         * <p>The maximum number of entries to return in each query.</p>
          * <p>Valid values: 10 to 100. Default value: 20.</p>
          * 
          * <strong>example:</strong>
@@ -215,7 +215,7 @@ public class ListRbacRoleHierarchyRequest extends Request {
         }
 
         /**
-         * <p>The sort order. Valid values: ASC and DESC.</p>
+         * <p>The sort order. Valid values: ASC, DESC.</p>
          * 
          * <strong>example:</strong>
          * <p>DOWNGRADE</p>

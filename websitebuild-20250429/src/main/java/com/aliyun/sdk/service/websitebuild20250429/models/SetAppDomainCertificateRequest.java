@@ -176,7 +176,7 @@ public class SetAppDomainCertificateRequest extends Request {
         }
 
         /**
-         * <p>The certificate type. Valid values: default free certificate and customer-owned certificate.</p>
+         * <p>The certificate type. Valid values: default free certificate, customer-owned certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>Server</p>

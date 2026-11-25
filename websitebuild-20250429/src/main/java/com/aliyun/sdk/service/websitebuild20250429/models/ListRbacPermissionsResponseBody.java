@@ -210,7 +210,7 @@ public class ListRbacPermissionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The detailed reason why access is denied.</p>
+         * <p>The detailed reason for access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -221,7 +221,7 @@ public class ListRbacPermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether retries are allowed.</p>
+         * <p>Indicates whether retries are allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -232,7 +232,7 @@ public class ListRbacPermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the app.</p>
+         * <p>The application name.</p>
          * 
          * <strong>example:</strong>
          * <p>spring-cloud-b</p>
@@ -273,7 +273,7 @@ public class ListRbacPermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries to return in each query.</p>
+         * <p>The number of results returned per query.</p>
          * <p>Valid values: 10 to 100. Default value: 20.</p>
          * 
          * <strong>example:</strong>
@@ -293,7 +293,7 @@ public class ListRbacPermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token that is used to start the next query. This parameter is empty if no next query exists.</p>
+         * <p>The token used to start the next query. This parameter is empty if no next query exists.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</p>
@@ -776,7 +776,7 @@ public class ListRbacPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the next feature.</p>
+             * <p>The next feature ID.</p>
              */
             public Builder next(Next next) {
                 this.next = next;
@@ -817,7 +817,7 @@ public class ListRbacPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>In addition to the pagination limit, the server processes a maximum of the latest 1,000 records for the current query. If the number of results exceeds 1,000, <strong>ResultLimit</strong> is <strong>true</strong>. In this case, narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
+             * <p>In addition to the pagination limit, the server processes a maximum of the latest 1,000 records for the current query. If the number of results exceeds 1,000, <strong>ResultLimit</strong> is set to <strong>true</strong>. In this case, narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is set to <strong>false</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>False</p>

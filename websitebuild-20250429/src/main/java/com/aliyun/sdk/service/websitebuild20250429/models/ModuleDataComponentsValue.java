@@ -106,7 +106,7 @@ public class ModuleDataComponentsValue extends TeaModel {
         } 
 
         /**
-         * <p>Component unique code (internal system identifier)</p>
+         * <p>The unique component code (internal system identifier).</p>
          * 
          * <strong>example:</strong>
          * <p>placeholder</p>
@@ -117,7 +117,7 @@ public class ModuleDataComponentsValue extends TeaModel {
         }
 
         /**
-         * <p>Component display name (user-visible name)</p>
+         * <p>The display name of the component (user-visible name).</p>
          * 
          * <strong>example:</strong>
          * <p>placeholder</p>
@@ -128,7 +128,7 @@ public class ModuleDataComponentsValue extends TeaModel {
         }
 
         /**
-         * <p>Component instance property configuration</p>
+         * <p>The instance property configuration of the component.</p>
          */
         public Builder instanceProperty(java.util.List<InstanceProperty> instanceProperty) {
             this.instanceProperty = instanceProperty;
@@ -136,7 +136,10 @@ public class ModuleDataComponentsValue extends TeaModel {
         }
 
         /**
-         * <p>Component instance property configuration</p>
+         * <p>The instance property configuration of the component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;deploy_area&quot;:{&quot;Code&quot;:&quot;deploy_area&quot;,&quot;Name&quot;:&quot;Deployment region&quot;,&quot;Value&quot;:&quot;HongKong&quot;,&quot;Values&quot;:[{&quot;Value&quot;:&quot;HongKong&quot;,&quot;Name&quot;:&quot;China (Hong Kong)&quot;}]}}</p>
          */
         public Builder properties(java.util.Map<String, ModuleDataComponentsValuePropertiesValue> properties) {
             this.properties = properties;
@@ -144,10 +147,10 @@ public class ModuleDataComponentsValue extends TeaModel {
         }
 
         /**
-         * <p>Module property status</p>
+         * <p>The module property status.</p>
          * 
          * <strong>example:</strong>
-         * <p>placeholder</p>
+         * <p>1</p>
          */
         public Builder moduleAttrStatus(Integer moduleAttrStatus) {
             this.moduleAttrStatus = moduleAttrStatus;
@@ -226,7 +229,7 @@ public class ModuleDataComponentsValue extends TeaModel {
             } 
 
             /**
-             * <p>Property code (internal system identifier)</p>
+             * <p>The property code (internal system identifier).</p>
              * 
              * <strong>example:</strong>
              * <p>placeholder</p>
@@ -237,7 +240,7 @@ public class ModuleDataComponentsValue extends TeaModel {
             }
 
             /**
-             * <p>Property value code (internal system value)</p>
+             * <p>The property value code (internal system value).</p>
              * 
              * <strong>example:</strong>
              * <p>placeholder</p>
@@ -248,7 +251,7 @@ public class ModuleDataComponentsValue extends TeaModel {
             }
 
             /**
-             * <p>Property display name (user-visible name)</p>
+             * <p>The display name of the property (user-visible name).</p>
              * 
              * <strong>example:</strong>
              * <p>placeholder</p>
@@ -344,7 +347,7 @@ public class ModuleDataComponentsValue extends TeaModel {
             } 
 
             /**
-             * <p>Property code (internal system identifier)</p>
+             * <p>The property code (internal system identifier).</p>
              * 
              * <strong>example:</strong>
              * <p>placeholder</p>
@@ -355,7 +358,7 @@ public class ModuleDataComponentsValue extends TeaModel {
             }
 
             /**
-             * <p>Property display name (user-visible name)</p>
+             * <p>The display name of the property (user-visible name).</p>
              * 
              * <strong>example:</strong>
              * <p>placeholder</p>
@@ -366,7 +369,7 @@ public class ModuleDataComponentsValue extends TeaModel {
             }
 
             /**
-             * <p>Property value code (internal system value)</p>
+             * <p>The property value code (internal system value).</p>
              * 
              * <strong>example:</strong>
              * <p>placeholder</p>
@@ -377,7 +380,7 @@ public class ModuleDataComponentsValue extends TeaModel {
             }
 
             /**
-             * <p>Module property value list</p>
+             * <p>The list of module property values.</p>
              */
             public Builder values(java.util.List<Values> values) {
                 this.values = values;

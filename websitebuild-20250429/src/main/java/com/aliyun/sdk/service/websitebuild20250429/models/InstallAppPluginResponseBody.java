@@ -184,7 +184,7 @@ public class InstallAppPluginResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The detailed reason for access denial.</p>
+         * <p>The detailed reasons for the access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -195,7 +195,7 @@ public class InstallAppPluginResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether retries are allowed.</p>
+         * <p>Indicates whether a retry is allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -228,7 +228,7 @@ public class InstallAppPluginResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic error message, which is used to replace <code>%s</code> in the error message returned in the <strong>ErrMessage</strong> response parameter.</p>
+         * <p>The dynamic error message, which is used to replace the <code>%s</code> in the error message returned in the <strong>ErrMessage</strong> response parameter.</p>
          * <blockquote>
          * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the <strong>DtsJobId</strong> request parameter is invalid.</p>
          * </blockquote>

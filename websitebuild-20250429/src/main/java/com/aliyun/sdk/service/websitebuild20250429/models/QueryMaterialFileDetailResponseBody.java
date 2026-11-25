@@ -223,7 +223,7 @@ public class QueryMaterialFileDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the permission check failure.</p>
+         * <p>The details of the failed permission check.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -286,7 +286,7 @@ public class QueryMaterialFileDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code. If the request is successful, the ErrorCode parameter is not returned. If the request fails, the ErrorCode parameter is returned. For more information, see the error codes in this topic.</p>
+         * <p>The error code. If the request is successful, this parameter is not returned. If the request fails, this parameter is returned. For more information, see the error codes in this topic.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -311,7 +311,7 @@ public class QueryMaterialFileDetailResponseBody extends TeaModel {
          * <p>The response data.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;TotalPageNum\&quot;: 1, \&quot;ResultLimit\&quot;: False, \&quot;CurrentPageNum\&quot;: 0, \&quot;PageSize\&quot;: 0, \&quot;TotalItemNum\&quot;: 0}</p>
+         * <p>{&quot;TotalPageNum&quot;: 1, &quot;ResultLimit&quot;: False, &quot;CurrentPageNum&quot;: 0, &quot;PageSize&quot;: 0, &quot;TotalItemNum&quot;: 0}</p>
          */
         public Builder module(AppMaterialFile module) {
             this.module = module;

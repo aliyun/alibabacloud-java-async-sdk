@@ -96,7 +96,7 @@ public class DeleteAppInstanceFileRequest extends Request {
         }
 
         /**
-         * <p>The session ID.</p>
+         * <p>The conversation ID.</p>
          * 
          * <strong>example:</strong>
          * <p>81bc5a34-1d8d-4ef7-a208-7401c51b054b</p>

@@ -210,7 +210,7 @@ public class ListAppDomainRedirectRecordsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The detailed reasons for the access denial.</p>
+         * <p>The detailed cause of the access denied error.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -254,7 +254,7 @@ public class ListAppDomainRedirectRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic message. This parameter is not in use and can be ignored.</p>
+         * <p>The dynamic message. This field is currently unused and can be ignored.</p>
          * 
          * <strong>example:</strong>
          * <p>SYSTEM_ERROR</p>
@@ -273,8 +273,7 @@ public class ListAppDomainRedirectRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of results to return per query.</p>
-         * <p>Valid values: 10 to 100. Default value: 20.</p>
+         * <p>The maximum number of results to return per query. Valid values: 10 to 100. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -285,7 +284,7 @@ public class ListAppDomainRedirectRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response object.</p>
+         * <p>The returned object.</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -293,7 +292,7 @@ public class ListAppDomainRedirectRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token used to start the next query. This parameter is empty if no next query is available.</p>
+         * <p>The token used to start the next query. If no more results are available, this parameter is empty.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</p>
@@ -326,10 +325,10 @@ public class ListAppDomainRedirectRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message.</p>
+         * <p>The exception message.</p>
          * 
          * <strong>example:</strong>
-         * <p>System error</p>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -441,7 +440,7 @@ public class ListAppDomainRedirectRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The target domain name.</p>
+             * <p>The destination domain name.</p>
              * 
              * <strong>example:</strong>
              * <p>aliyuncs.com</p>
@@ -546,7 +545,7 @@ public class ListAppDomainRedirectRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The target domain name.</p>
+             * <p>The destination domain name.</p>
              * 
              * <strong>example:</strong>
              * <p>aliyuncs.com</p>
@@ -742,7 +741,7 @@ public class ListAppDomainRedirectRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page size.</p>
+             * <p>The number of entries per page.</p>
              * 
              * <strong>example:</strong>
              * <p>50</p>
@@ -761,7 +760,7 @@ public class ListAppDomainRedirectRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>In addition to the pagination limit, the server processes a maximum of the latest 1,000 records for the current query. If the number of results exceeds 1,000, <strong>ResultLimit</strong> is set to <strong>true</strong>. In this case, narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is set to <strong>false</strong>.</p>
+             * <p>In addition to the pagination limit, the server processes a maximum of the latest 1,000 records for the current query. If the number of results exceeds 1,000, <strong>ResultLimit</strong> is <strong>true</strong>. In this case, narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
              */
             public Builder resultLimit(Boolean resultLimit) {
                 this.resultLimit = resultLimit;

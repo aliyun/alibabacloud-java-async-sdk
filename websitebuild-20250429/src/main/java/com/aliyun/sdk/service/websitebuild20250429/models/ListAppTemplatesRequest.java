@@ -275,7 +275,7 @@ public class ListAppTemplatesRequest extends Request {
          * <p>The search keyword.</p>
          * 
          * <strong>example:</strong>
-         * <p>${\&quot;wget JiexJPWT.popscan.xaliyun.com\&quot;}</p>
+         * <p>${&quot;wget JiexJPWT.popscan.xaliyun.com&quot;}</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);

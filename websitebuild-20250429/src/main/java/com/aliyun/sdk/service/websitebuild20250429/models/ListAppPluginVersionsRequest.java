@@ -110,7 +110,7 @@ public class ListAppPluginVersionsRequest extends Request {
         }
 
         /**
-         * <p>The page number. Valid values: integers greater than 0. Default value: 1.</p>
+         * <p>The current page number. Valid values: integers greater than 0. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

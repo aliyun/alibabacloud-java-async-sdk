@@ -165,7 +165,7 @@ public class EditPluginConfigRequest extends Request {
          * <p>The plug-in description.</p>
          * 
          * <strong>example:</strong>
-         * <p>根据关键字查询相关的Github Repositories</p>
+         * <p>Query relevant GitHub repositories based on keywords</p>
          */
         public Builder pluginDesc(String pluginDesc) {
             this.putQueryParameter("PluginDesc", pluginDesc);

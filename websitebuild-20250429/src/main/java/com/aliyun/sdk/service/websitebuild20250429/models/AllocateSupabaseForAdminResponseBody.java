@@ -184,7 +184,7 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the permission check failure.</p>
+         * <p>The details of the access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -206,7 +206,7 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the application.</p>
+         * <p>The application name.</p>
          * 
          * <strong>example:</strong>
          * <p>or</p>
@@ -722,10 +722,10 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The extra information.</p>
+             * <p>The additional information.</p>
              * 
              * <strong>example:</strong>
-             * <p>{\&quot;appId\&quot;:\&quot;APP_NTJAK8P11SNZDJ3M6BWC\&quot;}</p>
+             * <p>{&quot;appId&quot;:&quot;APP_NTJAK8P11SNZDJ3M6BWC&quot;}</p>
              */
             public Builder extra(String extra) {
                 this.extra = extra;
@@ -755,10 +755,10 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The deletion flag.</p>
+             * <p>Indicates whether the instance is deleted.</p>
              * 
              * <strong>example:</strong>
-             * <p>false</p>
+             * <p>0</p>
              */
             public Builder isDeleted(Integer isDeleted) {
                 this.isDeleted = isDeleted;
@@ -777,7 +777,7 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The read-only business schema name parsed by the Builder trusted binding. This name cannot be used as input for tenant switching.</p>
+             * <p>The read-only business schema name parsed by the Builder trusted binding. This parameter cannot be used as the input for switching tenants.</p>
              * 
              * <strong>example:</strong>
              * <p>tenant_00000000-0000-4000-8000-000000000001_schema</p>
@@ -799,10 +799,10 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status. Valid values: 0 (Paused) and 1 (Running).</p>
+             * <p>The instance status. Valid values: 0: Paused. 1: Running.</p>
              * 
              * <strong>example:</strong>
-             * <p>NORMAL</p>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -887,7 +887,7 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public URL of Supabase.</p>
+             * <p>The public URL of the Supabase instance.</p>
              * 
              * <strong>example:</strong>
              * <p>111</p>
@@ -909,7 +909,7 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The read-only tenant mode: schema indicates the legacy Builder pool, and db or agenticdb indicates the new platform. The history record can be empty.</p>
+             * <p>The read-only tenant mode. A value of schema indicates the legacy Builder pool, and a value of db or agenticdb indicates the new platform. Historical records can be empty.</p>
              * 
              * <strong>example:</strong>
              * <p>schema</p>

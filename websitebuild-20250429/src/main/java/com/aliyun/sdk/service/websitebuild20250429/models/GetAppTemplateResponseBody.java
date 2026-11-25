@@ -836,7 +836,7 @@ public class GetAppTemplateResponseBody extends TeaModel {
              * </blockquote>
              * 
              * <strong>example:</strong>
-             * <p>{\&quot;operations\&quot;:[{\&quot;operator\&quot;:\&quot;replace\&quot;,\&quot;oldMetaName\&quot;:\&quot;character2_add\&quot;,\&quot;newMetaType\&quot;:\&quot;varchar(2)\&quot;}]}</p>
+             * <p>{&quot;operations&quot;:[{&quot;operator&quot;:&quot;replace&quot;,&quot;oldMetaName&quot;:&quot;character2_add&quot;,&quot;newMetaType&quot;:&quot;varchar(2)&quot;}]}</p>
              */
             public Builder metadata(String metadata) {
                 this.metadata = metadata;

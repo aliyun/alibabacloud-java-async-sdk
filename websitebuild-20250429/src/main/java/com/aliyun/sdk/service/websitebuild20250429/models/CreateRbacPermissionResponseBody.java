@@ -195,7 +195,7 @@ public class CreateRbacPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether a retry is allowed.</p>
+         * <p>Indicates whether retry is allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -206,7 +206,7 @@ public class CreateRbacPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The application name.</p>
+         * <p>The app name.</p>
          * 
          * <strong>example:</strong>
          * <p>spring-cloud-b</p>

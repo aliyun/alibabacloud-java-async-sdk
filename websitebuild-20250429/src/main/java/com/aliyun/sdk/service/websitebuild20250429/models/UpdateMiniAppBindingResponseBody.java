@@ -98,10 +98,30 @@ public class UpdateMiniAppBindingResponseBody extends TeaModel {
      * <p>UpdateMiniAppBindingResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("PrivacyDraftId")
+        private String privacyDraftId;
+
+        @com.aliyun.core.annotation.NameInMap("PrivacyRevision")
+        private String privacyRevision;
+
+        @com.aliyun.core.annotation.NameInMap("ReadbackStatus")
+        private String readbackStatus;
+
+        @com.aliyun.core.annotation.NameInMap("Revision")
+        private Long revision;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
         @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
         private Data(Builder builder) {
+            this.privacyDraftId = builder.privacyDraftId;
+            this.privacyRevision = builder.privacyRevision;
+            this.readbackStatus = builder.readbackStatus;
+            this.revision = builder.revision;
+            this.status = builder.status;
             this.success = builder.success;
         }
 
@@ -114,6 +134,41 @@ public class UpdateMiniAppBindingResponseBody extends TeaModel {
         }
 
         /**
+         * @return privacyDraftId
+         */
+        public String getPrivacyDraftId() {
+            return this.privacyDraftId;
+        }
+
+        /**
+         * @return privacyRevision
+         */
+        public String getPrivacyRevision() {
+            return this.privacyRevision;
+        }
+
+        /**
+         * @return readbackStatus
+         */
+        public String getReadbackStatus() {
+            return this.readbackStatus;
+        }
+
+        /**
+         * @return revision
+         */
+        public Long getRevision() {
+            return this.revision;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
          * @return success
          */
         public Boolean getSuccess() {
@@ -121,14 +176,64 @@ public class UpdateMiniAppBindingResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String privacyDraftId; 
+            private String privacyRevision; 
+            private String readbackStatus; 
+            private Long revision; 
+            private String status; 
             private Boolean success; 
 
             private Builder() {
             } 
 
             private Builder(Data model) {
+                this.privacyDraftId = model.privacyDraftId;
+                this.privacyRevision = model.privacyRevision;
+                this.readbackStatus = model.readbackStatus;
+                this.revision = model.revision;
+                this.status = model.status;
                 this.success = model.success;
             } 
+
+            /**
+             * PrivacyDraftId.
+             */
+            public Builder privacyDraftId(String privacyDraftId) {
+                this.privacyDraftId = privacyDraftId;
+                return this;
+            }
+
+            /**
+             * PrivacyRevision.
+             */
+            public Builder privacyRevision(String privacyRevision) {
+                this.privacyRevision = privacyRevision;
+                return this;
+            }
+
+            /**
+             * ReadbackStatus.
+             */
+            public Builder readbackStatus(String readbackStatus) {
+                this.readbackStatus = readbackStatus;
+                return this;
+            }
+
+            /**
+             * Revision.
+             */
+            public Builder revision(Long revision) {
+                this.revision = revision;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
 
             /**
              * <p>Indicates whether the request is successful.</p>

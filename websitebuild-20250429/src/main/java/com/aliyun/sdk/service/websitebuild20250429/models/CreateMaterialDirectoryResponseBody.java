@@ -210,7 +210,7 @@ public class CreateMaterialDirectoryResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The detailed reason why access is denied.</p>
+         * <p>The detailed reason for the access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -221,7 +221,7 @@ public class CreateMaterialDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether a retry is allowed.</p>
+         * <p>Indicates whether retries are allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -232,7 +232,7 @@ public class CreateMaterialDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The application name, used to query applications with this name.</p>
+         * <p>The name of the application to query.</p>
          * 
          * <strong>example:</strong>
          * <p>ish-intelligence-store-platform-admin-web</p>
@@ -273,7 +273,7 @@ public class CreateMaterialDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code. Value description: If the request succeeds, the ErrorCode field is not returned. If the request fails, the ErrorCode field is returned. For more information, see the error code list in this topic.</p>
+         * <p>The error code. If the request is successful, this parameter is not returned. If the request fails, this parameter is returned. For more information, see the error code list in this topic.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -392,7 +392,7 @@ public class CreateMaterialDirectoryResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The folder ID.</p>
+             * <p>The ID of the folder.</p>
              * 
              * <strong>example:</strong>
              * <p>68157a0a-769a-4364-bbdc-a0e2cf3d5ad</p>

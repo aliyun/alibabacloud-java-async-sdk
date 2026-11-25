@@ -182,7 +182,7 @@ public class GetMiniAppBindingForAdminResponseBody extends TeaModel {
              * <p>The mini program ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxxx</p>
+             * <p>wx1111a1a111a1a111</p>
              */
             public Builder platformAppid(String platformAppid) {
                 this.platformAppid = platformAppid;

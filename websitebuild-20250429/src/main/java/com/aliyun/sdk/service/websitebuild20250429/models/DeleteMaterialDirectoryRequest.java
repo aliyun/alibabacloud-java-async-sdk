@@ -108,7 +108,7 @@ public class DeleteMaterialDirectoryRequest extends Request {
         }
 
         /**
-         * <p>The ID of the folder.</p>
+         * <p>The directory ID.</p>
          * 
          * <strong>example:</strong>
          * <p>68157a0a-769a-4364-bbdc-a0e2cf3d5ad</p>

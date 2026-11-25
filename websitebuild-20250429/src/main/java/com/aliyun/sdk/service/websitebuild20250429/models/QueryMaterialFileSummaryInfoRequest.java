@@ -234,7 +234,7 @@ public class QueryMaterialFileSummaryInfoRequest extends Request {
         }
 
         /**
-         * <p>The field used for sorting.</p>
+         * <p>The sort field.</p>
          * 
          * <strong>example:</strong>
          * <p>CreationTime</p>
@@ -246,7 +246,7 @@ public class QueryMaterialFileSummaryInfoRequest extends Request {
         }
 
         /**
-         * <p>The sort order. Valid values: ASC, DESC.</p>
+         * <p>The sort order. Valid values: ASC and DESC.</p>
          * 
          * <strong>example:</strong>
          * <p>BUY</p>

@@ -114,7 +114,7 @@ public class GetMiniAppBindingRequest extends Request {
          * <p>The list of extended information keys.</p>
          * 
          * <strong>example:</strong>
-         * <p>SERVER_DOMAIN</p>
+         * <p>[&quot;SERVER_DOMAIN&quot;]</p>
          */
         public Builder settingKeys(java.util.List<String> settingKeys) {
             String settingKeysShrink = shrink(settingKeys, "SettingKeys", "json");

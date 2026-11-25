@@ -267,7 +267,7 @@ public class AppMaterialFile extends TeaModel {
         }
 
         /**
-         * <p>The folder ID.</p>
+         * <p>The directory ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ddddwww</p>
@@ -314,7 +314,7 @@ public class AppMaterialFile extends TeaModel {
          * <p>The file name.</p>
          * 
          * <strong>example:</strong>
-         * <p>文件名</p>
+         * <p>File name</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -333,7 +333,7 @@ public class AppMaterialFile extends TeaModel {
         }
 
         /**
-         * <p>The storage size.</p>
+         * <p>The storage space size.</p>
          * 
          * <strong>example:</strong>
          * <p>23M</p>
@@ -344,7 +344,7 @@ public class AppMaterialFile extends TeaModel {
         }
 
         /**
-         * <p>The file name extension.</p>
+         * <p>The file extension.</p>
          * 
          * <strong>example:</strong>
          * <p>png</p>

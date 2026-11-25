@@ -184,7 +184,7 @@ public class DeleteMaterialTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the permission verification failure.</p>
+         * <p>The details of the permission check failure.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -195,7 +195,7 @@ public class DeleteMaterialTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether a retry is allowed.</p>
+         * <p>Specifies whether retries are allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -206,7 +206,7 @@ public class DeleteMaterialTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The application name. The application with this name is queried.</p>
+         * <p>The name of the application. This name is used to query the application.</p>
          * 
          * <strong>example:</strong>
          * <p>dewuApp</p>
@@ -217,7 +217,7 @@ public class DeleteMaterialTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic code. This parameter is not in use. Ignore this parameter.</p>
+         * <p>The dynamic code. This parameter is not used and can be ignored.</p>
          * 
          * <strong>example:</strong>
          * <p>ERROR-oo1</p>
@@ -247,7 +247,7 @@ public class DeleteMaterialTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the deletion was successful.</p>
+         * <p>Specifies whether the deletion was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -280,10 +280,10 @@ public class DeleteMaterialTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message.</p>
+         * <p>The exception message.</p>
          * 
          * <strong>example:</strong>
-         * <p>系统异常</p>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;

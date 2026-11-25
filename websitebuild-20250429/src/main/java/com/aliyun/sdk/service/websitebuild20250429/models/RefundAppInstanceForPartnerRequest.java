@@ -136,7 +136,7 @@ public class RefundAppInstanceForPartnerRequest extends Request {
         }
 
         /**
-         * <p>The idempotence token.</p>
+         * <p>The idempotency token.</p>
          * 
          * <strong>example:</strong>
          * <p>c6f7e8b9-a0b1-4c2d-9e0f-1a2b3c4d5e6f</p>
@@ -151,7 +151,7 @@ public class RefundAppInstanceForPartnerRequest extends Request {
          * <p>The reason for the refund.</p>
          * 
          * <strong>example:</strong>
-         * <p>渠道商退款</p>
+         * <p>Channel partner refund</p>
          */
         public Builder refundReason(String refundReason) {
             this.putQueryParameter("RefundReason", refundReason);

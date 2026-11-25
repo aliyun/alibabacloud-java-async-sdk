@@ -234,7 +234,7 @@ public class GetAIStaffPreviewUrlResponseBody extends TeaModel {
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>DtsJobId</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -348,6 +348,9 @@ public class GetAIStaffPreviewUrlResponseBody extends TeaModel {
 
             /**
              * <p>The preview URL information, including fields such as previewUrl and sessionId.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder urlMap(java.util.Map<String, String> urlMap) {
                 this.urlMap = urlMap;

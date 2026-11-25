@@ -96,7 +96,7 @@ public class UpdateAppCodeRequest extends Request {
         }
 
         /**
-         * <p>The edit operation content in JSON format.</p>
+         * <p>The content of the edit operation in JSON format.</p>
          * 
          * <strong>example:</strong>
          * <p>verify_6554d8cc0de584306d16506dd119cbfc</p>
@@ -108,7 +108,7 @@ public class UpdateAppCodeRequest extends Request {
         }
 
         /**
-         * <p>The session ID.</p>
+         * <p>The conversation ID.</p>
          * 
          * <strong>example:</strong>
          * <p>81bc5a34-1d8d-4ef7-a208-7401c51b054b</p>

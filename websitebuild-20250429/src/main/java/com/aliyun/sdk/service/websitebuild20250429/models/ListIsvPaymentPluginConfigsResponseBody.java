@@ -538,6 +538,9 @@ public class ListIsvPaymentPluginConfigsResponseBody extends TeaModel {
 
             /**
              * <p>The extended information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder extend(java.util.Map<String, String> extend) {
                 this.extend = extend;

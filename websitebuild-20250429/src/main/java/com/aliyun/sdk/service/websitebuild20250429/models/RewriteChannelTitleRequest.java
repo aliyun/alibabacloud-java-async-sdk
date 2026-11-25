@@ -110,10 +110,10 @@ public class RewriteChannelTitleRequest extends Request {
         }
 
         /**
-         * <p>The user personalization requirement in free text. This parameter is optional.</p>
+         * <p>The custom requirement specified by the user. This parameter is optional and accepts free text.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>Highlight the main features and keep the title concise and clear</p>
          */
         public Builder userRequirement(String userRequirement) {
             this.putQueryParameter("UserRequirement", userRequirement);

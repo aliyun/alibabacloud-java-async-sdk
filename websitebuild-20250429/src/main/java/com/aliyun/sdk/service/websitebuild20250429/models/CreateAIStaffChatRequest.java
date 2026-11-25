@@ -127,7 +127,7 @@ public class CreateAIStaffChatRequest extends Request {
         }
 
         /**
-         * <p>The chat ID. Pass in this parameter to resume a conversation after an interruption.</p>
+         * <p>The chat ID. Pass this parameter when resuming from an interruption.</p>
          * 
          * <strong>example:</strong>
          * <p>3b465fe1-6f06-4899-af9f-d43d9338df25</p>
@@ -160,7 +160,10 @@ public class CreateAIStaffChatRequest extends Request {
         }
 
         /**
-         * <p>The additional information for the conversation.</p>
+         * <p>The additional conversation information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder metaData(java.util.Map<String, String> metaData) {
             this.putBodyParameter("MetaData", metaData);
@@ -270,7 +273,7 @@ public class CreateAIStaffChatRequest extends Request {
              * <p>The message content.</p>
              * 
              * <strong>example:</strong>
-             * <p>{\&quot;CodeRevision\&quot;: \&quot;1750040991876284109\&quot;}</p>
+             * <p>{&quot;CodeRevision&quot;: &quot;1750040991876284109&quot;}</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -289,7 +292,10 @@ public class CreateAIStaffChatRequest extends Request {
             }
 
             /**
-             * <p>The business extension metadata in Map format. The value must be a JSON string.</p>
+             * <p>The business extension metadata in map format. The value must be a JSON string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder metaData(java.util.Map<String, String> metaData) {
                 this.metaData = metaData;

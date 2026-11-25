@@ -184,7 +184,7 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The detailed reason why access is denied.</p>
+         * <p>The details of the access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -311,8 +311,26 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
      * <p>GetAppPublishStatusResponseBody</p>
      */
     public static class Module extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ArtifactDigest")
+        private String artifactDigest;
+
+        @com.aliyun.core.annotation.NameInMap("AuditId")
+        private String auditId;
+
+        @com.aliyun.core.annotation.NameInMap("BindingId")
+        private String bindingId;
+
         @com.aliyun.core.annotation.NameInMap("CanQuickRevert")
         private String canQuickRevert;
+
+        @com.aliyun.core.annotation.NameInMap("CandidateId")
+        private String candidateId;
+
+        @com.aliyun.core.annotation.NameInMap("CandidateStatus")
+        private String candidateStatus;
+
+        @com.aliyun.core.annotation.NameInMap("CommitHash")
+        private String commitHash;
 
         @com.aliyun.core.annotation.NameInMap("CurrentStep")
         private String currentStep;
@@ -350,6 +368,27 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Percent")
         private Integer percent;
 
+        @com.aliyun.core.annotation.NameInMap("PlatformAppid")
+        private String platformAppid;
+
+        @com.aliyun.core.annotation.NameInMap("PluginDeclarationHash")
+        private String pluginDeclarationHash;
+
+        @com.aliyun.core.annotation.NameInMap("PluginState")
+        private String pluginState;
+
+        @com.aliyun.core.annotation.NameInMap("PrivacyDraftId")
+        private String privacyDraftId;
+
+        @com.aliyun.core.annotation.NameInMap("PrivacyRevision")
+        private String privacyRevision;
+
+        @com.aliyun.core.annotation.NameInMap("PublishDiagnostics")
+        private String publishDiagnostics;
+
+        @com.aliyun.core.annotation.NameInMap("PublishEnv")
+        private String publishEnv;
+
         @com.aliyun.core.annotation.NameInMap("PublishNumber")
         private String publishNumber;
 
@@ -358,6 +397,9 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("PublishTime")
         private String publishTime;
+
+        @com.aliyun.core.annotation.NameInMap("ReadbackStatus")
+        private String readbackStatus;
 
         @com.aliyun.core.annotation.NameInMap("SiteId")
         private String siteId;
@@ -371,8 +413,32 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Subchannel")
         private String subchannel;
 
+        @com.aliyun.core.annotation.NameInMap("SubmitIntentStatus")
+        private String submitIntentStatus;
+
+        @com.aliyun.core.annotation.NameInMap("UpdatedAt")
+        private Long updatedAt;
+
+        @com.aliyun.core.annotation.NameInMap("UploadAttemptId")
+        private String uploadAttemptId;
+
+        @com.aliyun.core.annotation.NameInMap("UploadLeaseState")
+        private String uploadLeaseState;
+
+        @com.aliyun.core.annotation.NameInMap("UploadSequence")
+        private Long uploadSequence;
+
+        @com.aliyun.core.annotation.NameInMap("UploadTicketState")
+        private String uploadTicketState;
+
         private Module(Builder builder) {
+            this.artifactDigest = builder.artifactDigest;
+            this.auditId = builder.auditId;
+            this.bindingId = builder.bindingId;
             this.canQuickRevert = builder.canQuickRevert;
+            this.candidateId = builder.candidateId;
+            this.candidateStatus = builder.candidateStatus;
+            this.commitHash = builder.commitHash;
             this.currentStep = builder.currentStep;
             this.currentStepCode = builder.currentStepCode;
             this.deployChannel = builder.deployChannel;
@@ -385,13 +451,27 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
             this.orderType = builder.orderType;
             this.orderTypeCode = builder.orderTypeCode;
             this.percent = builder.percent;
+            this.platformAppid = builder.platformAppid;
+            this.pluginDeclarationHash = builder.pluginDeclarationHash;
+            this.pluginState = builder.pluginState;
+            this.privacyDraftId = builder.privacyDraftId;
+            this.privacyRevision = builder.privacyRevision;
+            this.publishDiagnostics = builder.publishDiagnostics;
+            this.publishEnv = builder.publishEnv;
             this.publishNumber = builder.publishNumber;
             this.publishOrderId = builder.publishOrderId;
             this.publishTime = builder.publishTime;
+            this.readbackStatus = builder.readbackStatus;
             this.siteId = builder.siteId;
             this.stepCodes = builder.stepCodes;
             this.steps = builder.steps;
             this.subchannel = builder.subchannel;
+            this.submitIntentStatus = builder.submitIntentStatus;
+            this.updatedAt = builder.updatedAt;
+            this.uploadAttemptId = builder.uploadAttemptId;
+            this.uploadLeaseState = builder.uploadLeaseState;
+            this.uploadSequence = builder.uploadSequence;
+            this.uploadTicketState = builder.uploadTicketState;
         }
 
         public static Builder builder() {
@@ -403,10 +483,52 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
         }
 
         /**
+         * @return artifactDigest
+         */
+        public String getArtifactDigest() {
+            return this.artifactDigest;
+        }
+
+        /**
+         * @return auditId
+         */
+        public String getAuditId() {
+            return this.auditId;
+        }
+
+        /**
+         * @return bindingId
+         */
+        public String getBindingId() {
+            return this.bindingId;
+        }
+
+        /**
          * @return canQuickRevert
          */
         public String getCanQuickRevert() {
             return this.canQuickRevert;
+        }
+
+        /**
+         * @return candidateId
+         */
+        public String getCandidateId() {
+            return this.candidateId;
+        }
+
+        /**
+         * @return candidateStatus
+         */
+        public String getCandidateStatus() {
+            return this.candidateStatus;
+        }
+
+        /**
+         * @return commitHash
+         */
+        public String getCommitHash() {
+            return this.commitHash;
         }
 
         /**
@@ -494,6 +616,55 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
         }
 
         /**
+         * @return platformAppid
+         */
+        public String getPlatformAppid() {
+            return this.platformAppid;
+        }
+
+        /**
+         * @return pluginDeclarationHash
+         */
+        public String getPluginDeclarationHash() {
+            return this.pluginDeclarationHash;
+        }
+
+        /**
+         * @return pluginState
+         */
+        public String getPluginState() {
+            return this.pluginState;
+        }
+
+        /**
+         * @return privacyDraftId
+         */
+        public String getPrivacyDraftId() {
+            return this.privacyDraftId;
+        }
+
+        /**
+         * @return privacyRevision
+         */
+        public String getPrivacyRevision() {
+            return this.privacyRevision;
+        }
+
+        /**
+         * @return publishDiagnostics
+         */
+        public String getPublishDiagnostics() {
+            return this.publishDiagnostics;
+        }
+
+        /**
+         * @return publishEnv
+         */
+        public String getPublishEnv() {
+            return this.publishEnv;
+        }
+
+        /**
          * @return publishNumber
          */
         public String getPublishNumber() {
@@ -512,6 +683,13 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
          */
         public String getPublishTime() {
             return this.publishTime;
+        }
+
+        /**
+         * @return readbackStatus
+         */
+        public String getReadbackStatus() {
+            return this.readbackStatus;
         }
 
         /**
@@ -542,8 +720,56 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
             return this.subchannel;
         }
 
+        /**
+         * @return submitIntentStatus
+         */
+        public String getSubmitIntentStatus() {
+            return this.submitIntentStatus;
+        }
+
+        /**
+         * @return updatedAt
+         */
+        public Long getUpdatedAt() {
+            return this.updatedAt;
+        }
+
+        /**
+         * @return uploadAttemptId
+         */
+        public String getUploadAttemptId() {
+            return this.uploadAttemptId;
+        }
+
+        /**
+         * @return uploadLeaseState
+         */
+        public String getUploadLeaseState() {
+            return this.uploadLeaseState;
+        }
+
+        /**
+         * @return uploadSequence
+         */
+        public Long getUploadSequence() {
+            return this.uploadSequence;
+        }
+
+        /**
+         * @return uploadTicketState
+         */
+        public String getUploadTicketState() {
+            return this.uploadTicketState;
+        }
+
         public static final class Builder {
+            private String artifactDigest; 
+            private String auditId; 
+            private String bindingId; 
             private String canQuickRevert; 
+            private String candidateId; 
+            private String candidateStatus; 
+            private String commitHash; 
             private String currentStep; 
             private String currentStepCode; 
             private String deployChannel; 
@@ -556,19 +782,39 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
             private String orderType; 
             private String orderTypeCode; 
             private Integer percent; 
+            private String platformAppid; 
+            private String pluginDeclarationHash; 
+            private String pluginState; 
+            private String privacyDraftId; 
+            private String privacyRevision; 
+            private String publishDiagnostics; 
+            private String publishEnv; 
             private String publishNumber; 
             private Long publishOrderId; 
             private String publishTime; 
+            private String readbackStatus; 
             private String siteId; 
             private java.util.List<String> stepCodes; 
             private java.util.List<String> steps; 
             private String subchannel; 
+            private String submitIntentStatus; 
+            private Long updatedAt; 
+            private String uploadAttemptId; 
+            private String uploadLeaseState; 
+            private Long uploadSequence; 
+            private String uploadTicketState; 
 
             private Builder() {
             } 
 
             private Builder(Module model) {
+                this.artifactDigest = model.artifactDigest;
+                this.auditId = model.auditId;
+                this.bindingId = model.bindingId;
                 this.canQuickRevert = model.canQuickRevert;
+                this.candidateId = model.candidateId;
+                this.candidateStatus = model.candidateStatus;
+                this.commitHash = model.commitHash;
                 this.currentStep = model.currentStep;
                 this.currentStepCode = model.currentStepCode;
                 this.deployChannel = model.deployChannel;
@@ -581,14 +827,52 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
                 this.orderType = model.orderType;
                 this.orderTypeCode = model.orderTypeCode;
                 this.percent = model.percent;
+                this.platformAppid = model.platformAppid;
+                this.pluginDeclarationHash = model.pluginDeclarationHash;
+                this.pluginState = model.pluginState;
+                this.privacyDraftId = model.privacyDraftId;
+                this.privacyRevision = model.privacyRevision;
+                this.publishDiagnostics = model.publishDiagnostics;
+                this.publishEnv = model.publishEnv;
                 this.publishNumber = model.publishNumber;
                 this.publishOrderId = model.publishOrderId;
                 this.publishTime = model.publishTime;
+                this.readbackStatus = model.readbackStatus;
                 this.siteId = model.siteId;
                 this.stepCodes = model.stepCodes;
                 this.steps = model.steps;
                 this.subchannel = model.subchannel;
+                this.submitIntentStatus = model.submitIntentStatus;
+                this.updatedAt = model.updatedAt;
+                this.uploadAttemptId = model.uploadAttemptId;
+                this.uploadLeaseState = model.uploadLeaseState;
+                this.uploadSequence = model.uploadSequence;
+                this.uploadTicketState = model.uploadTicketState;
             } 
+
+            /**
+             * ArtifactDigest.
+             */
+            public Builder artifactDigest(String artifactDigest) {
+                this.artifactDigest = artifactDigest;
+                return this;
+            }
+
+            /**
+             * AuditId.
+             */
+            public Builder auditId(String auditId) {
+                this.auditId = auditId;
+                return this;
+            }
+
+            /**
+             * BindingId.
+             */
+            public Builder bindingId(String bindingId) {
+                this.bindingId = bindingId;
+                return this;
+            }
 
             /**
              * <p>Indicates whether quick rollback is supported.</p>
@@ -602,7 +886,31 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The current step of the task.</p>
+             * CandidateId.
+             */
+            public Builder candidateId(String candidateId) {
+                this.candidateId = candidateId;
+                return this;
+            }
+
+            /**
+             * CandidateStatus.
+             */
+            public Builder candidateStatus(String candidateStatus) {
+                this.candidateStatus = candidateStatus;
+                return this;
+            }
+
+            /**
+             * CommitHash.
+             */
+            public Builder commitHash(String commitHash) {
+                this.commitHash = commitHash;
+                return this;
+            }
+
+            /**
+             * <p>The current step number of the task.</p>
              * 
              * <strong>example:</strong>
              * <p>PRE_CHECK</p>
@@ -678,8 +986,10 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
             /**
              * <p>Indicates whether the call is successful. Valid values:</p>
              * <ul>
-             * <li><code>true</code>: The call is successful.</li>
-             * <li><code>false</code>: The call failed.</li>
+             * <li><p><code>true</code>: The call is successful.</p>
+             * </li>
+             * <li><p><code>false</code>: The call fails.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -691,7 +1001,7 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The additional description.</p>
+             * <p>The additional information.</p>
              * 
              * <strong>example:</strong>
              * <p>common notify successfully.</p>
@@ -702,7 +1012,7 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sorting type, such as ASC or DESC.</p>
+             * <p>The sort order. Valid values: ASC and DESC.</p>
              * 
              * <strong>example:</strong>
              * <p>DESC</p>
@@ -735,6 +1045,62 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
             }
 
             /**
+             * PlatformAppid.
+             */
+            public Builder platformAppid(String platformAppid) {
+                this.platformAppid = platformAppid;
+                return this;
+            }
+
+            /**
+             * PluginDeclarationHash.
+             */
+            public Builder pluginDeclarationHash(String pluginDeclarationHash) {
+                this.pluginDeclarationHash = pluginDeclarationHash;
+                return this;
+            }
+
+            /**
+             * PluginState.
+             */
+            public Builder pluginState(String pluginState) {
+                this.pluginState = pluginState;
+                return this;
+            }
+
+            /**
+             * PrivacyDraftId.
+             */
+            public Builder privacyDraftId(String privacyDraftId) {
+                this.privacyDraftId = privacyDraftId;
+                return this;
+            }
+
+            /**
+             * PrivacyRevision.
+             */
+            public Builder privacyRevision(String privacyRevision) {
+                this.privacyRevision = privacyRevision;
+                return this;
+            }
+
+            /**
+             * PublishDiagnostics.
+             */
+            public Builder publishDiagnostics(String publishDiagnostics) {
+                this.publishDiagnostics = publishDiagnostics;
+                return this;
+            }
+
+            /**
+             * PublishEnv.
+             */
+            public Builder publishEnv(String publishEnv) {
+                this.publishEnv = publishEnv;
+                return this;
+            }
+
+            /**
              * <p>The publish number.</p>
              * 
              * <strong>example:</strong>
@@ -757,7 +1123,7 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scheduled publish time in the UTC format yyyy-MM-dd\&quot;T\&quot;HH:mm:ss.SSS\&quot;Z\&quot;.</p>
+             * <p>The scheduled publish time in UTC format yyyy-MM-dd&quot;T&quot;HH:mm:ss.SSS&quot;Z&quot;.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
              * 
              * <strong>example:</strong>
@@ -769,7 +1135,15 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The site ID. You can obtain the site ID by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
+             * ReadbackStatus.
+             */
+            public Builder readbackStatus(String readbackStatus) {
+                this.readbackStatus = readbackStatus;
+                return this;
+            }
+
+            /**
+             * <p>The site ID.</p>
              * 
              * <strong>example:</strong>
              * <p>865181640657408</p>
@@ -803,6 +1177,54 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
              */
             public Builder subchannel(String subchannel) {
                 this.subchannel = subchannel;
+                return this;
+            }
+
+            /**
+             * SubmitIntentStatus.
+             */
+            public Builder submitIntentStatus(String submitIntentStatus) {
+                this.submitIntentStatus = submitIntentStatus;
+                return this;
+            }
+
+            /**
+             * UpdatedAt.
+             */
+            public Builder updatedAt(Long updatedAt) {
+                this.updatedAt = updatedAt;
+                return this;
+            }
+
+            /**
+             * UploadAttemptId.
+             */
+            public Builder uploadAttemptId(String uploadAttemptId) {
+                this.uploadAttemptId = uploadAttemptId;
+                return this;
+            }
+
+            /**
+             * UploadLeaseState.
+             */
+            public Builder uploadLeaseState(String uploadLeaseState) {
+                this.uploadLeaseState = uploadLeaseState;
+                return this;
+            }
+
+            /**
+             * UploadSequence.
+             */
+            public Builder uploadSequence(Long uploadSequence) {
+                this.uploadSequence = uploadSequence;
+                return this;
+            }
+
+            /**
+             * UploadTicketState.
+             */
+            public Builder uploadTicketState(String uploadTicketState) {
+                this.uploadTicketState = uploadTicketState;
                 return this;
             }
 

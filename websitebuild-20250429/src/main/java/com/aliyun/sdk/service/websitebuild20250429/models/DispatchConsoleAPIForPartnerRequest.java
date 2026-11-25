@@ -154,7 +154,7 @@ public class DispatchConsoleAPIForPartnerRequest extends Request {
          * <p>The error parameters.</p>
          * 
          * <strong>example:</strong>
-         * <p>[\&quot;\&quot;]</p>
+         * <p>[&quot;&quot;]</p>
          */
         public Builder params(String params) {
             this.putQueryParameter("Params", params);

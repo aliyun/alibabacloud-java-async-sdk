@@ -223,7 +223,7 @@ public class ExportMaterialFileResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the permission check failure.</p>
+         * <p>The details of the access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -245,7 +245,7 @@ public class ExportMaterialFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The application name. The name can contain digits, letters, and hyphens (-). It must start with a letter, cannot end with a hyphen (-), and can be up to 36 characters in length.</p>
+         * <p>The application name. The name can contain digits, letters, and hyphens (-). It must start with a letter, cannot end with a hyphen (-), and cannot exceed 36 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>spring-cloud-b</p>
@@ -416,7 +416,7 @@ public class ExportMaterialFileResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The file download URL.</p>
+             * <p>The download URL of the file.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://xxx.xxx.cn/original-data/pdf/mndj_report/cd649b2cc2102c0df57bfa1ae62931d6.zip">https://xxx.xxx.cn/original-data/pdf/mndj_report/cd649b2cc2102c0df57bfa1ae62931d6.zip</a></p>
