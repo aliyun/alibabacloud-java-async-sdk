@@ -205,7 +205,7 @@ public class CreateMcpRequest extends Request {
             } 
 
             /**
-             * <p>The API key used to verify MCP callers.</p>
+             * <p>The API key used to validate the MCP caller.</p>
              * 
              * <strong>example:</strong>
              * <p>example-api-key</p>
@@ -417,7 +417,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>The authentication scheme ID.</p>
+             * <p>The ID of the authentication scheme.</p>
              * 
              * <strong>example:</strong>
              * <p>mcp-1234567890abcdef</p>
@@ -546,7 +546,7 @@ public class CreateMcpRequest extends Request {
             } 
 
             /**
-             * <p>The caller API key authentication configuration for code-deployed MCP.</p>
+             * <p>The caller API key authentication configuration for the code package MCP.</p>
              */
             public Builder codePackage(CodePackage codePackage) {
                 this.codePackage = codePackage;
@@ -554,7 +554,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>The direct proxy authentication configuration.</p>
+             * <p>The authentication configuration for the direct proxy.</p>
              */
             public Builder directProxy(DirectProxy directProxy) {
                 this.directProxy = directProxy;
@@ -570,7 +570,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>The list of HTTP_TO_MCP authentication configurations.</p>
+             * <p>The list of authentication configurations for HTTP_TO_MCP.</p>
              */
             public Builder httpToMcp(java.util.List<HttpToMcp> httpToMcp) {
                 this.httpToMcp = httpToMcp;
@@ -650,7 +650,7 @@ public class CreateMcpRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the AgentCore credential referenced when the mode is set to CREDENTIAL.</p>
+             * <p>The AgentCore Credential referenced when the mode is CREDENTIAL.</p>
              * 
              * <strong>example:</strong>
              * <p>credential-id</p>
@@ -661,7 +661,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable ingress access control.</p>
+             * <p>Specifies whether to enable entry access control.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -669,7 +669,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>The access control mode. ANONYMOUS indicates anonymous access, and CREDENTIAL indicates authentication by using AgentCore credentials.</p>
+             * <p>ANONYMOUS indicates anonymous access. CREDENTIAL indicates the use of AgentCore access credentials.</p>
              * 
              * <strong>example:</strong>
              * <p>CREDENTIAL</p>
@@ -773,7 +773,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>The credential provider ARN.</p>
+             * <p>The ARN of the credential provider.</p>
              * 
              * <strong>example:</strong>
              * <p>acs:agentidentity:cn-hangzhou:1234567890123456:provider/example</p>
@@ -784,7 +784,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>The credential provider type.</p>
+             * <p>The type of the credential provider.</p>
              * 
              * <strong>example:</strong>
              * <p>oauth2</p>
@@ -795,7 +795,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable agent identity.</p>
+             * <p>Specifies whether to enable Agent Identity.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -888,7 +888,7 @@ public class CreateMcpRequest extends Request {
             } 
 
             /**
-             * <p>The temporary code package token returned by GetMcpCodePackageUploadUrl. Used to create a code deployment after a presigned upload is completed. Mutually exclusive with CodePackageUrl.</p>
+             * <p>The temporary code package token returned by GetMcpCodePackageUploadUrl. It is used to create a code deployment after a presigned upload is completed. You must specify either this parameter or CodePackageUrl.</p>
              * 
              * <strong>example:</strong>
              * <p>upload-token</p>
@@ -899,7 +899,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>The public Alibaba Cloud OSS HTTP(S) URL that can be directly passed when creating a code deployment. Mutually exclusive with CodePackageToken. Only supported by CreateMcp, not supported for update and query operations.</p>
+             * <p>The public Alibaba Cloud OSS HTTP(S) URL that can be directly passed when creating a code deployment. You must specify either this parameter or CodePackageToken. This parameter is only supported by CreateMcp, and is not supported for update and query operations.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example-bucket.oss-cn-hangzhou.aliyuncs.com/server.zip">https://example-bucket.oss-cn-hangzhou.aliyuncs.com/server.zip</a></p>
@@ -918,7 +918,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>The code package runtime: python3.13, nodejs22, or java17.</p>
+             * <p>The runtime of the code package. Valid values: python3.13, nodejs22, and java17.</p>
              * 
              * <strong>example:</strong>
              * <p>python3.13</p>
@@ -930,6 +930,369 @@ public class CreateMcpRequest extends Request {
 
             public CodeConfiguration build() {
                 return new CodeConfiguration(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateMcpRequest} extends {@link TeaModel}
+     *
+     * <p>CreateMcpRequest</p>
+     */
+    public static class AuthConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("password")
+        private String password;
+
+        @com.aliyun.core.annotation.NameInMap("userName")
+        private String userName;
+
+        private AuthConfig(Builder builder) {
+            this.password = builder.password;
+            this.userName = builder.userName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AuthConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return password
+         */
+        public String getPassword() {
+            return this.password;
+        }
+
+        /**
+         * @return userName
+         */
+        public String getUserName() {
+            return this.userName;
+        }
+
+        public static final class Builder {
+            private String password; 
+            private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(AuthConfig model) {
+                this.password = model.password;
+                this.userName = model.userName;
+            } 
+
+            /**
+             * <p>The password for the image registry. The password is encrypted and stored on the server, and is not returned in query responses. If you omit this parameter during an update, the existing password is retained.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-password</p>
+             */
+            public Builder password(String password) {
+                this.password = password;
+                return this;
+            }
+
+            /**
+             * <p>The username for the image registry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>puller</p>
+             */
+            public Builder userName(String userName) {
+                this.userName = userName;
+                return this;
+            }
+
+            public AuthConfig build() {
+                return new AuthConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateMcpRequest} extends {@link TeaModel}
+     *
+     * <p>CreateMcpRequest</p>
+     */
+    public static class CertConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("insecure")
+        private Boolean insecure;
+
+        @com.aliyun.core.annotation.NameInMap("rootCaCertBase64")
+        private String rootCaCertBase64;
+
+        private CertConfig(Builder builder) {
+            this.insecure = builder.insecure;
+            this.rootCaCertBase64 = builder.rootCaCertBase64;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CertConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return insecure
+         */
+        public Boolean getInsecure() {
+            return this.insecure;
+        }
+
+        /**
+         * @return rootCaCertBase64
+         */
+        public String getRootCaCertBase64() {
+            return this.rootCaCertBase64;
+        }
+
+        public static final class Builder {
+            private Boolean insecure; 
+            private String rootCaCertBase64; 
+
+            private Builder() {
+            } 
+
+            private Builder(CertConfig model) {
+                this.insecure = model.insecure;
+                this.rootCaCertBase64 = model.rootCaCertBase64;
+            } 
+
+            /**
+             * <p>Specifies whether to skip the verification of the TLS certificate of the image registry. A value of true indicates that the verification is skipped. Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder insecure(Boolean insecure) {
+                this.insecure = insecure;
+                return this;
+            }
+
+            /**
+             * <p>The Base64-encoded root CA certificate of the image registry, which is used to verify self-signed certificates.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LS0tLS1CRUdJTi...</p>
+             */
+            public Builder rootCaCertBase64(String rootCaCertBase64) {
+                this.rootCaCertBase64 = rootCaCertBase64;
+                return this;
+            }
+
+            public CertConfig build() {
+                return new CertConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateMcpRequest} extends {@link TeaModel}
+     *
+     * <p>CreateMcpRequest</p>
+     */
+    public static class NetworkConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("securityGroupId")
+        private String securityGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("vSwitchId")
+        private String vSwitchId;
+
+        @com.aliyun.core.annotation.NameInMap("vpcId")
+        private String vpcId;
+
+        private NetworkConfig(Builder builder) {
+            this.securityGroupId = builder.securityGroupId;
+            this.vSwitchId = builder.vSwitchId;
+            this.vpcId = builder.vpcId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NetworkConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return securityGroupId
+         */
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        /**
+         * @return vSwitchId
+         */
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        public static final class Builder {
+            private String securityGroupId; 
+            private String vSwitchId; 
+            private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetworkConfig model) {
+                this.securityGroupId = model.securityGroupId;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+            } 
+
+            /**
+             * <p>The ID of the security group used to pull images.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-example</p>
+             */
+            public Builder securityGroupId(String securityGroupId) {
+                this.securityGroupId = securityGroupId;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the vSwitch used to pull images.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-example</p>
+             */
+            public Builder vSwitchId(String vSwitchId) {
+                this.vSwitchId = vSwitchId;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the VPC where the image registry resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-example</p>
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
+                return this;
+            }
+
+            public NetworkConfig build() {
+                return new NetworkConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateMcpRequest} extends {@link TeaModel}
+     *
+     * <p>CreateMcpRequest</p>
+     */
+    public static class RegistryConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("authConfig")
+        private AuthConfig authConfig;
+
+        @com.aliyun.core.annotation.NameInMap("certConfig")
+        private CertConfig certConfig;
+
+        @com.aliyun.core.annotation.NameInMap("networkConfig")
+        private NetworkConfig networkConfig;
+
+        private RegistryConfig(Builder builder) {
+            this.authConfig = builder.authConfig;
+            this.certConfig = builder.certConfig;
+            this.networkConfig = builder.networkConfig;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RegistryConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return authConfig
+         */
+        public AuthConfig getAuthConfig() {
+            return this.authConfig;
+        }
+
+        /**
+         * @return certConfig
+         */
+        public CertConfig getCertConfig() {
+            return this.certConfig;
+        }
+
+        /**
+         * @return networkConfig
+         */
+        public NetworkConfig getNetworkConfig() {
+            return this.networkConfig;
+        }
+
+        public static final class Builder {
+            private AuthConfig authConfig; 
+            private CertConfig certConfig; 
+            private NetworkConfig networkConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(RegistryConfig model) {
+                this.authConfig = model.authConfig;
+                this.certConfig = model.certConfig;
+                this.networkConfig = model.networkConfig;
+            } 
+
+            /**
+             * <p>The authentication configuration of the image registry. Specify this parameter when the image registry requires username and password authentication.</p>
+             */
+            public Builder authConfig(AuthConfig authConfig) {
+                this.authConfig = authConfig;
+                return this;
+            }
+
+            /**
+             * <p>The TLS certificate verification configuration of the image registry.</p>
+             */
+            public Builder certConfig(CertConfig certConfig) {
+                this.certConfig = certConfig;
+                return this;
+            }
+
+            /**
+             * <p>The network configuration for image pulling. Specify this parameter when the image registry is accessible only within a VPC. Function Compute pulls images through this network.</p>
+             */
+            public Builder networkConfig(NetworkConfig networkConfig) {
+                this.networkConfig = networkConfig;
+                return this;
+            }
+
+            public RegistryConfig build() {
+                return new RegistryConfig(this);
             } 
 
         } 
@@ -960,6 +1323,9 @@ public class CreateMcpRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("mcpRuntimeMode")
         private String mcpRuntimeMode;
 
+        @com.aliyun.core.annotation.NameInMap("registryConfig")
+        private RegistryConfig registryConfig;
+
         @com.aliyun.core.annotation.NameInMap("sourceType")
         private String sourceType;
 
@@ -970,6 +1336,7 @@ public class CreateMcpRequest extends Request {
             this.image = builder.image;
             this.imageRegistryType = builder.imageRegistryType;
             this.mcpRuntimeMode = builder.mcpRuntimeMode;
+            this.registryConfig = builder.registryConfig;
             this.sourceType = builder.sourceType;
         }
 
@@ -1024,6 +1391,13 @@ public class CreateMcpRequest extends Request {
         }
 
         /**
+         * @return registryConfig
+         */
+        public RegistryConfig getRegistryConfig() {
+            return this.registryConfig;
+        }
+
+        /**
          * @return sourceType
          */
         public String getSourceType() {
@@ -1037,6 +1411,7 @@ public class CreateMcpRequest extends Request {
             private String image; 
             private String imageRegistryType; 
             private String mcpRuntimeMode; 
+            private RegistryConfig registryConfig; 
             private String sourceType; 
 
             private Builder() {
@@ -1049,11 +1424,12 @@ public class CreateMcpRequest extends Request {
                 this.image = model.image;
                 this.imageRegistryType = model.imageRegistryType;
                 this.mcpRuntimeMode = model.mcpRuntimeMode;
+                this.registryConfig = model.registryConfig;
                 this.sourceType = model.sourceType;
             } 
 
             /**
-             * <p>The ACR instance ID.</p>
+             * <p>The ID of the ACR instance.</p>
              * 
              * <strong>example:</strong>
              * <p>cri-example</p>
@@ -1072,7 +1448,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>The container entrypoint parameters.</p>
+             * <p>The entrypoint parameters of the container.</p>
              */
             public Builder entrypoint(java.util.List<String> entrypoint) {
                 this.entrypoint = entrypoint;
@@ -1080,7 +1456,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>The container image URL.</p>
+             * <p>The URL of the container image.</p>
              * 
              * <strong>example:</strong>
              * <p>registry.cn-hangzhou.aliyuncs.com/example/mcp:1.0.0</p>
@@ -1091,7 +1467,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>The image registry type.</p>
+             * <p>The type of the image registry.</p>
              * 
              * <strong>example:</strong>
              * <p>ACR</p>
@@ -1102,7 +1478,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>The MCP runtime mode. Custom containers currently need to expose standard MCP by themselves. Set the value to SELF_HOSTED.</p>
+             * <p>The MCP runtime mode. Custom containers must expose the standard MCP by themselves. Set the value to SELF_HOSTED.</p>
              * 
              * <strong>example:</strong>
              * <p>SELF_HOSTED</p>
@@ -1113,7 +1489,15 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>The container source type. Currently fixed to CONTAINER_IMAGE.</p>
+             * <p>The custom image registry configuration. This parameter takes effect only when ImageRegistryType is set to CUSTOM. It is used to configure image pull authentication, TLS certificate verification, and the private network for image pulling.</p>
+             */
+            public Builder registryConfig(RegistryConfig registryConfig) {
+                this.registryConfig = registryConfig;
+                return this;
+            }
+
+            /**
+             * <p>The source type of the container. This parameter is fixed to CONTAINER_IMAGE.</p>
              * 
              * <strong>example:</strong>
              * <p>CONTAINER_IMAGE</p>
@@ -1262,7 +1646,7 @@ public class CreateMcpRequest extends Request {
              * <p>The description of the hook.</p>
              * 
              * <strong>example:</strong>
-             * <p>Log MCP tool invoke</p>
+             * <p>Record MCP tool invocation</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1289,7 +1673,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>The hook request headers.</p>
+             * <p>The request headers of the hook.</p>
              */
             public Builder headers(java.util.Map<String, String> headers) {
                 this.headers = headers;
@@ -1365,7 +1749,7 @@ public class CreateMcpRequest extends Request {
             } 
 
             /**
-             * <p>Executes the PRE_LIST_TOOLS, PRE_CALL_TOOL, POST_LIST_TOOLS, and POST_CALL_TOOL hooks in the order of the array.</p>
+             * <p>The list of hooks executed in array order, including PRE_LIST_TOOLS, PRE_CALL_TOOL, POST_LIST_TOOLS, and POST_CALL_TOOL hooks.</p>
              */
             public Builder hooks(java.util.List<Hooks> hooks) {
                 this.hooks = hooks;
@@ -1487,7 +1871,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>The start rule for log segmentation.</p>
+             * <p>The start rule for Function Compute log segmentation.</p>
              * 
              * <strong>example:</strong>
              * <p>DefaultRegex</p>
@@ -1618,7 +2002,7 @@ public class CreateMcpRequest extends Request {
             } 
 
             /**
-             * <p>The MCP endpoint path, such as /mcp or /sse.</p>
+             * <p>Example: /mcp or /sse.</p>
              * 
              * <strong>example:</strong>
              * <p>/mcp</p>
@@ -1629,7 +2013,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>The session concurrency per instance. Currently fixed to 1.</p>
+             * <p>Currently fixed at 1.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1640,7 +2024,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>The session idle timeout period in seconds. Default value: 1800.</p>
+             * <p>Unit: seconds. Default value: 1800.</p>
              * 
              * <strong>example:</strong>
              * <p>1800</p>
@@ -1651,7 +2035,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>The maximum session lifetime in seconds. Default value: 21600.</p>
+             * <p>Unit: seconds. Default value: 21600.</p>
              * 
              * <strong>example:</strong>
              * <p>21600</p>
@@ -1662,7 +2046,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>The session mode. Only applicable to StreamableHTTP. Default value for creation: STATEFUL. If omitted during an update, the original value is retained. STATELESS disables Function Compute session affinity, and the stdio gateway does not enable stateful mode. Native HTTP services must support stateless MCP by themselves.</p>
+             * <p>Applicable only to StreamableHTTP. The default value is STATEFUL when created. If omitted during an update, the original value is retained. STATELESS disables Function Compute session affinity, and the stdio gateway does not enable stateful mode. Native HTTP services must support stateless MCP themselves.</p>
              * 
              * <strong>example:</strong>
              * <p>STATEFUL</p>
@@ -1764,7 +2148,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>The NAS server address.</p>
+             * <p>The service address of the NAS file system.</p>
              * 
              * <strong>example:</strong>
              * <p>example.cn-hangzhou.nas.aliyuncs.com</p>
@@ -1847,7 +2231,7 @@ public class CreateMcpRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the user group.</p>
+             * <p>The group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>
@@ -1858,7 +2242,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>The list of NAS mount points.</p>
+             * <p>The list of NAS mount targets.</p>
              */
             public Builder mountPoints(java.util.List<MountPoints> mountPoints) {
                 this.mountPoints = mountPoints;
@@ -2145,7 +2529,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether the mount point is read-only.</p>
+             * <p>Specifies whether the mount target is read-only.</p>
              */
             public Builder readOnly(Boolean readOnly) {
                 this.readOnly = readOnly;
@@ -2199,7 +2583,7 @@ public class CreateMcpRequest extends Request {
             } 
 
             /**
-             * <p>The list of OSS mount points.</p>
+             * <p>The list of OSS mount targets.</p>
              */
             public Builder mountPoints(java.util.List<OssMountConfigurationMountPoints> mountPoints) {
                 this.mountPoints = mountPoints;
@@ -2279,7 +2663,7 @@ public class CreateMcpRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to enable parameter transformation and result enhancement.</p>
+             * <p>Specifies whether to enable parameter transformation and result augmentation.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -2287,7 +2671,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>The reserved reference to the parameter transformation and result enhancement rule set.</p>
+             * <p>The reference to the reserved parameter transformation and result augmentation rule set.</p>
              * 
              * <strong>example:</strong>
              * <p>rules-1</p>
@@ -2298,7 +2682,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>The transformation rule version.</p>
+             * <p>The version of the transformation rule.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0</p>
@@ -2500,7 +2884,7 @@ public class CreateMcpRequest extends Request {
             } 
 
             /**
-             * <p>The CPU specifications in cores. Default value: 0.25.</p>
+             * <p>The CPU specification. Unit: cores. Default value: 0.25.</p>
              * 
              * <strong>example:</strong>
              * <p>0.25</p>
@@ -2511,7 +2895,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>The temporary disk size in MB. Valid values: 512 and 10240.</p>
+             * <p>The size of the ephemeral disk. Unit: MB. Valid values: 512 and 10240.</p>
              * 
              * <strong>example:</strong>
              * <p>512</p>
@@ -2541,7 +2925,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>The request concurrency per instance. Default value: 200.</p>
+             * <p>The maximum number of concurrent requests per instance. Default value: 200.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -2552,7 +2936,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>The memory specifications in MB. Default value: 512.</p>
+             * <p>The memory specification. Unit: MB. Default value: 512.</p>
              * 
              * <strong>example:</strong>
              * <p>512</p>
@@ -2563,7 +2947,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>The service port. Default value: 9000.</p>
+             * <p>Default value: 9000.</p>
              * 
              * <strong>example:</strong>
              * <p>9000</p>
@@ -2574,7 +2958,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>The function timeout period in seconds. Default value: 300.</p>
+             * <p>The timeout period of the function. Unit: seconds. Default value: 300.</p>
              * 
              * <strong>example:</strong>
              * <p>300</p>
@@ -2800,7 +3184,7 @@ public class CreateMcpRequest extends Request {
             } 
 
             /**
-             * <p>The MCP ingress access control configuration.</p>
+             * <p>The MCP entry access control configuration.</p>
              */
             public Builder accessControl(AccessControl accessControl) {
                 this.accessControl = accessControl;
@@ -2808,7 +3192,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>The agent identity configuration.</p>
+             * <p>The Agent Identity configuration.</p>
              */
             public Builder agentIdentityConfiguration(AgentIdentityConfiguration agentIdentityConfiguration) {
                 this.agentIdentityConfiguration = agentIdentityConfiguration;
@@ -2816,7 +3200,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>The artifact type. Code indicates a ZIP code package, and Container indicates a custom container.</p>
+             * <p>The artifact type. A value of Code indicates a ZIP code package, and a value of Container indicates a custom container.</p>
              * 
              * <strong>example:</strong>
              * <p>Code</p>
@@ -2891,7 +3275,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>The parameter transformation and result enhancement configuration.</p>
+             * <p>The configuration for parameter transformation and result augmentation.</p>
              */
             public Builder parameterTransformConfiguration(ParameterTransformConfiguration parameterTransformConfiguration) {
                 this.parameterTransformConfiguration = parameterTransformConfiguration;
@@ -2916,6 +3300,219 @@ public class CreateMcpRequest extends Request {
 
             public DeploymentConfig build() {
                 return new DeploymentConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateMcpRequest} extends {@link TeaModel}
+     *
+     * <p>CreateMcpRequest</p>
+     */
+    public static class Tools extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("expectedDigest")
+        private String expectedDigest;
+
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
+        private Tools(Builder builder) {
+            this.expectedDigest = builder.expectedDigest;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tools create() {
+            return builder().build();
+        }
+
+        /**
+         * @return expectedDigest
+         */
+        public String getExpectedDigest() {
+            return this.expectedDigest;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private String expectedDigest; 
+            private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tools model) {
+                this.expectedDigest = model.expectedDigest;
+                this.name = model.name;
+            } 
+
+            /**
+             * <p>Required for virtual MCP. The definition digest obtained from the ListMcpTools operation or validation result of the source MCP. The client passes this value back as-is without calculating it. This value is used only as a baseline for manual update validation and does not freeze the runtime schema.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</p>
+             */
+            public Builder expectedDigest(String expectedDigest) {
+                this.expectedDigest = expectedDigest;
+                return this;
+            }
+
+            /**
+             * <p>Required for virtual MCP. The name of the source tool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>get-current-time</p>
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public Tools build() {
+                return new Tools(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateMcpRequest} extends {@link TeaModel}
+     *
+     * <p>CreateMcpRequest</p>
+     */
+    public static class Sources extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("mcpServerId")
+        private String mcpServerId;
+
+        @com.aliyun.core.annotation.NameInMap("tools")
+        private java.util.List<Tools> tools;
+
+        private Sources(Builder builder) {
+            this.mcpServerId = builder.mcpServerId;
+            this.tools = builder.tools;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Sources create() {
+            return builder().build();
+        }
+
+        /**
+         * @return mcpServerId
+         */
+        public String getMcpServerId() {
+            return this.mcpServerId;
+        }
+
+        /**
+         * @return tools
+         */
+        public java.util.List<Tools> getTools() {
+            return this.tools;
+        }
+
+        public static final class Builder {
+            private String mcpServerId; 
+            private java.util.List<Tools> tools; 
+
+            private Builder() {
+            } 
+
+            private Builder(Sources model) {
+                this.mcpServerId = model.mcpServerId;
+                this.tools = model.tools;
+            } 
+
+            /**
+             * <p>Required for virtual MCP. The ID of the source MCP in the current workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mcp-server-source-1</p>
+             */
+            public Builder mcpServerId(String mcpServerId) {
+                this.mcpServerId = mcpServerId;
+                return this;
+            }
+
+            /**
+             * <p>Required for virtual MCP. The manually selected tools. Specify at least one tool for each source, and up to 100 tools in total across all sources.</p>
+             */
+            public Builder tools(java.util.List<Tools> tools) {
+                this.tools = tools;
+                return this;
+            }
+
+            public Sources build() {
+                return new Sources(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateMcpRequest} extends {@link TeaModel}
+     *
+     * <p>CreateMcpRequest</p>
+     */
+    public static class VirtualConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("sources")
+        private java.util.List<Sources> sources;
+
+        private VirtualConfig(Builder builder) {
+            this.sources = builder.sources;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VirtualConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return sources
+         */
+        public java.util.List<Sources> getSources() {
+            return this.sources;
+        }
+
+        public static final class Builder {
+            private java.util.List<Sources> sources; 
+
+            private Builder() {
+            } 
+
+            private Builder(VirtualConfig model) {
+                this.sources = model.sources;
+            } 
+
+            /**
+             * <p>Required for virtual MCP. Specify 1 to 10 different source MCPs.</p>
+             */
+            public Builder sources(java.util.List<Sources> sources) {
+                this.sources = sources;
+                return this;
+            }
+
+            public VirtualConfig build() {
+                return new VirtualConfig(this);
             } 
 
         } 
@@ -2966,6 +3563,9 @@ public class CreateMcpRequest extends Request {
         @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
+        @com.aliyun.core.annotation.NameInMap("virtualConfig")
+        private VirtualConfig virtualConfig;
+
         private CreateMcpRequestBody(Builder builder) {
             this.addresses = builder.addresses;
             this.auth = builder.auth;
@@ -2979,6 +3579,7 @@ public class CreateMcpRequest extends Request {
             this.protocol = builder.protocol;
             this.swaggerConfig = builder.swaggerConfig;
             this.type = builder.type;
+            this.virtualConfig = builder.virtualConfig;
         }
 
         public static Builder builder() {
@@ -3073,6 +3674,13 @@ public class CreateMcpRequest extends Request {
             return this.type;
         }
 
+        /**
+         * @return virtualConfig
+         */
+        public VirtualConfig getVirtualConfig() {
+            return this.virtualConfig;
+        }
+
         public static final class Builder {
             private java.util.List<String> addresses; 
             private Auth auth; 
@@ -3086,6 +3694,7 @@ public class CreateMcpRequest extends Request {
             private String protocol; 
             private String swaggerConfig; 
             private String type; 
+            private VirtualConfig virtualConfig; 
 
             private Builder() {
             } 
@@ -3103,10 +3712,11 @@ public class CreateMcpRequest extends Request {
                 this.protocol = model.protocol;
                 this.swaggerConfig = model.swaggerConfig;
                 this.type = model.type;
+                this.virtualConfig = model.virtualConfig;
             } 
 
             /**
-             * <p>The list of MCP service addresses. Required when Type is DIRECT_PROXY or HTTP_TO_MCP. Do not specify when Type is CODE_PACKAGE.</p>
+             * <p>The list of MCP service addresses.</p>
              */
             public Builder addresses(java.util.List<String> addresses) {
                 this.addresses = addresses;
@@ -3114,7 +3724,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>The backend authentication configuration. When enabled is set to true: for DIRECT_PROXY, specify directProxy (name/value); for HTTP_TO_MCP, specify the httpToMcp array (each item includes id, type, and credential; for apiKey, position and name are also required), which supports multiple authentication objects where the first one is the default upstream credential; for CODE_PACKAGE, specify codePackage (headerName/apiKey) to verify MCP callers. HTTP_TO_MCP credentials are merged into the securitySchemes of Swagger.</p>
+             * <p>The backend authentication configuration. When enabled is set to true: for DIRECT_PROXY, specify directProxy (name and value); for HTTP_TO_MCP, specify the httpToMcp array (each item includes id, type, and credential; apiKey also requires position and name). Multiple authentication objects are supported, and the first one is the default upstream credential. HTTP_TO_MCP credentials are merged into the securitySchemes of the Swagger document.</p>
              */
             public Builder auth(Auth auth) {
                 this.auth = auth;
@@ -3122,7 +3732,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>Optional. Valid values: legacy and modern. This parameter is only used for DIRECT_PROXY. If omitted for direct connection, the existing default behavior is maintained and no automatic upgrade is performed. modern does not support SSE. You can use the backendMcpProtocol and protocol recommended by ProbeMcpOrigin to configure backend access, which does not limit the external protocol conversion compatibility of the gateway. No need to pass this parameter for CODE_PACKAGE; valid inputs are ignored and not saved. Function Compute session affinity is configured only based on protocol and DeploymentConfig.McpConfiguration.SessionMode, and the gateway protocol is determined by the successful probing result after Function Compute deployment. Valid values for HTTP_TO_MCP are ignored and not saved.</p>
+             * <p>Optional. Valid values: legacy and modern. This parameter is used only for DIRECT_PROXY. If omitted for direct proxy, the existing default behavior is maintained and no automatic upgrade is performed. The modern value does not support Server-Sent Events (SSE). You can use the backendMcpProtocol and protocol recommended by ProbeMcpOrigin to configure backend access, which does not limit the external protocol conversion compatibility of the gateway. This parameter is not required for CODE_PACKAGE. Valid inputs are ignored and not saved. Function Compute (FC) session affinity is configured only based on protocol and DeploymentConfig.McpConfiguration.SessionMode, and the gateway protocol is determined by the successful probing result after FC deployment. Valid values for HTTP_TO_MCP are ignored and not saved.</p>
              * 
              * <strong>example:</strong>
              * <p>modern</p>
@@ -3141,7 +3751,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>The code deployment configuration. Required when Type is CODE_PACKAGE. When creating a Code artifact, you must specify either CodeConfiguration.CodePackageToken or CodePackageUrl, but not both. CodePackageUrl only supports public Alibaba Cloud OSS HTTP(S) URLs.</p>
+             * <p>The code deployment configuration. Required when Type is set to CODE_PACKAGE. When creating a code artifact, you must specify either CodeConfiguration.CodePackageToken or CodePackageUrl, but not both. CodePackageUrl only supports public Alibaba Cloud OSS HTTP(S) URLs.</p>
              */
             public Builder deploymentConfig(DeploymentConfig deploymentConfig) {
                 this.deploymentConfig = deploymentConfig;
@@ -3160,7 +3770,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>The MCP name.</p>
+             * <p>The name of the MCP service.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -3183,7 +3793,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>The access permission mode. PUBLIC indicates public access. CONTROLLED indicates that access is controlled based on permission rules.</p>
+             * <p>The access permission mode. PUBLIC indicates public access, and CONTROLLED indicates that access is controlled based on permission rules.</p>
              * 
              * <strong>example:</strong>
              * <p>CONTROLLED</p>
@@ -3205,7 +3815,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>If Type is HTTP_TO_MCP, specify this field.</p>
+             * <p>Specify this field if the type is HTTP_TO_MCP.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;type&quot;:&quot;object&quot;}</p>
@@ -3224,6 +3834,14 @@ public class CreateMcpRequest extends Request {
              */
             public Builder type(String type) {
                 this.type = type;
+                return this;
+            }
+
+            /**
+             * <p>The source and tool selection for a virtual MCP. This is used only when the type is VIRTUAL. The tool list can only be updated manually.</p>
+             */
+            public Builder virtualConfig(VirtualConfig virtualConfig) {
+                this.virtualConfig = virtualConfig;
                 return this;
             }
 

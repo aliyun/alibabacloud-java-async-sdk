@@ -31,6 +31,10 @@ public class ListMcpsRequest extends Request {
     private String customTag;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("includeVirtualConfig")
+    private Boolean includeVirtualConfig;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("maxResults")
     private Integer maxResults;
 
@@ -51,6 +55,10 @@ public class ListMcpsRequest extends Request {
     private String searchType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("type")
+    private String type;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("usageActive")
     private Boolean usageActive;
 
@@ -59,11 +67,13 @@ public class ListMcpsRequest extends Request {
         this.workspaceId = builder.workspaceId;
         this.regionId = builder.regionId;
         this.customTag = builder.customTag;
+        this.includeVirtualConfig = builder.includeVirtualConfig;
         this.maxResults = builder.maxResults;
         this.name = builder.name;
         this.nextToken = builder.nextToken;
         this.officialTag = builder.officialTag;
         this.searchType = builder.searchType;
+        this.type = builder.type;
         this.usageActive = builder.usageActive;
     }
 
@@ -102,6 +112,13 @@ public class ListMcpsRequest extends Request {
     }
 
     /**
+     * @return includeVirtualConfig
+     */
+    public Boolean getIncludeVirtualConfig() {
+        return this.includeVirtualConfig;
+    }
+
+    /**
      * @return maxResults
      */
     public Integer getMaxResults() {
@@ -137,6 +154,13 @@ public class ListMcpsRequest extends Request {
     }
 
     /**
+     * @return type
+     */
+    public String getType() {
+        return this.type;
+    }
+
+    /**
      * @return usageActive
      */
     public Boolean getUsageActive() {
@@ -147,11 +171,13 @@ public class ListMcpsRequest extends Request {
         private String workspaceId; 
         private String regionId; 
         private String customTag; 
+        private Boolean includeVirtualConfig; 
         private Integer maxResults; 
         private String name; 
         private String nextToken; 
         private String officialTag; 
         private String searchType; 
+        private String type; 
         private Boolean usageActive; 
 
         private Builder() {
@@ -163,11 +189,13 @@ public class ListMcpsRequest extends Request {
             this.workspaceId = request.workspaceId;
             this.regionId = request.regionId;
             this.customTag = request.customTag;
+            this.includeVirtualConfig = request.includeVirtualConfig;
             this.maxResults = request.maxResults;
             this.name = request.name;
             this.nextToken = request.nextToken;
             this.officialTag = request.officialTag;
             this.searchType = request.searchType;
+            this.type = request.type;
             this.usageActive = request.usageActive;
         } 
 
@@ -202,6 +230,18 @@ public class ListMcpsRequest extends Request {
         public Builder customTag(String customTag) {
             this.putQueryParameter("customTag", customTag);
             this.customTag = customTag;
+            return this;
+        }
+
+        /**
+         * <p>默认 false，仅返回修订号、状态、源和工具数量。需要完整配置时使用 GetMcp，或显式设置为 true。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder includeVirtualConfig(Boolean includeVirtualConfig) {
+            this.putQueryParameter("includeVirtualConfig", includeVirtualConfig);
+            this.includeVirtualConfig = includeVirtualConfig;
             return this;
         }
 
@@ -262,6 +302,18 @@ public class ListMcpsRequest extends Request {
         public Builder searchType(String searchType) {
             this.putQueryParameter("searchType", searchType);
             this.searchType = searchType;
+            return this;
+        }
+
+        /**
+         * <p>按 MCP 类型筛选，省略时返回全部类型。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VIRTUAL</p>
+         */
+        public Builder type(String type) {
+            this.putQueryParameter("type", type);
+            this.type = type;
             return this;
         }
 

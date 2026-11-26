@@ -177,7 +177,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
         }
 
         /**
-         * <p>The reserved query request identifier. The console backend does not read this parameter and does not provide idempotency guarantees such as deduplication or restoring the original processing result based on this identifier.</p>
+         * <p>The reserved query request identifier. The console backend does not read this parameter and does not provide idempotency guarantees such as deduplication or returning the original processing result based on this identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -381,7 +381,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             } 
 
             /**
-             * <p>The credential for the backend authentication.</p>
+             * <p>The backend authentication credentials.</p>
              * 
              * <strong>example:</strong>
              * <p>example-api-key</p>
@@ -392,7 +392,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             }
 
             /**
-             * <p>The ID of the backend authentication configuration.</p>
+             * <p>The backend authentication configuration ID.</p>
              * 
              * <strong>example:</strong>
              * <p>api-key-auth</p>
@@ -414,7 +414,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             }
 
             /**
-             * <p>The position where the API key is passed.</p>
+             * <p>The location where the API key is passed.</p>
              * 
              * <strong>example:</strong>
              * <p>header</p>
@@ -425,7 +425,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             }
 
             /**
-             * <p>The type of the backend authentication.</p>
+             * <p>The backend authentication type.</p>
              * 
              * <strong>example:</strong>
              * <p>apiKey</p>
@@ -604,7 +604,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             } 
 
             /**
-             * <p>The AgentCore credential ID referenced when the mode is set to CREDENTIAL.</p>
+             * <p>The AgentCore credential referenced when the mode is set to CREDENTIAL.</p>
              * 
              * <strong>example:</strong>
              * <p>credential-id</p>
@@ -615,7 +615,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable entry access control.</p>
+             * <p>Specifies whether to enable ingress access control.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -727,7 +727,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             }
 
             /**
-             * <p>The credential provider ARN.</p>
+             * <p>The ARN of the credential provider.</p>
              * 
              * <strong>example:</strong>
              * <p>acs:agentidentity:cn-hangzhou:1234567890123456:provider/example</p>
@@ -738,7 +738,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             }
 
             /**
-             * <p>The credential provider type.</p>
+             * <p>The type of the credential provider.</p>
              * 
              * <strong>example:</strong>
              * <p>oauth2</p>
@@ -749,7 +749,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable agent identity.</p>
+             * <p>Specifies whether to enable Agent Identity.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -840,7 +840,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             }
 
             /**
-             * <p>The complete startup command, passed sequentially by parameter boundaries. For example, when using supergateway to start a stdio MCP, pass supergateway, --stdio, the complete subcommand, and the remaining parameters.</p>
+             * <p>The complete startup command, passed sequentially by parameter boundaries. For example, when you use supergateway to start a stdio MCP, pass supergateway, --stdio, the complete subcommand, and the remaining parameters.</p>
              */
             public Builder command(java.util.List<String> command) {
                 this.command = command;
@@ -848,7 +848,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             }
 
             /**
-             * <p>The runtime environment for the code package. Valid values: python3.13, nodejs22, and java17.</p>
+             * <p>The runtime environment for the code package, such as python3.13, nodejs22, or java17.</p>
              * 
              * <strong>example:</strong>
              * <p>python3.13</p>
@@ -860,6 +860,369 @@ public class UpdateMcpTemplateConfigRequest extends Request {
 
             public CodeConfiguration build() {
                 return new CodeConfiguration(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateMcpTemplateConfigRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateMcpTemplateConfigRequest</p>
+     */
+    public static class AuthConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("password")
+        private String password;
+
+        @com.aliyun.core.annotation.NameInMap("userName")
+        private String userName;
+
+        private AuthConfig(Builder builder) {
+            this.password = builder.password;
+            this.userName = builder.userName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AuthConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return password
+         */
+        public String getPassword() {
+            return this.password;
+        }
+
+        /**
+         * @return userName
+         */
+        public String getUserName() {
+            return this.userName;
+        }
+
+        public static final class Builder {
+            private String password; 
+            private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(AuthConfig model) {
+                this.password = model.password;
+                this.userName = model.userName;
+            } 
+
+            /**
+             * <p>The password for the image registry. The password is encrypted and stored on the server, and is not returned in queries. Omit this field during updates to retain the existing password.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-password</p>
+             */
+            public Builder password(String password) {
+                this.password = password;
+                return this;
+            }
+
+            /**
+             * <p>The username for the image registry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>puller</p>
+             */
+            public Builder userName(String userName) {
+                this.userName = userName;
+                return this;
+            }
+
+            public AuthConfig build() {
+                return new AuthConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateMcpTemplateConfigRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateMcpTemplateConfigRequest</p>
+     */
+    public static class CertConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("insecure")
+        private Boolean insecure;
+
+        @com.aliyun.core.annotation.NameInMap("rootCaCertBase64")
+        private String rootCaCertBase64;
+
+        private CertConfig(Builder builder) {
+            this.insecure = builder.insecure;
+            this.rootCaCertBase64 = builder.rootCaCertBase64;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CertConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return insecure
+         */
+        public Boolean getInsecure() {
+            return this.insecure;
+        }
+
+        /**
+         * @return rootCaCertBase64
+         */
+        public String getRootCaCertBase64() {
+            return this.rootCaCertBase64;
+        }
+
+        public static final class Builder {
+            private Boolean insecure; 
+            private String rootCaCertBase64; 
+
+            private Builder() {
+            } 
+
+            private Builder(CertConfig model) {
+                this.insecure = model.insecure;
+                this.rootCaCertBase64 = model.rootCaCertBase64;
+            } 
+
+            /**
+             * <p>Specifies whether to skip the TLS certificate verification for the image registry. A value of true indicates that the verification is skipped. Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder insecure(Boolean insecure) {
+                this.insecure = insecure;
+                return this;
+            }
+
+            /**
+             * <p>The Base64-encoded root CA certificate of the image registry, used to verify self-signed certificates.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LS0tLS1CRUdJTi...</p>
+             */
+            public Builder rootCaCertBase64(String rootCaCertBase64) {
+                this.rootCaCertBase64 = rootCaCertBase64;
+                return this;
+            }
+
+            public CertConfig build() {
+                return new CertConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateMcpTemplateConfigRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateMcpTemplateConfigRequest</p>
+     */
+    public static class NetworkConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("securityGroupId")
+        private String securityGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("vSwitchId")
+        private String vSwitchId;
+
+        @com.aliyun.core.annotation.NameInMap("vpcId")
+        private String vpcId;
+
+        private NetworkConfig(Builder builder) {
+            this.securityGroupId = builder.securityGroupId;
+            this.vSwitchId = builder.vSwitchId;
+            this.vpcId = builder.vpcId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NetworkConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return securityGroupId
+         */
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        /**
+         * @return vSwitchId
+         */
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        public static final class Builder {
+            private String securityGroupId; 
+            private String vSwitchId; 
+            private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetworkConfig model) {
+                this.securityGroupId = model.securityGroupId;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+            } 
+
+            /**
+             * <p>The ID of the security group used to pull images.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-example</p>
+             */
+            public Builder securityGroupId(String securityGroupId) {
+                this.securityGroupId = securityGroupId;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the vSwitch used to pull images.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-example</p>
+             */
+            public Builder vSwitchId(String vSwitchId) {
+                this.vSwitchId = vSwitchId;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the VPC where the image registry is located.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-example</p>
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
+                return this;
+            }
+
+            public NetworkConfig build() {
+                return new NetworkConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateMcpTemplateConfigRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateMcpTemplateConfigRequest</p>
+     */
+    public static class RegistryConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("authConfig")
+        private AuthConfig authConfig;
+
+        @com.aliyun.core.annotation.NameInMap("certConfig")
+        private CertConfig certConfig;
+
+        @com.aliyun.core.annotation.NameInMap("networkConfig")
+        private NetworkConfig networkConfig;
+
+        private RegistryConfig(Builder builder) {
+            this.authConfig = builder.authConfig;
+            this.certConfig = builder.certConfig;
+            this.networkConfig = builder.networkConfig;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RegistryConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return authConfig
+         */
+        public AuthConfig getAuthConfig() {
+            return this.authConfig;
+        }
+
+        /**
+         * @return certConfig
+         */
+        public CertConfig getCertConfig() {
+            return this.certConfig;
+        }
+
+        /**
+         * @return networkConfig
+         */
+        public NetworkConfig getNetworkConfig() {
+            return this.networkConfig;
+        }
+
+        public static final class Builder {
+            private AuthConfig authConfig; 
+            private CertConfig certConfig; 
+            private NetworkConfig networkConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(RegistryConfig model) {
+                this.authConfig = model.authConfig;
+                this.certConfig = model.certConfig;
+                this.networkConfig = model.networkConfig;
+            } 
+
+            /**
+             * <p>The image registry authentication configuration. Specify this parameter when the image registry requires username and password authentication.</p>
+             */
+            public Builder authConfig(AuthConfig authConfig) {
+                this.authConfig = authConfig;
+                return this;
+            }
+
+            /**
+             * <p>The TLS certificate verification configuration for the image registry.</p>
+             */
+            public Builder certConfig(CertConfig certConfig) {
+                this.certConfig = certConfig;
+                return this;
+            }
+
+            /**
+             * <p>The network configuration for pulling images. Specify this parameter when the image registry is accessible only within a VPC. Function Compute pulls images through this network.</p>
+             */
+            public Builder networkConfig(NetworkConfig networkConfig) {
+                this.networkConfig = networkConfig;
+                return this;
+            }
+
+            public RegistryConfig build() {
+                return new RegistryConfig(this);
             } 
 
         } 
@@ -890,6 +1253,9 @@ public class UpdateMcpTemplateConfigRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("mcpRuntimeMode")
         private String mcpRuntimeMode;
 
+        @com.aliyun.core.annotation.NameInMap("registryConfig")
+        private RegistryConfig registryConfig;
+
         @com.aliyun.core.annotation.NameInMap("sourceType")
         private String sourceType;
 
@@ -900,6 +1266,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             this.image = builder.image;
             this.imageRegistryType = builder.imageRegistryType;
             this.mcpRuntimeMode = builder.mcpRuntimeMode;
+            this.registryConfig = builder.registryConfig;
             this.sourceType = builder.sourceType;
         }
 
@@ -954,6 +1321,13 @@ public class UpdateMcpTemplateConfigRequest extends Request {
         }
 
         /**
+         * @return registryConfig
+         */
+        public RegistryConfig getRegistryConfig() {
+            return this.registryConfig;
+        }
+
+        /**
          * @return sourceType
          */
         public String getSourceType() {
@@ -967,6 +1341,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             private String image; 
             private String imageRegistryType; 
             private String mcpRuntimeMode; 
+            private RegistryConfig registryConfig; 
             private String sourceType; 
 
             private Builder() {
@@ -979,6 +1354,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
                 this.image = model.image;
                 this.imageRegistryType = model.imageRegistryType;
                 this.mcpRuntimeMode = model.mcpRuntimeMode;
+                this.registryConfig = model.registryConfig;
                 this.sourceType = model.sourceType;
             } 
 
@@ -1032,7 +1408,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             }
 
             /**
-             * <p>The MCP runtime mode. Custom containers must currently expose the standard MCP themselves. Set this value to SELF_HOSTED.</p>
+             * <p>The MCP runtime mode. Custom containers must currently expose standard MCP by themselves. Set the value to SELF_HOSTED.</p>
              * 
              * <strong>example:</strong>
              * <p>SELF_HOSTED</p>
@@ -1043,7 +1419,15 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             }
 
             /**
-             * <p>The container source type. Currently, this value is fixed to CONTAINER_IMAGE.</p>
+             * <p>The custom image registry configuration. This configuration takes effect only when ImageRegistryType is set to CUSTOM. It is used to configure image pull authentication, TLS certificate verification, and private network pulling.</p>
+             */
+            public Builder registryConfig(RegistryConfig registryConfig) {
+                this.registryConfig = registryConfig;
+                return this;
+            }
+
+            /**
+             * <p>The container source type. Currently, this parameter is fixed to CONTAINER_IMAGE.</p>
              * 
              * <strong>example:</strong>
              * <p>CONTAINER_IMAGE</p>
@@ -1192,7 +1576,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
              * <p>The description of the hook.</p>
              * 
              * <strong>example:</strong>
-             * <p>Record MCP tool calls</p>
+             * <p>Log MCP tool calls</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1219,7 +1603,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             }
 
             /**
-             * <p>The hook request headers.</p>
+             * <p>The request headers of the hook.</p>
              */
             public Builder headers(java.util.Map<String, String> headers) {
                 this.headers = headers;
@@ -1227,7 +1611,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             }
 
             /**
-             * <p>The timeout period of the hook, in milliseconds.</p>
+             * <p>The timeout period in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>3000</p>
@@ -1295,7 +1679,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             } 
 
             /**
-             * <p>The ordered list of hooks. Executes the PRE_LIST_TOOLS, PRE_CALL_TOOL, POST_LIST_TOOLS, and POST_CALL_TOOL hooks in array order.</p>
+             * <p>Executes the PRE_LIST_TOOLS, PRE_CALL_TOOL, POST_LIST_TOOLS, and POST_CALL_TOOL hooks in the order of the array.</p>
              */
             public Builder hooks(java.util.List<Hooks> hooks) {
                 this.hooks = hooks;
@@ -1417,7 +1801,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             }
 
             /**
-             * <p>The start rule for FC log splitting.</p>
+             * <p>The start rule for splitting Function Compute logs.</p>
              * 
              * <strong>example:</strong>
              * <p>DefaultRegex</p>
@@ -1428,7 +1812,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             }
 
             /**
-             * <p>The Logstore name.</p>
+             * <p>The name of the Logstore.</p>
              * 
              * <strong>example:</strong>
              * <p>mcp-logs</p>
@@ -1439,7 +1823,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             }
 
             /**
-             * <p>The Simple Log Service project name.</p>
+             * <p>The name of the Simple Log Service project.</p>
              * 
              * <strong>example:</strong>
              * <p>agentcore-mcp-logs</p>
@@ -1559,7 +1943,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             }
 
             /**
-             * <p>The number of concurrent sessions per instance. Currently, this value is fixed to 1.</p>
+             * <p>The number of concurrent sessions per instance. This value is currently fixed at 1.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1570,7 +1954,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             }
 
             /**
-             * <p>The session idle timeout period in seconds. Default value: 1800.</p>
+             * <p>The session idle timeout in seconds. Default value: 1800.</p>
              * 
              * <strong>example:</strong>
              * <p>1800</p>
@@ -1592,7 +1976,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             }
 
             /**
-             * <p>The session mode. This parameter applies only to StreamableHTTP. Default value for creation: STATEFUL. If omitted during an update, the original value is retained. STATELESS disables Function Compute session affinity, and the stdio gateway does not enable stateful mode. Native HTTP services must support stateless MCP themselves.</p>
+             * <p>Applies only to StreamableHTTP. Defaults to STATEFUL upon creation. If omitted during an update, the original value is retained. STATELESS disables Function Compute session affinity and prevents the stdio gateway from enabling stateful mode. Native HTTP services must natively support stateless MCP.</p>
              * 
              * <strong>example:</strong>
              * <p>STATEFUL</p>
@@ -1777,7 +2161,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             } 
 
             /**
-             * <p>The runtime user group ID.</p>
+             * <p>The ID of the runtime user group.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>
@@ -1796,7 +2180,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             }
 
             /**
-             * <p>The runtime user ID.</p>
+             * <p>The ID of the runtime user.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>
@@ -1903,7 +2287,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             }
 
             /**
-             * <p>The security group ID.</p>
+             * <p>The ID of the security group.</p>
              * 
              * <strong>example:</strong>
              * <p>sg-example</p>
@@ -1922,7 +2306,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             }
 
             /**
-             * <p>The VPC ID.</p>
+             * <p>The ID of the virtual private cloud (VPC).</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-example</p>
@@ -2042,7 +2426,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             }
 
             /**
-             * <p>The path of the OSS bucket.</p>
+             * <p>The path in the OSS bucket.</p>
              * 
              * <strong>example:</strong>
              * <p>/data</p>
@@ -2053,7 +2437,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             }
 
             /**
-             * <p>The OSS service endpoint.</p>
+             * <p>The endpoint of the OSS service.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://oss-cn-hangzhou.aliyuncs.com">https://oss-cn-hangzhou.aliyuncs.com</a></p>
@@ -2217,7 +2601,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             }
 
             /**
-             * <p>The reserved parameter transformation and result enhancement rule set reference.</p>
+             * <p>The reserved reference to the parameter transformation and result enhancement rule set.</p>
              * 
              * <strong>example:</strong>
              * <p>rules-1</p>
@@ -2228,7 +2612,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             }
 
             /**
-             * <p>The transformation rule version.</p>
+             * <p>The version of the transformation rule.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0</p>
@@ -2430,7 +2814,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             } 
 
             /**
-             * <p>The CPU specification in cores. Default value: 0.25.</p>
+             * <p>The CPU specification, in cores. Default value: 0.25.</p>
              * 
              * <strong>example:</strong>
              * <p>0.25</p>
@@ -2441,7 +2825,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             }
 
             /**
-             * <p>The temporary disk size in MB. Valid values: 512 and 10240.</p>
+             * <p>The ephemeral disk size, in MB. Valid values: 512 and 10240.</p>
              * 
              * <strong>example:</strong>
              * <p>512</p>
@@ -2471,7 +2855,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             }
 
             /**
-             * <p>The number of concurrent requests per instance. Default value: 200.</p>
+             * <p>The maximum number of concurrent requests per instance. Default value: 200.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -2482,7 +2866,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             }
 
             /**
-             * <p>The memory specification in MB. Default value: 512.</p>
+             * <p>The memory specification, in MB. Default value: 512.</p>
              * 
              * <strong>example:</strong>
              * <p>512</p>
@@ -2504,7 +2888,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             }
 
             /**
-             * <p>The function timeout period in seconds. Default value: 300.</p>
+             * <p>The function timeout period, in seconds. Default value: 300.</p>
              * 
              * <strong>example:</strong>
              * <p>300</p>
@@ -2730,7 +3114,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             } 
 
             /**
-             * <p>The MCP entry access control.</p>
+             * <p>The MCP ingress access control.</p>
              */
             public Builder accessControl(AccessControl accessControl) {
                 this.accessControl = accessControl;
@@ -2738,7 +3122,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             }
 
             /**
-             * <p>The agent identity configuration.</p>
+             * <p>The Agent Identity configuration.</p>
              */
             public Builder agentIdentityConfiguration(AgentIdentityConfiguration agentIdentityConfiguration) {
                 this.agentIdentityConfiguration = agentIdentityConfiguration;
@@ -2959,7 +3343,7 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             }
 
             /**
-             * <p>The deployment configuration for a code-deployed MCP.</p>
+             * <p>The deployment configuration for code-deployed MCP.</p>
              */
             public Builder deploymentConfig(DeploymentConfig deploymentConfig) {
                 this.deploymentConfig = deploymentConfig;
@@ -2967,10 +3351,10 @@ public class UpdateMcpTemplateConfigRequest extends Request {
             }
 
             /**
-             * <p>The description of the MCP service.</p>
+             * <p>The MCP service description.</p>
              * 
              * <strong>example:</strong>
-             * <p>MCP service used to query the knowledge base</p>
+             * <p>MCP service for querying the knowledge base</p>
              */
             public Builder description(String description) {
                 this.description = description;

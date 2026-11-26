@@ -162,7 +162,7 @@ public class UpdateMcpRequest extends Request {
         }
 
         /**
-         * <p>The reserved query request identifier. The console backend does not read this parameter and does not provide idempotency guarantees for deduplication or restoring original results based on this identifier.</p>
+         * <p>The reserved query request identifier. The current console backend does not read this parameter and does not provide idempotency guarantees for deduplication or restoring the original acceptance result based on this identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-426614174000</p>
@@ -233,7 +233,7 @@ public class UpdateMcpRequest extends Request {
             } 
 
             /**
-             * <p>The API key used to verify the MCP caller.</p>
+             * <p>The API key used to validate the MCP caller.</p>
              * 
              * <strong>example:</strong>
              * <p>example-api-key</p>
@@ -244,7 +244,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The name of the request header that carries the API key.</p>
+             * <p>The name of the header that carries the API key.</p>
              * 
              * <strong>example:</strong>
              * <p>X-API-Key</p>
@@ -445,7 +445,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The authentication scheme ID.</p>
+             * <p>The ID of the authentication scheme.</p>
              * 
              * <strong>example:</strong>
              * <p>mcp-1234567890abcdef</p>
@@ -678,7 +678,7 @@ public class UpdateMcpRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the AgentCore credential referenced when the mode is set to CREDENTIAL.</p>
+             * <p>The AgentCore credential referenced when the mode is CREDENTIAL.</p>
              * 
              * <strong>example:</strong>
              * <p>credential-id</p>
@@ -697,11 +697,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The access control mode. Valid values:</p>
-             * <ul>
-             * <li>ANONYMOUS: anonymous access</li>
-             * <li>CREDENTIAL: AgentCore credential authentication</li>
-             * </ul>
+             * <p>The access control mode. ANONYMOUS indicates anonymous access, and CREDENTIAL indicates authentication using AgentCore access credentials.</p>
              * 
              * <strong>example:</strong>
              * <p>CREDENTIAL</p>
@@ -827,7 +823,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable agent identity.</p>
+             * <p>Specifies whether to enable Agent Identity.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -918,7 +914,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The complete startup command, passed sequentially as separate arguments. For example, when using supergateway to start a stdio MCP, pass supergateway, --stdio, the complete subcommand, and the remaining parameters.</p>
+             * <p>The complete startup command, passed sequentially by parameter boundaries. For example, when using supergateway to start a stdio MCP, pass supergateway, --stdio, the complete subcommand, and the remaining parameters.</p>
              */
             public Builder command(java.util.List<String> command) {
                 this.command = command;
@@ -926,7 +922,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The code package runtime. Valid values: python3.13, nodejs22, or java17.</p>
+             * <p>The code package runtime. Valid values: python3.13, nodejs22, and java17.</p>
              * 
              * <strong>example:</strong>
              * <p>python3.13</p>
@@ -938,6 +934,369 @@ public class UpdateMcpRequest extends Request {
 
             public CodeConfiguration build() {
                 return new CodeConfiguration(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateMcpRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateMcpRequest</p>
+     */
+    public static class AuthConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("password")
+        private String password;
+
+        @com.aliyun.core.annotation.NameInMap("userName")
+        private String userName;
+
+        private AuthConfig(Builder builder) {
+            this.password = builder.password;
+            this.userName = builder.userName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AuthConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return password
+         */
+        public String getPassword() {
+            return this.password;
+        }
+
+        /**
+         * @return userName
+         */
+        public String getUserName() {
+            return this.userName;
+        }
+
+        public static final class Builder {
+            private String password; 
+            private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(AuthConfig model) {
+                this.password = model.password;
+                this.userName = model.userName;
+            } 
+
+            /**
+             * <p>The image registry password. It is encrypted and stored by the server, and is not returned in queries. Omit this field during updates to retain the existing password.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-password</p>
+             */
+            public Builder password(String password) {
+                this.password = password;
+                return this;
+            }
+
+            /**
+             * <p>The image registry username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>puller</p>
+             */
+            public Builder userName(String userName) {
+                this.userName = userName;
+                return this;
+            }
+
+            public AuthConfig build() {
+                return new AuthConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateMcpRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateMcpRequest</p>
+     */
+    public static class CertConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("insecure")
+        private Boolean insecure;
+
+        @com.aliyun.core.annotation.NameInMap("rootCaCertBase64")
+        private String rootCaCertBase64;
+
+        private CertConfig(Builder builder) {
+            this.insecure = builder.insecure;
+            this.rootCaCertBase64 = builder.rootCaCertBase64;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CertConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return insecure
+         */
+        public Boolean getInsecure() {
+            return this.insecure;
+        }
+
+        /**
+         * @return rootCaCertBase64
+         */
+        public String getRootCaCertBase64() {
+            return this.rootCaCertBase64;
+        }
+
+        public static final class Builder {
+            private Boolean insecure; 
+            private String rootCaCertBase64; 
+
+            private Builder() {
+            } 
+
+            private Builder(CertConfig model) {
+                this.insecure = model.insecure;
+                this.rootCaCertBase64 = model.rootCaCertBase64;
+            } 
+
+            /**
+             * <p>Specifies whether to skip the verification of the image registry TLS certificate. Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder insecure(Boolean insecure) {
+                this.insecure = insecure;
+                return this;
+            }
+
+            /**
+             * <p>The Base64-encoded root CA certificate of the image registry, used to verify self-signed certificates.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LS0tLS1CRUdJTi...</p>
+             */
+            public Builder rootCaCertBase64(String rootCaCertBase64) {
+                this.rootCaCertBase64 = rootCaCertBase64;
+                return this;
+            }
+
+            public CertConfig build() {
+                return new CertConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateMcpRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateMcpRequest</p>
+     */
+    public static class NetworkConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("securityGroupId")
+        private String securityGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("vSwitchId")
+        private String vSwitchId;
+
+        @com.aliyun.core.annotation.NameInMap("vpcId")
+        private String vpcId;
+
+        private NetworkConfig(Builder builder) {
+            this.securityGroupId = builder.securityGroupId;
+            this.vSwitchId = builder.vSwitchId;
+            this.vpcId = builder.vpcId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NetworkConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return securityGroupId
+         */
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        /**
+         * @return vSwitchId
+         */
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        public static final class Builder {
+            private String securityGroupId; 
+            private String vSwitchId; 
+            private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetworkConfig model) {
+                this.securityGroupId = model.securityGroupId;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+            } 
+
+            /**
+             * <p>The ID of the security group used to pull images.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-example</p>
+             */
+            public Builder securityGroupId(String securityGroupId) {
+                this.securityGroupId = securityGroupId;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the vSwitch used to pull images.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-example</p>
+             */
+            public Builder vSwitchId(String vSwitchId) {
+                this.vSwitchId = vSwitchId;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the VPC where the image registry is located.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-example</p>
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
+                return this;
+            }
+
+            public NetworkConfig build() {
+                return new NetworkConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateMcpRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateMcpRequest</p>
+     */
+    public static class RegistryConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("authConfig")
+        private AuthConfig authConfig;
+
+        @com.aliyun.core.annotation.NameInMap("certConfig")
+        private CertConfig certConfig;
+
+        @com.aliyun.core.annotation.NameInMap("networkConfig")
+        private NetworkConfig networkConfig;
+
+        private RegistryConfig(Builder builder) {
+            this.authConfig = builder.authConfig;
+            this.certConfig = builder.certConfig;
+            this.networkConfig = builder.networkConfig;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RegistryConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return authConfig
+         */
+        public AuthConfig getAuthConfig() {
+            return this.authConfig;
+        }
+
+        /**
+         * @return certConfig
+         */
+        public CertConfig getCertConfig() {
+            return this.certConfig;
+        }
+
+        /**
+         * @return networkConfig
+         */
+        public NetworkConfig getNetworkConfig() {
+            return this.networkConfig;
+        }
+
+        public static final class Builder {
+            private AuthConfig authConfig; 
+            private CertConfig certConfig; 
+            private NetworkConfig networkConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(RegistryConfig model) {
+                this.authConfig = model.authConfig;
+                this.certConfig = model.certConfig;
+                this.networkConfig = model.networkConfig;
+            } 
+
+            /**
+             * <p>The image registry authentication configuration. Specify this when the image registry requires username and password authentication.</p>
+             */
+            public Builder authConfig(AuthConfig authConfig) {
+                this.authConfig = authConfig;
+                return this;
+            }
+
+            /**
+             * <p>The image registry TLS certificate verification configuration.</p>
+             */
+            public Builder certConfig(CertConfig certConfig) {
+                this.certConfig = certConfig;
+                return this;
+            }
+
+            /**
+             * <p>The image pull network configuration. Specify this when the image registry is accessible only within a VPC. Function Compute (FC) pulls images through this network.</p>
+             */
+            public Builder networkConfig(NetworkConfig networkConfig) {
+                this.networkConfig = networkConfig;
+                return this;
+            }
+
+            public RegistryConfig build() {
+                return new RegistryConfig(this);
             } 
 
         } 
@@ -968,6 +1327,9 @@ public class UpdateMcpRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("mcpRuntimeMode")
         private String mcpRuntimeMode;
 
+        @com.aliyun.core.annotation.NameInMap("registryConfig")
+        private RegistryConfig registryConfig;
+
         @com.aliyun.core.annotation.NameInMap("sourceType")
         private String sourceType;
 
@@ -978,6 +1340,7 @@ public class UpdateMcpRequest extends Request {
             this.image = builder.image;
             this.imageRegistryType = builder.imageRegistryType;
             this.mcpRuntimeMode = builder.mcpRuntimeMode;
+            this.registryConfig = builder.registryConfig;
             this.sourceType = builder.sourceType;
         }
 
@@ -1032,6 +1395,13 @@ public class UpdateMcpRequest extends Request {
         }
 
         /**
+         * @return registryConfig
+         */
+        public RegistryConfig getRegistryConfig() {
+            return this.registryConfig;
+        }
+
+        /**
          * @return sourceType
          */
         public String getSourceType() {
@@ -1045,6 +1415,7 @@ public class UpdateMcpRequest extends Request {
             private String image; 
             private String imageRegistryType; 
             private String mcpRuntimeMode; 
+            private RegistryConfig registryConfig; 
             private String sourceType; 
 
             private Builder() {
@@ -1057,6 +1428,7 @@ public class UpdateMcpRequest extends Request {
                 this.image = model.image;
                 this.imageRegistryType = model.imageRegistryType;
                 this.mcpRuntimeMode = model.mcpRuntimeMode;
+                this.registryConfig = model.registryConfig;
                 this.sourceType = model.sourceType;
             } 
 
@@ -1080,7 +1452,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The container entrypoint arguments.</p>
+             * <p>The container entrypoint parameters.</p>
              */
             public Builder entrypoint(java.util.List<String> entrypoint) {
                 this.entrypoint = entrypoint;
@@ -1110,7 +1482,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The MCP runtime mode. Custom containers must currently expose standard MCP themselves. Set the value to SELF_HOSTED.</p>
+             * <p>The MCP runtime mode. Custom containers must currently expose the standard MCP themselves. Set this to SELF_HOSTED.</p>
              * 
              * <strong>example:</strong>
              * <p>SELF_HOSTED</p>
@@ -1121,7 +1493,15 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The container source type. Currently fixed to CONTAINER_IMAGE.</p>
+             * <p>The custom image registry configuration. This takes effect only when ImageRegistryType is set to CUSTOM. It is used to configure image pull authentication, TLS certificate verification, and the private network for image pulling.</p>
+             */
+            public Builder registryConfig(RegistryConfig registryConfig) {
+                this.registryConfig = registryConfig;
+                return this;
+            }
+
+            /**
+             * <p>The container source type. Currently, this is fixed to CONTAINER_IMAGE.</p>
              * 
              * <strong>example:</strong>
              * <p>CONTAINER_IMAGE</p>
@@ -1256,7 +1636,7 @@ public class UpdateMcpRequest extends Request {
             } 
 
             /**
-             * <p>The API version of the hook.</p>
+             * <p>The hook API version.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0</p>
@@ -1267,10 +1647,10 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The description of the hook.</p>
+             * <p>The hook description.</p>
              * 
              * <strong>example:</strong>
-             * <p>Log MCP tool invocation</p>
+             * <p>Log MCP tool invoke</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1305,7 +1685,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The timeout period of the hook, in milliseconds.</p>
+             * <p>The timeout period in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>3000</p>
@@ -1316,7 +1696,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The callback URL of the hook.</p>
+             * <p>The hook callback URL.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example.com/mcp-hook">https://example.com/mcp-hook</a></p>
@@ -1373,7 +1753,7 @@ public class UpdateMcpRequest extends Request {
             } 
 
             /**
-             * <p>The list of hooks executed in array order, including PRE_LIST_TOOLS, PRE_CALL_TOOL, POST_LIST_TOOLS, and POST_CALL_TOOL hooks.</p>
+             * <p>Executes the PRE_LIST_TOOLS, PRE_CALL_TOOL, POST_LIST_TOOLS, and POST_CALL_TOOL hooks in the array order.</p>
              */
             public Builder hooks(java.util.List<Hooks> hooks) {
                 this.hooks = hooks;
@@ -1495,7 +1875,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The start rule for splitting Function Compute logs.</p>
+             * <p>The start rule for Function Compute log segmentation.</p>
              * 
              * <strong>example:</strong>
              * <p>DefaultRegex</p>
@@ -1637,7 +2017,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The session concurrency per instance. Currently fixed to 1.</p>
+             * <p>The session concurrency per instance. This value is currently fixed at 1.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1648,7 +2028,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The session idle timeout period in seconds. Default value: 1800.</p>
+             * <p>The session idle timeout in seconds. Default value: 1800.</p>
              * 
              * <strong>example:</strong>
              * <p>1800</p>
@@ -1670,7 +2050,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The session mode. This parameter applies only to StreamableHTTP. Default value: STATEFUL. If omitted during an update, the original value is retained. STATELESS disables Function Compute session affinity, and the stdio gateway does not enable stateful mode. Native HTTP services must support stateless MCP themselves.</p>
+             * <p>Applies only to StreamableHTTP. Defaults to STATEFUL upon creation. If omitted during an update, the original value is retained. STATELESS disables Function Compute session affinity and prevents the stdio gateway from enabling stateful mode. Native HTTP services must natively support stateless MCP.</p>
              * 
              * <strong>example:</strong>
              * <p>STATEFUL</p>
@@ -1855,7 +2235,7 @@ public class UpdateMcpRequest extends Request {
             } 
 
             /**
-             * <p>The user group ID.</p>
+             * <p>The group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>
@@ -1981,7 +2361,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The security group ID.</p>
+             * <p>The ID of the security group.</p>
              * 
              * <strong>example:</strong>
              * <p>sg-example</p>
@@ -2000,7 +2380,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The VPC ID.</p>
+             * <p>The ID of the virtual private cloud (VPC).</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-example</p>
@@ -2120,7 +2500,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The path in the OSS bucket.</p>
+             * <p>The path of the OSS bucket.</p>
              * 
              * <strong>example:</strong>
              * <p>/data</p>
@@ -2508,7 +2888,7 @@ public class UpdateMcpRequest extends Request {
             } 
 
             /**
-             * <p>The CPU specification in cores. Default value: 0.25.</p>
+             * <p>The CPU specification, in cores. Default value: 0.25.</p>
              * 
              * <strong>example:</strong>
              * <p>0.25</p>
@@ -2519,7 +2899,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The ephemeral disk size in MB. Valid values: 512 or 10240.</p>
+             * <p>The temporary disk size, in MB. Valid values: 512 and 10240.</p>
              * 
              * <strong>example:</strong>
              * <p>512</p>
@@ -2538,7 +2918,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The ARN of the RAM role used by user code to access downstream Alibaba Cloud resources.</p>
+             * <p>The ARN of the RAM role used when user code accesses downstream Alibaba Cloud resources.</p>
              * 
              * <strong>example:</strong>
              * <p>acs:ram::1234567890123456:role/agentcore-mcp-execution</p>
@@ -2549,7 +2929,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The request concurrency per instance. Default value: 200.</p>
+             * <p>The maximum number of concurrent requests per instance. Default value: 200.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -2560,7 +2940,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The memory specification in MB. Default value: 512.</p>
+             * <p>The memory specification, in MB. Default value: 512.</p>
              * 
              * <strong>example:</strong>
              * <p>512</p>
@@ -2582,7 +2962,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The function timeout period in seconds. Default value: 300.</p>
+             * <p>The function timeout period, in seconds. Default value: 300.</p>
              * 
              * <strong>example:</strong>
              * <p>300</p>
@@ -2816,7 +3196,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The agent identity configuration.</p>
+             * <p>The Agent Identity configuration.</p>
              */
             public Builder agentIdentityConfiguration(AgentIdentityConfiguration agentIdentityConfiguration) {
                 this.agentIdentityConfiguration = agentIdentityConfiguration;
@@ -2935,6 +3315,219 @@ public class UpdateMcpRequest extends Request {
      *
      * <p>UpdateMcpRequest</p>
      */
+    public static class Tools extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("expectedDigest")
+        private String expectedDigest;
+
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
+        private Tools(Builder builder) {
+            this.expectedDigest = builder.expectedDigest;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tools create() {
+            return builder().build();
+        }
+
+        /**
+         * @return expectedDigest
+         */
+        public String getExpectedDigest() {
+            return this.expectedDigest;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private String expectedDigest; 
+            private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tools model) {
+                this.expectedDigest = model.expectedDigest;
+                this.name = model.name;
+            } 
+
+            /**
+             * <p>Required for virtual MCP. The definition digest obtained from the ListMcpTools operation or validation result of the source MCP. The client passes it back as-is without calculating it. It is used only as a validation baseline for manual updates and does not freeze the runtime schema.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</p>
+             */
+            public Builder expectedDigest(String expectedDigest) {
+                this.expectedDigest = expectedDigest;
+                return this;
+            }
+
+            /**
+             * <p>Required for virtual MCP. The name of the source tool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>get-current-time</p>
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public Tools build() {
+                return new Tools(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateMcpRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateMcpRequest</p>
+     */
+    public static class Sources extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("mcpServerId")
+        private String mcpServerId;
+
+        @com.aliyun.core.annotation.NameInMap("tools")
+        private java.util.List<Tools> tools;
+
+        private Sources(Builder builder) {
+            this.mcpServerId = builder.mcpServerId;
+            this.tools = builder.tools;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Sources create() {
+            return builder().build();
+        }
+
+        /**
+         * @return mcpServerId
+         */
+        public String getMcpServerId() {
+            return this.mcpServerId;
+        }
+
+        /**
+         * @return tools
+         */
+        public java.util.List<Tools> getTools() {
+            return this.tools;
+        }
+
+        public static final class Builder {
+            private String mcpServerId; 
+            private java.util.List<Tools> tools; 
+
+            private Builder() {
+            } 
+
+            private Builder(Sources model) {
+                this.mcpServerId = model.mcpServerId;
+                this.tools = model.tools;
+            } 
+
+            /**
+             * <p>Required for virtual MCP. The ID of the source MCP in the current workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mcp-server-source-1</p>
+             */
+            public Builder mcpServerId(String mcpServerId) {
+                this.mcpServerId = mcpServerId;
+                return this;
+            }
+
+            /**
+             * <p>Required for virtual MCP. The manually selected tools. Specify at least one tool for each source, and up to 100 tools in total across all sources.</p>
+             */
+            public Builder tools(java.util.List<Tools> tools) {
+                this.tools = tools;
+                return this;
+            }
+
+            public Sources build() {
+                return new Sources(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateMcpRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateMcpRequest</p>
+     */
+    public static class VirtualConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("sources")
+        private java.util.List<Sources> sources;
+
+        private VirtualConfig(Builder builder) {
+            this.sources = builder.sources;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VirtualConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return sources
+         */
+        public java.util.List<Sources> getSources() {
+            return this.sources;
+        }
+
+        public static final class Builder {
+            private java.util.List<Sources> sources; 
+
+            private Builder() {
+            } 
+
+            private Builder(VirtualConfig model) {
+                this.sources = model.sources;
+            } 
+
+            /**
+             * <p>Required for virtual MCP. Specify 1 to 10 different source MCPs.</p>
+             */
+            public Builder sources(java.util.List<Sources> sources) {
+                this.sources = sources;
+                return this;
+            }
+
+            public VirtualConfig build() {
+                return new VirtualConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateMcpRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateMcpRequest</p>
+     */
     public static class UpdateMcpRequestBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("addresses")
         private java.util.List<String> addresses;
@@ -2954,6 +3547,9 @@ public class UpdateMcpRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("expectedRevision")
+        private Long expectedRevision;
+
         @com.aliyun.core.annotation.NameInMap("originProtocolVersion")
         private String originProtocolVersion;
 
@@ -2966,6 +3562,9 @@ public class UpdateMcpRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("swaggerConfig")
         private String swaggerConfig;
 
+        @com.aliyun.core.annotation.NameInMap("virtualConfig")
+        private VirtualConfig virtualConfig;
+
         private UpdateMcpRequestBody(Builder builder) {
             this.addresses = builder.addresses;
             this.auth = builder.auth;
@@ -2973,10 +3572,12 @@ public class UpdateMcpRequest extends Request {
             this.customTags = builder.customTags;
             this.deploymentConfig = builder.deploymentConfig;
             this.description = builder.description;
+            this.expectedRevision = builder.expectedRevision;
             this.originProtocolVersion = builder.originProtocolVersion;
             this.permissionMode = builder.permissionMode;
             this.protocol = builder.protocol;
             this.swaggerConfig = builder.swaggerConfig;
+            this.virtualConfig = builder.virtualConfig;
         }
 
         public static Builder builder() {
@@ -3030,6 +3631,13 @@ public class UpdateMcpRequest extends Request {
         }
 
         /**
+         * @return expectedRevision
+         */
+        public Long getExpectedRevision() {
+            return this.expectedRevision;
+        }
+
+        /**
          * @return originProtocolVersion
          */
         public String getOriginProtocolVersion() {
@@ -3057,6 +3665,13 @@ public class UpdateMcpRequest extends Request {
             return this.swaggerConfig;
         }
 
+        /**
+         * @return virtualConfig
+         */
+        public VirtualConfig getVirtualConfig() {
+            return this.virtualConfig;
+        }
+
         public static final class Builder {
             private java.util.List<String> addresses; 
             private Auth auth; 
@@ -3064,10 +3679,12 @@ public class UpdateMcpRequest extends Request {
             private java.util.List<String> customTags; 
             private DeploymentConfig deploymentConfig; 
             private String description; 
+            private Long expectedRevision; 
             private String originProtocolVersion; 
             private String permissionMode; 
             private String protocol; 
             private String swaggerConfig; 
+            private VirtualConfig virtualConfig; 
 
             private Builder() {
             } 
@@ -3079,10 +3696,12 @@ public class UpdateMcpRequest extends Request {
                 this.customTags = model.customTags;
                 this.deploymentConfig = model.deploymentConfig;
                 this.description = model.description;
+                this.expectedRevision = model.expectedRevision;
                 this.originProtocolVersion = model.originProtocolVersion;
                 this.permissionMode = model.permissionMode;
                 this.protocol = model.protocol;
                 this.swaggerConfig = model.swaggerConfig;
+                this.virtualConfig = model.virtualConfig;
             } 
 
             /**
@@ -3094,7 +3713,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The backend authentication configuration. When enabled is set to true: for DIRECT_PROXY, specify directProxy (name/value); for HTTP_TO_MCP, specify the httpToMcp array (each item includes id, type, and credential, and apiKey also requires position and name). Multiple authentication objects are supported, and the first one is the default upstream credential. HTTP_TO_MCP credentials are merged into the securitySchemes of Swagger.</p>
+             * <p>The backend authentication configuration. When enabled is set to true: for DIRECT_PROXY, specify directProxy (name and value); for HTTP_TO_MCP, specify the httpToMcp array (each item includes id, type, and credential; apiKey also requires position and name). Multiple authentication objects are supported, and the first one is the default upstream credential. HTTP_TO_MCP credentials are merged into the securitySchemes of Swagger.</p>
              */
             public Builder auth(Auth auth) {
                 this.auth = auth;
@@ -3102,7 +3721,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>Optional. Valid values: legacy and modern. This parameter is used only for DIRECT_PROXY. If omitted for direct connection, the current value is retained and validated against the existing protocol of the resource. The modern value is incompatible with SSE. Updates are rejected if they break existing client access contracts. For CODE_PACKAGE, this parameter is not required. Valid inputs are ignored, existing field values are not changed, and no publication or Function Compute (FC) session affinity changes are triggered. FC session affinity is configured only based on protocol and DeploymentConfig.McpConfiguration.SessionMode. The gateway protocol is determined by the result of successful probing after FC deployment. For HTTP_TO_MCP, valid values are ignored and not saved.</p>
+             * <p>Optional. Valid values: legacy and modern. This is used only for DIRECT_PROXY. If omitted for direct connection, the current value is retained and validated against the existing protocol of the resource. modern is incompatible with SSE. The update is rejected if it breaks existing client access contracts. For CODE_PACKAGE, this parameter is not required. Valid inputs are ignored, existing field values are not changed, and no publication or change to Function Compute (FC) session affinity is triggered. FC session affinity is configured only based on protocol and DeploymentConfig.McpConfiguration.SessionMode. The gateway protocol is determined by the result of successful probing after FC deployment. For HTTP_TO_MCP, valid values are ignored and not saved.</p>
              * 
              * <strong>example:</strong>
              * <p>modern</p>
@@ -3121,7 +3740,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The deployment configuration patch for CODE_PACKAGE MCP. Object fields are merged hierarchically. If you do not replace the code package, omit CodeConfiguration.CodePackageToken, and the server reuses the currently deployed code package. If you replace the code package, pass a new non-empty token. CodePackageUrl is supported only for CreateMcp and is not supported for updates.</p>
+             * <p>The deployment configuration patch for CODE_PACKAGE MCP. Object fields are merged hierarchically. To retain the current code package, omit CodeConfiguration.CodePackageToken and the server reuses the deployed code package. To replace the code package, pass a new non-empty token. CodePackageUrl is supported only in CreateMcp and is not supported during updates.</p>
              */
             public Builder deploymentConfig(DeploymentConfig deploymentConfig) {
                 this.deploymentConfig = deploymentConfig;
@@ -3140,7 +3759,18 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>Optional. The format is YYYY-MM-DD. This parameter can be specified during creation and modified during updates. If omitted during an update, the current value is retained. It only saves and displays the origin protocol date metadata. It is not a software version, does not restrict the external gateway protocol, does not control backend requests, does not indicate that real-time verification has passed, and does not trigger deployment. No default value is set, and the date is not restricted by legacy or modern. For HTTP_TO_MCP, valid dates are ignored and not saved.</p>
+             * <p>The current revision that must be passed when updating virtualConfig. If it does not match, a conflict is returned. Modifying the source or tool selection is not allowed during the CREATING or UPDATING state, and McpServer.Publish.InProgress is returned. However, you can still modify only the description and tags.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder expectedRevision(Long expectedRevision) {
+                this.expectedRevision = expectedRevision;
+                return this;
+            }
+
+            /**
+             * <p>Optional. The format is YYYY-MM-DD. It can be specified during creation and modified during updates. If omitted during an update, the current value is retained. It only saves and displays the origin protocol date metadata. It is not a software version, does not restrict the external gateway protocol, does not control backend requests, does not indicate that real-time validation has passed, and does not trigger deployment. No default value is set, and the date is not restricted by legacy or modern. For HTTP_TO_MCP, valid dates are ignored and not saved.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-03-26</p>
@@ -3151,7 +3781,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>PUBLIC indicates public access. CONTROLLED indicates that access is controlled based on permission rules.</p>
+             * <p>The access permission mode. PUBLIC indicates public access. CONTROLLED indicates that access is controlled based on permission rules.</p>
              * 
              * <strong>example:</strong>
              * <p>CONTROLLED</p>
@@ -3162,7 +3792,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>Optional. Valid values: SSE and StreamableHTTP. If this parameter is omitted or set to the current value, the original protocol is retained. Actual modifications are allowed only when the initial origin probing for a CODE_PACKAGE fails and the status is CREATE_PROBE_FAILED. After the server verifies that there are no successfully published versions, no gateway publications, and no pending tasks, a new compute deployment and origin probing are initiated, and the status returns to CREATING. Protocol modifications are not allowed for update failures after a successful publication.</p>
+             * <p>Optional. Valid values: SSE and StreamableHTTP. If omitted or set to the current value, the original protocol is retained. Actual modification is allowed only when the initial origin probing for CODE_PACKAGE fails and the status is CREATE_PROBE_FAILED. After the server verifies that there are no successfully published versions, no gateway publications, and no pending tasks, a new compute deployment and origin probing are initiated, and the status returns to CREATING. Protocol modification is not allowed for update failures after a successful publication.</p>
              * 
              * <strong>example:</strong>
              * <p>StreamableHTTP</p>
@@ -3173,13 +3803,21 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>If Type is set to HTTP_TO_MCP, specify this field.</p>
+             * <p>This field is required if the type is HTTP_TO_MCP.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;type&quot;:&quot;object&quot;}</p>
              */
             public Builder swaggerConfig(String swaggerConfig) {
                 this.swaggerConfig = swaggerConfig;
+                return this;
+            }
+
+            /**
+             * <p>The source and tool selection for a virtual MCP. This is used only for VIRTUAL type, and the tool list is updated only manually.</p>
+             */
+            public Builder virtualConfig(VirtualConfig virtualConfig) {
+                this.virtualConfig = virtualConfig;
                 return this;
             }
 

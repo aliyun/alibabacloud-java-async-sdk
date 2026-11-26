@@ -262,6 +262,219 @@ public class ListMcpsResponseBody extends TeaModel {
      *
      * <p>ListMcpsResponseBody</p>
      */
+    public static class Tools extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("expectedDigest")
+        private String expectedDigest;
+
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
+        private Tools(Builder builder) {
+            this.expectedDigest = builder.expectedDigest;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tools create() {
+            return builder().build();
+        }
+
+        /**
+         * @return expectedDigest
+         */
+        public String getExpectedDigest() {
+            return this.expectedDigest;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private String expectedDigest; 
+            private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tools model) {
+                this.expectedDigest = model.expectedDigest;
+                this.name = model.name;
+            } 
+
+            /**
+             * <p>虚拟 MCP 必填：从源 MCP 的 ListMcpTools 或校验结果取得的定义摘要，客户端原样回传，不自行计算。仅用作手动更新校验基线，不冻结运行时 Schema。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</p>
+             */
+            public Builder expectedDigest(String expectedDigest) {
+                this.expectedDigest = expectedDigest;
+                return this;
+            }
+
+            /**
+             * <p>虚拟 MCP 必填：源工具名称。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>get-current-time</p>
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public Tools build() {
+                return new Tools(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListMcpsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMcpsResponseBody</p>
+     */
+    public static class Sources extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("mcpServerId")
+        private String mcpServerId;
+
+        @com.aliyun.core.annotation.NameInMap("tools")
+        private java.util.List<Tools> tools;
+
+        private Sources(Builder builder) {
+            this.mcpServerId = builder.mcpServerId;
+            this.tools = builder.tools;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Sources create() {
+            return builder().build();
+        }
+
+        /**
+         * @return mcpServerId
+         */
+        public String getMcpServerId() {
+            return this.mcpServerId;
+        }
+
+        /**
+         * @return tools
+         */
+        public java.util.List<Tools> getTools() {
+            return this.tools;
+        }
+
+        public static final class Builder {
+            private String mcpServerId; 
+            private java.util.List<Tools> tools; 
+
+            private Builder() {
+            } 
+
+            private Builder(Sources model) {
+                this.mcpServerId = model.mcpServerId;
+                this.tools = model.tools;
+            } 
+
+            /**
+             * <p>虚拟 MCP 必填：当前工作空间的源 MCP ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mcp-server-source-1</p>
+             */
+            public Builder mcpServerId(String mcpServerId) {
+                this.mcpServerId = mcpServerId;
+                return this;
+            }
+
+            /**
+             * <p>虚拟 MCP 必填：手动选择的工具，每个源至少一个，全部源最多 100 个。</p>
+             */
+            public Builder tools(java.util.List<Tools> tools) {
+                this.tools = tools;
+                return this;
+            }
+
+            public Sources build() {
+                return new Sources(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListMcpsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMcpsResponseBody</p>
+     */
+    public static class AppliedVirtualConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("sources")
+        private java.util.List<Sources> sources;
+
+        private AppliedVirtualConfig(Builder builder) {
+            this.sources = builder.sources;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AppliedVirtualConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return sources
+         */
+        public java.util.List<Sources> getSources() {
+            return this.sources;
+        }
+
+        public static final class Builder {
+            private java.util.List<Sources> sources; 
+
+            private Builder() {
+            } 
+
+            private Builder(AppliedVirtualConfig model) {
+                this.sources = model.sources;
+            } 
+
+            /**
+             * <p>虚拟 MCP 必填，填写 1 到 10 个不同的源 MCP。</p>
+             */
+            public Builder sources(java.util.List<Sources> sources) {
+                this.sources = sources;
+                return this;
+            }
+
+            public AppliedVirtualConfig build() {
+                return new AppliedVirtualConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListMcpsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMcpsResponseBody</p>
+     */
     public static class CodePackage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("apiKey")
         private String apiKey;
@@ -1021,6 +1234,369 @@ public class ListMcpsResponseBody extends TeaModel {
      *
      * <p>ListMcpsResponseBody</p>
      */
+    public static class AuthConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("password")
+        private String password;
+
+        @com.aliyun.core.annotation.NameInMap("userName")
+        private String userName;
+
+        private AuthConfig(Builder builder) {
+            this.password = builder.password;
+            this.userName = builder.userName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AuthConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return password
+         */
+        public String getPassword() {
+            return this.password;
+        }
+
+        /**
+         * @return userName
+         */
+        public String getUserName() {
+            return this.userName;
+        }
+
+        public static final class Builder {
+            private String password; 
+            private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(AuthConfig model) {
+                this.password = model.password;
+                this.userName = model.userName;
+            } 
+
+            /**
+             * <p>镜像仓库密码，由服务端加密保存，查询时不返回。更新时省略该字段保留已有密码。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-password</p>
+             */
+            public Builder password(String password) {
+                this.password = password;
+                return this;
+            }
+
+            /**
+             * <p>镜像仓库用户名</p>
+             * 
+             * <strong>example:</strong>
+             * <p>puller</p>
+             */
+            public Builder userName(String userName) {
+                this.userName = userName;
+                return this;
+            }
+
+            public AuthConfig build() {
+                return new AuthConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListMcpsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMcpsResponseBody</p>
+     */
+    public static class CertConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("insecure")
+        private Boolean insecure;
+
+        @com.aliyun.core.annotation.NameInMap("rootCaCertBase64")
+        private String rootCaCertBase64;
+
+        private CertConfig(Builder builder) {
+            this.insecure = builder.insecure;
+            this.rootCaCertBase64 = builder.rootCaCertBase64;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CertConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return insecure
+         */
+        public Boolean getInsecure() {
+            return this.insecure;
+        }
+
+        /**
+         * @return rootCaCertBase64
+         */
+        public String getRootCaCertBase64() {
+            return this.rootCaCertBase64;
+        }
+
+        public static final class Builder {
+            private Boolean insecure; 
+            private String rootCaCertBase64; 
+
+            private Builder() {
+            } 
+
+            private Builder(CertConfig model) {
+                this.insecure = model.insecure;
+                this.rootCaCertBase64 = model.rootCaCertBase64;
+            } 
+
+            /**
+             * <p>true 表示不校验镜像仓库 TLS 证书，默认 false</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder insecure(Boolean insecure) {
+                this.insecure = insecure;
+                return this;
+            }
+
+            /**
+             * <p>Base64 编码的镜像仓库根 CA 证书，用于校验自签证书</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LS0tLS1CRUdJTi...</p>
+             */
+            public Builder rootCaCertBase64(String rootCaCertBase64) {
+                this.rootCaCertBase64 = rootCaCertBase64;
+                return this;
+            }
+
+            public CertConfig build() {
+                return new CertConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListMcpsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMcpsResponseBody</p>
+     */
+    public static class NetworkConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("securityGroupId")
+        private String securityGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("vSwitchId")
+        private String vSwitchId;
+
+        @com.aliyun.core.annotation.NameInMap("vpcId")
+        private String vpcId;
+
+        private NetworkConfig(Builder builder) {
+            this.securityGroupId = builder.securityGroupId;
+            this.vSwitchId = builder.vSwitchId;
+            this.vpcId = builder.vpcId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NetworkConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return securityGroupId
+         */
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        /**
+         * @return vSwitchId
+         */
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        public static final class Builder {
+            private String securityGroupId; 
+            private String vSwitchId; 
+            private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetworkConfig model) {
+                this.securityGroupId = model.securityGroupId;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+            } 
+
+            /**
+             * <p>拉取镜像使用的安全组 ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-example</p>
+             */
+            public Builder securityGroupId(String securityGroupId) {
+                this.securityGroupId = securityGroupId;
+                return this;
+            }
+
+            /**
+             * <p>拉取镜像使用的交换机 ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-example</p>
+             */
+            public Builder vSwitchId(String vSwitchId) {
+                this.vSwitchId = vSwitchId;
+                return this;
+            }
+
+            /**
+             * <p>镜像仓库所在 VPC ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-example</p>
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
+                return this;
+            }
+
+            public NetworkConfig build() {
+                return new NetworkConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListMcpsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMcpsResponseBody</p>
+     */
+    public static class RegistryConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("authConfig")
+        private AuthConfig authConfig;
+
+        @com.aliyun.core.annotation.NameInMap("certConfig")
+        private CertConfig certConfig;
+
+        @com.aliyun.core.annotation.NameInMap("networkConfig")
+        private NetworkConfig networkConfig;
+
+        private RegistryConfig(Builder builder) {
+            this.authConfig = builder.authConfig;
+            this.certConfig = builder.certConfig;
+            this.networkConfig = builder.networkConfig;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RegistryConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return authConfig
+         */
+        public AuthConfig getAuthConfig() {
+            return this.authConfig;
+        }
+
+        /**
+         * @return certConfig
+         */
+        public CertConfig getCertConfig() {
+            return this.certConfig;
+        }
+
+        /**
+         * @return networkConfig
+         */
+        public NetworkConfig getNetworkConfig() {
+            return this.networkConfig;
+        }
+
+        public static final class Builder {
+            private AuthConfig authConfig; 
+            private CertConfig certConfig; 
+            private NetworkConfig networkConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(RegistryConfig model) {
+                this.authConfig = model.authConfig;
+                this.certConfig = model.certConfig;
+                this.networkConfig = model.networkConfig;
+            } 
+
+            /**
+             * <p>镜像仓库需要用户名密码认证时填写</p>
+             */
+            public Builder authConfig(AuthConfig authConfig) {
+                this.authConfig = authConfig;
+                return this;
+            }
+
+            /**
+             * <p>镜像仓库 TLS 证书校验配置</p>
+             */
+            public Builder certConfig(CertConfig certConfig) {
+                this.certConfig = certConfig;
+                return this;
+            }
+
+            /**
+             * <p>镜像仓库仅在 VPC 内可访问时填写，FC 通过该网络拉取镜像</p>
+             */
+            public Builder networkConfig(NetworkConfig networkConfig) {
+                this.networkConfig = networkConfig;
+                return this;
+            }
+
+            public RegistryConfig build() {
+                return new RegistryConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListMcpsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMcpsResponseBody</p>
+     */
     public static class ContainerConfiguration extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("acrInstanceId")
         private String acrInstanceId;
@@ -1040,6 +1616,9 @@ public class ListMcpsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("mcpRuntimeMode")
         private String mcpRuntimeMode;
 
+        @com.aliyun.core.annotation.NameInMap("registryConfig")
+        private RegistryConfig registryConfig;
+
         @com.aliyun.core.annotation.NameInMap("sourceType")
         private String sourceType;
 
@@ -1050,6 +1629,7 @@ public class ListMcpsResponseBody extends TeaModel {
             this.image = builder.image;
             this.imageRegistryType = builder.imageRegistryType;
             this.mcpRuntimeMode = builder.mcpRuntimeMode;
+            this.registryConfig = builder.registryConfig;
             this.sourceType = builder.sourceType;
         }
 
@@ -1104,6 +1684,13 @@ public class ListMcpsResponseBody extends TeaModel {
         }
 
         /**
+         * @return registryConfig
+         */
+        public RegistryConfig getRegistryConfig() {
+            return this.registryConfig;
+        }
+
+        /**
          * @return sourceType
          */
         public String getSourceType() {
@@ -1117,6 +1704,7 @@ public class ListMcpsResponseBody extends TeaModel {
             private String image; 
             private String imageRegistryType; 
             private String mcpRuntimeMode; 
+            private RegistryConfig registryConfig; 
             private String sourceType; 
 
             private Builder() {
@@ -1129,6 +1717,7 @@ public class ListMcpsResponseBody extends TeaModel {
                 this.image = model.image;
                 this.imageRegistryType = model.imageRegistryType;
                 this.mcpRuntimeMode = model.mcpRuntimeMode;
+                this.registryConfig = model.registryConfig;
                 this.sourceType = model.sourceType;
             } 
 
@@ -1189,6 +1778,14 @@ public class ListMcpsResponseBody extends TeaModel {
              */
             public Builder mcpRuntimeMode(String mcpRuntimeMode) {
                 this.mcpRuntimeMode = mcpRuntimeMode;
+                return this;
+            }
+
+            /**
+             * <p>仅 ImageRegistryType 为 CUSTOM 时生效，用于配置镜像拉取认证、TLS 证书校验和私网拉取网络</p>
+             */
+            public Builder registryConfig(RegistryConfig registryConfig) {
+                this.registryConfig = registryConfig;
                 return this;
             }
 
@@ -3876,9 +4473,228 @@ public class ListMcpsResponseBody extends TeaModel {
      *
      * <p>ListMcpsResponseBody</p>
      */
+    public static class SourcesTools extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("expectedDigest")
+        private String expectedDigest;
+
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
+        private SourcesTools(Builder builder) {
+            this.expectedDigest = builder.expectedDigest;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SourcesTools create() {
+            return builder().build();
+        }
+
+        /**
+         * @return expectedDigest
+         */
+        public String getExpectedDigest() {
+            return this.expectedDigest;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private String expectedDigest; 
+            private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(SourcesTools model) {
+                this.expectedDigest = model.expectedDigest;
+                this.name = model.name;
+            } 
+
+            /**
+             * <p>虚拟 MCP 必填：从源 MCP 的 ListMcpTools 或校验结果取得的定义摘要，客户端原样回传，不自行计算。仅用作手动更新校验基线，不冻结运行时 Schema。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</p>
+             */
+            public Builder expectedDigest(String expectedDigest) {
+                this.expectedDigest = expectedDigest;
+                return this;
+            }
+
+            /**
+             * <p>虚拟 MCP 必填：源工具名称。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>get-current-time</p>
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public SourcesTools build() {
+                return new SourcesTools(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListMcpsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMcpsResponseBody</p>
+     */
+    public static class VirtualConfigSources extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("mcpServerId")
+        private String mcpServerId;
+
+        @com.aliyun.core.annotation.NameInMap("tools")
+        private java.util.List<SourcesTools> tools;
+
+        private VirtualConfigSources(Builder builder) {
+            this.mcpServerId = builder.mcpServerId;
+            this.tools = builder.tools;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VirtualConfigSources create() {
+            return builder().build();
+        }
+
+        /**
+         * @return mcpServerId
+         */
+        public String getMcpServerId() {
+            return this.mcpServerId;
+        }
+
+        /**
+         * @return tools
+         */
+        public java.util.List<SourcesTools> getTools() {
+            return this.tools;
+        }
+
+        public static final class Builder {
+            private String mcpServerId; 
+            private java.util.List<SourcesTools> tools; 
+
+            private Builder() {
+            } 
+
+            private Builder(VirtualConfigSources model) {
+                this.mcpServerId = model.mcpServerId;
+                this.tools = model.tools;
+            } 
+
+            /**
+             * <p>虚拟 MCP 必填：当前工作空间的源 MCP ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mcp-server-source-1</p>
+             */
+            public Builder mcpServerId(String mcpServerId) {
+                this.mcpServerId = mcpServerId;
+                return this;
+            }
+
+            /**
+             * <p>虚拟 MCP 必填：手动选择的工具，每个源至少一个，全部源最多 100 个。</p>
+             */
+            public Builder tools(java.util.List<SourcesTools> tools) {
+                this.tools = tools;
+                return this;
+            }
+
+            public VirtualConfigSources build() {
+                return new VirtualConfigSources(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListMcpsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMcpsResponseBody</p>
+     */
+    public static class VirtualConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("sources")
+        private java.util.List<VirtualConfigSources> sources;
+
+        private VirtualConfig(Builder builder) {
+            this.sources = builder.sources;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VirtualConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return sources
+         */
+        public java.util.List<VirtualConfigSources> getSources() {
+            return this.sources;
+        }
+
+        public static final class Builder {
+            private java.util.List<VirtualConfigSources> sources; 
+
+            private Builder() {
+            } 
+
+            private Builder(VirtualConfig model) {
+                this.sources = model.sources;
+            } 
+
+            /**
+             * <p>虚拟 MCP 必填，填写 1 到 10 个不同的源 MCP。</p>
+             */
+            public Builder sources(java.util.List<VirtualConfigSources> sources) {
+                this.sources = sources;
+                return this;
+            }
+
+            public VirtualConfig build() {
+                return new VirtualConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListMcpsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMcpsResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("addresses")
         private java.util.List<String> addresses;
+
+        @com.aliyun.core.annotation.NameInMap("appliedRevision")
+        private Long appliedRevision;
+
+        @com.aliyun.core.annotation.NameInMap("appliedVirtualConfig")
+        private AppliedVirtualConfig appliedVirtualConfig;
 
         @com.aliyun.core.annotation.NameInMap("auth")
         private Auth auth;
@@ -3904,6 +4720,12 @@ public class ListMcpsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("functionName")
         private String functionName;
 
+        @com.aliyun.core.annotation.NameInMap("lastValidationId")
+        private String lastValidationId;
+
+        @com.aliyun.core.annotation.NameInMap("lastValidationStatus")
+        private String lastValidationStatus;
+
         @com.aliyun.core.annotation.NameInMap("marketSource")
         private MarketSource marketSource;
 
@@ -3919,6 +4741,9 @@ public class ListMcpsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("operation")
         private Operation operation;
 
+        @com.aliyun.core.annotation.NameInMap("operationTaskId")
+        private String operationTaskId;
+
         @com.aliyun.core.annotation.NameInMap("originProbe")
         private OriginProbe originProbe;
 
@@ -3931,14 +4756,29 @@ public class ListMcpsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("protocol")
         private String protocol;
 
+        @com.aliyun.core.annotation.NameInMap("resolvedImageUri")
+        private String resolvedImageUri;
+
+        @com.aliyun.core.annotation.NameInMap("revision")
+        private Long revision;
+
+        @com.aliyun.core.annotation.NameInMap("sourceCount")
+        private Integer sourceCount;
+
         @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("statusReason")
         private String statusReason;
 
+        @com.aliyun.core.annotation.NameInMap("statusReasonCode")
+        private String statusReasonCode;
+
         @com.aliyun.core.annotation.NameInMap("swaggerConfig")
         private String swaggerConfig;
+
+        @com.aliyun.core.annotation.NameInMap("toolCount")
+        private Integer toolCount;
 
         @com.aliyun.core.annotation.NameInMap("type")
         private String type;
@@ -3949,8 +4789,13 @@ public class ListMcpsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("usageActive")
         private Boolean usageActive;
 
+        @com.aliyun.core.annotation.NameInMap("virtualConfig")
+        private VirtualConfig virtualConfig;
+
         private Items(Builder builder) {
             this.addresses = builder.addresses;
+            this.appliedRevision = builder.appliedRevision;
+            this.appliedVirtualConfig = builder.appliedVirtualConfig;
             this.auth = builder.auth;
             this.backendMcpProtocol = builder.backendMcpProtocol;
             this.createdAt = builder.createdAt;
@@ -3959,21 +4804,30 @@ public class ListMcpsResponseBody extends TeaModel {
             this.description = builder.description;
             this.endpoint = builder.endpoint;
             this.functionName = builder.functionName;
+            this.lastValidationId = builder.lastValidationId;
+            this.lastValidationStatus = builder.lastValidationStatus;
             this.marketSource = builder.marketSource;
             this.mcpServerId = builder.mcpServerId;
             this.name = builder.name;
             this.officialTag = builder.officialTag;
             this.operation = builder.operation;
+            this.operationTaskId = builder.operationTaskId;
             this.originProbe = builder.originProbe;
             this.originProtocolVersion = builder.originProtocolVersion;
             this.permissionMode = builder.permissionMode;
             this.protocol = builder.protocol;
+            this.resolvedImageUri = builder.resolvedImageUri;
+            this.revision = builder.revision;
+            this.sourceCount = builder.sourceCount;
             this.status = builder.status;
             this.statusReason = builder.statusReason;
+            this.statusReasonCode = builder.statusReasonCode;
             this.swaggerConfig = builder.swaggerConfig;
+            this.toolCount = builder.toolCount;
             this.type = builder.type;
             this.updatedAt = builder.updatedAt;
             this.usageActive = builder.usageActive;
+            this.virtualConfig = builder.virtualConfig;
         }
 
         public static Builder builder() {
@@ -3989,6 +4843,20 @@ public class ListMcpsResponseBody extends TeaModel {
          */
         public java.util.List<String> getAddresses() {
             return this.addresses;
+        }
+
+        /**
+         * @return appliedRevision
+         */
+        public Long getAppliedRevision() {
+            return this.appliedRevision;
+        }
+
+        /**
+         * @return appliedVirtualConfig
+         */
+        public AppliedVirtualConfig getAppliedVirtualConfig() {
+            return this.appliedVirtualConfig;
         }
 
         /**
@@ -4048,6 +4916,20 @@ public class ListMcpsResponseBody extends TeaModel {
         }
 
         /**
+         * @return lastValidationId
+         */
+        public String getLastValidationId() {
+            return this.lastValidationId;
+        }
+
+        /**
+         * @return lastValidationStatus
+         */
+        public String getLastValidationStatus() {
+            return this.lastValidationStatus;
+        }
+
+        /**
          * @return marketSource
          */
         public MarketSource getMarketSource() {
@@ -4083,6 +4965,13 @@ public class ListMcpsResponseBody extends TeaModel {
         }
 
         /**
+         * @return operationTaskId
+         */
+        public String getOperationTaskId() {
+            return this.operationTaskId;
+        }
+
+        /**
          * @return originProbe
          */
         public OriginProbe getOriginProbe() {
@@ -4111,6 +5000,27 @@ public class ListMcpsResponseBody extends TeaModel {
         }
 
         /**
+         * @return resolvedImageUri
+         */
+        public String getResolvedImageUri() {
+            return this.resolvedImageUri;
+        }
+
+        /**
+         * @return revision
+         */
+        public Long getRevision() {
+            return this.revision;
+        }
+
+        /**
+         * @return sourceCount
+         */
+        public Integer getSourceCount() {
+            return this.sourceCount;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -4125,10 +5035,24 @@ public class ListMcpsResponseBody extends TeaModel {
         }
 
         /**
+         * @return statusReasonCode
+         */
+        public String getStatusReasonCode() {
+            return this.statusReasonCode;
+        }
+
+        /**
          * @return swaggerConfig
          */
         public String getSwaggerConfig() {
             return this.swaggerConfig;
+        }
+
+        /**
+         * @return toolCount
+         */
+        public Integer getToolCount() {
+            return this.toolCount;
         }
 
         /**
@@ -4152,8 +5076,17 @@ public class ListMcpsResponseBody extends TeaModel {
             return this.usageActive;
         }
 
+        /**
+         * @return virtualConfig
+         */
+        public VirtualConfig getVirtualConfig() {
+            return this.virtualConfig;
+        }
+
         public static final class Builder {
             private java.util.List<String> addresses; 
+            private Long appliedRevision; 
+            private AppliedVirtualConfig appliedVirtualConfig; 
             private Auth auth; 
             private String backendMcpProtocol; 
             private String createdAt; 
@@ -4162,27 +5095,38 @@ public class ListMcpsResponseBody extends TeaModel {
             private String description; 
             private String endpoint; 
             private String functionName; 
+            private String lastValidationId; 
+            private String lastValidationStatus; 
             private MarketSource marketSource; 
             private String mcpServerId; 
             private String name; 
             private String officialTag; 
             private Operation operation; 
+            private String operationTaskId; 
             private OriginProbe originProbe; 
             private String originProtocolVersion; 
             private String permissionMode; 
             private String protocol; 
+            private String resolvedImageUri; 
+            private Long revision; 
+            private Integer sourceCount; 
             private String status; 
             private String statusReason; 
+            private String statusReasonCode; 
             private String swaggerConfig; 
+            private Integer toolCount; 
             private String type; 
             private String updatedAt; 
             private Boolean usageActive; 
+            private VirtualConfig virtualConfig; 
 
             private Builder() {
             } 
 
             private Builder(Items model) {
                 this.addresses = model.addresses;
+                this.appliedRevision = model.appliedRevision;
+                this.appliedVirtualConfig = model.appliedVirtualConfig;
                 this.auth = model.auth;
                 this.backendMcpProtocol = model.backendMcpProtocol;
                 this.createdAt = model.createdAt;
@@ -4191,21 +5135,30 @@ public class ListMcpsResponseBody extends TeaModel {
                 this.description = model.description;
                 this.endpoint = model.endpoint;
                 this.functionName = model.functionName;
+                this.lastValidationId = model.lastValidationId;
+                this.lastValidationStatus = model.lastValidationStatus;
                 this.marketSource = model.marketSource;
                 this.mcpServerId = model.mcpServerId;
                 this.name = model.name;
                 this.officialTag = model.officialTag;
                 this.operation = model.operation;
+                this.operationTaskId = model.operationTaskId;
                 this.originProbe = model.originProbe;
                 this.originProtocolVersion = model.originProtocolVersion;
                 this.permissionMode = model.permissionMode;
                 this.protocol = model.protocol;
+                this.resolvedImageUri = model.resolvedImageUri;
+                this.revision = model.revision;
+                this.sourceCount = model.sourceCount;
                 this.status = model.status;
                 this.statusReason = model.statusReason;
+                this.statusReasonCode = model.statusReasonCode;
                 this.swaggerConfig = model.swaggerConfig;
+                this.toolCount = model.toolCount;
                 this.type = model.type;
                 this.updatedAt = model.updatedAt;
                 this.usageActive = model.usageActive;
+                this.virtualConfig = model.virtualConfig;
             } 
 
             /**
@@ -4213,6 +5166,25 @@ public class ListMcpsResponseBody extends TeaModel {
              */
             public Builder addresses(java.util.List<String> addresses) {
                 this.addresses = addresses;
+                return this;
+            }
+
+            /**
+             * <p>已生效修订号。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder appliedRevision(Long appliedRevision) {
+                this.appliedRevision = appliedRevision;
+                return this;
+            }
+
+            /**
+             * <p>仅 includeVirtualConfig=true 时返回已生效的源和工具选择。</p>
+             */
+            public Builder appliedVirtualConfig(AppliedVirtualConfig appliedVirtualConfig) {
+                this.appliedVirtualConfig = appliedVirtualConfig;
                 return this;
             }
 
@@ -4296,6 +5268,28 @@ public class ListMcpsResponseBody extends TeaModel {
             }
 
             /**
+             * <p>当前目标组装最近一次工具校验的 ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>val-1234567890</p>
+             */
+            public Builder lastValidationId(String lastValidationId) {
+                this.lastValidationId = lastValidationId;
+                return this;
+            }
+
+            /**
+             * <p>当前目标组装的校验状态，取值为 PENDING、RUNNING、PAUSED、COMPLETED、PARTIAL_FAILED、FAILED 或 CANCELED。批量任务完成后按当前 MCP 的结果判定 COMPLETED 或 PARTIAL_FAILED。需查看明细时调用 GetMcp。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>COMPLETED</p>
+             */
+            public Builder lastValidationStatus(String lastValidationStatus) {
+                this.lastValidationStatus = lastValidationStatus;
+                return this;
+            }
+
+            /**
              * <p>The MCP source marketplace template.</p>
              */
             public Builder marketSource(MarketSource marketSource) {
@@ -4345,6 +5339,17 @@ public class ListMcpsResponseBody extends TeaModel {
             }
 
             /**
+             * <p>最近一次虚拟 MCP 发布任务 ID，可用于查询和定位异步发布结果。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>task-1234567890</p>
+             */
+            public Builder operationTaskId(String operationTaskId) {
+                this.operationTaskId = operationTaskId;
+                return this;
+            }
+
+            /**
              * <p>Only code deployment returns the minimal origin verification summary of the most recent task. This field is empty for direct proxy and HTTP to MCP, and queries do not trigger probing.</p>
              */
             public Builder originProbe(OriginProbe originProbe) {
@@ -4390,6 +5395,39 @@ public class ListMcpsResponseBody extends TeaModel {
             }
 
             /**
+             * <p>只读，记录当前生效部署从 FC 读取的镜像地址及 Digest。部署仍使用 deploymentConfig.containerConfiguration.image 中的 Tag；该字段不作为部署入参。部署尚未生效或未取得镜像摘要时为空。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>registry.example.com/mcp@sha256:0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef</p>
+             */
+            public Builder resolvedImageUri(String resolvedImageUri) {
+                this.resolvedImageUri = resolvedImageUri;
+                return this;
+            }
+
+            /**
+             * <p>目标修订号。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
+             */
+            public Builder revision(Long revision) {
+                this.revision = revision;
+                return this;
+            }
+
+            /**
+             * <p>选择的源数量。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
+             */
+            public Builder sourceCount(Integer sourceCount) {
+                this.sourceCount = sourceCount;
+                return this;
+            }
+
+            /**
              * <p>The status.</p>
              * 
              * <strong>example:</strong>
@@ -4412,6 +5450,17 @@ public class ListMcpsResponseBody extends TeaModel {
             }
 
             /**
+             * <p>虚拟 MCP 发布失败的安全原因码。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PublishFailed</p>
+             */
+            public Builder statusReasonCode(String statusReasonCode) {
+                this.statusReasonCode = statusReasonCode;
+                return this;
+            }
+
+            /**
              * <p>The Swagger configuration.</p>
              * 
              * <strong>example:</strong>
@@ -4419,6 +5468,17 @@ public class ListMcpsResponseBody extends TeaModel {
              */
             public Builder swaggerConfig(String swaggerConfig) {
                 this.swaggerConfig = swaggerConfig;
+                return this;
+            }
+
+            /**
+             * <p>选择的工具数量。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
+             */
+            public Builder toolCount(Integer toolCount) {
+                this.toolCount = toolCount;
                 return this;
             }
 
@@ -4449,6 +5509,14 @@ public class ListMcpsResponseBody extends TeaModel {
              */
             public Builder usageActive(Boolean usageActive) {
                 this.usageActive = usageActive;
+                return this;
+            }
+
+            /**
+             * <p>仅 includeVirtualConfig=true 时返回目标源和工具选择。</p>
+             */
+            public Builder virtualConfig(VirtualConfig virtualConfig) {
+                this.virtualConfig = virtualConfig;
                 return this;
             }
 

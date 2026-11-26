@@ -171,7 +171,7 @@ public class GetMcpResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -184,6 +184,219 @@ public class GetMcpResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetMcpResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMcpResponseBody</p>
+     */
+    public static class Tools extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("expectedDigest")
+        private String expectedDigest;
+
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
+        private Tools(Builder builder) {
+            this.expectedDigest = builder.expectedDigest;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tools create() {
+            return builder().build();
+        }
+
+        /**
+         * @return expectedDigest
+         */
+        public String getExpectedDigest() {
+            return this.expectedDigest;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private String expectedDigest; 
+            private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tools model) {
+                this.expectedDigest = model.expectedDigest;
+                this.name = model.name;
+            } 
+
+            /**
+             * <p>Required for virtual MCPs. The definition digest obtained from the ListMcpTools operation or the validation result of the source MCP. The client passes this value back as is without calculating it. This value is used only to manually update the validation baseline and does not freeze the runtime schema.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</p>
+             */
+            public Builder expectedDigest(String expectedDigest) {
+                this.expectedDigest = expectedDigest;
+                return this;
+            }
+
+            /**
+             * <p>Required for virtual MCPs. The name of the source tool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>get-current-time</p>
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public Tools build() {
+                return new Tools(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetMcpResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMcpResponseBody</p>
+     */
+    public static class Sources extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("mcpServerId")
+        private String mcpServerId;
+
+        @com.aliyun.core.annotation.NameInMap("tools")
+        private java.util.List<Tools> tools;
+
+        private Sources(Builder builder) {
+            this.mcpServerId = builder.mcpServerId;
+            this.tools = builder.tools;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Sources create() {
+            return builder().build();
+        }
+
+        /**
+         * @return mcpServerId
+         */
+        public String getMcpServerId() {
+            return this.mcpServerId;
+        }
+
+        /**
+         * @return tools
+         */
+        public java.util.List<Tools> getTools() {
+            return this.tools;
+        }
+
+        public static final class Builder {
+            private String mcpServerId; 
+            private java.util.List<Tools> tools; 
+
+            private Builder() {
+            } 
+
+            private Builder(Sources model) {
+                this.mcpServerId = model.mcpServerId;
+                this.tools = model.tools;
+            } 
+
+            /**
+             * <p>Required for virtual MCPs. The ID of the source MCP in the current workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mcp-server-source-1</p>
+             */
+            public Builder mcpServerId(String mcpServerId) {
+                this.mcpServerId = mcpServerId;
+                return this;
+            }
+
+            /**
+             * <p>Required for virtual MCPs. The manually selected tools. Specify at least one tool for each source, up to 100 tools across all sources.</p>
+             */
+            public Builder tools(java.util.List<Tools> tools) {
+                this.tools = tools;
+                return this;
+            }
+
+            public Sources build() {
+                return new Sources(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetMcpResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMcpResponseBody</p>
+     */
+    public static class AppliedVirtualConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("sources")
+        private java.util.List<Sources> sources;
+
+        private AppliedVirtualConfig(Builder builder) {
+            this.sources = builder.sources;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AppliedVirtualConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return sources
+         */
+        public java.util.List<Sources> getSources() {
+            return this.sources;
+        }
+
+        public static final class Builder {
+            private java.util.List<Sources> sources; 
+
+            private Builder() {
+            } 
+
+            private Builder(AppliedVirtualConfig model) {
+                this.sources = model.sources;
+            } 
+
+            /**
+             * <p>Required for virtual MCPs. Specify 1 to 10 different source MCPs.</p>
+             */
+            public Builder sources(java.util.List<Sources> sources) {
+                this.sources = sources;
+                return this;
+            }
+
+            public AppliedVirtualConfig build() {
+                return new AppliedVirtualConfig(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link GetMcpResponseBody} extends {@link TeaModel}
@@ -237,7 +450,7 @@ public class GetMcpResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The API key used to verify the MCP caller.</p>
+             * <p>The API key used to verify MCP callers.</p>
              * 
              * <strong>example:</strong>
              * <p>example-api-key</p>
@@ -578,7 +791,7 @@ public class GetMcpResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The caller API key authentication configuration for the code deployment MCP.</p>
+             * <p>The caller API key authentication configuration for the code-deployed MCP.</p>
              */
             public Builder codePackage(CodePackage codePackage) {
                 this.codePackage = codePackage;
@@ -594,7 +807,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the configuration is enabled.</p>
+             * <p>Specifies whether the configuration is enabled.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -682,7 +895,7 @@ public class GetMcpResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the AgentCore credential referenced when the mode is set to CREDENTIAL.</p>
+             * <p>The AgentCore credential referenced when the mode is set to CREDENTIAL.</p>
              * 
              * <strong>example:</strong>
              * <p>credential-id</p>
@@ -701,7 +914,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The access control mode. Valid values: ANONYMOUS indicates anonymous access. CREDENTIAL indicates that AgentCore access credentials are used.</p>
+             * <p>The access control mode. ANONYMOUS indicates anonymous access, and CREDENTIAL indicates the use of AgentCore access credentials.</p>
              * 
              * <strong>example:</strong>
              * <p>CREDENTIAL</p>
@@ -805,7 +1018,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The credential provider ARN.</p>
+             * <p>The ARN of the credential provider.</p>
              * 
              * <strong>example:</strong>
              * <p>acs:agentidentity:cn-hangzhou:1234567890123456:provider/example</p>
@@ -816,7 +1029,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The credential provider type.</p>
+             * <p>The type of the credential provider.</p>
              * 
              * <strong>example:</strong>
              * <p>oauth2</p>
@@ -827,7 +1040,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether agent identity is enabled.</p>
+             * <p>Specifies whether Agent identity is enabled.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -926,7 +1139,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The runtime of the code package. Valid values: python3.13, nodejs22, and java17.</p>
+             * <p>The code package runtime. Valid values: python3.13, nodejs22, and java17.</p>
              * 
              * <strong>example:</strong>
              * <p>python3.13</p>
@@ -938,6 +1151,374 @@ public class GetMcpResponseBody extends TeaModel {
 
             public CodeConfiguration build() {
                 return new CodeConfiguration(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetMcpResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMcpResponseBody</p>
+     */
+    public static class AuthConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("password")
+        private String password;
+
+        @com.aliyun.core.annotation.NameInMap("userName")
+        private String userName;
+
+        private AuthConfig(Builder builder) {
+            this.password = builder.password;
+            this.userName = builder.userName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AuthConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return password
+         */
+        public String getPassword() {
+            return this.password;
+        }
+
+        /**
+         * @return userName
+         */
+        public String getUserName() {
+            return this.userName;
+        }
+
+        public static final class Builder {
+            private String password; 
+            private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(AuthConfig model) {
+                this.password = model.password;
+                this.userName = model.userName;
+            } 
+
+            /**
+             * <p>The image registry password. The password is encrypted and stored on the server, and is not returned in query responses. Omit this field during updates to retain the existing password.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-password</p>
+             */
+            public Builder password(String password) {
+                this.password = password;
+                return this;
+            }
+
+            /**
+             * <p>The image registry username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>puller</p>
+             */
+            public Builder userName(String userName) {
+                this.userName = userName;
+                return this;
+            }
+
+            public AuthConfig build() {
+                return new AuthConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetMcpResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMcpResponseBody</p>
+     */
+    public static class CertConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("insecure")
+        private Boolean insecure;
+
+        @com.aliyun.core.annotation.NameInMap("rootCaCertBase64")
+        private String rootCaCertBase64;
+
+        private CertConfig(Builder builder) {
+            this.insecure = builder.insecure;
+            this.rootCaCertBase64 = builder.rootCaCertBase64;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CertConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return insecure
+         */
+        public Boolean getInsecure() {
+            return this.insecure;
+        }
+
+        /**
+         * @return rootCaCertBase64
+         */
+        public String getRootCaCertBase64() {
+            return this.rootCaCertBase64;
+        }
+
+        public static final class Builder {
+            private Boolean insecure; 
+            private String rootCaCertBase64; 
+
+            private Builder() {
+            } 
+
+            private Builder(CertConfig model) {
+                this.insecure = model.insecure;
+                this.rootCaCertBase64 = model.rootCaCertBase64;
+            } 
+
+            /**
+             * <p>Specifies whether to skip the verification of the image registry TLS certificate. Valid values:</p>
+             * <ul>
+             * <li>true: The verification is skipped.</li>
+             * <li>false: The verification is not skipped.
+             * Default value: false.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder insecure(Boolean insecure) {
+                this.insecure = insecure;
+                return this;
+            }
+
+            /**
+             * <p>The Base64-encoded root CA certificate of the image registry, used to verify self-signed certificates.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LS0tLS1CRUdJTi...</p>
+             */
+            public Builder rootCaCertBase64(String rootCaCertBase64) {
+                this.rootCaCertBase64 = rootCaCertBase64;
+                return this;
+            }
+
+            public CertConfig build() {
+                return new CertConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetMcpResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMcpResponseBody</p>
+     */
+    public static class NetworkConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("securityGroupId")
+        private String securityGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("vSwitchId")
+        private String vSwitchId;
+
+        @com.aliyun.core.annotation.NameInMap("vpcId")
+        private String vpcId;
+
+        private NetworkConfig(Builder builder) {
+            this.securityGroupId = builder.securityGroupId;
+            this.vSwitchId = builder.vSwitchId;
+            this.vpcId = builder.vpcId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NetworkConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return securityGroupId
+         */
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        /**
+         * @return vSwitchId
+         */
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        public static final class Builder {
+            private String securityGroupId; 
+            private String vSwitchId; 
+            private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetworkConfig model) {
+                this.securityGroupId = model.securityGroupId;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+            } 
+
+            /**
+             * <p>The ID of the security group used to pull images.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-example</p>
+             */
+            public Builder securityGroupId(String securityGroupId) {
+                this.securityGroupId = securityGroupId;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the vSwitch used to pull images.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-example</p>
+             */
+            public Builder vSwitchId(String vSwitchId) {
+                this.vSwitchId = vSwitchId;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the VPC where the image registry is located.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-example</p>
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
+                return this;
+            }
+
+            public NetworkConfig build() {
+                return new NetworkConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetMcpResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMcpResponseBody</p>
+     */
+    public static class RegistryConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("authConfig")
+        private AuthConfig authConfig;
+
+        @com.aliyun.core.annotation.NameInMap("certConfig")
+        private CertConfig certConfig;
+
+        @com.aliyun.core.annotation.NameInMap("networkConfig")
+        private NetworkConfig networkConfig;
+
+        private RegistryConfig(Builder builder) {
+            this.authConfig = builder.authConfig;
+            this.certConfig = builder.certConfig;
+            this.networkConfig = builder.networkConfig;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RegistryConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return authConfig
+         */
+        public AuthConfig getAuthConfig() {
+            return this.authConfig;
+        }
+
+        /**
+         * @return certConfig
+         */
+        public CertConfig getCertConfig() {
+            return this.certConfig;
+        }
+
+        /**
+         * @return networkConfig
+         */
+        public NetworkConfig getNetworkConfig() {
+            return this.networkConfig;
+        }
+
+        public static final class Builder {
+            private AuthConfig authConfig; 
+            private CertConfig certConfig; 
+            private NetworkConfig networkConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(RegistryConfig model) {
+                this.authConfig = model.authConfig;
+                this.certConfig = model.certConfig;
+                this.networkConfig = model.networkConfig;
+            } 
+
+            /**
+             * <p>The image registry authentication configuration. Specify this field when the image registry requires username and password authentication.</p>
+             */
+            public Builder authConfig(AuthConfig authConfig) {
+                this.authConfig = authConfig;
+                return this;
+            }
+
+            /**
+             * <p>The TLS certificate verification configuration for the image registry.</p>
+             */
+            public Builder certConfig(CertConfig certConfig) {
+                this.certConfig = certConfig;
+                return this;
+            }
+
+            /**
+             * <p>The network configuration for image pulling. Specify this field only when the image registry is accessible only within a VPC. Function Compute (FC) pulls images through this network.</p>
+             */
+            public Builder networkConfig(NetworkConfig networkConfig) {
+                this.networkConfig = networkConfig;
+                return this;
+            }
+
+            public RegistryConfig build() {
+                return new RegistryConfig(this);
             } 
 
         } 
@@ -968,6 +1549,9 @@ public class GetMcpResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("mcpRuntimeMode")
         private String mcpRuntimeMode;
 
+        @com.aliyun.core.annotation.NameInMap("registryConfig")
+        private RegistryConfig registryConfig;
+
         @com.aliyun.core.annotation.NameInMap("sourceType")
         private String sourceType;
 
@@ -978,6 +1562,7 @@ public class GetMcpResponseBody extends TeaModel {
             this.image = builder.image;
             this.imageRegistryType = builder.imageRegistryType;
             this.mcpRuntimeMode = builder.mcpRuntimeMode;
+            this.registryConfig = builder.registryConfig;
             this.sourceType = builder.sourceType;
         }
 
@@ -1032,6 +1617,13 @@ public class GetMcpResponseBody extends TeaModel {
         }
 
         /**
+         * @return registryConfig
+         */
+        public RegistryConfig getRegistryConfig() {
+            return this.registryConfig;
+        }
+
+        /**
          * @return sourceType
          */
         public String getSourceType() {
@@ -1045,6 +1637,7 @@ public class GetMcpResponseBody extends TeaModel {
             private String image; 
             private String imageRegistryType; 
             private String mcpRuntimeMode; 
+            private RegistryConfig registryConfig; 
             private String sourceType; 
 
             private Builder() {
@@ -1057,6 +1650,7 @@ public class GetMcpResponseBody extends TeaModel {
                 this.image = model.image;
                 this.imageRegistryType = model.imageRegistryType;
                 this.mcpRuntimeMode = model.mcpRuntimeMode;
+                this.registryConfig = model.registryConfig;
                 this.sourceType = model.sourceType;
             } 
 
@@ -1088,7 +1682,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The container image address.</p>
+             * <p>The container image URI.</p>
              * 
              * <strong>example:</strong>
              * <p>registry.cn-hangzhou.aliyuncs.com/example/mcp:1.0.0</p>
@@ -1110,7 +1704,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The MCP runtime mode. Custom containers must expose the standard MCP themselves. The value is SELF_HOSTED.</p>
+             * <p>The MCP runtime mode. Custom containers must currently expose the standard MCP themselves. Set the value to SELF_HOSTED.</p>
              * 
              * <strong>example:</strong>
              * <p>SELF_HOSTED</p>
@@ -1121,7 +1715,15 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The container source type. This value is currently fixed to CONTAINER_IMAGE.</p>
+             * <p>The custom image registry configuration. This configuration takes effect only when ImageRegistryType is set to CUSTOM. It is used to configure image pull authentication, TLS certificate verification, and the private network for image pulling.</p>
+             */
+            public Builder registryConfig(RegistryConfig registryConfig) {
+                this.registryConfig = registryConfig;
+                return this;
+            }
+
+            /**
+             * <p>The container source type. Currently fixed to CONTAINER_IMAGE.</p>
              * 
              * <strong>example:</strong>
              * <p>CONTAINER_IMAGE</p>
@@ -1270,7 +1872,7 @@ public class GetMcpResponseBody extends TeaModel {
              * <p>The description of the hook.</p>
              * 
              * <strong>example:</strong>
-             * <p>Record MCP tool invocation</p>
+             * <p>Record MCP tool invoke</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1278,7 +1880,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to enable the hook.</p>
+             * <p>Specifies whether the hook is enabled.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -1286,7 +1888,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The hook event.</p>
+             * <p>The event that triggers the hook.</p>
              * 
              * <strong>example:</strong>
              * <p>PRE_CALL_TOOL</p>
@@ -1373,7 +1975,7 @@ public class GetMcpResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ordered list of hooks. The PRE_LIST_TOOLS, PRE_CALL_TOOL, POST_LIST_TOOLS, and POST_CALL_TOOL hooks are executed in the order of the array.</p>
+             * <p>The ordered list of hooks. The system executes the PRE_LIST_TOOLS, PRE_CALL_TOOL, POST_LIST_TOOLS, and POST_CALL_TOOL hooks in the array order.</p>
              */
             public Builder hooks(java.util.List<Hooks> hooks) {
                 this.hooks = hooks;
@@ -1495,7 +2097,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start rule for splitting Function Compute logs.</p>
+             * <p>The Function Compute log splitting start rule.</p>
              * 
              * <strong>example:</strong>
              * <p>DefaultRegex</p>
@@ -1517,7 +2119,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the Simple Log Service project.</p>
+             * <p>The name of the Log Service project.</p>
              * 
              * <strong>example:</strong>
              * <p>agentcore-mcp-logs</p>
@@ -1637,7 +2239,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The session concurrency per instance. This value is currently fixed to 1.</p>
+             * <p>The number of concurrent sessions per instance. This value is currently fixed at 1.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1648,7 +2250,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The session idle timeout period. Unit: seconds. Default value: 1800.</p>
+             * <p>The session idle timeout in seconds. Default value: 1800.</p>
              * 
              * <strong>example:</strong>
              * <p>1800</p>
@@ -1659,7 +2261,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum session lifetime. Unit: seconds. Default value: 21600.</p>
+             * <p>The maximum session lifetime in seconds. Default value: 21600.</p>
              * 
              * <strong>example:</strong>
              * <p>21600</p>
@@ -1670,7 +2272,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The session mode. This parameter applies only to StreamableHTTP. Default value for creation: STATEFUL. If omitted during an update, the original value is retained. STATELESS disables Function Compute session affinity, and the stdio gateway does not enable stateful mode. Native HTTP services must support stateless MCP themselves.</p>
+             * <p>Applies only to StreamableHTTP. The default value is STATEFUL upon creation. If omitted during an update, the original value is retained. STATELESS disables Function Compute session affinity, and the stdio gateway does not enable stateful mode. Native HTTP services must support stateless MCP.</p>
              * 
              * <strong>example:</strong>
              * <p>STATEFUL</p>
@@ -2120,7 +2722,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The path of the OSS bucket.</p>
+             * <p>The path in the OSS bucket.</p>
              * 
              * <strong>example:</strong>
              * <p>/data</p>
@@ -2306,7 +2908,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The transformation rule version.</p>
+             * <p>The version of the transformation rule.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0</p>
@@ -2363,7 +2965,7 @@ public class GetMcpResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Specifies whether to enable the MCP proxy.</p>
+             * <p>Specifies whether the MCP proxy is enabled.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -2508,7 +3110,7 @@ public class GetMcpResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The CPU specifications. Unit: cores. Default value: 0.25.</p>
+             * <p>The CPU specification, in cores. Default value: 0.25.</p>
              * 
              * <strong>example:</strong>
              * <p>0.25</p>
@@ -2519,7 +3121,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ephemeral disk size. Unit: MB. Valid values: 512 and 10240.</p>
+             * <p>The temporary disk size, in MB. Valid values: 512 and 10240.</p>
              * 
              * <strong>example:</strong>
              * <p>512</p>
@@ -2549,7 +3151,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The request concurrency per instance. Default value: 200.</p>
+             * <p>The maximum number of concurrent requests per instance. Default value: 200.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -2560,7 +3162,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The memory specifications. Unit: MB. Default value: 512.</p>
+             * <p>The memory specification, in MB. Default value: 512.</p>
              * 
              * <strong>example:</strong>
              * <p>512</p>
@@ -2582,7 +3184,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The function timeout period. Unit: seconds. Default value: 300.</p>
+             * <p>The function timeout period, in seconds. Default value: 300.</p>
              * 
              * <strong>example:</strong>
              * <p>300</p>
@@ -2808,7 +3410,7 @@ public class GetMcpResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The MCP entry access control configuration.</p>
+             * <p>The MCP entry access control.</p>
              */
             public Builder accessControl(AccessControl accessControl) {
                 this.accessControl = accessControl;
@@ -2816,7 +3418,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The agent identity configuration.</p>
+             * <p>The Agent identity configuration.</p>
              */
             public Builder agentIdentityConfiguration(AgentIdentityConfiguration agentIdentityConfiguration) {
                 this.agentIdentityConfiguration = agentIdentityConfiguration;
@@ -2824,11 +3426,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The artifact type. Valid values:</p>
-             * <ul>
-             * <li>Code: ZIP code package.</li>
-             * <li>Container: Custom container.</li>
-             * </ul>
+             * <p>The artifact type. Code indicates a ZIP code package, and Container indicates a custom container.</p>
              * 
              * <strong>example:</strong>
              * <p>Code</p>
@@ -2939,6 +3537,771 @@ public class GetMcpResponseBody extends TeaModel {
      *
      * <p>GetMcpResponseBody</p>
      */
+    public static class CurrentDefinition extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("inputSchema")
+        private String inputSchema;
+
+        @com.aliyun.core.annotation.NameInMap("outputSchema")
+        private String outputSchema;
+
+        @com.aliyun.core.annotation.NameInMap("toolDescription")
+        private String toolDescription;
+
+        @com.aliyun.core.annotation.NameInMap("toolName")
+        private String toolName;
+
+        private CurrentDefinition(Builder builder) {
+            this.inputSchema = builder.inputSchema;
+            this.outputSchema = builder.outputSchema;
+            this.toolDescription = builder.toolDescription;
+            this.toolName = builder.toolName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CurrentDefinition create() {
+            return builder().build();
+        }
+
+        /**
+         * @return inputSchema
+         */
+        public String getInputSchema() {
+            return this.inputSchema;
+        }
+
+        /**
+         * @return outputSchema
+         */
+        public String getOutputSchema() {
+            return this.outputSchema;
+        }
+
+        /**
+         * @return toolDescription
+         */
+        public String getToolDescription() {
+            return this.toolDescription;
+        }
+
+        /**
+         * @return toolName
+         */
+        public String getToolName() {
+            return this.toolName;
+        }
+
+        public static final class Builder {
+            private String inputSchema; 
+            private String outputSchema; 
+            private String toolDescription; 
+            private String toolName; 
+
+            private Builder() {
+            } 
+
+            private Builder(CurrentDefinition model) {
+                this.inputSchema = model.inputSchema;
+                this.outputSchema = model.outputSchema;
+                this.toolDescription = model.toolDescription;
+                this.toolName = model.toolName;
+            } 
+
+            /**
+             * <p>The JSON schema for input parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;type&quot;:&quot;object&quot;,&quot;properties&quot;:{}}</p>
+             */
+            public Builder inputSchema(String inputSchema) {
+                this.inputSchema = inputSchema;
+                return this;
+            }
+
+            /**
+             * <p>The JSON schema for output results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;type&quot;:&quot;object&quot;,&quot;properties&quot;:{&quot;time&quot;:{&quot;type&quot;:&quot;string&quot;}}}</p>
+             */
+            public Builder outputSchema(String outputSchema) {
+                this.outputSchema = outputSchema;
+                return this;
+            }
+
+            /**
+             * <p>The description of the tool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Get the current time</p>
+             */
+            public Builder toolDescription(String toolDescription) {
+                this.toolDescription = toolDescription;
+                return this;
+            }
+
+            /**
+             * <p>The name of the tool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>get-current-time</p>
+             */
+            public Builder toolName(String toolName) {
+                this.toolName = toolName;
+                return this;
+            }
+
+            public CurrentDefinition build() {
+                return new CurrentDefinition(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetMcpResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMcpResponseBody</p>
+     */
+    public static class SourcesTools extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("currentDefinition")
+        private CurrentDefinition currentDefinition;
+
+        @com.aliyun.core.annotation.NameInMap("currentDigest")
+        private String currentDigest;
+
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("savedDigest")
+        private String savedDigest;
+
+        @com.aliyun.core.annotation.NameInMap("status")
+        private String status;
+
+        private SourcesTools(Builder builder) {
+            this.currentDefinition = builder.currentDefinition;
+            this.currentDigest = builder.currentDigest;
+            this.name = builder.name;
+            this.savedDigest = builder.savedDigest;
+            this.status = builder.status;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SourcesTools create() {
+            return builder().build();
+        }
+
+        /**
+         * @return currentDefinition
+         */
+        public CurrentDefinition getCurrentDefinition() {
+            return this.currentDefinition;
+        }
+
+        /**
+         * @return currentDigest
+         */
+        public String getCurrentDigest() {
+            return this.currentDigest;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return savedDigest
+         */
+        public String getSavedDigest() {
+            return this.savedDigest;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        public static final class Builder {
+            private CurrentDefinition currentDefinition; 
+            private String currentDigest; 
+            private String name; 
+            private String savedDigest; 
+            private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(SourcesTools model) {
+                this.currentDefinition = model.currentDefinition;
+                this.currentDigest = model.currentDigest;
+                this.name = model.name;
+                this.savedDigest = model.savedDigest;
+                this.status = model.status;
+            } 
+
+            /**
+             * <p>The current definition. This field is not returned if the read fails or the tool does not exist.</p>
+             */
+            public Builder currentDefinition(CurrentDefinition currentDefinition) {
+                this.currentDefinition = currentDefinition;
+                return this;
+            }
+
+            /**
+             * <p>The digest of the current definition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</p>
+             */
+            public Builder currentDigest(String currentDigest) {
+                this.currentDigest = currentDigest;
+                return this;
+            }
+
+            /**
+             * <p>The name of the source tool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>get-current-time</p>
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * <p>The digest saved at the time of selection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</p>
+             */
+            public Builder savedDigest(String savedDigest) {
+                this.savedDigest = savedDigest;
+                return this;
+            }
+
+            /**
+             * <p>The status of the tool: UNCHANGED, CHANGED, REMOVED, or UNKNOWN. The status is compared with the digest baseline at the time of saving. CHANGED does not necessarily mean that the current schema of the gateway is out of sync. UNKNOWN indicates a read failure and must not be treated as a deletion.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UNCHANGED</p>
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            public SourcesTools build() {
+                return new SourcesTools(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetMcpResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMcpResponseBody</p>
+     */
+    public static class ItemsSources extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("affectedVirtualMcps")
+        private java.util.List<String> affectedVirtualMcps;
+
+        @com.aliyun.core.annotation.NameInMap("checkedAt")
+        private String checkedAt;
+
+        @com.aliyun.core.annotation.NameInMap("mcpServerId")
+        private String mcpServerId;
+
+        @com.aliyun.core.annotation.NameInMap("reasonCode")
+        private String reasonCode;
+
+        @com.aliyun.core.annotation.NameInMap("status")
+        private String status;
+
+        @com.aliyun.core.annotation.NameInMap("tools")
+        private java.util.List<SourcesTools> tools;
+
+        private ItemsSources(Builder builder) {
+            this.affectedVirtualMcps = builder.affectedVirtualMcps;
+            this.checkedAt = builder.checkedAt;
+            this.mcpServerId = builder.mcpServerId;
+            this.reasonCode = builder.reasonCode;
+            this.status = builder.status;
+            this.tools = builder.tools;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ItemsSources create() {
+            return builder().build();
+        }
+
+        /**
+         * @return affectedVirtualMcps
+         */
+        public java.util.List<String> getAffectedVirtualMcps() {
+            return this.affectedVirtualMcps;
+        }
+
+        /**
+         * @return checkedAt
+         */
+        public String getCheckedAt() {
+            return this.checkedAt;
+        }
+
+        /**
+         * @return mcpServerId
+         */
+        public String getMcpServerId() {
+            return this.mcpServerId;
+        }
+
+        /**
+         * @return reasonCode
+         */
+        public String getReasonCode() {
+            return this.reasonCode;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return tools
+         */
+        public java.util.List<SourcesTools> getTools() {
+            return this.tools;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> affectedVirtualMcps; 
+            private String checkedAt; 
+            private String mcpServerId; 
+            private String reasonCode; 
+            private String status; 
+            private java.util.List<SourcesTools> tools; 
+
+            private Builder() {
+            } 
+
+            private Builder(ItemsSources model) {
+                this.affectedVirtualMcps = model.affectedVirtualMcps;
+                this.checkedAt = model.checkedAt;
+                this.mcpServerId = model.mcpServerId;
+                this.reasonCode = model.reasonCode;
+                this.status = model.status;
+                this.tools = model.tools;
+            } 
+
+            /**
+             * <p>The IDs of the virtual MCPs that reference this source. This field is for display purposes only.</p>
+             */
+            public Builder affectedVirtualMcps(java.util.List<String> affectedVirtualMcps) {
+                this.affectedVirtualMcps = affectedVirtualMcps;
+                return this;
+            }
+
+            /**
+             * <p>The time when the source was checked, in UTC ISO 8601 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-11-25T10:00:03Z</p>
+             */
+            public Builder checkedAt(String checkedAt) {
+                this.checkedAt = checkedAt;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the source MCP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mcp-server-source-1</p>
+             */
+            public Builder mcpServerId(String mcpServerId) {
+                this.mcpServerId = mcpServerId;
+                return this;
+            }
+
+            /**
+             * <p>The reason code indicating why the source is unreadable. A read failure is not treated as a tool deletion.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SourceUnavailable</p>
+             */
+            public Builder reasonCode(String reasonCode) {
+                this.reasonCode = reasonCode;
+                return this;
+            }
+
+            /**
+             * <p>The read status of the source. Valid values: AVAILABLE and UNKNOWN.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AVAILABLE</p>
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * <p>The validation results of the selected tools.</p>
+             */
+            public Builder tools(java.util.List<SourcesTools> tools) {
+                this.tools = tools;
+                return this;
+            }
+
+            public ItemsSources build() {
+                return new ItemsSources(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetMcpResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMcpResponseBody</p>
+     */
+    public static class Items extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("checkedRevision")
+        private Long checkedRevision;
+
+        @com.aliyun.core.annotation.NameInMap("sources")
+        private java.util.List<ItemsSources> sources;
+
+        @com.aliyun.core.annotation.NameInMap("virtualMcpServerId")
+        private String virtualMcpServerId;
+
+        private Items(Builder builder) {
+            this.checkedRevision = builder.checkedRevision;
+            this.sources = builder.sources;
+            this.virtualMcpServerId = builder.virtualMcpServerId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Items create() {
+            return builder().build();
+        }
+
+        /**
+         * @return checkedRevision
+         */
+        public Long getCheckedRevision() {
+            return this.checkedRevision;
+        }
+
+        /**
+         * @return sources
+         */
+        public java.util.List<ItemsSources> getSources() {
+            return this.sources;
+        }
+
+        /**
+         * @return virtualMcpServerId
+         */
+        public String getVirtualMcpServerId() {
+            return this.virtualMcpServerId;
+        }
+
+        public static final class Builder {
+            private Long checkedRevision; 
+            private java.util.List<ItemsSources> sources; 
+            private String virtualMcpServerId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.checkedRevision = model.checkedRevision;
+                this.sources = model.sources;
+                this.virtualMcpServerId = model.virtualMcpServerId;
+            } 
+
+            /**
+             * <p>The virtual MCP revision number read by the server when the validation is submitted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
+             */
+            public Builder checkedRevision(Long checkedRevision) {
+                this.checkedRevision = checkedRevision;
+                return this;
+            }
+
+            /**
+             * <p>The results returned by source.</p>
+             */
+            public Builder sources(java.util.List<ItemsSources> sources) {
+                this.sources = sources;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the checked virtual MCP, used to associate with the mcpIds in the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mcp-server-virtual-1</p>
+             */
+            public Builder virtualMcpServerId(String virtualMcpServerId) {
+                this.virtualMcpServerId = virtualMcpServerId;
+                return this;
+            }
+
+            public Items build() {
+                return new Items(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetMcpResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMcpResponseBody</p>
+     */
+    public static class LastValidation extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("createdAt")
+        private String createdAt;
+
+        @com.aliyun.core.annotation.NameInMap("failureCode")
+        private String failureCode;
+
+        @com.aliyun.core.annotation.NameInMap("failureMessage")
+        private String failureMessage;
+
+        @com.aliyun.core.annotation.NameInMap("finishedAt")
+        private String finishedAt;
+
+        @com.aliyun.core.annotation.NameInMap("items")
+        private java.util.List<Items> items;
+
+        @com.aliyun.core.annotation.NameInMap("status")
+        private String status;
+
+        @com.aliyun.core.annotation.NameInMap("validationId")
+        private String validationId;
+
+        private LastValidation(Builder builder) {
+            this.createdAt = builder.createdAt;
+            this.failureCode = builder.failureCode;
+            this.failureMessage = builder.failureMessage;
+            this.finishedAt = builder.finishedAt;
+            this.items = builder.items;
+            this.status = builder.status;
+            this.validationId = builder.validationId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static LastValidation create() {
+            return builder().build();
+        }
+
+        /**
+         * @return createdAt
+         */
+        public String getCreatedAt() {
+            return this.createdAt;
+        }
+
+        /**
+         * @return failureCode
+         */
+        public String getFailureCode() {
+            return this.failureCode;
+        }
+
+        /**
+         * @return failureMessage
+         */
+        public String getFailureMessage() {
+            return this.failureMessage;
+        }
+
+        /**
+         * @return finishedAt
+         */
+        public String getFinishedAt() {
+            return this.finishedAt;
+        }
+
+        /**
+         * @return items
+         */
+        public java.util.List<Items> getItems() {
+            return this.items;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return validationId
+         */
+        public String getValidationId() {
+            return this.validationId;
+        }
+
+        public static final class Builder {
+            private String createdAt; 
+            private String failureCode; 
+            private String failureMessage; 
+            private String finishedAt; 
+            private java.util.List<Items> items; 
+            private String status; 
+            private String validationId; 
+
+            private Builder() {
+            } 
+
+            private Builder(LastValidation model) {
+                this.createdAt = model.createdAt;
+                this.failureCode = model.failureCode;
+                this.failureMessage = model.failureMessage;
+                this.finishedAt = model.finishedAt;
+                this.items = model.items;
+                this.status = model.status;
+                this.validationId = model.validationId;
+            } 
+
+            /**
+             * <p>The time when the validation was submitted, in UTC ISO 8601 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-11-25T10:00:00Z</p>
+             */
+            public Builder createdAt(String createdAt) {
+                this.createdAt = createdAt;
+                return this;
+            }
+
+            /**
+             * <p>Returned only when the status is FAILED. Valid values:</p>
+             * <ul>
+             * <li>Workspace.NotFound: The workspace no longer exists during execution.</li>
+             * <li>ValidationFailed: An exception occurred during task execution.
+             * Source MCP read failures are returned through items.sources.reasonCode, and the corresponding task status is PARTIAL_FAILED.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ValidationFailed</p>
+             */
+            public Builder failureCode(String failureCode) {
+                this.failureCode = failureCode;
+                return this;
+            }
+
+            /**
+             * <p>The secure reason description returned only when the status is FAILED. It does not contain internal exceptions, credentials, or upstream raw responses. When querying a failed task, the API itself still returns a success response. You must read data.status and this field to obtain the failure details.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Failed to validate virtual MCP tools.</p>
+             */
+            public Builder failureMessage(String failureMessage) {
+                this.failureMessage = failureMessage;
+                return this;
+            }
+
+            /**
+             * <p>Returned only when the status is COMPLETED, PARTIAL_FAILED, FAILED, or CANCELED. The time is in UTC ISO 8601 format. This field is not returned when the status is PENDING, RUNNING, or PAUSED.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-11-25T10:00:05Z</p>
+             */
+            public Builder finishedAt(String finishedAt) {
+                this.finishedAt = finishedAt;
+                return this;
+            }
+
+            /**
+             * <p>The itemized validation report for the selected tools. It does not automatically modify the selection or enumerate new unselected tools. New candidate tools are obtained through the ListMcpTools operation of the source MCP.</p>
+             */
+            public Builder items(java.util.List<Items> items) {
+                this.items = items;
+                return this;
+            }
+
+            /**
+             * <p>The status of the validation task. Valid values:</p>
+             * <ul>
+             * <li>PENDING: Waiting to be executed.</li>
+             * <li>RUNNING: Executing, including waiting for retries.</li>
+             * <li>PAUSED: Paused and not yet finished.</li>
+             * <li>COMPLETED: The check is finished, but CHANGED or REMOVED items may still exist.</li>
+             * <li>PARTIAL_FAILED: UNKNOWN items exist, and all sources may be unreadable. Successful items are not guaranteed.</li>
+             * <li>FAILED: The task execution failed.</li>
+             * <li>CANCELED: The task is canceled.
+             * The terminal states are COMPLETED, PARTIAL_FAILED, FAILED, and CANCELED. The internal SUCCESS state is mapped to COMPLETED or PARTIAL_FAILED and is not directly returned.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>COMPLETED</p>
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the validation task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>val-1234567890</p>
+             */
+            public Builder validationId(String validationId) {
+                this.validationId = validationId;
+                return this;
+            }
+
+            public LastValidation build() {
+                return new LastValidation(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetMcpResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMcpResponseBody</p>
+     */
     public static class MarketSource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("marketItemId")
         private String marketItemId;
@@ -2973,7 +4336,7 @@ public class GetMcpResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The MCP marketplace template ID.</p>
+             * <p>The ID of the MCP marketplace template.</p>
              * 
              * <strong>example:</strong>
              * <p>market-1</p>
@@ -3082,7 +4445,7 @@ public class GetMcpResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Returns only bounded diagnostic codes and does not return the original error body from the origin server.</p>
+             * <p>Returns only bounded diagnostic codes and does not return the original error body from the origin.</p>
              * 
              * <strong>example:</strong>
              * <p>PROBE_TIMEOUT</p>
@@ -3093,7 +4456,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The necessary diagnostics that are trimmed and desensitized. It does not contain credentials or original responses.</p>
+             * <p>The trimmed and desensitized necessary diagnostics, which do not include credentials or original responses.</p>
              * 
              * <strong>example:</strong>
              * <p>The probe deadline was exceeded.</p>
@@ -3104,7 +4467,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the operation is suitable for retry based on a restricted policy. This field does not trigger automatic retries.</p>
+             * <p>Indicates whether it is suitable to retry according to the restricted policy. It does not trigger automatic retries.</p>
              */
             public Builder retryable(Boolean retryable) {
                 this.retryable = retryable;
@@ -3112,7 +4475,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source of the error. Valid values: MAGIC, ROUTER, NETWORK, ORIGIN, and UNKNOWN. The value is determined only based on actual evidence.</p>
+             * <p>MAGIC, ROUTER, NETWORK, ORIGIN, or UNKNOWN. It is determined solely based on actual evidence.</p>
              * 
              * <strong>example:</strong>
              * <p>UNKNOWN</p>
@@ -3245,7 +4608,7 @@ public class GetMcpResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The desensitized error of the current release operation. Gateway or formal link failures after the origin server passes verification are represented by this field.</p>
+             * <p>The desensitized error of the current release operation. Gateway or formal link failures after the origin passes are expressed by this field.</p>
              */
             public Builder error(Error error) {
                 this.error = error;
@@ -3264,7 +4627,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The release stage, such as compute deployment, origin verification, summary saving, gateway release, entry credential synchronization, formal link verification, or deployment submission. Old tasks retain their original stage semantics.</p>
+             * <p>Compute deployment, origin verification, summary saving, gateway release, ingress credential synchronization, formal link verification, or deployment submission. Old tasks retain their original stage semantics.</p>
              * 
              * <strong>example:</strong>
              * <p>VALIDATE_ORIGIN</p>
@@ -3275,7 +4638,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operation status. Valid values: PENDING, RUNNING, SUCCEEDED, and FAILED.</p>
+             * <p>PENDING, RUNNING, SUCCEEDED, or FAILED.</p>
              * 
              * <strong>example:</strong>
              * <p>RUNNING</p>
@@ -3286,7 +4649,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operation type. Valid value: PUBLISH.</p>
+             * <p>Currently PUBLISH.</p>
              * 
              * <strong>example:</strong>
              * <p>PUBLISH</p>
@@ -3297,7 +4660,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the operation was updated, in ISO 8601 UTC format.</p>
+             * <p>The time in ISO 8601 UTC format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-11-19T08:30:00Z</p>
@@ -3393,7 +4756,7 @@ public class GetMcpResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The verified legacy or modern policy. This field is empty if the policy is not confirmed.</p>
+             * <p>The verified legacy or modern policy. It is empty when unconfirmed.</p>
              * 
              * <strong>example:</strong>
              * <p>modern</p>
@@ -3404,7 +4767,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The verified SSE or StreamableHTTP transport. This field is empty if the transport is not confirmed.</p>
+             * <p>The verified SSE or StreamableHTTP. It is empty when unconfirmed.</p>
              * 
              * <strong>example:</strong>
              * <p>StreamableHTTP</p>
@@ -3415,7 +4778,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The actual negotiated or selected and verified date version. This field is empty if the version is not confirmed.</p>
+             * <p>The actual negotiated or selected and verified date version. It is empty when unconfirmed.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-03-26</p>
@@ -3426,7 +4789,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The actual session mode. Valid values: STATEFUL, STATELESS, and NOT_APPLICABLE. This field is empty if the mode is not confirmed.</p>
+             * <p>STATEFUL, STATELESS, or NOT_APPLICABLE. It is empty when unconfirmed.</p>
              * 
              * <strong>example:</strong>
              * <p>STATELESS</p>
@@ -3535,7 +4898,7 @@ public class GetMcpResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Returns only bounded diagnostic codes and does not return the original error body from the origin server.</p>
+             * <p>Returns only bounded diagnostic codes and does not return the original error body from the origin.</p>
              * 
              * <strong>example:</strong>
              * <p>PROBE_TIMEOUT</p>
@@ -3546,7 +4909,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The necessary diagnostics that are trimmed and desensitized. It does not contain credentials or original responses.</p>
+             * <p>The trimmed and desensitized necessary diagnostics, which do not include credentials or original responses.</p>
              * 
              * <strong>example:</strong>
              * <p>The probe deadline was exceeded.</p>
@@ -3557,7 +4920,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the operation is suitable for retry based on a restricted policy. This field does not trigger automatic retries.</p>
+             * <p>Indicates whether it is suitable to retry according to the restricted policy. It does not trigger automatic retries.</p>
              */
             public Builder retryable(Boolean retryable) {
                 this.retryable = retryable;
@@ -3565,7 +4928,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source of the error. Valid values: MAGIC, ROUTER, NETWORK, ORIGIN, and UNKNOWN. The value is determined only based on actual evidence.</p>
+             * <p>MAGIC, ROUTER, NETWORK, ORIGIN, or UNKNOWN. It is determined solely based on actual evidence.</p>
              * 
              * <strong>example:</strong>
              * <p>UNKNOWN</p>
@@ -3685,7 +5048,7 @@ public class GetMcpResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The actual configuration confirmed by evidence in the current verification. This field is empty if no confirmed information is available and is not inferred from the expected configuration.</p>
+             * <p>The actual configuration confirmed by evidence in this verification. It is empty when no confirmed information is available and is not inferred from the expected configuration.</p>
              */
             public Builder actualConfiguration(ActualConfiguration actualConfiguration) {
                 this.actualConfiguration = actualConfiguration;
@@ -3693,7 +5056,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The verification error. This field is empty if the verification is successful. It saves only the desensitized diagnostics required for the current verification.</p>
+             * <p>Empty upon success. It only saves the desensitized diagnostics required for this verification.</p>
              */
             public Builder error(LastResultError error) {
                 this.error = error;
@@ -3701,7 +5064,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time of the current origin verification, in ISO 8601 UTC format.</p>
+             * <p>The time of this origin verification, in ISO 8601 UTC format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-11-19T08:30:00Z</p>
@@ -3712,7 +5075,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The verification stage. Valid values: CONNECT, DISCOVER, INITIALIZE, SESSION_CHECK, CLEANUP, and COMPLETE.</p>
+             * <p>CONNECT, DISCOVER, INITIALIZE, SESSION_CHECK, CLEANUP, or COMPLETE.</p>
              * 
              * <strong>example:</strong>
              * <p>COMPLETE</p>
@@ -3723,7 +5086,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The verification result. Valid values: SUCCESS and FAILED. The result is SUCCESS if the protocol and applicable session checks pass. Not declaring any capabilities does not affect the passing status.</p>
+             * <p>SUCCESS or FAILED. The status is SUCCESS if the protocol and applicable session checks pass. Not declaring any capabilities does not affect the passing status.</p>
              * 
              * <strong>example:</strong>
              * <p>SUCCESS</p>
@@ -3780,7 +5143,7 @@ public class GetMcpResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Returned only for CODE_PACKAGE deployments. This field is cleared when a new task starts and is empty if no verification has been performed or if an old task did not perform verification. If a subsequent release fails, the current summary is retained, which does not indicate real-time health or the active version status.</p>
+             * <p>Returned only for CODE_PACKAGE. It is cleared when a new task starts and is empty if no verification has been performed or if the old task did not perform verification. If a subsequent release fails, this summary is retained, which does not indicate real-time health or the active version status.</p>
              */
             public Builder lastResult(LastResult lastResult) {
                 this.lastResult = lastResult;
@@ -3908,7 +5271,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The template schema version.</p>
+             * <p>The version of the template schema.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0</p>
@@ -3919,7 +5282,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The template input schema, represented as a JSON Schema string.</p>
+             * <p>The input schema of the template, represented as a JSON Schema string.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;type&quot;:&quot;object&quot;,&quot;properties&quot;:{&quot;addresses&quot;:{&quot;type&quot;:&quot;array&quot;,&quot;items&quot;:{&quot;type&quot;:&quot;string&quot;}}}}</p>
@@ -3950,9 +5313,228 @@ public class GetMcpResponseBody extends TeaModel {
      *
      * <p>GetMcpResponseBody</p>
      */
+    public static class VirtualConfigSourcesTools extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("expectedDigest")
+        private String expectedDigest;
+
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
+        private VirtualConfigSourcesTools(Builder builder) {
+            this.expectedDigest = builder.expectedDigest;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VirtualConfigSourcesTools create() {
+            return builder().build();
+        }
+
+        /**
+         * @return expectedDigest
+         */
+        public String getExpectedDigest() {
+            return this.expectedDigest;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private String expectedDigest; 
+            private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(VirtualConfigSourcesTools model) {
+                this.expectedDigest = model.expectedDigest;
+                this.name = model.name;
+            } 
+
+            /**
+             * <p>Required for virtual MCPs. The definition digest obtained from the ListMcpTools operation or the validation result of the source MCP. The client passes this value back as is without calculating it. This value is used only to manually update the validation baseline and does not freeze the runtime schema.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</p>
+             */
+            public Builder expectedDigest(String expectedDigest) {
+                this.expectedDigest = expectedDigest;
+                return this;
+            }
+
+            /**
+             * <p>Required for virtual MCPs. The name of the source tool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>get-current-time</p>
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public VirtualConfigSourcesTools build() {
+                return new VirtualConfigSourcesTools(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetMcpResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMcpResponseBody</p>
+     */
+    public static class VirtualConfigSources extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("mcpServerId")
+        private String mcpServerId;
+
+        @com.aliyun.core.annotation.NameInMap("tools")
+        private java.util.List<VirtualConfigSourcesTools> tools;
+
+        private VirtualConfigSources(Builder builder) {
+            this.mcpServerId = builder.mcpServerId;
+            this.tools = builder.tools;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VirtualConfigSources create() {
+            return builder().build();
+        }
+
+        /**
+         * @return mcpServerId
+         */
+        public String getMcpServerId() {
+            return this.mcpServerId;
+        }
+
+        /**
+         * @return tools
+         */
+        public java.util.List<VirtualConfigSourcesTools> getTools() {
+            return this.tools;
+        }
+
+        public static final class Builder {
+            private String mcpServerId; 
+            private java.util.List<VirtualConfigSourcesTools> tools; 
+
+            private Builder() {
+            } 
+
+            private Builder(VirtualConfigSources model) {
+                this.mcpServerId = model.mcpServerId;
+                this.tools = model.tools;
+            } 
+
+            /**
+             * <p>Required for virtual MCPs. The ID of the source MCP in the current workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mcp-server-source-1</p>
+             */
+            public Builder mcpServerId(String mcpServerId) {
+                this.mcpServerId = mcpServerId;
+                return this;
+            }
+
+            /**
+             * <p>Required for virtual MCPs. The manually selected tools. Specify at least one tool for each source, up to 100 tools across all sources.</p>
+             */
+            public Builder tools(java.util.List<VirtualConfigSourcesTools> tools) {
+                this.tools = tools;
+                return this;
+            }
+
+            public VirtualConfigSources build() {
+                return new VirtualConfigSources(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetMcpResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMcpResponseBody</p>
+     */
+    public static class VirtualConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("sources")
+        private java.util.List<VirtualConfigSources> sources;
+
+        private VirtualConfig(Builder builder) {
+            this.sources = builder.sources;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VirtualConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return sources
+         */
+        public java.util.List<VirtualConfigSources> getSources() {
+            return this.sources;
+        }
+
+        public static final class Builder {
+            private java.util.List<VirtualConfigSources> sources; 
+
+            private Builder() {
+            } 
+
+            private Builder(VirtualConfig model) {
+                this.sources = model.sources;
+            } 
+
+            /**
+             * <p>Required for virtual MCPs. Specify 1 to 10 different source MCPs.</p>
+             */
+            public Builder sources(java.util.List<VirtualConfigSources> sources) {
+                this.sources = sources;
+                return this;
+            }
+
+            public VirtualConfig build() {
+                return new VirtualConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetMcpResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMcpResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("addresses")
         private java.util.List<String> addresses;
+
+        @com.aliyun.core.annotation.NameInMap("appliedRevision")
+        private Long appliedRevision;
+
+        @com.aliyun.core.annotation.NameInMap("appliedVirtualConfig")
+        private AppliedVirtualConfig appliedVirtualConfig;
 
         @com.aliyun.core.annotation.NameInMap("auth")
         private Auth auth;
@@ -3978,6 +5560,12 @@ public class GetMcpResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("functionName")
         private String functionName;
 
+        @com.aliyun.core.annotation.NameInMap("lastValidation")
+        private LastValidation lastValidation;
+
+        @com.aliyun.core.annotation.NameInMap("lastValidationId")
+        private String lastValidationId;
+
         @com.aliyun.core.annotation.NameInMap("marketSource")
         private MarketSource marketSource;
 
@@ -3996,6 +5584,9 @@ public class GetMcpResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("operation")
         private Operation operation;
 
+        @com.aliyun.core.annotation.NameInMap("operationTaskId")
+        private String operationTaskId;
+
         @com.aliyun.core.annotation.NameInMap("originProbe")
         private OriginProbe originProbe;
 
@@ -4008,17 +5599,32 @@ public class GetMcpResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("protocol")
         private String protocol;
 
+        @com.aliyun.core.annotation.NameInMap("resolvedImageUri")
+        private String resolvedImageUri;
+
+        @com.aliyun.core.annotation.NameInMap("revision")
+        private Long revision;
+
+        @com.aliyun.core.annotation.NameInMap("sourceCount")
+        private Integer sourceCount;
+
         @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("statusReason")
         private String statusReason;
 
+        @com.aliyun.core.annotation.NameInMap("statusReasonCode")
+        private String statusReasonCode;
+
         @com.aliyun.core.annotation.NameInMap("swaggerConfig")
         private String swaggerConfig;
 
         @com.aliyun.core.annotation.NameInMap("template")
         private Template template;
+
+        @com.aliyun.core.annotation.NameInMap("toolCount")
+        private Integer toolCount;
 
         @com.aliyun.core.annotation.NameInMap("type")
         private String type;
@@ -4032,8 +5638,13 @@ public class GetMcpResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("usageActive")
         private Boolean usageActive;
 
+        @com.aliyun.core.annotation.NameInMap("virtualConfig")
+        private VirtualConfig virtualConfig;
+
         private Data(Builder builder) {
             this.addresses = builder.addresses;
+            this.appliedRevision = builder.appliedRevision;
+            this.appliedVirtualConfig = builder.appliedVirtualConfig;
             this.auth = builder.auth;
             this.backendMcpProtocol = builder.backendMcpProtocol;
             this.createdAt = builder.createdAt;
@@ -4042,24 +5653,33 @@ public class GetMcpResponseBody extends TeaModel {
             this.description = builder.description;
             this.endpoint = builder.endpoint;
             this.functionName = builder.functionName;
+            this.lastValidation = builder.lastValidation;
+            this.lastValidationId = builder.lastValidationId;
             this.marketSource = builder.marketSource;
             this.mcpServerConfig = builder.mcpServerConfig;
             this.mcpServerId = builder.mcpServerId;
             this.name = builder.name;
             this.officialTag = builder.officialTag;
             this.operation = builder.operation;
+            this.operationTaskId = builder.operationTaskId;
             this.originProbe = builder.originProbe;
             this.originProtocolVersion = builder.originProtocolVersion;
             this.permissionMode = builder.permissionMode;
             this.protocol = builder.protocol;
+            this.resolvedImageUri = builder.resolvedImageUri;
+            this.revision = builder.revision;
+            this.sourceCount = builder.sourceCount;
             this.status = builder.status;
             this.statusReason = builder.statusReason;
+            this.statusReasonCode = builder.statusReasonCode;
             this.swaggerConfig = builder.swaggerConfig;
             this.template = builder.template;
+            this.toolCount = builder.toolCount;
             this.type = builder.type;
             this.updatedAt = builder.updatedAt;
             this.url = builder.url;
             this.usageActive = builder.usageActive;
+            this.virtualConfig = builder.virtualConfig;
         }
 
         public static Builder builder() {
@@ -4075,6 +5695,20 @@ public class GetMcpResponseBody extends TeaModel {
          */
         public java.util.List<String> getAddresses() {
             return this.addresses;
+        }
+
+        /**
+         * @return appliedRevision
+         */
+        public Long getAppliedRevision() {
+            return this.appliedRevision;
+        }
+
+        /**
+         * @return appliedVirtualConfig
+         */
+        public AppliedVirtualConfig getAppliedVirtualConfig() {
+            return this.appliedVirtualConfig;
         }
 
         /**
@@ -4134,6 +5768,20 @@ public class GetMcpResponseBody extends TeaModel {
         }
 
         /**
+         * @return lastValidation
+         */
+        public LastValidation getLastValidation() {
+            return this.lastValidation;
+        }
+
+        /**
+         * @return lastValidationId
+         */
+        public String getLastValidationId() {
+            return this.lastValidationId;
+        }
+
+        /**
          * @return marketSource
          */
         public MarketSource getMarketSource() {
@@ -4176,6 +5824,13 @@ public class GetMcpResponseBody extends TeaModel {
         }
 
         /**
+         * @return operationTaskId
+         */
+        public String getOperationTaskId() {
+            return this.operationTaskId;
+        }
+
+        /**
          * @return originProbe
          */
         public OriginProbe getOriginProbe() {
@@ -4204,6 +5859,27 @@ public class GetMcpResponseBody extends TeaModel {
         }
 
         /**
+         * @return resolvedImageUri
+         */
+        public String getResolvedImageUri() {
+            return this.resolvedImageUri;
+        }
+
+        /**
+         * @return revision
+         */
+        public Long getRevision() {
+            return this.revision;
+        }
+
+        /**
+         * @return sourceCount
+         */
+        public Integer getSourceCount() {
+            return this.sourceCount;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -4218,6 +5894,13 @@ public class GetMcpResponseBody extends TeaModel {
         }
 
         /**
+         * @return statusReasonCode
+         */
+        public String getStatusReasonCode() {
+            return this.statusReasonCode;
+        }
+
+        /**
          * @return swaggerConfig
          */
         public String getSwaggerConfig() {
@@ -4229,6 +5912,13 @@ public class GetMcpResponseBody extends TeaModel {
          */
         public Template getTemplate() {
             return this.template;
+        }
+
+        /**
+         * @return toolCount
+         */
+        public Integer getToolCount() {
+            return this.toolCount;
         }
 
         /**
@@ -4259,8 +5949,17 @@ public class GetMcpResponseBody extends TeaModel {
             return this.usageActive;
         }
 
+        /**
+         * @return virtualConfig
+         */
+        public VirtualConfig getVirtualConfig() {
+            return this.virtualConfig;
+        }
+
         public static final class Builder {
             private java.util.List<String> addresses; 
+            private Long appliedRevision; 
+            private AppliedVirtualConfig appliedVirtualConfig; 
             private Auth auth; 
             private String backendMcpProtocol; 
             private String createdAt; 
@@ -4269,30 +5968,41 @@ public class GetMcpResponseBody extends TeaModel {
             private String description; 
             private String endpoint; 
             private String functionName; 
+            private LastValidation lastValidation; 
+            private String lastValidationId; 
             private MarketSource marketSource; 
             private String mcpServerConfig; 
             private String mcpServerId; 
             private String name; 
             private String officialTag; 
             private Operation operation; 
+            private String operationTaskId; 
             private OriginProbe originProbe; 
             private String originProtocolVersion; 
             private String permissionMode; 
             private String protocol; 
+            private String resolvedImageUri; 
+            private Long revision; 
+            private Integer sourceCount; 
             private String status; 
             private String statusReason; 
+            private String statusReasonCode; 
             private String swaggerConfig; 
             private Template template; 
+            private Integer toolCount; 
             private String type; 
             private String updatedAt; 
             private String url; 
             private Boolean usageActive; 
+            private VirtualConfig virtualConfig; 
 
             private Builder() {
             } 
 
             private Builder(Data model) {
                 this.addresses = model.addresses;
+                this.appliedRevision = model.appliedRevision;
+                this.appliedVirtualConfig = model.appliedVirtualConfig;
                 this.auth = model.auth;
                 this.backendMcpProtocol = model.backendMcpProtocol;
                 this.createdAt = model.createdAt;
@@ -4301,24 +6011,33 @@ public class GetMcpResponseBody extends TeaModel {
                 this.description = model.description;
                 this.endpoint = model.endpoint;
                 this.functionName = model.functionName;
+                this.lastValidation = model.lastValidation;
+                this.lastValidationId = model.lastValidationId;
                 this.marketSource = model.marketSource;
                 this.mcpServerConfig = model.mcpServerConfig;
                 this.mcpServerId = model.mcpServerId;
                 this.name = model.name;
                 this.officialTag = model.officialTag;
                 this.operation = model.operation;
+                this.operationTaskId = model.operationTaskId;
                 this.originProbe = model.originProbe;
                 this.originProtocolVersion = model.originProtocolVersion;
                 this.permissionMode = model.permissionMode;
                 this.protocol = model.protocol;
+                this.resolvedImageUri = model.resolvedImageUri;
+                this.revision = model.revision;
+                this.sourceCount = model.sourceCount;
                 this.status = model.status;
                 this.statusReason = model.statusReason;
+                this.statusReasonCode = model.statusReasonCode;
                 this.swaggerConfig = model.swaggerConfig;
                 this.template = model.template;
+                this.toolCount = model.toolCount;
                 this.type = model.type;
                 this.updatedAt = model.updatedAt;
                 this.url = model.url;
                 this.usageActive = model.usageActive;
+                this.virtualConfig = model.virtualConfig;
             } 
 
             /**
@@ -4330,7 +6049,26 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The backend authentication configuration. The enabled field indicates whether it is enabled. The directProxy field specifies the custom authentication header for the direct proxy. The httpToMcp field specifies the list of OpenAPI credentials for HTTP_TO_MCP.</p>
+             * <p>The applied revision number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder appliedRevision(Long appliedRevision) {
+                this.appliedRevision = appliedRevision;
+                return this;
+            }
+
+            /**
+             * <p>The applied sources and tool selection.</p>
+             */
+            public Builder appliedVirtualConfig(AppliedVirtualConfig appliedVirtualConfig) {
+                this.appliedVirtualConfig = appliedVirtualConfig;
+                return this;
+            }
+
+            /**
+             * <p>The backend authentication configuration. enabled specifies whether the configuration is enabled. directProxy specifies the custom authentication header for the direct proxy. httpToMcp specifies the list of OpenAPI credentials for HTTP_TO_MCP.</p>
              */
             public Builder auth(Auth auth) {
                 this.auth = auth;
@@ -4338,7 +6076,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The saved legacy or modern backend policy, which is separate from the transport indicated by the protocol and does not indicate verification. This field is not saved for new CODE_PACKAGE deployments. For historical CODE_PACKAGE deployments, the saved value does not control Function Compute session affinity or the gateway protocol. For the actual protocol, refer to OriginProbe.LastResult.ActualConfiguration.BackendMcpProtocol. Returns null for historical deployments with unspecified values and HTTP_TO_MCP deployments.</p>
+             * <p>The saved legacy or modern backend policy, which is separate from the transport indicated by the protocol and does not indicate verification. This field is not saved for newly created CODE_PACKAGE. For historical CODE_PACKAGE, the existing value does not control Function Compute session affinity or gateway protocol. For the actual protocol, refer to OriginProbe.LastResult.ActualConfiguration.BackendMcpProtocol. This field returns null for historically unspecified values and HTTP_TO_MCP.</p>
              * 
              * <strong>example:</strong>
              * <p>modern</p>
@@ -4379,7 +6117,7 @@ public class GetMcpResponseBody extends TeaModel {
              * <p>The description.</p>
              * 
              * <strong>example:</strong>
-             * <p>Sample description to illustrate the purpose of the resource</p>
+             * <p>A sample description used to illustrate the purpose of the resource</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -4387,7 +6125,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The MCP endpoint that can be called by users or agents. This field is empty before the deployment is completed.</p>
+             * <p>The MCP endpoint that can be called by users or agents. It is empty before deployment is completed.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example.com/mcp">https://example.com/mcp</a></p>
@@ -4398,13 +6136,32 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Function Compute function name for the CODE_PACKAGE MCP. This field is empty before deployment is complete and for other types.</p>
+             * <p>The name of the Function Compute function corresponding to the CODE_PACKAGE MCP. This field is empty before the deployment is complete, and is also empty for other types.</p>
              * 
              * <strong>example:</strong>
              * <p>agentcore-mcp-example</p>
              */
             public Builder functionName(String functionName) {
                 this.functionName = functionName;
+                return this;
+            }
+
+            /**
+             * <p>The validation progress, end time, failure cause, and tool details for the current target assembly. For batch submissions, the items field contains only the results for the current MCP. After a new assembly is saved, the old validation details are no longer returned.</p>
+             */
+            public Builder lastValidation(LastValidation lastValidation) {
+                this.lastValidation = lastValidation;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the last tool validation for the current target assembly.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>val-1234567890</p>
+             */
+            public Builder lastValidationId(String lastValidationId) {
+                this.lastValidationId = lastValidationId;
                 return this;
             }
 
@@ -4417,7 +6174,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The MCP server configuration.</p>
+             * <p>The server-side configuration of the MCP.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;type&quot;:&quot;object&quot;}</p>
@@ -4461,7 +6218,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The read-only progress that reuses existing release tasks. It does not change the primary status of the resource. This field is empty if no historical operation information is available.</p>
+             * <p>Reuses the read-only progress of existing release tasks. It does not change the primary status of the resource and is empty when there is no historical operation information.</p>
              */
             public Builder operation(Operation operation) {
                 this.operation = operation;
@@ -4469,7 +6226,18 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Returns the minimal origin verification summary of the most recent task only for code deployments. This field is empty for direct connection and HTTP-to-MCP deployments. Querying this field does not trigger probing.</p>
+             * <p>The ID of the most recent virtual MCP publishing task. You can use this ID to query and locate the results of the asynchronous publishing task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>task-1234567890</p>
+             */
+            public Builder operationTaskId(String operationTaskId) {
+                this.operationTaskId = operationTaskId;
+                return this;
+            }
+
+            /**
+             * <p>Returns the minimal origin verification summary of the most recent task only for code deployment. It is empty for direct connection and HTTP to MCP. Queries do not trigger probing.</p>
              */
             public Builder originProbe(OriginProbe originProbe) {
                 this.originProbe = originProbe;
@@ -4477,7 +6245,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The optional saved metadata for the origin MCP protocol date display, in YYYY-MM-DD format. You can specify this field during creation and modify it during updates. If omitted during an update, the current value is retained. This field is used only for saving and displaying information. It is not a software version, does not restrict the external gateway protocol, does not control backend requests, and does not indicate that real-time verification has passed. Returns null if omitted during creation and not updated, missing in historical data, or used in HTTP_TO_MCP deployments. No default value.</p>
+             * <p>The optional saved metadata for the origin MCP protocol date display, in YYYY-MM-DD format. It can be specified during creation and modified during updates. If omitted during an update, the current value is retained. This field only saves and displays information. It is not a software version, does not restrict the external gateway protocol, does not control backend requests, and does not indicate that real-time verification has passed. It returns null if omitted during creation and not updated, if historically missing, or for HTTP_TO_MCP. There is no default value.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-03-26</p>
@@ -4488,11 +6256,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The access permission mode. Valid values:</p>
-             * <ul>
-             * <li>PUBLIC: Public access.</li>
-             * <li>CONTROLLED: Access controlled based on permission rules.</li>
-             * </ul>
+             * <p>PUBLIC indicates public access. CONTROLLED indicates that access is controlled based on permission rules.</p>
              * 
              * <strong>example:</strong>
              * <p>CONTROLLED</p>
@@ -4510,6 +6274,39 @@ public class GetMcpResponseBody extends TeaModel {
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
+                return this;
+            }
+
+            /**
+             * <p>Read-only. Records the image URI and digest retrieved from Function Compute (FC) for the active deployment. The deployment still uses the tag specified in deploymentConfig.containerConfiguration.image. This field is not used as an input parameter for deployment. It is empty if the deployment is not yet active or the image digest has not been obtained.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>registry.example.com/mcp@sha256:0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef</p>
+             */
+            public Builder resolvedImageUri(String resolvedImageUri) {
+                this.resolvedImageUri = resolvedImageUri;
+                return this;
+            }
+
+            /**
+             * <p>The target revision number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
+             */
+            public Builder revision(Long revision) {
+                this.revision = revision;
+                return this;
+            }
+
+            /**
+             * <p>The number of selected sources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
+             */
+            public Builder sourceCount(Integer sourceCount) {
+                this.sourceCount = sourceCount;
                 return this;
             }
 
@@ -4536,6 +6333,17 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The security reason code for the virtual MCP publishing failure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PublishFailed</p>
+             */
+            public Builder statusReasonCode(String statusReasonCode) {
+                this.statusReasonCode = statusReasonCode;
+                return this;
+            }
+
+            /**
              * <p>The Swagger configuration.</p>
              * 
              * <strong>example:</strong>
@@ -4547,10 +6355,21 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The template schema for the usage-bound MCP version. This field is not returned for regular MCPs.</p>
+             * <p>The template schema for the bound version of the usage MCP. This field is not returned for regular MCPs.</p>
              */
             public Builder template(Template template) {
                 this.template = template;
+                return this;
+            }
+
+            /**
+             * <p>The number of selected tools.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
+             */
+            public Builder toolCount(Integer toolCount) {
+                this.toolCount = toolCount;
                 return this;
             }
 
@@ -4566,7 +6385,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the MCP was last updated, in ISO 8601 UTC format.</p>
+             * <p>The last update time of the MCP, in ISO 8601 UTC format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-23T01:00:00Z</p>
@@ -4592,6 +6411,14 @@ public class GetMcpResponseBody extends TeaModel {
              */
             public Builder usageActive(Boolean usageActive) {
                 this.usageActive = usageActive;
+                return this;
+            }
+
+            /**
+             * <p>The target sources and tool selection.</p>
+             */
+            public Builder virtualConfig(VirtualConfig virtualConfig) {
+                this.virtualConfig = virtualConfig;
                 return this;
             }
 

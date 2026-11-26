@@ -263,6 +263,9 @@ public class ListMcpToolsResponseBody extends TeaModel {
      * <p>ListMcpToolsResponseBody</p>
      */
     public static class Items extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("definitionDigest")
+        private String definitionDigest;
+
         @com.aliyun.core.annotation.NameInMap("inputSchema")
         private String inputSchema;
 
@@ -276,6 +279,7 @@ public class ListMcpToolsResponseBody extends TeaModel {
         private String toolName;
 
         private Items(Builder builder) {
+            this.definitionDigest = builder.definitionDigest;
             this.inputSchema = builder.inputSchema;
             this.outputSchema = builder.outputSchema;
             this.toolDescription = builder.toolDescription;
@@ -288,6 +292,13 @@ public class ListMcpToolsResponseBody extends TeaModel {
 
         public static Items create() {
             return builder().build();
+        }
+
+        /**
+         * @return definitionDigest
+         */
+        public String getDefinitionDigest() {
+            return this.definitionDigest;
         }
 
         /**
@@ -319,6 +330,7 @@ public class ListMcpToolsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String definitionDigest; 
             private String inputSchema; 
             private String outputSchema; 
             private String toolDescription; 
@@ -328,11 +340,23 @@ public class ListMcpToolsResponseBody extends TeaModel {
             } 
 
             private Builder(Items model) {
+                this.definitionDigest = model.definitionDigest;
                 this.inputSchema = model.inputSchema;
                 this.outputSchema = model.outputSchema;
                 this.toolDescription = model.toolDescription;
                 this.toolName = model.toolName;
             } 
+
+            /**
+             * <p>工具名称、说明和输入输出 Schema 的规范化 SHA-256 摘要。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</p>
+             */
+            public Builder definitionDigest(String definitionDigest) {
+                this.definitionDigest = definitionDigest;
+                return this;
+            }
 
             /**
              * <p>The input parameter schema of the tool.</p>

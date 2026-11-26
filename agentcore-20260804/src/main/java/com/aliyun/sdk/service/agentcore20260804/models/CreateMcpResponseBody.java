@@ -190,6 +190,219 @@ public class CreateMcpResponseBody extends TeaModel {
      *
      * <p>CreateMcpResponseBody</p>
      */
+    public static class Tools extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("expectedDigest")
+        private String expectedDigest;
+
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
+        private Tools(Builder builder) {
+            this.expectedDigest = builder.expectedDigest;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tools create() {
+            return builder().build();
+        }
+
+        /**
+         * @return expectedDigest
+         */
+        public String getExpectedDigest() {
+            return this.expectedDigest;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private String expectedDigest; 
+            private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tools model) {
+                this.expectedDigest = model.expectedDigest;
+                this.name = model.name;
+            } 
+
+            /**
+             * <p>Required for virtual MCP. The definition digest obtained from the ListMcpTools operation or validation result of the source MCP. The client passes this value back as-is without calculating it. This value is used only as a baseline for manual update validation and does not freeze the runtime schema.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</p>
+             */
+            public Builder expectedDigest(String expectedDigest) {
+                this.expectedDigest = expectedDigest;
+                return this;
+            }
+
+            /**
+             * <p>Required for virtual MCP. The name of the source tool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>get-current-time</p>
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public Tools build() {
+                return new Tools(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateMcpResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateMcpResponseBody</p>
+     */
+    public static class Sources extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("mcpServerId")
+        private String mcpServerId;
+
+        @com.aliyun.core.annotation.NameInMap("tools")
+        private java.util.List<Tools> tools;
+
+        private Sources(Builder builder) {
+            this.mcpServerId = builder.mcpServerId;
+            this.tools = builder.tools;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Sources create() {
+            return builder().build();
+        }
+
+        /**
+         * @return mcpServerId
+         */
+        public String getMcpServerId() {
+            return this.mcpServerId;
+        }
+
+        /**
+         * @return tools
+         */
+        public java.util.List<Tools> getTools() {
+            return this.tools;
+        }
+
+        public static final class Builder {
+            private String mcpServerId; 
+            private java.util.List<Tools> tools; 
+
+            private Builder() {
+            } 
+
+            private Builder(Sources model) {
+                this.mcpServerId = model.mcpServerId;
+                this.tools = model.tools;
+            } 
+
+            /**
+             * <p>Required for virtual MCP. The ID of the source MCP in the current workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mcp-server-source-1</p>
+             */
+            public Builder mcpServerId(String mcpServerId) {
+                this.mcpServerId = mcpServerId;
+                return this;
+            }
+
+            /**
+             * <p>Required for virtual MCP. The manually selected tools. Specify at least one tool for each source, and up to 100 tools in total across all sources.</p>
+             */
+            public Builder tools(java.util.List<Tools> tools) {
+                this.tools = tools;
+                return this;
+            }
+
+            public Sources build() {
+                return new Sources(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateMcpResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateMcpResponseBody</p>
+     */
+    public static class AppliedVirtualConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("sources")
+        private java.util.List<Sources> sources;
+
+        private AppliedVirtualConfig(Builder builder) {
+            this.sources = builder.sources;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AppliedVirtualConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return sources
+         */
+        public java.util.List<Sources> getSources() {
+            return this.sources;
+        }
+
+        public static final class Builder {
+            private java.util.List<Sources> sources; 
+
+            private Builder() {
+            } 
+
+            private Builder(AppliedVirtualConfig model) {
+                this.sources = model.sources;
+            } 
+
+            /**
+             * <p>Required for virtual MCP. Specify 1 to 10 different source MCPs.</p>
+             */
+            public Builder sources(java.util.List<Sources> sources) {
+                this.sources = sources;
+                return this;
+            }
+
+            public AppliedVirtualConfig build() {
+                return new AppliedVirtualConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateMcpResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateMcpResponseBody</p>
+     */
     public static class CodePackage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("apiKey")
         private String apiKey;
@@ -237,7 +450,7 @@ public class CreateMcpResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The API key used to verify MCP callers.</p>
+             * <p>The API key used to validate the MCP caller.</p>
              * 
              * <strong>example:</strong>
              * <p>example-api-key</p>
@@ -449,7 +662,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The authentication scheme ID.</p>
+             * <p>The ID of the authentication scheme.</p>
              * 
              * <strong>example:</strong>
              * <p>mcp-1234567890abcdef</p>
@@ -578,7 +791,7 @@ public class CreateMcpResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The caller API key authentication configuration for code-deployed MCP.</p>
+             * <p>The caller API key authentication configuration for the code package MCP.</p>
              */
             public Builder codePackage(CodePackage codePackage) {
                 this.codePackage = codePackage;
@@ -586,7 +799,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The direct proxy authentication configuration.</p>
+             * <p>The authentication configuration for the direct proxy.</p>
              */
             public Builder directProxy(DirectProxy directProxy) {
                 this.directProxy = directProxy;
@@ -602,7 +815,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of HTTP_TO_MCP authentication configurations.</p>
+             * <p>The list of authentication configurations for HTTP_TO_MCP.</p>
              */
             public Builder httpToMcp(java.util.List<HttpToMcp> httpToMcp) {
                 this.httpToMcp = httpToMcp;
@@ -682,7 +895,7 @@ public class CreateMcpResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the AgentCore credential referenced when the mode is set to CREDENTIAL.</p>
+             * <p>The AgentCore Credential referenced when the mode is CREDENTIAL.</p>
              * 
              * <strong>example:</strong>
              * <p>credential-id</p>
@@ -693,7 +906,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to enable ingress access control.</p>
+             * <p>Specifies whether to enable entry access control.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -701,7 +914,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The access control mode. ANONYMOUS indicates anonymous access, and CREDENTIAL indicates authentication by using AgentCore credentials.</p>
+             * <p>ANONYMOUS indicates anonymous access. CREDENTIAL indicates the use of AgentCore access credentials.</p>
              * 
              * <strong>example:</strong>
              * <p>CREDENTIAL</p>
@@ -805,7 +1018,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The credential provider ARN.</p>
+             * <p>The ARN of the credential provider.</p>
              * 
              * <strong>example:</strong>
              * <p>acs:agentidentity:cn-hangzhou:1234567890123456:provider/example</p>
@@ -816,7 +1029,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The credential provider type.</p>
+             * <p>The type of the credential provider.</p>
              * 
              * <strong>example:</strong>
              * <p>oauth2</p>
@@ -827,7 +1040,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to enable agent identity.</p>
+             * <p>Specifies whether to enable Agent Identity.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -907,7 +1120,7 @@ public class CreateMcpResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The temporary code package token returned by GetMcpCodePackageUploadUrl. This token is used to create or update a code deployment after a presigned upload is completed.</p>
+             * <p>The temporary code package token returned by GetMcpCodePackageUploadUrl. It is used to create or update a code deployment after the presigned upload is complete.</p>
              * 
              * <strong>example:</strong>
              * <p>upload-token</p>
@@ -926,7 +1139,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The code package runtime: python3.13, nodejs22, or java17.</p>
+             * <p>The runtime of the code package. Valid values: python3.13, nodejs22, and java17.</p>
              * 
              * <strong>example:</strong>
              * <p>python3.13</p>
@@ -938,6 +1151,369 @@ public class CreateMcpResponseBody extends TeaModel {
 
             public CodeConfiguration build() {
                 return new CodeConfiguration(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateMcpResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateMcpResponseBody</p>
+     */
+    public static class AuthConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("password")
+        private String password;
+
+        @com.aliyun.core.annotation.NameInMap("userName")
+        private String userName;
+
+        private AuthConfig(Builder builder) {
+            this.password = builder.password;
+            this.userName = builder.userName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AuthConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return password
+         */
+        public String getPassword() {
+            return this.password;
+        }
+
+        /**
+         * @return userName
+         */
+        public String getUserName() {
+            return this.userName;
+        }
+
+        public static final class Builder {
+            private String password; 
+            private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(AuthConfig model) {
+                this.password = model.password;
+                this.userName = model.userName;
+            } 
+
+            /**
+             * <p>The password for the image registry. The password is encrypted and stored on the server, and is not returned in query responses. If you omit this parameter during an update, the existing password is retained.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-password</p>
+             */
+            public Builder password(String password) {
+                this.password = password;
+                return this;
+            }
+
+            /**
+             * <p>The username for the image registry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>puller</p>
+             */
+            public Builder userName(String userName) {
+                this.userName = userName;
+                return this;
+            }
+
+            public AuthConfig build() {
+                return new AuthConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateMcpResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateMcpResponseBody</p>
+     */
+    public static class CertConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("insecure")
+        private Boolean insecure;
+
+        @com.aliyun.core.annotation.NameInMap("rootCaCertBase64")
+        private String rootCaCertBase64;
+
+        private CertConfig(Builder builder) {
+            this.insecure = builder.insecure;
+            this.rootCaCertBase64 = builder.rootCaCertBase64;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CertConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return insecure
+         */
+        public Boolean getInsecure() {
+            return this.insecure;
+        }
+
+        /**
+         * @return rootCaCertBase64
+         */
+        public String getRootCaCertBase64() {
+            return this.rootCaCertBase64;
+        }
+
+        public static final class Builder {
+            private Boolean insecure; 
+            private String rootCaCertBase64; 
+
+            private Builder() {
+            } 
+
+            private Builder(CertConfig model) {
+                this.insecure = model.insecure;
+                this.rootCaCertBase64 = model.rootCaCertBase64;
+            } 
+
+            /**
+             * <p>Specifies whether to skip the verification of the TLS certificate of the image registry. A value of true indicates that the verification is skipped. Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder insecure(Boolean insecure) {
+                this.insecure = insecure;
+                return this;
+            }
+
+            /**
+             * <p>The Base64-encoded root CA certificate of the image registry, which is used to verify self-signed certificates.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LS0tLS1CRUdJTi...</p>
+             */
+            public Builder rootCaCertBase64(String rootCaCertBase64) {
+                this.rootCaCertBase64 = rootCaCertBase64;
+                return this;
+            }
+
+            public CertConfig build() {
+                return new CertConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateMcpResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateMcpResponseBody</p>
+     */
+    public static class NetworkConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("securityGroupId")
+        private String securityGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("vSwitchId")
+        private String vSwitchId;
+
+        @com.aliyun.core.annotation.NameInMap("vpcId")
+        private String vpcId;
+
+        private NetworkConfig(Builder builder) {
+            this.securityGroupId = builder.securityGroupId;
+            this.vSwitchId = builder.vSwitchId;
+            this.vpcId = builder.vpcId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NetworkConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return securityGroupId
+         */
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        /**
+         * @return vSwitchId
+         */
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        public static final class Builder {
+            private String securityGroupId; 
+            private String vSwitchId; 
+            private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetworkConfig model) {
+                this.securityGroupId = model.securityGroupId;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+            } 
+
+            /**
+             * <p>The ID of the security group used to pull images.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-example</p>
+             */
+            public Builder securityGroupId(String securityGroupId) {
+                this.securityGroupId = securityGroupId;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the vSwitch used to pull images.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-example</p>
+             */
+            public Builder vSwitchId(String vSwitchId) {
+                this.vSwitchId = vSwitchId;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the VPC where the image registry resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-example</p>
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
+                return this;
+            }
+
+            public NetworkConfig build() {
+                return new NetworkConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateMcpResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateMcpResponseBody</p>
+     */
+    public static class RegistryConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("authConfig")
+        private AuthConfig authConfig;
+
+        @com.aliyun.core.annotation.NameInMap("certConfig")
+        private CertConfig certConfig;
+
+        @com.aliyun.core.annotation.NameInMap("networkConfig")
+        private NetworkConfig networkConfig;
+
+        private RegistryConfig(Builder builder) {
+            this.authConfig = builder.authConfig;
+            this.certConfig = builder.certConfig;
+            this.networkConfig = builder.networkConfig;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RegistryConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return authConfig
+         */
+        public AuthConfig getAuthConfig() {
+            return this.authConfig;
+        }
+
+        /**
+         * @return certConfig
+         */
+        public CertConfig getCertConfig() {
+            return this.certConfig;
+        }
+
+        /**
+         * @return networkConfig
+         */
+        public NetworkConfig getNetworkConfig() {
+            return this.networkConfig;
+        }
+
+        public static final class Builder {
+            private AuthConfig authConfig; 
+            private CertConfig certConfig; 
+            private NetworkConfig networkConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(RegistryConfig model) {
+                this.authConfig = model.authConfig;
+                this.certConfig = model.certConfig;
+                this.networkConfig = model.networkConfig;
+            } 
+
+            /**
+             * <p>The authentication configuration of the image registry. Specify this parameter when the image registry requires username and password authentication.</p>
+             */
+            public Builder authConfig(AuthConfig authConfig) {
+                this.authConfig = authConfig;
+                return this;
+            }
+
+            /**
+             * <p>The TLS certificate verification configuration of the image registry.</p>
+             */
+            public Builder certConfig(CertConfig certConfig) {
+                this.certConfig = certConfig;
+                return this;
+            }
+
+            /**
+             * <p>The network configuration for image pulling. Specify this parameter when the image registry is accessible only within a VPC. Function Compute pulls images through this network.</p>
+             */
+            public Builder networkConfig(NetworkConfig networkConfig) {
+                this.networkConfig = networkConfig;
+                return this;
+            }
+
+            public RegistryConfig build() {
+                return new RegistryConfig(this);
             } 
 
         } 
@@ -968,6 +1544,9 @@ public class CreateMcpResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("mcpRuntimeMode")
         private String mcpRuntimeMode;
 
+        @com.aliyun.core.annotation.NameInMap("registryConfig")
+        private RegistryConfig registryConfig;
+
         @com.aliyun.core.annotation.NameInMap("sourceType")
         private String sourceType;
 
@@ -978,6 +1557,7 @@ public class CreateMcpResponseBody extends TeaModel {
             this.image = builder.image;
             this.imageRegistryType = builder.imageRegistryType;
             this.mcpRuntimeMode = builder.mcpRuntimeMode;
+            this.registryConfig = builder.registryConfig;
             this.sourceType = builder.sourceType;
         }
 
@@ -1032,6 +1612,13 @@ public class CreateMcpResponseBody extends TeaModel {
         }
 
         /**
+         * @return registryConfig
+         */
+        public RegistryConfig getRegistryConfig() {
+            return this.registryConfig;
+        }
+
+        /**
          * @return sourceType
          */
         public String getSourceType() {
@@ -1045,6 +1632,7 @@ public class CreateMcpResponseBody extends TeaModel {
             private String image; 
             private String imageRegistryType; 
             private String mcpRuntimeMode; 
+            private RegistryConfig registryConfig; 
             private String sourceType; 
 
             private Builder() {
@@ -1057,11 +1645,12 @@ public class CreateMcpResponseBody extends TeaModel {
                 this.image = model.image;
                 this.imageRegistryType = model.imageRegistryType;
                 this.mcpRuntimeMode = model.mcpRuntimeMode;
+                this.registryConfig = model.registryConfig;
                 this.sourceType = model.sourceType;
             } 
 
             /**
-             * <p>The ACR instance ID.</p>
+             * <p>The ID of the ACR instance.</p>
              * 
              * <strong>example:</strong>
              * <p>cri-example</p>
@@ -1080,7 +1669,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The container entrypoint parameters.</p>
+             * <p>The entrypoint parameters of the container.</p>
              */
             public Builder entrypoint(java.util.List<String> entrypoint) {
                 this.entrypoint = entrypoint;
@@ -1088,7 +1677,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The container image URL.</p>
+             * <p>The URL of the container image.</p>
              * 
              * <strong>example:</strong>
              * <p>registry.cn-hangzhou.aliyuncs.com/example/mcp:1.0.0</p>
@@ -1099,7 +1688,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The image registry type.</p>
+             * <p>The type of the image registry.</p>
              * 
              * <strong>example:</strong>
              * <p>ACR</p>
@@ -1110,7 +1699,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The MCP runtime mode. Custom containers currently need to expose standard MCP by themselves. Set the value to SELF_HOSTED.</p>
+             * <p>The MCP runtime mode. Custom containers must expose the standard MCP by themselves. Set the value to SELF_HOSTED.</p>
              * 
              * <strong>example:</strong>
              * <p>SELF_HOSTED</p>
@@ -1121,7 +1710,15 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The container source type. Currently fixed to CONTAINER_IMAGE.</p>
+             * <p>The custom image registry configuration. This parameter takes effect only when ImageRegistryType is set to CUSTOM. It is used to configure image pull authentication, TLS certificate verification, and the private network for image pulling.</p>
+             */
+            public Builder registryConfig(RegistryConfig registryConfig) {
+                this.registryConfig = registryConfig;
+                return this;
+            }
+
+            /**
+             * <p>The source type of the container. This parameter is fixed to CONTAINER_IMAGE.</p>
              * 
              * <strong>example:</strong>
              * <p>CONTAINER_IMAGE</p>
@@ -1270,7 +1867,7 @@ public class CreateMcpResponseBody extends TeaModel {
              * <p>The description of the hook.</p>
              * 
              * <strong>example:</strong>
-             * <p>Record MCP tool invocation</p>
+             * <p>Records MCP tool invocation</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1297,7 +1894,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The hook request headers.</p>
+             * <p>The request headers of the hook.</p>
              */
             public Builder headers(java.util.Map<String, String> headers) {
                 this.headers = headers;
@@ -1373,7 +1970,7 @@ public class CreateMcpResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Executes the PRE_LIST_TOOLS, PRE_CALL_TOOL, POST_LIST_TOOLS, and POST_CALL_TOOL hooks in the order of the array.</p>
+             * <p>The list of hooks executed in array order, including PRE_LIST_TOOLS, PRE_CALL_TOOL, POST_LIST_TOOLS, and POST_CALL_TOOL hooks.</p>
              */
             public Builder hooks(java.util.List<Hooks> hooks) {
                 this.hooks = hooks;
@@ -1495,7 +2092,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start rule for log segmentation.</p>
+             * <p>The start rule for Function Compute log segmentation.</p>
              * 
              * <strong>example:</strong>
              * <p>DefaultRegex</p>
@@ -1626,7 +2223,7 @@ public class CreateMcpResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The MCP endpoint path, such as /mcp or /sse.</p>
+             * <p>Example: /mcp or /sse.</p>
              * 
              * <strong>example:</strong>
              * <p>/mcp</p>
@@ -1637,7 +2234,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The session concurrency per instance. Currently fixed to 1.</p>
+             * <p>Currently fixed at 1.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1648,7 +2245,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The session idle timeout period in seconds. Default value: 1800.</p>
+             * <p>Unit: seconds. Default value: 1800.</p>
              * 
              * <strong>example:</strong>
              * <p>1800</p>
@@ -1659,7 +2256,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum session lifetime in seconds. Default value: 21600.</p>
+             * <p>Unit: seconds. Default value: 21600.</p>
              * 
              * <strong>example:</strong>
              * <p>21600</p>
@@ -1670,7 +2267,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The session mode. Only applicable to StreamableHTTP. Default value for creation: STATEFUL. If omitted during an update, the original value is retained. STATELESS disables Function Compute session affinity, and the stdio gateway does not enable stateful mode. Native HTTP services must support stateless MCP by themselves.</p>
+             * <p>Applicable only to StreamableHTTP. The default value is STATEFUL when created. If omitted during an update, the original value is retained. STATELESS disables Function Compute session affinity, and the stdio gateway does not enable stateful mode. Native HTTP services must support stateless MCP themselves.</p>
              * 
              * <strong>example:</strong>
              * <p>STATEFUL</p>
@@ -1772,7 +2369,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The NAS server address.</p>
+             * <p>The service address of the NAS file system.</p>
              * 
              * <strong>example:</strong>
              * <p>example.cn-hangzhou.nas.aliyuncs.com</p>
@@ -1855,7 +2452,7 @@ public class CreateMcpResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the user group.</p>
+             * <p>The group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>
@@ -1866,7 +2463,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of NAS mount points.</p>
+             * <p>The list of NAS mount targets.</p>
              */
             public Builder mountPoints(java.util.List<MountPoints> mountPoints) {
                 this.mountPoints = mountPoints;
@@ -2153,7 +2750,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the mount point is read-only.</p>
+             * <p>Specifies whether the mount target is read-only.</p>
              */
             public Builder readOnly(Boolean readOnly) {
                 this.readOnly = readOnly;
@@ -2207,7 +2804,7 @@ public class CreateMcpResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of OSS mount points.</p>
+             * <p>The list of OSS mount targets.</p>
              */
             public Builder mountPoints(java.util.List<OssMountConfigurationMountPoints> mountPoints) {
                 this.mountPoints = mountPoints;
@@ -2287,7 +2884,7 @@ public class CreateMcpResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Specifies whether to enable parameter transformation and result enhancement.</p>
+             * <p>Specifies whether to enable parameter transformation and result augmentation.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -2295,7 +2892,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reserved reference to the parameter transformation and result enhancement rule set.</p>
+             * <p>The reference to the reserved parameter transformation and result augmentation rule set.</p>
              * 
              * <strong>example:</strong>
              * <p>rules-1</p>
@@ -2306,7 +2903,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The transformation rule version.</p>
+             * <p>The version of the transformation rule.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0</p>
@@ -2508,7 +3105,7 @@ public class CreateMcpResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The CPU specifications in cores. Default value: 0.25.</p>
+             * <p>The CPU specification. Unit: cores. Default value: 0.25.</p>
              * 
              * <strong>example:</strong>
              * <p>0.25</p>
@@ -2519,7 +3116,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The temporary disk size in MB. Valid values: 512 and 10240.</p>
+             * <p>The size of the ephemeral disk. Unit: MB. Valid values: 512 and 10240.</p>
              * 
              * <strong>example:</strong>
              * <p>512</p>
@@ -2549,7 +3146,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The request concurrency per instance. Default value: 200.</p>
+             * <p>The maximum number of concurrent requests per instance. Default value: 200.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -2560,7 +3157,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The memory specifications in MB. Default value: 512.</p>
+             * <p>The memory specification. Unit: MB. Default value: 512.</p>
              * 
              * <strong>example:</strong>
              * <p>512</p>
@@ -2571,7 +3168,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service port. Default value: 9000.</p>
+             * <p>Default value: 9000.</p>
              * 
              * <strong>example:</strong>
              * <p>9000</p>
@@ -2582,7 +3179,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The function timeout period in seconds. Default value: 300.</p>
+             * <p>The timeout period of the function. Unit: seconds. Default value: 300.</p>
              * 
              * <strong>example:</strong>
              * <p>300</p>
@@ -2808,7 +3405,7 @@ public class CreateMcpResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The MCP ingress access control configuration.</p>
+             * <p>The MCP entry access control configuration.</p>
              */
             public Builder accessControl(AccessControl accessControl) {
                 this.accessControl = accessControl;
@@ -2816,7 +3413,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The agent identity configuration.</p>
+             * <p>The Agent Identity configuration.</p>
              */
             public Builder agentIdentityConfiguration(AgentIdentityConfiguration agentIdentityConfiguration) {
                 this.agentIdentityConfiguration = agentIdentityConfiguration;
@@ -2824,7 +3421,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The artifact type. Code indicates a ZIP code package, and Container indicates a custom container.</p>
+             * <p>The artifact type. A value of Code indicates a ZIP code package, and a value of Container indicates a custom container.</p>
              * 
              * <strong>example:</strong>
              * <p>Code</p>
@@ -2899,7 +3496,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parameter transformation and result enhancement configuration.</p>
+             * <p>The configuration for parameter transformation and result augmentation.</p>
              */
             public Builder parameterTransformConfiguration(ParameterTransformConfiguration parameterTransformConfiguration) {
                 this.parameterTransformConfiguration = parameterTransformConfiguration;
@@ -2969,7 +3566,7 @@ public class CreateMcpResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the MCP marketplace template.</p>
+             * <p>The MCP marketplace template ID.</p>
              * 
              * <strong>example:</strong>
              * <p>market-1</p>
@@ -3078,7 +3675,7 @@ public class CreateMcpResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Returns only bounded diagnostic codes and does not return the original error body of the origin server.</p>
+             * <p>The bounded diagnostic code. Only bounded diagnostic codes are returned, and the original error body from the origin is not returned.</p>
              * 
              * <strong>example:</strong>
              * <p>PROBE_TIMEOUT</p>
@@ -3089,7 +3686,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The necessary diagnostics that are trimmed and desensitized. This parameter does not contain credentials or original responses.</p>
+             * <p>The necessary diagnostics that are trimmed and desensitized. This message does not contain credentials or original responses.</p>
              * 
              * <strong>example:</strong>
              * <p>The probe deadline was exceeded.</p>
@@ -3100,7 +3697,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the operation is suitable for retry based on a restricted policy. This parameter does not trigger automatic retries.</p>
+             * <p>Indicates whether the operation is suitable for retry based on a restricted policy. This field does not trigger automatic retries.</p>
              */
             public Builder retryable(Boolean retryable) {
                 this.retryable = retryable;
@@ -3119,7 +3716,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The detection or release stage where the error occurred.</p>
+             * <p>The detection or deployment stage where the error occurred.</p>
              * 
              * <strong>example:</strong>
              * <p>INITIALIZE</p>
@@ -3241,7 +3838,7 @@ public class CreateMcpResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The desensitized error of the current release operation. This field indicates the failure of the gateway or formal link after the origin server passes the verification.</p>
+             * <p>The sanitized error for the current deployment operation. This field indicates failures in the gateway or production pipeline after the origin server validation passes.</p>
              */
             public Builder error(Error error) {
                 this.error = error;
@@ -3249,7 +3846,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the current or most recent release operation.</p>
+             * <p>The identifier of the current or most recent deployment operation.</p>
              * 
              * <strong>example:</strong>
              * <p>3541f1af-87cc-45d1-a28e-94ec5633b931</p>
@@ -3260,7 +3857,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The release stage, such as compute deployment, origin verification, summary saving, gateway release, ingress credential synchronization, formal link verification, or deployment submission. Old tasks retain their original stage semantics.</p>
+             * <p>The deployment stage. Valid values: compute deployment, origin verification, summary saving, gateway deployment, ingress credential synchronization, formal link verification, and deployment submission. Old tasks retain their original stage semantics.</p>
              * 
              * <strong>example:</strong>
              * <p>VALIDATE_ORIGIN</p>
@@ -3282,7 +3879,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the operation. Valid value: PUBLISH.</p>
+             * <p>The type of the operation. The current valid value is PUBLISH.</p>
              * 
              * <strong>example:</strong>
              * <p>PUBLISH</p>
@@ -3293,7 +3890,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the operation was updated in ISO 8601 UTC format.</p>
+             * <p>The time in ISO 8601 UTC format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-11-19T08:30:00Z</p>
@@ -3389,7 +3986,7 @@ public class CreateMcpResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The verified backend MCP protocol policy. Valid values: legacy and modern. This parameter is empty if the policy is not confirmed.</p>
+             * <p>The verified legacy or modern backend MCP protocol policy. This field is empty if the policy is not confirmed.</p>
              * 
              * <strong>example:</strong>
              * <p>modern</p>
@@ -3400,7 +3997,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The verified MCP transport. Valid values: SSE and StreamableHTTP. This parameter is empty if the transport is not confirmed.</p>
+             * <p>The verified SSE or StreamableHTTP transport. This field is empty if the transport is not confirmed.</p>
              * 
              * <strong>example:</strong>
              * <p>StreamableHTTP</p>
@@ -3411,7 +4008,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The actual negotiated or selected and verified date version of the MCP protocol. This parameter is empty if the version is not confirmed.</p>
+             * <p>The actual date version negotiated or selected and verified. This field is empty if the version is not confirmed.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-03-26</p>
@@ -3422,7 +4019,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The actual session mode. Valid values: STATEFUL, STATELESS, and NOT_APPLICABLE. This parameter is empty if the mode is not confirmed.</p>
+             * <p>The actual session mode. Valid values: STATEFUL, STATELESS, and NOT_APPLICABLE. This field is empty if the mode is not confirmed.</p>
              * 
              * <strong>example:</strong>
              * <p>STATELESS</p>
@@ -3531,7 +4128,7 @@ public class CreateMcpResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Returns only bounded diagnostic codes and does not return the original error body of the origin server.</p>
+             * <p>The bounded diagnostic code. Only bounded diagnostic codes are returned, and the original error body from the origin is not returned.</p>
              * 
              * <strong>example:</strong>
              * <p>PROBE_TIMEOUT</p>
@@ -3542,7 +4139,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The necessary diagnostics that are trimmed and desensitized. This parameter does not contain credentials or original responses.</p>
+             * <p>The necessary diagnostics that are trimmed and desensitized. This message does not contain credentials or original responses.</p>
              * 
              * <strong>example:</strong>
              * <p>The probe deadline was exceeded.</p>
@@ -3553,7 +4150,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the operation is suitable for retry based on a restricted policy. This parameter does not trigger automatic retries.</p>
+             * <p>Indicates whether the operation is suitable for retry based on a restricted policy. This field does not trigger automatic retries.</p>
              */
             public Builder retryable(Boolean retryable) {
                 this.retryable = retryable;
@@ -3572,7 +4169,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The detection or release stage where the error occurred.</p>
+             * <p>The detection or deployment stage where the error occurred.</p>
              * 
              * <strong>example:</strong>
              * <p>INITIALIZE</p>
@@ -3681,7 +4278,7 @@ public class CreateMcpResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The actual configuration confirmed by evidence in the current verification. This parameter is empty if no confirmed information is available and is not inferred from the expected configuration.</p>
+             * <p>The actual configuration confirmed by evidence in the current verification. This field is empty if no confirmed information is available and is not inferred from the expected configuration.</p>
              */
             public Builder actualConfiguration(ActualConfiguration actualConfiguration) {
                 this.actualConfiguration = actualConfiguration;
@@ -3689,7 +4286,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The verification error. This parameter is empty if the verification is successful. It saves only the desensitized diagnostics required for the current verification.</p>
+             * <p>The verification error. This field is empty if the verification is successful. It saves only the desensitized diagnostics required for the current verification.</p>
              */
             public Builder error(LastResultError error) {
                 this.error = error;
@@ -3697,7 +4294,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time of the current origin verification in ISO 8601 UTC format.</p>
+             * <p>The time of the current origin verification, in ISO 8601 UTC format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-11-19T08:30:00Z</p>
@@ -3719,7 +4316,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The verification result. Valid values: SUCCESS and FAILED. The value is SUCCESS if the protocol and applicable session checks pass. Not declaring any capabilities does not affect the result.</p>
+             * <p>The verification result. Valid values: SUCCESS and FAILED. A value of SUCCESS indicates that the protocol and applicable session checks have passed. Not declaring any capabilities does not affect the passing status.</p>
              * 
              * <strong>example:</strong>
              * <p>SUCCESS</p>
@@ -3776,7 +4373,7 @@ public class CreateMcpResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Returned only for CODE_PACKAGE. This parameter is cleared when a new task starts and is empty if no verification has been performed or if an old task did not perform verification. If a subsequent release fails, the current summary is retained. This parameter does not indicate real-time health or the status of the effective version.</p>
+             * <p>The result returned only for CODE_PACKAGE resources. This field is cleared when a new task starts and is empty if no verification has been performed or if an old task did not perform verification. If a subsequent deployment fails, this summary is retained, but it does not indicate real-time health or the active version status.</p>
              */
             public Builder lastResult(LastResult lastResult) {
                 this.lastResult = lastResult;
@@ -3904,7 +4501,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The schema version of the template.</p>
+             * <p>The template schema version.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0</p>
@@ -3915,7 +4512,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The input schema of the template, represented as a JSON Schema string.</p>
+             * <p>The template input schema, represented as a JSON Schema string.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;type&quot;:&quot;object&quot;,&quot;properties&quot;:{&quot;addresses&quot;:{&quot;type&quot;:&quot;array&quot;,&quot;items&quot;:{&quot;type&quot;:&quot;string&quot;}}}}</p>
@@ -3926,7 +4523,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether a newer template version is available.</p>
+             * <p>Indicates whether an updated template version is available.</p>
              */
             public Builder updateAvailable(Boolean updateAvailable) {
                 this.updateAvailable = updateAvailable;
@@ -3946,9 +4543,228 @@ public class CreateMcpResponseBody extends TeaModel {
      *
      * <p>CreateMcpResponseBody</p>
      */
+    public static class SourcesTools extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("expectedDigest")
+        private String expectedDigest;
+
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
+        private SourcesTools(Builder builder) {
+            this.expectedDigest = builder.expectedDigest;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SourcesTools create() {
+            return builder().build();
+        }
+
+        /**
+         * @return expectedDigest
+         */
+        public String getExpectedDigest() {
+            return this.expectedDigest;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private String expectedDigest; 
+            private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(SourcesTools model) {
+                this.expectedDigest = model.expectedDigest;
+                this.name = model.name;
+            } 
+
+            /**
+             * <p>Required for virtual MCP. The definition digest obtained from the ListMcpTools operation or validation result of the source MCP. The client passes this value back as-is without calculating it. This value is used only as a baseline for manual update validation and does not freeze the runtime schema.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</p>
+             */
+            public Builder expectedDigest(String expectedDigest) {
+                this.expectedDigest = expectedDigest;
+                return this;
+            }
+
+            /**
+             * <p>Required for virtual MCP. The name of the source tool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>get-current-time</p>
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public SourcesTools build() {
+                return new SourcesTools(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateMcpResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateMcpResponseBody</p>
+     */
+    public static class VirtualConfigSources extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("mcpServerId")
+        private String mcpServerId;
+
+        @com.aliyun.core.annotation.NameInMap("tools")
+        private java.util.List<SourcesTools> tools;
+
+        private VirtualConfigSources(Builder builder) {
+            this.mcpServerId = builder.mcpServerId;
+            this.tools = builder.tools;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VirtualConfigSources create() {
+            return builder().build();
+        }
+
+        /**
+         * @return mcpServerId
+         */
+        public String getMcpServerId() {
+            return this.mcpServerId;
+        }
+
+        /**
+         * @return tools
+         */
+        public java.util.List<SourcesTools> getTools() {
+            return this.tools;
+        }
+
+        public static final class Builder {
+            private String mcpServerId; 
+            private java.util.List<SourcesTools> tools; 
+
+            private Builder() {
+            } 
+
+            private Builder(VirtualConfigSources model) {
+                this.mcpServerId = model.mcpServerId;
+                this.tools = model.tools;
+            } 
+
+            /**
+             * <p>Required for virtual MCP. The ID of the source MCP in the current workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mcp-server-source-1</p>
+             */
+            public Builder mcpServerId(String mcpServerId) {
+                this.mcpServerId = mcpServerId;
+                return this;
+            }
+
+            /**
+             * <p>Required for virtual MCP. The manually selected tools. Specify at least one tool for each source, and up to 100 tools in total across all sources.</p>
+             */
+            public Builder tools(java.util.List<SourcesTools> tools) {
+                this.tools = tools;
+                return this;
+            }
+
+            public VirtualConfigSources build() {
+                return new VirtualConfigSources(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateMcpResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateMcpResponseBody</p>
+     */
+    public static class VirtualConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("sources")
+        private java.util.List<VirtualConfigSources> sources;
+
+        private VirtualConfig(Builder builder) {
+            this.sources = builder.sources;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VirtualConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return sources
+         */
+        public java.util.List<VirtualConfigSources> getSources() {
+            return this.sources;
+        }
+
+        public static final class Builder {
+            private java.util.List<VirtualConfigSources> sources; 
+
+            private Builder() {
+            } 
+
+            private Builder(VirtualConfig model) {
+                this.sources = model.sources;
+            } 
+
+            /**
+             * <p>Required for virtual MCP. Specify 1 to 10 different source MCPs.</p>
+             */
+            public Builder sources(java.util.List<VirtualConfigSources> sources) {
+                this.sources = sources;
+                return this;
+            }
+
+            public VirtualConfig build() {
+                return new VirtualConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateMcpResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateMcpResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("addresses")
         private java.util.List<String> addresses;
+
+        @com.aliyun.core.annotation.NameInMap("appliedRevision")
+        private Long appliedRevision;
+
+        @com.aliyun.core.annotation.NameInMap("appliedVirtualConfig")
+        private AppliedVirtualConfig appliedVirtualConfig;
 
         @com.aliyun.core.annotation.NameInMap("auth")
         private Auth auth;
@@ -3989,6 +4805,9 @@ public class CreateMcpResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("operation")
         private Operation operation;
 
+        @com.aliyun.core.annotation.NameInMap("operationTaskId")
+        private String operationTaskId;
+
         @com.aliyun.core.annotation.NameInMap("originProbe")
         private OriginProbe originProbe;
 
@@ -4001,11 +4820,23 @@ public class CreateMcpResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("protocol")
         private String protocol;
 
+        @com.aliyun.core.annotation.NameInMap("resolvedImageUri")
+        private String resolvedImageUri;
+
+        @com.aliyun.core.annotation.NameInMap("revision")
+        private Long revision;
+
+        @com.aliyun.core.annotation.NameInMap("sourceCount")
+        private Integer sourceCount;
+
         @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("statusReason")
         private String statusReason;
+
+        @com.aliyun.core.annotation.NameInMap("statusReasonCode")
+        private String statusReasonCode;
 
         @com.aliyun.core.annotation.NameInMap("swaggerConfig")
         private String swaggerConfig;
@@ -4013,14 +4844,22 @@ public class CreateMcpResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("template")
         private Template template;
 
+        @com.aliyun.core.annotation.NameInMap("toolCount")
+        private Integer toolCount;
+
         @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         @com.aliyun.core.annotation.NameInMap("usageActive")
         private Boolean usageActive;
 
+        @com.aliyun.core.annotation.NameInMap("virtualConfig")
+        private VirtualConfig virtualConfig;
+
         private Data(Builder builder) {
             this.addresses = builder.addresses;
+            this.appliedRevision = builder.appliedRevision;
+            this.appliedVirtualConfig = builder.appliedVirtualConfig;
             this.auth = builder.auth;
             this.backendMcpProtocol = builder.backendMcpProtocol;
             this.customTags = builder.customTags;
@@ -4034,16 +4873,23 @@ public class CreateMcpResponseBody extends TeaModel {
             this.name = builder.name;
             this.officialTag = builder.officialTag;
             this.operation = builder.operation;
+            this.operationTaskId = builder.operationTaskId;
             this.originProbe = builder.originProbe;
             this.originProtocolVersion = builder.originProtocolVersion;
             this.permissionMode = builder.permissionMode;
             this.protocol = builder.protocol;
+            this.resolvedImageUri = builder.resolvedImageUri;
+            this.revision = builder.revision;
+            this.sourceCount = builder.sourceCount;
             this.status = builder.status;
             this.statusReason = builder.statusReason;
+            this.statusReasonCode = builder.statusReasonCode;
             this.swaggerConfig = builder.swaggerConfig;
             this.template = builder.template;
+            this.toolCount = builder.toolCount;
             this.type = builder.type;
             this.usageActive = builder.usageActive;
+            this.virtualConfig = builder.virtualConfig;
         }
 
         public static Builder builder() {
@@ -4059,6 +4905,20 @@ public class CreateMcpResponseBody extends TeaModel {
          */
         public java.util.List<String> getAddresses() {
             return this.addresses;
+        }
+
+        /**
+         * @return appliedRevision
+         */
+        public Long getAppliedRevision() {
+            return this.appliedRevision;
+        }
+
+        /**
+         * @return appliedVirtualConfig
+         */
+        public AppliedVirtualConfig getAppliedVirtualConfig() {
+            return this.appliedVirtualConfig;
         }
 
         /**
@@ -4153,6 +5013,13 @@ public class CreateMcpResponseBody extends TeaModel {
         }
 
         /**
+         * @return operationTaskId
+         */
+        public String getOperationTaskId() {
+            return this.operationTaskId;
+        }
+
+        /**
          * @return originProbe
          */
         public OriginProbe getOriginProbe() {
@@ -4181,6 +5048,27 @@ public class CreateMcpResponseBody extends TeaModel {
         }
 
         /**
+         * @return resolvedImageUri
+         */
+        public String getResolvedImageUri() {
+            return this.resolvedImageUri;
+        }
+
+        /**
+         * @return revision
+         */
+        public Long getRevision() {
+            return this.revision;
+        }
+
+        /**
+         * @return sourceCount
+         */
+        public Integer getSourceCount() {
+            return this.sourceCount;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -4192,6 +5080,13 @@ public class CreateMcpResponseBody extends TeaModel {
          */
         public String getStatusReason() {
             return this.statusReason;
+        }
+
+        /**
+         * @return statusReasonCode
+         */
+        public String getStatusReasonCode() {
+            return this.statusReasonCode;
         }
 
         /**
@@ -4209,6 +5104,13 @@ public class CreateMcpResponseBody extends TeaModel {
         }
 
         /**
+         * @return toolCount
+         */
+        public Integer getToolCount() {
+            return this.toolCount;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -4222,8 +5124,17 @@ public class CreateMcpResponseBody extends TeaModel {
             return this.usageActive;
         }
 
+        /**
+         * @return virtualConfig
+         */
+        public VirtualConfig getVirtualConfig() {
+            return this.virtualConfig;
+        }
+
         public static final class Builder {
             private java.util.List<String> addresses; 
+            private Long appliedRevision; 
+            private AppliedVirtualConfig appliedVirtualConfig; 
             private Auth auth; 
             private String backendMcpProtocol; 
             private java.util.List<String> customTags; 
@@ -4237,22 +5148,31 @@ public class CreateMcpResponseBody extends TeaModel {
             private String name; 
             private String officialTag; 
             private Operation operation; 
+            private String operationTaskId; 
             private OriginProbe originProbe; 
             private String originProtocolVersion; 
             private String permissionMode; 
             private String protocol; 
+            private String resolvedImageUri; 
+            private Long revision; 
+            private Integer sourceCount; 
             private String status; 
             private String statusReason; 
+            private String statusReasonCode; 
             private String swaggerConfig; 
             private Template template; 
+            private Integer toolCount; 
             private String type; 
             private Boolean usageActive; 
+            private VirtualConfig virtualConfig; 
 
             private Builder() {
             } 
 
             private Builder(Data model) {
                 this.addresses = model.addresses;
+                this.appliedRevision = model.appliedRevision;
+                this.appliedVirtualConfig = model.appliedVirtualConfig;
                 this.auth = model.auth;
                 this.backendMcpProtocol = model.backendMcpProtocol;
                 this.customTags = model.customTags;
@@ -4266,20 +5186,27 @@ public class CreateMcpResponseBody extends TeaModel {
                 this.name = model.name;
                 this.officialTag = model.officialTag;
                 this.operation = model.operation;
+                this.operationTaskId = model.operationTaskId;
                 this.originProbe = model.originProbe;
                 this.originProtocolVersion = model.originProtocolVersion;
                 this.permissionMode = model.permissionMode;
                 this.protocol = model.protocol;
+                this.resolvedImageUri = model.resolvedImageUri;
+                this.revision = model.revision;
+                this.sourceCount = model.sourceCount;
                 this.status = model.status;
                 this.statusReason = model.statusReason;
+                this.statusReasonCode = model.statusReasonCode;
                 this.swaggerConfig = model.swaggerConfig;
                 this.template = model.template;
+                this.toolCount = model.toolCount;
                 this.type = model.type;
                 this.usageActive = model.usageActive;
+                this.virtualConfig = model.virtualConfig;
             } 
 
             /**
-             * <p>The list of MCP service addresses. Required when Type is DIRECT_PROXY or HTTP_TO_MCP. Do not specify when Type is CODE_PACKAGE.</p>
+             * <p>The list of MCP service addresses.</p>
              */
             public Builder addresses(java.util.List<String> addresses) {
                 this.addresses = addresses;
@@ -4287,7 +5214,26 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The backend authentication configuration. enabled indicates whether it is enabled; directProxy specifies the custom authentication headers for direct proxy; httpToMcp specifies the list of OpenAPI credentials for HTTP_TO_MCP.</p>
+             * <p>The applied revision.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder appliedRevision(Long appliedRevision) {
+                this.appliedRevision = appliedRevision;
+                return this;
+            }
+
+            /**
+             * <p>The applied source and tool selection.</p>
+             */
+            public Builder appliedVirtualConfig(AppliedVirtualConfig appliedVirtualConfig) {
+                this.appliedVirtualConfig = appliedVirtualConfig;
+                return this;
+            }
+
+            /**
+             * <p>The backend authentication configuration. The enabled field indicates whether it is enabled. The directProxy field specifies custom authentication headers for the direct proxy. The httpToMcp field specifies the list of OpenAPI credentials for HTTP_TO_MCP.</p>
              */
             public Builder auth(Auth auth) {
                 this.auth = auth;
@@ -4295,7 +5241,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The saved legacy or modern backend policy, which is separate from the transport indicated by protocol and does not indicate verification. This field is not saved for newly created CODE_PACKAGE. For historical CODE_PACKAGE, the existing value does not control Function Compute session affinity or gateway protocol; for the actual protocol, refer to OriginProbe.LastResult.ActualConfiguration.BackendMcpProtocol. This field is returned as empty for historically unspecified values and HTTP_TO_MCP.</p>
+             * <p>The saved legacy or modern backend policy. This policy is separate from the transport indicated by the protocol field and does not indicate verification. This field is not saved for newly created CODE_PACKAGE resources. For historical CODE_PACKAGE resources, the saved value does not control Function Compute session affinity or the gateway protocol. For the actual protocol, refer to OriginProbe.LastResult.ActualConfiguration.BackendMcpProtocol. This field returns null for historically unspecified values and HTTP_TO_MCP scenarios.</p>
              * 
              * <strong>example:</strong>
              * <p>modern</p>
@@ -4314,7 +5260,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The deployment configuration of the code deployment MCP.</p>
+             * <p>The deployment configuration for the code deployment MCP.</p>
              */
             public Builder deploymentConfig(DeploymentConfig deploymentConfig) {
                 this.deploymentConfig = deploymentConfig;
@@ -4333,7 +5279,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The MCP endpoint that can be called by users or agents. This parameter is empty before the deployment is completed.</p>
+             * <p>The MCP endpoint that can be invoked by users or agents. This field is empty before deployment is complete.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example.com/mcp">https://example.com/mcp</a></p>
@@ -4344,7 +5290,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the Function Compute function corresponding to the CODE_PACKAGE MCP. This parameter is empty before the deployment is completed or for other types.</p>
+             * <p>The name of the Function Compute function corresponding to the CODE_PACKAGE MCP. This field is empty before deployment is complete or for other types.</p>
              * 
              * <strong>example:</strong>
              * <p>agentcore-mcp-example</p>
@@ -4355,7 +5301,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The MCP marketplace source template.</p>
+             * <p>The MCP source marketplace template.</p>
              */
             public Builder marketSource(MarketSource marketSource) {
                 this.marketSource = marketSource;
@@ -4396,7 +5342,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The official usage tag managed by the server.</p>
+             * <p>The official purpose tag managed by the server.</p>
              * 
              * <strong>example:</strong>
              * <p>KNOWLEDGE_BASE</p>
@@ -4407,7 +5353,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The read-only progress that reuses an existing release task. This parameter does not change the primary status of the resource and is empty if no historical operation information is available.</p>
+             * <p>The read-only progress that reuses an existing deployment task. This field does not change the primary status of the resource and is empty if no historical operation information is available.</p>
              */
             public Builder operation(Operation operation) {
                 this.operation = operation;
@@ -4415,7 +5361,18 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Returns the minimal origin verification summary of the most recent task only for code deployment. This parameter is empty for direct connection and HTTP-to-MCP scenarios. Querying this parameter does not trigger probing.</p>
+             * <p>The ID of the most recent virtual MCP publish task, which can be used to query and locate asynchronous publish results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>task-1234567890</p>
+             */
+            public Builder operationTaskId(String operationTaskId) {
+                this.operationTaskId = operationTaskId;
+                return this;
+            }
+
+            /**
+             * <p>The minimal origin verification summary of the most recent task, returned only for code deployments. This field is empty for direct connections and HTTP-to-MCP scenarios. Querying this field does not trigger probing.</p>
              */
             public Builder originProbe(OriginProbe originProbe) {
                 this.originProbe = originProbe;
@@ -4423,7 +5380,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The optional saved origin MCP protocol date display metadata in the YYYY-MM-DD format. You can specify this parameter when you create the resource and modify it when you update the resource. If you omit this parameter during an update, the current value is retained. This parameter is used only to save and display information. It does not represent a software version, restrict the external protocol of the gateway, control backend requests, or indicate that real-time verification is passed. If this parameter is omitted during creation and not updated, is missing in history, or is set to HTTP_TO_MCP, null is returned. No default value is provided.</p>
+             * <p>The optional saved display metadata for the origin MCP protocol date, in YYYY-MM-DD format. You can specify this field during creation and modify it during updates. If omitted during an update, the current value is retained. This field is used only for saving and displaying information. It is not a software version, does not restrict the external gateway protocol, does not control backend requests, and does not indicate that real-time verification has passed. This field returns null if it is omitted during creation and never updated, missing historically, or used in HTTP_TO_MCP scenarios. No default value is provided.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-03-26</p>
@@ -4434,7 +5391,7 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The access permission mode. PUBLIC indicates public access. CONTROLLED indicates that access is controlled based on permission rules.</p>
+             * <p>The access permission mode. PUBLIC indicates public access, and CONTROLLED indicates that access is controlled based on permission rules.</p>
              * 
              * <strong>example:</strong>
              * <p>CONTROLLED</p>
@@ -4452,6 +5409,39 @@ public class CreateMcpResponseBody extends TeaModel {
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
+                return this;
+            }
+
+            /**
+             * <p>Read-only. Records the image URI and digest read from Function Compute for the current active deployment. The deployment still uses the tag in deploymentConfig.containerConfiguration.image. This field is not used as a deployment input parameter. It is empty when the deployment is not yet active or the image digest is not obtained.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>registry.example.com/mcp@sha256:0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef</p>
+             */
+            public Builder resolvedImageUri(String resolvedImageUri) {
+                this.resolvedImageUri = resolvedImageUri;
+                return this;
+            }
+
+            /**
+             * <p>The target revision.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder revision(Long revision) {
+                this.revision = revision;
+                return this;
+            }
+
+            /**
+             * <p>The number of selected sources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
+             */
+            public Builder sourceCount(Integer sourceCount) {
+                this.sourceCount = sourceCount;
                 return this;
             }
 
@@ -4478,6 +5468,17 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The security reason code for the virtual MCP publish failure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PublishFailed</p>
+             */
+            public Builder statusReasonCode(String statusReasonCode) {
+                this.statusReasonCode = statusReasonCode;
+                return this;
+            }
+
+            /**
              * <p>The Swagger configuration.</p>
              * 
              * <strong>example:</strong>
@@ -4489,10 +5490,21 @@ public class CreateMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The bound template version and input schema of the MCP.</p>
+             * <p>The template version and input schema bound to the MCP.</p>
              */
             public Builder template(Template template) {
                 this.template = template;
+                return this;
+            }
+
+            /**
+             * <p>The number of selected tools.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
+             */
+            public Builder toolCount(Integer toolCount) {
+                this.toolCount = toolCount;
                 return this;
             }
 
@@ -4512,6 +5524,14 @@ public class CreateMcpResponseBody extends TeaModel {
              */
             public Builder usageActive(Boolean usageActive) {
                 this.usageActive = usageActive;
+                return this;
+            }
+
+            /**
+             * <p>The target source and tool selection.</p>
+             */
+            public Builder virtualConfig(VirtualConfig virtualConfig) {
+                this.virtualConfig = virtualConfig;
                 return this;
             }
 

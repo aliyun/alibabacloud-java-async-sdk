@@ -53,6 +53,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>Compares the saved tools with the current tools of the source MCPs in batch based on a list of MCP IDs. After submission, GetMcp returns the validation details of the current MCP, ListMcps returns the validation status of each MCP, and you can also use validationId to query the complete batch report. If the previous task of any MCP in the batch is in the PENDING, RUNNING, or PAUSED state, the entire batch returns 409. You can re-validate immediately after the previous task enters the desired state.</p>
+     * 
+     * @param request the request parameters of BatchValidateVirtualMcpTools  BatchValidateVirtualMcpToolsRequest
+     * @return BatchValidateVirtualMcpToolsResponse
+     */
+    CompletableFuture<BatchValidateVirtualMcpToolsResponse> batchValidateVirtualMcpTools(BatchValidateVirtualMcpToolsRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>登记资产上传会话，返回 assetId、uploadId 和实际状态；仅有效的 UPLOADING 会话返回限定其 original 对象的限时 PUT 地址。使用 PUT 上传文件二进制，不使用 JSON 或 multipart 包装，本期文件大小为 1 字节至 50 MiB。clientToken 可选；提供时，省略 assetId 将依据租户、工作空间、知识库和 clientToken 稳定派生资产 ID，便于首次响应丢失后的定位。同时省略 assetId 和 clientToken 时，每次请求创建新资产。未提供 clientToken 时按新的上传意图处理，不保证跨请求重试幂等。覆盖已有资产必须设置 overwrite=true；该参数仅授权覆盖，不强制重新导入。提供 clientToken 时，仅对该资产最近一次 Begin 保存的 token 幂等；后续 Begin（包括省略 clientToken 的请求）会替换最近请求标识。命中且规范化请求相同则复用上传会话，参数不同返回 409，包括 sourceETag 不同；token 不命中则按新的上传意图校验和受理，即使该 token 曾用于更早的上传。来源版本去重独立于 clientToken：指定稳定 assetId、overwrite=true 且提供 sourceETag 时，若来源身份及版本、导入参数和有效处理配置均未变化，即使未提供 clientToken，也可复用当前 uploadId 和加工代次；显式提供且命中最近 token 时仍要求完整规范化请求相同。复用有效 UPLOADING 会话时刷新同一对象路径的签名；复用 PENDING、PROCESSING 或 COMPLETED 会话时返回实际状态且不返回上传地址，PENDING 按相同 taskKey 补交调度，来源版本相同不表示处理完成。客户端 token 幂等命中后的失败状态只返回当前状态；新的上传意图遇到 FAILED、上传意图过期或来源、导入参数、有效处理配置变化时创建新的 uploadId、内部对象路径及加工代次。未提供 sourceETag 时不启用来源版本去重，可使用不同 clientToken 或不提供 clientToken，按新的上传意图重新导入；覆盖已有资产仍须 overwrite=true。新结果发布前仍使用旧发布版本。每个会话的原件对象仍必须禁止覆盖，签名头通过 headers 返回。完成 PUT 上传后，使用返回的 assetId 和 uploadId 调用 CompleteAssetUpload。携带 sourceETag 的 Begin 命中当前上传目标时，PENDING 会按相同 taskKey 补交调度，返回 PENDING、PROCESSING 或 COMPLETED 后无需再次上传或确认；显式提供相同 clientToken 且未传 sourceETag 的 PENDING 重放仍须重试 CompleteAssetUpload，以恢复受理结果未知的调度。</p>
      * 
      * @param request the request parameters of BeginAssetUpload  BeginAssetUploadRequest
@@ -598,9 +607,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <p>Creates an MCP service in a workspace for agents to use the tools provided by the service.
-     * The creation process is executed asynchronously. After submission, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcp">GetMcp</a> to query whether the service is ready.
+     * The creation process is executed asynchronously. After submission, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcp">GetMcp</a> to check whether the service is ready.
      * When deploying with a local code package, first call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcpCodePackageUploadUrl">GetMcpCodePackageUploadUrl</a> to obtain the URL and upload the file, and then fill the returned code package token into the deployment configuration.
-     * <code>clientToken</code> currently does not provide idempotency guarantees. If the request result is not confirmed, query existing services before deciding whether to recreate.</p>
+     * The clientToken parameter does not provide idempotency guarantees. If the request result is not confirmed, query existing services before deciding whether to create a new one.</p>
      * 
      * @param request the request parameters of CreateMcp  CreateMcpRequest
      * @return CreateMcpResponse
@@ -1922,6 +1931,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>Queries the status, report, and failure causes of an asynchronous validation task. You can continue to query the task before it finishes. PAUSED indicates that the task is paused. COMPLETED, PARTIAL_FAILED, FAILED, and CANCELED are desired states. When you query a failed task, the API operation itself still succeeds. You can determine whether the task failed based on data.status, failureCode, and failureMessage. The validation only returns a report and does not modify the gateway tool configurations.</p>
+     * 
+     * @param request the request parameters of GetVirtualMcpToolValidation  GetVirtualMcpToolValidationRequest
+     * @return GetVirtualMcpToolValidationResponse
+     */
+    CompletableFuture<GetVirtualMcpToolValidationResponse> getVirtualMcpToolValidation(GetVirtualMcpToolValidationRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>Queries the basic information, associated resources, and network configurations of a workspace to view the status or verify configurations.
      * The returned information includes the lifecycle status, associated observability workspace, AI Registry namespace, and current network policies.</p>
      * 
@@ -2249,6 +2267,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListMcpMarketItemsResponse
      */
     CompletableFuture<ListMcpMarketItemsResponse> listMcpMarketItems(ListMcpMarketItemsRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>查询 MCP 引用。校验仅返回报告，不修改网关工具配置。</p>
+     * 
+     * @param request the request parameters of ListMcpReferences  ListMcpReferencesRequest
+     * @return ListMcpReferencesResponse
+     */
+    CompletableFuture<ListMcpReferencesResponse> listMcpReferences(ListMcpReferencesRequest request);
 
     /**
      * <b>description</b> :
