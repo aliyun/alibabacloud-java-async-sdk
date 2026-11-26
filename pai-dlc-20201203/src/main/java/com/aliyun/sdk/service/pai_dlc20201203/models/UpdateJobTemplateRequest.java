@@ -158,7 +158,7 @@ public class UpdateJobTemplateRequest extends Request {
         } 
 
         /**
-         * <p>The unique identifier of the job template.</p>
+         * <p>The unique identifier of the task template.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,10 +171,10 @@ public class UpdateJobTemplateRequest extends Request {
         }
 
         /**
-         * <p>The field constraint rules. The key is a JSONPath expression, and the value is the constraint type: locked (cannot be overridden), overridable (can be overridden), or required (required). This parameter must be provided together with Content and cannot be updated separately.</p>
+         * <p>The field constraint rules. The key is a JSONPath expression, and the value is the constraint type: locked (locked and cannot be overridden), overridable (can be overridden), or required (required). This parameter must be provided together with Content and cannot be updated separately.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;JobSpecs[0].Image\&quot;:\&quot;locked\&quot;,\&quot;UserCommand\&quot;:\&quot;locked\&quot;,\&quot;JobType\&quot;:\&quot;locked\&quot;}</p>
+         * <p>{&quot;JobSpecs[0].Image&quot;:&quot;locked&quot;,&quot;UserCommand&quot;:&quot;locked&quot;,&quot;JobType&quot;:&quot;locked&quot;}</p>
          */
         public Builder constraints(java.util.Map<String, ?> constraints) {
             this.putBodyParameter("Constraints", constraints);
@@ -183,10 +183,10 @@ public class UpdateJobTemplateRequest extends Request {
         }
 
         /**
-         * <p>The configuration content of the job template. It supports all parameter fields of the CreateJob operation and must be passed in JSON format. A new version is created when this parameter is provided.</p>
+         * <p>The configuration content of the task template. It supports all parameter fields of the CreateJob operation and must be passed in JSON format. A new version is created when this parameter is provided.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;WorkspaceId\&quot;:\&quot;15****05\&quot;,\&quot;JobType\&quot;:\&quot;PyTorchJob\&quot;,\&quot;UserCommand\&quot;:\&quot;echo hello\&quot;,\&quot;JobSpecs\&quot;:[{\&quot;Type\&quot;:\&quot;Worker\&quot;,\&quot;PodCount\&quot;:1,\&quot;Image\&quot;:\&quot;dsw-registry-vpc.cn-hangzhou.cr.aliyuncs.com/pai/pytorch:2.8.0-gpu-py313-cu129-ubuntu22.04-3995b779-1764361782\&quot;,\&quot;EcsSpec\&quot;:\&quot;ecs.gn7i-c8g1.2xlarge\&quot;}],\&quot;ResourceType\&quot;:\&quot;ECS\&quot;,\&quot;_ResourcePaymentType\&quot;:\&quot;PostPaid\&quot;,\&quot;CredentialConfig\&quot;:{\&quot;EnableCredentialInject\&quot;:false},\&quot;Accessibility\&quot;:\&quot;PRIVATE\&quot;,\&quot;Settings\&quot;:{\&quot;JobReservedMinutes\&quot;:0,\&quot;Tags\&quot;:{}}}</p>
+         * <p>{&quot;WorkspaceId&quot;:&quot;15****05&quot;,&quot;JobType&quot;:&quot;PyTorchJob&quot;,&quot;UserCommand&quot;:&quot;echo hello&quot;,&quot;JobSpecs&quot;:[{&quot;Type&quot;:&quot;Worker&quot;,&quot;PodCount&quot;:1,&quot;Image&quot;:&quot;dsw-registry-vpc.cn-hangzhou.cr.aliyuncs.com/pai/pytorch:2.8.0-gpu-py313-cu129-ubuntu22.04-3995b779-1764361782&quot;,&quot;EcsSpec&quot;:&quot;ecs.gn7i-c8g1.2xlarge&quot;}],&quot;ResourceType&quot;:&quot;ECS&quot;,&quot;_ResourcePaymentType&quot;:&quot;PostPaid&quot;,&quot;CredentialConfig&quot;:{&quot;EnableCredentialInject&quot;:false},&quot;Accessibility&quot;:&quot;PRIVATE&quot;,&quot;Settings&quot;:{&quot;JobReservedMinutes&quot;:0,&quot;Tags&quot;:{}}}</p>
          */
         public Builder content(String content) {
             this.putBodyParameter("Content", content);
@@ -195,7 +195,7 @@ public class UpdateJobTemplateRequest extends Request {
         }
 
         /**
-         * <p>The description of the job template.</p>
+         * <p>The description of the task template.</p>
          * 
          * <strong>example:</strong>
          * <p>Template description</p>
@@ -231,7 +231,7 @@ public class UpdateJobTemplateRequest extends Request {
         }
 
         /**
-         * <p>The name of the job template.</p>
+         * <p>The name of the task template.</p>
          * 
          * <strong>example:</strong>
          * <p>job-template-example-1778047****</p>

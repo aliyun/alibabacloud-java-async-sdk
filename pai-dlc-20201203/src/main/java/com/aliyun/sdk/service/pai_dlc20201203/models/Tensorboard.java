@@ -431,7 +431,7 @@ public class Tensorboard extends TeaModel {
         } 
 
         /**
-         * <p>The visibility.</p>
+         * <p>The accessibility.</p>
          * 
          * <strong>example:</strong>
          * <p>PRIVATE</p>
@@ -442,7 +442,7 @@ public class Tensorboard extends TeaModel {
         }
 
         /**
-         * <p>The CPU resources.</p>
+         * <p>The CPU resource.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -541,7 +541,7 @@ public class Tensorboard extends TeaModel {
         }
 
         /**
-         * <p>The maximum running duration in minutes.</p>
+         * <p>The maximum runtime in minutes.</p>
          * 
          * <strong>example:</strong>
          * <p>240</p>
@@ -574,7 +574,7 @@ public class Tensorboard extends TeaModel {
         }
 
         /**
-         * <p>The priority of the Tensorboard job.</p>
+         * <p>The priority of the TensorBoard job.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -585,7 +585,7 @@ public class Tensorboard extends TeaModel {
         }
 
         /**
-         * <p>The ID of the resource group used by Tensorboard.</p>
+         * <p>The ID of the resource group used by TensorBoard.</p>
          * 
          * <strong>example:</strong>
          * <p>quota12***</p>
@@ -596,7 +596,7 @@ public class Tensorboard extends TeaModel {
         }
 
         /**
-         * <p>The name of the resource quota used by Tensorboard.</p>
+         * <p>The name of the resource quota used by TensorBoard.</p>
          * 
          * <strong>example:</strong>
          * <p>dlc-quota</p>
@@ -673,7 +673,7 @@ public class Tensorboard extends TeaModel {
         }
 
         /**
-         * <p>The datasets mounted to the Tensorboard job.</p>
+         * <p>The datasets mounted to the TensorBoard job.</p>
          */
         public Builder tensorboardDataSources(java.util.List<TensorboardDataSourceSpec> tensorboardDataSources) {
             this.tensorboardDataSources = tensorboardDataSources;
@@ -681,7 +681,7 @@ public class Tensorboard extends TeaModel {
         }
 
         /**
-         * <p>The Tensorboard ID.</p>
+         * <p>The TensorBoard ID.</p>
          * 
          * <strong>example:</strong>
          * <p>tensorboard-xxx</p>
@@ -692,7 +692,7 @@ public class Tensorboard extends TeaModel {
         }
 
         /**
-         * <p>The pay-as-you-go configuration for the Tensorboard job.</p>
+         * <p>The pay-as-you-go configuration for the TensorBoard job.</p>
          */
         public Builder tensorboardSpec(TensorboardSpec tensorboardSpec) {
             this.tensorboardSpec = tensorboardSpec;
@@ -700,7 +700,7 @@ public class Tensorboard extends TeaModel {
         }
 
         /**
-         * <p>The Tensorboard URL.</p>
+         * <p>The TensorBoard URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://xxxxxx">http://xxxxxx</a></p>

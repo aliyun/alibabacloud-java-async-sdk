@@ -570,8 +570,8 @@ public class ListJobsRequest extends Request {
         /**
          * <p>The visibility of the job. Valid values:</p>
          * <ul>
-         * <li>PUBLIC: visible to all users in the workspace.</li>
-         * <li>PRIVATE: visible only to you and administrators in the workspace. This is the default value.</li>
+         * <li>PUBLIC: The job is visible to all users in the workspace.</li>
+         * <li>PRIVATE: The job is visible only to you and administrators in the workspace. This is the default value.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -620,7 +620,9 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The job name. Supports fuzzy match. The match is case-insensitive and does not support wildcards. For example, if you enter test, it can match test-job1, job-test, job-test2, or job-Test, but it cannot match job-t1. Default value: empty, which indicates any job name.</p>
+         * <p>The job name. Fuzzy search is supported. The search is case-insensitive and does not support wildcards.
+         * For example, if you enter test, it can match test-job1, job-test, job-test2, or job-Test, but cannot match job-t1.
+         * If this parameter is left empty, all job names are matched.</p>
          * 
          * <strong>example:</strong>
          * <p>tf-mnist-test</p>
@@ -644,7 +646,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to filter jobs that are configured to run on specified nodes.</p>
+         * <p>Specifies whether to filter jobs that are configured to run on specific nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -656,7 +658,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The end time of the query interval. The creation time of the job is used for filtering. Default value: the current time.</p>
+         * <p>The end time of the query interval. Jobs are filtered based on their creation time. The default value is the current time.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-04-16T07:26:41Z</p>
@@ -668,7 +670,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to retrieve the job list across workspaces. This parameter must be used together with the ShowOwn=true parameter to query the jobs recently submitted by the current user.</p>
+         * <p>Specifies whether to retrieve the job list across workspaces. This parameter must be used together with the <code>ShowOwn=true</code> parameter to query the jobs recently submitted by the current user.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -680,7 +682,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>Retrieves data from the full-text index in the image (images) field. Chinese and English tokenization is supported.</p>
+         * <p>Retrieves data by using the full-text index in the image (images) field. Chinese and English tokenization is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>pytorch</p>
@@ -692,7 +694,8 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The job ID. Fuzzy match is not supported. The match is case-insensitive and does not support wildcards. Default value: empty, which indicates any job ID.</p>
+         * <p>The job ID. Fuzzy search is not supported. The search is case-insensitive and does not support wildcards.
+         * If this parameter is left empty, all job IDs are matched.</p>
          * 
          * <strong>example:</strong>
          * <p>dlc********</p>
@@ -716,7 +719,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The job type. Default value: empty, which indicates all types. Valid values:</p>
+         * <p>The job type. If this parameter is left empty, all job types are queried. Valid values:</p>
          * <ul>
          * <li>TFJob</li>
          * <li>PyTorchJob</li>
@@ -735,7 +738,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The field name used for numeric range filtering. This parameter must be used together with NumericRangeMin and NumericRangeMax.</p>
+         * <p>The field name for numeric range filtering. This parameter must be used together with NumericRangeMin and NumericRangeMax.</p>
          * 
          * <strong>example:</strong>
          * <p>RequestGPU</p>
@@ -787,12 +790,12 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The off-peak resource information. Valid values:</p>
+         * <p>The oversold resource information. Valid values:</p>
          * <ul>
          * <li>ForbiddenQuotaOverSold</li>
          * <li>ForceQuotaOverSold</li>
-         * <li>AcceptQuotaOverSold-true: true indicates that the job actually used off-peak resources.</li>
-         * <li>AcceptQuotaOverSold-false: false indicates that the job actually used guaranteed resources.</li>
+         * <li>AcceptQuotaOverSold-true: The value true indicates that the job actually used oversold resources.</li>
+         * <li>AcceptQuotaOverSold-false: The value false indicates that the job actually used guaranteed resources.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -805,7 +808,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The page number for paging in a paged query. The starting value is 1. Default value: 1.</p>
+         * <p>The page number for the paged query. Specify the page number to return for paging. The starting value is 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -817,7 +820,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The number of jobs to return per page.</p>
+         * <p>The number of jobs to return on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -846,7 +849,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The pipeline ID. Only jobs created by this pipeline are returned.</p>
+         * <p>The ID of the pipeline used to filter jobs.</p>
          * 
          * <strong>example:</strong>
          * <p>flow-*******</p>
@@ -858,7 +861,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>Retrieves data from the full-text index in the failed node reason field. Chinese and English tokenization is supported.</p>
+         * <p>Retrieves data by using the full-text index in the node failed reason (reason) field. Chinese and English tokenization is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>OOM</p>
@@ -883,6 +886,9 @@ public class ListJobsRequest extends Request {
 
         /**
          * <p>The list of resource IDs used to filter jobs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r1,r2</p>
          */
         public Builder resourceIds(String resourceIds) {
             this.putQueryParameter("ResourceIds", resourceIds);
@@ -891,7 +897,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The name of the resource quota used to filter the job list. Fuzzy match is supported, but wildcards are not supported. Default value: empty, which indicates no filtering by resource quota.</p>
+         * <p>The name of the resource quota used to filter the job list. Fuzzy match is supported, but wildcards are not supported. If this parameter is left empty, jobs are not filtered by resource quota.</p>
          * 
          * <strong>example:</strong>
          * <p>quota***</p>
@@ -915,7 +921,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The field used for sorting. Valid values:</p>
+         * <p>The field by which to sort the results. Valid values:</p>
          * <ul>
          * <li>DisplayName</li>
          * <li>JobType</li>
@@ -934,7 +940,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The start time of the query interval. The creation time of the job is used for filtering. Default value: the current time minus 7 days. If neither StartTime nor EndTime is configured, the jobs created in the last 7 days are queried by default.</p>
+         * <p>The start time of the query interval. Jobs are filtered based on their creation time. The default value is the current time minus 7 days. If neither StartTime nor EndTime is specified, the jobs created in the last 7 days are queried by default.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-04-16T07:25:34Z</p>
@@ -950,7 +956,7 @@ public class ListJobsRequest extends Request {
          * <ul>
          * <li>Creating</li>
          * <li>Queuing</li>
-         * <li>Bidding (currently only available for Lingjun spot jobs)</li>
+         * <li>Bidding (currently applicable only to Lingjun spot jobs)</li>
          * <li>EnvPreparing</li>
          * <li>SanityChecking</li>
          * <li>Running</li>
@@ -974,6 +980,9 @@ public class ListJobsRequest extends Request {
 
         /**
          * <p>The tags used for filtering.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;app&quot;:&quot;recommandation&quot;}</p>
          */
         public Builder tags(java.util.Map<String, String> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -995,7 +1004,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The time field used for StartTime and EndTime filtering. Default value: creation time.</p>
+         * <p>The time field used for StartTime and EndTime filtering. If this parameter is left empty, the creation time is used by default.</p>
          * 
          * <strong>example:</strong>
          * <p>GmtFinishTime</p>
@@ -1007,7 +1016,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>Retrieves data from the full-text index in the user command (user_command) field. Chinese and English tokenization is supported.</p>
+         * <p>Retrieves data by using the full-text index in the user command (user_command) field. Chinese and English tokenization is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>python train.py</p>
@@ -1031,7 +1040,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The username of the job submitter used to filter the job list. Fuzzy match is supported, but wildcards are not supported. Default value: empty, which indicates no filtering by username.</p>
+         * <p>The username of the job submitter used to filter the job list. Fuzzy search is supported, but wildcards are not supported. If this parameter is left empty, jobs are not filtered by username.</p>
          * 
          * <strong>example:</strong>
          * <p>test***</p>

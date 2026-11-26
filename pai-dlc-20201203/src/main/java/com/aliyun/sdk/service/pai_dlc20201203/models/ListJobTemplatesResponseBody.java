@@ -106,7 +106,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of templates.</p>
+         * <p>The template list.</p>
          */
         public Builder jobTemplates(java.util.List<JobTemplates> jobTemplates) {
             this.jobTemplates = jobTemplates;
@@ -125,7 +125,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of items per page.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -368,7 +368,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the template was created.</p>
+             * <p>The creation time.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
              * 
              * <strong>example:</strong>
@@ -380,7 +380,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the template was last modified.</p>
+             * <p>The modification time.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
              * 
              * <strong>example:</strong>
@@ -392,7 +392,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The most recent time when a task was successfully created by using this template.</p>
+             * <p>The most recent time a task was successfully created by using this template.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
              * 
              * <strong>example:</strong>
@@ -415,7 +415,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the user who last modified the template.</p>
+             * <p>The last modifier ID.</p>
              * 
              * <strong>example:</strong>
              * <p>20**************26</p>
@@ -459,7 +459,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the user who created the template.</p>
+             * <p>The creator ID.</p>
              * 
              * <strong>example:</strong>
              * <p>20**************26</p>

@@ -111,7 +111,7 @@ public class CreateSignalRequest extends Request {
         }
 
         /**
-         * <p>The signal delivery scope.</p>
+         * <p>The target scope for sending the signal.</p>
          */
         public Builder target(SignalTarget target) {
             this.putBodyParameter("Target", target);

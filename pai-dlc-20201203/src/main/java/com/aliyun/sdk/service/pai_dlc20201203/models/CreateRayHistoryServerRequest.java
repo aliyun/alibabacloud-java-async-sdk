@@ -148,8 +148,8 @@ public class CreateRayHistoryServerRequest extends Request {
         /**
          * <p>The visibility of the job. Valid values:</p>
          * <ul>
-         * <li>PUBLIC: Visible to all users in the workspace.</li>
-         * <li>PRIVATE: Visible only to you and administrators in the workspace.</li>
+         * <li>PUBLIC: The job is visible to all users in the workspace.</li>
+         * <li>PRIVATE: The job is visible only to you and administrators in the workspace.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -162,7 +162,7 @@ public class CreateRayHistoryServerRequest extends Request {
         }
 
         /**
-         * <p>The display name of the node.</p>
+         * <p>The display name of the job.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -175,7 +175,7 @@ public class CreateRayHistoryServerRequest extends Request {
         }
 
         /**
-         * <p>The hardware specifications of the public resource group. To access a detailed list of specifications, see <a href="https://help.aliyun.com/document_detail/171758.html">PAI-DLC billing</a>.&gt;Notice: Prices vary by specification.</p>
+         * <p>The hardware specifications of the public resource group. For a detailed list of specifications, see <a href="https://help.aliyun.com/document_detail/171758.html">PAI-DLC billing</a>. &gt;Notice: Prices vary based on specifications.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs.c6.large</p>
@@ -201,8 +201,8 @@ public class CreateRayHistoryServerRequest extends Request {
         /**
          * <p>The resource group ID. This parameter is optional.</p>
          * <ul>
-         * <li>If this parameter is left empty, the job is committed to the public resource group.</li>
-         * <li>If the current workspace is already attached to a resource quota, you can specify the corresponding resource quota ID here. For details about how to query a resource quota ID, see <a href="https://help.aliyun.com/document_detail/2651299.html">Manage resource quotas</a>.</li>
+         * <li>If this parameter is left empty, the job is submitted to the public resource group.</li>
+         * <li>If a resource quota is bound to the current workspace, you can specify the corresponding resource quota ID. For more information about how to query the resource quota ID, see <a href="https://help.aliyun.com/document_detail/2651299.html">Manage resource quotas</a>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -228,7 +228,7 @@ public class CreateRayHistoryServerRequest extends Request {
         }
 
         /**
-         * <p>The workspace ID.&lt;props=&quot;china&quot;&gt;For information about how to obtain a workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
+         * <p>The workspace ID. &lt;props=&quot;china&quot;&gt;For more information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -94,6 +94,9 @@ public class AliyunAccounts extends TeaModel {
 
         /**
          * <p>The UID of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890123456</p>
          */
         public Builder aliyunUid(String aliyunUid) {
             this.aliyunUid = aliyunUid;
@@ -102,6 +105,9 @@ public class AliyunAccounts extends TeaModel {
 
         /**
          * <p>The employee ID of the internal user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder employeeId(String employeeId) {
             this.employeeId = employeeId;

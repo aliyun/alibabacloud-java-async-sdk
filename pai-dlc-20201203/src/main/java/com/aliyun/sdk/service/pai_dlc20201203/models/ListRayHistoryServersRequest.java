@@ -283,7 +283,7 @@ public class ListRayHistoryServersRequest extends Request {
         } 
 
         /**
-         * <p>The display name of the node.</p>
+         * <p>The display name of the job.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -295,7 +295,7 @@ public class ListRayHistoryServersRequest extends Request {
         }
 
         /**
-         * <p>The end time of the query range. The node creation time is used for filtering.</p>
+         * <p>The end time of the query interval. The creation time of the job is used for filtering.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-11-09T16:00:00Z</p>
@@ -319,7 +319,7 @@ public class ListRayHistoryServersRequest extends Request {
         }
 
         /**
-         * <p>Filters results by the time after which the resource was last modified.</p>
+         * <p>The modification time used for filtering.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-11-09T16:00:00Z</p>
@@ -347,7 +347,7 @@ public class ListRayHistoryServersRequest extends Request {
         }
 
         /**
-         * <p>The page number for a paging query. Paging starts from page 1.</p>
+         * <p>The page number for a paging query. Pages start from 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -359,7 +359,7 @@ public class ListRayHistoryServersRequest extends Request {
         }
 
         /**
-         * <p>The number of RayHistoryServers to return per page in a paging query.</p>
+         * <p>The number of RayHistoryServer resources to return on each page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -371,7 +371,7 @@ public class ListRayHistoryServersRequest extends Request {
         }
 
         /**
-         * <p>The payment method. Valid values:</p>
+         * <p>The billing method. Valid values:</p>
          * <ul>
          * <li>PrePaid</li>
          * <li>PostPaid</li>
@@ -387,7 +387,7 @@ public class ListRayHistoryServersRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID. To query the ID of a dedicated resource group, see <a href="https://help.aliyun.com/document_detail/2651299.html">Manage resource quotas</a>.</p>
+         * <p>The resource group ID. For more information about how to query the ID of a dedicated resource group, see <a href="https://help.aliyun.com/document_detail/2651299.html">Manage resource quotas</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>quotaxxx</p>
@@ -399,7 +399,7 @@ public class ListRayHistoryServersRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return only the RayHistoryServers created by the current user.</p>
+         * <p>Specifies whether to return only the RayHistoryServer resources created by the current logon user.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -411,7 +411,7 @@ public class ListRayHistoryServersRequest extends Request {
         }
 
         /**
-         * <p>The field by which to sort the results. Valid values:</p>
+         * <p>The field by which to sort the returned results. Valid values:</p>
          * <ul>
          * <li>DisplayName</li>
          * <li>GmtCreateTime</li>
@@ -446,10 +446,10 @@ public class ListRayHistoryServersRequest extends Request {
          * <p>The status of the RayHistoryServer. Valid values:</p>
          * <ul>
          * <li>Creating: The RayHistoryServer is being created.</li>
-         * <li>Queuing: The RayHistoryServer is queuing.</li>
+         * <li>Queuing: The RayHistoryServer is in the queue.</li>
          * <li>Running: The RayHistoryServer is running.</li>
          * <li>Stopped: The RayHistoryServer is stopped.</li>
-         * <li>Failed: The RayHistoryServer has failed.</li>
+         * <li>Failed: The RayHistoryServer failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -474,7 +474,7 @@ public class ListRayHistoryServersRequest extends Request {
         }
 
         /**
-         * <p>Filters results by user ID.</p>
+         * <p>The user ID used for filtering.</p>
          * 
          * <strong>example:</strong>
          * <p>123456789</p>
@@ -486,7 +486,7 @@ public class ListRayHistoryServersRequest extends Request {
         }
 
         /**
-         * <p>Filters results by username.</p>
+         * <p>The username used for filtering.</p>
          * 
          * <strong>example:</strong>
          * <p>myusername</p>
@@ -498,7 +498,7 @@ public class ListRayHistoryServersRequest extends Request {
         }
 
         /**
-         * <p>The workspace ID. &lt;props=&quot;china&quot;&gt;To obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
+         * <p>The workspace ID. &lt;props=&quot;china&quot;&gt;For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>268</p>

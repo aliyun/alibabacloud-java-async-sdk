@@ -163,7 +163,7 @@ public class ListSignalsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of signal records for the job. Each element has the same structure as the response of GetSignal.</p>
+         * <p>The list of signal records for the job. The structure of each element is the same as the response of GetSignal.</p>
          */
         public Builder signals(java.util.List<Signals> signals) {
             this.signals = signals;
@@ -366,7 +366,7 @@ public class ListSignalsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The message of the returned result.</p>
+             * <p>The prompt message of the returned result.</p>
              * 
              * <strong>example:</strong>
              * <p>signal delivered to 1 pods</p>

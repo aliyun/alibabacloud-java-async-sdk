@@ -74,7 +74,7 @@ public class GetJobRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the job. For information about how to obtain a job ID, see <a href="https://help.aliyun.com/document_detail/459676.html">ListJobs</a>.</p>
+         * <p>The job ID. For information about how to obtain a job ID, see <a href="https://help.aliyun.com/document_detail/459676.html">ListJobs</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

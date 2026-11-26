@@ -467,8 +467,8 @@ public class CreateTensorboardRequest extends Request {
 
         /**
          * <p>The resource quota ID. This parameter is required when you create a TensorBoard job by using resources from a resource quota. &lt;props=&quot;china&quot;&gt;For more information about how to obtain the resource quota ID, see <a href="https://help.aliyun.com/document_detail/2628071.html">ListQuotas</a>.
-         * &lt;props=&quot;china&quot;&gt;Available only on the China site.
-         * Currently, only whitelisted users can use resource quota resources to create TensorBoard jobs. To use this feature, contact us.</p>
+         * &lt;props=&quot;china&quot;&gt;Released only on the China site.
+         * Currently, only whitelisted users can create TensorBoard jobs by using resources from a resource quota. To use this feature, contact us.</p>
          * 
          * <strong>example:</strong>
          * <p>quota12345</p>
@@ -504,7 +504,7 @@ public class CreateTensorboardRequest extends Request {
         }
 
         /**
-         * <p>The summary directory.</p>
+         * <p>The Summary directory.</p>
          * 
          * <strong>example:</strong>
          * <p>/root/data/</p>
@@ -516,7 +516,7 @@ public class CreateTensorboardRequest extends Request {
         }
 
         /**
-         * <p>The relative path of the summary directory.</p>
+         * <p>The relative path of the Summary directory.</p>
          * 
          * <strong>example:</strong>
          * <p>/summary/</p>
@@ -537,7 +537,7 @@ public class CreateTensorboardRequest extends Request {
         }
 
         /**
-         * <p>The pay-as-you-go configuration information of TensorBoard, which is used to create a TensorBoard job that uses pay-as-you-go resources.</p>
+         * <p>The pay-as-you-go configuration information of the TensorBoard instance, which is used to create a TensorBoard job that uses pay-as-you-go resources.</p>
          */
         public Builder tensorboardSpec(TensorboardSpec tensorboardSpec) {
             this.putBodyParameter("TensorboardSpec", tensorboardSpec);

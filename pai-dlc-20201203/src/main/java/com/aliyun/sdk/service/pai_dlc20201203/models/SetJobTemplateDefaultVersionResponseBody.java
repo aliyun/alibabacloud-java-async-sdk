@@ -91,7 +91,7 @@ public class SetJobTemplateDefaultVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time the template was last modified.</p>
+         * <p>The modification time.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>

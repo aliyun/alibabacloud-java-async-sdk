@@ -107,6 +107,9 @@ public class EventInfo extends TeaModel {
 
         /**
          * <p>The text content of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Training pod started.</p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -115,6 +118,9 @@ public class EventInfo extends TeaModel {
 
         /**
          * <p>The ID of the event, which is used to obtain the related context.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>event-example-001</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -145,6 +151,9 @@ public class EventInfo extends TeaModel {
 
         /**
          * <p>The timestamp of the event in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-11-01T00:00:00Z</p>
          */
         public Builder time(String time) {
             this.time = time;

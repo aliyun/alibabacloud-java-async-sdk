@@ -99,7 +99,7 @@ public class GetDashboardRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the link is a shared link. If set to true, the token parameter is also required.</p>
+         * <p>Specifies whether the dashboard URL is a shared link. If this parameter is set to true, the token parameter is also required.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

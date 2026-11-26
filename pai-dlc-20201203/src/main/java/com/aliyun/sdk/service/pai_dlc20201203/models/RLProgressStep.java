@@ -130,7 +130,7 @@ public class RLProgressStep extends TeaModel {
         }
 
         /**
-         * <p>The estimated remaining seconds, calculated as (Total - Current) × PaceSec.</p>
+         * <p>The estimated time remaining, in seconds. This value is not provided when it cannot be estimated. A value of 0 may be returned when the training is confirmed to be complete, even if PaceSec is not provided.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -141,7 +141,7 @@ public class RLProgressStep extends TeaModel {
         }
 
         /**
-         * <p>The per-step duration, calculated as the differential between contiguous step marks, in seconds.</p>
+         * <p>The average time per step over the recent step progress, in seconds. This value is not provided when there is insufficient information.</p>
          * 
          * <strong>example:</strong>
          * <p>14</p>
@@ -152,7 +152,7 @@ public class RLProgressStep extends TeaModel {
         }
 
         /**
-         * <p>The progress percentage, which is the ratio of Current to Total.</p>
+         * <p>The training progress percentage. A value of 100% may be returned for confirmed completed progress, where Current may be less than Total. Do not determine whether the training is complete based solely on the current step number.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -163,7 +163,7 @@ public class RLProgressStep extends TeaModel {
         }
 
         /**
-         * <p>The latest step mark time, in UNIX seconds.</p>
+         * <p>The timestamp of the latest step (in UNIX seconds).</p>
          * 
          * <strong>example:</strong>
          * <p>1787474487</p>
@@ -174,7 +174,7 @@ public class RLProgressStep extends TeaModel {
         }
 
         /**
-         * <p>The total number of steps, obtained from the configuration dump.</p>
+         * <p>The total number of steps (retrieved from the configuration dump).</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>

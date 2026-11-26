@@ -101,7 +101,7 @@ public class RLProgressTrainer extends TeaModel {
         }
 
         /**
-         * <p>The current mini-batch ordinal number.</p>
+         * <p>The current mini-batch index.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

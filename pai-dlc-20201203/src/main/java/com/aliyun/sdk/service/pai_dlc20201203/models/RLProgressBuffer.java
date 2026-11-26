@@ -171,7 +171,7 @@ public class RLProgressBuffer extends TeaModel {
         } 
 
         /**
-         * <p>The total number of consumed samples in incomplete buffers.</p>
+         * <p>The total number of consumed samples in unfinished buffers.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -193,7 +193,7 @@ public class RLProgressBuffer extends TeaModel {
         }
 
         /**
-         * <p>The estimated number of remaining seconds to fill the buffer.</p>
+         * <p>The estimated number of seconds remaining to fill the buffer.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -215,7 +215,7 @@ public class RLProgressBuffer extends TeaModel {
         }
 
         /**
-         * <p>The total number of finished samples in incomplete buffers.</p>
+         * <p>The total number of finished samples in unfinished buffers.</p>
          * 
          * <strong>example:</strong>
          * <p>500</p>
@@ -226,7 +226,7 @@ public class RLProgressBuffer extends TeaModel {
         }
 
         /**
-         * <p>The readiness percentage, which is the ratio of Ready to Target.</p>
+         * <p>The completion percentage of the finished count relative to the target count, up to 100%. This value is provided when the target count is greater than 0. This value is not equivalent to the proportion of currently available samples indicated by the ready count.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -237,7 +237,7 @@ public class RLProgressBuffer extends TeaModel {
         }
 
         /**
-         * <p>The total number of ready samples in incomplete buffers.</p>
+         * <p>The total number of ready samples in unfinished buffers.</p>
          * 
          * <strong>example:</strong>
          * <p>500</p>
@@ -248,7 +248,7 @@ public class RLProgressBuffer extends TeaModel {
         }
 
         /**
-         * <p>The total number of target samples in incomplete buffers.</p>
+         * <p>The total number of target samples in unfinished buffers.</p>
          * 
          * <strong>example:</strong>
          * <p>512</p>
@@ -270,7 +270,7 @@ public class RLProgressBuffer extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether Consumed is greater than 0, which means the batch has been fetched and the trainer is updating.</p>
+         * <p>Indicates whether the consumed count is greater than 0, which means that batches have been fetched and the trainer is updating.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

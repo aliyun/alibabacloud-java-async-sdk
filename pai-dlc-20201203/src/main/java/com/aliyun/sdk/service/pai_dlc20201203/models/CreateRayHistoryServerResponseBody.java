@@ -78,7 +78,7 @@ public class CreateRayHistoryServerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID of this call, used for diagnostics and troubleshooting.</p>
+         * <p>The request ID of the call. This ID is used for troubleshooting and support.</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-xxxxxxx</p>

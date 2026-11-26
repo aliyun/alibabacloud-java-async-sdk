@@ -107,6 +107,9 @@ public class CredentialRole extends TeaModel {
 
         /**
          * <p>The account on whose behalf the role is assumed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder assumeRoleFor(String assumeRoleFor) {
             this.assumeRoleFor = assumeRoleFor;
@@ -123,6 +126,9 @@ public class CredentialRole extends TeaModel {
 
         /**
          * <p>The access policy attached during role assumption.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Version&quot;:&quot;1&quot;,&quot;Statement&quot;:[{&quot;Effect&quot;:&quot;Allow&quot;,&quot;Action&quot;:[&quot;oss:GetObject&quot;],&quot;Resource&quot;:[&quot;acs:oss:<em>:</em>:example-bucket/data/*&quot;]}]}</p>
          */
         public Builder policy(String policy) {
             this.policy = policy;

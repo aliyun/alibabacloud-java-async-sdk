@@ -157,6 +157,9 @@ public class FreeResourceItem extends TeaModel {
 
         /**
          * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cluster-example-001</p>
          */
         public Builder clusterID(String clusterID) {
             this.clusterID = clusterID;
@@ -165,6 +168,9 @@ public class FreeResourceItem extends TeaModel {
 
         /**
          * <p>The cluster name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-training-cluster</p>
          */
         public Builder clusterName(String clusterName) {
             this.clusterName = clusterName;

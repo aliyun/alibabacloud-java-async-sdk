@@ -237,6 +237,9 @@ public class JobElasticSpec extends TeaModel {
 
         /**
          * <p>The AIMaster Docker image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registry/aimaster:v1</p>
          */
         public Builder AIMasterDockerImage(String AIMasterDockerImage) {
             this.AIMasterDockerImage = AIMasterDockerImage;

@@ -230,7 +230,7 @@ public class GetSignalResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status description, which contains a summary for each pod, such as the number of successful deliveries and the names of failed or pending pods.</p>
+         * <p>The <strong>status description</strong>, which includes a summary for each Pod (such as the number of successful deliveries and the names of failed or pending Pods).</p>
          * 
          * <strong>example:</strong>
          * <p>signal delivered to 1 pods</p>
@@ -241,7 +241,7 @@ public class GetSignalResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of pod names.</p>
+         * <p>The list of Pod names.</p>
          */
         public Builder podNames(java.util.List<String> podNames) {
             this.podNames = podNames;
@@ -249,7 +249,7 @@ public class GetSignalResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status reason code, such as <code>Completed</code>, <code>SignalFailed</code>, or <code>StoppedByJobEnded</code>.</p>
+         * <p>The <strong>status reason code</strong>, such as <code>Completed</code>, <code>SignalFailed</code>, or <code>StoppedByJobEnded</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>Completed</p>

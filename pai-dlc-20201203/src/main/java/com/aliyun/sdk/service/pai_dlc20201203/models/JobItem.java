@@ -946,6 +946,9 @@ public class JobItem extends TeaModel {
 
         /**
          * <p>The environment variables injected during job execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;ENABLE_DEBUG_MODE&quot;:&quot;true&quot;}</p>
          */
         public Builder envs(java.util.Map<String, String> envs) {
             this.envs = envs;
@@ -1340,6 +1343,9 @@ public class JobItem extends TeaModel {
 
         /**
          * <p>The system environment variable configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;ENABLE_DEBUG_MODE&quot;:&quot;true&quot;}</p>
          */
         public Builder systemEnvs(java.util.Map<String, String> systemEnvs) {
             this.systemEnvs = systemEnvs;

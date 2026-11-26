@@ -39,10 +39,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Make sure you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC before using this operation.</p>
-     * <blockquote>
-     * <p>Notice: The total length of the CreateJob operation parameters (including system-generated parameters) cannot exceed 65536 bytes.</p>
-     * </blockquote>
+     * <p>Make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC before you call this operation. &gt;Notice: The total length of the parameters in the CreateJob operation, including system-generated parameters, cannot exceed 65,536 bytes.</p>
      * 
      * @param request the request parameters of CreateRayHistoryServer  CreateRayHistoryServerRequest
      * @return CreateRayHistoryServerResponse
@@ -51,11 +48,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
      * <li>This API operation sends a specific signal to one or more pods of a specified job.</li>
-     * <li>After the signal is sent, the API immediately returns a <code>SignalId</code>. The actual signal delivery is processed by a background worker.</li>
-     * <li>You can query the signal status by calling the <code>GetSignal</code> or <code>ListSignals</code> operation.</li>
+     * <li>After the signal is sent, the API operation immediately returns a <code>SignalId</code>. The actual signal delivery is handled by background workers.</li>
+     * <li>You can query the status of the signal by calling the <code>GetSignal</code> or <code>ListSignals</code> API operation.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateSignal  CreateSignalRequest
@@ -83,7 +80,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this API, ensure you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">Pricing</a> of PAI-DLC.</p>
+     * <p>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.</p>
+     * <blockquote>
+     * <p>Notice: The total length of the parameters in the CreateJob operation, including system-generated parameters, cannot exceed 65,536 bytes.</p>
+     * </blockquote>
      * 
      * @param request the request parameters of DeleteRayHistoryServer  DeleteRayHistoryServerRequest
      * @return DeleteRayHistoryServerResponse
@@ -98,7 +98,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before using this operation, make sure that you fully understand the billing of PAI-DLC and its <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</p>
+     * <p>Before you call this API operation, make sure that you fully understand the billing method and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.</p>
      * 
      * @param request the request parameters of GetDashboard  GetDashboardRequest
      * @return GetDashboardResponse
@@ -137,13 +137,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This operation queries monitoring metrics for a specific job (JobId) or dimension (Dimensions) under a specified namespace (Namespace).</li>
-     * <li>Custom query time ranges are supported. By default, data from the last hour is returned.</li>
-     * <li>You can select different time intervals (Period) to retrieve data points at a finer or coarser granularity.</li>
-     * <li>To retrieve large amounts of data with paging, use the <code>NextToken</code> parameter for paging operations.</li>
-     * <li><code>MetricName</code> is required and specifies the name of the monitoring metric to query.</li>
+     * <li>This operation queries the monitoring metrics for a specific job (JobId) or dimension (Dimensions) under a specified namespace.</li>
+     * <li>Supports a custom query time range. The default is the data from the last hour.</li>
+     * <li>You can select different time intervals (Period) to obtain data points with finer or coarser granularity.</li>
+     * <li>If you need to retrieve a large amount of data through paging, you can use the <code>NextToken</code> parameter for paging.</li>
+     * <li><code>MetricName</code> is required and specifies the name of the specific monitoring metrics to query.</li>
      * <li>For advanced features or specific types of monitoring metrics, refer to the relevant documentation for more information.</li>
      * </ul>
      * 
@@ -166,7 +166,43 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you use this operation, make sure that you fully understand the billing of PAI-DLC and its <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</p>
+     * <p>获取DLC作业RL轨迹流转分析</p>
+     * 
+     * @param request the request parameters of GetRLFlowAnalysis  GetRLFlowAnalysisRequest
+     * @return GetRLFlowAnalysisResponse
+     */
+    CompletableFuture<GetRLFlowAnalysisResponse> getRLFlowAnalysis(GetRLFlowAnalysisRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>获取DLC作业某条异常日志的上下文</p>
+     * 
+     * @param request the request parameters of GetRLLogContext  GetRLLogContextRequest
+     * @return GetRLLogContextResponse
+     */
+    CompletableFuture<GetRLLogContextResponse> getRLLogContext(GetRLLogContextRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Queries a single reinforcement learning (RL) trajectory and sample-level events for the same sample based on JobId, PromptUid, and SampleIndex, and returns an event stream sorted by event time and collection time.</p>
+     * 
+     * @param request the request parameters of GetRLSample  GetRLSampleRequest
+     * @return GetRLSampleResponse
+     */
+    CompletableFuture<GetRLSampleResponse> getRLSample(GetRLSampleRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the RL training progress of a DLC job.</p>
+     * 
+     * @param request the request parameters of GetRLTrainingProgress  GetRLTrainingProgressRequest
+     * @return GetRLTrainingProgressResponse
+     */
+    CompletableFuture<GetRLTrainingProgressResponse> getRLTrainingProgress(GetRLTrainingProgressRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC before you call this operation.</p>
      * 
      * @param request the request parameters of GetRayDashboard  GetRayDashboardRequest
      * @return GetRayDashboardResponse
@@ -175,10 +211,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you use this operation, make sure that you are familiar with the billing of PAI-DLC and have read the <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</p>
-     * <blockquote>
-     * <p>Notice: The total length of the CreateJob operation parameters, including system-generated parameters, cannot exceed 65,536 bytes.</p>
-     * </blockquote>
+     * <p>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.&gt;Notice: The total length of parameters for the CreateJob operation, including system-generated parameters, cannot exceed 65,536 bytes.</p>
      * 
      * @param request the request parameters of GetRayHistoryServer  GetRayHistoryServerRequest
      * @return GetRayHistoryServerResponse
@@ -187,8 +220,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>You can call this operation to retrieve the details of a signal that corresponds to a specified <code>JobId</code> and <code>SignalId</code>, including the signal status and delivery scope. Note that the response no longer contains the raw result structure for each pod. Instead, the <code>Status</code>, <code>Reason</code>, and <code>Message</code> fields describe the overall signal processing result.</p>
+     * <h2>Request description</h2>
+     * <p>This API allows you to retrieve the details of a signal corresponding to a specified <code>JobId</code> and <code>SignalId</code>, including the signal status and delivery scope. Note that the returned results no longer include the raw result structure for each Pod. Instead, the overall signal processing status is expressed through the <code>Status</code>, <code>Reason</code>, and <code>Message</code> fields.</p>
      * 
      * @param request the request parameters of GetSignal  GetSignalRequest
      * @return GetSignalResponse
@@ -245,10 +278,25 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before using this operation, make sure you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.</p>
-     * <blockquote>
-     * <p>Notice: The total length of parameters for the CreateJob operation (including system-generated parameters) cannot exceed 65536 bytes.</p>
-     * </blockquote>
+     * <p>分页获取DLC作业的RL轨迹样本列表</p>
+     * 
+     * @param request the request parameters of ListRLSamples  ListRLSamplesRequest
+     * @return ListRLSamplesResponse
+     */
+    CompletableFuture<ListRLSamplesResponse> listRLSamples(ListRLSamplesRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>分页获取DLC作业某个uid下的RL轨迹列表</p>
+     * 
+     * @param request the request parameters of ListRLTrajectories  ListRLTrajectoriesRequest
+     * @return ListRLTrajectoriesResponse
+     */
+    CompletableFuture<ListRLTrajectoriesResponse> listRLTrajectories(ListRLTrajectoriesRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.&gt;Notice: The total length of parameters for the CreateJob operation, including system-generated parameters, cannot exceed 65,536 bytes.</p>
      * 
      * @param request the request parameters of ListRayHistoryServers  ListRayHistoryServersRequest
      * @return ListRayHistoryServersResponse
@@ -257,8 +305,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>You can call this operation to retrieve the details of all signal records for a specific job, including the signal ID, status, and creation time. You can use query parameters to further filter or sort the results.</p>
+     * <h2>Request description</h2>
+     * <p>You can use this API to retrieve the details of all signal records for a specific job, including the signal ID, status, and creation time. You can further filter or sort the results by using query parameters.</p>
      * 
      * @param request the request parameters of ListSignals  ListSignalsRequest
      * @return ListSignalsResponse
@@ -279,9 +327,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before using this operation, make sure that you fully understand the billing method and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.</p>
+     * <p>Make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC before you call this operation.</p>
      * <blockquote>
-     * <p>Notice: The total length of the CreateJob operation parameters, including system-generated parameters, cannot exceed 65,536 bytes.</p>
+     * <p>Notice: The total length of the request parameters for the CreateJob operation, including system-generated parameters, cannot exceed 65,536 bytes.</p>
      * </blockquote>
      * 
      * @param request the request parameters of StartRayHistoryServer  StartRayHistoryServerRequest
@@ -303,7 +351,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation, ensure you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> for PAI-DLC.&gt;Notice: The total length of the parameters for the CreateJob interface, including system-generated parameters, cannot exceed 65,536 bytes.</p>
+     * <p>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.</p>
+     * <blockquote>
+     * <p>Notice: The total length of the parameters in the CreateJob operation, including system-generated parameters, cannot exceed 65,536 bytes.</p>
+     * </blockquote>
      * 
      * @param request the request parameters of StopRayHistoryServer  StopRayHistoryServerRequest
      * @return StopRayHistoryServerResponse
@@ -318,7 +369,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before attaching tags, Alibaba Cloud checks the number of existing tags on the resource. If the limit is exceeded, an error message is returned.</p>
+     * <p>Before attaching tags, Alibaba Cloud checks the number of existing tags on the resources. If the limit is exceeded, an error message is returned.</p>
      * 
      * @param request the request parameters of TagResources  TagResourcesRequest
      * @return TagResourcesResponse

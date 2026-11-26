@@ -191,7 +191,7 @@ public class ListSignalsRequest extends Request {
         }
 
         /**
-         * <p>The field used for sorting.</p>
+         * <p>The sort field.</p>
          * 
          * <strong>example:</strong>
          * <p>GmtCreateTime</p>

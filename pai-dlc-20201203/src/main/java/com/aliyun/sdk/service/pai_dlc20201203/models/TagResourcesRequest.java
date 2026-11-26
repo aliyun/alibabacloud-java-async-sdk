@@ -117,7 +117,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The resource IDs. A maximum of 50 items can be specified.</p>
+         * <p>The resource IDs. Up to 50 items are supported.</p>
          * <p>This parameter is required.</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
@@ -143,7 +143,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The tags to be created and attached. A maximum of 20 items can be specified.</p>
+         * <p>The tags to add. Up to 20 items are supported.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putBodyParameter("Tag", tag);
@@ -211,7 +211,7 @@ public class TagResourcesRequest extends Request {
             } 
 
             /**
-             * <p>The tag key of the resource. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
+             * <p>The tag key of the resource. It can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
              * 
              * <strong>example:</strong>
              * <p>key</p>

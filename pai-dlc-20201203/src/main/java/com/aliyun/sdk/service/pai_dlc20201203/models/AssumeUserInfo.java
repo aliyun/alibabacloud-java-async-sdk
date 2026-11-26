@@ -94,6 +94,9 @@ public class AssumeUserInfo extends TeaModel {
 
         /**
          * <p>The AccessKey ID used for role assumption.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LTAI5tExample****KeyId1234</p>
          */
         public Builder accessKeyId(String accessKeyId) {
             this.accessKeyId = accessKeyId;
@@ -113,6 +116,9 @@ public class AssumeUserInfo extends TeaModel {
 
         /**
          * <p>The security token used for role assumption.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CAISexample****SecurityToken</p>
          */
         public Builder securityToken(String securityToken) {
             this.securityToken = securityToken;
