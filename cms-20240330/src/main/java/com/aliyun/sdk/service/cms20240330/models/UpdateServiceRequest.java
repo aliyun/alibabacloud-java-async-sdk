@@ -47,6 +47,10 @@ public class UpdateServiceRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("serviceStatus")
     private String serviceStatus;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("dryRun")
+    private Boolean dryRun;
+
     private UpdateServiceRequest(Builder builder) {
         super(builder);
         this.workspace = builder.workspace;
@@ -56,6 +60,7 @@ public class UpdateServiceRequest extends Request {
         this.description = builder.description;
         this.displayName = builder.displayName;
         this.serviceStatus = builder.serviceStatus;
+        this.dryRun = builder.dryRun;
     }
 
     public static Builder builder() {
@@ -120,6 +125,13 @@ public class UpdateServiceRequest extends Request {
         return this.serviceStatus;
     }
 
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
     public static final class Builder extends Request.Builder<UpdateServiceRequest, Builder> {
         private String workspace; 
         private String serviceId; 
@@ -128,6 +140,7 @@ public class UpdateServiceRequest extends Request {
         private String description; 
         private String displayName; 
         private String serviceStatus; 
+        private Boolean dryRun; 
 
         private Builder() {
             super();
@@ -142,6 +155,7 @@ public class UpdateServiceRequest extends Request {
             this.description = request.description;
             this.displayName = request.displayName;
             this.serviceStatus = request.serviceStatus;
+            this.dryRun = request.dryRun;
         } 
 
         /**
@@ -180,7 +194,7 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
-         * <p>The extended properties.</p>
+         * <p>The extended attributes.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;language&quot;:&quot;java&quot;}</p>
@@ -224,6 +238,15 @@ public class UpdateServiceRequest extends Request {
         public Builder serviceStatus(String serviceStatus) {
             this.putBodyParameter("serviceStatus", serviceStatus);
             this.serviceStatus = serviceStatus;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to perform a dry run of the request. Valid values: true: sends a check request and does not perform the actual operation. false: sends a normal request. Default value: false.</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("dryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 

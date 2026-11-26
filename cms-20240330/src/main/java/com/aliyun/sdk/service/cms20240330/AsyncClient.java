@@ -476,6 +476,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeletePrometheusVirtualInstanceResponse> deletePrometheusVirtualInstance(DeletePrometheusVirtualInstanceRequest request);
 
     /**
+     * @param request the request parameters of DeleteRumSymbolFiles  DeleteRumSymbolFilesRequest
+     * @return DeleteRumSymbolFilesResponse
+     */
+    CompletableFuture<DeleteRumSymbolFilesResponse> deleteRumSymbolFiles(DeleteRumSymbolFilesRequest request);
+
+    /**
      * @param request the request parameters of DeleteService  DeleteServiceRequest
      * @return DeleteServiceResponse
      */
@@ -849,6 +855,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetPrometheusViewResponse
      */
     CompletableFuture<GetPrometheusViewResponse> getPrometheusView(GetPrometheusViewRequest request);
+
+    /**
+     * @param request the request parameters of GetRumSymbolFileParams  GetRumSymbolFileParamsRequest
+     * @return GetRumSymbolFileParamsResponse
+     */
+    CompletableFuture<GetRumSymbolFileParamsResponse> getRumSymbolFileParams(GetRumSymbolFileParamsRequest request);
+
+    /**
+     * @param request the request parameters of GetRumSymbolFiles  GetRumSymbolFilesRequest
+     * @return GetRumSymbolFilesResponse
+     */
+    CompletableFuture<GetRumSymbolFilesResponse> getRumSymbolFiles(GetRumSymbolFilesRequest request);
+
+    /**
+     * @param request the request parameters of GetRumSymbolicStack  GetRumSymbolicStackRequest
+     * @return GetRumSymbolicStackResponse
+     */
+    CompletableFuture<GetRumSymbolicStackResponse> getRumSymbolicStack(GetRumSymbolicStackRequest request);
 
     /**
      * @param request the request parameters of GetService  GetServiceRequest

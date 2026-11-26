@@ -185,7 +185,7 @@ public class Hook extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>检查工具调用中的命令是否安全。</p>
+         * <p>Check whether the commands in tool calls are safe.</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -391,7 +391,7 @@ public class Hook extends TeaModel {
              * <p>The execution instruction. For the prompt type, it is a prompt. For the bash type, it is a Bash script. For the python3 type, it is a Python 3 script. For the hint type, it is contextual text directly appended. Non-empty UTF-8 text must be provided for all four types.</p>
              * 
              * <strong>example:</strong>
-             * <p>检查当前工具调用是否安全。</p>
+             * <p>Check whether the current tool call is safe.</p>
              */
             public Builder instruction(String instruction) {
                 this.instruction = instruction;

@@ -302,7 +302,7 @@ public class MaintainWindowForView extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试策略</p>
+         * <p>Test policy</p>
          */
         public Builder maintainWindowName(String maintainWindowName) {
             this.maintainWindowName = maintainWindowName;

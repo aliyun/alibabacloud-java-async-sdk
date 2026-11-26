@@ -31,11 +31,16 @@ public class DeleteServiceRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("regionId")
     private String regionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("dryRun")
+    private Boolean dryRun;
+
     private DeleteServiceRequest(Builder builder) {
         super(builder);
         this.workspace = builder.workspace;
         this.serviceId = builder.serviceId;
         this.regionId = builder.regionId;
+        this.dryRun = builder.dryRun;
     }
 
     public static Builder builder() {
@@ -72,10 +77,18 @@ public class DeleteServiceRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
     public static final class Builder extends Request.Builder<DeleteServiceRequest, Builder> {
         private String workspace; 
         private String serviceId; 
         private String regionId; 
+        private Boolean dryRun; 
 
         private Builder() {
             super();
@@ -86,10 +99,11 @@ public class DeleteServiceRequest extends Request {
             this.workspace = request.workspace;
             this.serviceId = request.serviceId;
             this.regionId = request.regionId;
+            this.dryRun = request.dryRun;
         } 
 
         /**
-         * <p>The workspace name.</p>
+         * <p>The name of the workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,7 +116,7 @@ public class DeleteServiceRequest extends Request {
         }
 
         /**
-         * <p>The service ID.</p>
+         * <p>The ID of the service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -120,6 +134,20 @@ public class DeleteServiceRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("regionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to perform a dry run of the request. Valid values:</p>
+         * <ul>
+         * <li>true: Sends a check request without making actual changes.</li>
+         * <li>false: Sends a normal request.
+         * Default value: false.</li>
+         * </ul>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("dryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 

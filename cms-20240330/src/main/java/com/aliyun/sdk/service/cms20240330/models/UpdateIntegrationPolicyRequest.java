@@ -247,7 +247,7 @@ public class UpdateIntegrationPolicyRequest extends Request {
              * <p>The value of the tag.</p>
              * 
              * <strong>example:</strong>
-             * <p>[{\&quot;Id\&quot;: \&quot;kgqie6hm\&quot;, \&quot;Name\&quot;: \&quot;Sheet1\&quot;}]</p>
+             * <p>[{&quot;Id&quot;: &quot;kgqie6hm&quot;, &quot;Name&quot;: &quot;Sheet1&quot;}]</p>
              */
             public Builder value(String value) {
                 this.value = value;

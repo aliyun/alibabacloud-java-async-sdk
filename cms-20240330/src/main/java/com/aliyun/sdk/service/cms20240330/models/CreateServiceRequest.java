@@ -64,6 +64,10 @@ public class CreateServiceRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("tags")
     private java.util.List<Tags> tags;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("dryRun")
+    private Boolean dryRun;
+
     private CreateServiceRequest(Builder builder) {
         super(builder);
         this.workspace = builder.workspace;
@@ -77,6 +81,7 @@ public class CreateServiceRequest extends Request {
         this.serviceStatus = builder.serviceStatus;
         this.serviceType = builder.serviceType;
         this.tags = builder.tags;
+        this.dryRun = builder.dryRun;
     }
 
     public static Builder builder() {
@@ -169,6 +174,13 @@ public class CreateServiceRequest extends Request {
         return this.tags;
     }
 
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
     public static final class Builder extends Request.Builder<CreateServiceRequest, Builder> {
         private String workspace; 
         private String regionId; 
@@ -181,6 +193,7 @@ public class CreateServiceRequest extends Request {
         private String serviceStatus; 
         private String serviceType; 
         private java.util.List<Tags> tags; 
+        private Boolean dryRun; 
 
         private Builder() {
             super();
@@ -199,6 +212,7 @@ public class CreateServiceRequest extends Request {
             this.serviceStatus = request.serviceStatus;
             this.serviceType = request.serviceType;
             this.tags = request.tags;
+            this.dryRun = request.dryRun;
         } 
 
         /**
@@ -327,6 +341,15 @@ public class CreateServiceRequest extends Request {
         public Builder tags(java.util.List<Tags> tags) {
             this.putBodyParameter("tags", tags);
             this.tags = tags;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to perform a dry run. Valid values: true: performs a dry run. The system checks the request but does not perform actual operations. false: sends a normal request. Default value: false.</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("dryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 

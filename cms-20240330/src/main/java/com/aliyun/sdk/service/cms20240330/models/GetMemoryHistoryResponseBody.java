@@ -406,7 +406,7 @@ public class GetMemoryHistoryResponseBody extends TeaModel {
              * <p>The old memory.</p>
              * 
              * <strong>example:</strong>
-             * <p>I really don\&quot;t like Python at all.</p>
+             * <p>I really don&quot;t like Python at all.</p>
              */
             public Builder oldMemory(String oldMemory) {
                 this.oldMemory = oldMemory;

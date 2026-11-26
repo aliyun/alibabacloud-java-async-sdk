@@ -216,7 +216,7 @@ public class CloudMonitoringCompositeEscalationEntry extends TeaModel {
          * <p>The precondition.</p>
          * 
          * <strong>example:</strong>
-         * <p>连续3次</p>
+         * <p>3 consecutive times</p>
          */
         public Builder preCondition(String preCondition) {
             this.preCondition = preCondition;

@@ -1317,6 +1317,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteRumSymbolFiles  DeleteRumSymbolFilesRequest
+     * @return DeleteRumSymbolFilesResponse
+     */
+    @Override
+    public CompletableFuture<DeleteRumSymbolFilesResponse> deleteRumSymbolFiles(DeleteRumSymbolFilesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteRumSymbolFiles").setMethod(HttpMethod.POST).setPathRegex("/rum/symbolFiles/delete").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteRumSymbolFilesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteRumSymbolFilesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeleteService  DeleteServiceRequest
      * @return DeleteServiceResponse
      */
@@ -2262,6 +2280,60 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetPrometheusViewResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetRumSymbolFileParams  GetRumSymbolFileParamsRequest
+     * @return GetRumSymbolFileParamsResponse
+     */
+    @Override
+    public CompletableFuture<GetRumSymbolFileParamsResponse> getRumSymbolFileParams(GetRumSymbolFileParamsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetRumSymbolFileParams").setMethod(HttpMethod.POST).setPathRegex("/rum/symbolFile/upload/policies").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetRumSymbolFileParamsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetRumSymbolFileParamsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetRumSymbolFiles  GetRumSymbolFilesRequest
+     * @return GetRumSymbolFilesResponse
+     */
+    @Override
+    public CompletableFuture<GetRumSymbolFilesResponse> getRumSymbolFiles(GetRumSymbolFilesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetRumSymbolFiles").setMethod(HttpMethod.POST).setPathRegex("/rum/symbolFiles/query").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetRumSymbolFilesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetRumSymbolFilesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetRumSymbolicStack  GetRumSymbolicStackRequest
+     * @return GetRumSymbolicStackResponse
+     */
+    @Override
+    public CompletableFuture<GetRumSymbolicStackResponse> getRumSymbolicStack(GetRumSymbolicStackRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetRumSymbolicStack").setMethod(HttpMethod.POST).setPathRegex("/rum/symbolic").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetRumSymbolicStackResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetRumSymbolicStackResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

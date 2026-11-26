@@ -31,11 +31,16 @@ public class CreateServiceObservabilityRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("dryRun")
+    private Boolean dryRun;
+
     private CreateServiceObservabilityRequest(Builder builder) {
         super(builder);
         this.workspace = builder.workspace;
         this.regionId = builder.regionId;
         this.type = builder.type;
+        this.dryRun = builder.dryRun;
     }
 
     public static Builder builder() {
@@ -72,10 +77,18 @@ public class CreateServiceObservabilityRequest extends Request {
         return this.type;
     }
 
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
     public static final class Builder extends Request.Builder<CreateServiceObservabilityRequest, Builder> {
         private String workspace; 
         private String regionId; 
         private String type; 
+        private Boolean dryRun; 
 
         private Builder() {
             super();
@@ -86,6 +99,7 @@ public class CreateServiceObservabilityRequest extends Request {
             this.workspace = request.workspace;
             this.regionId = request.regionId;
             this.type = request.type;
+            this.dryRun = request.dryRun;
         } 
 
         /**
@@ -120,6 +134,20 @@ public class CreateServiceObservabilityRequest extends Request {
         public Builder type(String type) {
             this.putPathParameter("type", type);
             this.type = type;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to perform a dry run on the request. Valid values:</p>
+         * <ul>
+         * <li>true: The system checks the request but does not perform the actual operation.</li>
+         * <li>false: The system processes the request normally.
+         * Default value: false.</li>
+         * </ul>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("dryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 

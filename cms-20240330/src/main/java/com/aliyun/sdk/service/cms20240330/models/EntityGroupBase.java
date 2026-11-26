@@ -299,7 +299,7 @@ public class EntityGroupBase extends TeaModel {
              * <p>The SPL query statement.</p>
              * 
              * <strong>example:</strong>
-             * <p>.entity with(type=\&quot;acs.ecs.instance\&quot;) | where region_id in (\&quot;cn-beijing\&quot;)</p>
+             * <p>.entity with(type=&quot;acs.ecs.instance&quot;) | where region_id in (&quot;cn-beijing&quot;)</p>
              */
             public Builder spl(String spl) {
                 this.spl = spl;

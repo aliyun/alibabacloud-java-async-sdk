@@ -185,7 +185,7 @@ public class GetEntityStoreDataRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>.entity with(domain=\&quot;acs\&quot;, type=\&quot;acs.k8s.node\&quot;) | limit 0, 10</p>
+         * <p>.entity with(domain=&quot;acs&quot;, type=&quot;acs.k8s.node&quot;) | limit 0, 10</p>
          */
         public Builder query(String query) {
             this.putBodyParameter("query", query);

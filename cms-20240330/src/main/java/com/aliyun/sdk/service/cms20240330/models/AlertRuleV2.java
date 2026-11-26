@@ -450,7 +450,7 @@ public class AlertRuleV2 extends TeaModel {
          * <p>The business source. This parameter is read-only. Examples include managed_service_for_prometheus, umodel, application_insights, cloud_monitoring, and sls.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值</p>
+         * <p>Sample value</p>
          */
         public Builder bizSource(String bizSource) {
             this.bizSource = bizSource;
@@ -469,7 +469,7 @@ public class AlertRuleV2 extends TeaModel {
          * <p>The content template.</p>
          * 
          * <strong>example:</strong>
-         * <p>告警触发: ${metricName} 当前值 ${currentValue} 超过阈值 ${threshold}</p>
+         * <p>Alert triggered: the current value ${currentValue} of ${metricName} exceeds the threshold ${threshold}</p>
          */
         public Builder contentTemplate(String contentTemplate) {
             this.contentTemplate = contentTemplate;
@@ -510,7 +510,7 @@ public class AlertRuleV2 extends TeaModel {
          * <p>The display name.</p>
          * 
          * <strong>example:</strong>
-         * <p>CPU水位告警95%</p>
+         * <p>CPU usage alert: 95%</p>
          */
         public Builder displayName(String displayName) {
             this.displayName = displayName;
@@ -611,7 +611,7 @@ public class AlertRuleV2 extends TeaModel {
          * <p>The partition key. This parameter is read-only and maintained by the system for rule routing and sharding.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值</p>
+         * <p>Sample value</p>
          */
         public Builder partitionKey(String partitionKey) {
             this.partitionKey = partitionKey;
