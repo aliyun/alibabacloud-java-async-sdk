@@ -143,7 +143,7 @@ public class AiccsSmartCallOperateRequest extends Request {
         } 
 
         /**
-         * <p>Unique receipt ID of the call. You can obtain it by invoking <a href="https://help.aliyun.com/document_detail/311247.html">SendCcoSmartCall</a>.</p>
+         * <p>The unique receipt ID of the call. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/311247.html">SendCcoSmartCall</a> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>116012854210^102814279****</p>
@@ -155,9 +155,9 @@ public class AiccsSmartCallOperateRequest extends Request {
         }
 
         /**
-         * <p>Specifies the action to be initiated for the called number during an Intelligent outbound call.</p>
+         * <p>The action initiated by the called number during an intelligent outbound call.</p>
          * <blockquote>
-         * <p>Currently, only the <strong>parallelBridge</strong> parameter is supported, which indicates bridging the called number with a call center agent.</p>
+         * <p>Currently, only the <strong>parallelBridge</strong> value is supported, which specifies that the action bridges the called number with a call center agent.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -179,7 +179,7 @@ public class AiccsSmartCallOperateRequest extends Request {
         }
 
         /**
-         * <p>Extension field.</p>
+         * <p>The extended field.</p>
          * 
          * <strong>example:</strong>
          * <p>Param</p>
@@ -191,7 +191,7 @@ public class AiccsSmartCallOperateRequest extends Request {
         }
 
         /**
-         * <p>Product name. Default value: <strong>aiccs</strong>.</p>
+         * <p>The product name. Default value: <strong>aiccs</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>aiccs</p>

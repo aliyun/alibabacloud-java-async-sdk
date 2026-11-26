@@ -119,7 +119,7 @@ public class GenerateWebSocketSignResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Status code. A value of &quot;Success&quot; indicates that the request succeeded.</p>
+         * <p>The status code. A value of Success indicates that the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -130,7 +130,7 @@ public class GenerateWebSocketSignResponseBody extends TeaModel {
         }
 
         /**
-         * <p>MessageBox message channel signature code.</p>
+         * <p>The MessageBox message channel signature code.</p>
          * 
          * <strong>example:</strong>
          * <p>dnthF_oinHg7JMJDmKqex3UxDD7</p>
@@ -141,7 +141,7 @@ public class GenerateWebSocketSignResponseBody extends TeaModel {
         }
 
         /**
-         * <p>HTTP status code.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -152,7 +152,7 @@ public class GenerateWebSocketSignResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Description of the status code.</p>
+         * <p>The description of the status code.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -163,7 +163,7 @@ public class GenerateWebSocketSignResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>EE338D98-9BD3-4413-B165</p>
@@ -174,10 +174,10 @@ public class GenerateWebSocketSignResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the API invocation succeeded. Valid values:</p>
+         * <p>Indicates whether the API operation is called successfully. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Succeeded.</li>
-         * <li><strong>false</strong>: Failed.</li>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

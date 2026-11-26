@@ -163,7 +163,7 @@ public class ImportTaskNumberDatasRequest extends Request {
          * <ul>
          * <li>EXCEL</li>
          * <li>JSON<blockquote>
-         * <p>Notice: API calls currently support only the JSON data type.</p>
+         * <p>Notice: API calls currently support only the JSON data type.</notice></p>
          * </blockquote>
          * </li>
          * </ul>
@@ -179,7 +179,10 @@ public class ImportTaskNumberDatasRequest extends Request {
         }
 
         /**
-         * EncryptionType.
+         * <p>The encryption method. Valid values: 0: no encryption. 1: MD5. 2: SHA256. 3: SM3.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder encryptionType(Long encryptionType) {
             this.putQueryParameter("EncryptionType", encryptionType);
@@ -188,9 +191,9 @@ public class ImportTaskNumberDatasRequest extends Request {
         }
 
         /**
-         * <p>The OSS file path. This parameter is optional.</p>
+         * <p>The Object Storage Service (OSS) file path. This parameter is optional.</p>
          * <blockquote>
-         * <p>API calls do not currently support the Excel data type. Therefore, uploading an OSS file path is currently unavailable.</p>
+         * <p>API calls do not currently support the Excel data type. Therefore, you cannot specify an OSS file path.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -212,7 +215,7 @@ public class ImportTaskNumberDatasRequest extends Request {
         }
 
         /**
-         * <p>If DataType is set to JSON, upload data through this field. A maximum of 1000 records can be uploaded at a time.</p>
+         * <p>If DataType is set to JSON, you must use this field to upload data. You can upload a maximum of 1,000 entries at a time.</p>
          */
         public Builder phoneNumberList(java.util.List<java.util.Map<String, ?>> phoneNumberList) {
             String phoneNumberListShrink = shrink(phoneNumberList, "PhoneNumberList", "json");

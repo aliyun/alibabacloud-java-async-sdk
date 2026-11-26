@@ -145,7 +145,7 @@ public class JoinThirdCallRequest extends Request {
         } 
 
         /**
-         * <p>Agent account name (agent logon name)</p>
+         * <p>The name of the agent account, which is the logon name of the agent.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,7 +158,7 @@ public class JoinThirdCallRequest extends Request {
         }
 
         /**
-         * <p>acid from WebSocket after an inbound call</p>
+         * <p>The acid in the WebSocket after an inbound call.</p>
          * 
          * <strong>example:</strong>
          * <p>7719786</p>
@@ -170,7 +170,7 @@ public class JoinThirdCallRequest extends Request {
         }
 
         /**
-         * <p>Unique customer request ID used for idempotency validation; can be generated using UUID</p>
+         * <p>The unique client request ID used for idempotency checks. You can generate it by using a UUID.</p>
          * 
          * <strong>example:</strong>
          * <p>46c1341e-2648-447a-9b11-70b6a298d94d</p>
@@ -182,7 +182,7 @@ public class JoinThirdCallRequest extends Request {
         }
 
         /**
-         * <p>connId from WebSocket after an inbound call</p>
+         * <p>The connId in the WebSocket after an inbound call.</p>
          * 
          * <strong>example:</strong>
          * <p>7719788</p>
@@ -194,7 +194,7 @@ public class JoinThirdCallRequest extends Request {
         }
 
         /**
-         * <p>holdConnId from WebSocket after an inbound call (only provided during two-step transfer)</p>
+         * <p>The holdConnId in the WebSocket after an inbound call. This parameter is required only for two-step transfers.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -206,7 +206,7 @@ public class JoinThirdCallRequest extends Request {
         }
 
         /**
-         * <p>AICCS instance ID, visible in the Artificial Intelligence Cloud Call Service console</p>
+         * <p>The ID of the Artificial Intelligence Cloud Call Service (AICCS) instance. You can view the instance ID in the AICCS console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -219,7 +219,7 @@ public class JoinThirdCallRequest extends Request {
         }
 
         /**
-         * <p>jobId from WebSocket after an inbound call</p>
+         * <p>The jobId in the WebSocket after an inbound call.</p>
          * 
          * <strong>example:</strong>
          * <p>7719787</p>

@@ -106,7 +106,10 @@ public class GetQualityRuleDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code. A value of 200 indicates that the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class GetQualityRuleDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The quality check rule information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class GetQualityRuleDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The description of the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class GetQualityRuleDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE338D98-9BD3-4413-B165</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class GetQualityRuleDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -256,7 +268,7 @@ public class GetQualityRuleDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * KeyWords.
+             * <p>The keywords.</p>
              */
             public Builder keyWords(java.util.List<String> keyWords) {
                 this.keyWords = keyWords;
@@ -264,7 +276,15 @@ public class GetQualityRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * MatchType.
+             * <p>The keyword match type. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: Any keyword appears.</li>
+             * <li><strong>2</strong>: All keywords appear.</li>
+             * <li><strong>3</strong>: No keywords appear.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder matchType(Integer matchType) {
                 this.matchType = matchType;
@@ -272,7 +292,10 @@ public class GetQualityRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Auto-created quality check rule</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -280,7 +303,10 @@ public class GetQualityRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RuleCreateTime.
+             * <p>The time when the rule was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Mon Mar 29 22:14:02 CST 2021</p>
              */
             public Builder ruleCreateTime(String ruleCreateTime) {
                 this.ruleCreateTime = ruleCreateTime;
@@ -288,7 +314,10 @@ public class GetQualityRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * <p>The ID of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5369</p>
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -296,7 +325,10 @@ public class GetQualityRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RuleTag.
+             * <p>The tag of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>638</p>
              */
             public Builder ruleTag(Integer ruleTag) {
                 this.ruleTag = ruleTag;

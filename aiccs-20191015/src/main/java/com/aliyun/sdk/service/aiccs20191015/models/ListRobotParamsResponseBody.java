@@ -106,7 +106,7 @@ public class ListRobotParamsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Status code. A value of 200 indicates that the request succeeded.</p>
+         * <p>The status code. A value of 200 indicates that the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class ListRobotParamsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Parameter information.</p>
+         * <p>The parameter information.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class ListRobotParamsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Description of the status code.</p>
+         * <p>The status code description.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -136,7 +136,7 @@ public class ListRobotParamsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>FF67D4D5-4E90-1DF5-BB8F-060BBFAD72DB</p>
@@ -147,9 +147,9 @@ public class ListRobotParamsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the API invocation succeeded. Valid values:</p>
+         * <p>Indicates whether the operation is called successfully. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Succeeded.</li>
+         * <li><strong>true</strong>: Successful.</li>
          * <li><strong>false</strong>: Failed.</li>
          * </ul>
          * 
@@ -233,7 +233,7 @@ public class ListRobotParamsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the parameter is required. Valid values:</p>
+             * <p>Specifies whether the parameter is required. Valid values:</p>
              * <ul>
              * <li><p>0: Not required.</p>
              * </li>
@@ -250,7 +250,7 @@ public class ListRobotParamsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Parameter ID.</p>
+             * <p>The parameter ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -261,10 +261,10 @@ public class ListRobotParamsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Parameter name.</p>
+             * <p>The parameter name.</p>
              * 
              * <strong>example:</strong>
-             * <p>名称</p>
+             * <p>Name</p>
              */
             public Builder paramName(String paramName) {
                 this.paramName = paramName;

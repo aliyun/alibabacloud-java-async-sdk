@@ -191,7 +191,14 @@ public class GetQualityResultRequest extends Request {
         } 
 
         /**
-         * ChannelType.
+         * <p>The channel type. Valid values:</p>
+         * <ul>
+         * <li><strong>online</strong>: Online.</li>
+         * <li><strong>hotline</strong>: Hotline.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>online</p>
          */
         public Builder channelType(String channelType) {
             this.putQueryParameter("ChannelType", channelType);
@@ -200,7 +207,7 @@ public class GetQualityResultRequest extends Request {
         }
 
         /**
-         * GroupIds.
+         * <p>The IDs of the skill groups.</p>
          */
         public Builder groupIds(java.util.List<Long> groupIds) {
             this.putQueryParameter("GroupIds", groupIds);
@@ -209,7 +216,14 @@ public class GetQualityResultRequest extends Request {
         }
 
         /**
-         * HitStatus.
+         * <p>The hit status. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Not hit.</li>
+         * <li><strong>1</strong>: Hit.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder hitStatus(Integer hitStatus) {
             this.putQueryParameter("HitStatus", hitStatus);
@@ -218,7 +232,11 @@ public class GetQualityResultRequest extends Request {
         }
 
         /**
+         * <p>Instance ID of the AICCS instance. You can obtain instance ID from the Artificial Intelligence Cloud Call Service console.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc_xp_pre***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -227,7 +245,10 @@ public class GetQualityResultRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The current page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -236,7 +257,10 @@ public class GetQualityResultRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -245,7 +269,7 @@ public class GetQualityResultRequest extends Request {
         }
 
         /**
-         * ProjectIds.
+         * <p>The IDs of the quality inspection tasks.</p>
          */
         public Builder projectIds(java.util.List<Long> projectIds) {
             this.putQueryParameter("ProjectIds", projectIds);
@@ -254,7 +278,7 @@ public class GetQualityResultRequest extends Request {
         }
 
         /**
-         * QualityRuleIds.
+         * <p>The IDs of the quality inspection rules.</p>
          */
         public Builder qualityRuleIds(java.util.List<Long> qualityRuleIds) {
             this.putQueryParameter("QualityRuleIds", qualityRuleIds);
@@ -263,7 +287,11 @@ public class GetQualityResultRequest extends Request {
         }
 
         /**
+         * <p>The end time of the session.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-04-18 16:04:20</p>
          */
         public Builder touchEndTime(String touchEndTime) {
             this.putQueryParameter("TouchEndTime", touchEndTime);
@@ -272,7 +300,11 @@ public class GetQualityResultRequest extends Request {
         }
 
         /**
+         * <p>The start time of the session.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-18 16:02:20</p>
          */
         public Builder touchStartTime(String touchStartTime) {
             this.putQueryParameter("TouchStartTime", touchStartTime);

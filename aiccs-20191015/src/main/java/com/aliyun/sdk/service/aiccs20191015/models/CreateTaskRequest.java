@@ -467,7 +467,7 @@ public class CreateTaskRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试任务</p>
+         * <p>Test task</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);

@@ -75,7 +75,7 @@ public class DeleteOuterAccountRequest extends Request {
         } 
 
         /**
-         * <p>External Account ID.</p>
+         * <p>The external account ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class DeleteOuterAccountRequest extends Request {
         }
 
         /**
-         * <p>Type of the external account.</p>
+         * <p>The external account type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

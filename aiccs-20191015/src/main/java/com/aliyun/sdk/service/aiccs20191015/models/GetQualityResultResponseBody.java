@@ -119,7 +119,10 @@ public class GetQualityResultResponseBody extends TeaModel {
         } 
 
         /**
-         * ChannelTypeName.
+         * <p>The name of the channel type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Online</p>
          */
         public Builder channelTypeName(String channelTypeName) {
             this.channelTypeName = channelTypeName;
@@ -127,7 +130,10 @@ public class GetQualityResultResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The status code. A value of 200 indicates that the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -135,7 +141,7 @@ public class GetQualityResultResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The quality inspection task data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -143,7 +149,10 @@ public class GetQualityResultResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The description of the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class GetQualityResultResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE338D98-9BD3-4413-B165</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class GetQualityResultResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -407,7 +422,14 @@ public class GetQualityResultResponseBody extends TeaModel {
             } 
 
             /**
-             * ChannelType.
+             * <p>The channel type. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: Hotline.</li>
+             * <li><strong>2</strong>: Online.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder channelType(String channelType) {
                 this.channelType = channelType;
@@ -415,7 +437,10 @@ public class GetQualityResultResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelTypeName.
+             * <p>The name of the channel type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Online</p>
              */
             public Builder channelTypeName(String channelTypeName) {
                 this.channelTypeName = channelTypeName;
@@ -423,7 +448,10 @@ public class GetQualityResultResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * <p>The ID of the skill group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -431,7 +459,10 @@ public class GetQualityResultResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * <p>The name of the skill group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Automated skill group</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -439,7 +470,10 @@ public class GetQualityResultResponseBody extends TeaModel {
             }
 
             /**
-             * HitDetail.
+             * <p>The details of the quality inspection result, including the hit keywords and context chat information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder hitDetail(String hitDetail) {
                 this.hitDetail = hitDetail;
@@ -447,7 +481,10 @@ public class GetQualityResultResponseBody extends TeaModel {
             }
 
             /**
-             * HitStatus.
+             * <p>Indicates whether the rule is hit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder hitStatus(Boolean hitStatus) {
                 this.hitStatus = hitStatus;
@@ -455,7 +492,10 @@ public class GetQualityResultResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * <p>The name of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xspace commercial service</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -463,7 +503,10 @@ public class GetQualityResultResponseBody extends TeaModel {
             }
 
             /**
-             * MemberName.
+             * <p>The name of the member.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Anonymous member</p>
              */
             public Builder memberName(String memberName) {
                 this.memberName = memberName;
@@ -471,7 +514,10 @@ public class GetQualityResultResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The ID of the quality inspection task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15977801</p>
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;
@@ -479,7 +525,10 @@ public class GetQualityResultResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectName.
+             * <p>The name of the quality inspection task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Automated quality inspection task</p>
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -487,7 +536,10 @@ public class GetQualityResultResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * <p>The ID of the quality inspection rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5369</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -495,7 +547,10 @@ public class GetQualityResultResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * <p>The name of the quality inspection rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Automated quality inspection rule</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -503,7 +558,10 @@ public class GetQualityResultResponseBody extends TeaModel {
             }
 
             /**
-             * ServicerId.
+             * <p>The ID of the customer service representative.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>555555</p>
              */
             public Builder servicerId(String servicerId) {
                 this.servicerId = servicerId;
@@ -511,7 +569,10 @@ public class GetQualityResultResponseBody extends TeaModel {
             }
 
             /**
-             * ServicerName.
+             * <p>The name of the customer service representative.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Liu Test</p>
              */
             public Builder servicerName(String servicerName) {
                 this.servicerName = servicerName;
@@ -519,7 +580,10 @@ public class GetQualityResultResponseBody extends TeaModel {
             }
 
             /**
-             * TouchId.
+             * <p>The session ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20928756</p>
              */
             public Builder touchId(String touchId) {
                 this.touchId = touchId;
@@ -527,7 +591,10 @@ public class GetQualityResultResponseBody extends TeaModel {
             }
 
             /**
-             * TouchStartTime.
+             * <p>The start time of the session.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-11-26 12:11:06</p>
              */
             public Builder touchStartTime(String touchStartTime) {
                 this.touchStartTime = touchStartTime;
@@ -620,7 +687,10 @@ public class GetQualityResultResponseBody extends TeaModel {
             } 
 
             /**
-             * PageNo.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNo(Integer pageNo) {
                 this.pageNo = pageNo;
@@ -628,7 +698,10 @@ public class GetQualityResultResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -636,7 +709,7 @@ public class GetQualityResultResponseBody extends TeaModel {
             }
 
             /**
-             * QualityResultResponseList.
+             * <p>The list of data details.</p>
              */
             public Builder qualityResultResponseList(java.util.List<QualityResultResponseList> qualityResultResponseList) {
                 this.qualityResultResponseList = qualityResultResponseList;
@@ -644,7 +717,10 @@ public class GetQualityResultResponseBody extends TeaModel {
             }
 
             /**
-             * TotalNum.
+             * <p>The total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>84</p>
              */
             public Builder totalNum(Integer totalNum) {
                 this.totalNum = totalNum;

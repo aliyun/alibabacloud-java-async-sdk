@@ -237,6 +237,7 @@ public class EditQualityProjectRequest extends Request {
         } 
 
         /**
+         * <p>The list of quality inspection rules.</p>
          * <p>This parameter is required.</p>
          */
         public Builder analysisIds(java.util.List<Long> analysisIds) {
@@ -246,6 +247,7 @@ public class EditQualityProjectRequest extends Request {
         }
 
         /**
+         * <p>The list of session channels.</p>
          * <p>This parameter is required.</p>
          */
         public Builder channelTouchType(java.util.List<Integer> channelTouchType) {
@@ -255,7 +257,15 @@ public class EditQualityProjectRequest extends Request {
         }
 
         /**
+         * <p>The check frequency type. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Periodic quality inspection.</li>
+         * <li><strong>4</strong>: Temporary quality inspection.</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder checkFreqType(Integer checkFreqType) {
             this.putQueryParameter("CheckFreqType", checkFreqType);
@@ -264,7 +274,7 @@ public class EditQualityProjectRequest extends Request {
         }
 
         /**
-         * DepList.
+         * <p>The list of departments.</p>
          */
         public Builder depList(java.util.List<Long> depList) {
             this.putQueryParameter("DepList", depList);
@@ -273,7 +283,7 @@ public class EditQualityProjectRequest extends Request {
         }
 
         /**
-         * GroupList.
+         * <p>The list of skill groups.</p>
          */
         public Builder groupList(java.util.List<Long> groupList) {
             this.putQueryParameter("GroupList", groupList);
@@ -282,7 +292,11 @@ public class EditQualityProjectRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc_xp_pre***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -291,7 +305,11 @@ public class EditQualityProjectRequest extends Request {
         }
 
         /**
+         * <p>The Artificial Intelligence Cloud Call Service instance ID. You can obtain the ID from the Artificial Intelligence Cloud Call Service console.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -300,7 +318,11 @@ public class EditQualityProjectRequest extends Request {
         }
 
         /**
+         * <p>The name of the quality inspection task.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Automated quality inspection task</p>
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);
@@ -309,7 +331,11 @@ public class EditQualityProjectRequest extends Request {
         }
 
         /**
+         * <p>The version of the quality inspection task.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder projectVersion(Integer projectVersion) {
             this.putQueryParameter("ProjectVersion", projectVersion);
@@ -318,7 +344,16 @@ public class EditQualityProjectRequest extends Request {
         }
 
         /**
+         * <p>The quality inspection scope. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Instance (all skill groups).</li>
+         * <li><strong>2</strong>: Department or skill group list.</li>
+         * <li><strong>3</strong>: Customer service representative list.</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder scopeType(Integer scopeType) {
             this.putQueryParameter("ScopeType", scopeType);
@@ -327,7 +362,7 @@ public class EditQualityProjectRequest extends Request {
         }
 
         /**
-         * ServicerList.
+         * <p>The list of customer service representatives.</p>
          */
         public Builder servicerList(java.util.List<String> servicerList) {
             this.putQueryParameter("ServicerList", servicerList);
@@ -336,7 +371,10 @@ public class EditQualityProjectRequest extends Request {
         }
 
         /**
-         * TimeRangeEnd.
+         * <p>The end time of the temporary quality inspection session. The value is a timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1619425576000</p>
          */
         public Builder timeRangeEnd(String timeRangeEnd) {
             this.putQueryParameter("TimeRangeEnd", timeRangeEnd);
@@ -345,7 +383,10 @@ public class EditQualityProjectRequest extends Request {
         }
 
         /**
-         * TimeRangeStart.
+         * <p>The start time of the temporary quality inspection session. The value is a timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1619424556000</p>
          */
         public Builder timeRangeStart(String timeRangeStart) {
             this.putQueryParameter("TimeRangeStart", timeRangeStart);

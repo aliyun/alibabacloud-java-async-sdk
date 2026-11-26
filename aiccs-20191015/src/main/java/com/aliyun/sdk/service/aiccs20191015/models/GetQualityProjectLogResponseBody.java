@@ -106,7 +106,10 @@ public class GetQualityProjectLogResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code. A value of 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class GetQualityProjectLogResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The task logs of the quality inspection node.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class GetQualityProjectLogResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The description of the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class GetQualityProjectLogResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE338D98-9BD3-4413-B165</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class GetQualityProjectLogResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -243,7 +255,10 @@ public class GetQualityProjectLogResponseBody extends TeaModel {
             } 
 
             /**
-             * ActionData.
+             * <p>The execution data of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Sampling quality inspection details: Total number of eligible samples=0</p>
              */
             public Builder actionData(String actionData) {
                 this.actionData = actionData;
@@ -251,7 +266,10 @@ public class GetQualityProjectLogResponseBody extends TeaModel {
             }
 
             /**
-             * ActionTime.
+             * <p>The time when the task was executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-04-16 08:44:26</p>
              */
             public Builder actionTime(String actionTime) {
                 this.actionTime = actionTime;
@@ -259,7 +277,10 @@ public class GetQualityProjectLogResponseBody extends TeaModel {
             }
 
             /**
-             * ActionType.
+             * <p>The execution type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Sampling quality inspection</p>
              */
             public Builder actionType(String actionType) {
                 this.actionType = actionType;
@@ -267,7 +288,10 @@ public class GetQualityProjectLogResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectCreateTime.
+             * <p>The time when the quality inspection task was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-04-07 18:07:18</p>
              */
             public Builder projectCreateTime(String projectCreateTime) {
                 this.projectCreateTime = projectCreateTime;
@@ -275,7 +299,10 @@ public class GetQualityProjectLogResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The ID of the quality inspection task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15977801</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;

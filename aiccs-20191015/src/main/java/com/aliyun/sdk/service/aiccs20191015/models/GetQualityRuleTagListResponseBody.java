@@ -106,7 +106,10 @@ public class GetQualityRuleTagListResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code. A value of 200 indicates that the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class GetQualityRuleTagListResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The list of rule tags.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class GetQualityRuleTagListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The description of the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class GetQualityRuleTagListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE338D98-9BD3-4413-B165</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class GetQualityRuleTagListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -204,7 +216,10 @@ public class GetQualityRuleTagListResponseBody extends TeaModel {
             } 
 
             /**
-             * RuleTagId.
+             * <p>The ID of the rule tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>70</p>
              */
             public Builder ruleTagId(Long ruleTagId) {
                 this.ruleTagId = ruleTagId;
@@ -212,7 +227,10 @@ public class GetQualityRuleTagListResponseBody extends TeaModel {
             }
 
             /**
-             * RuleTagName.
+             * <p>The name of the rule tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Modify tag</p>
              */
             public Builder ruleTagName(String ruleTagName) {
                 this.ruleTagName = ruleTagName;

@@ -93,7 +93,7 @@ public class LlmFullDuplexCallOperateRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值</p>
+         * <p>Sample value</p>
          */
         public Builder callId(String callId) {
             this.putQueryParameter("CallId", callId);
@@ -102,11 +102,11 @@ public class LlmFullDuplexCallOperateRequest extends Request {
         }
 
         /**
-         * <p>The action command: play / flush / hangup / sendDtmf.</p>
+         * <p>The action command. Valid values: play, flush, hangup, and sendDtmf.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值</p>
+         * <p>Sample value</p>
          */
         public Builder command(String command) {
             this.putQueryParameter("Command", command);
@@ -115,10 +115,10 @@ public class LlmFullDuplexCallOperateRequest extends Request {
         }
 
         /**
-         * <p>The extension parameter, a JSON character string. The metric description for each command:</p>
+         * <p>The extension parameters in JSON character string format. Metric description for each command:</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>Sample value</p>
          */
         public Builder param(String param) {
             this.putQueryParameter("Param", param);

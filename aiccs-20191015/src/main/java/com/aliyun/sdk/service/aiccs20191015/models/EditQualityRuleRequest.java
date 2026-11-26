@@ -135,7 +135,11 @@ public class EditQualityRuleRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the AICCS instance. You can obtain the instance ID in the Artificial Intelligence Cloud Call Service console.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc_xp_pre***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -144,6 +148,7 @@ public class EditQualityRuleRequest extends Request {
         }
 
         /**
+         * <p>The list of keywords.</p>
          * <p>This parameter is required.</p>
          */
         public Builder keyWords(java.util.List<String> keyWords) {
@@ -153,7 +158,16 @@ public class EditQualityRuleRequest extends Request {
         }
 
         /**
+         * <p>The keyword match type. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Matches any keyword.</li>
+         * <li><strong>2</strong>: Matches all keywords.</li>
+         * <li><strong>3</strong>: Matches no keyword.</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder matchType(Integer matchType) {
             this.putBodyParameter("MatchType", matchType);
@@ -162,7 +176,11 @@ public class EditQualityRuleRequest extends Request {
         }
 
         /**
+         * <p>The name of the quality check rule.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Automated quality check rule</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -171,7 +189,11 @@ public class EditQualityRuleRequest extends Request {
         }
 
         /**
+         * <p>The ID of the quality check item rule.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5369</p>
          */
         public Builder qualityRuleId(Long qualityRuleId) {
             this.putBodyParameter("QualityRuleId", qualityRuleId);
@@ -180,7 +202,11 @@ public class EditQualityRuleRequest extends Request {
         }
 
         /**
+         * <p>The tag of the quality check rule.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>638</p>
          */
         public Builder ruleTag(Integer ruleTag) {
             this.putBodyParameter("RuleTag", ruleTag);

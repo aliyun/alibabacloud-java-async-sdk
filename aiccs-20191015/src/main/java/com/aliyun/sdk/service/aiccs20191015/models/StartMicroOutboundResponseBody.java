@@ -133,7 +133,7 @@ public class StartMicroOutboundResponseBody extends TeaModel {
          * <p>Customer information.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;caseId\&quot;:2323****}</p>
+         * <p>{&quot;caseId&quot;:2323****}</p>
          */
         public Builder customerInfo(String customerInfo) {
             this.customerInfo = customerInfo;

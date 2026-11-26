@@ -106,7 +106,7 @@ public class GetCustomerInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Status code.</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class GetCustomerInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Membership information.</p>
+         * <p>The member information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class GetCustomerInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Description of the status code.</p>
+         * <p>The description of the status code.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -136,7 +136,7 @@ public class GetCustomerInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>DF6A3FB7-A5AA-43BE-A65B</p>
@@ -147,7 +147,7 @@ public class GetCustomerInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the API call succeeded.</p>
+         * <p>Indicates whether the API call is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -268,7 +268,10 @@ public class GetCustomerInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Custom fields.</p>
+             * <p>The custom fields.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;test&quot;:&quot;test&quot;,&quot;test2&quot;:1}</p>
              */
             public Builder customizeFields(java.util.Map<String, ?> customizeFields) {
                 this.customizeFields = customizeFields;
@@ -276,10 +279,10 @@ public class GetCustomerInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Nickname.</p>
+             * <p>The nickname.</p>
              * 
              * <strong>example:</strong>
-             * <p>测试会员</p>
+             * <p>Test member</p>
              */
             public Builder nick(String nick) {
                 this.nick = nick;
@@ -287,7 +290,7 @@ public class GetCustomerInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>External ID.</p>
+             * <p>The external ID.</p>
              * 
              * <strong>example:</strong>
              * <p>6666666</p>
@@ -298,7 +301,7 @@ public class GetCustomerInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Profile picture.</p>
+             * <p>The profile picture.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTLSW7XPFlJDwVunXP8pr84TvltwtLlNqTlOVSFeM3bCgn57mAB4JuZZmvMW0qicqW0PyzyUdZpxiaFQ">https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTLSW7XPFlJDwVunXP8pr84TvltwtLlNqTlOVSFeM3bCgn57mAB4JuZZmvMW0qicqW0PyzyUdZpxiaFQ</a></p>
@@ -309,10 +312,10 @@ public class GetCustomerInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Real name.</p>
+             * <p>The real name.</p>
              * 
              * <strong>example:</strong>
-             * <p>刘测试</p>
+             * <p>Liu Test</p>
              */
             public Builder realName(String realName) {
                 this.realName = realName;
@@ -320,7 +323,7 @@ public class GetCustomerInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Membership ID.</p>
+             * <p>The member ID.</p>
              * 
              * <strong>example:</strong>
              * <p>823456789023</p>

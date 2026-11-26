@@ -106,7 +106,7 @@ public class GetNumLocationResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Status code. A return value of &quot;Success&quot; indicates that the request succeeded.</p>
+         * <p>The status code. A value of Success indicates that the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -117,10 +117,10 @@ public class GetNumLocationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Number归属地.</p>
+         * <p>The location of the phone number.</p>
          * 
          * <strong>example:</strong>
-         * <p>杭州</p>
+         * <p>Hangzhou</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -128,10 +128,10 @@ public class GetNumLocationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Description of the status code.</p>
+         * <p>The description of the status code.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxx</p>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -139,7 +139,7 @@ public class GetNumLocationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>EE338D98-9BD3-4413-B165</p>
@@ -150,10 +150,10 @@ public class GetNumLocationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the API call succeeded.</p>
+         * <p>Indicates whether the API call is successful.</p>
          * <ul>
-         * <li><strong>true</strong>: Succeeded.</li>
-         * <li><strong>false</strong>: Failed.</li>
+         * <li><strong>true</strong>: The call is successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

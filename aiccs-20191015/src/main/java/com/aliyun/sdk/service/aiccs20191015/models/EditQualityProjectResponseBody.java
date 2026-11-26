@@ -106,7 +106,10 @@ public class EditQualityProjectResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code. A value of 200 indicates that the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class EditQualityProjectResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The quality inspection task information.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class EditQualityProjectResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The status message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class EditQualityProjectResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE338D98-9BD3-4413-B165</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class EditQualityProjectResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -217,7 +229,10 @@ public class EditQualityProjectResponseBody extends TeaModel {
             } 
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc_xp_pre***</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -225,7 +240,10 @@ public class EditQualityProjectResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The quality inspection task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -233,7 +251,10 @@ public class EditQualityProjectResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The version of the quality inspection task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder version(Integer version) {
                 this.version = version;

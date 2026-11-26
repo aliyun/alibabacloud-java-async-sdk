@@ -648,7 +648,7 @@ public class AiccsSmartCallRequest extends Request {
         }
 
         /**
-         * <p>The dynamic extension ID reserved for the caller. This ID is returned in the callback URL for the caller\&quot;s development identifier.</p>
+         * <p>The dynamic extension ID reserved for the caller. This ID is returned in the callback URL for the caller&quot;s development identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>2234****</p>
@@ -894,7 +894,7 @@ public class AiccsSmartCallRequest extends Request {
          * <p>The TTS parameter string in JSON format. This parameter must correspond to the TTS parameters in VoiceCode.</p>
          * 
          * <strong>example:</strong>
-         * <p>&quot;{\&quot;name\&quot;:\&quot;Hello\&quot;}&quot;</p>
+         * <p>&quot;{&quot;name&quot;:&quot;Hello&quot;}&quot;</p>
          */
         public Builder voiceCodeParam(String voiceCodeParam) {
             this.putQueryParameter("VoiceCodeParam", voiceCodeParam);

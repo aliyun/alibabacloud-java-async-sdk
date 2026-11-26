@@ -119,7 +119,7 @@ public class PageQueryAgentListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The detailed reason why access was denied.</p>
+         * <p>The detailed reason for access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>Access Denied</p>
@@ -152,7 +152,7 @@ public class PageQueryAgentListResponseBody extends TeaModel {
          * <p>The status code description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Succeeded</p>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -171,7 +171,7 @@ public class PageQueryAgentListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <p>Specifies whether the API call is successful. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: Successful.</li>
          * <li><strong>false</strong>: Failed.</li>
@@ -401,7 +401,7 @@ public class PageQueryAgentListResponseBody extends TeaModel {
              * <p>The agent name.</p>
              * 
              * <strong>example:</strong>
-             * <p>TestAgent</p>
+             * <p>Test agent</p>
              */
             public Builder agentName(String agentName) {
                 this.agentName = agentName;
@@ -423,7 +423,7 @@ public class PageQueryAgentListResponseBody extends TeaModel {
              * <p>The reason for review failure.</p>
              * 
              * <strong>example:</strong>
-             * <p>Provide additional process description</p>
+             * <p>Please provide the process description</p>
              */
             public Builder auditReason(String auditReason) {
                 this.auditReason = auditReason;
@@ -445,7 +445,7 @@ public class PageQueryAgentListResponseBody extends TeaModel {
              * <p>The business scenario name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Personal customer lead conversion</p>
+             * <p>Individual customer lead conversion</p>
              */
             public Builder businessTypeName(String businessTypeName) {
                 this.businessTypeName = businessTypeName;
@@ -453,7 +453,7 @@ public class PageQueryAgentListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time, in the format of YYYY-MM-DD HH:mm:ss.</p>
+             * <p>The creation time. Format: YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-10-28 17:10:17</p>
@@ -475,7 +475,7 @@ public class PageQueryAgentListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The most recent online time, in the format of YYYY-MM-DD HH:mm:ss.</p>
+             * <p>The last online time. Format: YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-10-28 14:38:15</p>
@@ -486,7 +486,7 @@ public class PageQueryAgentListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The most recent modification time, in the format of YYYY-MM-DD HH:mm:ss.</p>
+             * <p>The last modification time. Format: YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-10-28 17:10:17</p>
@@ -508,7 +508,14 @@ public class PageQueryAgentListResponseBody extends TeaModel {
             }
 
             /**
-             * WithActivePrompt.
+             * <p>Specifies whether the agent has an active prompt. Valid values:</p>
+             * <ul>
+             * <li>true: Active.</li>
+             * <li>false: Inactive.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder withActivePrompt(Boolean withActivePrompt) {
                 this.withActivePrompt = withActivePrompt;
@@ -516,7 +523,7 @@ public class PageQueryAgentListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the agent has been configured.</p>
+             * <p>Specifies whether the agent has been configured.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -612,7 +619,7 @@ public class PageQueryAgentListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of agent data.</p>
+             * <p>The list of agents.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -631,7 +638,7 @@ public class PageQueryAgentListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page size.</p>
+             * <p>The number of entries per page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>

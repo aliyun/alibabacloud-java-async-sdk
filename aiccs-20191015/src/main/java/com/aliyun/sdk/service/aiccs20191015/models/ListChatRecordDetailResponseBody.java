@@ -119,7 +119,7 @@ public class ListChatRecordDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Status code. A return value of 200 indicates that the request succeeded.</p>
+         * <p>The status code. A value of 200 indicates that the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -130,7 +130,7 @@ public class ListChatRecordDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>HTTP status code.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -141,10 +141,10 @@ public class ListChatRecordDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Description of the status code.</p>
+         * <p>The description of the status code.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxx</p>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -152,7 +152,7 @@ public class ListChatRecordDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>EE338D98-9BD3-4413-B165</p>
@@ -163,7 +163,7 @@ public class ListChatRecordDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returned data.</p>
+         * <p>The returned data.</p>
          */
         public Builder resultData(ResultData resultData) {
             this.resultData = resultData;
@@ -171,7 +171,7 @@ public class ListChatRecordDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the API call succeeded.</p>
+         * <p>Indicates whether the API call is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -282,7 +282,7 @@ public class ListChatRecordDetailResponseBody extends TeaModel {
              * <p>The content of the sent message.</p>
              * 
              * <strong>example:</strong>
-             * <p>你好</p>
+             * <p>Hello</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -301,7 +301,7 @@ public class ListChatRecordDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Message type.</p>
+             * <p>The message type.</p>
              * 
              * <strong>example:</strong>
              * <p>MSG</p>
@@ -323,10 +323,10 @@ public class ListChatRecordDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of sender. Valid values:</p>
+             * <p>The type of the sender. Valid values:</p>
              * <ul>
-             * <li><strong>1</strong>: Membership</li>
-             * <li><strong>2</strong>: Customer service</li>
+             * <li><strong>1</strong>: customer.</li>
+             * <li><strong>2</strong>: customer service representative.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -423,7 +423,7 @@ public class ListChatRecordDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Online End Time.</p>
+             * <p>The end time of the online session.</p>
              * 
              * <strong>example:</strong>
              * <p>1614578410000</p>
@@ -434,7 +434,7 @@ public class ListChatRecordDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A list of detailed online session information.</p>
+             * <p>The list of online session details.</p>
              */
             public Builder messageList(java.util.List<MessageList> messageList) {
                 this.messageList = messageList;
@@ -442,7 +442,7 @@ public class ListChatRecordDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Servicer Account</p>
+             * <p>The account of the customer service representative.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="mailto:123@123.com">123@123.com</a></p>
@@ -562,7 +562,7 @@ public class ListChatRecordDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Current page number.</p>
+             * <p>The current page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -573,7 +573,7 @@ public class ListChatRecordDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Query result data.</p>
+             * <p>The query result.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -581,7 +581,7 @@ public class ListChatRecordDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Page size</p>
+             * <p>The number of entries per page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -592,7 +592,7 @@ public class ListChatRecordDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Total number of pages.</p>
+             * <p>The total number of pages.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -603,7 +603,7 @@ public class ListChatRecordDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Total number of records.</p>
+             * <p>The total number of records.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

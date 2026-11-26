@@ -90,7 +90,11 @@ public class ChangeQualityProjectStatusRequest extends Request {
         } 
 
         /**
+         * <p>Instance ID of the AICCS instance. You can obtain instance ID from the Artificial Intelligence Cloud Call Service console.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc_xp_pre***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -99,7 +103,11 @@ public class ChangeQualityProjectStatusRequest extends Request {
         }
 
         /**
+         * <p>The ID of the quality inspection task.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -108,7 +116,15 @@ public class ChangeQualityProjectStatusRequest extends Request {
         }
 
         /**
+         * <p>The status of the quality inspection task. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Start.</li>
+         * <li><strong>1</strong>: Stop.</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

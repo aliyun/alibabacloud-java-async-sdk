@@ -119,7 +119,7 @@ public class SubmitAudioNoteResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The detailed reason why access is denied.</p>
+         * <p>The details of the access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -130,7 +130,7 @@ public class SubmitAudioNoteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request status code.</p>
+         * <p>The status code of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -141,7 +141,7 @@ public class SubmitAudioNoteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The recording notes task ID returned after successful submission. This value corresponds to the CallId in the subsequent asynchronous notes result callback.</p>
+         * <p>The ID of the audio note task returned after a successful submission, which is the CallId in the subsequent asynchronous audio note result callback.</p>
          * 
          * <strong>example:</strong>
          * <p>100000000000000001_100000000000000002</p>
@@ -155,7 +155,7 @@ public class SubmitAudioNoteResponseBody extends TeaModel {
          * <p>The description of the status code.</p>
          * 
          * <strong>example:</strong>
-         * <p>成功</p>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -163,7 +163,7 @@ public class SubmitAudioNoteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>12345678-1234-1234-1234-123456789012</p>
@@ -174,7 +174,7 @@ public class SubmitAudioNoteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the API call is successful.</p>
+         * <p>Indicates whether the API operation was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

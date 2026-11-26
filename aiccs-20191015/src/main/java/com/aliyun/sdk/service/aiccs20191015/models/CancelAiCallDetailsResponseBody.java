@@ -119,7 +119,7 @@ public class CancelAiCallDetailsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The detailed reason why the access was denied.</p>
+         * <p>The details of the access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -149,10 +149,10 @@ public class CancelAiCallDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned for the request.</p>
+         * <p>The description of the status code.</p>
          * 
          * <strong>example:</strong>
-         * <p>成功</p>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -171,12 +171,10 @@ public class CancelAiCallDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the operation was called successfully. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: The request succeeded.</p>
-         * </li>
-         * <li><p><strong>false</strong>: The request failed.</p>
-         * </li>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -285,7 +283,7 @@ public class CancelAiCallDetailsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of calls that could not be canceled.</p>
+             * <p>The number of unsuccessful cancellations.</p>
              * 
              * <strong>example:</strong>
              * <p>75</p>
@@ -296,11 +294,11 @@ public class CancelAiCallDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Details about the failed cancellations. This is a map where the key is the failed detail ID or phone number, and the value is the reason for the failure.</p>
+             * <p>The details of failed cancellations. This parameter is a map where the key is the ID or phone number of the failed detail record, and the value is the reason for the failure.</p>
              * 
              * <strong>example:</strong>
              * <p>{
-             *   &quot;176********&quot;: &quot;明细记录当前状态不可取消&quot;
+             *   &quot;176********&quot;: &quot;The detail record cannot be canceled in its current state&quot;
              * }</p>
              */
             public Builder failedDetails(java.util.Map<String, ?> failedDetails) {
@@ -309,14 +307,11 @@ public class CancelAiCallDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The result code of the cancellation. Valid values:</p>
+             * <p>The cancellation result. Valid values:</p>
              * <ul>
-             * <li><p>ALL_FAILED: All cancellations failed.</p>
-             * </li>
-             * <li><p>ALL_SUCCEED: All cancellations succeeded.</p>
-             * </li>
-             * <li><p>PART_FAILED: Some cancellations failed.</p>
-             * </li>
+             * <li>ALL_FAILED: All cancellations failed.</li>
+             * <li>ALL_SUCCEED: All cancellations succeeded.</li>
+             * <li>PART_FAILED: Some cancellations failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -328,7 +323,7 @@ public class CancelAiCallDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of calls that were successfully canceled.</p>
+             * <p>The number of successful cancellations.</p>
              * 
              * <strong>example:</strong>
              * <p>81</p>
@@ -339,7 +334,7 @@ public class CancelAiCallDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of items.</p>
+             * <p>The total count.</p>
              * 
              * <strong>example:</strong>
              * <p>50</p>

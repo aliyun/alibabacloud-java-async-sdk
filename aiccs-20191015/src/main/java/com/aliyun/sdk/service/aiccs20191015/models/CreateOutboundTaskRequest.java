@@ -296,7 +296,11 @@ public class CreateOutboundTaskRequest extends Request {
         } 
 
         /**
+         * <p>The calling number.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>130****1111</p>
          */
         public Builder ani(String ani) {
             this.putQueryParameter("Ani", ani);
@@ -305,7 +309,10 @@ public class CreateOutboundTaskRequest extends Request {
         }
 
         /**
-         * CallInfos.
+         * <p>The call information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;dnis&quot;:&quot;1&quot;,&quot;memberId&quot;:1133,&quot;memberName&quot;:&quot;Test member&quot;,&quot;priority&quot;:10}]</p>
          */
         public Builder callInfos(String callInfos) {
             this.putQueryParameter("CallInfos", callInfos);
@@ -314,7 +321,10 @@ public class CreateOutboundTaskRequest extends Request {
         }
 
         /**
-         * DepartmentId.
+         * <p>The department ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder departmentId(Long departmentId) {
             this.putQueryParameter("DepartmentId", departmentId);
@@ -323,7 +333,10 @@ public class CreateOutboundTaskRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The task description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test task description</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -332,7 +345,11 @@ public class CreateOutboundTaskRequest extends Request {
         }
 
         /**
+         * <p>The end date of the task execution. The maximum time span between the start time and the end time is 7 days.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-08-09</p>
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -341,7 +358,11 @@ public class CreateOutboundTaskRequest extends Request {
         }
 
         /**
+         * <p>The end time of the task execution.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23:00:00</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -350,7 +371,10 @@ public class CreateOutboundTaskRequest extends Request {
         }
 
         /**
-         * ExtAttrs.
+         * <p>The extended attributes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;remark&quot;:&quot;Outbound call test&quot;}</p>
          */
         public Builder extAttrs(String extAttrs) {
             this.putQueryParameter("ExtAttrs", extAttrs);
@@ -359,7 +383,10 @@ public class CreateOutboundTaskRequest extends Request {
         }
 
         /**
-         * GroupName.
+         * <p>The name of the skill group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test skill group</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -368,7 +395,11 @@ public class CreateOutboundTaskRequest extends Request {
         }
 
         /**
+         * <p>Instance ID of the AICCS instance. You can obtain instance ID from the Artificial Intelligence Cloud Call Service console.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc_xp_pre***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -377,7 +408,10 @@ public class CreateOutboundTaskRequest extends Request {
         }
 
         /**
-         * Model.
+         * <p>The model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder model(Integer model) {
             this.putQueryParameter("Model", model);
@@ -386,7 +420,13 @@ public class CreateOutboundTaskRequest extends Request {
         }
 
         /**
-         * RetryInterval.
+         * <p>The retry interval for unanswered calls. Unit: minutes.</p>
+         * <blockquote>
+         * <p>The default value is empty. If the number of retries is greater than 0, this parameter is required. The minimum time granularity is minutes, and the maximum value can be set to 48 hours.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder retryInterval(Integer retryInterval) {
             this.putQueryParameter("RetryInterval", retryInterval);
@@ -395,7 +435,10 @@ public class CreateOutboundTaskRequest extends Request {
         }
 
         /**
-         * RetryTime.
+         * <p>The number of retries for unanswered calls. Default value: <strong>0</strong>. Maximum value: <strong>3</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder retryTime(Integer retryTime) {
             this.putQueryParameter("RetryTime", retryTime);
@@ -404,7 +447,11 @@ public class CreateOutboundTaskRequest extends Request {
         }
 
         /**
+         * <p>The ID of the skill group.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder skillGroup(Long skillGroup) {
             this.putQueryParameter("SkillGroup", skillGroup);
@@ -413,7 +460,11 @@ public class CreateOutboundTaskRequest extends Request {
         }
 
         /**
+         * <p>The start date of the task execution. The maximum time span between the start time and the end time is 7 days.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-08-08</p>
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);
@@ -422,7 +473,11 @@ public class CreateOutboundTaskRequest extends Request {
         }
 
         /**
+         * <p>The start time of the task execution.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>09:09:09</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -431,7 +486,11 @@ public class CreateOutboundTaskRequest extends Request {
         }
 
         /**
+         * <p>The task name.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test task</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);
@@ -440,7 +499,16 @@ public class CreateOutboundTaskRequest extends Request {
         }
 
         /**
+         * <p>The task type. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: PREVIEW (preview)</li>
+         * <li><strong>2</strong>: FORECAST (forecast)</li>
+         * <li><strong>3</strong>: ROBOT (robot)</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder taskType(Integer taskType) {
             this.putQueryParameter("TaskType", taskType);

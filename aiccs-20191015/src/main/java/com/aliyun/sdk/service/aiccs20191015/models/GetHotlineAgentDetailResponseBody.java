@@ -119,7 +119,7 @@ public class GetHotlineAgentDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Status code.</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -130,7 +130,7 @@ public class GetHotlineAgentDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Agent service data.</p>
+         * <p>The agent service data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -138,7 +138,7 @@ public class GetHotlineAgentDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>HTTP status code.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -149,7 +149,7 @@ public class GetHotlineAgentDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Description of the status code.</p>
+         * <p>The description of the status code.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -160,7 +160,7 @@ public class GetHotlineAgentDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>EE338D98-9BD3-4413-B165</p>
@@ -171,10 +171,10 @@ public class GetHotlineAgentDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the API call succeeded. Valid values:</p>
+         * <p>Indicates whether the API call is successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Succeeded.</li>
-         * <li><strong>false</strong>: Failed.</li>
+         * <li><strong>true</strong>: successful</li>
+         * <li><strong>false</strong>: failed</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -309,7 +309,7 @@ public class GetHotlineAgentDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Agent ID.</p>
+             * <p>The agent ID.</p>
              * 
              * <strong>example:</strong>
              * <p>2235****</p>
@@ -320,7 +320,7 @@ public class GetHotlineAgentDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Agent status. Valid values: <strong>1~6</strong>.</p>
+             * <p>The agent status. Valid values: <strong>1</strong> to <strong>6</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -331,13 +331,13 @@ public class GetHotlineAgentDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Agent status code. Valid values:  </p>
+             * <p>The agent status code. Valid values:</p>
              * <ul>
-             * <li><strong>AgentCheckout</strong>: Agent logged off.  </li>
-             * <li><strong>AgentReady</strong>: Agent idle.  </li>
-             * <li><strong>AgentBreak</strong>: Agent on break.  </li>
-             * <li><strong>AgentAcw</strong>: Post-processing after a call.  </li>
-             * <li><strong>AgentBusyForCall</strong>: In a call.</li>
+             * <li><strong>AgentCheckout</strong>: off duty</li>
+             * <li><strong>AgentReady</strong>: idle</li>
+             * <li><strong>AgentBreak</strong>: on break</li>
+             * <li><strong>AgentAcw</strong>: in after-call work</li>
+             * <li><strong>AgentBusyForCall</strong>: on a call</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -349,7 +349,11 @@ public class GetHotlineAgentDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the agent is assigned. Valid values:<br><strong>false</strong>: Not assigned (no call).<br><strong>true</strong>: Assigned (in a call).</p>
+             * <p>Indicates whether the agent is assigned. Valid values:</p>
+             * <ul>
+             * <li><strong>false</strong>: not assigned (no active calls)</li>
+             * <li><strong>true</strong>: assigned (active calls)</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -360,13 +364,13 @@ public class GetHotlineAgentDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Break type. Valid values:  </p>
+             * <p>The break type. Valid values: </p>
              * <ul>
-             * <li><strong>1</strong>: Short break.  </li>
-             * <li><strong>2</strong>: Meal break.  </li>
-             * <li><strong>3</strong>: Meeting.  </li>
-             * <li><strong>4</strong>: Coaching.  </li>
-             * <li><strong>5</strong>: Training.</li>
+             * <li><strong>1</strong>: break</li>
+             * <li><strong>2</strong>: meal</li>
+             * <li><strong>3</strong>: meeting</li>
+             * <li><strong>4</strong>: coaching</li>
+             * <li><strong>5</strong>: training</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -378,10 +382,10 @@ public class GetHotlineAgentDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Tenant ID to which the agent belongs, corresponding to the instance ID in the input parameter.</p>
+             * <p>The ID of the tenant to which the agent belongs. This ID corresponds to the instance ID in the request parameters.</p>
              * 
              * <strong>example:</strong>
-             * <p>ccc_xp_pre-cn-***</p>
+             * <p>205282</p>
              */
             public Builder tenantId(Long tenantId) {
                 this.tenantId = tenantId;
@@ -389,7 +393,7 @@ public class GetHotlineAgentDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Heartbeat signature.</p>
+             * <p>The heartbeat signature.</p>
              * 
              * <strong>example:</strong>
              * <p>dnthF_oinHg7JMJDmKqex3Ux****</p>

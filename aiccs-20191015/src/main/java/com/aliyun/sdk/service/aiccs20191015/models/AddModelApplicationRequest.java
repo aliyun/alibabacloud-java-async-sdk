@@ -389,7 +389,7 @@ public class AddModelApplicationRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>TestApplication</p>
+         * <p>Test application</p>
          */
         public Builder applicationName(String applicationName) {
             this.putQueryParameter("ApplicationName", applicationName);
@@ -398,7 +398,7 @@ public class AddModelApplicationRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable call-connected event push. Disabled by default.</p>
+         * <p>Specifies whether to enable push notifications for call connected events. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -410,10 +410,10 @@ public class AddModelApplicationRequest extends Request {
         }
 
         /**
-         * <p>The scenario name.</p>
+         * <p>The name of the scenario.</p>
          * 
          * <strong>example:</strong>
-         * <p>TestScenario</p>
+         * <p>Test scenario</p>
          */
         public Builder dyvmsSceneName(String dyvmsSceneName) {
             this.putQueryParameter("DyvmsSceneName", dyvmsSceneName);
@@ -422,7 +422,7 @@ public class AddModelApplicationRequest extends Request {
         }
 
         /**
-         * <p>The model code.</p>
+         * <p>The code of the model.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -435,7 +435,7 @@ public class AddModelApplicationRequest extends Request {
         }
 
         /**
-         * <p>The model version.</p>
+         * <p>The version of the model.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -447,7 +447,7 @@ public class AddModelApplicationRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the first mute event triggers the model.</p>
+         * <p>Specifies whether to trigger the model upon the first mute event.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -471,7 +471,7 @@ public class AddModelApplicationRequest extends Request {
         }
 
         /**
-         * <p>The number of consecutive mute events before the system proactively hangs up the call.</p>
+         * <p>The number of consecutive mute events required to actively hang up the call.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -504,7 +504,7 @@ public class AddModelApplicationRequest extends Request {
         }
 
         /**
-         * <p>The qualification ID.</p>
+         * <p>The ID of the qualification.</p>
          * 
          * <strong>example:</strong>
          * <p>85</p>
@@ -516,10 +516,10 @@ public class AddModelApplicationRequest extends Request {
         }
 
         /**
-         * <p>The qualification name.</p>
+         * <p>The name of the qualification.</p>
          * 
          * <strong>example:</strong>
-         * <p>TestQualification</p>
+         * <p>Test qualification</p>
          */
         public Builder qualificationName(String qualificationName) {
             this.putQueryParameter("QualificationName", qualificationName);
@@ -528,7 +528,7 @@ public class AddModelApplicationRequest extends Request {
         }
 
         /**
-         * <p>The URL of the recorded audio file for the opening statement. This parameter is required when the opening statement type is set to 1.</p>
+         * <p>The URL of the audio recording file for the opening remark. This parameter is required when the opening remark type is set to 1.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://xxxxxxxx.wav">https://xxxxxxxx.wav</a></p>
@@ -570,7 +570,7 @@ public class AddModelApplicationRequest extends Request {
         }
 
         /**
-         * <p>The speech script content.</p>
+         * <p>The content of the speech script.</p>
          * 
          * <strong>example:</strong>
          * <p>Test speech script</p>
@@ -582,7 +582,7 @@ public class AddModelApplicationRequest extends Request {
         }
 
         /**
-         * <p>The speech script ID.</p>
+         * <p>The ID of the speech script.</p>
          * 
          * <strong>example:</strong>
          * <p>88</p>
@@ -594,11 +594,11 @@ public class AddModelApplicationRequest extends Request {
         }
 
         /**
-         * <p>The opening statement.</p>
+         * <p>The opening remark.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>Hello, this is an opening statement</p>
+         * <p>Hello, this is an opening remark</p>
          */
         public Builder startWord(String startWord) {
             this.putQueryParameter("StartWord", startWord);
@@ -607,7 +607,7 @@ public class AddModelApplicationRequest extends Request {
         }
 
         /**
-         * <p>The type of the opening statement.</p>
+         * <p>The type of the opening remark.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -619,7 +619,7 @@ public class AddModelApplicationRequest extends Request {
         }
 
         /**
-         * <p>The text-to-speech (TTS) configuration, including voice, volume, and speed.</p>
+         * <p>The text-to-speech (TTS) configuration, including the voice, volume, and speed.</p>
          * <p>This parameter is required.</p>
          */
         public Builder ttsConfig(TtsConfig ttsConfig) {
@@ -630,10 +630,10 @@ public class AddModelApplicationRequest extends Request {
         }
 
         /**
-         * <p>The usage description.</p>
+         * <p>The usage.</p>
          * 
          * <strong>example:</strong>
-         * <p>TestUsage</p>
+         * <p>Test usage</p>
          */
         public Builder usageDesc(String usageDesc) {
             this.putQueryParameter("UsageDesc", usageDesc);
@@ -831,7 +831,7 @@ public class AddModelApplicationRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to enable background sound.</p>
+             * <p>Specifies whether to enable background music.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -842,7 +842,7 @@ public class AddModelApplicationRequest extends Request {
             }
 
             /**
-             * <p>The background sound ID.</p>
+             * <p>The ID of the background music.</p>
              * 
              * <strong>example:</strong>
              * <p>111</p>
@@ -853,7 +853,7 @@ public class AddModelApplicationRequest extends Request {
             }
 
             /**
-             * <p>The background sound volume.</p>
+             * <p>The volume of the background music.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -864,7 +864,7 @@ public class AddModelApplicationRequest extends Request {
             }
 
             /**
-             * <p>The account ID.</p>
+             * <p>The ID of the account.</p>
              * 
              * <strong>example:</strong>
              * <p>45</p>
@@ -886,7 +886,7 @@ public class AddModelApplicationRequest extends Request {
             }
 
             /**
-             * <p>The mixing template ID.</p>
+             * <p>The ID of the audio mixing template.</p>
              * 
              * <strong>example:</strong>
              * <p>111</p>
@@ -897,7 +897,7 @@ public class AddModelApplicationRequest extends Request {
             }
 
             /**
-             * <p>The resource ID.</p>
+             * <p>The ID of the resource.</p>
              * 
              * <strong>example:</strong>
              * <p>example</p>
@@ -908,7 +908,7 @@ public class AddModelApplicationRequest extends Request {
             }
 
             /**
-             * <p>The speed for TTS variable playback. Valid values: -200 to 200. Default value: 0.</p>
+             * <p>The speed of the TTS playback. Valid values: -200 to 200. Default value: 0.</p>
              * 
              * <strong>example:</strong>
              * <p>13</p>
@@ -919,10 +919,10 @@ public class AddModelApplicationRequest extends Request {
             }
 
             /**
-             * <p>The voice style.</p>
+             * <p>The style of the voice.</p>
              * 
              * <strong>example:</strong>
-             * <p>龙小夏</p>
+             * <p>Long Xiaoxia</p>
              */
             public Builder ttsStyle(String ttsStyle) {
                 this.ttsStyle = ttsStyle;
@@ -930,7 +930,7 @@ public class AddModelApplicationRequest extends Request {
             }
 
             /**
-             * <p>The volume for TTS variable playback. Valid values: 0 to 100. Default value: 0.</p>
+             * <p>The volume of the TTS playback. Valid values: 0 to 100. Default value: 0.</p>
              * 
              * <strong>example:</strong>
              * <p>55</p>
@@ -941,7 +941,7 @@ public class AddModelApplicationRequest extends Request {
             }
 
             /**
-             * <p>The voice code.</p>
+             * <p>The code of the voice.</p>
              * 
              * <strong>example:</strong>
              * <p>ddddfd</p>
@@ -952,12 +952,11 @@ public class AddModelApplicationRequest extends Request {
             }
 
             /**
-             * <p>The voice type. Valid values:</p>
-             * <ul>
-             * <li>SYSTEM: system voice.</li>
-             * <li>COSYCLONE: cloned voice.</li>
-             * <li>BL-CUSTOM: custom premium cloned voice.</li>
-             * </ul>
+             * <p>The type of the voice. Valid values:</p>
+             * <pre><code>SYSTEM: system voice
+             * COSYCLONE: cloned voice
+             * BL-CUSTOM: custom premium cloned voice
+             * </code></pre>
              * 
              * <strong>example:</strong>
              * <p>SYSTEM</p>

@@ -75,7 +75,11 @@ public class GetAgentByIdRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the agent.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder agentId(Long agentId) {
             this.putBodyParameter("AgentId", agentId);
@@ -84,7 +88,11 @@ public class GetAgentByIdRequest extends Request {
         }
 
         /**
+         * <p>Instance ID of the AICCS instance. You can obtain instance ID from the Artificial Intelligence Cloud Call Service console.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc_xp_pre-cn-***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);

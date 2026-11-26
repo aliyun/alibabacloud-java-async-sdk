@@ -75,7 +75,11 @@ public class DeleteOutboundTaskRequest extends Request {
         } 
 
         /**
+         * <p>Instance ID of the Artificial Intelligence Cloud Call Service (AICCS) instance. You can obtain instance ID from the AICCS console.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc_xp_pre***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -84,7 +88,11 @@ public class DeleteOutboundTaskRequest extends Request {
         }
 
         /**
+         * <p>The ID of the outbound task.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120001</p>
          */
         public Builder outboundTaskId(Long outboundTaskId) {
             this.putQueryParameter("OutboundTaskId", outboundTaskId);

@@ -106,7 +106,7 @@ public class CancelTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Request status code. A value of OK indicates that the request succeeded.</p>
+         * <p>The status code of the request. A value of OK indicates that the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -117,9 +117,9 @@ public class CancelTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the operation succeeded. Valid values:</p>
+         * <p>Indicates whether the operation is successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Succeeded.</li>
+         * <li><strong>true</strong>: Successful.</li>
          * <li><strong>false</strong>: Failed.</li>
          * </ul>
          * 
@@ -132,7 +132,7 @@ public class CancelTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Description of the status code.</p>
+         * <p>The status code description.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -143,7 +143,7 @@ public class CancelTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>D9CB3933-9FE3-4870-BA8E-2BEE91B69D23</p>
@@ -154,9 +154,9 @@ public class CancelTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the API was invoked successfully. Valid values:</p>
+         * <p>Indicates whether the API operation is called successfully. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Succeeded.</li>
+         * <li><strong>true</strong>: Successful.</li>
          * <li><strong>false</strong>: Failed.</li>
          * </ul>
          * 

@@ -74,7 +74,11 @@ public class GetQualityProjectLogRequest extends Request {
         } 
 
         /**
+         * <p>Instance ID of the AICCS instance. You can obtain instance ID in the Instances section of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc_xp_pre***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -83,7 +87,10 @@ public class GetQualityProjectLogRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The ID of the quality inspection task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15977801</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);

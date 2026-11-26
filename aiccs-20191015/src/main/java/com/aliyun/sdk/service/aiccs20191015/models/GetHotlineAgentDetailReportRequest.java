@@ -169,7 +169,7 @@ public class GetHotlineAgentDetailReportRequest extends Request {
         }
 
         /**
-         * <p>The UNIX timestamp of the end date. Unit: milliseconds.</p>
+         * <p>The end date timestamp. Unit: milliseconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,8 +191,8 @@ public class GetHotlineAgentDetailReportRequest extends Request {
         }
 
         /**
-         * <p>The Artificial Intelligence Cloud Call Service (AICCS) instance ID.</p>
-         * <p>You can obtain it from <strong>Instance Management</strong> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
+         * <p>The AICCS instance ID.
+         * You can obtain the instance ID in the <b>Instances</b> section of the left-side navigation pane in the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -217,7 +217,7 @@ public class GetHotlineAgentDetailReportRequest extends Request {
         }
 
         /**
-         * <p>The UNIX timestamp of the start date. Unit: milliseconds.</p>
+         * <p>The start date timestamp. Unit: milliseconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

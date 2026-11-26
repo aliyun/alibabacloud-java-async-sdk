@@ -119,7 +119,7 @@ public class CreateAiCallTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The detailed reason for the access denial.</p>
+         * <p>The detailed reasons for access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -152,10 +152,10 @@ public class CreateAiCallTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The description of the status code.</p>
+         * <p>The status code description.</p>
          * 
          * <strong>example:</strong>
-         * <p>OK</p>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;

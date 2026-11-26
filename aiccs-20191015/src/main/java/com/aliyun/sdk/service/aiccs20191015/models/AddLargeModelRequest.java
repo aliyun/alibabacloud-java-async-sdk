@@ -197,7 +197,7 @@ public class AddLargeModelRequest extends Request {
         }
 
         /**
-         * <p>The base model.</p>
+         * <p>The foundation model.</p>
          */
         public Builder baseModel(java.util.List<String> baseModel) {
             String baseModelShrink = shrink(baseModel, "BaseModel", "json");
@@ -270,7 +270,7 @@ public class AddLargeModelRequest extends Request {
         }
 
         /**
-         * <p>The <code>top-k</code> value.</p>
+         * <p>topK</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -282,7 +282,7 @@ public class AddLargeModelRequest extends Request {
         }
 
         /**
-         * <p>The <code>top-p</code> value.</p>
+         * <p>topP</p>
          * 
          * <strong>example:</strong>
          * <p>0.1</p>

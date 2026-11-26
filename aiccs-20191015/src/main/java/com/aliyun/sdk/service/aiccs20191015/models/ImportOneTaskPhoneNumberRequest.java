@@ -173,7 +173,16 @@ public class ImportOneTaskPhoneNumberRequest extends Request {
         } 
 
         /**
-         * EncryptionType.
+         * <p>The encryption method. Valid values:</p>
+         * <ul>
+         * <li>0: no encryption</li>
+         * <li>1: MD5</li>
+         * <li>2: SHA256</li>
+         * <li>3: SM3</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>81</p>
          */
         public Builder encryptionType(Long encryptionType) {
             this.putQueryParameter("EncryptionType", encryptionType);
@@ -185,7 +194,7 @@ public class ImportOneTaskPhoneNumberRequest extends Request {
          * <p>The extension number.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p>SampleValueSampleValueSampleValue</p>
          */
         public Builder extension(String extension) {
             this.putQueryParameter("Extension", extension);
@@ -194,7 +203,7 @@ public class ImportOneTaskPhoneNumberRequest extends Request {
         }
 
         /**
-         * <p>The external serial number. We recommend that you use a unique ID. The value cannot exceed 128 characters.</p>
+         * <p>The external serial number. Use a unique ID. The value cannot exceed 128 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>94ba739b-xxxx-ef91-335d-4be006c34899</p>
@@ -259,17 +268,16 @@ public class ImportOneTaskPhoneNumberRequest extends Request {
         }
 
         /**
-         * <p>The variable list in Map format.</p>
+         * <p>The list of variables in map format.</p>
          * <blockquote>
-         * <p>Variable format for engine-based voice call tasks:</p>
+         * <p>Variable format for engine call tasks</p>
          * <ul>
-         * <li>{&quot;startWordParam.VariableKey1&quot;:&quot;VariableValue1&quot;,&quot;promptParam.VariableKey2&quot;:&quot;VariableValue2&quot;,&quot;bizParam.VariableKey3&quot;:&quot;VariableValue3&quot;}</li>
+         * <li>{&quot;startWordParam.variableKey1&quot;:&quot;variableValue1&quot;,&quot;promptParam.variableKey2&quot;:&quot;variableValue2&quot;,&quot;bizParam.variableKey3&quot;:&quot;variableValue3&quot;}</li>
          * </ul>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;VariableKey1&quot;:&quot;VariableValue1&quot;,&quot;VariableKey2&quot;:&quot;VariableValue2&quot;}
-         * For example values of engine-based voice call tasks, refer to the description on the left</p>
+         * <p>{&quot;variableKey1&quot;:&quot;variableValue1&quot;,&quot;variableKey2&quot;:&quot;variableValue2&quot;}</p>
          */
         public Builder variables(java.util.Map<String, ?> variables) {
             String variablesShrink = shrink(variables, "Variables", "json");

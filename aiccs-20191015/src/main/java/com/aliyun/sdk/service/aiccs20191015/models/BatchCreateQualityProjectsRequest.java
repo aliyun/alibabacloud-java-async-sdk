@@ -147,6 +147,7 @@ public class BatchCreateQualityProjectsRequest extends Request {
         } 
 
         /**
+         * <p>The list of quality check rules.</p>
          * <p>This parameter is required.</p>
          */
         public Builder analysisIds(java.util.List<Long> analysisIds) {
@@ -156,7 +157,7 @@ public class BatchCreateQualityProjectsRequest extends Request {
         }
 
         /**
-         * ChannelTouchType.
+         * <p>The list of session channels.</p>
          */
         public Builder channelTouchType(java.util.List<Integer> channelTouchType) {
             this.putQueryParameter("ChannelTouchType", channelTouchType);
@@ -165,7 +166,15 @@ public class BatchCreateQualityProjectsRequest extends Request {
         }
 
         /**
+         * <p>The check frequency type. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: periodic quality check</li>
+         * <li><strong>4</strong>: ad-hoc quality check</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder checkFreqType(Integer checkFreqType) {
             this.putQueryParameter("CheckFreqType", checkFreqType);
@@ -174,6 +183,7 @@ public class BatchCreateQualityProjectsRequest extends Request {
         }
 
         /**
+         * <p>The list of instances.</p>
          * <p>This parameter is required.</p>
          */
         public Builder instanceList(java.util.List<String> instanceList) {
@@ -183,7 +193,11 @@ public class BatchCreateQualityProjectsRequest extends Request {
         }
 
         /**
+         * <p>The name of the quality check task.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Automated quality check task</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -192,7 +206,10 @@ public class BatchCreateQualityProjectsRequest extends Request {
         }
 
         /**
-         * TimeRangeEnd.
+         * <p>The end time of the ad-hoc quality check session. The value is a timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1619425576000</p>
          */
         public Builder timeRangeEnd(String timeRangeEnd) {
             this.putQueryParameter("TimeRangeEnd", timeRangeEnd);
@@ -201,7 +218,10 @@ public class BatchCreateQualityProjectsRequest extends Request {
         }
 
         /**
-         * TimeRangeStart.
+         * <p>The start time of the ad-hoc quality check session. The value is a timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1619424556000</p>
          */
         public Builder timeRangeStart(String timeRangeStart) {
             this.putQueryParameter("TimeRangeStart", timeRangeStart);

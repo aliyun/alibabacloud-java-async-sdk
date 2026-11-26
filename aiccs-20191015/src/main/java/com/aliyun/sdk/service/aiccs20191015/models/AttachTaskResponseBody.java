@@ -106,7 +106,7 @@ public class AttachTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request status code. A value of OK indicates that the request succeeded.</p>
+         * <p>The status code of the request. A value of OK indicates that the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -117,7 +117,7 @@ public class AttachTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The quantity of successfully appended entries.</p>
+         * <p>The number of successfully appended records.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -128,7 +128,7 @@ public class AttachTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Description of the status code.</p>
+         * <p>The status code description.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -150,9 +150,9 @@ public class AttachTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the API call succeeded. Valid values:</p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Succeeded.</li>
+         * <li><strong>true</strong>: Successful.</li>
          * <li><strong>false</strong>: Failed.</li>
          * </ul>
          * 

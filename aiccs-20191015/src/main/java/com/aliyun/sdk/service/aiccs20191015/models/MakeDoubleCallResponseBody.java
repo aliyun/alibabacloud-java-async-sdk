@@ -106,7 +106,7 @@ public class MakeDoubleCallResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Status code.</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class MakeDoubleCallResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returned data.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class MakeDoubleCallResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Description of the status code.</p>
+         * <p>The description of the status code.</p>
          * 
          * <strong>example:</strong>
          * <p>Successful</p>
@@ -147,7 +147,7 @@ public class MakeDoubleCallResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the API call succeeded.</p>
+         * <p>Indicates whether the API call is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -203,7 +203,7 @@ public class MakeDoubleCallResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Session ID.</p>
+             * <p>The session ID.</p>
              * 
              * <strong>example:</strong>
              * <p>68255155365620598</p>

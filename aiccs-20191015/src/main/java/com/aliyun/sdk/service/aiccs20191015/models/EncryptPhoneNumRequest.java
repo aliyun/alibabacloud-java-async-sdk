@@ -75,7 +75,7 @@ public class EncryptPhoneNumRequest extends Request {
         } 
 
         /**
-         * <p>AICCS instance ID. You can obtain it from the Artificial Intelligence Cloud Call Service console.</p>
+         * <p>Instance ID of the Artificial Intelligence Cloud Call Service (AICCS) instance. You can obtain instance ID from the Artificial Intelligence Cloud Call Service console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

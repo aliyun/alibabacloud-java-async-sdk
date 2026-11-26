@@ -146,7 +146,7 @@ public class AddInboundNumberRequest extends Request {
         } 
 
         /**
-         * <p>The code of the large model application.</p>
+         * <p>The code of the large language model application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,7 +159,7 @@ public class AddInboundNumberRequest extends Request {
         }
 
         /**
-         * <p>A list of inbound numbers.</p>
+         * <p>The list of inbound numbers.</p>
          * <p>This parameter is required.</p>
          */
         public Builder inboundNumbers(java.util.List<String> inboundNumbers) {
@@ -170,7 +170,11 @@ public class AddInboundNumberRequest extends Request {
         }
 
         /**
-         * <p>The line type. Valid values: <code>1</code> (cloud communication resource) and <code>2</code> (customer-owned line).</p>
+         * <p>The line type. Valid values:</p>
+         * <ul>
+         * <li>1: Cloud communication resource.</li>
+         * <li>2: Customer-provided line.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -183,7 +187,7 @@ public class AddInboundNumberRequest extends Request {
         }
 
         /**
-         * <p>The code for the custom line.</p>
+         * <p>The custom line code.</p>
          * 
          * <strong>example:</strong>
          * <p>JILIANG_*****_TEST_NET</p>

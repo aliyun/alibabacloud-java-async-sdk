@@ -93,7 +93,7 @@ public class HangupCallResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Status code. A return value of Success indicates that the request succeeded.</p>
+         * <p>The status code. A value of Success indicates that the request succeeded.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -104,7 +104,7 @@ public class HangupCallResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Status code description.</p>
+         * <p>The description of the status code.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxx</p>
@@ -115,7 +115,7 @@ public class HangupCallResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>EE338D98-9BD3-4413-B165</p>
@@ -126,7 +126,7 @@ public class HangupCallResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the API call succeeded.</p>
+         * <p>Indicates whether the API operation was called successfully.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

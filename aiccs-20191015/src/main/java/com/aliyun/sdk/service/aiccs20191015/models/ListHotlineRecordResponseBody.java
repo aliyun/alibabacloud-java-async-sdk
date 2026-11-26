@@ -106,7 +106,7 @@ public class ListHotlineRecordResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Status code. A return value of Success indicates that the request succeeded.</p>
+         * <p>The status code. A value of Success indicates that the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -117,7 +117,7 @@ public class ListHotlineRecordResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Hotline session information.</p>
+         * <p>The hotline session information.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -125,10 +125,10 @@ public class ListHotlineRecordResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Description of the status code.</p>
+         * <p>The description of the status code.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxx</p>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -136,7 +136,7 @@ public class ListHotlineRecordResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>EE338D98-9BD3-4413-B165</p>
@@ -147,7 +147,11 @@ public class ListHotlineRecordResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether the API call succeeded.</p>
+         * <p>Indicates whether the API call was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Successful.</li>
+         * <li><strong>false</strong>: Failed.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -255,7 +259,7 @@ public class ListHotlineRecordResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Session ID. This corresponds to the acid in WebSocket after an inbound call.</p>
+             * <p>The session ID. This is the acid value in the WebSocket after an inbound call.</p>
              * 
              * <strong>example:</strong>
              * <p>100365558</p>
@@ -266,7 +270,7 @@ public class ListHotlineRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Connection ID.</p>
+             * <p>The connection ID.</p>
              * 
              * <strong>example:</strong>
              * <p>100365548</p>
@@ -277,7 +281,7 @@ public class ListHotlineRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Recording end UNIX timestamp. Unit: milliseconds.</p>
+             * <p>The timestamp when the recording ended. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>16128694810</p>
@@ -288,7 +292,7 @@ public class ListHotlineRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Recording start UNIX timestamp. Unit: milliseconds.</p>
+             * <p>The timestamp when the recording started. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>16128694110</p>
@@ -299,7 +303,7 @@ public class ListHotlineRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Recording file URL.</p>
+             * <p>The URL of the recording file.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://aliccrec-shvpc.oss-cn-shanghai.aliyuncs.com">http://aliccrec-shvpc.oss-cn-shanghai.aliyuncs.com</a></p>

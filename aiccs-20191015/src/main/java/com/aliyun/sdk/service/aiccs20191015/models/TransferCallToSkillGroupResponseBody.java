@@ -93,7 +93,7 @@ public class TransferCallToSkillGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Error encoding.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -104,10 +104,10 @@ public class TransferCallToSkillGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Description of the status code.</p>
+         * <p>The description of the status code.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxx</p>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -115,7 +115,7 @@ public class TransferCallToSkillGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>EE338D98-9BD3-4413-B165</p>
@@ -126,10 +126,10 @@ public class TransferCallToSkillGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the API call succeeded. Valid values:</p>
+         * <p>Indicates whether the API call was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Succeeded.</li>
-         * <li><strong>false</strong>: Failed.</li>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

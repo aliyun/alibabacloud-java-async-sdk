@@ -75,6 +75,7 @@ public class EditQualityRuleTagRequest extends Request {
         } 
 
         /**
+         * <p>The parsing types.</p>
          * <p>This parameter is required.</p>
          */
         public Builder analysisTypes(java.util.List<AnalysisTypes> analysisTypes) {
@@ -84,7 +85,11 @@ public class EditQualityRuleTagRequest extends Request {
         }
 
         /**
+         * <p>Instance ID of the AICCS instance. You can obtain instance ID from the Artificial Intelligence Cloud Call Service console.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc_xp_pre***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -152,7 +157,10 @@ public class EditQualityRuleTagRequest extends Request {
             } 
 
             /**
-             * Id.
+             * <p>The ID of the rule tag. Default value: null.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -160,7 +168,10 @@ public class EditQualityRuleTagRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The name of the rule tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>639</p>
              */
             public Builder name(String name) {
                 this.name = name;

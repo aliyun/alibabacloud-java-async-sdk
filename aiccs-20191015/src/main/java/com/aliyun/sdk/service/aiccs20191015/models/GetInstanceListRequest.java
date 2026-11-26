@@ -89,7 +89,10 @@ public class GetInstanceListRequest extends Request {
         } 
 
         /**
-         * Name.
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Xspace commercialization service</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -98,7 +101,10 @@ public class GetInstanceListRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The current page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -107,7 +113,10 @@ public class GetInstanceListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);

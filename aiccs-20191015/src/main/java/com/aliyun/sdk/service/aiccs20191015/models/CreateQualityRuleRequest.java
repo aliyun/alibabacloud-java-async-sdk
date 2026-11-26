@@ -120,7 +120,11 @@ public class CreateQualityRuleRequest extends Request {
         } 
 
         /**
+         * <p>Instance ID of the AICCS instance. You can obtain instance ID from the Artificial Intelligence Cloud Call Service console.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc_xp_pre***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -129,6 +133,7 @@ public class CreateQualityRuleRequest extends Request {
         }
 
         /**
+         * <p>The keywords.</p>
          * <p>This parameter is required.</p>
          */
         public Builder keyWords(java.util.List<String> keyWords) {
@@ -138,7 +143,16 @@ public class CreateQualityRuleRequest extends Request {
         }
 
         /**
+         * <p>The keyword match type. Valid values:	</p>
+         * <ul>
+         * <li><strong>1</strong>: Any keyword appears.</li>
+         * <li><strong>2</strong>: All keywords appear.</li>
+         * <li><strong>3</strong>: No keyword appears.</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder matchType(Integer matchType) {
             this.putBodyParameter("MatchType", matchType);
@@ -147,7 +161,11 @@ public class CreateQualityRuleRequest extends Request {
         }
 
         /**
+         * <p>The name of the quality check.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Automated quality check rule</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -156,7 +174,11 @@ public class CreateQualityRuleRequest extends Request {
         }
 
         /**
+         * <p>The tag of the quality check rule.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>638</p>
          */
         public Builder ruleTag(Integer ruleTag) {
             this.putBodyParameter("RuleTag", ruleTag);

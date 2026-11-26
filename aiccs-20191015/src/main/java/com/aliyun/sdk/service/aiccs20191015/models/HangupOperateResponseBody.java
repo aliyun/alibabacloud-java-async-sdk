@@ -93,7 +93,7 @@ public class HangupOperateResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code. A value of \&quot;OK\&quot; indicates that the request was successful.</p>
+         * <p>The status code. A value of &quot;OK&quot; indicates that the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>

@@ -119,7 +119,7 @@ public class ImportOneTaskPhoneNumberResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The detailed reason why access was denied.</p>
+         * <p>The detailed reason for the access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -149,7 +149,7 @@ public class ImportOneTaskPhoneNumberResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The description of the status code.</p>
+         * <p>The status code description.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -173,8 +173,8 @@ public class ImportOneTaskPhoneNumberResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the API call was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Successful.</li>
-         * <li><strong>false</strong>: Failed.</li>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

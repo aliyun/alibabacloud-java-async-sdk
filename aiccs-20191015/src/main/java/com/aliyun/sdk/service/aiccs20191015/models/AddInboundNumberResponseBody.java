@@ -119,7 +119,7 @@ public class AddInboundNumberResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Details about why access was denied.</p>
+         * <p>The detailed reason for the access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -171,12 +171,10 @@ public class AddInboundNumberResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the API call succeeded.</p>
+         * <p>Indicates whether the API call was successful. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: The call succeeded.</p>
-         * </li>
-         * <li><p><strong>false</strong>: The call failed.</p>
-         * </li>
+         * <li><strong>true</strong>: Successful.</li>
+         * <li><strong>false</strong>: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -259,7 +257,7 @@ public class AddInboundNumberResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The inbound number.</p>
+             * <p>The inbound phone number.</p>
              * 
              * <strong>example:</strong>
              * <p>234234238**33</p>
@@ -273,7 +271,7 @@ public class AddInboundNumberResponseBody extends TeaModel {
              * <p>The error description.</p>
              * 
              * <strong>example:</strong>
-             * <p>号码不合法</p>
+             * <p>Invalid number</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -281,7 +279,11 @@ public class AddInboundNumberResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the number was added successfully. <code>true</code> indicates success, and <code>false</code> indicates failure.</p>
+             * <p>Indicates whether the inbound number was added successfully. Valid values:</p>
+             * <ul>
+             * <li>true: Added successfully.</li>
+             * <li>false: Failed to add.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>false</p>

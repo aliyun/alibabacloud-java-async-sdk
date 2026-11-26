@@ -174,7 +174,7 @@ public class LlmSmartCallEncryptRequest extends Request {
         } 
 
         /**
-         * <p>The application code for the large language model.</p>
+         * <p>The code of the large language model application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -213,7 +213,7 @@ public class LlmSmartCallEncryptRequest extends Request {
         }
 
         /**
-         * <p>A user-defined ID for the outbound call.</p>
+         * <p>The custom outId specified by the customer.</p>
          * 
          * <strong>example:</strong>
          * <p>dsa*******sad</p>
@@ -234,10 +234,10 @@ public class LlmSmartCallEncryptRequest extends Request {
         }
 
         /**
-         * <p>Parameters for the large language model\&quot;s prompt.</p>
+         * <p>The prompt parameters for the large language model application.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;prompt&quot;:&quot;推荐一部电影&quot;}</p>
+         * <p>{&quot;prompt&quot;:&quot;Recommend a movie&quot;}</p>
          */
         public Builder promptParam(java.util.Map<String, ?> promptParam) {
             String promptParamShrink = shrink(promptParam, "PromptParam", "json");
@@ -265,10 +265,10 @@ public class LlmSmartCallEncryptRequest extends Request {
         }
 
         /**
-         * <p>Parameters for the large language model\&quot;s opening statement.</p>
+         * <p>The greeting parameters for the large language model application.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;name&quot;:&quot;小明&quot;,&quot;address&quot;:&quot;浙江省杭州市&quot;}</p>
+         * <p>{&quot;name&quot;:&quot;Xiao Ming&quot;,&quot;address&quot;:&quot;Hangzhou, Zhejiang&quot;}</p>
          */
         public Builder startWordParam(java.util.Map<String, ?> startWordParam) {
             String startWordParamShrink = shrink(startWordParam, "StartWordParam", "json");

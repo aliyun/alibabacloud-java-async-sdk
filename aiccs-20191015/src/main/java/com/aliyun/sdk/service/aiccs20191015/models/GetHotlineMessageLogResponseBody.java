@@ -106,7 +106,7 @@ public class GetHotlineMessageLogResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Status code. A return value of &quot;Success&quot; indicates that the request succeeded.</p>
+         * <p>The status code. A value of Success indicates that the request succeeded.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -117,7 +117,7 @@ public class GetHotlineMessageLogResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Voice messages.</p>
+         * <p>The voice message information.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -125,10 +125,10 @@ public class GetHotlineMessageLogResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Description of the status code.</p>
+         * <p>The description of the status code.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxx</p>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -147,7 +147,11 @@ public class GetHotlineMessageLogResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the API call succeeded.</p>
+         * <p>Indicates whether the API call succeeded. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The call succeeded.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -282,7 +286,7 @@ public class GetHotlineMessageLogResponseBody extends TeaModel {
              * <p>The session content.</p>
              * 
              * <strong>example:</strong>
-             * <p>您好。</p>
+             * <p>Hello</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -312,10 +316,10 @@ public class GetHotlineMessageLogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sender type. Valid values:  </p>
+             * <p>The sender type. Valid values:</p>
              * <ul>
-             * <li><strong>1</strong>: Membership  </li>
-             * <li><strong>2</strong>: Agent</li>
+             * <li><strong>1</strong>: member</li>
+             * <li><strong>2</strong>: agent</li>
              * </ul>
              * 
              * <strong>example:</strong>

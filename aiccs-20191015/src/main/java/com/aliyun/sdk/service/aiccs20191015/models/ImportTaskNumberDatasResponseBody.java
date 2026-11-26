@@ -119,7 +119,7 @@ public class ImportTaskNumberDatasResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The detailed reason why access was denied.</p>
+         * <p>The detailed reason for the access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -130,7 +130,7 @@ public class ImportTaskNumberDatasResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request status code. OK indicates that the request was successful.</p>
+         * <p>The request status code. If OK is returned, the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -152,7 +152,7 @@ public class ImportTaskNumberDatasResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The description of the status code.</p>
+         * <p>The status code description.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -174,10 +174,10 @@ public class ImportTaskNumberDatasResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <p>Indicates whether the operation was called successfully. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Successful.</li>
-         * <li><strong>false</strong>: Failed.</li>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

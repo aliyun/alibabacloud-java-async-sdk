@@ -118,7 +118,7 @@ public class AddSkillGroupRequest extends Request {
         } 
 
         /**
-         * <p>ID of the external department.</p>
+         * <p>The ID of the external department.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -130,7 +130,7 @@ public class AddSkillGroupRequest extends Request {
         }
 
         /**
-         * <p>Type of the external department.</p>
+         * <p>The type of the external department.</p>
          * 
          * <strong>example:</strong>
          * <p>type_invalid</p>
@@ -142,7 +142,7 @@ public class AddSkillGroupRequest extends Request {
         }
 
         /**
-         * <p>ID of the external skill group.</p>
+         * <p>The ID of the external skill group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,11 +155,11 @@ public class AddSkillGroupRequest extends Request {
         }
 
         /**
-         * <p>Name of the external skill group.</p>
+         * <p>The name of the external skill group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>热线技能组</p>
+         * <p>Hotline skill group</p>
          */
         public Builder outerGroupName(String outerGroupName) {
             this.putQueryParameter("OuterGroupName", outerGroupName);
@@ -168,7 +168,7 @@ public class AddSkillGroupRequest extends Request {
         }
 
         /**
-         * <p>Type of the external skill group.</p>
+         * <p>The type of the external skill group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

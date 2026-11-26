@@ -134,7 +134,7 @@ public class MakeCallRequest extends Request {
         } 
 
         /**
-         * <p>Called number.</p>
+         * <p>The called number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -147,7 +147,7 @@ public class MakeCallRequest extends Request {
         }
 
         /**
-         * <p>Calling number.</p>
+         * <p>The calling number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,7 +160,7 @@ public class MakeCallRequest extends Request {
         }
 
         /**
-         * <p>Operation code.</p>
+         * <p>The operation code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -173,7 +173,7 @@ public class MakeCallRequest extends Request {
         }
 
         /**
-         * <p>Pass-through business information.</p>
+         * <p>The pass-through business information.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;bizId&quot;: 23323}</p>
@@ -185,7 +185,7 @@ public class MakeCallRequest extends Request {
         }
 
         /**
-         * <p>External account ID.</p>
+         * <p>The external account ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -198,7 +198,7 @@ public class MakeCallRequest extends Request {
         }
 
         /**
-         * <p>External account type.</p>
+         * <p>The external account type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

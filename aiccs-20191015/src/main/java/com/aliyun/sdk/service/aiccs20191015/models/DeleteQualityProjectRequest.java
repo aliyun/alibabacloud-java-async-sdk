@@ -75,7 +75,11 @@ public class DeleteQualityProjectRequest extends Request {
         } 
 
         /**
+         * <p>The AICCS instance ID. You can obtain the ID from the Artificial Intelligence Cloud Call Service console.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc_xp_pre***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -84,7 +88,10 @@ public class DeleteQualityProjectRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The quality inspection task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);

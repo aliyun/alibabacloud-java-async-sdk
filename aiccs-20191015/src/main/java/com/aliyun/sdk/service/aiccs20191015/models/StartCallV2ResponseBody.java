@@ -93,7 +93,7 @@ public class StartCallV2ResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Status code. A return value of Success indicates that the request succeeded.</p>
+         * <p>The status code. A value of Success indicates that the request succeeded.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -104,10 +104,10 @@ public class StartCallV2ResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Description of the status code.</p>
+         * <p>The description of the status code.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxx</p>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -115,7 +115,7 @@ public class StartCallV2ResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>EE338D98-9BD3-4413-B165</p>

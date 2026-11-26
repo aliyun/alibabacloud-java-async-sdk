@@ -186,7 +186,7 @@ public class GetAgentStatisticsRequest extends Request {
         } 
 
         /**
-         * <p>List of agent IDs.</p>
+         * <p>The list of agent IDs.</p>
          */
         public Builder agentIds(java.util.List<Long> agentIds) {
             String agentIdsShrink = shrink(agentIds, "AgentIds", "simple");
@@ -196,7 +196,7 @@ public class GetAgentStatisticsRequest extends Request {
         }
 
         /**
-         * <p>Current page number. The value must be greater than <strong>0</strong>. Default value: <strong>1</strong>.</p>
+         * <p>The page number. The value must be greater than <strong>0</strong>. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -208,7 +208,7 @@ public class GetAgentStatisticsRequest extends Request {
         }
 
         /**
-         * <p>List of department IDs.</p>
+         * <p>The list of department IDs.</p>
          */
         public Builder depIds(java.util.List<Long> depIds) {
             String depIdsShrink = shrink(depIds, "DepIds", "simple");
@@ -218,7 +218,7 @@ public class GetAgentStatisticsRequest extends Request {
         }
 
         /**
-         * <p>End Datetime Variable as a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The end timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1617761765000</p>
@@ -230,7 +230,7 @@ public class GetAgentStatisticsRequest extends Request {
         }
 
         /**
-         * <p>Whether to query by agent group. Valid values:</p>
+         * <p>Specifies whether to group query results by agent. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: Yes.</li>
          * <li><strong>false</strong>: No.</li>
@@ -246,10 +246,10 @@ public class GetAgentStatisticsRequest extends Request {
         }
 
         /**
-         * <p>Indicates whether to query by department grouping. Valid values:  </p>
+         * <p>Specifies whether to group query results by department. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Yes  </li>
-         * <li><strong>false</strong>: No</li>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong>: No.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -262,7 +262,8 @@ public class GetAgentStatisticsRequest extends Request {
         }
 
         /**
-         * <p>AICCS instance ID.<br>You can obtain it from <strong>Instance Management</strong> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
+         * <p>The AICCS instance ID.
+         * You can obtain the ID from the <strong>Instances</strong> page in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -275,7 +276,7 @@ public class GetAgentStatisticsRequest extends Request {
         }
 
         /**
-         * <p>Page size. The value must be greater than <strong>0</strong>. Default value: <strong>20</strong>.</p>
+         * <p>The number of entries per page. The value must be greater than <strong>0</strong>. Default value: <strong>20</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -287,7 +288,7 @@ public class GetAgentStatisticsRequest extends Request {
         }
 
         /**
-         * <p>Start UNIX timestamp, in milliseconds.</p>
+         * <p>The start timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1615083365000</p>
@@ -299,10 +300,10 @@ public class GetAgentStatisticsRequest extends Request {
         }
 
         /**
-         * <p>Time latitude type. Valid values:  </p>
+         * <p>The time dimension type. Valid values:</p>
          * <ul>
-         * <li><strong>minute</strong>: minute  </li>
-         * <li><strong>hour</strong>: hour</li>
+         * <li><strong>minute</strong>: minutes</li>
+         * <li><strong>hour</strong>: hours</li>
          * </ul>
          * 
          * <strong>example:</strong>

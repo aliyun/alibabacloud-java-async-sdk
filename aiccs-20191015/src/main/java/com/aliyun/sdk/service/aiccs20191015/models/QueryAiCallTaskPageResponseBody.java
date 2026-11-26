@@ -149,10 +149,10 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message. This parameter is not returned if the call is successful.</p>
+         * <p>The error message. This parameter is not returned when the call is successful.</p>
          * 
          * <strong>example:</strong>
-         * <p>Invalid parameter.</p>
+         * <p>Invalid parameter</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -171,10 +171,10 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <p>Indicates whether the API call is successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: successful.</li>
-         * <li><strong>false</strong>: failed.</li>
+         * <li><strong>true</strong>: Successful.</li>
+         * <li><strong>false</strong>: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -557,7 +557,7 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
              * <p>The agent name.</p>
              * 
              * <strong>example:</strong>
-             * <p>TestAgent.</p>
+             * <p>Test agent</p>
              */
             public Builder agentName(String agentName) {
                 this.agentName = agentName;
@@ -565,7 +565,10 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
             }
 
             /**
-             * ApplicationCode.
+             * <p>The application code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Sample value</p>
              */
             public Builder applicationCode(String applicationCode) {
                 this.applicationCode = applicationCode;
@@ -573,7 +576,10 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
             }
 
             /**
-             * ApplicationName.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Sample value</p>
              */
             public Builder applicationName(String applicationName) {
                 this.applicationName = applicationName;
@@ -581,7 +587,10 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
             }
 
             /**
-             * CallExpireDate.
+             * <p>The call expiration date.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Sample value</p>
              */
             public Builder callExpireDate(String callExpireDate) {
                 this.callExpireDate = callExpireDate;
@@ -589,7 +598,10 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
             }
 
             /**
-             * CallExpireMinutes.
+             * <p>The call expiration duration in minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>39</p>
              */
             public Builder callExpireMinutes(Long callExpireMinutes) {
                 this.callExpireMinutes = callExpireMinutes;
@@ -597,7 +609,10 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
             }
 
             /**
-             * CallExpireType.
+             * <p>The call expiration type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>72</p>
              */
             public Builder callExpireType(Long callExpireType) {
                 this.callExpireType = callExpireType;
@@ -627,7 +642,7 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task concurrency.</p>
+             * <p>The concurrency of the task.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -638,7 +653,7 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time. This value is a UNIX timestamp in milliseconds.</p>
+             * <p>The creation time. The value is a timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1748932499000</p>
@@ -649,7 +664,7 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of calls made on the current day.</p>
+             * <p>The number of voice calls on the current day.</p>
              * 
              * <strong>example:</strong>
              * <p>22</p>
@@ -660,7 +675,7 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The daily connection rate. Daily connection rate = number of connections on the current day ÷ number of calls on the current day (DayCallCount).</p>
+             * <p>The connection rate on the current day. The daily connection rate is calculated by dividing the number of connected calls on the current day by the number of voice calls on the current day (DayCallCount).</p>
              * 
              * <strong>example:</strong>
              * <p>74.14%</p>
@@ -682,7 +697,7 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of failed task executions.</p>
+             * <p>The total number of failures for the task.</p>
              * 
              * <strong>example:</strong>
              * <p>61</p>
@@ -693,7 +708,7 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The historical connection rate. Historical connection rate = historical number of connections ÷ total number of calls (TotalCallCount).</p>
+             * <p>The historical connection rate. The historical connection rate is calculated by dividing the historical number of connected calls by the total number of voice calls (TotalCallCount).</p>
              * 
              * <strong>example:</strong>
              * <p>95.89%</p>
@@ -704,7 +719,7 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The actual start time of the task. This value is a UNIX timestamp in milliseconds.</p>
+             * <p>The actual start time of the task. The value is a timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1748932499000</p>
@@ -715,10 +730,10 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reason for startup failure.</p>
+             * <p>The reason for the start failure.</p>
              * 
              * <strong>example:</strong>
-             * <p>Agent is offline.</p>
+             * <p>The agent is offline</p>
              */
             public Builder startFailedReason(String startFailedReason) {
                 this.startFailedReason = startFailedReason;
@@ -726,7 +741,7 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scheduled start time of the task. This value is a UNIX timestamp in milliseconds.</p>
+             * <p>The scheduled start time of the task. The value is a timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1748932499000</p>
@@ -748,7 +763,7 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of successful task executions.</p>
+             * <p>The total number of successes for the task.</p>
              * 
              * <strong>example:</strong>
              * <p>36</p>
@@ -773,7 +788,7 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
              * <p>The task name.</p>
              * 
              * <strong>example:</strong>
-             * <p>TestTask.</p>
+             * <p>Test task</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -781,7 +796,7 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of calls made by the task.</p>
+             * <p>The total number of voice calls for the task.</p>
              * 
              * <strong>example:</strong>
              * <p>58</p>
@@ -792,7 +807,7 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of task items.</p>
+             * <p>The total count of the task.</p>
              * 
              * <strong>example:</strong>
              * <p>71</p>

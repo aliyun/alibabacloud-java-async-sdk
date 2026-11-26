@@ -172,7 +172,7 @@ public class GetSkillGroupAndAgentStatusSummaryRequest extends Request {
         } 
 
         /**
-         * <p>Current page. The value must be greater than <strong>0</strong>. Default value: <strong>1</strong>.</p>
+         * <p>The page number. The value must be greater than <strong>0</strong>. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -184,7 +184,7 @@ public class GetSkillGroupAndAgentStatusSummaryRequest extends Request {
         }
 
         /**
-         * <p>List of department IDs.</p>
+         * <p>The list of department IDs.</p>
          */
         public Builder depIds(java.util.List<Long> depIds) {
             String depIdsShrink = shrink(depIds, "DepIds", "simple");
@@ -194,7 +194,7 @@ public class GetSkillGroupAndAgentStatusSummaryRequest extends Request {
         }
 
         /**
-         * <p>End Datetime Variable as a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The end timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1617761765000</p>
@@ -206,9 +206,9 @@ public class GetSkillGroupAndAgentStatusSummaryRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to query by department grouping. Default value: <strong>false</strong>. Valid values:  </p>
+         * <p>Specifies whether to group query results by department. Default value: <strong>false</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Yes.  </li>
+         * <li><strong>true</strong>: Yes.</li>
          * <li><strong>false</strong>: No.</li>
          * </ul>
          * 
@@ -222,7 +222,7 @@ public class GetSkillGroupAndAgentStatusSummaryRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to query by skill group grouping. Default value: <strong>false</strong>. Valid values:</p>
+         * <p>Specifies whether to group query results by skill group. Default value: <strong>false</strong>. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: Yes.</li>
          * <li><strong>false</strong>: No.</li>
@@ -238,7 +238,7 @@ public class GetSkillGroupAndAgentStatusSummaryRequest extends Request {
         }
 
         /**
-         * <p>List of skill group IDs.</p>
+         * <p>The list of skill group IDs.</p>
          */
         public Builder groupIds(java.util.List<Long> groupIds) {
             String groupIdsShrink = shrink(groupIds, "GroupIds", "simple");
@@ -248,7 +248,8 @@ public class GetSkillGroupAndAgentStatusSummaryRequest extends Request {
         }
 
         /**
-         * <p>AICCS instance ID.<br>You can obtain it in the <strong>Instance Management</strong> section of the left-side navigation pane in the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
+         * <p>The AICCS instance ID.
+         * You can obtain the ID in the <strong>Instance Management</strong> section of the left-side navigation pane in the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -261,7 +262,7 @@ public class GetSkillGroupAndAgentStatusSummaryRequest extends Request {
         }
 
         /**
-         * <p>Page size. The value must be greater than <strong>0</strong>. Default value: <strong>20</strong>.</p>
+         * <p>The number of entries per page. The value must be greater than <strong>0</strong>. Default value: <strong>20</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -273,7 +274,7 @@ public class GetSkillGroupAndAgentStatusSummaryRequest extends Request {
         }
 
         /**
-         * <p>Start date UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The start timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1615083365000</p>

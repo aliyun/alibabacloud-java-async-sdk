@@ -327,7 +327,7 @@ public class QueryAiCallDetailPageRequest extends Request {
         } 
 
         /**
-         * <p>The batch ID. On the <strong>Call Task Management</strong> page, click Details to view the batch ID.</p>
+         * <p>The batch ID. You can view the batch ID by clicking Details on the <strong>Call Task Management</strong> page.</p>
          * 
          * <strong>example:</strong>
          * <p>1183**************</p>
@@ -341,17 +341,17 @@ public class QueryAiCallDetailPageRequest extends Request {
         /**
          * <p>The call result. Valid values:</p>
          * <ul>
-         * <li>CALL_FORWARDING: Call forwarding.</li>
-         * <li>INCOMING_CALL_BARRED: Incoming call barred.</li>
+         * <li>CALL_FORWARDING: Call forwarded.</li>
+         * <li>INCOMING_CALL_BARRED: Incoming calls barred.</li>
          * <li>CALL_REJECTED: Call rejected.</li>
          * <li>ANSWERED: Answered.</li>
          * <li>USER_BUSY: User busy.</li>
          * <li>POWERED_OFF: Powered off.</li>
          * <li>NO_USER_RESPONSE: Out of service area.</li>
-         * <li>OPERATOR_BLOCK: Blocked by carrier.</li>
-         * <li>OTHERS: Other status.</li>
-         * <li>SUSPEND: Service suspended.</li>
-         * <li>CANCEL: Caller canceled.</li>
+         * <li>OPERATOR_BLOCK: Blocked by operator.</li>
+         * <li>OTHERS: Other statuses.</li>
+         * <li>SUSPEND: Suspended.</li>
+         * <li>CANCEL: Canceled by caller.</li>
          * <li>INVALID_NUMBER: Invalid number.</li>
          * <li>UNAVAILABLE: Temporarily unavailable.</li>
          * <li>NETWORK_BUSY: Network busy.</li>
@@ -380,7 +380,7 @@ public class QueryAiCallDetailPageRequest extends Request {
         }
 
         /**
-         * <p>The list of task detail IDs. A maximum of 100 IDs can be specified.</p>
+         * <p>The list of task detail IDs. You can specify up to 100 IDs.</p>
          */
         public Builder detailIds(java.util.List<Long> detailIds) {
             String detailIdsShrink = shrink(detailIds, "DetailIds", "json");
@@ -390,7 +390,7 @@ public class QueryAiCallDetailPageRequest extends Request {
         }
 
         /**
-         * <p>The encryption type. Valid values: 0: no encryption. 1: MD5. 2: SHA256. 3: SM3.</p>
+         * <p>The encryption method. Valid values: 0: No encryption. 1: MD5. 2: SHA256. 3: SM3.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -402,7 +402,7 @@ public class QueryAiCallDetailPageRequest extends Request {
         }
 
         /**
-         * <p>The end calling time. This value is a UNIX timestamp. Unit: ms.</p>
+         * <p>The end call time. The value is a timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1748948749000</p>
@@ -414,7 +414,7 @@ public class QueryAiCallDetailPageRequest extends Request {
         }
 
         /**
-         * <p>The end import time. This value is a UNIX timestamp. Unit: ms.</p>
+         * <p>The end import time. The value is a timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1748948749000</p>
@@ -426,7 +426,7 @@ public class QueryAiCallDetailPageRequest extends Request {
         }
 
         /**
-         * <p>The major intent. On the <a href="https://aiccs.console.aliyun.com/agent/customize">Communication Agent Management</a> page, click the agent details to view the major intent.</p>
+         * <p>The primary intent. You can view the primary intent by clicking Agent Details on the <a href="https://aiccs.console.aliyun.com/agent/customize">Communication Agent Management</a> page.</p>
          * 
          * <strong>example:</strong>
          * <p>A</p>
@@ -462,7 +462,7 @@ public class QueryAiCallDetailPageRequest extends Request {
         }
 
         /**
-         * <p>The ID reserved for the caller. This ID is returned to the caller in the receipt message.</p>
+         * <p>The custom ID provided by the caller. This ID is returned to the caller in the receipt message.</p>
          * 
          * <strong>example:</strong>
          * <p>94ba739b-c01a-ef91-335d-4be006c34899</p>
@@ -483,7 +483,7 @@ public class QueryAiCallDetailPageRequest extends Request {
         }
 
         /**
-         * <p>The current page number. The value must be greater than <strong>0</strong>. Default value: <strong>1</strong>.</p>
+         * <p>The page number. The value must be greater than <strong>0</strong>. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -525,7 +525,7 @@ public class QueryAiCallDetailPageRequest extends Request {
         }
 
         /**
-         * <p>The start calling time. This value is a UNIX timestamp. Unit: ms.</p>
+         * <p>The start call time. The value is a timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1748948749000</p>
@@ -537,7 +537,7 @@ public class QueryAiCallDetailPageRequest extends Request {
         }
 
         /**
-         * <p>The start import time. This value is a UNIX timestamp. Unit: ms.</p>
+         * <p>The start import time. The value is a timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1748948749000</p>

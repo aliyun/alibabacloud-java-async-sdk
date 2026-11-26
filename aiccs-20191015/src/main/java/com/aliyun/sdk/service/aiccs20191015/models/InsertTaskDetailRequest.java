@@ -90,7 +90,11 @@ public class InsertTaskDetailRequest extends Request {
         } 
 
         /**
+         * <p>The outbound call information.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;dnis&quot;:&quot;1&quot;,&quot;memberId&quot;:1133,&quot;memberName&quot;:&quot;Test member&quot;,&quot;priority&quot;:10}]</p>
          */
         public Builder callInfos(String callInfos) {
             this.putQueryParameter("CallInfos", callInfos);
@@ -99,7 +103,11 @@ public class InsertTaskDetailRequest extends Request {
         }
 
         /**
+         * <p>Instance ID of the AICCS instance. You can obtain instance ID from the Artificial Intelligence Cloud Call Service console.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc_xp_pre***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -108,7 +116,11 @@ public class InsertTaskDetailRequest extends Request {
         }
 
         /**
+         * <p>The ID of the outbound task.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120001</p>
          */
         public Builder outboundTaskId(Long outboundTaskId) {
             this.putQueryParameter("OutboundTaskId", outboundTaskId);

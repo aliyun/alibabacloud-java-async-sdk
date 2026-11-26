@@ -106,7 +106,7 @@ public class GetQualityProjectDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code. A return value of 200 indicates that the request succeeded.</p>
+         * <p>The status code. A value of 200 indicates that the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class GetQualityProjectDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Quality inspection job information.</p>
+         * <p>The quality inspection task information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,10 +125,10 @@ public class GetQualityProjectDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Status code description.</p>
+         * <p>The description of the status code.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxx</p>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -136,7 +136,7 @@ public class GetQualityProjectDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>EE338D98-9BD3-4413-B165</p>
@@ -147,7 +147,7 @@ public class GetQualityProjectDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the API call succeeded.</p>
+         * <p>Indicates whether the API call is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -346,10 +346,10 @@ public class GetQualityProjectDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Inspection frequency type. Valid values:</p>
+             * <p>The check frequency type. Valid values:</p>
              * <ul>
-             * <li><strong>1</strong>: Periodic quality inspection</li>
-             * <li><strong>4</strong>: Ad hoc quality inspection</li>
+             * <li><strong>1</strong>: Periodic quality inspection.</li>
+             * <li><strong>4</strong>: Ad-hoc quality inspection.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -361,7 +361,7 @@ public class GetQualityProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Creation Time.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-04-07 18:07:18</p>
@@ -372,7 +372,7 @@ public class GetQualityProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Quality inspection sampling scope.</p>
+             * <p>The quality inspection sampling scope.</p>
              */
             public Builder depList(java.util.List<Long> depList) {
                 this.depList = depList;
@@ -380,7 +380,7 @@ public class GetQualityProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Quality inspection sampling scope.</p>
+             * <p>The quality inspection sampling scope.</p>
              */
             public Builder groupList(java.util.List<Long> groupList) {
                 this.groupList = groupList;
@@ -388,7 +388,7 @@ public class GetQualityProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Quality inspection job ID.</p>
+             * <p>The ID of the quality inspection task.</p>
              * 
              * <strong>example:</strong>
              * <p>15977801</p>
@@ -399,7 +399,7 @@ public class GetQualityProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Updated At.</p>
+             * <p>The update time.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-04-07 18:07:19</p>
@@ -410,10 +410,10 @@ public class GetQualityProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Quality inspection job name</p>
+             * <p>The name of the quality inspection task.</p>
              * 
              * <strong>example:</strong>
-             * <p>自动化质检任务</p>
+             * <p>Automated quality inspection task</p>
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -421,7 +421,7 @@ public class GetQualityProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Quality inspection rule IDs.</p>
+             * <p>The IDs of the quality inspection rules.</p>
              */
             public Builder qualityRuleIds(java.util.List<Long> qualityRuleIds) {
                 this.qualityRuleIds = qualityRuleIds;
@@ -429,7 +429,7 @@ public class GetQualityProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Quality inspection type. Fixed value: <strong>1</strong> (Consultation).</p>
+             * <p>The quality inspection type. The value is fixed to <strong>1</strong> (consulting).</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -440,7 +440,7 @@ public class GetQualityProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Quality inspection sampling scope.</p>
+             * <p>The quality inspection sampling scope.</p>
              */
             public Builder servicerList(java.util.List<Long> servicerList) {
                 this.servicerList = servicerList;
@@ -448,10 +448,10 @@ public class GetQualityProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Quality inspection job status. Valid values:  </p>
+             * <p>The status of the quality inspection task. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: Start  </li>
-             * <li><strong>1</strong>: Shutdown</li>
+             * <li><strong>0</strong>: Started.</li>
+             * <li><strong>1</strong>: Stopped.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -463,7 +463,7 @@ public class GetQualityProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Quality inspection job version number.</p>
+             * <p>The version number of the quality inspection task.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

@@ -199,10 +199,10 @@ public class QueryAiCallTaskPageRequest extends Request {
         } 
 
         /**
-         * <p>The agent name. The system performs a fuzzy match based on the agent name.</p>
+         * <p>The agent name. The system performs a fuzzy search based on the agent name.</p>
          * 
          * <strong>example:</strong>
-         * <p>TestAgent.</p>
+         * <p>Test agent</p>
          */
         public Builder agentName(String agentName) {
             this.putQueryParameter("AgentName", agentName);
@@ -244,7 +244,7 @@ public class QueryAiCallTaskPageRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page in paging. Settings for the number of rows per page.</p>
+         * <p>The paging Settings for the number of entries per page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -275,8 +275,10 @@ public class QueryAiCallTaskPageRequest extends Request {
 
         /**
          * <p>The creation source. Valid values:</p>
-         * <p>0: created by agent.</p>
-         * <p>1: created by engine.</p>
+         * <ul>
+         * <li>0: Created by an agent.</li>
+         * <li>1: Created by the engine.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -290,10 +292,10 @@ public class QueryAiCallTaskPageRequest extends Request {
         /**
          * <p>The task status. Valid values:</p>
          * <ul>
-         * <li>INIT: init (not started).</li>
-         * <li>FAILED: startup failed.</li>
-         * <li>RUNNING: running.</li>
-         * <li>STOPPED: stopped.</li>
+         * <li>INIT: Initialized (not started).</li>
+         * <li>FAILED: Failed to start.</li>
+         * <li>RUNNING: Running.</li>
+         * <li>STOPPED: Stopped.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -318,10 +320,10 @@ public class QueryAiCallTaskPageRequest extends Request {
         }
 
         /**
-         * <p>The task name. The system performs a fuzzy match based on the task name.</p>
+         * <p>The task name. The system performs a fuzzy search based on the task name.</p>
          * 
          * <strong>example:</strong>
-         * <p>TestTask.</p>
+         * <p>Test task</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);

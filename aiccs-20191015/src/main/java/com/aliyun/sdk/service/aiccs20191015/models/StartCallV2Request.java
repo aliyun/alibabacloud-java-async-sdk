@@ -134,7 +134,7 @@ public class StartCallV2Request extends Request {
         } 
 
         /**
-         * <p>Agent account name (agent logon name).</p>
+         * <p>The name of the agent account, which is the logon name of the agent.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -147,7 +147,7 @@ public class StartCallV2Request extends Request {
         }
 
         /**
-         * <p>Callee number for hotline outbound calls.</p>
+         * <p>The called number for the hotline outbound call.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,7 +160,7 @@ public class StartCallV2Request extends Request {
         }
 
         /**
-         * <p>Caller number for hotline outbound calls.</p>
+         * <p>The calling number for the hotline outbound call.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -173,10 +173,10 @@ public class StartCallV2Request extends Request {
         }
 
         /**
-         * <p>Call type. Valid values:</p>
+         * <p>The call type. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: Inbound</li>
-         * <li><strong>2</strong>: Outbound</li>
+         * <li><strong>1</strong>: Inbound call.</li>
+         * <li><strong>2</strong>: Outbound call.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -190,7 +190,7 @@ public class StartCallV2Request extends Request {
         }
 
         /**
-         * <p>Unique customer request ID. Used for idempotency validation. You can generate it using UUID.</p>
+         * <p>The unique ID of the client request. This parameter is used to ensure idempotence. You can use a UUID to generate the value.</p>
          * 
          * <strong>example:</strong>
          * <p>46c1341e-2648-447a-9b11-70b6a298d94d</p>
@@ -202,7 +202,7 @@ public class StartCallV2Request extends Request {
         }
 
         /**
-         * <p>AICCS instance ID. You can obtain it from the Artificial Intelligence Cloud Call Service console.</p>
+         * <p>The AICCS instance ID. You can obtain it from the Artificial Intelligence Cloud Call Service console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -104,9 +104,9 @@ public class InsertAiOutboundPhoneNumsRequest extends Request {
         } 
 
         /**
-         * <p>The batch version number of the job.  </p>
+         * <p>The task batch number.</p>
          * <blockquote>
-         * <p>If this parameter is not specified, numbers are imported into the default batch.</p>
+         * <p>If you do not specify this parameter, the numbers are imported to the default batch.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -119,9 +119,9 @@ public class InsertAiOutboundPhoneNumsRequest extends Request {
         }
 
         /**
-         * <p>Number details.  </p>
+         * <p>The number details.</p>
          * <blockquote>
-         * <p>A maximum of 30 entries are allowed.</p>
+         * <p>A maximum of 30 entries are supported.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          */
@@ -133,7 +133,8 @@ public class InsertAiOutboundPhoneNumsRequest extends Request {
         }
 
         /**
-         * <p>The Artificial Intelligence Cloud Call Service (AICCS) instance ID.<br>You can obtain it from <strong>Instance Management</strong> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
+         * <p>The AICCS instance ID.
+         * You can obtain the instance ID in the <b>Instances</b> section of the left-side navigation pane in the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,8 +147,8 @@ public class InsertAiOutboundPhoneNumsRequest extends Request {
         }
 
         /**
-         * <p>The job ID.  </p>
-         * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/312260.html">CreateAiOutboundTask</a> API and check the <strong>Data</strong> field in the response, or invoke the <a href="https://help.aliyun.com/document_detail/2718026.html">GetAiOutboundTaskList</a> API and check the <strong>TaskId</strong> field in the response.</p>
+         * <p>The task ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/312260.html">CreateAiOutboundTask</a> operation and view the <strong>Data</strong> response parameter, or call the <a href="https://help.aliyun.com/document_detail/2718026.html">GetAiOutboundTaskList</a> operation and view the <strong>TaskId</strong> response parameter.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -219,10 +220,10 @@ public class InsertAiOutboundPhoneNumsRequest extends Request {
             } 
 
             /**
-             * <p>Custom business information.</p>
+             * <p>The custom business information.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxxx</p>
+             * <p>ioi-qerhne-hoz-114c</p>
              */
             public Builder bizData(String bizData) {
                 this.bizData = bizData;
@@ -230,7 +231,7 @@ public class InsertAiOutboundPhoneNumsRequest extends Request {
             }
 
             /**
-             * <p>The callee number for outbound calls.</p>
+             * <p>The outbound called number.</p>
              * 
              * <strong>example:</strong>
              * <p>150****0000</p>

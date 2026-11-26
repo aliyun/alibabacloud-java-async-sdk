@@ -75,7 +75,7 @@ public class GetQualityProjectDetailRequest extends Request {
         } 
 
         /**
-         * <p>The Artificial Intelligence Cloud Call Service (AICCS) instance ID. You can obtain it from the console of Artificial Intelligence Cloud Call Service.</p>
+         * <p>Instance ID of the AICCS instance. You can obtain instance ID from the Artificial Intelligence Cloud Call Service console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class GetQualityProjectDetailRequest extends Request {
         }
 
         /**
-         * <p>The quality inspection job ID.</p>
+         * <p>The ID of the quality inspection task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

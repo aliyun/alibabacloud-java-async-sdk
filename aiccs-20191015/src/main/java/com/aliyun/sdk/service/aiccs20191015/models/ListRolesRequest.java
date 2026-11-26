@@ -74,7 +74,7 @@ public class ListRolesRequest extends Request {
         } 
 
         /**
-         * <p>Unique ID for the customer request. Used for idempotency validation and can be generated using UUID.</p>
+         * <p>The unique ID of the client request. This parameter is used to ensure idempotence. You can use a UUID to generate the value.</p>
          * 
          * <strong>example:</strong>
          * <p>46c1341e-2648-447a-9b11-70b6a298d94d</p>
@@ -86,7 +86,7 @@ public class ListRolesRequest extends Request {
         }
 
         /**
-         * <p>AICCS instance ID. You can obtain it from the Artificial Intelligence Cloud Call Service console.</p>
+         * <p>The AICCS instance ID. You can obtain the ID from the Artificial Intelligence Cloud Call Service console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

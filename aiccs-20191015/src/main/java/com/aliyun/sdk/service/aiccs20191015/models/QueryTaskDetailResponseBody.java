@@ -119,7 +119,10 @@ public class QueryTaskDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code. A value of 200 indicates that the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class QueryTaskDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The queried data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class QueryTaskDetailResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class QueryTaskDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The status code description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class QueryTaskDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE338D98-9BD3-4413-B165</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class QueryTaskDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -446,7 +461,10 @@ public class QueryTaskDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * Ani.
+             * <p>The caller number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1367123xxxx</p>
              */
             public Builder ani(String ani) {
                 this.ani = ani;
@@ -454,7 +472,10 @@ public class QueryTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * BuId.
+             * <p>The ID of the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder buId(Long buId) {
                 this.buId = buId;
@@ -462,7 +483,10 @@ public class QueryTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DepartmentId.
+             * <p>The department ID of the skill group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder departmentId(Long departmentId) {
                 this.departmentId = departmentId;
@@ -470,7 +494,10 @@ public class QueryTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Dnis.
+             * <p>The called number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0571456****</p>
              */
             public Builder dnis(String dnis) {
                 this.dnis = dnis;
@@ -478,7 +505,10 @@ public class QueryTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EndReason.
+             * <p>The call end reasons.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>110</p>
              */
             public Builder endReason(Integer endReason) {
                 this.endReason = endReason;
@@ -486,7 +516,10 @@ public class QueryTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ExtAttrs.
+             * <p>The extended attributes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;Note&quot;:&quot;Outbound call test&quot;}</p>
              */
             public Builder extAttrs(String extAttrs) {
                 this.extAttrs = extAttrs;
@@ -494,7 +527,10 @@ public class QueryTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The time when the task was created. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1615445263000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -502,7 +538,10 @@ public class QueryTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The time when the task was updated. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1615478401000</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -510,7 +549,10 @@ public class QueryTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120001</p>
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -518,7 +560,10 @@ public class QueryTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * MemberId.
+             * <p>The ID of the member. The ID of an anonymous member is -1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-1</p>
              */
             public Builder memberId(Long memberId) {
                 this.memberId = memberId;
@@ -526,7 +571,10 @@ public class QueryTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * MemberName.
+             * <p>The name of the member.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Anonymous member</p>
              */
             public Builder memberName(String memberName) {
                 this.memberName = memberName;
@@ -534,7 +582,10 @@ public class QueryTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * OutboundNum.
+             * <p>The outbound call number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>130****0000</p>
              */
             public Builder outboundNum(Integer outboundNum) {
                 this.outboundNum = outboundNum;
@@ -542,7 +593,10 @@ public class QueryTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * OutboundTaskId.
+             * <p>The ID of the outbound task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120001</p>
              */
             public Builder outboundTaskId(Long outboundTaskId) {
                 this.outboundTaskId = outboundTaskId;
@@ -550,7 +604,10 @@ public class QueryTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * <p>The priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -558,7 +615,10 @@ public class QueryTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RetryTime.
+             * <p>The next retry time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder retryTime(String retryTime) {
                 this.retryTime = retryTime;
@@ -566,7 +626,10 @@ public class QueryTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ServicerId.
+             * <p>The ID of the customer service representative.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1212</p>
              */
             public Builder servicerId(Long servicerId) {
                 this.servicerId = servicerId;
@@ -574,7 +637,10 @@ public class QueryTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ServicerName.
+             * <p>The name of the customer service representative.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>John Doe</p>
              */
             public Builder servicerName(String servicerName) {
                 this.servicerName = servicerName;
@@ -582,7 +648,10 @@ public class QueryTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SkillGroup.
+             * <p>The ID of the skill group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder skillGroup(Integer skillGroup) {
                 this.skillGroup = skillGroup;
@@ -590,7 +659,18 @@ public class QueryTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The outbound call status. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: Inbound call ringing.</li>
+             * <li><strong>2</strong>: Inbound call answered.</li>
+             * <li><strong>3</strong>: Inbound call disconnected.</li>
+             * <li><strong>4</strong>: Outbound call ringing.</li>
+             * <li><strong>5</strong>: Outbound call answered.</li>
+             * <li><strong>6</strong>: Outbound call disconnected.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -683,7 +763,10 @@ public class QueryTaskDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * CurrentPage.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(String currentPage) {
                 this.currentPage = currentPage;
@@ -691,7 +774,7 @@ public class QueryTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * List.
+             * <p>The outbound task information.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -699,7 +782,10 @@ public class QueryTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(String pageSize) {
                 this.pageSize = pageSize;
@@ -707,7 +793,10 @@ public class QueryTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TotalResults.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>34</p>
              */
             public Builder totalResults(String totalResults) {
                 this.totalResults = totalResults;

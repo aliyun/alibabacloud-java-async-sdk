@@ -106,7 +106,7 @@ public class ListRobotCallDialogResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request status code. OK indicates that the request was successful.</p>
+         * <p>The status code of the request. A value of OK indicates that the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -149,8 +149,8 @@ public class ListRobotCallDialogResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the operation was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Successful.</li>
-         * <li><strong>false</strong>: Failed.</li>
+         * <li><strong>true</strong>: The operation was successful.</li>
+         * <li><strong>false</strong>: The operation failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -262,7 +262,7 @@ public class ListRobotCallDialogResponseBody extends TeaModel {
              * <p>The script content.</p>
              * 
              * <strong>example:</strong>
-             * <p>I am a customer service representative from XX. I noticed that you previously looked for a job with us. I am doing a follow-up. How is your work going?</p>
+             * <p>I am a customer service representative from XX. I noticed that you previously looked for a job with us, so I am making a follow-up call. How is your current job going?</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -273,7 +273,7 @@ public class ListRobotCallDialogResponseBody extends TeaModel {
              * <p>The node type.</p>
              * 
              * <strong>example:</strong>
-             * <p>Opening</p>
+             * <p>Opening statement</p>
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -292,7 +292,7 @@ public class ListRobotCallDialogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The intent label.</p>
+             * <p>The intent tag.</p>
              * 
              * <strong>example:</strong>
              * <p>Rejection</p>
@@ -303,7 +303,7 @@ public class ListRobotCallDialogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * <p>The start time. The value is a timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1621483557000</p>

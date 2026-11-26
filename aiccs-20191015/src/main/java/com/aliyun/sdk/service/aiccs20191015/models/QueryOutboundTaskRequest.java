@@ -261,7 +261,10 @@ public class QueryOutboundTaskRequest extends Request {
         } 
 
         /**
-         * Ani.
+         * <p>The caller number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>130****0000</p>
          */
         public Builder ani(String ani) {
             this.putQueryParameter("Ani", ani);
@@ -270,7 +273,10 @@ public class QueryOutboundTaskRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * <p>The current page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -279,7 +285,10 @@ public class QueryOutboundTaskRequest extends Request {
         }
 
         /**
-         * DepartmentId.
+         * <p>The department ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder departmentId(String departmentId) {
             this.putQueryParameter("DepartmentId", departmentId);
@@ -288,7 +297,10 @@ public class QueryOutboundTaskRequest extends Request {
         }
 
         /**
-         * EndDate.
+         * <p>The end date of task execution. The maximum time span between the start time and the end time is 7 days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-08-09</p>
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -297,7 +309,10 @@ public class QueryOutboundTaskRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time of task execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23:00:00</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -306,7 +321,10 @@ public class QueryOutboundTaskRequest extends Request {
         }
 
         /**
-         * GroupName.
+         * <p>The skill group name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test skill group</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -315,7 +333,11 @@ public class QueryOutboundTaskRequest extends Request {
         }
 
         /**
+         * <p>The AICCS instance ID. You can obtain it from the Artificial Intelligence Cloud Call Service console.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc_xp_pre***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -324,7 +346,10 @@ public class QueryOutboundTaskRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -333,7 +358,10 @@ public class QueryOutboundTaskRequest extends Request {
         }
 
         /**
-         * SkillGroup.
+         * <p>The skill group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder skillGroup(Long skillGroup) {
             this.putQueryParameter("SkillGroup", skillGroup);
@@ -342,7 +370,10 @@ public class QueryOutboundTaskRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * <p>The start date of task execution. The maximum time span between the start time and the end time is 7 days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-08-08</p>
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);
@@ -351,7 +382,10 @@ public class QueryOutboundTaskRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time of task execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>09:09:09</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -360,7 +394,18 @@ public class QueryOutboundTaskRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The task status. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: not started</li>
+         * <li><strong>2</strong>: running</li>
+         * <li><strong>3</strong>: paused</li>
+         * <li><strong>4</strong>: expired</li>
+         * <li><strong>5</strong>: completed</li>
+         * <li><strong>6</strong>: deleted</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -369,7 +414,10 @@ public class QueryOutboundTaskRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120001</p>
          */
         public Builder taskId(Long taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -378,7 +426,10 @@ public class QueryOutboundTaskRequest extends Request {
         }
 
         /**
-         * TaskName.
+         * <p>The task name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test task</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);
@@ -387,7 +438,15 @@ public class QueryOutboundTaskRequest extends Request {
         }
 
         /**
-         * TaskType.
+         * <p>The task type. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: PREVIEW (preview)</li>
+         * <li><strong>2</strong>: FORECAST (forecast)</li>
+         * <li><strong>3</strong>: ROBOT (robot)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder taskType(Integer taskType) {
             this.putQueryParameter("TaskType", taskType);

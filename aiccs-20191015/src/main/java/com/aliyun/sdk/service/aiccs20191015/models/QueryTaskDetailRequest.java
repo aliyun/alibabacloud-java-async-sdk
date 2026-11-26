@@ -259,7 +259,10 @@ public class QueryTaskDetailRequest extends Request {
         } 
 
         /**
-         * Ani.
+         * <p>The caller number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>130****0000</p>
          */
         public Builder ani(String ani) {
             this.putQueryParameter("Ani", ani);
@@ -268,7 +271,10 @@ public class QueryTaskDetailRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * <p>The current page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -277,7 +283,10 @@ public class QueryTaskDetailRequest extends Request {
         }
 
         /**
-         * DepartmentIdList.
+         * <p>The list of department IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder departmentIdList(String departmentIdList) {
             this.putQueryParameter("DepartmentIdList", departmentIdList);
@@ -286,7 +295,10 @@ public class QueryTaskDetailRequest extends Request {
         }
 
         /**
-         * Dnis.
+         * <p>The called number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0571456****</p>
          */
         public Builder dnis(String dnis) {
             this.putQueryParameter("Dnis", dnis);
@@ -295,7 +307,10 @@ public class QueryTaskDetailRequest extends Request {
         }
 
         /**
-         * EndReasonList.
+         * <p>The call end reasons.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>110</p>
          */
         public Builder endReasonList(String endReasonList) {
             this.putQueryParameter("EndReasonList", endReasonList);
@@ -304,7 +319,11 @@ public class QueryTaskDetailRequest extends Request {
         }
 
         /**
+         * <p>Instance ID of the AICCS instance. You can obtain instance ID in the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a> by choosing Instances.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc_xp_pre***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -313,7 +332,10 @@ public class QueryTaskDetailRequest extends Request {
         }
 
         /**
-         * OutboundTaskId.
+         * <p>The ID of the outbound task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120001</p>
          */
         public Builder outboundTaskId(String outboundTaskId) {
             this.putQueryParameter("OutboundTaskId", outboundTaskId);
@@ -322,7 +344,10 @@ public class QueryTaskDetailRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -331,7 +356,10 @@ public class QueryTaskDetailRequest extends Request {
         }
 
         /**
-         * PriorityList.
+         * <p>The list of priorities. Valid values: <strong>1</strong> to <strong>100</strong>. A larger value indicates a higher priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[1,2,3,5]</p>
          */
         public Builder priorityList(String priorityList) {
             this.putQueryParameter("PriorityList", priorityList);
@@ -340,7 +368,10 @@ public class QueryTaskDetailRequest extends Request {
         }
 
         /**
-         * ServicerId.
+         * <p>The ID of the agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1212</p>
          */
         public Builder servicerId(String servicerId) {
             this.putQueryParameter("ServicerId", servicerId);
@@ -349,7 +380,10 @@ public class QueryTaskDetailRequest extends Request {
         }
 
         /**
-         * ServicerName.
+         * <p>The name of the agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>John Doe</p>
          */
         public Builder servicerName(String servicerName) {
             this.putQueryParameter("ServicerName", servicerName);
@@ -358,7 +392,10 @@ public class QueryTaskDetailRequest extends Request {
         }
 
         /**
-         * Sid.
+         * <p>The ID of the session.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1004849</p>
          */
         public Builder sid(String sid) {
             this.putQueryParameter("Sid", sid);
@@ -367,7 +404,10 @@ public class QueryTaskDetailRequest extends Request {
         }
 
         /**
-         * SkillGroup.
+         * <p>The ID of the skill group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder skillGroup(String skillGroup) {
             this.putQueryParameter("SkillGroup", skillGroup);
@@ -376,7 +416,18 @@ public class QueryTaskDetailRequest extends Request {
         }
 
         /**
-         * StatusList.
+         * <p>The list of task statuses. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Not started.</li>
+         * <li><strong>2</strong>: In progress.</li>
+         * <li><strong>3</strong>: Paused.</li>
+         * <li><strong>4</strong>: Expired.</li>
+         * <li><strong>5</strong>: Completed.</li>
+         * <li><strong>6</strong>: Deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>[1,2,3,5]</p>
          */
         public Builder statusList(String statusList) {
             this.putQueryParameter("StatusList", statusList);
@@ -385,7 +436,10 @@ public class QueryTaskDetailRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>The ID of the task detail.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder taskId(Long taskId) {
             this.putQueryParameter("TaskId", taskId);

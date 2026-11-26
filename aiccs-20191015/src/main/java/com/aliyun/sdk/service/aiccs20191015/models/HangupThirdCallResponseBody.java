@@ -93,7 +93,7 @@ public class HangupThirdCallResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Fault encoding</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -104,10 +104,10 @@ public class HangupThirdCallResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Fault description</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxx</p>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -115,7 +115,7 @@ public class HangupThirdCallResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID, used to trail the cause of a fault</p>
+         * <p>The ID of the request, which is used to trace the cause of the error.</p>
          * 
          * <strong>example:</strong>
          * <p>EE338D98-9BD3-4413-B165</p>
@@ -126,7 +126,7 @@ public class HangupThirdCallResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the API call succeeded</p>
+         * <p>Indicates whether the API call was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

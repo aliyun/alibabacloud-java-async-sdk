@@ -117,7 +117,7 @@ public class CreateAiOutboundTaskBatchResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The version ID of the newly created job batch.</p>
+         * <p>The ID of the created task batch version.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -150,10 +150,10 @@ public class CreateAiOutboundTaskBatchResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the API call succeeded. Valid values:</p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Succeeded.</li>
-         * <li><strong>false</strong>: Failed.</li>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

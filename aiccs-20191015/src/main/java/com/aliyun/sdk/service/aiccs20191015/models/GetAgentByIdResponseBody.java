@@ -106,7 +106,10 @@ public class GetAgentByIdResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code. A value of Success indicates that the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class GetAgentByIdResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The agent information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class GetAgentByIdResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The description of the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class GetAgentByIdResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE338D98-9BD3-4413-B165</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class GetAgentByIdResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -269,7 +281,10 @@ public class GetAgentByIdResponseBody extends TeaModel {
             } 
 
             /**
-             * AgentId.
+             * <p>The ID of the agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder agentId(Integer agentId) {
                 this.agentId = agentId;
@@ -277,7 +292,10 @@ public class GetAgentByIdResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUserName.
+             * <p>The name of the user who created the agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Zhang San</p>
              */
             public Builder createUserName(String createUserName) {
                 this.createUserName = createUserName;
@@ -285,7 +303,10 @@ public class GetAgentByIdResponseBody extends TeaModel {
             }
 
             /**
-             * ForeignKey.
+             * <p>The external key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>43990666****</p>
              */
             public Builder foreignKey(String foreignKey) {
                 this.foreignKey = foreignKey;
@@ -293,7 +314,10 @@ public class GetAgentByIdResponseBody extends TeaModel {
             }
 
             /**
-             * ForeignNick.
+             * <p>The logon name of the agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:123@123.com">123@123.com</a></p>
              */
             public Builder foreignNick(String foreignNick) {
                 this.foreignNick = foreignNick;
@@ -301,7 +325,10 @@ public class GetAgentByIdResponseBody extends TeaModel {
             }
 
             /**
-             * RealName.
+             * <p>The name of the agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Liu Ceshi</p>
              */
             public Builder realName(String realName) {
                 this.realName = realName;
@@ -309,7 +336,10 @@ public class GetAgentByIdResponseBody extends TeaModel {
             }
 
             /**
-             * ServicerType.
+             * <p>The service type. Default value: 3.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder servicerType(Integer servicerType) {
                 this.servicerType = servicerType;
@@ -317,7 +347,10 @@ public class GetAgentByIdResponseBody extends TeaModel {
             }
 
             /**
-             * ShowName.
+             * <p>The display name of the agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Liu Ceshi</p>
              */
             public Builder showName(String showName) {
                 this.showName = showName;

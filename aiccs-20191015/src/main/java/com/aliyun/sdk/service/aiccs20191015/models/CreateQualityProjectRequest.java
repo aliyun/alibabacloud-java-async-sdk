@@ -204,6 +204,7 @@ public class CreateQualityProjectRequest extends Request {
         } 
 
         /**
+         * <p>The list of quality check rules.</p>
          * <p>This parameter is required.</p>
          */
         public Builder analysisIds(java.util.List<Long> analysisIds) {
@@ -213,7 +214,7 @@ public class CreateQualityProjectRequest extends Request {
         }
 
         /**
-         * ChannelTouchType.
+         * <p>The list of session channels.</p>
          */
         public Builder channelTouchType(java.util.List<Integer> channelTouchType) {
             this.putBodyParameter("ChannelTouchType", channelTouchType);
@@ -222,7 +223,15 @@ public class CreateQualityProjectRequest extends Request {
         }
 
         /**
+         * <p>The check frequency type. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Periodic quality check.</li>
+         * <li><strong>4</strong>: Ad hoc quality check.</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder checkFreqType(Integer checkFreqType) {
             this.putBodyParameter("CheckFreqType", checkFreqType);
@@ -231,7 +240,7 @@ public class CreateQualityProjectRequest extends Request {
         }
 
         /**
-         * DepList.
+         * <p>The list of departments.</p>
          */
         public Builder depList(java.util.List<Long> depList) {
             this.putBodyParameter("DepList", depList);
@@ -240,7 +249,7 @@ public class CreateQualityProjectRequest extends Request {
         }
 
         /**
-         * GroupList.
+         * <p>The list of skill groups.</p>
          */
         public Builder groupList(java.util.List<Long> groupList) {
             this.putBodyParameter("GroupList", groupList);
@@ -249,7 +258,11 @@ public class CreateQualityProjectRequest extends Request {
         }
 
         /**
+         * <p>Instance ID of the Artificial Intelligence Cloud Call Service (AICCS) instance. You can obtain instance ID from Instance Management in the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc_xp_pre***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -258,7 +271,11 @@ public class CreateQualityProjectRequest extends Request {
         }
 
         /**
+         * <p>The name of the quality check task.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Automated quality check task</p>
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);
@@ -267,7 +284,16 @@ public class CreateQualityProjectRequest extends Request {
         }
 
         /**
+         * <p>The quality check scope. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Instance (all skill groups).</li>
+         * <li><strong>2</strong>: Department or skill group list.</li>
+         * <li><strong>3</strong>: Customer service representative list.</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder scopeType(Integer scopeType) {
             this.putBodyParameter("ScopeType", scopeType);
@@ -276,7 +302,7 @@ public class CreateQualityProjectRequest extends Request {
         }
 
         /**
-         * ServicerList.
+         * <p>The list of customer service representatives.</p>
          */
         public Builder servicerList(java.util.List<String> servicerList) {
             this.putBodyParameter("ServicerList", servicerList);
@@ -285,7 +311,10 @@ public class CreateQualityProjectRequest extends Request {
         }
 
         /**
-         * TimeRangeEnd.
+         * <p>The end time of the ad hoc quality check session. The value is a timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1619425576000</p>
          */
         public Builder timeRangeEnd(String timeRangeEnd) {
             this.putBodyParameter("TimeRangeEnd", timeRangeEnd);
@@ -294,7 +323,10 @@ public class CreateQualityProjectRequest extends Request {
         }
 
         /**
-         * TimeRangeStart.
+         * <p>The start time of the ad hoc quality check session. The value is a timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1619424556000</p>
          */
         public Builder timeRangeStart(String timeRangeStart) {
             this.putBodyParameter("TimeRangeStart", timeRangeStart);

@@ -106,7 +106,7 @@ public class ListDialogResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Request status code. A return value of OK indicates that the request succeeded.</p>
+         * <p>The request status code. A value of OK indicates that the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -117,7 +117,7 @@ public class ListDialogResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Call interaction content.</p>
+         * <p>The call interaction content.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class ListDialogResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Status code description.</p>
+         * <p>The status code description.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -136,7 +136,7 @@ public class ListDialogResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>D9CB3933-9FE3-4870-BA8E-2BEE91B69D23</p>
@@ -147,10 +147,10 @@ public class ListDialogResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the API invocation succeeded. Valid values:  </p>
+         * <p>Indicates whether the operation was called successfully. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Succeeded.  </li>
-         * <li><strong>false</strong>: Failed.</li>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -259,10 +259,10 @@ public class ListDialogResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Dialogue content.</p>
+             * <p>The script content.</p>
              * 
              * <strong>example:</strong>
-             * <p>您好</p>
+             * <p>Hello</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -270,7 +270,7 @@ public class ListDialogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>File Type.</p>
+             * <p>The node type.</p>
              * 
              * <strong>example:</strong>
              * <p>normal</p>
@@ -281,11 +281,11 @@ public class ListDialogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Speaking role. Valid values:</p>
+             * <p>The role of the speaker. Valid values:</p>
              * <ul>
-             * <li><p>robot: Bot.</p>
+             * <li><p>robot: The speaker is a robot.</p>
              * </li>
-             * <li><p>user: User.</p>
+             * <li><p>user: The speaker is a user.</p>
              * </li>
              * </ul>
              * 
@@ -298,10 +298,10 @@ public class ListDialogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Intent label.</p>
+             * <p>The intent tag.</p>
              * 
              * <strong>example:</strong>
-             * <p>肯定</p>
+             * <p>Affirmative</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -309,7 +309,7 @@ public class ListDialogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Start Time. UNIX timestamp format, in milliseconds.</p>
+             * <p>The start time. The value is a timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1619763900718</p>

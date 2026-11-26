@@ -101,7 +101,7 @@ public class QueryAiVoiceAgentDetailNewRequest extends Request {
         }
 
         /**
-         * <p>The branch ID. If this parameter is left empty, the currently active branch is automatically used.</p>
+         * <p>The branch ID. If left empty, the current active branch is automatically selected.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -113,7 +113,7 @@ public class QueryAiVoiceAgentDetailNewRequest extends Request {
         }
 
         /**
-         * <p>The version ID. If this parameter is left empty, the latest published version of the corresponding branch is used. This parameter must be used together with BranchId.</p>
+         * <p>The version ID. If left empty, the latest published version of the corresponding branch is used. This parameter must be used together with BranchId.</p>
          * 
          * <strong>example:</strong>
          * <p>21</p>
