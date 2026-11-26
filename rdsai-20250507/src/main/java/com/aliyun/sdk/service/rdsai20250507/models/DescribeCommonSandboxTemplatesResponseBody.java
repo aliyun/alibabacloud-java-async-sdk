@@ -149,6 +149,9 @@ public class DescribeCommonSandboxTemplatesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DefaultCpu")
         private String defaultCpu;
 
+        @com.aliyun.core.annotation.NameInMap("DefaultDisk")
+        private String defaultDisk;
+
         @com.aliyun.core.annotation.NameInMap("DefaultMemory")
         private String defaultMemory;
 
@@ -163,6 +166,7 @@ public class DescribeCommonSandboxTemplatesResponseBody extends TeaModel {
 
         private Templates(Builder builder) {
             this.defaultCpu = builder.defaultCpu;
+            this.defaultDisk = builder.defaultDisk;
             this.defaultMemory = builder.defaultMemory;
             this.defaultReplicas = builder.defaultReplicas;
             this.description = builder.description;
@@ -182,6 +186,13 @@ public class DescribeCommonSandboxTemplatesResponseBody extends TeaModel {
          */
         public String getDefaultCpu() {
             return this.defaultCpu;
+        }
+
+        /**
+         * @return defaultDisk
+         */
+        public String getDefaultDisk() {
+            return this.defaultDisk;
         }
 
         /**
@@ -214,6 +225,7 @@ public class DescribeCommonSandboxTemplatesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String defaultCpu; 
+            private String defaultDisk; 
             private String defaultMemory; 
             private Long defaultReplicas; 
             private String description; 
@@ -224,6 +236,7 @@ public class DescribeCommonSandboxTemplatesResponseBody extends TeaModel {
 
             private Builder(Templates model) {
                 this.defaultCpu = model.defaultCpu;
+                this.defaultDisk = model.defaultDisk;
                 this.defaultMemory = model.defaultMemory;
                 this.defaultReplicas = model.defaultReplicas;
                 this.description = model.description;
@@ -238,6 +251,14 @@ public class DescribeCommonSandboxTemplatesResponseBody extends TeaModel {
              */
             public Builder defaultCpu(String defaultCpu) {
                 this.defaultCpu = defaultCpu;
+                return this;
+            }
+
+            /**
+             * DefaultDisk.
+             */
+            public Builder defaultDisk(String defaultDisk) {
+                this.defaultDisk = defaultDisk;
                 return this;
             }
 

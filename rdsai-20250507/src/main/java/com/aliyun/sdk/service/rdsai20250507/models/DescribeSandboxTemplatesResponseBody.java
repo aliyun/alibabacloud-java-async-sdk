@@ -132,7 +132,7 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The backup parameter. You can ignore this parameter.</p>
+         * <p>A reserved parameter. Ignore this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -143,7 +143,7 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The position from which the read operation starts. An empty value indicates that the read operation starts from the beginning.</p>
+         * <p>The position from which the current query starts. If this parameter is left empty, the query starts from the beginning.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAc3HCuYhJi/wvpk4xOr0VLYz/NvD85HpgBeRBCusEIeVQ0dHZH9jr+NP3X9Jx0iSoql55b9nd4PIDm252/a0f+U=</p>
@@ -224,6 +224,9 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DefaultCpu")
         private String defaultCpu;
 
+        @com.aliyun.core.annotation.NameInMap("DefaultDisk")
+        private String defaultDisk;
+
         @com.aliyun.core.annotation.NameInMap("DefaultMemory")
         private String defaultMemory;
 
@@ -251,6 +254,7 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
         private SandboxTemplates(Builder builder) {
             this.createdBy = builder.createdBy;
             this.defaultCpu = builder.defaultCpu;
+            this.defaultDisk = builder.defaultDisk;
             this.defaultMemory = builder.defaultMemory;
             this.description = builder.description;
             this.enableVpcAccess = builder.enableVpcAccess;
@@ -281,6 +285,13 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
          */
         public String getDefaultCpu() {
             return this.defaultCpu;
+        }
+
+        /**
+         * @return defaultDisk
+         */
+        public String getDefaultDisk() {
+            return this.defaultDisk;
         }
 
         /**
@@ -342,6 +353,7 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
         public static final class Builder {
             private String createdBy; 
             private String defaultCpu; 
+            private String defaultDisk; 
             private String defaultMemory; 
             private String description; 
             private String enableVpcAccess; 
@@ -357,6 +369,7 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
             private Builder(SandboxTemplates model) {
                 this.createdBy = model.createdBy;
                 this.defaultCpu = model.defaultCpu;
+                this.defaultDisk = model.defaultDisk;
                 this.defaultMemory = model.defaultMemory;
                 this.description = model.description;
                 this.enableVpcAccess = model.enableVpcAccess;
@@ -368,7 +381,7 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The source that created the sandbox template. Valid values: user (created by a user) and system (created by the system).</p>
+             * <p>The creation source of the sandbox template. Valid values: user (created by a user) and system (created by the system).</p>
              * 
              * <strong>example:</strong>
              * <p>user</p>
@@ -379,13 +392,24 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of CPUs allocated to the sandbox created by using this template.</p>
+             * <p>The number of vCPUs allocated to the sandbox created by using this template.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
              */
             public Builder defaultCpu(String defaultCpu) {
                 this.defaultCpu = defaultCpu;
+                return this;
+            }
+
+            /**
+             * <p>The default disk space of the sandbox created by using this template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30Gi</p>
+             */
+            public Builder defaultDisk(String defaultDisk) {
+                this.defaultDisk = defaultDisk;
                 return this;
             }
 
@@ -412,7 +436,7 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the sandbox created by using this template can access resources in the VPC where Supabase resides.</p>
+             * <p>Specifies whether the sandbox created by using this template can access resources in the VPC where Supabase resides.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -445,7 +469,7 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of replicas for the sandbox template.</p>
+             * <p>The number of replicas of the sandbox template.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -456,7 +480,7 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The custom tags of the sandbox template. A key represents a tag name, and a value represents a tag value.</p>
+             * <p>The custom tags of the sandbox template. The key is the tag name and the value is the tag value.</p>
              */
             public Builder tags(java.util.Map<String, String> tags) {
                 this.tags = tags;
@@ -464,7 +488,7 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the sandbox template. Specify this ID when creating a sandbox by using this template.</p>
+             * <p>The ID of the sandbox template. Specify this ID when you create a sandbox by using this template.</p>
              * 
              * <strong>example:</strong>
              * <p>code-interpreter-asdxxxx</p>

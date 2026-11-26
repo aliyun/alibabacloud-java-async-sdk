@@ -1039,9 +1039,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <p>RDS Supabase</p>
-     * <h3>Related feature documentation</h3>
+     * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * @param request the request parameters of DescribeSandboxTemplates  DescribeSandboxTemplatesRequest
@@ -2226,9 +2226,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Applicable engines</h3>
      * <p>RDS Supabase</p>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * @param request the request parameters of ModifySandboxTemplate  ModifySandboxTemplateRequest

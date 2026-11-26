@@ -181,10 +181,10 @@ public class DescribeSandboxTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The backup parameter. You can ignore this parameter.</p>
+         * <p>A reserved parameter. Ignore this parameter.</p>
          * 
          * <strong>example:</strong>
-         * <p>None</p>
+         * <p>5</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);

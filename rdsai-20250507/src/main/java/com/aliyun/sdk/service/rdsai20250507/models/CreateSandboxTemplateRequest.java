@@ -22,6 +22,10 @@ public class CreateSandboxTemplateRequest extends Request {
     private String defaultCpu;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DefaultDisk")
+    private String defaultDisk;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DefaultMemory")
     private String defaultMemory;
 
@@ -58,6 +62,7 @@ public class CreateSandboxTemplateRequest extends Request {
     private CreateSandboxTemplateRequest(Builder builder) {
         super(builder);
         this.defaultCpu = builder.defaultCpu;
+        this.defaultDisk = builder.defaultDisk;
         this.defaultMemory = builder.defaultMemory;
         this.description = builder.description;
         this.image = builder.image;
@@ -86,6 +91,13 @@ public class CreateSandboxTemplateRequest extends Request {
      */
     public String getDefaultCpu() {
         return this.defaultCpu;
+    }
+
+    /**
+     * @return defaultDisk
+     */
+    public String getDefaultDisk() {
+        return this.defaultDisk;
     }
 
     /**
@@ -146,6 +158,7 @@ public class CreateSandboxTemplateRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateSandboxTemplateRequest, Builder> {
         private String defaultCpu; 
+        private String defaultDisk; 
         private String defaultMemory; 
         private String description; 
         private String image; 
@@ -162,6 +175,7 @@ public class CreateSandboxTemplateRequest extends Request {
         private Builder(CreateSandboxTemplateRequest request) {
             super(request);
             this.defaultCpu = request.defaultCpu;
+            this.defaultDisk = request.defaultDisk;
             this.defaultMemory = request.defaultMemory;
             this.description = request.description;
             this.image = request.image;
@@ -181,6 +195,15 @@ public class CreateSandboxTemplateRequest extends Request {
         public Builder defaultCpu(String defaultCpu) {
             this.putQueryParameter("DefaultCpu", defaultCpu);
             this.defaultCpu = defaultCpu;
+            return this;
+        }
+
+        /**
+         * DefaultDisk.
+         */
+        public Builder defaultDisk(String defaultDisk) {
+            this.putQueryParameter("DefaultDisk", defaultDisk);
+            this.defaultDisk = defaultDisk;
             return this;
         }
 

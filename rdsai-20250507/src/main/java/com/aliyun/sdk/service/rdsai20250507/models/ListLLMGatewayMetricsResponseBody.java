@@ -93,7 +93,10 @@ public class ListLLMGatewayMetricsResponseBody extends TeaModel {
         } 
 
         /**
-         * Granularity.
+         * <p>The time granularity of the returned metric data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>minute</p>
          */
         public Builder granularity(String granularity) {
             this.granularity = granularity;
@@ -101,7 +104,7 @@ public class ListLLMGatewayMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * MetricItems.
+         * <p>The list of metric series. Each element contains the metric key, model name, unit, and list of data points.</p>
          */
         public Builder metricItems(java.util.List<MetricItems> metricItems) {
             this.metricItems = metricItems;
@@ -109,7 +112,10 @@ public class ListLLMGatewayMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * MetricType.
+         * <p>The metric type for the current request. Valid values: tokenPerMinute, requestPerMinute, errorRequestPerMinute, and timeToFirstToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tokenPerMinute</p>
          */
         public Builder metricType(String metricType) {
             this.metricType = metricType;
@@ -117,7 +123,10 @@ public class ListLLMGatewayMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABCDEF77-41B5-5F9E-81E8-93DFDD379024</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -183,7 +192,10 @@ public class ListLLMGatewayMetricsResponseBody extends TeaModel {
             } 
 
             /**
-             * Timestamp.
+             * <p>The UNIX timestamp of the minute for the data point, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1779799200000</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -191,7 +203,10 @@ public class ListLLMGatewayMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The metric value, returned as a string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16022</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -284,7 +299,7 @@ public class ListLLMGatewayMetricsResponseBody extends TeaModel {
             } 
 
             /**
-             * DataPoints.
+             * <p>The list of minute-level data points for the metric series.</p>
              */
             public Builder dataPoints(java.util.List<DataPoints> dataPoints) {
                 this.dataPoints = dataPoints;
@@ -292,7 +307,10 @@ public class ListLLMGatewayMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * Key.
+             * <p>The metric key. For tokenPerMinute, the returned values can be inputTokens, outputTokens, implicitCachedTokens, explicitCachedTokens, and totalTokens. For requestPerMinute, the returned value is requestPerMinute. For errorRequestPerMinute, the returned value is the HTTP status code. For timeToFirstToken, the returned values can be averageTimeToFirstTokenMs, p50TimeToFirstTokenMs, p90TimeToFirstTokenMs, p95TimeToFirstTokenMs, and p99TimeToFirstTokenMs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>inputTokens</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -300,7 +318,10 @@ public class ListLLMGatewayMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * Model.
+             * <p>The name of the model corresponding to the metric series.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen-plus</p>
              */
             public Builder model(String model) {
                 this.model = model;
@@ -308,7 +329,10 @@ public class ListLLMGatewayMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * <p>The unit of the metric value. The unit is tokens for token usage metrics, count for request and error request metrics, and ms for time to first token metrics.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tokens</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;

@@ -67,7 +67,7 @@ public class ModifySandboxTemplateResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The instance ID of the AI application.</p>
+         * <p>The ID of the AI application instance.</p>
          * 
          * <strong>example:</strong>
          * <p>ra-supabase-8moov5lxba****</p>

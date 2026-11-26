@@ -22,6 +22,10 @@ public class ModifySandboxTemplateRequest extends Request {
     private String defaultCpu;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DefaultDisk")
+    private String defaultDisk;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DefaultMemory")
     private String defaultMemory;
 
@@ -54,6 +58,7 @@ public class ModifySandboxTemplateRequest extends Request {
     private ModifySandboxTemplateRequest(Builder builder) {
         super(builder);
         this.defaultCpu = builder.defaultCpu;
+        this.defaultDisk = builder.defaultDisk;
         this.defaultMemory = builder.defaultMemory;
         this.image = builder.image;
         this.instanceName = builder.instanceName;
@@ -81,6 +86,13 @@ public class ModifySandboxTemplateRequest extends Request {
      */
     public String getDefaultCpu() {
         return this.defaultCpu;
+    }
+
+    /**
+     * @return defaultDisk
+     */
+    public String getDefaultDisk() {
+        return this.defaultDisk;
     }
 
     /**
@@ -134,6 +146,7 @@ public class ModifySandboxTemplateRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifySandboxTemplateRequest, Builder> {
         private String defaultCpu; 
+        private String defaultDisk; 
         private String defaultMemory; 
         private String image; 
         private String instanceName; 
@@ -149,6 +162,7 @@ public class ModifySandboxTemplateRequest extends Request {
         private Builder(ModifySandboxTemplateRequest request) {
             super(request);
             this.defaultCpu = request.defaultCpu;
+            this.defaultDisk = request.defaultDisk;
             this.defaultMemory = request.defaultMemory;
             this.image = request.image;
             this.instanceName = request.instanceName;
@@ -171,6 +185,18 @@ public class ModifySandboxTemplateRequest extends Request {
         }
 
         /**
+         * <p>The default disk space for sandboxes created by using this template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30Gi</p>
+         */
+        public Builder defaultDisk(String defaultDisk) {
+            this.putQueryParameter("DefaultDisk", defaultDisk);
+            this.defaultDisk = defaultDisk;
+            return this;
+        }
+
+        /**
          * <p>The memory size for sandboxes created by using this template. Unit: GiB. Valid values: 1 to 8.</p>
          * 
          * <strong>example:</strong>
@@ -183,7 +209,7 @@ public class ModifySandboxTemplateRequest extends Request {
         }
 
         /**
-         * <p>The container image used for the sandbox template. Format: <code>[registry/]&lt;repo&gt;[:tag][@sha256:digest]</code>.</p>
+         * <p>The container image used by the sandbox template. Format: <code>[registry/]&lt;repo&gt;[:tag][@sha256:digest]</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>registry.example.com/example/sandbox:1.0</p>
@@ -195,7 +221,7 @@ public class ModifySandboxTemplateRequest extends Request {
         }
 
         /**
-         * <p>The instance ID of the AI application.</p>
+         * <p>The ID of the AI application instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -232,7 +258,7 @@ public class ModifySandboxTemplateRequest extends Request {
         }
 
         /**
-         * <p>The custom tags of the sandbox template. The key is the tag name, and the value is the tag value. You cannot use the system-reserved tag createdBy or the system-reserved tag hidden.</p>
+         * <p>The custom tags of the sandbox template. The key is the tag name, and the value is the tag value. You cannot use the system-reserved tags createdBy and hidden.</p>
          */
         public Builder tags(java.util.Map<String, String> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");

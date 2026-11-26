@@ -147,6 +147,7 @@ public class ListLLMGatewayMetricsRequest extends Request {
         } 
 
         /**
+         * <p>The end time for the metric query in ISO 8601 format. The time must be later than StartTime and is aligned to the minute. The maximum query range is 7 days.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,7 +160,10 @@ public class ListLLMGatewayMetricsRequest extends Request {
         }
 
         /**
-         * Granularity.
+         * <p>The time granularity. Default value: minute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>minute</p>
          */
         public Builder granularity(String granularity) {
             this.putQueryParameter("Granularity", granularity);
@@ -168,6 +172,7 @@ public class ListLLMGatewayMetricsRequest extends Request {
         }
 
         /**
+         * <p>The name of the Supabase instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -180,6 +185,13 @@ public class ListLLMGatewayMetricsRequest extends Request {
         }
 
         /**
+         * <p>The metric type. The match is case-insensitive. Valid values:</p>
+         * <ul>
+         * <li>tokenPerMinute: tokens per minute</li>
+         * <li>requestPerMinute: requests per minute</li>
+         * <li>errorRequestPerMinute: error requests per minute</li>
+         * <li>timeToFirstToken: time to first token percentiles</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -192,7 +204,10 @@ public class ListLLMGatewayMetricsRequest extends Request {
         }
 
         /**
-         * Model.
+         * <p>The model filter condition. Separate multiple model names with commas. If this parameter is not specified, data for all models is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen-plus,deepseek-v4-pro</p>
          */
         public Builder model(String model) {
             this.putQueryParameter("Model", model);
@@ -201,7 +216,10 @@ public class ListLLMGatewayMetricsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -210,6 +228,7 @@ public class ListLLMGatewayMetricsRequest extends Request {
         }
 
         /**
+         * <p>The start time for the metric query in ISO 8601 format. The time is aligned to the minute. The maximum query range between StartTime and EndTime is 7 days.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
